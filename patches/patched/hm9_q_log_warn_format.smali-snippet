@@ -1,4 +1,4 @@
-.method public static final varargs q(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public static final varargs s(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
 
     .prologue

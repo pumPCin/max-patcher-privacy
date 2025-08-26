@@ -1,4 +1,4 @@
-.method public static final G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public static final O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
     .prologue

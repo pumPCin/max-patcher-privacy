@@ -1,4 +1,4 @@
-.method public static final varargs N(Lus7;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public static final varargs z(Lqs7;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
 
     .prologue
