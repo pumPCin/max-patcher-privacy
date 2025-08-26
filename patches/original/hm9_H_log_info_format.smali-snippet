@@ -1,1 +1,1 @@
-.method public static final y(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public static final varargs y(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
