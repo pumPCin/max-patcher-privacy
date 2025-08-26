@@ -1,13 +1,1 @@
 .method public setVkConnectId(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
-    .locals 0
-
-    invoke-static {p1}, Lcom/my/tracker/MyTrackerParams;->a(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/my/tracker/MyTrackerParams;->setVkConnectIds([Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
-
-    move-result-object p0
-
-    return-object p0
-.end method

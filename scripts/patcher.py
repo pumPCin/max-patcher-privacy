@@ -2,6 +2,7 @@ import os
 import glob
 import sys
 import argparse
+import re
 
 DECOMPILED_DIR = "apk_workdir"
 PATCHES_DIR = "patches"
@@ -10,7 +11,7 @@ PATCHES_DIR = "patches"
 EXPERIMENTAL_SNIPPETS = [
     "hm9_G_log_info_throwable.smali-snippet",
     "hm9_H_log_info_format.smali-snippet",
-    "hm9_l_log_error_throwable.smali-snippet"
+    "hm9_l_log_error_throwable.smali-snippet",
     "hm9_m_log_debug_format.smali-snippet",
     "hm9_N_log_dispatcher.smali-snippet",
     "hm9_p_log_warn_throwable.smali-snippet",
@@ -45,13 +46,13 @@ def apply_patches(experimental=True):
         name = os.path.basename(orig_path)
         try:
             with open(orig_path, 'r', encoding='utf-8') as f:
-                original_block = f.read()
+                original_signature = f.read().strip()
         except Exception as e:
             print(f"[W] Could not read original snippet {name}: {e}")
             read_errors_original.append(name)
             continue
 
-        if original_block.strip() == "":
+        if not original_signature:
             empty_originals.append(name)
             continue
 
@@ -62,19 +63,19 @@ def apply_patches(experimental=True):
 
         try:
             with open(patched_path, 'r', encoding='utf-8') as f:
-                patched_block = f.read()
+                patched_block = f.read().strip()
         except Exception as e:
             print(f"[W] Could not read patched snippet {name}: {e}")
             read_errors_patched.append(name)
             continue
 
-        if patched_block.strip() == "":
+        if not patched_block:
             empty_patched.append(name)
 
         patch_pairs.append({
             'name': name,
-            'original': original_block,
-            'patched': patched_block
+            'signature': original_signature,
+            'replacement': patched_block
         })
 
     if EXPERIMENTAL_SNIPPETS:
@@ -111,7 +112,7 @@ def apply_patches(experimental=True):
     if empty_originals:
         print(f"[E] Empty original snippet files skipped ({len(empty_originals)}): {', '.join(sorted(empty_originals))}")
     if empty_patched:
-        print(f"[E] Patched snippets that are empty (will delete content) ({len(empty_patched)}): {', '.join(sorted(empty_patched))}")
+        print(f"[W] Patched snippets that are empty (will delete content) ({len(empty_patched)}): {', '.join(sorted(empty_patched))}")
     if read_errors_original:
         print(f"[E] Original snippet read errors ({len(read_errors_original)}): {', '.join(sorted(read_errors_original))}")
     if read_errors_patched:
@@ -136,14 +137,21 @@ def apply_patches(experimental=True):
 
         for pair in patch_pairs:
             name = pair['name']
-            original_block = pair['original']
-            patched_block = pair['patched']
+            signature = pair['signature']
+            replacement = pair['replacement']
 
-            if original_block in target_content:
-                print(f"[I]  -> Found match for '{name}' in '{os.path.basename(smali_fPath)}'. Applying patch.")
-                target_content = target_content.replace(original_block, patched_block)
-                total_patches_applied += 1
-                per_snippet_apply_counts[name] += 1
+            escaped_signature = re.escape(signature)
+            pattern = re.compile(
+                f"^{escaped_signature}.*?^\\.end method$",
+                re.DOTALL | re.MULTILINE
+            )
+
+            target_content, num_replacements = pattern.subn(replacement, target_content)
+
+            if num_replacements > 0:
+                print(f"[I]  -> Found match for '{name}' in '{os.path.basename(smali_fPath)}'. Applying patch ({num_replacements}x).")
+                total_patches_applied += num_replacements
+                per_snippet_apply_counts[name] += num_replacements
                 used_snippets.add(name)
 
         if original_content != target_content:

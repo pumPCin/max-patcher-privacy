@@ -1,7 +1,1 @@
 .method public setLang(Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
-    .locals 0
-
-    iput-object p1, p0, Lcom/my/tracker/MyTrackerParams;->e:Ljava/lang/String;
-
-    return-object p0
-.end method
