@@ -19,6 +19,11 @@ DANGEROUS_PERMS = {
     'android.permission.AUTHENTICATE_ACCOUNTS',
     'android.permission.MANAGE_ACCOUNTS',
     'com.google.android.gms.permission.AD_ID',
+    # todo: test
+    'android.permission.USE_BIOMETRIC',
+    'android.permission.USE_CREDENTIALS',
+    'android.permission.READ_MEDIA_VISUAL_USER_SELECTED',
+    'com.htc.launcher.permission.READ_SETTINGS',
 }
 
 STRICT_PERMS = DANGEROUS_PERMS.union({
@@ -48,6 +53,12 @@ STRICT_PERMS = DANGEROUS_PERMS.union({
     'com.oppo.launcher.permission.WRITE_SETTINGS',
     'me.everything.badger.permission.BADGE_COUNT_READ',
     'me.everything.badger.permission.BADGE_COUNT_WRITE',
+    # todo: test
+    'android.permission.USE_FULL_SCREEN_INTENT',
+    'android.permission.MODIFY_AUDIO_SETTINGS',
+    'android.permission.DOWNLOAD_WITHOUT_NOTIFICATION',
+    'android.permission.CHANGE_WIFI_STATE',
+    'com.htc.launcher.permission.UPDATE_SHORTCUT',
 })
 
 PARANOID_PERMS = STRICT_PERMS.union({
