@@ -74,7 +74,7 @@ jobs:
         if [ -d "apk_workdir/unknown" ]; then cp -r apk_workdir/unknown/* apk_workdir/build/unknown/; fi
 
     - name: Rebuild APK
-      run: apktool b apk_workdir -o rebuilt_unsigned.apk
+      run: apktool b apk_workdir --use-aapt2 -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
