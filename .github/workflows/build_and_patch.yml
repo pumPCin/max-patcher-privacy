@@ -51,7 +51,7 @@ jobs:
       shell: bash
 
     - name: Decompile APK
-      run: apktool d source_apk/ru.oneme.app.apk -f -o apk_workdir
+      run: apktool d -r -f source_apk/ru.oneme.app.apk -o apk_workdir
 
     - name: Patch AndroidManifest.xml
       run: python scripts/remove_perms.py --level "${{ inputs.permsRemoval }}"
@@ -74,7 +74,7 @@ jobs:
         if [ -d "apk_workdir/unknown" ]; then cp -r apk_workdir/unknown/* apk_workdir/build/unknown/; fi
 
     - name: Rebuild APK
-      run: apktool b apk_workdir --use-aapt2 -o rebuilt_unsigned.apk
+      run: apktool b apk_workdir -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
