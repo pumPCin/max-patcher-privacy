@@ -46,7 +46,6 @@ jobs:
       with:
         packages: 'platform-tools build-tools;34.0.0'
 
-    # setup-android action doesnt add buildtools to the PATH, so we do manually
     - name: Add Android Build Tools to PATH
       run: echo "${ANDROID_HOME}/build-tools/34.0.0" >> $GITHUB_PATH
       shell: bash
@@ -60,14 +59,19 @@ jobs:
     - name: Run Smali Patcher
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
 
-    # prevents java.util.zip.ZipException: duplicate entry: stamp-cert-sha256
-    - name: Remove conflicting original files
+    - name: Remove original signature
       run: |
         rm -rf apk_workdir/original/META-INF
-        rm -rf apk_workdir/original/stamp-cert-sha256
+        rm -f apk_workdir/original/stamp-cert-sha256
 
-    - name: Rebuild APK
-      run: apktool b apk_workdir -c -o rebuilt_unsigned.apk
+    # This replaces the need for the '-c' flag during rebuild.
+    - name: Copy Original Libs and Unknown Files
+      run: |
+        if [ -d "apk_workdir/lib" ]; then cp -r apk_workdir/lib/* apk_workdir/build/lib/; fi
+        if [ -d "apk_workdir/unknown" ]; then cp -r apk_workdir/unknown/* apk_workdir/build/unknown/; fi
+
+    - name: Rebuild APK (without -c flag)
+      run: apktool b apk_workdir -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
