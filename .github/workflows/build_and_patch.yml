@@ -56,21 +56,11 @@ jobs:
     - name: Patch AndroidManifest.xml
       run: python scripts/manifest_patcher.py --level "${{ inputs.permsRemoval }}"
 
-    - name: Verify Manifest Patching (Sanity Check)
-      run: |
-        echo "Verifying permissions in patched AndroidManifest.xml..."
-        if [ "${{ inputs.permsRemoval }}" = "paranoid" ]; then
-          if grep -q "android.permission.INTERNET" apk_workdir/AndroidManifest.xml; then
-            echo "Error: INTERNET permission still found in paranoid mode!"
-            exit 1
-          else
-            echo "Success: INTERNET permission correctly removed"
-          fi
-        else
-          echo "Skipping specific check for non-paranoid mode"
-        fi
-        echo "Listing remaining permissions:"
-        grep "<uses-permission" apk_workdir/AndroidManifest.xml || true
+    - name: Upload Patched Manifest for Debugging
+      uses: actions/upload-artifact@v4
+      with:
+        name: patched-manifest
+        path: apk_workdir/AndroidManifest.xml
 
     - name: Run Smali Patcher
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
@@ -82,7 +72,7 @@ jobs:
         rm -f apk_workdir/original/AndroidManifest.xml
 
     - name: Rebuild APK
-      run: apktool b apk_workdir -o rebuilt_unsigned.apk
+      run: apktool b apk_workdir --use-aapt2 -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk

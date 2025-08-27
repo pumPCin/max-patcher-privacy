@@ -19,7 +19,6 @@ DANGEROUS_PERMS = {
     'android.permission.AUTHENTICATE_ACCOUNTS',
     'android.permission.MANAGE_ACCOUNTS',
     'com.google.android.gms.permission.AD_ID',
-    # todo: test
     'android.permission.USE_BIOMETRIC',
     'android.permission.USE_CREDENTIALS',
     'android.permission.READ_MEDIA_VISUAL_USER_SELECTED',
@@ -53,7 +52,6 @@ STRICT_PERMS = DANGEROUS_PERMS.union({
     'com.oppo.launcher.permission.WRITE_SETTINGS',
     'me.everything.badger.permission.BADGE_COUNT_READ',
     'me.everything.badger.permission.BADGE_COUNT_WRITE',
-    # todo: test
     'android.permission.USE_FULL_SCREEN_INTENT',
     'android.permission.MODIFY_AUDIO_SETTINGS',
     'android.permission.DOWNLOAD_WITHOUT_NOTIFICATION',
@@ -73,6 +71,24 @@ PARANOID_PERMS = STRICT_PERMS.union({
     'com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE',
     'com.google.android.c2dm.permission.RECEIVE',
 })
+
+def remove_split_apk_attributes(root):
+    attributes_to_remove = [
+        'isSplitRequired',
+        'requiredSplitTypes',
+        'splitTypes'
+    ]
+    print("[I] Removing Split APK attributes from <manifest> tag...")
+    count = 0
+    for attr in attributes_to_remove:
+        key = '{http://schemas.android.com/apk/res/android}' + attr
+        if key in root.attrib:
+            del root.attrib[key]
+            print(f"  -> Removed attribute: {attr}")
+            count += 1
+    if count == 0:
+        print("[I] No Split APK attributes found to remove")
+    return count
 
 def patch_manifest(lvl='dangerous'):
     manifest = "apk_workdir/AndroidManifest.xml"
@@ -104,13 +120,19 @@ def patch_manifest(lvl='dangerous'):
     tree = ET.parse(manifest)
     root = tree.getroot()
 
+    remove_split_apk_attributes(root)
+
     permissions_removed_count = 0
+    elements_to_remove = []
     for perm_element in root.findall('uses-permission'):
         perm_name = perm_element.get('{http://schemas.android.com/apk/res/android}name')
         if perm_name in perms_to_remove:
             print(f"  -> Removing permission: {perm_name}")
-            root.remove(perm_element)
+            elements_to_remove.append(perm_element)
             permissions_removed_count += 1
+
+    for el in elements_to_remove:
+        root.remove(el)
 
     print(f"[I] Total perms removed: {permissions_removed_count}")
 
