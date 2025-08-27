@@ -6,8 +6,9 @@
 Готовый апк файл в https://github.com/TheSillyStever/max-patcher-privacy/actions
 (наверное не тестированный)
 
-Если есть проблемы [создайте пост](https://github.com/TheSillyStever/max-patcher-privacy/issues).
+Если есть проблемы или предложения? [создайте пост](https://github.com/TheSillyStever/max-patcher-privacy/issues)!.
 Хотите добавить что-то своё? [Пул-реквесты](https://github.com/TheSillyStever/max-patcher-privacy/pulls) всегда открыты!
+
 ## О проекте
 
 В связи с требованием о предустановке ПО, это приложение поставляется на многих устройствах. Внутри него находится трекеры, включая `my.tracker` (принадлежит VK), который собирает огромное количество данных о пользователе и устройстве.
