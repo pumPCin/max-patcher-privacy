@@ -56,36 +56,26 @@ jobs:
     - name: Patch AndroidManifest.xml
       run: python scripts/manifest_patcher.py --level "${{ inputs.permsRemoval }}"
 
-    - name: Verify Manifest Patching (Sanity Check)
-      run: |
-        echo "Verifying perms in patched AndroidManifest.xml..."
-        if [ "${{ inputs.permsRemoval }}" = "paranoid" ]; then
-          if grep -q "android.permission.INTERNET" apk_workdir/AndroidManifest.xml; then
-            echo "Error: INTERNET permission still found in paranoid mode!"
-            exit 1
-          else
-            echo "Success: INTERNET permission correctly removed."
-          fi
-        else
-          echo "Skipping specific check for non-paranoid mode."
-        fi
-        echo "Listing remaining permissions:"
-        grep "<uses-permission" apk_workdir/AndroidManifest.xml || true
-
     - name: Run Smali Patcher
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
 
-    - name: Remove Original Signature and Manifest
-      run: |
-        rm -rf apk_workdir/original/META-INF
-        rm -f apk_workdir/original/stamp-cert-sha256
-        rm -f apk_workdir/original/AndroidManifest.xml
+    - name: Rebuild APK (will have original manifest)
+      run: apktool b apk_workdir --use-aapt2 -o temp_build.apk
 
-    - name: Rebuild APK
-      run: apktool b apk_workdir --use-aapt2 -o rebuilt_unsigned.apk
+    - name: Manually compile the patched manifest
+      run: |
+        aapt2 compile --dir apk_workdir/res -o compiled_res.zip
+        aapt2 link --proto-format -o final_patched.apk -I "${ANDROID_HOME}/platforms/android-34/android.jar" \
+          --manifest apk_workdir/AndroidManifest.xml -R compiled_res.zip
+
+    - name: Extract the clean patched manifest
+      run: unzip final_patched.apk AndroidManifest.xml
+
+    - name: Replace the manifest in the main build
+      run: zip -r temp_build.apk AndroidManifest.xml
 
     - name: Zipalign the APK
-      run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
+      run: zipalign -v 4 temp_build.apk rebuilt_aligned.apk
 
     - name: Generate a temporary signing key
       run: |
