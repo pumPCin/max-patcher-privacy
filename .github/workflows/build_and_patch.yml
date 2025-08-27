@@ -67,10 +67,13 @@ jobs:
     # This replaces the need for the '-c' flag during rebuild.
     - name: Copy Original Libs and Unknown Files
       run: |
+        mkdir -p apk_workdir/build/lib/
+        mkdir -p apk_workdir/build/unknown/
+
         if [ -d "apk_workdir/lib" ]; then cp -r apk_workdir/lib/* apk_workdir/build/lib/; fi
         if [ -d "apk_workdir/unknown" ]; then cp -r apk_workdir/unknown/* apk_workdir/build/unknown/; fi
 
-    - name: Rebuild APK (without -c flag)
+    - name: Rebuild APK
       run: apktool b apk_workdir -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
