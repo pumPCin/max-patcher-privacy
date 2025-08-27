@@ -53,6 +53,15 @@ jobs:
     - name: Decompile APK
       run: apktool d source_apk/ru.oneme.app.apk -f -o apk_workdir
 
+
+    - name: Remove original AndroidManifest.xml copy in workdir (if exists)
+      run: |
+        if [ -f "apk_workdir/original/AndroidManifest.xml" ]; then
+          echo "Removing apk_workdir/original/AndroidManifest.xml to prevent conflicts"
+          rm "apk_workdir/original/AndroidManifest.xml"
+        fi
+      shell: bash
+
     - name: Patch AndroidManifest.xml based on user selection
       if: ${{ inputs.permsRemoval != 'none' }}
       run: |
@@ -61,23 +70,26 @@ jobs:
         DEST_MANIFEST="apk_workdir/AndroidManifest.xml"
         echo "Copying ${SOURCE_MANIFEST} to ${DEST_MANIFEST}"
         cp "${SOURCE_MANIFEST}" "${DEST_MANIFEST}"
+      shell: bash
 
     - name: Run Python Patcher for Smali
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
       env:
         EXPERIMENTAL: ${{ inputs.experimental }}
 
-    - name: Remove Original Signature and Manifest
+    - name: Remove original signature
       run: |
         rm -rf apk_workdir/original/META-INF
         rm -f apk_workdir/original/stamp-cert-sha256
-#        rm -f apk_workdir/original/AndroidManifest.xml
+      shell: bash
 
     - name: Rebuild APK
       run: apktool b apk_workdir -c -o rebuilt_unsigned.apk
+      shell: bash
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
+      shell: bash
 
     - name: Generate a temporary signing key
       run: |
@@ -90,6 +102,7 @@ jobs:
           -storepass temppassword \
           -keypass temppassword \
           -dname "CN=Anonymous, OU=Anonymous, O=Anonymous, L=Unknown, ST=Unknown, C=XX"
+      shell: bash
 
     - name: Sign the APK with the temporary key
       run: |
@@ -98,9 +111,11 @@ jobs:
         --ks-pass pass:temppassword \
         --key-pass pass:temppassword \
         rebuilt_aligned.apk
+      shell: bash
 
     - name: Rename Final APK
       run: mv rebuilt_aligned.apk patched-app-release.apk
+      shell: bash
 
     - name: Upload Patched APK as Artifact
       uses: actions/upload-artifact@v4
