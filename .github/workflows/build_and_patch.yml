@@ -55,7 +55,7 @@ jobs:
       run: apktool d source_apk/ru.oneme.app.apk -f -o apk_workdir
 
     - name: Patch AndroidManifest.xml
-      run: python scripts/manifest_patcher.py --level "${{ inputs.permsRemoval }}"
+      run: python scripts/remove_perms.py --level "${{ inputs.permsRemoval }}"
 
     - name: Run Smali Patcher
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
