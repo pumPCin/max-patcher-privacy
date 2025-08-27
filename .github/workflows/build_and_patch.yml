@@ -50,8 +50,9 @@ jobs:
       run: echo "${ANDROID_HOME}/build-tools/34.0.0" >> $GITHUB_PATH
       shell: bash
 
-    - name: Decompile APK
-      run: apktool d -r -f source_apk/ru.oneme.app.apk -o apk_workdir
+
+    - name: Decompile APK (Full)
+      run: apktool d -f source_apk/ru.oneme.app.apk -o apk_workdir
 
     - name: Patch AndroidManifest.xml
       run: python scripts/remove_perms.py --level "${{ inputs.permsRemoval }}"
@@ -64,22 +65,14 @@ jobs:
         rm -rf apk_workdir/original/META-INF
         rm -f apk_workdir/original/stamp-cert-sha256
 
-    # This replaces the need for the '-c' flag during rebuild.
-    - name: Copy Original Libs and Unknown Files
-      run: |
-        mkdir -p apk_workdir/build/lib/
-        mkdir -p apk_workdir/build/unknown/
-
-        if [ -d "apk_workdir/lib" ]; then cp -r apk_workdir/lib/* apk_workdir/build/lib/; fi
-        if [ -d "apk_workdir/unknown" ]; then cp -r apk_workdir/unknown/* apk_workdir/build/unknown/; fi
 
     - name: Rebuild APK
-      run: apktool b apk_workdir -o rebuilt_unsigned.apk
+      run: apktool b apk_workdir --use-aapt2 -c -o rebuilt_unsigned.apk
 
     - name: Zipalign the APK
       run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
 
-    - name: gen signing key
+    - name: Generate a temporary signing key
       run: |
         keytool -genkey -v \
           -keystore temp-release-key.keystore \
@@ -91,7 +84,7 @@ jobs:
           -keypass temppassword \
           -dname "CN=Anonymous, OU=Anonymous, O=Anonymous, L=Unknown, ST=Unknown, C=XX"
 
-    - name: sign the APK with key
+    - name: Sign the APK with the temporary key
       run: |
         apksigner sign --ks temp-release-key.keystore \
         --ks-key-alias temp_alias \
@@ -99,7 +92,7 @@ jobs:
         --key-pass pass:temppassword \
         rebuilt_aligned.apk
 
-    - name: Final APK
+    - name: Rename Final APK
       run: mv rebuilt_aligned.apk patched-app-release.apk
 
     - name: Upload Patched APK as Artifact
