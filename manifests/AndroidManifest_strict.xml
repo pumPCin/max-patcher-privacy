@@ -102,7 +102,7 @@
         <provider android:authorities="ru.oneme.app.notifications" android:exported="false" android:grantUriPermissions="true" android:name="ru.ok.messages.NotificationsImagesProvider"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:foregroundServiceType="dataSync|mediaPlayback|location|camera|microphone" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
         <meta-data android:name="android.max_aspect" android:value="2.5"/>
-        <meta-data android android:name="fontProviderRequests" android:value="Noto Color Emoji Compat"/>
+        <meta-data android:name="fontProviderRequests" android:value="Noto Color Emoji Compat"/>
         <service android:exported="false" android:foregroundServiceType="mediaPlayback|mediaProjection|camera|microphone" android:name="one.me.calls.impl.service.CallServiceImpl"/>
         <service android:exported="false" android:name="one.me.sdk.vendor.push.FcmMessagingService">
             <intent-filter>
