@@ -61,10 +61,11 @@ jobs:
       run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
 
     # prevents java.util.zip.ZipException: duplicate entry: stamp-cert-sha256
-    - name: Remove original signature
+    - name: Remove conflicting original files
       run: |
         rm -rf apk_workdir/original/META-INF
-        rm -rf apk_workdir/original/stamp-cert-sha256
+        rm -f apk_workdir/original/AndroidManifest.xml
+        rm -f apk_workdir/original/stamp-cert-sha256
 
     - name: Rebuild APK
       run: apktool b apk_workdir -c --use-aapt2 -o rebuilt_unsigned.apk
