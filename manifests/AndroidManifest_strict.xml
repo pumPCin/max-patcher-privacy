@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:installLocation="auto" package="ru.oneme.app" platformBuildVersionCode="35" platformBuildVersionName="15">    <queries>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:installLocation="auto" package="ru.oneme.app" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- Removed: android.permission.REQUEST_INSTALL_PACKAGES (DANGEROUS ONLY) -->
+    <!-- Removed: com.sec.android.provider.badge.permission.READ (STRICT MODE) -->
+    <!-- Removed: com.sec.android.provider.badge.permission.WRITE (STRICT MODE) -->
+    <!-- Removed: com.sonyericsson.home.permission.BROADCAST_BADGE (STRICT MODE) -->
+    <!-- Removed: com.sonymobile.home.permission.PROVIDER_INSERT_BADGE (STRICT MODE) -->
+    <!-- Removed: com.anddoes.launcher.permission.UPDATE_COUNT (STRICT MODE) -->
+    <!-- Removed: com.majeur.launcher.permission.UPDATE_BADGE (STRICT MODE) -->
+    <!-- Removed: com.huawei.android.launcher.permission.CHANGE_BADGE (STRICT MODE) -->
+    <!-- Removed: com.huawei.android.launcher.permission.READ_SETTINGS (DANGEROUS ONLY) -->
+    <!-- Removed: com.huawei.android.launcher.permission.WRITE_SETTINGS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.READ_APP_BADGE (STRICT MODE) -->
+    <!-- Removed: com.oppo.launcher.permission.READ_SETTINGS (DANGEROUS ONLY) -->
+    <!-- Removed: com.oppo.launcher.permission.WRITE_SETTINGS (DANGEROUS ONLY) -->
+    <!-- Removed: me.everything.badger.permission.BADGE_COUNT_READ (STRICT MODE) -->
+    <!-- Removed: me.everything.badger.permission.BADGE_COUNT_WRITE (STRICT MODE) -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <queries>
         <intent>
             <action android:name="android.intent.action.SEND"/>
             <data android:mimeType="*/*"/>
@@ -14,19 +33,67 @@
         </intent>
         <package android:name="com.google.android.apps.maps"/>
     </queries>
+    <!-- Removed: android.permission.SYSTEM_ALERT_WINDOW (DANGEROUS ONLY) -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Removed: android.permission.ACCESS_FINE_LOCATION (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.BLUETOOTH (STRICT MODE) -->
+    <!-- Removed: android.permission.BLUETOOTH_ADMIN (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.BLUETOOTH_CONNECT (STRICT MODE) -->
+    <!-- Removed: android.permission.CHANGE_WIFI_STATE (DANGEROUS ONLY) -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- Removed: android.permission.READ_CONTACTS (STRICT MODE) -->
+    <!-- Removed: android.permission.WRITE_CONTACTS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.CAMERA (STRICT MODE) -->
+    <!-- Removed: android.permission.READ_EXTERNAL_STORAGE (STRICT MODE) -->
+    <!-- Removed: android.permission.WRITE_EXTERNAL_STORAGE (STRICT MODE) -->
+    <!-- Removed: android.permission.READ_MEDIA_IMAGES (STRICT MODE) -->
+    <!-- Removed: android.permission.READ_MEDIA_VIDEO (STRICT MODE) -->
+    <!-- Removed: android.permission.RECORD_AUDIO (STRICT MODE) -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <!-- Removed: android.permission.DISABLE_KEYGUARD (STRICT MODE) -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- Removed: android.permission.ACCESS_COARSE_LOCATION (DANGEROUS ONLY) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <!-- Removed: android.permission.USE_BIOMETRIC (STRICT MODE) -->
+    <!-- Removed: android.permission.USE_FULL_SCREEN_INTENT (STRICT MODE) -->
+    <!-- Removed: android.permission.READ_PHONE_NUMBERS (DANGEROUS ONLY) -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true"/>
+    <permission android:name="ru.oneme.app.permission.settings.READ" android:protectionLevel="signature"/>
+    <!-- Removed: android.permission.READ_MEDIA_VISUAL_USER_SELECTED (STRICT MODE) -->
+    <!-- Removed: android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION (STRICT MODE) -->
+    <!-- Removed: android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK (STRICT MODE) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <!-- Removed: android.permission.GET_ACCOUNTS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.AUTHENTICATE_ACCOUNTS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.MANAGE_ACCOUNTS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.USE_CREDENTIALS (DANGEROUS ONLY) -->
+    <!-- Removed: android.permission.DOWNLOAD_WITHOUT_NOTIFICATION (DANGEROUS ONLY) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <!-- Removed: android.permission.USE_FINGERPRINT (STRICT MODE) -->
+    <!-- Removed: com.google.android.gms.permission.AD_ID (DANGEROUS ONLY) -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <!-- Removed: android.permission.CHANGE_NETWORK_STATE (DANGEROUS ONLY) -->
     <permission android:name="ru.oneme.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="ru.oneme.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <!-- Removed: com.htc.launcher.permission.READ_SETTINGS (DANGEROUS ONLY) -->
+    <!-- Removed: com.htc.launcher.permission.UPDATE_SHORTCUT (STRICT MODE) -->
+    <!-- Removed: com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE (DANGEROUS ONLY) -->
     <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:theme="@style/OneMe.Launch">
         <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <activity android:configChanges="locale|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light">

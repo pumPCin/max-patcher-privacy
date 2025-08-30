@@ -11,13 +11,13 @@ on:
       permsRemoval:
         description: 'Permission removal level. More removal may break features.'
         required: true
-        default: 'dangerous'
+        default: 'strict'
         type: choice
         options:
           - 'none'
           - 'dangerous'
           - 'strict'
-        # - 'paranoid'
+          - 'paranoid'
 
 jobs:
   build:
