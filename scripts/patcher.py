@@ -20,6 +20,11 @@ EXPERIMENTAL_SNIPPETS = [
     "NL_log_cancellation_exception.smail-snippet",
     # NU = Native utility
     "NU_device_fingerprinting.smali-snippet",
+    # "NU_payload_parser.smali-snippet"
+]
+
+# Exclusion DB
+EXCLUDED_SNIPPETS = [
     "NU_payload_parser.smali-snippet"
 ]
 
@@ -36,12 +41,12 @@ def apply_patches(experimental=True):
     print(f"[I] Patch snippets: {len(original_snippet_paths)} original, {len(patched_snippet_paths)} patched.")
 
     patched_by_name = {os.path.basename(p): p for p in patched_snippet_paths}
-    original_names = [os.path.basename(p) for p in original_snippet_paths]
+    original_names = {os.path.basename(p) for p in original_snippet_paths}
     patched_names = set(patched_by_name.keys())
 
     patch_pairs = []
     missing_patched = []
-    orphan_patched = sorted(patched_names - set(original_names))
+    orphan_patched = sorted(patched_names - original_names)
     empty_originals = []
     empty_patched = []
     read_errors_original = []
@@ -83,32 +88,29 @@ def apply_patches(experimental=True):
             'replacement': patched_block
         })
 
+
+    if EXCLUDED_SNIPPETS:
+        excluded_set = set(EXCLUDED_SNIPPETS)
+        actually_excluded = [p['name'] for p in patch_pairs if p['name'] in excluded_set]
+        if actually_excluded:
+            print(f"[I] Excluding {len(actually_excluded)} WIP patches: {', '.join(sorted(actually_excluded))}")
+            patch_pairs = [p for p in patch_pairs if p['name'] not in excluded_set]
+
     if EXPERIMENTAL_SNIPPETS:
-        filtered = []
-        skipped_experimental = []
-        included_experimental = []
-        for pair in patch_pairs:
-            is_experimental = pair['name'] in EXPERIMENTAL_SNIPPETS
-            if is_experimental and not experimental:
-                skipped_experimental.append(pair['name'])
-                continue
-            if is_experimental and experimental:
-                included_experimental.append(pair['name'])
-            filtered.append(pair)
-        patch_pairs = filtered
+        experimental_set = set(EXPERIMENTAL_SNIPPETS)
 
-        if experimental:
-            if included_experimental:
-                print(f"[I] Including experimental patches ({len(set(included_experimental))}): {', '.join(sorted(set(included_experimental)))}")
-            else:
-                print("[I] No experimental patch pair names matched the DB")
-        else:
+        if not experimental:
+            skipped_experimental = [p['name'] for p in patch_pairs if p['name'] in experimental_set]
             if skipped_experimental:
-                print(f"[I] Skipping experimental patches ({len(set(skipped_experimental))}): {', '.join(sorted(set(skipped_experimental)))}")
-            else:
-                print("[I] No experimental patch pair names to skip")
+                print(f"[I] Skipping {len(skipped_experimental)} experimental patches: {', '.join(sorted(skipped_experimental))}")
+                patch_pairs = [p for p in patch_pairs if p['name'] not in experimental_set]
+        else:
+            included_experimental = [p['name'] for p in patch_pairs if p['name'] in experimental_set]
+            if included_experimental:
+                print(f"[I] Including {len(included_experimental)} experimental patches: {', '.join(sorted(included_experimental))}")
 
-    print(f"[I] Matched patch pairs ready: {len(patch_pairs)}")
+
+    print(f"[I] Matched patch pairs ready to apply: {len(patch_pairs)}")
 
     if missing_patched:
         print(f"[E] Missing matching patched snippets ({len(missing_patched)}): {', '.join(sorted(missing_patched))}")
@@ -173,9 +175,8 @@ def apply_patches(experimental=True):
     print(f"        Smali files scanned: {len(all_smali_files)}")
     print(f"        Smali read failures: {smali_read_failures}")
     print(f"        Files modified: {files_modified}")
-    print(f"        Original snippets found: {len(original_snippet_paths)}")
-    print(f"        Patched snippets found: {len(patched_snippet_paths)}")
-    print(f"        Usable patch pairs: {len(patch_pairs)}")
+    print(f"        Total patch pairs found: {len(original_names)}")
+    print(f"        Usable patch pairs after filtering: {len(patch_pairs)}")
     print(f"        Unique snippets applied: {len(used_snippets)} / {len(patch_pairs)}")
     print(f"        Total patch applications (snippet x file): {total_patches_applied}")
 
