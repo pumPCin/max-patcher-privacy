@@ -1,0 +1,12 @@
+.method public static y(Landroid/content/Context;)Lgk4;
+    .locals 1
+    .param p0, "context"    # Landroid/content/Context;
+
+    .prologue
+    .line 1
+    # Always return the default, likely "LOW" or "UNKNOWN", performance class.
+    # This prevents the app from fingerprinting the device's hardware capabilities.
+    sget-object v0, Lgk4;->c:Lgk4;
+
+    return-object v0
+.end method

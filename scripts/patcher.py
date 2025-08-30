@@ -9,13 +9,18 @@ PATCHES_DIR = "patches"
 
 # Experimental DB
 EXPERIMENTAL_SNIPPETS = [
-    "hm9_G_log_info_throwable.smali-snippet",
-    "hm9_H_log_info_format.smali-snippet",
-    "hm9_l_log_error_throwable.smali-snippet",
-    "hm9_m_log_debug_format.smali-snippet",
-    "hm9_N_log_dispatcher.smali-snippet",
-    "hm9_p_log_warn_throwable.smali-snippet",
-    "hm9_q_log_warn_format.smali-snippet"
+    # NL = native logger
+    "NL_log_info_throwable.smali-snippet",
+    "NL_log_info_format.smali-snippet",
+    "NL_log_error_throwable.smali-snippet",
+    "NL_log_debug_format.smali-snippet",
+    "NL_log_dispatcher.smali-snippet",
+    "NL_log_warn_throwable.smali-snippet",
+    "NL_log_warn_format.smali-snippet",
+    "NL_log_cancellation_exception.smail-snippet",
+    # NU = Native utility
+    "NU_device_fingerprinting.smali-snippet",
+    "NU_payload_parser.smali-snippet"
 ]
 
 

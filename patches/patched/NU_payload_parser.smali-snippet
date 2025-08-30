@@ -1,0 +1,13 @@
+.method public static v(Lmy8;)Lqb2;
+    .locals 1
+    .param p0, "data"    # Lmy8;
+
+    .prologue
+    .line 1
+    # This method is a massive data parser.
+    # By returning null, we prevent any data from being processed and structured.
+    # The original code returns null on failure, so this is a safe execution path.
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
