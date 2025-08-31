@@ -28,6 +28,23 @@ EXCLUDED_SNIPPETS = [
     "NU_payload_parser.smali-snippet"
 ]
 
+def parse_snippet_content(content):
+    target_filename = None
+    signature_lines = []
+
+
+    
+
+    for line in content.splitlines():
+        # regex to find @FileName("...")
+        match = re.compile(r'^@FileName\("([^"]+)"\)').match(line)
+        if match:
+            target_filename = match.group(1)
+        else:
+            signature_lines.append(line)
+
+    signature = "\n".join(signature_lines).strip()
+    return target_filename, signature
 
 def apply_patches(experimental=True):
     print("[I] Smali patching process...")
@@ -56,11 +73,13 @@ def apply_patches(experimental=True):
         name = os.path.basename(orig_path)
         try:
             with open(orig_path, 'r', encoding='utf-8') as f:
-                original_signature = f.read().strip()
+                original_content = f.read()
         except Exception as e:
             print(f"[W] Could not read original snippet {name}: {e}")
             read_errors_original.append(name)
             continue
+
+        target_filename, original_signature = parse_snippet_content(original_content)
 
         if not original_signature:
             empty_originals.append(name)
@@ -85,7 +104,8 @@ def apply_patches(experimental=True):
         patch_pairs.append({
             'name': name,
             'signature': original_signature,
-            'replacement': patched_block
+            'replacement': patched_block,
+            'target_file': target_filename
         })
 
 
@@ -143,6 +163,9 @@ def apply_patches(experimental=True):
         original_content = target_content
 
         for pair in patch_pairs:
+            if pair['target_file'] and pair['target_file'] != os.path.basename(smali_fPath).replace('.smali', ''):
+                continue
+
             name = pair['name']
             signature = pair['signature']
             replacement = pair['replacement']
