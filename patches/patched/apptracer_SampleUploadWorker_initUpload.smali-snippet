@@ -1,0 +1,9 @@
+.method public final b(Ljava/lang/String;Ljava/lang/Long;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
