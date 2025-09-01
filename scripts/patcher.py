@@ -9,6 +9,8 @@ PATCHES_DIR = "patches"
 
 # Experimental DB
 EXPERIMENTAL_SNIPPETS = [
+    "emulator_isEmulator.smali-snippet",
+    
     # NL = native logger
     "NL_log_info_throwable.smali-snippet",
     "NL_log_info_format.smali-snippet",
