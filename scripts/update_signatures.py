@@ -4,8 +4,8 @@
 import os
 import re
 
-PATCHES_DIR = "patches"
-
+script_dir = os.path.dirname(__file__)
+PATCHES_DIR = os.path.join(script_dir, "..", "patches")
 
 SNIPPET_FILES_TO_UPDATE = [
 
