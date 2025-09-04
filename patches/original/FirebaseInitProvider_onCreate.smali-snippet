@@ -1,0 +1,2 @@
+@FileName("FirebaseInitProvider")
+.method public final onCreate()Z

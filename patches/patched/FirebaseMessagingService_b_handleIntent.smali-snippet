@@ -1,0 +1,7 @@
+.method public final b(Landroid/content/Intent;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    return-void
+.end method
