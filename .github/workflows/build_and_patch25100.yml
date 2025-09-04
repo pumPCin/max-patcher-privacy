@@ -1,0 +1,124 @@
+name: Build Patched APK 25.10.0
+
+on:
+  workflow_dispatch:
+    inputs:
+      experimental:
+        description: 'Enable experimental Smali patches (e.g., logging). Disable if app crashes.'
+        required: false
+        type: boolean
+        default: true
+      permsRemoval:
+        description: 'Permission removal level. More removal may break features.'
+        required: true
+        default: 'strict'
+        type: choice
+        options:
+          - 'none'
+          - 'dangerous'
+          - 'strict'
+         # - 'paranoid'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Download Apktool
+      run: |
+        wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
+        sudo mv apktool.jar /usr/local/bin/apktool.jar
+        echo '#!/bin/bash' | sudo tee /usr/local/bin/apktool
+        echo 'java -jar /usr/local/bin/apktool.jar "$@"' | sudo tee -a /usr/local/bin/apktool
+        sudo chmod +x /usr/local/bin/apktool
+
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        packages: 'platform-tools build-tools;34.0.0'
+
+    - name: Add Android Build Tools to PATH
+      run: echo "${ANDROID_HOME}/build-tools/34.0.0" >> $GITHUB_PATH
+      shell: bash
+
+    - name: Decompile APK
+      run: apktool d source_apk/ru.oneme.app.apk -f -o apk_workdir
+
+
+    - name: Remove original AndroidManifest.xml copy in workdir (if exists)
+      run: |
+        if [ -f "apk_workdir/original/AndroidManifest.xml" ]; then
+          echo "Removing apk_workdir/original/AndroidManifest.xml to prevent conflicts"
+          rm "apk_workdir/original/AndroidManifest.xml"
+        fi
+      shell: bash
+
+    - name: Patch AndroidManifest.xml based on user selection
+      if: ${{ inputs.permsRemoval != 'none' }}
+      run: |
+        echo "Permission removal level selected: ${{ inputs.permsRemoval }}"
+        SOURCE_MANIFEST="manifests/AndroidManifest_${{ inputs.permsRemoval }}.xml"
+        DEST_MANIFEST="apk_workdir/AndroidManifest.xml"
+        echo "Copying ${SOURCE_MANIFEST} to ${DEST_MANIFEST}"
+        cp "${SOURCE_MANIFEST}" "${DEST_MANIFEST}"
+      shell: bash
+
+    - name: Run Python Patcher for Smali
+      run: python scripts/patcher.py --experimental "${{ inputs.experimental }}"
+      env:
+        EXPERIMENTAL: ${{ inputs.experimental }}
+
+    - name: Remove original signature
+      run: |
+        rm -rf apk_workdir/original/META-INF
+        rm -f apk_workdir/original/stamp-cert-sha256
+      shell: bash
+
+    - name: Rebuild APK
+      run: apktool b apk_workdir -c -o rebuilt_unsigned.apk
+      shell: bash
+
+    - name: Zipalign the APK
+      run: zipalign -v 4 rebuilt_unsigned.apk rebuilt_aligned.apk
+      shell: bash
+
+    - name: Generate a temporary signing key
+      run: |
+        keytool -genkey -v \
+          -keystore temp-release-key.keystore \
+          -alias temp_alias \
+          -keyalg RSA \
+          -keysize 2048 \
+          -validity 10000 \
+          -storepass temppassword \
+          -keypass temppassword \
+          -dname "CN=Anonymous, OU=Anonymous, O=Anonymous, L=Unknown, ST=Unknown, C=XX"
+      shell: bash
+
+    - name: Sign the APK with the temporary key
+      run: |
+        apksigner sign --ks temp-release-key.keystore \
+        --ks-key-alias temp_alias \
+        --ks-pass pass:temppassword \
+        --key-pass pass:temppassword \
+        rebuilt_aligned.apk
+      shell: bash
+
+    - name: Rename Final APK
+      run: mv rebuilt_aligned.apk patched-app-release.apk
+      shell: bash
+
+    - name: Upload Patched APK as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: patched-apk-${{ inputs.permsRemoval }}
+        path: patched-app-release.apk
