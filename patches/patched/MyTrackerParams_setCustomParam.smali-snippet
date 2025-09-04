@@ -1,0 +1,9 @@
+.method public setCustomParam(Ljava/lang/String;Ljava/lang/String;)Lcom/my/tracker/MyTrackerParams;
+    .registers 3
+    .param p1, "s"    # Ljava/lang/String;
+    .param p2, "s1"    # Ljava/lang/String;
+
+    .prologue
+    .line 1
+    return-object p0
+.end method

@@ -1,4 +1,4 @@
-name: Build Patched APK
+name: Build Patched APK 25.10.0
 
 on:
   workflow_dispatch:
