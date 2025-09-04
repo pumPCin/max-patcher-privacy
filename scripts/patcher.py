@@ -21,12 +21,13 @@ EXPERIMENTAL_SNIPPETS = [
     "NL_log_warn_format.smali-snippet",
     "NL_log_cancellation_exception.smail-snippet",
     # NU = Native utility
-    "NU_device_fingerprinting.smali-snippet",
+    # "NU_device_fingerprinting.smali-snippet",
     # "NU_payload_parser.smali-snippet"
 ]
 
 # Exclusion DB
 EXCLUDED_SNIPPETS = [
+    "NU_device_fingerprinting.smali-snippet",
     "NU_payload_parser.smali-snippet"
 ]
 
