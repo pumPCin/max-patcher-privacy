@@ -17,7 +17,7 @@ on:
           - 'none'
           - 'dangerous'
           - 'strict'
-          - 'paranoid'
+         # - 'paranoid'
 
 jobs:
   build:

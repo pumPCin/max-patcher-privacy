@@ -4,11 +4,14 @@
 import os
 import re
 
+
 script_dir = os.path.dirname(__file__)
 PATCHES_DIR = os.path.join(script_dir, "..", "patches")
 
 SNIPPET_FILES_TO_UPDATE = [
+]
 
+NEW_TARGET_FILENAMES = [
 ]
 
 NEW_METHOD_SIGNATURES = [
@@ -20,35 +23,31 @@ def update_snippets():
         print("[E] The snippet/signature lists in the script are empty. Please fill them out.")
         return
 
-    if len(SNIPPET_FILES_TO_UPDATE) != len(NEW_METHOD_SIGNATURES):
-        print("[E] Error: The number of snippet files does not match the number of new signatures.")
-        print(f"    Files: {len(SNIPPET_FILES_TO_UPDATE)}, Signatures: {len(NEW_METHOD_SIGNATURES)}")
+    if not (len(SNIPPET_FILES_TO_UPDATE) == len(NEW_METHOD_SIGNATURES) == len(NEW_TARGET_FILENAMES)):
+        print("[E] Error: The number of items in the three lists do not match.")
+        print(f"    Files: {len(SNIPPET_FILES_TO_UPDATE)}, Filenames: {len(NEW_TARGET_FILENAMES)}, Signatures: {len(NEW_METHOD_SIGNATURES)}")
         return
 
     print(f"[I] Starting update for {len(SNIPPET_FILES_TO_UPDATE)} snippet files...")
 
-    for snippet_name, new_signature in zip(SNIPPET_FILES_TO_UPDATE, NEW_METHOD_SIGNATURES):
+    for snippet_name, new_filename, new_signature in zip(SNIPPET_FILES_TO_UPDATE, NEW_TARGET_FILENAMES, NEW_METHOD_SIGNATURES):
         print(f"  -> Processing: {snippet_name}")
 
         original_path = os.path.join(PATCHES_DIR, "original", snippet_name)
         patched_path = os.path.join(PATCHES_DIR, "patched", snippet_name)
 
         try:
-            with open(original_path, 'r', encoding='utf-8') as f:
-                original_content = f.read()
-
-            annotation_line = ""
-            if original_content.strip().startswith('@FileName'):
-                annotation_line = original_content.splitlines()[0] + "\n"
-
-            new_original_content = f"{annotation_line}{new_signature}"
+            new_original_content = ""
+            if new_filename:
+                new_original_content = f'@FileName("{new_filename}")\n'
+            new_original_content += new_signature
 
             with open(original_path, 'w', encoding='utf-8') as f:
                 f.write(new_original_content)
-            print(f"     - Updated original signature in: {original_path}")
+            print(f"     - Updated original snippet: {original_path}")
 
         except FileNotFoundError:
-            print(f"     [W] Original snippet not found: {original_path}")
+            print(f"     [W] Original snippet not found, skipping: {original_path}")
             continue
 
         try:
@@ -65,10 +64,10 @@ def update_snippets():
 
             with open(patched_path, 'w', encoding='utf-8') as f:
                 f.write(new_patched_content)
-            print(f"     - Updated patched signature in:  {patched_path}")
+            print(f"     - Updated patched snippet:  {patched_path}")
 
         except FileNotFoundError:
-            print(f"     [W] Patched snippet not found: {patched_path}")
+            print(f"     [W] Patched snippet not found, skipping: {patched_path}")
 
     print("\n[I] Snippet update process complete.")
 
