@@ -1,4 +1,4 @@
-.method public static final G(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+.method public static final varargs p(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 0
     .param p0, "tag"    # Ljava/lang/String;
     .param p1, "msg"    # Ljava/lang/String;
