@@ -1,0 +1,11 @@
+.method public final c(Ljava/net/URL;Ljava/lang/String;)Ljava/net/HttpURLConnection;
+    .registers 3
+    .param p1, "url"    # Ljava/net/URL;
+    .param p2, "apiKey"    # Ljava/lang/String;
+
+    .prologue
+    .line 1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
