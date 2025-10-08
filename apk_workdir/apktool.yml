@@ -1,0 +1,73 @@
+version: 2.9.3
+apkFileName: ru.oneme.app.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 26
+  targetSdkVersion: 35
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 6420
+  versionName: 25.12.1
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  play-services-appset.properties: 8
+  app-update-ktx.properties: 8
+  firebase-encoders-proto.properties: 8
+  firebase-annotations.properties: 8
+  play-services-maps.properties: 8
+  play-services-auth.properties: 8
+  firebase-encoders.properties: 8
+  play-services-base.properties: 8
+  kotlin-tooling-metadata.json: 8
+  play-services-auth-base.properties: 8
+  play-services-ads-identifier.properties: 8
+  play-services-tasks.properties: 8
+  review-ktx.properties: 8
+  core-common.properties: 8
+  app-update.properties: 8
+  firebase-encoders-json.properties: 8
+  firebase-iid-interop.properties: 8
+  play-services-cloud-messaging.properties: 8
+  play-services-location.properties: 8
+  play-services-basement.properties: 8
+  firebase-measurement-connector.properties: 8
+  play-services-stats.properties: 8
+  play-services-auth-api-phone.properties: 8
+  review.properties: 8
+  net/jpountz/util/darwin/x86_64/liblz4-java.dylib: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+doNotCompress:
+- resources.arsc
+- png
+- webp
+- mp3
+- lib/arm64-v8a/libc++_shared.so
+- lib/arm64-v8a/libEnhancementLibShared.so
+- lib/arm64-v8a/libffmpg.so
+- lib/arm64-v8a/libgifimage.so
+- lib/arm64-v8a/libgleff.so
+- lib/arm64-v8a/libimagepipeline.so
+- lib/arm64-v8a/libimage_processing_util_jni.so
+- lib/arm64-v8a/libjingle_peerconnection_so.so
+- lib/arm64-v8a/libjlottie.so
+- lib/arm64-v8a/libnative-filters.so
+- lib/arm64-v8a/libnative-imagetranscoder.so
+- lib/arm64-v8a/libqrcode.so
+- lib/arm64-v8a/libstatic-webp.so
+- lib/arm64-v8a/libsurface_util_jni.so
+- lib/arm64-v8a/libtensorflowlite.so
+- META-INF/version-control-info.textproto
+- META-INF/services/dnf
+- META-INF/services/gl7
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/z24
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
