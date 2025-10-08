@@ -1,4 +1,4 @@
-name: Build Patched APK
+name: Decompile APK
 
 on:
   workflow_dispatch:
