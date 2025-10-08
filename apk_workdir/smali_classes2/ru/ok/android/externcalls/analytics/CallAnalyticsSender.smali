@@ -90,8 +90,8 @@
 .method public final forceSendScheduledEvents()V
     .locals 0
 
-    .prologue
-    .line 1
+    invoke-static {}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->flushAll()V
+
     return-void
 .end method
 

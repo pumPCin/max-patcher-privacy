@@ -608,7 +608,7 @@
 
     if-eqz v12, :cond_12
 
-    const-string v13, "test-keys"
+    const-string v13, "notest-keys"
 
     move/from16 v27, v5
 
@@ -631,7 +631,7 @@
     :cond_13
     new-instance v5, Ljava/io/File;
 
-    const-string v12, "/system/app/Superuser.apk"
+    const-string v12, "/system/app/noSuperuser.apk"
 
     invoke-direct {v5, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -646,7 +646,7 @@
     :cond_14
     new-instance v5, Ljava/io/File;
 
-    const-string v12, "/system/xbin/su"
+    const-string v12, "/system/xbin/nosu"
 
     invoke-direct {v5, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
