@@ -137,8 +137,6 @@ def apply_patches():
 
     if total_patches_applied == 0:
         print("[W] No patches were applied. The app might have updated significantly!!!")
-        sys.exit(1)
-    return None
 
 
 if __name__ == "__main__":
