@@ -18,32 +18,9 @@ resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
-  app-update-ktx.properties: 8
-  app-update.properties: 8
-  core-common.properties: 8
-  firebase-annotations.properties: 8
-  firebase-encoders-json.properties: 8
-  firebase-encoders-proto.properties: 8
-  firebase-encoders.properties: 8
-  firebase-iid-interop.properties: 8
-  firebase-measurement-connector.properties: 8
   kotlin-tooling-metadata.json: 8
   net/jpountz/util/darwin/x86_64/liblz4-java.dylib: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
-  play-services-ads-identifier.properties: 8
-  play-services-appset.properties: 8
-  play-services-auth-api-phone.properties: 8
-  play-services-auth-base.properties: 8
-  play-services-auth.properties: 8
-  play-services-base.properties: 8
-  play-services-basement.properties: 8
-  play-services-cloud-messaging.properties: 8
-  play-services-location.properties: 8
-  play-services-maps.properties: 8
-  play-services-stats.properties: 8
-  play-services-tasks.properties: 8
-  review-ktx.properties: 8
-  review.properties: 8
 doNotCompress:
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
