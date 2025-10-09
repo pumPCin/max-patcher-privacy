@@ -253,11 +253,11 @@
     return-object v0
 
     :pswitch_1c
-    new-instance v0, Lone/me/devmenu/DevMenuScreen;
+    new-instance p0, Lone/me/devmenu/DevMenuScreen;
 
-    invoke-direct {v0}, Lone/me/devmenu/DevMenuScreen;-><init>()V
+    invoke-direct {p0}, Lone/me/devmenu/DevMenuScreen;-><init>()V
 
-    return-object v0
+    return-object p0
 
     :pswitch_data_0
     .packed-switch 0x0
