@@ -2110,7 +2110,7 @@
     <string name="to_save">Сохранить</string>
     <string name="tracer_app_token">t6QnlHov0Gq1UBGYG9GPqZu0EiVMZ922FKvwyAEASa90</string>
     <string name="tracer_environment">playGoogleRelease</string>
-    <string name="tracer_mapping_uuid">9d63efe0-a357-11f0-aa70-3f92c76adbc7</string>
+    <string name="tracer_mapping_uuid">249cadd0-a3a3-11f0-a781-3f92c76adbc7</string>
     <string name="trim_video__reset">Сбросить</string>
     <string name="trim_video__trim">Обрезать</string>
     <string name="tt_active_live_location_in_chat">Вы транслируете местоположение в чат \"%s\"</string>
