@@ -18,7 +18,6 @@ resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
-  kotlin-tooling-metadata.json: 8
   net/jpountz/util/darwin/x86_64/liblz4-java.dylib: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
 doNotCompress:
