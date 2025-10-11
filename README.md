@@ -1,9 +1,10 @@
 ![img](https://github.com/user-attachments/assets/511c50a3-1872-472b-afbf-a79dcd055630)
 
-# max-patcher-privacy - Патч для приватности
-Этот проект содержит автоматизированный патч для удаления шпионского SDK `my.tracker` (и другие логгеры) из приложения max.
 
-Готовый апк файл в https://github.com/TheSillyStever/max-patcher-privacy/actions
+# MAX mod
+Этот проект содержит автоматизированный патч для удаления шпионского SDK `my.tracker` (и другие логгеры) из приложения MAX.
+
+Готовый апк файл в https://github.com/pumPCin/MAX_mod/actions
 (наверное не тестированный)
 
 Если есть проблемы или предложения? [создайте пост](https://github.com/TheSillyStever/max-patcher-privacy/issues)!.
