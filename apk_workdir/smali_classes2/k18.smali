@@ -2,150 +2,187 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljc4;
 
-# instance fields
-.field public final a:Lbp7;
 
-.field public final b:Lbp7;
+# static fields
+.field public static final a:Lk18;
 
-.field public final c:Lbp7;
+.field public static final b:Ll18;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lk18;
 
-    iput-object p1, p0, Lk18;->a:Lbp7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lk18;->b:Lbp7;
+    sput-object v0, Lk18;->a:Lk18;
 
-    iput-object p3, p0, Lk18;->c:Lbp7;
+    sget-object v0, Ll18;->b:Ll18;
+
+    sput-object v0, Lk18;->b:Ll18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lx18;Lb18;)Ll18;
-    .locals 5
+.method public final a()Lrc4;
+    .locals 1
 
-    instance-of v0, p2, Lpz;
+    sget-object v0, Lk18;->b:Ll18;
 
-    iget-object v1, p0, Lk18;->b:Lbp7;
+    return-object v0
+.end method
 
-    iget-object v2, p0, Lk18;->a:Lbp7;
+.method public final b(Ljava/lang/String;Lmc4;Landroid/os/Bundle;)Luc4;
+    .locals 12
+
+    sget-object v0, Lk18;->b:Ll18;
+
+    iget-object v0, v0, Lrc4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    sget-object v0, Ll18;->b:Ll18;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Ll18;->c:Lmc4;
+
+    invoke-virtual {p2, v0}, Lmc4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const-string v2, "chat_id"
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v2, p3}, Lte0;->w(Ljava/lang/String;Landroid/os/Bundle;)J
+
+    move-result-wide v0
+
+    const-string v2, "request_code"
+
+    invoke-static {v2, p3}, Lte0;->v(Ljava/lang/String;Landroid/os/Bundle;)I
+
+    move-result v2
+
+    new-instance v3, Lyo7;
+
+    invoke-direct {v3, v0, v1, v2}, Lyo7;-><init>(JI)V
+
+    :goto_0
+    move-object v10, v3
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v0, Ll18;->d:Lmc4;
+
+    invoke-virtual {p2, v0}, Lmc4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-static {v2, p3}, Lte0;->p(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v4
+
+    const-string v0, "sender_id"
+
+    invoke-static {v0, p3}, Lte0;->p(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v5
+
+    const-string v0, "msg_id"
+
+    invoke-static {v0, p3}, Lte0;->p(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v6
+
+    const-string v0, "lat"
+
+    invoke-static {v0, p3}, Lte0;->u(Ljava/lang/String;Landroid/os/Bundle;)D
+
+    move-result-wide v7
+
+    const-string v0, "lon"
+
+    invoke-static {v0, p3}, Lte0;->u(Ljava/lang/String;Landroid/os/Bundle;)D
+
+    move-result-wide v9
+
+    const-string v0, "z"
+
+    invoke-virtual {p3, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lsz;
+    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v2
-
-    check-cast v2, Lwpd;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
-    check-cast v1, Lm9f;
+    :cond_2
+    move-object v11, v1
 
-    check-cast p2, Lpz;
+    new-instance v3, Lj18;
 
-    iget-object v3, p0, Lk18;->c:Lbp7;
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lpy;
-
-    invoke-direct {v0, p1, v2, v1, p2}, Ll18;-><init>(Lx18;Lwpd;Lm9f;Lb18;)V
-
-    iget-object v1, p2, Lpz;->y0:Lo10;
-
-    iget-object v1, v1, Lo10;->s:Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    invoke-direct/range {v3 .. v11}, Lj18;-><init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;DDLjava/lang/Float;)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance v1, Ljava/io/File;
+    :goto_1
+    new-instance v4, Luc4;
 
-    iget-object v3, p2, Lpz;->y0:Lo10;
+    const/4 v9, 0x0
 
-    iget-object v3, v3, Lo10;->s:Ljava/lang/String;
+    const/16 v11, 0x10
 
-    invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    const/4 v8, 0x1
 
-    invoke-virtual {v2, p2, v1}, Lwpd;->o(Lb18;Ljava/io/File;)V
+    move-object v5, p1
 
-    invoke-interface {p1, v4}, Lx18;->z(Z)V
+    move-object v6, p2
 
-    return-object v0
+    move-object v7, p3
 
-    :cond_1
-    :goto_0
-    const-string v1, "sz"
+    invoke-direct/range {v4 .. v11}, Luc4;-><init>(Ljava/lang/String;Lmc4;Landroid/os/Bundle;ILsc4;Ltc4;I)V
 
-    const-string v2, "Start download attach"
+    return-object v4
 
-    invoke-static {v1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_3
+    move-object v6, p2
 
-    const/4 v1, 0x1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-interface {p1, v1}, Lx18;->z(Z)V
+    const-string p2, "invalid route "
 
-    iget-object p1, p2, Lpz;->y0:Lo10;
+    invoke-static {p2, v6}, Lsw1;->g(Ljava/lang/String;Lmc4;)Ljava/lang/String;
 
-    invoke-virtual {v3, p1}, Lpy;->a(Lo10;)Lyqd;
+    move-result-object p2
 
-    move-result-object p1
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lrz;
-
-    invoke-direct {v1, v0, v4, p2}, Lrz;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p2, Lh8d;
-
-    const/4 v2, 0x5
-
-    invoke-direct {p2, v2, v0}, Lh8d;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1, p2}, Lyqd;->z(Lwo3;Lwo3;)V
-
-    iput-object p1, v0, Lsz;->Y:Lyqd;
-
-    return-object v0
-
-    :cond_2
-    new-instance v0, Ll18;
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lwpd;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lm9f;
-
-    invoke-direct {v0, p1, v2, v1, p2}, Ll18;-><init>(Lx18;Lwpd;Lm9f;Lb18;)V
-
-    return-object v0
+    throw p1
 .end method

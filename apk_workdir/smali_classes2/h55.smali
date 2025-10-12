@@ -1,364 +1,254 @@
 .class public final Lh55;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lww7;
+.implements Lje6;
 
 
 # instance fields
-.field public final X:Landroid/graphics/drawable/Drawable;
+.field public X:Landroid/graphics/Bitmap;
 
-.field public final Y:J
+.field public Y:I
 
-.field public final Z:I
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final a:I
+.field public final synthetic r0:I
 
-.field public final b:I
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final o:Ljava/util/List;
-
-.field public final w0:J
+.field public final synthetic s0:Li55;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JI)V
-    .locals 8
-
-    and-int/lit8 v0, p8, 0x8
-
-    if-eqz v0, :cond_0
-
-    .line 10
-    sget-object p4, Lb75;->a:Lb75;
-
-    :cond_0
-    move-object v4, p4
-
-    and-int/lit8 p4, p8, 0x20
-
-    if-eqz p4, :cond_1
-
-    const-wide/16 v0, 0x0
-
-    move-wide v6, v0
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    move-object v0, p0
-
-    move v1, p1
-
-    goto :goto_0
-
-    :cond_1
-    move-wide v6, p6
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    .line 11
-    :goto_0
-    invoke-direct/range {v0 .. v7}, Lh55;-><init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;J)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IILjava/lang/CharSequence;Ljava/util/List;Landroid/graphics/drawable/Drawable;J)V
+.method public constructor <init>(ILi55;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lh55;->r0:I
 
-    .line 2
-    iput p1, p0, Lh55;->a:I
+    iput-object p2, p0, Lh55;->s0:Li55;
 
-    .line 3
-    iput p2, p0, Lh55;->b:I
+    const/4 p1, 0x2
 
-    .line 4
-    iput-object p3, p0, Lh55;->c:Ljava/lang/CharSequence;
-
-    .line 5
-    iput-object p4, p0, Lh55;->o:Ljava/util/List;
-
-    .line 6
-    iput-object p5, p0, Lh55;->X:Landroid/graphics/drawable/Drawable;
-
-    .line 7
-    iput-wide p6, p0, Lh55;->Y:J
-
-    .line 8
-    sget p3, Lbta;->a:I
-
-    iput p3, p0, Lh55;->Z:I
-
-    const-wide/16 p3, 0x0
-
-    cmp-long p3, p6, p3
-
-    if-eqz p3, :cond_0
-
-    const-wide p2, 0x7fffffffffffffffL
-
-    .line 9
-    invoke-static {p6, p7}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide p4
-
-    sub-long/2addr p2, p4
-
-    int-to-long p4, p1
-
-    sub-long/2addr p2, p4
-
-    goto :goto_0
-
-    :cond_0
-    int-to-long p2, p2
-
-    :goto_0
-    iput-wide p2, p0, Lh55;->w0:J
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ln24;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lh55;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lh55;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lh55;
 
-    iget v1, p0, Lh55;->a:I
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget v3, p1, Lh55;->a:I
+    invoke-virtual {p1, p2}, Lh55;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
+    move-result-object p1
 
-    return v2
-
-    :cond_2
-    iget v1, p0, Lh55;->b:I
-
-    iget v3, p1, Lh55;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lh55;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lh55;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lh55;->o:Ljava/util/List;
-
-    iget-object v3, p1, Lh55;->o:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lh55;->X:Landroid/graphics/drawable/Drawable;
-
-    iget-object v3, p1, Lh55;->X:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Lh55;->Y:J
-
-    iget-wide v5, p1, Lh55;->Y:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    return-object p1
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lh55;->w0:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    iget v0, p0, Lh55;->a:I
+    new-instance v0, Lh55;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget v1, p0, Lh55;->r0:I
 
-    move-result v0
+    iget-object v2, p0, Lh55;->s0:Li55;
 
-    const/16 v1, 0x1f
+    invoke-direct {v0, v1, v2, p2}, Lh55;-><init>(ILi55;Lkotlin/coroutines/Continuation;)V
 
-    mul-int/2addr v0, v1
+    iput-object p1, v0, Lh55;->Z:Ljava/lang/Object;
 
-    iget v2, p0, Lh55;->b:I
+    return-object v0
+.end method
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    move-result v0
+    sget-object v0, Lr28;->o:Lr28;
 
-    iget-object v2, p0, Lh55;->c:Ljava/lang/CharSequence;
+    sget-object v1, Lo24;->a:Lo24;
 
-    invoke-static {v2, v0, v1}, Lnd5;->e(Ljava/lang/CharSequence;II)I
+    iget v2, p0, Lh55;->Y:I
 
-    move-result v0
+    const/4 v3, 0x0
 
-    iget-object v2, p0, Lh55;->o:Ljava/util/List;
+    const/4 v4, 0x1
 
-    invoke-static {v2, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
+    if-eqz v2, :cond_1
 
-    move-result v0
+    if-ne v2, v4, :cond_0
 
-    iget-object v2, p0, Lh55;->X:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lh55;->X:Landroid/graphics/Bitmap;
 
-    if-nez v2, :cond_0
+    iget-object v2, p0, Lh55;->Z:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v2, Ln24;
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lh55;->Z:Ljava/lang/Object;
+
+    move-object v2, p1
+
+    check-cast v2, Ln24;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget v5, p0, Lh55;->r0:I
+
+    sget-object v6, Lyt3;->n:Lhoa;
+
+    if-nez v6, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    :cond_2
+    invoke-virtual {v6, v0}, Lhoa;->b(Lr28;)Z
 
-    move-result v2
+    move-result v7
 
+    if-eqz v7, :cond_3
+
+    const-string v7, "start extracting sprite by index: "
+
+    invoke-static {v5, v7}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v6, v0, p1, v5, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
     :goto_0
-    add-int/2addr v0, v2
+    iget p1, p0, Lh55;->r0:I
 
-    mul-int/2addr v0, v1
+    iget-object v5, p0, Lh55;->s0:Li55;
 
-    iget-wide v1, p0, Lh55;->Y:J
+    iget-object v5, v5, Li55;->b:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v5, p1}, Lbbh;->F(Landroid/content/Context;I)Landroid/graphics/Bitmap;
 
-    move-result v1
+    move-result-object p1
 
-    add-int/2addr v1, v0
+    iget-object v5, p0, Lh55;->s0:Li55;
 
-    return v1
-.end method
+    iget-object v6, v5, Li55;->a:Lg55;
 
-.method public final m()I
-    .locals 1
+    iget-object v6, v6, Lg55;->a:[Landroid/graphics/Bitmap;
 
-    iget v0, p0, Lh55;->Z:I
+    iget v7, p0, Lh55;->r0:I
 
-    return v0
-.end method
+    aput-object p1, v6, v7
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-object v5, v5, Li55;->d:Lt6e;
 
-    const-string v0, ", itemIndex="
+    new-instance v6, Ljava/lang/Integer;
 
-    const-string v1, ", defaultValue="
+    invoke-direct {v6, v7}, Ljava/lang/Integer;-><init>(I)V
 
-    const-string v2, "EmojiModel(groupIndex="
+    iput-object v2, p0, Lh55;->Z:Ljava/lang/Object;
 
-    iget v3, p0, Lh55;->a:I
+    iput-object p1, p0, Lh55;->X:Landroid/graphics/Bitmap;
 
-    iget v4, p0, Lh55;->b:I
+    iput v4, p0, Lh55;->Y:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6, p0}, Lt6e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v5
 
-    iget-object v1, p0, Lh55;->c:Ljava/lang/CharSequence;
+    if-ne v5, v1, :cond_4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v1
 
-    const-string v1, ", values="
+    :cond_4
+    move-object v1, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lh55;->o:Ljava/util/List;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const-string v1, ", drawable="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lh55;->r0:I
 
-    iget-object v1, p0, Lh55;->X:Landroid/graphics/drawable/Drawable;
+    sget-object v5, Lyt3;->n:Lhoa;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-nez v5, :cond_5
 
-    const-string v1, ", animojiId="
+    goto :goto_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_5
+    invoke-virtual {v5, v0}, Lhoa;->b(Lr28;)Z
 
-    iget-wide v1, p0, Lh55;->Y:J
+    move-result v6
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v6, :cond_7
 
-    const-string v1, ")"
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_6
+    const/4 v4, 0x0
 
-    move-result-object v0
+    :goto_2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-object v0
+    const-string v6, "finish extracting sprite by index: "
+
+    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, " , sprite exist: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v0, p1, v1, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

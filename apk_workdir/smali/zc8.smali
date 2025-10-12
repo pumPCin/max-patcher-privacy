@@ -1,246 +1,242 @@
-.class public Lzc8;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.class public final Lzc8;
+.super Ljava/util/concurrent/atomic/AtomicReferenceArray;
 .source "SourceFile"
+
+# interfaces
+.implements Lad8;
 
 
 # instance fields
-.field public a:Lu5e;
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public b:Lt35;
-
-.field public c:Landroid/content/res/ColorStateList;
-
-.field public d:Landroid/content/res/ColorStateList;
-
-.field public e:Landroid/content/res/ColorStateList;
-
-.field public f:Landroid/graphics/PorterDuff$Mode;
-
-.field public g:Landroid/graphics/Rect;
-
-.field public final h:F
-
-.field public i:F
-
-.field public j:F
-
-.field public k:I
-
-.field public l:F
-
-.field public m:F
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public final q:Landroid/graphics/Paint$Style;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lu5e;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
 
-    const/4 v0, 0x0
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
+    iput-object p1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
-
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v1, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    iput v1, p0, Lzc8;->h:F
-
-    iput v1, p0, Lzc8;->i:F
-
-    const/16 v1, 0xff
-
-    iput v1, p0, Lzc8;->k:I
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lzc8;->l:F
-
-    iput v1, p0, Lzc8;->m:F
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lzc8;->n:I
-
-    iput v1, p0, Lzc8;->o:I
-
-    iput v1, p0, Lzc8;->p:I
-
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
-
-    iput-object v1, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
-
-    iput-object p1, p0, Lzc8;->a:Lu5e;
-
-    iput-object v0, p0, Lzc8;->b:Lt35;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzc8;)V
-    .locals 2
-
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
-
-    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v1, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iput v0, p0, Lzc8;->h:F
-
-    iput v0, p0, Lzc8;->i:F
-
-    const/16 v0, 0xff
-
-    iput v0, p0, Lzc8;->k:I
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lzc8;->l:F
-
-    iput v0, p0, Lzc8;->m:F
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lzc8;->n:I
-
-    iput v0, p0, Lzc8;->o:I
-
-    iput v0, p0, Lzc8;->p:I
-
-    sget-object v0, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
-
-    iput-object v0, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
-
-    iget-object v0, p1, Lzc8;->a:Lu5e;
-
-    iput-object v0, p0, Lzc8;->a:Lu5e;
-
-    iget-object v0, p1, Lzc8;->b:Lt35;
-
-    iput-object v0, p0, Lzc8;->b:Lt35;
-
-    iget v0, p1, Lzc8;->j:F
-
-    iput v0, p0, Lzc8;->j:F
-
-    iget-object v0, p1, Lzc8;->c:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzc8;->c:Landroid/content/res/ColorStateList;
-
-    iget-object v0, p1, Lzc8;->d:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzc8;->d:Landroid/content/res/ColorStateList;
-
-    iget-object v0, p1, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    iput-object v0, p0, Lzc8;->f:Landroid/graphics/PorterDuff$Mode;
-
-    iget-object v0, p1, Lzc8;->e:Landroid/content/res/ColorStateList;
-
-    iput-object v0, p0, Lzc8;->e:Landroid/content/res/ColorStateList;
-
-    iget v0, p1, Lzc8;->k:I
-
-    iput v0, p0, Lzc8;->k:I
-
-    iget v0, p1, Lzc8;->h:F
-
-    iput v0, p0, Lzc8;->h:F
-
-    iget v0, p1, Lzc8;->p:I
-
-    iput v0, p0, Lzc8;->p:I
-
-    iget v0, p1, Lzc8;->n:I
-
-    iput v0, p0, Lzc8;->n:I
-
-    iget v0, p1, Lzc8;->i:F
-
-    iput v0, p0, Lzc8;->i:F
-
-    iget v0, p1, Lzc8;->l:F
-
-    iput v0, p0, Lzc8;->l:F
-
-    iget v0, p1, Lzc8;->m:F
-
-    iput v0, p0, Lzc8;->m:F
-
-    iget v0, p1, Lzc8;->o:I
-
-    iput v0, p0, Lzc8;->o:I
-
-    iget-object v0, p1, Lzc8;->q:Landroid/graphics/Paint$Style;
-
-    iput-object v0, p0, Lzc8;->q:Landroid/graphics/Paint$Style;
-
-    iget-object v0, p1, Lzc8;->g:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    iget-object p1, p1, Lzc8;->g:Landroid/graphics/Rect;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
-
-    iput-object v0, p0, Lzc8;->g:Landroid/graphics/Rect;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final getChangingConfigurations()I
-    .locals 1
+.method public final clear()V
+    .locals 4
 
+    :goto_0
+    iget v0, p0, Lzc8;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    add-int/lit8 v3, v0, 0x1
+
+    iput v3, p0, Lzc8;->b:I
+
+    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    move-object v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_0
+
+    :goto_1
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Lzc8;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    iget v0, p0, Lzc8;->b:I
+
+    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public newDrawable()Landroid/graphics/drawable/Drawable;
+.method public final j()I
+    .locals 1
+
+    iget-object v0, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lzc8;->b:I
+
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance v0, Lad8;
+    const-string v0, "value is null"
 
-    invoke-direct {v0, p0}, Lad8;-><init>(Lzc8;)V
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-boolean v1, v0, Lad8;->X:Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    invoke-virtual {p0, v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final peek()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lzc8;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x0
 
     return-object v0
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lzc8;->b:I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    return-object v2
+
+    :cond_0
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    add-int/lit8 v3, v0, 0x1
+
+    iput v3, p0, Lzc8;->b:I
+
+    invoke-virtual {p0, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    return-object v1
+
+    :cond_1
+    iget-object v1, p0, Lzc8;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    if-ne v1, v0, :cond_0
+
+    return-object v2
+.end method
+
+.method public final q()V
+    .locals 2
+
+    iget v0, p0, Lzc8;->b:I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lzc8;->b:I
+
+    return-void
 .end method

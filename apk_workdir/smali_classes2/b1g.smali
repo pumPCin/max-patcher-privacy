@@ -1,74 +1,51 @@
-.class public final synthetic Lb1g;
-.super Ljava/lang/Object;
+.class public final Lb1g;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Le6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lps9;
 
-.field public final synthetic b:Lg1g;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lc1g;
+
+.field public o:Lc1g;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg1g;I)V
+.method public constructor <init>(Lc1g;Lwy3;)V
     .locals 0
 
-    iput p2, p0, Lb1g;->a:I
+    iput-object p1, p0, Lb1g;->Z:Lc1g;
 
-    iput-object p1, p0, Lb1g;->b:Lg1g;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lb1g;->a:I
+    iput-object p1, p0, Lb1g;->Y:Ljava/lang/Object;
 
-    const-string v1, "f1g"
+    iget p1, p0, Lb1g;->r0:I
 
-    iget-object v2, p0, Lb1g;->b:Lg1g;
+    const/high16 v0, -0x80000000
 
-    packed-switch v0, :pswitch_data_0
+    or-int/2addr p1, v0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput p1, p0, Lb1g;->r0:I
 
-    const-string v3, "removeUploadFromRepository: finished for data="
+    iget-object p1, p0, Lb1g;->Z:Lc1g;
 
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Lc1g;->h(Lwy3;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_0
-    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v1, v0, v2}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -4,324 +4,215 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:La73;
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lrz3;Le2d;)V
+.method public constructor <init>(La73;Ljava/util/HashMap;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object p1, p0, Lua0;->a:La73;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lua0;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lua0;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lua0;->d:Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Lt4g;->o(Lfh3;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lua0;->e:Ljava/lang/Object;
+    iput-object p2, p0, Lua0;->b:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lva0;
-    .locals 12
+.method public final a(Lyob;JI)J
+    .locals 8
 
-    iget v0, p0, Lua0;->a:I
+    iget-object v0, p0, Lua0;->a:La73;
 
-    if-nez v0, :cond_0
+    invoke-interface {v0}, La73;->l()J
 
-    const-string v0, " registrationStatus"
+    move-result-wide v0
+
+    sub-long/2addr p2, v0
+
+    iget-object v0, p0, Lua0;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lva0;
+
+    iget-wide v0, p1, Lva0;->a:J
+
+    add-int/lit8 p4, p4, -0x1
+
+    const-wide/16 v2, 0x1
+
+    cmp-long v2, v0, v2
+
+    if-lez v2, :cond_0
+
+    move-wide v2, v0
 
     goto :goto_0
 
     :cond_0
-    const-string v0, ""
+    const-wide/16 v2, 0x2
 
     :goto_0
-    iget-object v1, p0, Lua0;->f:Ljava/lang/Object;
+    const-wide v4, 0x40c3880000000000L    # 10000.0
 
-    check-cast v1, Ljava/lang/Long;
-
-    if-nez v1, :cond_1
-
-    const-string v1, " expiresInSecs"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object v1, p0, Lua0;->g:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Long;
-
-    if-nez v1, :cond_2
-
-    const-string v1, " tokenCreationEpochInSecs"
-
-    invoke-static {v0, v1}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    new-instance v2, Lva0;
-
-    iget-object v0, p0, Lua0;->b:Ljava/lang/Object;
-
-    move-object v8, v0
-
-    check-cast v8, Ljava/lang/String;
-
-    iget v3, p0, Lua0;->a:I
-
-    iget-object v0, p0, Lua0;->c:Ljava/lang/Object;
-
-    move-object v9, v0
-
-    check-cast v9, Ljava/lang/String;
-
-    iget-object v0, p0, Lua0;->d:Ljava/lang/Object;
-
-    move-object v10, v0
-
-    check-cast v10, Ljava/lang/String;
-
-    iget-object v0, p0, Lua0;->f:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    invoke-static {v4, v5}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v4
 
-    iget-object v0, p0, Lua0;->g:Ljava/lang/Object;
+    int-to-long v6, p4
 
-    check-cast v0, Ljava/lang/Long;
+    mul-long/2addr v2, v6
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    long-to-double v2, v2
 
-    move-result-wide v6
+    invoke-static {v2, v3}, Ljava/lang/Math;->log(D)D
 
-    iget-object v0, p0, Lua0;->e:Ljava/lang/Object;
+    move-result-wide v2
 
-    move-object v11, v0
+    div-double/2addr v4, v2
 
-    check-cast v11, Ljava/lang/String;
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    invoke-direct/range {v2 .. v11}, Lva0;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
 
-    return-object v2
+    move-result-wide v2
 
-    :cond_3
-    new-instance v1, Ljava/lang/IllegalStateException;
+    const-wide/high16 v4, 0x4008000000000000L    # 3.0
 
-    const-string v2, "Missing required properties:"
+    int-to-double v6, p4
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-object v0
+    move-result-wide v4
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    long-to-double v0, v0
 
-    throw v1
+    mul-double/2addr v4, v0
+
+    mul-double/2addr v4, v2
+
+    double-to-long v0, v4
+
+    invoke-static {v0, v1, p2, p3}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p2
+
+    iget-wide v0, p1, Lva0;->b:J
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
 .end method
 
-.method public b()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lua0;->d:Ljava/lang/Object;
-
-    check-cast v0, Le2d;
-
-    iget-object v1, p0, Lua0;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Le2d;->a(Landroid/content/Context;)I
-
-    move-result v0
-
-    iget v1, p0, Lua0;->a:I
-
-    if-eq v1, v0, :cond_0
-
-    iput v0, p0, Lua0;->a:I
-
-    iget-object v1, p0, Lua0;->c:Ljava/lang/Object;
-
-    check-cast v1, Lrz3;
-
-    iget-object v1, v1, Lrz3;->b:Ljava/lang/Object;
-
-    check-cast v1, Lew4;
-
-    invoke-virtual {v1, p0, v0}, Lew4;->b(Lua0;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c()I
-    .locals 5
-
-    iget-object v0, p0, Lua0;->d:Ljava/lang/Object;
-
-    check-cast v0, Le2d;
-
-    iget-object v1, p0, Lua0;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Le2d;->a(Landroid/content/Context;)I
-
-    move-result v2
-
-    iput v2, p0, Lua0;->a:I
-
-    new-instance v2, Landroid/content/IntentFilter;
-
-    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
-
-    iget v0, v0, Le2d;->a:I
-
-    and-int/lit8 v3, v0, 0x1
-
-    if-eqz v3, :cond_1
-
-    sget v3, Lt4g;->a:I
-
-    const/16 v4, 0x18
-
-    if-lt v3, v4, :cond_0
-
-    const-string v3, "connectivity"
-
-    invoke-virtual {v1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/net/ConnectivityManager;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Lg2d;
-
-    invoke-direct {v4, p0}, Lg2d;-><init>(Lua0;)V
-
-    iput-object v4, p0, Lua0;->g:Ljava/lang/Object;
-
-    invoke-virtual {v3, v4}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
+    instance-of v0, p1, Lua0;
 
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lua0;
+
+    iget-object v0, p0, Lua0;->a:La73;
+
+    iget-object v1, p1, Lua0;->a:La73;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lua0;->b:Ljava/util/HashMap;
+
+    iget-object p1, p1, Lua0;->b:Ljava/util/HashMap;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    :goto_0
-    and-int/lit8 v3, v0, 0x8
+    const/4 p1, 0x0
 
-    if-eqz v3, :cond_2
+    return p1
+.end method
 
-    const-string v3, "android.intent.action.ACTION_POWER_CONNECTED"
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    iget-object v0, p0, Lua0;->a:La73;
 
-    const-string v3, "android.intent.action.ACTION_POWER_DISCONNECTED"
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+    move-result v0
 
-    :cond_2
-    and-int/lit8 v3, v0, 0x4
+    const v1, 0xf4243
 
-    if-eqz v3, :cond_4
+    xor-int/2addr v0, v1
 
-    sget v3, Lt4g;->a:I
+    mul-int/2addr v0, v1
 
-    const/16 v4, 0x17
+    iget-object v1, p0, Lua0;->b:Ljava/util/HashMap;
 
-    if-lt v3, v4, :cond_3
+    invoke-interface {v1}, Ljava/util/Map;->hashCode()I
 
-    const-string v3, "android.os.action.DEVICE_IDLE_MODE_CHANGED"
+    move-result v1
 
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_3
-    const-string v3, "android.intent.action.SCREEN_ON"
-
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v3, "android.intent.action.SCREEN_OFF"
-
-    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    :cond_4
-    :goto_1
-    and-int/lit8 v0, v0, 0x10
-
-    if-eqz v0, :cond_5
-
-    const-string v0, "android.intent.action.DEVICE_STORAGE_LOW"
-
-    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    const-string v0, "android.intent.action.DEVICE_STORAGE_OK"
-
-    invoke-virtual {v2, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
-
-    :cond_5
-    new-instance v0, Lhn;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v0, v3, p0}, Lhn;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lua0;->f:Ljava/lang/Object;
-
-    iget-object v3, p0, Lua0;->e:Ljava/lang/Object;
-
-    check-cast v3, Landroid/os/Handler;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v0, v2, v4, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
-
-    iget v0, p0, Lua0;->a:I
+    xor-int/2addr v0, v1
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SchedulerConfig{clock="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lua0;->a:La73;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", values="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lua0;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

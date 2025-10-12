@@ -1,352 +1,447 @@
-.class public final synthetic Li30;
+.class public final Li30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr1f;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Li0f;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final b:Landroid/os/Handler;
+
+.field public c:Ljf5;
+
+.field public d:Le20;
+
+.field public e:I
+
+.field public f:I
+
+.field public g:F
+
+.field public h:Lm30;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
-    .locals 0
-
-    iput p2, p0, Li30;->a:I
-
-    iput-object p1, p0, Li30;->b:Landroid/content/Context;
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Ljf5;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Li30;->g:F
+
+    new-instance v0, Le30;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Le30;-><init>(Landroid/content/Context;I)V
+
+    invoke-static {v0}, Lkv9;->y(Li0f;)Li0f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Li30;->a:Li0f;
+
+    iput-object p3, p0, Li30;->c:Ljf5;
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Li30;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Li30;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 10
+.method public final a()V
+    .locals 4
 
-    iget v0, p0, Li30;->a:I
+    iget v0, p0, Li30;->e:I
 
-    const/4 v1, 0x7
+    const/4 v1, 0x1
 
-    const/4 v2, 0x2
+    if-eq v0, v1, :cond_2
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
-
-    sget-object v1, Lxe4;->n:Lxyc;
-
-    const-class v3, Lxe4;
-
-    monitor-enter v3
-
-    :try_start_0
-    sget-object v1, Lxe4;->t:Lxe4;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lpz9;
-
-    invoke-direct {v1, v0, v2}, Lpz9;-><init>(Landroid/content/Context;I)V
-
-    new-instance v4, Lxe4;
-
-    iget-object v0, v1, Lpz9;->c:Ljava/lang/Object;
-
-    move-object v5, v0
-
-    check-cast v5, Landroid/content/Context;
-
-    iget-object v0, v1, Lpz9;->o:Ljava/lang/Object;
-
-    move-object v6, v0
-
-    check-cast v6, Ljava/util/HashMap;
-
-    iget v7, v1, Lpz9;->b:I
-
-    iget-object v0, v1, Lpz9;->X:Ljava/lang/Object;
-
-    move-object v8, v0
-
-    check-cast v8, Ly5f;
-
-    iget-boolean v9, v1, Lpz9;->a:Z
-
-    invoke-direct/range {v4 .. v9}, Lxe4;-><init>(Landroid/content/Context;Ljava/util/HashMap;ILy5f;Z)V
-
-    sput-object v4, Lxe4;->t:Lxe4;
+    if-nez v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    iget-object v0, p0, Li30;->h:Lm30;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Li30;->a:Li0f;
+
+    invoke-interface {v0}, Li0f;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    iget-object v1, p0, Li30;->h:Lm30;
+
+    sget v2, Lg3g;->a:I
+
+    const/16 v3, 0x1a
+
+    if-lt v2, v3, :cond_1
+
+    iget-object v1, v1, Lm30;->f:Landroid/media/AudioFocusRequest;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocusRequest(Landroid/media/AudioFocusRequest;)I
+
+    return-void
+
+    :cond_1
+    iget-object v1, v1, Lm30;->b:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final b(I)V
+    .locals 4
+
+    iget-object v0, p0, Li30;->c:Ljf5;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Ljf5;->r0:Lv4f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lv4f;->c()Lt4f;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lv4f;->a:Landroid/os/Handler;
+
+    const/16 v2, 0x21
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, p1, v3}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+
+    move-result-object p1
+
+    iput-object p1, v1, Lt4f;->a:Landroid/os/Message;
+
+    invoke-virtual {v1}, Lt4f;->b()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(I)V
+    .locals 1
+
+    iget v0, p0, Li30;->e:I
+
+    if-ne v0, p1, :cond_0
 
     goto :goto_1
 
     :cond_0
+    iput p1, p0, Li30;->e:I
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_1
+
+    const p1, 0x3e4ccccd    # 0.2f
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 p1, 0x3f800000    # 1.0f
+
     :goto_0
-    sget-object v0, Lxe4;->t:Lxe4;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v0, p0, Li30;->g:F
 
-    monitor-exit v3
+    cmpl-float v0, v0, p1
 
-    return-object v0
+    if-nez v0, :cond_2
 
+    goto :goto_1
+
+    :cond_2
+    iput p1, p0, Li30;->g:F
+
+    iget-object p1, p0, Li30;->c:Ljf5;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Ljf5;->r0:Lv4f;
+
+    const/16 v0, 0x22
+
+    invoke-virtual {p1, v0}, Lv4f;->f(I)Z
+
+    :cond_3
     :goto_1
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return-void
+.end method
 
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
-
-    sget-object v3, Lye4;->p:Lxyc;
-
-    const-class v3, Lye4;
-
-    monitor-enter v3
-
-    :try_start_2
-    sget-object v4, Lye4;->v:Lye4;
-
-    if-nez v4, :cond_2
-
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    if-nez v0, :cond_1
+.method public final d(IZ)I
+    .locals 12
 
     const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-eq p1, v1, :cond_a
+
+    iget p1, p0, Li30;->f:I
+
+    if-ne p1, v1, :cond_a
+
+    const/4 v2, 0x3
+
+    const/4 v3, -0x1
+
+    if-eqz p2, :cond_7
+
+    iget p2, p0, Li30;->e:I
+
+    const/4 v4, 0x2
+
+    if-ne p2, v4, :cond_0
+
+    goto/16 :goto_5
+
+    :cond_0
+    iget-object p2, p0, Li30;->h:Lm30;
+
+    if-eqz p2, :cond_1
 
     goto :goto_2
 
     :cond_1
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    if-nez p2, :cond_2
 
-    move-result-object v0
+    new-instance p2, Lc0;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    sget-object v5, Le20;->g:Le20;
+
+    iput-object v5, p2, Lc0;->c:Ljava/lang/Object;
+
+    iput p1, p2, Lc0;->a:I
+
+    goto :goto_0
+
+    :cond_2
+    new-instance p1, Lc0;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iget v5, p2, Lm30;->a:I
+
+    iput v5, p1, Lc0;->a:I
+
+    iget-object v5, p2, Lm30;->d:Le20;
+
+    iput-object v5, p1, Lc0;->c:Ljava/lang/Object;
+
+    iget-boolean p2, p2, Lm30;->e:Z
+
+    iput-boolean p2, p1, Lc0;->b:Z
+
+    move-object p2, p1
+
+    :goto_0
+    iget-object p1, p0, Li30;->d:Le20;
+
+    if-eqz p1, :cond_3
+
+    iget v5, p1, Le20;->a:I
+
+    if-ne v5, v1, :cond_3
+
+    move v5, v1
+
+    goto :goto_1
+
+    :cond_3
+    move v5, v0
+
+    :goto_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p2, Lc0;->c:Ljava/lang/Object;
+
+    iput-boolean v5, p2, Lc0;->b:Z
+
+    new-instance v8, Ld30;
+
+    const/4 p1, 0x0
+
+    invoke-direct {v8, p1, p0}, Ld30;-><init>(ILjava/lang/Object;)V
+
+    iget-object v9, p0, Li30;->b:Landroid/os/Handler;
+
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lm30;
+
+    iget v7, p2, Lc0;->a:I
+
+    iget-object p1, p2, Lc0;->c:Ljava/lang/Object;
+
+    move-object v10, p1
+
+    check-cast v10, Le20;
+
+    iget-boolean v11, p2, Lc0;->b:Z
+
+    invoke-direct/range {v6 .. v11}, Lm30;-><init>(ILandroid/media/AudioManager$OnAudioFocusChangeListener;Landroid/os/Handler;Le20;Z)V
+
+    iput-object v6, p0, Li30;->h:Lm30;
 
     :goto_2
-    new-instance v5, Ljava/util/HashMap;
+    iget-object p1, p0, Li30;->a:Li0f;
 
-    const/16 v6, 0x8
+    invoke-interface {p1}, Li0f;->get()Ljava/lang/Object;
 
-    invoke-direct {v5, v6}, Ljava/util/HashMap;-><init>(I)V
+    move-result-object p1
 
-    const/4 v6, 0x0
+    check-cast p1, Landroid/media/AudioManager;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object p2, p0, Li30;->h:Lm30;
 
-    move-result-object v6
+    sget v5, Lg3g;->a:I
 
-    const-wide/32 v7, 0xf4240
+    const/16 v6, 0x1a
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-lt v5, v6, :cond_4
 
-    move-result-object v7
+    iget-object p2, p2, Lm30;->f:Landroid/media/AudioFocusRequest;
 
-    invoke-virtual {v5, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1, p2}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioFocusRequest;)I
 
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v2, 0x5
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v2, 0xa
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v2, 0x9
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v1, Lye4;
-
-    invoke-direct {v1, v0, v5}, Lye4;-><init>(Landroid/content/Context;Ljava/util/HashMap;)V
-
-    sput-object v1, Lye4;->v:Lye4;
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception v0
+    move-result p1
 
     goto :goto_4
 
-    :cond_2
-    :goto_3
-    sget-object v0, Lye4;->v:Lye4;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    :cond_4
+    iget-object v5, p2, Lm30;->b:Landroid/media/AudioManager$OnAudioFocusChangeListener;
 
-    monitor-exit v3
+    iget-object v6, p2, Lm30;->d:Le20;
 
-    return-object v0
+    iget v7, v6, Le20;->b:I
 
-    :goto_4
-    :try_start_3
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    and-int/2addr v7, v1
 
-    throw v0
+    if-ne v7, v1, :cond_5
+
+    :pswitch_0
+    move v0, v1
+
+    goto :goto_3
+
+    :cond_5
+    iget v6, v6, Le20;->c:I
+
+    packed-switch v6, :pswitch_data_0
 
     :pswitch_1
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    move v0, v2
 
-    new-instance v2, Lsl4;
-
-    new-instance v3, Lh9a;
-
-    invoke-direct {v3, v1}, Lh9a;-><init>(I)V
-
-    invoke-direct {v2, v0, v3}, Lsl4;-><init>(Landroid/content/Context;Lh9a;)V
-
-    return-object v2
+    goto :goto_3
 
     :pswitch_2
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    const/16 v0, 0xa
 
-    new-instance v1, Ltl4;
-
-    invoke-direct {v1, v0}, Ltl4;-><init>(Landroid/content/Context;)V
-
-    return-object v1
+    goto :goto_3
 
     :pswitch_3
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    move v0, v4
 
-    new-instance v1, Lef4;
-
-    new-instance v2, Lih4;
-
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    return-object v1
+    goto :goto_3
 
     :pswitch_4
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    const/4 v0, 0x5
 
-    new-instance v1, Lzi4;
-
-    new-instance v2, Ljh4;
-
-    invoke-direct {v2}, Ljh4;-><init>()V
-
-    invoke-direct {v1, v0, v2}, Lzi4;-><init>(Landroid/content/Context;Ljh4;)V
-
-    return-object v1
+    goto :goto_3
 
     :pswitch_5
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    const/4 v0, 0x4
 
-    new-instance v1, Lrj4;
-
-    invoke-direct {v1, v0}, Lrj4;-><init>(Landroid/content/Context;)V
-
-    return-object v1
+    goto :goto_3
 
     :pswitch_6
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    const/16 v0, 0x8
 
-    new-instance v1, Lzi4;
-
-    new-instance v2, Ljh4;
-
-    invoke-direct {v2}, Ljh4;-><init>()V
-
-    invoke-direct {v1, v0, v2}, Lzi4;-><init>(Landroid/content/Context;Ljh4;)V
-
-    return-object v1
-
+    :goto_3
     :pswitch_7
-    iget-object v0, p0, Li30;->b:Landroid/content/Context;
+    iget p2, p2, Lm30;->a:I
 
-    invoke-static {v0}, Lj40;->q(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-virtual {p1, v5, v0, p2}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    move-result-object v0
+    move-result p1
 
-    return-object v0
+    :goto_4
+    if-ne p1, v1, :cond_6
 
-    nop
+    invoke-virtual {p0, v4}, Li30;->c(I)V
+
+    return v1
+
+    :cond_6
+    invoke-virtual {p0, v1}, Li30;->c(I)V
+
+    return v3
+
+    :cond_7
+    iget p1, p0, Li30;->e:I
+
+    if-eq p1, v1, :cond_9
+
+    if-eq p1, v2, :cond_8
+
+    :goto_5
+    return v1
+
+    :cond_8
+    return v0
+
+    :cond_9
+    return v3
+
+    :cond_a
+    invoke-virtual {p0}, Li30;->a()V
+
+    invoke-virtual {p0, v0}, Li30;->c(I)V
+
+    return v1
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x2
         :pswitch_7
         :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
         :pswitch_2
         :pswitch_1
         :pswitch_0

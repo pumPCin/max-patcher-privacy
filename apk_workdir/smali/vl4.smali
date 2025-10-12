@@ -1,183 +1,68 @@
-.class public final Lvl4;
+.class public final synthetic Lvl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lyn6;
+.field public final synthetic b:Lax0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;Lyn6;)V
+.method public synthetic constructor <init>(Lax0;I)V
     .locals 0
 
+    iput p2, p0, Lvl4;->a:I
+
+    iput-object p1, p0, Lvl4;->b:Lax0;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Lvl4;->b(Ljava/util/Set;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvl4;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lvl4;->b:Lyn6;
 
     return-void
 .end method
 
-.method public static b(Ljava/util/Set;)Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lia0;
-
-    iget-object v2, v1, Lia0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x2f
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v1, v1, Lia0;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/16 v1, 0x20
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 4
+.method public final run()V
+    .locals 1
 
-    iget-object v0, p0, Lvl4;->a:Ljava/lang/String;
+    iget v0, p0, Lvl4;->a:I
 
-    iget-object v1, p0, Lvl4;->b:Lyn6;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, v1, Lyn6;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lvl4;->b:Lax0;
 
-    check-cast v2, Ljava/util/HashSet;
+    iget-object v0, v0, Lax0;->b:Ljava/lang/Object;
 
-    monitor-enter v2
+    check-cast v0, Lwl4;
 
-    :try_start_0
-    iget-object v3, v1, Lyn6;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lwl4;->i:Lihg;
 
-    check-cast v3, Ljava/util/HashSet;
+    invoke-interface {v0}, Lihg;->n()V
 
-    invoke-static {v3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    return-void
 
-    move-result-object v3
+    :pswitch_0
+    iget-object v0, p0, Lvl4;->b:Lax0;
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    iget-object v0, v0, Lax0;->b:Ljava/lang/Object;
 
-    invoke-interface {v3}, Ljava/util/Set;->isEmpty()Z
+    check-cast v0, Lwl4;
 
-    move-result v2
+    iget-object v0, v0, Lwl4;->i:Lihg;
 
-    if-eqz v2, :cond_0
+    invoke-interface {v0}, Lihg;->onFirstFrameRendered()V
 
-    return-object v0
+    return-void
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    nop
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v0, 0x20
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget-object v0, v1, Lyn6;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashSet;
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-object v1, v1, Lyn6;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/HashSet;
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v1
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {v1}, Lvl4;->b(Ljava/util/Set;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v1
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_3
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

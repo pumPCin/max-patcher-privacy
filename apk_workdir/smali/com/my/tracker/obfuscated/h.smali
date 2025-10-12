@@ -45,6 +45,7 @@
 .method public static a()Ljava/util/concurrent/Executor;
     .locals 1
 
+    .line 4
     sget-object v0, Lcom/my/tracker/obfuscated/h;->a:Ljava/util/concurrent/Executor;
 
     return-object v0
@@ -53,22 +54,26 @@
 .method public static a(Ljava/lang/Runnable;)V
     .locals 1
 
+    .line 5
     sget-object v0, Lcom/my/tracker/obfuscated/h;->c:Lcom/my/tracker/obfuscated/h$a;
 
     invoke-virtual {v0, p0}, Lcom/my/tracker/obfuscated/h$a;->a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
     move-result-object p0
 
+    .line 6
     sget-object v0, Lcom/my/tracker/obfuscated/h;->a:Ljava/util/concurrent/Executor;
 
     if-nez v0, :cond_0
 
+    .line 7
     const-string p0, "Async - background executor is not found"
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
     return-void
 
+    .line 8
     :cond_0
     invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -78,10 +83,12 @@
 .method public static a(Ljava/util/concurrent/Executor;)V
     .locals 1
 
+    .line 1
     sget-object v0, Lcom/my/tracker/obfuscated/h;->a:Ljava/util/concurrent/Executor;
 
     if-eqz v0, :cond_0
 
+    .line 2
     const-string p0, "Async - unexpected init error"
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
@@ -93,6 +100,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_1
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 

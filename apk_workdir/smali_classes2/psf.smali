@@ -1,24 +1,24 @@
-.class public final synthetic Lpsf;
+.class public final Lpsf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ltd6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final synthetic b:Ltd6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/password/TwoFACheckPassScreen;I)V
+.method public synthetic constructor <init>(ILtd6;)V
     .locals 0
 
-    iput p2, p0, Lpsf;->a:I
+    iput p1, p0, Lpsf;->a:I
 
-    iput-object p1, p0, Lpsf;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    iput-object p2, p0, Lpsf;->b:Ltd6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,88 +32,134 @@
 
     iget v0, p0, Lpsf;->a:I
 
-    iget-object v1, p0, Lpsf;->b:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
+    new-instance v0, Lkrd;
 
-    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lpsf;->b:Ltd6;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast v1, Lvag;
 
-    move-result-object v0
+    const/16 v2, 0x1d
 
-    check-cast v0, Lje7;
-
-    sget-object v2, Lje7;->b:Lje7;
-
-    if-ne v0, v2, :cond_0
-
-    invoke-virtual {v1}, Lb04;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lj40;->D(Landroid/app/Activity;)V
-
-    :cond_0
-    sget-object v0, Loyf;->a:Loyf;
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
 
     return-object v0
 
     :pswitch_0
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
+    new-instance v0, Lkrd;
 
-    new-instance v0, Lke7;
+    iget-object v1, p0, Lpsf;->b:Ltd6;
 
-    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+    check-cast v1, Lzh1;
 
-    move-result-object v1
+    const/16 v2, 0x1c
 
-    invoke-direct {v0, v1}, Lke7;-><init>(Li8d;)V
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
 
     return-object v0
 
     :pswitch_1
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
+    new-instance v0, Lkrd;
 
-    iget-object v0, v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lpsf;->b:Ltd6;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast v1, Lzwg;
 
-    move-result-object v0
+    const/16 v2, 0x1b
 
-    check-cast v0, Lje7;
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
 
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    sget-object v0, Lhfd;->Q1:Lhfd;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_2
-    sget-object v0, Lhfd;->e2:Lhfd;
-
-    :goto_0
     return-object v0
+
+    :pswitch_2
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lvag;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lvag;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lj8e;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lzh1;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lttf;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Lpsf;->b:Ltd6;
+
+    check-cast v1, Lj8e;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

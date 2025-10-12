@@ -1,198 +1,100 @@
 .class public final La94;
-.super Ls08;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public a:Landroid/net/Uri;
 
+.field public b:J
 
-# direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lbb8;I)V
-    .locals 0
+.field public c:I
 
-    iput p3, p0, La94;->c:I
+.field public d:[B
 
-    invoke-direct {p0, p1, p2}, Ls08;-><init>(Ljava/util/concurrent/Executor;Lbb8;)V
+.field public e:Ljava/util/Map;
 
-    return-void
-.end method
+.field public f:J
+
+.field public g:J
+
+.field public h:Ljava/lang/String;
+
+.field public i:I
 
 
 # virtual methods
-.method public final d(Lb67;)Lw75;
-    .locals 4
+.method public a()Lb94;
+    .locals 14
 
-    iget v0, p0, La94;->c:I
+    iget-object v0, p0, La94;->a:Landroid/net/Uri;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    new-instance v0, Ljava/io/FileInputStream;
+    new-instance v1, Lb94;
 
-    invoke-virtual {p1}, Lb67;->d()Ljava/io/File;
+    iget-object v2, p0, La94;->a:Landroid/net/Uri;
 
-    move-result-object v1
+    iget-wide v3, p0, La94;->b:J
 
-    invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
+    iget v5, p0, La94;->c:I
 
-    move-result-object v1
+    iget-object v6, p0, La94;->d:[B
 
-    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    iget-object v7, p0, La94;->e:Ljava/util/Map;
 
-    invoke-virtual {p1}, Lb67;->d()Ljava/io/File;
+    iget-wide v8, p0, La94;->f:J
 
-    move-result-object p1
+    iget-wide v10, p0, La94;->g:J
 
-    invoke-virtual {p1}, Ljava/io/File;->length()J
+    iget-object v12, p0, La94;->h:Ljava/lang/String;
 
-    move-result-wide v1
+    iget v13, p0, La94;->i:I
 
-    long-to-int p1, v1
+    invoke-direct/range {v1 .. v13}, Lb94;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
-    invoke-virtual {p0, v0, p1}, Ls08;->c(Ljava/io/InputStream;I)Lw75;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object p1, p1, Lb67;->b:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v0, 0x5
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "data:"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v0, 0x2c
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v0
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, ";"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    move p1, v1
-
-    goto :goto_0
+    return-object v1
 
     :cond_0
-    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object p1
+    const-string v1, "The uri must be set."
 
-    array-length v0, p1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    add-int/lit8 v0, v0, -0x1
-
-    aget-object p1, p1, v0
-
-    const-string v0, "base64"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    invoke-static {v2, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object p1
-
-    :goto_1
-    new-instance v0, Ljava/io/ByteArrayInputStream;
-
-    invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
-
-    array-length p1, p1
-
-    invoke-virtual {p0, v0, p1}, Ls08;->c(Ljava/io/InputStream;I)Lw75;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method
 
-.method public final e()Ljava/lang/String;
-    .locals 1
+.method public b()Lc94;
+    .locals 15
 
-    iget v0, p0, La94;->c:I
+    iget-object v0, p0, La94;->a:Landroid/net/Uri;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "The uri must be set."
 
-    const-string v0, "LocalFileFetchProducer"
+    invoke-static {v0, v1}, Lq5h;->m(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
+    new-instance v2, Lc94;
 
-    :pswitch_0
-    const-string v0, "DataFetchProducer"
+    iget-object v3, p0, La94;->a:Landroid/net/Uri;
 
-    return-object v0
+    iget-wide v4, p0, La94;->b:J
 
-    nop
+    iget v6, p0, La94;->c:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v7, p0, La94;->d:[B
+
+    iget-object v8, p0, La94;->e:Ljava/util/Map;
+
+    iget-wide v9, p0, La94;->f:J
+
+    iget-wide v11, p0, La94;->g:J
+
+    iget-object v13, p0, La94;->h:Ljava/lang/String;
+
+    iget v14, p0, La94;->i:I
+
+    invoke-direct/range {v2 .. v14}, Lc94;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+
+    return-object v2
 .end method

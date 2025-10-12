@@ -1,19 +1,21 @@
 .class public final Lhp4;
-.super Ljava/lang/Object;
+.super Lrp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final a:Lhp4;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhp4;
 
-    iput-object p1, p0, Lhp4;->a:Lbp7;
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Lhp4;->a:Lhp4;
 
     return-void
 .end method

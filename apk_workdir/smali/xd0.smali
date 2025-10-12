@@ -1,245 +1,143 @@
 .class public final Lxd0;
-.super Ljava/lang/Object;
+.super Lrh7;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field private volatile synthetic _disposer$volatile:Ljava/lang/Object;
 
-.field public final b:I
+.field public final b:Lc22;
 
-.field public final c:I
+.field public c:Lis4;
 
-.field public final d:I
-
-.field public final e:F
-
-.field public final f:Ljava/lang/String;
+.field public final synthetic o:Lzd0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;IIIFLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lxd0;->a:Ljava/util/ArrayList;
+    const-string v1, "_disposer$volatile"
 
-    iput p2, p0, Lxd0;->b:I
+    const-class v2, Lxd0;
 
-    iput p3, p0, Lxd0;->c:I
+    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    iput p4, p0, Lxd0;->d:I
+    move-result-object v0
 
-    iput p5, p0, Lxd0;->e:F
-
-    iput-object p6, p0, Lxd0;->f:Ljava/lang/String;
+    sput-object v0, Lxd0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     return-void
 .end method
 
-.method public static a(Lg5g;)Lxd0;
-    .locals 12
+.method public constructor <init>(Lzd0;Lc22;)V
+    .locals 0
 
-    sget-object v0, Lk74;->a:[B
+    iput-object p1, p0, Lxd0;->o:Lzd0;
 
-    const/4 v1, 0x4
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    :try_start_0
-    invoke-virtual {p0, v1}, Lg5g;->F(I)V
+    iput-object p2, p0, Lxd0;->b:Lc22;
 
-    invoke-virtual {p0}, Lg5g;->s()I
+    return-void
+.end method
 
-    move-result v2
 
-    const/4 v3, 0x3
+# virtual methods
+.method public final c()Z
+    .locals 1
 
-    and-int/2addr v2, v3
+    const/4 v0, 0x0
 
-    add-int/lit8 v6, v2, 0x1
+    return v0
+.end method
 
-    if-eq v6, v3, :cond_3
+.method public final d(Ljava/lang/Throwable;)V
+    .locals 5
 
-    new-instance v5, Ljava/util/ArrayList;
+    iget-object v0, p0, Lxd0;->b:Lc22;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lg5g;->s()I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v2
+    new-instance v1, Lwe3;
 
-    and-int/lit8 v2, v2, 0x1f
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lwe3;-><init>(Ljava/lang/Throwable;Z)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lc22;->y(Ljava/lang/Object;Lle6;)Lkotlinx/coroutines/internal/Symbol;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {v0, p1}, Lc22;->l(Ljava/lang/Object;)V
+
+    sget-object p1, Lxd0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyd0;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lyd0;->a()V
+
+    return-void
+
+    :cond_0
+    sget-object p1, Lzd0;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    iget-object v1, p0, Lxd0;->o:Lzd0;
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    iget-object p1, v1, Lzd0;->a:[Lcm4;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    array-length v2, p1
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    array-length v2, p1
 
     const/4 v3, 0x0
 
-    move v4, v3
-
     :goto_0
-    if-ge v4, v2, :cond_0
+    if-ge v3, v2, :cond_1
 
-    invoke-virtual {p0}, Lg5g;->x()I
+    aget-object v4, p1, v3
 
-    move-result v7
-
-    iget v8, p0, Lg5g;->b:I
-
-    invoke-virtual {p0, v7}, Lg5g;->F(I)V
-
-    iget-object v9, p0, Lg5g;->a:[B
-
-    add-int/lit8 v10, v7, 0x4
-
-    new-array v10, v10, [B
-
-    invoke-static {v0, v3, v10, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v9, v8, v10, v1, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v5, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lg5g;->s()I
-
-    move-result v4
-
-    move v7, v3
-
-    :goto_1
-    if-ge v7, v4, :cond_1
-
-    invoke-virtual {p0}, Lg5g;->x()I
-
-    move-result v8
-
-    iget v9, p0, Lg5g;->b:I
-
-    invoke-virtual {p0, v8}, Lg5g;->F(I)V
-
-    iget-object v10, p0, Lg5g;->a:[B
-
-    add-int/lit8 v11, v8, 0x4
-
-    new-array v11, v11, [B
-
-    invoke-static {v0, v3, v11, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-static {v10, v9, v11, v1, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v5, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v7, v7, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    if-lez v2, :cond_2
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [B
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [B
-
-    array-length p0, p0
-
-    invoke-static {v6, v0, p0}, Lgh5;->z(I[BI)Ljx9;
-
-    move-result-object p0
-
-    iget v0, p0, Ljx9;->e:I
-
-    iget v1, p0, Ljx9;->f:I
-
-    iget v2, p0, Ljx9;->g:F
-
-    iget v3, p0, Ljx9;->a:I
-
-    iget v4, p0, Ljx9;->b:I
-
-    iget p0, p0, Ljx9;->c:I
-
-    const-string v7, "avc1.%02X%02X%02X"
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v4}, Lcm4;->m()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
+    add-int/lit8 v3, v3, 0x1
 
-    filled-new-array {v3, v4, p0}, [Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p0
-
-    invoke-static {v7, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    move v7, v0
-
-    move v8, v1
-
-    :goto_2
-    move-object v10, p0
-
-    move v9, v2
-
-    goto :goto_3
+    :cond_1
+    invoke-virtual {v0, v1}, Lc22;->resumeWith(Ljava/lang/Object;)V
 
     :cond_2
-    const/4 v0, -0x1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    const/4 p0, 0x0
-
-    move v7, v0
-
-    move v8, v7
-
-    goto :goto_2
-
-    :goto_3
-    new-instance v4, Lxd0;
-
-    invoke-direct/range {v4 .. v10}, Lxd0;-><init>(Ljava/util/ArrayList;IIIFLjava/lang/String;)V
-
-    return-object v4
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p0
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    const-string v0, "Error parsing AVC config"
-
-    invoke-static {p0, v0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
+    return-void
 .end method

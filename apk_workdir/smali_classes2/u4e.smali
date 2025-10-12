@@ -1,134 +1,337 @@
-.class public final synthetic Lu4e;
+.class public abstract Lu4e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lid4;
 
+# static fields
+.field public static final a:Lw2a;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p1, p0, Lu4e;->a:I
+    new-instance v0, Lw2a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xa
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lw2a;-><init>(II)V
+
+    sput-object v0, Lu4e;->a:Lw2a;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    sput-object v0, Lu4e;->b:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
+.method public static final a(Landroid/graphics/Path;Landroid/graphics/Rect;)V
+    .locals 5
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+    if-eqz p1, :cond_2
 
-    iget v0, p0, Lu4e;->a:I
+    invoke-virtual {p1}, Landroid/graphics/Rect;->isEmpty()Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    new-instance v0, Lone/me/webview/FaqWebViewWidget;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0}, Lone/me/webview/FaqWebViewWidget;-><init>()V
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    new-instance v0, Landroid/graphics/Matrix;
 
-    :pswitch_0
-    new-instance v0, Lone/me/webapp/settings/WebAppsSettingScreen;
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    invoke-direct {v0}, Lone/me/webapp/settings/WebAppsSettingScreen;-><init>()V
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_1
-    new-instance v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-    invoke-direct {v0}, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;-><init>()V
+    move-result v2
 
-    return-object v0
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    :pswitch_2
-    new-instance v1, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    move-result v1
 
-    const/4 v5, 0x2
+    div-int/lit8 v1, v1, 0x2
 
-    const/4 v6, 0x0
+    new-instance v2, Lije;
 
-    sget-object v2, Lete;->c:Lete;
+    invoke-direct {v2, v1}, Lije;-><init>(I)V
 
-    const-wide/16 v3, 0x0
+    sget-object v3, Lu4e;->a:Lw2a;
 
-    invoke-direct/range {v1 .. v6}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lete;JILof4;)V
+    invoke-virtual {v3, v2}, Lm68;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/Path;
+
+    if-nez v2, :cond_1
+
+    invoke-static {v1}, Lu4e;->b(I)Landroid/graphics/Path;
+
+    move-result-object v2
+
+    :cond_1
+    invoke-virtual {p0, v2}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    div-float/2addr v2, v3
+
+    int-to-float v1, v1
+
+    sub-float/2addr v2, v1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float/2addr v4, v3
+
+    sub-float/2addr v4, v1
+
+    iget v1, p1, Landroid/graphics/Rect;->left:I
+
+    int-to-float v1, v1
+
+    add-float/2addr v1, v2
+
+    iget p1, p1, Landroid/graphics/Rect;->top:I
+
+    int-to-float p1, p1
+
+    add-float/2addr p1, v4
+
+    invoke-virtual {v0, v1, p1}, Landroid/graphics/Matrix;->setTranslate(FF)V
+
+    invoke-virtual {p0, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Landroid/graphics/Path;->reset()V
+
+    return-void
+.end method
+
+.method public static final b(I)Landroid/graphics/Path;
+    .locals 22
+
+    move/from16 v0, p0
+
+    new-instance v1, Landroid/graphics/Path;
+
+    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+
+    if-gtz v0, :cond_0
 
     return-object v1
 
-    :pswitch_3
-    new-instance v2, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    :cond_0
+    int-to-double v2, v0
 
-    const/4 v6, 0x2
+    const-wide v4, 0x4006666666666666L    # 2.8
 
-    const/4 v7, 0x0
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
-    sget-object v3, Lete;->b:Lete;
+    move-result-wide v6
 
-    const-wide/16 v4, 0x0
+    int-to-float v8, v0
 
-    invoke-direct/range {v2 .. v7}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lete;JILof4;)V
+    neg-float v9, v8
 
-    return-object v2
+    const/4 v10, 0x0
 
-    :pswitch_4
-    new-instance v0, Lone/me/stickerssettings/StickersSettingsScreen;
+    invoke-virtual {v1, v9, v10}, Landroid/graphics/Path;->moveTo(FF)V
 
-    invoke-direct {v0}, Lone/me/stickerssettings/StickersSettingsScreen;-><init>()V
+    neg-double v9, v2
 
-    return-object v0
+    move-wide/from16 v16, v9
 
-    :pswitch_5
-    new-instance v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    const/4 v14, 0x0
 
-    const/4 v1, 0x0
+    :goto_0
+    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->abs(D)D
 
-    sget-object v2, Llme;->c:Llme;
+    move-result-wide v11
 
-    invoke-direct {v0, v1, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLlme;)V
+    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
-    return-object v0
+    move-result-wide v11
 
-    :pswitch_6
-    new-instance v0, Lone/me/startconversation/chat/PickChatMembers;
+    sub-double v11, v6, v11
 
-    invoke-direct {v0}, Lone/me/startconversation/chat/PickChatMembers;-><init>()V
+    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
 
-    return-object v0
+    move-result-wide v18
 
-    :pswitch_7
-    new-instance v0, Lone/me/startconversation/StartConversationScreen;
+    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
 
-    invoke-direct {v0}, Lone/me/startconversation/StartConversationScreen;-><init>()V
+    move-result-wide v11
 
-    return-object v0
+    const-wide v4, 0x3fd6db6db6db6db7L    # 0.35714285714285715
 
-    :pswitch_8
-    new-instance v0, Lone/me/settings/storage/ui/SettingsStorageScreen;
+    invoke-static {v11, v12, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
-    invoke-direct {v0}, Lone/me/settings/storage/ui/SettingsStorageScreen;-><init>()V
+    move-result-wide v11
 
-    return-object v0
+    mul-double v11, v11, v18
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-wide/from16 v4, v16
+
+    double-to-float v13, v4
+
+    double-to-float v11, v11
+
+    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
+
+    const/16 v16, 0x1
+
+    if-eqz v14, :cond_3
+
+    move-wide v4, v2
+
+    const/4 v15, 0x0
+
+    :goto_1
+    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    const-wide v13, 0x4006666666666666L    # 2.8
+
+    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    sub-double v11, v6, v11
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->signum(D)D
+
+    move-result-wide v13
+
+    neg-double v13, v13
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v11
+
+    move-wide/from16 v20, v2
+
+    const-wide v2, 0x3fd6db6db6db6db7L    # 0.35714285714285715
+
+    invoke-static {v11, v12, v2, v3}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v11
+
+    mul-double/2addr v11, v13
+
+    double-to-float v13, v4
+
+    double-to-float v11, v11
+
+    invoke-virtual {v1, v13, v11}, Landroid/graphics/Path;->lineTo(FF)V
+
+    if-eqz v15, :cond_1
+
+    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
+
+    invoke-virtual {v1, v8, v8}, Landroid/graphics/Path;->offset(FF)V
+
+    return-object v1
+
+    :cond_1
+    const/16 v11, 0x50
+
+    int-to-double v12, v11
+
+    div-double v12, v20, v12
+
+    const-wide v2, 0x3fc999999999999aL    # 0.2
+
+    invoke-static {v12, v13, v2, v3}, Lk84;->d(DD)D
+
+    move-result-wide v12
+
+    sub-double/2addr v4, v12
+
+    neg-int v12, v0
+
+    int-to-double v12, v12
+
+    cmpg-double v12, v4, v12
+
+    if-gtz v12, :cond_2
+
+    move-wide v4, v9
+
+    move/from16 v15, v16
+
+    :cond_2
+    move-wide/from16 v2, v20
+
+    goto :goto_1
+
+    :cond_3
+    move-wide/from16 v20, v2
+
+    move v12, v14
+
+    const-wide v2, 0x3fc999999999999aL    # 0.2
+
+    const/16 v11, 0x50
+
+    int-to-double v13, v11
+
+    div-double v13, v20, v13
+
+    invoke-static {v13, v14, v2, v3}, Lk84;->d(DD)D
+
+    move-result-wide v2
+
+    add-double/2addr v2, v4
+
+    cmpl-double v4, v2, v20
+
+    if-ltz v4, :cond_4
+
+    move/from16 v14, v16
+
+    move-wide/from16 v2, v20
+
+    move-wide/from16 v16, v2
+
+    :goto_2
+    const-wide v4, 0x4006666666666666L    # 2.8
+
+    goto/16 :goto_0
+
+    :cond_4
+    move-wide/from16 v16, v2
+
+    move v14, v12
+
+    move-wide/from16 v2, v20
+
+    goto :goto_2
 .end method

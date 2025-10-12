@@ -1,96 +1,57 @@
-.class public final synthetic Lkna;
+.class public final Lkna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lyn7;
 
-.field public final synthetic b:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public final b:Lh4f;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Lh4f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Thread$UncaughtExceptionHandler;I)V
-    .locals 0
-
-    iput p3, p0, Lkna;->a:I
-
-    iput-object p1, p0, Lkna;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lkna;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+    .locals 7
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p6, p0, Lkna;->a:Lyn7;
 
+    new-instance v0, Lkj2;
 
-# virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 8
-
-    iget v0, p0, Lkna;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkna;->c:Ljava/lang/Object;
-
-    move-object v3, v0
-
-    check-cast v3, Lzb4;
-
-    new-instance v1, Lhpa;
-
-    const/4 v6, 0x0
-
-    iget-object v4, p0, Lkna;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-object v5, p1
+    move-object v1, p1
 
     move-object v2, p2
 
-    invoke-direct/range {v1 .. v6}, Lhpa;-><init>(Ljava/lang/Throwable;Lzb4;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
+    move-object v3, p3
 
-    invoke-static {v1}, Lq9e;->y(Llf6;)Ljava/lang/Object;
+    move-object v4, p4
 
-    return-void
+    move-object v5, p5
 
-    :pswitch_0
-    move-object v5, p1
+    move-object v6, p6
 
-    move-object v2, p2
+    invoke-direct/range {v0 .. v6}, Lkj2;-><init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
 
-    iget-object p1, p0, Lkna;->c:Ljava/lang/Object;
+    new-instance p1, Lh4f;
 
-    move-object v4, p1
+    invoke-direct {p1, v0}, Lh4f;-><init>(Ltd6;)V
 
-    check-cast v4, Lzna;
+    iput-object p1, p0, Lkna;->b:Lh4f;
 
-    move-object v3, v2
+    new-instance p1, Lgna;
 
-    new-instance v2, Lqna;
+    const/4 p2, 0x0
 
-    const/4 v7, 0x0
+    invoke-direct {p1, v1, v6, v4, p2}, Lgna;-><init>(Lyn7;Lyn7;Lyn7;I)V
 
-    move-object v6, v5
+    new-instance p2, Lh4f;
 
-    iget-object v5, p0, Lkna;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
 
-    invoke-direct/range {v2 .. v7}, Lqna;-><init>(Ljava/lang/Throwable;Lzna;Ljava/lang/Thread$UncaughtExceptionHandler;Ljava/lang/Thread;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v2}, Lq9e;->y(Llf6;)Ljava/lang/Object;
+    iput-object p2, p0, Lkna;->c:Lh4f;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

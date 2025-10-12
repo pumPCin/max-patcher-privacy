@@ -2,151 +2,137 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lord;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Llf6;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lfo4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfo4;->b:Ljava/lang/Object;
-
-    check-cast p2, Lmo7;
-
-    iput-object p2, p0, Lfo4;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lord;Ljava/lang/Object;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lfo4;->a:I
-
-    iput-object p1, p0, Lfo4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lfo4;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lfo4;->a:Ljava/lang/String;
 
-.method public constructor <init>(Lve6;Lxe6;)V
-    .locals 1
+    iput-object p2, p0, Lfo4;->b:Ljava/lang/String;
 
-    const/4 v0, 0x2
-
-    iput v0, p0, Lfo4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Lmo7;
-
-    iput-object p1, p0, Lfo4;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lfo4;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lfo4;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lfo4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lfo4;
+
+    iget-object v2, p0, Lfo4;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lfo4;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Le3g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfo4;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lfo4;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Le3g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lfo4;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lfo4;->c:Ljava/lang/String;
+
+    invoke-static {v2, p1}, Le3g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lfo4;->a:I
+    iget-object v0, p0, Lfo4;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-object v0, p0, Lfo4;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lvr5;
+    mul-int/lit8 v0, v0, 0x1f
 
-    new-instance v1, Ljava/util/ArrayList;
+    const/4 v1, 0x0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    iget-object v2, p0, Lfo4;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lxrd;->b0(Lord;Ljava/util/Collection;)V
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lfo4;->c:Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    check-cast v0, Ljava/util/Comparator;
+    move-result v2
 
-    invoke-static {v1, v0}, Lj93;->X(Ljava/util/List;Ljava/util/Comparator;)V
+    goto :goto_0
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    :cond_0
+    move v2, v1
 
-    move-result-object v0
+    :goto_0
+    add-int/2addr v0, v2
 
-    return-object v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    :pswitch_0
-    new-instance v0, Lv29;
+    iget-object v2, p0, Lfo4;->c:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lv29;-><init>(Lfo4;)V
+    if-eqz v2, :cond_1
 
-    return-object v0
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    :pswitch_1
-    new-instance v0, Lvj6;
+    move-result v1
 
-    invoke-direct {v0, p0}, Lvj6;-><init>(Lfo4;)V
+    :cond_1
+    add-int/2addr v0, v1
 
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Lct4;
-
-    iget-object v1, p0, Lfo4;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljs;
-
-    iget-object v1, v1, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Iterable;
-
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lfo4;->c:Ljava/lang/Object;
-
-    check-cast v2, Lt03;
-
-    invoke-direct {v0, v1, v2}, Lct4;-><init>(Ljava/util/Iterator;Lt03;)V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Leo4;
-
-    invoke-direct {v0, p0}, Leo4;-><init>(Lfo4;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

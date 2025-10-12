@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract cancel()V
+.method public abstract p(Landroid/graphics/Typeface;)V
 .end method

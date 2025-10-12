@@ -1,50 +1,61 @@
 .class public final Lkbf;
-.super Ljava/lang/Object;
+.super Lahh;
 .source "SourceFile"
 
-# interfaces
-.implements Lmz3;
+
+# instance fields
+.field public final synthetic f:Landroid/content/Context;
+
+.field public final synthetic g:Landroid/text/TextPaint;
+
+.field public final synthetic h:Lahh;
+
+.field public final synthetic i:Llbf;
+
+
+# direct methods
+.method public constructor <init>(Llbf;Landroid/content/Context;Landroid/text/TextPaint;Lahh;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkbf;->i:Llbf;
+
+    iput-object p2, p0, Lkbf;->f:Landroid/content/Context;
+
+    iput-object p3, p0, Lkbf;->g:Landroid/text/TextPaint;
+
+    iput-object p4, p0, Lkbf;->h:Lahh;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
+.method public final p(I)V
     .locals 1
 
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+    iget-object v0, p0, Lkbf;->h:Lahh;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lahh;->p(I)V
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
+.method public final q(Landroid/graphics/Typeface;Z)V
+    .locals 3
 
-    move-result-object p1
+    iget-object v0, p0, Lkbf;->f:Landroid/content/Context;
 
-    return-object p1
+    iget-object v1, p0, Lkbf;->g:Landroid/text/TextPaint;
 
-    :cond_0
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+    iget-object v2, p0, Lkbf;->i:Llbf;
 
-    move-result v0
+    invoke-virtual {v2, v0, v1, p1}, Llbf;->g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lkbf;->h:Lahh;
 
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+    invoke-virtual {v0, p1, p2}, Lahh;->q(Landroid/graphics/Typeface;Z)V
 
-    move-result-object p1
-
-    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

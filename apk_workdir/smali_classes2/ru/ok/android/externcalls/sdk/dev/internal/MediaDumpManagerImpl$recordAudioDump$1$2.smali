@@ -25,7 +25,7 @@
         "Lorg/webrtc/DumpCallback;",
         "",
         "dumpFolderPath",
-        "Loyf;",
+        "Laxf;",
         "onStarted",
         "(Ljava/lang/String;)V",
         "onComplete",

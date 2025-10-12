@@ -1,21 +1,19 @@
-.class public abstract Lxnb;
+.class public final Lxnb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/graphics/Rect;
+# instance fields
+.field public final a:Lyn7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyn7;)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/Rect;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    sput-object v0, Lxnb;->a:Landroid/graphics/Rect;
+    iput-object p1, p0, Lxnb;->a:Lyn7;
 
     return-void
 .end method

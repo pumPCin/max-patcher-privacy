@@ -4,28 +4,16 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-class v0, Lsgh;
 
-    const/16 v1, 0x1f
-
-    if-lt v0, v1, :cond_0
-
-    const/high16 v0, 0x2000000
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    sput v0, Lsgh;->a:I
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method

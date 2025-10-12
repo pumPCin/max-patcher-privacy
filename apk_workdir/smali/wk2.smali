@@ -1,9 +1,9 @@
 .class public final Lwk2;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lwk2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lwk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,47 +60,118 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lwk2;->X:Ljava/lang/Object;
 
-    check-cast p1, Lhy9;
+    check-cast p1, Le04;
 
-    instance-of v0, p1, Lzc4;
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    if-eqz v0, :cond_1
+    move-result p1
 
-    iget-object v0, p0, Lwk2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->L0(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)Z
+    iget-object v1, p0, Lwk2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    move-result v1
+    if-eqz p1, :cond_4
 
-    if-eqz v1, :cond_0
+    if-eq p1, v0, :cond_3
 
-    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->P0()Llhg;
+    const/4 v2, 0x2
+
+    if-eq p1, v2, :cond_1
+
+    const/4 v2, 0x3
+
+    if-ne p1, v2, :cond_0
+
+    sget-object p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->M0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0()Lrm2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrm2;->w()V
+
+    invoke-virtual {v1, v0, v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->V0(ZZ)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    invoke-static {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->L0(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, v1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->z0:Lou8;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lou8;->a()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    invoke-interface {v0}, Llhg;->pause()V
+    const/16 v2, 0x8
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {v0, v1}, Llhg;->Z(Landroid/view/Surface;)V
+    invoke-virtual {p1}, Lou8;->a()Landroid/widget/ImageView;
 
-    invoke-interface {v0}, Llhg;->stop()V
+    move-result-object p1
 
-    :cond_0
-    sget-object v0, Lpk2;->c:Lpk2;
+    const/4 v0, 0x0
 
-    check-cast p1, Lzc4;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
+    :cond_2
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0()Lrm2;
 
-    :cond_1
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrm2;->E()V
+
+    goto :goto_0
+
+    :cond_3
+    sget-object p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->M0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0()Lrm2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrm2;->w()V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, v0, p1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->V0(ZZ)V
+
+    goto :goto_0
+
+    :cond_4
+    sget-object p1, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->M0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->R0()Lrm2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrm2;->E()V
+
+    invoke-virtual {v1, v0, v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->V0(ZZ)V
+
+    :cond_5
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

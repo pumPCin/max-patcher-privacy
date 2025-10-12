@@ -4,8 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Ljavax/net/ssl/SSLSocket;)Z
-.end method
-
-.method public abstract g(Ljavax/net/ssl/SSLSocket;)Lcie;
+.method public abstract getDelegate()Lv0f;
 .end method

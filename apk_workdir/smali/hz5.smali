@@ -1,85 +1,45 @@
 .class public final Lhz5;
-.super Ljava/lang/Object;
+.super Liz5;
 .source "SourceFile"
-
-# interfaces
-.implements Lxda;
-.implements Leze;
 
 
 # instance fields
-.field public final a:Lcze;
-
-.field public b:Lss4;
+.field public final synthetic a:[Ljava/lang/Iterable;
 
 
 # direct methods
-.method public constructor <init>(Lcze;)V
+.method public constructor <init>([Ljava/lang/Iterable;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhz5;->a:Lcze;
+    iput-object p1, p0, Lhz5;->a:[Ljava/lang/Iterable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
 
-    iget-object v0, p0, Lhz5;->a:Lcze;
+    new-instance v0, Lgz5;
 
-    invoke-interface {v0}, Lcze;->b()V
+    iget-object v1, p0, Lhz5;->a:[Ljava/lang/Iterable;
 
-    return-void
-.end method
+    array-length v1, v1
 
-.method public final c(Lss4;)V
-    .locals 0
+    invoke-direct {v0, p0, v1}, Lgz5;-><init>(Lhz5;I)V
 
-    iput-object p1, p0, Lhz5;->b:Lss4;
+    new-instance v1, Lsg7;
 
-    iget-object p1, p0, Lhz5;->a:Lcze;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1, p0}, Lcze;->d(Leze;)V
+    sget-object v2, Lrg7;->X:Lrg7;
 
-    return-void
-.end method
+    iput-object v2, v1, Lsg7;->b:Ljava/util/Iterator;
 
-.method public final cancel()V
-    .locals 1
+    iput-object v0, v1, Lsg7;->c:Ljava/util/Iterator;
 
-    iget-object v0, p0, Lhz5;->b:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lhz5;->a:Lcze;
-
-    invoke-interface {v0, p1}, Lcze;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lhz5;->a:Lcze;
-
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v1
 .end method

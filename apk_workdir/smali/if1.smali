@@ -1,23 +1,27 @@
 .class public final Lif1;
-.super Lkf1;
+.super Llf1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ldh1;
 
-.field public final b:Lch1;
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lch1;Z)V
+.method public constructor <init>(Ldh1;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lif1;->a:Z
+    iput-object p1, p0, Lif1;->a:Ldh1;
 
-    iput-object p1, p0, Lif1;->b:Lch1;
+    iput-boolean p2, p0, Lif1;->b:Z
+
+    iput-boolean p3, p0, Lif1;->c:Z
 
     return-void
 .end method
@@ -45,45 +49,62 @@
     :cond_1
     check-cast p1, Lif1;
 
-    iget-boolean v1, p0, Lif1;->a:Z
+    iget-object v1, p0, Lif1;->a:Ldh1;
 
-    iget-boolean v3, p1, Lif1;->a:Z
+    iget-object v3, p1, Lif1;->a:Ldh1;
 
-    if-eq v1, v3, :cond_2
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lif1;->b:Lch1;
+    iget-boolean v1, p0, Lif1;->b:Z
 
-    iget-object p1, p1, Lif1;->b:Lch1;
+    iget-boolean v3, p1, Lif1;->b:Z
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
+    if-eq v1, v3, :cond_3
 
     return v2
 
     :cond_3
+    iget-boolean v1, p0, Lif1;->c:Z
+
+    iget-boolean p1, p1, Lif1;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-boolean v0, p0, Lif1;->a:Z
+    iget-object v0, p0, Lif1;->a:Ldh1;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Ldh1;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lif1;->b:Lch1;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Lch1;->hashCode()I
+    iget-boolean v2, p0, Lif1;->b:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lif1;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -93,31 +114,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "HasOpenAction(hasAction="
+    const-string v1, "HasItemActions(opponentId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-boolean v1, p0, Lif1;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", opponentId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lif1;->b:Lch1;
+    iget-object v1, p0, Lif1;->a:Ldh1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, ", hasMenuAction="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-boolean v1, p0, Lif1;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isRaiseHand="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lif1;->c:Z
+
+    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

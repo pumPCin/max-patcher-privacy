@@ -1,118 +1,73 @@
-.class public abstract Lu95;
-.super Lzx4;
+.class public final enum Lu95;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/graphics/drawable/Animatable;
 
+# static fields
+.field public static final enum a:Lu95;
 
-# instance fields
-.field public final b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public static final enum b:Lu95;
 
-.field public c:Lt95;
+.field public static final synthetic c:[Lu95;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0, p1}, Lzx4;-><init>(Landroid/graphics/drawable/Drawable;)V
+    new-instance v0, Lu95;
 
-    iput-object p1, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    const-string v1, "SUCCESS"
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-# virtual methods
-.method public a()V
-    .locals 0
+    sput-object v0, Lu95;->a:Lu95;
 
-    return-void
-.end method
+    new-instance v1, Lu95;
 
-.method public b()V
-    .locals 0
+    const-string v2, "FAILURE"
 
-    return-void
-.end method
+    const/4 v3, 0x1
 
-.method public final invalidateSelf()V
-    .locals 2
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lu95;->c:Lt95;
+    sput-object v1, Lu95;->b:Lu95;
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Lt95;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lt95;-><init>(Landroid/graphics/drawable/Drawable$Callback;I)V
-
-    iput-object v0, p0, Lu95;->c:Lt95;
-
-    iget-object v1, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {v1, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->registerAnimationCallback(Lae;)V
-
-    :cond_0
-    invoke-super {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-.end method
-
-.method public final isRunning()Z
-    .locals 1
-
-    iget-object v0, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->isRunning()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public start()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+    filled-new-array {v0, v1}, [Lu95;
 
     move-result-object v0
 
-    iget-object v1, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    sput-object v0, Lu95;->c:[Lu95;
 
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lu95;->c:Lt95;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->unregisterAnimationCallback(Lae;)Z
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lu95;->c:Lt95;
-
-    :cond_1
-    iget-object v0, p0, Lu95;->c:Lt95;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->start()V
-
-    :cond_2
     return-void
 .end method
 
-.method public stop()V
+.method public static valueOf(Ljava/lang/String;)Lu95;
     .locals 1
 
-    iget-object v0, p0, Lu95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    const-class v0, Lu95;
 
-    invoke-virtual {v0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->stop()V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return-void
+    move-result-object p0
+
+    check-cast p0, Lu95;
+
+    return-object p0
+.end method
+
+.method public static values()[Lu95;
+    .locals 1
+
+    sget-object v0, Lu95;->c:[Lu95;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lu95;
+
+    return-object v0
 .end method

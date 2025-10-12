@@ -1,171 +1,97 @@
-.class public final synthetic Lfzb;
+.class public final Lfzb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lhzb;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgzb;
+.field public final a:Lcdf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgzb;I)V
+.method public constructor <init>(Lcdf;)V
     .locals 0
 
-    iput p2, p0, Lfzb;->a:I
-
-    iput-object p1, p0, Lfzb;->b:Lgzb;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfzb;->a:Lcdf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lfzb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lfzb;->b:Lgzb;
-
-    iget-object v0, v0, Lgzb;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
-
-    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->B0()Lszb;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lszb;->J0:Ljb5;
-
-    new-instance v1, Lxyb;
-
-    new-instance v2, Lyy3;
-
-    sget v3, Lwra;->L:I
-
-    sget v4, Lyra;->S0:I
-
-    move v5, v4
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, v5}, Ljef;-><init>(I)V
-
-    sget v5, Lvsa;->V:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    sget v6, Lg9d;->K1:I
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    sget v7, Lvsa;->Q:I
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    invoke-direct/range {v2 .. v7}, Lyy3;-><init>(ILoef;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Lxyb;-><init>(Ljava/util/List;)V
-
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lfzb;->b:Lgzb;
-
-    iget-object v0, v0, Lgzb;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
-
-    invoke-virtual {v0}, Lone/me/profile/screens/invite/ProfileInviteScreen;->B0()Lszb;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lszb;->J0:Ljb5;
-
-    invoke-virtual {v0}, Lszb;->s()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance v3, Lvyb;
+    instance-of v1, p1, Lfzb;
 
-    invoke-direct {v3, v2}, Lvyb;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    invoke-static {v1, v3}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    invoke-static {}, Lx63;->b()Z
+    return v2
 
-    move-result v2
+    :cond_1
+    check-cast p1, Lfzb;
 
-    if-eqz v2, :cond_2
+    iget-object v1, p0, Lfzb;->a:Lcdf;
 
-    new-instance v2, Lyyb;
+    iget-object p1, p1, Lfzb;->a:Lcdf;
 
-    invoke-virtual {v0}, Lszb;->r()Lm82;
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result p1
 
-    if-eqz v0, :cond_1
+    if-nez p1, :cond_2
 
-    invoke-virtual {v0}, Lm82;->H()Z
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lfzb;->a:Lcdf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    const/4 v3, 0x1
+    return v0
+.end method
 
-    if-ne v0, v3, :cond_1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget v0, Lyra;->N0:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v1, "ShowRestoreMembersSnackbar(caption="
 
-    :cond_1
-    sget v0, Lyra;->P0:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    new-instance v3, Ljef;
+    iget-object v1, p0, Lfzb;->a:Lcdf;
 
-    invoke-direct {v3, v0}, Ljef;-><init>(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget v0, Lg9d;->r:I
+    const-string v1, ")"
 
-    invoke-direct {v2, v0, v3}, Lyyb;-><init>(ILjef;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, v1, Ljb5;->b:Le8e;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    :cond_2
-    :goto_1
-    sget-object v0, Loyf;->a:Loyf;
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

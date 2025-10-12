@@ -1,56 +1,53 @@
 .class public final Lgqg;
-.super Ljava/lang/ref/WeakReference;
+.super Lwy3;
 .source "SourceFile"
 
-# interfaces
-.implements Lss4;
+
+# instance fields
+.field public X:Lmn0;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvqg;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:I
 
 
-# virtual methods
-.method public final g()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lvqg;Lwy3;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iput-object p1, p0, Lgqg;->Z:Lvqg;
 
-    move-result-object v0
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Lss4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    :cond_0
     return-void
 .end method
 
-.method public final h()Z
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iput-object p1, p0, Lgqg;->Y:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lgqg;->r0:I
 
-    check-cast v0, Lss4;
+    const/high16 v0, -0x80000000
 
-    if-eqz v0, :cond_1
+    or-int/2addr p1, v0
 
-    invoke-interface {v0}, Lss4;->h()Z
+    iput p1, p0, Lgqg;->r0:I
 
-    move-result v0
+    iget-object p1, p0, Lgqg;->Z:Lvqg;
 
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    return v0
+    invoke-static {p1, v0, p0}, Lvqg;->b(Lvqg;Lmn0;Lwy3;)Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    move-result-object p1
 
-    return v0
+    return-object p1
 .end method

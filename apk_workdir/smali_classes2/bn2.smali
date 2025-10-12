@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Lvd6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ln8;
+.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln8;I)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
     .locals 0
 
     iput p2, p0, Lbn2;->a:I
 
-    iput-object p1, p0, Lbn2;->b:Ln8;
+    iput-object p1, p0, Lbn2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,155 +27,67 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lbn2;->a:I
 
-    iget-object v1, p0, Lbn2;->b:Ln8;
+    sget-object v1, Laxf;->a:Laxf;
 
-    check-cast v1, Ldn2;
+    iget-object v2, p0, Lbn2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
 
-    return-void
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->D0()Lcy8;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcy8;->Z:Lhne;
+
+    const/4 v0, 0x0
+
+    sget-object v2, Ly65;->a:Ly65;
+
+    invoke-virtual {p1, v0, v2}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v1
 
     :pswitch_0
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
+    check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->C0()Lon2;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lon2;->s()Lkv7;
+
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_1
-    sget-object v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->x0:[Ltm7;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
 
-    return-void
+    invoke-virtual {v2}, Ljz3;->getRouter()Ln6d;
 
-    :pswitch_2
-    sget v0, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->Y:I
+    move-result-object p1
 
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ln6d;->C()Z
 
-    return-void
-
-    :pswitch_3
-    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_4
-    sget-object v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->y0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_5
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_6
-    sget-object v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;->z0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_7
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_8
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_9
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_a
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_b
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_c
-    sget-object v0, Lone/me/contactlist/ContactListWidget;->T0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_d
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->P0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_e
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->P0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_f
-    sget-object v0, Lone/me/chats/search/ChatsListSearchScreen;->N0:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_10
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltm7;
-
-    invoke-virtual {v1, p1}, Ldn2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
+    return-object v1
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -1,109 +1,83 @@
-.class public final enum Lfr1;
-.super Ljava/lang/Enum;
+.class public final synthetic Lfr1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final enum X:Lfr1;
 
-.field public static final synthetic Y:[Lfr1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum a:Lfr1;
-
-.field public static final enum b:Lfr1;
-
-.field public static final enum c:Lfr1;
-
-.field public static final enum o:Lfr1;
+.field public final synthetic b:Lkr1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lkr1;I)V
+    .locals 0
 
-    new-instance v0, Lfr1;
+    iput p2, p0, Lfr1;->a:I
 
-    const-string v1, "MIDDLE"
+    iput-object p1, p0, Lfr1;->b:Lkr1;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lfr1;->a:Lfr1;
-
-    new-instance v1, Lfr1;
-
-    const-string v2, "SMALL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lfr1;->b:Lfr1;
-
-    new-instance v2, Lfr1;
-
-    const-string v3, "PIP"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lfr1;->c:Lfr1;
-
-    new-instance v3, Lfr1;
-
-    const-string v4, "PREVIEW"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lfr1;->o:Lfr1;
-
-    new-instance v4, Lfr1;
-
-    const-string v5, "BIG_AVATAR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lfr1;->X:Lfr1;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lfr1;
-
-    move-result-object v0
-
-    sput-object v0, Lfr1;->Y:[Lfr1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lfr1;
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    const-class v0, Lfr1;
+    iget p1, p0, Lfr1;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p1, p0, Lfr1;->b:Lkr1;
 
-    check-cast p0, Lfr1;
+    iget-object v0, p1, Lkr1;->b1:Lhr1;
 
-    return-object p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public static values()[Lfr1;
-    .locals 1
+    iget-object p1, p1, Lkr1;->h1:Ldh1;
 
-    sget-object v0, Lfr1;->Y:[Lfr1;
+    invoke-interface {v0, p1}, Lhr1;->q(Ldh1;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :cond_0
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object p1, p0, Lfr1;->b:Lkr1;
 
-    check-cast v0, [Lfr1;
+    iget-object p1, p1, Lkr1;->b1:Lhr1;
 
-    return-object v0
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1}, Lhr1;->I()V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lfr1;->b:Lkr1;
+
+    iget-object v0, p1, Lkr1;->b1:Lhr1;
+
+    if-eqz v0, :cond_2
+
+    iget-object p1, p1, Lkr1;->h1:Ldh1;
+
+    invoke-interface {v0, p1}, Lhr1;->w(Ldh1;)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,105 +1,63 @@
 .class public final Lh1e;
-.super Lv2;
+.super Luc0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lh1e;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lh1e;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Lh1e;->b:Lh1e;
+
+    return-void
+.end method
+
+
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lh1e;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x6e285b4b
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 11
+    .locals 1
 
-    iget-object v0, p0, Lv2;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/BitSet;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v2
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v3}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v3
-
-    const/4 v4, 0x3
-
-    invoke-virtual {v0, v4}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v4
-
-    const/4 v5, 0x4
-
-    invoke-virtual {v0, v5}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v5
-
-    const/4 v6, 0x5
-
-    invoke-virtual {v0, v6}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v6
-
-    const/4 v7, 0x6
-
-    invoke-virtual {v0, v7}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v7
-
-    const/4 v8, 0x7
-
-    invoke-virtual {v0, v8}, Ljava/util/BitSet;->get(I)Z
-
-    move-result v0
-
-    const-string v8, ",\n                isTitleChanged="
-
-    const-string v9, ",\n                isTypeChanged="
-
-    const-string v10, "\n            Payload(\n                isSectionChanged="
-
-    invoke-static {v10, v1, v8, v2, v9}, Lfl7;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",\n                isDescriptionResChanged="
-
-    const-string v8, ",\n                isEndViewChanged="
-
-    invoke-static {v2, v8, v1, v3, v4}, Lqw1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v2, ",\n                isCounterTypeChanged="
-
-    const-string v3, ",\n                isUpperTextChanged="
-
-    invoke-static {v2, v3, v1, v5, v6}, Lqw1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ",\n                isStartIconChanged="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, ",\n            )\n        "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lzxe;->N(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "CameraPermission"
 
     return-object v0
 .end method

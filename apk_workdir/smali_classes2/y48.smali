@@ -1,73 +1,48 @@
 .class public final Ly48;
-.super Lbj0;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public final X:Lit9;
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Lz48;
 
-.field public final c:Z
-
-.field public final o:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JZZZLit9;)V
+.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+    iput-object p1, p0, Ly48;->Y:Lz48;
 
-    iput-boolean p3, p0, Ly48;->b:Z
-
-    iput-boolean p4, p0, Ly48;->c:Z
-
-    iput-boolean p5, p0, Ly48;->o:Z
-
-    iput-object p6, p0, Ly48;->X:Lit9;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ly48;->X:Lit9;
+    iput-object p1, p0, Ly48;->o:Ljava/lang/Object;
 
-    iget v0, v0, Lit9;->d:I
+    iget p1, p0, Ly48;->X:I
 
-    const-string v1, "LoginEvent(requestId="
+    const/high16 v0, -0x80000000
 
-    const-string v2, ", isFirstLogin="
+    or-int/2addr p1, v0
 
-    iget-wide v3, p0, Lbj0;->a:J
+    iput p1, p0, Ly48;->X:I
 
-    iget-boolean v5, p0, Ly48;->b:Z
+    iget-object p1, p0, Ly48;->Y:Lz48;
 
-    invoke-static {v3, v4, v1, v2, v5}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v2, ", hasNewMessages="
+    move-result-object p1
 
-    const-string v3, ", videoChatHistory="
-
-    iget-boolean v4, p0, Ly48;->c:Z
-
-    iget-boolean v5, p0, Ly48;->o:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lvl3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v2, ", chats="
-
-    const-string v3, ")"
-
-    invoke-static {v1, v2, v0, v3}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,39 +1,57 @@
-.class public final Lf82;
+.class public abstract Lf82;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Iterable;
+.implements Lel7;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:C
 
-.field public final b:Lf82;
+.field public final b:C
 
 .field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lf82;)V
-    .locals 0
+.method public constructor <init>(CC)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf82;->a:Ljava/lang/String;
+    iput-char p1, p0, Lf82;->a:C
 
-    iput-object p2, p0, Lf82;->b:Lf82;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x1
+    invoke-static {p1, p2, v0}, Loq0;->h(III)I
 
-    if-nez p2, :cond_0
+    move-result p1
 
-    goto :goto_0
+    int-to-char p1, p1
 
-    :cond_0
-    iget p2, p2, Lf82;->c:I
+    iput-char p1, p0, Lf82;->b:C
 
-    add-int/2addr p1, p2
-
-    :goto_0
-    iput p1, p0, Lf82;->c:I
+    iput v0, p0, Lf82;->c:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final iterator()Ljava/util/Iterator;
+    .locals 4
+
+    new-instance v0, Lg82;
+
+    iget-char v1, p0, Lf82;->b:C
+
+    iget v2, p0, Lf82;->c:I
+
+    iget-char v3, p0, Lf82;->a:C
+
+    invoke-direct {v0, v3, v1, v2}, Lg82;-><init>(CCI)V
+
+    return-object v0
 .end method

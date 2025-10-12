@@ -1,274 +1,111 @@
-.class public final Loj5;
-.super Landroid/webkit/WebViewClient;
+.class public final synthetic Loj5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webview/FaqWebViewWidget;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lxk5;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webview/FaqWebViewWidget;)V
+.method public synthetic constructor <init>(Lxk5;I)V
     .locals 0
 
-    iput-object p1, p0, Loj5;->a:Lone/me/webview/FaqWebViewWidget;
+    iput p2, p0, Loj5;->a:I
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    iput-object p1, p0, Loj5;->b:Lxk5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
-    .locals 6
+.method public final call()Ljava/lang/Object;
+    .locals 5
 
-    iget-object p1, p0, Loj5;->a:Lone/me/webview/FaqWebViewWidget;
+    iget v0, p0, Loj5;->a:I
 
-    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->o:Lbp7;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Loj5;->b:Lxk5;
 
-    if-eqz p2, :cond_a
-
-    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
-
-    move-result-object p2
-
-    if-nez p2, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    if-eqz v2, :cond_1
-
-    const-string v5, "mailto"
-
-    invoke-static {v2, v5, v1}, Lyxe;->c0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v2
-
-    if-ne v2, v4, :cond_1
-
-    sget-object p2, Lone/me/webview/FaqWebViewWidget;->Z:Lzu3;
-
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
-
-    move-result-object p2
-
-    new-instance v0, Lqj5;
-
-    invoke-direct {v0, p1, v3}, Lqj5;-><init>(Lone/me/webview/FaqWebViewWidget;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v1, Lh34;->b:Lh34;
-
-    invoke-static {p2, v3, v1, v0, v4}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    move-result-object p2
-
-    iget-object v0, p1, Lone/me/webview/FaqWebViewWidget;->c:Lg65;
-
-    sget-object v1, Lone/me/webview/FaqWebViewWidget;->w0:[Ltm7;
-
-    aget-object v1, v1, v4
-
-    invoke-virtual {v0, p1, v1, p2}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
-
-    return v4
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lil;
-
-    check-cast v5, Lnw7;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "max"
-
-    invoke-static {v2, v5, v1}, Lyxe;->c0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v2
-
-    if-ne v2, v4, :cond_2
-
-    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->B0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
-
-    return v4
-
-    :cond_2
-    sget-object v2, Lone/me/webview/FaqWebViewWidget;->Z:Lzu3;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lxk5;->c()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    check-cast v0, Lil;
+    return-object v0
 
-    check-cast v0, Lnw7;
+    :pswitch_0
+    iget-object v0, p0, Loj5;->b:Lxk5;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v0, "https"
+    const/4 v1, 0x0
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    const-string v2, "SELECT COUNT(*) FROM favorite_stickers"
 
-    move-result-object v0
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    invoke-static {v1, v2}, Lt4d;->c(ILjava/lang/String;)Lt4d;
 
     move-result-object v2
 
-    if-nez v2, :cond_3
+    iget-object v0, v0, Lxk5;->a:Lc4d;
 
-    goto/16 :goto_3
+    invoke-virtual {v0}, Lc4d;->b()V
 
-    :cond_3
-    aget-object v0, v0, v1
-
-    invoke-static {v2, v0, v1}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lc4d;->n(Lx0f;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/webkit/MimeTypeMap;->getFileExtensionFromUrl(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result-object v0
+    move-result v3
 
-    if-eqz v0, :cond_a
+    if-eqz v3, :cond_0
 
-    invoke-static {v0}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
+    invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result v2
-
-    if-nez v2, :cond_4
+    move-result-wide v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_4
-    move-object v0, v3
-
-    :goto_0
-    if-eqz v0, :cond_a
-
-    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_a
-
-    invoke-static {v0}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    move-object v3, v0
-
-    :cond_5
-    if-eqz v3, :cond_a
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v2, Lone/me/webview/FaqWebViewWidget;->x0:Ljava/util/List;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_a
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_6
+    :catchall_0
+    move-exception v1
 
     goto :goto_1
 
-    :cond_6
-    const-string v2, "image/"
+    :cond_0
+    const-wide/16 v3, 0x0
 
-    invoke-static {v0, v2, v4}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    :goto_0
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    move-result v2
+    invoke-virtual {v2}, Lt4d;->o()V
 
-    if-eqz v2, :cond_7
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v2, "djvu"
+    move-result-object v0
 
-    invoke-static {v0, v2, v4}, Lyxe;->c0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    return-object v0
 
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    goto :goto_3
-
-    :cond_7
     :goto_1
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    move-result v2
+    invoke-virtual {v2}, Lt4d;->o()V
 
-    if-nez v2, :cond_8
+    throw v1
 
-    goto :goto_2
-
-    :cond_8
-    const-string v2, "video/"
-
-    invoke-static {v0, v2, v4}, Lgye;->b0(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    :goto_2
-    invoke-static {p1, p2}, Lone/me/webview/FaqWebViewWidget;->B0(Lone/me/webview/FaqWebViewWidget;Landroid/net/Uri;)V
-
-    return v4
-
-    :cond_a
-    :goto_3
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -26,6 +26,7 @@
 .method public final decompress([B[B)I
     .locals 1
 
+    .line 2
     array-length v0, p2
 
     invoke-virtual {p0, p1, p2, v0}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([B[BI)I
@@ -50,6 +51,7 @@
 
     move v5, p3
 
+    .line 1
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([BI[BII)I
 
     move-result p1
@@ -60,6 +62,7 @@
 .method public final decompress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
     .locals 6
 
+    .line 6
     invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v2
@@ -82,12 +85,14 @@
 
     move-result p1
 
+    .line 7
     invoke-virtual {v3}, Ljava/nio/Buffer;->limit()I
 
     move-result p2
 
     invoke-virtual {v3, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 8
     invoke-virtual {v1}, Ljava/nio/Buffer;->position()I
 
     move-result p2
@@ -104,6 +109,7 @@
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-virtual {p0, p1, v0, p2}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([BII)[B
 
     move-result-object p1
@@ -114,6 +120,7 @@
 .method public final decompress([BII)[B
     .locals 6
 
+    .line 3
     new-array v3, p3, [B
 
     const/4 v4, 0x0
@@ -126,6 +133,7 @@
 
     move v5, p3
 
+    .line 4
     invoke-virtual/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress([BI[BII)I
 
     return-object v3

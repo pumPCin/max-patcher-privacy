@@ -2,7 +2,6 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract getCoroutineContext()Lw24;
-.end method
+# interfaces
+.implements Luz8;
+.implements Lb09;

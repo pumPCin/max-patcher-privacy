@@ -1,61 +1,171 @@
 .class public final Llzf;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lgu9;
+.field public final a:J
 
-.field public Y:J
+.field public final b:J
 
-.field public Z:J
-
-.field public o:Luzf;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Luzf;
-
-.field public y0:I
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Luzf;Lnz3;)V
+.method public synthetic constructor <init>(JJ)V
+    .locals 7
+
+    const-wide/16 v5, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-wide v3, p3
+
+    .line 1
+    invoke-direct/range {v0 .. v6}, Llzf;-><init>(JJJ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JJJ)V
     .locals 0
 
-    iput-object p1, p0, Llzf;->x0:Luzf;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-wide p1, p0, Llzf;->a:J
+
+    .line 4
+    iput-wide p3, p0, Llzf;->b:J
+
+    .line 5
+    iput-wide p5, p0, Llzf;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Llzf;->w0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Llzf;->y0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Llzf;
 
-    iput p1, p0, Llzf;->y0:I
+    const/4 v2, 0x0
 
-    const-wide/16 v1, 0x0
+    if-nez v1, :cond_1
 
-    const-wide/16 v3, 0x0
+    return v2
 
-    iget-object v0, p0, Llzf;->x0:Luzf;
+    :cond_1
+    check-cast p1, Llzf;
 
-    move-object v5, p0
+    iget-wide v3, p0, Llzf;->a:J
 
-    invoke-virtual/range {v0 .. v5}, Luzf;->b(JJLnz3;)Ljava/lang/Object;
+    iget-wide v5, p1, Llzf;->a:J
 
-    move-result-object p1
+    cmp-long v1, v3, v5
 
-    return-object p1
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Llzf;->b:J
+
+    iget-wide v5, p1, Llzf;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Llzf;->c:J
+
+    iget-wide v5, p1, Llzf;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Llzf;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Llzf;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    iget-wide v1, p0, Llzf;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 8
+
+    iget-wide v0, p0, Llzf;->b:J
+
+    iget-wide v2, p0, Llzf;->a:J
+
+    add-long/2addr v0, v2
+
+    iget-wide v4, p0, Llzf;->c:J
+
+    add-long/2addr v4, v2
+
+    const-string v6, "Chunk["
+
+    const-string v7, " -> "
+
+    invoke-static {v2, v3, v6, v7}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, " (position: "
+
+    const-string v1, ")]"
+
+    invoke-static {v4, v5, v0, v1, v2}, Lc85;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

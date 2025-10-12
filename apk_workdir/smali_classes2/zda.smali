@@ -1,100 +1,64 @@
-.class public Lzda;
-.super Landroid/widget/TextView;
+.class public final synthetic Lzda;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Ltlg;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lzda;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lzda;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getObserverSpanListener()Ltlg;
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lzda;->a:Ltlg;
+    iget v0, p0, Lzda;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final onWindowVisibilityChanged(I)V
-    .locals 1
+    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
 
-    invoke-super {p0, p1}, Landroid/view/View;->onWindowVisibilityChanged(I)V
-
-    if-eqz p1, :cond_1
-
-    const/16 v0, 0x8
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lzda;->a:Ltlg;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p0}, Ltlg;->onViewDetachedFromWindow(Landroid/view/View;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->b(Ljava/lang/String;)V
 
     return-void
 
-    :cond_1
-    iget-object p1, p0, Lzda;->a:Ltlg;
+    :pswitch_0
+    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
 
-    if-eqz p1, :cond_2
-
-    invoke-static {p0}, Ltlg;->a(Landroid/widget/TextView;)V
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final setObserverSpanListener(Ltlg;)V
-    .locals 0
-
-    iput-object p1, p0, Lzda;->a:Ltlg;
+    invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/upload/UploadStarter;->a(Ljava/lang/String;)V
 
     return-void
-.end method
 
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
+    :pswitch_1
+    iget-object v0, p0, Lzda;->b:Ljava/lang/String;
 
-    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+    invoke-static {v0}, Lru/ok/android/onelog/OneLogImpl;->a(Ljava/lang/String;)V
 
-    if-nez v0, :cond_1
+    return-void
 
-    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    nop
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

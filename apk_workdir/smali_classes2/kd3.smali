@@ -1,19 +1,23 @@
 .class public final Lkd3;
-.super Ll9f;
+.super Ly7f;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Z
+.field public final c:J
+
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(JLjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lkd3;->c:Z
+    iput-wide p1, p0, Lkd3;->c:J
+
+    iput-object p3, p0, Lkd3;->o:Ljava/util/List;
 
     return-void
 .end method
@@ -21,15 +25,35 @@
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    const-string v0, "Response(success="
+    iget-object v0, p0, Lkd3;->o:Ljava/util/List;
 
-    const-string v1, ")"
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget-boolean v2, p0, Lkd3;->c:Z
+    move-result v0
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Response(complainSync="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lkd3;->c:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ",complainsSize:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

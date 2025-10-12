@@ -1,199 +1,106 @@
 .class public final Lqjh;
-.super Lwyf;
+.super Lzih;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final b:I
+.field public final synthetic b:Lfaf;
 
-.field public c:I
+.field public final synthetic c:Lgih;
 
-.field public final o:Lsjh;
+.field public final synthetic o:Lvkh;
 
 
 # direct methods
-.method public constructor <init>(Lsjh;I)V
-    .locals 2
+.method public constructor <init>(Lvkh;Lfaf;Lfaf;Lgih;)V
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    iput-object p3, p0, Lqjh;->b:Lfaf;
 
-    move-result v0
+    iput-object p4, p0, Lqjh;->c:Lgih;
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lqjh;->o:Lvkh;
 
-    invoke-direct {p0, v1}, Lwyf;-><init>(I)V
-
-    if-ltz p2, :cond_0
-
-    if-gt p2, v0, :cond_0
-
-    iput v0, p0, Lqjh;->b:I
-
-    iput p2, p0, Lqjh;->c:I
-
-    iput-object p1, p0, Lqjh;->o:Lsjh;
+    invoke-direct {p0, p2}, Lzih;-><init>(Lfaf;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "index"
-
-    invoke-static {p2, v0, v1}, Lj40;->a0(IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 6
 
-    iget-object v0, p0, Lqjh;->o:Lsjh;
+    iget-object v0, p0, Lqjh;->o:Lvkh;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v0, v0, Lvkh;->f:Ljava/lang/Object;
 
-    move-result-object p1
+    monitor-enter v0
 
-    return-object p1
-.end method
+    :try_start_0
+    iget-object v1, p0, Lqjh;->o:Lvkh;
 
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
+    iget-object v2, p0, Lqjh;->b:Lfaf;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v3, v1, Lvkh;->e:Ljava/util/HashSet;
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    throw p1
-.end method
+    iget-object v3, v2, Lfaf;->a:Lflh;
 
-.method public final hasNext()Z
-    .locals 2
+    new-instance v4, Lbzb;
 
-    iget v0, p0, Lqjh;->c:I
+    const/16 v5, 0x10
 
-    iget v1, p0, Lqjh;->b:I
+    invoke-direct {v4, v1, v5, v2}, Lbzb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    if-ge v0, v1, :cond_0
+    invoke-virtual {v3, v4}, Lflh;->i(Lkda;)Lflh;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Lqjh;->o:Lvkh;
 
-    return v0
+    iget-object v1, v1, Lvkh;->k:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    return v0
-.end method
+    move-result v1
 
-.method public final hasPrevious()Z
-    .locals 1
+    if-lez v1, :cond_0
 
-    iget v0, p0, Lqjh;->c:I
+    iget-object v1, p0, Lqjh;->o:Lvkh;
 
-    if-lez v0, :cond_0
+    iget-object v1, v1, Lvkh;->b:Ljuf;
 
-    const/4 v0, 0x1
+    const-string v2, "Already connected to the service."
 
-    return v0
+    const/4 v3, 0x0
 
-    :cond_0
-    const/4 v0, 0x0
+    new-array v3, v3, [Ljava/lang/Object;
 
-    return v0
-.end method
+    invoke-virtual {v1, v2, v3}, Ljuf;->c(Ljava/lang/String;[Ljava/lang/Object;)V
 
-.method public final next()Ljava/lang/Object;
-    .locals 2
+    goto :goto_0
 
-    invoke-virtual {p0}, Lqjh;->hasNext()Z
+    :catchall_0
+    move-exception v1
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lqjh;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lqjh;->c:I
-
-    invoke-virtual {p0, v0}, Lqjh;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_1
 
     :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    :goto_0
+    iget-object v1, p0, Lqjh;->o:Lvkh;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    iget-object v2, p0, Lqjh;->c:Lgih;
 
-    throw v0
-.end method
+    invoke-static {v1, v2}, Lvkh;->b(Lvkh;Lgih;)V
 
-.method public final nextIndex()I
-    .locals 1
+    monitor-exit v0
 
-    iget v0, p0, Lqjh;->c:I
+    return-void
 
-    return v0
-.end method
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lqjh;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lqjh;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lqjh;->c:I
-
-    invoke-virtual {p0, v0}, Lqjh;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lqjh;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    throw v1
 .end method

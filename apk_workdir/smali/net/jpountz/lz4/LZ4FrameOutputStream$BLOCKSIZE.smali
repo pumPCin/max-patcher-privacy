@@ -133,10 +133,12 @@
 
     if-ne p0, v0, :cond_0
 
+    .line 2
     sget-object p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->SIZE_4MB:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
     return-object p0
 
+    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -146,24 +148,29 @@
 
     const-string v2, "]"
 
-    invoke-static {p0, v1, v2}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 4
+    invoke-static {p0, v1, v2}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
+    .line 5
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 6
     :cond_1
     sget-object p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->SIZE_1MB:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
     return-object p0
 
+    .line 7
     :cond_2
     sget-object p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->SIZE_256KB:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
     return-object p0
 
+    .line 8
     :cond_3
     sget-object p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->SIZE_64KB:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
@@ -173,6 +180,7 @@
 .method public static valueOf(Ljava/lang/String;)Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
     .locals 1
 
+    .line 1
     const-class v0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;

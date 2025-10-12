@@ -1,104 +1,164 @@
-.class public final synthetic Ldl8;
+.class public final Ldl8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lel8;
-.implements Let8;
-
 
 # instance fields
-.field public final synthetic a:Landroid/app/PendingIntent;
+.field public final a:Landroid/net/Uri;
+
+.field public final b:La67;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/app/PendingIntent;)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;Ld40;La67;)V
+    .locals 1
+
+    sget-object p2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ldl8;->a:Landroid/app/PendingIntent;
+    iput-object p1, p0, Ldl8;->a:Landroid/net/Uri;
 
-    return-void
-.end method
+    iput-object p3, p0, Ldl8;->b:La67;
 
-.method public synthetic constructor <init>(Landroid/app/PendingIntent;)V
-    .locals 0
+    invoke-static {}, La67;->i()Lx57;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    iput-object p1, p0, Ldl8;->a:Landroid/app/PendingIntent;
+    const/4 p2, 0x0
+
+    :goto_0
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    if-ge p2, v0, :cond_0
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfl8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lfl8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1, v0}, Lq57;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lx57;->h()Lexc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lks8;I)V
-    .locals 1
-
-    iget-object v0, p0, Ldl8;->a:Landroid/app/PendingIntent;
-
-    invoke-interface {p1, p2, v0}, Lks8;->c(ILandroid/app/PendingIntent;)V
-
-    return-void
-.end method
-
-.method public e(Lvk8;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    invoke-virtual {p1}, Lvk8;->isConnected()Z
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ldl8;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Ldl8;
+
+    iget-object v0, p0, Ldl8;->a:Landroid/net/Uri;
+
+    iget-object v1, p1, Ldl8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p1, Lvk8;->o:Landroid/app/PendingIntent;
+    sget v0, Le3g;->a:I
 
-    iget-object v1, p0, Ldl8;->a:Landroid/app/PendingIntent;
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v0}, Le3g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
-    goto :goto_1
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    :cond_0
-    iput-object v1, p1, Lvk8;->o:Landroid/app/PendingIntent;
+    invoke-interface {v0, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Lvk8;->a:Lak8;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_2
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    iget-object v0, p0, Ldl8;->b:La67;
 
-    move-result-object v0
+    iget-object p1, p1, Ldl8;->b:La67;
 
-    iget-object v1, p1, Lak8;->X:Landroid/os/Handler;
+    invoke-virtual {v0, p1}, La67;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    move-result p1
 
-    move-result-object v1
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
+    if-eqz p1, :cond_2
 
     :goto_0
-    invoke-static {v0}, Lpih;->o(Z)V
+    const/4 p1, 0x1
 
-    iget-object p1, p1, Lak8;->o:Lyj8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return p1
 
     :cond_2
     :goto_1
-    return-void
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ldl8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xe1781
+
+    mul-int/2addr v0, v1
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit16 v1, v1, 0x3c1
+
+    iget-object v0, p0, Ldl8;->b:La67;
+
+    invoke-virtual {v0}, La67;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    return v0
 .end method

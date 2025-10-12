@@ -1,35 +1,23 @@
-.class public abstract Lkz3;
+.class public final Lkz3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Loz3;
+
+.field public final b:Z
+
+
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
+.method public constructor <init>(Loz3;Z)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lkz3;->a:Loz3;
 
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
+    iput-boolean p2, p0, Lkz3;->b:Z
 
     return-void
 .end method

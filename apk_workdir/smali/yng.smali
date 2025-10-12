@@ -1,239 +1,188 @@
-.class public final Lyng;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public abstract Lyng;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfqf;
 
+# static fields
+.field public static final a:J
 
-# instance fields
-.field public final a:Landroid/view/View;
+.field public static final b:Ljava/lang/Object;
 
-.field public final b:I
-
-.field public final c:Landroid/view/ViewGroup;
-
-.field public final d:Z
-
-.field public e:Z
-
-.field public f:Z
+.field public static c:Lxng;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v0, 0x0
+    const-wide/16 v1, 0x1
 
-    iput-boolean v0, p0, Lyng;->f:Z
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    iput-object p1, p0, Lyng;->a:Landroid/view/View;
+    move-result-wide v0
 
-    iput p2, p0, Lyng;->b:I
+    sput-wide v0, Lyng;->a:J
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    new-instance v0, Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Landroid/view/ViewGroup;
-
-    iput-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lyng;->d:Z
-
-    invoke-virtual {p0, p1}, Lyng;->g(Z)V
+    sput-object v0, Lyng;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Liqf;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()V
+.method public static a(Landroid/content/Context;)V
     .locals 2
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lyng;->g(Z)V
-
-    iget-boolean v0, p0, Lyng;->f:Z
+    sget-object v0, Lyng;->c:Lxng;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lyng;->a:Landroid/view/View;
+    new-instance v0, Lxng;
 
-    iget v1, p0, Lyng;->b:I
+    invoke-direct {v0, p0}, Lxng;-><init>(Landroid/content/Context;)V
 
-    invoke-static {v0, v1}, Lfng;->b(Landroid/view/View;I)V
+    sput-object v0, Lyng;->c:Lxng;
+
+    iget-object p0, v0, Lxng;->a:Ljava/lang/Object;
+
+    monitor-enter p0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, v0, Lxng;->g:Z
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 
     :cond_0
     return-void
 .end method
 
-.method public final c(Liqf;)V
-    .locals 0
+.method public static b(Landroid/content/Intent;)V
+    .locals 3
 
-    invoke-virtual {p1, p0}, Liqf;->D(Lfqf;)Liqf;
+    sget-object v0, Lyng;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    monitor-enter v0
 
-.method public final f()V
-    .locals 2
+    :try_start_0
+    sget-object v1, Lyng;->c:Lxng;
 
-    const/4 v0, 0x1
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v0}, Lyng;->g(Z)V
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    iget-boolean v0, p0, Lyng;->f:Z
+    const/4 v2, 0x0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    iget-object v0, p0, Lyng;->a:Landroid/view/View;
+    move-result v1
 
-    const/4 v1, 0x0
+    if-eqz v1, :cond_0
 
-    invoke-static {v0, v1}, Lfng;->b(Landroid/view/View;I)V
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-.method public final g(Z)V
-    .locals 1
+    sget-object p0, Lyng;->c:Lxng;
 
-    iget-boolean v0, p0, Lyng;->d:Z
+    invoke-virtual {p0}, Lxng;->c()V
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
-    iget-boolean v0, p0, Lyng;->e:Z
+    :catchall_0
+    move-exception p0
 
-    if-eq v0, p1, :cond_0
-
-    iget-object v0, p0, Lyng;->c:Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_0
-
-    iput-boolean p1, p0, Lyng;->e:Z
-
-    invoke-static {v0, p1}, Lv63;->x0(Landroid/view/ViewGroup;Z)V
+    goto :goto_1
 
     :cond_0
-    return-void
-.end method
-
-.method public final h(Liqf;)V
-    .locals 0
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public static c(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
+    .locals 4
 
-    const/4 p1, 0x1
+    sget-object v0, Lyng;->b:Ljava/lang/Object;
 
-    iput-boolean p1, p0, Lyng;->f:Z
+    monitor-enter v0
 
-    return-void
-.end method
+    :try_start_0
+    invoke-static {p0}, Lyng;->a(Landroid/content/Context;)V
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    const-string v1, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    iget-boolean p1, p0, Lyng;->f:Z
+    const/4 v2, 0x0
 
-    if-nez p1, :cond_0
+    invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    iget-object p1, p0, Lyng;->a:Landroid/view/View;
+    move-result v1
 
-    iget v0, p0, Lyng;->b:I
+    const-string v2, "com.google.firebase.iid.WakeLockHolder.wakefulintent"
 
-    invoke-static {p1, v0}, Lfng;->b(Landroid/view/View;I)V
+    const/4 v3, 0x1
 
-    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
+    invoke-virtual {p1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lyng;->g(Z)V
+    sget-object p1, Lyng;->c:Lxng;
 
-    return-void
-.end method
+    sget-wide v1, Lyng;->a:J
 
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 0
-
-    if-nez p2, :cond_1
-
-    iget-boolean p1, p0, Lyng;->f:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lyng;->a:Landroid/view/View;
-
-    iget p2, p0, Lyng;->b:I
-
-    invoke-static {p1, p2}, Lfng;->b(Landroid/view/View;I)V
-
-    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lyng;->g(Z)V
+    invoke-virtual {p1, v1, v2}, Lxng;->a(J)V
 
     :cond_1
-    return-void
-.end method
+    monitor-exit v0
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    return-object p0
 
-    return-void
-.end method
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;Z)V
-    .locals 0
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p0, Lyng;->a:Landroid/view/View;
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, p2}, Lfng;->b(Landroid/view/View;I)V
-
-    iget-object p1, p0, Lyng;->c:Landroid/view/ViewGroup;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_0
-    return-void
+    throw p0
 .end method

@@ -1,109 +1,54 @@
 .class public final Lm09;
-.super Lm3f;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lp83;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ldah;
+.field public final a:Landroid/view/CollapsibleActionView;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ldah;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    iput-object p1, p0, Lm09;->X:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iput-object p3, p0, Lm09;->Y:Ldah;
+    move-result-object v0
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-object v0, p1
+
+    check-cast v0, Landroid/view/CollapsibleActionView;
+
+    iput-object v0, p0, Lm09;->a:Landroid/view/CollapsibleActionView;
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lm09;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lm09;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lm09;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lm09;
-
-    iget-object v0, p0, Lm09;->X:Ljava/lang/Object;
-
-    iget-object v1, p0, Lm09;->Y:Ldah;
-
-    invoke-direct {p1, v0, p2, v1}, Lm09;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ldah;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onActionViewCollapsed()V
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Lm09;->a:Landroid/view/CollapsibleActionView;
 
-    iget-object p1, p0, Lm09;->X:Ljava/lang/Object;
+    invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewCollapsed()V
 
-    check-cast p1, Lm82;
+    return-void
+.end method
 
-    iget-object v0, p0, Lm09;->Y:Ldah;
+.method public final onActionViewExpanded()V
+    .locals 1
 
-    iget-object v0, v0, Ldah;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lm09;->a:Landroid/view/CollapsibleActionView;
 
-    check-cast v0, Ls5f;
+    invoke-interface {v0}, Landroid/view/CollapsibleActionView;->onActionViewExpanded()V
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwfb;
-
-    invoke-virtual {p1}, Lm82;->l()Lap3;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p1}, Lwfb;->a(Lap3;)Lreb;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method

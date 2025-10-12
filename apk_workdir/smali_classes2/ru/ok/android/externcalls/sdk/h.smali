@@ -3,23 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lno3;
 
 
 # instance fields
-.field public final synthetic X:Lxo3;
+.field public final synthetic X:Loo3;
 
 .field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
 .field public final synthetic b:Z
 
-.field public final synthetic c:Lxo3;
+.field public final synthetic c:Loo3;
 
 .field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLxo3;ZLxo3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLoo3;ZLoo3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +28,11 @@
 
     iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Lxo3;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/h;->c:Loo3;
 
     iput-boolean p4, p0, Lru/ok/android/externcalls/sdk/h;->o:Z
 
-    iput-object p5, p0, Lru/ok/android/externcalls/sdk/h;->X:Lxo3;
+    iput-object p5, p0, Lru/ok/android/externcalls/sdk/h;->X:Loo3;
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 .method public final accept(Ljava/lang/Object;)V
     .locals 6
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/h;->X:Lxo3;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/h;->X:Loo3;
 
     move-object v5, p1
 
@@ -52,11 +52,11 @@
 
     iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/h;->b:Z
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/h;->c:Lxo3;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/h;->c:Loo3;
 
     iget-boolean v3, p0, Lru/ok/android/externcalls/sdk/h;->o:Z
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->n(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLxo3;ZLxo3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/ConversationImpl;->B(Lru/ok/android/externcalls/sdk/ConversationImpl;ZLoo3;ZLoo3;Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$PrepareResult;)V
 
     return-void
 .end method

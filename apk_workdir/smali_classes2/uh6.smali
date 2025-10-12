@@ -3,62 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxh6;
+.implements Liu5;
 
 
-# static fields
-.field public static final a:Luh6;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Liu5;
+
+.field public final synthetic c:Lki6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Liu5;Lki6;I)V
+    .locals 0
 
-    new-instance v0, Luh6;
+    iput p3, p0, Luh6;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luh6;->b:Liu5;
 
-    sput-object v0, Luh6;->a:Luh6;
+    iput-object p2, p0, Luh6;->c:Lki6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Luh6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lth6;
+
+    iget-object v1, p0, Luh6;->c:Lki6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p1, v1, v2}, Lth6;-><init>(Lku5;Lki6;I)V
+
+    iget-object p1, p0, Luh6;->b:Liu5;
+
+    invoke-interface {p1, v0, p2}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Luh6;
+    sget-object p1, Laxf;->a:Laxf;
 
-    if-nez p1, :cond_1
+    :goto_0
+    return-object p1
 
-    const/4 p1, 0x0
+    :pswitch_0
+    new-instance v0, Lth6;
 
-    return p1
+    iget-object v1, p0, Luh6;->c:Lki6;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Lth6;-><init>(Lku5;Lki6;I)V
+
+    iget-object p1, p0, Luh6;->b:Liu5;
+
+    invoke-interface {p1, v0, p2}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    sget-object p1, Laxf;->a:Laxf;
 
-.method public final hashCode()I
-    .locals 1
+    :goto_1
+    return-object p1
 
-    const v0, -0x6ebc12d1
+    nop
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ClearSelectionAndScrollUp"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

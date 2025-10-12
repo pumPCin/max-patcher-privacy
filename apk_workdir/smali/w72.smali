@@ -1,168 +1,177 @@
 .class public final Lw72;
-.super Ljava/lang/Object;
+.super Li27;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:[C
+# instance fields
+.field public final b:Ljava/lang/String;
 
-.field public static final b:[B
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:[Li27;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
+.method public constructor <init>(Ljava/lang/String;IIJJ[Li27;)V
+    .locals 1
 
-    const/16 v0, 0x75
+    const-string v0, "CHAP"
 
-    new-array v0, v0, [C
+    invoke-direct {p0, v0}, Li27;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lw72;->a:[C
+    iput-object p1, p0, Lw72;->b:Ljava/lang/String;
 
-    const/16 v0, 0x7e
+    iput p2, p0, Lw72;->c:I
 
-    new-array v0, v0, [B
+    iput p3, p0, Lw72;->d:I
 
-    sput-object v0, Lw72;->b:[B
+    iput-wide p4, p0, Lw72;->e:J
 
-    const/4 v0, 0x0
+    iput-wide p6, p0, Lw72;->f:J
 
-    move v1, v0
-
-    :goto_0
-    const/16 v2, 0x20
-
-    if-ge v1, v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x62
-
-    const/16 v3, 0x8
-
-    invoke-static {v1, v3}, Lw72;->a(CI)V
-
-    const/16 v1, 0x74
-
-    const/16 v4, 0x9
-
-    invoke-static {v1, v4}, Lw72;->a(CI)V
-
-    const/16 v1, 0x6e
-
-    const/16 v5, 0xa
-
-    invoke-static {v1, v5}, Lw72;->a(CI)V
-
-    const/16 v1, 0xc
-
-    const/16 v6, 0x66
-
-    invoke-static {v6, v1}, Lw72;->a(CI)V
-
-    const/16 v1, 0x72
-
-    const/16 v6, 0xd
-
-    invoke-static {v1, v6}, Lw72;->a(CI)V
-
-    const/16 v1, 0x2f
-
-    invoke-static {v1, v1}, Lw72;->a(CI)V
-
-    const/16 v1, 0x22
-
-    invoke-static {v1, v1}, Lw72;->a(CI)V
-
-    const/16 v7, 0x5c
-
-    invoke-static {v7, v7}, Lw72;->a(CI)V
-
-    sget-object v8, Lw72;->b:[B
-
-    :goto_1
-    const/16 v9, 0x21
-
-    if-ge v0, v9, :cond_1
-
-    const/16 v9, 0x7f
-
-    aput-byte v9, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x3
-
-    aput-byte v0, v8, v4
-
-    aput-byte v0, v8, v5
-
-    aput-byte v0, v8, v6
-
-    aput-byte v0, v8, v2
-
-    const/16 v0, 0x2c
-
-    const/4 v2, 0x4
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x3a
-
-    const/4 v2, 0x5
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x7b
-
-    const/4 v2, 0x6
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x7d
-
-    const/4 v2, 0x7
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x5b
-
-    aput-byte v3, v8, v0
-
-    const/16 v0, 0x5d
-
-    aput-byte v4, v8, v0
-
-    const/4 v0, 0x1
-
-    aput-byte v0, v8, v1
-
-    const/4 v0, 0x2
-
-    aput-byte v0, v8, v7
+    iput-object p8, p0, Lw72;->g:[Li27;
 
     return-void
 .end method
 
-.method public static a(CI)V
-    .locals 1
 
-    const/16 v0, 0x75
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    if-eq p0, v0, :cond_0
+    const/4 v0, 0x1
 
-    sget-object v0, Lw72;->a:[C
+    if-ne p0, p1, :cond_0
 
-    int-to-char p1, p1
-
-    aput-char p1, v0, p0
+    return v0
 
     :cond_0
-    return-void
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lw72;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lw72;
+
+    iget v2, p0, Lw72;->c:I
+
+    iget v3, p1, Lw72;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lw72;->d:I
+
+    iget v3, p1, Lw72;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-wide v2, p0, Lw72;->e:J
+
+    iget-wide v4, p1, Lw72;->e:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Lw72;->f:J
+
+    iget-wide v4, p1, Lw72;->f:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lw72;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lw72;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lw72;->g:[Li27;
+
+    iget-object p1, p1, Lw72;->g:[Li27;
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/16 v0, 0x20f
+
+    iget v1, p0, Lw72;->c:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lw72;->d:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lw72;->e:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lw72;->f:J
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lw72;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method

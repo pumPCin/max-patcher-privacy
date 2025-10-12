@@ -1,93 +1,64 @@
-.class public final synthetic Lhjd;
+.class public final Lhjd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lljd;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Law3;
+# static fields
+.field public static final a:Lhjd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Law3;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lhjd;->a:I
+    new-instance v0, Lhjd;
 
-    iput-object p1, p0, Lhjd;->b:Law3;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lhjd;->a:Lhjd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lhjd;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lgkd;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object v0, p0, Lhjd;->b:Law3;
+    :cond_0
+    instance-of p1, p1, Lhjd;
 
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0(Lgkd;)V
+    return p1
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_1
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lhjd;->b:Law3;
+    const v0, 0x24f68a67
 
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0(Lgkd;)V
+    const-string v0, "None"
 
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lhjd;->b:Law3;
-
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0(Lgkd;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lhjd;->b:Law3;
-
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {v0, p1}, Lone/me/chats/search/ChatsListSearchScreen;->D0(Lgkd;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

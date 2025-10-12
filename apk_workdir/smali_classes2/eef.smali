@@ -1,34 +1,34 @@
-.class public final Leef;
+.class public final synthetic Leef;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
+
+
+# instance fields
+.field public final synthetic a:Lje6;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lje6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leef;->a:Lje6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+.method public final onFrame(II)V
+    .locals 1
 
-    new-instance v0, Lfef;
+    iget-object v0, p0, Leef;->a:Lje6;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {v0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Lje6;II)V
 
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-direct {v0, v1, p1}, Lfef;-><init>(II)V
-
-    return-object v0
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
-
-    new-array p1, p1, [Lfef;
-
-    return-object p1
+    return-void
 .end method

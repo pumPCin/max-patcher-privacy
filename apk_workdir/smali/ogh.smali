@@ -4,168 +4,106 @@
 
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
-
-.field public static final b:Ljava/util/HashMap;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 13
+    .locals 1
 
-    new-instance v0, Ljava/util/HashMap;
+    const-class v0, Logh;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    sput-object v0, Logh;->a:Ljava/util/HashMap;
+    return-void
+.end method
 
-    new-instance v1, Ljava/util/HashMap;
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
-    sput-object v1, Logh;->b:Ljava/util/HashMap;
+    move-result v0
 
-    const/4 v2, -0x2
+    if-nez v0, :cond_0
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p0, 0x0
 
-    move-result-object v2
+    return-object p0
 
-    const-string v3, "An unknown error occurred."
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
 
-    const/4 v3, -0x3
+    check-cast p0, Landroid/os/Parcelable;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object p0
+.end method
 
-    move-result-object v3
+.method public static b(Landroid/os/Parcel;)V
+    .locals 2
 
-    const-string v4, "The API is not available on this device."
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p0
 
-    const/4 v4, -0x4
+    if-gtz p0, :cond_0
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
 
-    move-result-object v4
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
 
-    const-string v5, "The request that was sent by the app is malformed."
+    const-string v1, "Parcel data not fully consumed, unread size: "
 
-    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
-    const/4 v5, -0x5
+    move-result-object p0
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v5
+    throw v0
+.end method
 
-    const-string v6, "The install is unavailable to this user or device."
+.method public static c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    .locals 2
 
-    invoke-virtual {v0, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    const/4 v6, -0x6
+    if-nez p1, :cond_0
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v6
+    return-void
 
-    const-string v7, "The download/install is not allowed, due to the current device state (e.g. low battery, low disk space, ...)."
+    :cond_0
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v7, -0x7
+    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
+.end method
 
-    move-result-object v7
+.method public static d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    .locals 0
 
-    const-string v8, "The install/update has not been (fully) downloaded yet."
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    const/4 v8, -0x8
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
 
-    move-result-object v8
+    :cond_0
+    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    const-string v9, "The install is already in progress and there is no UI flow to resume."
+    move-result-object p1
 
-    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v9, -0x9
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const-string v10, "The Play Store app is either not installed or not the official version."
-
-    invoke-virtual {v0, v9, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v10, -0xa
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const-string v11, "The app is not owned by any user on this device. An app is \"owned\" if it has been acquired from Play."
-
-    invoke-virtual {v0, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/16 v11, -0x64
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    const-string v12, "An internal error happened in the Play Store."
-
-    invoke-virtual {v0, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_UNKNOWN"
-
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_API_NOT_AVAILABLE"
-
-    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INVALID_REQUEST"
-
-    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_UNAVAILABLE"
-
-    invoke-virtual {v1, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_NOT_ALLOWED"
-
-    invoke-virtual {v1, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_DOWNLOAD_NOT_PRESENT"
-
-    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INSTALL_IN_PROGRESS"
-
-    invoke-virtual {v1, v8, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "ERROR_INTERNAL_ERROR"
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "ERROR_PLAY_STORE_NOT_FOUND"
-
-    invoke-virtual {v1, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "ERROR_APP_NOT_OWNED"
-
-    invoke-virtual {v1, v10, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
     return-void
 .end method

@@ -1,48 +1,54 @@
 .class public final Lcfb;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:J
 
-.field public final synthetic Y:Ldfb;
+.field public final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:I
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Ldfb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIJ)V
     .locals 0
 
-    iput-object p1, p0, Lcfb;->Y:Ldfb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lcfb;->a:J
+
+    iput p1, p0, Lcfb;->b:I
+
+    iput p2, p0, Lcfb;->c:I
+
+    sget-object p1, Lbfb;->$EnumSwitchMapping$0:[I
+
+    invoke-static {p2}, Lsw1;->u(I)I
+
+    move-result p2
+
+    aget p1, p1, p2
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_0
+
+    const/4 p3, 0x2
+
+    if-eq p1, p3, :cond_0
+
+    const/4 p3, 0x3
+
+    if-eq p1, p3, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    iput-boolean p2, p0, Lcfb;->d:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lcfb;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lcfb;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcfb;->X:I
-
-    iget-object p1, p0, Lcfb;->Y:Ldfb;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldfb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

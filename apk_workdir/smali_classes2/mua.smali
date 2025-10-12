@@ -1,151 +1,100 @@
-.class public abstract Lmua;
+.class public final Lmua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpua;
+
 
 # static fields
-.field public static final a:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lmua;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
+.field public static final a:Lmua;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lmua;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmua;->a:Lmua;
+
+    new-instance v0, Lqg8;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
+
+    sput-object v0, Lmua;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Ldkc;->oneme_setting_item_about:I
+    const/4 v0, 0x0
 
-    sput v0, Lmua;->a:I
+    return v0
+.end method
 
-    sget v0, Ldkc;->oneme_setting_item_appearance:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sput v0, Lmua;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Ldkc;->oneme_setting_item_battery:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Lmua;->c:I
+    return v0
 
-    sget v0, Ldkc;->oneme_setting_item_esia_connected_title:I
+    :cond_0
+    instance-of p1, p1, Lmua;
 
-    sput v0, Lmua;->d:I
+    if-nez p1, :cond_1
 
-    sget v0, Ldkc;->oneme_setting_item_esia_not_connected_subtitle:I
+    const/4 p1, 0x0
 
-    sput v0, Lmua;->e:I
+    return p1
 
-    sget v0, Ldkc;->oneme_setting_item_esia_not_connected_title:I
+    :cond_1
+    return v0
+.end method
 
-    sput v0, Lmua;->f:I
+.method public final hashCode()I
+    .locals 1
 
-    sget v0, Ldkc;->oneme_setting_item_folders:I
+    const v0, -0x472bda66
 
-    sput v0, Lmua;->g:I
+    return v0
+.end method
 
-    sget v0, Ldkc;->oneme_setting_item_invite_friends_title:I
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sput v0, Lmua;->h:I
+    const-string v0, "Empty"
 
-    sget v0, Ldkc;->oneme_setting_item_messages:I
+    return-object v0
+.end method
 
-    sput v0, Lmua;->i:I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget v0, Ldkc;->oneme_setting_item_notification:I
+    const/4 p2, 0x1
 
-    sput v0, Lmua;->j:I
-
-    sget v0, Ldkc;->oneme_setting_item_notification_and_sound:I
-
-    sput v0, Lmua;->k:I
-
-    sget v0, Ldkc;->oneme_setting_item_privacy:I
-
-    sput v0, Lmua;->l:I
-
-    sget v0, Ldkc;->oneme_setting_item_storage:I
-
-    sput v0, Lmua;->m:I
-
-    sget v0, Ldkc;->oneme_setting_item_support:I
-
-    sput v0, Lmua;->n:I
-
-    sget v0, Ldkc;->oneme_settings_cant_open_camera:I
-
-    sput v0, Lmua;->o:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_error:I
-
-    sput v0, Lmua;->p:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_success:I
-
-    sput v0, Lmua;->q:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_title:I
-
-    sput v0, Lmua;->r:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_camera:I
-
-    sput v0, Lmua;->s:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_gallery:I
-
-    sput v0, Lmua;->t:I
-
-    sget v0, Ldkc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
-
-    sput v0, Lmua;->u:I
-
-    sget v0, Ldkc;->oneme_settings_link_copied_snackbar_title:I
-
-    sput v0, Lmua;->v:I
-
-    sget v0, Ldkc;->oneme_settings_phonenumber_copied_snackbar_title:I
-
-    sput v0, Lmua;->w:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

@@ -1,24 +1,27 @@
-.class public final synthetic Lqk8;
+.class public final Lqk8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsx7;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Landroidx/media3/common/PlaybackException;
+.field public b:J
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroidx/media3/common/PlaybackException;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    iput p1, p0, Lqk8;->a:I
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iput-object p2, p0, Lqk8;->b:Landroidx/media3/common/PlaybackException;
+    iput-wide v0, p0, Lqk8;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,54 +30,70 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public a()Ltk8;
     .locals 1
 
-    iget v0, p0, Lqk8;->a:I
+    new-instance v0, Ltk8;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0}, Lrk8;-><init>(Lqk8;)V
 
-    iget-object v0, p0, Lqk8;->b:Landroidx/media3/common/PlaybackException;
+    return-object v0
+.end method
 
-    check-cast p1, Lukb;
+.method public b(J)V
+    .locals 2
 
-    invoke-interface {p1, v0}, Lukb;->I0(Landroidx/media3/common/PlaybackException;)V
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lq5h;->f(Z)V
+
+    iput-wide p1, p0, Lqk8;->b:J
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lqk8;->b:Landroidx/media3/common/PlaybackException;
+.method public c(J)V
+    .locals 2
 
-    check-cast p1, Lukb;
+    const-wide/16 v0, 0x0
 
-    invoke-interface {p1, v0}, Lukb;->B0(Landroidx/media3/common/PlaybackException;)V
+    cmp-long v0, p1, v0
 
-    return-void
+    if-ltz v0, :cond_0
 
-    :pswitch_1
-    iget-object v0, p0, Lqk8;->b:Landroidx/media3/common/PlaybackException;
+    const/4 v0, 0x1
 
-    check-cast p1, Lukb;
+    goto :goto_0
 
-    invoke-interface {p1, v0}, Lukb;->I0(Landroidx/media3/common/PlaybackException;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    return-void
+    :goto_0
+    invoke-static {v0}, Lq5h;->f(Z)V
 
-    :pswitch_2
-    iget-object v0, p0, Lqk8;->b:Landroidx/media3/common/PlaybackException;
-
-    check-cast p1, Lukb;
-
-    invoke-interface {p1, v0}, Lukb;->B0(Landroidx/media3/common/PlaybackException;)V
+    iput-wide p1, p0, Lqk8;->a:J
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

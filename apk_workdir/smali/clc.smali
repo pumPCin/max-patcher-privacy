@@ -1,38 +1,121 @@
-.class public abstract Lclc;
+.class public final synthetic Lclc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static TextAppearance_MediaRouter_Dynamic_Body:I = 0x7f140333
+# instance fields
+.field public final synthetic a:I
 
-.field public static TextAppearance_MediaRouter_Dynamic_Body_Light:I = 0x7f140334
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
 
-.field public static TextAppearance_MediaRouter_Dynamic_Header:I = 0x7f140335
 
-.field public static TextAppearance_MediaRouter_Dynamic_Header_Light:I = 0x7f140336
+# direct methods
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;I)V
+    .locals 0
 
-.field public static TextAppearance_MediaRouter_Dynamic_Metadata_PrimaryText:I = 0x7f140337
+    iput p2, p0, Lclc;->a:I
 
-.field public static TextAppearance_MediaRouter_Dynamic_Metadata_SecondaryText:I = 0x7f140338
+    iput-object p1, p0, Lclc;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
 
-.field public static TextAppearance_MediaRouter_PrimaryText:I = 0x7f140339
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static TextAppearance_MediaRouter_SecondaryText:I = 0x7f14033a
+    return-void
+.end method
 
-.field public static TextAppearance_MediaRouter_Title:I = 0x7f14033b
 
-.field public static ThemeOverlay_MediaRouter_Dark:I = 0x7f14042a
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-.field public static ThemeOverlay_MediaRouter_Light:I = 0x7f14042b
+    iget p1, p0, Lclc;->a:I
 
-.field public static Theme_MediaRouter:I = 0x7f1403a9
+    const/4 v0, 0x1
 
-.field public static Theme_MediaRouter_Light:I = 0x7f1403aa
+    iget-object v1, p0, Lclc;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
 
-.field public static Theme_MediaRouter_LightControlPanel:I = 0x7f1403ac
+    packed-switch p1, :pswitch_data_0
 
-.field public static Theme_MediaRouter_Light_DarkControlPanel:I = 0x7f1403ab
+    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->C0:[Lpl7;
 
-.field public static Widget_MediaRouter_Light_MediaRouteButton:I = 0x7f14067b
+    iget-object p1, v1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->z0:Lyn7;
 
-.field public static Widget_MediaRouter_MediaRouteButton:I = 0x7f14067c
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lelc;
+
+    iget-object v2, p1, Lelc;->b:Ldh1;
+
+    iget-object p1, p1, Lelc;->c:Lrt1;
+
+    invoke-virtual {p1}, Lrt1;->d()Lw3b;
+
+    move-result-object v3
+
+    iget-object p1, p1, Lrt1;->l:Loz0;
+
+    iget-object v3, v3, Lw3b;->a:Lfh1;
+
+    invoke-interface {v3}, Lfh1;->getId()Ldh1;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const/4 v2, 0x0
+
+    check-cast p1, Lj01;
+
+    invoke-virtual {p1, v2}, Lj01;->i(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lj01;
+
+    invoke-virtual {p1}, Lj01;->f()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    invoke-static {v2}, Le4b;->c(Ldh1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->lowerHandParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
+
+    :cond_1
+    iget-object p1, p1, Lj01;->C0:Lt6e;
+
+    sget-object v2, Lfb;->a:Lfb;
+
+    invoke-virtual {p1, v2}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->C0:[Lpl7;
+
+    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 1
 
+    .line 2
     sget-object v0, Landroid/media/MediaDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -56,6 +57,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaDescriptionCompat$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p1
@@ -66,6 +68,7 @@
 .method public newArray(I)[Landroid/support/v4/media/MediaDescriptionCompat;
     .locals 0
 
+    .line 2
     new-array p1, p1, [Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-object p1
@@ -74,6 +77,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaDescriptionCompat$1;->newArray(I)[Landroid/support/v4/media/MediaDescriptionCompat;
 
     move-result-object p1

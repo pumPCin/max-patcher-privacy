@@ -1,51 +1,213 @@
 .class public final Lou7;
-.super Lnz3;
+.super Landroid/widget/TextView;
 .source "SourceFile"
+
+# interfaces
+.implements Ldu7;
+.implements Le63;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ln1c;
 
-.field public final synthetic Y:Lzu7;
-
-.field public Z:I
-
-.field public o:Lgv5;
+.field public final b:Lgu7;
 
 
 # direct methods
-.method public constructor <init>(Lzu7;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ln1c;)V
+    .locals 3
 
-    iput-object p1, p0, Lou7;->Y:Lzu7;
+    invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lou7;->a:Ln1c;
+
+    new-instance p2, Lf63;
+
+    invoke-direct {p2, p1, p0}, Lf63;-><init>(Landroid/content/Context;Le63;)V
+
+    new-instance p1, Lgu7;
+
+    new-instance v0, Lpf7;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, p0}, Lpf7;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {p1, p0, v0, v1}, Lgu7;-><init>(Ldu7;Ltd6;I)V
+
+    iput-object p1, p0, Lou7;->b:Lgu7;
+
+    sget v0, Loqa;->W:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setId(I)V
+
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v1, -0x2
+
+    invoke-direct {v0, v1, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/16 v1, 0x14
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Li8e;->I(F)I
+
+    move-result v1
+
+    iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setGravity(I)V
+
+    sget-object v1, Ldwf;->p:Lddf;
+
+    invoke-static {v1, p0}, Lddf;->d(Lddf;Landroid/widget/TextView;)V
+
+    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    new-instance p1, Lxc0;
+
+    const/4 p2, 0x3
+
+    const/16 v1, 0x13
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, p2, v2, v1}, Lxc0;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, p0}, Luce;->T(Lle6;Landroid/view/View;)V
+
+    sget-object p1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setMaxLines(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b(Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
+    .locals 2
 
-    iput-object p1, p0, Lou7;->X:Ljava/lang/Object;
+    iget-object p3, p0, Lou7;->a:Ln1c;
 
-    iget p1, p0, Lou7;->Z:I
+    check-cast p3, Lone/me/profile/ProfileScreen;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p3}, Lone/me/profile/ProfileScreen;->G0()Lc3c;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lou7;->Z:I
+    const/4 v1, 0x1
 
-    iget-object p1, p0, Lou7;->Y:Lzu7;
+    invoke-virtual {v0, v1, p1, p2}, Lc3c;->A(ILjava/lang/String;Lhu7;)V
 
+    invoke-virtual {p3}, Lone/me/profile/ProfileScreen;->G0()Lc3c;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p1, p2}, Lc3c;->x(Ljava/lang/String;Lhu7;)V
+
+    return-void
+.end method
+
+.method public final h(Landroid/text/style/ClickableSpan;IILjava/lang/String;Lhu7;Landroid/view/MotionEvent;)Z
+    .locals 0
+
+    iget-object p1, p0, Lou7;->a:Ln1c;
+
+    check-cast p1, Lone/me/profile/ProfileScreen;
+
+    invoke-virtual {p1, p4, p5, p6}, Lone/me/profile/ProfileScreen;->H0(Ljava/lang/String;Lhu7;Landroid/view/MotionEvent;)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/text/Spannable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spannable;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v0, p0}, Lzu7;->h(Lgv5;Lkw7;Lnz3;)Ljava/lang/Object;
+    :goto_0
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :cond_1
+    iget-object v1, p0, Lou7;->b:Lgu7;
+
+    invoke-virtual {v1, v0}, Lgu7;->c(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/text/Spannable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/text/Spannable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    return-void
+
+    :cond_1
+    iget-object v1, p0, Lou7;->b:Lgu7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lgu7;->a(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

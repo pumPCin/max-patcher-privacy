@@ -1,139 +1,181 @@
 .class public final Lhba;
-.super Lx2;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
+
+# interfaces
+.implements Lyba;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public X:J
 
-.field public final c:Lked;
+.field public final a:Lyba;
+
+.field public final b:Le22;
+
+.field public final c:Loba;
+
+.field public final o:Ldnb;
 
 
 # direct methods
-.method public constructor <init>(Li7c;Lked;I)V
+.method public constructor <init>(Lyba;JLdnb;Le22;Loba;)V
     .locals 0
 
-    iput p3, p0, Lhba;->b:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    packed-switch p3, :pswitch_data_0
+    iput-object p1, p0, Lhba;->a:Lyba;
 
-    sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    iput-object p5, p0, Lhba;->b:Le22;
 
-    invoke-direct {p0, p1}, Lx2;-><init>(Lnda;)V
+    iput-object p6, p0, Lhba;->c:Loba;
 
-    iput-object p2, p0, Lhba;->c:Lked;
+    iput-object p4, p0, Lhba;->o:Ldnb;
 
-    return-void
-
-    :pswitch_0
-    sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-direct {p0, p1}, Lx2;-><init>(Lnda;)V
-
-    iput-object p2, p0, Lhba;->c:Lked;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lraa;Lked;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lhba;->b:I
-
-    invoke-direct {p0, p1}, Lx2;-><init>(Lnda;)V
-
-    iput-object p2, p0, Lhba;->c:Lked;
+    iput-wide p2, p0, Lhba;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(Lxda;)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
-    iget v0, p0, Lhba;->b:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    new-instance v0, Lrda;
+    if-nez v0, :cond_2
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lhba;->c:Lked;
+    :cond_0
+    iget-object v1, p0, Lhba;->b:Le22;
 
-    invoke-virtual {v1}, Lked;->a()Lied;
+    invoke-virtual {v1}, Le22;->g()Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-direct {v0, p1, v1}, Lrda;-><init>(Lxda;Lied;)V
+    if-eqz v1, :cond_1
 
-    iget-object p1, p0, Lx2;->a:Lnda;
+    goto :goto_0
 
-    invoke-interface {p1, v0}, Lnda;->a(Lxda;)V
+    :cond_1
+    iget-object v1, p0, Lhba;->c:Loba;
+
+    invoke-interface {v1, p0}, Loba;->a(Lyba;)V
+
+    neg-int v0, v0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget-object v0, p0, Lhba;->a:Lyba;
+
+    invoke-interface {v0}, Lyba;->b()V
+
+    return-void
+.end method
+
+.method public final c(Lfs4;)V
+    .locals 1
+
+    iget-object v0, p0, Lhba;->b:Le22;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+
+    return-void
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lhba;->a:Lyba;
+
+    invoke-interface {v0, p1}, Lyba;->e(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
+
+    iget-wide v0, p0, Lhba;->X:J
+
+    const-wide v2, 0x7fffffffffffffffL
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    sub-long v2, v0, v2
+
+    iput-wide v2, p0, Lhba;->X:J
+
+    :cond_0
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    iget-object v1, p0, Lhba;->a:Lyba;
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v1, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
 
     return-void
 
-    :pswitch_0
-    new-instance v0, Lqs1;
+    :cond_1
+    :try_start_0
+    iget-object v0, p0, Lhba;->o:Ldnb;
 
-    invoke-direct {v0, p1}, Lqs1;-><init>(Lxda;)V
+    invoke-interface {v0, p1}, Ldnb;->test(Ljava/lang/Object;)Z
 
-    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p1, Ltg6;
+    if-nez v0, :cond_2
 
-    const/16 v1, 0x12
+    invoke-interface {v1, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    invoke-direct {p1, p0, v0, v2, v1}, Ltg6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    :cond_2
+    invoke-virtual {p0}, Lhba;->a()V
 
-    iget-object v1, p0, Lhba;->c:Lked;
+    return-void
 
-    invoke-virtual {v1, p1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lws4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-interface {v1, v2}, Lyba;->onError(Ljava/lang/Throwable;)V
 
     return-void
-
-    :pswitch_1
-    new-instance v0, Lgba;
-
-    new-instance v1, Lksd;
-
-    invoke-direct {v1, p1}, Lksd;-><init>(Lxda;)V
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object p1, p0, Lhba;->c:Lked;
-
-    invoke-virtual {p1}, Lked;->a()Lied;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Lgba;-><init>(Lksd;Lied;)V
-
-    iget-object p1, p0, Lx2;->a:Lnda;
-
-    invoke-interface {p1, v0}, Lnda;->a(Lxda;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

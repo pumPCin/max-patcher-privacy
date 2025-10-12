@@ -4,36 +4,20 @@
 
 
 # instance fields
-.field public final a:F
+.field public final a:Lk5g;
 
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:F
-
-.field public final e:F
-
-.field public final f:[F
+.field public final b:Ll5g;
 
 
 # direct methods
-.method public constructor <init>(FFFFF[F)V
+.method public constructor <init>(Lk5g;Ll5g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lj5g;->a:F
+    iput-object p1, p0, Lj5g;->a:Lk5g;
 
-    iput p2, p0, Lj5g;->b:F
-
-    iput p3, p0, Lj5g;->c:F
-
-    iput p4, p0, Lj5g;->d:F
-
-    iput p5, p0, Lj5g;->e:F
-
-    iput-object p6, p0, Lj5g;->f:[F
+    iput-object p2, p0, Lj5g;->b:Ll5g;
 
     return-void
 .end method
@@ -61,127 +45,49 @@
     :cond_1
     check-cast p1, Lj5g;
 
-    iget v1, p0, Lj5g;->a:F
+    iget-object v1, p0, Lj5g;->a:Lk5g;
 
-    iget v3, p1, Lj5g;->a:F
+    iget-object v3, p1, Lj5g;->a:Lk5g;
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Lj5g;->b:F
+    iget-object v1, p0, Lj5g;->b:Ll5g;
 
-    iget v3, p1, Lj5g;->b:F
+    iget-object p1, p1, Lj5g;->b:Ll5g;
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_3
+    if-nez p1, :cond_3
 
     return v2
 
     :cond_3
-    iget v1, p0, Lj5g;->c:F
-
-    iget v3, p1, Lj5g;->c:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lj5g;->d:F
-
-    iget v3, p1, Lj5g;->d:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Lj5g;->e:F
-
-    iget v3, p1, Lj5g;->e:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lj5g;->f:[F
-
-    iget-object p1, p1, Lj5g;->f:[F
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lj5g;->a:F
+    const/high16 v0, 0x1f000000
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lj5g;->b:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    iget v2, p0, Lj5g;->c:F
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
+    const/high16 v1, 0x29000000
 
-    move-result v0
-
-    iget v2, p0, Lj5g;->d:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lj5g;->e:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v1, p0, Lj5g;->f:[F
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([F)I
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
@@ -191,67 +97,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lj5g;->f:[F
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+    const-string v1, "VfxButtonIconOverlayPlainColors(elevation1="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lj5g;->a:Lk5g;
 
-    const-string v2, "GradientEllipse(cx="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, ", elevation2="
 
-    iget v2, p0, Lj5g;->a:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lj5g;->b:Ll5g;
 
-    const-string v2, ", cy="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    iget v2, p0, Lj5g;->b:F
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", rx="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lj5g;->c:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", ry="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lj5g;->d:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", rotation="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v2, p0, Lj5g;->e:F
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v2, ", stops="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

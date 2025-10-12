@@ -1,51 +1,66 @@
-.class public final Lmjf;
-.super Lnz3;
+.class public final synthetic Lmjf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public X:Lfea;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lsjf;
-
-.field public o:Lsjf;
-
-.field public w0:I
+.field public final synthetic b:Lojf;
 
 
 # direct methods
-.method public constructor <init>(Lsjf;Lnz3;)V
+.method public synthetic constructor <init>(Lojf;I)V
     .locals 0
 
-    iput-object p1, p0, Lmjf;->Z:Lsjf;
+    iput p2, p0, Lmjf;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmjf;->b:Lojf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iput-object p1, p0, Lmjf;->Y:Ljava/lang/Object;
+    iget v0, p0, Lmjf;->a:I
 
-    iget p1, p0, Lmjf;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lijf;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lmjf;->b:Lojf;
 
-    iput p1, p0, Lmjf;->w0:I
+    iget-object v2, v1, Lojf;->c:Ltd6;
 
-    iget-object p1, p0, Lmjf;->Z:Lsjf;
+    iget v3, v1, Lojf;->X:I
 
-    invoke-virtual {p1, p0}, Lsjf;->k(Lnz3;)Ljava/lang/Object;
+    iget v1, v1, Lojf;->Y:I
 
-    move-result-object p1
+    invoke-direct {v0, v2, v3, v1}, Lijf;-><init>(Ltd6;II)V
 
-    return-object p1
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lmjf;->b:Lojf;
+
+    invoke-virtual {v0}, Lojf;->dismiss()V
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

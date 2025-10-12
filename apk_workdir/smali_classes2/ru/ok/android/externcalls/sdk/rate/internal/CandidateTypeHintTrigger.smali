@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;
-.implements Lhj1;
+.implements Lij1;
 
 
 # annotations
@@ -21,8 +21,8 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;",
         "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
-        "Lhj1;",
-        "Lpmc;",
+        "Lij1;",
+        "Lwkc;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;",
         "config",
@@ -31,20 +31,20 @@
         "",
         "topology",
         "<init>",
-        "(Lpmc;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V",
+        "(Lwkc;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V",
         "activeCandidateType",
-        "Loyf;",
+        "Laxf;",
         "onStatInternal",
         "(Ljava/lang/String;)V",
-        "Lrmc;",
+        "Lykc;",
         "rtcStat",
         "onRtcStats",
-        "(Lrmc;)V",
+        "(Lykc;)V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
-        "Lpmc;",
+        "Lwkc;",
         "Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "Ljava/lang/String;",
@@ -85,7 +85,7 @@
 
 .field private firstMetCurrentCandidateType:J
 
-.field private final log:Lpmc;
+.field private final log:Lwkc;
 
 .field private final topology:Ljava/lang/String;
 
@@ -108,19 +108,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;-><init>(Laf4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lpmc;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
+.method public constructor <init>(Lwkc;Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lpmc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lwkc;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/connection/CandidateTypeHintConfig;
 
@@ -184,7 +184,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v2, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -198,13 +198,13 @@
 
     sub-long/2addr v2, v4
 
-    iget-object v4, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lpmc;
+    iget-object v4, p0, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->log:Lwkc;
 
     const-string v5, "measured candidate: "
 
     const-string v6, ", time: "
 
-    invoke-static {v5, v2, v3, p1, v6}, Lhqd;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v2, v3, p1, v6}, Ljjd;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
 
@@ -218,7 +218,7 @@
 
     const-string v6, "RateManager"
 
-    invoke-interface {v4, v6, v5}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v4, v6, v5}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -240,7 +240,7 @@
 
     const-string v6, "_"
 
-    invoke-static {v5, v4, v6, p1, v6}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v4, v6, p1, v6}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -293,10 +293,10 @@
     return-void
 .end method
 
-.method public onRtcStats(Lrmc;)V
+.method public onRtcStats(Lykc;)V
     .locals 0
 
-    invoke-virtual {p1}, Lrmc;->c()Li22;
+    invoke-virtual {p1}, Lykc;->c()Ll22;
 
     move-result-object p1
 
@@ -305,7 +305,7 @@
     return-void
 
     :cond_0
-    iget-object p1, p1, Li22;->b:Ljava/lang/String;
+    iget-object p1, p1, Ll22;->b:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/rate/internal/CandidateTypeHintTrigger;->onStatInternal(Ljava/lang/String;)V
 

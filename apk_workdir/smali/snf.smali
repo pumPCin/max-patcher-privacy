@@ -1,193 +1,206 @@
 .class public final Lsnf;
-.super Ljava/lang/Object;
+.super Lncd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/util/concurrent/PriorityBlockingQueue;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final c:Laof;
+.field public final c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public final d:I
-
-.field public final e:[B
+.field public volatile o:Z
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/String;I[BII[B)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/concurrent/PriorityBlockingQueue;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Ljava/util/concurrent/PriorityBlockingQueue;-><init>()V
 
-    if-nez p3, :cond_0
+    iput-object v0, p0, Lsnf;->a:Ljava/util/concurrent/PriorityBlockingQueue;
 
-    move v2, v1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    goto :goto_0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    :cond_0
-    move v2, v0
+    iput-object v0, p0, Lsnf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    :goto_0
-    if-nez p7, :cond_1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move v3, v1
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object v0, p0, Lsnf;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b(Ljava/lang/Runnable;)Lfs4;
+    .locals 2
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v0}, Lncd;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, p1, v0, v1}, Lsnf;->e(Ljava/lang/Runnable;J)Lfs4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    .locals 2
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v0}, Lncd;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p2
+
+    add-long/2addr p2, v0
+
+    new-instance p4, Lzme;
+
+    invoke-direct {p4, p1, p0, p2, p3}, Lzme;-><init>(Ljava/lang/Runnable;Lsnf;J)V
+
+    invoke-virtual {p0, p4, p2, p3}, Lsnf;->e(Ljava/lang/Runnable;J)Lfs4;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final e(Ljava/lang/Runnable;J)Lfs4;
+    .locals 2
+
+    sget-object v0, Lj65;->a:Lj65;
+
+    iget-boolean v1, p0, Lsnf;->o:Z
+
+    if-eqz v1, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    move v3, v0
+    :cond_0
+    new-instance v1, Lqnf;
 
-    :goto_1
-    xor-int/2addr v2, v3
-
-    invoke-static {v2}, Lpih;->i(Z)V
-
-    iput-boolean p1, p0, Lsnf;->a:Z
-
-    iput-object p2, p0, Lsnf;->b:Ljava/lang/String;
-
-    iput p3, p0, Lsnf;->d:I
-
-    iput-object p7, p0, Lsnf;->e:[B
-
-    new-instance p1, Laof;
-
-    if-nez p2, :cond_2
-
-    goto :goto_4
-
-    :cond_2
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
-
-    move-result p3
-
-    const/4 p7, 0x2
-
-    const/4 v2, -0x1
-
-    sparse-switch p3, :sswitch_data_0
-
-    :goto_2
-    move v0, v2
-
-    goto :goto_3
-
-    :sswitch_0
-    const-string p3, "cens"
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v0, 0x3
-
-    goto :goto_3
-
-    :sswitch_1
-    const-string p3, "cenc"
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    move v0, p7
-
-    goto :goto_3
-
-    :sswitch_2
-    const-string p3, "cbcs"
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move v0, v1
-
-    goto :goto_3
-
-    :sswitch_3
-    const-string p3, "cbc1"
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    :goto_3
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    const-string p7, "Unsupported protection scheme type \'"
-
-    invoke-direct {p3, p7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "\'. Assuming AES-CTR crypto mode."
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p2
 
-    const-string p3, "TrackEncryptionBox"
+    iget-object p3, p0, Lsnf;->c:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-static {p3, p2}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p3}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    goto :goto_4
+    move-result p3
 
-    :pswitch_0
-    move v1, p7
+    invoke-direct {v1, p1, p2, p3}, Lqnf;-><init>(Ljava/lang/Runnable;Ljava/lang/Long;I)V
 
-    :goto_4
-    :pswitch_1
-    invoke-direct {p1, v1, p5, p6, p4}, Laof;-><init>(III[B)V
+    iget-object p1, p0, Lsnf;->a:Ljava/util/concurrent/PriorityBlockingQueue;
 
-    iput-object p1, p0, Lsnf;->c:Laof;
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/PriorityBlockingQueue;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lsnf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    const/4 p1, 0x1
+
+    :cond_1
+    :goto_0
+    iget-boolean p2, p0, Lsnf;->o:Z
+
+    if-eqz p2, :cond_2
+
+    iget-object p1, p0, Lsnf;->a:Ljava/util/concurrent/PriorityBlockingQueue;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/PriorityBlockingQueue;->clear()V
+
+    return-object v0
+
+    :cond_2
+    iget-object p2, p0, Lsnf;->a:Ljava/util/concurrent/PriorityBlockingQueue;
+
+    invoke-virtual {p2}, Ljava/util/concurrent/PriorityBlockingQueue;->poll()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lqnf;
+
+    if-nez p2, :cond_3
+
+    iget-object p2, p0, Lsnf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    neg-int p1, p1
+
+    invoke-virtual {p2, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    :goto_1
+    return-object v0
+
+    :cond_3
+    iget-boolean p3, p2, Lqnf;->o:Z
+
+    if-nez p3, :cond_1
+
+    iget-object p2, p2, Lqnf;->a:Ljava/lang/Runnable;
+
+    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    :cond_4
+    new-instance p1, Lrnf;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2, v1}, Lrnf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p2, Lv6;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p3, p1}, Lv6;-><init>(ILjava/lang/Object;)V
+
+    return-object p2
+.end method
+
+.method public final f()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lsnf;->o:Z
 
     return-void
+.end method
 
-    :sswitch_data_0
-    .sparse-switch
-        0x2e7ccd -> :sswitch_3
-        0x2e7d0f -> :sswitch_2
-        0x2e8997 -> :sswitch_1
-        0x2e89a7 -> :sswitch_0
-    .end sparse-switch
+.method public final g()Z
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
+    iget-boolean v0, p0, Lsnf;->o:Z
+
+    return v0
 .end method

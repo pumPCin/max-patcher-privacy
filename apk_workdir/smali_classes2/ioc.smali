@@ -1,85 +1,142 @@
-.class public final enum Lioc;
-.super Ljava/lang/Enum;
+.class public final Lioc;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final enum a:Lioc;
 
-.field public static final enum b:Lioc;
-
-.field public static final enum c:Lioc;
-
-.field public static final synthetic o:[Lioc;
+# instance fields
+.field public final synthetic X:Lru/ok/onechat/reactions/ReactionsViewModel;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lioc;
+    iput-object p1, p0, Lioc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    const-string v1, "NONE"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lioc;->a:Lioc;
-
-    new-instance v1, Lioc;
-
-    const-string v2, "READ"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lioc;->b:Lioc;
-
-    new-instance v2, Lioc;
-
-    const-string v3, "WRITE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lioc;->c:Lioc;
-
-    filled-new-array {v0, v1, v2}, [Lioc;
-
-    move-result-object v0
-
-    sput-object v0, Lioc;->o:[Lioc;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lioc;
-    .locals 1
 
-    const-class v0, Lioc;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ln24;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lioc;
+    invoke-virtual {p0, p1, p2}, Lioc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lioc;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lioc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lioc;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lioc;->o:[Lioc;
+    new-instance p1, Lioc;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lioc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lioc;-><init>(Lru/ok/onechat/reactions/ReactionsViewModel;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lioc;
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lioc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    iget-object p1, p1, Lru/ok/onechat/reactions/ReactionsViewModel;->p:Lq0d;
+
+    invoke-virtual {p1}, Lq0d;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Iterable;
+
+    const/16 v0, 0x8
+
+    invoke-static {p1, v0}, Lw83;->w0(Ljava/lang/Iterable;I)Ljava/util/List;
+
+    move-result-object v1
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x3f
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v1 .. v6}, Lw83;->l0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd6;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v0, Lyt3;->n:Lhoa;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lr28;->o:Lr28;
+
+    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "Warmup reactions. defaultReactions = ["
+
+    const-string v3, "]"
+
+    invoke-static {v2, p1, v3}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    const-string v3, "ru.ok.onechat.reactions.ReactionsViewModel"
+
+    invoke-virtual {v0, v1, v3, p1, v2}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lioc;->X:Lru/ok/onechat/reactions/ReactionsViewModel;
+
+    invoke-virtual {p1}, Lru/ok/onechat/reactions/ReactionsViewModel;->i()Lr82;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p1, Lr82;->b:Luc2;
+
+    iget-wide v0, p1, Luc2;->h0:J
+
+    :cond_2
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

@@ -1,59 +1,34 @@
 .class public final Ljve;
-.super Lnz3;
+.super Lej7;
 .source "SourceFile"
+
+# interfaces
+.implements Lkve;
 
 
 # instance fields
-.field public X:Ljava/util/Collection;
+.field public final c:Ljava/lang/String;
 
-.field public Y:Ljava/util/Iterator;
+.field public final d:Ljava/lang/String;
 
-.field public Z:Lmre;
+.field public final e:Ljava/lang/String;
 
-.field public o:Llve;
-
-.field public w0:Ljava/util/Collection;
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Llve;
-
-.field public z0:I
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Llve;Lnz3;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    iput-object p1, p0, Ljve;->y0:Llve;
+    invoke-direct {p0}, Lej7;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljve;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Ljve;->d:Ljava/lang/String;
+
+    iput-object p3, p0, Ljve;->e:Ljava/lang/String;
+
+    iput-boolean p4, p0, Ljve;->f:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ljve;->x0:Ljava/lang/Object;
-
-    iget p1, p0, Ljve;->z0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ljve;->z0:I
-
-    iget-object p1, p0, Ljve;->y0:Llve;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Llve;->t(Ljava/util/List;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

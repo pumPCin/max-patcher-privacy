@@ -1,73 +1,166 @@
-.class public final enum Lqq1;
-.super Ljava/lang/Enum;
+.class public final synthetic Lqq1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# static fields
-.field public static final enum a:Lqq1;
 
-.field public static final enum b:Lqq1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lqq1;
+.field public final synthetic b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    new-instance v0, Lqq1;
+    .line 1
+    iput p2, p0, Lqq1;->a:I
 
-    const-string v1, "NEGATIVE_POSITIVE"
+    iput p1, p0, Lqq1;->b:I
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lqq1;->a:Lqq1;
-
-    new-instance v1, Lqq1;
-
-    const-string v2, "NEUTRAL_POSITIVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lqq1;->b:Lqq1;
-
-    filled-new-array {v0, v1}, [Lqq1;
-
-    move-result-object v0
-
-    sput-object v0, Lqq1;->c:[Lqq1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqq1;
-    .locals 1
+.method public synthetic constructor <init>(Lnge;I)V
+    .locals 0
 
-    const-class v0, Lqq1;
+    .line 2
+    const/4 p1, 0x3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput p1, p0, Lqq1;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lqq1;
+    iput p2, p0, Lqq1;->b:I
 
-    return-object p0
+    return-void
 .end method
 
-.method public static values()[Lqq1;
-    .locals 1
 
-    sget-object v0, Lqq1;->c:[Lqq1;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget v0, p0, Lqq1;->a:I
+
+    const-string v1, "prefetch "
+
+    sget-object v2, Laxf;->a:Laxf;
+
+    iget v3, p0, Lqq1;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lma7;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    check-cast v0, [Lqq1;
+    const-wide/16 v4, 0xc8
 
-    return-object v0
+    invoke-virtual {v0, v4, v5}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v1, Lhge;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, p1, v4}, Lhge;-><init>(Lma7;I)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance v1, Lpg;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v1, p1, v3, v4}, Lpg;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
+
+    return-object v2
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    if-eqz p1, :cond_0
+
+    sget-object v0, Le87;->D0:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " fetchRealAlbums() completed by error"
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-object v2
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Throwable;
+
+    if-eqz p1, :cond_1
+
+    sget-object v0, Le87;->D0:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " fetchVirtualAlbums() completed by error"
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-object v2
+
+    :pswitch_2
+    check-cast p1, Ly5d;
+
+    invoke-static {p1, v3}, Ly5d;->A(Ly5d;I)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
 .end method

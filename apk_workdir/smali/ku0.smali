@@ -1,66 +1,45 @@
-.class public final Lku0;
-.super Lnz3;
+.class public interface abstract Lku0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Llu0;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Llu0;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lku0;->X:Llu0;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lsee;
+.implements Ljava/nio/channels/WritableByteChannel;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public abstract D(I[B)Lku0;
+.end method
 
-    iput-object p1, p0, Lku0;->o:Ljava/lang/Object;
+.method public abstract H(Ljava/lang/String;)Lku0;
+.end method
 
-    iget p1, p0, Lku0;->Y:I
+.method public abstract I(Ljw0;)Lku0;
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract L(J)Lku0;
+.end method
 
-    or-int/2addr p1, v0
+.method public abstract b0(J)Lku0;
+.end method
 
-    iput p1, p0, Lku0;->Y:I
+.method public abstract flush()V
+.end method
 
-    const/4 v2, 0x0
+.method public abstract getBuffer()Lht0;
+.end method
 
-    const-wide/16 v3, 0x0
+.method public abstract write([B)Lku0;
+.end method
 
-    iget-object v0, p0, Lku0;->X:Llu0;
+.method public abstract writeByte(I)Lku0;
+.end method
 
-    const/4 v1, 0x0
+.method public abstract writeInt(I)Lku0;
+.end method
 
-    move-object v5, p0
+.method public abstract writeShort(I)Lku0;
+.end method
 
-    invoke-virtual/range {v0 .. v5}, Llu0;->C(Lo72;IJLnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Ln72;
-
-    invoke-direct {v0, p1}, Ln72;-><init>(Ljava/lang/Object;)V
-
-    return-object v0
+.method public abstract x()Lku0;
 .end method

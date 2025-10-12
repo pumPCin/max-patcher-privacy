@@ -1,78 +1,39 @@
-.class public abstract Ld1d;
+.class public final Ld1d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/content/res/ColorStateList;
+
+.field public final b:Landroid/content/res/Configuration;
+
+.field public final c:I
+
+
 # direct methods
-.method public static a(Landroid/app/Activity;Ldr7;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/res/ColorStateList;Landroid/content/res/Configuration;Landroid/content/res/Resources$Theme;)V
+    .locals 0
 
-    instance-of v0, p0, Lcs7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Ld1d;->a:Landroid/content/res/ColorStateList;
 
-    check-cast p0, Lcs7;
+    iput-object p2, p0, Ld1d;->b:Landroid/content/res/Configuration;
 
-    invoke-interface {p0}, Lcs7;->L()Les7;
+    if-nez p3, :cond_0
 
-    move-result-object p0
+    const/4 p1, 0x0
 
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0, p1}, Les7;->d(Ldr7;)V
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    invoke-virtual {p3}, Landroid/content/res/Resources$Theme;->hashCode()I
 
-.method public static b(Landroid/app/Activity;)V
-    .locals 3
+    move-result p1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    :goto_0
+    iput p1, p0, Ld1d;->c:I
 
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_0
-
-    sget-object v0, Lf1d$a;->Companion:Le1d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lf1d$a;
-
-    invoke-direct {v0}, Lf1d$a;-><init>()V
-
-    invoke-static {p0, v0}, Lyzc;->l(Landroid/app/Activity;Lf1d$a;)V
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object p0
-
-    const-string v0, "androidx.lifecycle.LifecycleDispatcher.report_fragment_tag"
-
-    invoke-virtual {p0, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    new-instance v2, Lf1d;
-
-    invoke-direct {v2}, Landroid/app/Fragment;-><init>()V
-
-    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(Landroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
-
-    invoke-virtual {p0}, Landroid/app/FragmentManager;->executePendingTransactions()Z
-
-    :cond_1
     return-void
 .end method

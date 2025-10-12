@@ -32,7 +32,7 @@
         "isDetected",
         "",
         "loss",
-        "Loyf;",
+        "Laxf;",
         "onLossInternal",
         "(ZLjava/lang/Number;)V",
         "Ljava/math/BigInteger;",
@@ -40,10 +40,10 @@
         "packetSent",
         "getLoss",
         "(Ljava/math/BigInteger;Ljava/math/BigInteger;)I",
-        "Lble;",
+        "Lzje;",
         "send",
         "onRtcStats",
-        "(Lble;)V",
+        "(Lzje;)V",
         "",
         "onNewLoss",
         "(F)V",
@@ -57,9 +57,9 @@
         "getHintKey",
         "()Ljava/lang/String;",
         "lossDetectionCount",
-        "Lf78;",
+        "Ly58;",
         "lossCalc",
-        "Lf78;",
+        "Ly58;",
         "<set-?>",
         "wasReported",
         "Z",
@@ -80,7 +80,7 @@
 # instance fields
 .field private final hintKey:Ljava/lang/String;
 
-.field private final lossCalc:Lf78;
+.field private final lossCalc:Ly58;
 
 .field private final lossCount:I
 
@@ -114,11 +114,11 @@
 
     iput-object p5, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->hintKey:Ljava/lang/String;
 
-    new-instance p1, Lf78;
+    new-instance p1, Ly58;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->lossCalc:Lf78;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->lossCalc:Ly58;
 
     return-void
 .end method
@@ -135,7 +135,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->lossCalc:Lf78;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->lossCalc:Ly58;
 
     invoke-virtual {p1}, Ljava/math/BigInteger;->longValue()J
 
@@ -145,7 +145,7 @@
 
     move-result-wide p1
 
-    invoke-virtual {v1, v2, v3, p1, p2}, Lf78;->a(JJ)D
+    invoke-virtual {v1, v2, v3, p1, p2}, Ly58;->a(JJ)D
 
     move-result-wide p1
 
@@ -157,7 +157,7 @@
 
     double-to-int p1, p1
 
-    invoke-static {p1, v0, v1}, Lkjd;->h(III)I
+    invoke-static {p1, v0, v1}, Lk84;->f(III)I
 
     move-result p1
 
@@ -173,7 +173,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->this$0:Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Lpmc;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;->access$getLog$p(Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger;)Lwkc;
 
     move-result-object v0
 
@@ -199,7 +199,7 @@
 
     const-string v1, "RateManager"
 
-    invoke-interface {v0, v1, p2}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p2}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p2, 0x1
 
@@ -331,12 +331,12 @@
     return-void
 .end method
 
-.method public final onRtcStats(Lble;)V
+.method public final onRtcStats(Lzje;)V
     .locals 4
 
-    iget-object v0, p1, Lble;->i:Ljava/math/BigInteger;
+    iget-object v0, p1, Lzje;->i:Ljava/math/BigInteger;
 
-    iget-object p1, p1, Lble;->h:Ljava/math/BigInteger;
+    iget-object p1, p1, Lzje;->h:Ljava/math/BigInteger;
 
     invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/rate/internal/LossHintTrigger$LossReporter;->getLoss(Ljava/math/BigInteger;Ljava/math/BigInteger;)I
 

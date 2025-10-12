@@ -1,58 +1,109 @@
-.class public final Ljy1;
-.super Ljava/lang/Object;
+.class public final enum Ljy1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lb57;
 
+# static fields
+.field public static final enum X:Ljy1;
 
-# instance fields
-.field public final a:Liy1;
+.field public static final synthetic Y:[Ljy1;
+
+.field public static final enum a:Ljy1;
+
+.field public static final enum b:Ljy1;
+
+.field public static final enum c:Ljy1;
+
+.field public static final enum o:Ljy1;
 
 
 # direct methods
-.method public constructor <init>(Liy1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljy1;
 
-    iput-object p1, p0, Ljy1;->a:Liy1;
+    const-string v1, "UNKNOWN"
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-# virtual methods
-.method public final b(Lkd5;)V
-    .locals 1
+    sput-object v0, Ljy1;->a:Ljy1;
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    new-instance v1, Ljy1;
 
-    invoke-interface {v0, p1}, Liy1;->b(Lkd5;)V
+    const-string v2, "INACTIVE"
 
-    return-void
-.end method
+    const/4 v3, 0x1
 
-.method public final c()Lw7f;
-    .locals 1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    sput-object v1, Ljy1;->b:Ljy1;
 
-    invoke-interface {v0}, Liy1;->c()Lw7f;
+    new-instance v2, Ljy1;
+
+    const-string v3, "METERING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ljy1;->c:Ljy1;
+
+    new-instance v3, Ljy1;
+
+    const-string v4, "CONVERGED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ljy1;->o:Ljy1;
+
+    new-instance v4, Ljy1;
+
+    const-string v5, "LOCKED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ljy1;->X:Ljy1;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ljy1;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Ljy1;->Y:[Ljy1;
+
+    return-void
 .end method
 
-.method public final getTimestamp()J
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Ljy1;
+    .locals 1
 
-    iget-object v0, p0, Ljy1;->a:Liy1;
+    const-class v0, Ljy1;
 
-    invoke-interface {v0}, Liy1;->getTimestamp()J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-wide v0
+    move-result-object p0
 
-    return-wide v0
+    check-cast p0, Ljy1;
+
+    return-object p0
+.end method
+
+.method public static values()[Ljy1;
+    .locals 1
+
+    sget-object v0, Ljy1;->Y:[Ljy1;
+
+    invoke-virtual {v0}, [Ljy1;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljy1;
+
+    return-object v0
 .end method

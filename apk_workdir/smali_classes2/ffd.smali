@@ -1,142 +1,83 @@
-.class public interface abstract Lffd;
+.class public final synthetic Lffd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltd6;
 
-# static fields
-.field public static final a:Lefd;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvd6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILvd6;)V
+    .locals 0
 
-    sget-object v0, Lefd;->a:Lefd;
+    iput p1, p0, Lffd;->a:I
 
-    sput-object v0, Lffd;->a:Lefd;
+    iput-object p2, p0, Lffd;->b:Lvd6;
 
-    return-void
-.end method
-
-.method public static e(Landroid/content/Context;Landroid/net/Uri;)V
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.MEDIA_SCANNER_SCAN_FILE"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    sget-object v0, Lefd;->a:Lefd;
-
-    sget-object v0, Lefd;->b:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "sendBroadcastToGallery: failed for uri "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1, p0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Lgfd;Ljava/lang/String;)Landroid/net/Uri;
-.end method
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-.method public abstract b(Lgfd;Ljava/lang/String;)Landroid/net/Uri;
-.end method
+    iget v0, p0, Lffd;->a:I
 
-.method public c()Ljava/lang/String;
-    .locals 3
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Lffd;->d()Lwp7;
+    iget-object v0, p0, Lffd;->b:Lvd6;
 
-    move-result-object v0
+    sget-object v1, Llle;->c:Llle;
 
-    new-instance v1, Ljava/util/Date;
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lwp7;->a(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "MOV_"
-
-    const-string v2, ".mp4"
-
-    invoke-static {v1, v0, v2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    sget-object v0, Laxf;->a:Laxf;
 
     return-object v0
-.end method
 
-.method public abstract d()Lwp7;
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lffd;->b:Lvd6;
 
-.method public f(Z)Ljava/lang/String;
-    .locals 3
+    sget-object v1, Lgfd;->c:Lgfd;
 
-    invoke-interface {p0}, Lffd;->d()Lwp7;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/util/Date;
-
-    invoke-direct {v1}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lwp7;->a(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_0
-
-    const-string p1, "gif"
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    :cond_0
-    const-string p1, "jpg"
+    :pswitch_1
+    iget-object v0, p0, Lffd;->b:Lvd6;
 
-    :goto_0
-    const-string v1, "IMG_"
+    sget-object v1, Lgfd;->b:Lgfd;
 
-    const-string v2, "."
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, p1}, Lqe0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p1
+    :pswitch_2
+    iget-object v0, p0, Lffd;->b:Lvd6;
 
-    return-object p1
+    sget-object v1, Lgfd;->a:Lgfd;
+
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

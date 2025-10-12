@@ -3,185 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp11;
+.implements Lvd6;
 
 
 # instance fields
-.field public final a:Lbt1;
+.field public final synthetic a:I
 
-.field public final b:Lbp7;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic b:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbt1;)V
+.method public synthetic constructor <init>(Lyn7;I)V
     .locals 0
 
+    iput p2, p0, Lq11;->a:I
+
+    iput-object p1, p0, Lq11;->b:Lyn7;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lq11;->a:Lbt1;
-
-    iput-object p1, p0, Lq11;->b:Lbp7;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lq11;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lq11;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget v0, p0, Lq11;->a:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-object v1, v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    check-cast v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
+    iget-object v0, p0, Lq11;->b:Lyn7;
 
-    if-eqz v1, :cond_0
-
-    const/4 v5, 0x6
-
-    const/4 v6, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v2, p1
-
-    invoke-static/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->changeStateAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Lve6;Lxe6;ILjava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
-
-    iget-object v0, p0, Lq11;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
+    check-cast v0, Lm63;
 
-    if-eqz v0, :cond_1
+    check-cast v0, Lt08;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->getCurrentDevice()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iget-object v1, v0, Lt08;->D0:Lzrd;
 
-    move-result-object v0
+    sget-object v2, Lt08;->M0:[Lpl7;
 
-    if-nez v0, :cond_0
+    const/16 v3, 0x16
 
-    goto :goto_0
+    aget-object v2, v2, v3
 
-    :cond_0
-    return-object v0
+    invoke-virtual {v1, v0, v2, p1}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
-    :cond_1
-    :goto_0
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->Companion:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;->getNONE()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    return-object p1
 
-    move-result-object v0
+    :pswitch_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-.method public final c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-    .locals 1
+    iget-object v0, p0, Lq11;->b:Lyn7;
 
-    iget-object v0, p0, Lq11;->b:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ln14;
+    check-cast v0, Lm63;
 
-    invoke-virtual {v0}, Ln14;->a()Lru/ok/android/externcalls/sdk/Conversation;
+    check-cast v0, Lt08;
 
-    move-result-object v0
+    iget-object v1, v0, Lt08;->G0:Lzrd;
 
-    if-eqz v0, :cond_0
+    sget-object v2, Lt08;->M0:[Lpl7;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMicrophoneManager()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
+    const/16 v3, 0x19
 
-    move-result-object v0
+    aget-object v2, v2, v3
 
-    return-object v0
+    invoke-virtual {v1, v0, v2, p1}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
-    :cond_0
-    const/4 v0, 0x0
+    sget-object p1, Laxf;->a:Laxf;
 
-    return-object v0
-.end method
+    return-object p1
 
-.method public final d()Z
-    .locals 3
+    nop
 
-    invoke-virtual {p0}, Lq11;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->isMicEnabled()Z
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    if-ne v0, v2, :cond_0
-
-    return v2
-
-    :cond_0
-    return v1
-.end method
-
-.method public final e(Z)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CallAudioController microphone changed="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CallAudioController"
-
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lq11;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->setMicEnabled(Z)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

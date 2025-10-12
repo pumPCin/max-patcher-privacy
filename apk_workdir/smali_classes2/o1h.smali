@@ -1,23 +1,19 @@
 .class public final Lo1h;
-.super Lik7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ljava/lang/String;
+# virtual methods
+.method public final serializer()Lql7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lql7;"
+        }
+    .end annotation
 
-.field public final d:Ljava/lang/String;
+    sget-object v0, Ln1h;->a:Ln1h;
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Lik7;-><init>()V
-
-    iput-object p1, p0, Lo1h;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lo1h;->d:Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

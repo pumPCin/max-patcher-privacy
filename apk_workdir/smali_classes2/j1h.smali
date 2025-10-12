@@ -1,19 +1,3 @@
-.class public final Lj1h;
-.super Ljava/lang/Object;
+.class public abstract Lj1h;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
-
-
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
-
-    sget-object v0, Li1h;->a:Li1h;
-
-    return-object v0
-.end method

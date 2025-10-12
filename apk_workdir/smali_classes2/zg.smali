@@ -1,300 +1,158 @@
-.class public final Lzg;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public abstract Lzg;
+.super Lv7f;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p2, p0, Lzg;->a:I
-
-    iput-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lzg;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-    .locals 0
-
-    .line 2
-    iput p4, p0, Lzg;->a:I
-
-    iput-object p1, p0, Lzg;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lzg;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public final z(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lzg;->a:I
+    sget-object v0, Lxg;->w0:Lxg;
 
-    sparse-switch v0, :sswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
-
-    return-void
-
-    :sswitch_0
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lomg;
-
-    invoke-interface {p1}, Lomg;->a()V
-
-    return-void
-
-    :sswitch_1
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/transition/TransitionValues;
-
-    iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_1
-        0x6 -> :sswitch_0
-    .end sparse-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lzg;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lc8h;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    iget-object v1, p1, Lc8h;->a:Lb8h;
-
-    invoke-virtual {v1, v0}, Lb8h;->d(F)V
-
-    iget-object v0, p0, Lzg;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-static {v0, p1}, Ly7h;->e(Landroid/view/View;Lc8h;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lomg;
-
-    invoke-interface {p1}, Lomg;->c()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast v0, Lds;
-
-    invoke-virtual {v0, p1}, Lade;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p0, Lzg;->c:Ljava/lang/Object;
-
-    check-cast v0, Liqf;
-
-    iget-object v0, v0, Liqf;->E0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lzg;->c:Ljava/lang/Object;
-
-    check-cast p1, Lj35;
-
-    iget-object v0, p1, Lj35;->o:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast v1, [F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->setValues([F)V
-
-    iget-object v0, p1, Lj35;->o:Landroid/graphics/Matrix;
-
-    iget-object v1, p1, Lj35;->w0:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_3
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lak6;
-
-    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
-
-    move-result-object p1
-
-    check-cast p1, Lyj6;
-
-    iget-object v0, p0, Lzg;->c:Ljava/lang/Object;
-
-    check-cast v0, Liy4;
-
-    iget-object v0, v0, Liy4;->b:Lud6;
-
-    invoke-virtual {p1, v0}, Lyj6;->h(Lycd;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
-
-    check-cast p1, Lak6;
-
-    invoke-virtual {p1}, Ljy4;->getHierarchy()Lgy4;
-
-    move-result-object p1
-
-    check-cast p1, Lyj6;
-
-    iget-object v0, p0, Lzg;->c:Ljava/lang/Object;
-
-    check-cast v0, Ldy4;
-
-    iget-object v0, v0, Ldy4;->b:[F
-
-    invoke-static {v0}, Lf8d;->c([F)Lf8d;
+    invoke-virtual {v0, p1, p2}, Lv7f;->B(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lyj6;->m(Lf8d;)V
+    check-cast v0, Lnh;
 
-    return-void
+    instance-of v1, v0, Lih;
 
-    :pswitch_5
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    if-nez v1, :cond_0
 
-    iget-object p1, p0, Lzg;->c:Ljava/lang/Object;
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    check-cast p1, Lw63;
+    move-result-object v1
 
-    iget-boolean p1, p1, Lw63;->b:Z
+    const/16 v2, 0x23
 
-    if-eqz p1, :cond_0
+    invoke-static {v1, v2}, Lpwe;->T0(Ljava/lang/String;C)Z
 
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast p1, Landroid/transition/TransitionValues;
+    if-eqz v1, :cond_0
 
-    iget-object p1, p1, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+    new-instance v0, Lih;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setClipBounds(Landroid/graphics/Rect;)V
+    invoke-direct {v0, v1}, Lih;-><init>(I)V
 
     :cond_0
-    return-void
+    instance-of v1, v0, Lih;
 
-    :pswitch_6
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    check-cast p1, Landroid/animation/ValueAnimator;
+    new-instance p1, Lih;
 
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    iget-object p1, p0, Lzg;->c:Ljava/lang/Object;
+    move-result-object p2
 
-    check-cast p1, Lzf7;
+    invoke-static {p2}, Lhq;->C(Ljava/lang/String;)I
 
-    invoke-virtual {p1}, Lzf7;->invoke()Ljava/lang/Object;
+    move-result p2
 
-    return-void
+    invoke-direct {p1, p2}, Lih;-><init>(I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    return-object p1
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+    :cond_1
+    instance-of v1, v0, Ljh;
 
-    iget v0, p0, Lzg;->a:I
+    if-eqz v1, :cond_2
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v0, Ljh;
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    return-void
+    move-result-object p2
 
-    :pswitch_0
-    iget-object p1, p0, Lzg;->b:Ljava/lang/Object;
+    :try_start_0
+    invoke-static {p1, p2}, Liq4;->a(Landroid/content/Context;Ljava/lang/String;)F
 
-    check-cast p1, Lomg;
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p1}, Lomg;->b()V
+    goto :goto_0
 
-    return-void
+    :catch_0
+    invoke-static {p2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
-    :pswitch_1
-    iget-object v0, p0, Lzg;->c:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, Liqf;
+    :goto_0
+    invoke-direct {v0, p1}, Ljh;-><init>(F)V
 
-    iget-object v0, v0, Liqf;->E0:Ljava/util/ArrayList;
+    return-object v0
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :cond_2
+    instance-of p1, v0, Lkh;
 
-    return-void
+    if-eqz p1, :cond_3
 
-    nop
+    new-instance p1, Lkh;
 
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p2
+
+    invoke-direct {p1, p2}, Lkh;-><init>(I)V
+
+    return-object p1
+
+    :cond_3
+    instance-of p1, v0, Llh;
+
+    if-eqz p1, :cond_4
+
+    new-instance p1, Llh;
+
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Llh;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+
+    :cond_4
+    sget-object p1, Lmh;->a:Lmh;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object p2, p0, Lv7f;->b:Ljava/lang/Object;
+
+    check-cast p2, Lwg;
+
+    iget-object p2, p2, Lwg;->a:Ljava/lang/String;
+
+    const-string p3, "Undefined "
+
+    const-string v0, " type"
+
+    invoke-static {p3, p2, v0}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

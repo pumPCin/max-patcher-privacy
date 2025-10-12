@@ -256,6 +256,7 @@
 .method public subscribe(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
     .locals 1
 
+    .line 5
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -266,12 +267,14 @@
 
     if-eqz p2, :cond_0
 
+    .line 6
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat;->mImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;->subscribe(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 
     return-void
 
+    .line 7
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -281,6 +284,7 @@
 
     throw p1
 
+    .line 8
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -290,6 +294,7 @@
 
     throw p1
 
+    .line 9
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -303,6 +308,7 @@
 .method public subscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -311,6 +317,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat;->mImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;
 
     const/4 v1, 0x0
@@ -319,6 +326,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -328,6 +336,7 @@
 
     throw p1
 
+    .line 4
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -341,12 +350,14 @@
 .method public unsubscribe(Ljava/lang/String;)V
     .locals 2
 
+    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat;->mImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;
 
     const/4 v1, 0x0
@@ -355,6 +366,7 @@
 
     return-void
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -368,6 +380,7 @@
 .method public unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
     .locals 1
 
+    .line 4
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -376,12 +389,14 @@
 
     if-eqz p2, :cond_0
 
+    .line 5
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat;->mImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;->unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -391,6 +406,7 @@
 
     throw p1
 
+    .line 7
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

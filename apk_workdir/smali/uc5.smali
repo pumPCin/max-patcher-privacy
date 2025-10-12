@@ -1,353 +1,526 @@
-.class public final Luc5;
-.super Lied;
+.class public final synthetic Luc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lof3;
+.implements Lfe6;
+.implements Lkw7;
+.implements Llw7;
+.implements Ljw7;
+.implements Lke6;
+.implements Lno3;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final Y:Lbg3;
-
-.field public final a:Z
-
-.field public final b:Ljava/util/concurrent/Executor;
-
-.field public final c:Lrob;
-
-.field public volatile o:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    .line 1
+    iput p1, p0, Luc5;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+.method public synthetic constructor <init>(Lve5;)V
+    .locals 0
 
-    iput-object v0, p0, Luc5;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    .line 2
+    const/4 p1, 0x7
 
-    new-instance v0, Lbg3;
+    iput p1, p0, Luc5;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Luc5;->Y:Lbg3;
-
-    iput-object p1, p0, Luc5;->b:Ljava/util/concurrent/Executor;
-
-    new-instance p1, Lrob;
-
-    const/16 v0, 0x1a
-
-    invoke-direct {p1, v0}, Lrob;-><init>(I)V
-
-    iput-object p1, p0, Luc5;->c:Lrob;
-
-    iput-boolean p2, p0, Luc5;->a:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Runnable;)Lss4;
-    .locals 3
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    sget-object v0, Lw65;->a:Lw65;
+    iget v0, p0, Luc5;->a:I
 
-    iget-boolean v1, p0, Luc5;->o:Z
+    const-string v1, "ck5"
 
-    if-eqz v1, :cond_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    return-object v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    iget-boolean v1, p0, Luc5;->a:Z
+    :pswitch_0
+    const-string v0, "load: failed"
 
-    if-eqz v1, :cond_1
+    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance v1, Ltc5;
+    return-void
 
-    iget-object v2, p0, Luc5;->Y:Lbg3;
+    :pswitch_1
+    const-string v0, "clear: failed to clear fav stickers repository"
 
-    invoke-direct {v1, p1, v2}, Ltc5;-><init>(Ljava/lang/Runnable;Lts4;)V
+    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object p1, p0, Luc5;->Y:Lbg3;
+    return-void
 
-    invoke-virtual {p1, v1}, Lbg3;->a(Lss4;)Z
+    :pswitch_2
+    const-string v0, "setFavoriteStickerSetMoved: failed"
 
-    goto :goto_0
+    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_1
-    new-instance v1, Lsc5;
+    return-void
 
-    invoke-direct {v1, p1}, Lsc5;-><init>(Ljava/lang/Runnable;)V
+    :pswitch_3
+    const-string v0, "onAssetsUpdate: failed to store fav sticker sets"
 
-    :goto_0
-    iget-object p1, p0, Luc5;->c:Lrob;
+    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    new-instance v2, Lip9;
+    :pswitch_4
+    const-string v0, "failed favorites obs"
 
-    invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-static {v1, v0, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object v1, v2, Lip9;->a:Ljava/lang/Object;
+    return-void
 
-    iget-object p1, p1, Lrob;->b:Ljava/lang/Object;
+    nop
 
-    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
+    :pswitch_data_0
+    .packed-switch 0x12
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
 
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    move-result-object p1
+    iget v0, p0, Luc5;->a:I
 
-    check-cast p1, Lip9;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    :pswitch_0
+    check-cast p1, Lpk5;
 
-    iget-object p1, p0, Luc5;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :try_start_0
-    iget-object p1, p0, Luc5;->b:Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v1
-
-    :catch_0
-    move-exception p1
+    new-instance v0, Lek5;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Luc5;->o:Z
+    invoke-direct {v0, p1, v1}, Lek5;-><init>(Lpk5;I)V
 
-    iget-object v1, p0, Luc5;->c:Lrob;
+    new-instance p1, Lnba;
 
-    invoke-virtual {v1}, Lrob;->clear()V
+    const/4 v1, 0x4
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    invoke-direct {p1, v1, v0}, Lnba;-><init>(ILjava/lang/Object;)V
 
-    return-object v0
+    return-object p1
 
-    :cond_2
-    return-object v1
-.end method
+    :pswitch_1
+    check-cast p1, Lpk5;
 
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 9
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v1, Lw65;->a:Lw65;
+    new-instance v0, Lek5;
 
-    const-wide/16 v2, 0x0
+    const/4 v1, 0x0
 
-    cmp-long v0, p2, v2
+    invoke-direct {v0, p1, v1}, Lek5;-><init>(Lpk5;I)V
 
-    if-gtz v0, :cond_0
+    new-instance p1, Lnba;
 
-    invoke-virtual {p0, p1}, Luc5;->b(Ljava/lang/Runnable;)Lss4;
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Lnba;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_2
+    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {p1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->A()Lpk5;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_0
-    iget-boolean v0, p0, Luc5;->o:Z
+    :pswitch_3
+    check-cast p1, Lpk5;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object v1
+    new-instance v0, Lig4;
 
-    :cond_1
-    new-instance v0, Lb22;
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p1}, Lig4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lfe3;
+
+    invoke-direct {p1, v1, v0}, Lfe3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_4
+    check-cast p1, Lik5;
+
+    iget-object p1, p1, Lik5;->a:Ljava/util/List;
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Lhk5;
+
+    invoke-virtual {p1}, Lhk5;->a()Lbde;
+
+    move-result-object p1
+
+    new-instance v0, Luc5;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Luc5;-><init>(I)V
+
+    new-instance v1, Lde3;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2}, Lb22;-><init>(I)V
-
-    new-instance v6, Lb22;
-
-    invoke-direct {v6, v0}, Lb22;-><init>(Lb22;)V
-
-    new-instance v2, Lndd;
-
-    new-instance v3, Ldo3;
-
-    const/4 v4, 0x1
-
-    const/4 v8, 0x0
-
-    move-object v5, p0
-
-    move-object v7, p1
-
-    invoke-direct/range {v3 .. v8}, Ldo3;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
-
-    iget-object p1, v5, Luc5;->Y:Lbg3;
-
-    invoke-direct {v2, v3, p1}, Lndd;-><init>(Ljava/lang/Runnable;Lts4;)V
-
-    iget-object p1, v5, Luc5;->Y:Lbg3;
-
-    invoke-virtual {p1, v2}, Lbg3;->a(Lss4;)Z
-
-    iget-object p1, v5, Luc5;->b:Ljava/util/concurrent/Executor;
-
-    instance-of v3, p1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v3, :cond_2
-
-    :try_start_0
-    check-cast p1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-interface {p1, v2, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Lndd;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, v5, Luc5;->o:Z
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    invoke-direct {v1, p1, v2, v0}, Lde3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object v1
 
-    :cond_2
-    sget-object p1, Lvc5;->a:Lked;
+    :pswitch_6
+    check-cast p1, Lhk5;
 
-    invoke-virtual {p1, v2, p2, p3, p4}, Lked;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
+    invoke-virtual {p1}, Lhk5;->a()Lbde;
 
     move-result-object p1
 
-    new-instance p2, Lys4;
+    new-instance v0, Luc5;
 
-    invoke-direct {p2, p1}, Lys4;-><init>(Lss4;)V
+    const/16 v1, 0x1c
 
-    invoke-virtual {v2, p2}, Lndd;->a(Ljava/util/concurrent/Future;)V
+    invoke-direct {v0, v1}, Luc5;-><init>(I)V
 
-    :goto_0
-    invoke-static {v0, v2}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    new-instance v1, Lbde;
 
-    return-object v6
-.end method
+    const/4 v2, 0x0
 
-.method public final g()V
-    .locals 1
+    invoke-direct {v1, p1, v0, v2}, Lbde;-><init>(Lrce;Lke6;I)V
 
-    iget-boolean v0, p0, Luc5;->o:Z
+    return-object v1
 
-    if-nez v0, :cond_0
+    :pswitch_7
+    check-cast p1, Lhk5;
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lhk5;->a()Lbde;
 
-    iput-boolean v0, p0, Luc5;->o:Z
+    move-result-object p1
 
-    iget-object v0, p0, Luc5;->Y:Lbg3;
+    new-instance v0, Lgk5;
 
-    invoke-virtual {v0}, Lbg3;->g()V
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Luc5;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0, v1}, Lgk5;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    new-instance v1, Lsc8;
 
-    move-result v0
+    const/4 v2, 0x3
 
-    if-nez v0, :cond_0
+    invoke-direct {v1, p1, v0, v2}, Lsc8;-><init>(Ljava/lang/Object;Lke6;I)V
 
-    iget-object v0, p0, Luc5;->c:Lrob;
+    return-object v1
 
-    invoke-virtual {v0}, Lrob;->clear()V
+    :pswitch_8
+    check-cast p1, Lhk5;
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p1}, Lhk5;->a()Lbde;
 
-.method public final h()Z
-    .locals 1
+    move-result-object p1
 
-    iget-boolean v0, p0, Luc5;->o:Z
+    new-instance v0, Luc5;
 
-    return v0
-.end method
+    const/16 v1, 0x1d
 
-.method public final run()V
-    .locals 3
+    invoke-direct {v0, v1}, Luc5;-><init>(I)V
 
-    iget-object v0, p0, Luc5;->c:Lrob;
+    new-instance v1, Lbde;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    :cond_0
-    iget-boolean v2, p0, Luc5;->o:Z
+    invoke-direct {v1, p1, v0, v2}, Lbde;-><init>(Lrce;Lke6;I)V
 
-    if-eqz v2, :cond_1
+    return-object v1
 
-    invoke-virtual {v0}, Lrob;->clear()V
+    :pswitch_9
+    check-cast p1, Lxk5;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_1
-    invoke-virtual {v0}, Lrob;->poll()Ljava/lang/Object;
+    const-string v0, "SELECT id FROM favorite_stickers ORDER BY `index` ASC"
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lt4d;->c(ILjava/lang/String;)Lt4d;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lxk5;->a:Lc4d;
+
+    const-string v2, "favorite_stickers"
+
+    filled-new-array {v2}, [Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Runnable;
+    new-instance v3, Lxh;
 
-    if-nez v2, :cond_3
+    const/16 v4, 0xb
 
-    iget-boolean v2, p0, Luc5;->o:Z
+    invoke-direct {v3, p1, v4, v0}, Lxh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    if-eqz v2, :cond_2
+    invoke-static {v1, v2, v3}, Lcea;->g(Lc4d;[Ljava/lang/String;Ljava/util/concurrent/Callable;)Ll9a;
 
-    invoke-virtual {v0}, Lrob;->clear()V
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_a
+    check-cast p1, Lxk5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Loj5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Loj5;-><init>(Lxk5;I)V
+
+    new-instance p1, Lnba;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Lnba;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_b
+    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {p1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->B()Lxk5;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_c
+    check-cast p1, Lxk5;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Loj5;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Loj5;-><init>(Lxk5;I)V
+
+    new-instance p1, Lnba;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Lnba;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_d
+    check-cast p1, Lxk5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lig4;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p1}, Lig4;-><init>(ILjava/lang/Object;)V
+
+    new-instance p1, Lfe3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v1, v0}, Lfe3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_e
+    new-instance v0, Lrd4;
+
+    check-cast p1, Lm4f;
+
+    invoke-direct {v0, p1}, Lrd4;-><init>(Lm4f;)V
+
+    return-object v0
+
+    :pswitch_f
+    new-instance v0, Lsd4;
+
+    check-cast p1, Ln4f;
+
+    invoke-direct {v0, p1}, Lsd4;-><init>(Ln4f;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_f
+        :pswitch_e
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_0
+        :pswitch_0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public g(Ljava/lang/Object;Lnt5;)V
+    .locals 0
+
+    check-cast p1, Lljb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 4
+
+    iget v0, p0, Luc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    check-cast p1, Lmjb;
+
+    invoke-interface {p1}, Lmjb;->c()V
 
     return-void
 
-    :cond_2
-    iget-object v2, p0, Luc5;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+    :pswitch_1
+    check-cast p1, Lljb;
 
-    neg-int v1, v1
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 
-    :cond_3
-    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+    :pswitch_2
+    check-cast p1, Lljb;
 
-    iget-boolean v2, p0, Luc5;->o:Z
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v0}, Lrob;->clear()V
+    invoke-interface {p1}, Lljb;->s()V
 
     return-void
+
+    :pswitch_3
+    check-cast p1, Lmjb;
+
+    new-instance v0, Landroidx/media3/exoplayer/ExoTimeoutException;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Landroidx/media3/exoplayer/ExoTimeoutException;-><init>(I)V
+
+    new-instance v1, Landroidx/media3/exoplayer/ExoPlaybackException;
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x3eb
+
+    invoke-direct {v1, v2, v0, v3}, Landroidx/media3/exoplayer/ExoPlaybackException;-><init>(ILjava/lang/Exception;I)V
+
+    invoke-interface {p1, v1}, Lmjb;->I0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_3
+        :pswitch_0
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public r(Lcl6;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Luc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->d(Lcl6;)Ljava/util/concurrent/Executor;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->a(Lcl6;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->e(Lcl6;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lcom/google/firebase/concurrent/ExecutorsRegistrar;->g(Lcl6;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

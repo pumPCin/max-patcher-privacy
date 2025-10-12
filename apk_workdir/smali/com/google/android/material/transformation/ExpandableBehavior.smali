@@ -1,12 +1,12 @@
 .class public abstract Lcom/google/android/material/transformation/ExpandableBehavior;
-.super Lz14;
+.super Li14;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lz14;"
+        "Li14;"
     }
 .end annotation
 
@@ -18,6 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,6 +27,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,7 +53,7 @@
 .method public final l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
     .locals 3
 
-    sget-object p3, Lskg;->a:Ljava/util/WeakHashMap;
+    sget-object p3, Lijg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p2}, Landroid/view/View;->isLaidOut()Z
 

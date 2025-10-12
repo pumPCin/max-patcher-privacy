@@ -1,371 +1,227 @@
-.class public abstract Lxid;
-.super Lh3;
+.class public final Lxid;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr63;
+.implements Lqjd;
+
+
+# static fields
+.field public static final synthetic c:I
 
 
 # instance fields
-.field public final h:Le8e;
+.field public final a:Lyn7;
 
-.field public volatile i:Lm33;
-
-.field public j:Lxp4;
-
-.field public k:Ljava/util/Locale;
+.field public final b:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lop5;)V
-    .locals 1
+.method public constructor <init>(Lyn7;Lyn7;)V
+    .locals 0
 
-    const-string v0, "user.prefs"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Lh3;-><init>(Landroid/content/Context;Ljava/lang/String;Lop5;)V
+    iput-object p1, p0, Lxid;->a:Lyn7;
 
-    const/4 p1, 0x1
+    iput-object p2, p0, Lxid;->b:Lyn7;
+
+    return-void
+.end method
+
+.method public static final b(Lxid;Ljava/lang/Throwable;Lwy3;)Ljava/lang/Object;
+    .locals 4
+
+    instance-of v0, p2, Lwid;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lwid;
+
+    iget v1, v0, Lwid;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lwid;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lwid;
+
+    invoke-direct {v0, p0, p2}, Lwid;-><init>(Lxid;Lwy3;)V
+
+    :goto_0
+    iget-object p0, v0, Lwid;->o:Ljava/lang/Object;
+
+    iget p2, v0, Lwid;->Y:I
+
+    const/4 v1, 0x1
+
+    if-eqz p2, :cond_2
+
+    if-ne p2, v1, :cond_1
+
+    invoke-static {p0}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p0}, Lcea;->z(Ljava/lang/Object;)V
+
+    instance-of p0, p1, Lru/ok/tamtam/errors/TamErrorException;
 
     const/4 p2, 0x0
 
-    invoke-static {p1, p2, p1}, Lf8e;->a(III)Le8e;
+    const-string v2, "request failed with "
 
-    move-result-object p1
+    const-string v3, "xid"
 
-    iput-object p1, p0, Lxid;->h:Le8e;
+    if-eqz p0, :cond_3
 
-    return-void
+    move-object p0, p1
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Li7f;
+
+    iget-object p0, p0, Li7f;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lte0;->h(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Retrying"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, p0, p2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    sget p0, Lyz4;->o:I
+
+    sget-object p0, Ld05;->o:Ld05;
+
+    invoke-static {v1, p0}, Lx2d;->M(ILd05;)J
+
+    move-result-wide p0
+
+    iput v1, v0, Lwid;->Y:I
+
+    invoke-static {p0, p1, v0}, Lbv0;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lo24;->a:Lo24;
+
+    if-ne p0, p1, :cond_4
+
+    return-object p1
+
+    :cond_3
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Couldn\'t recover"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, p0, p2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v1, 0x0
+
+    :cond_4
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public declared-synchronized b()V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-super {p0}, Lh3;->b()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lxid;->i:Lm33;
-
-    iget-object v0, p0, Lxid;->h:Le8e;
-
-    invoke-virtual {p0}, Lxid;->p()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Le8e;->h(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final k()J
+.method public final a(ILjava/lang/Object;Ljava/lang/String;)Luu5;
     .locals 6
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-object v3, p2
 
-    move-result-wide v0
+    check-cast v3, Ljava/lang/Long;
 
-    const-wide/16 v2, 0x0
+    new-instance v0, Luid;
 
-    iget-object v4, p0, Lh3;->g:Lep7;
+    const/4 v5, 0x0
 
-    const-string v5, "server.timeDelta"
+    move-object v2, p0
 
-    invoke-virtual {v4, v5, v2, v3}, Lep7;->getLong(Ljava/lang/String;J)J
+    move v1, p1
 
-    move-result-wide v2
+    move-object v4, p3
 
-    add-long/2addr v2, v0
+    invoke-direct/range {v0 .. v5}, Luid;-><init>(ILxid;Ljava/lang/Long;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    return-wide v2
-.end method
+    new-instance p1, Ly8d;
 
-.method public final declared-synchronized l()J
-    .locals 5
+    invoke-direct {p1, v0}, Ly8d;-><init>(Lje6;)V
 
-    monitor-enter p0
+    new-instance p2, Lvid;
 
-    :try_start_0
-    iget-object v0, p0, Lxid;->i:Lm33;
+    const/4 p3, 0x0
 
-    if-nez v0, :cond_0
+    invoke-direct {p2, p0, p3}, Lvid;-><init>(Lxid;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v0, Lm33;
+    const-wide/16 v0, 0x2
 
-    new-instance v1, Lwid;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Lwid;-><init>(Lxid;I)V
-
-    new-instance v2, Ljsc;
-
-    const/16 v3, 0x9
-
-    invoke-direct {v2, v3, p0}, Ljsc;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, v1, v2}, Lm33;-><init>(Lwid;Ljsc;)V
-
-    iput-object v0, p0, Lxid;->i:Lm33;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lxid;->i:Lm33;
-
-    iget-wide v1, v0, Lm33;->b:J
-
-    iget-object v0, v0, Lm33;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    int-to-long v3, v0
-
-    add-long/2addr v1, v3
-
-    monitor-exit p0
-
-    return-wide v1
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final m()J
-    .locals 4
-
-    const-wide/16 v0, 0x0
-
-    iget-object v2, p0, Lh3;->g:Lep7;
-
-    const-string v3, "user.chatsLastSync"
-
-    invoke-virtual {v2, v3, v0, v1}, Lep7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final n()Ljava/lang/String;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lh3;->g:Lep7;
-
-    const-string v2, "user.deviceAvatarPath"
-
-    invoke-virtual {v1, v2, v0}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final o()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ru"
-
-    iget-object v1, p0, Lh3;->g:Lep7;
-
-    const-string v2, "user.lang"
-
-    invoke-virtual {v1, v2, v0}, Lep7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final p()J
-    .locals 4
-
-    const-wide/16 v0, -0x1
-
-    iget-object v2, p0, Lh3;->g:Lep7;
-
-    const-string v3, "user.Id"
-
-    invoke-virtual {v2, v3, v0, v1}, Lep7;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final q()Lqv5;
-    .locals 3
-
-    new-instance v0, Lwid;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lwid;-><init>(Lxid;I)V
-
-    new-instance v1, Lny5;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lny5;-><init>(Lwid;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Lqv5;
-
-    iget-object v2, p0, Lxid;->h:Le8e;
-
-    invoke-direct {v0, v1, v2}, Lqv5;-><init>(Llf6;Lev5;)V
-
-    return-object v0
-.end method
-
-.method public final r()Ljava/util/Locale;
-    .locals 2
-
-    iget-object v0, p0, Lxid;->k:Ljava/util/Locale;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/Locale;
-
-    invoke-virtual {p0}, Lxid;->o()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lxid;->k:Ljava/util/Locale;
-
-    :cond_0
-    iget-object v0, p0, Lxid;->k:Ljava/util/Locale;
-
-    return-object v0
-.end method
-
-.method public final s(J)V
-    .locals 3
-
-    invoke-virtual {p0}, Lxid;->m()J
-
-    move-result-wide v0
-
-    cmp-long v0, p1, v0
-
-    if-lez v0, :cond_0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lh3;->e:Ljava/lang/String;
-
-    const-string v2, "setChatsLastSync %d"
-
-    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    const-string v0, "user.chatsLastSync"
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p1, v0, v1, p2}, Luce;->V(Ly8d;JLje6;)Luu5;
 
     move-result-object p1
 
-    invoke-virtual {p0, v0, p1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
+    new-instance p2, Lol2;
 
-    :cond_0
-    return-void
-.end method
+    const/4 v0, 0x3
 
-.method public final t(J)V
-    .locals 1
+    const/4 v1, 0x5
 
-    const-string v0, "app.first.login.time"
+    invoke-direct {p2, v0, p3, v1}, Lol2;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance p3, Luu5;
 
-    move-result-object p1
+    invoke-direct {p3, p1, p2}, Luu5;-><init>(Liu5;Lle6;)V
 
-    invoke-virtual {p0, v0, p1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
-
-    return-void
-.end method
-
-.method public final u(Z)V
-    .locals 1
-
-    const-string v0, "app.forceConnection"
-
-    invoke-virtual {p0, v0, p1}, Lh3;->g(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final v(J)V
-    .locals 1
-
-    const-string v0, "app.last.login.time"
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/Long;)V
-    .locals 1
-
-    const-string v0, "user.Id"
-
-    invoke-virtual {p0, v0, p1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
-
-    iget-object v0, p0, Lxid;->h:Le8e;
-
-    invoke-virtual {v0, p1}, Le8e;->h(Ljava/lang/Object;)Z
-
-    return-void
+    return-object p3
 .end method

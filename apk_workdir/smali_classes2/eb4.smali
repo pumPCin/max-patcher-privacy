@@ -1,51 +1,84 @@
 .class public final Leb4;
-.super Lnz3;
+.super Lhq;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lib4;
-
-.field public Z:I
-
-.field public o:Lib4;
+.field public final r0:Z
 
 
 # direct methods
-.method public constructor <init>(Lib4;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Z)V
+    .locals 1
 
-    iput-object p1, p0, Leb4;->Y:Lib4;
+    const/4 v0, 0x7
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Lhq;-><init>(I)V
+
+    iput-boolean p1, p0, Leb4;->r0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Leb4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Leb4;
+
+    iget-boolean v1, p0, Leb4;->r0:Z
+
+    iget-boolean p1, p1, Leb4;->r0:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Leb4;->X:Ljava/lang/Object;
+    iget-boolean v0, p0, Leb4;->r0:Z
 
-    iget p1, p0, Leb4;->Z:I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
+    return v0
+.end method
 
-    iput p1, p0, Leb4;->Z:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object p1, p0, Leb4;->Y:Lib4;
+    const-string v0, "Switch(isToggled="
 
-    const/4 v0, 0x0
+    const-string v1, ")"
 
-    invoke-static {p1, v0, p0}, Lib4;->a(Lib4;Lza4;Lnz3;)Ljava/lang/Object;
+    iget-boolean v2, p0, Leb4;->r0:Z
 
-    move-result-object p1
+    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

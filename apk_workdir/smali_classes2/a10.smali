@@ -4,20 +4,41 @@
 
 
 # instance fields
-.field public final a:Ll28;
+.field public a:Lf18;
 
-.field public final b:J
+.field public b:J
+
+.field public c:J
+
+.field public d:J
+
+.field public e:Ljava/util/List;
+
+.field public f:Ljava/lang/String;
+
+.field public g:F
+
+.field public h:Z
+
+.field public i:Lc10;
 
 
-# direct methods
-.method public constructor <init>(Ll28;J)V
-    .locals 0
+# virtual methods
+.method public final a()Lb10;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, La10;->a:Lf18;
 
-    iput-object p1, p0, La10;->a:Ll28;
+    if-nez v0, :cond_0
 
-    iput-wide p2, p0, La10;->b:J
+    sget-object v0, Lf18;->Z:Lf18;
 
-    return-void
+    iput-object v0, p0, La10;->a:Lf18;
+
+    :cond_0
+    new-instance v0, Lb10;
+
+    invoke-direct {v0, p0}, Lb10;-><init>(La10;)V
+
+    return-object v0
 .end method

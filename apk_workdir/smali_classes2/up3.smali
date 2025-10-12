@@ -1,147 +1,156 @@
-.class public final Lup3;
-.super Lm3f;
+.class public final synthetic Lup3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/function/BiConsumer;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lfq3;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lfq3;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lup3;->Z:Lfq3;
+    iput p1, p0, Lup3;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lup3;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Lgwb;
+    iget v0, p0, Lup3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lup3;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lup3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast v1, Ljava/util/HashMap;
 
-    check-cast p1, Lup3;
+    check-cast p1, Ljava/lang/String;
 
-    sget-object p2, Loyf;->a:Loyf;
+    check-cast p2, Lhu3;
 
-    invoke-virtual {p1, p2}, Lup3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    new-instance v0, Ll88;
 
-    return-object p1
-.end method
+    invoke-direct {v0}, Ll88;-><init>()V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    const-string v2, "firstName"
 
-    new-instance v0, Lup3;
+    iget-object v3, p2, Lhu3;->a:Ljava/lang/String;
 
-    iget-object v1, p0, Lup3;->Z:Lfq3;
+    invoke-virtual {v0, v2, v3}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p2}, Lup3;-><init>(Lfq3;Lkotlin/coroutines/Continuation;)V
+    iget-object p2, p2, Lhu3;->b:Ljava/lang/String;
 
-    iput-object p1, v0, Lup3;->Y:Ljava/lang/Object;
+    if-eqz p2, :cond_1
 
-    return-object v0
-.end method
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    move-result v2
 
-    iget v0, p0, Lup3;->X:I
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lup3;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lgwb;
-
-    instance-of v0, p1, Ldwb;
-
-    if-eqz v0, :cond_3
-
-    check-cast p1, Ldwb;
-
-    iget-object p1, p1, Ldwb;->a:Ljava/lang/Long;
-
-    iget-object v0, p0, Lup3;->Z:Lfq3;
-
-    iget-object v3, v0, Lfq3;->p:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v3
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    cmp-long p1, v5, v3
-
-    if-eqz p1, :cond_2
+    if-nez v2, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    iget-object p1, v0, Li52;->e:Le8e;
+    :cond_0
+    const-string v2, "lastName"
 
-    sget-object v0, Lj73;->b:Lj73;
+    invoke-virtual {v0, v2, p2}, Ll88;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput v2, p0, Lup3;->X:I
-
-    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
+    :cond_1
     :goto_0
-    return-object v1
+    invoke-virtual {v0}, Ll88;->b()Ll88;
+
+    move-result-object p2
+
+    invoke-virtual {v1, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    check-cast v1, Lmk;
+
+    sget-object v0, Lone/me/android/OneMeApplication;->s0:Lpea;
+
+    invoke-virtual {v1, p1, p2}, Lmk;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    check-cast v1, Lmw;
+
+    invoke-virtual {v1, p1, p2}, Lmw;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_2
+    check-cast v1, Lvp3;
+
+    check-cast p1, Ljava/lang/Long;
+
+    check-cast p2, Lro3;
+
+    if-eqz p2, :cond_2
+
+    iget-object v0, v1, Lvp3;->f:Lys4;
+
+    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf94;
+
+    check-cast v0, Lm84;
+
+    iget-object v0, v0, Lm84;->d:La4d;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, p2, Lro3;->a:Lhq3;
+
+    iget-object p1, p1, Lhq3;->b:Lgq3;
+
+    invoke-virtual {v0}, La4d;->d()Luv3;
+
+    move-result-object p2
+
+    iget-object v0, v0, La4d;->c:Ljava/lang/Object;
+
+    check-cast v0, Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lld6;
+
+    iget-object v0, v0, Lld6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p2, p1, v0}, Luv3;->c(Lgq3;Ljava/util/concurrent/ConcurrentHashMap;)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

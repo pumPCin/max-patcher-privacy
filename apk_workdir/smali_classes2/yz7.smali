@@ -1,246 +1,97 @@
-.class public final Lyz7;
-.super Landroid/graphics/drawable/Drawable;
+.class public final enum Lyz7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/graphics/drawable/Animatable;
 
+# static fields
+.field public static final synthetic X:[Lyz7;
 
-# instance fields
-.field public final X:Landroid/animation/ObjectAnimator;
+.field public static final enum a:Lyz7;
 
-.field public final a:Landroid/content/Context;
+.field public static final enum b:Lyz7;
 
-.field public final b:I
+.field public static final enum c:Lyz7;
 
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Lvf;
+.field public static final enum o:Lyz7;
 
 
 # direct methods
-.method public constructor <init>(IILandroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    new-instance v0, Lyz7;
 
-    iput-object p3, p0, Lyz7;->a:Landroid/content/Context;
+    const-string v1, "NOT_SUPPORTED"
 
-    iput p2, p0, Lyz7;->b:I
+    const/4 v2, 0x0
 
-    new-instance p2, Lai5;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 p3, 0x1
+    sput-object v0, Lyz7;->a:Lyz7;
 
-    invoke-direct {p2, p0, p1, p3}, Lai5;-><init>(Ljava/lang/Object;II)V
+    new-instance v1, Lyz7;
 
-    const/4 p1, 0x3
+    const-string v2, "PHOTO"
 
-    invoke-static {p1, p2}, Lvr0;->r(ILve6;)Lbp7;
+    const/4 v3, 0x1
 
-    move-result-object p1
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lyz7;->c:Ljava/lang/Object;
+    sput-object v1, Lyz7;->b:Lyz7;
 
-    new-instance p1, Lvf;
+    new-instance v2, Lyz7;
 
-    const-string p2, "rotation"
+    const-string v3, "GIF"
 
-    const/4 p3, 0x0
+    const/4 v4, 0x2
 
-    invoke-direct {p1, p2, p3}, Lvf;-><init>(Ljava/lang/String;F)V
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lyz7;->o:Lvf;
+    sput-object v2, Lyz7;->c:Lyz7;
 
-    const/4 p2, 0x2
+    new-instance v3, Lyz7;
 
-    new-array p2, p2, [F
+    const-string v4, "VIDEO"
 
-    fill-array-data p2, :array_0
+    const/4 v5, 0x3
 
-    const/4 p3, 0x0
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p3, p1, p2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    sput-object v3, Lyz7;->o:Lyz7;
 
-    move-result-object p1
-
-    const-wide/16 p2, 0x4b0
-
-    invoke-virtual {p1, p2, p3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    const/4 p2, -0x1
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
-
-    new-instance p2, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {p2}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance p2, Lg00;
-
-    const/16 p3, 0xe
-
-    invoke-direct {p2, p3, p0}, Lg00;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iput-object p1, p0, Lyz7;->X:Landroid/animation/ObjectAnimator;
-
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x43b38000    # 359.0f
-    .end array-data
-.end method
-
-
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    filled-new-array {v0, v1, v2, v3}, [Lyz7;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
+    sput-object v0, Lyz7;->X:[Lyz7;
 
-    move-result v0
+    return-void
+.end method
 
-    int-to-float v0, v0
+.method public static valueOf(Ljava/lang/String;)Lyz7;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    const-class v0, Lyz7;
 
-    move-result-object v1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->centerY()I
+    move-result-object p0
 
-    move-result v1
+    check-cast p0, Lyz7;
 
-    int-to-float v1, v1
+    return-object p0
+.end method
 
-    iget-object v2, p0, Lyz7;->o:Lvf;
+.method public static values()[Lyz7;
+    .locals 1
 
-    iget v2, v2, Lvf;->a:F
+    sget-object v0, Lyz7;->X:[Lyz7;
 
-    invoke-virtual {p1, v2, v0, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    iget-object v0, p0, Lyz7;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/drawable/Drawable;
+    check-cast v0, [Lyz7;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final getIntrinsicHeight()I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getIntrinsicWidth()I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getOpacity()I
-    .locals 1
-
-    const/4 v0, -0x3
-
-    return v0
-.end method
-
-.method public final isRunning()Z
-    .locals 1
-
-    iget-object v0, p0, Lyz7;->X:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->isRunning()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/graphics/drawable/Drawable;->onBoundsChange(Landroid/graphics/Rect;)V
-
-    iget-object v0, p0, Lyz7;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public final setAlpha(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final start()V
-    .locals 1
-
-    iget-object v0, p0, Lyz7;->X:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    return-void
-.end method
-
-.method public final stop()V
-    .locals 1
-
-    iget-object v0, p0, Lyz7;->X:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    return-void
+    return-object v0
 .end method

@@ -1,151 +1,129 @@
 .class public final Lf6c;
-.super Lg79;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile c:[Lf6c;
-
-
 # instance fields
-.field public a:I
+.field public final a:Landroid/net/Uri;
 
-.field public b:I
+.field public final b:Landroid/graphics/Bitmap;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lf6c;->a:Landroid/net/Uri;
 
-    iput v0, p0, Lf6c;->a:I
-
-    iput v0, p0, Lf6c;->b:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    iput-object p2, p0, Lf6c;->b:Landroid/graphics/Bitmap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lf6c;->a:I
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x1
+    return v0
 
-    invoke-static {v1, v0}, Le83;->f(II)I
+    :cond_0
+    instance-of v1, p1, Lf6c;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lf6c;
+
+    iget-object v1, p0, Lf6c;->a:Landroid/net/Uri;
+
+    iget-object v3, p1, Lf6c;->a:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lf6c;->b:Landroid/graphics/Bitmap;
+
+    iget-object p1, p1, Lf6c;->b:Landroid/graphics/Bitmap;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lf6c;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
     move-result v0
 
-    goto :goto_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v1, p0, Lf6c;->b:Landroid/graphics/Bitmap;
 
-    :goto_0
-    iget v1, p0, Lf6c;->b:I
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x2
-
-    invoke-static {v2, v1}, Le83;->f(II)I
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
     add-int/2addr v1, v0
 
     return v1
-
-    :cond_1
-    return v0
 .end method
 
-.method public final mergeFrom(Ld83;)Lg79;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v1, "QrCode(uri="
 
-    if-eqz v0, :cond_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x8
+    iget-object v1, p0, Lf6c;->a:Landroid/net/Uri;
 
-    if-eq v0, v1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/16 v1, 0x10
+    const-string v1, ", bitmap="
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+    iget-object v1, p0, Lf6c;->b:Landroid/graphics/Bitmap;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v1, ")"
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    invoke-virtual {p1}, Ld83;->p()I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    iput v0, p0, Lf6c;->b:I
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iput v0, p0, Lf6c;->a:I
-
-    goto :goto_0
-
-    :cond_4
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Le83;)V
-    .locals 2
-
-    iget v0, p0, Lf6c;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
-
-    :cond_0
-    iget v0, p0, Lf6c;->b:I
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

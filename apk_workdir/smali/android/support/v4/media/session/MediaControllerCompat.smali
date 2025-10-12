@@ -60,10 +60,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_1
 
+    .line 3
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -74,14 +76,17 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/Set;
 
+    .line 4
     iput-object p2, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
+    .line 5
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-lt v0, v1, :cond_0
 
+    .line 6
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi29;
 
     invoke-direct {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi29;-><init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat$Token;)V
@@ -90,6 +95,7 @@
 
     return-void
 
+    .line 7
     :cond_0
     new-instance v0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;
 
@@ -99,6 +105,7 @@
 
     return-void
 
+    .line 8
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -112,6 +119,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/support/v4/media/session/MediaSessionCompat;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat;->getSessionToken()Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object p2
@@ -124,6 +132,7 @@
 .method public static getMediaController(Landroid/app/Activity;)Landroid/support/v4/media/session/MediaControllerCompat;
     .locals 2
 
+    .line 1
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -132,20 +141,24 @@
 
     move-result-object v0
 
-    sget v1, Lqgc;->media_controller_compat_view_tag:I
+    sget v1, Lwec;->media_controller_compat_view_tag:I
 
+    .line 2
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3
     instance-of v1, v0, Landroid/support/v4/media/session/MediaControllerCompat;
 
     if-eqz v1, :cond_0
 
+    .line 4
     check-cast v0, Landroid/support/v4/media/session/MediaControllerCompat;
 
     return-object v0
 
+    .line 5
     :cond_0
     invoke-static {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->getMediaController(Landroid/app/Activity;)Landroid/support/v4/media/session/MediaControllerCompat;
 
@@ -165,7 +178,7 @@
 
     move-result-object v0
 
-    sget v1, Lqgc;->media_controller_compat_view_tag:I
+    sget v1, Lwec;->media_controller_compat_view_tag:I
 
     invoke-virtual {v0, v1, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
@@ -221,7 +234,7 @@
 
     const-string v1, "."
 
-    invoke-static {v0, p0, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -235,6 +248,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
@@ -245,6 +259,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 1
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
@@ -312,6 +327,7 @@
 .method public getMediaController()Ljava/lang/Object;
     .locals 1
 
+    .line 6
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->getMediaController()Ljava/lang/Object;
@@ -425,12 +441,12 @@
     return v0
 .end method
 
-.method public getSession2Token()Ls6g;
+.method public getSession2Token()Lf5g;
     .locals 1
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Ls6g;
+    invoke-virtual {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lf5g;
 
     move-result-object v0
 
@@ -522,6 +538,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
 
     return-void
@@ -532,6 +549,7 @@
 
     if-eqz p1, :cond_2
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mRegisteredCallbacks:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -540,6 +558,7 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     const-string p1, "MediaControllerCompat"
 
     const-string p2, "the callback has already been registered"
@@ -551,19 +570,23 @@
     :cond_0
     if-nez p2, :cond_1
 
+    .line 4
     new-instance p2, Landroid/os/Handler;
 
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
+    .line 5
     :cond_1
     invoke-virtual {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->setHandler(Landroid/os/Handler;)V
 
+    .line 6
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mImpl:Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImpl;->registerCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;Landroid/os/Handler;)V
 
     return-void
 
+    .line 7
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

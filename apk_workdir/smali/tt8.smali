@@ -1,128 +1,86 @@
-.class public Ltt8;
+.class public final synthetic Ltt8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmo3;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lbc6;
 
-.field public final c:I
+.field public final synthetic c:Lzx7;
+
+.field public final synthetic o:Lhm8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lbc6;Lzx7;Lhm8;I)V
     .locals 0
 
+    iput p4, p0, Ltt8;->a:I
+
+    iput-object p1, p0, Ltt8;->b:Lbc6;
+
+    iput-object p2, p0, Ltt8;->c:Lzx7;
+
+    iput-object p3, p0, Ltt8;->o:Lhm8;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltt8;->a:Ljava/lang/String;
-
-    iput p2, p0, Ltt8;->b:I
-
-    iput p3, p0, Ltt8;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Ltt8;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lyt8;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Ltt8;
+    iget-object v0, p0, Ltt8;->b:Lbc6;
 
-    const/4 v2, 0x0
+    iget v1, v0, Lbc6;->b:I
 
-    if-nez v1, :cond_1
+    iget-object v0, v0, Lbc6;->c:Ljava/lang/Object;
 
-    return v2
+    check-cast v0, Lot8;
 
-    :cond_1
-    check-cast p1, Ltt8;
+    iget-object v2, p0, Ltt8;->c:Lzx7;
 
-    iget v1, p0, Ltt8;->c:I
+    iget-object v3, p0, Ltt8;->o:Lhm8;
 
-    iget-object v3, p0, Ltt8;->a:Ljava/lang/String;
+    invoke-interface {p1, v1, v0, v2, v3}, Lyt8;->d(ILot8;Lzx7;Lhm8;)V
 
-    iget v4, p0, Ltt8;->b:I
+    return-void
 
-    if-ltz v4, :cond_4
+    :pswitch_0
+    iget-object v0, p0, Ltt8;->b:Lbc6;
 
-    iget v5, p1, Ltt8;->b:I
+    iget v1, v0, Lbc6;->b:I
 
-    if-gez v5, :cond_2
+    iget-object v0, v0, Lbc6;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lot8;
 
-    :cond_2
-    iget-object v5, p1, Ltt8;->a:Ljava/lang/String;
+    iget-object v2, p0, Ltt8;->c:Lzx7;
 
-    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    iget-object v3, p0, Ltt8;->o:Lhm8;
 
-    move-result v3
+    invoke-interface {p1, v1, v0, v2, v3}, Lyt8;->u(ILot8;Lzx7;Lhm8;)V
 
-    if-eqz v3, :cond_3
+    return-void
 
-    iget v3, p1, Ltt8;->b:I
+    nop
 
-    if-ne v4, v3, :cond_3
-
-    iget p1, p1, Ltt8;->c:I
-
-    if-ne v1, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-
-    :cond_4
-    :goto_0
-    iget-object v4, p1, Ltt8;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget p1, p1, Ltt8;->c:I
-
-    if-ne v1, p1, :cond_5
-
-    return v0
-
-    :cond_5
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Ltt8;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ltt8;->a:Ljava/lang/String;
-
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

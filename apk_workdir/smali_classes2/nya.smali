@@ -1,144 +1,133 @@
-.class public final Lnya;
-.super Ljava/lang/Object;
+.class public final enum Lnya;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lpya;
 
+# static fields
+.field public static final enum X:Lnya;
 
-# instance fields
-.field public final a:I
+.field public static final enum Y:Lnya;
 
-.field public final b:I
+.field public static final enum Z:Lnya;
 
-.field public final c:F
+.field public static final enum a:Lnya;
 
-.field public final d:I
+.field public static final enum b:Lnya;
 
-.field public final e:Lxe6;
+.field public static final enum c:Lnya;
+
+.field public static final enum o:Lnya;
+
+.field public static final synthetic r0:[Lnya;
 
 
 # direct methods
-.method public constructor <init>(ILxe6;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    sget v0, Lvsa;->R:I
+    new-instance v0, Lnya;
 
-    and-int/lit8 p3, p3, 0x8
+    const-string v1, "AUTO_TRANSITION"
 
-    if-eqz p3, :cond_0
+    const/4 v2, 0x0
 
-    sget v0, Lvsa;->P:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnya;->a:Lnya;
 
-    iput p1, p0, Lnya;->a:I
+    new-instance v1, Lnya;
 
-    const/4 p1, 0x4
+    const-string v2, "SEEK"
 
-    iput p1, p0, Lnya;->b:I
+    const/4 v3, 0x1
 
-    const/high16 p1, 0x41400000    # 12.0f
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p1, p0, Lnya;->c:F
+    sput-object v1, Lnya;->b:Lnya;
 
-    iput v0, p0, Lnya;->d:I
+    new-instance v2, Lnya;
 
-    iput-object p2, p0, Lnya;->e:Lxe6;
+    const-string v3, "SEEK_ADJUSTMENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lnya;->c:Lnya;
+
+    new-instance v3, Lnya;
+
+    const-string v4, "SKIP"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lnya;->o:Lnya;
+
+    new-instance v4, Lnya;
+
+    const-string v5, "REMOVE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lnya;->X:Lnya;
+
+    new-instance v5, Lnya;
+
+    const-string v6, "INTERNAL"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lnya;->Y:Lnya;
+
+    new-instance v6, Lnya;
+
+    const-string v7, "UNKNOWN"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lnya;->Z:Lnya;
+
+    filled-new-array/range {v0 .. v6}, [Lnya;
+
+    move-result-object v0
+
+    sput-object v0, Lnya;->r0:[Lnya;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lnya;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-class v0, Lnya;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Lnya;
+    check-cast p0, Lnya;
 
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lnya;
-
-    iget v0, p1, Lnya;->a:I
-
-    iget v1, p0, Lnya;->a:I
-
-    if-ne v1, v0, :cond_2
-
-    iget v0, p0, Lnya;->b:I
-
-    iget v1, p1, Lnya;->b:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lnya;->c:F
-
-    iget v1, p1, Lnya;->c:F
-
-    cmpg-float v0, v0, v1
-
-    if-nez v0, :cond_2
-
-    iget v0, p0, Lnya;->d:I
-
-    iget p1, p1, Lnya;->d:I
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static values()[Lnya;
+    .locals 1
 
-    iget v0, p0, Lnya;->a:I
+    sget-object v0, Lnya;->r0:[Lnya;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    const/16 v1, 0x1f
+    check-cast v0, [Lnya;
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lnya;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lnya;->c:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
-
-    move-result v0
-
-    iget v1, p0, Lnya;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method

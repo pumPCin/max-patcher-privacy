@@ -1,106 +1,111 @@
-.class public final synthetic Lpe5;
+.class public final Lpe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrx7;
-.implements Lsx7;
-.implements Lvo3;
+.implements Landroid/view/SurfaceHolder$Callback;
+.implements Landroid/view/TextureView$SurfaceTextureListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:F
+.field public final synthetic a:Lve5;
 
 
 # direct methods
-.method public synthetic constructor <init>(IF)V
+.method public constructor <init>(Lve5;)V
     .locals 0
 
-    iput p1, p0, Lpe5;->a:I
-
-    iput p2, p0, Lpe5;->b:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpe5;->a:Lve5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
+.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 1
 
-    iget v0, p0, Lpe5;->a:I
+    new-instance v0, Landroid/view/Surface;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    check-cast p1, Lgmb;
+    iget-object p1, p0, Lpe5;->a:Lve5;
 
-    invoke-virtual {p1}, Lgmb;->p0()V
+    invoke-virtual {p1, v0}, Lve5;->T0(Landroid/view/Surface;)V
 
-    iget-object p1, p1, Lgmb;->a:Lif5;
+    iput-object v0, p1, Lve5;->X0:Landroid/view/Surface;
 
-    iget v0, p0, Lpe5;->b:F
-
-    invoke-virtual {p1, v0}, Lif5;->J1(F)V
+    invoke-virtual {p1, p2, p3}, Lve5;->Q0(II)V
 
     return-void
-
-    :pswitch_0
-    iget v0, p0, Lpe5;->b:F
-
-    check-cast p1, Lgmb;
-
-    invoke-virtual {p1, v0}, Lgmb;->j0(F)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 1
 
-    iget v0, p0, Lpe5;->a:I
+    const/4 p1, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lpe5;->a:Lve5;
 
-    iget v0, p0, Lpe5;->b:F
+    invoke-virtual {v0, p1}, Lve5;->T0(Landroid/view/Surface;)V
 
-    check-cast p1, Lukb;
+    const/4 p1, 0x0
 
-    invoke-interface {p1, v0}, Lukb;->j(F)V
+    invoke-virtual {v0, p1, p1}, Lve5;->Q0(II)V
 
-    return-void
+    const/4 p1, 0x1
 
-    :pswitch_0
-    iget v0, p0, Lpe5;->b:F
+    return p1
+.end method
 
-    check-cast p1, Lukb;
+.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
+    .locals 0
 
-    invoke-interface {p1, v0}, Lukb;->j(F)V
+    iget-object p1, p0, Lpe5;->a:Lve5;
 
-    return-void
-
-    :pswitch_1
-    iget v0, p0, Lpe5;->b:F
-
-    check-cast p1, Ltkb;
-
-    invoke-interface {p1, v0}, Ltkb;->j(F)V
+    invoke-virtual {p1, p2, p3}, Lve5;->Q0(II)V
 
     return-void
+.end method
 
-    nop
+.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
+    .locals 0
+
+    iget-object p1, p0, Lpe5;->a:Lve5;
+
+    invoke-virtual {p1, p3, p4}, Lve5;->Q0(II)V
+
+    return-void
+.end method
+
+.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
+    .locals 0
+
+    iget-object p1, p0, Lpe5;->a:Lve5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
+    .locals 1
+
+    iget-object p1, p0, Lpe5;->a:Lve5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0}, Lve5;->Q0(II)V
+
+    return-void
 .end method

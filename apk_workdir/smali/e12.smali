@@ -1,314 +1,209 @@
-.class public abstract Le12;
+.class public final synthetic Le12;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqo3;
 
-# static fields
-.field public static final a:Lw02;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iput p2, p0, Le12;->a:I
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    iput-object p1, p0, Le12;->b:Ljava/lang/Object;
 
-    new-instance v1, Lrq7;
+    iput-object p3, p0, Le12;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2}, Lrq7;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lw02;
-
-    invoke-direct {v1, v0}, Lw02;-><init>(Ljava/util/LinkedHashSet;)V
-
-    sput-object v1, Le12;->a:Lw02;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lbb8;Lw02;)V
-    .locals 7
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    const/16 v1, 0x22
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const-string v4, "CameraValidator"
-
-    if-lt v0, v1, :cond_1
-
-    invoke-static {p0}, Lzn0;->b(Landroid/content/Context;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lbb8;->y()Ljava/util/LinkedHashSet;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v0, "Virtual device with ID: "
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Lzn0;->b(Landroid/content/Context;)I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " has "
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p0
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " cameras. Skipping validation."
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v4, p0}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
-
-    const-string p1, "No cameras available"
-
-    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/IllegalArgumentException;)V
-
-    throw p0
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    :try_start_0
-    invoke-virtual {p2}, Lw02;->b()Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    const-string p0, "No lens facing info in the availableCamerasSelector, don\'t verify the camera lens facing."
-
-    invoke-static {v4, p0}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    const-string p1, "Cannot get lens facing from the availableCamerasSelector don\'t verify the camera lens facing."
-
-    invoke-static {v4, p1, p0}, Ls4d;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    move-object v0, v3
-
-    :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v5, "Verifying camera lens facing on "
-
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v5, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", lensFacingInteger: "
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object p0
-
-    :try_start_1
-    const-string v1, "android.hardware.camera"
-
-    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
+    iget v0, p0, Le12;->a:I
 
     const/4 v1, 0x1
 
-    if-eqz p2, :cond_4
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    iget-object v3, p0, Le12;->c:Ljava/lang/Object;
 
-    move-result v5
+    iget-object v4, p0, Le12;->b:Ljava/lang/Object;
 
-    if-ne v5, v1, :cond_5
+    packed-switch v0, :pswitch_data_0
+
+    check-cast v4, Lquc;
+
+    check-cast v3, Lvs1;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    iget-object v0, v4, Lquc;->V:Ljava/lang/Throwable;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p1, Landroidx/camera/video/internal/encoder/EncodeException;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x5
+
+    invoke-virtual {v4, v0}, Lquc;->A(I)V
 
     goto :goto_0
 
-    :catch_1
-    move-exception v1
+    :cond_0
+    const/4 v0, 0x6
 
-    move-object v3, v1
+    invoke-virtual {v4, v0}, Lquc;->A(I)V
 
-    goto :goto_1
-
-    :cond_4
     :goto_0
-    sget-object v5, Lw02;->c:Lw02;
+    iput-object p1, v4, Lquc;->V:Ljava/lang/Throwable;
 
-    invoke-virtual {p1}, Lbb8;->y()Ljava/util/LinkedHashSet;
+    invoke-virtual {v4}, Lquc;->K()V
 
-    move-result-object v6
+    invoke-virtual {v3, v2}, Lvs1;->b(Ljava/lang/Object;)Z
 
-    invoke-virtual {v5, v6}, Lw02;->c(Ljava/util/LinkedHashSet;)Le02;
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    return-void
 
-    move v2, v1
+    :pswitch_0
+    check-cast v4, Lot9;
 
-    goto :goto_2
+    check-cast v3, Ljava/lang/Boolean;
 
-    :goto_1
-    const-string v1, "Camera LENS_FACING_BACK verification failed"
+    check-cast p1, Lm18;
 
-    invoke-static {v4, v1, v3}, Ls4d;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :cond_5
-    :goto_2
-    :try_start_2
-    const-string v1, "android.hardware.camera.front"
+    move-result v0
 
-    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    iput-boolean v0, p1, Lm18;->f:Z
 
-    move-result p0
+    iget-object v0, v4, Lot9;->Y:Lu18;
 
-    if-eqz p0, :cond_7
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz p2, :cond_6
+    const-string v0, "u18"
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    const-string v1, "background permissions is not supported yet"
 
-    move-result p0
+    invoke-static {v0, v1, v2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-nez p0, :cond_7
+    const/4 v0, 0x0
 
-    goto :goto_3
-
-    :catch_2
-    move-exception p0
-
-    move-object v3, p0
-
-    goto :goto_4
-
-    :cond_6
-    :goto_3
-    sget-object p0, Lw02;->b:Lw02;
-
-    invoke-virtual {p1}, Lbb8;->y()Ljava/util/LinkedHashSet;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Lw02;->c(Ljava/util/LinkedHashSet;)Le02;
-    :try_end_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_5
-
-    :goto_4
-    const-string p0, "Camera LENS_FACING_FRONT verification failed"
-
-    invoke-static {v4, p0, v3}, Ls4d;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_5
-    :try_start_3
-    sget-object p0, Le12;->a:Lw02;
-
-    invoke-virtual {p1}, Lbb8;->y()Ljava/util/LinkedHashSet;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Lw02;->c(Ljava/util/LinkedHashSet;)Le02;
-
-    const-string p0, "Found a LENS_FACING_EXTERNAL camera"
-
-    invoke-static {v4, p0}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_3
-
-    add-int/lit8 v2, v2, 0x1
-
-    :catch_3
-    if-nez v3, :cond_8
+    iput-boolean v0, p1, Lm18;->g:Z
 
     return-void
 
-    :cond_8
-    new-instance p0, Ljava/lang/StringBuilder;
+    :pswitch_1
+    check-cast v4, Loz4;
 
-    const-string p2, "Camera LensFacing verification failed, existing cameras: "
+    check-cast v3, Lj1f;
 
-    invoke-direct {p0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Leb0;
 
-    invoke-virtual {p1}, Lbb8;->y()Ljava/util/LinkedHashSet;
+    invoke-virtual {v3}, Lj1f;->close()V
+
+    iget-object p1, v4, Loz4;->r0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {p1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p1, Landroid/view/Surface;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz p1, :cond_2
 
-    move-result-object p0
+    iget-object v0, v4, Loz4;->a:Lmz4;
 
-    invoke-static {v4, p0}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v2, v0, Lgt4;->c:Ljava/lang/Object;
 
-    new-instance p0, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
+    check-cast v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-string p1, "Expected camera missing from device."
+    invoke-static {v2, v1}, Lyf6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    invoke-direct {p0, p1, v2, v3}, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;-><init>(Ljava/lang/String;ILjava/lang/IllegalArgumentException;)V
+    iget-object v2, v0, Lgt4;->e:Ljava/lang/Object;
 
-    throw p0
+    check-cast v2, Ljava/lang/Thread;
+
+    invoke-static {v2}, Lyf6;->c(Ljava/lang/Thread;)V
+
+    invoke-virtual {v0, p1, v1}, Lgt4;->s(Landroid/view/Surface;Z)V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    check-cast v4, Lck4;
+
+    check-cast v3, Lj1f;
+
+    check-cast p1, Leb0;
+
+    invoke-virtual {v3}, Lj1f;->close()V
+
+    iget-object p1, v4, Lck4;->r0:Ljava/util/LinkedHashMap;
+
+    invoke-interface {p1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/Surface;
+
+    if-eqz p1, :cond_3
+
+    iget-object v0, v4, Lck4;->a:Lgt4;
+
+    iget-object v2, v0, Lgt4;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-static {v2, v1}, Lyf6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
+
+    iget-object v2, v0, Lgt4;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Thread;
+
+    invoke-static {v2}, Lyf6;->c(Ljava/lang/Thread;)V
+
+    invoke-virtual {v0, p1, v1}, Lgt4;->s(Landroid/view/Surface;Z)V
+
+    :cond_3
+    return-void
+
+    :pswitch_3
+    check-cast v4, Landroid/view/Surface;
+
+    check-cast v3, Landroid/graphics/SurfaceTexture;
+
+    check-cast p1, Lgb0;
+
+    invoke-virtual {v4}, Landroid/view/Surface;->release()V
+
+    invoke-virtual {v3}, Landroid/graphics/SurfaceTexture;->release()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

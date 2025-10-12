@@ -2,173 +2,48 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Cloneable;
-
 
 # instance fields
-.field public X:I
+.field public final a:Lc4d;
 
-.field public a:Ljava/nio/charset/CodingErrorAction;
+.field public final b:Lvh;
 
-.field public b:Ljava/nio/charset/CodingErrorAction;
+.field public final c:Lwh;
 
-.field public c:I
-
-.field public o:I
+.field public final d:Lwh;
 
 
-# virtual methods
-.method public final clone()Ljava/lang/Object;
+# direct methods
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
     .locals 2
 
-    new-instance v0, Lk79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk79;->a:Lc4d;
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+    new-instance v0, Lvh;
 
-    iput-object v1, v0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
+    const/16 v1, 0xc
 
-    iput-object v1, v0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
 
-    const v1, 0x7fffffff
+    iput-object v0, p0, Lk79;->b:Lvh;
 
-    iput v1, v0, Lk79;->c:I
+    new-instance v0, Lwh;
 
-    const/16 v1, 0x2000
+    const/16 v1, 0x19
 
-    iput v1, v0, Lk79;->o:I
+    invoke-direct {v0, p1, v1}, Lwh;-><init>(Lc4d;I)V
 
-    iput v1, v0, Lk79;->X:I
+    iput-object v0, p0, Lk79;->c:Lwh;
 
-    iget-object v1, p0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
+    new-instance v0, Lwh;
 
-    iput-object v1, v0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
+    const/16 v1, 0x1a
 
-    iget-object v1, p0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-direct {v0, p1, v1}, Lwh;-><init>(Lc4d;I)V
 
-    iput-object v1, v0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
+    iput-object v0, p0, Lk79;->d:Lwh;
 
-    iget v1, p0, Lk79;->c:I
-
-    iput v1, v0, Lk79;->c:I
-
-    iget v1, p0, Lk79;->o:I
-
-    iput v1, v0, Lk79;->o:I
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Lk79;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lk79;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
-
-    iget-object v1, p1, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lk79;->c:I
-
-    iget v1, p1, Lk79;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lk79;->X:I
-
-    iget v1, p1, Lk79;->X:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lk79;->o:I
-
-    iget p1, p1, Lk79;->o:I
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lk79;->a:Ljava/nio/charset/CodingErrorAction;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    const/16 v2, 0x3e0
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lk79;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lk79;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lk79;->o:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lk79;->X:I
-
-    add-int/2addr v2, v0
-
-    return v2
+    return-void
 .end method

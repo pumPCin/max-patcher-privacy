@@ -3,59 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/ScreenCapturerAndroid;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
+.method public synthetic constructor <init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqdd;->a:I
 
-    iput-object p1, p0, Lqdd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    iput-object p1, p0, Lqdd;->b:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    const/4 p1, 0x4
+    iget v0, p0, Lqdd;->a:I
 
-    if-ne p2, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    iget-object v0, p0, Lqdd;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move-result p1
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->b(Lorg/webrtc/ScreenCapturerAndroid;)V
 
-    const/4 p2, 0x1
+    return-void
 
-    if-ne p1, p2, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lqdd;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
-    new-instance p1, Lsdd;
+    invoke-static {v0}, Lorg/webrtc/ScreenCapturerAndroid;->a(Lorg/webrtc/ScreenCapturerAndroid;)V
 
-    iget-object p2, p0, Lqdd;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    return-void
 
-    iget-object p3, p2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J1:Ljava/lang/Object;
+    nop
 
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Landroid/os/Parcelable;
-
-    invoke-direct {p1, p3}, Lsdd;-><init>(Landroid/os/Parcelable;)V
-
-    invoke-virtual {p2, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->b1(Lvdd;)V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

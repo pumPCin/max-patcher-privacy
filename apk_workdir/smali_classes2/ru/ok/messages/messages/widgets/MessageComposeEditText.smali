@@ -1,84 +1,84 @@
 .class public Lru/ok/messages/messages/widgets/MessageComposeEditText;
-.super Lq45;
+.super Ld45;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic B0:I
+.field public static final synthetic w0:I
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    sget v0, Lxac;->editTextStyle:I
+    sget v0, Ld9c;->editTextStyle:I
 
-    invoke-direct {p0, p1, p2, v0}, Lgi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lmi;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    check-cast p1, Lk8f;
+    check-cast p1, Ly6f;
 
     check-cast p1, Lone/me/android/OneMeApplication;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object p1, Lzid;->a:Lzid;
+    sget-object p1, Lhhd;->a:Lhhd;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class p2, Lp55;
-
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object p1
 
-    check-cast p1, Lp55;
+    const-class p2, Lb55;
 
-    iget-boolean p2, p1, Lp55;->e:Z
+    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb55;
+
+    iget-boolean p2, p1, Lb55;->e:Z
 
     if-nez p2, :cond_0
 
-    new-instance p2, Ld65;
+    new-instance p2, Lq55;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, v0, p1}, Ld65;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Lq55;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p0, p2}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     :cond_0
-    invoke-static {}, Lem;->b()Lsg3;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    check-cast p1, Lyka;
+    check-cast p1, Lnja;
 
-    invoke-virtual {p1}, Lyka;->b()Lqc;
+    invoke-virtual {p1}, Lnja;->a()Lxc;
 
-    sget-object p1, Lem;->o:Lem;
+    sget-object p1, Lum;->o:Lum;
 
-    invoke-virtual {p1}, Lem;->a()Lzob;
+    invoke-virtual {p1}, Lum;->a()Lpnb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lzob;->c:Lsp;
+    iget-object p1, p1, Lpnb;->c:Lz2g;
 
     const/4 p2, 0x0
 
-    iget-object p1, p1, Lh3;->g:Lep7;
+    iget-object p1, p1, Lv3;->h:Lbo7;
 
     const-string v0, "app.messages.replace.emoji"
 
-    invoke-virtual {p1, v0, p2}, Lep7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v0, p2}, Lbo7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lq45;->setReplaceTextSmiles(Z)V
+    invoke-virtual {p0, p1}, Ld45;->setReplaceTextSmiles(Z)V
 
     return-void
 .end method
@@ -111,13 +111,13 @@
 
     iput-object v1, p1, Landroid/view/inputmethod/EditorInfo;->contentMimeTypes:[Ljava/lang/String;
 
-    new-instance p1, Lmu8;
+    new-instance p1, Lys8;
 
-    invoke-direct {p1, p0}, Lmu8;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
+    invoke-direct {p1, p0}, Lys8;-><init>(Lru/ok/messages/messages/widgets/MessageComposeEditText;)V
 
-    new-instance v1, Lqb7;
+    new-instance v1, Lka7;
 
-    invoke-direct {v1, v0, p1}, Lqb7;-><init>(Landroid/view/inputmethod/InputConnection;Lrb7;)V
+    invoke-direct {v1, v0, p1}, Lka7;-><init>(Landroid/view/inputmethod/InputConnection;Lla7;)V
 
     return-object v1
 .end method
@@ -173,19 +173,19 @@
     return-void
 .end method
 
-.method public setListener(Ld49;)V
+.method public setListener(Lr29;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setMIUITextSelectListener(Le49;)V
+.method public setMIUITextSelectListener(Ls29;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setTextSelectListener(Lf49;)V
+.method public setTextSelectListener(Lt29;)V
     .locals 0
 
     return-void

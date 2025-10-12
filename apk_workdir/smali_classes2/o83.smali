@@ -1,653 +1,619 @@
 .class public final Lo83;
-.super Ljava/lang/Object;
+.super Lqu8;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lz73;
 
 
 # instance fields
-.field public final X:J
-
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final o:Ljava/lang/Object;
+.field public final B0:Lc83;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;J)V
-    .locals 9
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    const/4 v0, 0x2
+    invoke-direct {p0, p1}, Lqu8;-><init>(Landroid/content/Context;)V
 
-    iput v0, p0, Lo83;->a:I
+    new-instance v0, Lc83;
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p1, p0}, Lc83;-><init>(Landroid/content/Context;Landroid/view/ViewGroup;)V
 
-    .line 3
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object v0, p0, Lo83;->B0:Lc83;
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 p1, 0x1
 
-    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    new-instance v8, Llx9;
-
-    const-string v0, "firebase-iid-executor"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v8, v0, v2}, Llx9;-><init>(Ljava/lang/String;I)V
-
-    const/4 v3, 0x1
-
-    const-wide/16 v4, 0x1e
-
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
-
-    iput-object v1, p0, Lo83;->o:Ljava/lang/Object;
-
-    .line 4
-    iput-object p1, p0, Lo83;->c:Ljava/lang/Object;
-
-    .line 5
-    iput-wide p2, p0, Lo83;->X:J
-
-    .line 6
-    iget-object p1, p1, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
-
-    .line 7
-    const-string p2, "power"
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/PowerManager;
-
-    const/4 p2, 0x1
-
-    .line 8
-    const-string p3, "fiid-sync"
-
-    invoke-virtual {p1, p2, p3}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lo83;->b:Ljava/lang/Object;
-
-    const/4 p2, 0x0
-
-    .line 9
-    invoke-virtual {p1, p2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setTransitionGroup(Z)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+.method public static final synthetic A(Lo83;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 1
-    iput p6, p0, Lo83;->a:I
+    invoke-super {p0, p1}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    iput-object p1, p0, Lo83;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    iput-object p2, p0, Lo83;->c:Ljava/lang/Object;
+.method public static final synthetic B(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
 
-    iput-object p3, p0, Lo83;->o:Ljava/lang/Object;
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
-    iput-wide p4, p0, Lo83;->X:J
+    return-void
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public static final synthetic C(Lo83;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public static final synthetic D(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Z
+.method public final c(II)I
     .locals 2
 
-    iget-object v0, p0, Lo83;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lo83;->B0:Lc83;
 
-    check-cast v0, Lcom/google/firebase/messaging/FirebaseMessaging;
+    iget v1, v0, Lc83;->c:I
 
-    iget-object v0, v0, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    invoke-virtual {v0, p1, p2}, Lc83;->b(II)V
 
-    const-string v1, "connectivity"
+    iget p1, v0, Lc83;->d:I
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final e(Landroid/view/MotionEvent;[I)V
+    .locals 2
 
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    invoke-static {v0}, Li8e;->I(F)I
 
-    const/4 v0, 0x1
+    move-result v0
 
-    return v0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    :cond_1
-    const/4 v0, 0x0
+    move-result p1
 
-    return v0
+    invoke-static {p1}, Li8e;->I(F)I
+
+    move-result p1
+
+    iget-object v1, p0, Lo83;->B0:Lc83;
+
+    invoke-virtual {v1, v0, p1, p2}, Lc83;->e(II[I)V
+
+    return-void
 .end method
 
-.method public b()Z
-    .locals 5
+.method public final i(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    const-string v0, "FirebaseMessaging"
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super {p0, p1}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lk83;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, v2}, Lk83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ll83;
 
     const/4 v1, 0x0
 
-    :try_start_0
-    iget-object v2, p0, Lo83;->c:Ljava/lang/Object;
+    invoke-direct {v0, p0, p1, v1}, Ll83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;I)V
 
-    check-cast v2, Lcom/google/firebase/messaging/FirebaseMessaging;
+    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {v2}, Lcom/google/firebase/messaging/FirebaseMessaging;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "Token retrieval failed: null"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :catch_0
-    move-exception v2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "Token successfully retrieved"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :cond_1
-    const/4 v0, 0x1
-
-    return v0
-
-    :catch_1
-    const-string v2, "Token retrieval failed with SecurityException. Will retry token retrieval"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :goto_0
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "SERVICE_NOT_AVAILABLE"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    const-string v4, "INTERNAL_SERVER_ERROR"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    const-string v4, "InternalServerError"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-nez v3, :cond_3
-
-    const-string v2, "Token retrieval failed without exception message. Will retry token retrieval"
-
-    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
-
-    :cond_3
-    throw v2
-
-    :cond_4
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Token retrieval failed: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ". Will retry token retrieval"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v1
+    return-void
 .end method
 
-.method public final run()V
-    .locals 7
+.method public final o(Landroid/view/MotionEvent;)La83;
+    .locals 2
 
-    iget v0, p0, Lo83;->a:I
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Lo83;->b:Ljava/lang/Object;
+    invoke-static {v0}, Li8e;->I(F)I
 
-    check-cast v0, Landroid/os/PowerManager$WakeLock;
+    move-result v0
 
-    const-string v1, "Topic sync or token retrieval failed on hard failure exceptions: "
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    invoke-static {}, Lrtd;->r()Lrtd;
+    move-result p1
 
-    move-result-object v2
+    invoke-static {p1}, Li8e;->I(F)I
 
-    iget-object v3, p0, Lo83;->c:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v3, Lcom/google/firebase/messaging/FirebaseMessaging;
+    iget-object v1, p0, Lo83;->B0:Lc83;
 
-    iget-object v4, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    invoke-virtual {v1, v0, p1}, Lc83;->a(II)La83;
 
-    invoke-virtual {v2, v4}, Lrtd;->v(Landroid/content/Context;)Z
+    move-result-object p1
 
-    move-result v2
+    return-object p1
+.end method
 
-    if-eqz v2, :cond_0
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 6
 
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    :cond_0
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
 
-    :try_start_0
-    monitor-enter v3
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    move-result v0
 
-    const/4 v4, 0x1
+    int-to-float v0, v0
 
-    :try_start_1
-    iput-boolean v4, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_3
-
-    :try_start_2
-    monitor-exit v3
-
-    iget-object v4, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->h:Lpfg;
-
-    invoke-virtual {v4}, Lpfg;->j()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    monitor-enter v3
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :try_start_3
-    iput-boolean v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    monitor-exit v3
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    invoke-static {}, Lrtd;->r()Lrtd;
-
-    move-result-object v1
-
-    iget-object v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lrtd;->v(Landroid/content/Context;)Z
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    int-to-float v1, v1
 
-    :goto_0
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
+    const/4 v2, 0x2
 
-    goto/16 :goto_3
+    int-to-float v2, v2
 
-    :catchall_0
-    move-exception v4
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    :try_start_5
-    monitor-exit v3
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    move-result-object v3
 
-    :try_start_6
-    throw v4
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_1
-    invoke-static {}, Lrtd;->r()Lrtd;
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    mul-float/2addr v3, v4
+
+    mul-float/2addr v3, v2
+
+    sub-float v3, v0, v3
+
+    div-float/2addr v3, v0
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    mul-float/2addr v4, v2
+
+    sub-float v2, v1, v4
+
+    div-float/2addr v2, v1
+
+    invoke-static {}, Ljh8;->a()Landroid/graphics/Matrix;
 
     move-result-object v4
 
-    iget-object v5, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    invoke-virtual {v4}, Landroid/graphics/Matrix;->reset()V
 
-    invoke-virtual {v4, v5}, Lrtd;->t(Landroid/content/Context;)Z
+    const/high16 v5, 0x40000000    # 2.0f
 
-    move-result v4
+    div-float/2addr v0, v5
 
-    if-eqz v4, :cond_2
+    div-float/2addr v1, v5
 
-    invoke-virtual {p0}, Lo83;->a()Z
+    invoke-virtual {v4, v3, v2, v0, v1}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    move-result v4
+    invoke-static {}, Ljh8;->b()Landroid/graphics/Path;
 
-    if-nez v4, :cond_2
+    move-result-object v0
 
-    new-instance v4, Lhn;
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    invoke-direct {v4}, Lhn;-><init>()V
-
-    iput-object p0, v4, Lhn;->b:Ljava/lang/Object;
-
-    invoke-virtual {v4}, Lhn;->a()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    invoke-static {}, Lrtd;->r()Lrtd;
+    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    iget-object v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    check-cast v1, Lb29;
 
-    invoke-virtual {v1, v2}, Lrtd;->v(Landroid/content/Context;)Z
+    invoke-virtual {v1}, Lb29;->a()Landroid/graphics/Path;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
+
+    invoke-static {}, Ljh8;->a()Landroid/graphics/Matrix;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+
+    invoke-static {}, Ljh8;->b()Landroid/graphics/Path;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+
+    :try_start_0
+    iget-object v0, p0, Lo83;->B0:Lc83;
+
+    iget-object v2, v0, Lc83;->h:[F
+
+    array-length v2, v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    iget-object v4, v0, Lc83;->e:Ler0;
+
+    invoke-virtual {v4, v3}, Ler0;->c(I)Lux4;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lux4;->d()Li5d;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v4, p1}, Li5d;->draw(Landroid/graphics/Canvas;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v1
+    :cond_1
+    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    goto :goto_4
+    return-void
 
-    :catch_0
-    move-exception v4
+    :catchall_0
+    move-exception v0
 
-    goto :goto_2
+    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    :cond_2
-    :try_start_7
-    invoke-virtual {p0}, Lo83;->b()Z
+    throw v0
+.end method
 
-    move-result v4
+.method public final onFinishTemporaryDetach()V
+    .locals 1
 
-    if-eqz v4, :cond_3
+    invoke-super {p0}, Landroid/view/View;->onFinishTemporaryDetach()V
 
-    monitor-enter v3
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_0
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+    iget-object v0, p0, Lo83;->B0:Lc83;
 
-    :try_start_8
-    iput-boolean v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+    iget-object v0, v0, Lc83;->e:Ler0;
 
-    :try_start_9
-    monitor-exit v3
-    :try_end_9
-    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_0
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+    invoke-virtual {v0}, Ler0;->k()V
 
-    goto :goto_1
+    return-void
+.end method
 
-    :catchall_2
-    move-exception v4
+.method public final onStartTemporaryDetach()V
+    .locals 1
 
-    :try_start_a
-    monitor-exit v3
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_2
+    invoke-super {p0}, Landroid/view/View;->onStartTemporaryDetach()V
 
-    :try_start_b
-    throw v4
+    iget-object v0, p0, Lo83;->B0:Lc83;
 
-    :cond_3
-    iget-wide v4, p0, Lo83;->X:J
+    iget-object v0, v0, Lc83;->e:Ler0;
 
-    invoke-virtual {v3, v4, v5}, Lcom/google/firebase/messaging/FirebaseMessaging;->h(J)V
-    :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_0
-    .catchall {:try_start_b .. :try_end_b} :catchall_1
+    invoke-virtual {v0}, Ler0;->l()V
 
-    :goto_1
-    invoke-static {}, Lrtd;->r()Lrtd;
+    return-void
+.end method
 
-    move-result-object v1
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 15
 
-    iget-object v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-virtual {v1, v2}, Lrtd;->v(Landroid/content/Context;)Z
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
 
-    if-eqz v1, :cond_4
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-super/range {p0 .. p4}, Landroid/view/View;->scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lm83;
+
+    const/4 v7, 0x0
+
+    move-object v2, p0
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p2
+
+    move-wide/from16 v5, p3
+
+    invoke-direct/range {v1 .. v7}, Lm83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v8, Lm83;
+
+    const/4 v14, 0x1
+
+    move-object v9, p0
+
+    move-object/from16 v10, p1
+
+    move-object/from16 v11, p2
+
+    move-wide/from16 v12, p3
+
+    invoke-direct/range {v8 .. v14}, Lm83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+
+    invoke-virtual {p0, v8}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public setOnFinalImageSetCallback(Lvd6;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lvd6;",
+            ")V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lo83;->B0:Lc83;
+
+    iput-object p1, v0, Lc83;->g:Lvd6;
+
+    return-void
+.end method
+
+.method public final u(IIII)J
+    .locals 0
+
+    iget-object p1, p0, Lo83;->B0:Lc83;
+
+    invoke-virtual {p1, p2}, Lc83;->c(I)V
+
+    iget p2, p1, Lc83;->c:I
+
+    iget p1, p1, Lc83;->d:I
+
+    invoke-static {p2, p1}, Lgc7;->a(II)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
+
+    .line 4
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-super {p0, p1}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+
+    .line 6
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lk83;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, v2}, Lk83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ll83;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Ll83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Looper;->isCurrentThread()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 2
+    invoke-super {p0, p1, p2}, Landroid/view/View;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+
+    return-void
+
+    .line 3
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Ln83;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, p2, v2}, Ln83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_1
+    new-instance v0, Ln83;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, p2, v1}, Ln83;-><init>(Lo83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    iget-object v0, p0, Lo83;->B0:Lc83;
+
+    invoke-virtual {v0, p1}, Lc83;->g(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :catchall_3
-    move-exception v4
+    :cond_0
+    const/4 p1, 0x0
 
-    :try_start_c
-    monitor-exit v3
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_3
+    return p1
 
-    :try_start_d
-    throw v4
-    :try_end_d
-    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_0
-    .catchall {:try_start_d .. :try_end_d} :catchall_1
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    :goto_2
-    :try_start_e
-    const-string v5, "FirebaseMessaging"
+    return p1
+.end method
 
-    new-instance v6, Ljava/lang/StringBuilder;
+.method public final w(Lzd8;)V
+    .locals 4
 
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Ld83;
 
-    invoke-virtual {v4}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    iget-object v0, p1, Ld83;->a:[F
 
-    move-result-object v1
+    iget-object p1, p1, Ld83;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lo83;->B0:Lc83;
 
-    const-string v1, ". Won\'t retry the operation."
+    iput-object v0, v1, Lc83;->h:[F
 
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, v1, Lc83;->f:Ljk;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget-object v2, Lc83;->k:[Lpl7;
 
-    move-result-object v1
+    const/4 v3, 0x0
 
-    invoke-static {v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    aget-object v2, v2, v3
 
-    monitor-enter v3
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_1
-
-    :try_start_f
-    iput-boolean v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->i:Z
-    :try_end_f
-    .catchall {:try_start_f .. :try_end_f} :catchall_4
-
-    :try_start_10
-    monitor-exit v3
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_1
-
-    invoke-static {}, Lrtd;->r()Lrtd;
-
-    move-result-object v1
-
-    iget-object v2, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
-
-    invoke-virtual {v1, v2}, Lrtd;->v(Landroid/content/Context;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    :goto_3
-    return-void
-
-    :catchall_4
-    move-exception v1
-
-    :try_start_11
-    monitor-exit v3
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_4
-
-    :try_start_12
-    throw v1
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_1
-
-    :goto_4
-    invoke-static {}, Lrtd;->r()Lrtd;
-
-    move-result-object v2
-
-    iget-object v3, v3, Lcom/google/firebase/messaging/FirebaseMessaging;->b:Landroid/content/Context;
-
-    invoke-virtual {v2, v3}, Lrtd;->v(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    :cond_5
-    throw v1
-
-    :pswitch_0
-    iget-object v0, p0, Lo83;->b:Ljava/lang/Object;
-
-    check-cast v0, Lq83;
-
-    iget-object v1, p0, Lo83;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/graphics/drawable/Drawable;
-
-    iget-object v2, p0, Lo83;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Runnable;
-
-    iget-wide v3, p0, Lo83;->X:J
-
-    invoke-static {v0, v1, v2, v3, v4}, Lq83;->y(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    invoke-virtual {v0, v1, v2, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
     return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lo83;->b:Ljava/lang/Object;
-
-    check-cast v0, Lq83;
-
-    iget-object v1, p0, Lo83;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/graphics/drawable/Drawable;
-
-    iget-object v2, p0, Lo83;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/Runnable;
-
-    iget-wide v3, p0, Lo83;->X:J
-
-    invoke-static {v0, v1, v2, v3, v4}, Lq83;->y(Lq83;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

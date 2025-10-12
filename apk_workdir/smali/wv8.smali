@@ -1,88 +1,64 @@
 .class public final Lwv8;
-.super Li6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxv8;
 
-# instance fields
-.field public final e:Lns8;
 
-.field public f:[I
+# static fields
+.field public static final a:Lwv8;
 
 
 # direct methods
-.method public constructor <init>(Lns8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Li6a;-><init>()V
+    new-instance v0, Lwv8;
 
-    iput-object p1, p0, Lwv8;->e:Lns8;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwv8;->a:Lwv8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lyqd;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p1, Lyqd;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast p1, Landroid/app/Notification$Builder;
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Landroid/app/Notification$MediaStyle;
-
-    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
-
-    iget-object v1, p0, Lwv8;->e:Lns8;
-
-    iget-object v2, v1, Lns8;->a:Lft8;
-
-    iget-object v2, v2, Lft8;->h:Lot8;
-
-    iget-object v2, v2, Lot8;->k:Lys8;
-
-    iget-object v2, v2, Lys8;->a:Ljava/lang/Object;
-
-    check-cast v2, Lss8;
-
-    iget-object v2, v2, Lss8;->c:Lxs8;
-
-    iget-object v2, v2, Lxs8;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/media/session/MediaSession$Token;
-
-    invoke-virtual {v0, v2}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lwv8;->f:[I
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0, v2}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
+    return v0
 
     :cond_0
-    sget v2, Lt4g;->a:I
+    instance-of p1, p1, Lwv8;
 
-    invoke-virtual {p1, v0}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+    if-nez p1, :cond_1
 
-    new-instance v0, Landroid/os/Bundle;
+    const/4 p1, 0x0
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    return p1
 
-    iget-object v1, v1, Lns8;->a:Lft8;
+    :cond_1
+    return v0
+.end method
 
-    iget-object v1, v1, Lft8;->j:Ldxd;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v1}, Ldxd;->b()Landroid/os/Bundle;
+    const v0, -0x73235df3
 
-    move-result-object v1
+    return v0
+.end method
 
-    const-string v2, "androidx.media3.session"
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    const-string v0, "Money"
 
-    invoke-virtual {p1, v0}, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
-
-    return-void
+    return-object v0
 .end method

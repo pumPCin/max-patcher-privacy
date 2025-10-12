@@ -2,97 +2,102 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmaa;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final a:Lm80;
+.field public b:I
 
-.field public static final b:Lfn5;
+.field public c:F
 
-.field public static final c:Lfn5;
+.field public d:F
 
+.field public e:J
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public f:J
 
-    new-instance v0, Lm80;
+.field public g:J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public h:F
 
-    sput-object v0, Lm80;->a:Lm80;
-
-    new-instance v0, Lpx;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpx;-><init>(I)V
-
-    const-class v1, Lb6c;
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "eventsDroppedCount"
-
-    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lm80;->b:Lfn5;
-
-    new-instance v0, Lpx;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lpx;-><init>(I)V
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "reason"
-
-    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lm80;->c:Lfn5;
-
-    return-void
-.end method
+.field public i:I
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 3
+.method public final a(J)F
+    .locals 8
 
-    check-cast p1, Lw38;
+    iget-wide v0, p0, Lm80;->e:J
 
-    check-cast p2, Lnaa;
+    cmp-long v2, p1, v0
 
-    sget-object v0, Lm80;->b:Lfn5;
+    const/4 v3, 0x0
 
-    iget-wide v1, p1, Lw38;->a:J
+    if-gez v2, :cond_0
 
-    invoke-interface {p2, v0, v1, v2}, Lnaa;->e(Lfn5;J)Lnaa;
+    return v3
 
-    sget-object v0, Lm80;->c:Lfn5;
+    :cond_0
+    iget-wide v4, p0, Lm80;->g:J
 
-    iget-object p1, p1, Lw38;->b:Lv38;
+    const-wide/16 v6, 0x0
 
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    cmp-long v2, v4, v6
 
-    return-void
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    if-ltz v2, :cond_2
+
+    cmp-long v2, p1, v4
+
+    if-gez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sub-long/2addr p1, v4
+
+    iget v0, p0, Lm80;->h:F
+
+    sub-float v1, v6, v0
+
+    long-to-float p1, p1
+
+    iget p2, p0, Lm80;->i:I
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1, v3, v6}, Lyv7;->b(FFF)F
+
+    move-result p1
+
+    mul-float/2addr p1, v0
+
+    add-float/2addr p1, v1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    sub-long/2addr p1, v0
+
+    long-to-float p1, p1
+
+    iget p2, p0, Lm80;->a:I
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    invoke-static {p1, v3, v6}, Lyv7;->b(FFF)F
+
+    move-result p1
+
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    mul-float/2addr p1, p2
+
+    return p1
 .end method

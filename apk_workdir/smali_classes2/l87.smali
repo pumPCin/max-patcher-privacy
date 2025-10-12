@@ -1,37 +1,68 @@
-.class public abstract synthetic Ll87;
+.class public final synthetic Ll87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/ToLongFunction;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/16 v0, 0xb
+    iput p1, p0, Ll87;->a:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Ll87;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .locals 2
+
+    iget v0, p0, Ll87;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lafa;->a:Lafa;
+
+    sget-object v1, Lone/me/android/OneMeApplication;->s0:Lpea;
+
+    invoke-virtual {v0, p1}, Lafa;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Le1a;
+
+    iget-wide v0, p1, Le1a;->a:J
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

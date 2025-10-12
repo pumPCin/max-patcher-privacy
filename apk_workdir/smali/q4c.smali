@@ -1,207 +1,157 @@
-.class public final Lq4c;
-.super Ljava/lang/Object;
+.class public final enum Lq4c;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+
+# static fields
+.field public static final enum X:Lq4c;
+
+.field public static final enum Y:Lq4c;
+
+.field public static final enum Z:Lq4c;
+
+.field public static final enum b:Lq4c;
+
+.field public static final enum c:Lq4c;
+
+.field public static final enum o:Lq4c;
+
+.field public static final synthetic r0:[Lq4c;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq4c;
 
-    iput-object p1, p0, Lq4c;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lq4c;->b:Ljava/lang/String;
+    const-string v2, "http/1.0"
 
-    iput-object p3, p0, Lq4c;->c:Ljava/lang/String;
+    const-string v3, "HTTP_1_0"
 
-    iput-object p4, p0, Lq4c;->d:Ljava/lang/String;
+    invoke-direct {v0, v3, v1, v2}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object p5, p0, Lq4c;->e:Ljava/lang/String;
+    sput-object v0, Lq4c;->b:Lq4c;
+
+    new-instance v1, Lq4c;
+
+    const/4 v2, 0x1
+
+    const-string v3, "http/1.1"
+
+    const-string v4, "HTTP_1_1"
+
+    invoke-direct {v1, v4, v2, v3}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lq4c;->c:Lq4c;
+
+    new-instance v2, Lq4c;
+
+    const/4 v3, 0x2
+
+    const-string v4, "spdy/3.1"
+
+    const-string v5, "SPDY_3"
+
+    invoke-direct {v2, v5, v3, v4}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lq4c;->o:Lq4c;
+
+    new-instance v3, Lq4c;
+
+    const/4 v4, 0x3
+
+    const-string v5, "h2"
+
+    const-string v6, "HTTP_2"
+
+    invoke-direct {v3, v6, v4, v5}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lq4c;->X:Lq4c;
+
+    new-instance v4, Lq4c;
+
+    const/4 v5, 0x4
+
+    const-string v6, "h2_prior_knowledge"
+
+    const-string v7, "H2_PRIOR_KNOWLEDGE"
+
+    invoke-direct {v4, v7, v5, v6}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lq4c;->Y:Lq4c;
+
+    new-instance v5, Lq4c;
+
+    const/4 v6, 0x5
+
+    const-string v7, "quic"
+
+    const-string v8, "QUIC"
+
+    invoke-direct {v5, v8, v6, v7}, Lq4c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lq4c;->Z:Lq4c;
+
+    filled-new-array/range {v0 .. v5}, [Lq4c;
+
+    move-result-object v0
+
+    sput-object v0, Lq4c;->r0:[Lq4c;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lq4c;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq4c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lq4c;
-
-    iget-object v1, p0, Lq4c;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lq4c;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lq4c;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lq4c;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lq4c;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lq4c;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lq4c;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lq4c;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lq4c;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Lq4c;->e:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lr4g;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lq4c;
+    .locals 1
 
-    const/4 v0, 0x0
+    const-class v0, Lq4c;
 
-    iget-object v1, p0, Lq4c;->a:Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v1, :cond_0
+    move-result-object p0
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    check-cast p0, Lq4c;
 
-    move-result v1
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public static values()[Lq4c;
+    .locals 1
 
-    :cond_0
-    move v1, v0
+    sget-object v0, Lq4c;->r0:[Lq4c;
 
-    :goto_0
-    const/16 v2, 0x20f
+    invoke-virtual {v0}, [Lq4c;->clone()Ljava/lang/Object;
 
-    add-int/2addr v2, v1
+    move-result-object v0
 
-    mul-int/lit8 v2, v2, 0x1f
+    check-cast v0, [Lq4c;
 
-    iget-object v1, p0, Lq4c;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result v1
+    iget-object v0, p0, Lq4c;->a:Ljava/lang/String;
 
-    goto :goto_1
-
-    :cond_1
-    move v1, v0
-
-    :goto_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v1, p0, Lq4c;->c:Ljava/lang/String;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_2
-
-    :cond_2
-    move v1, v0
-
-    :goto_2
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v1, p0, Lq4c;->d:Ljava/lang/String;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    goto :goto_3
-
-    :cond_3
-    move v1, v0
-
-    :goto_3
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v1, p0, Lq4c;->e:Ljava/lang/String;
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :cond_4
-    add-int/2addr v2, v0
-
-    return v2
+    return-object v0
 .end method

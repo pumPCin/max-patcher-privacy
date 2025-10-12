@@ -3,121 +3,126 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/BiConsumer;
+.implements Lpo3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lzb2;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic c:J
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lzb2;JJJ)V
     .locals 0
 
-    iput p2, p0, Lpb2;->a:I
-
-    iput-object p1, p0, Lpb2;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lpb2;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpb2;->a:Lzb2;
+
+    iput-wide p2, p0, Lpb2;->b:J
+
+    iput-wide p4, p0, Lpb2;->c:J
+
+    iput-wide p6, p0, Lpb2;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 9
 
-    iget v0, p0, Lpb2;->a:I
+    check-cast p1, Lec2;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lpb2;->a:Lzb2;
 
-    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
+    iget-object v1, v0, Lzb2;->A:Lys4;
 
-    check-cast v0, Ljava/util/Collection;
+    invoke-virtual {p1}, Lec2;->c()Ljava/util/Map;
 
-    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Lds;
+    iget-wide v2, p0, Lpb2;->b:J
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast p2, Lap3;
+    move-result-object v4
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v4
 
-    if-eqz v0, :cond_0
+    check-cast v4, Ljava/lang/Long;
 
-    invoke-virtual {v1, p1, p2}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v4, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    return-void
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
 
-    :pswitch_0
-    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
+    move-result-wide v4
 
-    check-cast v0, Ljava/util/Collection;
+    iget-wide v6, p0, Lpb2;->c:J
 
-    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
+    cmp-long v4, v4, v6
 
-    check-cast v1, Ljava/util/ArrayList;
+    if-eqz v4, :cond_1
 
-    check-cast p1, Ljava/lang/Long;
+    const/4 v4, 0x1
 
-    check-cast p2, Lm82;
-
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    goto :goto_0
 
     :cond_1
-    return-void
+    const/4 v4, 0x0
 
-    :pswitch_1
-    iget-object v0, p0, Lpb2;->c:Ljava/lang/Object;
+    :goto_0
+    if-eqz v4, :cond_2
 
-    check-cast v0, Lit9;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v1, p0, Lpb2;->b:Ljava/lang/Object;
+    move-result-object v5
 
-    check-cast v1, Ljava/util/ArrayList;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast p1, Ljava/lang/Long;
+    move-result-object v8
 
-    check-cast p2, Lm82;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v2, v3}, Lit9;->d(J)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v5, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v0}, Lzb2;->J()J
+
+    move-result-wide v4
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v1}, Lys4;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v1}, Lys4;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lq6a;
+
+    iget-wide v0, p0, Lpb2;->d:J
+
+    invoke-virtual {p1, v0, v1, v6, v7}, Lq6a;->H(JJ)V
+
+    :cond_3
+    :goto_1
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

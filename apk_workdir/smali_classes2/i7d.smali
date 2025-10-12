@@ -1,23 +1,8 @@
-.class public final Li7d;
+.class public interface abstract Li7d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:F
-
-.field public b:F
-
-.field public c:F
-
-.field public d:F
-
-.field public e:I
-
-.field public f:I
-
-.field public g:F
-
-.field public h:Z
-
-.field public i:Lzlh;
+# virtual methods
+.method public abstract a(Lg84;[BI)V
+.end method

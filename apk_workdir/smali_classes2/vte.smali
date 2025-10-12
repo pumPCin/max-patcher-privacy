@@ -1,25 +1,39 @@
 .class public final Lvte;
-.super Lwld;
+.super Lrc4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ljava/util/ArrayList;
+# static fields
+.field public static final b:Lvte;
+
+.field public static final c:Lmc4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/4 v0, 0x2
+    new-instance v0, Lvte;
 
-    invoke-direct {p0, v0, p1}, Lwld;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0}, Lrc4;-><init>()V
 
-    new-instance p1, Ljava/util/ArrayList;
+    sput-object v0, Lvte;->b:Lvte;
 
-    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lvte;->c:Ljava/util/ArrayList;
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":stickers/showcase"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+
+    move-result-object v0
+
+    sput-object v0, Lvte;->c:Lmc4;
 
     return-void
 .end method

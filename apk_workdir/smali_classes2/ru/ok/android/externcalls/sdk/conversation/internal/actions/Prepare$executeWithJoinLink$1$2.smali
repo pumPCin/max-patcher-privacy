@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmf6;
+.implements Lke6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lude;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1;->invoke()Lrce;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lmf6;"
+        "Lke6;"
     }
 .end annotation
 
@@ -35,9 +35,9 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "it",
-        "Lp1b;",
+        "Ld0b;",
         "apply",
-        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lp1b;",
+        "(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ld0b;",
         "<anonymous>"
     }
     k = 0x3
@@ -83,34 +83,34 @@
 
 
 # virtual methods
-.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
-
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lp1b;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Lp1b;
+.method public final apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ld0b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
             ")",
-            "Lp1b;"
+            "Ld0b;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lp1b;
+    new-instance v0, Ld0b;
 
-    invoke-direct {v0, p1}, Lp1b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    invoke-direct {v0, p1}, Ld0b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
 
     return-object v0
+.end method
+
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    check-cast p1, Lru/ok/android/externcalls/sdk/api/ConversationParams;
+
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeWithJoinLink$1$2;->apply(Lru/ok/android/externcalls/sdk/api/ConversationParams;)Ld0b;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -42,10 +42,12 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object p1
 
+    .line 3
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     invoke-direct {v0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;)V
@@ -56,6 +58,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object p1
@@ -66,6 +69,7 @@
 .method public newArray(I)[Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 0
 
+    .line 2
     new-array p1, p1, [Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     return-object p1
@@ -74,6 +78,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token$1;->newArray(I)[Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object p1

@@ -1,20 +1,80 @@
-.class public interface abstract Llj8;
+.class public final synthetic Llj8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkw7;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroidx/media3/common/PlaybackException;
+
+
+# direct methods
+.method public synthetic constructor <init>(ILandroidx/media3/common/PlaybackException;)V
+    .locals 0
+
+    iput p1, p0, Llj8;->a:I
+
+    iput-object p2, p0, Llj8;->b:Landroidx/media3/common/PlaybackException;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract a(I)Landroid/media/MediaCodecInfo;
-.end method
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-.method public abstract b(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-.end method
+    iget v0, p0, Llj8;->a:I
 
-.method public abstract c(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract d()I
-.end method
+    iget-object v0, p0, Llj8;->b:Landroidx/media3/common/PlaybackException;
 
-.method public abstract g()Z
+    check-cast p1, Lmjb;
+
+    invoke-interface {p1, v0}, Lmjb;->I0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llj8;->b:Landroidx/media3/common/PlaybackException;
+
+    check-cast p1, Lmjb;
+
+    invoke-interface {p1, v0}, Lmjb;->B0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Llj8;->b:Landroidx/media3/common/PlaybackException;
+
+    check-cast p1, Lmjb;
+
+    invoke-interface {p1, v0}, Lmjb;->I0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Llj8;->b:Landroidx/media3/common/PlaybackException;
+
+    check-cast p1, Lmjb;
+
+    invoke-interface {p1, v0}, Lmjb;->B0(Landroidx/media3/common/PlaybackException;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

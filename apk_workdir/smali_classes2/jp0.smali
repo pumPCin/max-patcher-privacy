@@ -2,96 +2,123 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmp0;
-
 
 # instance fields
-.field public final a:Lrs3;
+.field public final a:Lyn7;
+
+.field public final b:Lt6e;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lrs3;)V
-    .locals 0
+.method public constructor <init>(Lyn7;Lyn7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljp0;->a:Lrs3;
+    iput-object p1, p0, Ljp0;->a:Lyn7;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lu6e;->b(III)Lt6e;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljp0;->b:Lt6e;
+
+    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Le7f;
+
+    check-cast p2, Lmka;
+
+    invoke-virtual {p2}, Lmka;->a()Lh24;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ljp0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Liv0;
+
+    invoke-virtual {p1, p0}, Liv0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onEvent(Lbx3;)V
     .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
 
-    const/4 v0, 0x1
+    .line 1
+    new-instance v0, Lgp0;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    invoke-direct {v0, p0, p1, v1}, Lgp0;-><init>(Ljp0;Lbx3;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    instance-of v1, p1, Ljp0;
+    const/4 p1, 0x3
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Ljp0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    if-nez v1, :cond_1
+    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ljp0;
-
-    iget-object v1, p0, Ljp0;->a:Lrs3;
-
-    iget-object p1, p1, Ljp0;->a:Lrs3;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onEvent(Lcs3;)V
+    .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
 
-    iget-object v0, p0, Ljp0;->a:Lrs3;
+    .line 2
+    new-instance v0, Lhp0;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-direct {v0, p0, p1, v1}, Lhp0;-><init>(Ljp0;Lcs3;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Ljp0;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final onEvent(Lsi0;)V
+    .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 3
+    new-instance v0, Lip0;
 
-    const-string v1, "ContactList(event="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Lip0;-><init>(Ljp0;Lsi0;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Ljp0;->a:Lrs3;
+    const/4 p1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Ljp0;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, ")"
+    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -3,42 +3,30 @@
 
 
 # static fields
-.field public static oneme_media_keyboard:I = 0x7f0a0732
+.field public static one_chat_react_default_react_anim_view:I = 0x7f0a05f0
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a0733
+.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a05f1
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a0734
+.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a05f2
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0735
+.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a05f3
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0736
+.field public static one_chat_react_panel_layout:I = 0x7f0a05f4
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0737
+.field public static one_chat_reactions_expand_view_type:I = 0x7f0a05f5
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a0738
+.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a05f6
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0739
+.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a05f7
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a073a
+.field public static onechat_react_badge_container:I = 0x7f0a05f9
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a073b
+.field public static onechat_react_bubble:I = 0x7f0a05fa
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a073c
+.field public static onechat_react_bubble_counter:I = 0x7f0a05fb
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a073d
+.field public static onechat_react_bubble_counter_container:I = 0x7f0a05fc
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a073e
+.field public static onechat_react_message_reaction_bubble:I = 0x7f0a05fd
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a073f
-
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a0740
-
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a0741
-
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a0742
-
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a0743
-
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a0744
-
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0745
+.field public static tag_reaction_effects_view:I = 0x7f0a0bdc

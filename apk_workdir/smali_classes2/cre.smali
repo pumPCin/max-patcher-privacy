@@ -1,111 +1,123 @@
 .class public final Lcre;
-.super Lm3f;
+.super Lj95;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lfef;
 
 
 # instance fields
-.field public final synthetic X:Lire;
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lire;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Lcre;->X:Lire;
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    const/4 p1, 0x2
+    sget v1, Ldbc;->sticker_typing:I
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Lj95;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcre;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcre;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lcre;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 1
 
-    new-instance p1, Lcre;
+    iget-boolean v0, p0, Lcre;->o:Z
 
-    iget-object v0, p0, Lcre;->X:Lire;
+    if-nez v0, :cond_0
 
-    invoke-direct {p1, v0, p2}, Lcre;-><init>(Lire;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcre;->X:Lire;
-
-    iget-object p1, p1, Lire;->w0:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm13;
-
-    iget-object v1, p0, Lcre;->X:Lire;
-
-    iget-wide v1, v1, Lire;->b:J
-
-    check-cast p1, Lm23;
-
-    invoke-virtual {p1, v1, v2}, Lm23;->N(J)Lsqc;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lsqc;->a:Lfoe;
-
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm82;
-
-    if-nez p1, :cond_0
-
-    return-object v0
+    invoke-virtual {p0}, Lcre;->start()V
 
     :cond_0
-    iget-object v1, p0, Lcre;->X:Lire;
+    return-void
+.end method
 
-    iget-object v1, v1, Lire;->D0:Lmoe;
+.method public final onThemeChanged(Llwa;)V
+    .locals 2
 
-    invoke-virtual {p1}, Lm82;->k0()V
+    invoke-interface {p1}, Llwa;->getIcon()Lg17;
 
-    iget-object p1, p1, Lm82;->y0:Ljava/lang/CharSequence;
+    move-result-object p1
 
-    invoke-virtual {v1, p1}, Lmoe;->setValue(Ljava/lang/Object;)V
+    iget p1, p1, Lg17;->j:I
 
-    return-object v0
+    const-string v0, "_R_G_L_4_G_D_0_P_0"
+
+    iget-object v1, p0, Lj95;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_4_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_3_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_2_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_1_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_0_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_1_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    const-string v0, "_R_G_L_0_G_D_2_P_0"
+
+    invoke-static {v1, v0, p1}, Lw7;->s(Lp4g;Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public final start()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcre;->o:Z
+
+    invoke-super {p0}, Lj95;->start()V
+
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcre;->o:Z
+
+    invoke-super {p0}, Lj95;->stop()V
+
+    return-void
 .end method

@@ -1,97 +1,118 @@
-.class public final enum Lswd;
-.super Ljava/lang/Enum;
+.class public final Lswd;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final synthetic X:[Lswd;
 
-.field public static final enum a:Lswd;
+# instance fields
+.field public X:I
 
-.field public static final enum b:Lswd;
-
-.field public static final enum c:Lswd;
-
-.field public static final enum o:Lswd;
+.field public final synthetic Y:Lbxd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lbxd;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lswd;
+    iput-object p1, p0, Lswd;->Y:Lbxd;
 
-    const-string v1, "UPDATE"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lswd;->a:Lswd;
-
-    new-instance v1, Lswd;
-
-    const-string v2, "REMOVE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lswd;->b:Lswd;
-
-    new-instance v2, Lswd;
-
-    const-string v3, "ACTIVATE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lswd;->c:Lswd;
-
-    new-instance v3, Lswd;
-
-    const-string v4, "TIMEOUT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lswd;->o:Lswd;
-
-    filled-new-array {v0, v1, v2, v3}, [Lswd;
-
-    move-result-object v0
-
-    sput-object v0, Lswd;->X:[Lswd;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lswd;
-    .locals 1
 
-    const-class v0, Lswd;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ln24;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lswd;
+    invoke-virtual {p0, p1, p2}, Lswd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lswd;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lswd;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lswd;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lswd;->X:[Lswd;
+    new-instance p1, Lswd;
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lswd;->Y:Lbxd;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lswd;-><init>(Lbxd;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lswd;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lswd;->X:I
+
+    iget-object v1, p0, Lswd;->Y:Lbxd;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lbxd;->b:Ldk6;
+
+    iput v2, p0, Lswd;->X:I
+
+    invoke-virtual {p1, p0}, Ldk6;->d(Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    :goto_0
+    check-cast p1, Lw2e;
+
+    iget-object v0, v1, Lbxd;->B0:Lhne;
+
+    invoke-virtual {v0, p1}, Lhne;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

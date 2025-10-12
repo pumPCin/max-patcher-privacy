@@ -3,4 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqf6;
+.implements Loe6;
+
+
+# virtual methods
+.method public abstract getArity()I
+.end method

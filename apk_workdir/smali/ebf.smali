@@ -2,226 +2,89 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lal;
+
 
 # static fields
-.field public static final d:Lebf;
-
-.field public static final e:Lebf;
-
-.field public static final f:Lebf;
-
-.field public static final g:Lebf;
-
-.field public static final h:Lebf;
-
-.field public static final i:Lebf;
+.field public static final b:Lebf;
 
 
 # instance fields
-.field public final a:[F
-
-.field public final b:[F
-
-.field public final c:[F
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 2
 
     new-instance v0, Lebf;
 
-    invoke-direct {v0}, Lebf;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lebf;->d:Lebf;
+    invoke-direct {v0, v1}, Lebf;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Lebf;->b:[F
-
-    const/4 v2, 0x0
-
-    const v3, 0x3f0ccccd    # 0.55f
-
-    aput v3, v1, v2
-
-    const/4 v4, 0x1
-
-    const v5, 0x3f3d70a4    # 0.74f
-
-    aput v5, v1, v4
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    const v1, 0x3eb33333    # 0.35f
-
-    aput v1, v0, v2
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    aput v6, v0, v4
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->e:Lebf;
-
-    iget-object v7, v0, Lebf;->b:[F
-
-    const v8, 0x3e99999a    # 0.3f
-
-    aput v8, v7, v2
-
-    const/high16 v9, 0x3f000000    # 0.5f
-
-    aput v9, v7, v4
-
-    const/4 v10, 0x2
-
-    const v11, 0x3f333333    # 0.7f
-
-    aput v11, v7, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v1, v0, v2
-
-    aput v6, v0, v4
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->f:Lebf;
-
-    iget-object v7, v0, Lebf;->b:[F
-
-    const v12, 0x3e851eb8    # 0.26f
-
-    aput v12, v7, v4
-
-    const v13, 0x3ee66666    # 0.45f
-
-    aput v13, v7, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v1, v0, v2
-
-    aput v6, v0, v4
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->g:Lebf;
-
-    iget-object v1, v0, Lebf;->b:[F
-
-    aput v3, v1, v2
-
-    aput v5, v1, v4
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v8, v0, v4
-
-    const v1, 0x3ecccccd    # 0.4f
-
-    aput v1, v0, v10
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->h:Lebf;
-
-    iget-object v3, v0, Lebf;->b:[F
-
-    aput v8, v3, v2
-
-    aput v9, v3, v4
-
-    aput v11, v3, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v8, v0, v4
-
-    aput v1, v0, v10
-
-    new-instance v0, Lebf;
-
-    invoke-direct {v0}, Lebf;-><init>()V
-
-    sput-object v0, Lebf;->i:Lebf;
-
-    iget-object v2, v0, Lebf;->b:[F
-
-    aput v12, v2, v4
-
-    aput v13, v2, v10
-
-    iget-object v0, v0, Lebf;->a:[F
-
-    aput v8, v0, v4
-
-    aput v1, v0, v10
+    sput-object v0, Lebf;->b:Lebf;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 9
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x3
-
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Lebf;->a:[F
-
-    new-array v2, v0, [F
-
-    iput-object v2, p0, Lebf;->b:[F
-
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Lebf;->c:[F
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    aput v4, v1, v3
-
-    const/4 v5, 0x1
-
-    const/high16 v6, 0x3f000000    # 0.5f
-
-    aput v6, v1, v5
-
-    const/4 v7, 0x2
-
-    const/high16 v8, 0x3f800000    # 1.0f
-
-    aput v8, v1, v7
-
-    aput v4, v2, v3
-
-    aput v6, v2, v5
-
-    aput v8, v2, v7
-
-    const v1, 0x3e75c28f    # 0.24f
-
-    aput v1, v0, v3
-
-    const v2, 0x3f051eb8    # 0.52f
-
-    aput v2, v0, v5
-
-    aput v1, v0, v7
+    iput-object p1, p0, Lebf;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lebf;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lebf;
+
+    iget-object v0, p0, Lebf;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lebf;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lebf;->a:Ljava/lang/String;
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

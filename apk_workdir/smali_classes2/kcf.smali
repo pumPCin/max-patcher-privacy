@@ -1,111 +1,74 @@
-.class public final enum Lkcf;
-.super Ljava/lang/Enum;
+.class public final Lkcf;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lkcf;
-
-.field public static final synthetic Y:Lla5;
-
-.field public static final enum b:Lkcf;
-
-.field public static final enum c:Lkcf;
-
-.field public static final enum o:Lkcf;
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Llcf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lkcf;
-
-    const-string v1, "WAITING"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lkcf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lkcf;->b:Lkcf;
-
-    new-instance v1, Lkcf;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0xa
-
-    const-string v4, "PROCESSING"
-
-    invoke-direct {v1, v4, v2, v3}, Lkcf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lkcf;->c:Lkcf;
-
-    new-instance v2, Lkcf;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x14
-
-    const-string v5, "FAILED"
-
-    invoke-direct {v2, v5, v3, v4}, Lkcf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lkcf;->o:Lkcf;
-
-    filled-new-array {v0, v1, v2}, [Lkcf;
-
-    move-result-object v0
-
-    sput-object v0, Lkcf;->X:[Lkcf;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lkcf;->Y:Lla5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Llcf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lkcf;->X:Llcf;
 
-    iput p3, p0, Lkcf;->a:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkcf;
-    .locals 1
 
-    const-class v0, Lkcf;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Laxf;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lkcf;
+    invoke-virtual {p0, p1, p2}, Lkcf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lkcf;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lkcf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lkcf;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lkcf;->X:[Lkcf;
+    new-instance p1, Lkcf;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lkcf;->X:Llcf;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lkcf;-><init>(Llcf;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lkcf;
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkcf;->X:Llcf;
+
+    iget-object p1, p1, Llcf;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

@@ -1,85 +1,37 @@
 .class public final Lah;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lzg;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final X:Lah;
 
-.field public final synthetic b:Landroid/animation/AnimatorSet;
-
-.field public final synthetic c:Lve6;
+.field public static final o:Lah;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Lve6;I)V
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 4
 
-    iput p3, p0, Lah;->a:I
+    new-instance v0, Lah;
 
-    iput-object p1, p0, Lah;->b:Landroid/animation/AnimatorSet;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lah;->c:Lve6;
+    const/4 v2, 0x1
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sget-object v3, Lwg;->o:Lwg;
 
-    return-void
-.end method
+    invoke-direct {v0, v3, v2, v1}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
+    sput-object v0, Lah;->o:Lah;
 
-# virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    new-instance v0, Lah;
 
-    iget v0, p0, Lah;->a:I
+    sget-object v3, Lwg;->X:Lwg;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v3, v2, v1}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    sput-object v0, Lah;->X:Lah;
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lah;->b:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, p0, Lah;->c:Lve6;
-
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget v0, p0, Lah;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lah;->b:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    iget-object p1, p0, Lah;->c:Lve6;
-
-    invoke-interface {p1}, Lve6;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method

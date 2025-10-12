@@ -1,65 +1,55 @@
 .class public final Lrtg;
-.super Lox9;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic k:Lstg;
+.field public X:Lxtg;
+
+.field public Y:Lftg;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lutg;
+
+.field public final synthetic r0:Lutg;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lstg;)V
+.method public constructor <init>(Lutg;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrtg;->r0:Lutg;
 
-    iput-object p1, p0, Lrtg;->k:Lstg;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lrtg;->k:Lstg;
+    iput-object p1, p0, Lrtg;->Z:Ljava/lang/Object;
 
-    iget-object v0, v0, Lstg;->d:Ljava/lang/Object;
+    iget p1, p0, Lrtg;->s0:I
 
-    check-cast v0, Lag6;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lrtg;->s0:I
 
-.method public final E()V
-    .locals 2
+    iget-object p1, p0, Lrtg;->r0:Lutg;
 
-    iget-object v0, p0, Lrtg;->k:Lstg;
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lstg;->e:Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lutg;->g(Ljava/lang/String;Lwy3;)Ljava/lang/Object;
 
-    check-cast v0, Ljava/lang/String;
+    move-result-object p1
 
-    const-string v1, "onAuthenticationFailed"
-
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final F()V
-    .locals 1
-
-    iget-object v0, p0, Lrtg;->k:Lstg;
-
-    iget-object v0, v0, Lstg;->c:Ljava/lang/Object;
-
-    check-cast v0, Lag6;
-
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

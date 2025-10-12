@@ -3,20 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmaa;
+.implements Ln8a;
 
 
 # static fields
 .field public static final a:Le80;
 
-.field public static final b:Lfn5;
+.field public static final b:Ltm5;
 
-.field public static final c:Lfn5;
+.field public static final c:Ltm5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Le80;
 
@@ -24,21 +24,51 @@
 
     sput-object v0, Le80;->a:Le80;
 
-    const-string v0, "clientType"
+    new-instance v0, Ley;
 
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ley;-><init>(I)V
 
-    sput-object v0, Le80;->b:Lfn5;
+    const-class v1, Ln4c;
 
-    const-string v0, "androidClientInfo"
-
-    invoke-static {v0}, Lfn5;->a(Ljava/lang/String;)Lfn5;
+    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Le80;->c:Lfn5;
+    new-instance v2, Ltm5;
+
+    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSource"
+
+    invoke-direct {v2, v3, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Le80;->b:Ltm5;
+
+    new-instance v0, Ley;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Ley;-><init>(I)V
+
+    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Ltm5;
+
+    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "logEventDropped"
+
+    invoke-direct {v1, v2, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Le80;->c:Ltm5;
 
     return-void
 .end method
@@ -48,25 +78,21 @@
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    check-cast p1, Lp63;
+    check-cast p1, Lu28;
 
-    check-cast p2, Lnaa;
+    check-cast p2, Lo8a;
 
-    check-cast p1, Lm90;
+    sget-object v0, Le80;->b:Ltm5;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p1, Lu28;->a:Ljava/lang/String;
 
-    sget-object v0, Lo63;->a:Lo63;
+    invoke-interface {p2, v0, v1}, Lo8a;->a(Ltm5;Ljava/lang/Object;)Lo8a;
 
-    sget-object v1, Le80;->b:Lfn5;
+    sget-object v0, Le80;->c:Ltm5;
 
-    invoke-interface {p2, v1, v0}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    iget-object p1, p1, Lu28;->b:Ljava/util/List;
 
-    sget-object v0, Le80;->c:Lfn5;
-
-    iget-object p1, p1, Lm90;->a:Lx80;
-
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    invoke-interface {p2, v0, p1}, Lo8a;->a(Ltm5;Ljava/lang/Object;)Lo8a;
 
     return-void
 .end method

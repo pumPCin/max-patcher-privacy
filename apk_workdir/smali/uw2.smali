@@ -1,162 +1,120 @@
 .class public final Luw2;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:Lz56;
+.field public final synthetic Y:Lhx2;
 
-.field public final c:Lmoe;
-
-.field public final d:Lg13;
+.field public final synthetic Z:Lxv2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lz56;Lr8f;)V
-    .locals 3
+.method public constructor <init>(Lhx2;Lxv2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luw2;->Y:Lhx2;
 
-    iput-object p1, p0, Luw2;->a:Ljava/lang/String;
+    iput-object p2, p0, Luw2;->Z:Lxv2;
 
-    iput-object p2, p0, Luw2;->b:Lz56;
+    const/4 p1, 0x2
 
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object v0
-
-    iput-object v0, p0, Luw2;->c:Lmoe;
-
-    new-instance v1, Lg13;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v0, v2}, Lg13;-><init>(Lev5;I)V
-
-    iput-object v1, p0, Luw2;->d:Lg13;
-
-    check-cast p3, Lwla;
-
-    invoke-virtual {p3}, Lwla;->a()Ly24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    invoke-interface {p2}, Lz56;->y()Lev5;
-
-    move-result-object p2
-
-    new-instance v1, Lqb;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v1, p2, p0, v2}, Lqb;-><init>(Lev5;Ljava/lang/Object;I)V
-
-    new-instance p2, Lsw2;
-
-    invoke-direct {p2, p0, p1}, Lsw2;-><init>(Luw2;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p1, Ljx5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v1, p2, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    invoke-virtual {p3}, Lwla;->a()Ly24;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Ltp;->G(Lev5;Lw24;)Lev5;
-
-    move-result-object p1
-
-    invoke-static {p1, v0}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lp06;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Luw2;->a:Ljava/lang/String;
+    check-cast p1, Ln24;
 
-    const-string v1, "folder "
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :try_start_0
-    iget-object v2, p0, Luw2;->c:Lmoe;
+    invoke-virtual {p0, p1, p2}, Luw2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v2}, Lmoe;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v2
+    check-cast p1, Luw2;
 
-    check-cast v2, Lp06;
+    sget-object p2, Laxf;->a:Laxf;
 
-    if-nez v2, :cond_1
+    invoke-virtual {p1, p2}, Luw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, p0, Luw2;->b:Lz56;
+    move-result-object p1
 
-    invoke-interface {v2, v0}, Lz56;->B(Ljava/lang/String;)Lp06;
+    return-object p1
+.end method
 
-    move-result-object v2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-eqz v2, :cond_0
+    new-instance p1, Luw2;
 
-    return-object v2
+    iget-object v0, p0, Luw2;->Y:Lhx2;
 
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Luw2;->Z:Lxv2;
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1, p2}, Luw2;-><init>(Lhx2;Lxv2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, " not found"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Luw2;->X:I
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    new-instance v2, Ljava/lang/IllegalArgumentException;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    move-exception v1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    return-object v2
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
+    iget-object p1, p0, Luw2;->Z:Lxv2;
+
+    check-cast p1, Lvv2;
+
+    iput v1, p0, Luw2;->X:I
+
+    iget-object v0, p0, Luw2;->Y:Lhx2;
+
+    invoke-static {v0, p1, p0}, Lhx2;->a(Lhx2;Lvv2;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    const-class v2, Luw2;
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "fail to get folderValue for id "
-
-    invoke-static {v3, v0, v2, v1}, Lnd5;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    return-object p1
 .end method

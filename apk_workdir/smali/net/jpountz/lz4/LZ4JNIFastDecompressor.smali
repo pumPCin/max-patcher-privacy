@@ -37,16 +37,20 @@
 .method public decompress(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I
     .locals 7
 
+    .line 5
     invoke-virtual {p3}, Ljava/nio/Buffer;->isReadOnly()Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    invoke-static {p2, p1}, Lgw0;->a(ILjava/nio/ByteBuffer;)V
+    .line 6
+    invoke-static {p2, p1}, Lcw0;->a(ILjava/nio/ByteBuffer;)V
 
-    invoke-static {p3, p4, p5}, Lgw0;->b(Ljava/nio/ByteBuffer;II)V
+    .line 7
+    invoke-static {p3, p4, p5}, Lcw0;->b(Ljava/nio/ByteBuffer;II)V
 
+    .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
@@ -85,11 +89,13 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     sget-object v0, Lnet/jpountz/lz4/LZ4JNIFastDecompressor;->SAFE_INSTANCE:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
     if-nez v0, :cond_3
 
+    .line 10
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->safeInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object v0
@@ -113,12 +119,14 @@
 
     move-object v1, v0
 
+    .line 11
     invoke-virtual/range {v1 .. v6}, Lnet/jpountz/lz4/LZ4FastDecompressor;->decompress(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)I
 
     move-result p1
 
     return p1
 
+    .line 12
     :goto_0
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->hasArray()Z
 
@@ -128,10 +136,12 @@
 
     if-eqz p1, :cond_4
 
+    .line 13
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
+    .line 14
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result p3
@@ -153,6 +163,7 @@
 
     move v2, v3
 
+    .line 15
     :goto_1
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->hasArray()Z
 
@@ -160,10 +171,12 @@
 
     if-eqz p1, :cond_5
 
+    .line 16
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object p1
 
+    .line 17
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result p3
@@ -181,6 +194,7 @@
     :cond_5
     move-object v3, p2
 
+    .line 18
     :goto_2
     invoke-static/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4JNI;->LZ4_decompress_fast([BLjava/nio/ByteBuffer;I[BLjava/nio/ByteBuffer;II)I
 
@@ -190,6 +204,7 @@
 
     return p1
 
+    .line 19
     :cond_6
     new-instance p2, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -215,6 +230,7 @@
 
     throw p2
 
+    .line 20
     :cond_7
     new-instance p1, Ljava/nio/ReadOnlyBufferException;
 
@@ -226,9 +242,11 @@
 .method public final decompress([BI[BII)I
     .locals 7
 
-    invoke-static {p2, p1}, Ldbd;->a(I[B)V
+    .line 1
+    invoke-static {p2, p1}, Lk9d;->a(I[B)V
 
-    invoke-static {p4, p3, p5}, Ldbd;->b(I[BI)V
+    .line 2
+    invoke-static {p4, p3, p5}, Lk9d;->b(I[BI)V
 
     const/4 v1, 0x0
 
@@ -244,6 +262,7 @@
 
     move v6, p5
 
+    .line 3
     invoke-static/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4JNI;->LZ4_decompress_fast([BLjava/nio/ByteBuffer;I[BLjava/nio/ByteBuffer;II)I
 
     move-result p1
@@ -252,6 +271,7 @@
 
     return p1
 
+    .line 4
     :cond_0
     new-instance p2, Lnet/jpountz/lz4/LZ4Exception;
 

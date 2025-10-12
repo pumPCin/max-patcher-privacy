@@ -1,44 +1,25 @@
-.class public final Lc6h;
+.class public abstract Lc6h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lt5h;
-
 
 # direct methods
-.method public constructor <init>(ILt5h;)V
+.method public static a(Landroid/view/Window$Callback;Landroid/view/SearchEvent;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0, p1}, Landroid/view/Window$Callback;->onSearchRequested(Landroid/view/SearchEvent;)Z
 
-    iput p1, p0, Lc6h;->a:I
+    move-result p0
 
-    iput-object p2, p0, Lc6h;->b:Lt5h;
-
-    return-void
+    return p0
 .end method
 
+.method public static b(Landroid/view/Window$Callback;Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
+    .locals 0
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+    invoke-interface {p0, p1, p2}, Landroid/view/Window$Callback;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
-    check-cast p1, Lc6h;
+    move-result-object p0
 
-    iget v0, p0, Lc6h;->a:I
-
-    iget p1, p1, Lc6h;->a:I
-
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
-
-    move-result p1
-
-    return p1
+    return-object p0
 .end method

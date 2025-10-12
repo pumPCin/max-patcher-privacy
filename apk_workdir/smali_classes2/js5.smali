@@ -4,128 +4,241 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Liyd;
 
-.field public b:J
+.field public final b:Lks5;
 
-.field public c:Z
-
-.field public final d:Lis5;
+.field public final c:Lhs5;
 
 
 # direct methods
-.method public constructor <init>(Lv7b;)V
-    .locals 1
+.method public constructor <init>(Lq61;Lazb;Ljgf;ZZZLtd6;Liyd;Ltd6;Lwkc;)V
+    .locals 15
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    move-object/from16 v0, p8
 
-    iput-boolean v0, p0, Ljs5;->c:Z
+    iput-object v0, p0, Ljs5;->a:Liyd;
 
-    iput-object p1, p0, Ljs5;->d:Lis5;
+    new-instance v8, Lurd;
+
+    new-instance v0, Lpfa;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x13
+
+    const/4 v1, 0x0
+
+    const-class v3, Ljs5;
+
+    const-string v4, "isServerTopology"
+
+    const-string v5, "isServerTopology()Z"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Lpfa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    move-object/from16 v5, p1
+
+    move-object/from16 v4, p3
+
+    move/from16 v1, p4
+
+    move-object/from16 v2, p9
+
+    move-object/from16 v6, p10
+
+    move-object v3, v0
+
+    move-object v0, v8
+
+    invoke-direct/range {v0 .. v6}, Lurd;-><init>(ZLtd6;Lpfa;Ljgf;Lp61;Lwkc;)V
+
+    move-object v12, v0
+
+    new-instance v8, Lk87;
+
+    new-instance v5, Lpfa;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    const/4 v1, 0x0
+
+    const-class v3, Ljs5;
+
+    const-string v4, "isServerTopology"
+
+    move-object v0, v5
+
+    const-string v5, "isServerTopology()Z"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Lpfa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    const/4 v11, 0x0
+
+    move-object/from16 v9, p1
+
+    move/from16 v6, p4
+
+    move/from16 v7, p5
+
+    move-object/from16 v10, p10
+
+    move-object v5, v0
+
+    move-object v4, v8
+
+    move-object/from16 v8, p3
+
+    invoke-direct/range {v4 .. v11}, Lk87;-><init>(Lye6;ZZLjgf;Lp61;Lwkc;I)V
+
+    move-object v13, v4
+
+    new-instance v8, Lk87;
+
+    new-instance v5, Lpfa;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x12
+
+    const-class v3, Ljs5;
+
+    const-string v4, "isServerTopology"
+
+    move-object v0, v5
+
+    const-string v5, "isServerTopology()Z"
+
+    invoke-direct/range {v0 .. v7}, Lpfa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    const/4 v11, 0x1
+
+    move/from16 v6, p4
+
+    move/from16 v7, p5
+
+    move-object v5, v0
+
+    move-object v4, v8
+
+    move-object/from16 v8, p3
+
+    invoke-direct/range {v4 .. v11}, Lk87;-><init>(Lye6;ZZLjgf;Lp61;Lwkc;I)V
+
+    move-object v14, v4
+
+    new-instance v8, Lri7;
+
+    new-instance v5, Lpfa;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x11
+
+    const-class v3, Ljs5;
+
+    const-string v4, "isServerTopology"
+
+    move-object v0, v5
+
+    const-string v5, "isServerTopology()Z"
+
+    invoke-direct/range {v0 .. v7}, Lpfa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    move-object/from16 v10, p1
+
+    move-object/from16 v9, p3
+
+    move/from16 v6, p4
+
+    move/from16 v7, p5
+
+    move-object/from16 v11, p10
+
+    move-object v5, v0
+
+    move-object v4, v8
+
+    move/from16 v8, p6
+
+    invoke-direct/range {v4 .. v11}, Lri7;-><init>(Lpfa;ZZZLjgf;Lp61;Lwkc;)V
+
+    new-instance v0, Lks5;
+
+    const/4 v1, 0x4
+
+    new-array v1, v1, [Lgs5;
+
+    const/4 v3, 0x0
+
+    aput-object v12, v1, v3
+
+    const/4 v3, 0x1
+
+    aput-object v13, v1, v3
+
+    const/4 v3, 0x2
+
+    aput-object v14, v1, v3
+
+    const/4 v3, 0x3
+
+    aput-object v4, v1, v3
+
+    invoke-static {v1}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    move-object/from16 v3, p2
+
+    invoke-direct {v0, v1, v3}, Lks5;-><init>(Ljava/util/List;Lazb;)V
+
+    iput-object v0, p0, Ljs5;->b:Lks5;
+
+    new-instance v1, Lhs5;
+
+    move-object/from16 v3, p7
+
+    invoke-direct {v1, v3, v0}, Lhs5;-><init>(Ltd6;Lks5;)V
+
+    iput-object v1, p0, Ljs5;->c:Lhs5;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)J
-    .locals 7
+.method public static final a(Ljs5;)Z
+    .locals 1
 
-    const-string v0, "\n"
+    iget-object p0, p0, Ljs5;->a:Liyd;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    iget-object p0, p0, Liyd;->a:Ljava/lang/Object;
+
+    check-cast p0, Ltd6;
+
+    invoke-interface {p0}, Ltd6;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
-    array-length v0, p0
+    check-cast p0, Lnkf;
 
-    const/4 v1, 0x0
+    sget-object v0, Lnkf;->c:Lnkf;
 
-    const/4 v2, 0x0
+    if-ne p0, v0, :cond_0
 
-    :goto_0
-    const/4 v3, 0x1
+    const/4 p0, 0x1
 
-    if-ge v2, v0, :cond_1
-
-    aget-object v4, p0, v2
-
-    const-string v5, "a=fingerprint"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    array-length v5, v4
-
-    const/4 v6, 0x2
-
-    if-ne v5, v6, :cond_0
-
-    aget-object v1, v4, v3
+    return p0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const/4 p0, 0x0
 
-    goto :goto_0
-
-    :cond_1
-    if-eqz v1, :cond_3
-
-    const-string p0, ":"
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object p0
-
-    array-length v0, p0
-
-    sub-int/2addr v0, v3
-
-    const/4 v1, 0x7
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    const-wide/16 v1, 0x0
-
-    :goto_1
-    if-ltz v0, :cond_2
-
-    aget-object v3, p0, v0
-
-    const/16 v4, 0x10
-
-    invoke-static {v3, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    shl-long/2addr v1, v4
-
-    int-to-long v3, v3
-
-    or-long/2addr v1, v3
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_1
-
-    :cond_2
-    return-wide v1
-
-    :cond_3
-    const-wide/16 v0, -0x1
-
-    return-wide v0
+    return p0
 .end method

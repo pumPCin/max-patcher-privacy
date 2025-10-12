@@ -1,61 +1,56 @@
-.class public abstract Lvua;
+.class public final Lvua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
+.field public final synthetic b:Lwua;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lwua;I)V
+    .locals 0
 
-    sget v0, Ljkc;->share_confirm_cancel:I
+    iput p2, p0, Lvua;->a:I
 
-    sput v0, Lvua;->a:I
+    iput-object p1, p0, Lvua;->b:Lwua;
 
-    sget v0, Ljkc;->share_confirm_close:I
-
-    sput v0, Lvua;->b:I
-
-    sget v0, Ljkc;->share_confirmation_close_title:I
-
-    sput v0, Lvua;->c:I
-
-    sget v0, Ljkc;->share_message_hint:I
-
-    sput v0, Lvua;->d:I
-
-    sget v0, Ljkc;->share_search_hint:I
-
-    sput v0, Lvua;->e:I
-
-    sget v0, Ljkc;->share_toolbar_action_cancel_selection:I
-
-    sput v0, Lvua;->f:I
-
-    sget v0, Ljkc;->share_toolbar_action_select:I
-
-    sput v0, Lvua;->g:I
-
-    sget v0, Ljkc;->share_toolbar_title:I
-
-    sput v0, Lvua;->h:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lvua;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvua;->b:Lwua;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lvua;->b:Lwua;
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

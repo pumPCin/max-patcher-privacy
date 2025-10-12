@@ -1,216 +1,237 @@
-.class public final Lvkb;
+.class public final synthetic Lvkb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final Y:J
+.field public final synthetic b:Lwkb;
 
-.field public final Z:J
-
-.field public final a:Ljava/lang/Object;
-
-.field public final b:I
-
-.field public final c:Lpm8;
-
-.field public final o:Ljava/lang/Object;
-
-.field public final w0:I
-
-.field public final x0:I
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;ILpm8;Ljava/lang/Object;IJJII)V
+.method public synthetic constructor <init>(Lwkb;II)V
     .locals 0
 
+    iput p3, p0, Lvkb;->a:I
+
+    iput-object p1, p0, Lvkb;->b:Lwkb;
+
+    iput p2, p0, Lvkb;->c:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvkb;->a:Ljava/lang/Object;
-
-    iput p2, p0, Lvkb;->b:I
-
-    iput-object p3, p0, Lvkb;->c:Lpm8;
-
-    iput-object p4, p0, Lvkb;->o:Ljava/lang/Object;
-
-    iput p5, p0, Lvkb;->X:I
-
-    iput-wide p6, p0, Lvkb;->Y:J
-
-    iput-wide p8, p0, Lvkb;->Z:J
-
-    iput p10, p0, Lvkb;->w0:I
-
-    iput p11, p0, Lvkb;->x0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final run()V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lvkb;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lvkb;->b:Lwkb;
+
+    iget-object v0, v0, Lwkb;->g:Lykb;
+
+    const/16 v1, 0x1a
+
+    invoke-virtual {v0, v1}, Lykb;->T(I)Z
+
+    move-result v1
+
+    const/16 v2, 0x22
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto/16 :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/16 v1, -0x64
 
-    if-eqz p1, :cond_2
+    iget v3, p0, Lvkb;->c:I
 
-    const-class v2, Lvkb;
+    const/4 v4, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq v3, v1, :cond_9
 
-    move-result-object v3
+    const/4 v1, -0x1
 
-    if-eq v2, v3, :cond_1
+    if-eq v3, v1, :cond_7
+
+    if-eq v3, v4, :cond_5
+
+    const/16 v1, 0x64
+
+    if-eq v3, v1, :cond_3
+
+    const/16 v1, 0x65
+
+    if-eq v3, v1, :cond_1
+
+    const-string v0, "VolumeProviderCompat"
+
+    const-string v1, "onAdjustVolume: Ignoring unknown direction: "
+
+    invoke-static {v3, v1, v0}, Lxw1;->m(ILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lvkb;
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
 
-    iget v2, p0, Lvkb;->b:I
+    move-result v1
 
-    iget v3, p1, Lvkb;->b:I
+    if-eqz v1, :cond_2
 
-    if-ne v2, v3, :cond_2
+    invoke-virtual {v0}, Lykb;->R()Z
 
-    iget v2, p0, Lvkb;->X:I
+    move-result v1
 
-    iget v3, p1, Lvkb;->X:I
+    xor-int/2addr v1, v4
 
-    if-ne v2, v3, :cond_2
+    invoke-virtual {v0, v4, v1}, Lykb;->g0(IZ)V
 
-    iget-wide v2, p0, Lvkb;->Y:J
-
-    iget-wide v4, p1, Lvkb;->Y:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lvkb;->Z:J
-
-    iget-wide v4, p1, Lvkb;->Z:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lvkb;->w0:I
-
-    iget v3, p1, Lvkb;->w0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget v2, p0, Lvkb;->x0:I
-
-    iget v3, p1, Lvkb;->x0:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v2, p0, Lvkb;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Lvkb;->a:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lvkb;->o:Ljava/lang/Object;
-
-    iget-object v3, p1, Lvkb;->o:Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lvkb;->c:Lpm8;
-
-    iget-object p1, p1, Lvkb;->c:Lpm8;
-
-    invoke-static {v2, p1}, Lz84;->f(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
+    goto :goto_0
 
     :cond_2
+    invoke-virtual {v0}, Lykb;->R()Z
+
+    move-result v1
+
+    xor-int/2addr v1, v4
+
+    invoke-virtual {v0, v1}, Lykb;->h0(Z)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v0, v4, v2}, Lykb;->g0(IZ)V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v0, v2}, Lykb;->h0(Z)V
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    invoke-virtual {v0, v4}, Lykb;->P(I)V
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {v0}, Lykb;->O()V
+
+    goto :goto_0
+
+    :cond_7
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    invoke-virtual {v0, v4}, Lykb;->x(I)V
+
+    goto :goto_0
+
+    :cond_8
+    invoke-virtual {v0}, Lykb;->s()V
+
+    goto :goto_0
+
+    :cond_9
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    invoke-virtual {v0, v4, v4}, Lykb;->g0(IZ)V
+
+    goto :goto_0
+
+    :cond_a
+    invoke-virtual {v0, v4}, Lykb;->h0(Z)V
+
     :goto_0
-    return v1
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 10
+    :pswitch_0
+    iget-object v0, p0, Lvkb;->b:Lwkb;
 
-    iget v0, p0, Lvkb;->b:I
+    iget-object v0, v0, Lwkb;->g:Lykb;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v1, 0x19
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Lykb;->T(I)Z
 
-    iget v0, p0, Lvkb;->X:I
+    move-result v1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v2, 0x21
 
-    move-result-object v5
+    if-nez v1, :cond_b
 
-    iget-wide v0, p0, Lvkb;->Y:J
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result v1
 
-    move-result-object v6
+    if-nez v1, :cond_b
 
-    iget-wide v0, p0, Lvkb;->Z:J
+    goto :goto_1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_b
+    invoke-virtual {v0, v2}, Lykb;->T(I)Z
 
-    move-result-object v7
+    move-result v1
 
-    iget v0, p0, Lvkb;->w0:I
+    iget v2, p0, Lvkb;->c:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v1, :cond_c
 
-    move-result-object v8
+    const/4 v1, 0x1
 
-    iget v0, p0, Lvkb;->x0:I
+    invoke-virtual {v0, v2, v1}, Lykb;->j0(II)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    goto :goto_1
 
-    move-result-object v9
+    :cond_c
+    invoke-virtual {v0, v2}, Lykb;->i0(I)V
 
-    iget-object v1, p0, Lvkb;->a:Ljava/lang/Object;
+    :goto_1
+    return-void
 
-    iget-object v3, p0, Lvkb;->c:Lpm8;
-
-    iget-object v4, p0, Lvkb;->o:Ljava/lang/Object;
-
-    filled-new-array/range {v1 .. v9}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

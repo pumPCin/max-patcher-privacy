@@ -1,368 +1,264 @@
-.class public final Lu7h;
-.super La7;
+.class public final synthetic Lu7h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll19;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lrob;
+.field public final synthetic a:I
 
-.field public Y:Ljava/lang/ref/WeakReference;
-
-.field public final synthetic Z:Lv7h;
-
-.field public final c:Landroid/content/Context;
-
-.field public final o:Ln19;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lv7h;Landroid/content/Context;Lrob;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lu7h;->a:I
+
+    iput-object p2, p0, Lu7h;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lu7h;->Z:Lv7h;
-
-    iput-object p2, p0, Lu7h;->c:Landroid/content/Context;
-
-    iput-object p3, p0, Lu7h;->X:Lrob;
-
-    new-instance p1, Ln19;
-
-    invoke-direct {p1, p2}, Ln19;-><init>(Landroid/content/Context;)V
-
-    const/4 p2, 0x1
-
-    iput p2, p1, Ln19;->A0:I
-
-    iput-object p1, p0, Lu7h;->o:Ln19;
-
-    iput-object p0, p1, Ln19;->X:Ll19;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final run()V
+    .locals 10
 
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
+    iget v0, p0, Lu7h;->a:I
 
-    iget-object v1, v0, Lv7h;->A0:Lu7h;
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v1, p0, :cond_0
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Lvif;
+
+    const-string v1, "x"
+
+    const-string v2, "OKRTCLmsAdapter"
+
+    iget-object v0, v0, Lvif;->b:Ljava/lang/Object;
+
+    check-cast v0, Lx4f;
+
+    const-string v3, "Screen size did change"
+
+    iget-object v4, v0, Lx4f;->a:Ljava/lang/Object;
+
+    check-cast v4, Lo08;
+
+    iget-object v5, v0, Lx4f;->o:Ljava/lang/Object;
+
+    check-cast v5, Lm08;
+
+    iget-object v6, v5, Lm08;->n:Lwkc;
+
+    if-nez v4, :cond_0
+
+    goto :goto_3
 
     :cond_0
-    iget-boolean v1, v0, Lv7h;->H0:Z
+    :try_start_0
+    invoke-virtual {v5}, Lm08;->e()V
 
-    if-eqz v1, :cond_1
+    iget-object v4, v5, Lm08;->B:Lorg/webrtc/Size;
 
-    iput-object p0, v0, Lv7h;->B0:Lu7h;
+    iget-object v7, v5, Lm08;->A:Landroid/util/DisplayMetrics;
 
-    iget-object v1, p0, Lu7h;->X:Lrob;
+    iget v8, v7, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iput-object v1, v0, Lv7h;->C0:Lrob;
+    iget v9, v4, Lorg/webrtc/Size;->width:I
+
+    if-ne v8, v9, :cond_1
+
+    iget v8, v7, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iget v9, v4, Lorg/webrtc/Size;->height:I
+
+    if-eq v8, v9, :cond_2
 
     goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lu7h;->X:Lrob;
-
-    invoke-virtual {v1, p0}, Lrob;->r(La7;)V
-
-    :goto_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lu7h;->X:Lrob;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Lv7h;->p0(Z)V
-
-    iget-object v2, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-object v3, v2, Landroidx/appcompat/widget/ActionBarContextView;->C0:Landroid/view/View;
-
-    if-nez v3, :cond_2
-
-    invoke-virtual {v2}, Landroidx/appcompat/widget/ActionBarContextView;->e()V
-
-    :cond_2
-    iget-object v2, v0, Lv7h;->Y:Landroidx/appcompat/widget/ActionBarOverlayLayout;
-
-    iget-boolean v3, v0, Lv7h;->M0:Z
-
-    invoke-virtual {v2, v3}, Landroidx/appcompat/widget/ActionBarOverlayLayout;->setHideOnContentScrollEnabled(Z)V
-
-    iput-object v1, v0, Lv7h;->A0:Lu7h;
-
-    return-void
-.end method
-
-.method public final b()Landroid/view/View;
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Y:Ljava/lang/ref/WeakReference;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final c()Ln19;
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->o:Ln19;
-
-    return-object v0
-.end method
-
-.method public final d()Landroid/view/MenuInflater;
-    .locals 2
-
-    new-instance v0, La2f;
-
-    iget-object v1, p0, Lu7h;->c:Landroid/content/Context;
-
-    invoke-direct {v0, v1}, La2f;-><init>(Landroid/content/Context;)V
-
-    return-object v0
-.end method
-
-.method public final e(Ln19;Landroid/view/MenuItem;)Z
-    .locals 0
-
-    iget-object p1, p0, Lu7h;->X:Lrob;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lrob;->b:Ljava/lang/Object;
-
-    check-cast p1, Lj6f;
-
-    invoke-virtual {p1, p0, p2}, Lj6f;->u(La7;Landroid/view/MenuItem;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final f()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->getSubtitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionBarContextView;->getTitle()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final h()V
-    .locals 2
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->A0:Lu7h;
-
-    if-eq v0, p0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lu7h;->o:Ln19;
-
-    invoke-virtual {v0}, Ln19;->w()V
-
-    :try_start_0
-    iget-object v1, p0, Lu7h;->X:Lrob;
-
-    invoke-virtual {v1, p0, v0}, Lrob;->s(La7;Landroid/view/Menu;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Ln19;->v()V
-
-    return-void
 
     :catchall_0
     move-exception v1
 
-    invoke-virtual {v0}, Ln19;->v()V
-
-    throw v1
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-boolean v0, v0, Landroidx/appcompat/widget/ActionBarContextView;->K0:Z
-
-    return v0
-.end method
-
-.method public final j(Landroid/view/View;)V
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setCustomView(Landroid/view/View;)V
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lu7h;->Y:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public final k(I)V
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->o:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lu7h;->l(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final l(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final m(I)V
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->o:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lu7h;->n(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final n(Ljava/lang/CharSequence;)V
-    .locals 1
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setTitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final o(Z)V
-    .locals 1
-
-    iput-boolean p1, p0, La7;->b:Z
-
-    iget-object v0, p0, Lu7h;->Z:Lv7h;
-
-    iget-object v0, v0, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ActionBarContextView;->setTitleOptional(Z)V
-
-    return-void
-.end method
-
-.method public final z(Ln19;)V
-    .locals 0
-
-    iget-object p1, p0, Lu7h;->X:Lrob;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Lu7h;->h()V
-
-    iget-object p1, p0, Lu7h;->Z:Lv7h;
-
-    iget-object p1, p1, Lv7h;->x0:Landroidx/appcompat/widget/ActionBarContextView;
-
-    iget-object p1, p1, Landroidx/appcompat/widget/ActionBarContextView;->o:Lw6;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lw6;->k()Z
+    goto :goto_1
 
     :cond_1
     :goto_0
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v3, v4, Lorg/webrtc/Size;->width:I
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v4, Lorg/webrtc/Size;->height:I
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, "->"
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, v7, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, v7, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v6, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v1, v7, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iput v1, v4, Lorg/webrtc/Size;->width:I
+
+    iget v3, v7, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iput v3, v4, Lorg/webrtc/Size;->height:I
+
+    iget-object v4, v0, Lx4f;->a:Ljava/lang/Object;
+
+    check-cast v4, Lo08;
+
+    invoke-interface {v4, v1, v3}, Lo08;->a(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    const-string v3, "Error on screen share size update"
+
+    invoke-interface {v6, v2, v3, v1}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_2
+    iget-object v0, v0, Lx4f;->a:Ljava/lang/Object;
+
+    check-cast v0, Lo08;
+
+    invoke-virtual {v5, v0}, Lm08;->b(Lo08;)V
+
+    :goto_3
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lcom/my/tracker/obfuscated/f0;
+
+    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/f0;->a()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxbh;
+
+    iget-object v1, v0, Lxbh;->g:Lac4;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    invoke-virtual {v1}, Lac4;->a()V
+
+    iput-object v2, v0, Lxbh;->g:Lac4;
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lxbh;->D:I
+
+    :goto_4
+    iget-object v1, v0, Lxbh;->f:Lhca;
+
+    if-eqz v1, :cond_4
+
+    :try_start_1
+    iget-object v1, v1, Lhca;->e:Ljava/lang/Object;
+
+    check-cast v1, Ljava/io/ByteArrayOutputStream;
+
+    invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :catch_0
+    :cond_4
+    iput-object v2, v0, Lxbh;->f:Lhca;
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/messages/media/mediabar/LocalPhotoView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/messages/views/widgets/AvatarCropView;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lu7h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lv7h;
+
+    iget-object v1, v0, Lv7h;->d:Lb4f;
+
+    new-instance v2, Lmcf;
+
+    const/16 v3, 0x1a
+
+    invoke-direct {v2, v3, v0}, Lmcf;-><init>(ILjava/lang/Object;)V
+
+    check-cast v1, Lt8d;
+
+    invoke-virtual {v1, v2}, Lt8d;->X(La4f;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

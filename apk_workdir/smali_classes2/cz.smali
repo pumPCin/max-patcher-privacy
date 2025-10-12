@@ -1,176 +1,123 @@
 .class public final Lcz;
-.super Lgz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic h:[Lpl7;
+
+
 # instance fields
-.field public final a:J
+.field public final a:Lys4;
 
-.field public final b:F
+.field public final b:Lys4;
 
-.field public final c:Loef;
+.field public final c:Lys4;
+
+.field public final d:Lys4;
+
+.field public final e:Lys4;
+
+.field public final f:Lys4;
+
+.field public final g:Lys4;
 
 
 # direct methods
-.method public constructor <init>(JFLoef;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lf4c;
 
-    iput-wide p1, p0, Lcz;->a:J
+    const-class v1, Lcz;
 
-    iput p3, p0, Lcz;->b:F
+    const-string v2, "api"
 
-    iput-object p4, p0, Lcz;->c:Loef;
+    const-string v3, "getApi()Lru/ok/tamtam/api/Api;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lewc;->a:Lfwc;
+
+    const-string v3, "clientPrefs"
+
+    const-string v5, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+
+    move-result-object v2
+
+    new-instance v3, Lf4c;
+
+    const-string v5, "fileAttachDownloader"
+
+    const-string v6, "getFileAttachDownloader()Lru/ok/tamtam/FileAttachDownloader;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v5, Lf4c;
+
+    const-string v6, "uiBus"
+
+    const-string v7, "getUiBus()Lcom/squareup/otto/Bus;"
+
+    invoke-direct {v5, v1, v6, v7, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    new-instance v6, Lf4c;
+
+    const-string v7, "fileSystem"
+
+    const-string v8, "getFileSystem()Lru/ok/tamtam/FileSystem;"
+
+    invoke-direct {v6, v1, v7, v8, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Lpl7;
+
+    aput-object v0, v1, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v1, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v1, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v1, v0
+
+    const/4 v0, 0x4
+
+    aput-object v6, v1, v0
+
+    sput-object v1, Lcz;->h:[Lpl7;
 
     return-void
 .end method
 
+.method public constructor <init>(Lys4;Lys4;Lys4;Lys4;Lys4;Lys4;Lys4;)V
+    .locals 0
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p0, Lcz;->a:J
+    iput-object p6, p0, Lcz;->a:Lys4;
 
-    return-wide v0
-.end method
+    iput-object p7, p0, Lcz;->b:Lys4;
 
-.method public final b()Loef;
-    .locals 1
+    iput-object p1, p0, Lcz;->c:Lys4;
 
-    iget-object v0, p0, Lcz;->c:Loef;
+    iput-object p2, p0, Lcz;->d:Lys4;
 
-    return-object v0
-.end method
+    iput-object p3, p0, Lcz;->e:Lys4;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iput-object p4, p0, Lcz;->f:Lys4;
 
-    const/4 v0, 0x1
+    iput-object p5, p0, Lcz;->g:Lys4;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lcz;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lcz;
-
-    iget-wide v3, p0, Lcz;->a:J
-
-    iget-wide v5, p1, Lcz;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lcz;->b:F
-
-    iget v3, p1, Lcz;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lcz;->c:Loef;
-
-    iget-object p1, p1, Lcz;->c:Loef;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lcz;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lcz;->b:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcz;->c:Loef;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Downloading(messageId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lcz;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcz;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", textSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcz;->c:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

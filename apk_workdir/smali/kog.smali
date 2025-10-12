@@ -3,39 +3,33 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:[B
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Lt4g;->a:I
-
-    const/16 v0, 0x24
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lkog;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(IIIII[B)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lkog;->a:I
 
-    iput-object p1, p0, Lkog;->a:Ljava/lang/String;
+    iput p3, p0, Lkog;->b:I
+
+    iput p4, p0, Lkog;->c:I
+
+    iput p5, p0, Lkog;->d:I
+
+    iput-object p6, p0, Lkog;->e:[B
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

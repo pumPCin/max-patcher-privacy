@@ -1,50 +1,42 @@
-.class public abstract Lu65;
+.class public final Lu65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+.implements Lv9d;
 
 
 # virtual methods
-.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+.method public final b()V
     .locals 0
 
     return-void
 .end method
 
-.method public onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
+.method public final d()Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public onActivityPaused(Landroid/app/Activity;)V
+.method public final e(J)I
     .locals 0
 
-    return-void
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public onActivityResumed(Landroid/app/Activity;)V
+.method public final g(Lax0;Lvb4;I)I
     .locals 0
 
-    return-void
-.end method
+    const/4 p1, 0x4
 
-.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    iput p1, p2, Lhy;->b:I
 
-    return-void
-.end method
+    const/4 p1, -0x4
 
-.method public onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
+    return p1
 .end method

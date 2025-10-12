@@ -1,63 +1,110 @@
-.class public final Lsw;
-.super Lnz3;
+.class public final synthetic Lsw;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public Y:J
-
-.field public Z:I
-
-.field public o:Luw;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Luw;
-
-.field public y0:I
+.field public final synthetic b:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(Luw;Lnz3;)V
+.method public synthetic constructor <init>(Ljava/util/LinkedHashSet;)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lsw;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsw;->b:Ljava/util/LinkedHashSet;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/util/LinkedHashSet;Lxm3;)V
     .locals 0
 
-    iput-object p1, p0, Lsw;->x0:Luw;
+    .line 2
+    const/4 p2, 0x1
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lsw;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsw;->b:Ljava/util/LinkedHashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lsw;->w0:Ljava/lang/Object;
+    iget v0, p0, Lsw;->a:I
 
-    iget p1, p0, Lsw;->y0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Lro3;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1}, Lro3;->n()J
 
-    iput p1, p0, Lsw;->y0:I
+    move-result-wide v0
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-wide/16 v4, 0x0
+    move-result-object v0
 
-    iget-object v0, p0, Lsw;->x0:Luw;
+    iget-object v1, p0, Lsw;->b:Ljava/util/LinkedHashSet;
 
-    const-wide/16 v2, 0x0
+    invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    move-object v6, p0
+    move-result v0
 
-    invoke-virtual/range {v0 .. v6}, Luw;->b(IJJLnz3;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Lro3;->t()Z
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    check-cast p1, Le39;
+
+    iget-wide v0, p1, Le39;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lsw;->b:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

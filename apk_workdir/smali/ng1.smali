@@ -1,9 +1,9 @@
 .class public final Lng1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lng1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lng1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,350 +60,200 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+    .locals 7
 
-    iget-object v0, p0, Lng1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->o:Ljava/lang/Object;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lng1;->X:Ljava/lang/Object;
 
-    check-cast p1, Lhy9;
+    check-cast p1, Lrg1;
 
-    instance-of v2, p1, Lgl1;
+    iget-object v0, p0, Lng1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    if-eqz v2, :cond_c
+    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0:Ltm0;
 
-    check-cast p1, Lgl1;
+    sget-object v2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lpl7;
 
-    sget-object v2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->M0:[Ltm7;
+    iget-object v2, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->w0:Ltm0;
 
-    instance-of v2, p1, Lqk1;
+    sget-object v3, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lpl7;
 
-    const/4 v3, 0x1
+    const/4 v4, 0x5
 
-    const/4 v4, 0x0
+    aget-object v4, v3, v4
 
-    const-string v5, "BottomSheetWidget"
+    invoke-virtual {v2}, Ltm0;->getValue()Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    move-result-object v2
 
-    if-eqz v2, :cond_3
+    check-cast v2, Landroid/widget/TextView;
 
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
+    iget-object v4, p1, Lrg1;->e:Ljava/lang/CharSequence;
 
-    new-instance v8, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
+    invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v8}, Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;-><init>()V
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Ljxa;
 
-    invoke-virtual {v8, v0}, Lb04;->setTargetController(Lb04;)V
+    move-result-object v2
 
-    invoke-virtual {v8, v0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+    iget-object v4, p1, Lrg1;->e:Ljava/lang/CharSequence;
 
-    move-object p1, v0
+    invoke-virtual {v2, v4}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
 
-    :goto_0
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+    iget-object v2, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->u0:Ltm0;
 
-    move-result-object v1
+    const/4 v4, 0x3
 
-    if-eqz v1, :cond_0
+    aget-object v4, v3, v4
 
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
+    invoke-virtual {v2}, Ltm0;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
+
+    check-cast v2, Lqha;
+
+    iget-object v4, p1, Lrg1;->b:Ljava/util/List;
+
+    iget-object v5, p1, Lrg1;->c:Ljava/util/List;
+
+    iget-boolean v6, p1, Lrg1;->d:Z
+
+    invoke-virtual {v2, v4, v5, v6}, Lqha;->b(Ljava/util/List;Ljava/util/List;Z)V
+
+    iget-boolean v2, p1, Lrg1;->f:Z
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Ljxa;
+
+    move-result-object v2
+
+    iget-object v4, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->s0:Ljava/lang/Object;
+
+    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwwa;
+
+    invoke-virtual {v2, v4}, Ljxa;->setRightActions(Lzwa;)V
 
     goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lo8d;
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lo8d;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v6
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lo8d;->f0()Li8d;
-
-    move-result-object v6
-
-    :cond_2
-    invoke-virtual {v8, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v6, :cond_d
-
-    new-instance v7, Ll8d;
-
-    const/4 v12, 0x0
-
-    const/4 v13, -0x1
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v7 .. v13}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    invoke-static {v4, v7, v3, v5}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {v6, v7}, Li8d;->H(Ll8d;)V
-
-    goto/16 :goto_4
-
-    :cond_3
-    instance-of v2, p1, Luk1;
-
-    if-eqz v2, :cond_7
-
-    sget-object v1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    new-instance v8, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
-
-    check-cast p1, Luk1;
-
-    iget-object p1, p1, Luk1;->D:Lch1;
-
-    invoke-direct {v8, p1}, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;-><init>(Lch1;)V
-
-    invoke-virtual {v8, v0}, Lb04;->setTargetController(Lb04;)V
-
-    invoke-virtual {v8, v0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object p1, v0
-
-    :goto_2
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {p1}, Lb04;->getParentController()Lb04;
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_4
-    instance-of v1, p1, Lo8d;
-
-    if-eqz v1, :cond_5
-
-    check-cast p1, Lo8d;
-
-    goto :goto_3
-
-    :cond_5
-    move-object p1, v6
-
-    :goto_3
-    if-eqz p1, :cond_6
-
-    invoke-interface {p1}, Lo8d;->f0()Li8d;
-
-    move-result-object v6
-
-    :cond_6
-    invoke-virtual {v8, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v6, :cond_d
-
-    new-instance v7, Ll8d;
-
-    const/4 v12, 0x0
-
-    const/4 v13, -0x1
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v7 .. v13}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    invoke-static {v4, v7, v3, v5}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {v6, v7}, Li8d;->H(Ll8d;)V
-
-    goto/16 :goto_4
-
-    :cond_7
-    instance-of v2, p1, Ljk1;
-
-    if-eqz v2, :cond_8
-
-    invoke-virtual {v0}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Li8d;->B(Lb04;)Z
-
-    goto/16 :goto_4
-
-    :cond_8
-    instance-of v2, p1, Lal1;
-
-    if-eqz v2, :cond_9
-
-    sget-object v1, Lye1;->c:Lye1;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v2, Laka;->U1:I
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast p1, Lal1;
-
-    iget-object p1, p1, Lal1;->D:Ljava/lang/String;
-
-    const-class v2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Ljxa;
 
     move-result-object v2
 
-    invoke-virtual {v1, p1, v0, v2}, Lye1;->d1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    sget-object v4, Luwa;->a:Luwa;
 
-    goto/16 :goto_4
+    invoke-virtual {v2, v4}, Ljxa;->setRightActions(Lzwa;)V
 
-    :cond_9
-    instance-of v2, p1, Lnk1;
+    :goto_0
+    invoke-static {}, Lshd;->l()Lkv7;
 
-    if-eqz v2, :cond_a
+    move-result-object v2
 
-    check-cast p1, Lnk1;
+    iget-object p1, p1, Lrg1;->a:Ljava/util/List;
 
-    iget-object p1, p1, Lnk1;->D:Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lkv7;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {v2}, Lshd;->e(Ljava/util/List;)Lkv7;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-static {v1, p1}, Lx63;->a(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v2, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0:Lh4f;
 
-    invoke-static {}, Lx63;->b()Z
+    invoke-virtual {v2}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lsf1;
+
+    invoke-virtual {v2, p1}, Lhv7;->E(Ljava/util/List;)V
+
+    invoke-virtual {p1}, Lkv7;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_d
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0()Landroid/view/ViewStub;
 
-    move-result-object p1
+    move-result-object v2
 
-    sget v1, Luic;->call_link_share_dialog_share_link_copy:I
+    invoke-static {v2}, Lov9;->N(Landroid/view/ViewStub;)Z
 
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    move-result v2
 
-    move-result-object p1
+    if-nez v2, :cond_1
 
-    new-instance v1, Lava;
+    goto :goto_2
 
-    invoke-direct {v1, v0}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
+    :cond_1
+    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0()Landroid/view/ViewStub;
 
-    invoke-virtual {v1, p1}, Lava;->h(Ljava/lang/CharSequence;)V
+    move-result-object v2
 
-    new-instance p1, Lnq1;
+    const/16 v4, 0xb
 
-    const/4 v0, 0x3
+    aget-object v5, v3, v4
 
-    invoke-direct {p1, v0, v6}, Lnq1;-><init>(ILve6;)V
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, p1}, Lava;->d(Lbva;)V
+    move-result-object v5
 
-    new-instance p1, Liva;
+    check-cast v5, Lrla;
 
-    invoke-direct {p1, v4, v4, v4, v0}, Liva;-><init>(IIII)V
+    const/4 v6, 0x0
 
-    invoke-virtual {v1, p1}, Lava;->c(Liva;)V
+    invoke-static {v2, v5, v6}, Lov9;->J(Landroid/view/ViewStub;Landroid/view/View;Ltd6;)V
 
-    invoke-virtual {v1}, Lava;->i()Lzua;
+    aget-object v2, v3, v4
 
-    goto :goto_4
-
-    :cond_a
-    instance-of v2, p1, Lel1;
-
-    if-eqz v2, :cond_b
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lfbe;
+    check-cast v1, Lrla;
 
-    check-cast p1, Lel1;
+    const/16 v2, 0x8
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v4, 0x0
 
-    new-instance v1, Lia5;
+    if-eqz p1, :cond_2
 
-    invoke-direct {v1, p1, v0, v4, v3}, Lia5;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    move v5, v4
 
-    sget-object p1, Lmk1;->a:Lmk1;
+    goto :goto_1
 
-    invoke-static {p1, v1}, Lfbe;->b(Lmk1;Lve6;)V
+    :cond_2
+    move v5, v2
 
-    goto :goto_4
+    :goto_1
+    invoke-virtual {v1, v5}, Lrla;->setVisibility(I)V
 
-    :cond_b
-    instance-of v2, p1, Lfl1;
+    iget-object v0, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->v0:Ltm0;
 
-    if-eqz v2, :cond_d
+    const/4 v1, 0x4
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    aget-object v1, v3, v1
 
-    move-result-object v1
+    invoke-virtual {v0}, Ltm0;->getValue()Ljava/lang/Object;
 
-    check-cast v1, Lfbe;
+    move-result-object v0
 
-    check-cast p1, Lfl1;
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_3
 
-    new-instance v1, Lia5;
+    move v2, v4
 
-    const/4 v2, 0x2
+    :cond_3
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {v1, v0, p1, v4, v2}, Lia5;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    sget-object p1, Lmk1;->b:Lmk1;
-
-    invoke-static {p1, v1}, Lfbe;->b(Lmk1;Lve6;)V
-
-    goto :goto_4
-
-    :cond_c
-    instance-of v0, p1, Lzc4;
-
-    if-eqz v0, :cond_d
-
-    sget-object v0, Lye1;->c:Lye1;
-
-    check-cast p1, Lzc4;
-
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
-
-    :cond_d
-    :goto_4
-    sget-object p1, Loyf;->a:Loyf;
+    :goto_2
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

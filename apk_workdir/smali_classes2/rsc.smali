@@ -1,126 +1,170 @@
-.class public final enum Lrsc;
-.super Ljava/lang/Enum;
+.class public final synthetic Lrsc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final enum X:Lrsc;
-
-.field public static final enum Y:Lrsc;
-
-.field public static final synthetic Z:[Lrsc;
-
-.field public static final enum b:Lrsc;
-
-.field public static final enum c:Lrsc;
-
-.field public static final enum o:Lrsc;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lrsc;
-
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v2}, Lrsc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lrsc;->b:Lrsc;
-
-    new-instance v1, Lrsc;
-
-    const-string v2, "EMOJI"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Lrsc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lrsc;->c:Lrsc;
-
-    new-instance v2, Lrsc;
-
-    const-string v3, "STICKER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Lrsc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lrsc;->o:Lrsc;
-
-    new-instance v3, Lrsc;
-
-    const-string v4, "GIF"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Lrsc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lrsc;->X:Lrsc;
-
-    new-instance v4, Lrsc;
-
-    const-string v5, "ANIMOJI"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Lrsc;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lrsc;->Y:Lrsc;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lrsc;
-
-    move-result-object v0
-
-    sput-object v0, Lrsc;->Z:[Lrsc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lrsc;->a:I
 
-    iput p3, p0, Lrsc;->a:I
+    iput-object p1, p0, Lrsc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrsc;
-    .locals 1
 
-    const-class v0, Lrsc;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lrsc;->a:I
 
-    move-result-object p0
+    const-string v1, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams"
 
-    check-cast p0, Lrsc;
+    iget-object v2, p0, Lrsc;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public static values()[Lrsc;
-    .locals 1
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
 
-    sget-object v0, Lrsc;->Z:[Lrsc;
-
-    invoke-virtual {v0}, [Lrsc;->clone()Ljava/lang/Object;
+    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, [Lrsc;
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    return-object v0
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iput p1, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iput p1, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_1
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->P0()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
+
+    return-void
+
+    :pswitch_2
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->F0()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

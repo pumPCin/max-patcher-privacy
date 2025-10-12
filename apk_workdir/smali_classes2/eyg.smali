@@ -1,179 +1,144 @@
-.class public final synthetic Leyg;
+.class public final Leyg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Lfyg;
 
 
-# static fields
-.field public static final a:Leyg;
+# instance fields
+.field public final a:[Ljava/lang/String;
 
-.field private static final descriptor:Ldsd;
+.field public final b:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>([Ljava/lang/String;[I)V
+    .locals 0
 
-    new-instance v0, Leyg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leyg;->a:[Ljava/lang/String;
 
-    sput-object v0, Leyg;->a:Leyg;
-
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "phone"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Leyg;->descriptor:Ldsd;
+    iput-object p2, p0, Leyg;->b:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Leyg;->descriptor:Ldsd;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v5, v1
-
-    move v6, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x2
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+    if-eqz p1, :cond_1
 
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    throw p1
+    move-result-object v1
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v3
+    :goto_0
+    const-class v2, Leyg;
 
-    or-int/lit8 v6, v6, 0x1
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    move v5, v2
+    check-cast p1, Leyg;
 
-    goto :goto_0
+    iget-object v1, p0, Leyg;->a:[Ljava/lang/String;
+
+    iget-object v3, p1, Leyg;->a:[Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
+    iget-object v1, p0, Leyg;->b:[I
 
-    new-instance p1, Lgyg;
+    iget-object p1, p1, Leyg;->b:[I
 
-    invoke-direct {p1, v6, v3, v4}, Lgyg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([I[I)Z
 
-    return-object p1
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final b(Le04;Ljava/lang/Object;)V
-    .locals 3
+.method public final hashCode()I
+    .locals 2
 
-    check-cast p2, Lgyg;
+    iget-object v0, p0, Leyg;->a:[Ljava/lang/String;
 
-    sget-object v0, Leyg;->descriptor:Ldsd;
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    move-result v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p2, Lgyg;->a:Ljava/lang/String;
+    iget-object v1, p0, Leyg;->b:[I
 
-    const/4 v2, 0x0
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
 
-    invoke-virtual {p1, v0, v2, v1}, Le04;->l(Ldsd;ILjava/lang/String;)V
+    move-result v1
 
-    const/4 v1, 0x1
+    add-int/2addr v1, v0
 
-    iget-object p2, p2, Lgyg;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Le04;->m()V
-
-    return-void
+    return v1
 .end method
 
-.method public final c()[Lum7;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v0, 0x2
+    iget-object v0, p0, Leyg;->a:[Ljava/lang/String;
 
-    new-array v0, v0, [Lum7;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    sget-object v1, Luxe;->a:Luxe;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Leyg;->b:[I
 
-    aput-object v1, v0, v2
+    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    const/4 v2, 0x1
+    move-result-object v1
 
-    aput-object v1, v0, v2
+    const-string v2, ", grantResults="
 
-    return-object v0
-.end method
+    const-string v3, ")"
 
-.method public final d()Ldsd;
-    .locals 1
+    const-string v4, "VerifyCameraPermission(permissions="
 
-    sget-object v0, Leyg;->descriptor:Ldsd;
+    invoke-static {v4, v0, v2, v1, v3}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -1,280 +1,139 @@
-.class public final synthetic Lpvb;
-.super Ljava/lang/Object;
+.class public final Lpvb;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lcdf;
 
-.field public final synthetic b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
-    .locals 0
+.method public constructor <init>(Lcdf;Ljava/lang/Integer;)V
+    .locals 1
 
-    iput p2, p0, Lpvb;->a:I
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Lpvb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lpvb;->b:Lcdf;
+
+    iput-object p2, p0, Lpvb;->c:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 19
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-object/from16 v0, p0
+    const/4 v0, 0x1
 
-    iget v1, v0, Lpvb;->a:I
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpvb;
 
     const/4 v2, 0x0
 
-    iget-object v3, v0, Lpvb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    if-nez v1, :cond_1
 
-    packed-switch v1, :pswitch_data_0
+    return v2
 
-    sget-object v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
+    :cond_1
+    check-cast p1, Lpvb;
 
-    new-instance v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lpvb;->b:Lcdf;
 
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object v3, p1, Lpvb;->b:Lcdf;
 
-    move-result-object v4
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const/4 v5, 0x0
+    move-result v1
 
-    invoke-direct {v1, v4, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    if-nez v1, :cond_2
 
-    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+    return v2
 
-    const/4 v5, -0x2
+    :cond_2
+    iget-object v1, p0, Lpvb;->c:Ljava/lang/Integer;
 
-    const/16 v6, 0x50
+    iget-object p1, p1, Lpvb;->c:Ljava/lang/Integer;
 
-    const/4 v7, -0x1
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v4, v7, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+    move-result p1
 
-    const/16 v5, 0xc
+    if-nez p1, :cond_3
 
-    int-to-float v5, v5
+    return v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    :cond_3
+    return v0
+.end method
 
-    move-result-object v6
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object v0, p0, Lpvb;->b:Lcdf;
 
-    move-result-object v6
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+    move-result v0
 
-    mul-float/2addr v5, v6
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {v5}, Lv63;->r0(F)I
+    iget-object v1, p0, Lpvb;->c:Ljava/lang/Integer;
 
-    move-result v5
+    if-nez v1, :cond_0
 
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    iput v5, v4, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v4, Lxia;->c:Lxia;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lxia;)V
-
-    sget-object v4, Lwia;->a:Lwia;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lwia;)V
-
-    sget-object v4, Luia;->c:Luia;
-
-    invoke-virtual {v1, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Luia;)V
-
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Levb;
-
-    move-result-object v4
-
-    sget-object v5, Levb;->b:Levb;
-
-    const/16 v6, 0x8
-
-    if-ne v4, v5, :cond_0
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    move v2, v6
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    add-int/2addr v0, v1
 
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Levb;
+    return v0
+.end method
 
-    move-result-object v2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v4, Levb;->c:Levb;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-ne v2, v4, :cond_1
+    const-string v1, "ShowSnackbar(title="
 
-    sget v2, Lvra;->Z0:I
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_1
+    iget-object v1, p0, Lpvb;->b:Lcdf;
 
-    :cond_1
-    sget v2, Lvra;->F0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_1
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    const-string v1, ", icon="
 
-    new-instance v2, Lnxa;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v6, v3}, Lnxa;-><init>(ILjava/lang/Object;)V
+    iget-object v1, p0, Lpvb;->c:Ljava/lang/Integer;
 
-    invoke-static {v1, v2}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v1
+    const-string v1, ")"
 
-    :pswitch_0
-    iget-object v1, v3, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->b:Lpr;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v4, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0:[Ltm7;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    aget-object v2, v4, v2
+    move-result-object v0
 
-    invoke-virtual {v1, v3}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iget-object v1, v3, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->c:Lpr;
-
-    const/4 v2, 0x1
-
-    aget-object v2, v4, v2
-
-    invoke-virtual {v1, v3}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v8
-
-    invoke-virtual {v3}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->B0()Levb;
-
-    move-result-object v10
-
-    sget-object v1, Lvvb;->a:Lvvb;
-
-    invoke-virtual {v1}, Lvvb;->c()Lbp7;
-
-    move-result-object v2
-
-    check-cast v2, Ls5f;
-
-    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v11, v2
-
-    check-cast v11, Lm13;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lhx3;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v12, v2
-
-    check-cast v12, Lhx3;
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lv9;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v17
-
-    invoke-virtual {v1}, Lvvb;->d()Lbp7;
-
-    move-result-object v15
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lf2c;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v13
-
-    invoke-virtual {v1}, Lvvb;->b()Lbp7;
-
-    move-result-object v14
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Llm5;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v16
-
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lr63;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v18
-
-    new-instance v5, Lovb;
-
-    invoke-direct/range {v5 .. v18}, Lovb;-><init>(JJLevb;Lm13;Lhx3;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
-
-    return-object v5
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

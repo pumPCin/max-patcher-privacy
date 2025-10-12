@@ -1,137 +1,45 @@
 .class public abstract Lulg;
-.super Lz14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lvlg;
-
-.field public b:I
-
-
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static a(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/view/WindowInsets$Builder;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
 
-    iput v0, p0, Lulg;->b:I
+    invoke-static {p1}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public constructor <init>(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
 
-    iput p1, p0, Lulg;->b:I
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {p0, v0, p2}, Landroid/view/View;->computeSystemWindowInsets(Landroid/view/WindowInsets;Landroid/graphics/Rect;)Landroid/view/WindowInsets;
 
+    move-result-object p0
 
-# virtual methods
-.method public l(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
-    .locals 0
+    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsets()Landroid/graphics/Insets;
 
-    invoke-virtual {p0, p1, p2, p3}, Lulg;->y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+    move-result-object p0
 
-    iget-object p1, p0, Lulg;->a:Lvlg;
+    iget p2, p0, Landroid/graphics/Insets;->left:I
 
-    if-nez p1, :cond_0
+    iget v0, p0, Landroid/graphics/Insets;->top:I
 
-    new-instance p1, Lvlg;
+    iget v1, p0, Landroid/graphics/Insets;->right:I
 
-    invoke-direct {p1, p2}, Lvlg;-><init>(Landroid/view/View;)V
+    iget p0, p0, Landroid/graphics/Insets;->bottom:I
 
-    iput-object p1, p0, Lulg;->a:Lvlg;
-
-    :cond_0
-    iget-object p1, p0, Lulg;->a:Lvlg;
-
-    iget-object p2, p1, Lvlg;->a:Landroid/view/View;
-
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
-
-    move-result p3
-
-    iput p3, p1, Lvlg;->b:I
-
-    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iput p2, p1, Lvlg;->c:I
-
-    iget-object p1, p0, Lulg;->a:Lvlg;
-
-    invoke-virtual {p1}, Lvlg;->a()V
-
-    iget p1, p0, Lulg;->b:I
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lulg;->a:Lvlg;
-
-    invoke-virtual {p2, p1}, Lvlg;->b(I)Z
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Lulg;->b:I
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final x()I
-    .locals 1
-
-    iget-object v0, p0, Lulg;->a:Lvlg;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Lvlg;->d:I
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public y(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
-    .locals 0
-
-    invoke-virtual {p1, p2, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->q(Landroid/view/View;I)V
+    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
-.end method
-
-.method public z(I)Z
-    .locals 1
-
-    iget-object v0, p0, Lulg;->a:Lvlg;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lvlg;->b(I)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    iput p1, p0, Lulg;->b:I
-
-    const/4 p1, 0x0
-
-    return p1
 .end method

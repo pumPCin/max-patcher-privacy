@@ -1,5 +1,5 @@
 .class public final Ltk1;
-.super Lgl1;
+.super Lhl1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Ltk1;
 
-    invoke-direct {v0}, Lgl1;-><init>()V
+    invoke-direct {v0}, Lhl1;-><init>()V
 
     sput-object v0, Ltk1;->D:Ltk1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x78c1725f
+    const v0, -0x3c04238b
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "OpenMoreAction"
+    const-string v0, "OpenCallProfile"
 
     return-object v0
 .end method

@@ -1,107 +1,176 @@
-.class public abstract Lplc;
+.class public final Lplc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static MapAttrs:[I = null
+# instance fields
+.field public final a:I
 
-.field public static MapAttrs_ambientEnabled:I = 0x0
+.field public final b:Ljava/lang/Integer;
 
-.field public static MapAttrs_backgroundColor:I = 0x1
-
-.field public static MapAttrs_cameraBearing:I = 0x2
-
-.field public static MapAttrs_cameraMaxZoomPreference:I = 0x3
-
-.field public static MapAttrs_cameraMinZoomPreference:I = 0x4
-
-.field public static MapAttrs_cameraTargetLat:I = 0x5
-
-.field public static MapAttrs_cameraTargetLng:I = 0x6
-
-.field public static MapAttrs_cameraTilt:I = 0x7
-
-.field public static MapAttrs_cameraZoom:I = 0x8
-
-.field public static MapAttrs_latLngBoundsNorthEastLatitude:I = 0x9
-
-.field public static MapAttrs_latLngBoundsNorthEastLongitude:I = 0xa
-
-.field public static MapAttrs_latLngBoundsSouthWestLatitude:I = 0xb
-
-.field public static MapAttrs_latLngBoundsSouthWestLongitude:I = 0xc
-
-.field public static MapAttrs_liteMode:I = 0xd
-
-.field public static MapAttrs_mapColorScheme:I = 0xe
-
-.field public static MapAttrs_mapId:I = 0xf
-
-.field public static MapAttrs_mapType:I = 0x10
-
-.field public static MapAttrs_uiCompass:I = 0x11
-
-.field public static MapAttrs_uiMapToolbar:I = 0x12
-
-.field public static MapAttrs_uiRotateGestures:I = 0x13
-
-.field public static MapAttrs_uiScrollGestures:I = 0x14
-
-.field public static MapAttrs_uiScrollGesturesDuringRotateOrZoom:I = 0x15
-
-.field public static MapAttrs_uiTiltGestures:I = 0x16
-
-.field public static MapAttrs_uiZoomControls:I = 0x17
-
-.field public static MapAttrs_uiZoomGestures:I = 0x18
-
-.field public static MapAttrs_useViewLifecycle:I = 0x19
-
-.field public static MapAttrs_zOrderOnTop:I = 0x1a
+.field public final c:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILjava/lang/Integer;Z)V
+    .locals 0
 
-    const/16 v0, 0x1b
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput p1, p0, Lplc;->a:I
 
-    fill-array-data v0, :array_0
+    iput-object p2, p0, Lplc;->b:Ljava/lang/Integer;
 
-    sput-object v0, Lplc;->MapAttrs:[I
+    iput-boolean p3, p0, Lplc;->c:Z
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        0x7f040040
-        0x7f04005c
-        0x7f0400b5
-        0x7f0400b6
-        0x7f0400b7
-        0x7f0400b8
-        0x7f0400b9
-        0x7f0400ba
-        0x7f0400bb
-        0x7f040590
-        0x7f040591
-        0x7f040592
-        0x7f040593
-        0x7f040604
-        0x7f04060b
-        0x7f04060c
-        0x7f04060d
-        0x7f0408c2
-        0x7f0408c3
-        0x7f0408c4
-        0x7f0408c5
-        0x7f0408c6
-        0x7f0408c7
-        0x7f0408c8
-        0x7f0408c9
-        0x7f0408d2
-        0x7f0408fa
-    .end array-data
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lplc;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lplc;
+
+    iget v0, p0, Lplc;->a:I
+
+    iget v1, p1, Lplc;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lplc;->b:Ljava/lang/Integer;
+
+    iget-object v1, p1, Lplc;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lplc;->c:Z
+
+    iget-boolean p1, p1, Lplc;->c:Z
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lplc;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    sget-object v1, Lmlc;->b:Lmlc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lplc;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lplc;->c:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RateCallButtonData(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lplc;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", size="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lmlc;->b:Lmlc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lplc;->b:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lplc;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

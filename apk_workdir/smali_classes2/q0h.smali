@@ -1,100 +1,256 @@
-.class public final Lq0h;
-.super Lm3f;
+.class public final synthetic Lq0h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lri6;
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Lq0h;
 
-.field public final synthetic Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field private static final descriptor:Lmqd;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lq0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    new-instance v0, Lq0h;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lq0h;->a:Lq0h;
+
+    new-instance v1, Lflb;
+
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.share.WebAppShareRequest"
+
+    const/4 v3, 0x3
+
+    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "text"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "link"
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lq0h;->descriptor:Lmqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lx8;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v0, Lq0h;->descriptor:Lmqd;
 
-    invoke-virtual {p0, p1, p2}, Lq0h;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
 
     move-result-object p1
 
-    check-cast p1, Lq0h;
+    const/4 v1, 0x1
 
-    sget-object p2, Loyf;->a:Loyf;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Lq0h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    return-object p2
+    move v6, v1
+
+    move v7, v2
+
+    move-object v4, v3
+
+    move-object v5, v4
+
+    :goto_0
+    if-eqz v6, :cond_4
+
+    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+
+    move-result v8
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_3
+
+    if-eqz v8, :cond_2
+
+    if-eq v8, v1, :cond_1
+
+    const/4 v9, 0x2
+
+    if-ne v8, v9, :cond_0
+
+    sget-object v8, Llwe;->a:Llwe;
+
+    invoke-virtual {p1, v0, v9, v5}, Lx8;->s(Lmqd;ILjava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    or-int/lit8 v7, v7, 0x4
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
+    :cond_1
+    sget-object v8, Llwe;->a:Llwe;
+
+    invoke-virtual {p1, v0, v1, v4}, Lx8;->s(Lmqd;ILjava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    or-int/lit8 v7, v7, 0x2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    or-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    move v6, v2
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
+
+    new-instance p1, Lu0h;
+
+    invoke-direct {p1, v3, v7, v4, v5}, Lu0h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lq0h;
-
-    iget-object v1, p0, Lq0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
-
-    invoke-direct {v0, p2, v1}, Lq0h;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
-
-    iput-object p1, v0, Lq0h;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Lmz3;Ljava/lang/Object;)V
     .locals 4
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p2, Lu0h;
 
-    iget-object p1, p0, Lq0h;->X:Ljava/lang/Object;
+    sget-object v0, Lq0h;->descriptor:Lmqd;
 
-    check-cast p1, Lx0h;
+    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
 
-    iget-object v0, p0, Lq0h;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+    move-result-object p1
 
-    iget-object v1, v0, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:Ln4h;
+    iget-object v1, p2, Lu0h;->a:Ljava/lang/String;
 
-    iget-object v2, p1, Lx0h;->b:Ljava/util/List;
+    iget-object v2, p2, Lu0h;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lpw7;->E(Ljava/util/List;)V
+    iget-object p2, p2, Lu0h;->b:Ljava/lang/String;
 
-    iget-object v1, v0, Lone/me/webapp/settings/WebAppSettingsScreen;->X:Lmqc;
+    const/4 v3, 0x0
 
-    sget-object v2, Lone/me/webapp/settings/WebAppSettingsScreen;->w0:[Ltm7;
+    invoke-virtual {p1, v0, v3, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
 
-    const/4 v3, 0x2
+    invoke-virtual {p1}, Lmz3;->s()Z
 
-    aget-object v2, v2, v3
+    move-result v1
 
-    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p2, :cond_1
+
+    :goto_0
+    sget-object v1, Llwe;->a:Llwe;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v0, v1, p2}, Lmz3;->h(Lmqd;ILjava/lang/Object;)V
+
+    :cond_1
+    invoke-virtual {p1}, Lmz3;->s()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    :goto_1
+    sget-object p2, Llwe;->a:Llwe;
+
+    const/4 p2, 0x2
+
+    invoke-virtual {p1, v0, p2, v2}, Lmz3;->h(Lmqd;ILjava/lang/Object;)V
+
+    :cond_3
+    invoke-virtual {p1}, Lmz3;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lql7;
+    .locals 5
+
+    invoke-static {}, Loza;->p()Lql7;
 
     move-result-object v0
 
-    check-cast v0, Ltya;
+    invoke-static {}, Loza;->p()Lql7;
 
-    iget-object p1, p1, Lx0h;->a:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
+    const/4 v2, 0x3
 
-    sget-object p1, Loyf;->a:Loyf;
+    new-array v2, v2, [Lql7;
 
-    return-object p1
+    sget-object v3, Llwe;->a:Llwe;
+
+    const/4 v4, 0x0
+
+    aput-object v3, v2, v4
+
+    const/4 v3, 0x1
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x2
+
+    aput-object v1, v2, v0
+
+    return-object v2
+.end method
+
+.method public final d()Lmqd;
+    .locals 1
+
+    sget-object v0, Lq0h;->descriptor:Lmqd;
+
+    return-object v0
 .end method

@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Ltd6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lq81;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq81;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ZI)V
     .locals 0
 
-    iput p2, p0, Lp81;->a:I
+    iput p3, p0, Lp81;->a:I
 
-    iput-object p1, p0, Lp81;->b:Lq81;
+    iput-object p1, p0, Lp81;->c:Ljava/lang/Object;
+
+    iput-boolean p2, p0, Lp81;->b:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,50 +31,62 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
     iget v0, p0, Lp81;->a:I
 
-    check-cast p1, Luxa;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lbx4;->y0:Lsed;
+    iget-object v0, p0, Lp81;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lp81;->b:Lq81;
+    check-cast v0, Lwp1;
 
-    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
+    iget-boolean v1, p0, Lp81;->b:Z
 
-    invoke-virtual {p1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Luxa;->b()Lue0;
-
-    const/4 p1, 0x0
+    invoke-static {v0, v1}, Lwp1;->w(Lwp1;Z)V
 
     :goto_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object v0, Laxf;->a:Laxf;
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 
     :pswitch_0
-    sget-object p1, Lbx4;->y0:Lsed;
+    iget-object v0, p0, Lp81;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lp81;->b:Lq81;
+    check-cast v0, Lju6;
 
-    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
+    sget-object v1, Lf81;->c:Lf81;
 
-    invoke-virtual {p1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
+    check-cast v0, Lhu6;
 
-    move-result-object p1
+    iget-wide v2, v0, Lhu6;->a:J
 
-    invoke-interface {p1}, Luxa;->getIcon()Lk27;
+    invoke-virtual {v1}, Ld3;->o0()Loc4;
 
-    const/4 p1, -0x1
+    move-result-object v0
+
+    const-string v1, ":call-user?opponent_id="
+
+    const-string v4, "&video_enabled="
+
+    iget-boolean v5, p0, Lp81;->b:Z
+
+    invoke-static {v2, v3, v1, v4, v5}, Lnd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "&microphone_enabled=true"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     goto :goto_0
 

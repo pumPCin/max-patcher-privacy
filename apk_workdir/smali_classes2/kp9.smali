@@ -1,46 +1,55 @@
 .class public final Lkp9;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lv79;
+.field public final a:Z
+
+.field public final b:Ljava/util/Set;
+
+.field public final c:Ljava/util/List;
 
 
-# virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 2
 
-    const-string v0, "reactionInfo"
+    const/4 v0, 0x1
 
-    invoke-static {p2, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    and-int/2addr p1, v0
 
-    move-result p2
+    if-eqz p1, :cond_0
 
-    if-eqz p2, :cond_0
+    const/4 v0, 0x0
 
-    invoke-static {p1}, Lipe;->u(Ls89;)Lv79;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lkp9;->c:Lv79;
-
-    return-void
-
+    .line 5
     :cond_0
-    invoke-virtual {p1}, Ls89;->B()V
+    sget-object p1, Ly65;->a:Ly65;
+
+    .line 6
+    sget-object v1, Lo65;->a:Lo65;
+
+    .line 7
+    invoke-direct {p0, v0, p1, v1}, Lkp9;-><init>(ZLjava/util/Set;Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(ZLjava/util/Set;Ljava/util/List;)V
+    .locals 0
 
-    iget-object v0, p0, Lkp9;->c:Lv79;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    .line 2
+    iput-boolean p1, p0, Lkp9;->a:Z
 
-    move-result-object v0
+    .line 3
+    iput-object p2, p0, Lkp9;->b:Ljava/util/Set;
 
-    return-object v0
+    .line 4
+    iput-object p3, p0, Lkp9;->c:Ljava/util/List;
+
+    return-void
 .end method

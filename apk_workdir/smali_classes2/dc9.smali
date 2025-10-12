@@ -1,43 +1,64 @@
-.class public abstract Ldc9;
+.class public final Ldc9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhc9;
+
 
 # static fields
-.field public static final a:Lbp7;
-
-.field public static final b:Lbp7;
+.field public static final a:Ldc9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    sget-object v0, Lec9;->a:Lec9;
+    new-instance v0, Ldc9;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v1
-
-    const-class v2, Ldq;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    sput-object v1, Ldc9;->a:Lbp7;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Luzf;
-
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    sput-object v0, Ldc9;->b:Lbp7;
+    sput-object v0, Ldc9;->a:Ldc9;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Ldc9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2d4a0842
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OnKeyboardSwap"
+
+    return-object v0
 .end method

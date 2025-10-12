@@ -3,210 +3,456 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgwb;
+.implements Ltd6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:Ltd6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(ILtd6;)V
     .locals 0
 
+    iput p1, p0, Ldwb;->a:I
+
+    iput-object p2, p0, Ldwb;->b:Ltd6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldwb;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Ldwb;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ldwb;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Ldwb;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Ldwb;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    new-instance v0, Lkrd;
 
-    :cond_0
-    instance-of v1, p1, Ldwb;
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lj8e;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lqoe;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lste;
+
+    const/16 v2, 0x12
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lqoe;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lbse;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lure;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lspe;
+
+    const/16 v2, 0xe
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_6
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lr4d;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_7
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/16 v2, 0xc
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_8
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_9
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Ld9e;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_a
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_b
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_c
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_d
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lx1e;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_e
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_f
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lgyd;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_10
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lr4d;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_11
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lb1c;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_12
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lb1c;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_13
+    new-instance v0, Lkrd;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lb1c;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldwb;
-
-    iget-object v1, p0, Ldwb;->a:Ljava/lang/Long;
-
-    iget-object v3, p1, Ldwb;->a:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ldwb;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Ldwb;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ldwb;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Ldwb;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Ldwb;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Ldwb;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Ldwb;->a:Ljava/lang/Long;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Ldwb;->b:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v3, p0, Ldwb;->c:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v1
-
-    iget-object v2, p0, Ldwb;->d:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactUpdate(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldwb;->a:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fullName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldwb;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", nickName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldwb;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatarUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldwb;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v0, v2, v1}, Lkrd;-><init>(ILtd6;)V
 
     return-object v0
+
+    :pswitch_14
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lb1c;
+
+    const/16 v2, 0x1d
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_15
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Ltwc;
+
+    const/16 v2, 0x1c
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_16
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lzh1;
+
+    const/16 v2, 0x1b
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_17
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Ltsc;
+
+    const/16 v2, 0x1a
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_18
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lzh1;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_19
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lsja;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_1a
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lzh1;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_1b
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lzh1;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    :pswitch_1c
+    new-instance v0, Lcw8;
+
+    iget-object v1, p0, Ldwb;->b:Ltd6;
+
+    check-cast v1, Lsja;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2, v1}, Lcw8;-><init>(ILtd6;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

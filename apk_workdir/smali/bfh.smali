@@ -1,64 +1,71 @@
-.class public final Lbfh;
+.class public abstract Lbfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Legh;
 
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-# instance fields
-.field public final synthetic a:Landroid/app/Activity;
-
-.field public final synthetic b:Landroid/os/Bundle;
-
-.field public final synthetic c:Landroid/os/Bundle;
-
-.field public final synthetic d:Lum4;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Lum4;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p1, p0, Lbfh;->d:Lum4;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object p2, p0, Lbfh;->a:Landroid/app/Activity;
+    sput-object v0, Lbfh;->a:Ljava/util/HashMap;
 
-    iput-object p3, p0, Lbfh;->b:Landroid/os/Bundle;
+    new-instance v1, Ljava/util/HashMap;
 
-    iput-object p4, p0, Lbfh;->c:Landroid/os/Bundle;
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    return-void
-.end method
+    sput-object v1, Lbfh;->b:Ljava/util/HashMap;
 
+    const/4 v2, -0x1
 
-# virtual methods
-.method public final a()I
-    .locals 1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v0, 0x0
+    move-result-object v2
 
-    return v0
-.end method
+    const-string v3, "The Play Store app is either not installed or not the official version."
 
-.method public final b()V
-    .locals 4
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lbfh;->d:Lum4;
+    const/4 v3, -0x2
 
-    iget-object v0, v0, Lum4;->a:Ljava/lang/Object;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast v0, Lrr7;
+    move-result-object v3
 
-    iget-object v1, p0, Lbfh;->b:Landroid/os/Bundle;
+    const-string v4, "Call first requestReviewFlow to get the ReviewInfo."
 
-    iget-object v2, p0, Lbfh;->c:Landroid/os/Bundle;
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, p0, Lbfh;->a:Landroid/app/Activity;
+    const/16 v4, -0x64
 
-    invoke-interface {v0, v3, v1, v2}, Lrr7;->p(Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const-string v5, "Retry with an exponential backoff. Consider filing a bug if fails consistently."
+
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "PLAY_STORE_NOT_FOUND"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "INVALID_REQUEST"
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "INTERNAL_ERROR"
+
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

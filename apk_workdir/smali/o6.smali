@@ -1,13 +1,12 @@
 .class public final Lo6;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lss4;
 
 
 # instance fields
 .field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
@@ -16,64 +15,40 @@
 
     iput p1, p0, Lo6;->a:I
 
-    invoke-direct {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    iput-object p2, p0, Lo6;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v0, p0, Lo6;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->w0:Z
 
-    iget v1, p0, Lo6;->a:I
-
-    packed-switch v1, :pswitch_data_0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    :pswitch_0
-    check-cast v0, Le6;
-
-    :try_start_0
-    invoke-interface {v0}, Le6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lgc5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_0
-    return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -81,101 +56,348 @@
     .end packed-switch
 .end method
 
-.method public final h()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 4
 
     iget v0, p0, Lo6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "RunnableDisposable(disposed="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lo6;->h()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    const-string v1, "ActionDisposable(disposed="
+    return-void
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_1
+    iget-object v0, p0, Lo6;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lo6;->h()Z
+    check-cast v0, Lwof;
 
-    move-result v1
+    invoke-virtual {v0}, Lwof;->n()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    const-string v1, ", "
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_2
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    check-cast p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    move-result-object v1
+    const/4 v0, 0x5
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->y(I)V
 
-    const-string v1, ")"
+    iget-object v0, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    :cond_0
+    return-void
+
+    :pswitch_3
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Leb8;
+
+    iget-object v0, p1, Lza8;->b:Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-virtual {p1, v1}, Leb8;->b(F)V
+
+    return-void
+
+    :pswitch_4
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lcom/google/android/material/behavior/HideBottomViewOnScrollBehavior;->h:Landroid/view/ViewPropertyAnimator;
+
+    return-void
+
+    :pswitch_5
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljz4;
+
+    invoke-virtual {p1}, Lq85;->q()V
+
+    iget-object p1, p1, Ljz4;->r:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
+
+    :pswitch_6
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L(I)V
+
+    iget-object v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->U:Ljava/lang/ref/WeakReference;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->U:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
+
+    :cond_1
+    return-void
+
+    :pswitch_7
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Lbk0;
+
+    invoke-static {p1}, Ltvf;->x(Landroid/view/View;)Landroid/view/ViewGroup;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v1, Lj7e;
+
+    invoke-direct {v1, v0}, Lj7e;-><init>(Landroid/view/ViewGroup;)V
+
+    move-object v0, v1
+
+    :goto_0
+    iget-object p1, p1, Lbk0;->y0:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljjf;
+
+    iget-object v2, v0, Lj7e;->a:Ljava/lang/Object;
+
+    check-cast v2, Landroid/view/ViewOverlay;
+
+    invoke-virtual {v2, v1}, Landroid/view/ViewOverlay;->remove(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    :cond_3
+    return-void
+
+    :pswitch_8
+    new-instance p1, Ljava/util/ArrayList;
+
+    iget-object v0, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqf;
+
+    iget-object v1, v0, Lqf;->X:Ljava/util/ArrayList;
+
+    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_2
+    if-ge v2, v1, :cond_4
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lhe;
+
+    invoke-virtual {v3, v0}, Lhe;->a(Landroid/graphics/drawable/Drawable;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    return-void
+
+    :pswitch_9
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Landroidx/appcompat/widget/ActionBarOverlayLayout;->w0:Z
+
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget v0, p0, Lo6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationRepeat(Landroid/animation/Animator;)V
+
+    iget-object p1, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast p1, Ler7;
+
+    iget v0, p1, Ler7;->Z:I
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    iget-object v2, p1, Ler7;->Y:Lor7;
+
+    iget-object v2, v2, Ltj0;->c:[I
+
+    array-length v2, v2
+
+    rem-int/2addr v0, v2
+
+    iput v0, p1, Ler7;->Z:I
+
+    iput-boolean v1, p1, Ler7;->r0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 4
+
+    iget v0, p0, Lo6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance p1, Ljava/util/ArrayList;
+
+    iget-object v0, p0, Lo6;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqf;
+
+    iget-object v1, v0, Lqf;->X:Ljava/util/ArrayList;
+
+    invoke-direct {p1, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lhe;
+
+    invoke-virtual {v3, v0}, Lhe;->b(Landroid/graphics/drawable/Drawable;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

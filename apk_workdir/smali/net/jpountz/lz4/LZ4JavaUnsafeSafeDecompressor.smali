@@ -35,6 +35,7 @@
 
     move/from16 v0, p2
 
+    .line 39
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v2
@@ -49,6 +50,7 @@
 
     move/from16 v2, p5
 
+    .line 40
     invoke-virtual/range {p1 .. p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -90,17 +92,21 @@
 
     move/from16 v6, p6
 
-    invoke-static/range {p1 .. p1}, Lgw0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    .line 41
+    invoke-static/range {p1 .. p1}, Lcw0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    invoke-static/range {p4 .. p4}, Lgw0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    .line 42
+    invoke-static/range {p4 .. p4}, Lcw0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    invoke-static {v1, v0, v3}, Lgw0;->b(Ljava/nio/ByteBuffer;II)V
+    .line 43
+    invoke-static {v1, v0, v3}, Lcw0;->b(Ljava/nio/ByteBuffer;II)V
 
-    invoke-static {v4, v2, v6}, Lgw0;->b(Ljava/nio/ByteBuffer;II)V
+    .line 44
+    invoke-static {v4, v2, v6}, Lcw0;->b(Ljava/nio/ByteBuffer;II)V
 
     const/4 v5, 0x1
 
@@ -108,6 +114,7 @@
 
     if-ne v3, v5, :cond_1
 
+    .line 45
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -118,6 +125,7 @@
 
     return v0
 
+    .line 46
     :cond_1
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -134,6 +142,7 @@
 
     move v7, v2
 
+    .line 47
     :goto_0
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
@@ -158,6 +167,7 @@
 
     add-int/lit8 v12, v0, 0x1
 
+    .line 48
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -191,6 +201,7 @@
 
     add-int/lit8 v13, v6, -0x8
 
+    .line 49
     const-string v14, "Malformed input at "
 
     if-gt v12, v13, :cond_d
@@ -203,10 +214,12 @@
 
     goto :goto_4
 
+    .line 50
     :cond_6
     invoke-static {v1, v0, v4, v7, v9}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->wildArraycopy(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V
 
-    invoke-static {v15, v1}, Lgw0;->d(ILjava/nio/ByteBuffer;)I
+    .line 51
+    invoke-static {v15, v1}, Lcw0;->d(ILjava/nio/ByteBuffer;)I
 
     move-result v0
 
@@ -227,6 +240,7 @@
 
     add-int/lit8 v7, v15, 0x1
 
+    .line 52
     invoke-virtual {v1, v15}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v8
@@ -260,21 +274,26 @@
 
     if-gt v7, v6, :cond_a
 
+    .line 53
     invoke-static {v4, v0, v12, v5}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->safeIncrementalCopy(Ljava/nio/ByteBuffer;III)V
 
     goto :goto_3
 
+    .line 54
     :cond_a
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v15, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 55
+    invoke-static {v15, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 56
     invoke-direct {v0, v1}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 57
     :cond_b
     invoke-static {v4, v0, v12, v7}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->wildIncrementalCopy(Ljava/nio/ByteBuffer;III)V
 
@@ -285,13 +304,16 @@
 
     goto :goto_0
 
+    .line 58
     :cond_c
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v15, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 59
+    invoke-static {v15, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 60
     invoke-direct {v0, v1}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -304,23 +326,28 @@
 
     if-ne v5, v3, :cond_e
 
+    .line 61
     invoke-static {v1, v0, v4, v7, v9}, Lnet/jpountz/lz4/LZ4ByteBufferUtils;->safeArraycopy(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;II)V
 
     sub-int/2addr v12, v2
 
     return v12
 
+    .line 62
     :cond_e
     new-instance v1, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v0, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 63
+    invoke-static {v0, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 64
     invoke-direct {v1, v0}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v1
 
+    .line 65
     :cond_f
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -344,11 +371,14 @@
 
     move/from16 v5, p6
 
-    sget-object v6, Lkzf;->a:Lsun/misc/Unsafe;
+    .line 1
+    sget-object v6, Lwxf;->a:Lsun/misc/Unsafe;
 
-    invoke-static {v1, v0, v2}, Ldbd;->b(I[BI)V
+    .line 2
+    invoke-static {v1, v0, v2}, Lk9d;->b(I[BI)V
 
-    invoke-static {v4, v3, v5}, Ldbd;->b(I[BI)V
+    .line 3
+    invoke-static {v4, v3, v5}, Lk9d;->b(I[BI)V
 
     const/4 v6, 0x1
 
@@ -356,7 +386,8 @@
 
     if-ne v2, v6, :cond_0
 
-    invoke-static {v1, v0}, Lkzf;->a(I[B)B
+    .line 4
+    invoke-static {v1, v0}, Lwxf;->a(I[B)B
 
     move-result v0
 
@@ -366,6 +397,7 @@
 
     return v0
 
+    .line 5
     :cond_0
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
@@ -382,8 +414,9 @@
 
     move v7, v4
 
+    .line 6
     :goto_0
-    invoke-static {v1, v0}, Lkzf;->a(I[B)B
+    invoke-static {v1, v0}, Lwxf;->a(I[B)B
 
     move-result v8
 
@@ -406,7 +439,8 @@
 
     add-int/lit8 v12, v1, 0x1
 
-    invoke-static {v1, v0}, Lkzf;->a(I[B)B
+    .line 7
+    invoke-static {v1, v0}, Lwxf;->a(I[B)B
 
     move-result v1
 
@@ -439,6 +473,7 @@
 
     add-int/lit8 v13, v5, -0x8
 
+    .line 8
     const-string v14, "Malformed input at "
 
     if-gt v12, v13, :cond_d
@@ -451,19 +486,23 @@
 
     goto :goto_4
 
+    .line 9
     :cond_5
     invoke-static {v0, v1, v3, v7, v9}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->wildArraycopy([BI[BII)V
 
-    invoke-static {v15, v0}, Lkzf;->f(I[B)S
+    .line 10
+    invoke-static {v15, v0}, Lwxf;->f(I[B)S
 
     move-result v1
 
-    sget-object v6, Lu4g;->a:Ljava/nio/ByteOrder;
+    .line 11
+    sget-object v6, Lh3g;->a:Ljava/nio/ByteOrder;
 
     sget-object v7, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     if-ne v6, v7, :cond_6
 
+    .line 12
     invoke-static {v1}, Ljava/lang/Short;->reverseBytes(S)S
 
     move-result v1
@@ -490,7 +529,8 @@
 
     add-int/lit8 v7, v15, 0x1
 
-    invoke-static {v15, v0}, Lkzf;->a(I[B)B
+    .line 13
+    invoke-static {v15, v0}, Lwxf;->a(I[B)B
 
     move-result v8
 
@@ -523,21 +563,26 @@
 
     if-gt v7, v5, :cond_a
 
+    .line 14
     invoke-static {v3, v1, v12, v6}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->safeIncrementalCopy([BIII)V
 
     goto :goto_3
 
+    .line 15
     :cond_a
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v15, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 16
+    invoke-static {v15, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 17
     invoke-direct {v0, v1}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 18
     :cond_b
     invoke-static {v3, v1, v12, v7}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->wildIncrementalCopy([BIII)V
 
@@ -548,13 +593,16 @@
 
     goto/16 :goto_0
 
+    .line 19
     :cond_c
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v15, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 20
+    invoke-static {v15, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 21
     invoke-direct {v0, v1}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
@@ -567,23 +615,28 @@
 
     if-ne v5, v2, :cond_e
 
+    .line 22
     invoke-static {v0, v1, v3, v7, v9}, Lnet/jpountz/lz4/LZ4UnsafeUtils;->safeArraycopy([BI[BII)V
 
     sub-int/2addr v12, v4
 
     return v12
 
+    .line 23
     :cond_e
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 
-    invoke-static {v1, v14}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    .line 24
+    invoke-static {v1, v14}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
+    .line 25
     invoke-direct {v0, v1}, Lnet/jpountz/lz4/LZ4Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
 
+    .line 26
     :cond_f
     new-instance v0, Lnet/jpountz/lz4/LZ4Exception;
 

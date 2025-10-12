@@ -1,46 +1,63 @@
-.class public final synthetic Ljv8;
-.super Ljava/lang/Object;
+.class public final Ljv8;
+.super Luc0;
 .source "SourceFile"
 
-# interfaces
-.implements Lxu8;
 
-
-# instance fields
-.field public final synthetic a:Lsv8;
+# static fields
+.field public static final b:Ljv8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsv8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljv8;
 
-    iput-object p1, p0, Ljv8;->a:Lsv8;
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Ljv8;->b:Ljv8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llj0;Lmif;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p0, Ljv8;->a:Lsv8;
+    const/4 v0, 0x1
 
-    iget-object p1, p1, Lsv8;->i:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lvf5;
+    return v0
 
-    iget-object p1, p1, Lvf5;->w0:Lh6f;
+    :cond_0
+    instance-of p1, p1, Ljv8;
 
-    const/4 p2, 0x2
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, p2}, Lh6f;->e(I)V
+    const/4 p1, 0x0
 
-    const/16 p2, 0x16
+    return p1
 
-    invoke-virtual {p1, p2}, Lh6f;->f(I)Z
+    :cond_1
+    return v0
+.end method
 
-    return-void
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x31eac9b2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowSelectFileTypeDialog"
+
+    return-object v0
 .end method

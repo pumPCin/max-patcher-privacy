@@ -1,270 +1,205 @@
 .class public final Lj1;
-.super Lhv0;
+.super Lpr0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lsun/misc/Unsafe;
+# virtual methods
+.method public final R(Ls1;Ls1;)V
+    .locals 0
 
-.field public static final f:J
+    iput-object p2, p1, Ls1;->b:Ls1;
 
-.field public static final g:J
+    return-void
+.end method
 
-.field public static final h:J
+.method public final S(Ls1;Ljava/lang/Thread;)V
+    .locals 0
 
-.field public static final i:J
+    iput-object p2, p1, Ls1;->a:Ljava/lang/Thread;
 
-.field public static final j:J
+    return-void
+.end method
 
+.method public final g(Lu1;Ld1;Ld1;)Z
+    .locals 1
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    const-string v0, "a"
-
-    const-string v1, "b"
-
-    const-class v2, Lk1;
+    monitor-enter p1
 
     :try_start_0
-    invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
+    iget-object v0, p1, Lu1;->b:Ld1;
 
-    move-result-object v3
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lu1;->b:Ld1;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
     :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
-
-    :catch_0
-    :try_start_1
-    new-instance v3, Li1;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v3}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsun/misc/Unsafe;
-    :try_end_1
-    .catch Ljava/security/PrivilegedActionException; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_0
-    :try_start_2
-    const-class v4, Lm1;
-
-    const-string v5, "c"
-
-    invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v5
-
-    sput-wide v5, Lj1;->g:J
-
-    invoke-virtual {v4, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v5
-
-    sput-wide v5, Lj1;->f:J
-
-    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v4
-
-    sput-wide v4, Lj1;->h:J
-
-    invoke-virtual {v2, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v4
-
-    sput-wide v4, Lj1;->i:J
-
-    invoke-virtual {v2, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lj1;->j:J
-
-    sput-object v3, Lj1;->e:Lsun/misc/Unsafe;
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_1
-
-    return-void
-
-    :catch_1
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_2
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "Could not initialize intrinsics"
-
-    invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
+    throw p2
 .end method
 
+.method public final h(Lu1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
 
-# virtual methods
-.method public final A(Lm1;)Lk1;
-    .locals 3
+    monitor-enter p1
 
-    sget-object v0, Lk1;->c:Lk1;
+    :try_start_0
+    iget-object v0, p1, Lu1;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Lu1;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lm1;->c:Lk1;
+    const/4 p2, 0x0
 
-    if-ne v0, v1, :cond_1
+    monitor-exit p1
 
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0, p1, v1, v0}, Lj1;->f(Lm1;Lk1;Lk1;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
+    return p2
 
     :goto_0
-    return-object v1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
 .end method
 
-.method public final K(Lk1;Lk1;)V
-    .locals 3
+.method public final i(Lu1;Ls1;Ls1;)Z
+    .locals 1
 
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
+    monitor-enter p1
 
-    sget-wide v1, Lj1;->j:J
+    :try_start_0
+    iget-object v0, p1, Lu1;->c:Ls1;
 
-    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
+    if-ne v0, p2, :cond_0
 
-    return-void
-.end method
+    iput-object p3, p1, Lu1;->c:Ls1;
 
-.method public final L(Lk1;Ljava/lang/Thread;)V
-    .locals 3
+    const/4 p2, 0x1
 
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
+    monitor-exit p1
 
-    sget-wide v1, Lj1;->i:J
+    return p2
 
-    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
+    :catchall_0
+    move-exception p2
 
-    return-void
-.end method
-
-.method public final d(Lm1;Lv0;Lv0;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->f:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lg1;->a(Lsun/misc/Unsafe;Lm1;JLv0;Lv0;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final e(Lm1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->h:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lh1;->a(Lsun/misc/Unsafe;Lm1;JLjava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final f(Lm1;Lk1;Lk1;)Z
-    .locals 6
-
-    sget-object v0, Lj1;->e:Lsun/misc/Unsafe;
-
-    sget-wide v2, Lj1;->g:J
-
-    move-object v1, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v5}, Lf1;->a(Lsun/misc/Unsafe;Lm1;JLk1;Lk1;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final z(Lm1;)Lv0;
-    .locals 3
-
-    sget-object v0, Lv0;->d:Lv0;
+    goto :goto_0
 
     :cond_0
-    iget-object v1, p1, Lm1;->b:Lv0;
+    const/4 p2, 0x0
 
-    if-ne v0, v1, :cond_1
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final l(Lu1;)Ld1;
+    .locals 2
+
+    sget-object v0, Ld1;->d:Ld1;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, p1, Lu1;->b:Ld1;
+
+    if-eq v1, v0, :cond_0
+
+    iput-object v0, p1, Lu1;->b:Ld1;
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p0, p1, v1, v0}, Lj1;->d(Lm1;Lv0;Lv0;)Z
+    :catchall_0
+    move-exception v0
 
-    move-result v2
+    goto :goto_1
 
-    if-eqz v2, :cond_0
-
+    :cond_0
     :goto_0
+    monitor-exit p1
+
     return-object v1
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final m(Lu1;)Ls1;
+    .locals 2
+
+    sget-object v0, Ls1;->c:Ls1;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, p1, Lu1;->c:Ls1;
+
+    if-eq v1, v0, :cond_0
+
+    iput-object v0, p1, Lu1;->c:Ls1;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p1
+
+    return-object v1
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method

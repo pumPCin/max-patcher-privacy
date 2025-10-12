@@ -1,80 +1,73 @@
-.class public final Ljha;
-.super Ljava/lang/Object;
+.class public final enum Ljha;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Ljha;
 
-# instance fields
-.field public final synthetic X:J
+.field public static final enum b:Ljha;
 
-.field public final synthetic a:I
-
-.field public final synthetic b:Llha;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic o:Ljava/lang/Runnable;
+.field public static final synthetic c:[Ljha;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llha;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p6, p0, Ljha;->a:I
+    new-instance v0, Ljha;
 
-    iput-object p1, p0, Ljha;->b:Llha;
+    const-string v1, "ICON"
 
-    iput-object p2, p0, Ljha;->c:Landroid/graphics/drawable/Drawable;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Ljha;->o:Ljava/lang/Runnable;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide p4, p0, Ljha;->X:J
+    sput-object v0, Ljha;->a:Ljha;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Ljha;
+
+    const-string v2, "ICON_WITH_TEXT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ljha;->b:Ljha;
+
+    filled-new-array {v0, v1}, [Ljha;
+
+    move-result-object v0
+
+    sput-object v0, Ljha;->c:[Ljha;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ljha;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    const-class v0, Ljha;
 
-    iget v0, p0, Ljha;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Ljha;->o:Ljava/lang/Runnable;
+    check-cast p0, Ljha;
 
-    iget-wide v1, p0, Ljha;->X:J
+    return-object p0
+.end method
 
-    iget-object v3, p0, Ljha;->b:Llha;
+.method public static values()[Ljha;
+    .locals 1
 
-    iget-object v4, p0, Ljha;->c:Landroid/graphics/drawable/Drawable;
+    sget-object v0, Ljha;->c:[Ljha;
 
-    invoke-static {v3, v4, v0, v1, v2}, Llha;->c(Llha;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Ljha;->o:Ljava/lang/Runnable;
+    check-cast v0, [Ljha;
 
-    iget-wide v1, p0, Ljha;->X:J
-
-    iget-object v3, p0, Ljha;->b:Llha;
-
-    iget-object v4, p0, Ljha;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v3, v4, v0, v1, v2}, Llha;->c(Llha;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

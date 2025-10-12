@@ -1,64 +1,89 @@
 .class public final Latc;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lbtc;
+.implements Lje6;
 
 
-# static fields
-.field public static final a:Latc;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+    .locals 0
 
-    new-instance v0, Latc;
+    iput-object p2, p0, Latc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Latc;->a:Latc;
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Latc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of p1, p1, Latc;
+    check-cast p1, Latc;
 
-    if-nez p1, :cond_1
+    sget-object p2, Laxf;->a:Laxf;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, p2}, Latc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p1
-
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const v0, 0x726dbab4
+    new-instance v0, Latc;
 
-    return v0
-.end method
+    iget-object v1, p0, Latc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-direct {v0, p2, v1}, Latc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
 
-    const-string v0, "OutOfMemory"
+    iput-object p1, v0, Latc;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Latc;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iget-object v0, p0, Latc;->Y:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    iget-object v1, v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->D0:Luog;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1, p1}, Luog;->setDurationText(Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->M0()Landroid/widget/TextView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

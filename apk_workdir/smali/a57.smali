@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract getExtras()Ljava/util/Map;
-.end method
-
-.method public abstract getHeight()I
-.end method
-
-.method public abstract getWidth()I
+.method public abstract createImageTranscoder(Lt37;Z)Lz47;
 .end method

@@ -1,93 +1,55 @@
-.class public abstract synthetic Lv2g;
+.class public final Lv2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public a:Ljava/lang/Boolean;
 
+.field public b:Ljava/lang/Long;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.field public c:Ljava/lang/String;
 
-    const/16 v0, 0x9
+.field public d:Ljava/lang/String;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+.field public e:Ljava/lang/String;
 
-    move-result-object v0
+.field public f:Ljava/lang/String;
 
-    array-length v0, v0
+.field public g:Ljava/lang/String;
 
-    new-array v0, v0, [I
+.field public h:Ljava/lang/Boolean;
 
-    const/4 v1, 0x1
+.field public i:Ljava/lang/Integer;
 
-    const/4 v2, 0x0
+.field public j:Ljava/lang/Integer;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.field public k:Ljava/lang/Integer;
 
-    :catch_0
-    const/4 v2, 0x2
+.field public l:Ljava/lang/Boolean;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+.field public m:Ljava/lang/Boolean;
 
-    :catch_1
-    const/4 v1, 0x3
+.field public n:Ljava/lang/Boolean;
 
-    const/16 v3, 0x8
+.field public o:I
 
-    :try_start_2
-    aput v1, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+.field public p:I
 
-    :catch_2
-    const/4 v1, 0x4
+.field public q:Lw2g;
 
-    const/4 v4, 0x6
+.field public r:I
 
-    :try_start_3
-    aput v1, v0, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+.field public s:I
 
-    :catch_3
-    const/4 v5, 0x5
+.field public t:Ljava/lang/Boolean;
 
-    :try_start_4
-    aput v5, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+.field public u:Ljava/lang/Boolean;
 
-    :catch_4
-    :try_start_5
-    aput v4, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+.field public v:Ljava/lang/Boolean;
 
-    :catch_5
-    const/4 v1, 0x7
+.field public w:I
 
-    :try_start_6
-    aput v1, v0, v5
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+.field public x:Ljava/lang/Boolean;
 
-    :catch_6
-    :try_start_7
-    aput v3, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    sput-object v0, Lv2g;->$EnumSwitchMapping$0:[I
-
-    return-void
-.end method
+.field public y:Ljava/lang/Boolean;

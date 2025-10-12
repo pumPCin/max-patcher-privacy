@@ -1,30 +1,29 @@
-.class public interface abstract Lwz1;
-.super Ljava/lang/Object;
+.class public final Lwz1;
+.super Landroid/hardware/camera2/CameraDevice$StateCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lca0;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v1, Lca0;
-
-    invoke-direct {v1, v0}, Lca0;-><init>(Ljava/lang/Object;)V
-
-    sput-object v1, Lwz1;->a:Lca0;
+# virtual methods
+.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
 
     return-void
 .end method
 
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
 
-# virtual methods
-.method public abstract a(Ljava/util/List;)Ljava/util/List;
+    return-void
+.end method
+
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 0
+
+    return-void
 .end method

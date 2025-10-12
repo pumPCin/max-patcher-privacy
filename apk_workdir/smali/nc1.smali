@@ -1,77 +1,240 @@
 .class public final Lnc1;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Ler1;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lnc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    iput-object p1, p0, Lnc1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Q()V
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0:[Ltm7;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lnc1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-virtual {p0, p1, p2}, Lnc1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->F0()Ljc1;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lnc1;
 
-    iget-object v0, v0, Ljc1;->A0:Lmoe;
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lnc1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lnc1;
+
+    iget-object v1, p0, Lnc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    invoke-direct {v0, p2, v1}, Lnc1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+
+    iput-object p1, v0, Lnc1;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 17
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lnc1;->X:Ljava/lang/Object;
+
+    check-cast v1, Lac1;
+
+    iget-object v2, v0, Lnc1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+
+    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->u0:Lvoc;
+
+    sget-object v4, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lpl7;
+
+    const/4 v5, 0x6
+
+    aget-object v4, v4, v5
+
+    invoke-interface {v3, v2, v4}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lkr1;
+
+    iget-object v4, v1, Lac1;->a:Lhd0;
+
+    invoke-virtual {v3, v4}, Lkr1;->setAvatar(Lhd0;)V
+
+    iget-object v4, v1, Lac1;->c:Lod8;
+
+    sget-object v5, Lod8;->b:Lod8;
+
+    if-ne v4, v5, :cond_0
+
+    sget-object v6, Lb3g;->b:Lb3g;
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    sget-object v6, Lb3g;->o:Lb3g;
 
-    move-result-object v1
+    :goto_0
+    invoke-virtual {v3, v6}, Lkr1;->setButtonAction(Lb3g;)V
 
-    move-object v2, v1
+    if-ne v4, v5, :cond_1
 
-    check-cast v2, Lcc1;
+    const/4 v4, 0x1
 
-    iget-boolean v3, v2, Lcc1;->d:Z
+    goto :goto_1
 
-    xor-int/lit8 v6, v3, 0x1
+    :cond_1
+    const/4 v4, 0x0
 
-    const/4 v9, 0x0
+    :goto_1
+    iget-boolean v5, v1, Lac1;->d:Z
 
-    const/16 v10, 0x77
-
-    const/4 v3, 0x0
+    invoke-virtual {v3, v4, v5}, Lkr1;->F(ZZ)V
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    invoke-virtual {v3, v4, v4}, Lkr1;->G(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    const/4 v7, 0x0
+    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Landroid/widget/TextView;
 
-    const/4 v8, 0x0
+    move-result-object v3
 
-    invoke-static/range {v2 .. v10}, Lcc1;->a(Lcc1;Lqd0;Lve8;Lve8;ZLoef;Ljava/util/ArrayList;Loef;I)Lcc1;
+    iget-object v4, v1, Lac1;->e:Lcdf;
+
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->B0()Ly5d;
+
+    move-result-object v5
+
+    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->v0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v7, v3
+
+    check-cast v7, Landroid/graphics/drawable/Drawable;
+
+    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->w0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v6, v3
+
+    check-cast v6, Landroid/graphics/drawable/Drawable;
+
+    iget-object v8, v1, Lac1;->b:Lod8;
+
+    sget v3, Lbhc;->call_microphone_enabled_accessibility:I
+
+    new-instance v9, Lxcf;
+
+    invoke-direct {v9, v3}, Lxcf;-><init>(I)V
+
+    sget v3, Lbhc;->call_microphone_disabled_accessibility:I
+
+    new-instance v10, Lxcf;
+
+    invoke-direct {v10, v3}, Lxcf;-><init>(I)V
+
+    invoke-static/range {v5 .. v10}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0(Ly5d;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lod8;Lxcf;Lxcf;)V
+
+    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->E0()Ly5d;
+
+    move-result-object v11
+
+    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v13, v3
+
+    check-cast v13, Landroid/graphics/drawable/Drawable;
+
+    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->y0:Ljava/lang/Object;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v12, v3
+
+    check-cast v12, Landroid/graphics/drawable/Drawable;
+
+    iget-object v14, v1, Lac1;->c:Lod8;
+
+    sget v3, Lbhc;->call_video_enabled_accessibility:I
+
+    new-instance v15, Lxcf;
+
+    invoke-direct {v15, v3}, Lxcf;-><init>(I)V
+
+    sget v3, Lbhc;->call_video_disabled_accessibility:I
+
+    new-instance v4, Lxcf;
+
+    invoke-direct {v4, v3}, Lxcf;-><init>(I)V
+
+    move-object/from16 v16, v4
+
+    invoke-static/range {v11 .. v16}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->H0(Ly5d;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lod8;Lxcf;Lxcf;)V
+
+    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lwua;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, v1, Lac1;->f:Ljava/util/List;
 
-    move-result v1
+    invoke-virtual {v2, v3}, Lwua;->setAvatars(Ljava/util/List;)V
 
-    if-eqz v1, :cond_0
+    iget-object v1, v1, Lac1;->g:Lcdf;
 
-    return-void
+    invoke-virtual {v2, v1}, Lwua;->setTitle(Lcdf;)V
+
+    sget-object v1, Laxf;->a:Laxf;
+
+    return-object v1
 .end method

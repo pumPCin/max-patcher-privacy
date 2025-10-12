@@ -1,19 +1,72 @@
 .class public final Ll9g;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lm9g;
 
-# instance fields
-.field public a:Lk9g;
+
+# static fields
+.field public static final a:Ll9g;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ll9g;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ll9g;->a:Ll9g;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final setPlayer(Lb0b;)V
+.method public final a(Landroid/graphics/Matrix;II)Lorg/webrtc/SurfaceTextureHelper$FrameGeometry;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Ll9g;->a:Lk9g;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Lk9g;->setPlayer(Lb0b;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Ll9g;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x62c43bf4
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "NoOp"
+
+    return-object v0
 .end method

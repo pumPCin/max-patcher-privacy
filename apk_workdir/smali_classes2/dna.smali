@@ -1,75 +1,79 @@
-.class public final Ldna;
-.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
+.class public abstract Ldna;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final bridge contains(Ljava/lang/Object;)Z
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    if-nez p1, :cond_0
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    const/4 v0, 0x1
+    sput v0, Ldna;->a:I
 
-    goto :goto_0
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    sput v0, Ldna;->b:I
 
-    :goto_0
-    if-nez v0, :cond_1
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
 
-    const/4 p1, 0x0
+    sput v0, Ldna;->c:I
 
-    return p1
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
 
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
+    sput v0, Ldna;->d:I
 
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
 
-    move-result p1
+    sput v0, Ldna;->e:I
 
-    return p1
-.end method
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 0
+    sput v0, Ldna;->f:I
 
-    check-cast p1, Ljava/lang/Runnable;
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_rate_view_title:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
+    sput v0, Ldna;->g:I
 
-    move-result p1
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_thank_view:I
 
-    return p1
-.end method
+    sput v0, Ldna;->h:I
 
-.method public final bridge remove(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
 
-    if-nez p1, :cond_0
+    sput v0, Ldna;->i:I
 
-    const/4 v0, 0x1
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_thank_view_icon:I
 
-    goto :goto_0
+    sput v0, Ldna;->j:I
 
-    :cond_0
-    instance-of v0, p1, Ljava/lang/Runnable;
+    sget v0, Lscc;->fake_in_app_review_bottom_sheet_thank_view_title:I
 
-    :goto_0
-    if-nez v0, :cond_1
+    sput v0, Ldna;->k:I
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ljava/lang/Runnable;
-
-    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

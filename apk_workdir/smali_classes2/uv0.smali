@@ -2,69 +2,138 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Z
-
-.field public final Z:J
-
-.field public final a:Lsv0;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lrv0;
-
-.field public final o:Ljava/lang/String;
+.field public final a:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Lpf;)V
-    .locals 2
+.method public constructor <init>(Lyn7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lpf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsv0;
-
-    iput-object v0, p0, Luv0;->a:Lsv0;
-
-    iget-object v0, p1, Lpf;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Luv0;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Lpf;->e:Ljava/lang/Object;
-
-    check-cast v0, Lrv0;
-
-    iput-object v0, p0, Luv0;->c:Lrv0;
-
-    iget-object v0, p1, Lpf;->f:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Luv0;->o:Ljava/lang/String;
-
-    iget-object v0, p1, Lpf;->g:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Luv0;->X:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lpf;->a:Z
-
-    iput-boolean v0, p0, Luv0;->Y:Z
-
-    iget-wide v0, p1, Lpf;->b:J
-
-    iput-wide v0, p0, Luv0;->Z:J
+    iput-object p1, p0, Luv0;->a:Lyn7;
 
     return-void
+.end method
+
+.method public static a()Lnha;
+    .locals 7
+
+    new-instance v0, Lnha;
+
+    sget v1, Loqa;->a1:I
+
+    sget v2, Lqqa;->B:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget v3, Ll7d;->s1:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x34
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lnha;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
+.method public static b()Lnha;
+    .locals 7
+
+    new-instance v0, Lnha;
+
+    sget v1, Loqa;->b1:I
+
+    sget v2, Lqqa;->B:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget v3, Ll7d;->t1:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x34
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lnha;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
+.method public static c()Lnha;
+    .locals 7
+
+    new-instance v0, Lnha;
+
+    sget v1, Loqa;->r1:I
+
+    sget v2, Lqqa;->C:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget v3, Ll7d;->L0:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x34
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lnha;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
+.end method
+
+.method public static d()Lnha;
+    .locals 7
+
+    new-instance v0, Lnha;
+
+    sget v1, Loqa;->t1:I
+
+    sget v2, Lqqa;->O:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget v3, Ll7d;->k1:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x34
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lnha;-><init>(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)V
+
+    return-object v0
 .end method

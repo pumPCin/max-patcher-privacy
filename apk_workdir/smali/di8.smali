@@ -1,65 +1,129 @@
 .class public final Ldi8;
-.super Lci8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:Lau8;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lau8;)V
+.method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
-    iput-object p1, p0, Ldi8;->g:Lau8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lci8;-><init>(Lau8;)V
+    iput-object p1, p0, Ldi8;->a:Ljava/lang/String;
+
+    iput-boolean p2, p0, Ldi8;->b:Z
+
+    iput-boolean p3, p0, Ldi8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lut8;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Ldi8;->g:Lau8;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, v0, Lau8;->Y:Lai8;
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-class v1, Ldi8;
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Ldi8;
+
+    iget-object v0, p0, Ldi8;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Ldi8;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Ldi8;->b:Z
+
+    iget-boolean v1, p1, Ldi8;->b:Z
+
+    if-ne v0, v1, :cond_2
+
+    iget-boolean v0, p0, Ldi8;->c:Z
+
+    iget-boolean p1, p1, Ldi8;->c:Z
+
+    if-ne v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-object v0, p0, Ldi8;->a:Ljava/lang/String;
+
+    const/16 v1, 0x1f
+
+    invoke-static {v1, v1, v0}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ldi8;->b:Z
+
+    const/16 v3, 0x4d5
+
+    const/16 v4, 0x4cf
+
+    if-eqz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Ldi8;->c:Z
 
     if-eqz v1, :cond_1
 
-    iget-object v0, v0, Lau8;->c:Lai8;
-
-    if-ne v1, v0, :cond_0
-
-    new-instance v0, Lut8;
-
-    iget-object v1, p0, Lum4;->b:Ljava/lang/Object;
-
-    check-cast v1, Lbi8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lf4;->f(Lbi8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lut8;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, v1, Lai8;->d:Lut8;
-
-    return-object v0
+    move v3, v4
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    add-int/2addr v0, v3
 
-    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method

@@ -1,68 +1,89 @@
-.class public final Losa;
-.super Lsn;
+.class public final synthetic Losa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvsa;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lvsa;I)V
+    .locals 0
+
+    iput p2, p0, Losa;->a:I
+
+    iput-object p1, p0, Losa;->b:Lvsa;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(ZLuxa;)V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget p1, p0, Losa;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Losa;->b:Lvsa;
+
+    iget-object p1, p1, Lvsa;->B0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/AppCompatEditText;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Losa;->b:Lvsa;
+
+    invoke-virtual {p1}, Lvsa;->d()V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Losa;->b:Lvsa;
+
+    invoke-virtual {p1}, Lvsa;->b()V
+
+    iget-object p1, p1, Lvsa;->t0:Lssa;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p2}, Luxa;->getIcon()Lk27;
-
-    move-result-object p1
-
-    iget p1, p1, Lk27;->k:I
-
-    goto :goto_0
+    invoke-interface {p1}, Lssa;->p()V
 
     :cond_0
-    invoke-interface {p2}, Luxa;->i()Ljye;
+    return-void
 
-    move-result-object p1
+    :pswitch_2
+    iget-object p1, p0, Losa;->b:Lvsa;
 
-    iget-object p1, p1, Ljye;->b:Loye;
-
-    iget p1, p1, Loye;->b:I
-
-    :goto_0
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+    invoke-virtual {p1}, Lvsa;->d()V
 
     return-void
-.end method
 
-.method public final onThemeChanged(Luxa;)V
-    .locals 1
+    nop
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0, p1}, Losa;->b(ZLuxa;)V
-
-    return-void
-.end method
-
-.method public setChecked(Z)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Losa;->b(ZLuxa;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

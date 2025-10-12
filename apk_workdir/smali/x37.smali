@@ -1,12 +1,14 @@
-.class public interface abstract annotation Lx37;
+.class public interface abstract Lx37;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
 
+# virtual methods
+.method public abstract b(Lzc5;)V
+.end method
 
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+.method public abstract d()Lk6f;
+.end method
+
+.method public abstract getTimestamp()J
+.end method

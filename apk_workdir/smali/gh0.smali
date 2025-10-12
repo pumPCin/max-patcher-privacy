@@ -2,162 +2,145 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lov7;
+
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final a:J
 
-.field public final b:Le8e;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Ly9b;
-
-.field public final e:Ly9b;
-
-.field public final f:Lxg0;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lov0;Lr8f;)V
-    .locals 1
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgh0;->a:Landroid/app/Application;
+    iput-wide p1, p0, Lgh0;->a:J
 
-    const/4 p1, 0x0
-
-    const/4 v0, 0x7
-
-    invoke-static {p1, p1, v0}, Lf8e;->b(III)Le8e;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgh0;->b:Le8e;
-
-    check-cast p3, Lwla;
-
-    invoke-virtual {p3}, Lwla;->c()Le88;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Le88;->getImmediate()Le88;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance p1, Ly9b;
-
-    sget-object p3, Lz9b;->f:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Ly9b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lgh0;->d:Ly9b;
-
-    new-instance p1, Ly9b;
-
-    sget-object p3, Lz9b;->l:[Ljava/lang/String;
-
-    invoke-direct {p1, p3}, Ly9b;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lgh0;->e:Ly9b;
-
-    new-instance p1, Lxg0;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p3, p0}, Lxg0;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lgh0;->f:Lxg0;
-
-    invoke-virtual {p2, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput-object p3, p0, Lgh0;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lc0g;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance p1, Lbh0;
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, p0, v0}, Lbh0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lgh0;
 
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lgh0;
+
+    iget-wide v3, p0, Lgh0;->a:J
+
+    iget-wide v5, p1, Lgh0;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lgh0;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lgh0;->b:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final onEvent(Ldcb;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final getItemId()J
+    .locals 2
 
-    new-instance p1, Lzg0;
+    iget-wide v0, p0, Lgh0;->a:J
 
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lzg0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    return-wide v0
 .end method
 
-.method public final onEvent(Lrx3;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Lah0;
+    iget-wide v0, p0, Lgh0;->a:J
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {p1, p0, v0}, Lah0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    const/4 v1, 0x3
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v1, p0, Lgh0;->b:Ljava/util/List;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final onEvent(Ly48;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
-
-    new-instance p1, Lyg0;
+.method public final m()I
+    .locals 1
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lyg0;-><init>(Lgh0;Lkotlin/coroutines/Continuation;)V
+    return v0
+.end method
 
-    const/4 v1, 0x3
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v2, p0, Lgh0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    const-string v1, "BannerViewPagerListItem(itemId="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lgh0;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", items="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgh0;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

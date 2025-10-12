@@ -1,126 +1,192 @@
 .class public final Ldi5;
-.super Li9f;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Comparable;
+.implements Lvof;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Landroid/view/View;
 
-.field public final o:Ljava/util/zip/ZipEntry;
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/zip/ZipEntry;I)V
-    .locals 2
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getCrc()J
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    move-result-wide v0
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iput-boolean v0, p0, Ldi5;->b:Z
 
-    move-result-object v0
-
-    const/16 v1, 0xb
-
-    invoke-direct {p0, p1, v1, v0}, Li9f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object p2, p0, Ldi5;->o:Ljava/util/zip/ZipEntry;
-
-    iput p3, p0, Ldi5;->X:I
+    iput-object p1, p0, Ldi5;->a:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+.method public final a(Lwof;)V
+    .locals 0
 
-    check-cast p1, Ldi5;
-
-    iget-object v0, p0, Li9f;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iget-object p1, p1, Li9f;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final b()V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ldi5;->a:Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
-    return v0
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    sget-object v1, Lvlg;->a:Lbmg;
+
+    invoke-virtual {v1, v0}, Lnjg;->v(Landroid/view/View;)F
+
+    move-result v1
+
+    goto :goto_0
 
     :cond_0
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_2
-
-    const-class v2, Ldi5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldi5;
-
-    iget-object v2, p0, Ldi5;->o:Ljava/util/zip/ZipEntry;
-
-    iget-object v3, p1, Ldi5;->o:Ljava/util/zip/ZipEntry;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v2, p0, Ldi5;->X:I
-
-    iget p1, p1, Ldi5;->X:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
+    sget v2, Lsbc;->transition_pause_alpha:I
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final c(Lwof;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final d(Lwof;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 3
+
+    sget v0, Lsbc;->transition_pause_alpha:I
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Ldi5;->a:Landroid/view/View;
+
+    invoke-virtual {v2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final h(Lwof;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    iget v0, p0, Ldi5;->X:I
+    const/high16 p1, 0x3f800000    # 1.0f
 
-    mul-int/lit8 v0, v0, 0x1f
+    sget-object v0, Lvlg;->a:Lbmg;
 
-    iget-object v1, p0, Ldi5;->o:Ljava/util/zip/ZipEntry;
+    iget-object v1, p0, Ldi5;->a:Landroid/view/View;
 
-    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->hashCode()I
+    invoke-virtual {v0, v1, p1}, Lnjg;->C(Landroid/view/View;F)V
 
-    move-result v1
+    return-void
+.end method
 
-    add-int/2addr v1, v0
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    return v1
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, p1, v0}, Ldi5;->onAnimationEnd(Landroid/animation/Animator;Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 2
+
+    .line 2
+    iget-boolean p1, p0, Ldi5;->b:Z
+
+    iget-object v0, p0, Ldi5;->a:Landroid/view/View;
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    const/4 v1, 0x0
+
+    .line 3
+    invoke-virtual {v0, p1, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    :cond_0
+    if-nez p2, :cond_1
+
+    .line 4
+    sget-object p1, Lvlg;->a:Lbmg;
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0, p2}, Lnjg;->C(Landroid/view/View;F)V
+
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget-object p1, p0, Ldi5;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->hasOverlappingRendering()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ldi5;->b:Z
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    :cond_0
+    return-void
 .end method

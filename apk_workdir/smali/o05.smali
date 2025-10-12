@@ -1,15 +1,55 @@
-.class public abstract Lo05;
+.class public final Lo05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Landroid/util/SparseArray;
+
+
 # direct methods
-.method public static final a(Ljava/time/Duration;)J
-    .locals 2
+.method public constructor <init>(IZIIIIIIILandroid/util/SparseArray;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide v0
+    iput p1, p0, Lo05;->a:I
 
-    return-wide v0
+    iput-boolean p2, p0, Lo05;->b:Z
+
+    iput p3, p0, Lo05;->c:I
+
+    iput p4, p0, Lo05;->d:I
+
+    iput p5, p0, Lo05;->e:I
+
+    iput p6, p0, Lo05;->f:I
+
+    iput p7, p0, Lo05;->g:I
+
+    iput p8, p0, Lo05;->h:I
+
+    iput p9, p0, Lo05;->i:I
+
+    iput-object p10, p0, Lo05;->j:Landroid/util/SparseArray;
+
+    return-void
 .end method

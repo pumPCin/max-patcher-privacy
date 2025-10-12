@@ -1,105 +1,39 @@
 .class public final Lbi9;
-.super Ljava/lang/Object;
+.super Lrc4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Le8e;
+# static fields
+.field public static final b:Lbi9;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public static final c:Lmc4;
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbi9;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Lrc4;-><init>()V
 
-    const/4 v1, 0x7
+    sput-object v0, Lbi9;->b:Lbi9;
 
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":settings/messages"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
     move-result-object v0
 
-    iput-object v0, p0, Lbi9;->a:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lbi9;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onEvent(Llu4;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 1
-    new-instance v0, Lxh9;
-
-    iget-wide v1, p1, Llu4;->X:J
-
-    iget-object p1, p1, Llu4;->o:Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, p1}, Lxh9;-><init>(JLjava/lang/String;)V
-
-    .line 2
-    new-instance p1, Lai9;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v0, v1}, Lai9;-><init>(Lbi9;Lzh9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v2, p0, Lbi9;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, p1, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
-.end method
-
-.method public final onEvent(Lnu4;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 3
-    new-instance v0, Lyh9;
-
-    iget-wide v1, p1, Lnu4;->o:J
-
-    iget-object p1, p1, Lnu4;->c:Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, p1}, Lyh9;-><init>(JLjava/lang/String;)V
-
-    .line 4
-    new-instance p1, Lai9;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v0, v1}, Lai9;-><init>(Lbi9;Lzh9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v2, p0, Lbi9;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, p1, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    sput-object v0, Lbi9;->c:Lmc4;
 
     return-void
 .end method

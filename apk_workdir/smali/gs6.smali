@@ -1,42 +1,69 @@
-.class public final synthetic Lgs6;
-.super Ljava/lang/Object;
+.class public final Lgs6;
+.super Ljs6;
 .source "SourceFile"
 
-# interfaces
-.implements Lvs4;
 
-
-# instance fields
-.field public final synthetic a:Lhs6;
-
-.field public final synthetic b:Ljava/lang/Runnable;
+# static fields
+.field public static final c:Lgs6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhs6;Ljava/lang/Runnable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgs6;
 
-    iput-object p1, p0, Lgs6;->a:Lhs6;
+    sget v1, Lgja;->p:I
 
-    iput-object p2, p0, Lgs6;->b:Ljava/lang/Runnable;
+    new-instance v2, Lxcf;
+
+    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v2, v1}, Ljs6;-><init>(Lxcf;Lxcf;)V
+
+    sput-object v0, Lgs6;->c:Lgs6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lgs6;->b:Ljava/lang/Runnable;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lgs6;->a:Lhs6;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, v1, Lhs6;->a:Landroid/os/Handler;
+    return v0
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    :cond_0
+    instance-of p1, p1, Lgs6;
 
-    return-void
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x783d121b
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Connected"
+
+    return-object v0
 .end method

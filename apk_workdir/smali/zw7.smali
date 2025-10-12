@@ -3,89 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Lzba;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Lr8a;
+
+.field public final c:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lzw7;->a:I
-
-    iput-object p2, p0, Lzw7;->b:Ljava/lang/Object;
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lr8a;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method private final a(Landroid/widget/AdapterView;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-.method private final b(Landroid/widget/AdapterView;)V
-    .locals 0
+    iput-object v0, p0, Lzw7;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p1, p0, Lzw7;->c:Ljava/util/concurrent/Executor;
+
+    iput-object p2, p0, Lzw7;->b:Lr8a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 0
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
-    iget p1, p0, Lzw7;->a:I
+    check-cast p1, Lax7;
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Lfr5;
 
-    iget-object p1, p0, Lzw7;->b:Ljava/lang/Object;
+    const/16 v1, 0x14
 
-    check-cast p1, Landroidx/appcompat/widget/e;
+    invoke-direct {v0, p0, v1, p1}, Lfr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, p3}, Landroidx/appcompat/widget/e;->onItemSelected(I)Z
+    iget-object p1, p0, Lzw7;->c:Ljava/util/concurrent/Executor;
 
-    return-void
-
-    :pswitch_0
-    const/4 p1, -0x1
-
-    if-eq p3, p1, :cond_0
-
-    iget-object p1, p0, Lzw7;->b:Ljava/lang/Object;
-
-    check-cast p1, Lex7;
-
-    iget-object p1, p1, Lex7;->c:Llz4;
-
-    if-eqz p1, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Llz4;->setListSelectionHidden(Z)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-
-    iget p1, p0, Lzw7;->a:I
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

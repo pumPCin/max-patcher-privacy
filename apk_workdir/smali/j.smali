@@ -1,5 +1,5 @@
 .class public final Lj;
-.super Lv2;
+.super Ld3;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
     sput-object v0, Lj;->c:Lj;
 

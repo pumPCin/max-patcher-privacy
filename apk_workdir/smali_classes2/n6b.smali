@@ -1,42 +1,59 @@
-.class public final Ln6b;
+.class public interface abstract Ln6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoEncoderFactory;
 
+# virtual methods
+.method public abstract a(Lo6b;Lorg/webrtc/SessionDescription;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Lpmc;Ljava/lang/IllegalStateException;)V
-    .locals 2
+.method public abstract b(Lo6b;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract c(Lo6b;)V
+.end method
 
-    const-string v0, "PatchedVideoEncoderFactory"
+.method public abstract e(Ljava/lang/String;)V
+.end method
 
-    const-string v1, "Video encoder factory init failed"
+.method public abstract f(Lo6b;Ljava/lang/String;)V
+.end method
 
-    invoke-interface {p1, v0, v1, p2}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public abstract g(Lo6b;[Lorg/webrtc/IceCandidate;)V
+.end method
+
+.method public abstract i(Lo6b;Lorg/webrtc/PeerConnection$SignalingState;)V
+.end method
+
+.method public abstract j(Lo6b;Lorg/webrtc/IceCandidate;)V
+.end method
+
+.method public abstract k(Lo6b;Lorg/webrtc/SessionDescription;)V
+.end method
+
+.method public abstract l(Lo6b;Lorg/webrtc/PeerConnection$IceConnectionState;)V
+.end method
+
+.method public m(Lo6b;J)V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
+.method public abstract o(Lo6b;)V
 .end method
 
-.method public final getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-    .locals 1
+.method public onIceRestart()V
+    .locals 0
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    new-array v0, v0, [Lorg/webrtc/VideoCodecInfo;
+.method public abstract onNegotiationError(Llw9;)V
+.end method
 
-    return-object v0
+.method public abstract onPeerConnectionStateChanged(Lorg/webrtc/PeerConnection$PeerConnectionState;)V
+.end method
+
+.method public abstract onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
 .end method

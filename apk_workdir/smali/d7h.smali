@@ -3,599 +3,378 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ld7h;
+
+
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Lone/me/sdk/arch/Widget;
-
-.field public final c:Ljava/lang/Object;
+.field public final a:Lb7h;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/arch/Widget;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    sget-object v0, La7h;->q:Ld7h;
+
+    sput-object v0, Ld7h;->b:Ld7h;
+
+    return-void
+
+    :cond_0
+    sget-object v0, Lb7h;->b:Ld7h;
+
+    sput-object v0, Ld7h;->b:Ld7h;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 1
 
-    iput p2, p0, Ld7h;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
+    .line 8
+    new-instance v0, Lb7h;
 
-    new-instance p1, Lwsf;
+    invoke-direct {v0, p0}, Lb7h;-><init>(Ld7h;)V
 
-    const/16 p2, 0xf
+    iput-object v0, p0, Ld7h;->a:Lb7h;
 
-    invoke-direct {p1, p2, p0}, Lwsf;-><init>(ILjava/lang/Object;)V
+    return-void
+.end method
 
-    const/4 p2, 0x3
+.method public constructor <init>(Landroid/view/WindowInsets;)V
+    .locals 2
 
-    invoke-static {p2, p1}, Lvr0;->r(ILve6;)Lbp7;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
+    new-instance v0, La7h;
+
+    invoke-direct {v0, p0, p1}, La7h;-><init>(Ld7h;Landroid/view/WindowInsets;)V
+
+    iput-object v0, p0, Ld7h;->a:Lb7h;
+
+    return-void
+
+    :cond_0
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_1
+
+    .line 4
+    new-instance v0, Ly6h;
+
+    invoke-direct {v0, p0, p1}, Ly6h;-><init>(Ld7h;Landroid/view/WindowInsets;)V
+
+    iput-object v0, p0, Ld7h;->a:Lb7h;
+
+    return-void
+
+    :cond_1
+    const/16 v1, 0x1c
+
+    if-lt v0, v1, :cond_2
+
+    .line 5
+    new-instance v0, Lx6h;
+
+    invoke-direct {v0, p0, p1}, Lx6h;-><init>(Ld7h;Landroid/view/WindowInsets;)V
+
+    iput-object v0, p0, Ld7h;->a:Lb7h;
+
+    return-void
+
+    .line 6
+    :cond_2
+    new-instance v0, Lw6h;
+
+    invoke-direct {v0, p0, p1}, Lw6h;-><init>(Ld7h;Landroid/view/WindowInsets;)V
+
+    iput-object v0, p0, Ld7h;->a:Lb7h;
+
+    return-void
+.end method
+
+.method public static e(Lwb7;IIII)Lwb7;
+    .locals 5
+
+    iget v0, p0, Lwb7;->a:I
+
+    sub-int/2addr v0, p1
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iget v2, p0, Lwb7;->b:I
+
+    sub-int/2addr v2, p2
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    iget v3, p0, Lwb7;->c:I
+
+    sub-int/2addr v3, p3
+
+    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    iget v4, p0, Lwb7;->d:I
+
+    sub-int/2addr v4, p4
+
+    invoke-static {v1, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    if-ne v0, p1, :cond_0
+
+    if-ne v2, p2, :cond_0
+
+    if-ne v3, p3, :cond_0
+
+    if-ne v1, p4, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-static {v0, v2, v3, v1}, Lwb7;->b(IIII)Lwb7;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/view/View;Landroid/view/WindowInsets;)Ld7h;
+    .locals 2
+
+    new-instance v0, Ld7h;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v0, p1}, Ld7h;-><init>(Landroid/view/WindowInsets;)V
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lijg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p0}, Lxig;->a(Landroid/view/View;)Ld7h;
 
     move-result-object p1
 
-    iput-object p1, p0, Ld7h;->c:Ljava/lang/Object;
+    iget-object v1, v0, Ld7h;->a:Lb7h;
 
-    return-void
+    invoke-virtual {v1, p1}, Lb7h;->q(Ld7h;)V
 
-    :pswitch_0
-    sget-object p2, Lm9b;->a:Lm9b;
+    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
-    invoke-virtual {p2}, Lscout/Component;->getAccessor()La5;
+    move-result-object p0
 
-    move-result-object p2
+    invoke-virtual {v1, p0}, Lb7h;->d(Landroid/view/View;)V
 
-    const-class v0, Lh6g;
-
-    invoke-virtual {p2, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object p2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    iput-object p2, p0, Ld7h;->c:Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private final d([Ljava/lang/String;IIII)V
-    .locals 0
-
-    return-void
+    :cond_0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public final a()I
+    .locals 1
 
-    new-instance v0, Lava;
+    iget-object v0, p0, Ld7h;->a:Lb7h;
 
-    iget-object v1, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-direct {v0, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget v1, Lsja;->a:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lava;->g(Loef;)V
-
-    invoke-virtual {v0}, Lava;->i()Lzua;
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 12
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    sget v0, Lsja;->i:I
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2, v2, v1}, Lqe0;->c(ILandroid/os/Bundle;Lhfd;I)Lsl3;
+    invoke-virtual {v0}, Lb7h;->j()Lwb7;
 
     move-result-object v0
 
-    sget v1, Lsja;->h:I
+    iget v0, v0, Lwb7;->d:I
 
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v3}, Lsl3;->f(Loef;)V
-
-    sget v1, Lrja;->c:I
-
-    sget v3, Lsja;->g:I
-
-    new-instance v4, Ljef;
-
-    invoke-direct {v4, v3}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v1, v4}, Lsl3;->c(ILoef;)V
-
-    invoke-virtual {v0}, Lsl3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v6
-
-    iget-object v0, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {v6, v0}, Lb04;->setTargetController(Lb04;)V
-
-    invoke-virtual {v6, v0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object v1, v0
-
-    :goto_0
-    invoke-virtual {v1}, Lb04;->getParentController()Lb04;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v1}, Lb04;->getParentController()Lb04;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v3, v1, Lo8d;
-
-    if-eqz v3, :cond_1
-
-    check-cast v1, Lo8d;
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v2
-
-    :goto_1
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Lo8d;->f0()Li8d;
-
-    move-result-object v2
-
-    :cond_2
-    invoke-virtual {v6, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v2, :cond_3
-
-    new-instance v5, Ll8d;
-
-    const/4 v10, 0x0
-
-    const/4 v11, -0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v5 .. v11}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    const-string v3, "BottomSheetWidget"
-
-    invoke-static {v0, v5, v1, v3}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {v2, v5}, Li8d;->H(Ll8d;)V
-
-    :cond_3
-    return-void
+    return v0
 .end method
 
-.method public final c([Ljava/lang/String;IIII)V
-    .locals 8
+.method public final b()I
+    .locals 1
 
-    iget v0, p0, Ld7h;->a:I
+    iget-object v0, p0, Ld7h;->a:Lb7h;
 
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    new-instance v1, Lone/me/sdk/permissionhost/PermissionBottomSheet;
-
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    move v6, p5
-
-    invoke-direct/range {v1 .. v6}, Lone/me/sdk/permissionhost/PermissionBottomSheet;-><init>([Ljava/lang/String;IIII)V
-
-    iget-object p1, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {v1, p1}, Lb04;->setTargetController(Lb04;)V
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object p2, p1
-
-    :goto_0
-    invoke-virtual {p2}, Lb04;->getParentController()Lb04;
-
-    move-result-object p3
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p2}, Lb04;->getParentController()Lb04;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p3, p2, Lo8d;
-
-    const/4 p4, 0x0
-
-    if-eqz p3, :cond_1
-
-    check-cast p2, Lo8d;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p2, p4
-
-    :goto_1
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2}, Lo8d;->f0()Li8d;
-
-    move-result-object p4
-
-    :cond_2
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz p4, :cond_3
-
-    move-object v2, v1
-
-    new-instance v1, Ll8d;
-
-    const/4 v6, 0x0
-
-    const/4 v7, -0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v7}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x1
-
-    const-string p3, "BottomSheetWidget"
-
-    invoke-static {p1, v1, p2, p3}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
-
-    invoke-virtual {p4, v1}, Li8d;->H(Ll8d;)V
-
-    :cond_3
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(I[Ljava/lang/String;)V
-    .locals 3
-
-    iget v0, p0, Ld7h;->a:I
-
-    iget-object v1, p0, Ld7h;->c:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    const/16 v0, 0xb4
-
-    iget-object v2, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    if-ne p1, v0, :cond_0
-
-    check-cast v1, Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lh6g;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lvd7;->a:Ljava/lang/String;
-
-    iget-boolean p1, p1, Lh6g;->a:Z
-
-    :try_start_0
-    invoke-static {p2, p1}, Lvd7;->c(Landroid/content/Context;Z)Landroid/content/Intent;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lv3d;
-
-    invoke-direct {v0, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_0
-    invoke-static {p1}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    sget-object v0, Lvd7;->a:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "showFsiSettings getOpenFsiSettingsIntent error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lvd7;->a:Ljava/lang/String;
-
-    invoke-static {p2}, Lvd7;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    invoke-virtual {p2, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v2, p2, p1}, Lb04;->requestPermissions([Ljava/lang/String;I)V
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :pswitch_0
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lb7h;->j()Lwb7;
 
     move-result-object v0
 
-    check-cast v0, Ld7h;
+    iget v0, v0, Lwb7;->a:I
 
-    invoke-virtual {v0, p1, p2}, Ld7h;->e(I[Ljava/lang/String;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final f(Ljava/lang/String;)Z
-    .locals 2
+.method public final c()I
+    .locals 1
 
-    iget v0, p0, Ld7h;->a:I
+    iget-object v0, p0, Ld7h;->a:Lb7h;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lb7h;->j()Lwb7;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v0
 
-    const/16 v1, 0x1d
+    iget v0, v0, Lwb7;->c:I
 
-    if-lt v0, v1, :cond_0
+    return v0
+.end method
 
-    sget-object v0, Lz9b;->d:[Ljava/lang/String;
+.method public final d()I
+    .locals 1
 
-    sget-object v0, Lz9b;->p:[Ljava/lang/String;
+    iget-object v0, p0, Ld7h;->a:Lb7h;
 
-    invoke-static {v0, p1}, Lhs;->V([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lb7h;->j()Lwb7;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget v0, v0, Lwb7;->b:I
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
 
     const/4 p1, 0x1
 
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {v0, p1}, Lb04;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
-
-    move-result p1
-
-    :goto_0
     return p1
 
-    :pswitch_0
-    iget-object v0, p0, Ld7h;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ld7h;
-
-    invoke-virtual {v0, p1}, Ld7h;->f(Ljava/lang/String;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g(II)V
-    .locals 8
-
-    iget v0, p0, Ld7h;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
-
-    new-instance v2, Lone/me/sdk/permissionhost/PermissionBottomSheet;
-
-    invoke-direct {v2, p1, p2}, Lone/me/sdk/permissionhost/PermissionBottomSheet;-><init>(II)V
-
-    iget-object p1, p0, Ld7h;->b:Lone/me/sdk/arch/Widget;
-
-    invoke-virtual {v2, p1}, Lb04;->setTargetController(Lb04;)V
-
-    invoke-virtual {v2, p1}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
-
-    move-object p2, p1
-
-    :goto_0
-    invoke-virtual {p2}, Lb04;->getParentController()Lb04;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p2}, Lb04;->getParentController()Lb04;
-
-    move-result-object p2
-
-    goto :goto_0
-
     :cond_0
-    instance-of v0, p2, Lo8d;
+    instance-of v0, p1, Ld7h;
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    check-cast p2, Lo8d;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p2, v1
-
-    :goto_1
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2}, Lo8d;->f0()Li8d;
-
-    move-result-object v1
-
-    :cond_2
-    move-object p2, v1
-
-    invoke-virtual {v2, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz p2, :cond_3
-
-    new-instance v1, Ll8d;
-
-    const/4 v6, 0x0
-
-    const/4 v7, -0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v7}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
+    if-nez v0, :cond_1
 
     const/4 p1, 0x0
 
-    const/4 v0, 0x1
+    return p1
 
-    const-string v2, "BottomSheetWidget"
+    :cond_1
+    check-cast p1, Ld7h;
 
-    invoke-static {p1, v1, v0, v2}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
+    iget-object v0, p0, Ld7h;->a:Lb7h;
 
-    invoke-virtual {p2, v1}, Li8d;->H(Ll8d;)V
+    iget-object p1, p1, Ld7h;->a:Lb7h;
 
-    :cond_3
-    return-void
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_0
-    iget-object v0, p0, Ld7h;->c:Ljava/lang/Object;
+    move-result p1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final f(IIII)Ld7h;
+    .locals 2
 
-    check-cast v0, Ld7h;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {v0, p1, p2}, Ld7h;->g(II)V
+    const/16 v1, 0x1e
 
-    return-void
+    if-lt v0, v1, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-instance v0, Lt6h;
+
+    invoke-direct {v0, p0}, Lt6h;-><init>(Ld7h;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v1, 0x1d
+
+    if-lt v0, v1, :cond_1
+
+    new-instance v0, Ls6h;
+
+    invoke-direct {v0, p0}, Ls6h;-><init>(Ld7h;)V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Lr6h;
+
+    invoke-direct {v0, p0}, Lr6h;-><init>(Ld7h;)V
+
+    :goto_0
+    invoke-static {p1, p2, p3, p4}, Lwb7;->b(IIII)Lwb7;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lu6h;->g(Lwb7;)V
+
+    invoke-virtual {v0}, Lu6h;->b()Ld7h;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final g()Landroid/view/WindowInsets;
+    .locals 2
+
+    iget-object v0, p0, Ld7h;->a:Lb7h;
+
+    instance-of v1, v0, Lv6h;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lv6h;
+
+    iget-object v0, v0, Lv6h;->c:Landroid/view/WindowInsets;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ld7h;->a:Lb7h;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Lb7h;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

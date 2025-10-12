@@ -2,48 +2,133 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lbp7;
-
-.field public final b:Lbp7;
-
-.field public final c:Lv6c;
-
-.field public final d:Lbp7;
-
-.field public final e:Lbp7;
-
-.field public final f:Ls5f;
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/audio/Logger;
 
 
-# direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lv6c;Lbp7;Lbp7;)V
+# virtual methods
+.method public final d(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-static {p1, p2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lbt1;->a:Lbp7;
+    return-void
+.end method
 
-    iput-object p2, p0, Lbt1;->b:Lbp7;
+.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    iput-object p3, p0, Lbt1;->c:Lv6c;
+    .line 2
+    invoke-static {p1, p2, p3}, Lyt3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p4, p0, Lbt1;->d:Lbp7;
+    return-void
+.end method
 
-    iput-object p5, p0, Lbt1;->e:Lbp7;
+.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    new-instance p1, Llj1;
+    const/4 v0, 0x0
 
-    const/16 p2, 0x10
+    .line 2
+    invoke-static {p1, p2, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {p1, p2}, Llj1;-><init>(I)V
+    return-void
+.end method
 
-    new-instance p2, Ls5f;
+.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+    .line 1
+    invoke-static {p1, p2, p3}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Lbt1;->f:Ls5f;
+    return-void
+.end method
+
+.method public final i(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-static {p1, p2, v0}, Lyt3;->r(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    return-void
+.end method
+
+.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    const/4 p3, 0x0
+
+    .line 2
+    invoke-static {p1, p2, p3}, Lyt3;->r(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    return-void
+.end method
+
+.method public final v(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p1, p2}, Lyt3;->J(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 7
+
+    .line 2
+    sget-object v0, Lyt3;->n:Lhoa;
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lr28;->c:Lr28;
+
+    const/4 v4, 0x0
+
+    const/16 v6, 0x8
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v5, p3
+
+    invoke-static/range {v0 .. v6}, Lhoa;->f(Lhoa;Lr28;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final w(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p1, p2}, Lyt3;->N(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 2
+    invoke-static {p1, p2, p3}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 3
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lyt3;->N(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

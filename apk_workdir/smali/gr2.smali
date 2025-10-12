@@ -1,146 +1,179 @@
 .class public final Lgr2;
-.super Lm3f;
+.super Lrp;
 .source "SourceFile"
 
-# interfaces
-.implements Lnf6;
 
-
-# instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Lf52;
-
-.field public synthetic Z:Luxa;
+# static fields
+.field public static final a:Lgr2;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lgr2;->X:I
+    new-instance v0, Lgr2;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Lgr2;->a:Lgr2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a()Lv53;
+    .locals 9
 
-    iget v0, p0, Lgr2;->X:I
+    new-instance v0, Lv53;
 
-    check-cast p1, Lf52;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    check-cast p2, Luxa;
+    move-result-object v1
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const-class v2, Lg13;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    new-instance v0, Lgr2;
+    move-result-object v1
 
-    const/4 v1, 0x3
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    invoke-direct {v0, v1, p3, v2}, Lgr2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    const-class v3, Le7f;
 
-    iput-object p1, v0, Lgr2;->Y:Lf52;
+    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    iput-object p2, v0, Lgr2;->Z:Luxa;
+    move-result-object v2
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    invoke-virtual {v0, p1}, Lgr2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v4
 
-    return-object p1
+    const-class v5, Lcl;
 
-    :pswitch_0
-    new-instance v0, Lgr2;
+    invoke-virtual {v4, v5}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    const/4 v1, 0x3
+    move-result-object v4
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    invoke-direct {v0, v1, p3, v2}, Lgr2;-><init>(ILkotlin/coroutines/Continuation;I)V
+    move-result-object v5
 
-    iput-object p1, v0, Lgr2;->Y:Lf52;
+    const-class v6, Lsrd;
 
-    iput-object p2, v0, Lgr2;->Z:Luxa;
+    invoke-virtual {v5, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-object v5
 
-    invoke-virtual {v0, p1}, Lgr2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v6, v3
 
-    return-object p1
+    move-object v3, v4
 
-    nop
+    move-object v4, v5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    new-instance v5, Ls53;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v7
+
+    const-class v8, Ltaf;
+
+    invoke-virtual {v7, v8}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v7
+
+    invoke-direct {v5, v6, v7}, Ls53;-><init>(Lyn7;Lyn7;)V
+
+    invoke-direct/range {v0 .. v5}, Lv53;-><init>(Lyn7;Lyn7;Lyn7;Lyn7;Ls53;)V
+
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b()Lyh9;
+    .locals 7
 
-    iget v0, p0, Lgr2;->X:I
+    new-instance v0, Lyh9;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v1
 
-    iget-object p1, p0, Lgr2;->Y:Lf52;
+    const-class v2, Le7f;
 
-    iget-object v0, p0, Lgr2;->Z:Luxa;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    move-result-object v1
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v2
+
+    const-class v3, La9h;
+
+    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lok6;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v4
+
+    const-class v5, Leb9;
+
+    invoke-virtual {v4, v5}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v5
+
+    const-class v6, Luk6;
+
+    invoke-virtual {v5, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v5
+
+    invoke-direct/range {v0 .. v5}, Lyh9;-><init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+
+    return-object v0
+.end method
+
+.method public final getDispatchers()Le7f;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->h:I
+    const-class v1, Le7f;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgr2;->Y:Lf52;
-
-    iget-object v0, p0, Lgr2;->Z:Luxa;
-
-    invoke-interface {v0}, Luxa;->a()Liu2;
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0}, Liu2;->u()Lglf;
+    check-cast v0, Le7f;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lglf;->a:Ldlf;
-
-    iget-object v0, v0, Ldlf;->a:Lelf;
-
-    iget v0, v0, Lelf;->d:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

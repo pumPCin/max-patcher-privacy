@@ -1,112 +1,138 @@
-.class public final Lnub;
-.super Ljava/lang/Object;
+.class public final enum Lnub;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnub;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Lnub;
+
+.field public static final synthetic c:[Lnub;
+
+.field public static final synthetic o:Laa5;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lnub;->a:I
+    new-instance v0, Lnub;
 
-    iput-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "create"
+
+    const-string v3, "CREATE"
+
+    invoke-direct {v0, v3, v1, v2}, Lnub;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lnub;->b:Lnub;
+
+    new-instance v1, Lnub;
+
+    const/4 v2, 0x1
+
+    const-string v3, "edit"
+
+    const-string v4, "EDIT"
+
+    invoke-direct {v1, v4, v2, v3}, Lnub;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    filled-new-array {v0, v1}, [Lnub;
+
+    move-result-object v0
+
+    sput-object v0, Lnub;->c:[Lnub;
+
+    new-instance v1, Laa5;
+
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lnub;->o:Laa5;
+
+    new-instance v0, Lnua;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lnua;-><init>(I)V
+
+    sput-object v0, Lnub;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lnub;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lnub;
+    .locals 1
+
+    const-class v0, Lnub;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lnub;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnub;
+    .locals 1
+
+    sget-object v0, Lnub;->c:[Lnub;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnub;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    iget p1, p0, Lnub;->a:I
+    const/4 v0, 0x0
 
-    packed-switch p1, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p2
 
-    invoke-virtual {p1}, Li8d;->C()Z
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lnub;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Ltm7;
-
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwub;
-
-    iget-object v0, p1, Lwub;->y0:Lqle;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ld0;->isActive()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p1, Lwub;->X:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr8f;
-
-    check-cast v0, Lwla;
-
-    invoke-virtual {v0}, Lwla;->b()Ly24;
-
-    move-result-object v0
-
-    new-instance v1, Lvub;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lvub;-><init>(Lwub;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v0, v1, v2}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lwub;->y0:Lqle;
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

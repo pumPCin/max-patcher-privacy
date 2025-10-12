@@ -4,64 +4,138 @@
 
 
 # instance fields
-.field public a:Lu00;
+.field public final a:Ljava/lang/String;
 
-.field public b:J
+.field public final b:Ljava/lang/String;
 
-.field public c:Ljava/util/Collection;
+.field public final c:I
 
-.field public d:Ljava/lang/String;
+.field public final d:I
 
-.field public e:Ljava/lang/String;
+.field public final e:J
 
-.field public f:Ljava/lang/String;
+.field public final f:Ljava/util/List;
 
-.field public g:Ljava/lang/String;
 
-.field public h:Lf10;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public i:Ljava/lang/String;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-.field public j:Ljava/lang/String;
+    return-void
+.end method
 
-.field public k:Z
+.method public constructor <init>(Ls00;)V
+    .locals 2
 
-.field public l:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public m:J
+    iget-object v0, p1, Ls00;->a:Ljava/io/Serializable;
 
-.field public n:J
+    check-cast v0, Ljava/lang/String;
 
-.field public o:Ljava/lang/String;
+    iput-object v0, p0, Lt00;->a:Ljava/lang/String;
+
+    iget-object v0, p1, Ls00;->c:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lt00;->b:Ljava/lang/String;
+
+    iget v0, p1, Ls00;->d:I
+
+    iput v0, p0, Lt00;->c:I
+
+    iget v0, p1, Ls00;->f:I
+
+    iput v0, p0, Lt00;->d:I
+
+    iget-wide v0, p1, Ls00;->b:J
+
+    iput-wide v0, p0, Lt00;->e:J
+
+    iget-object p1, p1, Ls00;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iput-object p1, p0, Lt00;->f:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lv00;
-    .locals 1
+.method public final a()Z
+    .locals 2
 
-    iget-object v0, p0, Lt00;->c:Ljava/util/Collection;
+    iget v0, p0, Lt00;->d:I
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x3
 
-    new-instance v0, Ljava/util/ArrayList;
+    if-ne v0, v1, :cond_0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lt00;->c:Ljava/util/Collection;
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lt00;->a:Lu00;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_1
+    return v0
+.end method
 
-    sget-object v0, Lu00;->a:Lu00;
+.method public final b()Z
+    .locals 2
 
-    iput-object v0, p0, Lt00;->a:Lu00;
+    const/4 v0, 0x5
+
+    iget v1, p0, Lt00;->d:I
+
+    if-ne v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lt00;->a()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x4
+
+    if-ne v1, v0, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    new-instance v0, Lv00;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Lv00;-><init>(Lt00;)V
+    return v0
 
-    return-object v0
+    :cond_2
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final c()Z
+    .locals 2
+
+    iget v0, p0, Lt00;->c:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

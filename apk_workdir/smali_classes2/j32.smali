@@ -1,177 +1,227 @@
 .class public final Lj32;
-.super Lm3f;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Lnf6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Landroidx/appcompat/widget/AppCompatTextView;
+.field public b:Z
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lj32;->X:I
+    .line 1
+    iput p1, p0, Lj32;->a:I
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lj32;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkj5;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lj32;->a:I
+
+    .line 3
+    iput-object p1, p0, Lj32;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    const/4 p1, 0x0
+
+    .line 4
+    iput-boolean p1, p0, Lj32;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/android/root/RootController;Z)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lj32;->a:I
+
+    iput-object p1, p0, Lj32;->c:Ljava/lang/Object;
+
+    iput-boolean p2, p0, Lj32;->b:Z
+
+    .line 2
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 3
 
-    iget v0, p0, Lj32;->X:I
+    iget v0, p0, Lj32;->a:I
 
-    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v1, p0, Lj32;->c:Ljava/lang/Object;
 
-    check-cast p2, Luxa;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    const/4 v2, 0x1
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance p2, Lj32;
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    const/4 v0, 0x3
+    iput-boolean v2, p0, Lj32;->b:Z
 
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lj32;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p2, p1}, Lj32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 
     :pswitch_0
-    new-instance p2, Lj32;
+    check-cast v1, Lone/me/android/root/RootController;
 
-    const/4 v0, 0x3
+    iget-boolean p1, p0, Lj32;->b:Z
 
-    const/4 v1, 0x1
+    sget-object v0, Lone/me/android/root/RootController;->s0:[Lpl7;
 
-    invoke-direct {p2, v0, p3, v1}, Lj32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {v1, p1}, Lone/me/android/root/RootController;->G0(Z)V
 
-    iput-object p1, p2, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p2, p1}, Lj32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 
     :pswitch_1
-    new-instance p2, Lj32;
+    iput-boolean v2, p0, Lj32;->b:Z
 
-    const/4 v0, 0x3
+    return-void
 
-    const/4 v1, 0x0
+    :pswitch_2
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
 
-    invoke-direct {p2, v0, p3, v1}, Lj32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-boolean v2, p0, Lj32;->b:Z
 
-    iput-object p1, p2, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    check-cast v1, Lk32;
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object p1, v1, Lk32;->c:Ltua;
 
-    invoke-virtual {p2, p1}, Lj32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ltua;->invoke()Ljava/lang/Object;
 
-    return-object p1
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 3
 
-    iget v0, p0, Lj32;->X:I
+    iget v0, p0, Lj32;->a:I
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lj32;->c:Ljava/lang/Object;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    iget-object p1, p0, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-boolean p1, p0, Lj32;->b:Z
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    check-cast v2, Landroid/view/View;
 
-    move-result-object v0
+    const/4 p1, 0x4
 
-    invoke-interface {v0}, Luxa;->getText()Lbdf;
+    invoke-virtual {v2, p1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v0
+    :cond_0
+    iput-boolean v1, p0, Lj32;->b:Z
 
-    iget v0, v0, Lbdf;->e:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 
     :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast v2, Lone/me/android/root/RootController;
 
-    iget-object p1, p0, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-boolean p1, p0, Lj32;->b:Z
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    sget-object v0, Lone/me/android/root/RootController;->s0:[Lpl7;
 
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-virtual {v2, p1}, Lone/me/android/root/RootController;->G0(Z)V
 
-    move-result-object v0
-
-    invoke-interface {v0}, Luxa;->getText()Lbdf;
-
-    move-result-object v0
-
-    iget v0, v0, Lbdf;->h:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 
     :pswitch_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast v2, Lkj5;
 
-    iget-object p1, p0, Lj32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-boolean p1, p0, Lj32;->b:Z
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    iput-boolean v1, p0, Lj32;->b:Z
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-interface {v0}, Luxa;->getText()Lbdf;
+    :cond_1
+    iget-object p1, v2, Lkj5;->J0:Landroid/animation/ValueAnimator;
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget v0, v0, Lbdf;->i:I
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    check-cast p1, Ljava/lang/Float;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    return-object p1
+    move-result p1
+
+    const/4 v0, 0x0
+
+    cmpl-float p1, p1, v0
+
+    if-nez p1, :cond_2
+
+    iput v1, v2, Lkj5;->K0:I
+
+    invoke-virtual {v2, v1}, Lkj5;->l(I)V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x2
+
+    iput p1, v2, Lkj5;->K0:I
+
+    iget-object p1, v2, Lkj5;->C0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    iget-boolean p1, p0, Lj32;->b:Z
+
+    if-nez p1, :cond_3
+
+    check-cast v2, Lk32;
+
+    invoke-virtual {v2, v1}, Lk32;->c(Z)V
+
+    :cond_3
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

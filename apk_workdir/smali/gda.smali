@@ -1,181 +1,107 @@
 .class public final Lgda;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxda;
+.implements Lmq7;
+.implements La22;
 
 
 # instance fields
-.field public X:J
+.field public final a:Lwq7;
 
-.field public final a:Lxda;
+.field public final b:Lada;
 
-.field public final b:Lb22;
+.field public c:Lhda;
 
-.field public final c:Lnda;
-
-.field public final o:Llob;
+.field public final synthetic o:Lida;
 
 
 # direct methods
-.method public constructor <init>(Lxda;JLlob;Lb22;Lnda;)V
+.method public constructor <init>(Lida;Lwq7;Lada;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgda;->a:Lxda;
+    iput-object p1, p0, Lgda;->o:Lida;
 
-    iput-object p5, p0, Lgda;->b:Lb22;
+    iput-object p2, p0, Lgda;->a:Lwq7;
 
-    iput-object p6, p0, Lgda;->c:Lnda;
+    iput-object p3, p0, Lgda;->b:Lada;
 
-    iput-object p4, p0, Lgda;->o:Llob;
-
-    iput-wide p2, p0, Lgda;->X:J
+    invoke-virtual {p2, p0}, Lwq7;->a(Lqq7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final cancel()V
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iget-object v0, p0, Lgda;->a:Lwq7;
 
-    move-result v0
+    invoke-virtual {v0, p0}, Lwq7;->f(Lqq7;)V
 
-    if-nez v0, :cond_2
+    iget-object v0, p0, Lgda;->b:Lada;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lgda;->c:Lhda;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lhda;->cancel()V
 
     :cond_0
-    iget-object v1, p0, Lgda;->b:Lb22;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Lb22;->h()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v1, p0, Lgda;->c:Lnda;
-
-    invoke-interface {v1, p0}, Lnda;->a(Lxda;)V
-
-    neg-int v0, v0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    :goto_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lgda;->a:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
+    iput-object v0, p0, Lgda;->c:Lhda;
 
     return-void
 .end method
 
-.method public final c(Lss4;)V
-    .locals 1
+.method public final d(Luq7;Lvp7;)V
+    .locals 0
 
-    iget-object v0, p0, Lgda;->b:Lb22;
+    sget-object p1, Lvp7;->ON_START:Lvp7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p2, p1, :cond_0
 
-    invoke-static {v0, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    iget-object p1, p0, Lgda;->o:Lida;
 
-    return-void
-.end method
+    iget-object p2, p0, Lgda;->b:Lada;
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lgda;->a:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-wide v0, p0, Lgda;->X:J
-
-    const-wide v2, 0x7fffffffffffffffL
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    sub-long v2, v0, v2
-
-    iput-wide v2, p0, Lgda;->X:J
-
-    :cond_0
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    iget-object v1, p0, Lgda;->a:Lxda;
-
-    if-nez v0, :cond_1
-
-    invoke-interface {v1, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    :try_start_0
-    iget-object v0, p0, Lgda;->o:Llob;
-
-    invoke-interface {v0, p1}, Llob;->test(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_2
-
-    invoke-interface {v1, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0}, Lgda;->a()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    new-instance v2, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+    invoke-virtual {p1, p2}, Lida;->b(Lada;)Lhda;
 
     move-result-object p1
 
-    invoke-direct {v2, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    iput-object p1, p0, Lgda;->c:Lhda;
 
-    invoke-interface {v1, v2}, Lxda;->onError(Ljava/lang/Throwable;)V
+    return-void
 
+    :cond_0
+    sget-object p1, Lvp7;->ON_STOP:Lvp7;
+
+    if-ne p2, p1, :cond_1
+
+    iget-object p1, p0, Lgda;->c:Lhda;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1}, Lhda;->cancel()V
+
+    return-void
+
+    :cond_1
+    sget-object p1, Lvp7;->ON_DESTROY:Lvp7;
+
+    if-ne p2, p1, :cond_2
+
+    invoke-virtual {p0}, Lgda;->cancel()V
+
+    :cond_2
     return-void
 .end method

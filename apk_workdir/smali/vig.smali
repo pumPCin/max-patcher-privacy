@@ -3,118 +3,101 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public final a:I
+.field public a:Ld7h;
 
-.field public final b:I
+.field public final synthetic b:Landroid/view/View;
 
-.field public final c:I
-
-.field public final o:F
+.field public final synthetic c:Lyca;
 
 
 # direct methods
-.method public constructor <init>(FIII)V
+.method public constructor <init>(Landroid/view/View;Lyca;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lvig;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lvig;->c:Lyca;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lvig;->a:I
+    const/4 p1, 0x0
 
-    iput p3, p0, Lvig;->b:I
-
-    iput p4, p0, Lvig;->c:I
-
-    iput p1, p0, Lvig;->o:F
+    iput-object p1, p0, Lvig;->a:Ld7h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 5
 
-    const/4 v0, 0x1
+    invoke-static {p1, p2}, Ld7h;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ld7h;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    iget-object v2, p0, Lvig;->c:Lyca;
+
+    const/16 v3, 0x1e
+
+    if-ge v1, v3, :cond_0
+
+    iget-object v4, p0, Lvig;->b:Landroid/view/View;
+
+    invoke-static {p2, v4}, Lwig;->a(Landroid/view/WindowInsets;Landroid/view/View;)V
+
+    iget-object p2, p0, Lvig;->a:Ld7h;
+
+    invoke-virtual {v0, p2}, Ld7h;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {v2, p1, v0}, Lyca;->y(Landroid/view/View;Ld7h;)Ld7h;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld7h;->g()Landroid/view/WindowInsets;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    instance-of v1, p1, Lvig;
+    iput-object v0, p0, Lvig;->a:Ld7h;
 
-    const/4 v2, 0x0
+    invoke-interface {v2, p1, v0}, Lyca;->y(Landroid/view/View;Ld7h;)Ld7h;
 
-    if-eqz v1, :cond_1
+    move-result-object p2
 
-    check-cast p1, Lvig;
+    if-lt v1, v3, :cond_1
 
-    iget v1, p0, Lvig;->a:I
+    invoke-virtual {p2}, Ld7h;->g()Landroid/view/WindowInsets;
 
-    iget v3, p1, Lvig;->a:I
+    move-result-object p1
 
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lvig;->b:I
-
-    iget v3, p1, Lvig;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lvig;->c:I
-
-    iget v3, p1, Lvig;->c:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lvig;->o:F
-
-    iget p1, p1, Lvig;->o:F
-
-    cmpl-float p1, v1, p1
-
-    if-nez p1, :cond_1
-
-    return v0
+    return-object p1
 
     :cond_1
-    return v2
-.end method
+    sget-object v0, Lijg;->a:Ljava/util/WeakHashMap;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {p1}, Luig;->c(Landroid/view/View;)V
 
-    const/16 v0, 0xd9
+    invoke-virtual {p2}, Ld7h;->g()Landroid/view/WindowInsets;
 
-    iget v1, p0, Lvig;->a:I
+    move-result-object p1
 
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lvig;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lvig;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lvig;->o:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method

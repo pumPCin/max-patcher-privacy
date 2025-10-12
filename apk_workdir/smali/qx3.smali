@@ -1,71 +1,38 @@
-.class public final Lqx3;
-.super Lhh0;
+.class public interface abstract Lqx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lc00;
-
-.field public final b:Lt03;
-
-.field public final c:Lik3;
-
-
 # direct methods
-.method public constructor <init>()V
+.method public static a(Lqx3;)J
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p0, Lcf4;
 
-    new-instance v0, Lc00;
+    iget-object p0, p0, Lcf4;->b:Ljava/util/Map;
 
-    const/16 v1, 0xf
+    const-string v0, "exo_len"
 
-    invoke-direct {v0, v1}, Lc00;-><init>(I)V
+    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v0, p0, Lqx3;->a:Lc00;
+    move-result-object p0
 
-    new-instance v0, Lt03;
+    check-cast p0, [B
 
-    const/16 v1, 0xb
+    if-eqz p0, :cond_0
 
-    invoke-direct {v0, v1}, Lt03;-><init>(I)V
+    invoke-static {p0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    iput-object v0, p0, Lqx3;->b:Lt03;
+    move-result-object p0
 
-    new-instance v0, Lik3;
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->getLong()J
 
-    const/16 v1, 0x9
+    move-result-wide v0
 
-    invoke-direct {v0, v1}, Lik3;-><init>(I)V
+    return-wide v0
 
-    iput-object v0, p0, Lqx3;->c:Lik3;
+    :cond_0
+    const-wide/16 v0, -0x1
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/util/Comparator;
-    .locals 1
-
-    iget-object v0, p0, Lqx3;->a:Lc00;
-
-    return-object v0
-.end method
-
-.method public final b()Lxe6;
-    .locals 1
-
-    iget-object v0, p0, Lqx3;->b:Lt03;
-
-    return-object v0
-.end method
-
-.method public final c()Lve6;
-    .locals 1
-
-    iget-object v0, p0, Lqx3;->c:Lik3;
-
-    return-object v0
+    return-wide v0
 .end method

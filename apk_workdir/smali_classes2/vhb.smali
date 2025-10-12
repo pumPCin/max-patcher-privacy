@@ -1,78 +1,89 @@
-.class public final Lvhb;
-.super Lxl;
+.class public final enum Lvhb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Loaf;
+
+# static fields
+.field public static final synthetic b:[Lvhb;
+
+.field public static final synthetic c:Laa5;
 
 
 # instance fields
-.field public final o:Z
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(JZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    new-instance v0, Lvhb;
 
-    iput-boolean p3, p0, Lvhb;->o:Z
+    const-string v1, "CALL"
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
+    const/4 v3, 0x1
 
-# virtual methods
-.method public final d(Ll9f;)V
-    .locals 0
+    invoke-direct {v0, v1, v2, v3}, Lvhb;-><init>(Ljava/lang/String;II)V
 
-    return-void
-.end method
+    new-instance v1, Lvhb;
 
-.method public final e(Lv8f;)V
-    .locals 4
+    const-string v2, "VIDEO"
 
-    iget-object v0, p0, Lxl;->c:Lyl;
+    const/4 v4, 0x2
 
-    if-eqz v0, :cond_0
+    invoke-direct {v1, v2, v3, v4}, Lvhb;-><init>(Ljava/lang/String;II)V
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0}, Lyl;->b()Lov0;
+    filled-new-array {v0, v1}, [Lvhb;
 
     move-result-object v0
 
-    new-instance v1, Laj0;
+    sput-object v0, Lvhb;->b:[Lvhb;
 
-    iget-wide v2, p0, Lxl;->a:J
+    new-instance v1, Laa5;
 
-    invoke-direct {v1, v2, v3, p1}, Laj0;-><init>(JLv8f;)V
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
 
-    invoke-virtual {v0, v1}, Lov0;->c(Ljava/lang/Object;)V
+    sput-object v1, Lvhb;->c:Laa5;
 
     return-void
 .end method
 
-.method public final i()Li9f;
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-    new-instance v0, Ll38;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v1, 0x0
+    iput p3, p0, Lvhb;->a:I
 
-    const/16 v2, 0x11
+    return-void
+.end method
 
-    invoke-direct {v0, v1, v2}, Ll38;-><init>(Ln0b;I)V
+.method public static valueOf(Ljava/lang/String;)Lvhb;
+    .locals 1
 
-    const-string v1, "interactive"
+    const-class v0, Lvhb;
 
-    iget-boolean v2, p0, Lvhb;->o:Z
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0, v1, v2}, Li9f;->e(Ljava/lang/String;Z)V
+    move-result-object p0
+
+    check-cast p0, Lvhb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lvhb;
+    .locals 1
+
+    sget-object v0, Lvhb;->b:[Lvhb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lvhb;
 
     return-object v0
 .end method

@@ -1,23 +1,11 @@
-.class public final Leu6;
+.class public interface abstract Leu6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:I
+# virtual methods
+.method public abstract getId()J
+.end method
 
-
-# instance fields
-.field public final a:Lq9h;
-
-
-# direct methods
-.method public constructor <init>(Lq9h;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Leu6;->a:Lq9h;
-
-    return-void
+.method public abstract l()J
 .end method

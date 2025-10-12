@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation build Lht4;
+.annotation build Lvs4;
 .end annotation

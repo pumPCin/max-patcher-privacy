@@ -20,42 +20,51 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Liwc;Ljp5;)V
+.method public constructor <init>(Landroid/content/Context;Lquc;Lto5;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 2
     iput-boolean v0, p0, Lbw1;->a:Z
 
+    .line 3
     iput-boolean v0, p0, Lbw1;->b:Z
 
-    invoke-static {p1}, Lox9;->q(Landroid/content/Context;)Landroid/content/Context;
+    .line 4
+    invoke-static {p1}, Lzc6;->l(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
     iput-object p1, p0, Lbw1;->c:Ljava/lang/Object;
 
+    .line 5
     iput-object p2, p0, Lbw1;->d:Ljava/lang/Object;
 
+    .line 6
     iput-object p3, p0, Lbw1;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;ZLlag;)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;ZLx8g;)V
     .locals 2
 
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15
     iput-object p1, p0, Lbw1;->c:Ljava/lang/Object;
 
-    new-instance v0, Lase;
+    .line 16
+    new-instance v0, Lsqe;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lase;-><init>(I)V
+    invoke-direct {v0, v1}, Lsqe;-><init>(I)V
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
@@ -63,16 +72,20 @@
 
     iput-object p1, p0, Lbw1;->d:Ljava/lang/Object;
 
+    .line 17
     iput-boolean p2, p0, Lbw1;->a:Z
 
+    .line 18
     iput-object p3, p0, Lbw1;->f:Ljava/lang/Object;
 
+    .line 19
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lbw1;->e:Ljava/lang/Object;
 
+    .line 20
     new-instance p1, Ljava/util/ArrayDeque;
 
     invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
@@ -82,33 +95,38 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljw1;Lcsd;)V
-    .locals 2
+.method public constructor <init>(Lkw1;Llqd;)V
+    .locals 1
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 8
     iput-boolean v0, p0, Lbw1;->a:Z
 
+    .line 9
     iput-boolean v0, p0, Lbw1;->b:Z
 
+    .line 10
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lbw1;->e:Ljava/lang/Object;
 
-    new-instance v0, Lr4;
+    .line 11
+    new-instance v0, Lxx1;
 
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lr4;-><init>(I)V
+    invoke-direct {v0}, Lxx1;-><init>()V
 
     iput-object v0, p0, Lbw1;->f:Ljava/lang/Object;
 
+    .line 12
     iput-object p1, p0, Lbw1;->c:Ljava/lang/Object;
 
+    .line 13
     iput-object p2, p0, Lbw1;->d:Ljava/lang/Object;
 
     return-void
@@ -142,23 +160,23 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    new-instance v1, Lr42;
+    new-instance v1, Lw42;
 
     const/4 v2, 0x5
 
-    invoke-direct {v1, p0, v2, v0}, Lr42;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, v0}, Lw42;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     iget-object v2, p0, Lbw1;->c:Ljava/lang/Object;
 
     check-cast v2, Ljava/util/concurrent/ExecutorService;
 
-    new-instance v3, Lri;
+    new-instance v3, Lyi;
 
     const/4 v4, 0x6
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, p0, v5, v1, v4}, Lri;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
+    invoke-direct {v3, p0, v5, v1, v4}, Lyi;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
 
     invoke-interface {v2, v3}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -209,13 +227,13 @@
 
     iget-object v0, p0, Lbw1;->f:Ljava/lang/Object;
 
-    check-cast v0, Llag;
+    check-cast v0, Lx8g;
 
     invoke-static {p1}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Llag;->a(Landroidx/media3/common/VideoFrameProcessingException;)V
+    invoke-interface {v0, p1}, Lx8g;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
 
     return-void
 
@@ -281,7 +299,7 @@
     throw v0
 .end method
 
-.method public d(Lmag;)V
+.method public d(Ly8g;)V
     .locals 4
 
     invoke-virtual {p0}, Lbw1;->c()Z
@@ -292,7 +310,7 @@
 
     xor-int/2addr v0, v1
 
-    invoke-static {v0}, Lpih;->o(Z)V
+    invoke-static {v0}, Lq5h;->k(Z)V
 
     iget-object v0, p0, Lbw1;->e:Ljava/lang/Object;
 
@@ -315,13 +333,13 @@
 
     check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lri;
+    new-instance v1, Lyi;
 
     const/4 v2, 0x6
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, p0, v3, p1, v2}, Lri;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
+    invoke-direct {v1, p0, v3, p1, v2}, Lyi;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -351,7 +369,7 @@
 
     iget-object p1, p0, Lbw1;->f:Ljava/lang/Object;
 
-    check-cast p1, Llag;
+    check-cast p1, Lx8g;
 
     new-instance v0, Landroidx/media3/common/VideoFrameProcessingException;
 
@@ -359,7 +377,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Llag;->a(Landroidx/media3/common/VideoFrameProcessingException;)V
+    invoke-interface {p1, v0}, Lx8g;->b(Landroidx/media3/common/VideoFrameProcessingException;)V
 
     :cond_0
     return-void
@@ -375,12 +393,12 @@
     throw p1
 .end method
 
-.method public e(Ljava/util/concurrent/Executor;Lzo3;)Lkwc;
+.method public e(Ljava/util/concurrent/Executor;Lqo3;)Lsuc;
     .locals 12
 
     const-string v0, "Listener Executor can\'t be null."
 
-    invoke-static {p1, v0}, Ll74;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lnjg;->k(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lbw1;->g:Ljava/lang/Object;
 
@@ -388,24 +406,24 @@
 
     iget-object p1, p0, Lbw1;->d:Ljava/lang/Object;
 
-    check-cast p1, Liwc;
+    check-cast p1, Lquc;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p2, p1, Liwc;->h:Ljava/lang/Object;
+    iget-object p2, p1, Lquc;->h:Ljava/lang/Object;
 
     monitor-enter p2
 
     :try_start_0
-    iget-wide v0, p1, Liwc;->o:J
+    iget-wide v0, p1, Lquc;->o:J
 
     const-wide/16 v2, 0x1
 
     add-long v6, v0, v2
 
-    iput-wide v6, p1, Liwc;->o:J
+    iput-wide v6, p1, Lquc;->o:J
 
-    iget-object v0, p1, Liwc;->j:Lhwc;
+    iget-object v0, p1, Lquc;->j:Lpuc;
 
     invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
@@ -422,7 +440,7 @@
     goto/16 :goto_2
 
     :pswitch_0
-    iget-object v0, p1, Liwc;->m:Lbb0;
+    iget-object v0, p1, Lquc;->m:Lsa0;
 
     :goto_0
     move-object v10, v1
@@ -443,24 +461,24 @@
     goto/16 :goto_6
 
     :pswitch_1
-    iget-object v0, p1, Liwc;->n:Lbb0;
+    iget-object v0, p1, Lquc;->n:Lsa0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p1, Liwc;->j:Lhwc;
+    iget-object v0, p1, Lquc;->j:Lpuc;
 
-    sget-object v3, Lhwc;->o:Lhwc;
+    sget-object v3, Lpuc;->o:Lpuc;
 
     if-ne v0, v3, :cond_1
 
-    iget-object v0, p1, Liwc;->m:Lbb0;
+    iget-object v0, p1, Lquc;->m:Lsa0;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p1, Liwc;->n:Lbb0;
+    iget-object v0, p1, Lquc;->n:Lsa0;
 
     if-nez v0, :cond_0
 
@@ -474,19 +492,19 @@
     :goto_1
     const-string v4, "Expected recorder to be idle but a recording is either pending or in progress."
 
-    invoke-static {v4, v0}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {v4, v0}, Lnjg;->l(Ljava/lang/String;Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_1
     :try_start_1
-    new-instance v4, Lbb0;
+    new-instance v4, Lsa0;
 
     iget-object v0, p0, Lbw1;->e:Ljava/lang/Object;
 
     move-object v5, v0
 
-    check-cast v5, Ljp5;
+    check-cast v5, Lto5;
 
     iget-object v0, p0, Lbw1;->g:Ljava/lang/Object;
 
@@ -494,7 +512,7 @@
 
     iget-object v8, p0, Lbw1;->f:Ljava/lang/Object;
 
-    check-cast v8, Lzo3;
+    check-cast v8, Lqo3;
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -510,33 +528,33 @@
 
     move-object v6, v0
 
-    invoke-direct/range {v4 .. v11}, Lbb0;-><init>(Ljp5;Ljava/util/concurrent/Executor;Lzo3;ZZJ)V
+    invoke-direct/range {v4 .. v11}, Lsa0;-><init>(Lto5;Ljava/util/concurrent/Executor;Lqo3;ZZJ)V
 
     iget-object v0, p0, Lbw1;->c:Ljava/lang/Object;
 
     check-cast v0, Landroid/content/Context;
 
-    invoke-virtual {v4, v0}, Lbb0;->i(Landroid/content/Context;)V
+    invoke-virtual {v4, v0}, Lsa0;->i(Landroid/content/Context;)V
 
-    iput-object v4, p1, Liwc;->n:Lbb0;
+    iput-object v4, p1, Lquc;->n:Lsa0;
 
-    iget-object v0, p1, Liwc;->j:Lhwc;
+    iget-object v0, p1, Lquc;->j:Lpuc;
 
     if-ne v0, v3, :cond_2
 
-    sget-object v0, Lhwc;->b:Lhwc;
+    sget-object v0, Lpuc;->b:Lpuc;
 
-    invoke-virtual {p1, v0}, Liwc;->D(Lhwc;)V
+    invoke-virtual {p1, v0}, Lquc;->D(Lpuc;)V
 
-    iget-object v0, p1, Liwc;->e:Lcsd;
+    iget-object v0, p1, Lquc;->e:Llqd;
 
-    new-instance v3, Lawc;
+    new-instance v3, Lhuc;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p1, v4}, Lawc;-><init>(Liwc;I)V
+    invoke-direct {v3, p1, v4}, Lhuc;-><init>(Lquc;I)V
 
-    invoke-virtual {v0, v3}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v3}, Llqd;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_2
 
@@ -546,30 +564,30 @@
     goto :goto_3
 
     :cond_2
-    sget-object v3, Lhwc;->x0:Lhwc;
+    sget-object v3, Lpuc;->s0:Lpuc;
 
     if-ne v0, v3, :cond_3
 
-    sget-object v0, Lhwc;->b:Lhwc;
+    sget-object v0, Lpuc;->b:Lpuc;
 
-    invoke-virtual {p1, v0}, Liwc;->D(Lhwc;)V
+    invoke-virtual {p1, v0}, Lquc;->D(Lpuc;)V
 
-    iget-object v0, p1, Liwc;->e:Lcsd;
+    iget-object v0, p1, Lquc;->e:Llqd;
 
-    new-instance v3, Lawc;
+    new-instance v3, Lhuc;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v4}, Lawc;-><init>(Liwc;I)V
+    invoke-direct {v3, p1, v4}, Lhuc;-><init>(Lquc;I)V
 
-    invoke-virtual {v0, v3}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v3}, Llqd;->execute(Ljava/lang/Runnable;)V
 
     goto :goto_2
 
     :cond_3
-    sget-object v0, Lhwc;->b:Lhwc;
+    sget-object v0, Lpuc;->b:Lpuc;
 
-    invoke-virtual {p1, v0}, Liwc;->D(Lhwc;)V
+    invoke-virtual {p1, v0}, Lquc;->D(Lpuc;)V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -611,15 +629,15 @@
 
     move-result-object v1
 
-    invoke-static {p2, v1}, Ls4d;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lnc6;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v4, Lbb0;
+    new-instance v4, Lsa0;
 
     iget-object p2, p0, Lbw1;->e:Ljava/lang/Object;
 
     move-object v5, p2
 
-    check-cast v5, Ljp5;
+    check-cast v5, Lto5;
 
     iget-object p2, p0, Lbw1;->g:Ljava/lang/Object;
 
@@ -631,58 +649,58 @@
 
     move-object v7, p2
 
-    check-cast v7, Lzo3;
+    check-cast v7, Lqo3;
 
     iget-boolean v8, p0, Lbw1;->a:Z
 
     iget-boolean v9, p0, Lbw1;->b:Z
 
-    invoke-direct/range {v4 .. v11}, Lbb0;-><init>(Ljp5;Ljava/util/concurrent/Executor;Lzo3;ZZJ)V
+    invoke-direct/range {v4 .. v11}, Lsa0;-><init>(Lto5;Ljava/util/concurrent/Executor;Lqo3;ZZJ)V
 
-    invoke-virtual {p1, v4, v2, v0}, Liwc;->j(Lbb0;ILjava/lang/Throwable;)V
+    invoke-virtual {p1, v4, v2, v0}, Lquc;->j(Lsa0;ILjava/lang/Throwable;)V
 
-    new-instance v4, Lkwc;
+    new-instance v4, Lsuc;
 
     iget-object p1, p0, Lbw1;->d:Ljava/lang/Object;
 
     move-object v5, p1
 
-    check-cast v5, Liwc;
+    check-cast v5, Lquc;
 
     iget-object p1, p0, Lbw1;->e:Ljava/lang/Object;
 
     move-object v8, p1
 
-    check-cast v8, Ljp5;
+    check-cast v8, Lto5;
 
     const/4 v9, 0x1
 
     move-wide v6, v10
 
-    invoke-direct/range {v4 .. v9}, Lkwc;-><init>(Liwc;JLjp5;Z)V
+    invoke-direct/range {v4 .. v9}, Lsuc;-><init>(Lquc;JLto5;Z)V
 
     goto :goto_5
 
     :cond_4
-    new-instance v4, Lkwc;
+    new-instance v4, Lsuc;
 
     iget-object p1, p0, Lbw1;->d:Ljava/lang/Object;
 
     move-object v5, p1
 
-    check-cast v5, Liwc;
+    check-cast v5, Lquc;
 
     iget-object p1, p0, Lbw1;->e:Ljava/lang/Object;
 
     move-object v8, p1
 
-    check-cast v8, Ljp5;
+    check-cast v8, Lto5;
 
     const/4 v9, 0x0
 
     move-wide v6, v10
 
-    invoke-direct/range {v4 .. v9}, Lkwc;-><init>(Liwc;JLjp5;Z)V
+    invoke-direct/range {v4 .. v9}, Lsuc;-><init>(Lquc;JLto5;Z)V
 
     :goto_5
     return-object v4
@@ -718,7 +736,7 @@
     .end packed-switch
 .end method
 
-.method public f(Lmag;Z)V
+.method public f(Ly8g;Z)V
     .locals 4
 
     iget-object v0, p0, Lbw1;->e:Ljava/lang/Object;
@@ -749,11 +767,11 @@
 
     check-cast v1, Ljava/util/concurrent/ExecutorService;
 
-    new-instance v2, Lri;
+    new-instance v2, Lyi;
 
     const/4 v3, 0x6
 
-    invoke-direct {v2, p0, p2, p1, v3}, Lri;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
+    invoke-direct {v2, p0, p2, p1, v3}, Lyi;-><init>(Ljava/lang/Object;ZLjava/lang/Object;I)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     :try_end_1
@@ -789,7 +807,7 @@
     throw p1
 .end method
 
-.method public g(Lmag;)V
+.method public g(Ly8g;)V
     .locals 2
 
     iget-object v0, p0, Lbw1;->e:Ljava/lang/Object;
@@ -821,13 +839,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p1, Lkag;
+    new-instance p1, Lv8g;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, v0}, Lbw1;->f(Lmag;Z)V
+    invoke-virtual {p0, p1, v0}, Lbw1;->f(Ly8g;Z)V
 
     return-void
 
@@ -848,7 +866,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lpih;->o(Z)V
+    invoke-static {v0}, Lq5h;->k(Z)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -877,7 +895,7 @@
 
     const-string v1, "android.permission.RECORD_AUDIO"
 
-    invoke-static {v0, v1}, Lpih;->m(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lkv9;->e(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -887,19 +905,19 @@
 
     iget-object v0, p0, Lbw1;->d:Ljava/lang/Object;
 
-    check-cast v0, Liwc;
+    check-cast v0, Lquc;
 
-    iget-object v0, v0, Liwc;->C:Lhx;
+    iget-object v0, v0, Lquc;->C:Lvx;
 
-    invoke-static {v0}, Liwc;->l(Lhx;)Ljava/lang/Object;
+    invoke-static {v0}, Lquc;->l(Lvx;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lna0;
+    check-cast v0, Lea0;
 
-    iget-object v0, v0, Lna0;->b:Lb90;
+    iget-object v0, v0, Lea0;->b:Ls80;
 
-    iget v0, v0, Lb90;->e:I
+    iget v0, v0, Ls80;->e:I
 
     const/4 v1, 0x1
 
@@ -915,7 +933,7 @@
     :goto_0
     const-string v2, "The Recorder this recording is associated to doesn\'t support audio."
 
-    invoke-static {v2, v0}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {v2, v0}, Lnjg;->l(Ljava/lang/String;Z)V
 
     iput-boolean v1, p0, Lbw1;->a:Z
 

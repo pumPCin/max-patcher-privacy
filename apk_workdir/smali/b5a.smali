@@ -1,219 +1,152 @@
-.class public abstract Lb5a;
-.super Ljava/lang/Object;
+.class public final enum Lb5a;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum a:Lb5a;
+
+.field public static final synthetic b:[Lb5a;
+
+
 # direct methods
-.method public static a(Landroid/app/NotificationChannel;)Z
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canBypassDnd()Z
+    new-instance v0, Lb5a;
 
-    move-result p0
+    const-string v1, "COMPLETE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lb5a;->a:Lb5a;
+
+    filled-new-array {v0}, [Lb5a;
+
+    move-result-object v0
+
+    sput-object v0, Lb5a;->b:[Lb5a;
+
+    return-void
+.end method
+
+.method public static a(Lyba;Ljava/lang/Object;)Z
+    .locals 2
+
+    sget-object v0, Lb5a;->a:Lb5a;
+
+    const/4 v1, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    invoke-interface {p0}, Lyba;->b()V
+
+    return v1
+
+    :cond_0
+    instance-of v0, p1, Lz4a;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lz4a;
+
+    iget-object p1, p1, Lz4a;->a:Ljava/lang/Throwable;
+
+    invoke-interface {p0, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
+
+    return v1
+
+    :cond_1
+    invoke-interface {p0, p1}, Lyba;->e(Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public static b(Landroid/app/NotificationChannel;)Z
-    .locals 0
+.method public static b(Lyba;Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->canShowBadge()Z
+    sget-object v0, Lb5a;->a:Lb5a;
 
-    move-result p0
+    const/4 v1, 0x1
 
-    return p0
+    if-ne p1, v0, :cond_0
+
+    invoke-interface {p0}, Lyba;->b()V
+
+    return v1
+
+    :cond_0
+    instance-of v0, p1, Lz4a;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lz4a;
+
+    iget-object p1, p1, Lz4a;->a:Ljava/lang/Throwable;
+
+    invoke-interface {p0, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
+
+    return v1
+
+    :cond_1
+    instance-of v0, p1, Ly4a;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Ly4a;
+
+    iget-object p1, p1, Ly4a;->a:Lfs4;
+
+    invoke-interface {p0, p1}, Lyba;->c(Lfs4;)V
+
+    return v1
+
+    :cond_2
+    invoke-interface {p0, p1}, Lyba;->e(Ljava/lang/Object;)V
+
+    return v1
 .end method
 
-.method public static c(Ljava/lang/String;Ljava/lang/CharSequence;I)Landroid/app/NotificationChannel;
+.method public static valueOf(Ljava/lang/String;)Lb5a;
     .locals 1
 
-    new-instance v0, Landroid/app/NotificationChannel;
+    const-class v0, Lb5a;
 
-    invoke-direct {v0, p0, p1, p2}, Landroid/app/NotificationChannel;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;I)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lb5a;
+
+    return-object p0
+.end method
+
+.method public static values()[Lb5a;
+    .locals 1
+
+    sget-object v0, Lb5a;->b:[Lb5a;
+
+    invoke-virtual {v0}, [Lb5a;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lb5a;
 
     return-object v0
 .end method
 
-.method public static d(Landroid/app/NotificationChannel;Z)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableLights(Z)V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    return-void
-.end method
+    const-string v0, "NotificationLite.Complete"
 
-.method public static e(Landroid/app/NotificationChannel;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->enableVibration(Z)V
-
-    return-void
-.end method
-
-.method public static f(Landroid/app/NotificationChannel;)Landroid/media/AudioAttributes;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getAudioAttributes()Landroid/media/AudioAttributes;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getDescription()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getGroup()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static j(Landroid/app/NotificationChannel;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getImportance()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static k(Landroid/app/NotificationChannel;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLightColor()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static l(Landroid/app/NotificationChannel;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getLockscreenVisibility()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static m(Landroid/app/NotificationChannel;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getName()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static n(Landroid/app/NotificationChannel;)Landroid/net/Uri;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getSound()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static o(Landroid/app/NotificationChannel;)[J
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getVibrationPattern()[J
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static p(Landroid/app/NotificationChannel;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setDescription(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static q(Landroid/app/NotificationChannel;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setGroup(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static r(Landroid/app/NotificationChannel;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setLightColor(I)V
-
-    return-void
-.end method
-
-.method public static s(Landroid/app/NotificationChannel;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setShowBadge(Z)V
-
-    return-void
-.end method
-
-.method public static t(Landroid/app/NotificationChannel;Landroid/net/Uri;Landroid/media/AudioAttributes;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setSound(Landroid/net/Uri;Landroid/media/AudioAttributes;)V
-
-    return-void
-.end method
-
-.method public static u(Landroid/app/NotificationChannel;[J)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationChannel;->setVibrationPattern([J)V
-
-    return-void
-.end method
-
-.method public static v(Landroid/app/NotificationChannel;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldShowLights()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static w(Landroid/app/NotificationChannel;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->shouldVibrate()Z
-
-    move-result p0
-
-    return p0
+    return-object v0
 .end method

@@ -1,19 +1,23 @@
 .class public final Lpi2;
-.super Lti2;
+.super Lqi2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final b:Lxcf;
+
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lxcf;Ljava/lang/Integer;)V
     .locals 0
 
-    invoke-direct {p0}, Lti2;-><init>()V
+    invoke-direct {p0}, Lqi2;-><init>()V
 
-    iput-object p1, p0, Lpi2;->b:Ljava/lang/String;
+    iput-object p1, p0, Lpi2;->b:Lxcf;
+
+    iput-object p2, p0, Lpi2;->c:Ljava/lang/Integer;
 
     return-void
 .end method
@@ -21,64 +25,107 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lpi2;
+    instance-of v0, p1, Lpi2;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lpi2;
 
-    iget-object v1, p0, Lpi2;->b:Ljava/lang/String;
+    iget-object v0, p0, Lpi2;->b:Lxcf;
 
-    iget-object p1, p1, Lpi2;->b:Ljava/lang/String;
+    iget-object v1, p1, Lpi2;->b:Lxcf;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lpi2;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0, v1}, Lxcf;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lpi2;->c:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lpi2;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lpi2;->b:Lxcf;
+
+    iget v0, v0, Lxcf;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lpi2;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    const-string v0, "ShareLink(link="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpi2;->b:Lxcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpi2;->c:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lpi2;->b:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

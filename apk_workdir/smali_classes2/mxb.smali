@@ -1,134 +1,88 @@
 .class public final Lmxb;
-.super Lm3f;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/profileedit/ProfileEditScreen;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lmxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+    const/16 v0, 0xe
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmxb;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lsxb;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lmxb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lmxb;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lmxb;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v1, p0, Lmxb;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lmxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lmxb;->b:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lmxb;
+    iget-object v0, p0, Lmxb;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lmxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, v1, p2}, Lmxb;-><init>(Lone/me/profileedit/ProfileEditScreen;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lmxb;->X:Ljava/lang/Object;
-
-    return-object v0
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-string v0, "SendLink(link="
 
-    iget-object p1, p0, Lmxb;->X:Ljava/lang/Object;
+    const-string v1, ")"
 
-    check-cast p1, Lsxb;
+    iget-object v2, p0, Lmxb;->b:Ljava/lang/String;
 
-    if-eqz p1, :cond_1
-
-    iget-object v0, p1, Lsxb;->a:Ljef;
-
-    iget-object v1, p0, Lmxb;->Y:Lone/me/profileedit/ProfileEditScreen;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v2, Loyf;->a:Loyf;
-
-    if-nez v0, :cond_0
-
-    return-object v2
-
-    :cond_0
-    new-instance v3, Lava;
-
-    invoke-direct {v3, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget-object v1, Lsva;->a:Lsva;
-
-    invoke-virtual {v3, v1}, Lava;->e(Ltva;)V
-
-    invoke-virtual {v3, v0}, Lava;->h(Ljava/lang/CharSequence;)V
-
-    sget-object v0, Luva;->a:Luva;
-
-    invoke-virtual {v3, v0}, Lava;->f(Lyva;)V
-
-    new-instance v0, Liva;
-
-    iget v1, p1, Lsxb;->b:I
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x0
-
-    invoke-direct {v0, v5, v5, v1, v4}, Liva;-><init>(IIII)V
-
-    invoke-virtual {v3, v0}, Lava;->c(Liva;)V
-
-    iget-object p1, p1, Lsxb;->c:Lfx1;
-
-    invoke-virtual {v3, p1}, Lava;->d(Lbva;)V
-
-    invoke-virtual {v3}, Lava;->i()Lzua;
-
-    return-object v2
-
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-object v0
 .end method

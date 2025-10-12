@@ -1,184 +1,129 @@
-.class public final synthetic Lqt1;
-.super Ljava/lang/Object;
+.class public final Lqt1;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lbp7;
-
-.field public final synthetic c:Lbp7;
+.field public final synthetic Y:Lrt1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbp7;Lbp7;I)V
+.method public constructor <init>(Lrt1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lqt1;->a:I
+    iput-object p1, p0, Lqt1;->Y:Lrt1;
 
-    iput-object p1, p0, Lqt1;->b:Lbp7;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lqt1;->c:Lbp7;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lqt1;->a:I
+    check-cast p1, Ll2g;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lk12;
+    invoke-virtual {p0, p1, p2}, Lqt1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lqt1;->b:Lbp7;
+    move-result-object p1
 
-    iget-object v2, p0, Lqt1;->c:Lbp7;
+    check-cast p1, Lqt1;
 
-    invoke-direct {v0, v1, v2}, Lk12;-><init>(Lbp7;Lbp7;)V
+    sget-object p2, Laxf;->a:Laxf;
 
-    return-object v0
+    invoke-virtual {p1, p2}, Lqt1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lqt1;->b:Lbp7;
+    return-object p2
+.end method
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Lqt1;
 
-    check-cast v0, Lr8f;
+    iget-object v1, p0, Lqt1;->Y:Lrt1;
 
-    check-cast v0, Lwla;
+    invoke-direct {v0, v1, p2}, Lqt1;-><init>(Lrt1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    const-string v2, "shortcuts"
-
-    invoke-virtual {v0, v1, v2}, Ly24;->limitedParallelism(ILjava/lang/String;)Ly24;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lqt1;->c:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lw24;
-
-    invoke-virtual {v0, v1}, Le0;->plus(Lw24;)Lw24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
+    iput-object p1, v0, Lqt1;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    invoke-static {}, Lhxf;->a()Lki7;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    move-result-object v0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lqt1;->b:Lbp7;
+    iget-object p1, p0, Lqt1;->X:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast p1, Ll2g;
 
-    move-result-object v1
+    sget-object v0, Ll2g;->a:Ll2g;
 
-    check-cast v1, Lr8f;
+    iget-object v1, p0, Lqt1;->Y:Lrt1;
 
-    check-cast v1, Lwla;
+    if-ne p1, v0, :cond_0
 
-    invoke-virtual {v1}, Lwla;->a()Ly24;
-
-    move-result-object v1
-
-    const-string v2, "non-contacts"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Ly24;->limitedParallelism(ILjava/lang/String;)Ly24;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Llj7;->plus(Lw24;)Lw24;
+    invoke-virtual {v1}, Lrt1;->b()Lane;
 
     move-result-object v0
 
-    iget-object v1, p0, Lqt1;->c:Lbp7;
+    check-cast v0, Lhne;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lw24;
-
-    invoke-interface {v0, v1}, Lw24;->plus(Lw24;)Lw24;
+    invoke-virtual {v0}, Lhne;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+    check-cast v0, Lz54;
 
-    move-result-object v0
+    iget-object v2, v1, Lrt1;->n:Lyn7;
 
-    return-object v0
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    :pswitch_2
-    invoke-static {}, Lpih;->a()Lp1f;
+    move-result-object v2
 
-    move-result-object v0
+    move-object v3, v2
 
-    iget-object v1, p0, Lqt1;->b:Lbp7;
+    check-cast v3, Lrv1;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object v5, v0, Lz54;->c:Ljava/lang/String;
 
-    move-result-object v1
+    iget-boolean v10, v0, Lz54;->i:Z
 
-    check-cast v1, Lr8f;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lwla;
+    const/4 v11, 0x0
 
-    invoke-virtual {v1}, Lwla;->b()Ly24;
+    const/16 v12, 0x178
 
-    move-result-object v1
+    const-string v4, "BAD_CONNECTION_ALERT"
 
-    invoke-interface {v0, v1}, Lw24;->plus(Lw24;)Lw24;
+    const-string v6, "VPN"
 
-    move-result-object v0
+    const/4 v7, 0x0
 
-    iget-object v1, p0, Lqt1;->c:Lbp7;
+    const/4 v8, 0x0
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v9, 0x0
 
-    move-result-object v1
+    invoke-static/range {v3 .. v12}, Lrv1;->d(Lrv1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLnv1;I)V
 
-    check-cast v1, Lw24;
+    :cond_0
+    invoke-virtual {v1, p1}, Lrt1;->n(Ll2g;)V
 
-    invoke-interface {v0, v1}, Lw24;->plus(Lw24;)Lw24;
+    sget-object p1, Laxf;->a:Laxf;
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

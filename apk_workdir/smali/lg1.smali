@@ -1,26 +1,34 @@
 .class public final Llg1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
 .field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
+.field public final synthetic Z:I
+
+.field public final synthetic r0:Landroid/os/Bundle;
+
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+.method public constructor <init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    iput-object p1, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    const/4 p2, 0x2
+    iput p2, p0, Llg1;->Z:I
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Llg1;->r0:Landroid/os/Bundle;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +38,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Ln24;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Llg1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,83 +48,99 @@
 
     check-cast p1, Llg1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Llg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Llg1;
+    new-instance p1, Llg1;
 
-    iget-object v1, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    iget v0, p0, Llg1;->Z:I
 
-    invoke-direct {v0, p2, v1}, Llg1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;)V
+    iget-object v1, p0, Llg1;->r0:Landroid/os/Bundle;
 
-    iput-object p1, v0, Llg1;->X:Ljava/lang/Object;
+    iget-object v2, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    return-object v0
+    invoke-direct {p1, v2, v0, v1, p2}, Llg1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 5
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Llg1;->X:I
 
-    iget-object p1, p0, Llg1;->X:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Lea;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->E0:Lmqc;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    sget-object v2, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->M0:[Ltm7;
+    goto :goto_0
 
-    const/16 v3, 0x8
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    aget-object v2, v2, v3
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-interface {v1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    throw p1
 
-    move-object v2, v1
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    check-cast v2, Landroid/widget/TextView;
+    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lpl7;
 
-    iget-object v1, p1, Lea;->b:Ljava/util/List;
+    iget-object p1, p0, Llg1;->Y:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->G0()Lhg1;
 
-    move-result v1
+    move-result-object p1
 
-    xor-int/lit8 v3, v1, 0x1
+    iput v1, p0, Llg1;->X:I
 
-    const/4 v6, 0x0
+    iget-object v0, p1, Lhg1;->X:Le7f;
 
-    const/4 v7, 0x6
+    check-cast v0, Lmka;
 
-    const-wide/16 v4, 0x0
-
-    invoke-static/range {v2 .. v7}, Lva8;->i(Landroid/view/View;ZJLxe6;I)V
-
-    iget-object v0, v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->J0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lmka;->b()Lh24;
 
     move-result-object v0
 
-    check-cast v0, Laa;
+    new-instance v1, Ldg1;
 
-    iget-object p1, p1, Lea;->b:Ljava/util/List;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+    iget v3, p0, Llg1;->Z:I
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v4, p0, Llg1;->r0:Landroid/os/Bundle;
+
+    invoke-direct {v1, p1, v3, v4, v2}, Ldg1;-><init>(Lhg1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

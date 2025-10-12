@@ -4,24 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lc94;IZ)I
+.method public abstract d(Landroid/graphics/Matrix;)V
 .end method
 
-.method public abstract b(JIIILznf;)V
-.end method
-
-.method public abstract c(ILg5g;)V
-.end method
-
-.method public abstract d(Lr76;)V
-.end method
-
-.method public e(Lc94;IZ)I
-    .locals 0
-
-    invoke-interface {p0, p1, p2, p3}, Lbof;->a(Lc94;IZ)I
-
-    move-result p1
-
-    return p1
+.method public abstract g(Landroid/graphics/RectF;)V
 .end method

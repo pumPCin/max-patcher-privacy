@@ -1,48 +1,76 @@
 .class public final Lbq7;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lwq7;
 
-.field public final synthetic Y:Le13;
+.field public final b:Lwp7;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lqr4;
+
+.field public final d:Lef3;
 
 
 # direct methods
-.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lwq7;Lwp7;Lqr4;Leh7;)V
+    .locals 1
 
-    iput-object p1, p0, Lbq7;->Y:Le13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbq7;->a:Lwq7;
+
+    iput-object p2, p0, Lbq7;->b:Lwp7;
+
+    iput-object p3, p0, Lbq7;->c:Lqr4;
+
+    new-instance p2, Lef3;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p0, p3, p4}, Lef3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lbq7;->d:Lef3;
+
+    iget-object p3, p1, Lwq7;->d:Lwp7;
+
+    sget-object v0, Lwp7;->a:Lwp7;
+
+    if-ne p3, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-interface {p4, p1}, Leh7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    invoke-virtual {p0}, Lbq7;->a()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1, p2}, Lwq7;->a(Lqq7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iput-object p1, p0, Lbq7;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lbq7;->a:Lwq7;
 
-    iget p1, p0, Lbq7;->X:I
+    iget-object v1, p0, Lbq7;->d:Lef3;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {v0, v1}, Lwq7;->f(Lqq7;)V
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lbq7;->X:I
+    iget-object v1, p0, Lbq7;->c:Lqr4;
 
-    iget-object p1, p0, Lbq7;->Y:Le13;
+    iput-boolean v0, v1, Lqr4;->b:Z
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Lqr4;->a()V
 
-    invoke-virtual {p1, v0, p0}, Le13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

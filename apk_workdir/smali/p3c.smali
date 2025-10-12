@@ -2,242 +2,203 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lv9d;
+
 
 # instance fields
 .field public final a:I
 
-.field public final b:I
-
-.field public final c:J
-
-.field public final d:J
+.field public final synthetic b:Lt3c;
 
 
 # direct methods
-.method public constructor <init>(IIJJ)V
+.method public constructor <init>(Lt3c;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lp3c;->a:I
+    iput-object p1, p0, Lp3c;->b:Lt3c;
 
-    iput p2, p0, Lp3c;->b:I
-
-    iput-wide p3, p0, Lp3c;->c:J
-
-    iput-wide p5, p0, Lp3c;->d:J
+    iput p2, p0, Lp3c;->a:I
 
     return-void
-.end method
-
-.method public static a(Ljava/io/File;)Lp3c;
-    .locals 9
-
-    new-instance v1, Ljava/io/DataInputStream;
-
-    new-instance v0, Ljava/io/FileInputStream;
-
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    invoke-direct {v1, v0}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
-
-    :try_start_0
-    new-instance v2, Lp3c;
-
-    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Ljava/io/DataInputStream;->readInt()I
-
-    move-result v4
-
-    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
-
-    move-result-wide v5
-
-    invoke-virtual {v1}, Ljava/io/DataInputStream;->readLong()J
-
-    move-result-wide v7
-
-    invoke-direct/range {v2 .. v8}, Lp3c;-><init>(IIJJ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
-    return-object v2
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    :try_start_1
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_0
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/io/File;)V
+.method public final b()V
     .locals 3
 
-    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+    iget v0, p0, Lp3c;->a:I
 
-    new-instance v0, Ljava/io/DataOutputStream;
+    iget-object v1, p0, Lp3c;->b:Lt3c;
 
-    new-instance v1, Ljava/io/FileOutputStream;
+    iget-object v2, v1, Lt3c;->E0:[Lt9d;
 
-    invoke-direct {v1, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    aget-object v0, v2, v0
 
-    invoke-direct {v0, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-virtual {v0}, Lt9d;->v()V
 
-    :try_start_0
-    iget p1, p0, Lp3c;->a:I
+    iget-object v0, v1, Lt3c;->w0:Lx08;
 
-    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
+    iget-object v2, v1, Lt3c;->o:Lhl9;
 
-    iget p1, p0, Lp3c;->b:I
+    iget v1, v1, Lt3c;->O0:I
 
-    invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
+    invoke-virtual {v2, v1}, Lhl9;->h(I)I
 
-    iget-wide v1, p0, Lp3c;->c:J
+    move-result v1
 
-    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
+    iget-object v2, v0, Lx08;->c:Ljava/lang/Object;
 
-    iget-wide v1, p0, Lp3c;->d:J
+    check-cast v2, Ljava/io/IOException;
 
-    invoke-virtual {v0, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v2, :cond_3
 
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
+    iget-object v0, v0, Lx08;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Lgy7;
 
-    :catchall_0
-    move-exception p1
+    if-eqz v0, :cond_2
 
-    :try_start_1
-    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    const/high16 v2, -0x80000000
 
-    goto :goto_0
+    if-ne v1, v2, :cond_0
 
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_0
-    throw p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    iget v1, v0, Lgy7;->b:I
 
     :cond_0
-    const/4 v1, 0x0
+    iget-object v2, v0, Lgy7;->o:Ljava/io/IOException;
 
-    if-eqz p1, :cond_2
+    if-eqz v2, :cond_2
 
-    instance-of v2, p1, Lp3c;
+    iget v0, v0, Lgy7;->X:I
 
-    if-nez v2, :cond_1
+    if-gt v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lp3c;
-
-    iget v2, p0, Lp3c;->b:I
-
-    iget v3, p1, Lp3c;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Lp3c;->c:J
-
-    iget-wide v4, p1, Lp3c;->c:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lp3c;->a:I
-
-    iget v3, p1, Lp3c;->a:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-wide v2, p0, Lp3c;->d:J
-
-    iget-wide v4, p1, Lp3c;->d:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
+    throw v2
 
     :cond_2
     :goto_0
-    return v1
+    return-void
+
+    :cond_3
+    throw v2
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public final d()Z
+    .locals 3
 
-    iget v0, p0, Lp3c;->b:I
+    iget-object v0, p0, Lp3c;->b:Lt3c;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0}, Lt3c;->F()Z
 
-    move-result-object v0
+    move-result v1
 
-    iget-wide v1, p0, Lp3c;->c:J
+    if-nez v1, :cond_0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
+    iget-object v1, v0, Lt3c;->E0:[Lt9d;
 
     iget v2, p0, Lp3c;->a:I
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aget-object v1, v1, v2
 
-    move-result-object v2
+    iget-boolean v0, v0, Lt3c;->Y0:Z
 
-    iget-wide v3, p0, Lp3c;->d:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-virtual {v1, v0}, Lt9d;->t(Z)Z
 
     move-result v0
 
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(J)I
+    .locals 4
+
+    iget-object v0, p0, Lp3c;->b:Lt3c;
+
+    invoke-virtual {v0}, Lt3c;->F()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    iget v1, p0, Lp3c;->a:I
+
+    invoke-virtual {v0, v1}, Lt3c;->y(I)V
+
+    iget-object v2, v0, Lt3c;->E0:[Lt9d;
+
+    aget-object v2, v2, v1
+
+    iget-boolean v3, v0, Lt3c;->Y0:Z
+
+    invoke-virtual {v2, p1, p2, v3}, Lt9d;->r(JZ)I
+
+    move-result p1
+
+    invoke-virtual {v2, p1}, Lt9d;->C(I)V
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0, v1}, Lt3c;->B(I)V
+
+    :cond_1
+    return p1
+.end method
+
+.method public final g(Lax0;Lvb4;I)I
+    .locals 5
+
+    iget-object v0, p0, Lp3c;->b:Lt3c;
+
+    invoke-virtual {v0}, Lt3c;->F()Z
+
+    move-result v1
+
+    const/4 v2, -0x3
+
+    if-eqz v1, :cond_0
+
+    return v2
+
+    :cond_0
+    iget v1, p0, Lp3c;->a:I
+
+    invoke-virtual {v0, v1}, Lt3c;->y(I)V
+
+    iget-object v3, v0, Lt3c;->E0:[Lt9d;
+
+    aget-object v3, v3, v1
+
+    iget-boolean v4, v0, Lt3c;->Y0:Z
+
+    invoke-virtual {v3, p1, p2, p3, v4}, Lt9d;->y(Lax0;Lvb4;IZ)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_1
+
+    invoke-virtual {v0, v1}, Lt3c;->B(I)V
+
+    :cond_1
+    return p1
 .end method

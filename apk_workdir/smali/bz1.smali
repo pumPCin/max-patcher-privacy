@@ -1,3 +1,3 @@
-.class public interface abstract Lbz1;
-.super Ljava/lang/Object;
+.class public final Lbz1;
+.super Lw9h;
 .source "SourceFile"

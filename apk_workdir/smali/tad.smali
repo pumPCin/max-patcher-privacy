@@ -3,151 +3,173 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map$Entry;
+.implements Lvad;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Lkn;
 
-.field public final b:Ljava/lang/Object;
+.field public b:Z
 
-.field public c:Ltad;
+.field public c:Landroid/os/Bundle;
 
-.field public o:Ltad;
+.field public final d:Lh4f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lkn;Lhkg;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltad;->a:Ljava/lang/Object;
+    iput-object p1, p0, Ltad;->a:Lkn;
 
-    iput-object p2, p0, Ltad;->b:Ljava/lang/Object;
+    new-instance p1, Lee;
+
+    const/4 v0, 0x6
+
+    invoke-direct {p1, v0, p2}, Lee;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lh4f;
+
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+
+    iput-object p2, p0, Ltad;->d:Lh4f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()Landroid/os/Bundle;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Landroid/os/Bundle;
 
-    if-ne p1, p0, :cond_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    return v0
+    iget-object v1, p0, Ltad;->c:Landroid/os/Bundle;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
     :cond_0
-    instance-of v1, p1, Ltad;
+    iget-object v1, p0, Ltad;->d:Lh4f;
 
-    const/4 v2, 0x0
+    invoke-virtual {v1}, Lh4f;->getValue()Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    return v2
+    check-cast v1, Landroidx/lifecycle/SavedStateHandlesVM;
+
+    iget-object v1, v1, Landroidx/lifecycle/SavedStateHandlesVM;->b:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_1
-    check-cast p1, Ltad;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, p0, Ltad;->a:Ljava/lang/Object;
+    move-result v2
 
-    iget-object v3, p1, Ltad;->a:Ljava/lang/Object;
+    if-eqz v2, :cond_2
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v2
 
-    if-eqz v1, :cond_2
+    check-cast v2, Ljava/util/Map$Entry;
 
-    iget-object v1, p0, Ltad;->b:Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    iget-object p1, p1, Ltad;->b:Ljava/lang/Object;
+    move-result-object v3
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v3, Ljava/lang/String;
 
-    move-result p1
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    if-eqz p1, :cond_2
+    move-result-object v2
 
-    return v0
+    check-cast v2, Lqad;
+
+    iget-object v2, v2, Lqad;->e:Lvad;
+
+    invoke-interface {v2}, Lvad;->a()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    invoke-static {v2, v4}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    goto :goto_0
 
     :cond_2
-    return v2
-.end method
+    const/4 v1, 0x0
 
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ltad;->a:Ljava/lang/Object;
+    iput-boolean v1, p0, Ltad;->b:Z
 
     return-object v0
 .end method
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+.method public final b()V
+    .locals 3
 
-    iget-object v0, p0, Ltad;->b:Ljava/lang/Object;
+    iget-boolean v0, p0, Ltad;->b:Z
 
-    return-object v0
-.end method
+    if-nez v0, :cond_2
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v0, p0, Ltad;->a:Lkn;
 
-    iget-object v0, p0, Ltad;->a:Ljava/lang/Object;
+    const-string v1, "androidx.lifecycle.internal.SavedStateHandlesProvider"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    iget-object v1, p0, Ltad;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "An entry modification is not supported"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Ltad;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ltad;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lkn;->c(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v2, p0, Ltad;->c:Landroid/os/Bundle;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    :cond_1
+    iput-object v1, p0, Ltad;->c:Landroid/os/Bundle;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltad;->b:Z
+
+    iget-object v0, p0, Ltad;->d:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/lifecycle/SavedStateHandlesVM;
+
+    :cond_2
+    return-void
 .end method

@@ -1,138 +1,106 @@
 .class public final Lqvb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnf6;
+.implements Luvb;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Ltya;
-
-.field public synthetic Z:Luxa;
+.field public final a:Lz93;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lz93;)V
     .locals 0
 
-    iput p3, p0, Lqvb;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqvb;->a:Lz93;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lqvb;->X:I
+    const/4 v0, 0x1
 
-    check-cast p1, Ltya;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Luxa;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lqvb;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lqvb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lqvb;->Y:Ltya;
-
-    iput-object p2, v0, Lqvb;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lqvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lqvb;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lqvb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lqvb;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lqvb;->Y:Ltya;
+    return v2
 
-    iput-object p2, v0, Lqvb;->Z:Luxa;
+    :cond_1
+    check-cast p1, Lqvb;
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v1, p0, Lqvb;->a:Lz93;
 
-    invoke-virtual {v0, p1}, Lqvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lqvb;->a:Lz93;
 
-    return-object p1
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    nop
+    move-result p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lqvb;->X:I
+    iget-object v0, p0, Lqvb;->a:Lz93;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lqvb;->Y:Ltya;
+    return v0
 
-    iget-object v0, p0, Lqvb;->Z:Luxa;
+    :cond_0
+    iget-object v0, v0, Lz93;->a:Ljava/util/List;
 
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatNamePayload(errorText="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqvb;->a:Lz93;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->l:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqvb;->Y:Ltya;
-
-    iget-object v0, p0, Lqvb;->Z:Luxa;
-
-    invoke-interface {v0}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

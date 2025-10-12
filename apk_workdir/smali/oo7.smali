@@ -1,239 +1,717 @@
 .class public final Loo7;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lov9;
 .source "SourceFile"
-
-# interfaces
-.implements Lyz5;
-.implements Leze;
-.implements Lss4;
 
 
 # instance fields
-.field public final a:La98;
+.field public final synthetic g:I
 
-.field public final b:Ly88;
-
-.field public final c:Lcg6;
-
-.field public final o:Liz5;
+.field public final h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
 
 # direct methods
-.method public constructor <init>(La98;Ly88;)V
-    .locals 1
+.method public synthetic constructor <init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
+    .locals 0
 
-    sget-object v0, Loch;->c:Lcg6;
+    iput p2, p0, Loo7;->g:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    iput-object p1, p0, Loo7;->a:La98;
-
-    iput-object p2, p0, Loo7;->b:Ly88;
-
-    iput-object v0, p0, Loo7;->c:Lcg6;
-
-    sget-object p1, Liz5;->a:Liz5;
-
-    iput-object p1, p0, Loo7;->o:Liz5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lgze;->a:Lgze;
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object v0, p0, Loo7;->c:Lcg6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 0
-
-    invoke-static {p0}, Lgze;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    return-void
-.end method
-
-.method public final d(Leze;)V
+.method public final B()I
     .locals 1
 
-    invoke-static {p0, p1}, Lgze;->d(Ljava/util/concurrent/atomic/AtomicReference;Leze;)Z
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final E()I
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Loo7;->x()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    return v0
 
-    :try_start_0
-    iget-object v0, p0, Loo7;->o:Liz5;
+    :pswitch_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    invoke-virtual {v0, p0}, Liz5;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
 
-    return-void
+    neg-int v0, v0
 
-    :catchall_0
-    move-exception v0
+    return v0
 
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-interface {p1}, Leze;->cancel()V
-
-    invoke-virtual {p0, v0}, Loo7;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final f(Ljava/lang/Object;)V
+.method public final F(Landroid/view/View;)I
     .locals 1
 
-    invoke-virtual {p0}, Loo7;->h()Z
+    iget v0, p0, Loo7;->g:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
-    :try_start_0
-    iget-object v0, p0, Loo7;->a:La98;
+    move-result p1
 
-    invoke-virtual {v0, p1}, La98;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    return-void
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
 
-    :catchall_0
-    move-exception p1
+    sub-int/2addr p1, v0
 
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
+    return p1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, Leze;
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
 
-    invoke-interface {v0}, Leze;->cancel()V
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
 
-    invoke-virtual {p0, p1}, Loo7;->onError(Ljava/lang/Throwable;)V
+    add-int/2addr p1, v0
 
-    :cond_0
-    return-void
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final g()V
-    .locals 0
+.method public final G(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)I
+    .locals 1
 
-    invoke-static {p0}, Lgze;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
+    iget v0, p0, Loo7;->g:I
 
-    return-void
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final h()Z
-    .locals 2
+.method public final H()I
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v0, p0, Loo7;->g:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Lgze;->a:Lgze;
+    const/4 v0, 0x0
 
-    if-ne v0, v1, :cond_0
+    return v0
 
+    :pswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    nop
 
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final i(J)V
+.method public final M(F)Z
     .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v0, p0, Loo7;->g:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Leze;
+    const/4 v0, 0x0
 
-    invoke-interface {v0, p1, p2}, Leze;->i(J)V
+    cmpg-float p1, p1, v0
 
-    return-void
-.end method
+    if-gez p1, :cond_0
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
+    const/4 p1, 0x1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lgze;->a:Lgze;
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object v0, p0, Loo7;->b:Ly88;
-
-    invoke-virtual {v0, p1}, Ly88;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    cmpl-float p1, p1, v0
+
+    if-lez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final P(Landroid/view/View;)Z
+    .locals 2
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p1
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    invoke-virtual {p0}, Loo7;->x()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    div-int/lit8 v1, v1, 0x2
+
+    if-le p1, v1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Loo7;->x()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Loo7;->z()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    if-ge p1, v0, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final Q(FF)Z
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result p2
+
+    cmpl-float p2, v0, p2
+
+    if-lez p2, :cond_0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    const/16 p2, 0x1f4
+
+    int-to-float p2, p2
+
+    cmpl-float p1, p1, p2
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result p2
+
+    cmpl-float p2, v0, p2
+
+    if-lez p2, :cond_1
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    const/16 p2, 0x1f4
+
+    int-to-float p2, p2
+
+    cmpl-float p1, p1, p2
+
+    if-lez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g0(Landroid/view/View;F)Z
+    .locals 2
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->k:F
+
+    mul-float/2addr p2, v1
+
+    add-float/2addr p2, p1
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    cmpl-float p1, p1, p2
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->k:F
+
+    mul-float/2addr p2, v1
+
+    add-float/2addr p2, p1
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/high16 p2, 0x3f000000    # 0.5f
+
+    cmpl-float p1, p1, p2
+
+    if-lez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final i(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    return p1
+
+    :pswitch_0
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final j(I)F
+    .locals 2
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0}, Loo7;->x()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    sub-float v1, v0, v1
+
+    int-to-float p1, p1
+
+    sub-float/2addr v0, p1
+
+    div-float/2addr v0, v1
+
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Loo7;->z()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0}, Loo7;->x()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    sub-float/2addr v1, v0
+
+    int-to-float p1, p1
+
+    sub-float/2addr p1, v0
+
+    div-float/2addr p1, v1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final m0(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
     return-void
+
+    :pswitch_0
+    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n0(Landroid/view/ViewGroup$MarginLayoutParams;II)V
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p3, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget p3, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    if-gt p2, p3, :cond_0
+
+    sub-int/2addr p3, p2
+
+    iput p3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    if-gt p2, v0, :cond_1
+
+    iput p3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final w(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    .locals 1
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+
+    return p1
+
+    :pswitch_0
+    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final x()I
+    .locals 3
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    iget v2, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
+
+    sub-int/2addr v1, v2
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    sub-int/2addr v1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->n:I
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    add-int/2addr v1, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final z()I
+    .locals 2
+
+    iget v0, p0, Loo7;->g:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Loo7;->h:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+
+    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
+
+    neg-int v1, v1
+
+    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
+
+    sub-int/2addr v1, v0
+
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

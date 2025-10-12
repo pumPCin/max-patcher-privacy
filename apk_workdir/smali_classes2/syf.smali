@@ -1,123 +1,73 @@
-.class public final Lsyf;
-.super Lm3f;
+.class public final enum Lsyf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lsyf;
 
-# instance fields
-.field public X:I
+.field public static final enum b:Lsyf;
 
-.field public final synthetic Y:Ltyf;
-
-.field public final synthetic Z:J
+.field public static final synthetic c:[Lsyf;
 
 
 # direct methods
-.method public constructor <init>(Ltyf;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lsyf;->Y:Ltyf;
+    new-instance v0, Lsyf;
 
-    iput-wide p2, p0, Lsyf;->Z:J
+    const-string v1, "UNKNOWN"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lsyf;->a:Lsyf;
+
+    new-instance v1, Lsyf;
+
+    const-string v2, "NOT_ENOUGH_VIDEO_TRACKS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lsyf;->b:Lsyf;
+
+    filled-new-array {v0, v1}, [Lsyf;
+
+    move-result-object v0
+
+    sput-object v0, Lsyf;->c:[Lsyf;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lsyf;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lsyf;
 
-    check-cast p1, Le34;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lsyf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lsyf;
 
-    move-result-object p1
-
-    check-cast p1, Lsyf;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lsyf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public static values()[Lsyf;
+    .locals 1
 
-    new-instance p1, Lsyf;
+    sget-object v0, Lsyf;->c:[Lsyf;
 
-    iget-object v0, p0, Lsyf;->Y:Ltyf;
+    invoke-virtual {v0}, [Lsyf;->clone()Ljava/lang/Object;
 
-    iget-wide v1, p0, Lsyf;->Z:J
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lsyf;-><init>(Ltyf;JLkotlin/coroutines/Continuation;)V
+    check-cast v0, [Lsyf;
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lsyf;->X:I
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsyf;->Y:Ltyf;
-
-    iget-object p1, p1, Ltyf;->d:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lip3;
-
-    iput v2, p0, Lsyf;->X:I
-
-    iget-wide v2, p0, Lsyf;->Z:J
-
-    invoke-virtual {p1, v2, v3}, Lip3;->a(J)V
-
-    sget-object p1, Lf34;->a:Lf34;
-
-    if-ne v1, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    return-object v1
+    return-object v0
 .end method

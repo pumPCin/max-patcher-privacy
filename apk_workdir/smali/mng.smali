@@ -1,55 +1,43 @@
 .class public final Lmng;
-.super Llng;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final C(Landroid/view/View;F)V
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:[B
+
+
+# direct methods
+.method public synthetic constructor <init>(IIIIII[B)V
     .locals 0
 
-    invoke-static {p1, p2}, Lyzc;->v(Landroid/view/View;F)V
+    iput p1, p0, Lmng;->a:I
+
+    iput p2, p0, Lmng;->b:I
+
+    iput p3, p0, Lmng;->c:I
+
+    iput p4, p0, Lmng;->d:I
+
+    iput p5, p0, Lmng;->e:I
+
+    iput p6, p0, Lmng;->f:I
+
+    iput-object p7, p0, Lmng;->g:[B
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public final D(Landroid/view/View;I)V
-    .locals 0
-
-    invoke-static {p1, p2}, Lyzc;->w(Landroid/view/View;I)V
-
-    return-void
-.end method
-
-.method public final J(Landroid/view/View;IIII)V
-    .locals 0
-
-    invoke-static {p1, p2, p3, p4, p5}, Lyzc;->x(Landroid/view/View;IIII)V
-
-    return-void
-.end method
-
-.method public final K(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 0
-
-    invoke-static {p1, p2}, Lyzc;->C(Landroid/view/View;Landroid/graphics/Matrix;)V
-
-    return-void
-.end method
-
-.method public final L(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 0
-
-    invoke-static {p1, p2}, Lyzc;->D(Landroid/view/View;Landroid/graphics/Matrix;)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/View;)F
-    .locals 0
-
-    invoke-static {p1}, Lyzc;->a(Landroid/view/View;)F
-
-    move-result p1
-
-    return p1
 .end method

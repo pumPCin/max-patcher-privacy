@@ -1,60 +1,113 @@
-.class public final synthetic Lp7e;
+.class public final Lp7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lov7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lr7e;
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr7e;I)V
-    .locals 0
-
-    iput p2, p0, Lp7e;->a:I
-
-    iput-object p1, p0, Lp7e;->b:Lr7e;
+.method public constructor <init>(I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lp7e;->a:I
+
+    sget v0, Lvoa;->d:I
+
+    iput v0, p0, Lp7e;->b:I
+
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lp7e;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lp7e;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lp7e;
+
+    iget v1, p0, Lp7e;->a:I
+
+    iget p1, p1, Lp7e;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lp7e;->c:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
     iget v0, p0, Lp7e;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iget-object v0, p0, Lp7e;->b:Lr7e;
+    move-result v0
 
-    invoke-static {v0}, Lr7e;->i(Lr7e;)Landroid/graphics/drawable/ShapeDrawable;
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lp7e;->b:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShimmerMemberListItem(pos="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lp7e;->a:I
+
+    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lp7e;->b:Lr7e;
-
-    invoke-static {v0}, Lr7e;->b(Lr7e;)Landroid/graphics/drawable/RippleDrawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

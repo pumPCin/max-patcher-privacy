@@ -3,4 +3,12 @@
 
 
 # static fields
-.field public static view_tree_view_model_store_owner:I = 0x7f0a0d45
+.field public static call_busy:I = 0x7f120001
+
+.field public static call_connected:I = 0x7f120002
+
+.field public static call_connecting:I = 0x7f120003
+
+.field public static call_finished:I = 0x7f120004
+
+.field public static call_ringing:I = 0x7f120006

@@ -1,70 +1,107 @@
-.class public final synthetic Lse5;
+.class public final Lse5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrx7;
+.implements Lu8g;
+.implements Lqkb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lu8g;
 
-.field public final synthetic b:Ldkb;
-
-.field public final synthetic c:I
+.field public b:Lse5;
 
 
-# direct methods
-.method public synthetic constructor <init>(Ldkb;II)V
-    .locals 0
+# virtual methods
+.method public final a(ILjava/lang/Object;)V
+    .locals 1
 
-    iput p3, p0, Lse5;->a:I
+    const/4 v0, 0x7
 
-    iput-object p1, p0, Lse5;->b:Ldkb;
+    if-eq p1, v0, :cond_3
 
-    iput p2, p0, Lse5;->c:I
+    const/16 v0, 0x8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eq p1, v0, :cond_2
+
+    const/16 v0, 0x2710
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-nez p2, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/ClassCastException;
+
+    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    check-cast p2, Lse5;
+
+    iput-object p2, p0, Lse5;->b:Lse5;
+
+    return-void
+
+    :cond_3
+    check-cast p2, Lu8g;
+
+    iput-object p2, p0, Lse5;->a:Lu8g;
 
     return-void
 .end method
 
+.method public final b(JJLw66;Landroid/media/MediaFormat;)V
+    .locals 7
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+    iget-object v0, p0, Lse5;->a:Lu8g;
 
-    iget v0, p0, Lse5;->a:I
+    if-eqz v0, :cond_0
 
-    check-cast p1, Ltkb;
+    move-wide v1, p1
 
-    packed-switch v0, :pswitch_data_0
+    move-wide v3, p3
 
-    iget-object v0, p0, Lse5;->b:Ldkb;
+    move-object v5, p5
 
-    iget-boolean v0, v0, Ldkb;->l:Z
+    move-object v6, p6
 
-    iget v1, p0, Lse5;->c:I
+    invoke-interface/range {v0 .. v6}, Lu8g;->b(JJLw66;Landroid/media/MediaFormat;)V
 
-    invoke-interface {p1, v1, v0}, Ltkb;->i(IZ)V
-
+    :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lse5;->b:Ldkb;
+.method public final c()V
+    .locals 1
 
-    iget-object v0, v0, Ldkb;->a:Llif;
+    iget-object v0, p0, Lse5;->b:Lse5;
 
-    iget v0, p0, Lse5;->c:I
+    if-eqz v0, :cond_0
 
-    invoke-interface {p1, v0}, Ltkb;->y(I)V
+    invoke-virtual {v0}, Lse5;->c()V
 
+    :cond_0
     return-void
+.end method
 
-    nop
+.method public final d()V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lse5;->b:Lse5;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lse5;->d()V
+
+    :cond_0
+    return-void
 .end method

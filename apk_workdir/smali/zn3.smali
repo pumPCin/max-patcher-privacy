@@ -1,375 +1,112 @@
-.class public abstract Lzn3;
+.class public final Lzn3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/SparseIntArray;
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:F
+
+.field public d:F
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    new-instance v0, Landroid/util/SparseIntArray;
+    sget-object v0, Lgkc;->PropertySet:[I
 
-    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    sput-object v0, Lzn3;->a:Landroid/util/SparseIntArray;
+    move-result-object p1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintWidth:I
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
-    const/16 v2, 0x40
+    move-result p2
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    const/4 v0, 0x0
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHeight:I
+    :goto_0
+    if-ge v0, p2, :cond_4
 
-    const/16 v2, 0x41
+    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    move-result v1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintLeft_toLeftOf:I
+    sget v2, Lgkc;->PropertySet_android_alpha:I
 
-    const/16 v2, 0x8
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    iget v2, p0, Lzn3;->c:F
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintLeft_toRightOf:I
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    const/16 v2, 0x9
+    move-result v1
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    iput v1, p0, Lzn3;->c:F
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintRight_toLeftOf:I
+    goto :goto_1
 
-    const/16 v2, 0xa
+    :cond_0
+    sget v2, Lgkc;->PropertySet_android_visibility:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    if-ne v1, v2, :cond_1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintRight_toRightOf:I
+    iget v2, p0, Lzn3;->a:I
 
-    const/16 v2, 0xb
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    move-result v1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintTop_toTopOf:I
+    iput v1, p0, Lzn3;->a:I
 
-    const/16 v2, 0xc
+    sget-object v2, Lbo3;->d:[I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    aget v1, v2, v1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintTop_toBottomOf:I
+    iput v1, p0, Lzn3;->a:I
 
-    const/16 v2, 0xd
+    goto :goto_1
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    :cond_1
+    sget v2, Lgkc;->PropertySet_visibilityMode:I
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBottom_toTopOf:I
+    if-ne v1, v2, :cond_2
 
-    const/16 v2, 0xe
+    iget v2, p0, Lzn3;->b:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBottom_toBottomOf:I
+    move-result v1
 
-    const/16 v2, 0xf
+    iput v1, p0, Lzn3;->b:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    goto :goto_1
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBaseline_toBaselineOf:I
+    :cond_2
+    sget v2, Lgkc;->PropertySet_motionProgress:I
 
-    const/16 v2, 0x10
+    if-ne v1, v2, :cond_3
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    iget v2, p0, Lzn3;->d:F
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBaseline_toTopOf:I
+    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
-    const/16 v2, 0x34
+    move-result v1
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    iput v1, p0, Lzn3;->d:F
 
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBaseline_toBottomOf:I
+    :cond_3
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
 
-    const/16 v2, 0x35
+    goto :goto_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintCircle:I
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintCircleRadius:I
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintCircleAngle:I
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_editor_absoluteX:I
-
-    const/16 v2, 0x31
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_editor_absoluteY:I
-
-    const/16 v2, 0x32
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintGuide_begin:I
-
-    const/4 v2, 0x5
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintGuide_end:I
-
-    const/4 v2, 0x6
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintGuide_percent:I
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_guidelineUseRtl:I
-
-    const/16 v2, 0x43
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_android_orientation:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintStart_toEndOf:I
-
-    const/16 v2, 0x11
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintStart_toStartOf:I
-
-    const/16 v2, 0x12
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintEnd_toStartOf:I
-
-    const/16 v2, 0x13
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintEnd_toEndOf:I
-
-    const/16 v2, 0x14
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginLeft:I
-
-    const/16 v2, 0x15
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginTop:I
-
-    const/16 v2, 0x16
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginRight:I
-
-    const/16 v2, 0x17
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginBottom:I
-
-    const/16 v2, 0x18
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginStart:I
-
-    const/16 v2, 0x19
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginEnd:I
-
-    const/16 v2, 0x1a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_goneMarginBaseline:I
-
-    const/16 v2, 0x37
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_marginBaseline:I
-
-    const/16 v2, 0x36
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHorizontal_bias:I
-
-    const/16 v2, 0x1d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintVertical_bias:I
-
-    const/16 v2, 0x1e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintDimensionRatio:I
-
-    const/16 v2, 0x2c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHorizontal_weight:I
-
-    const/16 v2, 0x2d
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintVertical_weight:I
-
-    const/16 v2, 0x2e
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHorizontal_chainStyle:I
-
-    const/16 v2, 0x2f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintVertical_chainStyle:I
-
-    const/16 v2, 0x30
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constrainedWidth:I
-
-    const/16 v2, 0x1b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constrainedHeight:I
-
-    const/16 v2, 0x1c
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintWidth_default:I
-
-    const/16 v2, 0x1f
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHeight_default:I
-
-    const/16 v2, 0x20
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintWidth_min:I
-
-    const/16 v2, 0x21
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintWidth_max:I
-
-    const/16 v2, 0x22
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintWidth_percent:I
-
-    const/16 v2, 0x23
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHeight_min:I
-
-    const/16 v2, 0x24
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHeight_max:I
-
-    const/16 v2, 0x25
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintHeight_percent:I
-
-    const/16 v2, 0x26
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintLeft_creator:I
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintTop_creator:I
-
-    const/16 v2, 0x28
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintRight_creator:I
-
-    const/16 v2, 0x29
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBottom_creator:I
-
-    const/16 v2, 0x2a
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintBaseline_creator:I
-
-    const/16 v2, 0x2b
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_constraintTag:I
-
-    const/16 v2, 0x33
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
-
-    sget v1, Lzlc;->ConstraintLayout_Layout_layout_wrapBehaviorInParent:I
-
-    const/16 v2, 0x42
-
-    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->append(II)V
+    :cond_4
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method

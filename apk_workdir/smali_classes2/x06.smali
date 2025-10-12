@@ -1,46 +1,26 @@
 .class public final Lx06;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public A0:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public B0:I
-
-.field public final synthetic C0:Ly48;
-
-.field public final synthetic D0:Lz06;
-
-.field public X:Lz06;
-
-.field public Y:[J
-
-.field public Z:[J
-
-.field public w0:I
-
-.field public x0:I
-
-.field public y0:I
-
-.field public z0:I
+.field public final synthetic Y:Lone/me/folders/edit/FolderEditScreen;
 
 
 # direct methods
-.method public constructor <init>(Ly48;Lz06;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lx06;->C0:Ly48;
-
-    iput-object p2, p0, Lx06;->D0:Lz06;
+    iput-object p1, p0, Lx06;->Y:Lone/me/folders/edit/FolderEditScreen;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -50,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lr06;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -60,282 +40,196 @@
 
     check-cast p1, Lx06;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lx06;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lx06;
+    new-instance v0, Lx06;
 
-    iget-object v0, p0, Lx06;->C0:Ly48;
+    iget-object v1, p0, Lx06;->Y:Lone/me/folders/edit/FolderEditScreen;
 
-    iget-object v1, p0, Lx06;->D0:Lz06;
+    invoke-direct {v0, v1, p2}, Lx06;-><init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lx06;-><init>(Ly48;Lz06;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lx06;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 21
+    .locals 9
 
-    move-object/from16 v0, p0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget v1, v0, Lx06;->B0:I
+    iget-object p1, p0, Lx06;->X:Ljava/lang/Object;
 
-    sget-object v2, Loyf;->a:Loyf;
+    check-cast p1, Lr06;
 
-    const/16 v4, 0x8
+    instance-of v0, p1, Lo06;
 
-    iget-object v5, v0, Lx06;->D0:Lz06;
+    sget-object v1, Laxf;->a:Laxf;
 
-    const/4 v6, 0x1
+    iget-object v2, p0, Lx06;->Y:Lone/me/folders/edit/FolderEditScreen;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_0
 
-    if-ne v1, v6, :cond_0
+    sget-object v0, Lone/me/folders/edit/FolderEditScreen;->r0:[Lpl7;
 
-    iget v1, v0, Lx06;->z0:I
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->D0()V
 
-    iget v7, v0, Lx06;->y0:I
+    invoke-virtual {v2}, Ljz3;->getRouter()Ln6d;
 
-    iget-wide v8, v0, Lx06;->A0:J
+    move-result-object v0
 
-    iget v10, v0, Lx06;->x0:I
+    invoke-virtual {v0}, Ln6d;->C()Z
 
-    iget v11, v0, Lx06;->w0:I
+    check-cast p1, Lo06;
 
-    iget-object v12, v0, Lx06;->Z:[J
+    iget-boolean p1, p1, Lo06;->a:Z
 
-    iget-object v13, v0, Lx06;->Y:[J
+    if-eqz p1, :cond_1
 
-    iget-object v14, v0, Lx06;->X:Lz06;
+    sget-object p1, Ll36;->a:Ll36;
 
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
 
-    move v3, v1
+    move-result-object p1
 
-    move/from16 v17, v4
+    invoke-virtual {p1}, Lo5;->e()Ljava/lang/Object;
 
-    move-object/from16 v1, p1
+    move-result-object p1
 
-    goto/16 :goto_2
+    check-cast p1, Lw67;
+
+    if-eqz p1, :cond_1
+
+    new-instance v0, Lv67;
+
+    sget-object v2, Lt67;->c:Lt67;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v2, v3}, Lv67;-><init>(Lt67;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sget-object v2, Lmdd;->n1:Lmdd;
+
+    invoke-virtual {p1, v0, v2}, Lw67;->f(Ljava/util/Set;Lmdd;)V
+
+    return-object v1
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Lq06;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v0, :cond_3
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Ljz3;->getRouter()Ln6d;
 
-    throw v1
+    move-result-object v0
+
+    invoke-virtual {v0}, Ln6d;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lw83;->n0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lq6d;
+
+    iget-object v0, v0, Lq6d;->b:Ljava/lang/String;
+
+    if-nez v0, :cond_2
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lx06;->C0:Ly48;
-
-    iget-object v1, v1, Ly48;->X:Lit9;
-
-    iget-object v7, v1, Lit9;->b:[J
-
-    iget-object v1, v1, Lit9;->a:[J
-
-    array-length v8, v1
-
-    add-int/lit8 v8, v8, -0x2
-
-    if-ltz v8, :cond_7
-
-    move-object v10, v5
-
-    const/4 v9, 0x0
-
-    :goto_0
-    aget-wide v11, v1, v9
-
-    not-long v13, v11
-
-    const/4 v15, 0x7
-
-    shl-long/2addr v13, v15
-
-    and-long/2addr v13, v11
-
-    const-wide v15, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
-
-    and-long/2addr v13, v15
-
-    cmp-long v13, v13, v15
-
-    if-eqz v13, :cond_6
-
-    sub-int v13, v9, v8
-
-    not-int v13, v13
-
-    ushr-int/lit8 v13, v13, 0x1f
-
-    rsub-int/lit8 v13, v13, 0x8
-
-    move v14, v13
-
-    move-object v13, v7
-
-    move v7, v14
-
-    move-object v14, v10
-
-    move v10, v9
-
-    move-wide/from16 v19, v11
-
-    move-object v12, v1
-
-    move v11, v8
-
-    move-wide/from16 v8, v19
-
-    const/4 v1, 0x0
-
-    :goto_1
-    if-ge v1, v7, :cond_5
-
-    const-wide/16 v15, 0xff
-
-    and-long/2addr v15, v8
-
-    const-wide/16 v17, 0x80
-
-    cmp-long v15, v15, v17
-
-    if-gez v15, :cond_4
-
-    shl-int/lit8 v15, v10, 0x3
-
-    add-int/2addr v15, v1
-
-    move/from16 v17, v4
-
-    aget-wide v3, v13, v15
-
-    iget-object v15, v14, Lz06;->b:Lae2;
-
-    iget-object v6, v14, Lz06;->a:Ljava/lang/String;
-
-    iput-object v14, v0, Lx06;->X:Lz06;
-
-    iput-object v13, v0, Lx06;->Y:[J
-
-    iput-object v12, v0, Lx06;->Z:[J
-
-    iput v11, v0, Lx06;->w0:I
-
-    iput v10, v0, Lx06;->x0:I
-
-    iput-wide v8, v0, Lx06;->A0:J
-
-    iput v7, v0, Lx06;->y0:I
-
-    iput v1, v0, Lx06;->z0:I
-
-    move/from16 p1, v1
-
-    const/4 v1, 0x1
-
-    iput v1, v0, Lx06;->B0:I
-
-    invoke-virtual {v15, v3, v4, v0, v6}, Lae2;->g(JLnz3;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v3, Lf34;->a:Lf34;
-
-    if-ne v1, v3, :cond_2
-
-    return-object v3
+    return-object v1
 
     :cond_2
-    move/from16 v3, p1
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->D0()V
 
-    :goto_2
-    check-cast v1, Ljava/lang/Boolean;
+    sget-object v2, Lf26;->c:Lf26;
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Lq06;
 
-    move-result v1
+    iget-object v3, p1, Lq06;->a:Ljava/util/List;
 
-    if-eqz v1, :cond_3
+    invoke-virtual {v2}, Ld3;->o0()Loc4;
 
-    invoke-static {v5}, Lz06;->a(Lz06;)V
+    move-result-object p1
 
-    return-object v2
+    const/4 v7, 0x0
+
+    const/16 v8, 0x3e
+
+    const-string v4, ","
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v3 .. v8}, Lw83;->l0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd6;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ":settings/folder/members-picker?tag="
+
+    const-string v4, "&members_ids="
+
+    invoke-static {v3, v0, v4, v2}, Lnd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v1
 
     :cond_3
-    move v1, v3
+    instance-of p1, p1, Lp06;
 
-    goto :goto_3
+    if-eqz p1, :cond_4
+
+    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->r0:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/folders/edit/FolderEditScreen;->C0()Lr16;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lr16;->x0:Lbpc;
+
+    iget-object p1, p1, Lbpc;->a:Lane;
+
+    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb16;
+
+    invoke-virtual {p1}, Lb16;->a()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1, v2}, Ltf2;->M(Ljava/lang/CharSequence;Lone/me/sdk/arch/Widget;)V
+
+    return-object v1
 
     :cond_4
-    move/from16 p1, v1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    move/from16 v17, v4
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    :goto_3
-    shr-long v8, v8, v17
-
-    const/16 v18, 0x1
-
-    add-int/lit8 v1, v1, 0x1
-
-    move/from16 v4, v17
-
-    move/from16 v6, v18
-
-    goto :goto_1
-
-    :cond_5
-    move v3, v4
-
-    move/from16 v18, v6
-
-    if-ne v7, v3, :cond_7
-
-    move v9, v10
-
-    move v8, v11
-
-    move-object v1, v12
-
-    move-object v7, v13
-
-    move-object v10, v14
-
-    goto :goto_4
-
-    :cond_6
-    move v3, v4
-
-    move/from16 v18, v6
-
-    :goto_4
-    if-eq v9, v8, :cond_7
-
-    add-int/lit8 v9, v9, 0x1
-
-    move v4, v3
-
-    move/from16 v6, v18
-
-    goto/16 :goto_0
-
-    :cond_7
-    return-object v2
+    throw p1
 .end method

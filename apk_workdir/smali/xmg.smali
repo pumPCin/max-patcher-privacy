@@ -1,14 +1,23 @@
-.class public interface abstract Lxmg;
+.class public abstract Lxmg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract dispose()V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract g(I)I
-.end method
+.field public final b:Ljava/lang/Long;
 
-.method public abstract j(I)I
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Long;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lxmg;->a:I
+
+    iput-object p1, p0, Lxmg;->b:Ljava/lang/Long;
+
+    return-void
 .end method

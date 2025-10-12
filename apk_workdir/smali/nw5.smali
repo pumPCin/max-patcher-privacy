@@ -1,35 +1,100 @@
 .class public final Lnw5;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Liu5;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public Y:I
+.field public final synthetic b:Liu5;
 
-.field public o:Ljava/lang/Throwable;
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Liu5;Lje6;I)V
+    .locals 0
+
+    iput p3, p0, Lnw5;->a:I
+
+    iput-object p1, p0, Lnw5;->b:Liu5;
+
+    iput-object p2, p0, Lnw5;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lnw5;->X:Ljava/lang/Object;
+    iget v0, p0, Lnw5;->a:I
 
-    iget p1, p0, Lnw5;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lmw5;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lnw5;->c:Ljava/lang/Object;
 
-    iput p1, p0, Lnw5;->Y:I
+    const/4 v2, 0x1
 
-    const/4 p1, 0x0
+    invoke-direct {v0, p1, v1, v2}, Lmw5;-><init>(Lku5;Lje6;I)V
 
-    invoke-static {p1, p1, p1, p0}, Lj40;->a(Ldhf;Lnf6;Ljava/lang/Throwable;Lnz3;)Ljava/lang/Object;
+    iget-object p1, p0, Lnw5;->b:Liu5;
+
+    invoke-interface {p1, v0, p2}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    :goto_0
     return-object p1
+
+    :pswitch_0
+    new-instance v0, Lmw5;
+
+    iget-object v1, p0, Lnw5;->c:Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Lmw5;-><init>(Lku5;Lje6;I)V
+
+    iget-object p1, p0, Lnw5;->b:Liu5;
+
+    invoke-interface {p1, v0, p2}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Laxf;->a:Laxf;
+
+    :goto_1
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

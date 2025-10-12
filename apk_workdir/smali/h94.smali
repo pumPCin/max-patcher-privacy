@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract a()Lk94;
+.method public abstract getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+.end method
+
+.method public abstract getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 .end method

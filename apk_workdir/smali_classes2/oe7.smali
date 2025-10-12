@@ -1,49 +1,19 @@
 .class public final Loe7;
-.super Lnz3;
+.super Lse7;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lqe7;
-
-.field public Z:I
-
-.field public o:Lqe7;
+.field public final a:Lcdf;
 
 
 # direct methods
-.method public constructor <init>(Lqe7;Lnz3;)V
+.method public constructor <init>(Lcdf;)V
     .locals 0
 
-    iput-object p1, p0, Loe7;->Y:Lqe7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Loe7;->a:Lcdf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Loe7;->X:Ljava/lang/Object;
-
-    iget p1, p0, Loe7;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loe7;->Z:I
-
-    iget-object p1, p0, Loe7;->Y:Lqe7;
-
-    invoke-virtual {p1, p0}, Lqe7;->a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ldge;
+.implements Lbfe;
 
 
 # instance fields
-.field public F1:Z
+.field public x1:Z
 
 
 # direct methods
@@ -18,85 +18,21 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->F1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public B()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public I(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->T0()Lu5;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    return-void
-.end method
-
-.method public K()V
-    .locals 3
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->d1()Lke6;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lke6;->e()Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->F1:Z
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2, v2}, Lke6;->b(ZZZ)V
-
-    return-void
-.end method
-
-.method public Z0(Lu5;)V
+.method public I0(Lb6;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->r1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->k1:Z
 
-    instance-of p1, p1, Lke6;
+    instance-of p1, p1, Lid6;
 
     if-eqz p1, :cond_0
 
@@ -112,20 +48,20 @@
     throw p1
 .end method
 
-.method public d1()Lke6;
+.method public final M0()Lid6;
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->T0()Lu5;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lb6;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->T0()Lu5;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lb6;
 
     move-result-object v0
 
-    check-cast v0, Lke6;
+    check-cast v0, Lid6;
 
     return-object v0
 
@@ -135,16 +71,16 @@
     return-object v0
 .end method
 
-.method public final k()V
+.method public final g()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->d1()Lke6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lid6;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->F1:Z
+    iget-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
 
     if-nez v1, :cond_0
 
@@ -153,11 +89,77 @@
     :cond_0
     const/4 v1, 0x0
 
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
     const/4 v2, 0x1
 
-    invoke-interface {v0, v2, v2, v1}, Lke6;->b(ZZZ)V
+    invoke-virtual {v0, v2, v1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0(ZZ)V
 
     :cond_1
     :goto_0
+    return-void
+.end method
+
+.method public p()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public u(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->D0()Lb6;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0}, Landroid/app/Activity;->overridePendingTransition(II)V
+
+    return-void
+.end method
+
+.method public w()V
+    .locals 3
+
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->M0()Lid6;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-boolean v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Z
+
+    iput-boolean v1, p0, Lru/ok/messages/views/fragments/FrgSlideOut;->x1:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0(ZZ)V
+
     return-void
 .end method

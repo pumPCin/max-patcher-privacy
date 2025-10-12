@@ -1,82 +1,73 @@
-.class public final Lmgb;
-.super Lm3f;
+.class public final enum Lmgb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lmgb;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum b:Lmgb;
 
-.field public final synthetic Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+.field public static final synthetic c:[Lmgb;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lmgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+    new-instance v0, Lmgb;
 
-    const/4 p1, 0x2
+    const-string v1, "COVER"
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lmgb;->a:Lmgb;
+
+    new-instance v1, Lmgb;
+
+    const-string v2, "FIT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lmgb;->b:Lmgb;
+
+    filled-new-array {v0, v1}, [Lmgb;
+
+    move-result-object v0
+
+    sput-object v0, Lmgb;->c:[Lmgb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmgb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmgb;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lmgb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmgb;
-
-    iget-object v1, p0, Lmgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    invoke-direct {v0, v1, p2}, Lmgb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmgb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lmgb;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    const-class v0, Lmgb;
 
-    iget-object p1, p0, Lmgb;->X:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p1, Ljava/util/List;
+    move-result-object p0
 
-    iget-object v0, p0, Lmgb;->Y:Lone/me/chats/picker/members/PickerMembersListWidget;
+    check-cast p0, Lmgb;
 
-    iget-object v0, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->w0:Lpeb;
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+.method public static values()[Lmgb;
+    .locals 1
 
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object v0, Lmgb;->c:[Lmgb;
 
-    return-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lmgb;
+
+    return-object v0
 .end method

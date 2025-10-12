@@ -7,68 +7,114 @@
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:I
-
 .field public final a:I
 
-.field public final b:J
-
-.field public final c:Lx29;
-
-.field public final o:Ljava/lang/String;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(IJLx29;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lq69;->a:I
 
-    iput-wide p2, p0, Lq69;->b:J
-
-    iput-object p4, p0, Lq69;->c:Lx29;
-
-    iput-object p5, p0, Lq69;->o:Ljava/lang/String;
-
-    iput-object p6, p0, Lq69;->X:Ljava/lang/String;
-
-    iput-object p7, p0, Lq69;->Y:Ljava/lang/String;
-
-    iput p8, p0, Lq69;->Z:I
+    iput p2, p0, Lq69;->b:I
 
     return-void
+.end method
+
+.method public static a(Lc79;)Lq69;
+    .locals 6
+
+    invoke-static {p0}, Lg8;->I(Lc79;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    move v3, v2
+
+    :goto_0
+    if-ge v1, v0, :cond_3
+
+    invoke-virtual {p0}, Lc79;->r0()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v5, "views"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    const-string v5, "forwards"
+
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {p0}, Lc79;->y()V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Lc79;->n0()I
+
+    move-result v3
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0}, Lc79;->n0()I
+
+    move-result v2
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    new-instance p0, Lq69;
+
+    invoke-direct {p0, v2, v3}, Lq69;-><init>(II)V
+
+    return-object p0
 .end method
 
 
 # virtual methods
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "{type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lq69;->a:I
-
-    invoke-static {v1}, Lfl7;->t(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v0, ", forwards="
 
     const-string v1, "}"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "{views="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v3, p0, Lq69;->a:I
+
+    iget v4, p0, Lq69;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

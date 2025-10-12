@@ -1,64 +1,48 @@
 .class public final Lsyg;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lpzg;
+.super Lwy3;
 
 
-# static fields
-.field public static final a:Lsyg;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lqeg;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqeg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lsyg;
+    iput-object p1, p0, Lsyg;->Y:Lqeg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lsyg;->a:Lsyg;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lsyg;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lsyg;->X:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lsyg;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lsyg;->X:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lsyg;->Y:Lqeg;
 
-    return p1
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lqeg;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    const v0, 0x3228b28e
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraError"
-
-    return-object v0
+    return-object p1
 .end method

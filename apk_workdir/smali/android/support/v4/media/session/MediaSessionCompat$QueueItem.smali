@@ -67,6 +67,7 @@
 .method private constructor <init>(Landroid/media/session/MediaSession$QueueItem;Landroid/support/v4/media/MediaDescriptionCompat;J)V
     .locals 2
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p2, :cond_1
@@ -77,14 +78,18 @@
 
     if-eqz v0, :cond_0
 
+    .line 3
     iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->mDescription:Landroid/support/v4/media/MediaDescriptionCompat;
 
+    .line 4
     iput-wide p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->mId:J
 
+    .line 5
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->mItemFwk:Landroid/media/session/MediaSession$QueueItem;
 
     return-void
 
+    .line 6
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -94,6 +99,7 @@
 
     throw p1
 
+    .line 7
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -107,8 +113,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
     sget-object v0, Landroid/support/v4/media/MediaDescriptionCompat;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -119,6 +127,7 @@
 
     iput-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;->mDescription:Landroid/support/v4/media/MediaDescriptionCompat;
 
+    .line 10
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
@@ -133,6 +142,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-direct {p0, v0, p1, p2, p3}, Landroid/support/v4/media/session/MediaSessionCompat$QueueItem;-><init>(Landroid/media/session/MediaSession$QueueItem;Landroid/support/v4/media/MediaDescriptionCompat;J)V
 
     return-void
@@ -298,7 +308,7 @@
 
     const-string v3, " }"
 
-    invoke-static {v0, v1, v2, v3}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

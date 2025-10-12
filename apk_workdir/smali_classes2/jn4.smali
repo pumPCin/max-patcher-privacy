@@ -1,123 +1,130 @@
 .class public final Ljn4;
-.super Lg04;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic Z:I
-
-
 # instance fields
-.field public final X:Landroid/os/Handler;
-
-.field public Y:Lly1;
-
-.field public final o:J
+.field public final a:Lyn7;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lyn7;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg04;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x3e8
-
-    iput-wide v0, p0, Ljn4;->o:J
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Ljn4;->X:Landroid/os/Handler;
+    iput-object p1, p0, Ljn4;->a:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final a(JJLjava/util/List;Z)V
+    .locals 18
 
-    iget-object v0, p0, Ljn4;->Y:Lly1;
+    invoke-interface/range {p5 .. p5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    iget-object v1, p0, Ljn4;->X:Landroid/os/Handler;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v1
+
+    move-object/from16 v3, p0
+
+    iget-object v4, v3, Ljn4;->a:Lyn7;
+
+    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcl;
+
+    invoke-static {v1, v2}, Ljl3;->g(J)Ljava/util/List;
+
+    move-result-object v13
+
+    if-eqz p6, :cond_0
+
+    const/4 v1, -0x1
+
+    :goto_1
+    move/from16 v16, v1
+
+    goto :goto_2
 
     :cond_0
-    iget-object v0, p0, Ljn4;->Y:Lly1;
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    goto :goto_1
 
-    invoke-virtual {v0}, Lly1;->run()V
+    :goto_2
+    check-cast v4, Lgea;
+
+    move-wide/from16 v8, p1
+
+    invoke-virtual {v4, v8, v9}, Lgea;->n(J)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    const/4 v0, 0x0
+    new-instance v5, Lfn2;
 
-    iput-object v0, p0, Ljn4;->Y:Lly1;
+    invoke-virtual {v4}, Lgea;->x()Lnnb;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final f(Lg04;Lb04;)V
-    .locals 0
+    check-cast v1, Lpnb;
 
-    iget-object p1, p0, Ljn4;->Y:Lly1;
+    iget-object v1, v1, Lpnb;->a:Lt08;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v1}, Lfhd;->k()J
 
-    iget-object p2, p0, Ljn4;->X:Landroid/os/Handler;
+    move-result-wide v6
 
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    const/4 v15, 0x1
 
-    :cond_0
-    const/4 p1, 0x0
+    const/16 v17, 0x0
 
-    iput-object p1, p0, Ljn4;->Y:Lly1;
+    const/4 v12, 0x2
 
-    return-void
-.end method
+    sget-object v14, Ltm2;->b:Ltm2;
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLe04;)V
-    .locals 9
+    move-wide/from16 v10, p3
 
-    iget-object v0, p0, Ljn4;->Y:Lly1;
+    invoke-direct/range {v5 .. v17}, Lfn2;-><init>(JJJILjava/util/List;Ltm2;ZII)V
 
-    iget-object v1, p0, Ljn4;->X:Landroid/os/Handler;
+    if-nez v16, :cond_2
 
-    if-eqz v0, :cond_0
+    invoke-static {v4, v5}, Lgea;->v(Lgea;Lnm;)J
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    goto :goto_0
 
-    :cond_0
-    new-instance v2, Lly1;
+    :cond_2
+    invoke-static {v4, v5}, Lgea;->u(Lgea;Lnm;)J
 
-    move-object v5, p0
+    goto :goto_0
 
-    move-object v6, p1
-
-    move-object v3, p2
-
-    move-object v7, p3
-
-    move v4, p4
-
-    move-object v8, p5
-
-    invoke-direct/range {v2 .. v8}, Lly1;-><init>(Landroid/view/View;ZLjn4;Landroid/view/ViewGroup;Landroid/view/View;Le04;)V
-
-    iget-wide p1, v5, Ljn4;->o:J
-
-    invoke-virtual {v1, v2, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    iput-object v2, v5, Ljn4;->Y:Lly1;
+    :cond_3
+    move-object/from16 v3, p0
 
     return-void
 .end method

@@ -1,717 +1,683 @@
 .class public final Lsp7;
-.super Ltp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic k:I
+.field public final a:I
 
-.field public final l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+.field public final e:Ljava/lang/Object;
+
+.field public final f:Ljava/lang/Object;
+
+.field public final g:Ljava/lang/Object;
+
+.field public final h:Ljava/lang/Object;
+
+.field public final i:Ljava/lang/Object;
+
+.field public final j:Ljava/io/Serializable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/google/android/material/sidesheet/SideSheetBehavior;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 9
 
-    iput p2, p0, Lsp7;->k:I
+    .line 1
+    sget-object v0, Lhhd;->a:Lhhd;
 
-    iput-object p1, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    .line 2
+    invoke-virtual {v0}, Lhhd;->b()Lcfa;
 
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v0}, Lhhd;->k()Lnnb;
+
+    move-result-object v2
+
+    check-cast v2, Lpnb;
+
+    .line 4
+    iget-object v2, v2, Lpnb;->c:Lz2g;
+
+    .line 5
+    sget-object v3, Lghd;->a:Lyn7;
+
+    .line 6
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lm63;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    .line 7
+    sget-object v4, Lghd;->d:Lyn7;
+
+    .line 8
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v5
+
+    const-class v6, La1c;
+
+    invoke-virtual {v5, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v5
+
+    .line 9
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v0
+
+    const-class v6, Lp53;
+
+    invoke-virtual {v0, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v0
+
+    .line 10
+    new-instance v6, Lke7;
+
+    const/16 v7, 0xb
+
+    invoke-direct {v6, v7}, Lke7;-><init>(I)V
+
+    .line 11
+    new-instance v7, Lh4f;
+
+    invoke-direct {v7, v6}, Lh4f;-><init>(Ltd6;)V
+
+    .line 12
+    new-instance v6, Lke7;
+
+    const/16 v8, 0xc
+
+    invoke-direct {v6, v8}, Lke7;-><init>(I)V
+
+    .line 13
+    new-instance v8, Lh4f;
+
+    invoke-direct {v8, v6}, Lh4f;-><init>(Ltd6;)V
+
+    .line 14
+    sget-object v6, Lghd;->a:Lyn7;
+
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
+    iput-object v1, p0, Lsp7;->b:Ljava/lang/Object;
+
+    .line 17
+    iput-object v2, p0, Lsp7;->c:Ljava/lang/Object;
+
+    .line 18
+    iput-object v3, p0, Lsp7;->d:Ljava/lang/Object;
+
+    .line 19
+    iput-object v4, p0, Lsp7;->e:Ljava/lang/Object;
+
+    .line 20
+    iput-object v5, p0, Lsp7;->f:Ljava/lang/Object;
+
+    const/4 v1, 0x6
+
+    .line 21
+    iput v1, p0, Lsp7;->a:I
+
+    .line 22
+    iput-object v0, p0, Lsp7;->g:Ljava/lang/Object;
+
+    .line 23
+    iput-object v7, p0, Lsp7;->i:Ljava/lang/Object;
+
+    .line 24
+    iput-object v8, p0, Lsp7;->j:Ljava/io/Serializable;
+
+    .line 25
+    iput-object v6, p0, Lsp7;->h:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lu16;)V
+    .locals 13
+
+    .line 26
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 27
+    invoke-static {}, Lzc6;->p()Lyc6;
+
+    .line 28
+    invoke-static {}, Loe4;->a()Lqlb;
+
+    move-result-object v0
+
+    .line 29
+    iput-object v0, p0, Lsp7;->b:Ljava/lang/Object;
+
+    .line 30
+    invoke-static {}, Lk0a;->m()Lk0a;
+
+    move-result-object v0
+
+    .line 31
+    iput-object v0, p0, Lsp7;->c:Ljava/lang/Object;
+
+    .line 32
+    iget-object v0, p1, Lu16;->b:Ljava/lang/Object;
+
+    check-cast v0, Lqlb;
+
+    const/high16 v1, 0x20000
+
+    const/high16 v2, 0x400000
+
+    if-nez v0, :cond_1
+
+    .line 33
+    new-instance v0, Lqlb;
+
+    .line 34
+    sget v3, Lxg4;->a:I
+
+    mul-int v4, v3, v2
+
+    .line 35
+    new-instance v5, Landroid/util/SparseIntArray;
+
+    invoke-direct {v5}, Landroid/util/SparseIntArray;-><init>()V
+
+    move v6, v1
+
+    :goto_0
+    if-gt v6, v2, :cond_0
+
+    .line 36
+    invoke-virtual {v5, v6, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    mul-int/lit8 v6, v6, 0x2
+
+    goto :goto_0
+
+    .line 37
+    :cond_0
+    sget v3, Lxg4;->a:I
+
+    .line 38
+    invoke-direct {v0, v2, v4, v5, v3}, Lqlb;-><init>(IILandroid/util/SparseIntArray;I)V
+
+    .line 39
+    :cond_1
+    iput-object v0, p0, Lsp7;->d:Ljava/lang/Object;
+
+    .line 40
+    iget-object v0, p1, Lu16;->c:Ljava/lang/Object;
+
+    check-cast v0, Lc09;
+
+    if-nez v0, :cond_2
+
+    .line 41
+    invoke-static {}, Lj0a;->b()Lj0a;
+
+    move-result-object v0
+
+    .line 42
+    :cond_2
+    iput-object v0, p0, Lsp7;->e:Ljava/lang/Object;
+
+    .line 43
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    const/16 v3, 0x400
+
+    const/4 v4, 0x5
+
+    .line 44
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v3, 0x800
+
+    .line 45
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v3, 0x1000
+
+    .line 46
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v3, 0x2000
+
+    .line 47
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v3, 0x4000
+
+    .line 48
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const v5, 0x8000
+
+    .line 49
+    invoke-virtual {v0, v5, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/high16 v5, 0x10000
+
+    .line 50
+    invoke-virtual {v0, v5, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 51
+    invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/high16 v1, 0x40000
+
+    const/4 v5, 0x2
+
+    .line 52
+    invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/high16 v1, 0x80000
+
+    .line 53
+    invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/high16 v1, 0x100000
+
+    .line 54
+    invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 55
+    new-instance v6, Lqlb;
+
+    .line 56
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/Runtime;->maxMemory()J
+
+    move-result-wide v7
+
+    const-wide/32 v9, 0x7fffffff
+
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v7
+
+    long-to-int v7, v7
+
+    const/high16 v8, 0x1000000
+
+    if-ge v7, v8, :cond_3
+
+    const/high16 v7, 0x300000
+
+    goto :goto_1
+
+    :cond_3
+    const/high16 v11, 0x2000000
+
+    if-ge v7, v11, :cond_4
+
+    const/high16 v7, 0x600000
+
+    goto :goto_1
+
+    :cond_4
+    const/high16 v7, 0xc00000
+
+    .line 57
+    :goto_1
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Ljava/lang/Runtime;->maxMemory()J
+
+    move-result-wide v11
+
+    invoke-static {v11, v12, v9, v10}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v9
+
+    long-to-int v9, v9
+
+    if-ge v9, v8, :cond_5
+
+    .line 58
+    div-int/2addr v9, v5
+
+    goto :goto_2
+
+    .line 59
+    :cond_5
+    div-int/lit8 v9, v9, 0x4
+
+    mul-int/lit8 v9, v9, 0x3
+
+    :goto_2
+    const/4 v5, -0x1
+
+    .line 60
+    invoke-direct {v6, v7, v9, v0, v5}, Lqlb;-><init>(IILandroid/util/SparseIntArray;I)V
+
+    .line 61
+    iput-object v6, p0, Lsp7;->f:Ljava/lang/Object;
+
+    .line 62
+    invoke-static {}, Lk0a;->m()Lk0a;
+
+    move-result-object v0
+
+    .line 63
+    iput-object v0, p0, Lsp7;->g:Ljava/lang/Object;
+
+    .line 64
+    iget-object v0, p1, Lu16;->o:Ljava/lang/Object;
+
+    check-cast v0, Lqlb;
+
+    if-nez v0, :cond_6
+
+    .line 65
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    .line 66
+    invoke-virtual {v0, v3, v4}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 67
+    new-instance v3, Lqlb;
+
+    const v4, 0x14000
+
+    .line 68
+    invoke-direct {v3, v4, v1, v0, v5}, Lqlb;-><init>(IILandroid/util/SparseIntArray;I)V
+
+    move-object v0, v3
+
+    .line 69
+    :cond_6
+    iput-object v0, p0, Lsp7;->h:Ljava/lang/Object;
+
+    .line 70
+    invoke-static {}, Lk0a;->m()Lk0a;
+
+    move-result-object v0
+
+    .line 71
+    iput-object v0, p0, Lsp7;->i:Ljava/lang/Object;
+
+    .line 72
+    iget-object p1, p1, Lu16;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    if-nez p1, :cond_7
+
+    const-string p1, "legacy"
+
+    :cond_7
+    iput-object p1, p0, Lsp7;->j:Ljava/io/Serializable;
+
+    .line 73
+    iput v2, p0, Lsp7;->a:I
+
+    .line 74
+    invoke-static {}, Lzc6;->p()Lyc6;
+
+    return-void
+.end method
+
+.method public static b(ILtd6;)V
+    .locals 9
+
+    sget-object v0, Lr28;->o:Lr28;
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v1
+
+    sget-object v3, Lyt3;->n:Lhoa;
+
+    const/4 v4, 0x0
+
+    const-string v5, "Upgrade to "
+
+    const-string v6, "LibraryUpgradeHelper"
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3, v0}, Lhoa;->b(Lr28;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    const-string v7, " started"
+
+    invoke-static {p0, v5, v7}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v0, v6, v7, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+
+    sget-object p1, Lyt3;->n:Lhoa;
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1, v0}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    sget v3, Lyz4;->o:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v7
+
+    sub-long/2addr v7, v1
+
+    sget-object v1, Ld05;->b:Ld05;
+
+    invoke-static {v7, v8, v1}, Lx2d;->N(JLd05;)J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Lyz4;->j(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " complete. It takes "
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, v0, v6, p0, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final C0(Landroid/view/ViewGroup$MarginLayoutParams;I)V
-    .locals 1
+.method public a()V
+    .locals 9
 
-    iget v0, p0, Lsp7;->k:I
+    iget-object v0, p0, Lsp7;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lcfa;
 
-    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    iget-object v1, p0, Lsp7;->c:Ljava/lang/Object;
 
-    return-void
+    check-cast v1, Lz2g;
 
-    :pswitch_0
-    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    iget-object v2, v1, Lv3;->h:Lbo7;
 
-    return-void
+    const-string v3, "app.library.version"
 
-    nop
+    invoke-virtual {v2, v3}, Lbo7;->contains(Ljava/lang/String;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result v2
 
-.method public final D0(Landroid/view/ViewGroup$MarginLayoutParams;II)V
-    .locals 1
+    const/4 v4, 0x5
 
-    iget v0, p0, Lsp7;->k:I
+    iget v5, p0, Lsp7;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v2, :cond_1
 
-    iget-object p3, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    invoke-virtual {v0}, Lcfa;->d()Z
 
-    iget p3, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+    move-result v2
 
-    if-gt p2, p3, :cond_0
+    if-eqz v2, :cond_0
 
-    sub-int/2addr p3, p2
+    invoke-virtual {v1, v4, v3}, Lv3;->g(ILjava/lang/String;)V
 
-    iput p3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    goto :goto_0
 
     :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
-
-    if-gt p2, v0, :cond_1
-
-    iput p3, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    invoke-virtual {v1, v5, v3}, Lv3;->g(ILjava/lang/String;)V
 
     :cond_1
+    :goto_0
+    iget-object v2, v1, Lv3;->h:Lbo7;
+
+    const/4 v6, 0x6
+
+    invoke-virtual {v2, v3, v6}, Lbo7;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    if-ne v2, v5, :cond_2
+
+    const-string v0, "LibraryUpgradeHelper"
+
+    const-string v1, "upgrade not needed"
+
+    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final K(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    return p1
-
-    :pswitch_0
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final M()I
-    .locals 3
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
-
-    iget v2, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
-
-    sub-int/2addr v1, v2
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    sub-int/2addr v1, v0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    :cond_2
+    invoke-virtual {v0}, Lcfa;->d()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_7
 
-    :pswitch_0
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->n:I
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    add-int/2addr v1, v0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final N()I
-    .locals 2
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
-
-    neg-int v1, v1
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    sub-int/2addr v1, v0
-
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final O()I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final P()I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lsp7;->M()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
-
-    neg-int v0, v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final Q(Landroid/view/View;)I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    sub-int/2addr p1, v0
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    add-int/2addr p1, v0
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final R(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final U()I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_0
     const/4 v0, 0x1
 
-    return v0
+    if-ge v2, v0, :cond_3
 
-    nop
+    new-instance v7, Lop7;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const/4 v8, 0x0
 
-.method public final X(F)Z
-    .locals 1
+    invoke-direct {v7, p0, v8}, Lop7;-><init>(Lsp7;I)V
 
-    iget v0, p0, Lsp7;->k:I
+    invoke-static {v0, v7}, Lsp7;->b(ILtd6;)V
 
-    packed-switch v0, :pswitch_data_0
+    :cond_3
+    if-gt v2, v0, :cond_4
 
-    const/4 v0, 0x0
+    if-le v5, v0, :cond_4
 
-    cmpg-float p1, p1, v0
+    new-instance v0, Lop7;
 
-    if-gez p1, :cond_0
+    const/4 v7, 0x1
 
-    const/4 p1, 0x1
+    invoke-direct {v0, p0, v7}, Lop7;-><init>(Lsp7;I)V
 
-    goto :goto_0
+    const/4 v7, 0x2
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-static {v7, v0}, Lsp7;->b(ILtd6;)V
 
-    :goto_0
-    return p1
+    :cond_4
+    const/4 v0, 0x3
 
-    :pswitch_0
-    const/4 v0, 0x0
+    const/4 v7, 0x4
 
-    cmpl-float p1, p1, v0
+    if-gt v2, v0, :cond_5
 
-    if-lez p1, :cond_1
+    if-le v5, v0, :cond_5
 
-    const/4 p1, 0x1
+    new-instance v0, Lop7;
 
-    goto :goto_1
+    const/4 v8, 0x2
 
-    :cond_1
-    const/4 p1, 0x0
+    invoke-direct {v0, p0, v8}, Lop7;-><init>(Lsp7;I)V
 
-    :goto_1
-    return p1
+    invoke-static {v7, v0}, Lsp7;->b(ILtd6;)V
 
-    nop
+    :cond_5
+    if-gt v2, v7, :cond_6
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-le v5, v7, :cond_6
 
-.method public final Y(Landroid/view/View;)Z
-    .locals 2
+    new-instance v0, Lop7;
 
-    iget v0, p0, Lsp7;->k:I
+    const/4 v7, 0x3
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, p0, v7}, Lop7;-><init>(Lsp7;I)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+    invoke-static {v4, v0}, Lsp7;->b(ILtd6;)V
 
-    move-result p1
+    :cond_6
+    if-gt v2, v4, :cond_7
 
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    if-le v5, v4, :cond_7
 
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
+    new-instance v0, Lop7;
 
-    invoke-virtual {p0}, Lsp7;->M()I
+    const/4 v2, 0x4
 
-    move-result v1
+    invoke-direct {v0, p0, v2}, Lop7;-><init>(Lsp7;I)V
 
-    add-int/2addr v1, v0
+    invoke-static {v6, v0}, Lsp7;->b(ILtd6;)V
 
-    div-int/lit8 v1, v1, 0x2
+    :cond_7
+    invoke-virtual {v1, v5, v3}, Lv3;->g(ILjava/lang/String;)V
 
-    if-le p1, v1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    invoke-virtual {p0}, Lsp7;->M()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lsp7;->N()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    div-int/lit8 v0, v0, 0x2
-
-    if-ge p1, v0, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final Z(FF)Z
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p2
-
-    cmpl-float p2, v0, p2
-
-    if-lez p2, :cond_0
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result p1
-
-    const/16 p2, 0x1f4
-
-    int-to-float p2, p2
-
-    cmpl-float p1, p1, p2
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    :pswitch_0
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p2
-
-    cmpl-float p2, v0, p2
-
-    if-lez p2, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
-
-    move-result p1
-
-    const/16 p2, 0x1f4
-
-    int-to-float p2, p2
-
-    cmpl-float p1, p1, p2
-
-    if-lez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    return p1
-
-    :pswitch_0
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h(I)F
-    .locals 2
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->m:I
-
-    int-to-float v0, v0
-
-    invoke-virtual {p0}, Lsp7;->M()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float v1, v0, v1
-
-    int-to-float p1, p1
-
-    sub-float/2addr v0, p1
-
-    div-float/2addr v0, v1
-
-    return v0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lsp7;->N()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p0}, Lsp7;->M()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    sub-float/2addr v1, v0
-
-    int-to-float p1, p1
-
-    sub-float/2addr p1, v0
-
-    div-float/2addr p1, v1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final r0(Landroid/view/View;F)Z
-    .locals 2
-
-    iget v0, p0, Lsp7;->k:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->k:F
-
-    mul-float/2addr p2, v1
-
-    add-float/2addr p2, p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/high16 p2, 0x3f000000    # 0.5f
-
-    cmpl-float p1, p1, p2
-
-    if-lez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    iget-object v0, p0, Lsp7;->l:Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->k:F
-
-    mul-float/2addr p2, v1
-
-    add-float/2addr p2, p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/high16 p2, 0x3f000000    # 0.5f
-
-    cmpl-float p1, p1, p2
-
-    if-lez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

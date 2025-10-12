@@ -1,104 +1,58 @@
 .class public final Lmr3;
-.super Lm3f;
+.super Lor3;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements La38;
 
 
-# instance fields
-.field public final synthetic X:Lqr3;
-
-.field public final synthetic Y:Ll4g;
+# static fields
+.field public static final z0:Lmr3;
 
 
 # direct methods
-.method public constructor <init>(Lqr3;Ll4g;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 20
 
-    iput-object p1, p0, Lmr3;->X:Lqr3;
+    new-instance v0, Lmr3;
 
-    iput-object p2, p0, Lmr3;->Y:Ll4g;
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-array v1, v1, [I
+
+    move-object/from16 v19, v1
+
+    const-wide/16 v1, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-string v5, ""
+
+    const-string v6, ""
+
+    const-wide/16 v8, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/4 v12, 0x2
+
+    const/4 v13, 0x1
+
+    const-string v15, ""
+
+    const-string v16, ""
+
+    const-string v17, ""
+
+    const/16 v18, 0x0
+
+    move-object v14, v7
+
+    invoke-direct/range {v0 .. v19}, Lor3;-><init>(JJLjava/lang/String;Ljava/lang/String;Ljava/util/List;JJIILjava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lyl7;[I)V
+
+    sput-object v0, Lmr3;->z0:Lmr3;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmr3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmr3;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lmr3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lmr3;
-
-    iget-object v0, p0, Lmr3;->X:Lqr3;
-
-    iget-object v1, p0, Lmr3;->Y:Ll4g;
-
-    invoke-direct {p1, v0, v1, p2}, Lmr3;-><init>(Lqr3;Ll4g;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmr3;->X:Lqr3;
-
-    iget-object p1, p1, Lqr3;->z:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltk;
-
-    new-instance v0, Lk4g;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lmr3;->Y:Ll4g;
-
-    iput-object v1, v0, Lk4g;->q:Ll4g;
-
-    new-instance v1, Lm4g;
-
-    invoke-direct {v1, v0}, Lm4g;-><init>(Lk4g;)V
-
-    invoke-interface {p1, v1}, Ltk;->a(Lm4g;)J
-
-    move-result-wide v0
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    return-object p1
 .end method

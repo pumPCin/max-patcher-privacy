@@ -1,231 +1,241 @@
 .class public final Lp97;
-.super Lbj0;
+.super Ls59;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lhn4;
-
-.field public final Y:Z
-
-.field public final Z:J
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:Z
+.field public a:[Lo97;
 
 
 # direct methods
-.method public constructor <init>(JJZLhn4;ZJ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Lbj0;-><init>()V
+    invoke-direct {p0}, Ls59;-><init>()V
 
-    iput-wide p1, p0, Lp97;->b:J
+    sget-object v0, Lo97;->f:[Lo97;
 
-    iput-wide p3, p0, Lp97;->c:J
+    if-nez v0, :cond_1
 
-    iput-boolean p5, p0, Lp97;->o:Z
+    sget-object v0, Lad7;->b:Ljava/lang/Object;
 
-    iput-object p6, p0, Lp97;->X:Lhn4;
+    monitor-enter v0
 
-    iput-boolean p7, p0, Lp97;->Y:Z
+    :try_start_0
+    sget-object v1, Lo97;->f:[Lo97;
 
-    iput-wide p8, p0, Lp97;->Z:J
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lo97;
+
+    sput-object v1, Lo97;->f:[Lo97;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_1
+    :goto_2
+    sget-object v0, Lo97;->f:[Lo97;
+
+    iput-object v0, p0, Lp97;->a:[Lo97;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Ls59;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lp97;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lp97;
-
-    iget-wide v3, p0, Lp97;->b:J
-
-    iget-wide v5, p1, Lp97;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lp97;->c:J
-
-    iget-wide v5, p1, Lp97;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lp97;->o:Z
-
-    iget-boolean v3, p1, Lp97;->o:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lp97;->X:Lhn4;
-
-    iget-object v3, p1, Lp97;->X:Lhn4;
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lp97;->Y:Z
-
-    iget-boolean v3, p1, Lp97;->Y:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-wide v3, p0, Lp97;->Z:J
-
-    iget-wide v5, p1, Lp97;->Z:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final computeSerializedSize()I
     .locals 4
 
-    iget-wide v0, p0, Lp97;->b:J
+    iget-object v0, p0, Lp97;->a:[Lo97;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const/4 v1, 0x0
 
-    move-result v0
+    if-eqz v0, :cond_2
 
-    const/16 v1, 0x1f
+    array-length v0, v0
 
-    mul-int/2addr v0, v1
+    if-lez v0, :cond_2
 
-    iget-wide v2, p0, Lp97;->c:J
+    move v0, v1
 
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+    :goto_0
+    iget-object v2, p0, Lp97;->a:[Lo97;
 
-    move-result v0
+    array-length v3, v2
 
-    iget-boolean v2, p0, Lp97;->o:Z
+    if-ge v1, v3, :cond_1
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    aget-object v2, v2, v1
 
-    move-result v0
+    if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lp97;->X:Lhn4;
+    const/4 v3, 0x1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v3, v2}, Ly73;->i(ILs59;)I
 
     move-result v2
 
     add-int/2addr v2, v0
 
-    mul-int/2addr v2, v1
+    move v0, v2
 
-    iget-boolean v0, p0, Lp97;->Y:Z
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v2, v1, v0}, Lvl3;->d(IIZ)I
+    goto :goto_0
 
-    move-result v0
+    :cond_1
+    return v0
 
-    iget-wide v1, p0, Lp97;->Z:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
+    :cond_2
     return v1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final mergeFrom(Lx73;)Ls59;
     .locals 5
 
-    const-string v0, "IncomingMessageEvent(chatId="
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lx73;->s()I
 
-    const-string v1, ", messageId="
+    move-result v0
 
-    iget-wide v2, p0, Lp97;->b:J
+    if-eqz v0, :cond_5
 
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v1, 0xa
 
-    move-result-object v0
+    if-eq v0, v1, :cond_1
 
-    iget-wide v1, p0, Lp97;->c:J
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, ", isInvisiblePush="
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_3
 
-    iget-boolean v1, p0, Lp97;->o:Z
+    :cond_1
+    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, ", itemType="
+    iget-object v1, p0, Lp97;->a:[Lo97;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lp97;->X:Lhn4;
+    if-nez v1, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move v3, v2
 
-    const-string v1, ", isControl="
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    array-length v3, v1
 
-    iget-boolean v1, p0, Lp97;->Y:Z
+    :goto_1
+    add-int/2addr v0, v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    new-array v4, v0, [Lo97;
 
-    const-string v1, ", sender="
+    if-eqz v3, :cond_3
 
-    const-string v2, ")"
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget-wide v3, p0, Lp97;->Z:J
+    :cond_3
+    :goto_2
+    add-int/lit8 v1, v0, -0x1
 
-    invoke-static {v3, v4, v1, v2, v0}, Lnd5;->j(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    if-ge v3, v1, :cond_4
 
-    move-result-object v0
+    new-instance v1, Lo97;
 
-    return-object v0
+    invoke-direct {v1}, Lo97;-><init>()V
+
+    aput-object v1, v4, v3
+
+    invoke-virtual {p1, v1}, Lx73;->j(Ls59;)V
+
+    invoke-virtual {p1}, Lx73;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Lo97;
+
+    invoke-direct {v0}, Lo97;-><init>()V
+
+    aput-object v0, v4, v3
+
+    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
+
+    iput-object v4, p0, Lp97;->a:[Lo97;
+
+    goto :goto_0
+
+    :cond_5
+    :goto_3
+    return-object p0
+.end method
+
+.method public final writeTo(Ly73;)V
+    .locals 3
+
+    iget-object v0, p0, Lp97;->a:[Lo97;
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lp97;->a:[Lo97;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Ly73;->y(ILs59;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

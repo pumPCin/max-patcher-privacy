@@ -1,136 +1,150 @@
-.class public final synthetic Lzm2;
+.class public final Lzm2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+.field public final b:Lcdf;
+
+.field public final c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
+.method public constructor <init>(ILcdf;Z)V
     .locals 0
 
-    iput p2, p0, Lzm2;->a:I
-
-    iput-object p1, p0, Lzm2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lzm2;->a:I
+
+    iput-object p2, p0, Lzm2;->b:Lcdf;
+
+    iput-boolean p3, p0, Lzm2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lzm2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lzm2;
+
+    iget v1, p0, Lzm2;->a:I
+
+    iget v3, p1, Lzm2;->a:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lzm2;->b:Lcdf;
+
+    iget-object v3, p1, Lzm2;->b:Lcdf;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lzm2;->c:Z
+
+    iget-boolean p1, p1, Lzm2;->c:Z
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
 
     iget v0, p0, Lzm2;->a:I
 
-    iget-object v1, p0, Lzm2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltm7;
+    const/16 v1, 0x1f
 
-    new-instance v2, Lw11;
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->C0()Ltn2;
+    iget-object v2, p0, Lzm2;->b:Lcdf;
 
-    move-result-object v4
+    invoke-static {v0, v1, v2}, Lnd0;->c(IILcdf;)I
 
-    const/4 v8, 0x0
+    move-result v0
 
-    const/16 v9, 0xb
+    iget-boolean v1, p0, Lzm2;->c:Z
 
-    const/4 v3, 0x0
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const-class v5, Ltn2;
+    move-result v1
 
-    const-string v6, "getMemberListActions"
+    add-int/2addr v1, v0
 
-    const-string v7, "getMemberListActions()Lkotlinx/coroutines/flow/Flow;"
+    return v1
+.end method
 
-    invoke-direct/range {v2 .. v9}, Lw11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    new-instance v3, Lv8;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->B0()J
+    const-string v1, "ChatMembersInfo(titleRes="
 
-    move-result-wide v4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lcub;->a:Lcub;
+    iget v1, p0, Lzm2;->a:I
 
-    invoke-virtual {v0}, Lcub;->c()Lbp7;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    const-string v1, ", subtitle="
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    iget-object v1, p0, Lzm2;->b:Lcdf;
 
-    const-class v8, Lepb;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v8}, La5;->d(Ljava/lang/Class;)Ls5f;
+    const-string v1, ", isAdminWithPermission="
 
-    move-result-object v7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcub;->d()Lbp7;
+    const-string v1, ")"
 
-    move-result-object v8
+    iget-boolean v2, p0, Lzm2;->c:Z
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    move-result-object v9
-
-    const-class v10, Lipb;
-
-    invoke-virtual {v9, v10}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lcub;->g()Lbp7;
-
-    move-result-object v10
-
-    const/4 v11, 0x1
-
-    invoke-direct/range {v3 .. v11}, Lv8;-><init>(JLbp7;Lbp7;Lbp7;Lbp7;Lbp7;I)V
-
-    new-instance v0, Lmz8;
-
-    new-instance v4, Lan2;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v5, v1}, Lan2;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, v4, v3, v2}, Lmz8;-><init>(Lxe6;Laj4;Lve6;)V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Ltm7;
-
-    new-instance v0, Ltn2;
-
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->B0()J
-
-    move-result-wide v1
-
-    const/16 v3, 0x3c
-
-    invoke-direct {v0, v1, v2, v3}, Ltn2;-><init>(JI)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

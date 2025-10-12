@@ -1,90 +1,57 @@
 .class public final Ll86;
-.super Lm3f;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lo86;
+.field public X:Le39;
 
-.field public final synthetic Y:Ljava/lang/StringBuilder;
+.field public Y:Ljava/lang/Comparable;
+
+.field public Z:Ljava/lang/Object;
+
+.field public o:Ln86;
+
+.field public r0:I
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Ln86;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lo86;Ljava/lang/StringBuilder;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ln86;Lwy3;)V
     .locals 0
 
-    iput-object p1, p0, Ll86;->X:Lo86;
+    iput-object p1, p0, Ll86;->t0:Ln86;
 
-    iput-object p2, p0, Ll86;->Y:Ljava/lang/StringBuilder;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ll86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ll86;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ll86;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ll86;
-
-    iget-object v0, p0, Ll86;->X:Lo86;
-
-    iget-object v1, p0, Ll86;->Y:Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, v0, v1, p2}, Ll86;-><init>(Lo86;Ljava/lang/StringBuilder;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iput-object p1, p0, Ll86;->s0:Ljava/lang/Object;
 
-    iget-object p1, p0, Ll86;->X:Lo86;
+    iget p1, p0, Ll86;->u0:I
 
-    iget-object p1, p1, Lo86;->k:Lbp7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object p1
+    iput p1, p0, Ll86;->u0:I
 
-    check-cast p1, Lava;
+    iget-object p1, p0, Ll86;->t0:Ln86;
 
-    iget-object v0, p0, Ll86;->Y:Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lava;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lava;->i()Lzua;
+    invoke-virtual {p1, v0, v0, p0}, Ln86;->a(Le39;Ljava/lang/Long;Lwy3;)Ljava/lang/Object;
 
     move-result-object p1
 

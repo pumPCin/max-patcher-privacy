@@ -1,122 +1,80 @@
-.class public final Lhbf;
+.class public final synthetic Lhbf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmz3;
+.implements Ly8g;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Libf;
 
-.field public final synthetic b:Lmz3;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lqb6;
+
+.field public final synthetic d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmz3;I)V
+.method public synthetic constructor <init>(Libf;ILqb6;J)V
     .locals 0
 
-    iput p2, p0, Lhbf;->a:I
-
-    iput-object p1, p0, Lhbf;->b:Lmz3;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhbf;->a:Libf;
+
+    iput p2, p0, Lhbf;->b:I
+
+    iput-object p3, p0, Lhbf;->c:Lqb6;
+
+    iput-wide p4, p0, Lhbf;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 9
 
-    iget v0, p0, Lhbf;->a:I
+    iget-object v0, p0, Lhbf;->a:Libf;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Lhbf;->b:I
 
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+    iget-object v2, p0, Lhbf;->c:Lqb6;
 
-    move-result v0
+    iget-wide v3, p0, Lhbf;->d:J
 
-    if-eqz v0, :cond_0
+    new-instance v5, Lfm6;
 
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+    iget-object v6, v2, Lqb6;->a:Lw66;
 
-    move-result-object p1
+    iget v7, v6, Lw66;->u:I
 
-    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
+    iget v6, v6, Lw66;->v:I
 
-    move-result-object p1
+    const/4 v8, -0x1
 
-    goto :goto_0
+    invoke-direct {v5, v1, v8, v7, v6}, Lfm6;-><init>(IIII)V
 
-    :cond_0
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+    iget-object v0, v0, Libf;->o:Linf;
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v5, v3, v4}, Linf;->P(Lfm6;J)V
 
-    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
+    iget-object v0, v2, Lqb6;->a:Lw66;
 
-    move-result-object p1
+    iget v0, v0, Lw66;->u:I
 
-    goto :goto_0
+    sget-object v0, Lgb4;->a:Ljava/util/LinkedHashMap;
 
-    :cond_1
-    iget-object v0, p0, Lhbf;->b:Lmz3;
+    const-class v0, Lgb4;
 
-    invoke-virtual {p1, v0}, Lbolts/Task;->continueWithTask(Lmz3;)Lbolts/Task;
+    monitor-enter v0
 
-    move-result-object p1
+    monitor-exit v0
 
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-static {}, Lbolts/Task;->cancelled()Lbolts/Task;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lhbf;->b:Lmz3;
-
-    invoke-virtual {p1, v0}, Lbolts/Task;->continueWith(Lmz3;)Lbolts/Task;
-
-    move-result-object p1
-
-    :goto_1
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

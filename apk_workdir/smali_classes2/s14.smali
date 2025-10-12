@@ -1,242 +1,137 @@
-.class public final synthetic Ls14;
-.super Ljava/lang/Object;
+.class public final Ls14;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final synthetic Y:Lrf3;
+
+.field public final synthetic Z:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+.method public constructor <init>(Lrf3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ls14;->a:I
+    iput-object p1, p0, Ls14;->Y:Lrf3;
 
-    iput-object p1, p0, Ls14;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p2, p0, Ls14;->Z:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ls14;->a:I
+    check-cast p1, Ln24;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Ls14;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {p0, p1, p2}, Ls14;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lw65;->a:Lw65;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Ls14;
 
-    move-result-object v0
+    sget-object p2, Laxf;->a:Laxf;
 
-    check-cast v0, Lss4;
+    invoke-virtual {p1, p2}, Ls14;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    invoke-interface {v0}, Lss4;->g()V
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Ls14;
+
+    iget-object v0, p0, Ls14;->Y:Lrf3;
+
+    iget-object v1, p0, Ls14;->Z:Ljava/lang/String;
+
+    invoke-direct {p1, v0, v1, p2}, Ls14;-><init>(Lrf3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Ls14;->X:I
+
+    const/4 v5, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v5, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    return-object p1
 
     :cond_0
-    sget-object v0, Loyf;->a:Loyf;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    return-object v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_0
-    iget-object v0, p0, Ls14;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lone/me/android/OneMeApplication;->x0:Lkga;
+    throw p1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Ls14;->Y:Lrf3;
 
-    check-cast v0, Ljava/lang/Boolean;
+    iget-object p1, p1, Lrf3;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-object v2, p1
 
-    return-object v0
+    check-cast v2, Lead;
 
-    :pswitch_1
-    iget-object v0, p0, Ls14;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iput v5, p0, Ls14;->X:I
 
-    sget-object v1, Lone/me/android/OneMeApplication;->x0:Lkga;
+    sget-object p1, Lq0a;->a:Lq0a;
 
-    sget-object v1, Ly38;->o:Ly38;
+    iget-object v0, v2, Lead;->b:Lh24;
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    invoke-virtual {p1, v0}, Lm0;->plus(Lf24;)Lf24;
 
-    move-result-wide v2
+    move-result-object p1
 
-    sget-object v4, Lzid;->a:Lzid;
-
-    invoke-virtual {v4}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v4
-
-    const-class v5, Lxoa;
-
-    invoke-virtual {v4, v5}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lxoa;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "OneMeInitialDataStorage"
-
-    const-string v6, "load"
-
-    invoke-static {v5, v6}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v6, Lwoa;
-
-    const/4 v7, 0x0
-
-    invoke-direct {v6, v4, v7}, Lwoa;-><init>(Lxoa;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v4, Lv65;->a:Lv65;
-
-    invoke-static {v4, v6}, Lq9e;->x(Lw24;Llf6;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/util/List;
+    new-instance v1, Lcad;
 
     const/4 v6, 0x0
 
-    invoke-interface {v4, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v3, p0, Ls14;->Z:Ljava/lang/String;
 
-    move-result-object v8
+    const/4 v4, 0x0
 
-    check-cast v8, Ljava/lang/Boolean;
+    invoke-direct/range {v1 .. v6}, Lcad;-><init>(Lead;Ljava/lang/String;ZZLkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {p1, v1, p0}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result v8
+    move-result-object p1
 
-    const/4 v9, 0x1
+    sget-object v0, Lo24;->a:Lo24;
 
-    invoke-interface {v4, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-ne p1, v0, :cond_2
 
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-eqz v8, :cond_1
-
-    if-eqz v4, :cond_1
-
-    move v6, v9
-
-    :cond_1
-    sget-object v4, Lox9;->j:Lqpa;
-
-    if-nez v4, :cond_2
-
-    goto :goto_0
+    return-object v0
 
     :cond_2
-    invoke-virtual {v4, v1}, Lqpa;->b(Ly38;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    const-string v8, "load finished "
-
-    invoke-static {v8, v6}, Lq89;->j(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v4, v1, v5, v8, v7}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_0
-    sget-object v4, Lox9;->j:Lqpa;
-
-    if-nez v4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v4, v1}, Lqpa;->b(Ly38;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    sget v5, Ln05;->o:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v2
-
-    sget-object v2, Ls05;->b:Ls05;
-
-    invoke-static {v8, v9, v2}, Lyhh;->P(JLs05;)J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ln05;->j(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "initialDataStorage().load() by "
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "InitialDataTask"
-
-    invoke-virtual {v4, v1, v3, v2, v7}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_1
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ls14;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/Conversation$State;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

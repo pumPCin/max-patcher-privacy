@@ -1,60 +1,299 @@
-.class public final Lajh;
-.super Lcfh;
+.class public final synthetic Lajh;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic e:Ltbf;
+.field public final synthetic b:Lekh;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Boolean;Ltbf;)V
+.method public synthetic constructor <init>(Lekh;I)V
     .locals 0
 
-    iput-object p1, p0, Lajh;->d:Ljava/lang/Object;
+    iput p2, p0, Lajh;->a:I
 
-    iput-object p2, p0, Lajh;->e:Ltbf;
+    iput-object p1, p0, Lajh;->b:Lekh;
 
-    const-string p1, "com.google.android.gms.common.api.internal.IStatusCallback"
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lcfh;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Z(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 1
+.method public final run()V
+    .locals 7
 
-    const/4 p3, 0x1
+    iget v0, p0, Lajh;->a:I
 
-    if-ne p1, p3, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+    const-string v0, "Service disconnected"
 
-    invoke-static {p2, p1}, Llfh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    iget-object v1, p0, Lajh;->b:Lekh;
 
-    move-result-object p1
+    invoke-virtual {v1, v0}, Lekh;->a(Ljava/lang/String;)V
 
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
+    return-void
 
-    invoke-static {p2}, Llfh;->b(Landroid/os/Parcel;)V
+    :pswitch_0
+    iget-object v0, p0, Lajh;->b:Lekh;
 
-    iget-object p2, p0, Lajh;->d:Ljava/lang/Object;
+    monitor-enter v0
 
-    iget-object v0, p0, Lajh;->e:Ltbf;
+    :try_start_0
+    iget v1, v0, Lekh;->a:I
 
-    invoke-static {p1, p2, v0}, Lhd6;->R(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Ltbf;)V
+    const/4 v2, 0x1
 
-    return p3
+    if-ne v1, v2, :cond_0
+
+    const-string v1, "Timed out while binding"
+
+    invoke-virtual {v0, v1}, Lekh;->a(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_0
-    const/4 p1, 0x0
+    monitor-exit v0
 
-    return p1
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :goto_0
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+
+    :goto_2
+    :pswitch_1
+    iget-object v0, p0, Lajh;->b:Lekh;
+
+    monitor-enter v0
+
+    :try_start_2
+    iget v1, v0, Lekh;->a:I
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_1
+
+    monitor-exit v0
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v1
+
+    goto/16 :goto_4
+
+    :cond_1
+    iget-object v1, v0, Lekh;->o:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lekh;->c()V
+
+    monitor-exit v0
+
+    :goto_3
+    return-void
+
+    :cond_2
+    iget-object v1, v0, Lekh;->o:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llkh;
+
+    iget-object v2, v0, Lekh;->X:Landroid/util/SparseArray;
+
+    iget v3, v1, Llkh;->a:I
+
+    invoke-virtual {v2, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    iget-object v2, v0, Lekh;->Y:Lykh;
+
+    iget-object v2, v2, Lykh;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v3, Lpff;
+
+    const/16 v4, 0x9
+
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v0, v1, v5, v4}, Lpff;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v5, 0x1e
+
+    invoke-interface {v2, v3, v5, v6, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    const-string v2, "MessengerIpcClient"
+
+    const/4 v3, 0x3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Sending "
+
+    const-string v4, "MessengerIpcClient"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    iget-object v2, v0, Lekh;->Y:Lykh;
+
+    iget-object v3, v0, Lekh;->b:Landroid/os/Messenger;
+
+    iget v4, v1, Llkh;->c:I
+
+    iget-object v2, v2, Lykh;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/content/Context;
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v5
+
+    iput v4, v5, Landroid/os/Message;->what:I
+
+    iget v4, v1, Llkh;->a:I
+
+    iput v4, v5, Landroid/os/Message;->arg1:I
+
+    iput-object v3, v5, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    invoke-virtual {v1}, Llkh;->a()Z
+
+    move-result v4
+
+    const-string v6, "oneWay"
+
+    invoke-virtual {v3, v6, v4}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v4, "pkg"
+
+    invoke-virtual {v3, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v1, Llkh;->d:Landroid/os/Bundle;
+
+    const-string v2, "data"
+
+    invoke-virtual {v3, v2, v1}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-virtual {v5, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    :try_start_3
+    iget-object v1, v0, Lekh;->c:Lt8b;
+
+    iget-object v2, v1, Lt8b;->b:Ljava/lang/Object;
+
+    check-cast v2, Landroid/os/Messenger;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    goto/16 :goto_2
+
+    :cond_4
+    iget-object v1, v1, Lt8b;->c:Ljava/lang/Object;
+
+    check-cast v1, Lfhh;
+
+    if-eqz v1, :cond_5
+
+    iget-object v1, v1, Lfhh;->a:Landroid/os/Messenger;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+
+    goto/16 :goto_2
+
+    :cond_5
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Both messengers are null"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lekh;->a(Ljava/lang/String;)V
+
+    goto/16 :goto_2
+
+    :goto_4
+    :try_start_4
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

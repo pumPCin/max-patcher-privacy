@@ -1,192 +1,168 @@
-.class public abstract Lqkh;
-.super Lcfh;
+.class public final Lqkh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltgh;
+.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public final d:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>([B)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const-string v0, "com.google.android.gms.common.internal.ICertData"
+    iput p1, p0, Lqkh;->a:I
 
-    const/4 v1, 0x4
+    iput-object p2, p0, Lqkh;->b:Ljava/lang/Object;
 
-    invoke-direct {p0, v0, v1}, Lcfh;-><init>(Ljava/lang/String;I)V
-
-    array-length v0, p1
-
-    const/16 v1, 0x19
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result p1
-
-    iput p1, p0, Lqkh;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
-.end method
-
-.method public static d0(Ljava/lang/String;)[B
-    .locals 1
-
-    :try_start_0
-    const-string v0, "ISO-8859-1"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final a0(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 1
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    iget p1, p0, Lqkh;->d:I
-
-    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    return p2
-
-    :cond_1
-    invoke-virtual {p0}, Lqkh;->e0()[B
-
-    move-result-object p1
-
-    new-instance v0, Lpaa;
-
-    invoke-direct {v0, p1}, Lpaa;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-static {p3, v0}, Lbih;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
-
-    return p2
-.end method
-
-.method public abstract e0()[B
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    const/4 v0, 0x0
+    iget v0, p0, Lqkh;->a:I
 
-    if-eqz p1, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    instance-of v1, p1, Ltgh;
+    iget-object v0, p0, Lqkh;->b:Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    check-cast v0, Lklh;
 
-    goto :goto_0
+    iget-object v1, v0, Lklh;->b:Lxs4;
 
-    :cond_0
-    :try_start_0
-    check-cast p1, Ltgh;
-
-    move-object v1, p1
-
-    check-cast v1, Lqkh;
-
-    iget v1, v1, Lqkh;->d:I
-
-    iget v2, p0, Lqkh;->d:I
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lqkh;
-
-    invoke-virtual {p1}, Lqkh;->e0()[B
+    filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v1, Lpaa;
+    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
 
-    invoke-direct {v1, p1}, Lpaa;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, p1}, Lxs4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v1}, Lpaa;->e0(Lh27;)Ljava/lang/Object;
+    new-instance p1, Lukh;
+
+    invoke-direct {p1, p0, p2}, Lukh;-><init>(Lqkh;Landroid/os/IBinder;)V
+
+    invoke-virtual {v0}, Lklh;->a()Landroid/os/Handler;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqkh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lvkh;
+
+    iget-object v1, v0, Lvkh;->b:Ljuf;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, [B
+    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
 
-    invoke-virtual {p0}, Lqkh;->e0()[B
+    invoke-virtual {v1, v2, p1}, Ljuf;->c(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    new-instance p1, Lgih;
 
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-direct {p1, p0, p2}, Lgih;-><init>(Lqkh;Landroid/os/IBinder;)V
 
-    move-result p1
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Lvkh;->a()Landroid/os/Handler;
 
-    return p1
+    move-result-object p2
 
-    :catch_0
-    move-exception p1
+    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    const-string v1, "GoogleCertificates"
+    return-void
 
-    const-string v2, "Failed to get Google certificates from remote"
+    nop
 
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_2
-    :goto_0
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 3
 
-    iget v0, p0, Lqkh;->d:I
+    iget v0, p0, Lqkh;->a:I
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lqkh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lklh;
+
+    iget-object v1, v0, Lklh;->b:Lxs4;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+
+    invoke-virtual {v1, v2, p1}, Lxs4;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance p1, Lpkh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lpkh;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lklh;->a()Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqkh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lvkh;
+
+    iget-object v1, v0, Lvkh;->b:Ljuf;
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
+
+    invoke-virtual {v1, v2, p1}, Ljuf;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance p1, Lvjh;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lvjh;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lvkh;->a()Landroid/os/Handler;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

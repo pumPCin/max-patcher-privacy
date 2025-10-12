@@ -1,177 +1,424 @@
 .class public final Lryd;
-.super Lm3f;
+.super Lxuc;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final X:Landroid/view/LayoutInflater;
 
-.field public final synthetic Y:Lsyd;
+.field public final Y:Lru/ok/messages/settings/FrgBaseSettings;
+
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lsyd;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroidx/fragment/app/b;Ljava/util/List;Lru/ok/messages/settings/FrgBaseSettings;)V
     .locals 0
 
-    iput-object p1, p0, Lryd;->Y:Lsyd;
+    invoke-direct {p0}, Lxuc;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lryd;->o:Ljava/util/List;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lryd;->X:Landroid/view/LayoutInflater;
+
+    iput-object p3, p0, Lryd;->Y:Lru/ok/messages/settings/FrgBaseSettings;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lryd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lryd;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lryd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final j()I
     .locals 1
 
-    new-instance p1, Lryd;
+    iget-object v0, p0, Lryd;->o:Ljava/util/List;
 
-    iget-object v0, p0, Lryd;->Y:Lsyd;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-direct {p1, v0, p2}, Lryd;-><init>(Lsyd;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final l(I)I
+    .locals 1
 
-    iget v0, p0, Lryd;->X:I
+    iget-object v0, p0, Lryd;->o:Ljava/util/List;
 
-    const/4 v1, 0x1
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v2, p0, Lryd;->Y:Lsyd;
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lfwd;
 
-    if-ne v0, v1, :cond_0
+    iget p1, p1, Lfwd;->Y:I
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    return p1
+.end method
+
+.method public final r(Luvc;I)V
+    .locals 6
+
+    iget v0, p1, Luvc;->Y:I
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lryd;->o:Ljava/util/List;
+
+    if-ne v0, v1, :cond_5
+
+    check-cast p1, Lno7;
+
+    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lfwd;
+
+    iput-object p2, p1, Lno7;->K0:Lfwd;
+
+    iget-object v0, p1, Lno7;->J0:Landroid/widget/TextView;
+
+    iget-object p2, p2, Lfwd;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object p2, p1, Lno7;->G0:Landroidx/appcompat/widget/SwitchCompat;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    iget-object v0, p1, Lno7;->K0:Lfwd;
+
+    iget-object v0, v0, Lfwd;->X:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move v0, v3
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move v0, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/SwitchCompat;->setChecked(Z)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lw23;
 
-    throw p1
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1, p1}, Lw23;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p2, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    iget-object v0, p1, Lno7;->K0:Lfwd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
+
+    iget-object p2, p1, Lno7;->K0:Lfwd;
+
+    iget-object p2, p2, Lfwd;->X:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    move v0, v3
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move v0, v2
 
-    iget-object p1, v2, Lsyd;->c:Lmm6;
+    :goto_1
+    iget-object v1, p1, Lno7;->I0:Landroid/view/View;
 
-    new-instance v0, Ly7c;
+    const/16 v4, 0x8
 
-    invoke-virtual {v2}, Lsyd;->t()Lxob;
+    if-eqz v0, :cond_2
 
-    move-result-object v3
+    move v5, v2
 
-    check-cast v3, Lzob;
-
-    iget-object v3, v3, Lzob;->a:Lt63;
-
-    invoke-virtual {v3}, Lxid;->p()J
-
-    move-result-wide v3
-
-    sget-object v5, Lbx4;->y0:Lsed;
-
-    iget-object v6, v2, Lsyd;->o:Landroid/app/Application;
-
-    invoke-virtual {v5, v6}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lbx4;->h()Luxa;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Luxa;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {v0, v3, v4, v5}, Lz7c;-><init>(JLjava/lang/String;)V
-
-    iput v1, p0, Lryd;->X:I
-
-    invoke-virtual {p1, v0, v1, p0}, Lmm6;->a(Lz7c;ZLm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_2
 
     :cond_2
-    :goto_0
-    check-cast p1, Lt7c;
+    move v5, v4
 
-    sget-object v0, Loyf;->a:Loyf;
+    :goto_2
+    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
-    if-eqz p1, :cond_3
+    if-eqz v0, :cond_3
 
-    iget-object p1, p1, Lt7c;->b:Landroid/graphics/Bitmap;
+    iget-object v0, p1, Lno7;->E0:Lru/ok/messages/settings/view/LedSeekBar;
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v0, p2}, Lru/ok/messages/settings/view/LedSeekBar;->setColor(I)V
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+    :cond_3
+    iget-object p2, p1, Luvc;->a:Landroid/view/View;
 
-    move-result p1
+    iget-object v0, p1, Lno7;->K0:Lfwd;
 
-    iget-object v1, v2, Lsyd;->E0:Ljb5;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v2, Lb2e;->c:Lb2e;
+    invoke-virtual {p2, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p1, Lno7;->K0:Lfwd;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v3, ":invite/qr?height="
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Landroid/view/View;->setAlpha(F)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p2, p1, Lno7;->H0:Landroid/view/View;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p1, Lno7;->K0:Lfwd;
+
+    iget-boolean p1, p1, Lfwd;->Z:Z
+
+    if-eqz p1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v2, v4
+
+    :goto_3
+    invoke-virtual {p2, v2}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :cond_5
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_7
+
+    check-cast p1, Lds0;
+
+    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lfwd;
+
+    iput-object p2, p1, Lds0;->F0:Lfwd;
+
+    iget-boolean v0, p1, Lds0;->G0:Z
+
+    if-nez v0, :cond_6
+
+    iget-object v0, p2, Lfwd;->X:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    iget-object p1, p1, Lds0;->E0:Lru/ok/messages/settings/view/BrightnessSeekBar;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lru/ok/messages/settings/view/BrightnessSeekBar;->setProgress(I)V
+
+    :cond_6
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :cond_7
+    check-cast p1, Liwd;
+
+    invoke-interface {v4, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfwd;
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    sub-int/2addr v1, v3
+
+    if-ne p2, v1, :cond_8
+
+    move v2, v3
+
+    :cond_8
+    invoke-virtual {p1, v0, v2}, Liwd;->A(Lfwd;Z)V
+
+    return-void
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Luvc;
+    .locals 4
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lryd;->X:Landroid/view/LayoutInflater;
+
+    if-ne p2, v0, :cond_0
+
+    sget p2, Lmfc;->row_setting_header:I
+
+    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lqe0;->m(Ljava/lang/String;Ljb5;)V
+    new-instance p2, Liwd;
+
+    invoke-direct {p2, p1, v1}, Liwd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
+
+    :cond_0
+    const/4 v0, 0x6
+
+    if-ne p2, v0, :cond_1
+
+    sget p2, Lmfc;->row_setting_progress:I
+
+    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Lf3c;
+
+    invoke-direct {p2, p1, v1}, Liwd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
+
+    :cond_1
+    const/4 v0, 0x4
+
+    iget-object v1, p0, Lryd;->Y:Lru/ok/messages/settings/FrgBaseSettings;
+
+    if-ne p2, v0, :cond_2
+
+    sget p2, Lmfc;->row_setting_led:I
+
+    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Lno7;
+
+    invoke-direct {p2, p1, v1}, Lno7;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
+
+    :cond_2
+    const/4 v0, 0x7
+
+    if-ne p2, v0, :cond_3
+
+    sget p2, Lmfc;->row_setting_contact:I
+
+    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Lx23;
+
+    invoke-direct {p2, p1, v1}, Lx23;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
 
     :cond_3
-    return-object v0
+    const/16 v0, 0x9
+
+    if-ne p2, v0, :cond_4
+
+    sget p2, Lmfc;->row_setting_brightness:I
+
+    invoke-virtual {v3, p2, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    new-instance p2, Lds0;
+
+    invoke-direct {p2, p1, v1}, Lds0;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
+
+    :cond_4
+    sget v0, Lmfc;->row_setting:I
+
+    invoke-virtual {v3, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_5
+
+    new-instance p2, Lx23;
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p1, v3, v1, v0}, Lx23;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;I)V
+
+    return-object p2
+
+    :cond_5
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_6
+
+    new-instance p2, Lrcf;
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    invoke-direct {p2, p1, v3, v1}, Lrcf;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
+
+    :cond_6
+    const/16 v0, 0xa
+
+    if-ne p2, v0, :cond_7
+
+    new-instance p2, Lx23;
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p2, p1, v3, v1, v0}, Lx23;-><init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;I)V
+
+    return-object p2
+
+    :cond_7
+    new-instance p2, Liwd;
+
+    invoke-direct {p2, p1, v1}, Liwd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    return-object p2
 .end method

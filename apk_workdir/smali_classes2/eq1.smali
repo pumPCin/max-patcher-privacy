@@ -1,23 +1,34 @@
-.class public final Leq1;
+.class public final synthetic Leq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhoe;
+
 
 # instance fields
-.field public final a:Lnwd;
-
-.field public final b:Lvce;
+.field public final synthetic a:Lgs5;
 
 
 # direct methods
-.method public constructor <init>(Lnwd;Lvce;)V
+.method public synthetic constructor <init>(Lgs5;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Leq1;->a:Lnwd;
+    iput-object p1, p0, Leq1;->a:Lgs5;
 
-    iput-object p2, p0, Leq1;->b:Lvce;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lgoe;)V
+    .locals 1
+
+    iget-object v0, p0, Leq1;->a:Lgs5;
+
+    invoke-interface {v0, p1}, Lgs5;->d(Lgoe;)V
 
     return-void
 .end method

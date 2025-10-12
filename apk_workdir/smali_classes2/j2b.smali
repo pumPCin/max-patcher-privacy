@@ -1,222 +1,123 @@
 .class public final Lj2b;
-.super Ljava/lang/Object;
+.super Lk2b;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lbz;
-
-.field public final d:Ll2b;
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Ljava/util/List;
-
-.field public final h:Lin4;
+.field public final d:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public constructor <init>(Li2b;)V
-    .locals 2
+.method public constructor <init>([BII)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    shr-int/lit8 v0, p3, 0x2
 
-    iget-wide v0, p1, Li2b;->a:J
+    invoke-direct {p0, p1, v0, p2}, Lk2b;-><init>([BII)V
 
-    iput-wide v0, p0, Lj2b;->a:J
+    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
-    iget-object v0, p1, Li2b;->b:Ljava/lang/String;
+    move-result-object p1
 
-    iput-object v0, p0, Lj2b;->b:Ljava/lang/String;
+    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    iget-object v0, p1, Li2b;->c:Lbz;
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    iput-object v0, p0, Lj2b;->c:Lbz;
+    move-result-object p1
 
-    iget-object v0, p1, Li2b;->d:Ll2b;
-
-    iput-object v0, p0, Lj2b;->d:Ll2b;
-
-    iget-boolean v0, p1, Li2b;->e:Z
-
-    iput-boolean v0, p0, Lj2b;->e:Z
-
-    iget-boolean v0, p1, Li2b;->f:Z
-
-    iput-boolean v0, p0, Lj2b;->f:Z
-
-    iget-object v0, p1, Li2b;->g:Ljava/util/List;
-
-    iput-object v0, p0, Lj2b;->g:Ljava/util/List;
-
-    iget-object p1, p1, Li2b;->h:Lin4;
-
-    iput-object p1, p0, Lj2b;->h:Lin4;
+    iput-object p1, p0, Lj2b;->d:Ljava/nio/ByteBuffer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lds;
-    .locals 3
+.method public final a(I)S
+    .locals 4
 
-    new-instance v0, Lds;
+    shl-int/lit8 p1, p1, 0x2
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lj2b;->d:Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0, v1}, Lade;-><init>(I)V
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
-    iget-wide v1, p0, Lj2b;->a:J
+    move-result p1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    float-to-double v0, p1
 
-    move-result-object v1
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    const-string v2, "cid"
+    add-double/2addr v0, v2
 
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide v2, 0x40dfffe000000000L    # 32767.5
 
-    iget-object v1, p0, Lj2b;->b:Ljava/lang/String;
+    mul-double/2addr v0, v2
 
-    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    double-to-int p1, v0
 
-    move-result v2
+    add-int/lit16 p1, p1, -0x8000
 
-    if-nez v2, :cond_0
+    int-to-short p1, p1
 
-    const-string v2, "text"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    iget-boolean v1, p0, Lj2b;->e:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const-string v2, "detectShare"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lj2b;->c:Lbz;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    const-string v2, "attaches"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    iget-object v1, p0, Lj2b;->d:Ll2b;
-
-    if-eqz v1, :cond_2
-
-    const-string v2, "link"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    iget-boolean v1, p0, Lj2b;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    const-string v2, "isLive"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p0, Lj2b;->g:Ljava/util/List;
-
-    if-eqz v1, :cond_3
-
-    const-string v2, "elements"
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    iget-object v1, p0, Lj2b;->h:Lin4;
-
-    if-eqz v1, :cond_4
-
-    const-string v2, "delayedAttributes"
-
-    invoke-virtual {v1}, Lin4;->a()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    return-object v0
+    return p1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
-    iget-object v0, p0, Lj2b;->g:Ljava/util/List;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lkmc;->e(Ljava/util/Collection;)I
+    const-string v1, "PCM float ("
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "OutgoingMessage{cid="
+    iget v1, p0, Lk2b;->a:I
 
-    const-string v2, ", text="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Lj2b;->a:J
+    const-string v2, ") {"
 
-    const-string v5, "***"
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v3, v4, v2, v5}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-lez v1, :cond_0
 
-    move-result-object v1
+    const/4 v2, 0x0
 
-    const-string v2, ", attaches="
+    iget-object v3, p0, Lj2b;->d:Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
-    iget-object v2, p0, Lj2b;->c:Lbz;
+    move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v2, ", link="
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    iget-object v2, p0, Lj2b;->d:Ll2b;
+    const-string v4, ", "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", detectShare="
+    shl-int/lit8 v4, v2, 0x2
 
-    const-string v3, ", live=\'"
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->getFloat(I)F
 
-    iget-boolean v4, p0, Lj2b;->e:Z
+    move-result v4
 
-    iget-boolean v5, p0, Lj2b;->f:Z
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v1, v4, v5}, Lvl3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    add-int/lit8 v2, v2, 0x1
 
-    const-string v2, "\', elements="
+    goto :goto_0
 
-    const-string v3, "}"
+    :cond_0
+    const/16 v1, 0x7d
 
-    invoke-static {v1, v2, v0, v3}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,35 +1,56 @@
-.class public interface abstract Lr74;
+.class public final synthetic Lr74;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ly74;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ly74;I)V
+    .locals 0
+
+    iput p2, p0, Lr74;->a:I
+
+    iput-object p1, p0, Lr74;->b:Ly74;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b()V
-.end method
+.method public final run()V
+    .locals 2
 
-.method public abstract c(JLgnd;)J
-.end method
+    iget v0, p0, Lr74;->a:I
 
-.method public abstract d(Lo43;ZLfz7;Llu3;)Z
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract e(Lo43;)V
-.end method
+    iget-object v0, p0, Lr74;->b:Ly74;
 
-.method public abstract f(JLo43;Ljava/util/List;)Z
-.end method
+    const/4 v1, 0x0
 
-.method public abstract g(Lw74;I)V
-.end method
+    invoke-virtual {v0, v1}, Ly74;->s(Z)V
 
-.method public abstract h(Leg5;)V
-.end method
+    return-void
 
-.method public abstract i(JLjava/util/List;)I
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lr74;->b:Ly74;
 
-.method public abstract j(La08;JLjava/util/List;Lke0;)V
-.end method
+    invoke-virtual {v0}, Ly74;->t()V
 
-.method public abstract release()V
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

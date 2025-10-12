@@ -1,117 +1,62 @@
-.class public final Lbsb;
-.super Lbj0;
+.class public final synthetic Lbsb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
-.field public final c:J
+.field public final synthetic b:Lcdb;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public synthetic constructor <init>(Lcdb;I)V
     .locals 0
 
-    invoke-direct {p0}, Lbj0;-><init>()V
+    iput p2, p0, Lbsb;->a:I
 
-    iput-wide p1, p0, Lbsb;->b:J
+    iput-object p1, p0, Lbsb;->b:Lcdb;
 
-    iput-wide p3, p0, Lbsb;->c:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbsb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbsb;
-
-    iget-wide v3, p0, Lbsb;->b:J
-
-    iget-wide v5, p1, Lbsb;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lbsb;->c:J
-
-    iget-wide v5, p1, Lbsb;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    iget-wide v0, p0, Lbsb;->b:J
+    iget v0, p0, Lbsb;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    sget-object v1, Laxf;->a:Laxf;
 
-    move-result v0
+    iget-object v2, p0, Lbsb;->b:Lcdb;
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast p1, Landroid/view/View;
 
-    iget-wide v1, p0, Lbsb;->c:J
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lpl7;
 
-    move-result v1
+    invoke-virtual {v2, p1}, Lcdb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    add-int/2addr v1, v0
+    return-object v1
 
-    return v1
-.end method
+    :pswitch_0
+    sget-object v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->u0:[Lpl7;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    invoke-virtual {v2, p1}, Lcdb;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "ProfileAvatarUpdatedEvent(requestId="
+    return-object v1
 
-    const-string v1, ", photoId="
+    nop
 
-    iget-wide v2, p0, Lbsb;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lbsb;->c:J
-
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

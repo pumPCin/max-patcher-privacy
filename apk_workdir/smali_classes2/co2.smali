@@ -1,158 +1,294 @@
-.class public final enum Lco2;
-.super Ljava/lang/Enum;
+.class public final Lco2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lco2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final b:Lh9a;
-
-.field public static final enum c:Lco2;
-
-.field public static final synthetic o:[Lco2;
+.implements Lbvb;
 
 
 # instance fields
-.field public final a:Ls5f;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lxcf;
+
+.field public final c:Lz93;
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;Lxcf;Lz93;I)V
+    .locals 0
 
-    new-instance v0, Lco2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lhn4;->o:Lw88;
+    iput-object p1, p0, Lco2;->a:Ljava/lang/String;
 
-    const-string v1, "DEFAULT"
+    iput-object p2, p0, Lco2;->b:Lxcf;
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lco2;->c:Lz93;
 
-    invoke-direct {v0, v1, v2}, Lco2;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lco2;->c:Lco2;
-
-    new-instance v1, Lco2;
-
-    const-string v2, "SCHEDULED_SEND"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Lco2;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1}, [Lco2;
-
-    move-result-object v0
-
-    sput-object v0, Lco2;->o:[Lco2;
-
-    new-instance v0, Lh9a;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lh9a;-><init>(I)V
-
-    sput-object v0, Lco2;->b:Lh9a;
-
-    new-instance v0, Lt7;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lt7;-><init>(I)V
-
-    sput-object v0, Lco2;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput p4, p0, Lco2;->o:I
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance p1, Lzh1;
-
-    const/16 p2, 0xc
-
-    invoke-direct {p1, p2, p0}, Lzh1;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ls5f;
-
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
-
-    iput-object p2, p0, Lco2;->a:Ls5f;
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p1, p2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lco2;
-    .locals 1
-
-    const-class v0, Lco2;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lco2;
-
-    return-object p0
-.end method
-
-.method public static values()[Lco2;
-    .locals 1
-
-    sget-object v0, Lco2;->o:[Lco2;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lco2;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lco2;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lco2;
+
+    iget-object v0, p0, Lco2;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lco2;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lco2;->b:Lxcf;
+
+    iget-object v1, p1, Lco2;->b:Lxcf;
+
+    invoke-virtual {v0, v1}, Lxcf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lco2;->c:Lz93;
+
+    iget-object v1, p1, Lco2;->c:Lz93;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lco2;->o:I
+
+    iget p1, p1, Lco2;->o:I
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    const/high16 v0, 0x20000
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lov7;)Z
+    .locals 4
+
+    const/high16 v0, 0x20000
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lov7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
 
     const/4 v0, 0x0
+
+    iget-object v1, p0, Lco2;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lco2;->b:Lxcf;
+
+    iget v3, v3, Lxcf;->b:I
+
+    invoke-static {v3, v1, v2}, Ljjd;->e(III)I
+
+    move-result v1
+
+    iget-object v3, p0, Lco2;->c:Lz93;
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, v3, Lz93;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget v0, p0, Lco2;->o:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final k(Lov7;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lco2;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lqvb;
+
+    check-cast p1, Lco2;
+
+    iget-object p1, p1, Lco2;->c:Lz93;
+
+    invoke-direct {v0, p1}, Lqvb;-><init>(Lz93;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/high16 v0, 0x20000
+
+    return v0
+.end method
+
+.method public final q(Lov7;)Z
     .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lco2;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p2
+    move-result p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    return p1
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatNameItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lco2;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", hintText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lco2;->b:Lxcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lco2;->c:Lz93;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", limitCharacters="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lco2;->o:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

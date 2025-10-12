@@ -3,10 +3,26 @@
 
 
 # static fields
-.field public static oneme_stickers_set_add_button:I = 0x7f130a46
+.field public static MarkdownItemView:[I = null
 
-.field public static oneme_stickers_set_remove_button:I = 0x7f130a47
+.field public static MarkdownItemView_miv_highlight_title:I = 0x0
 
-.field public static oneme_stickers_set_snackbar_favorite_added:I = 0x7f130a48
+.field public static MarkdownItemView_miv_title:I = 0x1
 
-.field public static oneme_stickers_set_snackbar_favorite_removed:I = 0x7f130a49
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    const v0, 0x7f04066f
+
+    const v1, 0x7f040670
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lckc;->MarkdownItemView:[I
+
+    return-void
+.end method

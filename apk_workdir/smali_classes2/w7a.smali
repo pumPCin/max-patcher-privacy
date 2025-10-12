@@ -3,23 +3,33 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
+# instance fields
+.field public final a:J
 
-    sget-object v0, Lx7a;->a:Ljava/lang/Object;
+.field public final b:J
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+.field public final c:J
 
-    move-result-object v0
+.field public final d:Ljava/lang/Boolean;
 
-    check-cast v0, Lum7;
+.field public final e:Ldz4;
 
-    return-object v0
+
+# direct methods
+.method public constructor <init>(JJJLjava/lang/Boolean;Ldz4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lw7a;->a:J
+
+    iput-wide p3, p0, Lw7a;->b:J
+
+    iput-wide p5, p0, Lw7a;->c:J
+
+    iput-object p7, p0, Lw7a;->d:Ljava/lang/Boolean;
+
+    iput-object p8, p0, Lw7a;->e:Ldz4;
+
+    return-void
 .end method

@@ -77,23 +77,28 @@
 .method public static a()Lcom/my/tracker/obfuscated/v;
     .locals 2
 
+    .line 1
     sget-object v0, Lcom/my/tracker/obfuscated/v;->h:Lcom/my/tracker/obfuscated/v;
 
     if-nez v0, :cond_1
 
+    .line 2
     const-class v1, Lcom/my/tracker/obfuscated/v;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     sget-object v0, Lcom/my/tracker/obfuscated/v;->h:Lcom/my/tracker/obfuscated/v;
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance v0, Lcom/my/tracker/obfuscated/v;
 
     invoke-direct {v0}, Lcom/my/tracker/obfuscated/v;-><init>()V
 
+    .line 5
     sput-object v0, Lcom/my/tracker/obfuscated/v;->h:Lcom/my/tracker/obfuscated/v;
 
     goto :goto_0
@@ -103,6 +108,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_0
     :goto_0
     monitor-exit v1
@@ -125,18 +131,21 @@
 .method public a(Lcom/my/tracker/MyTrackerConfig$InstalledPackagesProvider;ZLandroid/content/Context;)Lcom/my/tracker/obfuscated/u;
     .locals 9
 
+    .line 7
     iget-object v0, p0, Lcom/my/tracker/obfuscated/v;->a:Lcom/my/tracker/obfuscated/d;
 
     invoke-virtual {v0, p3}, Lcom/my/tracker/obfuscated/d;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/c;
 
     move-result-object v2
 
+    .line 8
     iget-object v0, p0, Lcom/my/tracker/obfuscated/v;->b:Lcom/my/tracker/obfuscated/r;
 
     invoke-virtual {v0, p3}, Lcom/my/tracker/obfuscated/r;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/q;
 
     move-result-object v3
 
+    .line 9
     iget-object v0, p0, Lcom/my/tracker/obfuscated/v;->e:Lcom/my/tracker/obfuscated/f;
 
     invoke-virtual {v0, p1, p3}, Lcom/my/tracker/obfuscated/f;->a(Lcom/my/tracker/MyTrackerConfig$InstalledPackagesProvider;Landroid/content/Context;)Lcom/my/tracker/obfuscated/e;
@@ -155,6 +164,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     iget-object p1, p0, Lcom/my/tracker/obfuscated/v;->d:Lcom/my/tracker/obfuscated/e0;
 
@@ -162,12 +172,14 @@
 
     move-result-object p1
 
+    .line 11
     iget-object p2, p0, Lcom/my/tracker/obfuscated/v;->c:Lcom/my/tracker/obfuscated/z;
 
     invoke-virtual {p2, p3}, Lcom/my/tracker/obfuscated/z;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/y;
 
     move-result-object p2
 
+    .line 12
     iget-object v0, p0, Lcom/my/tracker/obfuscated/v;->g:Lcom/my/tracker/obfuscated/x;
 
     invoke-virtual {v0, p3}, Lcom/my/tracker/obfuscated/x;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/w;
@@ -180,6 +192,7 @@
 
     move-object v8, v0
 
+    .line 13
     :goto_0
     iget-object p1, p0, Lcom/my/tracker/obfuscated/v;->f:Lcom/my/tracker/obfuscated/k;
 
@@ -187,6 +200,7 @@
 
     move-result-object v7
 
+    .line 14
     new-instance v1, Lcom/my/tracker/obfuscated/u;
 
     invoke-direct/range {v1 .. v8}, Lcom/my/tracker/obfuscated/u;-><init>(Lcom/my/tracker/obfuscated/c;Lcom/my/tracker/obfuscated/q;Lcom/my/tracker/obfuscated/y;Lcom/my/tracker/obfuscated/d0;Lcom/my/tracker/obfuscated/e;Lcom/my/tracker/obfuscated/j;Lcom/my/tracker/obfuscated/w;)V

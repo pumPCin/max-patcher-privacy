@@ -1,37 +1,19 @@
-.class public abstract Luta;
+.class public final Luta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+# instance fields
+.field public final synthetic a:Lc40;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lc40;)V
+    .locals 0
 
-    sget v0, Lckc;->oneme_stickers_set_add_button:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Luta;->a:I
-
-    sget v0, Lckc;->oneme_stickers_set_remove_button:I
-
-    sput v0, Luta;->b:I
-
-    sget v0, Lckc;->oneme_stickers_set_snackbar_favorite_added:I
-
-    sput v0, Luta;->c:I
-
-    sget v0, Lckc;->oneme_stickers_set_snackbar_favorite_removed:I
-
-    sput v0, Luta;->d:I
+    iput-object p1, p0, Luta;->a:Lc40;
 
     return-void
 .end method

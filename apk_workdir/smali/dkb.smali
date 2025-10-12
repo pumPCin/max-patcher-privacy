@@ -2,716 +2,305 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final t:Luu8;
+# interfaces
+.implements Lsmf;
 
 
 # instance fields
-.field public final a:Llif;
+.field public final a:Ls9d;
 
-.field public final b:Luu8;
+.field public final b:Lw98;
 
-.field public final c:J
+.field public final c:Lui9;
 
-.field public final d:J
+.field public d:J
 
-.field public final e:I
-
-.field public final f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-.field public final g:Z
-
-.field public final h:Lwnf;
-
-.field public final i:Lqof;
-
-.field public final j:Ljava/util/List;
-
-.field public final k:Luu8;
-
-.field public final l:Z
-
-.field public final m:I
-
-.field public final n:Lfkb;
-
-.field public final o:Z
-
-.field public final p:Z
-
-.field public volatile q:J
-
-.field public volatile r:J
-
-.field public volatile s:J
+.field public final synthetic e:Lfkb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Luu8;
-
-    new-instance v1, Ljava/lang/Object;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-direct {v0, v1}, Luu8;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Ldkb;->t:Luu8;
-
-    return-void
-.end method
-
-.method public constructor <init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-    .locals 0
+.method public constructor <init>(Lfkb;Lwc4;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldkb;->a:Llif;
+    iput-object p1, p0, Ldkb;->e:Lfkb;
 
-    iput-object p2, p0, Ldkb;->b:Luu8;
+    new-instance p1, Ls9d;
 
-    iput-wide p3, p0, Ldkb;->c:J
+    const/4 v0, 0x0
 
-    iput-wide p5, p0, Ldkb;->d:J
+    invoke-direct {p1, p2, v0, v0}, Ls9d;-><init>(Lwc4;Lqy4;Lbc6;)V
 
-    iput p7, p0, Ldkb;->e:I
+    iput-object p1, p0, Ldkb;->a:Ls9d;
 
-    iput-object p8, p0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    new-instance p1, Lw98;
 
-    iput-boolean p9, p0, Ldkb;->g:Z
+    const/16 p2, 0x13
 
-    iput-object p10, p0, Ldkb;->h:Lwnf;
+    const/4 v0, 0x0
 
-    iput-object p11, p0, Ldkb;->i:Lqof;
+    invoke-direct {p1, p2, v0}, Lw98;-><init>(IZ)V
 
-    iput-object p12, p0, Ldkb;->j:Ljava/util/List;
+    iput-object p1, p0, Ldkb;->b:Lw98;
 
-    iput-object p13, p0, Ldkb;->k:Luu8;
+    new-instance p1, Lui9;
 
-    iput-boolean p14, p0, Ldkb;->l:Z
+    const/4 p2, 0x1
 
-    iput p15, p0, Ldkb;->m:I
+    invoke-direct {p1, p2}, Lub4;-><init>(I)V
 
-    move-object/from16 p1, p16
+    iput-object p1, p0, Ldkb;->c:Lui9;
 
-    iput-object p1, p0, Ldkb;->n:Lfkb;
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
 
-    move-wide/from16 p1, p17
-
-    iput-wide p1, p0, Ldkb;->q:J
-
-    move-wide/from16 p1, p19
-
-    iput-wide p1, p0, Ldkb;->r:J
-
-    move-wide/from16 p1, p21
-
-    iput-wide p1, p0, Ldkb;->s:J
-
-    move/from16 p1, p23
-
-    iput-boolean p1, p0, Ldkb;->o:Z
-
-    move/from16 p1, p24
-
-    iput-boolean p1, p0, Ldkb;->p:Z
+    iput-wide p1, p0, Ldkb;->d:J
 
     return-void
-.end method
-
-.method public static h(Lqof;)Ldkb;
-    .locals 25
-
-    new-instance v0, Ldkb;
-
-    sget-object v10, Lwnf;->o:Lwnf;
-
-    sget-object v12, Lxyc;->X:Lxyc;
-
-    sget-object v16, Lfkb;->o:Lfkb;
-
-    const/16 v23, 0x0
-
-    const/16 v24, 0x0
-
-    sget-object v1, Llif;->a:Leif;
-
-    sget-object v2, Ldkb;->t:Luu8;
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide/16 v5, 0x0
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const-wide/16 v17, 0x0
-
-    const-wide/16 v19, 0x0
-
-    const-wide/16 v21, 0x0
-
-    move-object v13, v2
-
-    move-object/from16 v11, p0
-
-    invoke-direct/range {v0 .. v24}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Luu8;)Ldkb;
-    .locals 26
+.method public final a(Ln84;IZ)I
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->a:Ls9d;
 
-    new-instance v1, Ldkb;
+    invoke-interface {v0, p1, p2, p3}, Lsmf;->e(Ln84;IZ)I
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    move-result p1
 
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget v8, v0, Ldkb;->e:I
-
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-boolean v15, v0, Ldkb;->l:Z
-
-    iget v14, v0, Ldkb;->m:I
-
-    move-object/from16 v16, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v18, v1
-
-    move-object/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v21, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v23, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move/from16 v25, v2
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v18
-
-    move-wide/from16 v18, v19
-
-    move-wide/from16 v20, v21
-
-    move-wide/from16 v22, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v14
-
-    move-object/from16 v14, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return p1
 .end method
 
-.method public final b(Luu8;JJJJLwnf;Lqof;Ljava/util/List;)Ldkb;
-    .locals 26
+.method public final b(JIIILqmf;)V
+    .locals 7
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->a:Ls9d;
 
-    new-instance v1, Ldkb;
+    move-wide v1, p1
 
-    iget-object v2, v0, Ldkb;->a:Llif;
+    move v3, p3
 
-    iget v8, v0, Ldkb;->e:I
+    move v4, p4
 
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
+    move v5, p5
 
-    iget-boolean v10, v0, Ldkb;->g:Z
+    move-object v6, p6
 
-    iget-object v14, v0, Ldkb;->k:Luu8;
+    invoke-virtual/range {v0 .. v6}, Ls9d;->b(JIIILqmf;)V
 
-    iget-boolean v15, v0, Ldkb;->l:Z
+    :cond_0
+    :goto_0
+    iget-object p1, p0, Ldkb;->a:Ls9d;
 
-    iget v3, v0, Ldkb;->m:I
+    const/4 p2, 0x0
 
-    iget-object v4, v0, Ldkb;->n:Lfkb;
+    invoke-virtual {p1, p2}, Ls9d;->r(Z)Z
 
-    iget-wide v5, v0, Ldkb;->q:J
+    move-result p1
 
-    iget-boolean v7, v0, Ldkb;->o:Z
+    if-eqz p1, :cond_6
 
-    iget-boolean v11, v0, Ldkb;->p:Z
+    iget-object p1, p0, Ldkb;->c:Lui9;
 
-    move-wide/from16 v22, p2
+    invoke-virtual {p1}, Lub4;->u()V
 
-    move-wide/from16 v20, p8
+    iget-object p3, p0, Ldkb;->a:Ls9d;
 
-    move-object/from16 v12, p11
+    iget-object p4, p0, Ldkb;->b:Lw98;
 
-    move-object/from16 v13, p12
+    invoke-virtual {p3, p4, p1, p2, p2}, Ls9d;->w(Lw98;Lub4;IZ)I
 
-    move/from16 v16, v3
+    move-result p3
 
-    move-object/from16 v17, v4
+    const/4 p4, -0x4
 
-    move-wide/from16 v18, v5
+    if-ne p3, p4, :cond_1
 
-    move/from16 v24, v7
+    invoke-virtual {p1}, Lub4;->x()V
 
-    move/from16 v25, v11
+    goto :goto_1
 
-    move-object/from16 v3, p1
+    :cond_1
+    const/4 p1, 0x0
 
-    move-wide/from16 v4, p4
+    :goto_1
+    if-nez p1, :cond_2
 
-    move-wide/from16 v6, p6
+    goto :goto_0
 
-    move-object/from16 v11, p10
+    :cond_2
+    iget-wide p3, p1, Lub4;->Y:J
 
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
+    iget-object p5, p0, Ldkb;->e:Lfkb;
 
-    return-object v1
+    iget-object p5, p5, Lfkb;->s0:Ljava/lang/Object;
+
+    check-cast p5, Lup;
+
+    invoke-virtual {p5, p1}, Lx2d;->f(Lui9;)Lpi9;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object p1, p1, Lpi9;->a:[Lni9;
+
+    aget-object p1, p1, p2
+
+    check-cast p1, Lib5;
+
+    iget-object p2, p1, Lib5;->a:Ljava/lang/String;
+
+    iget-object p5, p1, Lib5;->b:Ljava/lang/String;
+
+    const-string p6, "urn:mpeg:dash:event:2012"
+
+    invoke-virtual {p6, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const-string p2, "1"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "2"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    const-string p2, "3"
+
+    invoke-virtual {p2, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    :cond_4
+    const-wide p5, -0x7fffffffffffffffL    # -4.9E-324
+
+    :try_start_0
+    iget-object p1, p1, Lib5;->X:[B
+
+    invoke-static {p1}, Le3g;->m([B)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Le3g;->E(Ljava/lang/String;)J
+
+    move-result-wide p1
+    :try_end_0
+    .catch Lcom/google/android/exoplayer2/ParserException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move-wide p1, p5
+
+    :goto_2
+    cmp-long p5, p1, p5
+
+    if-nez p5, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    new-instance p5, Lbkb;
+
+    invoke-direct {p5, p3, p4, p1, p2}, Lbkb;-><init>(JJ)V
+
+    iget-object p1, p0, Ldkb;->e:Lfkb;
+
+    iget-object p1, p1, Lfkb;->b:Landroid/os/Handler;
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2, p5}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    goto/16 :goto_0
+
+    :cond_6
+    iget-object p1, p0, Ldkb;->a:Ls9d;
+
+    iget-object p2, p1, Ls9d;->a:Lm9d;
+
+    monitor-enter p1
+
+    :try_start_1
+    iget p3, p1, Ls9d;->s:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez p3, :cond_7
+
+    monitor-exit p1
+
+    const-wide/16 p3, -0x1
+
+    goto :goto_3
+
+    :cond_7
+    :try_start_2
+    invoke-virtual {p1, p3}, Ls9d;->f(I)J
+
+    move-result-wide p3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p1
+
+    :goto_3
+    invoke-virtual {p2, p3, p4}, Lm9d;->c(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    move-object p2, v0
+
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p2
 .end method
 
-.method public final c(Z)Ldkb;
-    .locals 28
+.method public final c(ILt3g;)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->a:Ls9d;
 
-    new-instance v1, Ldkb;
+    invoke-interface {v0, p1, p2}, Lsmf;->c(ILt3g;)V
 
-    iget-object v2, v0, Ldkb;->a:Llif;
-
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget v8, v0, Ldkb;->e:I
-
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-object v14, v0, Ldkb;->k:Luu8;
-
-    iget-boolean v15, v0, Ldkb;->l:Z
-
-    move-object/from16 v16, v1
-
-    iget v1, v0, Ldkb;->m:I
-
-    move/from16 v17, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v19, v1
-
-    move-object/from16 v18, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v20, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v22, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v24, v1
-
-    iget-boolean v1, v0, Ldkb;->p:Z
-
-    move-object/from16 v2, v18
-
-    move-wide/from16 v26, v24
-
-    move/from16 v24, p1
-
-    move/from16 v25, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v17
-
-    move-object/from16 v17, v19
-
-    move-wide/from16 v18, v20
-
-    move-wide/from16 v20, v22
-
-    move-wide/from16 v22, v26
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return-void
 .end method
 
-.method public final d(IZ)Ldkb;
-    .locals 26
+.method public final d(Lu66;)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Ldkb;->a:Ls9d;
 
-    new-instance v1, Ldkb;
+    invoke-virtual {v0, p1}, Ls9d;->d(Lu66;)V
 
-    iget-object v2, v0, Ldkb;->a:Llif;
-
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget v8, v0, Ldkb;->e:I
-
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-object v14, v0, Ldkb;->k:Luu8;
-
-    iget-object v15, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v16, v1
-
-    move-object/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v18, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v20, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v22, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move/from16 v24, v1
-
-    move/from16 v25, v2
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move/from16 v16, p1
-
-    move-object/from16 v17, v15
-
-    move/from16 v15, p2
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
-.end method
-
-.method public final e(Lcom/google/android/exoplayer2/ExoPlaybackException;)Ldkb;
-    .locals 26
-
-    move-object/from16 v0, p0
-
-    new-instance v1, Ldkb;
-
-    iget-object v2, v0, Ldkb;->a:Llif;
-
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget v8, v0, Ldkb;->e:I
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-object v14, v0, Ldkb;->k:Luu8;
-
-    iget-boolean v15, v0, Ldkb;->l:Z
-
-    iget v9, v0, Ldkb;->m:I
-
-    move-object/from16 v16, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v18, v1
-
-    move-object/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v21, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v23, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move/from16 v25, v2
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v18
-
-    move-wide/from16 v18, v19
-
-    move-wide/from16 v20, v21
-
-    move-wide/from16 v22, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v9
-
-    move-object/from16 v9, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
-.end method
-
-.method public final f(I)Ldkb;
-    .locals 26
-
-    move-object/from16 v0, p0
-
-    new-instance v1, Ldkb;
-
-    iget-object v2, v0, Ldkb;->a:Llif;
-
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-object v14, v0, Ldkb;->k:Luu8;
-
-    iget-boolean v15, v0, Ldkb;->l:Z
-
-    iget v8, v0, Ldkb;->m:I
-
-    move-object/from16 v16, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v18, v1
-
-    move-object/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v21, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v23, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move/from16 v25, v2
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v17, v18
-
-    move-wide/from16 v18, v19
-
-    move-wide/from16 v20, v21
-
-    move-wide/from16 v22, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v8
-
-    move/from16 v8, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
-.end method
-
-.method public final g(Llif;)Ldkb;
-    .locals 28
-
-    move-object/from16 v0, p0
-
-    new-instance v1, Ldkb;
-
-    iget-object v3, v0, Ldkb;->b:Luu8;
-
-    iget-wide v4, v0, Ldkb;->c:J
-
-    iget-wide v6, v0, Ldkb;->d:J
-
-    iget v8, v0, Ldkb;->e:I
-
-    iget-object v9, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    iget-boolean v10, v0, Ldkb;->g:Z
-
-    iget-object v11, v0, Ldkb;->h:Lwnf;
-
-    iget-object v12, v0, Ldkb;->i:Lqof;
-
-    iget-object v13, v0, Ldkb;->j:Ljava/util/List;
-
-    iget-object v14, v0, Ldkb;->k:Luu8;
-
-    iget-boolean v15, v0, Ldkb;->l:Z
-
-    iget v2, v0, Ldkb;->m:I
-
-    move-object/from16 v16, v1
-
-    iget-object v1, v0, Ldkb;->n:Lfkb;
-
-    move-object/from16 v18, v1
-
-    move/from16 v17, v2
-
-    iget-wide v1, v0, Ldkb;->q:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Ldkb;->r:J
-
-    move-wide/from16 v21, v1
-
-    iget-wide v1, v0, Ldkb;->s:J
-
-    move-wide/from16 v23, v1
-
-    iget-boolean v1, v0, Ldkb;->o:Z
-
-    iget-boolean v2, v0, Ldkb;->p:Z
-
-    move-wide/from16 v26, v23
-
-    move/from16 v24, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v17
-
-    move-object/from16 v17, v18
-
-    move-wide/from16 v18, v19
-
-    move-wide/from16 v20, v21
-
-    move-wide/from16 v22, v26
-
-    move/from16 v25, v2
-
-    move-object/from16 v2, p1
-
-    invoke-direct/range {v1 .. v25}, Ldkb;-><init>(Llif;Luu8;JJILcom/google/android/exoplayer2/ExoPlaybackException;ZLwnf;Lqof;Ljava/util/List;Luu8;ZILfkb;JJJZZ)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return-void
 .end method

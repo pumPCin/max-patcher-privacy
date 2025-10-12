@@ -1,405 +1,158 @@
 .class public final Lua7;
-.super Lg79;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile f:[Lua7;
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:Lu56;
-
-.field public e:[Lwa7;
+.field public final synthetic Y:Lone/me/login/inputname/InputNameScreen;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    iput-object p2, p0, Lua7;->Y:Lone/me/login/inputname/InputNameScreen;
 
-    const-string v0, ""
+    const/4 p2, 0x2
 
-    iput-object v0, p0, Lua7;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Lua7;->b:Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lua7;->c:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lua7;->d:Lu56;
-
-    invoke-static {}, Lwa7;->a()[Lwa7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lua7;->e:[Lwa7;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lpa7;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lua7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lua7;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lua7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lua7;
+
+    iget-object v1, p0, Lua7;->Y:Lone/me/login/inputname/InputNameScreen;
+
+    invoke-direct {v0, p2, v1}, Lua7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/inputname/InputNameScreen;)V
+
+    iput-object p1, v0, Lua7;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    iget-object v0, p0, Lua7;->a:Ljava/lang/String;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-string v1, ""
+    iget-object p1, p0, Lua7;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Lpa7;
 
-    move-result v0
+    if-eqz p1, :cond_1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lua7;->Y:Lone/me/login/inputname/InputNameScreen;
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lx2d;->x(Ljz3;)V
 
-    iget-object v0, p0, Lua7;->a:Ljava/lang/String;
+    sget-object v1, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
 
-    const/4 v3, 0x1
+    iget-object v1, v0, Lone/me/login/inputname/InputNameScreen;->r0:Ljava/lang/Object;
 
-    invoke-static {v3, v0}, Le83;->l(ILjava/lang/String;)I
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    goto :goto_0
+    check-cast v1, Lzc7;
 
-    :cond_0
-    move v0, v2
+    iget-object p1, p1, Lpa7;->b:Lrwc;
 
-    :goto_0
-    iget-object v3, p0, Lua7;->b:Ljava/lang/String;
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x2
-
-    iget-object v3, p0, Lua7;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Le83;->l(ILjava/lang/String;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_1
-    iget v1, p0, Lua7;->c:I
-
-    if-eqz v1, :cond_2
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v1}, Le83;->n(II)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_2
-    iget-object v1, p0, Lua7;->d:Lu56;
-
-    if-eqz v1, :cond_3
-
-    const/4 v3, 0x4
-
-    invoke-static {v3, v1}, Le83;->i(ILg79;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :cond_3
-    iget-object v1, p0, Lua7;->e:[Lwa7;
-
-    if-eqz v1, :cond_5
-
-    array-length v1, v1
-
-    if-lez v1, :cond_5
-
-    :goto_1
-    iget-object v1, p0, Lua7;->e:[Lwa7;
-
-    array-length v3, v1
-
-    if-ge v2, v3, :cond_5
-
-    aget-object v1, v1, v2
-
-    if-eqz v1, :cond_4
-
-    const/16 v3, 0x11
-
-    invoke-static {v3, v1}, Le83;->i(ILg79;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    move v0, v1
-
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    return v0
-.end method
-
-.method public final mergeFrom(Ld83;)Lg79;
-    .locals 5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_9
-
-    const/16 v1, 0x12
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x18
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x8a
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lo7;->m(Ld83;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lua7;->e:[Lwa7;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_2
-    array-length v3, v1
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [Lwa7;
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_3
-    :goto_2
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_4
-
-    new-instance v1, Lwa7;
-
-    invoke-direct {v1}, Lwa7;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Ld83;->j(Lg79;)V
-
-    invoke-virtual {p1}, Ld83;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v0, Lwa7;
-
-    invoke-direct {v0}, Lwa7;-><init>()V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
-
-    iput-object v4, p0, Lua7;->e:[Lwa7;
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lua7;->d:Lu56;
-
-    if-nez v0, :cond_6
-
-    new-instance v0, Lu56;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lu56;-><init>(I)V
-
-    iput-object v0, p0, Lua7;->d:Lu56;
-
-    :cond_6
-    iget-object v0, p0, Lua7;->d:Lu56;
-
-    invoke-virtual {p1, v0}, Ld83;->j(Lg79;)V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lua7;->c:I
-
-    goto :goto_0
-
-    :cond_8
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-virtual {v0}, Ljz3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
-    iput-object v0, p0, Lua7;->b:Ljava/lang/String;
+    const-string v2, "screen:input_name:avatars"
 
-    goto :goto_0
+    const-class v3, Lcob;
 
-    :cond_9
-    invoke-virtual {p1}, Ld83;->r()Ljava/lang/String;
+    invoke-static {v0, v2, v3}, Lb19;->j(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lua7;->a:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    check-cast v0, Landroid/os/Parcelable;
 
-    :cond_a
-    :goto_3
-    return-object p0
-.end method
+    check-cast v0, Lcob;
 
-.method public final writeTo(Le83;)V
-    .locals 3
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lua7;->a:Ljava/lang/String;
+    new-instance v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    const-string v1, ""
+    invoke-direct {v2, p1, v0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(Lrwc;Lcob;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 p1, 0x0
 
-    move-result v0
+    invoke-static {v2, p1, p1}, Lomc;->e(Ljz3;Ldh;Ldh;)Lq6d;
 
-    if-nez v0, :cond_0
+    move-result-object p1
 
-    iget-object v0, p0, Lua7;->a:Ljava/lang/String;
+    const-string v0, "InputNameScreen"
 
-    const/4 v2, 0x1
+    invoke-virtual {v1, p1, v0}, Lzc7;->a(Lq6d;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v2, v0}, Le83;->E(ILjava/lang/String;)V
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 
     :cond_0
-    iget-object v0, p0, Lua7;->b:Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    const-string v0, "No value passed for key screen:input_name:avatars of type "
 
-    if-nez v0, :cond_1
+    const-string v1, " in bundle"
 
-    const/4 v0, 0x2
+    invoke-static {v0, p1, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Lua7;->b:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {p1, v0, v1}, Le83;->E(ILjava/lang/String;)V
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_1
-    iget v0, p0, Lua7;->c:I
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    if-eqz v0, :cond_2
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Le83;->G(II)V
-
-    :cond_2
-    iget-object v0, p0, Lua7;->d:Lu56;
-
-    if-eqz v0, :cond_3
-
-    const/4 v1, 0x4
-
-    invoke-virtual {p1, v1, v0}, Le83;->y(ILg79;)V
-
-    :cond_3
-    iget-object v0, p0, Lua7;->e:[Lwa7;
-
-    if-eqz v0, :cond_5
-
-    array-length v0, v0
-
-    if-lez v0, :cond_5
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lua7;->e:[Lwa7;
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_5
-
-    aget-object v1, v1, v0
-
-    if-eqz v1, :cond_4
-
-    const/16 v2, 0x11
-
-    invoke-virtual {p1, v2, v1}, Le83;->y(ILg79;)V
-
-    :cond_4
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    return-void
+    throw p1
 .end method

@@ -10,11 +10,11 @@
     }
     d2 = {
         "Lkotlin/Function0;",
-        "Loyf;",
+        "Laxf;",
         "block",
         "",
         "loop",
-        "(Lve6;)Ljava/lang/Void;",
+        "(Ltd6;)Ljava/lang/Void;",
         "",
         "IS_CLOSED_MASK",
         "I",
@@ -35,19 +35,19 @@
 
 
 # direct methods
-.method private static final loop(Lve6;)Ljava/lang/Void;
+.method private static final loop(Ltd6;)Ljava/lang/Void;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Ltd6;",
             ")",
             "Ljava/lang/Void;"
         }
     .end annotation
 
     :goto_0
-    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Ltd6;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 .end method

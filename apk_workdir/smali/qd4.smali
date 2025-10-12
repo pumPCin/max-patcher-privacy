@@ -3,28 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsx7;
+.implements Lkw7;
 
 
 # instance fields
-.field public final synthetic a:Lwc;
+.field public final synthetic a:I
 
-.field public final synthetic b:Z
+.field public final synthetic b:Ldd;
 
-.field public final synthetic c:I
+.field public final synthetic c:Lhm8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwc;ZI)V
+.method public synthetic constructor <init>(Ldd;Lhm8;I)V
     .locals 0
 
+    iput p3, p0, Lqd4;->a:I
+
+    iput-object p1, p0, Lqd4;->b:Ldd;
+
+    iput-object p2, p0, Lqd4;->c:Lhm8;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqd4;->a:Lwc;
-
-    iput-boolean p2, p0, Lqd4;->b:Z
-
-    iput p3, p0, Lqd4;->c:I
 
     return-void
 .end method
@@ -32,17 +32,37 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;)V
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lqd4;->c:I
+    iget v0, p0, Lqd4;->a:I
 
-    check-cast p1, Lxc;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lqd4;->a:Lwc;
+    iget-object v0, p0, Lqd4;->c:Lhm8;
 
-    iget-boolean v2, p0, Lqd4;->b:Z
+    check-cast p1, Led;
 
-    invoke-interface {p1, v1, v2, v0}, Lxc;->L0(Lwc;ZI)V
+    iget-object v1, p0, Lqd4;->b:Ldd;
+
+    invoke-interface {p1, v1, v0}, Led;->b0(Ldd;Lhm8;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqd4;->c:Lhm8;
+
+    check-cast p1, Led;
+
+    iget-object v1, p0, Lqd4;->b:Ldd;
+
+    invoke-interface {p1, v1, v0}, Led;->R0(Ldd;Lhm8;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

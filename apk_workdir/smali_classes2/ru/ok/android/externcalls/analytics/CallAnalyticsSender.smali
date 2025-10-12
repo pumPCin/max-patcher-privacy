@@ -15,7 +15,7 @@
         "()V",
         "Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;",
         "config",
-        "Loyf;",
+        "Laxf;",
         "initialize",
         "(Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;)V",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
@@ -90,8 +90,8 @@
 .method public final forceSendScheduledEvents()V
     .locals 0
 
-    invoke-static {}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->flushAll()V
-
+    .prologue
+    .line 1
     return-void
 .end method
 
@@ -215,11 +215,11 @@
 
     invoke-interface {v0, v2, v1}, Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Ld11;
+    new-instance v0, Lx01;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Ld11;-><init>(ZI)V
+    invoke-direct {v0, p1, v1}, Lx01;-><init>(ZI)V
 
     invoke-static {v0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
 

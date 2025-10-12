@@ -1,79 +1,136 @@
 .class public final Lf78;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public a:J
+.field public final synthetic X:Lone/me/main/MainScreen;
 
-.field public b:J
+.field public final synthetic Y:Le78;
 
-.field public c:J
+.field public final synthetic Z:Lrw4;
 
-.field public d:J
+
+# direct methods
+.method public constructor <init>(Lone/me/main/MainScreen;Le78;Lrw4;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lf78;->X:Lone/me/main/MainScreen;
+
+    iput-object p2, p0, Lf78;->Y:Le78;
+
+    iput-object p3, p0, Lf78;->Z:Lrw4;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(JJ)D
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-wide v0, p0, Lf78;->a:J
+    check-cast p1, Llwa;
 
-    sub-long v0, p1, v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p0, p1, p2}, Lf78;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    cmp-long v4, v0, v2
+    move-result-object p1
 
-    if-gez v4, :cond_0
+    check-cast p1, Lf78;
 
-    move-wide v0, v2
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lf78;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lf78;
+
+    iget-object v0, p0, Lf78;->Y:Le78;
+
+    iget-object v1, p0, Lf78;->Z:Lrw4;
+
+    iget-object v2, p0, Lf78;->X:Lone/me/main/MainScreen;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lf78;-><init>(Lone/me/main/MainScreen;Le78;Lrw4;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lf78;->X:Lone/me/main/MainScreen;
+
+    iget-object p1, p1, Lone/me/main/MainScreen;->c:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :cond_0
-    iput-wide v0, p0, Lf78;->c:J
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-wide v4, p0, Lf78;->b:J
+    move-result v0
 
-    sub-long v4, p3, v4
+    iget-object v1, p0, Lf78;->Z:Lrw4;
 
-    cmp-long v6, v4, v2
+    if-eqz v0, :cond_1
 
-    if-gez v6, :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-wide v4, v2
+    move-result-object v0
 
-    :cond_1
-    iput-wide v4, p0, Lf78;->d:J
+    check-cast v0, Ljava/util/Map$Entry;
 
-    cmp-long v6, v4, v2
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    if-nez v6, :cond_3
+    move-result-object v0
 
-    cmp-long v2, v0, v2
+    check-cast v0, Landroid/view/ViewGroup;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-static {v1, v0}, Lrw4;->e(Lrw4;Landroid/view/ViewGroup;)V
 
     goto :goto_0
 
+    :cond_1
+    iget-object p1, p0, Lf78;->Y:Le78;
+
+    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {v1, p1}, Lrw4;->e(Lrw4;Landroid/view/ViewGroup;)V
+
     :cond_2
-    const-wide/16 v0, 0x0
+    sget-object p1, Laxf;->a:Laxf;
 
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    long-to-double v2, v0
-
-    add-long/2addr v4, v0
-
-    long-to-double v0, v4
-
-    div-double v0, v2, v0
-
-    :goto_1
-    iput-wide p1, p0, Lf78;->a:J
-
-    iput-wide p3, p0, Lf78;->b:J
-
-    return-wide v0
+    return-object p1
 .end method

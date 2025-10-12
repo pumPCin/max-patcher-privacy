@@ -1,53 +1,63 @@
 .class public final Lk89;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:[Ltm7;
-
-
 # instance fields
-.field public final a:Ljt4;
+.field public X:Ljava/lang/Object;
+
+.field public Y:Ljava/lang/Object;
+
+.field public Z:Ljava/lang/Long;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:Z
+
+.field public s0:Z
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lx89;
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lx89;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lt5c;
+    iput-object p1, p0, Lk89;->u0:Lx89;
 
-    const-class v1, Lk89;
-
-    const-string v2, "prefs"
-
-    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Lxxc;->a:Lyxc;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ltm7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lk89;->b:[Ltm7;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljt4;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lk89;->a:Ljt4;
+    iput-object p1, p0, Lk89;->t0:Ljava/lang/Object;
 
-    return-void
+    iget p1, p0, Lk89;->v0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lk89;->v0:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lk89;->u0:Lx89;
+
+    invoke-static {v1, p1, p1, v0, p0}, Lx89;->r(Lx89;Lx79;La89;ZLwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

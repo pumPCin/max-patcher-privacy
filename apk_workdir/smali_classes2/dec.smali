@@ -3,46 +3,58 @@
 
 
 # static fields
-.field public static oneme_contactlist_action_audio_call:I = 0x7f0a0684
+.field public static oneme_settings_twofa_action:I = 0x7f0a0837
 
-.field public static oneme_contactlist_action_block:I = 0x7f0a0685
+.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a0838
 
-.field public static oneme_contactlist_action_delete:I = 0x7f0a0686
+.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a0839
 
-.field public static oneme_contactlist_action_open_profile:I = 0x7f0a0687
+.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a083a
 
-.field public static oneme_contactlist_action_select:I = 0x7f0a0688
+.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a083b
 
-.field public static oneme_contactlist_action_share_contact:I = 0x7f0a0689
+.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a083c
 
-.field public static oneme_contactlist_action_suspend_bot:I = 0x7f0a068a
+.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a083d
 
-.field public static oneme_contactlist_action_video_call:I = 0x7f0a068b
+.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a083e
 
-.field public static oneme_contactlist_action_write:I = 0x7f0a068c
+.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a083f
 
-.field public static oneme_contactlist_confirm_block:I = 0x7f0a068d
+.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a0840
 
-.field public static oneme_contactlist_confirm_cancel:I = 0x7f0a068e
+.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a0841
 
-.field public static oneme_contactlist_confirm_delete:I = 0x7f0a068f
+.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a0842
 
-.field public static oneme_contactlist_contact_view_type:I = 0x7f0a0690
+.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a0843
 
-.field public static oneme_contactlist_container:I = 0x7f0a0691
+.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a0844
 
-.field public static oneme_contactlist_empty_search_result_view_type:I = 0x7f0a0692
+.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a0845
 
-.field public static oneme_contactlist_global_contact_view_type:I = 0x7f0a0693
+.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a0846
 
-.field public static oneme_contactlist_menu_item_add_contact:I = 0x7f0a0694
+.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a0847
 
-.field public static oneme_contactlist_menu_item_create_chat:I = 0x7f0a0695
+.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a0848
 
-.field public static oneme_contactlist_menu_item_invite:I = 0x7f0a0696
+.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a0849
 
-.field public static oneme_contactlist_phonebook_contact_view_type:I = 0x7f0a0697
+.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a084a
 
-.field public static oneme_contactlist_rv:I = 0x7f0a0698
+.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a084b
 
-.field public static oneme_contactlist_toolbar:I = 0x7f0a0699
+.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a084c
+
+.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a084d
+
+.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a084e
+
+.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a084f
+
+.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a0850
+
+.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a0851
+
+.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a0852

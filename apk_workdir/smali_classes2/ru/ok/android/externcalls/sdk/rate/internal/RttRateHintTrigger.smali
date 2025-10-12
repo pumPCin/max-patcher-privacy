@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;
-.implements Lhj1;
+.implements Lij1;
 
 
 # annotations
@@ -21,29 +21,29 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;",
         "Lru/ok/android/externcalls/sdk/rate/internal/HintTrigger;",
-        "Lhj1;",
-        "Lpmc;",
+        "Lij1;",
+        "Lwkc;",
         "log",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "config",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "collection",
         "<init>",
-        "(Lpmc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
+        "(Lwkc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V",
         "",
         "rtt",
-        "Loyf;",
+        "Laxf;",
         "onStatInternal",
         "(J)V",
-        "Lrmc;",
+        "Lykc;",
         "rtcStat",
         "onRtcStats",
-        "(Lrmc;)V",
+        "(Lykc;)V",
         "Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;",
         "stat",
         "onNetworkStat",
         "(Lru/ok/android/externcalls/sdk/net/internal/monitor/NetworkStat;)V",
-        "Lpmc;",
+        "Lwkc;",
         "Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;",
         "Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;",
         "",
@@ -80,7 +80,7 @@
 
 .field private highRttCount:I
 
-.field private final log:Lpmc;
+.field private final log:Lwkc;
 
 .field private wasReported:Z
 
@@ -93,19 +93,19 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;-><init>(Laf4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->Companion:Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lpmc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
+.method public constructor <init>(Lwkc;Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;Lru/ok/android/externcalls/sdk/rate/internal/RateHintCollection;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lpmc;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lwkc;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
@@ -132,7 +132,7 @@
     goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lpmc;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->log:Lwkc;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     const-string v2, "RateManager"
 
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/rate/internal/RttRateHintTrigger;->config:Lru/ok/android/externcalls/sdk/rate/rtt/RttRateHintConfig;
 
@@ -251,20 +251,20 @@
     return-void
 .end method
 
-.method public onRtcStats(Lrmc;)V
+.method public onRtcStats(Lykc;)V
     .locals 2
 
-    invoke-virtual {p1}, Lrmc;->c()Li22;
+    invoke-virtual {p1}, Lykc;->c()Ll22;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p1, Li22;->h:Ljava/lang/String;
+    iget-object p1, p1, Ll22;->h:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Leye;->Q(Ljava/lang/String;)Ljava/lang/Float;
+    invoke-static {p1}, Lvwe;->d0(Ljava/lang/String;)Ljava/lang/Float;
 
     move-result-object p1
 

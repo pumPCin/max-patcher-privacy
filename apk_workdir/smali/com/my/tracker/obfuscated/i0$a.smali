@@ -37,6 +37,7 @@
 .method public a()V
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/my/tracker/obfuscated/i0$a;->a:Lcom/my/tracker/obfuscated/i0;
 
     iget-object v0, v0, Lcom/my/tracker/obfuscated/i0;->e:Lcom/my/tracker/obfuscated/a;
@@ -49,6 +50,7 @@
 .method public a(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/i0$a;->a:Lcom/my/tracker/obfuscated/i0;
 
     iget-object v0, v0, Lcom/my/tracker/obfuscated/i0;->f:Lcom/my/tracker/obfuscated/i;

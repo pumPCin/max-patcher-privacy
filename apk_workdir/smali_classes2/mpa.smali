@@ -1,49 +1,25 @@
-.class public final Lmpa;
-.super Lnz3;
+.class public abstract Lmpa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:I
 
-.field public final synthetic Y:Lqpa;
-
-.field public Z:I
-
-.field public o:Ljava/nio/file/Path;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lqpa;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lmpa;->Y:Lqpa;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lmpa;->X:Ljava/lang/Object;
+    sget v0, Lcdc;->oneme_messages_settings_content_recycler:I
 
-    iget p1, p0, Lmpa;->Z:I
+    sput v0, Lmpa;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lcdc;->oneme_messages_settings_toolbar:I
 
-    or-int/2addr p1, v0
+    sput v0, Lmpa;->b:I
 
-    iput p1, p0, Lmpa;->Z:I
-
-    iget-object p1, p0, Lmpa;->Y:Lqpa;
-
-    invoke-virtual {p1, p0}, Lqpa;->a(Lnz3;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

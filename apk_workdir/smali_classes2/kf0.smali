@@ -1,28 +1,28 @@
 .class public final Lkf0;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lwxc;
+.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public final synthetic Y:Ljava/util/List;
+.field public final synthetic Y:I
 
 
 # direct methods
-.method public constructor <init>(Lwxc;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lkf0;->X:Lwxc;
+    iput-object p1, p0, Lkf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iput-object p2, p0, Lkf0;->Y:Ljava/util/List;
+    iput p2, p0, Lkf0;->Y:I
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -42,7 +42,7 @@
 
     check-cast p1, Lkf0;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lkf0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -56,11 +56,11 @@
 
     new-instance p1, Lkf0;
 
-    iget-object v0, p0, Lkf0;->X:Lwxc;
+    iget-object v0, p0, Lkf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iget-object v1, p0, Lkf0;->Y:Ljava/util/List;
+    iget v1, p0, Lkf0;->Y:I
 
-    invoke-direct {p1, v0, v1, p2}, Lkf0;-><init>(Lwxc;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, v1, p2}, Lkf0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;ILkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
@@ -68,29 +68,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lkf0;->X:Lwxc;
+    iget-object p1, p0, Lkf0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iget-object p1, p1, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Lq9h;
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Ld8h;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lq9h;->g()Landroidx/work/impl/model/WorkersQueueDao;
+    invoke-virtual {p1}, Ld8h;->g()Landroidx/work/impl/model/WorkersQueueDao;
 
     move-result-object p1
 
-    iget-object v0, p0, Lkf0;->Y:Ljava/util/List;
+    iget v0, p0, Lkf0;->Y:I
 
-    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->contains(Ljava/util/List;)Z
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-interface {p1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->getItemsForRunning(I)Ljava/util/List;
 
     move-result-object p1
 

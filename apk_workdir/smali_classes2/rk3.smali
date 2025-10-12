@@ -1,30 +1,26 @@
 .class public final Lrk3;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Landroid/widget/TextView;
-
-.field public Z:I
-
-.field public final synthetic w0:Lone/me/login/confirm/ConfirmPhoneScreen;
+.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lrk3;->w0:Lone/me/login/confirm/ConfirmPhoneScreen;
+    iput-object p2, p0, Lrk3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lrk3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -44,402 +38,156 @@
 
     check-cast p1, Lrk3;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lrk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lrk3;
+    new-instance v0, Lrk3;
 
-    iget-object v0, p0, Lrk3;->w0:Lone/me/login/confirm/ConfirmPhoneScreen;
+    iget-object v1, p0, Lrk3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    invoke-direct {p1, v0, p2}, Lrk3;-><init>(Lone/me/login/confirm/ConfirmPhoneScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lrk3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lrk3;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+    .locals 5
 
-    iget v0, p0, Lrk3;->Z:I
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Lrk3;->X:Ljava/lang/Object;
 
-    const-wide/16 v2, 0x3e8
+    check-cast p1, Luk3;
 
-    const/4 v4, 0x1
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 v5, 0x0
+    move-result p1
 
-    const/4 v6, 0x0
+    const/4 v0, 0x0
 
-    iget-object v7, p0, Lrk3;->w0:Lone/me/login/confirm/ConfirmPhoneScreen;
+    iget-object v1, p0, Lrk3;->Y:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
 
-    sget-object v8, Lf34;->a:Lf34;
+    if-eqz p1, :cond_2
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-eq p1, v2, :cond_1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v0, 0x2
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-ne p1, v0, :cond_0
 
-    throw p1
-
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_6
-
-    :pswitch_1
-    iget-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_4
-
-    :pswitch_2
-    iget-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_3
-
-    :pswitch_3
-    iget-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    iget-object v6, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_2
-
-    :pswitch_4
-    iget-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    iget-object v7, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_1
-
-    :pswitch_5
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :pswitch_6
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->G0:[Ltm7;
-
-    invoke-virtual {v7}, Lone/me/login/confirm/ConfirmPhoneScreen;->D0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    sget v0, Lmic;->oneme_settings_privacy_onboarding_error_pin_code_equals:I
 
-    move-result-object p1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    const-wide/16 v9, 0x320
+    move-result-object v2
 
-    invoke-virtual {p1, v9, v10}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    invoke-virtual {v7}, Lone/me/login/confirm/ConfirmPhoneScreen;->F0()Landroid/widget/TextView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v9, v10}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
-
-    iput v4, p0, Lrk3;->Z:I
-
-    const-wide/16 v9, 0xbb8
-
-    invoke-static {v9, v10, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v7}, Lb04;->getView()Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/ViewGroup;
-
-    iget-object v0, v7, Lone/me/login/confirm/ConfirmPhoneScreen;->E0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v7}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v9
-
-    invoke-direct {v0, v9, v5}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v9, Lrec;->oneme_login_confirm_timer:I
-
-    invoke-virtual {v0, v9}, Landroid/view/View;->setId(I)V
-
-    sget-object v9, Lrxf;->r:Lpef;
-
-    invoke-static {v9, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    new-instance v9, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v10, -0x1
-
-    const/4 v11, -0x2
-
-    invoke-direct {v9, v10, v11}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v10, 0xc
-
-    int-to-float v10, v10
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v11
-
-    iget v11, v11, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v11, v10
-
-    invoke-static {v11}, Lv63;->r0(F)I
-
-    move-result v11
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v12
-
-    iget v12, v12, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v10, v12
-
-    invoke-static {v10}, Lv63;->r0(F)I
-
-    move-result v10
-
-    const/16 v12, 0x10
-
-    int-to-float v12, v12
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v13
-
-    iget v13, v13, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v12, v13
-
-    invoke-static {v12}, Lv63;->r0(F)I
-
-    move-result v12
-
-    invoke-virtual {v9, v11, v1, v10, v12}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, v9}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v9, 0x11
-
-    invoke-virtual {v0, v9}, Landroid/widget/TextView;->setGravity(I)V
-
-    sget-object v9, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v9, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v9
-
-    invoke-interface {v9}, Luxa;->getText()Lbdf;
-
-    move-result-object v9
-
-    iget v9, v9, Lbdf;->g:I
-
-    invoke-virtual {v0, v9}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v0, v6}, Landroid/view/View;->setAlpha(F)V
-
-    iput-object v0, v7, Lone/me/login/confirm/ConfirmPhoneScreen;->E0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iget-object p1, v7, Lone/me/login/confirm/ConfirmPhoneScreen;->E0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    if-eqz p1, :cond_5
-
-    sget v0, Lkjc;->oneme_login_confirm_info_loading_1:I
-
-    iput-object v7, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iput-object p1, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    const/4 v6, 0x2
-
-    iput v6, p0, Lrk3;->Z:I
-
-    invoke-virtual {v7, p1, v0, v1, p0}, Lone/me/login/confirm/ConfirmPhoneScreen;->C0(Landroid/widget/TextView;IZLnz3;)Ljava/lang/Object;
+    invoke-static {v2, v0}, Lw7;->k(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    if-ne v0, v8, :cond_1
+    invoke-virtual {p1, v0}, Lhgb;->setErrorText(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
+
+    move-result-object p1
+
+    sget-object v0, Ldl3;->c:Ldl3;
+
+    invoke-virtual {p1, v0}, Lhgb;->setState(Ldl3;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 
     :cond_1
-    move-object v0, p1
-
-    :goto_1
-    iput-object v7, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iput-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    const/4 p1, 0x3
-
-    iput p1, p0, Lrk3;->Z:I
-
-    invoke-static {v2, v3, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
 
     move-result-object p1
 
-    if-ne p1, v8, :cond_2
+    invoke-virtual {p1, v0}, Lhgb;->setErrorText(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
+
+    move-result-object p1
+
+    sget-object v0, Ldl3;->b:Ldl3;
+
+    invoke-virtual {p1, v0}, Lhgb;->setState(Ldl3;)V
+
+    goto :goto_1
 
     :cond_2
-    move-object v6, v7
-
-    :goto_2
-    sget p1, Lkjc;->oneme_login_confirm_info_loading_2:I
-
-    iput-object v6, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iput-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    const/4 v7, 0x4
-
-    iput v7, p0, Lrk3;->Z:I
-
-    sget-object v7, Lone/me/login/confirm/ConfirmPhoneScreen;->G0:[Ltm7;
-
-    invoke-virtual {v6, v0, p1, v1, p0}, Lone/me/login/confirm/ConfirmPhoneScreen;->C0(Landroid/widget/TextView;IZLnz3;)Ljava/lang/Object;
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
 
     move-result-object p1
 
-    if-ne p1, v8, :cond_3
+    invoke-virtual {p1, v0}, Lhgb;->setErrorText(Ljava/lang/CharSequence;)V
 
-    goto :goto_5
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lhgb;->I0:Lgl3;
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_4
+
+    invoke-virtual {p1, v3}, Lgl3;->H0(I)Lma7;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_3
+
+    check-cast v4, Lbge;
+
+    iget-object v4, v4, Lbge;->G0:Lbl3;
+
+    invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
-    move-object v1, v6
+    add-int/lit8 v3, v3, 0x1
 
-    :goto_3
-    iput-object v1, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iput-object v0, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    const/4 p1, 0x5
-
-    iput p1, p0, Lrk3;->Z:I
-
-    invoke-static {v2, v3, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_4
-
-    goto :goto_5
+    goto :goto_0
 
     :cond_4
-    :goto_4
-    sget p1, Lkjc;->oneme_login_confirm_info_loading_3:I
+    invoke-virtual {p1}, Lgl3;->J0()Z
 
-    iput-object v5, p0, Lrk3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
-
-    iput-object v5, p0, Lrk3;->Y:Landroid/widget/TextView;
-
-    const/4 v2, 0x6
-
-    iput v2, p0, Lrk3;->Z:I
-
-    sget-object v2, Lone/me/login/confirm/ConfirmPhoneScreen;->G0:[Ltm7;
-
-    invoke-virtual {v1, v0, p1, v4, p0}, Lone/me/login/confirm/ConfirmPhoneScreen;->C0(Landroid/widget/TextView;IZLnz3;)Ljava/lang/Object;
+    invoke-static {v1}, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->B0(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;)Lhgb;
 
     move-result-object p1
 
-    if-ne p1, v8, :cond_5
+    sget-object v0, Ldl3;->o:Ldl3;
 
-    :goto_5
-    return-object v8
+    invoke-virtual {p1, v0}, Lhgb;->setState(Ldl3;)V
 
-    :cond_5
-    :goto_6
-    sget-object p1, Loyf;->a:Loyf;
+    :goto_1
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

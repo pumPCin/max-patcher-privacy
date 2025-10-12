@@ -1,27 +1,33 @@
 .class public final Lcv4;
-.super Lnz3;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
+.field public X:Lawc;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public Y:Lcwc;
 
-.field public final synthetic Z:Ljv4;
+.field public Z:Lcwc;
 
-.field public o:Ljv4;
+.field public o:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
 
-.field public w0:I
+.field public r0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Ljv4;Lnz3;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;Lwy3;)V
     .locals 0
 
-    iput-object p1, p0, Lcv4;->Z:Ljv4;
+    iput-object p1, p0, Lcv4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -31,21 +37,19 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lcv4;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lcv4;->s0:Ljava/lang/Object;
 
-    iget p1, p0, Lcv4;->w0:I
+    iget p1, p0, Lcv4;->u0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lcv4;->w0:I
+    iput p1, p0, Lcv4;->u0:I
 
-    iget-object p1, p0, Lcv4;->Z:Ljv4;
+    iget-object p1, p0, Lcv4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Ljv4;->f(ZZLnz3;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

@@ -1,152 +1,133 @@
-.class public interface abstract Liy1;
-.super Ljava/lang/Object;
+.class public final enum Liy1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# virtual methods
-.method public b(Lkd5;)V
-    .locals 5
+# static fields
+.field public static final enum X:Liy1;
 
-    iget-object v0, p1, Lkd5;->a:Ljava/util/ArrayList;
+.field public static final enum Y:Liy1;
 
-    invoke-interface {p0}, Liy1;->e()I
+.field public static final enum Z:Liy1;
 
-    move-result v1
+.field public static final enum a:Liy1;
 
-    const/4 v2, 0x1
+.field public static final enum b:Liy1;
 
-    if-ne v1, v2, :cond_0
+.field public static final enum c:Liy1;
 
-    return-void
+.field public static final enum o:Liy1;
 
-    :cond_0
-    invoke-static {v1}, Lqw1;->u(I)I
+.field public static final synthetic r0:[Liy1;
 
-    move-result v3
 
-    if-eq v3, v2, :cond_7
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Liy1;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Liy1;->a:Liy1;
+
+    new-instance v1, Liy1;
+
+    const-string v2, "INACTIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Liy1;->b:Liy1;
+
+    new-instance v2, Liy1;
+
+    const-string v3, "SCANNING"
 
     const/4 v4, 0x2
 
-    if-eq v3, v4, :cond_6
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v4, 0x3
+    sput-object v2, Liy1;->c:Liy1;
 
-    if-eq v3, v4, :cond_5
+    new-instance v3, Liy1;
 
-    const/4 p1, 0x1
+    const-string v4, "PASSIVE_FOCUSED"
 
-    if-eq v1, p1, :cond_4
+    const/4 v5, 0x3
 
-    const/4 p1, 0x2
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eq v1, p1, :cond_3
+    sput-object v3, Liy1;->o:Liy1;
 
-    const/4 p1, 0x3
+    new-instance v4, Liy1;
 
-    if-eq v1, p1, :cond_2
+    const-string v5, "PASSIVE_NOT_FOCUSED"
 
-    const/4 p1, 0x4
+    const/4 v6, 0x4
 
-    if-eq v1, p1, :cond_1
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string p1, "null"
+    sput-object v4, Liy1;->X:Liy1;
 
-    goto :goto_0
+    new-instance v5, Liy1;
 
-    :cond_1
-    const-string p1, "FIRED"
+    const-string v6, "LOCKED_FOCUSED"
 
-    goto :goto_0
+    const/4 v7, 0x5
 
-    :cond_2
-    const-string p1, "READY"
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    goto :goto_0
+    sput-object v5, Liy1;->Y:Liy1;
 
-    :cond_3
-    const-string p1, "NONE"
+    new-instance v6, Liy1;
 
-    goto :goto_0
+    const-string v7, "LOCKED_NOT_FOCUSED"
 
-    :cond_4
-    const-string p1, "UNKNOWN"
+    const/4 v8, 0x6
 
-    :goto_0
-    const-string v0, "Unknown flash state: "
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    sput-object v6, Liy1;->Z:Liy1;
 
-    move-result-object p1
+    filled-new-array/range {v0 .. v6}, [Liy1;
 
-    const-string v0, "ExifData"
+    move-result-object v0
 
-    invoke-static {v0, p1}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_5
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_6
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_7
-    const/16 v1, 0x20
-
-    :goto_1
-    and-int/lit8 v3, v1, 0x1
-
-    if-ne v3, v2, :cond_8
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "LightSource"
-
-    invoke-virtual {p1, v3, v2, v0}, Lkd5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-
-    :cond_8
-    const-string v2, "Flash"
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v2, v1, v0}, Lkd5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    sput-object v0, Liy1;->r0:[Liy1;
 
     return-void
 .end method
 
-.method public abstract c()Lw7f;
-.end method
-
-.method public abstract d()Lfy1;
-.end method
-
-.method public abstract e()I
-.end method
-
-.method public abstract f()Ldy1;
-.end method
-
-.method public abstract getTimestamp()J
-.end method
-
-.method public h()Landroid/hardware/camera2/CaptureResult;
+.method public static valueOf(Ljava/lang/String;)Liy1;
     .locals 1
 
-    const/4 v0, 0x0
+    const-class v0, Liy1;
 
-    return-object v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Liy1;
+
+    return-object p0
 .end method
 
-.method public abstract k()Ley1;
+.method public static values()[Liy1;
+    .locals 1
+
+    sget-object v0, Liy1;->r0:[Liy1;
+
+    invoke-virtual {v0}, [Liy1;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Liy1;
+
+    return-object v0
 .end method

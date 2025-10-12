@@ -3,83 +3,398 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final synthetic b:F
+.field public final synthetic b:Lo5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;F)V
+.method public synthetic constructor <init>(Lo5;I)V
     .locals 0
 
+    iput p2, p0, Lchd;->a:I
+
+    iput-object p1, p0, Lchd;->b:Lo5;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lchd;->a:Landroid/view/View;
-
-    iput p2, p0, Lchd;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget v0, p0, Lchd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lapa;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Float;
+    return-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    :pswitch_0
+    iget-object v0, p0, Lchd;->b:Lo5;
 
-    move-result v0
+    const-class v1, Lbm3;
 
-    iget-object v1, p0, Lchd;->a:Landroid/view/View;
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    move-result-object v0
 
-    iget v0, p0, Lchd;->b:F
+    return-object v0
 
-    const/4 v2, 0x0
+    :pswitch_1
+    iget-object v0, p0, Lchd;->b:Lo5;
 
-    cmpg-float v3, v0, v2
+    const-class v1, Lzl5;
 
-    if-nez v3, :cond_0
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/high16 v2, 0x3f800000    # 1.0f
+    return-object v0
 
-    sub-float/2addr v2, v0
+    :pswitch_2
+    iget-object v0, p0, Lchd;->b:Lo5;
 
-    :goto_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    const-class v1, Lugd;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    cmpl-float v0, v0, v2
+    move-result-object v0
 
-    if-ltz v0, :cond_1
+    return-object v0
 
-    const/4 v0, 0x1
+    :pswitch_3
+    iget-object v0, p0, Lchd;->b:Lo5;
 
-    int-to-float v0, v0
+    const-class v1, Lk69;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    sub-float/2addr v0, p1
+    return-object v0
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+    :pswitch_4
+    iget-object v0, p0, Lchd;->b:Lo5;
 
-    :cond_1
-    return-void
+    const-class v1, Lsrd;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lwnb;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lnnb;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lnnb;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Ltb5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lcl;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_a
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lf94;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lc56;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lc7f;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lwnb;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_e
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lapa;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_f
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lbu4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_10
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lyq4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_11
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lm69;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_12
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lsrd;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_13
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lcl;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_14
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Ltb5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_15
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lm63;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_16
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lcl;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_17
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lz7f;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_18
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lzla;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_19
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lf47;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1a
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Llp5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1b
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Liv0;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1c
+    iget-object v0, p0, Lchd;->b:Lo5;
+
+    const-class v1, Lan5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

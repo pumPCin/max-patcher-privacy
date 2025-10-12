@@ -3,51 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
-.implements Lou8;
-.implements Lqu8;
-.implements Lvo3;
+.implements Ll6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
+.field public final synthetic b:Lpk5;
 
-.field public final synthetic c:I
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;IJI)V
+.method public synthetic constructor <init>(Lpk5;Ljava/util/List;I)V
     .locals 0
 
-    .line 1
-    iput p5, p0, Lfk5;->a:I
+    iput p3, p0, Lfk5;->a:I
 
-    iput-object p1, p0, Lfk5;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lfk5;->b:Lpk5;
 
-    iput p2, p0, Lfk5;->c:I
-
-    iput-wide p3, p0, Lfk5;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
-    .locals 0
-
-    .line 2
-    iput p5, p0, Lfk5;->a:I
-
-    iput-object p1, p0, Lfk5;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lfk5;->b:J
-
-    iput p4, p0, Lfk5;->c:I
+    iput-object p2, p0, Lfk5;->c:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,270 +31,114 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 14
+.method public final run()V
+    .locals 6
 
     iget v0, p0, Lfk5;->a:I
 
-    const-string v1, " to position="
-
-    const-string v2, "onNotifMoved: failed to move id="
-
-    iget v3, p0, Lfk5;->c:I
-
-    iget-wide v4, p0, Lfk5;->b:J
-
-    iget-object v6, p0, Lfk5;->o:Ljava/lang/Object;
-
     packed-switch v0, :pswitch_data_0
 
-    check-cast v6, Lzze;
+    iget-object v0, p0, Lfk5;->c:Ljava/util/List;
 
-    move-object v0, p1
+    iget-object v1, p0, Lfk5;->b:Lpk5;
 
-    check-cast v0, Ln64;
+    iget-object v2, v1, Lpk5;->a:Lc4d;
 
-    iget-object v1, v6, Lzze;->h:Lt76;
+    invoke-virtual {v2}, Lc4d;->c()V
 
-    invoke-static {v1}, Lpih;->p(Ljava/lang/Object;)V
+    :try_start_0
+    const-string v3, "SELECT MAX(`index`) FROM favorite_sticker_sets"
 
-    iget-object v1, v0, Ln64;->a:Le77;
+    const/4 v4, 0x0
 
-    iget-wide v7, v0, Ln64;->c:J
+    invoke-static {v4, v3}, Lt4d;->c(ILjava/lang/String;)Lt4d;
 
-    invoke-static {v1, v7, v8}, Le2a;->o(Le77;J)[B
+    move-result-object v3
+
+    iget-object v1, v1, Lpk5;->a:Lc4d;
+
+    invoke-virtual {v1}, Lc4d;->b()V
+
+    invoke-virtual {v1, v3}, Lc4d;->n(Lx0f;)Landroid/database/Cursor;
 
     move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    iget-object v2, v6, Lzze;->c:Ly4b;
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v5
 
-    array-length v7, v1
+    if-eqz v5, :cond_0
 
-    invoke-virtual {v2, v7, v1}, Ly4b;->E(I[B)V
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
 
-    iget-object v7, v6, Lzze;->a:Lcof;
+    move-result v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    array-length v8, v1
+    goto :goto_0
 
-    const/4 v9, 0x0
-
-    invoke-interface {v7, v2, v8, v9}, Lcof;->b(Ly4b;II)V
-
-    iget-wide v7, v0, Ln64;->b:J
-
-    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, v7, v10
-
-    const/4 v2, 0x1
-
-    const-wide v10, 0x7fffffffffffffffL
-
-    if-nez v0, :cond_1
-
-    iget-object v0, v6, Lzze;->h:Lt76;
-
-    iget-wide v7, v0, Lt76;->s:J
-
-    cmp-long v0, v7, v10
-
-    if-nez v0, :cond_0
-
-    move v9, v2
-
-    :cond_0
-    invoke-static {v9}, Lpih;->o(Z)V
-
-    :goto_0
-    move-wide v8, v4
+    :catchall_0
+    move-exception v0
 
     goto :goto_1
 
-    :cond_1
-    iget-object v0, v6, Lzze;->h:Lt76;
-
-    iget-wide v12, v0, Lt76;->s:J
-
-    cmp-long v0, v12, v10
-
-    if-nez v0, :cond_2
-
-    add-long/2addr v4, v7
-
-    goto :goto_0
-
-    :cond_2
-    add-long v4, v7, v12
-
-    goto :goto_0
-
-    :goto_1
-    iget-object v7, v6, Lzze;->a:Lcof;
-
-    or-int/lit8 v10, v3, 0x1
-
-    array-length v11, v1
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    invoke-interface/range {v7 .. v13}, Lcof;->a(JIIILaof;)V
-
-    return-void
-
-    :pswitch_0
-    check-cast v6, Lil5;
-
-    move-object v0, p1
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    sget-object v7, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "il5"
-
-    invoke-static {v2, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v6}, Lil5;->I()V
-
-    return-void
-
-    :pswitch_1
-    check-cast v6, Lok5;
-
-    move-object v0, p1
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    sget-object v7, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ok5"
-
-    invoke-static {v2, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v6}, Lok5;->J()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(Lgmb;Lls8;)V
-    .locals 3
-
-    iget-object v0, p0, Lfk5;->o:Ljava/lang/Object;
-
-    check-cast v0, Lru8;
-
-    iget v1, p0, Lfk5;->c:I
-
-    invoke-virtual {v0, p2, p1, v1}, Lru8;->b0(Lls8;Lgmb;I)I
-
-    move-result p2
-
-    invoke-virtual {p1}, Lgmb;->p0()V
-
-    iget-object p1, p1, Lgmb;->a:Lif5;
-
-    const/4 v0, 0x0
-
-    iget-wide v1, p0, Lfk5;->b:J
-
-    invoke-virtual {p1, p2, v1, v2, v0}, Lif5;->Y0(IJZ)V
-
-    return-void
-.end method
-
-.method public j(Lft8;Lls8;I)Ljava/lang/Object;
-    .locals 6
-
-    iget-object p3, p0, Lfk5;->o:Ljava/lang/Object;
-
-    move-object v2, p3
-
-    check-cast v2, Ljava/util/List;
-
-    iget p3, p0, Lfk5;->c:I
-
-    const/4 v0, -0x1
-
-    if-ne p3, v0, :cond_0
-
-    iget-object v1, p1, Lft8;->t:Lgmb;
-
-    invoke-virtual {v1}, Lgmb;->z()I
-
-    move-result v1
-
-    move v3, v1
-
-    goto :goto_0
-
     :cond_0
-    move v3, p3
-
     :goto_0
-    if-ne p3, v0, :cond_1
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    iget-object p3, p1, Lft8;->t:Lgmb;
+    invoke-virtual {v3}, Lt4d;->o()V
 
-    invoke-virtual {p3}, Lgmb;->c()J
+    add-int/lit8 v4, v4, 0x1
 
-    move-result-wide v0
+    int-to-long v3, v4
 
-    :goto_1
-    move-wide v4, v0
+    invoke-static {v3, v4, v0}, Lpk5;->b(JLjava/util/List;)Ljava/util/ArrayList;
 
-    move-object v0, p1
+    invoke-virtual {v2}, Lc4d;->q()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move-object v1, p2
+    invoke-virtual {v2}, Lc4d;->k()V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
 
     goto :goto_2
 
-    :cond_1
-    iget-wide v0, p0, Lfk5;->b:J
+    :goto_1
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    goto :goto_1
+    invoke-virtual {v3}, Lt4d;->o()V
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     :goto_2
-    invoke-virtual/range {v0 .. v5}, Lft8;->p(Lls8;Ljava/util/List;IJ)Lsxd;
+    invoke-virtual {v2}, Lc4d;->k()V
 
-    move-result-object p1
+    throw v0
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lfk5;->b:Lpk5;
+
+    iget-object v1, p0, Lfk5;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lpk5;->a(Ljava/util/List;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

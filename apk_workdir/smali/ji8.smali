@@ -1,7 +1,8 @@
-.class public abstract Lji8;
-.super Landroid/content/BroadcastReceiver;
+.class public interface abstract Lji8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# virtual methods
+.method public abstract b(Ljava/lang/Object;)I
+.end method

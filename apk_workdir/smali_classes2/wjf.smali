@@ -1,53 +1,140 @@
 .class public final Lwjf;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:I
 
-.field public final synthetic Z:Lyjf;
-
-.field public o:Ljava/lang/Object;
-
-.field public w0:I
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lyjf;Lnz3;)V
+.method public constructor <init>(III)V
     .locals 0
 
-    iput-object p1, p0, Lwjf;->Z:Lyjf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lwjf;->a:I
+
+    iput p2, p0, Lwjf;->b:I
+
+    iput p3, p0, Lwjf;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iput-object p1, p0, Lwjf;->Y:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lwjf;->w0:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lwjf;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lwjf;->w0:I
+    goto :goto_0
 
-    iget-object p1, p0, Lwjf;->Z:Lyjf;
+    :cond_1
+    check-cast p1, Lwjf;
 
-    const/4 v0, 0x0
+    iget v0, p0, Lwjf;->a:I
 
-    invoke-virtual {p1, v0, p0}, Lyjf;->a(Lxq5;Lnz3;)Ljava/lang/Object;
+    iget v1, p1, Lwjf;->a:I
 
-    move-result-object p1
+    if-eq v0, v1, :cond_2
 
-    return-object p1
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lwjf;->b:I
+
+    iget v1, p1, Lwjf;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lwjf;->c:I
+
+    iget p1, p1, Lwjf;->c:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lwjf;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lwjf;->b:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget v1, p0, Lwjf;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", neutralFade="
+
+    const-string v1, ", themed="
+
+    const-string v2, "TopbarBackgroundDisabledColors(neutral="
+
+    iget v3, p0, Lwjf;->a:I
+
+    iget v4, p0, Lwjf;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget v2, p0, Lwjf;->c:I
+
+    invoke-static {v0, v2, v1}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

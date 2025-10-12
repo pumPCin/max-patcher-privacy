@@ -1,32 +1,69 @@
 .class public final Lywe;
-.super Ljava/lang/Object;
+.super Ljn7;
 .source "SourceFile"
 
 # interfaces
-.implements Lzd0;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Lt76;
+.field public final synthetic a:[C
 
 
 # direct methods
-.method public constructor <init>(Lt76;)V
+.method public constructor <init>([C)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lywe;->a:[C
 
-    iput-object p1, p0, Lywe;->a:Lt76;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getType()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const v0, 0x66727473
+    check-cast p1, Ljava/lang/CharSequence;
 
-    return v0
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    iget-object v0, p0, Lywe;->a:[C
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, v0, p2, v1}, Lpwe;->C0(Ljava/lang/CharSequence;[CIZ)I
+
+    move-result p1
+
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    new-instance v0, Ld3b;
+
+    invoke-direct {v0, p1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v0
 .end method

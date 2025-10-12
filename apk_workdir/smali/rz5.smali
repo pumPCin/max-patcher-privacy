@@ -1,186 +1,144 @@
 .class public final Lrz5;
-.super Lym4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyz5;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public X:Z
+.field public final a:Landroid/graphics/Rect;
+
+.field public final b:Landroid/graphics/Rect;
 
 .field public final c:Z
 
-.field public o:Leze;
+.field public final o:Lss6;
 
 
 # direct methods
-.method public constructor <init>(Lcze;Z)V
-    .locals 0
+.method public constructor <init>(ZLss6;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lym4;-><init>(Lcze;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lrz5;->c:Z
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lrz5;->a:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lrz5;->b:Landroid/graphics/Rect;
+
+    iput-boolean p1, p0, Lrz5;->c:Z
+
+    iput-object p2, p0, Lrz5;->o:Lss6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 3
 
-    iget-boolean v0, p0, Lrz5;->X:Z
+    iget-object v0, p0, Lrz5;->o:Lss6;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    check-cast p1, Le5;
+
+    iget-object v0, p0, Lrz5;->a:Landroid/graphics/Rect;
+
+    invoke-virtual {p1, v0}, Le5;->f(Landroid/graphics/Rect;)V
+
+    check-cast p2, Le5;
+
+    iget-object p1, p0, Lrz5;->b:Landroid/graphics/Rect;
+
+    invoke-virtual {p2, p1}, Le5;->f(Landroid/graphics/Rect;)V
+
+    iget p2, v0, Landroid/graphics/Rect;->top:I
+
+    iget v1, p1, Landroid/graphics/Rect;->top:I
+
+    if-ge p2, v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    if-le p2, v1, :cond_1
 
-    iput-boolean v0, p0, Lrz5;->X:Z
-
-    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lym4;->b:Ljava/lang/Object;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
+    goto :goto_1
 
     :cond_1
-    if-nez v0, :cond_3
+    iget p2, v0, Landroid/graphics/Rect;->left:I
 
-    iget-boolean v0, p0, Lrz5;->c:Z
+    iget v1, p1, Landroid/graphics/Rect;->left:I
 
-    iget-object v1, p0, Lym4;->a:Lcze;
+    iget-boolean v2, p0, Lrz5;->c:Z
 
-    if-eqz v0, :cond_2
+    if-ge p2, v1, :cond_2
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    if-eqz v2, :cond_7
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    invoke-interface {v1, v0}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    goto :goto_1
 
     :cond_2
-    invoke-interface {v1}, Lcze;->b()V
+    if-le p2, v1, :cond_3
 
-    return-void
+    if-eqz v2, :cond_8
+
+    goto :goto_0
 
     :cond_3
-    invoke-virtual {p0, v0}, Lym4;->g(Ljava/lang/Object;)V
+    iget p2, v0, Landroid/graphics/Rect;->bottom:I
 
-    return-void
-.end method
+    iget v1, p1, Landroid/graphics/Rect;->bottom:I
 
-.method public final cancel()V
-    .locals 1
+    if-ge p2, v1, :cond_4
 
-    const/4 v0, 0x4
+    goto :goto_0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    :cond_4
+    if-le p2, v1, :cond_5
 
-    const/4 v0, 0x0
+    goto :goto_1
 
-    iput-object v0, p0, Lym4;->b:Ljava/lang/Object;
+    :cond_5
+    iget p2, v0, Landroid/graphics/Rect;->right:I
 
-    iget-object v0, p0, Lrz5;->o:Leze;
+    iget p1, p1, Landroid/graphics/Rect;->right:I
 
-    invoke-interface {v0}, Leze;->cancel()V
+    if-ge p2, p1, :cond_6
 
-    return-void
-.end method
+    if-eqz v2, :cond_7
 
-.method public final d(Leze;)V
-    .locals 2
+    goto :goto_1
 
-    iget-object v0, p0, Lrz5;->o:Leze;
+    :cond_6
+    if-le p2, p1, :cond_9
 
-    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
+    if-eqz v2, :cond_8
 
-    move-result v0
+    :cond_7
+    :goto_0
+    const/4 p1, -0x1
 
-    if-eqz v0, :cond_0
+    return p1
 
-    iput-object p1, p0, Lrz5;->o:Leze;
-
-    iget-object v0, p0, Lym4;->a:Lcze;
-
-    invoke-interface {v0, p0}, Lcze;->d(Leze;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Leze;->i(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lrz5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lym4;->b:Ljava/lang/Object;
-
-    if-eqz v0, :cond_1
-
+    :cond_8
+    :goto_1
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lrz5;->X:Z
+    return p1
 
-    iget-object p1, p0, Lrz5;->o:Leze;
+    :cond_9
+    const/4 p1, 0x0
 
-    invoke-interface {p1}, Leze;->cancel()V
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Sequence contains more than one element!"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lym4;->a:Lcze;
-
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lym4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lrz5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrz5;->X:Z
-
-    iget-object v0, p0, Lym4;->a:Lcze;
-
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return p1
 .end method

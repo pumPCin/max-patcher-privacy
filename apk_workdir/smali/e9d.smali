@@ -1,65 +1,93 @@
-.class public final Le9d;
-.super Ljava/lang/Object;
+.class public abstract Le9d;
+.super Lph7;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:Z
-
-.field public h:Z
-
-
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public dequeueWork()Lkh7;
+    .locals 4
 
-    iput p1, p0, Le9d;->c:I
+    const/4 v0, 0x0
 
-    iput p2, p0, Le9d;->d:I
+    :try_start_0
+    iget-object v1, p0, Lph7;->mJobImpl:Lih7;
 
-    const/4 v0, 0x1
+    if-eqz v1, :cond_0
 
-    iput-boolean v0, p0, Le9d;->h:Z
+    invoke-interface {v1}, Lih7;->b()Lkh7;
 
-    iget-boolean v0, p0, Le9d;->g:Z
+    move-result-object v0
 
-    const/high16 v1, -0x80000000
-
-    if-eqz v0, :cond_1
-
-    if-eq p2, v1, :cond_0
-
-    iput p2, p0, Le9d;->a:I
+    return-object v0
 
     :cond_0
-    if-eq p1, v1, :cond_3
+    iget-object v1, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
 
-    iput p1, p0, Le9d;->b:I
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    :try_start_1
+    iget-object v2, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_1
+
+    iget-object v2, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lkh7;
+
+    monitor-exit v1
+
+    return-object v2
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_0
 
     :cond_1
-    if-eq p1, v1, :cond_2
+    monitor-exit v1
 
-    iput p1, p0, Le9d;->a:I
+    return-object v0
 
-    :cond_2
-    if-eq p2, v1, :cond_3
+    :goto_0
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iput p2, p0, Le9d;->b:I
+    :try_start_2
+    throw v2
+    :try_end_2
+    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
 
-    :cond_3
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    return-object v0
+.end method
+
+.method public onCreate()V
+    .locals 1
+
+    invoke-super {p0}, Lph7;->onCreate()V
+
+    new-instance v0, Lmh7;
+
+    invoke-direct {v0, p0}, Lmh7;-><init>(Le9d;)V
+
+    iput-object v0, p0, Lph7;->mJobImpl:Lih7;
+
     return-void
 .end method

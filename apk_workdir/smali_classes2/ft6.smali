@@ -1,64 +1,77 @@
-.class public final Lft6;
-.super Landroid/text/style/ClickableSpan;
+.class public abstract Lft6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:Ljv7;
-
-.field public c:I
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
 
-    iput-object p1, p0, Lft6;->a:Ljava/lang/String;
+    const-string v1, "0123456789ABCDEF"
 
-    iput p2, p0, Lft6;->c:I
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lft6;->a:[B
 
     return-void
 .end method
 
+.method public static a([B)Ljava/lang/String;
+    .locals 6
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+    array-length v0, p0
 
-    iget-object v0, p0, Lft6;->b:Ljv7;
+    mul-int/lit8 v0, v0, 0x2
 
-    if-eqz v0, :cond_0
+    new-array v0, v0, [B
 
-    iget-object v1, v0, Ljv7;->a:Lov7;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Ljv7;->b:Ljava/lang/Object;
+    :goto_0
+    array-length v2, p0
 
-    sget-object v2, Lpv7;->b:Lpv7;
+    if-ge v1, v2, :cond_0
 
-    check-cast v0, Landroid/text/style/ClickableSpan;
+    aget-byte v2, p0, v1
 
-    iget-object v3, p0, Lft6;->a:Ljava/lang/String;
+    and-int/lit16 v3, v2, 0xff
 
-    invoke-virtual {v1, p1, v3, v2, v0}, Lov7;->b(Landroid/view/View;Ljava/lang/String;Lpv7;Landroid/text/style/ClickableSpan;)V
+    mul-int/lit8 v4, v1, 0x2
+
+    ushr-int/lit8 v3, v3, 0x4
+
+    sget-object v5, Lft6;->a:[B
+
+    aget-byte v3, v5, v3
+
+    aput-byte v3, v0, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    and-int/lit8 v2, v2, 0xf
+
+    aget-byte v2, v5, v2
+
+    aput-byte v2, v0, v4
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    new-instance p0, Ljava/lang/String;
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    sget-object v1, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
-    iget v0, p0, Lft6;->c:I
+    invoke-direct {p0, v0, v1}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
-
-    return-void
+    return-object p0
 .end method

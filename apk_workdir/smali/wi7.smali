@@ -1,111 +1,136 @@
-.class public abstract Lwi7;
-.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
+.class public final Lwi7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvs4;
-.implements Lt97;
+.implements Lno3;
 
 
 # instance fields
-.field public a:Llj7;
+.field public final a:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lwi7;->a:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lwi7;->a:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
 
 # virtual methods
-.method public final b()Lm2a;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract c()Z
-.end method
-
-.method public abstract d(Ljava/lang/Throwable;)V
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget-object v0, p0, Lwi7;->a:Llj7;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v0, p0}, Llj7;->removeNode$kotlinx_coroutines_core(Lwi7;)V
-
-    return-void
-.end method
-
-.method public final isActive()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public a(Ljava/lang/StringBuilder;Ljava/util/Iterator;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :try_start_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v0, :cond_2
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Lvb4;->q(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "[job@"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lwi7;->a:Llj7;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lvb4;->q(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lwi7;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    instance-of v1, v0, Ljava/lang/CharSequence;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance p2, Ljava/lang/AssertionError;
+
+    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p2
+.end method
+
+.method public accept(Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object p1, p0, Lwi7;->a:Ljava/lang/String;
+
+    const-string v0, "Connection restored"
+
+    invoke-static {p1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
 .end method

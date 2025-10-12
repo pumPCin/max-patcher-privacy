@@ -1,116 +1,201 @@
-.class public final Lqa7;
-.super Lg79;
+.class public final synthetic Lqa7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public a:[B
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/login/inputname/InputNameScreen;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/login/inputname/InputNameScreen;I)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    iput p2, p0, Lqa7;->a:I
 
-    sget-object v0, Lo7;->i:[B
+    iput-object p1, p0, Lqa7;->b:Lone/me/login/inputname/InputNameScreen;
 
-    iput-object v0, p0, Lqa7;->a:[B
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    iget-object v0, p0, Lqa7;->a:[B
+    iget v0, p0, Lqa7;->a:I
 
-    sget-object v1, Lo7;->i:[B
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lqa7;->b:Lone/me/login/inputname/InputNameScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
+
+    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->F0()Lya7;
+
+    move-result-object v0
+
+    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->y0:Lds;
+
+    sget-object v5, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
+
+    const/4 v6, 0x5
+
+    aget-object v5, v5, v6
+
+    invoke-virtual {v4, v3}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v8, v4
+
+    check-cast v8, Ljava/lang/String;
+
+    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->E0()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v0, v2, v8}, Lya7;->s(ILjava/lang/String;)Z
+
+    move-result v4
+
+    const/4 v5, 0x2
+
+    invoke-virtual {v0, v5, v9}, Lya7;->s(ILjava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v4, :cond_0
+
+    if-eqz v5, :cond_0
+
+    new-instance v5, Lrwc;
+
+    iget-object v6, v0, Lya7;->c:Ljava/lang/String;
+
+    iget-object v7, v0, Lya7;->o:Ljava/lang/String;
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v5 .. v10}, Lrwc;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
+
+    iget-object v0, v0, Lya7;->Y:Lya5;
+
+    new-instance v4, Lpa7;
+
+    invoke-direct {v4, v5}, Lpa7;-><init>(Lrwc;)V
+
+    invoke-static {v0, v4}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->C0()Liwa;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Liwa;->g()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x1
+    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->D0()Liwa;
 
-    iget-object v1, p0, Lqa7;->a:[B
+    move-result-object v0
 
-    invoke-static {v0, v1}, Le83;->b(I[B)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final mergeFrom(Ld83;)Lg79;
-    .locals 2
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
+    invoke-virtual {v0}, Liwa;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
     :cond_1
-    invoke-virtual {p1}, Ld83;->g()[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lqa7;->a:[B
-
-    goto :goto_0
+    move v1, v2
 
     :cond_2
-    :goto_1
-    return-object p0
-.end method
+    xor-int/lit8 v0, v1, 0x1
 
-.method public final writeTo(Le83;)V
-    .locals 2
+    invoke-virtual {v3}, Lone/me/login/inputname/InputNameScreen;->B0()Llf;
 
-    iget-object v0, p0, Lqa7;->a:[B
+    move-result-object v1
 
-    sget-object v1, Lo7;->i:[B
+    invoke-virtual {v1, v0}, Llf;->setActiveButtonLoaderState(Z)V
 
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+    sget-object v0, Laxf;->a:Laxf;
 
-    move-result v0
+    return-object v0
 
-    if-nez v0, :cond_0
+    :pswitch_0
+    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
 
-    const/4 v0, 0x1
+    new-instance v0, Lya7;
 
-    iget-object v1, p0, Lqa7;->a:[B
+    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->b:Lds;
 
-    invoke-virtual {p1, v0, v1}, Le83;->s(I[B)V
+    sget-object v5, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
 
-    :cond_0
-    return-void
+    aget-object v1, v5, v1
+
+    invoke-virtual {v4, v3}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v4, v3, Lone/me/login/inputname/InputNameScreen;->c:Lds;
+
+    aget-object v2, v5, v2
+
+    invoke-virtual {v4, v3}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    sget-object v3, Li38;->a:Li38;
+
+    invoke-virtual {v3}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lfm3;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    invoke-direct {v0, v1, v2, v3}, Lya7;-><init>(Ljava/lang/String;Ljava/lang/String;Lyn7;)V
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/login/inputname/InputNameScreen;->A0:[Lpl7;
+
+    new-instance v0, Lzc7;
+
+    invoke-virtual {v3}, Ljz3;->getRouter()Ln6d;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lzc7;-><init>(Ln6d;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

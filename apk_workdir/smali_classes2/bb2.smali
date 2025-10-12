@@ -3,78 +3,115 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Lenb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lzb2;
 
-.field public final synthetic b:Lub2;
+.field public final synthetic b:Z
 
-.field public final synthetic c:J
-
-.field public final synthetic d:J
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;JJI)V
+.method public synthetic constructor <init>(Lzb2;ZZ)V
     .locals 0
 
-    iput p6, p0, Lbb2;->a:I
-
-    iput-object p1, p0, Lbb2;->b:Lub2;
-
-    iput-wide p2, p0, Lbb2;->c:J
-
-    iput-wide p4, p0, Lbb2;->d:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbb2;->a:Lzb2;
+
+    iput-boolean p2, p0, Lbb2;->b:Z
+
+    iput-boolean p3, p0, Lbb2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final a(Ljava/lang/Comparable;)Z
+    .locals 2
 
-    iget v0, p0, Lbb2;->a:I
+    check-cast p1, Lr82;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p1, Lr82;->b:Luc2;
 
-    iget-object v1, p0, Lbb2;->b:Lub2;
+    iget v0, v0, Luc2;->m:I
 
-    iget-wide v2, p0, Lbb2;->c:J
+    iget-boolean v1, p0, Lbb2;->b:Z
 
-    invoke-virtual {v1, v2, v3}, Lub2;->A(J)Lqc2;
+    if-gtz v0, :cond_0
 
-    move-result-object v0
+    if-eqz v1, :cond_4
 
-    iget-wide v2, v0, Lyi0;->a:J
+    invoke-virtual {p1}, Lr82;->i0()Z
 
-    iget-object v4, v0, Lqc2;->b:Lpc2;
+    move-result v0
 
-    iget-wide v5, p0, Lbb2;->d:J
+    if-eqz v0, :cond_4
 
-    invoke-virtual/range {v1 .. v6}, Lub2;->i0(JLpc2;J)V
+    :cond_0
+    iget-boolean v0, p0, Lbb2;->c:Z
 
-    return-void
+    if-nez v0, :cond_1
 
-    :pswitch_0
-    iget-wide v0, p0, Lbb2;->c:J
+    iget-object v0, p0, Lbb2;->a:Lzb2;
 
-    iget-wide v2, p0, Lbb2;->d:J
+    iget-object v0, v0, Lzb2;->m:Lnnb;
 
-    iget-object v4, p0, Lbb2;->b:Lub2;
+    check-cast v0, Lpnb;
 
-    invoke-virtual {v4, v0, v1, v2, v3}, Lub2;->h0(JJ)V
+    iget-object v0, v0, Lpnb;->a:Lt08;
 
-    return-void
+    invoke-virtual {p1, v0}, Lr82;->U(Lm63;)Z
 
-    nop
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lr82;->z()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_1
+    invoke-virtual {p1}, Lr82;->E()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p1}, Lr82;->e0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lr82;->h0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Lr82;->i0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    return p1
 .end method

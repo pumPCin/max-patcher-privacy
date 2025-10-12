@@ -3,66 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llt9;
+.implements Lvd6;
 
 
 # instance fields
-.field public final synthetic a:Lfz0;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lzy0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfz0;)V
+.method public synthetic constructor <init>(Lzy0;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lqy0;->a:I
 
-    iput-object p1, p0, Lqy0;->a:Lfz0;
+    iput-object p1, p0, Lqy0;->b:Lzy0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Lmt9;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lqy0;->a:Lfz0;
+    iget v0, p0, Lqy0;->a:I
 
-    iget-object v0, v0, Lfz0;->J0:Lgp1;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Lgp1;->l:Lg7;
+    check-cast p1, Lhoe;
 
-    iget-boolean p1, p1, Lmt9;->f:Z
+    iget-object v0, p0, Lqy0;->b:Lzy0;
 
-    iget-object v0, v0, Lg7;->b:Li7;
+    iget-object v0, v0, Lzy0;->m0:Lfq1;
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v0, p1}, Lfq1;->M(Lhoe;)V
 
-    iget-boolean p1, v0, Li7;->b:Z
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
-    if-eqz p1, :cond_0
+    return-object p1
 
-    return-void
+    :pswitch_0
+    check-cast p1, Lpoe;
 
-    :cond_0
-    const/4 p1, 0x1
+    iget-object v0, p0, Lqy0;->b:Lzy0;
 
-    iput-boolean p1, v0, Li7;->b:Z
+    iget-object v0, v0, Lzy0;->m0:Lfq1;
 
-    iget-object p1, v0, Li7;->c:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lfq1;->z(Lpoe;)V
 
-    check-cast p1, Luhf;
+    goto :goto_0
 
-    invoke-interface {p1}, Luhf;->getMsSinceBoot()J
+    :pswitch_1
+    check-cast p1, Lhoe;
 
-    move-result-wide v1
+    iget-object v0, p0, Lqy0;->b:Lzy0;
 
-    iput-wide v1, v0, Li7;->a:J
+    iget-object v0, v0, Lzy0;->m0:Lfq1;
 
-    return-void
+    invoke-virtual {v0, p1}, Lfq1;->M(Lhoe;)V
 
-    :cond_1
-    invoke-virtual {v0}, Li7;->b()V
+    goto :goto_0
 
-    return-void
+    :pswitch_2
+    check-cast p1, Lpoe;
+
+    iget-object v0, p0, Lqy0;->b:Lzy0;
+
+    iget-object v0, v0, Lzy0;->m0:Lfq1;
+
+    invoke-virtual {v0, p1}, Lfq1;->z(Lpoe;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

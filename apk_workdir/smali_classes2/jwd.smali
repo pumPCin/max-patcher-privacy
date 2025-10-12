@@ -1,58 +1,51 @@
 .class public final Ljwd;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Len1;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Low;
+
+.field public Z:I
+
+.field public o:Low;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Low;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljwd;->Y:Low;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ljwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lr6d;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ljwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p1, p0, Ljwd;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget p1, p0, Ljwd;->Z:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    or-int/2addr p1, v0
 
-    move-result v1
+    iput p1, p0, Ljwd;->Z:I
 
-    if-eqz v1, :cond_0
+    iget-object p1, p0, Ljwd;->Y:Low;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, p0}, Low;->b(Ljqb;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    check-cast v1, Len1;
+    move-result-object p1
 
-    invoke-interface {v1, p1}, Len1;->a(Lr6d;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

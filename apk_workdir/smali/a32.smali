@@ -1,167 +1,123 @@
-.class public final La32;
-.super Lws7;
+.class public final synthetic La32;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lws1;
 
 
 # instance fields
-.field public final synthetic q:I
+.field public final synthetic a:Lc32;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(Lc32;)V
     .locals 0
 
-    iput p2, p0, La32;->q:I
+    iput-object p1, p0, La32;->a:Lc32;
 
-    invoke-direct {p0, p1}, Lws7;-><init>(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
-    .locals 0
-
-    const/4 p1, 0x0
-
-    iput p1, p0, La32;->q:I
-
-    invoke-direct {p0, p2}, Lws7;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/view/View;I)I
-    .locals 1
+.method public a()V
+    .locals 4
 
-    iget v0, p0, La32;->q:I
+    iget-object v0, p0, La32;->a:Lc32;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lc32;->a:Ljava/lang/Object;
 
-    invoke-super {p0, p1, p2}, Lws7;->b(Landroid/view/View;I)I
+    monitor-enter v1
 
-    move-result p1
+    :try_start_0
+    iget v2, v0, Lc32;->i:I
 
-    return p1
+    const/4 v3, 0x5
 
-    :pswitch_0
-    const/4 p1, 0x0
+    if-ne v2, v3, :cond_0
 
-    return p1
+    iget-object v2, v0, Lc32;->f:Lztd;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v2}, Lc32;->k(Lztd;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+
+    return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method
 
-.method public c(Landroid/view/View;I)I
-    .locals 1
+.method public w(Lvs1;)Ljava/lang/String;
+    .locals 5
 
-    iget v0, p0, La32;->q:I
+    iget-object v0, p0, La32;->a:Lc32;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "Release[session="
 
-    invoke-super {p0, p1, p2}, Lws7;->c(Landroid/view/View;I)I
+    iget-object v2, v0, Lc32;->a:Ljava/lang/Object;
 
-    move-result p1
+    monitor-enter v2
 
-    return p1
+    :try_start_0
+    iget-object v3, v0, Lc32;->k:Lvs1;
 
-    :pswitch_0
-    const/4 p1, 0x0
+    if-nez v3, :cond_0
 
-    return p1
+    const/4 v3, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    goto :goto_0
 
-.method public d(Landroid/util/DisplayMetrics;)F
-    .locals 1
+    :cond_0
+    const/4 v3, 0x0
 
-    iget v0, p0, La32;->q:I
+    :goto_0
+    const-string v4, "Release completer expected to be null"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v4, v3}, Lnjg;->l(Ljava/lang/String;Z)V
 
-    invoke-super {p0, p1}, Lws7;->d(Landroid/util/DisplayMetrics;)F
+    iput-object p1, v0, Lc32;->k:Lvs1;
 
-    move-result p1
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    return p1
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_0
-    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    int-to-float p1, p1
+    const-string v0, "]"
 
-    const/high16 v0, 0x42c80000    # 100.0f
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    div-float/2addr v0, p1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(I)Landroid/graphics/PointF;
-    .locals 1
-
-    iget v0, p0, La32;->q:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lws7;->g(I)Landroid/graphics/PointF;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-
-    :pswitch_0
-    const/4 p1, 0x0
+    monitor-exit v2
 
     return-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :catchall_0
+    move-exception p1
 
-.method public h()I
-    .locals 1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v0, p0, La32;->q:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lws7;->h()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, -0x1
-
-    return v0
-
-    :pswitch_1
-    const/4 v0, -0x1
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

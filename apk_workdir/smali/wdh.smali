@@ -1,45 +1,67 @@
-.class public final synthetic Lwdh;
-.super Lt5c;
+.class public abstract Lwdh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lwdh;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lwdh;
+    const-class v0, Lwdh;
 
-    const-string v1, "getFramesDropped()J"
-
-    const/4 v2, 0x0
-
-    const-class v3, Lcle;
-
-    const-string v4, "framesDropped"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lwdh;->a:Lwdh;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-# virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Parcelable;
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Parcel;)V
     .locals 2
 
-    check-cast p1, Lcle;
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    iget-wide v0, p1, Lcle;->s:J
+    move-result p0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-gtz p0, :cond_0
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
+
+    const-string v1, "Parcel data not fully consumed, unread size: "
+
+    invoke-static {p0, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

@@ -1,88 +1,97 @@
-.class public final synthetic Lw39;
+.class public final Lw39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ly39;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lz39;
-
-.field public final synthetic c:Lq39;
+.field public final a:Ljava/util/Collection;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldh9;Lz39;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lw39;->a:I
+.method public constructor <init>(Ljava/util/Collection;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw39;->c:Lq39;
-
-    iput-object p2, p0, Lw39;->b:Lz39;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lz39;Ldh9;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Lw39;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw39;->b:Lz39;
-
-    iput-object p2, p0, Lw39;->c:Lq39;
+    iput-object p1, p0, Lw39;->a:Ljava/util/Collection;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget p1, p0, Lw39;->a:I
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lw39;->c:Lq39;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lw39;->b:Lz39;
+    return v0
 
-    packed-switch p1, :pswitch_data_0
+    :cond_0
+    instance-of v1, p1, Lw39;
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, p1}, Lz39;->L(Lq39;Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
 
-    :pswitch_0
-    iget-wide v1, v1, Lz39;->N0:J
+    :cond_1
+    check-cast p1, Lw39;
 
-    check-cast v0, Ldh9;
+    iget-object v1, p0, Lw39;->a:Ljava/util/Collection;
 
-    iget-object p1, v0, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object p1, p1, Lw39;->a:Ljava/util/Collection;
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->Q0(J)V
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lw39;->a:Ljava/util/Collection;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ByIds(messageIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lw39;->a:Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

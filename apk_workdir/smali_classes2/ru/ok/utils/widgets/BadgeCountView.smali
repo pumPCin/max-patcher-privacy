@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljgf;
+.implements Lyef;
 
 
 # annotations
@@ -14,37 +14,37 @@
     d2 = {
         "Lru/ok/utils/widgets/BadgeCountView;",
         "Landroidx/appcompat/widget/AppCompatTextView;",
-        "Ljgf;",
+        "Lyef;",
         "",
         "backgroundColor",
-        "Loyf;",
+        "Laxf;",
         "setBackgroundColor",
         "(I)V",
         "",
-        "z0",
+        "u0",
         "Z",
         "getNeedPlusIndicator",
         "()Z",
         "setNeedPlusIndicator",
         "(Z)V",
         "needPlusIndicator",
-        "A0",
+        "v0",
         "getManageVisibility",
         "setManageVisibility",
         "manageVisibility",
         "<set-?>",
-        "B0",
-        "Loqc;",
+        "w0",
+        "Lxoc;",
         "getCount",
         "()I",
         "setCount",
         "count",
-        "Lkg0;",
-        "C0",
+        "Lcg0;",
+        "x0",
         "getStyle",
-        "()Lkg0;",
+        "()Lcg0;",
         "setStyle",
-        "(Lkg0;)V",
+        "(Lcg0;)V",
         "style",
         "ui-utils_release"
     }
@@ -59,26 +59,26 @@
 
 
 # static fields
-.field public static final synthetic E0:[Ltm7;
+.field public static final synthetic z0:[Lpl7;
 
 
 # instance fields
-.field public A0:Z
+.field public u0:Z
 
-.field public final B0:Lfc0;
+.field public v0:Z
 
-.field public final C0:Lck;
+.field public final w0:Lwb0;
 
-.field public D0:I
+.field public final x0:Ljk;
 
-.field public z0:Z
+.field public y0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Lut9;
+    new-instance v0, Lds9;
 
     const-string v1, "count"
 
@@ -86,21 +86,21 @@
 
     const-class v3, Lru/ok/utils/widgets/BadgeCountView;
 
-    invoke-direct {v0, v3, v1, v2}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lxxc;->a:Lyxc;
+    sget-object v1, Lewc;->a:Lfwc;
 
     const-string v2, "style"
 
     const-string v4, "getStyle()Lru/ok/utils/widgets/BadgeCountView$Style;"
 
-    invoke-static {v1, v3, v2, v4}, Lnd5;->g(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lut9;
+    invoke-static {v1, v3, v2, v4}, Lc85;->g(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lds9;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Ltm7;
+    new-array v2, v2, [Lpl7;
 
     const/4 v3, 0x0
 
@@ -110,7 +110,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lru/ok/utils/widgets/BadgeCountView;->E0:[Ltm7;
+    sput-object v2, Lru/ok/utils/widgets/BadgeCountView;->z0:[Lpl7;
 
     return-void
 .end method
@@ -140,67 +140,67 @@
 
     const/4 p2, 0x1
 
-    iput-boolean p2, p0, Lru/ok/utils/widgets/BadgeCountView;->A0:Z
+    iput-boolean p2, p0, Lru/ok/utils/widgets/BadgeCountView;->v0:Z
 
-    new-instance p2, Lfc0;
+    new-instance p2, Lwb0;
 
-    invoke-direct {p2, p0, p1}, Lfc0;-><init>(Lru/ok/utils/widgets/BadgeCountView;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lwb0;-><init>(Lru/ok/utils/widgets/BadgeCountView;Landroid/content/Context;)V
 
-    iput-object p2, p0, Lru/ok/utils/widgets/BadgeCountView;->B0:Lfc0;
+    iput-object p2, p0, Lru/ok/utils/widgets/BadgeCountView;->w0:Lwb0;
 
-    new-instance p1, Lck;
+    new-instance p1, Ljk;
 
     const/4 p2, 0x1
 
-    invoke-direct {p1, p2, p0}, Lck;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Ljk;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lru/ok/utils/widgets/BadgeCountView;->C0:Lck;
+    iput-object p1, p0, Lru/ok/utils/widgets/BadgeCountView;->x0:Ljk;
 
     const/4 p1, -0x1
 
-    iput p1, p0, Lru/ok/utils/widgets/BadgeCountView;->D0:I
+    iput p1, p0, Lru/ok/utils/widgets/BadgeCountView;->y0:I
 
     return-void
 .end method
 
-.method private final getStyle()Lkg0;
+.method private final getStyle()Lcg0;
     .locals 2
 
-    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->E0:[Ltm7;
+    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->z0:[Lpl7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lru/ok/utils/widgets/BadgeCountView;->C0:Lck;
+    iget-object v0, p0, Lru/ok/utils/widgets/BadgeCountView;->x0:Ljk;
 
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
 
-    check-cast v0, Lkg0;
+    check-cast v0, Lcg0;
 
     return-object v0
 .end method
 
-.method public static final synthetic i(Lru/ok/utils/widgets/BadgeCountView;Lkg0;)V
+.method public static final synthetic i(Lru/ok/utils/widgets/BadgeCountView;Lcg0;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/utils/widgets/BadgeCountView;->setStyle(Lkg0;)V
+    invoke-direct {p0, p1}, Lru/ok/utils/widgets/BadgeCountView;->setStyle(Lcg0;)V
 
     return-void
 .end method
 
-.method private final setStyle(Lkg0;)V
+.method private final setStyle(Lcg0;)V
     .locals 2
 
-    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->E0:[Ltm7;
+    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->z0:[Lpl7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lru/ok/utils/widgets/BadgeCountView;->C0:Lck;
+    iget-object v1, p0, Lru/ok/utils/widgets/BadgeCountView;->x0:Ljk;
 
-    invoke-virtual {v1, p0, v0, p1}, Lv2;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -230,7 +230,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->z0:Z
+    iput-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->u0:Z
 
     return-void
 
@@ -241,7 +241,7 @@
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Ltk4;->e0:Ltk4;
+    sget-object v0, Lfk4;->e0:Lfk4;
 
     goto :goto_0
 
@@ -250,18 +250,18 @@
 
     move-result-object v0
 
-    sget-object v1, Lvaf;->a0:Ls5f;
+    sget-object v1, Lh9f;->a0:Lh4f;
 
-    invoke-static {v0}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+    invoke-static {v0}, Luce;->e0(Landroid/content/Context;)Lh9f;
 
     move-result-object v0
 
     :goto_0
-    iget v1, v0, Lvaf;->F:I
+    iget v1, v0, Lh9f;->F:I
 
     invoke-virtual {p0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget v0, v0, Lvaf;->H:I
+    iget v0, v0, Lh9f;->H:I
 
     invoke-virtual {p0, v0}, Lru/ok/utils/widgets/BadgeCountView;->setBackgroundColor(I)V
 
@@ -271,15 +271,15 @@
 .method public final getCount()I
     .locals 2
 
-    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->E0:[Ltm7;
+    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->z0:[Lpl7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lru/ok/utils/widgets/BadgeCountView;->B0:Lfc0;
+    iget-object v0, p0, Lru/ok/utils/widgets/BadgeCountView;->w0:Lwb0;
 
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Number;
 
@@ -293,7 +293,7 @@
 .method public final getManageVisibility()Z
     .locals 1
 
-    iget-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->A0:Z
+    iget-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->v0:Z
 
     return v0
 .end method
@@ -301,7 +301,7 @@
 .method public final getNeedPlusIndicator()Z
     .locals 1
 
-    iget-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->z0:Z
+    iget-boolean v0, p0, Lru/ok/utils/widgets/BadgeCountView;->u0:Z
 
     return v0
 .end method
@@ -309,7 +309,7 @@
 .method public setBackgroundColor(I)V
     .locals 2
 
-    iput p1, p0, Lru/ok/utils/widgets/BadgeCountView;->D0:I
+    iput p1, p0, Lru/ok/utils/widgets/BadgeCountView;->y0:I
 
     invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -356,7 +356,7 @@
 .method public final setCount(I)V
     .locals 2
 
-    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->E0:[Ltm7;
+    sget-object v0, Lru/ok/utils/widgets/BadgeCountView;->z0:[Lpl7;
 
     const/4 v1, 0x0
 
@@ -366,9 +366,9 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lru/ok/utils/widgets/BadgeCountView;->B0:Lfc0;
+    iget-object v1, p0, Lru/ok/utils/widgets/BadgeCountView;->w0:Lwb0;
 
-    invoke-virtual {v1, p0, v0, p1}, Lv2;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -376,7 +376,7 @@
 .method public final setManageVisibility(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lru/ok/utils/widgets/BadgeCountView;->A0:Z
+    iput-boolean p1, p0, Lru/ok/utils/widgets/BadgeCountView;->v0:Z
 
     return-void
 .end method
@@ -384,7 +384,7 @@
 .method public final setNeedPlusIndicator(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lru/ok/utils/widgets/BadgeCountView;->z0:Z
+    iput-boolean p1, p0, Lru/ok/utils/widgets/BadgeCountView;->u0:Z
 
     return-void
 .end method

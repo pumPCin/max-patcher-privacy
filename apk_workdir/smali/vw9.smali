@@ -1,48 +1,33 @@
-.class public final Lvw9;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg68;
-
-.field public synthetic o:Ljava/lang/Object;
+.class public abstract Lvw9;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Lg68;Lkotlin/coroutines/Continuation;)V
+.method public static final a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
     .locals 0
 
-    iput-object p1, p0, Lvw9;->Y:Lg68;
+    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->getNetworkCapabilities(Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method
 
+.method public static final b(Landroid/net/NetworkCapabilities;I)Z
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
-    iput-object p1, p0, Lvw9;->o:Ljava/lang/Object;
+    move-result p0
 
-    iget p1, p0, Lvw9;->X:I
+    return p0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public static final c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    .locals 0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->unregisterNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
 
-    iput p1, p0, Lvw9;->X:I
-
-    iget-object p1, p0, Lvw9;->Y:Lg68;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lg68;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

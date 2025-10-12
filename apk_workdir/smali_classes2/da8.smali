@@ -1,23 +1,21 @@
-.class public final Lda8;
+.class public interface abstract Lda8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Landroid/graphics/Bitmap;
-
-.field public final b:Ldo0;
+# interfaces
+.implements Lo14;
 
 
-# direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Ldo0;)V
-    .locals 0
+# virtual methods
+.method public a(Landroid/text/Spannable;II)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x21
 
-    iput-object p1, p0, Lda8;->a:Landroid/graphics/Bitmap;
-
-    iput-object p2, p0, Lda8;->b:Ldo0;
+    invoke-static {p1, p0, p2, p3, v0}, Lb19;->r(Landroid/text/Spannable;Lda8;III)V
 
     return-void
+.end method
+
+.method public abstract getType()I
 .end method

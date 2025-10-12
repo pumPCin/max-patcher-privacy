@@ -1,125 +1,752 @@
 .class public final Lz2g;
-.super Ljava/lang/Object;
+.super Lhgd;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+
+# static fields
+.field public static o:[I
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:J
-
-.field public final synthetic o:La3g;
+.field public final n:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method public constructor <init>(La3g;Ljava/lang/String;IJ)V
+.method public constructor <init>(Landroid/content/Context;Lxo5;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lhgd;-><init>(Landroid/content/Context;Lxo5;)V
 
-    iput-object p1, p0, Lz2g;->o:La3g;
+    new-instance p1, Ljava/util/WeakHashMap;
 
-    iput-object p2, p0, Lz2g;->a:Ljava/lang/String;
+    const/4 p2, 0x1
 
-    iput p3, p0, Lz2g;->b:I
+    invoke-direct {p1, p2}, Ljava/util/WeakHashMap;-><init>(I)V
 
-    iput-wide p4, p0, Lz2g;->c:J
+    iput-object p1, p0, Lz2g;->n:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final q()I
+    .locals 2
 
-    iget-object v0, p0, Lz2g;->o:La3g;
+    invoke-virtual {p0}, Lz2g;->s()[I
 
-    iget-object v1, v0, La3g;->c:Lp5d;
+    move-result-object v0
 
-    iget-object v0, v0, La3g;->a:Lx5d;
+    const/4 v1, 0x3
 
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
+    aget v0, v0, v1
 
-    move-result-object v2
+    return v0
+.end method
 
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lz2g;->a:Ljava/lang/String;
-
-    if-nez v4, :cond_0
-
-    invoke-interface {v2, v3}, Lf2f;->Z(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v2, v3, v4}, Lf2f;->f(ILjava/lang/String;)V
-
-    :goto_0
-    iget v3, p0, Lz2g;->b:I
-
-    invoke-static {v3}, Lqw1;->u(I)I
-
-    move-result v3
-
-    int-to-long v3, v3
-
-    const/4 v5, 0x2
-
-    invoke-interface {v2, v5, v3, v4}, Lf2f;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Lz2g;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v2}, Lh2f;->C()I
-
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+.method public final r()Lb3d;
+    .locals 7
 
     const/4 v0, 0x0
 
-    return-object v0
+    iget-object v1, p0, Lv3;->h:Lbo7;
 
-    :catchall_0
+    const-string v2, "app.calls.incoming.ringtone"
+
+    invoke-virtual {v1, v2, v0}, Lbo7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "system_"
+
+    const-string v2, "custom_"
+
+    sget-object v3, Lz2d;->a:Lz2d;
+
+    if-eqz v0, :cond_5
+
+    :try_start_0
+    invoke-static {v0}, Lpwe;->D0(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    const-string v4, "default_"
+
+    const/4 v5, 0x1
+
+    invoke-static {v0, v4, v5}, Lpwe;->S0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    invoke-static {v0, v2, v5}, Lpwe;->S0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v4
+
+    const/4 v6, 0x0
+
+    if-eqz v4, :cond_3
+
+    new-instance v1, Ly2d;
+
+    invoke-static {v0, v2, v6}, Lpwe;->S0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v0, v2, v4}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0, v6, v2}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ly2d;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    :catch_0
     move-exception v0
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {v0, v1, v5}, Lpwe;->S0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    new-instance v2, La3d;
+
+    invoke-static {v0, v1, v6}, Lpwe;->S0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    invoke-virtual {v0, v1, v4}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     goto :goto_1
 
-    :catchall_1
-    move-exception v3
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    :try_start_3
-    invoke-virtual {v0}, Lx5d;->k()V
+    move-result v1
 
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    invoke-virtual {v0, v6, v1}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v0
 
     :goto_1
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    throw v0
+    move-result-object v0
+
+    invoke-direct {v2, v0}, La3d;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v2
+
+    :goto_2
+    const-class v1, Lx2d;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "can\'t load ringtone path from settings, use default instead"
+
+    invoke-static {v1, v2, v0}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_3
+    return-object v3
+.end method
+
+.method public final s()[I
+    .locals 10
+
+    sget-object v0, Lz2g;->o:[I
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lv3;->e:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_1:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_2:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v4
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_3:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v5
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_4:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v6
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_5:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v7
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v2, Ln9c;->led_6:I
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v8
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Ln9c;->led_7:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v9
+
+    filled-new-array/range {v3 .. v9}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lz2g;->o:[I
+
+    :cond_0
+    sget-object v0, Lz2g;->o:[I
+
+    return-object v0
+.end method
+
+.method public final t(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lv3;->h:Lbo7;
+
+    const-string v1, "DEFAULT"
+
+    invoke-virtual {v0, p1, v1}, Lbo7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "_NONE_"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-object v1
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final u()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lv3;->h:Lbo7;
+
+    const-string v2, "app.privacy.content.level.access"
+
+    invoke-virtual {v1, v2, v0}, Lbo7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final v(Lx2g;)V
+    .locals 7
+
+    const-string v0, "updateUserSettings, settings = %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "z2g"
+
+    invoke-static {v2, v0, v1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p1, Lx2g;->b:Ljava/lang/Long;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-string v2, "app.notification.dontDisturbUntil"
+
+    invoke-virtual {p0, v0, v1, v2}, Lv3;->h(JLjava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p1, Lx2g;->a:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.notification.show.new.users"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_1
+    iget-object v0, p1, Lx2g;->c:Ljava/lang/String;
+
+    const-string v1, "REPLY"
+
+    const-string v2, "OFF"
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    move v0, v4
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v5
+
+    :goto_0
+    const-string v6, "app.notification.dialogs.show"
+
+    invoke-virtual {p0, v0, v6}, Lv3;->g(ILjava/lang/String;)V
+
+    iget-object v6, p0, Lhgd;->k:Lpl0;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Lpl0;->e(Ljava/lang/Object;)V
+
+    :cond_4
+    iget-object v0, p1, Lx2g;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    move v3, v4
+
+    goto :goto_1
+
+    :cond_5
+    move v3, v5
+
+    :cond_6
+    :goto_1
+    invoke-virtual {p0, v3}, Lhgd;->o(I)V
+
+    :cond_7
+    iget-object v0, p1, Lx2g;->e:Ljava/lang/String;
+
+    if-eqz v0, :cond_8
+
+    const-string v1, "app.notification.ringtone"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    iget-object v0, p1, Lx2g;->f:Ljava/lang/String;
+
+    if-eqz v0, :cond_9
+
+    const-string v1, "app.notification.dialogs.ringtone"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_9
+    iget-object v0, p1, Lx2g;->g:Ljava/lang/String;
+
+    if-eqz v0, :cond_a
+
+    const-string v1, "app.notification.chats.ringtone"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_a
+    iget-object v0, p1, Lx2g;->i:Ljava/lang/Integer;
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-static {v0}, Lwee;->s(I)I
+
+    move-result v0
+
+    const-string v1, "app.notification.led.color"
+
+    invoke-virtual {p0, v0, v1}, Lv3;->g(ILjava/lang/String;)V
+
+    :cond_b
+    iget-object v0, p1, Lx2g;->h:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_c
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    xor-int/2addr v0, v5
+
+    const-string v1, "app.privacy.online.show"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_c
+    iget-object v0, p1, Lx2g;->j:Ljava/lang/Integer;
+
+    if-eqz v0, :cond_d
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-static {v0}, Lwee;->s(I)I
+
+    move-result v0
+
+    const-string v1, "app.notification.dialogs.led.color"
+
+    invoke-virtual {p0, v0, v1}, Lv3;->g(ILjava/lang/String;)V
+
+    :cond_d
+    iget-object v0, p1, Lx2g;->k:Ljava/lang/Integer;
+
+    if-eqz v0, :cond_e
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-static {v0}, Lwee;->s(I)I
+
+    move-result v0
+
+    const-string v1, "app.notification.chats.led.color"
+
+    invoke-virtual {p0, v0, v1}, Lv3;->g(ILjava/lang/String;)V
+
+    :cond_e
+    iget-object v0, p1, Lx2g;->l:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_f
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.notification.vibrate"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_f
+    iget-object v0, p1, Lx2g;->m:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_10
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.notification.dialogs.vibrate"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_10
+    iget-object v0, p1, Lx2g;->n:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_11
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.notification.chats.vibrate"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_11
+    iget v0, p1, Lx2g;->p:I
+
+    if-eqz v0, :cond_12
+
+    invoke-static {v0}, Lajf;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "app.privacy.incoming.call"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_12
+    iget v0, p1, Lx2g;->o:I
+
+    if-eqz v0, :cond_13
+
+    invoke-static {v0}, Lajf;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "app.privacy.chats.invite"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_13
+    iget-object v0, p1, Lx2g;->q:Lw2g;
+
+    if-eqz v0, :cond_14
+
+    iget-object v0, v0, Lw2g;->a:Ljava/lang/String;
+
+    const-string v1, "app.privacy.inactive.ttl"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_14
+    iget v0, p1, Lx2g;->r:I
+
+    if-eqz v0, :cond_15
+
+    const-string v1, "app.group.chat.call.notification.status"
+
+    invoke-static {v0}, Lajf;->j(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_15
+    iget v0, p1, Lx2g;->s:I
+
+    if-eqz v0, :cond_16
+
+    const-string v1, "app.suggest.stickers.status"
+
+    invoke-static {v0}, Lajf;->l(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_16
+    iget-object v0, p1, Lx2g;->t:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_17
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "audio.transcription.enabled"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_17
+    iget-object v0, p1, Lx2g;->u:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_18
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.privacy.safe_mode"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_18
+    iget-object v0, p1, Lx2g;->v:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_19
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.privacy.safe_mode_no_pin"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_19
+    iget v0, p1, Lx2g;->w:I
+
+    if-eqz v0, :cond_1a
+
+    invoke-static {v0}, Lajf;->k(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "app.privacy.search_by_phone"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1a
+    iget-object v0, p1, Lx2g;->x:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_1b
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    const-string v1, "app.privacy.unsafe.files"
+
+    invoke-virtual {p0, v1, v0}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_1b
+    iget-object p1, p1, Lx2g;->y:Ljava/lang/Boolean;
+
+    if-eqz p1, :cond_1c
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const-string v0, "app.privacy.content.level.access"
+
+    invoke-virtual {p0, v0, p1}, Lv3;->f(Ljava/lang/String;Z)V
+
+    :cond_1c
+    return-void
 .end method

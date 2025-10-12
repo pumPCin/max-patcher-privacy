@@ -1,19 +1,23 @@
 .class public final Lewg;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
+# static fields
+.field public static final c:Lewg;
 
-    sget-object v0, Ldwg;->a:Ldwg;
 
-    return-object v0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lewg;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lewg;->c:Lewg;
+
+    return-void
 .end method

@@ -1,52 +1,55 @@
 .class public final Ld8d;
-.super Lc8d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
+# static fields
+.field public static final c:Ljava/lang/String;
+
+.field public static final d:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-static {}, Lud6;->s()Ltd6;
+    sget v0, Lg3g;->a:I
 
-    iget-boolean v0, p0, Lc8d;->b:Z
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x24
 
-    iget-boolean v0, p0, Lc8d;->c:Z
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    iget v0, p0, Lc8d;->o:F
+    sput-object v0, Ld8d;->c:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    cmpl-float v0, v0, v1
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    if-lez v0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    invoke-super {p0, p1}, Lc8d;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lud6;->s()Ltd6;
+    sput-object v0, Ld8d;->d:Ljava/lang/String;
 
     return-void
+.end method
 
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lc8d;->f()V
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-virtual {p0}, Lc8d;->d()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lc8d;->X:Landroid/graphics/Path;
+    iput-object p1, p0, Ld8d;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
-
-    invoke-super {p0, p1}, Lc8d;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-static {}, Lud6;->s()Ltd6;
+    iput p2, p0, Ld8d;->b:I
 
     return-void
 .end method

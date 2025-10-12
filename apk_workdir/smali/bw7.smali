@@ -1,13 +1,11 @@
-.class public final Lbw7;
+.class public interface abstract Lbw7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Future;
 
-# instance fields
-.field public a:Landroid/text/style/URLSpan;
 
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
+# virtual methods
+.method public abstract d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.end method

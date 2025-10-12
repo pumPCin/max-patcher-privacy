@@ -29,6 +29,7 @@
 .method public constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
+    .line 12
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object v0
@@ -45,7 +46,8 @@
 .method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;)V
     .locals 0
 
-    invoke-static {}, Ljbh;->c()Ljbh;
+    .line 10
+    invoke-static {}, Lv9h;->c()Lv9h;
 
     const/4 p1, 0x0
 
@@ -57,6 +59,7 @@
 
     const/4 v0, 0x1
 
+    .line 9
     invoke-direct {p0, p1, p2, p3, v0}, Lnet/jpountz/lz4/LZ4BlockInputStream;-><init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;Ljava/util/zip/Checksum;Z)V
 
     return-void
@@ -65,30 +68,38 @@
 .method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4FastDecompressor;Ljava/util/zip/Checksum;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
+    .line 2
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->decompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
+    .line 3
     iput-object p3, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->checksum:Ljava/util/zip/Checksum;
 
+    .line 4
     iput-boolean p4, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->stopOnEmptyBlock:Z
 
     const/4 p1, 0x0
 
+    .line 5
     new-array p2, p1, [B
 
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->buffer:[B
 
+    .line 6
     sget p2, Lnet/jpountz/lz4/LZ4BlockOutputStream;->HEADER_LENGTH:I
 
     new-array p2, p2, [B
 
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->compressedBuffer:[B
 
+    .line 7
     iput p1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->originalLen:I
 
     iput p1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
+    .line 8
     iput-boolean p1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
 
     return-void
@@ -97,13 +108,14 @@
 .method public constructor <init>(Ljava/io/InputStream;Z)V
     .locals 0
 
+    .line 11
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->fastDecompressor()Lnet/jpountz/lz4/LZ4FastDecompressor;
 
-    invoke-static {}, Ljbh;->c()Ljbh;
+    invoke-static {}, Lv9h;->c()Lv9h;
 
     const/4 p1, 0x0
 
@@ -238,7 +250,7 @@
     :goto_1
     add-int/lit8 v9, v3, 0x1
 
-    invoke-static {v9, v2}, Ldbd;->d(I[B)I
+    invoke-static {v9, v2}, Lk9d;->d(I[B)I
 
     move-result v2
 
@@ -246,7 +258,7 @@
 
     add-int/lit8 v10, v3, 0x5
 
-    invoke-static {v10, v9}, Ldbd;->d(I[B)I
+    invoke-static {v10, v9}, Lk9d;->d(I[B)I
 
     move-result v9
 
@@ -256,7 +268,7 @@
 
     add-int/lit8 v3, v3, 0x9
 
-    invoke-static {v3, v9}, Ldbd;->d(I[B)I
+    invoke-static {v3, v9}, Lk9d;->d(I[B)I
 
     move-result v3
 
@@ -536,6 +548,7 @@
         }
     .end annotation
 
+    .line 1
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
 
     const/4 v1, -0x1
@@ -544,6 +557,7 @@
 
     return v1
 
+    .line 2
     :cond_0
     iget v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
@@ -551,8 +565,10 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 3
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4BlockInputStream;->refill()V
 
+    .line 4
     :cond_1
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
 
@@ -560,6 +576,7 @@
 
     return v1
 
+    .line 5
     :cond_2
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->buffer:[B
 
@@ -586,6 +603,7 @@
 
     const/4 v0, 0x0
 
+    .line 14
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1}, Lnet/jpountz/lz4/LZ4BlockInputStream;->read([BII)I
@@ -603,8 +621,10 @@
         }
     .end annotation
 
-    invoke-static {p2, p1, p3}, Ldbd;->b(I[BI)V
+    .line 6
+    invoke-static {p2, p1, p3}, Lk9d;->b(I[BI)V
 
+    .line 7
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
 
     const/4 v1, -0x1
@@ -613,6 +633,7 @@
 
     return v1
 
+    .line 8
     :cond_0
     iget v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
@@ -620,8 +641,10 @@
 
     if-ne v0, v2, :cond_1
 
+    .line 9
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4BlockInputStream;->refill()V
 
+    .line 10
     :cond_1
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->finished:Z
 
@@ -629,6 +652,7 @@
 
     return v1
 
+    .line 11
     :cond_2
     iget v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->originalLen:I
 
@@ -640,12 +664,14 @@
 
     move-result p3
 
+    .line 12
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->buffer:[B
 
     iget v1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
     invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
+    .line 13
     iget p1, p0, Lnet/jpountz/lz4/LZ4BlockInputStream;->o:I
 
     add-int/2addr p1, p3

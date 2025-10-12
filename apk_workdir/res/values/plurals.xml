@@ -237,14 +237,6 @@
         <item quantity="few">%d участника</item>
         <item quantity="many">%d участников</item>
     </plurals>
-    <plurals name="tt_dates_days">
-        <item quantity="other">%d дней</item>
-        <item quantity="zero">%d дней</item>
-        <item quantity="one">%d день</item>
-        <item quantity="two">%d дня</item>
-        <item quantity="few">%d дня</item>
-        <item quantity="many">%d дней</item>
-    </plurals>
     <plurals name="tt_dates_days_last_update">
         <item quantity="other">Обновлено %d дней назад</item>
         <item quantity="zero">Обновлено %d дней назад</item>

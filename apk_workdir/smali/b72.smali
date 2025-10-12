@@ -1,77 +1,53 @@
 .class public final Lb72;
-.super La72;
+.super Lwy3;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Liu5;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lc72;
+
+.field public o:Lc72;
+
+.field public r0:I
+
+
 # direct methods
-.method public constructor <init>(IIILw24;Lev5;)V
-    .locals 1
+.method public constructor <init>(Lc72;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    and-int/lit8 v0, p3, 0x2
+    iput-object p1, p0, Lb72;->Z:Lc72;
 
-    if-eqz v0, :cond_0
-
-    sget-object p4, Lv65;->a:Lv65;
-
-    :cond_0
-    and-int/lit8 v0, p3, 0x4
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, -0x3
-
-    :cond_1
-    and-int/lit8 p3, p3, 0x8
-
-    if-eqz p3, :cond_2
-
-    const/4 p2, 0x1
-
-    :cond_2
-    invoke-direct {p0, p1, p2, p4, p5}, La72;-><init>(IILw24;Lev5;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lw24;II)Lt62;
-    .locals 2
-
-    new-instance v0, Lb72;
-
-    iget-object v1, p0, La72;->o:Lev5;
-
-    invoke-direct {v0, p2, p3, p1, v1}, La72;-><init>(IILw24;Lev5;)V
-
-    return-object v0
-.end method
-
-.method public final l()Lev5;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, La72;->o:Lev5;
+    iput-object p1, p0, Lb72;->Y:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iget p1, p0, Lb72;->r0:I
 
-.method public final n(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, La72;->o:Lev5;
+    or-int/2addr p1, v0
 
-    invoke-interface {v0, p1, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput p1, p0, Lb72;->r0:I
+
+    iget-object p1, p0, Lb72;->Z:Lc72;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lc72;->b(Liu5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
 .end method

@@ -1,218 +1,125 @@
-.class public final Lcc8;
-.super Landroid/widget/ArrayAdapter;
+.class public abstract Lcc8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/content/res/ColorStateList;
+# static fields
+.field public static final a:[I
 
-.field public b:Landroid/content/res/ColorStateList;
-
-.field public final synthetic c:Ldc8;
+.field public static final b:[I
 
 
 # direct methods
-.method public constructor <init>(Ldc8;Landroid/content/Context;I[Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcc8;->c:Ldc8;
+    const/high16 v0, 0x1010000
 
-    invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
+    sget v1, Lb9c;->theme:I
 
-    invoke-virtual {p0}, Lcc8;->a()V
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcc8;->a:[I
+
+    sget v0, Lb9c;->materialThemeOverlay:I
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lcc8;->b:[I
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 2
 
-# virtual methods
-.method public final a()V
-    .locals 7
+    sget-object v0, Lcc8;->b:[I
 
-    iget-object v0, p0, Lcc8;->c:Ldc8;
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    iget-object v1, v0, Ldc8;->D0:Landroid/content/res/ColorStateList;
+    move-result-object p2
 
-    const/4 v2, 0x0
+    const/4 p3, 0x0
 
-    const/4 v3, 0x0
-
-    if-eqz v1, :cond_0
-
-    const v4, 0x10100a7
-
-    filled-new-array {v4}, [I
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v1
-
-    filled-new-array {v1, v3}, [I
-
-    move-result-object v1
-
-    new-array v5, v3, [I
-
-    filled-new-array {v4, v5}, [[I
-
-    move-result-object v4
-
-    new-instance v5, Landroid/content/res/ColorStateList;
-
-    invoke-direct {v5, v4, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    goto :goto_0
-
-    :cond_0
-    move-object v5, v2
-
-    :goto_0
-    iput-object v5, p0, Lcc8;->b:Landroid/content/res/ColorStateList;
-
-    iget v1, v0, Ldc8;->C0:I
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Ldc8;->D0:Landroid/content/res/ColorStateList;
-
-    if-eqz v1, :cond_1
-
-    const v1, 0x1010367
-
-    const v2, -0x10100a7
-
-    filled-new-array {v1, v2}, [I
-
-    move-result-object v1
-
-    const v4, 0x10100a1
-
-    filled-new-array {v4, v2}, [I
-
-    move-result-object v2
-
-    iget-object v4, v0, Ldc8;->D0:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v4, v2, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v4
-
-    iget-object v5, v0, Ldc8;->D0:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {v5, v1, v3}, Landroid/content/res/ColorStateList;->getColorForState([II)I
-
-    move-result v5
-
-    iget v6, v0, Ldc8;->C0:I
-
-    invoke-static {v4, v6}, Lz93;->g(II)I
-
-    move-result v4
-
-    iget v6, v0, Ldc8;->C0:I
-
-    invoke-static {v5, v6}, Lz93;->g(II)I
-
-    move-result v5
-
-    iget v0, v0, Ldc8;->C0:I
-
-    filled-new-array {v4, v5, v0}, [I
-
-    move-result-object v0
-
-    new-array v3, v3, [I
-
-    filled-new-array {v2, v1, v3}, [[I
-
-    move-result-object v1
-
-    new-instance v2, Landroid/content/res/ColorStateList;
-
-    invoke-direct {v2, v1, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
-
-    :cond_1
-    iput-object v2, p0, Lcc8;->a:Landroid/content/res/ColorStateList;
-
-    return-void
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
-
-    invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object p1
-
-    instance-of p2, p1, Landroid/widget/TextView;
-
-    if-eqz p2, :cond_2
-
-    move-object p2, p1
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iget-object p3, p0, Lcc8;->c:Ldc8;
-
-    invoke-virtual {p3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    if-eqz v0, :cond_1
+    instance-of p2, p0, Lsy3;
 
-    iget v0, p3, Ldc8;->C0:I
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_0
 
-    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+    move-object p2, p0
 
-    iget p3, p3, Ldc8;->C0:I
+    check-cast p2, Lsy3;
 
-    invoke-direct {v0, p3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    iget p2, p2, Lsy3;->a:I
 
-    iget-object p3, p0, Lcc8;->b:Landroid/content/res/ColorStateList;
+    if-ne p2, v0, :cond_0
 
-    if-eqz p3, :cond_0
-
-    iget-object p3, p0, Lcc8;->a:Landroid/content/res/ColorStateList;
-
-    invoke-static {v0, p3}, Llx4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    new-instance p3, Landroid/graphics/drawable/RippleDrawable;
-
-    iget-object v2, p0, Lcc8;->b:Landroid/content/res/ColorStateList;
-
-    invoke-direct {p3, v2, v0, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    move-object v1, p3
+    move p2, v1
 
     goto :goto_0
 
     :cond_0
-    move-object v1, v0
+    move p2, p3
+
+    :goto_0
+    if-eqz v0, :cond_4
+
+    if-eqz p2, :cond_1
+
+    goto :goto_2
 
     :cond_1
-    :goto_0
-    sget-object p3, Lskg;->a:Ljava/util/WeakHashMap;
+    new-instance p2, Lsy3;
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p2, p0, v0}, Lsy3;-><init>(Landroid/content/Context;I)V
+
+    sget-object v0, Lcc8;->a:[I
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    return-object p1
+    move p1, p3
+
+    :goto_1
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2}, Lsy3;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

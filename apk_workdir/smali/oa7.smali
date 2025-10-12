@@ -1,24 +1,28 @@
-.class public interface abstract Loa7;
+.class public abstract Loa7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final I:Lna7;
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget-object v0, Lna7;->a:Lna7;
+    const-string v0, "InputMerger"
 
-    sput-object v0, Loa7;->I:Lna7;
+    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Loa7;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lhw2;
+.method public abstract a(Ljava/util/ArrayList;)Lf84;
 .end method

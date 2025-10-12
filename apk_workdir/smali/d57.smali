@@ -1,77 +1,26 @@
-.class public abstract synthetic Ld57;
-.super Ljava/lang/Object;
+.class public final Ld57;
+.super Le57;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ScheduledFuture;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
+# virtual methods
+.method public final bridge synthetic compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    check-cast p1, Ljava/util/concurrent/Delayed;
 
-    invoke-static {}, Le57;->values()[Le57;
+    const/4 p1, -0x1
 
-    move-result-object v0
+    return p1
+.end method
 
-    array-length v0, v0
+.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
+    .locals 2
 
-    new-array v0, v0, [I
+    const-wide/16 v0, 0x0
 
-    :try_start_0
-    sget-object v1, Le57;->a:[Le57;
-
-    const/4 v1, 0x1
-
-    aput v1, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x2
-
-    const/4 v2, 0x3
-
-    :try_start_1
-    sget-object v3, Le57;->a:[Le57;
-
-    aput v1, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    :try_start_2
-    sget-object v3, Le57;->a:[Le57;
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Le57;->a:[Le57;
-
-    const/4 v1, 0x4
-
-    aput v1, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Le57;->a:[Le57;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v0, Ld57;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-wide v0
 .end method

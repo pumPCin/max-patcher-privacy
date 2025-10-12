@@ -1,25 +1,23 @@
 .class public final Llre;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final c:Llre;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public d:J
+    new-instance v0, Llre;
 
-.field public e:J
+    const/16 v1, 0x8
 
-.field public f:J
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-.field public g:Ljava/util/ArrayList;
+    sput-object v0, Llre;->c:Llre;
 
-.field public h:Ljava/lang/String;
-
-.field public i:Z
-
-.field public j:I
+    return-void
+.end method

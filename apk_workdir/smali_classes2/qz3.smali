@@ -1,57 +1,254 @@
 .class public final Lqz3;
-.super Laj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
+
+
+# static fields
+.field public static final X:Lqz3;
+
+.field public static final Y:Lqz3;
+
+.field public static final Z:Lqz3;
+
+.field public static final b:Lqz3;
+
+.field public static final c:Lqz3;
+
+.field public static final o:Lqz3;
+
+.field public static final r0:Lqz3;
+
+.field public static final s0:Lqz3;
+
+.field public static final t0:Lqz3;
+
+.field public static final u0:Lqz3;
+
+.field public static final v0:Lqz3;
+
+.field public static final w0:Lqz3;
 
 
 # instance fields
-.field public final c:J
-
-.field public final o:Ljava/util/List;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lv8f;JLjava/util/List;)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->b:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->c:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->o:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->X:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->Y:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->Z:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->r0:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->s0:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->t0:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->u0:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->v0:Lqz3;
+
+    new-instance v0, Lqz3;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lqz3;-><init>(I)V
+
+    sput-object v0, Lqz3;->w0:Lqz3;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Laj0;-><init>(Lv8f;)V
+    iput p1, p0, Lqz3;->a:I
 
-    iput-wide p2, p0, Lqz3;->c:J
-
-    iput-object p4, p0, Lqz3;->o:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lqz3;->a:I
 
-    const-string v1, "ControlMessageAddError{chatId="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v1, p0, Lqz3;->c:J
+    const/16 v1, 0x40
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
 
-    const-string v1, ", contactIds="
+    new-instance v1, Lld6;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0}, Lld6;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
 
-    iget-object v1, p0, Lqz3;->o:Ljava/util/List;
+    return-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/16 v1, 0x7d
+    const/16 v1, 0x40
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v1, Lld6;
+
+    invoke-direct {v1, v0}, Lld6;-><init>(Ljava/util/concurrent/ConcurrentHashMap;)V
+
+    return-object v1
+
+    :pswitch_1
+    sget-object v0, Lnja;->a:Lnja;
+
+    invoke-virtual {v0}, Lnja;->k()Lxka;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_2
+    sget-object v0, Lnja;->a:Lnja;
+
+    return-object v0
+
+    :pswitch_3
+    sget-object v0, Lhhd;->a:Lhhd;
+
+    return-object v0
+
+    :pswitch_4
+    sget-object v0, Laxf;->a:Laxf;
+
+    return-object v0
+
+    :pswitch_5
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_6
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_7
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_8
+    const-class v0, Ljz3;
+
+    return-object v0
+
+    :pswitch_9
+    const-class v0, Ljz3;
+
+    return-object v0
+
+    :pswitch_a
+    const-class v0, Ljz3;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,48 +1,63 @@
 .class public final Lah9;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Llv7;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lbh9;
+
+.field public Z:I
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lbh9;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lah9;->Y:Lbh9;
 
-    iput-object p1, p0, Lah9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lb59;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object v0, p0, Lah9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Lah9;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lah9;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lah9;->Z:I
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    iget-object v0, p0, Lah9;->Y:Lbh9;
 
     const-wide/16 v1, 0x0
 
-    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Lb59;J)V
+    const-wide/16 v3, 0x0
 
-    return-void
-.end method
+    const-wide/16 v5, 0x0
 
-.method public final b(Ljava/lang/String;Lpv7;Landroid/text/style/ClickableSpan;)V
-    .locals 2
+    const/4 v7, 0x0
 
-    iget-object p3, p0, Lah9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    move-object v10, p0
 
-    const-wide/16 v0, 0x0
+    invoke-virtual/range {v0 .. v10}, Lbh9;->d(JJJZILrm4;Lwy3;)Ljava/lang/Object;
 
-    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->B0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lpv7;J)V
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

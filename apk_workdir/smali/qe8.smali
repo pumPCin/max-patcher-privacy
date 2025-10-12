@@ -1,144 +1,87 @@
 .class public final Lqe8;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lke8;
-.implements Lss4;
-.implements Lve3;
+.implements Lle6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
 
-.field public final b:Lnee;
+.field public synthetic Y:Llwa;
 
-.field public final c:Lude;
+.field public final synthetic Z:Landroid/graphics/drawable/GradientDrawable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnee;Lude;I)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p3, p0, Lqe8;->a:I
+    iput p3, p0, Lqe8;->X:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Lqe8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    iput-object p1, p0, Lqe8;->b:Lnee;
+    const/4 p1, 0x3
 
-    iput-object p2, p0, Lqe8;->c:Lude;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lqe8;->b:Lnee;
-
-    invoke-interface {v0, p1}, Lnee;->a(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 4
-
-    iget v0, p0, Lqe8;->a:I
+    iget v0, p0, Lqe8;->X:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, La4d;
+    check-cast p1, Ljq0;
 
-    iget-object v1, p0, Lqe8;->b:Lnee;
+    check-cast p2, Llwa;
 
-    const/4 v2, 0x0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, v2, v1}, La4d;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    new-instance p1, Lqe8;
 
-    iget-object v1, p0, Lqe8;->c:Lude;
+    iget-object v0, p0, Lqe8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {v1, v0}, Lude;->k(Lnee;)V
+    const/4 v1, 0x1
 
-    return-void
+    invoke-direct {p1, v0, p3, v1}, Lqe8;-><init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p2, p1, Lqe8;->Y:Llwa;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lqe8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 
     :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    check-cast p1, Landroid/widget/FrameLayout;
 
-    move-result-object v0
+    check-cast p2, Llwa;
 
-    check-cast v0, Lss4;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lws4;->a:Lws4;
+    new-instance p1, Lqe8;
 
-    if-eq v0, v1, :cond_0
+    iget-object v0, p0, Lqe8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p1, v0, p3, v1}, Lqe8;-><init>(Landroid/graphics/drawable/GradientDrawable;Lkotlin/coroutines/Continuation;I)V
 
-    move-result v0
+    iput-object p2, p1, Lqe8;->Y:Llwa;
 
-    if-eqz v0, :cond_0
+    sget-object p2, Laxf;->a:Laxf;
 
-    new-instance v0, Lgx0;
+    invoke-virtual {p1, p2}, Lqe8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v1, 0x16
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lqe8;->b:Lnee;
-
-    invoke-direct {v0, v3, p0, v2, v1}, Lgx0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object v1, p0, Lqe8;->c:Lude;
-
-    invoke-virtual {v1, v0}, Lude;->k(Lnee;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lss4;)V
-    .locals 1
-
-    iget v0, p0, Lqe8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Lws4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lqe8;->b:Lnee;
-
-    invoke-interface {p1, p0}, Lnee;->c(Lss4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0, p1}, Lws4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lqe8;->b:Lnee;
-
-    invoke-interface {p1, p0}, Lnee;->c(Lss4;)V
-
-    :cond_1
-    return-void
+    return-object p2
 
     nop
 
@@ -148,91 +91,53 @@
     .end packed-switch
 .end method
 
-.method public final g()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lqe8;->a:I
+    iget v0, p0, Lqe8;->X:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lqe8;->Y:Llwa;
 
-    :pswitch_0
-    invoke-static {p0}, Lws4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    invoke-interface {p1}, Llwa;->a()Lcu2;
 
-    return-void
+    move-result-object p1
 
-    nop
+    invoke-interface {p1}, Lcu2;->s()Ltb3;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object p1
 
-.method public final h()Z
-    .locals 1
+    iget-object p1, p1, Ltb3;->b:Lka3;
 
-    iget v0, p0, Lqe8;->a:I
+    iget-object p1, p1, Lka3;->w:[I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lqe8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColors([I)V
 
-    move-result-object v0
+    sget-object p1, Laxf;->a:Laxf;
 
-    check-cast v0, Lss4;
-
-    invoke-static {v0}, Lws4;->b(Lss4;)Z
-
-    move-result v0
-
-    return v0
+    return-object p1
 
     :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lqe8;->Y:Llwa;
 
-    check-cast v0, Lss4;
+    invoke-interface {p1}, Llwa;->b()Lme0;
 
-    invoke-static {v0}, Lws4;->b(Lss4;)Z
+    const/high16 p1, -0x67000000
 
-    move-result v0
+    iget-object v0, p0, Lqe8;->Z:Landroid/graphics/drawable/GradientDrawable;
 
-    return v0
+    invoke-static {v0, p1}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
 
-    nop
+    sget-object p1, Laxf;->a:Laxf;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lqe8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqe8;->b:Lnee;
-
-    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lqe8;->b:Lnee;
-
-    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0

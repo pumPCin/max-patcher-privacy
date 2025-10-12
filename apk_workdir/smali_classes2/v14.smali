@@ -1,518 +1,559 @@
 .class public final Lv14;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractList;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Lx14;
 
-.field public final b:Lbp7;
+.field public final b:I
 
-.field public final c:Lbp7;
+.field public c:I
+
+.field public o:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;)V
+.method public constructor <init>(Lx14;II)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    iput-object p1, p0, Lv14;->a:Lbp7;
+    iput-object p1, p0, Lv14;->a:Lx14;
 
-    iput-object p2, p0, Lv14;->b:Lbp7;
+    iget-object p1, p1, Lx14;->b:[Ljava/lang/Object;
 
-    iput-object p3, p0, Lv14;->c:Lbp7;
+    iput-object p1, p0, Lv14;->o:[Ljava/lang/Object;
+
+    iput p2, p0, Lv14;->b:I
+
+    sub-int/2addr p3, p2
+
+    iput p3, p0, Lv14;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu89;)Lraa;
-    .locals 10
+.method public final a()V
+    .locals 2
 
-    const-string v0, "v14"
+    iget-object v0, p0, Lv14;->a:Lx14;
 
-    const-string v1, "convertVideo: messageUpload = %s"
+    iget-object v0, v0, Lx14;->b:[Ljava/lang/Object;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    iget-object v1, p0, Lv14;->o:[Ljava/lang/Object;
 
-    move-result-object v2
+    if-ne v0, v1, :cond_0
 
-    invoke-static {v0, v1, v2}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    return-void
 
-    iget v0, p1, Lu89;->d:I
+    :cond_0
+    new-instance v0, Ljava/util/ConcurrentModificationException;
 
-    const/4 v1, 0x2
+    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
-    if-ne v0, v1, :cond_b
+    throw v0
+.end method
 
-    new-instance v0, Lwxc;
+.method public final add(ILjava/lang/Object;)V
+    .locals 3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lv14;->a:Lx14;
 
-    iput-object p1, v0, Lwxc;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    iget-object v2, p1, Lu89;->e:Lb9g;
-
-    if-nez v2, :cond_7
-
-    invoke-virtual {p1}, Lu89;->a()Lt89;
-
-    move-result-object p1
-
-    new-instance v2, Lm10;
-
-    invoke-direct {v2, v1}, Lm10;-><init>(I)V
-
-    iget-object v3, v0, Lwxc;->a:Ljava/lang/Object;
-
-    check-cast v3, Lu89;
-
-    iget-object v4, p0, Lv14;->a:Lbp7;
-
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lqp;
-
-    check-cast v4, Lzhd;
-
-    invoke-virtual {v4}, Lzhd;->n()Li8g;
-
-    move-result-object v4
-
-    iget-object v4, v4, Li8g;->a:Ld8c;
-
-    iget-object v5, p0, Lv14;->c:Lbp7;
-
-    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lzp8;
-
-    iget-object v3, v3, Lu89;->b:Ljava/lang/String;
-
-    check-cast v5, Ljj0;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v6, 0x0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
     :try_start_0
-    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {p0}, Lv14;->a()V
 
-    move-result-object v3
+    if-ltz p1, :cond_0
 
-    iget-object v7, v5, Ljj0;->a:Landroid/content/Context;
+    iget v1, p0, Lv14;->c:I
 
-    invoke-static {v3, v7, v5}, Ls4d;->n(Landroid/net/Uri;Landroid/content/Context;Ljj0;)Ljava/util/ArrayList;
+    if-gt p1, v1, :cond_0
 
-    move-result-object v3
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget v2, p0, Lv14;->b:I
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {v1, p1, p2}, Lx14;->add(ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lv14;->a:Lx14;
+
+    iget-object p1, p1, Lx14;->b:[Ljava/lang/Object;
+
+    iput-object p1, p0, Lv14;->o:[Ljava/lang/Object;
+
+    iget p1, p0, Lv14;->c:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lv14;->c:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
 
     :catchall_0
-    move-exception v3
+    move-exception p1
 
-    const-string v5, "jj0"
-
-    const-string v7, "getAvailableQualitiesForVideo: failed"
-
-    invoke-static {v5, v7, v3}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    move-object v3, v6
-
-    :goto_0
-    if-nez v3, :cond_0
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
-    move-result-object v3
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result v5
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    if-nez v5, :cond_1
+    throw p1
+.end method
 
-    goto :goto_1
+.method public final b(I)V
+    .locals 4
 
-    :cond_1
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ltz p1, :cond_0
 
-    move-result-object v6
+    iget v0, p0, Lv14;->c:I
 
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    if-ge p1, v0, :cond_0
 
-    move-result v5
+    return-void
 
-    if-nez v5, :cond_2
+    :cond_0
+    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
-    goto :goto_1
+    iget v1, p0, Lv14;->c:I
 
-    :cond_2
-    move-object v5, v6
+    const-string v2, "Index: "
 
-    check-cast v5, Lf8c;
+    const-string v3, ",Size: "
 
-    iget-object v5, v5, Lf8c;->a:Ld8c;
-
-    :cond_3
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    move-object v8, v7
-
-    check-cast v8, Lf8c;
-
-    iget-object v8, v8, Lf8c;->a:Ld8c;
-
-    invoke-virtual {v5, v8}, Ljava/lang/Enum;->compareTo(Ljava/lang/Object;)I
-
-    move-result v9
-
-    if-lez v9, :cond_4
-
-    move-object v6, v7
-
-    move-object v5, v8
-
-    :cond_4
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-nez v7, :cond_3
-
-    :goto_1
-    check-cast v6, Lf8c;
-
-    if-nez v6, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    iget-object v3, v6, Lf8c;->a:Ld8c;
-
-    invoke-interface {v3, v4}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result v5
-
-    if-gez v5, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move-object v4, v3
-
-    :goto_2
-    iput-object v4, v2, Lm10;->c:Ld8c;
-
-    new-instance v3, Lb9g;
-
-    invoke-direct {v3, v2}, Lb9g;-><init>(Lm10;)V
-
-    iput-object v3, p1, Lt89;->e:Lb9g;
-
-    new-instance v2, Lu89;
-
-    invoke-direct {v2, p1}, Lu89;-><init>(Lt89;)V
-
-    iput-object v2, v0, Lwxc;->a:Ljava/lang/Object;
-
-    :cond_7
-    iget-object p1, v0, Lwxc;->a:Ljava/lang/Object;
-
-    move-object v2, p1
-
-    check-cast v2, Lu89;
-
-    iget-object v2, v2, Lu89;->e:Lb9g;
-
-    if-nez v2, :cond_8
-
-    invoke-static {p1}, Lraa;->l(Ljava/lang/Object;)Lmca;
+    invoke-static {v2, p1, v1, v3}, Lbk7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
+    invoke-direct {v0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final clear()V
+    .locals 4
+
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Lv14;->a()V
+
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget v2, p0, Lv14;->b:I
+
+    iget v3, p0, Lv14;->c:I
+
+    add-int/2addr v3, v2
+
+    invoke-static {v1, v2, v3}, Lx14;->a(Lx14;II)V
+
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget-object v1, v1, Lx14;->b:[Ljava/lang/Object;
+
+    iput-object v1, p0, Lv14;->o:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lv14;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lv14;->b(I)V
+
+    invoke-virtual {p0}, Lv14;->a()V
+
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget v2, p0, Lv14;->b:I
+
+    add-int/2addr p1, v2
+
+    iget-object v1, v1, Lx14;->b:[Ljava/lang/Object;
+
+    aget-object p1, v1, p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
     return-object p1
 
-    :cond_8
-    new-instance v3, Lm10;
+    :catchall_0
+    move-exception p1
 
-    invoke-direct {v3, v1}, Lm10;-><init>(I)V
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    iget-object v4, v2, Lb9g;->a:Ld8c;
+    throw p1
+.end method
 
-    iput-object v4, v3, Lm10;->c:Ld8c;
+.method public final iterator()Ljava/util/Iterator;
+    .locals 6
 
-    iget v4, v2, Lb9g;->b:F
+    iget-object v0, p0, Lv14;->a:Lx14;
 
-    iput v4, v3, Lm10;->a:F
+    iget-object v1, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    iget v4, v2, Lb9g;->c:F
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    iput v4, v3, Lm10;->b:F
+    :try_start_0
+    invoke-virtual {p0}, Lv14;->a()V
 
-    iget-boolean v2, v2, Lb9g;->d:Z
+    new-instance v2, Lw14;
 
-    iput-boolean v2, v3, Lm10;->d:Z
+    iget v3, p0, Lv14;->b:I
 
-    new-instance v2, Lb9g;
+    iget v4, p0, Lv14;->c:I
 
-    invoke-direct {v2, v3}, Lb9g;-><init>(Lm10;)V
+    const/4 v5, 0x0
 
-    new-instance v3, Lbjb;
+    invoke-direct {v2, v0, v5, v3, v4}, Lw14;-><init>(Ljava/util/List;III)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v4, 0xd
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {v3, v4}, Lbjb;-><init>(I)V
+    return-object v2
 
-    check-cast p1, Lu89;
+    :catchall_0
+    move-exception v0
 
-    iget-object p1, p1, Lu89;->b:Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    iput-object p1, v3, Lbjb;->b:Ljava/lang/Object;
+    throw v0
+.end method
 
-    iput-object v2, v3, Lbjb;->c:Ljava/lang/Object;
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 5
 
-    new-instance p1, Lv8g;
+    const-string v0, "Index: "
 
-    invoke-direct {p1, v3}, Lv8g;-><init>(Lbjb;)V
+    iget-object v1, p0, Lv14;->a:Lx14;
 
-    iget-object v2, p0, Lv14;->b:Lbp7;
+    iget-object v2, v1, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    move-result-object v2
+    :try_start_0
+    invoke-virtual {p0}, Lv14;->a()V
 
-    check-cast v2, Lf9g;
+    if-ltz p1, :cond_0
 
-    monitor-enter v2
+    iget v3, p0, Lv14;->c:I
 
-    :try_start_1
-    const-string v3, "f9g"
+    if-gt p1, v3, :cond_0
 
-    const-string v4, "convertVideo: %s"
+    new-instance v0, Lw14;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    iget v4, p0, Lv14;->b:I
 
-    move-result-object v5
+    invoke-direct {v0, v1, p1, v4, v3}, Lw14;-><init>(Ljava/util/List;III)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v3, v4, v5}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v3, v2, Lf9g;->i:Ljava/util/HashMap;
-
-    invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lraa;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-eqz v3, :cond_9
-
-    monitor-exit v2
-
-    goto/16 :goto_4
-
-    :cond_9
-    :try_start_2
-    iget-object v3, v2, Lf9g;->b:Lh9g;
-
-    invoke-virtual {v3}, Lh9g;->a()Ldee;
-
-    move-result-object v3
-
-    new-instance v4, Lc9g;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v4, p1, v5}, Lc9g;-><init>(Lv8g;I)V
-
-    new-instance v6, Lyd8;
-
-    invoke-direct {v6, v3, v1, v4}, Lyd8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v3, Lgqf;
-
-    const/16 v4, 0x1a
-
-    invoke-direct {v3, v4}, Lgqf;-><init>(I)V
-
-    new-instance v4, Lbe8;
-
-    invoke-direct {v4, v6, v3, v5}, Lbe8;-><init>(Lrd8;Ljava/lang/Object;I)V
-
-    new-instance v3, Lgqf;
-
-    const/16 v6, 0x18
-
-    invoke-direct {v3, v6}, Lgqf;-><init>(I)V
-
-    new-instance v6, Loe8;
-
-    sget-object v7, Loch;->d:Lk2a;
-
-    sget-object v8, Loch;->c:Lcg6;
-
-    invoke-direct {v6, v4, v3, v7, v8}, Loe8;-><init>(Lrd8;Lwo3;Lwo3;Le6;)V
-
-    new-instance v3, Lu14;
-
-    const/16 v4, 0xb
-
-    invoke-direct {v3, v2, v4, p1}, Lu14;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v4, Lce8;
-
-    invoke-direct {v4, v3}, Lce8;-><init>(Ljava/util/concurrent/Callable;)V
-
-    new-instance v3, Lbe8;
-
-    invoke-direct {v3, v6, v4, v1}, Lbe8;-><init>(Lrd8;Ljava/lang/Object;I)V
-
-    new-instance v1, Le9g;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v2, v4}, Le9g;-><init>(Lf9g;I)V
-
-    new-instance v4, Lyd8;
-
-    invoke-direct {v4, v3, v5, v1}, Lyd8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    instance-of v1, v4, Lig6;
-
-    if-eqz v1, :cond_a
-
-    check-cast v4, Lig6;
-
-    invoke-interface {v4}, Lig6;->d()Lraa;
-
-    move-result-object v1
-
-    goto :goto_3
-
-    :cond_a
-    new-instance v1, Lbf3;
-
-    invoke-direct {v1, v5, v4}, Lbf3;-><init>(ILjava/lang/Object;)V
-
-    :goto_3
-    new-instance v3, Lrsd;
-
-    const/16 v4, 0x15
-
-    invoke-direct {v3, v2, v4, p1}, Lrsd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v4, Loba;
-
-    invoke-direct {v4, v1, v7, v3, v8}, Loba;-><init>(Lraa;Lwo3;Lwo3;Le6;)V
-
-    new-instance v1, Lw9f;
-
-    const/16 v3, 0x8
-
-    invoke-direct {v1, v2, v3, p1}, Lw9f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v3, Lxaa;
-
-    invoke-direct {v3, v4, v7, v1, v5}, Lxaa;-><init>(Lraa;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance v1, Le9g;
-
-    invoke-direct {v1, v2, v5}, Le9g;-><init>(Lf9g;I)V
-
-    new-instance v4, Lxaa;
-
-    invoke-direct {v4, v3, v1, v8, v5}, Lxaa;-><init>(Lraa;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    const-string v1, "bufferSize"
-
-    invoke-static {v5, v1}, Lud6;->I(ILjava/lang/String;)V
-
-    new-instance v1, Le2a;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    new-instance v3, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v3}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    new-instance v5, Lcda;
-
-    invoke-direct {v5, v3, v1}, Lcda;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Lxca;)V
-
-    new-instance v6, Lfda;
-
-    invoke-direct {v6, v5, v4, v3, v1}, Lfda;-><init>(Lcda;Lraa;Ljava/util/concurrent/atomic/AtomicReference;Lxca;)V
-
-    new-instance v1, Lwca;
-
-    invoke-direct {v1, v6}, Lwca;-><init>(Lfm3;)V
-
-    iget-object v3, v2, Lf9g;->f:Lked;
-
-    invoke-virtual {v1, v3}, Lraa;->q(Lked;)Lhba;
-
-    move-result-object v3
-
-    iget-object v1, v2, Lf9g;->i:Ljava/util/HashMap;
-
-    invoke-virtual {v1, p1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    monitor-exit v2
-
-    :goto_4
-    sget-object p1, Lmf2;->o:Lmf2;
-
-    sget-object v1, Loch;->d:Lk2a;
-
-    sget-object v2, Loch;->c:Lcg6;
-
-    new-instance v4, Loba;
-
-    invoke-direct {v4, v3, p1, v1, v2}, Loba;-><init>(Lraa;Lwo3;Lwo3;Le6;)V
-
-    new-instance p1, Lkk2;
-
-    const/4 v1, 0x5
-
-    invoke-direct {p1, v1, v0}, Lkk2;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lkba;
-
-    invoke-direct {v0, v4, p1, v1}, Lkba;-><init>(Lraa;Lmf6;I)V
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     return-object v0
 
-    :catchall_1
+    :catchall_0
     move-exception p1
 
-    :try_start_3
-    monitor-exit v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    goto :goto_0
 
-    throw p1
+    :cond_0
+    :try_start_1
+    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
 
-    :cond_b
-    invoke-static {p1}, Lraa;->l(Ljava/lang/Object;)Lmca;
+    iget v3, p0, Lv14;->c:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", Size: "
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
+    invoke-direct {v1, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 2
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 3
+    :try_start_0
+    invoke-virtual {p0, p1}, Lv14;->b(I)V
+
+    .line 4
+    invoke-virtual {p0}, Lv14;->a()V
+
+    .line 5
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget v2, p0, Lv14;->b:I
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {v1, p1}, Lx14;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 6
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    .line 7
+    iget-object v1, v1, Lx14;->b:[Ljava/lang/Object;
+
+    .line 8
+    iput-object v1, p0, Lv14;->o:[Ljava/lang/Object;
+
+    .line 9
+    iget v1, p0, Lv14;->c:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    iput v1, p0, Lv14;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 10
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
     return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 11
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    .line 12
+    invoke-virtual {p0, p1}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    .line 13
+    :cond_0
+    invoke-virtual {p0, p1}, Lv14;->remove(I)Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lv14;->b(I)V
+
+    invoke-virtual {p0}, Lv14;->a()V
+
+    iget-object v1, p0, Lv14;->a:Lx14;
+
+    iget v2, p0, Lv14;->b:I
+
+    add-int/2addr p1, v2
+
+    invoke-virtual {v1, p1, p2}, Lx14;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lv14;->a:Lx14;
+
+    iget-object p2, p2, Lx14;->b:[Ljava/lang/Object;
+
+    iput-object p2, p0, Lv14;->o:[Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 2
+
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v0, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Lv14;->a()V
+
+    iget v1, p0, Lv14;->c:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return v1
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v1
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 4
+
+    iget-object v0, p0, Lv14;->a:Lx14;
+
+    iget-object v1, v0, Lx14;->a:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    invoke-virtual {p0}, Lv14;->a()V
+
+    if-ltz p1, :cond_0
+
+    iget v2, p0, Lv14;->c:I
+
+    if-gt p2, v2, :cond_0
+
+    new-instance v2, Lv14;
+
+    iget v3, p0, Lv14;->b:I
+
+    add-int/2addr p1, v3
+
+    add-int/2addr p2, v3
+
+    invoke-direct {v2, v0, p1, p2}, Lv14;-><init>(Lx14;II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-object v2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
 .end method

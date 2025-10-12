@@ -1,148 +1,65 @@
 .class public final Lzx7;
-.super Lppf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/ListIterator;
+
+# static fields
+.field public static final c:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:Lc94;
 
-.field public final synthetic c:Ljava/util/AbstractList;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/AbstractList;Ljava/util/ListIterator;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lzx7;->b:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-object p1, p0, Lzx7;->c:Ljava/util/AbstractList;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    invoke-direct {p0, p2}, Lppf;-><init>(Ljava/util/Iterator;)V
+    sput-object v0, Lzx7;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
     return-void
 .end method
 
+.method public constructor <init>(Lc94;)V
+    .locals 7
 
-# virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 1
+    iget-object v0, p1, Lc94;->a:Landroid/net/Uri;
 
-    iget v0, p0, Lzx7;->b:I
+    .line 2
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
+    const-wide/16 v3, 0x0
 
-    iget-object v0, p0, Lzx7;->c:Ljava/util/AbstractList;
+    const-wide/16 v5, 0x0
 
-    check-cast v0, Lby7;
+    move-object v1, p0
 
-    iget-object v0, v0, Lby7;->b:Lhf6;
+    move-object v2, p1
 
-    invoke-interface {v0, p1}, Lhf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 3
+    invoke-direct/range {v1 .. v6}, Lzx7;-><init>(Lc94;JJ)V
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lzx7;->c:Ljava/util/AbstractList;
-
-    check-cast v0, Lay7;
-
-    iget-object v0, v0, Lay7;->b:Lhf6;
-
-    invoke-interface {v0, p1}, Lhf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final add(Ljava/lang/Object;)V
+.method public constructor <init>(Lc94;JJ)V
     .locals 0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    .line 5
+    iput-object p1, p0, Lzx7;->a:Lc94;
 
-    throw p1
-.end method
+    .line 6
+    iput-wide p2, p0, Lzx7;->b:J
 
-.method public final hasPrevious()Z
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lppf;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget-object v0, p0, Lppf;->a:Ljava/util/Iterator;
-
-    check-cast v0, Ljava/util/ListIterator;
-
-    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    return-void
 .end method

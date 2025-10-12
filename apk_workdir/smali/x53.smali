@@ -1,98 +1,117 @@
-.class public final Lx53;
+.class public final synthetic Lx53;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/Set;
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
+.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
+    .locals 0
 
-    sget-object v0, Ldab;->a1:Ldab;
+    iput p2, p0, Lx53;->a:I
 
-    sget-object v1, Ldab;->b1:Ldab;
-
-    filled-new-array {v0, v1}, [Ldab;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqxd;->x([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lx53;->d:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbp7;Lbp7;)V
-    .locals 1
+    iput-object p1, p0, Lx53;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-class v0, Lx53;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lx53;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lx53;->b:Lbp7;
-
-    iput-object p2, p0, Lx53;->c:Lbp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLnz3;)Ljava/lang/Object;
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    iget-object v0, p0, Lx53;->b:Lbp7;
+    iget p1, p0, Lx53;->a:I
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p1, p0, Lx53;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    check-cast v0, Lr8f;
+    const/4 v0, 0x1
 
-    check-cast v0, Lwla;
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object p1, p0, Lx53;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    new-instance v1, Lw53;
+    const/4 v0, 0x1
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
 
-    invoke-direct {v1, p0, p1, p2, v2}, Lw53;-><init>(Lx53;JLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v1, p3}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljz3;->getTargetController()Ljz3;
 
     move-result-object p1
 
-    sget-object p2, Lf34;->a:Lf34;
+    instance-of v1, p1, Lw53;
 
-    if-ne p1, p2, :cond_0
+    const/4 v2, 0x0
 
-    return-object p1
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lw53;
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    move-object p1, v2
 
-    return-object p1
+    :goto_0
+    if-eqz p1, :cond_2
+
+    check-cast p1, Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {p1}, Lone/me/chats/search/ChatsListSearchScreen;->C0()Lez2;
+
+    move-result-object p1
+
+    iget-object v1, p1, Lez2;->T0:Loke;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ll0;->isActive()Z
+
+    move-result v1
+
+    if-ne v1, v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p1, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p1, Lez2;->Q0:Lh24;
+
+    new-instance v3, Liy2;
+
+    invoke-direct {v3, p1, v2}, Liy2;-><init>(Lez2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v4, 0x2
+
+    invoke-static {v0, v1, v2, v3, v4}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lez2;->T0:Loke;
+
+    :cond_2
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

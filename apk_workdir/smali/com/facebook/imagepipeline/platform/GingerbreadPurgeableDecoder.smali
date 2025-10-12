@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lit4;
+.annotation build Lws4;
 .end annotation
 
 
@@ -19,12 +19,12 @@
 # direct methods
 .method public constructor <init>()V
     .locals 2
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     invoke-direct {p0}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;-><init>()V
 
-    sget-boolean v0, Lp5h;->a:Z
+    sget-boolean v0, Lb4h;->a:Z
 
     const/4 v1, 0x0
 
@@ -49,7 +49,7 @@
     :catchall_0
     const/4 v0, 0x1
 
-    sput-boolean v0, Lp5h;->a:Z
+    sput-boolean v0, Lb4h;->a:Z
 
     :goto_0
     iput-object v1, p0, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->c:Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public static g(Lt73;I[B)Landroid/os/MemoryFile;
+.method public static g(Lm73;I[B)Landroid/os/MemoryFile;
     .locals 8
 
     const/4 v0, 0x0
@@ -83,22 +83,22 @@
     invoke-virtual {v2, v0}, Landroid/os/MemoryFile;->allowPurging(Z)Z
 
     :try_start_0
-    new-instance v1, Lanb;
+    new-instance v1, Ltlb;
 
-    invoke-virtual {p0}, Lt73;->i0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lm73;->X()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lh19;
+    check-cast v4, Lyz8;
 
-    invoke-direct {v1, v4}, Lanb;-><init>(Lh19;)V
+    invoke-direct {v1, v4}, Ltlb;-><init>(Lyz8;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
     :try_start_1
-    new-instance v4, Ljs7;
+    new-instance v4, Lbr7;
 
-    invoke-direct {v4, v1, p1}, Ljs7;-><init>(Ljava/io/InputStream;I)V
+    invoke-direct {v4, v1, p1}, Lbr7;-><init>(Ljava/io/InputStream;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -144,13 +144,13 @@
 
     :cond_1
     :goto_3
-    invoke-virtual {p0}, Lt73;->close()V
+    invoke-virtual {p0}, Lm73;->close()V
 
-    invoke-static {v1}, Lv73;->b(Ljava/io/InputStream;)V
+    invoke-static {v1}, Lo73;->b(Ljava/io/InputStream;)V
 
-    invoke-static {v4}, Lv73;->b(Ljava/io/InputStream;)V
+    invoke-static {v4}, Lo73;->b(Ljava/io/InputStream;)V
 
-    invoke-static {v3}, Lv73;->a(Ljava/io/Closeable;)V
+    invoke-static {v3}, Lo73;->a(Ljava/io/Closeable;)V
 
     return-object v2
 
@@ -179,45 +179,45 @@
     move-object v4, p2
 
     :goto_4
-    invoke-virtual {p0}, Lt73;->close()V
+    invoke-virtual {p0}, Lm73;->close()V
 
-    invoke-static {v3}, Lv73;->b(Ljava/io/InputStream;)V
+    invoke-static {v3}, Lo73;->b(Ljava/io/InputStream;)V
 
-    invoke-static {v4}, Lv73;->b(Ljava/io/InputStream;)V
+    invoke-static {v4}, Lo73;->b(Ljava/io/InputStream;)V
 
-    invoke-static {p2}, Lv73;->a(Ljava/io/Closeable;)V
+    invoke-static {p2}, Lo73;->a(Ljava/io/Closeable;)V
 
     throw p1
 .end method
 
 
 # virtual methods
-.method public final c(Lt73;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final a(Lm73;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
 
-    invoke-virtual {p1}, Lt73;->i0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lm73;->X()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lh19;
+    check-cast v0, Lyz8;
 
-    invoke-virtual {v0}, Lh19;->X()I
+    invoke-virtual {v0}, Lyz8;->O()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, v0, v1, p2}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->h(Lt73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, v0, v1, p2}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->h(Lm73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final d(Lt73;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final b(Lm73;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
 
-    invoke-static {p2, p1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(ILt73;)Z
+    invoke-static {p2, p1}, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->e(ILm73;)Z
 
     move-result v0
 
@@ -231,20 +231,20 @@
     sget-object v0, Lcom/facebook/imagepipeline/nativecode/DalvikPurgeableDecoder;->b:[B
 
     :goto_0
-    invoke-virtual {p0, p1, p2, v0, p3}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->h(Lt73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-virtual {p0, p1, p2, v0, p3}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->h(Lm73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final h(Lt73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+.method public final h(Lm73;I[BLandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
 
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {p1, p2, p3}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->g(Lt73;I[B)Landroid/os/MemoryFile;
+    invoke-static {p1, p2, p3}, Lcom/facebook/imagepipeline/platform/GingerbreadPurgeableDecoder;->g(Lm73;I[B)Landroid/os/MemoryFile;
 
     move-result-object p1
     :try_end_0
@@ -266,7 +266,7 @@
 
     const-string p3, "BitmapFactory returned null"
 
-    invoke-static {p2, p3}, Lbv0;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Li8e;->j(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -312,7 +312,7 @@
 
     :goto_0
     :try_start_3
-    invoke-static {p2}, Lipe;->w(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Lug5;->t(Ljava/lang/Throwable;)V
 
     throw v0
     :try_end_3
@@ -369,7 +369,7 @@
     move-exception p1
 
     :try_start_3
-    invoke-static {p1}, Lipe;->w(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lug5;->t(Ljava/lang/Throwable;)V
 
     throw v0
 
@@ -411,7 +411,7 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
     :goto_2
-    invoke-static {p1}, Lipe;->w(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lug5;->t(Ljava/lang/Throwable;)V
 
     throw v0
 .end method

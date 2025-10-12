@@ -2,5 +2,19 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln59;
+
+# virtual methods
+.method public abstract d(Lps0;)V
+.end method
+
+.method public abstract m()V
+.end method
+
+.method public abstract setForwardClickListener(Lvd6;)V
+.end method
+
+.method public abstract setLink(Lf59;)V
+.end method
+
+.method public abstract setReplyClickListener(Lje6;)V
+.end method

@@ -1,136 +1,73 @@
 .class public final Lx38;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
-
-
-# static fields
-.field public static final X:Lx38;
-
-.field public static final Y:Lx38;
-
-.field public static final Z:Lx38;
-
-.field public static final b:Lx38;
-
-.field public static final c:Lx38;
-
-.field public static final o:Lx38;
 
 
 # instance fields
-.field public final a:Lp5e;
+.field public final synthetic A0:Lz38;
+
+.field public B0:I
+
+.field public X:Ljava/util/Iterator;
+
+.field public Y:Lr82;
+
+.field public Z:Lqc2;
+
+.field public o:Lz38;
+
+.field public r0:Lp19;
+
+.field public s0:Lp19;
+
+.field public t0:Ljava/util/Iterator;
+
+.field public u0:Lq19;
+
+.field public v0:Ldwc;
+
+.field public w0:Ldwc;
+
+.field public x0:I
+
+.field public y0:I
+
+.field public synthetic z0:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->c:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->b:Lx38;
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->o:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->c:Lx38;
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->X:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->o:Lx38;
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->Y:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->X:Lx38;
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->Z:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->Y:Lx38;
-
-    new-instance v0, Lx38;
-
-    sget-object v1, Lp5e;->w0:Lp5e;
-
-    invoke-direct {v0, v1}, Lx38;-><init>(Lp5e;)V
-
-    sput-object v0, Lx38;->Z:Lx38;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lp5e;)V
+.method public constructor <init>(Lz38;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx38;->A0:Lz38;
 
-    iput-object p1, p0, Lx38;->a:Lp5e;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, Lx38;
+    iput-object p1, p0, Lx38;->z0:Ljava/lang/Object;
 
-    iget-object p1, p1, Lx38;->a:Lp5e;
+    iget p1, p0, Lx38;->B0:I
 
-    iget-object v0, p0, Lx38;->a:Lp5e;
+    const/high16 v0, -0x80000000
 
-    iget v0, v0, Lp5e;->b:I
+    or-int/2addr p1, v0
 
-    iget p1, p1, Lp5e;->b:I
+    iput p1, p0, Lx38;->B0:I
 
-    invoke-static {v0, p1}, Lsx9;->k(II)I
+    iget-object p1, p0, Lx38;->A0:Lz38;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    return p1
-.end method
+    invoke-virtual {p1, v0, p0}, Lz38;->f(Ljava/util/Map;Lwy3;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object p1
 
-    iget-object v0, p0, Lx38;->a:Lp5e;
-
-    iget-object v0, v0, Lp5e;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lx38;->a:Lp5e;
-
-    iget-object v0, v0, Lp5e;->a:Ljava/lang/String;
-
-    return-object v0
+    return-object p1
 .end method

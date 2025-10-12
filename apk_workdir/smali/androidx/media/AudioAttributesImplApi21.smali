@@ -16,10 +16,12 @@
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
+    .line 2
     iput v0, p0, Landroidx/media/AudioAttributesImplApi21;->b:I
 
     return-void
@@ -28,12 +30,15 @@
 .method public constructor <init>(Landroid/media/AudioAttributes;I)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p1, p0, Landroidx/media/AudioAttributesImplApi21;->a:Landroid/media/AudioAttributes;
 
     const/4 p1, -0x1
 
+    .line 5
     iput p1, p0, Landroidx/media/AudioAttributesImplApi21;->b:I
 
     return-void

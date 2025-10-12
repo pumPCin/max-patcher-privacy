@@ -1,46 +1,59 @@
-.class public final synthetic Leie;
+.class public final Leie;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/WindowInsetsController$OnControllableInsetsChangedListener;
+
+# static fields
+.field public static final e:Lqv4;
+
+.field public static final f:Lqv4;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqv4;
 
-    iput-object p1, p0, Leie;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lqv4;-><init>(I)V
+
+    sput-object v0, Leie;->e:Lqv4;
+
+    new-instance v0, Lqv4;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lqv4;-><init>(I)V
+
+    sput-object v0, Leie;->f:Lqv4;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onControllableInsetsChanged(Landroid/view/WindowInsetsController;I)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    iget-object p1, p0, Leie;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit8 p2, p2, 0x8
+    iput p2, p0, Leie;->a:I
 
-    if-eqz p2, :cond_0
+    iput p3, p0, Leie;->b:I
 
-    const/4 p2, 0x1
+    iput-object p1, p0, Leie;->c:Ljava/lang/String;
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iput-object p4, p0, Leie;->d:Ljava/lang/String;
 
     return-void
 .end method

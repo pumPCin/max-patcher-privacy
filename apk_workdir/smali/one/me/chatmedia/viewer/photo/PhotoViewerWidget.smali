@@ -25,10 +25,10 @@
         "messageId",
         "",
         "attachId",
-        "Ldfd;",
+        "Lidd;",
         "scopeId",
-        "(JLjava/lang/String;Ljava/lang/String;Lof4;)V",
-        "tcb",
+        "(JLjava/lang/String;Ljava/lang/String;Laf4;)V",
+        "lbb",
         "chat-media-viewer_release"
     }
     k = 0x1
@@ -42,24 +42,24 @@
 
 
 # static fields
-.field public static final synthetic X:[Ltm7;
+.field public static final synthetic X:[Lpl7;
 
 
 # instance fields
-.field public final a:Lpr;
+.field public final a:Lds;
 
-.field public final b:Lpr;
+.field public final b:Lds;
 
-.field public final c:Lbp7;
+.field public final c:Lyn7;
 
-.field public final o:Lmqc;
+.field public final o:Lvoc;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Lt5c;
+    new-instance v0, Lf4c;
 
     const-class v1, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;
 
@@ -69,37 +69,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lxxc;->a:Lyxc;
+    sget-object v2, Lewc;->a:Lfwc;
 
     const-string v3, "localAttachId"
 
     const-string v5, "getLocalAttachId()Ljava/lang/String;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
+    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
 
     move-result-object v2
 
-    new-instance v3, Lt5c;
+    new-instance v3, Lf4c;
 
     const-string v5, "parentScopeId"
 
     const-string v6, "getParentScopeId-IluPPks()Ljava/lang/String;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lt5c;
+    new-instance v5, Lf4c;
 
     const-string v6, "photoView"
 
     const-string v7, "getPhotoView()Lone/me/chatmedia/viewer/photo/PhotoView;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Ltm7;
+    new-array v1, v1, [Lpl7;
 
     aput-object v0, v1, v4
 
@@ -115,48 +115,56 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Ltm7;
+    sput-object v1, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
 
     return-void
 .end method
 
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Lof4;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Laf4;)V
     .locals 0
 
+    .line 16
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    new-instance p2, Ln4b;
+    .line 17
+    new-instance p2, Ld3b;
 
     const-string p5, "chat.media.viewer.message_id"
 
-    invoke-direct {p2, p5, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, p5, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance p1, Ln4b;
+    .line 18
+    new-instance p1, Ld3b;
 
     const-string p5, "chat.media.viewer.attach_id"
 
-    invoke-direct {p1, p5, p3}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, p5, p3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance p3, Ldfd;
+    .line 19
+    new-instance p3, Lidd;
 
-    invoke-direct {p3, p4}, Ldfd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p3, p4}, Lidd;-><init>(Ljava/lang/String;)V
 
-    new-instance p4, Ln4b;
+    .line 20
+    new-instance p4, Ld3b;
 
     const-string p5, "arg_key_scope_id"
 
-    invoke-direct {p4, p5, p3}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, p5, p3}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {p2, p1, p4}, [Ln4b;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+    .line 21
+    filled-new-array {p2, p1, p4}, [Ld3b;
 
     move-result-object p1
 
+    .line 22
+    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 23
     invoke-direct {p0, p1}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;-><init>(Landroid/os/Bundle;)V
 
     return-void
@@ -171,25 +179,30 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
+    .line 1
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
 
     const-wide/16 v3, 0x0
 
+    .line 2
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    new-instance v0, Lpr;
+    .line 3
+    new-instance v0, Lds;
 
     const-class v3, Ljava/lang/Long;
 
     const-string v4, "chat.media.viewer.message_id"
 
-    invoke-direct {v0, v3, p1, v4}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, v3, p1, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->a:Lpr;
+    .line 4
+    iput-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->a:Lds;
 
-    new-instance p1, Lpr;
+    .line 5
+    new-instance p1, Lds;
 
     const-class v0, Ljava/lang/String;
 
@@ -197,53 +210,63 @@
 
     const-string v4, "chat.media.viewer.attach_id"
 
-    invoke-direct {p1, v0, v3, v4}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v3, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->b:Lpr;
+    .line 6
+    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->b:Lds;
 
+    .line 7
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getScopeId-IluPPks()Ljava/lang/String;
 
     move-result-object p1
 
-    new-instance v0, Ldfd;
+    .line 8
+    new-instance v0, Lidd;
 
-    invoke-direct {v0, p1}, Ldfd;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lidd;-><init>(Ljava/lang/String;)V
 
-    new-instance p1, Lpr;
+    .line 9
+    new-instance p1, Lds;
 
-    const-class v3, Ldfd;
+    const-class v3, Lidd;
 
     const-string v4, "arg_key_scope_id"
 
-    invoke-direct {p1, v3, v0, v4}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {p1, v3, v0, v4}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Ltm7;
+    .line 10
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p1, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ldfd;
+    check-cast p1, Lidd;
 
-    iget-object p1, p1, Ldfd;->a:Ljava/lang/String;
+    .line 11
+    iget-object p1, p1, Lidd;->a:Ljava/lang/String;
 
-    const-class v0, Lvm2;
+    .line 12
+    const-class v0, Lrm2;
 
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lve6;)Lbp7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->c:Lbp7;
-
-    sget p1, Ljka;->j:I
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    .line 13
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Ltd6;)Lyn7;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:Lmqc;
+    .line 14
+    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->c:Lyn7;
+
+    .line 15
+    sget p1, Lzia;->j:I
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:Lvoc;
 
     return-void
 .end method
@@ -253,15 +276,15 @@
 .method public final B0()Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Ltm7;
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->b:Lpr;
+    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->b:Lds;
 
-    invoke-virtual {v0, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -273,15 +296,15 @@
 .method public final C0()J
     .locals 2
 
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Ltm7;
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->a:Lpr;
+    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->a:Lds;
 
-    invoke-virtual {v0, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -294,36 +317,36 @@
     return-wide v0
 .end method
 
-.method public final D0()Lscb;
+.method public final D0()Lkbb;
     .locals 2
 
-    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Ltm7;
+    sget-object v0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->X:[Lpl7;
 
     const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:Lmqc;
+    iget-object v1, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->o:Lvoc;
 
-    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lscb;
+    check-cast v0, Lkbb;
 
     return-object v0
 .end method
 
-.method public final E0()Lvm2;
+.method public final E0()Lrm2;
     .locals 1
 
-    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->c:Lbp7;
+    iget-object v0, p0, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->c:Lyn7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvm2;
+    check-cast v0, Lrm2;
 
     return-object v0
 .end method
@@ -347,15 +370,15 @@
 
     invoke-virtual {p3, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    new-instance p1, Lscb;
+    new-instance p1, Lkbb;
 
     invoke-virtual {p3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lscb;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lkbb;-><init>(Landroid/content/Context;)V
 
-    sget p2, Ljka;->j:I
+    sget p2, Lzia;->j:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -367,7 +390,7 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lvm2;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lrm2;
 
     move-result-object p1
 
@@ -379,17 +402,17 @@
 
     move-result-object v2
 
-    invoke-virtual {p1, v0, v1, v2}, Lvm2;->C(JLjava/lang/String;)Lqm8;
+    invoke-virtual {p1, v0, v1, v2}, Lrm2;->D(JLjava/lang/String;)Lkl8;
 
     move-result-object p1
 
-    instance-of v0, p1, Lim8;
+    instance-of v0, p1, Lcl8;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lim8;
+    check-cast p1, Lcl8;
 
     goto :goto_0
 
@@ -402,25 +425,27 @@
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lscb;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
 
     move-result-object v0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Llch;->setZoomEnabled(Z)V
+    invoke-virtual {v0, v2}, Lxah;->setZoomEnabled(Z)V
 
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lscb;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
 
     move-result-object v0
 
-    new-instance v2, Lr4;
+    new-instance v2, Ln12;
 
-    invoke-direct {v2, p0}, Lr4;-><init>(Ljava/lang/Object;)V
+    const/16 v3, 0x19
 
-    invoke-virtual {v0, v2}, Lscb;->setListener(Lrcb;)V
+    invoke-direct {v2, v3, p0}, Ln12;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lvm2;
+    invoke-virtual {v0, v2}, Lkbb;->setListener(Ljbb;)V
+
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lrm2;
 
     move-result-object v0
 
@@ -432,87 +457,87 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v2, v3, v4}, Lvm2;->F(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v4}, Lrm2;->G(JLjava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lscb;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->D0()Lkbb;
 
     move-result-object v0
 
-    iget-object p1, p1, Lim8;->o:Lh47;
+    iget-object p1, p1, Lcl8;->o:Ld37;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, v2}, Lscb;->r(Lh47;Z)V
+    invoke-virtual {v0, p1, v2}, Lkbb;->k(Ld37;Z)V
 
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lvm2;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lvm2;->S0:Ljb5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcs7;->L()Les7;
-
-    move-result-object v0
-
-    sget-object v2, Ler7;->o:Ler7;
-
-    invoke-static {p1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lrm2;
 
     move-result-object p1
 
-    new-instance v0, Lucb;
+    iget-object p1, p1, Lrm2;->N0:Lya5;
 
-    invoke-direct {v0, v1, p0}, Lucb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
-    new-instance v3, Ljx5;
+    move-result-object v0
+
+    invoke-interface {v0}, Luq7;->x()Lwq7;
+
+    move-result-object v0
+
+    sget-object v2, Lwp7;->o:Lwp7;
+
+    invoke-static {p1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+
+    move-result-object p1
+
+    new-instance v0, Lmbb;
+
+    invoke-direct {v0, v1, p0}, Lmbb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+
+    new-instance v3, Lnw5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lvm2;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lvm2;->e1:Lsqc;
+    invoke-static {v3, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    invoke-virtual {p0}, Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;->E0()Lrm2;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lrm2;->Z0:Lbpc;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcs7;->L()Les7;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {p1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object p1
 
-    new-instance v0, Lvcb;
+    new-instance v0, Lnbb;
 
-    invoke-direct {v0, v1, p0}, Lvcb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
+    invoke-direct {v0, v1, p0}, Lnbb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatmedia/viewer/photo/PhotoViewerWidget;)V
 
-    new-instance v1, Ljx5;
+    new-instance v1, Lnw5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method

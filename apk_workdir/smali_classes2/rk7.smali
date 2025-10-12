@@ -1,67 +1,50 @@
-.class public final Lrk7;
-.super Lsk7;
+.class public interface abstract Lrk7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lrk7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lrk7;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    const-string v3, "unknown"
-
-    invoke-direct {v0, v3, v1, v2}, Lsk7;-><init>(Ljava/lang/String;ILtk7;)V
-
-    sput-object v0, Lrk7;->d:Lrk7;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lrk7;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
+.method public abstract B()Ljava/lang/String;
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2c724b44
-
-    return v0
+.method public abstract P()Ljava/lang/String;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public abstract U()Z
+.end method
 
-    const-string v0, "UnknownError"
+.method public abstract Y()Ljava/lang/String;
+.end method
 
-    return-object v0
+.method public abstract hasNext()Z
+.end method
+
+.method public abstract name()Ljava/lang/String;
+.end method
+
+.method public abstract peek()I
+.end method
+
+.method public abstract q()V
+.end method
+
+.method public abstract s()V
+.end method
+
+.method public abstract t()V
+.end method
+
+.method public abstract u()V
+.end method
+
+.method public abstract w()J
+.end method
+
+.method public abstract y()V
+.end method
+
+.method public abstract z()I
 .end method

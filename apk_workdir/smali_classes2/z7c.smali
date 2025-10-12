@@ -1,122 +1,109 @@
-.class public abstract Lz7c;
-.super Ljava/lang/Object;
+.class public final Lz7c;
+.super Lyjg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final X:Llp5;
 
-.field public final b:Ljava/lang/String;
+.field public final Y:Lkdd;
+
+.field public final Z:Lto8;
+
+.field public final b:Lzab;
+
+.field public final c:Lhad;
+
+.field public final o:Lwz7;
+
+.field public final r0:Le7f;
+
+.field public final s0:Lhne;
+
+.field public final t0:Lhne;
+
+.field public final u0:Lya5;
+
+.field public final v0:Lya5;
+
+.field public final w0:Lq8b;
+
+.field public final x0:Lq8b;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Lzab;Lhad;Lwz7;Llp5;Lkdd;Lto8;Le7f;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lyjg;-><init>()V
 
-    iput-wide p1, p0, Lz7c;->a:J
+    iput-object p1, p0, Lz7c;->b:Lzab;
 
-    iput-object p3, p0, Lz7c;->b:Ljava/lang/String;
+    iput-object p2, p0, Lz7c;->c:Lhad;
+
+    iput-object p3, p0, Lz7c;->o:Lwz7;
+
+    iput-object p4, p0, Lz7c;->X:Llp5;
+
+    iput-object p5, p0, Lz7c;->Y:Lkdd;
+
+    iput-object p6, p0, Lz7c;->Z:Lto8;
+
+    iput-object p7, p0, Lz7c;->r0:Le7f;
+
+    sget-object p1, Lh7c;->a:Lh7c;
+
+    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz7c;->s0:Lhne;
+
+    sget-object p1, Lcy1;->c:Lcy1;
+
+    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz7c;->t0:Lhne;
+
+    new-instance p1, Lya5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lya5;-><init>(I)V
+
+    iput-object p1, p0, Lz7c;->u0:Lya5;
+
+    new-instance p1, Lya5;
+
+    invoke-direct {p1, p2}, Lya5;-><init>(I)V
+
+    iput-object p1, p0, Lz7c;->v0:Lya5;
+
+    new-instance p1, Lq8b;
+
+    const-string p2, "android.permission.RECORD_AUDIO"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lq8b;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lz7c;->w0:Lq8b;
+
+    new-instance p1, Lq8b;
+
+    const-string p2, "android.permission.CAMERA"
+
+    filled-new-array {p2}, [Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lq8b;-><init>([Ljava/lang/String;)V
+
+    iput-object p1, p0, Lz7c;->x0:Lq8b;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz7c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    check-cast p1, Lz7c;
-
-    iget-wide v3, p1, Lz7c;->a:J
-
-    iget-wide v5, p0, Lz7c;->a:J
-
-    cmp-long v1, v5, v3
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lz7c;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lz7c;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lxxc;->a(Ljava/lang/Class;)Ll53;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ll53;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lz7c;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lz7c;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
 .end method

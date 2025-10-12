@@ -1,131 +1,104 @@
-.class public abstract Lx85;
+.class public final synthetic Lx85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltd6;
 
-# static fields
-.field public static final a:Ls5f;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
+    .locals 0
 
-    new-instance v0, Lik3;
+    iput p2, p0, Lx85;->a:I
 
-    const/16 v1, 0x1b
+    iput-object p1, p0, Lx85;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-direct {v0, v1}, Lik3;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lx85;->a:Ls5f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
 
-    if-eqz p0, :cond_4
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iget v0, p0, Lx85;->a:I
 
-    move-result v0
+    iget-object v1, p0, Lx85;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_2
+    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->y0:[Lpl7;
 
-    :cond_0
-    sget-object v0, Lx85;->a:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Ljava/security/MessageDigest;
+    invoke-static {v0}, Lwgd;->a(Landroid/content/Context;)Llne;
 
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    sget-object v1, Li82;->a:Ljava/nio/charset/Charset;
+    return-object v0
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    :pswitch_0
+    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->h2:I
+
+    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result p0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, 0x0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v2, p0}, Ljava/security/MessageDigest;->update([BII)V
+    const-string v0, "-"
 
-    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v0
 
-    array-length v1, p0
+    const-string v1, "."
 
-    :goto_0
-    if-ge v2, v1, :cond_2
+    const-string v2, "_"
 
-    aget-byte v3, p0, v2
+    invoke-static {v0, v1, v2}, Lxwe;->n0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    and-int/lit16 v3, v3, 0xff
+    move-result-object v0
 
-    invoke-static {v3}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    return-object v0
 
-    move-result-object v3
+    nop
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-ne v4, v5, :cond_1
-
-    const/16 v4, 0x30
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_3
-    return-object p0
-
-    :cond_4
-    :goto_2
-    const-string p0, ""
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

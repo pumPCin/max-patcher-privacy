@@ -1,98 +1,29 @@
 .class public final Lfa0;
-.super Ljava/lang/Object;
+.super Lax9;
 .source "SourceFile"
-
-# interfaces
-.implements Lfch;
 
 
 # instance fields
-.field public final a:F
+.field public final a:Lzw9;
 
-.field public final b:F
-
-.field public final c:F
-
-.field public final d:F
+.field public final b:Lyw9;
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
+.method public constructor <init>(Lzw9;Lyw9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lfa0;->a:F
+    iput-object p1, p0, Lfa0;->a:Lzw9;
 
-    iput p2, p0, Lfa0;->b:F
-
-    iput p3, p0, Lfa0;->c:F
-
-    iput p4, p0, Lfa0;->d:F
+    iput-object p2, p0, Lfa0;->b:Lyw9;
 
     return-void
 .end method
 
-.method public static e(Lfch;)Lfa0;
-    .locals 4
-
-    new-instance v0, Lfa0;
-
-    invoke-interface {p0}, Lfch;->c()F
-
-    move-result v1
-
-    invoke-interface {p0}, Lfch;->a()F
-
-    move-result v2
-
-    invoke-interface {p0}, Lfch;->b()F
-
-    move-result v3
-
-    invoke-interface {p0}, Lfch;->d()F
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Lfa0;-><init>(FFFF)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->b:F
-
-    return v0
-.end method
-
-.method public final b()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->c:F
-
-    return v0
-.end method
-
-.method public final c()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->a:F
-
-    return v0
-.end method
-
-.method public final d()F
-    .locals 1
-
-    iget v0, p0, Lfa0;->d:F
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
@@ -103,117 +34,109 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lfa0;
+    instance-of v1, p1, Lax9;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
+
+    check-cast p1, Lax9;
+
+    iget-object v1, p0, Lfa0;->a:Lzw9;
+
+    if-nez v1, :cond_1
+
+    move-object v1, p1
+
+    check-cast v1, Lfa0;
+
+    iget-object v1, v1, Lfa0;->a:Lzw9;
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_1
+    move-object v3, p1
+
+    check-cast v3, Lfa0;
+
+    iget-object v3, v3, Lfa0;->a:Lzw9;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :goto_0
+    iget-object v1, p0, Lfa0;->b:Lyw9;
+
+    if-nez v1, :cond_2
 
     check-cast p1, Lfa0;
 
-    iget v1, p0, Lfa0;->a:F
+    iget-object p1, p1, Lfa0;->b:Lyw9;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-nez p1, :cond_3
 
-    move-result v1
+    goto :goto_1
 
-    iget v3, p1, Lfa0;->a:F
+    :cond_2
+    check-cast p1, Lfa0;
 
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object p1, p1, Lfa0;->b:Lyw9;
 
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lfa0;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lfa0;->b:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lfa0;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lfa0;->c:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lfa0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget p1, p1, Lfa0;->d:F
-
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-ne v1, p1, :cond_1
+    if-eqz p1, :cond_3
 
+    :goto_1
     return v0
 
-    :cond_1
+    :cond_3
     return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lfa0;->a:F
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object v1, p0, Lfa0;->a:Lzw9;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    const v1, 0xf4243
+    move v1, v0
 
-    xor-int/2addr v0, v1
+    goto :goto_0
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lfa0;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lfa0;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lfa0;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
+    :goto_0
+    const v2, 0xf4243
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v2
+
+    iget-object v2, p0, Lfa0;->b:Lyw9;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
     xor-int/2addr v0, v1
 
     return v0
@@ -224,37 +147,21 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableZoomState{zoomRatio="
+    const-string v1, "NetworkConnectionInfo{networkType="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lfa0;->a:F
+    iget-object v1, p0, Lfa0;->a:Lzw9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", maxZoomRatio="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfa0;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", minZoomRatio="
+    const-string v1, ", mobileSubtype="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lfa0;->c:F
+    iget-object v1, p0, Lfa0;->b:Lyw9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", linearZoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lfa0;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, "}"
 

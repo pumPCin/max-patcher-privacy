@@ -1,47 +1,118 @@
-.class public final synthetic Lq18;
+.class public final Lq18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu18;
-
 
 # instance fields
-.field public final synthetic a:Ls18;
+.field public final synthetic a:I
+
+.field public b:I
+
+.field public c:Ljava/lang/Long;
+
+.field public d:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls18;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lq18;->a:Ls18;
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lq18;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a(II)V
+.method public constructor <init>(Lq18;)V
     .locals 1
 
-    iget-object v0, p0, Lq18;->a:Ls18;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Ls18;->t:Lkfd;
+    iput v0, p0, Lq18;->a:I
 
-    if-eqz v0, :cond_0
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, p2}, Lim9;->a(II)Landroid/graphics/Point;
+    .line 3
+    iget v0, p1, Lq18;->b:I
 
-    move-result-object p1
+    iput v0, p0, Lq18;->b:I
 
-    iget p2, p1, Landroid/graphics/Point;->x:I
+    .line 4
+    iget-object v0, p1, Lq18;->c:Ljava/lang/Long;
 
-    iget p1, p1, Landroid/graphics/Point;->y:I
+    iput-object v0, p0, Lq18;->c:Ljava/lang/Long;
 
-    invoke-virtual {v0, p2, p1}, Lkfd;->a(II)V
+    .line 5
+    iget-object p1, p1, Lq18;->d:Ljava/lang/Long;
 
-    :cond_0
+    iput-object p1, p0, Lq18;->d:Ljava/lang/Long;
+
     return-void
+.end method
+
+
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lq18;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LocationProviderRequest{priority="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lq18;->b:I
+
+    invoke-static {v1}, Lbk7;->s(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", interval="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lq18;->c:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fastestInterval="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lq18;->d:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,219 +1,479 @@
-.class public final Lph7;
-.super Ljava/lang/Object;
+.class public abstract Lph7;
+.super Landroid/app/Service;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+
+# static fields
+.field static final DEBUG:Z = false
+
+.field static final TAG:Ljava/lang/String; = "JobIntentService"
+
+.field static final sClassWorkEnqueuer:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Landroid/content/ComponentName;",
+            "Loh7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field static final sLock:Ljava/lang/Object;
 
 
 # instance fields
-.field public final a:F
+.field final mCompatQueue:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Ljh7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final b:F
+.field mCompatWorkEnqueuer:Loh7;
 
-.field public final c:F
+.field mCurProcessor:Lhh7;
 
-.field public final d:F
+.field mDestroyed:Z
 
-.field public final e:Lnxc;
+.field mInterruptIfStopped:Z
 
-.field public final f:I
+.field mJobImpl:Lih7;
 
-.field public final g:Landroid/animation/ValueAnimator;
-
-.field public h:Z
-
-.field public i:F
-
-.field public j:F
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:F
-
-.field public final synthetic n:I
-
-.field public final synthetic o:Lnxc;
-
-.field public final synthetic p:Lth7;
+.field mStopped:Z
 
 
 # direct methods
-.method public constructor <init>(Lth7;Lnxc;IFFFFILnxc;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lph7;->p:Lth7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p8, p0, Lph7;->n:I
+    sput-object v0, Lph7;->sLock:Ljava/lang/Object;
 
-    iput-object p9, p0, Lph7;->o:Lnxc;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 p1, 0x0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-boolean p1, p0, Lph7;->k:Z
+    sput-object v0, Lph7;->sClassWorkEnqueuer:Ljava/util/HashMap;
 
-    iput-boolean p1, p0, Lph7;->l:Z
+    return-void
+.end method
 
-    iput p3, p0, Lph7;->f:I
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p2, p0, Lph7;->e:Lnxc;
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    iput p4, p0, Lph7;->a:F
+    const/4 v0, 0x0
 
-    iput p5, p0, Lph7;->b:F
+    iput-boolean v0, p0, Lph7;->mInterruptIfStopped:Z
 
-    iput p6, p0, Lph7;->c:F
+    iput-boolean v0, p0, Lph7;->mStopped:Z
 
-    iput p7, p0, Lph7;->d:F
+    iput-boolean v0, p0, Lph7;->mDestroyed:Z
 
-    const/4 p1, 0x2
+    const/4 v0, 0x0
 
-    new-array p1, p1, [F
+    iput-object v0, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
 
-    fill-array-data p1, :array_0
+    return-void
+.end method
 
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+.method public static enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
+    .locals 2
 
-    move-result-object p1
+    if-eqz p3, :cond_0
 
-    iput-object p1, p0, Lph7;->g:Landroid/animation/ValueAnimator;
+    .line 2
+    sget-object v0, Lph7;->sLock:Ljava/lang/Object;
 
-    new-instance p3, Lek0;
+    monitor-enter v0
 
-    const/4 p4, 0x5
+    const/4 v1, 0x1
 
-    invoke-direct {p3, p4, p0}, Lek0;-><init>(ILjava/lang/Object;)V
+    .line 3
+    :try_start_0
+    invoke-static {p0, p1, v1, p2}, Lph7;->getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)Loh7;
 
-    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    move-result-object p0
 
-    iget-object p2, p2, Lnxc;->a:Landroid/view/View;
+    .line 4
+    invoke-virtual {p0, p2}, Loh7;->a(I)V
 
-    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
+    .line 5
+    check-cast p0, Lnh7;
 
-    invoke-virtual {p1, p0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    .line 6
+    iget-object p1, p0, Lnh7;->d:Landroid/app/job/JobScheduler;
 
-    const/4 p1, 0x0
+    iget-object p0, p0, Lnh7;->c:Landroid/app/job/JobInfo;
 
-    iput p1, p0, Lph7;->m:F
+    new-instance p2, Landroid/app/job/JobWorkItem;
+
+    invoke-direct {p2, p3}, Landroid/app/job/JobWorkItem;-><init>(Landroid/content/Intent;)V
+
+    invoke-virtual {p1, p0, p2}, Landroid/app/job/JobScheduler;->enqueue(Landroid/app/job/JobInfo;Landroid/app/job/JobWorkItem;)I
+
+    .line 7
+    monitor-exit v0
 
     return-void
 
-    nop
+    :catchall_0
+    move-exception p0
 
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    .line 8
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "work must not be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/Class<",
+            "*>;I",
+            "Landroid/content/Intent;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/content/ComponentName;
+
+    invoke-direct {v0, p0, p1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-static {p0, v0, p2, p3}, Lph7;->enqueueWork(Landroid/content/Context;Landroid/content/ComponentName;ILandroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method public static getWorkEnqueuer(Landroid/content/Context;Landroid/content/ComponentName;ZI)Loh7;
+    .locals 2
+
+    sget-object v0, Lph7;->sClassWorkEnqueuer:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Loh7;
+
+    if-nez v1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    new-instance p2, Lnh7;
+
+    invoke-direct {p2, p0, p1, p3}, Lnh7;-><init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Can\'t be here without a job id"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/animation/Animator;)V
-    .locals 1
+.method public abstract dequeueWork()Lkh7;
+.end method
 
-    iget-boolean p1, p0, Lph7;->l:Z
+.method public doStopCurrentWork()Z
+    .locals 2
 
+    iget-object v0, p0, Lph7;->mCurProcessor:Lhh7;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, p0, Lph7;->mInterruptIfStopped:Z
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    :cond_0
     const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lph7;->mStopped:Z
+
+    invoke-virtual {p0}, Lph7;->onStopCurrentWork()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public ensureProcessorRunningLocked(Z)V
+    .locals 2
+
+    iget-object p1, p0, Lph7;->mCurProcessor:Lhh7;
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lph7;->e:Lnxc;
+    new-instance p1, Lhh7;
 
-    invoke-virtual {p1, v0}, Lnxc;->u(Z)V
+    invoke-direct {p1, p0}, Lhh7;-><init>(Lph7;)V
+
+    iput-object p1, p0, Lph7;->mCurProcessor:Lhh7;
+
+    sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     :cond_0
-    iput-boolean v0, p0, Lph7;->l:Z
-
     return-void
 .end method
 
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public isStopped()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lph7;->mStopped:Z
+
+    return v0
+.end method
+
+.method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    iget-object p1, p0, Lph7;->mJobImpl:Lih7;
 
-    iput p1, p0, Lph7;->m:F
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lih7;->a()Landroid/os/IBinder;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public onCreate()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/app/Service;->onCreate()V
+
+    new-instance v0, Lmh7;
+
+    invoke-direct {v0, p0}, Lmh7;-><init>(Lph7;)V
+
+    iput-object v0, p0, Lph7;->mJobImpl:Lih7;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lph7;->mCompatWorkEnqueuer:Loh7;
 
     return-void
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
+.method public onDestroy()V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lph7;->a(Landroid/animation/Animator;)V
+    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    iget-boolean p1, p0, Lph7;->k:Z
+    iget-object v0, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    monitor-enter v0
+
+    const/4 v1, 0x1
+
+    :try_start_0
+    iput-boolean v1, p0, Lph7;->mDestroyed:Z
+
+    iget-object v1, p0, Lph7;->mCompatWorkEnqueuer:Loh7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :cond_0
+    return-void
+.end method
+
+.method public abstract onHandleWork(Landroid/content/Intent;)V
+.end method
+
+.method public onStartCommand(Landroid/content/Intent;II)I
+    .locals 2
+
+    iget-object p2, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Lph7;->mCompatWorkEnqueuer:Loh7;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    monitor-enter p2
+
+    :try_start_0
+    iget-object v0, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    new-instance v1, Ljh7;
 
     if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Landroid/content/Intent;
+
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+
+    :goto_0
+    invoke-direct {v1, p0, p1, p3}, Ljh7;-><init>(Lph7;Landroid/content/Intent;I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lph7;->ensureProcessorRunningLocked(Z)V
+
+    monitor-exit p2
+
+    const/4 p1, 0x3
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_1
+    const/4 p1, 0x2
+
+    return p1
+.end method
+
+.method public onStopCurrentWork()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public processorFinished()V
+    .locals 2
+
+    iget-object v0, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_2
+
+    monitor-enter v0
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iput-object v1, p0, Lph7;->mCurProcessor:Lhh7;
+
+    iget-object v1, p0, Lph7;->mCompatQueue:Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lph7;->ensureProcessorRunningLocked(Z)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
 
     goto :goto_1
 
     :cond_0
-    iget p1, p0, Lph7;->n:I
+    iget-boolean v1, p0, Lph7;->mDestroyed:Z
 
-    iget-object v0, p0, Lph7;->o:Lnxc;
+    if-nez v1, :cond_1
 
-    iget-object v1, p0, Lph7;->p:Lth7;
+    iget-object v1, p0, Lph7;->mCompatWorkEnqueuer:Loh7;
 
-    if-gtz p1, :cond_1
-
-    iget-object p1, v1, Lth7;->B0:Lsh7;
-
-    iget-object v2, v1, Lth7;->G0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1, v2, v0}, Lsh7;->a(Landroidx/recyclerview/widget/RecyclerView;Lnxc;)V
-
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_1
-    iget-object v2, v1, Lth7;->a:Ljava/util/ArrayList;
+    :goto_0
+    monitor-exit v0
 
-    iget-object v3, v0, Lnxc;->a:Landroid/view/View;
+    return-void
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lph7;->h:Z
-
-    if-lez p1, :cond_2
-
-    iget-object v2, v1, Lth7;->G0:Landroidx/recyclerview/widget/RecyclerView;
-
-    new-instance v3, Lsg6;
-
-    invoke-direct {v3, v1, p0, p1}, Lsg6;-><init>(Lth7;Lph7;I)V
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    throw v1
 
     :cond_2
-    :goto_0
-    iget-object p1, v1, Lth7;->L0:Landroid/view/View;
-
-    iget-object v0, v0, Lnxc;->a:Landroid/view/View;
-
-    if-ne p1, v0, :cond_3
-
-    invoke-virtual {v1, v0}, Lth7;->r(Landroid/view/View;)V
-
-    :cond_3
-    :goto_1
     return-void
 .end method
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+.method public setInterruptIfStopped(Z)V
     .locals 0
 
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    iput-boolean p1, p0, Lph7;->mInterruptIfStopped:Z
 
     return-void
 .end method

@@ -1,77 +1,59 @@
 .class public final Lcf2;
-.super Lr3c;
+.super Lti0;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final x(Lww7;)V
-    .locals 6
+# instance fields
+.field public final b:J
 
-    check-cast p1, Lzzb;
+.field public final c:Ljava/lang/Long;
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
 
-    check-cast v0, Laf2;
+# direct methods
+.method public constructor <init>(JLjava/lang/Long;)V
+    .locals 0
 
-    iget-object p1, p1, Lzzb;->a:Lre2;
+    invoke-direct {p0}, Lti0;-><init>()V
 
-    iget-object v1, p1, Lre2;->e:Ljava/lang/String;
+    iput-wide p1, p0, Lcf2;->b:J
 
-    invoke-virtual {v0, v1}, Laf2;->setLink(Ljava/lang/String;)V
-
-    iget-boolean v1, p1, Lre2;->f:Z
-
-    invoke-virtual {v0, v1}, Laf2;->setLoading(Z)V
-
-    iget-object v1, p1, Lre2;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Laf2;->setChatTitle(Ljava/lang/String;)V
-
-    iget-wide v1, p1, Lre2;->b:J
-
-    iget-object v3, p1, Lre2;->a:Ljava/lang/String;
-
-    iget-object v4, p1, Lre2;->c:Ljava/lang/CharSequence;
-
-    iget-object v5, v0, Laf2;->M0:Llha;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v5, v3, v1, v4}, Llha;->n(Llha;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Lre2;->g:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-boolean p1, p1, Lre2;->h:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v2
-
-    :goto_0
-    iget-object v1, v0, Laf2;->P0:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v2, 0x8
-
-    :goto_1
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Laf2;->u()V
+    iput-object p3, p0, Lcf2;->c:Ljava/lang/Long;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    invoke-super {p0}, Lti0;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "ChatLastReactionUpdatedEvent{chatId="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lcf2;->b:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, "\'lastReactionMessageId="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcf2;->c:Ljava/lang/Long;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "\', lastReaction=null}"
+
+    invoke-static {v1, v2, v0}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

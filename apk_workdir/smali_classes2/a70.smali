@@ -1,23 +1,52 @@
 .class public final La70;
-.super Li9f;
+.super Lv7f;
 .source "SourceFile"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 2
 
-    sget-object v0, Ln0b;->O0:Ln0b;
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Li9f;-><init>(Ln0b;)V
+    if-eq p1, v0, :cond_1
 
-    const-string v0, "trackId"
+    const/4 v0, 0x2
 
-    invoke-virtual {p0, v0, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p1, v0, :cond_0
 
-    const-string p1, "verifyCode"
+    goto :goto_0
 
-    invoke-virtual {p0, p1, p2}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object p1
+
+    new-instance v0, Ld3b;
+
+    const-string v1, "reason"
+
+    invoke-direct {v0, v1, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0}, [Ld3b;
+
+    move-result-object p1
+
+    invoke-static {p1}, Llbd;->b([Ld3b;)Lfs9;
+
+    move-result-object p1
+
+    const/4 v0, 0x3
+
+    const-string v1, "registration_failed"
+
+    invoke-direct {p0, v1, v0, p1}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method

@@ -11,26 +11,26 @@
     d2 = {
         "Lkotlinx/coroutines/internal/ThreadState;",
         "",
-        "Lw24;",
+        "Lf24;",
         "context",
         "",
         "n",
         "<init>",
-        "(Lw24;I)V",
-        "Llgf;",
+        "(Lf24;I)V",
+        "Laff;",
         "element",
         "value",
-        "Loyf;",
+        "Laxf;",
         "append",
-        "(Llgf;Ljava/lang/Object;)V",
+        "(Laff;Ljava/lang/Object;)V",
         "restore",
-        "(Lw24;)V",
-        "Lw24;",
+        "(Lf24;)V",
+        "Lf24;",
         "",
         "values",
         "[Ljava/lang/Object;",
         "elements",
-        "[Llgf;",
+        "[Laff;",
         "i",
         "I",
         "kotlinx-coroutines-core"
@@ -46,13 +46,13 @@
 
 
 # instance fields
-.field public final context:Lw24;
+.field public final context:Lf24;
 
-.field private final elements:[Llgf;
+.field private final elements:[Laff;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "[",
-            "Llgf;"
+            "Laff;"
         }
     .end annotation
 .end field
@@ -63,32 +63,32 @@
 
 
 # direct methods
-.method public constructor <init>(Lw24;I)V
+.method public constructor <init>(Lf24;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadState;->context:Lw24;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadState;->context:Lf24;
 
     new-array p1, p2, [Ljava/lang/Object;
 
     iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadState;->values:[Ljava/lang/Object;
 
-    new-array p1, p2, [Llgf;
+    new-array p1, p2, [Laff;
 
-    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Llgf;
+    iput-object p1, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Laff;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final append(Llgf;Ljava/lang/Object;)V
+.method public final append(Laff;Ljava/lang/Object;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Llgf;",
+            "Laff;",
             "Ljava/lang/Object;",
             ")V"
         }
@@ -100,7 +100,7 @@
 
     aput-object p2, v0, v1
 
-    iget-object p2, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Llgf;
+    iget-object p2, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Laff;
 
     add-int/lit8 v0, v1, 0x1
 
@@ -111,10 +111,10 @@
     return-void
 .end method
 
-.method public final restore(Lw24;)V
+.method public final restore(Lf24;)V
     .locals 4
 
-    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Llgf;
+    iget-object v0, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Laff;
 
     array-length v0, v0
 
@@ -125,7 +125,7 @@
     :goto_0
     add-int/lit8 v1, v0, -0x1
 
-    iget-object v2, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Llgf;
+    iget-object v2, p0, Lkotlinx/coroutines/internal/ThreadState;->elements:[Laff;
 
     aget-object v2, v2, v0
 
@@ -133,7 +133,7 @@
 
     aget-object v0, v3, v0
 
-    invoke-interface {v2, p1, v0}, Llgf;->restoreThreadContext(Lw24;Ljava/lang/Object;)V
+    invoke-interface {v2, p1, v0}, Laff;->restoreThreadContext(Lf24;Ljava/lang/Object;)V
 
     if-gez v1, :cond_0
 

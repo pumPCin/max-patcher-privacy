@@ -87,7 +87,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;-><init>(Laf4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->Companion:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;
 
@@ -210,7 +210,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->name:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -265,7 +265,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->deviceType:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
 
-    invoke-static {p1, v0}, Lhs;->V([Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lvs;->B([Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

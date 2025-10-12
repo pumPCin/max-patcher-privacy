@@ -1,19 +1,23 @@
 .class public final Lm90;
-.super Lp63;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lx80;
+.field public final a:Lli9;
+
+.field public final b:Lpa0;
 
 
 # direct methods
-.method public constructor <init>(Lx80;)V
+.method public constructor <init>(Lli9;Lpa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm90;->a:Lx80;
+    iput-object p1, p0, Lm90;->a:Lli9;
+
+    iput-object p2, p0, Lm90;->b:Lpa0;
 
     return-void
 .end method
@@ -21,26 +25,34 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lp63;
+    instance-of v0, p1, Lm90;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lp63;
+    check-cast p1, Lm90;
 
-    move-object v0, p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Lm90;
+    iget-object v0, p1, Lm90;->a:Lli9;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p1, Lm90;->b:Lpa0;
 
-    sget-object v0, Lo63;->a:Lo63;
+    iget-object v1, p0, Lm90;->a:Lli9;
+
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lyob;->a:Lyob;
 
     invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -48,13 +60,9 @@
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lm90;
+    iget-object v0, p0, Lm90;->b:Lpa0;
 
-    iget-object p1, p1, Lm90;->a:Lx80;
-
-    iget-object v0, p0, Lm90;->a:Lx80;
-
-    invoke-virtual {v0, p1}, Lx80;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lpa0;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -72,25 +80,37 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    sget-object v0, Lo63;->a:Lo63;
+    const v0, 0xf4243
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    mul-int v1, v0, v0
+
+    iget-object v2, p0, Lm90;->a:Lli9;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    sget-object v2, Lyob;->a:Lyob;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v1, v2
+
+    mul-int/2addr v1, v0
+
+    iget-object v0, p0, Lm90;->b:Lpa0;
+
+    invoke-virtual {v0}, Lpa0;->hashCode()I
 
     move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lm90;->a:Lx80;
-
-    invoke-virtual {v1}, Lx80;->hashCode()I
-
-    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -102,19 +122,27 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ClientInfo{clientType="
+    const-string v1, "Event{code=null, payload="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lo63;->a:Lo63;
+    iget-object v1, p0, Lm90;->a:Lli9;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", androidClientInfo="
+    const-string v1, ", priority="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lm90;->a:Lx80;
+    sget-object v1, Lyob;->a:Lyob;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", productData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lm90;->b:Lpa0;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,60 +1,111 @@
-.class public final synthetic Lqa9;
-.super Ljava/lang/Object;
+.class public final Lqa9;
+.super Lscout/Component;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+# static fields
+.field public static final a:Lqa9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lqa9;->a:I
+    new-instance v0, Lqa9;
 
-    iput-object p1, p0, Lqa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    sget-object v1, Lvb9;->a:Lhdd;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lscout/Component;-><init>(Lhdd;)V
+
+    sput-object v0, Lqa9;->a:Lqa9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
+.method public final a()Lw67;
+    .locals 1
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lo5;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lw67;
+
+    return-object v0
+.end method
+
+.method public final b()Lead;
+    .locals 5
+
+    new-instance v0, Lead;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v1
+
+    const-class v2, Lkdd;
+
+    invoke-virtual {v1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lkdd;
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v2
+
+    const-class v3, Le7f;
+
+    invoke-virtual {v2, v3}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le7f;
+
+    check-cast v2, Lmka;
+
+    invoke-virtual {v2}, Lmka;->b()Lh24;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lo5b;
+
+    invoke-virtual {v3, v4}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lo5b;
+
+    invoke-direct {v0, v1, v2, v3}, Lead;-><init>(Lkdd;Lh24;Lo5b;)V
+
+    return-object v0
+.end method
+
+.method public final getDispatchers()Le7f;
     .locals 2
 
-    iget v0, p0, Lqa9;->a:I
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Lqa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const-class v1, Le7f;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->I0:Lxkf;
+    move-result-object v0
 
-    return-void
+    check-cast v0, Le7f;
 
-    :pswitch_0
-    iget-object v0, p0, Lqa9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->I0:Lxkf;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

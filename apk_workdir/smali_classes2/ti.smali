@@ -1,11 +1,3 @@
-.class public abstract Lti;
-.super Ldf1;
+.class public interface abstract Lti;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract e(J)V
-.end method
-
-.method public abstract f(III)V
-.end method

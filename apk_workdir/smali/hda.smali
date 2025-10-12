@@ -1,97 +1,70 @@
 .class public final Lhda;
-.super Ljda;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La22;
 
 
 # instance fields
-.field public final Z:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:Lada;
+
+.field public final synthetic b:Lida;
 
 
 # direct methods
-.method public constructor <init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
+.method public constructor <init>(Lida;Lada;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Ljda;-><init>(Lksd;JLjava/util/concurrent/TimeUnit;Lked;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object p1, p0
+    iput-object p1, p0, Lhda;->b:Lida;
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p2, p1, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-object p2, p0, Lhda;->a:Lada;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final cancel()V
+    .locals 4
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lhda;->b:Lida;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, v0, Lida;->b:Lfs;
 
-    move-result-object v0
+    iget-object v2, p0, Lhda;->a:Lada;
 
-    iget-object v1, p0, Ljda;->a:Lksd;
+    invoke-virtual {v1, v2}, Lfs;->remove(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Lida;->c:Lada;
 
-    invoke-virtual {v1, v0}, Lksd;->f(Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v1}, Lksd;->b()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final run()V
-    .locals 3
-
-    iget-object v0, p0, Lhda;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    invoke-static {v1, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget-object v2, p0, Ljda;->a:Lksd;
+    const/4 v3, 0x0
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v2, v1}, Lksd;->f(Ljava/lang/Object;)V
+    invoke-virtual {v2}, Lada;->a()V
+
+    iput-object v3, v0, Lida;->c:Lada;
 
     :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    iget-object v0, v2, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result v0
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_1
+    iget-object v0, v2, Lada;->c:Lye6;
 
-    invoke-virtual {v2}, Lksd;->b()V
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
     :cond_1
+    iput-object v3, v2, Lada;->c:Lye6;
+
     return-void
 .end method

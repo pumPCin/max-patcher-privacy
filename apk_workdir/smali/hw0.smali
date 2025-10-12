@@ -1,351 +1,261 @@
 .class public final Lhw0;
-.super Ljava/io/FilterOutputStream;
+.super Ljava/io/FilterInputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final b:Ljava/io/OutputStream;
-
-.field public c:Ljava/nio/ByteOrder;
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/OutputStream;)V
-    .locals 1
+.method public constructor <init>(Ljava/io/InputStream;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    iput v0, p0, Lhw0;->a:I
+    const-wide/16 v0, -0x1
 
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    iput-wide v0, p0, Lhw0;->b:J
 
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+    const-wide/32 v0, 0x100001
 
-    iput-object p1, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    iput-object v0, p0, Lhw0;->c:Ljava/nio/ByteOrder;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/io/OutputStream;Ljava/nio/ByteOrder;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lhw0;->a:I
-
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
-
-    iput-object p1, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    iput-object p2, p0, Lhw0;->c:Ljava/nio/ByteOrder;
+    iput-wide v0, p0, Lhw0;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(I)V
-    .locals 1
+.method public final available()I
+    .locals 4
 
-    iget-object v0, p0, Lhw0;->b:Ljava/io/OutputStream;
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
 
-    return-void
+    move-result v0
+
+    int-to-long v0, v0
+
+    iget-wide v2, p0, Lhw0;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    return v0
 .end method
 
-.method public final d(I)V
-    .locals 3
+.method public final declared-synchronized mark(I)V
+    .locals 2
 
-    iget v0, p0, Lhw0;->a:I
+    monitor-enter p0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    iget-object v0, p0, Lhw0;->c:Ljava/nio/ByteOrder;
+    invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    iget-wide v0, p0, Lhw0;->a:J
 
-    iget-object v2, p0, Lhw0;->b:Ljava/io/OutputStream;
+    iput-wide v0, p0, Lhw0;->b:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ne v0, v1, :cond_0
+    monitor-exit p0
 
-    and-int/lit16 v0, p1, 0xff
+    return-void
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    :catchall_0
+    move-exception p1
 
-    ushr-int/lit8 v0, p1, 0x8
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    and-int/lit16 v0, v0, 0xff
+    throw p1
+.end method
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+.method public final read()I
+    .locals 5
 
-    ushr-int/lit8 v0, p1, 0x10
+    .line 1
+    iget-wide v0, p0, Lhw0;->a:J
 
-    and-int/lit16 v0, v0, 0xff
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    cmp-long v0, v0, v2
 
-    ushr-int/lit8 p1, p1, 0x18
+    const/4 v1, -0x1
 
-    and-int/lit16 p1, p1, 0xff
+    if-nez v0, :cond_0
 
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    return v1
+
+    .line 2
+    :cond_0
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->read()I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_1
+
+    .line 3
+    iget-wide v1, p0, Lhw0;->a:J
+
+    const-wide/16 v3, 0x1
+
+    sub-long/2addr v1, v3
+
+    iput-wide v1, p0, Lhw0;->a:J
+
+    :cond_1
+    return v0
+.end method
+
+.method public final read([BII)I
+    .locals 6
+
+    .line 4
+    iget-wide v0, p0, Lhw0;->a:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    const/4 v3, -0x1
+
+    if-nez v2, :cond_0
+
+    return v3
+
+    :cond_0
+    int-to-long v4, p3
+
+    .line 5
+    invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    long-to-int p3, v0
+
+    .line 6
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
+
+    move-result p1
+
+    if-eq p1, v3, :cond_1
+
+    .line 7
+    iget-wide p2, p0, Lhw0;->a:J
+
+    int-to-long v0, p1
+
+    sub-long/2addr p2, v0
+
+    iput-wide p2, p0, Lhw0;->a:J
+
+    :cond_1
+    return p1
+.end method
+
+.method public final declared-synchronized reset()V
+    .locals 4
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lhw0;->b:J
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
+
+    iget-wide v0, p0, Lhw0;->b:J
+
+    iput-wide v0, p0, Lhw0;->a:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    :try_start_1
+    new-instance v0, Ljava/io/IOException;
 
-    if-ne v0, v1, :cond_1
+    const-string v1, "Mark not set"
 
-    ushr-int/lit8 v0, p1, 0x18
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    throw v0
 
     :cond_1
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "Mark not supported"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
     :goto_0
-    return-void
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :pswitch_0
-    iget-object v0, p0, Lhw0;->c:Ljava/nio/ByteOrder;
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    iget-object v2, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    if-ne v0, v1, :cond_2
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x18
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_3
-
-    ushr-int/lit8 v0, p1, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method
 
-.method public final i(S)V
-    .locals 3
+.method public final skip(J)J
+    .locals 2
 
-    iget v0, p0, Lhw0;->a:I
+    iget-wide v0, p0, Lhw0;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
-    iget-object v0, p0, Lhw0;->c:Ljava/nio/ByteOrder;
+    move-result-wide p1
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    iget-object v0, p0, Ljava/io/FilterInputStream;->in:Ljava/io/InputStream;
 
-    iget-object v2, p0, Lhw0;->b:Ljava/io/OutputStream;
+    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
-    if-ne v0, v1, :cond_0
+    move-result-wide p1
 
-    and-int/lit16 v0, p1, 0xff
+    iget-wide v0, p0, Lhw0;->a:J
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    sub-long/2addr v0, p1
 
-    ushr-int/lit8 p1, p1, 0x8
+    iput-wide v0, p0, Lhw0;->a:J
 
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_1
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lhw0;->c:Ljava/nio/ByteOrder;
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    iget-object v2, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    if-ne v0, v1, :cond_2
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x8
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_3
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([B)V
-    .locals 1
-
-    iget v0, p0, Lhw0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    iget v0, p0, Lhw0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lhw0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide p1
 .end method

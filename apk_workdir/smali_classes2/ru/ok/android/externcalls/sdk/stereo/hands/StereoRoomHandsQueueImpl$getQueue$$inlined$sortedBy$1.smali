@@ -88,7 +88,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lbf0;->f(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
     move-result p1
 

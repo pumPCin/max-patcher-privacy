@@ -1,22 +1,23 @@
 .class public final Lq0e;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lu0e;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static final c:Lq0e;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq0e;
 
-    iput-object p1, p0, Lq0e;->a:Ljava/lang/String;
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lq0e;->c:Lq0e;
 
     return-void
 .end method

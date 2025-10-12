@@ -11,14 +11,18 @@
 
 .field public final synthetic b:Ljava/lang/Object;
 
+.field public final synthetic c:Ljava/lang/Object;
+
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    iput p1, p0, Lyz0;->a:I
+    iput p2, p0, Lyz0;->a:I
 
-    iput-object p2, p0, Lyz0;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lyz0;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lyz0;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,7 +32,7 @@
 
 # virtual methods
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 13
 
     iget v0, p0, Lyz0;->a:I
 
@@ -36,377 +40,518 @@
 
     iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
 
-    check-cast v0, Ly60;
-
-    check-cast p1, Lx60;
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, v0, Ly60;->c:Lx60;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lwld;
-
-    check-cast p1, Ljava/lang/Long;
-
-    check-cast v0, Lese;
-
-    iget-wide v0, v0, Lese;->o:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljgb;
-
-    check-cast p1, Ljava/util/Set;
-
-    new-instance v1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v1, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lupe;
-
-    check-cast p1, Lupe;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lu4b;
-
-    check-cast p1, Lu4b;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lt38;
-
-    check-cast p1, Lt38;
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lxn8;
-
-    check-cast p1, Lxn8;
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lqm8;
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-interface {v0}, Lqm8;->w()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_7
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcg2;
-
-    check-cast p1, Lcg2;
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lq11;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-nez p1, :cond_2
-
-    iget-object p1, v0, Lq11;->a:Lbt1;
-
-    new-instance v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;-><init>()V
-
-    iget-object v1, p1, Lbt1;->a:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->setContext(Landroid/content/Context;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lbt1;->c:Lv6c;
-
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->setProximityTracker(Lru/ok/android/externcalls/sdk/audio/ProximityTracker;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    move-result-object v0
-
-    new-instance v1, Lav;
-
-    iget-object v2, p1, Lbt1;->b:Lbp7;
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const-class v4, Ly21;
-
-    const-string v6, "isVideoEnabled"
-
-    const-string v7, "isVideoEnabled()Z"
-
-    invoke-direct/range {v1 .. v7}, Lav;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Lh8d;
-
-    const/16 v3, 0x17
-
-    invoke-direct {v2, v3, v1}, Lh8d;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->setVideoTracker(Lru/ok/android/externcalls/sdk/audio/VideoTracker;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    move-result-object v0
-
-    new-instance v1, Lat1;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0, v1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->setDisabledAudioDeviceUsagePolicy(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lbt1;->d:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsia;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v1, p1, Lbt1;->e:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lktd;
-
-    check-cast v1, Lgjd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->debug-mode:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v3, 0x0
-
-    int-to-long v3, v3
-
-    invoke-virtual {v1, v2, v3, v4}, Lgjd;->n(Ljava/lang/Enum;J)J
-
-    move-result-wide v1
-
-    long-to-int v1, v1
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_1
-
-    iget-object p1, p1, Lbt1;->f:Ls5f;
-
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lzs1;
-
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->setLogger(Lru/ok/android/externcalls/sdk/audio/Logger;)Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;
-
-    :cond_1
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$Builder;->build()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    move-result-object p1
-
-    :cond_2
-    return-object p1
-
-    :pswitch_9
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
-    check-cast v0, Lch1;
-
-    check-cast p1, Lgs;
-
-    iget-wide v0, v0, Lch1;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lgs;->remove(Ljava/lang/Object;)Z
-
-    return-object p1
-
-    :pswitch_a
-    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
-
     check-cast v0, Ljava/util/List;
 
-    check-cast p1, Lgs;
+    iget-object v1, p0, Lyz0;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lgs;->isEmpty()Z
+    check-cast v1, Llse;
 
-    move-result v1
+    check-cast p1, Ljava/util/List;
 
-    if-eqz v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance p1, Ljava/util/ArrayList;
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Lg93;->V(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Ly83;->O(Ljava/lang/Iterable;I)I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {p1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :goto_1
+    :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    check-cast v2, Lvoe;
 
-    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ln5b;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lch1;
+    invoke-static {v1, v2}, Llse;->r(Llse;Lvoe;)Lqpe;
 
     move-result-object v2
 
-    iget-wide v2, v2, Lch1;->a:J
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_0
+    return-object p1
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :pswitch_0
+    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
 
-    goto :goto_1
+    check-cast v0, Lx4f;
 
-    :cond_4
-    new-instance v0, Lgs;
+    iget-object v1, p0, Lyz0;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v1, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0, v2}, Lgs;-><init>(I)V
+    check-cast p1, Ljava/util/Set;
 
-    new-instance v2, Lzr;
+    iget-object p1, v0, Lx4f;->b:Ljava/lang/Object;
 
-    invoke-direct {v2, p1}, Lzr;-><init>(Lgs;)V
+    check-cast p1, Ljava/util/Set;
 
-    :cond_5
-    :goto_2
-    invoke-virtual {v2}, Lzr;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    invoke-virtual {v2}, Lzr;->next()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    move-object v3, p1
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast v3, Ljava/lang/Number;
+    move-result v0
 
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    if-eqz v0, :cond_1
 
-    move-result-wide v3
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object v3
+    check-cast v0, Ljava/lang/Number;
 
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    move-result v3
+    move-result-wide v2
 
-    if-nez v3, :cond_5
+    new-instance v0, Lcfb;
 
-    invoke-virtual {v0, p1}, Lgs;->add(Ljava/lang/Object;)Z
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    invoke-direct {v0, v4, v5, v2, v3}, Lcfb;-><init>(IIJ)V
+
+    invoke-interface {v1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_1
+    return-object v1
+
+    :pswitch_1
+    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lhh9;
+
+    iget-object v1, p0, Lyz0;->c:Ljava/lang/Object;
+
+    check-cast v1, Lr82;
+
+    check-cast p1, Lih9;
+
+    iget-boolean p1, v0, Lhh9;->b:Z
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_2
+
+    move v5, v2
 
     goto :goto_2
 
-    :cond_6
-    move-object p1, v0
+    :cond_2
+    const/4 v3, 0x4
 
+    move v5, v3
+
+    :goto_2
+    if-eqz p1, :cond_4
+
+    iget-object v1, v1, Lr82;->b:Luc2;
+
+    iget v1, v1, Luc2;->m:I
+
+    if-lez v1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    move v7, v2
+
+    goto :goto_4
+
+    :cond_4
     :goto_3
+    const/4 v1, 0x0
+
+    move v7, v1
+
+    :goto_4
+    xor-int/lit8 v6, p1, 0x1
+
+    iget-wide v10, v0, Lhh9;->a:J
+
+    new-instance v4, Lih9;
+
+    const-wide/16 v8, 0x0
+
+    const/16 v12, 0x10
+
+    invoke-direct/range {v4 .. v12}, Lih9;-><init>(IZZJJI)V
+
+    return-object v4
+
+    :pswitch_2
+    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object v1, p0, Lyz0;->c:Ljava/lang/Object;
+
+    check-cast v1, Lw46;
+
+    check-cast p1, Ljava/util/Set;
+
+    new-instance p1, Lxs;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v2, v0}, Lxs;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, La92;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v0, v2, v1}, La92;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Lgqd;->W(Lxpd;Lvd6;)Ler5;
+
+    move-result-object p1
+
+    sget-object v0, Lr46;->a:Lr46;
+
+    invoke-interface {p1}, Lxpd;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    sget-object p1, Ly65;->a:Ly65;
+
+    goto :goto_6
+
+    :cond_5
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object p1
+
+    goto :goto_6
+
+    :cond_6
+    new-instance v2, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v2}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    :goto_5
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_5
+
+    :cond_7
+    move-object p1, v2
+
+    :goto_6
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lyz0;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;
+
+    iget-object v1, p0, Lyz0;->c:Ljava/lang/Object;
+
+    check-cast v1, Lj01;
+
+    check-cast p1, Lus;
+
+    sget-object v2, Lr28;->o:Lr28;
+
+    iget-object v3, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->participantsIds:Ljava/util/List;
+
+    new-instance v4, Lus;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Lus;-><init>(I)V
+
+    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_7
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_8
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    invoke-static {v6}, Le4b;->a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ldh1;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lus;->add(Ljava/lang/Object;)Z
+
+    goto :goto_7
+
+    :cond_8
+    iget-boolean v3, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasAdded:Z
+
+    const/4 v6, 0x0
+
+    const-string v7, "CallAdminSettingsController"
+
+    if-eqz v3, :cond_e
+
+    sget-object v0, Lyt3;->n:Lhoa;
+
+    if-nez v0, :cond_9
+
+    goto :goto_8
+
+    :cond_9
+    invoke-virtual {v0, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_a
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v8, "Waiting room added new users="
+
+    invoke-direct {v3, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v7, v3, v6}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_a
+    :goto_8
+    iget-object v1, v1, Lj01;->s0:Lhne;
+
+    :cond_b
+    invoke-virtual {v1}, Lhne;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lna;
+
+    new-instance v8, Lus;
+
+    invoke-direct {v8, v5}, Lus;-><init>(I)V
+
+    new-instance v2, Lns;
+
+    invoke-direct {v2, v4}, Lns;-><init>(Lus;)V
+
+    :cond_c
+    :goto_9
+    invoke-virtual {v2}, Lns;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_d
+
+    invoke-virtual {v2}, Lns;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    move-object v7, v3
+
+    check-cast v7, Ldh1;
+
+    iget-wide v9, v7, Ldh1;->a:J
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v7
+
+    invoke-virtual {p1, v7}, Lus;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_c
+
+    invoke-virtual {v8, v3}, Lus;->add(Ljava/lang/Object;)Z
+
+    goto :goto_9
+
+    :cond_d
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v9
+
+    const/4 v11, 0x1
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v6 .. v11}, Lna;->a(Lna;Ljava/util/LinkedHashMap;Lus;JI)Lna;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    goto :goto_a
+
+    :cond_e
+    iget-boolean p1, v0, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipantsUpdate;->hasRemoved:Z
+
+    if-eqz p1, :cond_10
+
+    sget-object p1, Lyt3;->n:Lhoa;
+
+    if-nez p1, :cond_f
+
+    goto :goto_a
+
+    :cond_f
+    invoke-virtual {p1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Waiting room remove users="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v7, v0, v6}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_a
+
+    :cond_10
+    sget-object p1, Lyt3;->n:Lhoa;
+
+    if-nez p1, :cond_11
+
+    goto :goto_a
+
+    :cond_11
+    invoke-virtual {p1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Waiting room update users="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v2, v7, v0, v6}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_12
+    :goto_a
+    new-instance p1, Lus;
+
+    invoke-direct {p1, v5}, Lus;-><init>(I)V
+
+    new-instance v0, Lns;
+
+    invoke-direct {v0, v4}, Lns;-><init>(Lus;)V
+
+    :goto_b
+    invoke-virtual {v0}, Lns;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    invoke-virtual {v0}, Lns;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldh1;
+
+    iget-wide v1, v1, Ldh1;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lus;->add(Ljava/lang/Object;)Z
+
+    goto :goto_b
+
+    :cond_13
     return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1

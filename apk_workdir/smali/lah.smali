@@ -1,79 +1,72 @@
-.class public final Llah;
+.class public final synthetic Llah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lji4;
 
-.field public final c:Lzd5;
+.field public final synthetic c:Lvs1;
 
-.field public final d:Lbah;
-
-.field public final e:Ljava/util/Set;
-
-.field public final f:J
-
-.field public final g:I
+.field public final synthetic o:Lw90;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lzd5;Lbah;Ljava/util/Set;JI)V
+.method public synthetic constructor <init>(Lji4;Lvs1;Lw90;I)V
     .locals 0
 
+    iput p4, p0, Llah;->a:I
+
+    iput-object p1, p0, Llah;->b:Lji4;
+
+    iput-object p2, p0, Llah;->c:Lvs1;
+
+    iput-object p3, p0, Llah;->o:Lw90;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llah;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Llah;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Llah;->c:Lzd5;
-
-    iput-object p4, p0, Llah;->d:Lbah;
-
-    iput-object p5, p0, Llah;->e:Ljava/util/Set;
-
-    iput-wide p6, p0, Llah;->f:J
-
-    iput p8, p0, Llah;->g:I
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lzd5;Landroidx/work/WorkRequest;)V
-    .locals 10
 
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+# virtual methods
+.method public final run()V
+    .locals 3
 
-    move-result-object v0
+    iget v0, p0, Llah;->a:I
 
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v2
+    iget-object v0, p0, Llah;->c:Lvs1;
 
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getWorkSpec()Lbah;
+    iget-object v1, p0, Llah;->o:Lw90;
 
-    move-result-object v5
+    iget-object v2, p0, Llah;->b:Lji4;
 
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getTags()Ljava/util/Set;
-
-    move-result-object v6
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v7
-
-    const/4 v9, 0x0
-
-    move-object v1, p0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    invoke-direct/range {v1 .. v9}, Llah;-><init>(Ljava/lang/String;Ljava/lang/String;Lzd5;Lbah;Ljava/util/Set;JI)V
+    invoke-virtual {v2, v0, v1}, Lji4;->c(Lvs1;Lw90;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Llah;->c:Lvs1;
+
+    iget-object v1, p0, Llah;->o:Lw90;
+
+    iget-object v2, p0, Llah;->b:Lji4;
+
+    invoke-virtual {v2, v0, v1}, Lji4;->c(Lvs1;Lw90;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,138 +1,101 @@
-.class public final Lzb9;
+.class public final synthetic Lzb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbc9;
+.implements Lvd6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:J
 
-.field public final b:Llbg;
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/Boolean;
+
+.field public final synthetic o:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(JLlbg;)V
+.method public synthetic constructor <init>(JLjava/lang/String;Ljava/lang/Boolean;Ljava/lang/Long;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Lzb9;->a:J
 
-    iput-object p3, p0, Lzb9;->b:Llbg;
+    iput-object p3, p0, Lzb9;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lzb9;->c:Ljava/lang/Boolean;
+
+    iput-object p5, p0, Lzb9;->o:Ljava/lang/Long;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzb9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzb9;
-
-    iget-wide v3, p0, Lzb9;->a:J
-
-    iget-wide v5, p1, Lzb9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lzb9;->b:Llbg;
-
-    iget-object p1, p1, Lzb9;->b:Llbg;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lzb9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lzb9;->b:Llbg;
-
-    invoke-virtual {v1}, Llbg;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lzb9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lnc4;
 
-    const-string v1, "OnSurfaceClick(messageId="
+    const-string v0, ":chats"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object v0, p1, Lnc4;->a:Ljava/lang/String;
+
+    const-string v0, "id"
 
     iget-wide v1, p0, Lzb9;->a:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v1, ", model="
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1, v0}, Lnc4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lzb9;->b:Llbg;
+    const-string v0, "type"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, "local"
 
-    const-string v1, ")"
+    invoke-virtual {p1, v1, v0}, Lnc4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lzb9;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    const-string v1, "payload"
+
+    invoke-virtual {p1, v0, v1}, Lnc4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lzb9;->c:Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_1
+
+    const-string v1, "highlight_message"
+
+    invoke-virtual {p1, v0, v1}, Lnc4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_1
+    iget-object v0, p0, Lzb9;->o:Ljava/lang/Long;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    const-string v2, "message_id"
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0, v2}, Lnc4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    :cond_2
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

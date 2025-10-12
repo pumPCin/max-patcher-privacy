@@ -1,187 +1,96 @@
 .class public final Lyxg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lfyg;
 
 
 # instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ldyg;
-
-.field public final synthetic w0:Layg;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Layg;Ldyg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p2, p0, Lyxg;->Z:Ldyg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyxg;->w0:Layg;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lyxg;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/String;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyxg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyxg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lyxg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Lyxg;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lyxg;->Z:Ldyg;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lyxg;->w0:Layg;
-
-    invoke-direct {v0, v2, v1, p2}, Lyxg;-><init>(Layg;Ldyg;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lyxg;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    iget v0, p0, Lyxg;->X:I
-
-    iget-object v1, p0, Lyxg;->w0:Layg;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lyxg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lyxg;
 
-    iget-object p1, p0, Lyxg;->Y:Ljava/lang/Object;
+    iget-object v1, p0, Lyxg;->a:Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/String;
+    iget-object p1, p1, Lyxg;->a:Ljava/lang/String;
 
-    new-instance v0, Lgyg;
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lyxg;->Z:Ldyg;
+    move-result p1
 
-    iget-object v3, v3, Ldyg;->a:Ljava/lang/String;
+    if-nez p1, :cond_2
 
-    invoke-direct {v0, v3, p1}, Lgyg;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, v1, Layg;->e:Llu0;
-
-    new-instance v3, Ljk7;
-
-    iget-object v4, v1, Layg;->a:Lwk7;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lgyg;->Companion:Lfyg;
-
-    invoke-virtual {v5}, Lfyg;->serializer()Lum7;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5, v0}, Lwk7;->b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v4, "WebAppRequestPhone"
-
-    invoke-direct {v3, v4, v0}, Ljk7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Lyxg;->X:I
-
-    invoke-interface {p1, v3, p0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    iget-object p1, v1, Layg;->f:Lpqg;
+    return v0
+.end method
 
-    if-eqz p1, :cond_3
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v1, Layg;->b:Lbp7;
+    iget-object v0, p0, Lyxg;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShowNativeShareDialog(text="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lyxg;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v1, v0
-
-    check-cast v1, Lztg;
-
-    iget-wide v3, p1, Lpqg;->a:J
-
-    iget-object v5, p1, Lpqg;->b:Ljava/lang/String;
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0xf0
-
-    const-string v2, "WebAppRequestPhone"
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-static/range {v1 .. v10}, Lztg;->a(Lztg;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

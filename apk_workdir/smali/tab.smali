@@ -1,416 +1,276 @@
 .class public final Ltab;
-.super Ly1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:Lgrf;
+.field public X:Z
 
-.field public Y:I
+.field public Y:Z
 
-.field public final c:Lrab;
+.field public Z:Z
 
-.field public o:I
+.field public a:I
 
+.field public b:J
 
-# direct methods
-.method public constructor <init>(Lrab;I)V
-    .locals 1
+.field public c:Z
 
-    iget v0, p1, Lrab;->w0:I
+.field public o:Ljava/lang/String;
 
-    invoke-direct {p0, p2, v0}, Ly1;-><init>(II)V
+.field public r0:I
 
-    iput-object p1, p0, Ltab;->c:Lrab;
+.field public s0:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lrab;->d()I
+.field public t0:I
 
-    move-result p1
-
-    iput p1, p0, Ltab;->o:I
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ltab;->Y:I
-
-    invoke-virtual {p0}, Ltab;->b()V
-
-    return-void
-.end method
+.field public u0:Ljava/lang/String;
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget v0, p0, Ltab;->o:I
-
-    iget-object v1, p0, Ltab;->c:Lrab;
-
-    invoke-virtual {v1}, Lrab;->d()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/util/ConcurrentModificationException;
-
-    invoke-direct {v0}, Ljava/util/ConcurrentModificationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final add(Ljava/lang/Object;)V
-    .locals 2
-
-    invoke-virtual {p0}, Ltab;->a()V
-
-    iget v0, p0, Ly1;->a:I
-
-    iget-object v1, p0, Ltab;->c:Lrab;
-
-    invoke-virtual {v1, v0, p1}, Lrab;->add(ILjava/lang/Object;)V
-
-    iget p1, p0, Ly1;->a:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Ly1;->a:I
-
-    invoke-virtual {v1}, Lrab;->getSize()I
-
-    move-result p1
-
-    iput p1, p0, Ly1;->b:I
-
-    invoke-virtual {v1}, Lrab;->d()I
-
-    move-result p1
-
-    iput p1, p0, Ltab;->o:I
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Ltab;->Y:I
-
-    invoke-virtual {p0}, Ltab;->b()V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 7
-
-    iget-object v0, p0, Ltab;->c:Lrab;
-
-    iget-object v1, v0, Lrab;->Y:[Ljava/lang/Object;
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ltab;->X:Lgrf;
-
-    return-void
-
-    :cond_0
-    iget v2, v0, Lrab;->w0:I
-
-    const/4 v3, 0x1
-
-    sub-int/2addr v2, v3
-
-    and-int/lit8 v2, v2, -0x20
-
-    iget v4, p0, Ly1;->a:I
-
-    if-le v4, v2, :cond_1
-
-    move v4, v2
-
-    :cond_1
-    iget v0, v0, Lrab;->o:I
-
-    div-int/lit8 v0, v0, 0x5
-
-    add-int/2addr v0, v3
-
-    iget-object v5, p0, Ltab;->X:Lgrf;
-
-    if-nez v5, :cond_2
-
-    new-instance v3, Lgrf;
-
-    invoke-direct {v3, v1, v4, v2, v0}, Lgrf;-><init>([Ljava/lang/Object;III)V
-
-    iput-object v3, p0, Ltab;->X:Lgrf;
-
-    return-void
-
-    :cond_2
-    iput v4, v5, Ly1;->a:I
-
-    iput v2, v5, Ly1;->b:I
-
-    iput v0, v5, Lgrf;->c:I
-
-    iget-object v6, v5, Lgrf;->o:[Ljava/lang/Object;
-
-    array-length v6, v6
-
-    if-ge v6, v0, :cond_3
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    iput-object v0, v5, Lgrf;->o:[Ljava/lang/Object;
-
-    :cond_3
-    iget-object v0, v5, Lgrf;->o:[Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    aput-object v1, v0, v6
-
-    if-ne v4, v2, :cond_4
-
-    move v6, v3
-
-    :cond_4
-    iput-boolean v6, v5, Lgrf;->X:Z
-
-    sub-int/2addr v4, v6
-
-    invoke-virtual {v5, v4, v3}, Lgrf;->b(II)V
-
-    return-void
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    invoke-virtual {p0}, Ltab;->a()V
+    instance-of v0, p1, Ltab;
 
-    invoke-virtual {p0}, Ly1;->hasNext()Z
+    if-eqz v0, :cond_2
+
+    check-cast p1, Ltab;
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    if-ne p0, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget v0, p0, Ltab;->a:I
+
+    iget v1, p1, Ltab;->a:I
+
+    if-ne v0, v1, :cond_2
+
+    iget-wide v0, p0, Ltab;->b:J
+
+    iget-wide v2, p1, Ltab;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Ltab;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Ltab;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Ly1;->a:I
+    iget-boolean v0, p0, Ltab;->Y:Z
 
-    iput v0, p0, Ltab;->Y:I
+    iget-boolean v1, p1, Ltab;->Y:Z
 
-    iget-object v1, p0, Ltab;->X:Lgrf;
+    if-ne v0, v1, :cond_2
 
-    iget-object v2, p0, Ltab;->c:Lrab;
+    iget v0, p0, Ltab;->r0:I
 
-    if-nez v1, :cond_0
+    iget v1, p1, Ltab;->r0:I
 
-    iget-object v1, v2, Lrab;->Z:[Ljava/lang/Object;
+    if-ne v0, v1, :cond_2
 
-    add-int/lit8 v2, v0, 0x1
+    iget-object v0, p0, Ltab;->s0:Ljava/lang/String;
 
-    iput v2, p0, Ly1;->a:I
+    iget-object v1, p1, Ltab;->s0:Ljava/lang/String;
 
-    aget-object v0, v1, v0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {v1}, Ly1;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Ly1;->a:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Ly1;->a:I
-
-    invoke-virtual {v1}, Lgrf;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    iget-object v0, v2, Lrab;->Z:[Ljava/lang/Object;
-
-    iget v2, p0, Ly1;->a:I
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, Ly1;->a:I
-
-    iget v1, v1, Ly1;->b:I
-
-    sub-int/2addr v2, v1
-
-    aget-object v0, v0, v2
-
-    return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 4
-
-    invoke-virtual {p0}, Ltab;->a()V
-
-    invoke-virtual {p0}, Ly1;->hasPrevious()Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Ly1;->a:I
+    iget v0, p0, Ltab;->t0:I
 
-    add-int/lit8 v1, v0, -0x1
+    iget v1, p1, Ltab;->t0:I
 
-    iput v1, p0, Ltab;->Y:I
+    if-ne v0, v1, :cond_2
 
-    iget-object v1, p0, Ltab;->X:Lgrf;
+    iget-object v0, p0, Ltab;->u0:Ljava/lang/String;
 
-    iget-object v2, p0, Ltab;->c:Lrab;
+    iget-object p1, p1, Ltab;->u0:Ljava/lang/String;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, v2, Lrab;->Z:[Ljava/lang/Object;
+    move-result p1
 
-    add-int/lit8 v0, v0, -0x1
+    if-eqz p1, :cond_2
 
-    iput v0, p0, Ly1;->a:I
+    :goto_0
+    const/4 p1, 0x1
 
-    aget-object v0, v1, v0
+    return p1
 
-    return-object v0
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/16 v0, 0x87d
+
+    iget v1, p0, Ltab;->a:I
+
+    add-int/2addr v0, v1
+
+    const/16 v1, 0x35
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Ltab;->b:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Long;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Ltab;->o:Ljava/lang/String;
+
+    invoke-static {v2, v1, v0}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ltab;->Y:Z
+
+    const/16 v3, 0x4d5
+
+    if-eqz v2, :cond_0
+
+    const/16 v2, 0x4cf
+
+    goto :goto_0
 
     :cond_0
-    iget v3, v1, Ly1;->b:I
+    move v2, v3
 
-    if-le v0, v3, :cond_1
+    :goto_0
+    add-int/2addr v0, v2
 
-    iget-object v1, v2, Lrab;->Z:[Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    add-int/lit8 v0, v0, -0x1
+    iget v2, p0, Ltab;->r0:I
 
-    iput v0, p0, Ly1;->a:I
+    add-int/2addr v0, v2
 
-    sub-int/2addr v0, v3
+    mul-int/2addr v0, v1
 
-    aget-object v0, v1, v0
+    iget-object v2, p0, Ltab;->s0:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget v2, p0, Ltab;->t0:I
+
+    invoke-static {v2, v0, v1}, Lsab;->i(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Ltab;->u0:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    add-int/2addr v2, v3
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Country Code: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Ltab;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " National Number: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Ltab;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ltab;->X:Z
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Ltab;->Y:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, " Leading Zero(s): true"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    iget-boolean v1, p0, Ltab;->Z:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, " Number of leading zeros: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ltab;->r0:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_1
-    add-int/lit8 v0, v0, -0x1
+    iget-boolean v1, p0, Ltab;->c:Z
 
-    iput v0, p0, Ly1;->a:I
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lgrf;->previous()Ljava/lang/Object;
+    const-string v1, " Extension: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltab;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 4
-
-    invoke-virtual {p0}, Ltab;->a()V
-
-    iget v0, p0, Ltab;->Y:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v2, p0, Ltab;->c:Lrab;
-
-    invoke-virtual {v2, v0}, Lrab;->a(I)Ljava/lang/Object;
-
-    iget v0, p0, Ltab;->Y:I
-
-    iget v3, p0, Ly1;->a:I
-
-    if-ge v0, v3, :cond_0
-
-    iput v0, p0, Ly1;->a:I
-
-    :cond_0
-    invoke-virtual {v2}, Lrab;->getSize()I
-
-    move-result v0
-
-    iput v0, p0, Ly1;->b:I
-
-    invoke-virtual {v2}, Lrab;->d()I
-
-    move-result v0
-
-    iput v0, p0, Ltab;->o:I
-
-    iput v1, p0, Ltab;->Y:I
-
-    invoke-virtual {p0}, Ltab;->b()V
-
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 2
-
-    invoke-virtual {p0}, Ltab;->a()V
-
-    iget v0, p0, Ltab;->Y:I
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v1, p0, Ltab;->c:Lrab;
-
-    invoke-virtual {v1, v0, p1}, Lrab;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v1}, Lrab;->d()I
-
-    move-result p1
-
-    iput p1, p0, Ltab;->o:I
-
-    invoke-virtual {p0}, Ltab;->b()V
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
 .end method

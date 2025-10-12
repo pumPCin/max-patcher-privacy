@@ -1,73 +1,99 @@
 .class public final Llt6;
-.super Lnt6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # static fields
-.field public static final c:Llt6;
+.field public static volatile c:Llt6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Llt6;
+    const/4 v0, 0x0
 
-    sget v1, Lqka;->p:I
+    iput v0, p0, Llt6;->a:I
 
-    new-instance v2, Ljef;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
+    .line 2
+    new-instance v0, Lkt6;
 
-    sget v1, Lt9d;->S:I
+    const/4 v1, 0x0
 
-    new-instance v3, Ljef;
+    .line 3
+    invoke-direct {v0, v1}, Lkt6;-><init>(I)V
 
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
+    .line 4
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
-    invoke-direct {v0, v2, v3}, Lnt6;-><init>(Ljef;Ljef;)V
+    move-result-object v0
 
-    sput-object v0, Llt6;->c:Llt6;
+    iput-object v0, p0, Llt6;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ldv8;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Llt6;->a:I
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llt6;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Llt6;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Llt6;->b:Ljava/lang/Object;
 
-    :cond_0
-    instance-of p1, p1, Llt6;
+    check-cast v0, Ldv8;
 
-    if-nez p1, :cond_1
+    iget-object v0, v0, Ldv8;->a:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    check-cast v0, Landroid/os/Handler;
 
-    return p1
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_1
-    return v0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Llt6;->b:Ljava/lang/Object;
 
-    const v0, 0x709adf5c
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    return v0
-.end method
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    return-void
 
-    const-string v0, "Connecting"
+    nop
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

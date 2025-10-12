@@ -1,260 +1,57 @@
-.class public final synthetic Lmxa;
-.super Ljava/lang/Object;
+.class public final Lmxa;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lnxa;
 
-.field public final synthetic b:Lrxa;
+.field public final synthetic b:Loxa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrxa;I)V
+.method public constructor <init>(Lnxa;Loxa;)V
     .locals 0
 
-    iput p2, p0, Lmxa;->a:I
+    iput-object p1, p0, Lmxa;->a:Lnxa;
 
-    iput-object p1, p0, Lmxa;->b:Lrxa;
+    iput-object p2, p0, Lmxa;->b:Loxa;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 1
 
-    iget v0, p0, Lmxa;->a:I
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    sget v0, Lq9d;->r:I
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    move-result-object p1
 
-    iget-object v2, p0, Lmxa;->b:Lrxa;
+    iget-object p2, p0, Lmxa;->a:Lnxa;
 
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
+    iget-object p2, p2, Lnxa;->a:Lwyg;
 
-    move-result-object v1
+    iget-object p2, p2, Lwyg;->X0:Lya5;
 
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
+    new-instance v0, Lpxg;
 
-    move-result-object v1
+    invoke-direct {v0, p1}, Lpxg;-><init>(Ljava/lang/String;)V
 
-    iget v1, v1, Lk27;->f:I
+    invoke-static {p2, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lmxa;->b:Loxa;
 
-    move-result-object v2
+    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
 
-    invoke-static {v2, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    const/4 p1, 0x1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
-
-    const/16 v1, 0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-object v0
-
-    :pswitch_0
-    sget v0, Lq9d;->F1:I
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    iget-object v2, p0, Lmxa;->b:Lrxa;
-
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->f:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
-
-    const/16 v1, 0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-object v0
-
-    :pswitch_1
-    sget v0, Lg9d;->p0:I
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    iget-object v2, p0, Lmxa;->b:Lrxa;
-
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->j:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
-
-    const/16 v1, 0x14
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

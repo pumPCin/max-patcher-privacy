@@ -1,135 +1,293 @@
-.class public final Lpx;
-.super Ljava/lang/Object;
+.class public Lpx;
+.super Ldhf;
 .source "SourceFile"
 
-# interfaces
-.implements Lb6c;
+
+# static fields
+.field public static final h:J
+
+.field public static final i:J
+
+.field public static j:Lpx;
 
 
 # instance fields
-.field public final a:I
+.field public e:Z
+
+.field public f:Lpx;
+
+.field public g:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput p1, p0, Lpx;->a:I
+    const-wide/16 v1, 0x3c
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lpx;->h:J
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lpx;->i:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final annotationType()Ljava/lang/Class;
-    .locals 1
+.method public final i()V
+    .locals 10
 
-    const-class v0, Lb6c;
+    iget-boolean v0, p0, Lpx;->e:Z
 
-    return-object v0
-.end method
+    if-nez v0, :cond_8
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    iget-wide v0, p0, Ldhf;->c:J
 
-    if-ne p0, p1, :cond_0
+    iget-boolean v2, p0, Ldhf;->a:Z
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v3, v0, v3
+
+    if-nez v3, :cond_0
+
+    if-nez v2, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v4, 0x1
+
+    iput-boolean v4, p0, Lpx;->e:Z
+
+    const-class v5, Lpx;
+
+    monitor-enter v5
+
+    :try_start_0
+    sget-object v6, Lpx;->j:Lpx;
+
+    if-nez v6, :cond_1
+
+    new-instance v6, Lpx;
+
+    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
+
+    sput-object v6, Lpx;->j:Lpx;
+
+    new-instance v6, Lmx;
+
+    const-string v7, "Okio Watchdog"
+
+    invoke-direct {v6, v7}, Lmx;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/Thread;->setDaemon(Z)V
+
+    invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    :cond_0
-    instance-of v0, p1, Lb6c;
+    :catchall_0
+    move-exception v0
 
-    if-nez v0, :cond_1
+    goto :goto_4
+
+    :cond_1
+    :goto_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v6
+
+    if-eqz v3, :cond_2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {p0}, Ldhf;->c()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v6
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v6
+
+    iput-wide v0, p0, Lpx;->g:J
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    add-long/2addr v0, v6
+
+    iput-wide v0, p0, Lpx;->g:J
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz v2, :cond_7
+
+    invoke-virtual {p0}, Ldhf;->c()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lpx;->g:J
+
+    :goto_1
+    iget-wide v0, p0, Lpx;->g:J
+
+    sub-long/2addr v0, v6
+
+    sget-object v2, Lpx;->j:Lpx;
+
+    :goto_2
+    iget-object v3, v2, Lpx;->f:Lpx;
+
+    if-eqz v3, :cond_5
+
+    iget-wide v8, v3, Lpx;->g:J
+
+    sub-long/2addr v8, v6
+
+    cmp-long v4, v0, v8
+
+    if-gez v4, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move-object v2, v3
+
+    goto :goto_2
+
+    :cond_5
+    :goto_3
+    iput-object v3, p0, Lpx;->f:Lpx;
+
+    iput-object p0, v2, Lpx;->f:Lpx;
+
+    sget-object v0, Lpx;->j:Lpx;
+
+    if-ne v2, v0, :cond_6
+
+    const-class v0, Lpx;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_6
+    monitor-exit v5
+
+    return-void
+
+    :cond_7
+    :try_start_1
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_4
+    monitor-exit v5
+
+    throw v0
+
+    :cond_8
+    const-string v0, "Unbalanced enter/exit"
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public final j()Z
+    .locals 4
+
+    iget-boolean v0, p0, Lpx;->e:Z
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    iput-boolean v1, p0, Lpx;->e:Z
+
+    const-class v0, Lpx;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v2, Lpx;->j:Lpx;
+
+    :goto_0
+    if-eqz v2, :cond_2
+
+    iget-object v3, v2, Lpx;->f:Lpx;
+
+    if-ne v3, p0, :cond_1
+
+    iget-object v3, p0, Lpx;->f:Lpx;
+
+    iput-object v3, v2, Lpx;->f:Lpx;
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lpx;->f:Lpx;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
+    move-exception v1
 
     goto :goto_1
 
     :cond_1
-    check-cast p1, Lb6c;
+    move-object v2, v3
 
-    check-cast p1, Lpx;
-
-    iget v0, p1, Lpx;->a:I
-
-    iget v1, p0, Lpx;->a:I
-
-    if-ne v1, v0, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p1, La6c;->a:La6c;
-
-    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    monitor-exit v0
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const v0, 0xde0d66
-
-    iget v1, p0, Lpx;->a:I
-
-    xor-int/2addr v0, v1
-
-    sget-object v1, La6c;->a:La6c;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    const v2, 0x79ad669e
-
-    xor-int/2addr v1, v2
-
-    add-int/2addr v0, v1
+    const/4 v0, 0x1
 
     return v0
+
+    :goto_1
+    monitor-exit v0
+
+    throw v1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public k()V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lpx;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, "intEncoding="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, La6c;->a:La6c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

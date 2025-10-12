@@ -1,48 +1,40 @@
-.class public final Li43;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lb43;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lb43;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Li43;->Y:Lb43;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Li43;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a()J
+.end method
 
-    iput-object p1, p0, Li43;->o:Ljava/lang/Object;
+.method public b(J)Z
+    .locals 2
 
-    iget p1, p0, Li43;->X:I
+    invoke-interface {p0}, Li43;->a()J
 
-    const/high16 v0, -0x80000000
+    move-result-wide v0
 
-    or-int/2addr p1, v0
+    cmp-long v0, v0, p1
 
-    iput p1, p0, Li43;->X:I
+    if-gtz v0, :cond_0
 
-    iget-object p1, p0, Li43;->Y:Lb43;
+    invoke-interface {p0}, Li43;->c()J
 
-    const/4 v0, 0x0
+    move-result-wide v0
 
-    invoke-virtual {p1, v0, p0}, Lb43;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    cmp-long p1, p1, v0
 
-    move-result-object p1
+    if-gtz p1, :cond_0
 
-    return-object p1
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract c()J
 .end method

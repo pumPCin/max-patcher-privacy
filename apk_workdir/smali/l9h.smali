@@ -1,15 +1,27 @@
-.class public abstract Ll9h;
+.class public final Ll9h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:[B
+
+.field public final c:Z
+
+
 # direct methods
-.method public static a(Landroid/content/Context;)Z
+.method public constructor <init>(I[BZ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->isDeviceProtectedStorage()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Ll9h;->a:I
 
-    return p0
+    iput-object p2, p0, Ll9h;->b:[B
+
+    iput-boolean p3, p0, Ll9h;->c:Z
+
+    return-void
 .end method

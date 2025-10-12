@@ -1,17 +1,18 @@
-.class public interface abstract annotation Lnl7;
+.class public interface abstract Lnl7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/annotation/Annotation;
-
-
-# annotations
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+.implements Lpl7;
+.implements Ltd6;
 
 
 # virtual methods
-.method public abstract names()[Ljava/lang/String;
+.method public abstract get()Ljava/lang/Object;
+.end method
+
+.method public abstract getDelegate()Ljava/lang/Object;
+.end method
+
+.method public abstract getGetter()Lml7;
 .end method

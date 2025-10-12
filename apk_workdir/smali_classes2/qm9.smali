@@ -1,125 +1,73 @@
-.class public final Lqm9;
-.super Lm3f;
+.class public final enum Lqm9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum a:Lqm9;
 
-# instance fields
-.field public X:I
+.field public static final enum b:Lqm9;
 
-.field public final synthetic Y:Lwm9;
-
-.field public final synthetic Z:Ljava/lang/Object;
+.field public static final synthetic c:[Lqm9;
 
 
 # direct methods
-.method public constructor <init>(Lwm9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lqm9;->Y:Lwm9;
+    new-instance v0, Lqm9;
 
-    iput-object p2, p0, Lqm9;->Z:Ljava/lang/Object;
+    const-string v1, "MOVIE"
 
-    const/4 p1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lqm9;->a:Lqm9;
+
+    new-instance v1, Lqm9;
+
+    const-string v2, "STREAM"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lqm9;->b:Lqm9;
+
+    filled-new-array {v0, v1}, [Lqm9;
+
+    move-result-object v0
+
+    sput-object v0, Lqm9;->c:[Lqm9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lqm9;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lqm9;
 
-    check-cast p1, Le34;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    invoke-virtual {p0, p1, p2}, Lqm9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p0, Lqm9;
 
-    move-result-object p1
-
-    check-cast p1, Lqm9;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lqm9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lqm9;
+    .locals 1
 
-    new-instance p1, Lqm9;
+    sget-object v0, Lqm9;->c:[Lqm9;
 
-    iget-object v0, p0, Lqm9;->Y:Lwm9;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v1, p0, Lqm9;->Z:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-direct {p1, v0, v1, p2}, Lqm9;-><init>(Lwm9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lqm9;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    sget p1, Ln05;->o:I
-
-    const/4 p1, 0x3
-
-    sget-object v0, Ls05;->o:Ls05;
-
-    invoke-static {p1, v0}, Lyhh;->O(ILs05;)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lqm9;->X:I
-
-    iget-object p1, p0, Lqm9;->Y:Lwm9;
-
-    iget-object v0, p0, Lqm9;->Z:Ljava/lang/Object;
-
-    invoke-virtual {p1, v2, v3, p0, v0}, Lwm9;->M(JLnz3;Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    check-cast v0, [Lqm9;
 
     return-object v0
-
-    :cond_2
-    return-object p1
 .end method

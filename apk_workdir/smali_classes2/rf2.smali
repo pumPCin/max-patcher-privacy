@@ -1,80 +1,58 @@
 .class public final Lrf2;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lc31;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lsf2;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lsf2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lrf2;->Y:Lsf2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lrf2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lx40;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lrf2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrf2;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lrf2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onNewMessage(Li87;)V
     .locals 2
 
-    new-instance v0, Lrf2;
+    iget-object v0, p0, Lrf2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget-object v1, p0, Lrf2;->Y:Lsf2;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v0, v1, p2}, Lrf2;-><init>(Lsf2;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lrf2;->X:Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object p1, p0, Lrf2;->X:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast p1, Lx40;
+    check-cast v1, Lc31;
 
-    iget-object v0, p0, Lrf2;->Y:Lsf2;
+    invoke-interface {v1, p1}, Lc31;->onNewMessage(Li87;)V
 
-    invoke-static {v0, p1}, Lsf2;->u(Lsf2;Lx40;)V
+    goto :goto_0
 
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

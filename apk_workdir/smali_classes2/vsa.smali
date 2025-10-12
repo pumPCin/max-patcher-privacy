@@ -1,319 +1,843 @@
-.class public abstract Lvsa;
-.super Ljava/lang/Object;
+.class public final Lvsa;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Lfef;
 
 
 # static fields
-.field public static final A:I
+.field public static final synthetic H0:I
 
-.field public static final B:I
 
-.field public static final C:I
+# instance fields
+.field public final A0:Ljava/lang/Object;
 
-.field public static final D:I
+.field public final B0:Ljava/lang/Object;
 
-.field public static final E:I
+.field public final C0:Ljava/lang/Object;
 
-.field public static final F:I
+.field public final D0:Ljava/lang/Object;
 
-.field public static final G:I
+.field public final E0:Ljava/lang/Object;
 
-.field public static final H:I
+.field public final F0:Landroid/animation/ValueAnimator;
 
-.field public static final I:I
+.field public final G0:Landroid/animation/ValueAnimator;
 
-.field public static final J:I
+.field public final a:I
 
-.field public static final K:I
+.field public final b:I
 
-.field public static final L:I
+.field public final c:I
 
-.field public static final M:I
+.field public o:Ljava/lang/CharSequence;
 
-.field public static final N:I
+.field public r0:Ljava/lang/String;
 
-.field public static final O:I
+.field public s0:Lrsa;
 
-.field public static final P:I
+.field public t0:Lssa;
 
-.field public static final Q:I
+.field public u0:Z
 
-.field public static final R:I
+.field public v0:Z
 
-.field public static final S:I
+.field public w0:Z
 
-.field public static final T:I
+.field public x0:Z
 
-.field public static final U:I
+.field public y0:Z
 
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public z0:Ltsa;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 6
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Leac;->spacing_size_s:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lvsa;->a:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Leac;->spacing_size_l:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lvsa;->b:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Leac;->spacing_size_xl:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lvsa;->c:I
+
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lzic;->oneme_search_view_default_hint:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->r0:Ljava/lang/String;
+
+    sget-object v0, Lrsa;->a:Lrsa;
+
+    iput-object v0, p0, Lvsa;->s0:Lrsa;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvsa;->u0:Z
+
+    iput-boolean v0, p0, Lvsa;->v0:Z
+
+    iput-boolean v0, p0, Lvsa;->w0:Z
+
+    iput-boolean v0, p0, Lvsa;->x0:Z
+
+    iput-boolean v0, p0, Lvsa;->y0:Z
+
+    sget-object v0, Ltsa;->a:Ltsa;
+
+    iput-object v0, p0, Lvsa;->z0:Ltsa;
+
+    new-instance v0, Lnsa;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, p0, v1}, Lnsa;-><init>(Landroid/content/Context;Lvsa;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->A0:Ljava/lang/Object;
+
+    new-instance v0, Lnsa;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p1, p0, v2}, Lnsa;-><init>(Landroid/content/Context;Lvsa;I)V
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->B0:Ljava/lang/Object;
+
+    new-instance v0, Lnsa;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, p1, p0, v2}, Lnsa;-><init>(Landroid/content/Context;Lvsa;I)V
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->C0:Ljava/lang/Object;
+
+    new-instance v0, Lnsa;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, p1, p0, v2}, Lnsa;-><init>(Landroid/content/Context;Lvsa;I)V
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->D0:Ljava/lang/Object;
+
+    new-instance v0, Lnsa;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, p1, p0, v2}, Lnsa;-><init>(Landroid/content/Context;Lvsa;I)V
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lvsa;->E0:Ljava/lang/Object;
+
+    const/16 v0, 0x78
+
+    filled-new-array {v0}, [I
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x78
+
+    invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    new-instance v4, Lusa;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, p0, v5}, Lusa;-><init>(Lvsa;I)V
+
+    invoke-virtual {v1, v4}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v4, Lpsa;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, p0, v5}, Lpsa;-><init>(Lvsa;I)V
+
+    invoke-virtual {v1, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iput-object v1, p0, Lvsa;->F0:Landroid/animation/ValueAnimator;
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    new-instance v1, Ljf;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p0, v2, p1}, Ljf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance p1, Lpsa;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, p0, v1}, Lpsa;-><init>(Lvsa;I)V
+
+    invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iput-object v0, p0, Lvsa;->G0:Landroid/animation/ValueAnimator;
+
+    return-void
+.end method
+
+.method public static a(Landroid/animation/Animator;)V
+    .locals 2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->getListeners()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
+
+    invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/animation/Animator$AnimatorListener;
+
+    invoke-virtual {p0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
+    .locals 2
+
+    iget-boolean v0, p0, Lvsa;->w0:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lvsa;->F0:Landroid/animation/ValueAnimator;
+
+    invoke-static {v0}, Lvsa;->a(Landroid/animation/Animator;)V
+
+    iget-boolean v0, p0, Lvsa;->y0:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    :goto_0
+    iget-object v1, p0, Lvsa;->G0:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setCurrentFraction(F)V
+
+    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
+.end method
+
+.method public final c(Z)V
+    .locals 2
+
+    iget-boolean v0, p0, Lvsa;->v0:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lvsa;->G0:Landroid/animation/ValueAnimator;
+
+    invoke-static {v0}, Lvsa;->a(Landroid/animation/Animator;)V
+
+    iget-boolean v0, p0, Lvsa;->x0:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    :goto_0
+    iget-object v1, p0, Lvsa;->F0:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setCurrentFraction(F)V
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Lusa;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lusa;-><init>(Lvsa;I)V
+
+    invoke-virtual {v1, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    :cond_2
+    new-instance p1, Luq0;
+
+    const/16 v0, 0xa
+
+    invoke-direct {p1, v0, p0}, Luq0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    const/4 v0, -0x1
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    const/4 v0, -0x2
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    const/16 v0, 0x34
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Li8e;->I(F)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setMinimumHeight(I)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final d()V
     .locals 1
 
-    sget v0, Lnac;->chat_common_background_fileType_archiveBadge:I
+    const/4 v0, 0x1
 
-    sput v0, Lvsa;->a:I
+    invoke-virtual {p0, v0}, Lvsa;->c(Z)V
 
-    sget v0, Lnac;->chat_common_background_fileType_archiveBkg:I
+    iget-object v0, p0, Lvsa;->t0:Lssa;
 
-    sput v0, Lvsa;->b:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lnac;->chat_common_background_fileType_archiveElement:I
+    invoke-interface {v0}, Lssa;->e()V
 
-    sput v0, Lvsa;->c:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lnac;->chat_common_background_fileType_archiveIcon:I
+.method public final getCollapseWithAnimation()Z
+    .locals 1
 
-    sput v0, Lvsa;->d:I
+    iget-boolean v0, p0, Lvsa;->y0:Z
 
-    sget v0, Lnac;->chat_common_background_fileType_dataBadge:I
+    return v0
+.end method
 
-    sput v0, Lvsa;->e:I
+.method public final getExpandWithAnimation()Z
+    .locals 1
 
-    sget v0, Lnac;->chat_common_background_fileType_dataBkg:I
+    iget-boolean v0, p0, Lvsa;->x0:Z
 
-    sput v0, Lvsa;->f:I
+    return v0
+.end method
 
-    sget v0, Lnac;->chat_common_background_fileType_dataElement:I
+.method public final getShouldShowSearchIcon()Z
+    .locals 1
 
-    sput v0, Lvsa;->g:I
+    iget-boolean v0, p0, Lvsa;->u0:Z
 
-    sget v0, Lnac;->chat_common_background_fileType_dataIcon:I
+    return v0
+.end method
 
-    sput v0, Lvsa;->h:I
+.method public final getState()Ltsa;
+    .locals 1
 
-    sget v0, Lnac;->chat_common_background_fileType_imageBadge:I
+    iget-object v0, p0, Lvsa;->z0:Ltsa;
 
-    sput v0, Lvsa;->i:I
+    return-object v0
+.end method
 
-    sget v0, Lnac;->chat_common_background_fileType_imageBkg:I
+.method public final onThemeChanged(Llwa;)V
+    .locals 3
 
-    sput v0, Lvsa;->j:I
+    iget-object v0, p0, Lvsa;->C0:Ljava/lang/Object;
 
-    sget v0, Lnac;->chat_common_background_fileType_imageElement:I
+    invoke-interface {v0}, Lyn7;->a()Z
 
-    sput v0, Lvsa;->k:I
+    move-result v1
 
-    sget v0, Lnac;->chat_common_background_fileType_imageIcon:I
+    if-eqz v1, :cond_0
 
-    sput v0, Lvsa;->l:I
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    sget v0, Lnac;->chat_common_background_fileType_musicBadge:I
+    move-result-object v0
 
-    sput v0, Lvsa;->m:I
+    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
 
-    sget v0, Lnac;->chat_common_background_fileType_musicBkg:I
+    invoke-interface {p1}, Llwa;->getIcon()Lg17;
 
-    sput v0, Lvsa;->n:I
+    move-result-object v1
 
-    sget v0, Lnac;->chat_common_background_fileType_musicElement:I
+    iget v1, v1, Lg17;->f:I
 
-    sput v0, Lvsa;->o:I
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sget v0, Lnac;->chat_common_background_fileType_musicIcon:I
+    move-result-object v1
 
-    sput v0, Lvsa;->p:I
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    sget v0, Lnac;->chat_common_background_fileType_presentationBadge:I
+    :cond_0
+    iget-object v0, p0, Lvsa;->A0:Ljava/lang/Object;
 
-    sput v0, Lvsa;->q:I
+    invoke-interface {v0}, Lyn7;->a()Z
 
-    sget v0, Lnac;->chat_common_background_fileType_presentationBkg:I
+    move-result v1
 
-    sput v0, Lvsa;->r:I
+    if-eqz v1, :cond_1
 
-    sget v0, Lnac;->chat_common_background_fileType_presentationElement:I
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    sput v0, Lvsa;->s:I
+    move-result-object v0
 
-    sget v0, Lnac;->chat_common_background_fileType_presentationIcon:I
+    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
 
-    sput v0, Lvsa;->t:I
+    invoke-interface {p1}, Llwa;->getIcon()Lg17;
 
-    sget v0, Lnac;->chat_common_background_fileType_programBadge:I
+    move-result-object v1
 
-    sput v0, Lvsa;->u:I
+    iget v1, v1, Lg17;->f:I
 
-    sget v0, Lnac;->chat_common_background_fileType_programBkg:I
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sput v0, Lvsa;->v:I
+    move-result-object v1
 
-    sget v0, Lnac;->chat_common_background_fileType_programElement:I
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    sput v0, Lvsa;->w:I
+    :cond_1
+    iget-object v0, p0, Lvsa;->E0:Ljava/lang/Object;
 
-    sget v0, Lnac;->chat_common_background_fileType_programIcon:I
+    invoke-interface {v0}, Lyn7;->a()Z
 
-    sput v0, Lvsa;->x:I
+    move-result v1
 
-    sget v0, Lnac;->chat_common_background_fileType_textBadge:I
+    if-eqz v1, :cond_2
 
-    sput v0, Lvsa;->y:I
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    sget v0, Lnac;->chat_common_background_fileType_textBkg:I
+    move-result-object v0
 
-    sput v0, Lvsa;->z:I
+    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
 
-    sget v0, Lnac;->chat_common_background_fileType_textElement:I
+    invoke-interface {p1}, Llwa;->getIcon()Lg17;
 
-    sput v0, Lvsa;->A:I
+    move-result-object v1
 
-    sget v0, Lnac;->chat_common_background_fileType_textIcon:I
+    iget v1, v1, Lg17;->j:I
 
-    sput v0, Lvsa;->B:I
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    sget v0, Lnac;->chat_common_background_fileType_unknownBadge:I
+    move-result-object v1
 
-    sput v0, Lvsa;->C:I
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    sget v0, Lnac;->chat_common_background_fileType_unknownBkg:I
+    :cond_2
+    iget-object v0, p0, Lvsa;->B0:Ljava/lang/Object;
 
-    sput v0, Lvsa;->D:I
+    invoke-interface {v0}, Lyn7;->a()Z
 
-    sget v0, Lnac;->chat_common_background_fileType_unknownElement:I
+    move-result v1
 
-    sput v0, Lvsa;->E:I
+    if-eqz v1, :cond_4
 
-    sget v0, Lnac;->chat_common_background_fileType_unknownIcon:I
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    sput v0, Lvsa;->F:I
+    move-result-object v0
 
-    sget v0, Lnac;->chat_common_background_fileType_videoBadge:I
+    check-cast v0, Landroidx/appcompat/widget/AppCompatEditText;
 
-    sput v0, Lvsa;->G:I
+    invoke-static {v0}, Loq0;->i(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
 
-    sget v0, Lnac;->chat_common_background_fileType_videoBkg:I
+    move-result-object v1
 
-    sput v0, Lvsa;->H:I
+    if-eqz v1, :cond_3
 
-    sget v0, Lnac;->chat_common_background_fileType_videoElement:I
+    invoke-interface {p1}, Llwa;->getText()Lobf;
 
-    sput v0, Lvsa;->I:I
+    move-result-object v2
 
-    sget v0, Lnac;->chat_common_background_fileType_videoIcon:I
+    iget v2, v2, Lobf;->j:I
 
-    sput v0, Lvsa;->J:I
+    invoke-static {v1, v2}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
 
-    sget v0, Lnac;->chat_common_text_fileType:I
+    :cond_3
+    invoke-interface {p1}, Llwa;->b()Lme0;
 
-    sput v0, Lvsa;->K:I
+    move-result-object v1
 
-    sget v0, Lnac;->global_background_accent_neutral:I
+    iget-object v1, v1, Lme0;->a:Lle0;
 
-    sput v0, Lvsa;->L:I
+    iget v1, v1, Lle0;->h:I
 
-    sget v0, Lnac;->global_background_accent_neutralFade:I
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sput v0, Lvsa;->M:I
+    invoke-interface {p1}, Llwa;->getText()Lobf;
 
-    sget v0, Lnac;->global_background_accent_neutralFadeSecondary:I
+    move-result-object v1
 
-    sput v0, Lvsa;->N:I
+    iget v1, v1, Lobf;->g:I
 
-    sget v0, Lnac;->global_background_surfaceCard:I
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHintTextColor(I)V
 
-    sput v0, Lvsa;->O:I
+    invoke-interface {p1}, Llwa;->getText()Lobf;
 
-    sget v0, Lnac;->global_icon_contrastStatic:I
+    move-result-object p1
 
-    sput v0, Lvsa;->P:I
+    iget p1, p1, Lobf;->e:I
 
-    sget v0, Lnac;->global_icon_negative:I
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sput v0, Lvsa;->Q:I
+    :cond_4
+    return-void
+.end method
 
-    sget v0, Lnac;->global_icon_primary:I
+.method public final setCollapseWithAnimation(Z)V
+    .locals 0
 
-    sput v0, Lvsa;->R:I
+    iput-boolean p1, p0, Lvsa;->y0:Z
 
-    sget v0, Lnac;->global_icon_tertiary:I
+    return-void
+.end method
 
-    sput v0, Lvsa;->S:I
+.method public final setCollapsedStyle(Lrsa;)V
+    .locals 6
 
-    sget v0, Lnac;->global_icon_themed:I
+    iput-object p1, p0, Lvsa;->s0:Lrsa;
 
-    sput v0, Lvsa;->T:I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    sget v0, Lnac;->global_states_text_disabled_primary:I
+    move-result p1
 
-    sput v0, Lvsa;->U:I
+    const/4 v0, 0x0
 
-    sget v0, Lnac;->global_text_negative:I
+    iget-object v1, p0, Lvsa;->C0:Ljava/lang/Object;
 
-    sput v0, Lvsa;->V:I
+    sget-object v2, Ltsa;->a:Ltsa;
 
-    sget v0, Lnac;->global_text_positive:I
+    iget-object v3, p0, Lvsa;->D0:Ljava/lang/Object;
 
-    sput v0, Lvsa;->W:I
+    const/16 v4, 0x8
 
-    sget v0, Lnac;->global_text_primary:I
+    if-eqz p1, :cond_3
 
-    sput v0, Lvsa;->X:I
+    const/4 v5, 0x1
 
-    sget v0, Lnac;->global_text_secondary:I
+    if-ne p1, v5, :cond_2
 
-    sput v0, Lvsa;->Y:I
+    invoke-interface {v3}, Lyn7;->a()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_0
+    iget-object p1, p0, Lvsa;->z0:Ltsa;
+
+    if-ne p1, v2, :cond_6
+
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    iget-boolean v1, p0, Lvsa;->u0:Z
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v4
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    invoke-interface {v1}, Lyn7;->a()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_4
+    iget-object p1, p0, Lvsa;->z0:Ltsa;
+
+    if-ne p1, v2, :cond_6
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    iget-boolean v1, p0, Lvsa;->u0:Z
+
+    if-eqz v1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    move v0, v4
+
+    :goto_1
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_6
+    return-void
+.end method
+
+.method public final setCollapsible(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lvsa;->w0:Z
+
+    return-void
+.end method
+
+.method public final setExpandWithAnimation(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lvsa;->x0:Z
+
+    return-void
+.end method
+
+.method public final setExpandable(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lvsa;->v0:Z
+
+    return-void
+.end method
+
+.method public final setListener(Lssa;)V
+    .locals 0
+
+    iput-object p1, p0, Lvsa;->t0:Lssa;
+
+    return-void
+.end method
+
+.method public final setSearchHint(Ljava/lang/String;)V
+    .locals 2
+
+    iput-object p1, p0, Lvsa;->r0:Ljava/lang/String;
+
+    iget-object v0, p0, Lvsa;->B0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setSearchText(Ljava/lang/CharSequence;)V
+    .locals 2
+
+    iput-object p1, p0, Lvsa;->o:Ljava/lang/CharSequence;
+
+    iget-object v0, p0, Lvsa;->B0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->a()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->length()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setSelection(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setShouldShowSearchIcon(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lvsa;->u0:Z
 
     return-void
 .end method

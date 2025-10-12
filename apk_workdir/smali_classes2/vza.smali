@@ -1,58 +1,48 @@
-.class public final synthetic Lvza;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Supplier;
+.class public final Lvza;
+.super Lwy3;
 
 
 # instance fields
-.field public final synthetic a:Lc0b;
+.field public X:I
+
+.field public final synthetic Y:Lmz9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc0b;)V
+.method public constructor <init>(Lmz9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvza;->Y:Lmz9;
 
-    iput-object p1, p0, Lvza;->a:Lc0b;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 11
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lvza;->a:Lc0b;
+    iput-object p1, p0, Lvza;->o:Ljava/lang/Object;
 
-    iget-object v0, v0, Lc0b;->b:Lwlb;
+    iget p1, p0, Lvza;->X:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/high16 v0, -0x80000000
 
-    new-instance v1, Lxy7;
+    or-int/2addr p1, v0
 
-    iget v2, v0, Lwlb;->e:I
+    iput p1, p0, Lvza;->X:I
 
-    int-to-long v2, v2
+    iget-object p1, p0, Lvza;->Y:Lmz9;
 
-    iget v4, v0, Lwlb;->f:I
+    const/4 v0, 0x0
 
-    int-to-long v4, v4
+    invoke-virtual {p1, v0, p0}, Lmz9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v6, v0, Lwlb;->g:I
+    move-result-object p1
 
-    int-to-long v6, v6
-
-    iget v8, v0, Lwlb;->d:I
-
-    int-to-long v8, v8
-
-    iget-boolean v10, v0, Lwlb;->c:Z
-
-    invoke-direct/range {v1 .. v10}, Lxy7;-><init>(JJJJZ)V
-
-    return-object v1
+    return-object p1
 .end method

@@ -1,99 +1,75 @@
-.class public abstract synthetic Ln2a;
+.class public final Ln2a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final synthetic c:[Lpl7;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final d:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:Lys4;
+
+.field public final b:Lys4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
-    const/4 v0, 0x3
+    new-instance v0, Lf4c;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const-class v1, Ln2a;
 
-    move-result-object v1
+    const-string v2, "chats"
 
-    array-length v1, v1
+    const-string v3, "getChats()Lru/ok/tamtam/chats/ChatController;"
 
-    new-array v1, v1, [I
+    const/4 v4, 0x0
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/4 v3, 0x0
+    sget-object v2, Lewc;->a:Lfwc;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v3, "messages"
 
-    :catch_0
+    const-string v5, "getMessages()Lru/ok/tamtam/messages/MessageController;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+
+    move-result-object v2
+
     const/4 v3, 0x2
 
-    :try_start_1
-    aput v3, v1, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    new-array v3, v3, [Lpl7;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    aput-object v0, v3, v4
 
-    :catch_2
-    sput-object v1, Ln2a;->$EnumSwitchMapping$0:[I
+    const/4 v0, 0x1
 
-    invoke-static {}, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->values()[Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    aput-object v2, v3, v0
 
-    move-result-object v1
+    sput-object v3, Ln2a;->c:[Lpl7;
 
-    array-length v1, v1
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    new-array v1, v1, [I
+    move-result-object v0
 
-    :try_start_3
-    sget-object v4, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->NONE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    sput-object v0, Ln2a;->d:Ljava/lang/String;
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
+    return-void
+.end method
 
-    move-result v4
+.method public constructor <init>(Lys4;Lys4;)V
+    .locals 0
 
-    aput v2, v1, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :catch_3
-    :try_start_4
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->PIPELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    iput-object p1, p0, Ln2a;->a:Lys4;
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aput v3, v1, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v2, Lorg/webrtc/PeerConnectionFactory$EnhancerKind;->BASELINE:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v1, Ln2a;->$EnumSwitchMapping$1:[I
+    iput-object p2, p0, Ln2a;->b:Lys4;
 
     return-void
 .end method

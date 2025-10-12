@@ -1,159 +1,93 @@
 .class public final Lmmg;
-.super Ljava/lang/Object;
+.super Lp86;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final b:Ljava/lang/String;
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Lf02;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lp86;-><init>(Lf02;)V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    const-string v1, "virtual-"
 
-    iput-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-interface {p1}, Lf02;->d()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "-"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmmg;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(F)V
+.method public final b()I
     .locals 1
-
-    iget-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(J)V
-    .locals 1
-
-    iget-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Lomg;)V
-    .locals 4
-
-    iget-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    if-eqz v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object v1
-
-    new-instance v2, Lzg;
-
-    const/4 v3, 0x6
-
-    invoke-direct {v2, p1, v3, v0}, Lzg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p0, v0}, Lmmg;->l(I)I
 
-    :cond_1
-    return-void
+    move-result v0
+
+    return v0
 .end method
 
-.method public final e(F)V
+.method public final d()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lmmg;->a:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lmmg;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final l(I)I
+    .locals 1
 
-    check-cast v0, Landroid/view/View;
+    iget-object v0, p0, Lp86;->a:Lf02;
 
-    if-eqz v0, :cond_0
+    invoke-interface {v0, p1}, Lf02;->l(I)I
 
-    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    move-result p1
 
-    move-result-object v0
+    iget v0, p0, Lmmg;->c:I
 
-    invoke-virtual {v0, p1}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    sub-int/2addr p1, v0
 
-    :cond_0
-    return-void
+    invoke-static {p1}, Leof;->h(I)I
+
+    move-result p1
+
+    return p1
 .end method

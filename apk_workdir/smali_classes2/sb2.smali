@@ -3,118 +3,191 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lno3;
 
 
 # instance fields
-.field public final synthetic a:Lub2;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:J
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final synthetic c:J
 
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public synthetic constructor <init>(JLjava/lang/String;J)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lsb2;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsb2;->a:Lub2;
+    iput-wide p1, p0, Lsb2;->b:J
 
-    iput-object p2, p0, Lsb2;->b:Ljava/util/List;
+    iput-object p3, p0, Lsb2;->o:Ljava/lang/Object;
 
-    iput-object p3, p0, Lsb2;->c:Ljava/lang/String;
+    iput-wide p4, p0, Lsb2;->c:J
 
-    iput-object p4, p0, Lsb2;->o:Ljava/lang/String;
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lc39;JJ)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lsb2;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsb2;->o:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lsb2;->b:J
+
+    iput-wide p4, p0, Lsb2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public final accept(Ljava/lang/Object;)V
+    .locals 11
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lsb2;->a:I
 
-    const-string v1, "createMultiChat, contacts.size() = "
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lsb2;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Lsb2;->b:Ljava/util/List;
+    check-cast v0, Lc39;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    check-cast p1, Lr00;
 
-    move-result v2
+    iget-object v0, v0, Lc39;->c:Lnnb;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v1, p1, Lr00;->e:Lq00;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v1, :cond_4
+
+    iget-wide v1, p0, Lsb2;->c:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v5, v1, v3
+
+    if-nez v5, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    check-cast v0, Lpnb;
+
+    iget-object v0, v0, Lpnb;->b:Lhlb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->min-duration-save-audio-start-time:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/16 v6, 0x14
+
+    int-to-long v6, v6
+
+    invoke-virtual {v0, v5, v6, v7}, Lohd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v5
+
+    long-to-int v0, v5
+
+    int-to-long v5, v0
+
+    cmp-long v0, v1, v5
+
+    if-gez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-wide v5, p0, Lsb2;->b:J
+
+    sub-long v7, v1, v5
+
+    const-wide/16 v9, 0xbb8
+
+    cmp-long v0, v7, v9
+
+    if-gtz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-wide v3, v5
+
+    :goto_0
+    iget-object v0, p1, Lr00;->e:Lq00;
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Lq00;->j:Lq00;
+
+    :cond_3
+    invoke-virtual {v0}, Lq00;->a()Lp00;
 
     move-result-object v0
 
-    const-string v2, "ub2"
+    iput-wide v3, v0, Lp00;->g:J
 
-    invoke-static {v2, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    iput-wide v1, v0, Lp00;->c:J
 
-    sget-object v0, Loc2;->b:Loc2;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iget-object v2, p0, Lsb2;->a:Lub2;
+    move-result-wide v1
 
-    iget-object v3, p0, Lsb2;->c:Ljava/lang/String;
+    iput-wide v1, v0, Lp00;->h:J
 
-    iget-object v4, p0, Lsb2;->o:Ljava/lang/String;
+    new-instance v1, Lq00;
 
-    invoke-virtual {v2, v0, v1, v3, v4}, Lub2;->b(Loc2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lm82;
+    invoke-direct {v1, v0}, Lq00;-><init>(Lp00;)V
 
-    move-result-object v0
+    iput-object v1, p1, Lr00;->e:Lq00;
 
-    new-instance v4, Lt00;
+    :cond_4
+    :goto_1
+    return-void
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    :pswitch_0
+    iget-object v0, p0, Lsb2;->o:Ljava/lang/Object;
 
-    sget-object v5, Lu00;->b:Lu00;
+    move-object v4, v0
 
-    iput-object v5, v4, Lt00;->a:Lu00;
+    check-cast v4, Ljava/lang/String;
 
-    const/4 v5, 0x3
+    check-cast p1, Lec2;
 
-    iput v5, v4, Lt00;->l:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v1, v4, Lt00;->c:Ljava/util/Collection;
+    new-instance v1, Lqc2;
 
-    iput-object v3, v4, Lt00;->d:Ljava/lang/String;
+    iget-wide v2, p0, Lsb2;->c:J
 
-    invoke-virtual {v4}, Lt00;->a()Lv00;
+    iget-wide v5, p0, Lsb2;->b:J
 
-    move-result-object v1
+    invoke-direct/range {v1 .. v6}, Lqc2;-><init>(JLjava/lang/String;J)V
 
-    iget-wide v3, v0, Lm82;->a:J
+    iput-object v1, p1, Lec2;->i0:Lqc2;
 
-    new-instance v5, Lwtd;
+    return-void
 
-    const/4 v6, 0x1
+    nop
 
-    invoke-direct {v5, v3, v4, v1, v6}, Lwtd;-><init>(JLjava/lang/Object;I)V
-
-    new-instance v1, Lxtd;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v5, v3}, Lxtd;-><init>(Lwtd;B)V
-
-    iget-object v2, v2, Lub2;->w:Ljt4;
-
-    invoke-virtual {v2}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnah;
-
-    invoke-virtual {v2, v1}, Lnah;->b(Lstd;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

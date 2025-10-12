@@ -14,7 +14,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedback;",
         "feedback",
-        "Loyf;",
+        "Laxf;",
         "onFeedbackAdded",
         "(Ljava/util/List;)V",
         "onFeedbackRemoved",

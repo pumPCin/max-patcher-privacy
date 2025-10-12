@@ -2,215 +2,225 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbvb;
+
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lbp7;
-
-.field public volatile e:Z
+.field public final b:Lz93;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
+.method public constructor <init>(Ljava/lang/String;Lz93;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpn7;->a:Lbp7;
+    iput-object p1, p0, Lpn7;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lpn7;->b:Lbp7;
-
-    iput-object p3, p0, Lpn7;->c:Lbp7;
-
-    iput-object p4, p0, Lpn7;->d:Lbp7;
+    iput-object p2, p0, Lpn7;->b:Lz93;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-boolean v0, p0, Lpn7;->e:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lpn7;->e:Z
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lpn7;->a:Lbp7;
+    return v0
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loqe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljqe;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Ljqe;-><init>(Loqe;I)V
-
-    new-instance v2, Lmqe;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v2, v3}, Lmqe;-><init>(I)V
-
-    iget-object v0, v0, Loqe;->h:Lked;
-
-    invoke-static {v1, v2, v0}, Liad;->a(Le6;Lwo3;Lked;)Lqs1;
-
-    iget-object v0, p0, Lpn7;->b:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lil5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lhl5;
+    :cond_0
+    instance-of v1, p1, Lpn7;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Lhl5;-><init>(ILjava/lang/Object;)V
+    if-nez v1, :cond_1
 
-    new-instance v2, Lbf3;
+    return v2
 
-    const/4 v3, 0x3
+    :cond_1
+    check-cast p1, Lpn7;
 
-    invoke-direct {v2, v3, v1}, Lbf3;-><init>(ILjava/lang/Object;)V
+    iget-object v1, p0, Lpn7;->a:Ljava/lang/String;
 
-    iget-object v1, v0, Lil5;->o:Ljt4;
+    iget-object v3, p1, Lpn7;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljt4;->get()Ljava/lang/Object;
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v1
 
-    check-cast v1, Lked;
+    if-nez v1, :cond_2
 
-    invoke-virtual {v2, v1}, Lraa;->q(Lked;)Lhba;
+    return v2
 
-    move-result-object v1
+    :cond_2
+    iget-object v1, p0, Lpn7;->b:Lz93;
 
-    iget-object v2, v0, Lil5;->c:Ljt4;
+    iget-object p1, p1, Lpn7;->b:Lz93;
 
-    invoke-virtual {v2}, Ljt4;->get()Ljava/lang/Object;
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result p1
 
-    check-cast v2, Lked;
+    if-nez p1, :cond_3
 
-    invoke-virtual {v1, v2}, Lraa;->m(Lked;)Loca;
+    return v2
 
-    move-result-object v1
+    :cond_3
+    return v0
+.end method
 
-    new-instance v2, Lgl5;
+.method public final getItemId()J
+    .locals 2
 
-    const/4 v3, 0x1
+    const/4 v0, 0x2
 
-    invoke-direct {v2, v0, v3}, Lgl5;-><init>(Lil5;I)V
+    int-to-long v0, v0
 
-    new-instance v0, Lqk5;
+    return-wide v0
+.end method
 
-    const/16 v3, 0xd
+.method public final h(Lov7;)Z
+    .locals 4
 
-    invoke-direct {v0, v3}, Lqk5;-><init>(I)V
+    const/4 v0, 0x2
 
-    sget-object v3, Loch;->c:Lcg6;
+    int-to-long v0, v0
 
-    new-instance v4, Lno7;
+    invoke-interface {p1}, Lov7;->getItemId()J
 
-    invoke-direct {v4, v2, v0, v3}, Lno7;-><init>(Lwo3;Lwo3;Le6;)V
+    move-result-wide v2
 
-    invoke-virtual {v1, v4}, Lraa;->a(Lxda;)V
+    cmp-long p1, v0, v2
 
-    iget-object v0, p0, Lpn7;->c:Lbp7;
+    if-nez p1, :cond_0
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lpn7;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lpn7;->b:Lz93;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, v2, Lz93;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final k(Lov7;)Ljava/lang/Object;
+    .locals 1
+
+    instance-of v0, p1, Lpn7;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    new-instance v0, Lsvb;
+
+    check-cast p1, Lpn7;
+
+    iget-object p1, p1, Lpn7;->b:Lz93;
+
+    invoke-direct {v0, p1}, Lsvb;-><init>(Lz93;)V
+
+    return-object v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x2
+
+    return v0
+.end method
+
+.method public final q(Lov7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lpn7;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LastNameItem(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpn7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpn7;->b:Lz93;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lok5;
-
-    invoke-virtual {v0}, Lok5;->p()Lmda;
-
-    move-result-object v1
-
-    new-instance v2, Lcz4;
-
-    const/16 v4, 0x15
-
-    invoke-direct {v2, v4}, Lcz4;-><init>(I)V
-
-    new-instance v4, Lae8;
-
-    const/4 v5, 0x3
-
-    invoke-direct {v4, v1, v2, v5}, Lae8;-><init>(Ljava/lang/Object;Lmf6;I)V
-
-    iget-object v1, v0, Lok5;->o:Ls5f;
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lked;
-
-    invoke-virtual {v4, v2}, Lraa;->q(Lked;)Lhba;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lked;
-
-    invoke-virtual {v2, v1}, Lraa;->m(Lked;)Loca;
-
-    move-result-object v1
-
-    new-instance v2, Lik5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v2, v0, v4}, Lik5;-><init>(Lok5;I)V
-
-    new-instance v0, Lcz4;
-
-    const/16 v4, 0x16
-
-    invoke-direct {v0, v4}, Lcz4;-><init>(I)V
-
-    new-instance v4, Lno7;
-
-    invoke-direct {v4, v2, v0, v3}, Lno7;-><init>(Lwo3;Lwo3;Le6;)V
-
-    invoke-virtual {v1, v4}, Lraa;->a(Lxda;)V
-
-    iget-object v0, p0, Lpn7;->d:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leue;
-
-    return-void
+    return-object v0
 .end method

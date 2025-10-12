@@ -29,7 +29,7 @@
 
 
 # instance fields
-.field public final p1:Lwr7;
+.field public final i1:Loq7;
 
 
 # direct methods
@@ -38,97 +38,120 @@
 
     invoke-direct {p0}, Landroidx/fragment/app/a;-><init>()V
 
-    new-instance v0, Lwr7;
+    new-instance v0, Loq7;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lwr7;-><init>(Z)V
+    invoke-direct {v0, v1}, Loq7;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->p1:Lwr7;
+    iput-object v0, p0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Loq7;
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->N0()V
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->y0()V
 
-    invoke-virtual {p0, v1}, Landroidx/fragment/app/a;->L0(Z)V
+    iget-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
 
+    if-eq v0, v1, :cond_0
+
+    iput-boolean v1, p0, Landroidx/fragment/app/a;->O0:Z
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->O()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->P()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Landroidx/fragment/app/a;->E0:Lw96;
+
+    iget-object v0, v0, Lw96;->A0:Landroidx/fragment/app/b;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final R0()Lwr7;
+.method public final B0()Loq7;
     .locals 1
 
-    iget-object v0, p0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->p1:Lwr7;
+    iget-object v0, p0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Loq7;
 
     return-object v0
 .end method
 
-.method public final S0(ILjava/lang/String;)V
+.method public final C0(ILjava/lang/String;)V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->R0()Lwr7;
+    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->B0()Loq7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lwr7;->h:Landroid/util/SparseArray;
+    iget-object v0, v0, Loq7;->h:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final T0(Landroid/app/Activity;)V
+.method public final D0(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0, p1, p0}, Lk74;->z(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
+    invoke-static {p0, p1, p0}, Lbbh;->z(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
 
     return-void
 .end method
 
-.method public final U0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+.method public final E0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
     .locals 0
 
-    invoke-virtual {p0, p3, p1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->S0(ILjava/lang/String;)V
+    invoke-virtual {p0, p3, p1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->C0(ILjava/lang/String;)V
 
-    invoke-virtual {p0, p2, p3, p4}, Landroidx/fragment/app/a;->Q0(Landroid/content/Intent;ILandroid/os/Bundle;)V
+    invoke-virtual {p0, p2, p3, p4}, Landroidx/fragment/app/a;->A0(Landroid/content/Intent;ILandroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public final g0(IILandroid/content/Intent;)V
+.method public final S(IILandroid/content/Intent;)V
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/a;->g0(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Landroidx/fragment/app/a;->S(IILandroid/content/Intent;)V
 
-    invoke-static {p0, p1, p2, p3}, Lk74;->s(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;IILandroid/content/Intent;)V
+    invoke-static {p0, p1, p2, p3}, Lbbh;->s(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;IILandroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public final i0(Landroid/content/Context;)V
+.method public final U(Landroid/content/Context;)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/a;->i0(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Landroidx/fragment/app/a;->U(Landroid/content/Context;)V
 
-    invoke-static {p0, p1}, Lk74;->t(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Lbbh;->t(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public final j0(Landroid/os/Bundle;)V
+.method public final V(Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/fragment/app/a;->j0(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroidx/fragment/app/a;->V(Landroid/os/Bundle;)V
 
-    invoke-static {p0, p1}, Lk74;->u(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/os/Bundle;)V
+    invoke-static {p0, p1}, Lbbh;->u(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public final k0(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+.method public final W(Landroid/view/Menu;Landroid/view/MenuInflater;)V
     .locals 2
 
-    invoke-static {p0}, Lk74;->r(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)Ljava/util/List;
+    invoke-static {p0}, Lbbh;->q(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)Ljava/util/List;
 
     move-result-object v0
 
@@ -147,9 +170,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lq7;
+    check-cast v1, Ly7;
 
-    invoke-virtual {v1, p1, p2}, Li8d;->v(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v1, p1, p2}, Ln6d;->v(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     goto :goto_0
 
@@ -157,38 +180,38 @@
     return-void
 .end method
 
-.method public final m0()V
+.method public final Y()V
     .locals 1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/a;->W0:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->Q0:Z
 
-    invoke-static {p0}, Lk74;->v(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
+    invoke-static {p0}, Lbbh;->v(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
 
     return-void
 .end method
 
-.method public final o0()V
+.method public final a0()V
     .locals 2
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/a;->W0:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->Q0:Z
 
-    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->R0()Lwr7;
+    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->B0()Loq7;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lwr7;->e:Z
+    iput-boolean v1, v0, Loq7;->e:Z
 
-    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->R0()Lwr7;
+    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->B0()Loq7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lwr7;->b:Landroid/app/Activity;
+    iget-object v0, v0, Loq7;->b:Landroid/app/Activity;
 
     if-eqz v0, :cond_0
 
@@ -196,16 +219,78 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, Lk74;->l(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Z)V
+    invoke-static {p0, v0}, Lbbh;->g(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Z)V
 
     :cond_0
+    return-void
+.end method
+
+.method public final f0(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    new-instance v0, Lee;
+
+    invoke-direct {v0, p0, p1}, Lee;-><init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/view/MenuItem;)V
+
+    invoke-static {p0, p1, v0}, Lbbh;->w(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/view/MenuItem;Ltd6;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final h0(Landroid/view/Menu;)V
+    .locals 2
+
+    invoke-static {p0}, Lbbh;->q(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly7;
+
+    invoke-virtual {v1, p1}, Ln6d;->x(Landroid/view/Menu;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final i0(I[Ljava/lang/String;[I)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Lbbh;->x(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;I[Ljava/lang/String;[I)V
+
+    return-void
+.end method
+
+.method public final k0(Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lbbh;->y(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/os/Bundle;)V
+
     return-void
 .end method
 
 .method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lk74;->E(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
+    invoke-static {p0, p1}, Lbbh;->I(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -213,7 +298,7 @@
 .method public final onActivityDestroyed(Landroid/app/Activity;)V
     .locals 1
 
-    sget-object v0, Lxr7;->a:Ljava/util/LinkedHashMap;
+    sget-object v0, Lpq7;->a:Ljava/util/LinkedHashMap;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -223,7 +308,7 @@
 .method public final onActivityPaused(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lk74;->F(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
+    invoke-static {p0, p1}, Lbbh;->J(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -231,11 +316,11 @@
 .method public final onActivityPreDestroyed(Landroid/app/Activity;)V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->R0()Lwr7;
+    invoke-virtual {p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->B0()Loq7;
 
     move-result-object v0
 
-    iget-object v0, v0, Lwr7;->b:Landroid/app/Activity;
+    iget-object v0, v0, Loq7;->b:Landroid/app/Activity;
 
     if-ne v0, p1, :cond_0
 
@@ -245,7 +330,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-static {p0}, Lk74;->v(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
+    invoke-static {p0}, Lbbh;->v(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)V
 
     :cond_0
     return-void
@@ -254,7 +339,7 @@
 .method public final onActivityResumed(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lk74;->G(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
+    invoke-static {p0, p1}, Lbbh;->K(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -262,7 +347,7 @@
 .method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lk74;->H(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;Landroid/os/Bundle;)V
+    invoke-static {p0, p1, p2}, Lbbh;->L(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -270,7 +355,7 @@
 .method public final onActivityStarted(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lk74;->I(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
+    invoke-static {p0, p1}, Lbbh;->M(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -278,69 +363,7 @@
 .method public final onActivityStopped(Landroid/app/Activity;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lk74;->J(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
-
-    return-void
-.end method
-
-.method public final t0(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    new-instance v0, Lxd;
-
-    invoke-direct {v0, p0, p1}, Lxd;-><init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/view/MenuItem;)V
-
-    invoke-static {p0, p1, v0}, Lk74;->w(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/view/MenuItem;Lve6;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final v0(Landroid/view/Menu;)V
-    .locals 2
-
-    invoke-static {p0}, Lk74;->r(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lq7;
-
-    invoke-virtual {v1, p1}, Li8d;->x(Landroid/view/Menu;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w0(I[Ljava/lang/String;[I)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lk74;->x(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;I[Ljava/lang/String;[I)V
-
-    return-void
-.end method
-
-.method public final y0(Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lk74;->y(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/os/Bundle;)V
+    invoke-static {p0, p1}, Lbbh;->N(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/app/Activity;)V
 
     return-void
 .end method

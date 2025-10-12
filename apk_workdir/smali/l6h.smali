@@ -1,376 +1,294 @@
-.class public abstract Ll6h;
-.super Ljava/lang/Object;
+.class public final Ll6h;
+.super Lo6h;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/reflect/Field;
+.field public static final e:Landroid/view/animation/PathInterpolator;
 
-.field public static final b:Lc78;
+.field public static final f:Lgj5;
 
-.field public static final c:Ljava/lang/Object;
+.field public static final g:Landroid/view/animation/DecelerateInterpolator;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    :try_start_0
-    const-class v0, Landroid/graphics/Typeface;
+    new-instance v0, Landroid/view/animation/PathInterpolator;
 
-    const-string v1, "native_instance"
+    const v1, 0x3f8ccccd    # 1.1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    const/4 v1, 0x1
+    invoke-direct {v0, v3, v1, v3, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Ll6h;->e:Landroid/view/animation/PathInterpolator;
 
-    goto :goto_0
+    new-instance v0, Lgj5;
 
-    :catch_0
-    move-exception v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, v1}, Lgj5;-><init>(I)V
 
-    move-result-object v1
+    sput-object v0, Ll6h;->f:Lgj5;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
-    move-result-object v1
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    const-string v2, "WeightTypeface"
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 v0, 0x0
-
-    :goto_0
-    sput-object v0, Ll6h;->a:Ljava/lang/reflect/Field;
-
-    new-instance v0, Lc78;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lc78;-><init>(I)V
-
-    sput-object v0, Ll6h;->b:Lc78;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll6h;->c:Ljava/lang/Object;
+    sput-object v0, Ll6h;->g:Landroid/view/animation/DecelerateInterpolator;
 
     return-void
 .end method
 
-.method public static a(Lv2;Landroid/content/Context;Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 21
+.method public static e(Landroid/view/View;Lp6h;)V
+    .locals 2
 
-    move-object/from16 v0, p0
+    invoke-static {p0}, Ll6h;->j(Landroid/view/View;)La82;
 
-    move-object/from16 v1, p2
+    move-result-object v0
 
-    move/from16 v2, p3
+    if-eqz v0, :cond_0
 
-    sget-object v3, Ll6h;->a:Ljava/lang/reflect/Field;
+    invoke-virtual {v0, p1}, La82;->b(Lp6h;)V
 
-    if-eqz v3, :cond_e
+    iget v0, v0, La82;->a:I
 
-    shl-int/lit8 v5, v2, 0x1
+    if-nez v0, :cond_0
 
-    sget-object v6, Ll6h;->c:Ljava/lang/Object;
+    goto :goto_1
 
-    monitor-enter v6
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    :try_start_0
-    invoke-virtual {v3, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v3
+    check-cast p0, Landroid/view/ViewGroup;
 
-    check-cast v3, Ljava/lang/Number;
+    const/4 v0, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    move-result-wide v7
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v1
 
-    :try_start_1
-    sget-object v3, Ll6h;->b:Lc78;
+    if-ge v0, v1, :cond_1
 
-    invoke-virtual {v3, v7, v8}, Lc78;->b(J)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    move-result-object v9
+    move-result-object v1
 
-    check-cast v9, Landroid/util/SparseArray;
+    invoke-static {v1, p1}, Ll6h;->e(Landroid/view/View;Lp6h;)V
 
-    if-nez v9, :cond_0
-
-    new-instance v9, Landroid/util/SparseArray;
-
-    const/4 v10, 0x4
-
-    invoke-direct {v9, v10}, Landroid/util/SparseArray;-><init>(I)V
-
-    invoke-virtual {v3, v7, v8, v9}, Lc78;->e(JLjava/lang/Object;)V
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    :goto_1
+    return-void
+.end method
 
-    goto/16 :goto_7
+.method public static f(Landroid/view/View;Lp6h;Landroid/view/WindowInsets;Z)V
+    .locals 2
+
+    invoke-static {p0}, Ll6h;->j(Landroid/view/View;)La82;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iput-object p2, v0, La82;->b:Ljava/lang/Object;
+
+    if-nez p3, :cond_1
+
+    invoke-virtual {v0, p1}, La82;->c(Lp6h;)V
+
+    iget p3, v0, La82;->a:I
+
+    if-nez p3, :cond_0
+
+    const/4 p3, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v9, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/graphics/Typeface;
-
-    if-eqz v3, :cond_1
-
-    monitor-exit v6
-
-    return-object v3
+    move p3, v1
 
     :cond_1
     :goto_0
-    invoke-static {v1}, Lv2;->M0(Landroid/graphics/Typeface;)J
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    move-result-wide v7
+    if-eqz v0, :cond_2
 
-    const-wide/16 v10, 0x0
+    check-cast p0, Landroid/view/ViewGroup;
 
-    cmp-long v3, v7, v10
+    :goto_1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    if-nez v3, :cond_2
+    move-result v0
 
-    const/4 v3, 0x0
+    if-ge v1, v0, :cond_2
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0, p1, p2, p3}, Ll6h;->f(Landroid/view/View;Lp6h;Landroid/view/WindowInsets;Z)V
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_2
-    iget-object v3, v0, Lv2;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v3, Ljava/util/concurrent/ConcurrentHashMap;
+.method public static g(Landroid/view/View;Ld7h;Ljava/util/List;)V
+    .locals 2
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p0}, Ll6h;->j(Landroid/view/View;)La82;
 
-    move-result-object v7
+    move-result-object v0
 
-    invoke-virtual {v3, v7}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v3
+    invoke-virtual {v0, p1, p2}, La82;->d(Ld7h;Ljava/util/List;)Ld7h;
 
-    check-cast v3, Lw66;
+    move-result-object p1
 
+    iget v0, v0, La82;->a:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    check-cast p0, Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-static {v1, p1, p2}, Ll6h;->g(Landroid/view/View;Ld7h;Ljava/util/List;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     :goto_1
-    if-nez v3, :cond_3
+    return-void
+.end method
 
-    const/4 v4, 0x0
+.method public static h(Landroid/view/View;Lp6h;Ldzb;)V
+    .locals 2
 
-    const/4 v10, 0x0
+    invoke-static {p0}, Ll6h;->j(Landroid/view/View;)La82;
 
-    const/16 v18, 0x2
+    move-result-object v0
 
-    goto/16 :goto_4
+    if-eqz v0, :cond_0
 
-    :cond_3
-    invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, p1, p2}, La82;->e(Lp6h;Ldzb;)Ldzb;
 
-    move-result-object v14
+    iget v0, v0, La82;->a:I
 
-    iget-object v12, v3, Lw66;->a:[Lx66;
+    if-nez v0, :cond_0
 
-    array-length v13, v12
+    goto :goto_1
 
-    const v15, 0x7fffffff
+    :cond_0
+    instance-of v0, p0, Landroid/view/ViewGroup;
 
-    const/4 v4, 0x0
+    if-eqz v0, :cond_1
 
-    const/4 v7, 0x0
+    check-cast p0, Landroid/view/ViewGroup;
 
-    const/16 v16, 0x0
+    const/4 v0, 0x0
 
-    const/16 v18, 0x2
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    :goto_2
-    if-ge v4, v13, :cond_6
+    move-result v1
 
-    move-wide/from16 v19, v10
+    if-ge v0, v1, :cond_1
 
-    aget-object v10, v12, v4
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    iget v11, v10, Lx66;->b:I
+    move-result-object v1
 
-    sub-int/2addr v11, v2
+    invoke-static {v1, p1, p2}, Ll6h;->h(Landroid/view/View;Lp6h;Ldzb;)V
 
-    invoke-static {v11}, Ljava/lang/Math;->abs(I)I
+    add-int/lit8 v0, v0, 0x1
 
-    move-result v11
+    goto :goto_0
 
-    mul-int/lit8 v11, v11, 0x2
+    :cond_1
+    :goto_1
+    return-void
+.end method
 
-    iget-boolean v8, v10, Lx66;->c:Z
+.method public static i(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 1
 
-    add-int/2addr v11, v8
+    sget v0, Lgdc;->tag_on_apply_window_listener:I
 
-    if-eqz v7, :cond_4
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    if-le v15, v11, :cond_5
+    move-result-object v0
 
-    :cond_4
-    move-object v7, v10
+    if-eqz v0, :cond_0
 
-    move v15, v11
+    return-object p1
 
-    :cond_5
-    add-int/lit8 v4, v4, 0x1
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    move-wide/from16 v10, v19
+    move-result-object p0
 
-    goto :goto_2
+    return-object p0
+.end method
 
-    :cond_6
-    move-wide/from16 v19, v10
+.method public static j(Landroid/view/View;)La82;
+    .locals 1
 
-    if-nez v7, :cond_7
+    sget v0, Lgdc;->tag_window_insets_animation_callback:I
 
-    move-object/from16 v4, v16
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    const/4 v10, 0x0
+    move-result-object p0
 
-    goto :goto_4
+    instance-of v0, p0, Lk6h;
 
-    :cond_7
-    iget v15, v7, Lx66;->f:I
+    if-eqz v0, :cond_0
 
-    iget-object v4, v7, Lx66;->a:Ljava/lang/String;
+    check-cast p0, Lk6h;
 
-    sget-object v12, Lixf;->a:Lv2;
+    iget-object p0, p0, Lk6h;->a:La82;
 
-    const/16 v17, 0x0
+    return-object p0
 
-    move-object/from16 v13, p1
+    :cond_0
+    const/4 p0, 0x0
 
-    move-object/from16 v16, v4
-
-    invoke-virtual/range {v12 .. v17}, Lv2;->C0(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
-
-    move-result-object v4
-
-    move-object/from16 v7, v16
-
-    move/from16 v8, v17
-
-    if-eqz v4, :cond_8
-
-    const/4 v10, 0x0
-
-    invoke-static {v14, v15, v7, v10, v8}, Lixf;->c(Landroid/content/res/Resources;ILjava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v7
-
-    sget-object v8, Lixf;->b:Lt78;
-
-    invoke-virtual {v8, v7, v4}, Lt78;->d(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_8
-    const/4 v10, 0x0
-
-    :goto_3
-    invoke-static {v4}, Lv2;->M0(Landroid/graphics/Typeface;)J
-
-    move-result-wide v7
-
-    cmp-long v11, v7, v19
-
-    if-eqz v11, :cond_9
-
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v7
-
-    invoke-virtual {v0, v7, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_9
-    :goto_4
-    if-nez v4, :cond_d
-
-    const/16 v0, 0x258
-
-    const/4 v3, 0x1
-
-    if-lt v2, v0, :cond_a
-
-    move v0, v3
-
-    goto :goto_5
-
-    :cond_a
-    move v0, v10
-
-    :goto_5
-    if-nez v0, :cond_b
-
-    move v7, v10
-
-    goto :goto_6
-
-    :cond_b
-    if-nez v0, :cond_c
-
-    move/from16 v7, v18
-
-    goto :goto_6
-
-    :cond_c
-    move v7, v3
-
-    :goto_6
-    invoke-static {v1, v7}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-
-    move-result-object v4
-
-    :cond_d
-    invoke-virtual {v9, v5, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    monitor-exit v6
-
-    return-object v4
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :goto_7
-    monitor-exit v6
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_e
-    const/16 v16, 0x0
-
-    return-object v16
+    return-object p0
 .end method

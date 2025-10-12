@@ -3,24 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Liw1;
+.implements Ljw1;
 
 
 # instance fields
 .field public final synthetic a:J
 
-.field public final synthetic b:Lts1;
+.field public final synthetic b:Lvs1;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLts1;)V
+.method public synthetic constructor <init>(JLvs1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide p1, p0, Ldw1;->a:J
 
-    iput-object p3, p0, Ldw1;->b:Lts1;
+    iput-object p3, p0, Ldw1;->b:Lvs1;
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 
     iget-wide v0, p0, Ldw1;->a:J
 
-    invoke-static {p1, v0, v1}, Ljw1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+    invoke-static {p1, v0, v1}, Lkw1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
 
     move-result p1
 
@@ -40,9 +40,9 @@
 
     const/4 p1, 0x0
 
-    iget-object v0, p0, Ldw1;->b:Lts1;
+    iget-object v0, p0, Ldw1;->b:Lvs1;
 
-    invoke-virtual {v0, p1}, Lts1;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lvs1;->b(Ljava/lang/Object;)Z
 
     const/4 p1, 0x1
 

@@ -1,59 +1,31 @@
-.class public abstract Li82;
+.class public final Li82;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/nio/charset/Charset;
+.field public static final b:Li82;
 
-.field public static final b:Ljava/nio/charset/Charset;
 
-.field public static final c:Ljava/nio/charset/Charset;
-
-.field public static volatile d:Ljava/nio/charset/Charset;
-
-.field public static volatile e:Ljava/nio/charset/Charset;
+# instance fields
+.field public a:[[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "UTF-8"
+    new-instance v0, Li82;
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/16 v1, 0x80
 
-    sput-object v0, Li82;->a:Ljava/nio/charset/Charset;
+    new-array v1, v1, [[I
 
-    const-string v0, "UTF-16"
+    iput-object v1, v0, Li82;->a:[[I
 
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Li82;->b:Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16BE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "UTF-16LE"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "US-ASCII"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    const-string v0, "ISO-8859-1"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    sput-object v0, Li82;->c:Ljava/nio/charset/Charset;
+    sput-object v0, Li82;->b:Li82;
 
     return-void
 .end method

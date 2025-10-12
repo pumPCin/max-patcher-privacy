@@ -3,19 +3,15 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmaa;
+.implements Ln8a;
 
 
 # static fields
 .field public static final a:Lk80;
 
-.field public static final b:Lfn5;
+.field public static final b:Ltm5;
 
-.field public static final c:Lfn5;
-
-.field public static final d:Lfn5;
-
-.field public static final e:Lfn5;
+.field public static final c:Ltm5;
 
 
 # direct methods
@@ -28,95 +24,51 @@
 
     sput-object v0, Lk80;->a:Lk80;
 
-    new-instance v0, Lpx;
+    new-instance v0, Ley;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lpx;-><init>(I)V
+    invoke-direct {v0, v1}, Ley;-><init>(I)V
 
-    const-class v1, Lb6c;
+    const-class v1, Ln4c;
 
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v3, "window"
+    new-instance v2, Ltm5;
 
-    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
 
-    sput-object v2, Lk80;->b:Lfn5;
+    move-result-object v0
 
-    new-instance v0, Lpx;
+    const-string v3, "startMs"
+
+    invoke-direct {v2, v3, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lk80;->b:Ltm5;
+
+    new-instance v0, Ley;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, v2}, Lpx;-><init>(I)V
+    invoke-direct {v0, v2}, Ley;-><init>(I)V
 
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-static {v1, v0}, Lsw1;->n(Ljava/lang/Class;Ley;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    const-string v3, "logSourceMetrics"
+    new-instance v1, Ltm5;
 
-    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lk80;->c:Lfn5;
-
-    new-instance v0, Lpx;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lpx;-><init>(I)V
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
+    invoke-static {v0}, Lsw1;->o(Ljava/util/HashMap;)Ljava/util/Map;
 
     move-result-object v0
 
-    new-instance v2, Lfn5;
+    const-string v2, "endMs"
 
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-direct {v1, v2, v0}, Ltm5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
-    move-result-object v0
-
-    const-string v3, "globalMetrics"
-
-    invoke-direct {v2, v3, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lk80;->d:Lfn5;
-
-    new-instance v0, Lpx;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Lpx;-><init>(I)V
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "appNamespace"
-
-    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lk80;->e:Lfn5;
+    sput-object v1, Lk80;->c:Ltm5;
 
     return-void
 .end method
@@ -124,35 +76,23 @@
 
 # virtual methods
 .method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
-    check-cast p1, Lq63;
+    check-cast p1, Lpgf;
 
-    check-cast p2, Lnaa;
+    check-cast p2, Lo8a;
 
-    sget-object v0, Lk80;->b:Lfn5;
+    sget-object v0, Lk80;->b:Ltm5;
 
-    iget-object v1, p1, Lq63;->a:Laif;
+    iget-wide v1, p1, Lpgf;->a:J
 
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    invoke-interface {p2, v0, v1, v2}, Lo8a;->e(Ltm5;J)Lo8a;
 
-    sget-object v0, Lk80;->c:Lfn5;
+    sget-object v0, Lk80;->c:Ltm5;
 
-    iget-object v1, p1, Lq63;->b:Ljava/util/List;
+    iget-wide v1, p1, Lpgf;->b:J
 
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
-
-    sget-object v0, Lk80;->d:Lfn5;
-
-    iget-object v1, p1, Lq63;->c:Lzn6;
-
-    invoke-interface {p2, v0, v1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
-
-    sget-object v0, Lk80;->e:Lfn5;
-
-    iget-object p1, p1, Lq63;->d:Ljava/lang/String;
-
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    invoke-interface {p2, v0, v1, v2}, Lo8a;->e(Ltm5;J)Lo8a;
 
     return-void
 .end method

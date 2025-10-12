@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc69;
+.implements Lyb9;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x15cdca80
+    const v0, 0x43f6b71e
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "DoneWithDisable"
+    const-string v0, "MessagePinned"
 
     return-object v0
 .end method

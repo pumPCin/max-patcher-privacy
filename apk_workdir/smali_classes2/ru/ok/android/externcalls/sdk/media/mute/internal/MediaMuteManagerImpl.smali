@@ -22,40 +22,40 @@
         "listenerManager",
         "<init>",
         "(Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;Lru/ok/android/externcalls/sdk/media/mute/internal/listener/MediaMuteListenerManager;)V",
-        "Lnwd;",
+        "Lvud;",
         "roomId",
-        "Lpo8;",
+        "Ljn8;",
         "getMediaOptionsForCall",
-        "(Lnwd;)Lpo8;",
+        "(Lvud;)Ljn8;",
         "getMediaOptionsForCurrentUser",
-        "()Lpo8;",
+        "()Ljn8;",
         "",
-        "Lno8;",
+        "Lhn8;",
         "mediaOptions",
         "Lkotlin/Function0;",
-        "Loyf;",
+        "Laxf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "requestToEnableMediaForAll",
-        "(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/util/Set;Lvud;Ltd6;Lvd6;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantId",
         "requestToEnableMediaForParticipant",
-        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V",
         "",
         "mute",
         "setAudioPlayoutMuted",
         "(Z)V",
         "",
-        "Loo8;",
+        "Lin8;",
         "statesToUpdate",
         "updateMediaOptionsForAll",
-        "(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/util/Map;Lvud;Ltd6;Lvd6;)V",
         "updateMediaOptionsForParticipant",
-        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V",
+        "(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V",
         "Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;",
         "listener",
         "addListener",
@@ -106,24 +106,24 @@
     return-void
 .end method
 
-.method public getMediaOptionsForCall(Lnwd;)Lpo8;
+.method public getMediaOptionsForCall(Lvud;)Ljn8;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/MediaMuteManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;
 
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->getMediaOptionsForCall(Lnwd;)Lpo8;
+    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->getMediaOptionsForCall(Lvud;)Ljn8;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public getMediaOptionsForCurrentUser()Lpo8;
+.method public getMediaOptionsForCurrentUser()Ljn8;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/MediaMuteManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;
 
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->getMediaOptionsForCurrentUser()Lpo8;
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->getMediaOptionsForCurrentUser()Ljn8;
 
     move-result-object v0
 
@@ -140,42 +140,42 @@
     return-void
 .end method
 
-.method public requestToEnableMediaForAll(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V
+.method public requestToEnableMediaForAll(Ljava/util/Set;Lvud;Ltd6;Lvd6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lno8;",
+            "Lhn8;",
             ">;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lvud;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/MediaMuteManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->requestToEnableMediaForAll(Ljava/util/Set;Lnwd;Lve6;Lxe6;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->requestToEnableMediaForAll(Ljava/util/Set;Lvud;Ltd6;Lvd6;)V
 
     return-void
 .end method
 
-.method public requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
+.method public requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lno8;",
+            "Lhn8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lvud;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
@@ -192,7 +192,7 @@
 
     move-object v5, p5
 
-    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
+    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->requestToEnableMediaForParticipant(Ljava/util/Set;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V
 
     return-void
 .end method
@@ -207,44 +207,44 @@
     return-void
 .end method
 
-.method public updateMediaOptionsForAll(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V
+.method public updateMediaOptionsForAll(Ljava/util/Map;Lvud;Ltd6;Lvd6;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lno8;",
+            "Lhn8;",
             "+",
-            "Loo8;",
+            "Lin8;",
             ">;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lvud;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/media/mute/internal/MediaMuteManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->updateMediaOptionsForAll(Ljava/util/Map;Lnwd;Lve6;Lxe6;)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->updateMediaOptionsForAll(Ljava/util/Map;Lvud;Ltd6;Lvd6;)V
 
     return-void
 .end method
 
-.method public updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
+.method public updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lno8;",
+            "Lhn8;",
             "+",
-            "Loo8;",
+            "Lin8;",
             ">;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-            "Lnwd;",
-            "Lve6;",
-            "Lxe6;",
+            "Lvud;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
@@ -261,7 +261,7 @@
 
     move-object v5, p5
 
-    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lve6;Lxe6;)V
+    invoke-interface/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutor;->updateMediaOptionsForParticipant(Ljava/util/Map;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Ltd6;Lvd6;)V
 
     return-void
 .end method

@@ -1,63 +1,109 @@
-.class public final synthetic Lzd4;
+.class public final Lzd4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsx7;
-.implements Lnt8;
-
 
 # instance fields
-.field public final synthetic a:F
+.field public final a:Lw66;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:La50;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;F)V
+.method public constructor <init>(Lw66;IIIIIIILa50;ZZZ)V
     .locals 0
 
-    iput-object p1, p0, Lzd4;->b:Ljava/lang/Object;
-
-    iput p2, p0, Lzd4;->a:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzd4;->a:Lw66;
+
+    iput p2, p0, Lzd4;->b:I
+
+    iput p3, p0, Lzd4;->c:I
+
+    iput p4, p0, Lzd4;->d:I
+
+    iput p5, p0, Lzd4;->e:I
+
+    iput p6, p0, Lzd4;->f:I
+
+    iput p7, p0, Lzd4;->g:I
+
+    iput p8, p0, Lzd4;->h:I
+
+    iput-object p9, p0, Lzd4;->i:La50;
+
+    iput-boolean p10, p0, Lzd4;->j:Z
+
+    iput-boolean p11, p0, Lzd4;->k:Z
+
+    iput-boolean p12, p0, Lzd4;->l:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lls8;)V
-    .locals 1
+.method public final a()Ln4;
+    .locals 3
 
-    iget-object p1, p0, Lzd4;->b:Ljava/lang/Object;
+    new-instance v0, Ln4;
 
-    check-cast p1, Lot8;
+    iget v1, p0, Lzd4;->c:I
 
-    iget-object p1, p1, Lot8;->g:Lft8;
+    const/4 v2, 0x1
 
-    iget-object p1, p1, Lft8;->t:Lgmb;
+    if-ne v1, v2, :cond_0
 
-    iget v0, p0, Lzd4;->a:F
+    goto :goto_0
 
-    invoke-virtual {p1, v0}, Lgmb;->j0(F)V
+    :cond_0
+    const/4 v2, 0x0
 
-    return-void
-.end method
+    :goto_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 2
+    iget v1, p0, Lzd4;->g:I
 
-    iget-object v0, p0, Lzd4;->b:Ljava/lang/Object;
+    iput v1, v0, Ln4;->a:I
 
-    check-cast v0, Lwc;
+    iget v1, p0, Lzd4;->e:I
 
-    iget v1, p0, Lzd4;->a:F
+    iput v1, v0, Ln4;->b:I
 
-    check-cast p1, Lxc;
+    iget v1, p0, Lzd4;->f:I
 
-    invoke-interface {p1, v0, v1}, Lxc;->v0(Lwc;F)V
+    iput v1, v0, Ln4;->c:I
 
-    return-void
+    iget-boolean v1, p0, Lzd4;->l:Z
+
+    iput-boolean v1, v0, Ln4;->d:Z
+
+    iput-boolean v2, v0, Ln4;->e:Z
+
+    iget v1, p0, Lzd4;->h:I
+
+    iput v1, v0, Ln4;->f:I
+
+    return-object v0
 .end method

@@ -22,12 +22,12 @@
         "key",
         "Lkotlin/Function1;",
         "",
-        "Loyf;",
+        "Laxf;",
         "onError",
         "Lkotlin/Function0;",
         "onSuccess",
         "sendFeedback",
-        "(Ljava/lang/String;Lxe6;Lve6;)V",
+        "(Ljava/lang/String;Lvd6;Ltd6;)V",
         "Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;",
         "calls-sdk_release"
     }
@@ -56,34 +56,34 @@
     return-void
 .end method
 
-.method public static synthetic a(Lve6;Lorg/json/JSONObject;)V
+.method public static synthetic a(Ltd6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->sendFeedback$lambda$0(Lve6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->sendFeedback$lambda$0(Ltd6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method public static synthetic b(Lxe6;Lorg/json/JSONObject;)V
+.method public static synthetic b(Lvd6;Lorg/json/JSONObject;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->sendFeedback$lambda$1(Lxe6;Lorg/json/JSONObject;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->sendFeedback$lambda$1(Lvd6;Lorg/json/JSONObject;)V
 
     return-void
 .end method
 
-.method private static final sendFeedback$lambda$0(Lve6;Lorg/json/JSONObject;)V
+.method private static final sendFeedback$lambda$0(Ltd6;Lorg/json/JSONObject;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Ltd6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 .end method
 
-.method private static final sendFeedback$lambda$1(Lxe6;Lorg/json/JSONObject;)V
+.method private static final sendFeedback$lambda$1(Lvd6;Lorg/json/JSONObject;)V
     .locals 3
 
     if-eqz p0, :cond_0
@@ -98,9 +98,9 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p1, v2, v1, v2}, Lru/ok/android/externcalls/sdk/feedback/exceptions/FeedbackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILof4;)V
+    invoke-direct {v0, p1, v2, v1, v2}, Lru/ok/android/externcalls/sdk/feedback/exceptions/FeedbackException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILaf4;)V
 
-    invoke-interface {p0, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -108,21 +108,21 @@
 
 
 # virtual methods
-.method public sendFeedback(Ljava/lang/String;Lxe6;Lve6;)V
+.method public sendFeedback(Ljava/lang/String;Lvd6;Ltd6;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lxe6;",
-            "Lve6;",
+            "Lvd6;",
+            "Ltd6;",
             ")V"
         }
     .end annotation
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->signalingProvider:Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;
 
-    invoke-static {v0, p2}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lxe6;)Ldce;
+    invoke-static {v0, p2}, Lru/ok/android/externcalls/sdk/signaling/SignalingProviderKt;->get(Lru/ok/android/externcalls/sdk/signaling/SignalingProvider;Lvd6;)Lwae;
 
     move-result-object v0
 
@@ -136,31 +136,31 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lv63;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lxj6;
+    invoke-static {v2, v1}, Lrkc;->b(Lorg/json/JSONObject;Ljava/lang/String;)Lvi6;
 
     move-result-object v1
 
     const-string v2, "key"
 
-    iget-object v3, v1, Lxj6;->a:Lorg/json/JSONObject;
+    iget-object v3, v1, Lvi6;->a:Lorg/json/JSONObject;
 
     invoke-virtual {v3, v2, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance p1, Lvs;
+    new-instance p1, Lkt;
 
     const/4 v2, 0x4
 
-    invoke-direct {p1, v2, p3}, Lvs;-><init>(ILve6;)V
+    invoke-direct {p1, v2, p3}, Lkt;-><init>(ILtd6;)V
 
-    new-instance p3, Lws;
+    new-instance p3, Llt;
 
-    invoke-direct {p3, v2, p2}, Lws;-><init>(ILxe6;)V
+    invoke-direct {p3, v2, p2}, Llt;-><init>(ILvd6;)V
 
     const/4 p2, 0x0
 
-    invoke-virtual {v0, v1, p2, p1, p3}, Ldce;->d(Lgce;ZLcce;Lcce;)V
+    invoke-virtual {v0, v1, p2, p1, p3}, Lwae;->d(Lzae;ZLvae;Lvae;)V
 
     return-void
 

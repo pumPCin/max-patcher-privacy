@@ -1,175 +1,99 @@
-.class public abstract Lrua;
-.super Ljava/lang/Object;
+.class public final Lrua;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final synthetic c:I
 
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic o:Lsua;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lsua;I)V
+    .locals 0
 
-    sget v0, Lhkc;->oneme_settings_storage_action_one_month:I
+    iput p2, p0, Lrua;->c:I
 
-    sput v0, Lrua;->a:I
+    iput-object p1, p0, Lrua;->o:Lsua;
 
-    sget v0, Lhkc;->oneme_settings_storage_action_one_week:I
+    const/16 p1, 0x9
 
-    sput v0, Lrua;->b:I
+    packed-switch p2, :pswitch_data_0
 
-    sget v0, Lhkc;->oneme_settings_storage_action_six_month:I
+    sget-object p2, Lgua;->a:Lgua;
 
-    sput v0, Lrua;->c:I
-
-    sget v0, Lhkc;->oneme_settings_storage_action_unlimited:I
-
-    sput v0, Lrua;->d:I
-
-    sget v0, Lhkc;->oneme_settings_storage_audio_messages:I
-
-    sput v0, Lrua;->e:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache:I
-
-    sput v0, Lrua;->f:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_action_clear:I
-
-    sput v0, Lrua;->g:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_all_title:I
-
-    sput v0, Lrua;->h:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_audio_title:I
-
-    sput v0, Lrua;->i:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_desc:I
-
-    sput v0, Lrua;->j:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_files_title:I
-
-    sput v0, Lrua;->k:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_gif_title:I
-
-    sput v0, Lrua;->l:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_images_title:I
-
-    sput v0, Lrua;->m:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_music_title:I
-
-    sput v0, Lrua;->n:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_stickers_title:I
-
-    sput v0, Lrua;->o:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_dialog_video_title:I
-
-    sput v0, Lrua;->p:I
-
-    sget v0, Lhkc;->oneme_settings_storage_clear_cache_success_snackbar:I
-
-    sput v0, Lrua;->q:I
-
-    sget v0, Lhkc;->oneme_settings_storage_files:I
-
-    sput v0, Lrua;->r:I
-
-    sget v0, Lhkc;->oneme_settings_storage_gif:I
-
-    sput v0, Lrua;->s:I
-
-    sget v0, Lhkc;->oneme_settings_storage_images:I
-
-    sput v0, Lrua;->t:I
-
-    sget v0, Lhkc;->oneme_settings_storage_music:I
-
-    sput v0, Lrua;->u:I
-
-    sget v0, Lhkc;->oneme_settings_storage_screen_data_section:I
-
-    sput v0, Lrua;->v:I
-
-    sget v0, Lhkc;->oneme_settings_storage_screen_preserve_media_cache_desc:I
-
-    sput v0, Lrua;->w:I
-
-    sget v0, Lhkc;->oneme_settings_storage_screen_preserve_media_cache_title:I
-
-    sput v0, Lrua;->x:I
-
-    sget v0, Lhkc;->oneme_settings_storage_screen_toolbar_title:I
-
-    sput v0, Lrua;->y:I
-
-    sget v0, Lhkc;->oneme_settings_storage_stickers:I
-
-    sput v0, Lrua;->z:I
-
-    sget v0, Lhkc;->oneme_settings_storage_video:I
-
-    sput v0, Lrua;->A:I
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lmua;->a:Lmua;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lrua;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p2, Lpua;
+
+    check-cast p1, Lpua;
+
+    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lrua;->o:Lsua;
+
+    invoke-static {p1, p2}, Lsua;->w(Lsua;Lpua;)V
+
+    invoke-virtual {p1}, Lsua;->x()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast p2, Ljua;
+
+    check-cast p1, Ljua;
+
+    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p1, p0, Lrua;->o:Lsua;
+
+    invoke-static {p1, p2}, Lsua;->v(Lsua;Ljua;)V
+
+    invoke-virtual {p1}, Lsua;->x()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

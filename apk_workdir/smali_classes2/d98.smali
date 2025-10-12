@@ -1,85 +1,113 @@
-.class public final enum Ld98;
-.super Ljava/lang/Enum;
+.class public final Ld98;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ld98;
+# instance fields
+.field public a:Lr82;
 
-.field public static final enum b:Ld98;
+.field public b:I
 
-.field public static final enum c:Ld98;
+.field public c:Le39;
 
-.field public static final synthetic o:[Ld98;
+.field public d:Lone/me/messages/list/loader/MessageModel;
+
+.field public e:Lwmb;
+
+.field public f:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Ld98;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LOCAL"
+    sget-object v0, Lo65;->a:Lo65;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ld98;->a:Ld98;
-
-    new-instance v1, Ld98;
-
-    const-string v2, "GLOBAL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ld98;->b:Ld98;
-
-    new-instance v2, Ld98;
-
-    const-string v3, "MESSAGES"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ld98;->c:Ld98;
-
-    filled-new-array {v0, v1, v2}, [Ld98;
-
-    move-result-object v0
-
-    sput-object v0, Ld98;->o:[Ld98;
+    iput-object v0, p0, Ld98;->f:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ld98;
-    .locals 1
 
-    const-class v0, Ld98;
+# virtual methods
+.method public final a(Lvd6;)Le98;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-interface {p1, p0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    iget-object p1, p0, Ld98;->a:Lr82;
 
-    check-cast p0, Ld98;
+    const-string v0, "Required value was null."
 
-    return-object p0
-.end method
+    if-eqz p1, :cond_3
 
-.method public static values()[Ld98;
-    .locals 1
+    iget v1, p0, Ld98;->b:I
 
-    sget-object v0, Ld98;->o:[Ld98;
+    iget-object v2, p0, Ld98;->e:Lwmb;
 
-    invoke-virtual {v0}, [Ld98;->clone()Ljava/lang/Object;
+    if-eqz v2, :cond_2
 
-    move-result-object v0
+    new-instance v0, Le98;
 
-    check-cast v0, [Ld98;
+    invoke-direct {v0, p1, v2, v1}, Le98;-><init>(Lr82;Lwmb;I)V
+
+    iget-object p1, p0, Ld98;->c:Le39;
+
+    if-eqz p1, :cond_0
+
+    sget-object v1, Le98;->h:[Lpl7;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    iget-object v1, v0, Le98;->d:Lf8;
+
+    iput-object p1, v1, Lf8;->b:Ljava/lang/Object;
+
+    :cond_0
+    iget-object p1, p0, Ld98;->d:Lone/me/messages/list/loader/MessageModel;
+
+    if-eqz p1, :cond_1
+
+    sget-object v1, Le98;->h:[Lpl7;
+
+    const/4 v2, 0x1
+
+    aget-object v1, v1, v2
+
+    iget-object v1, v0, Le98;->e:Lf8;
+
+    iput-object p1, v1, Lf8;->b:Ljava/lang/Object;
+
+    :cond_1
+    iget-object p1, p0, Ld98;->f:Ljava/util/List;
+
+    sget-object v1, Le98;->h:[Lpl7;
+
+    const/4 v2, 0x3
+
+    aget-object v1, v1, v2
+
+    iget-object v1, v0, Le98;->g:Lf8;
+
+    iput-object p1, v1, Lf8;->b:Ljava/lang/Object;
 
     return-object v0
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

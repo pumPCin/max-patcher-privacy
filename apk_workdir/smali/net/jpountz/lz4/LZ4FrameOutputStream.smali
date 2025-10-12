@@ -33,7 +33,7 @@
 # instance fields
 .field private final buffer:Ljava/nio/ByteBuffer;
 
-.field private final checksum:Libh;
+.field private final checksum:Lu9h;
 
 .field private final compressedBuffer:[B
 
@@ -71,6 +71,7 @@
         }
     .end annotation
 
+    .line 16
     sget-object v0, Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;->SIZE_4MB:Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;
 
     invoke-direct {p0, p1, v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;-><init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;)V
@@ -86,6 +87,7 @@
         }
     .end annotation
 
+    .line 15
     sget-object v0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->DEFAULT_FEATURES:[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
 
     invoke-direct {p0, p1, p2, v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;-><init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
@@ -93,7 +95,7 @@
     return-void
 .end method
 
-.method public varargs constructor <init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;JLnet/jpountz/lz4/LZ4Compressor;Libh;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
+.method public varargs constructor <init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;JLnet/jpountz/lz4/LZ4Compressor;Lu9h;[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -101,10 +103,12 @@
         }
     .end annotation
 
+    .line 3
     invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
     const/4 p1, 0x4
 
+    .line 4
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -119,10 +123,13 @@
 
     const/4 p1, 0x0
 
+    .line 5
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
+    .line 6
     iput-object p5, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->compressor:Lnet/jpountz/lz4/LZ4Compressor;
 
+    .line 7
     new-instance v0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     new-instance v1, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
@@ -139,6 +146,7 @@
 
     iput-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
+    .line 8
     invoke-virtual {v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->getBD()Lnet/jpountz/lz4/LZ4FrameOutputStream$BD;
 
     move-result-object p1
@@ -149,6 +157,7 @@
 
     iput p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->maxBlockSize:I
 
+    .line 9
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p2
@@ -159,6 +168,7 @@
 
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
+    .line 10
     invoke-virtual {p5, p1}, Lnet/jpountz/lz4/LZ4Compressor;->maxCompressedLength(I)I
 
     move-result p1
@@ -167,6 +177,7 @@
 
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->compressedBuffer:[B
 
+    .line 11
     iget-object p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->getFLG()Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;
@@ -189,6 +200,7 @@
 
     goto :goto_0
 
+    .line 12
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -198,10 +210,12 @@
 
     throw p1
 
+    .line 13
     :cond_1
     :goto_0
     iput-wide p3, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->knownSize:J
 
+    .line 14
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;->writeHeader()V
 
     return-void
@@ -215,13 +229,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->fastCompressor()Lnet/jpountz/lz4/LZ4Compressor;
 
-    invoke-static {}, Ljbh;->c()Ljbh;
+    invoke-static {}, Lv9h;->c()Lv9h;
 
     const/4 p1, 0x0
 
@@ -246,6 +261,7 @@
 
     move-object v5, p3
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Lnet/jpountz/lz4/LZ4FrameOutputStream;-><init>(Ljava/io/OutputStream;Lnet/jpountz/lz4/LZ4FrameOutputStream$BLOCKSIZE;J[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
 
     return-void
@@ -593,8 +609,10 @@
         }
     .end annotation
 
+    .line 1
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;->ensureNotFinished()V
 
+    .line 2
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
@@ -605,8 +623,10 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 3
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;->writeBlock()V
 
+    .line 4
     :cond_0
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -614,6 +634,7 @@
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
+    .line 5
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     sget-object v1, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->CONTENT_CHECKSUM:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
@@ -624,6 +645,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 6
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     const/4 v1, 0x1
@@ -654,12 +676,15 @@
 
     add-int v0, p2, p3
 
+    .line 7
     array-length v1, p1
 
     if-gt v0, v1, :cond_3
 
+    .line 8
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;->ensureNotFinished()V
 
+    .line 9
     :goto_0
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -669,16 +694,19 @@
 
     if-le p3, v0, :cond_1
 
+    .line 10
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/Buffer;->remaining()I
 
     move-result v0
 
+    .line 11
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1, p2, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 12
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     sget-object v2, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->CONTENT_CHECKSUM:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
@@ -689,10 +717,12 @@
 
     if-eqz v1, :cond_0
 
+    .line 13
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     invoke-virtual {v1, p1, p2, v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->updateStreamHash([BII)V
 
+    .line 14
     :cond_0
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream;->writeBlock()V
 
@@ -702,11 +732,13 @@
 
     goto :goto_0
 
+    .line 15
     :cond_1
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
+    .line 16
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     sget-object v1, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->CONTENT_CHECKSUM:Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;
@@ -717,6 +749,7 @@
 
     if-eqz v0, :cond_2
 
+    .line 17
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     invoke-virtual {v0, p1, p2, p3}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->updateStreamHash([BII)V
@@ -724,6 +757,7 @@
     :cond_2
     return-void
 
+    .line 18
     :cond_3
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 

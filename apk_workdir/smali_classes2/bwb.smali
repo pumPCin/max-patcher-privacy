@@ -1,93 +1,138 @@
 .class public final Lbwb;
-.super Lgd4;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lle6;
 
-# static fields
-.field public static final b:Lbwb;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public final synthetic X:I
 
-.field public static final d:Lbd4;
+.field public synthetic Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static final e:Lbd4;
-
-.field public static final f:Lbd4;
+.field public synthetic Z:Llwa;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p3, p0, Lbwb;->X:I
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lbwb;->X:I
+
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    check-cast p2, Llwa;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
 
     new-instance v0, Lbwb;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    const/4 v1, 0x3
 
-    sput-object v0, Lbwb;->b:Lbwb;
+    const/4 v2, 0x1
 
-    const-string v1, "id"
+    invoke-direct {v0, v1, p3, v2}, Lbwb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const-string v2, "type"
+    iput-object p1, v0, Lbwb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    iput-object p2, v0, Lbwb;->Z:Llwa;
 
-    move-result-object v3
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-string v4, ":profile/edit"
+    invoke-virtual {v0, p1}, Lbwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v5, 0x0
+    return-object p1
 
-    const/16 v6, 0xe
+    :pswitch_0
+    new-instance v0, Lbwb;
 
-    invoke-static {v0, v4, v3, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    const/4 v1, 0x3
 
-    move-result-object v3
+    const/4 v2, 0x0
 
-    sput-object v3, Lbwb;->c:Lbd4;
+    invoke-direct {v0, v1, p3, v2}, Lbwb;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    const-string v3, ":profile/member_permissions"
+    iput-object p1, v0, Lbwb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    iput-object p2, v0, Lbwb;->Z:Llwa;
 
-    move-result-object v4
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-static {v0, v3, v4, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-virtual {v0, p1}, Lbwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    return-object p1
 
-    sput-object v3, Lbwb;->d:Lbd4;
+    nop
 
-    const-string v3, "flow"
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    filled-new-array {v1, v2, v3}, [Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object v1
+    iget v0, p0, Lbwb;->X:I
 
-    const-string v2, ":profile/edit/link"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lbwb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    sput-object v1, Lbwb;->e:Lbd4;
+    iget-object v0, p0, Lbwb;->Z:Llwa;
 
-    const-string v1, "contact_id"
-
-    const-string v2, "permissions_type"
-
-    const-string v3, "chat_id"
-
-    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":profile/edit/admin_permission"
-
-    invoke-static {v0, v2, v1, v5, v6}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-interface {v0}, Llwa;->b()Lme0;
 
     move-result-object v0
 
-    sput-object v0, Lbwb;->f:Lbd4;
+    iget v0, v0, Lme0;->k:I
 
-    return-void
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lbwb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v0, p0, Lbwb;->Z:Llwa;
+
+    invoke-interface {v0}, Llwa;->b()Lme0;
+
+    move-result-object v0
+
+    iget v0, v0, Lme0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,37 +1,41 @@
-.class public abstract Lpka;
-.super Ljava/lang/Object;
+.class public final Lpka;
+.super Landroid/text/style/ReplacementSpan;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    sget v0, Lvhc;->picker_chats_list_forward_messages:I
+    invoke-direct {p0}, Landroid/text/style/ReplacementSpan;-><init>()V
 
-    sput v0, Lpka;->a:I
-
-    sget v0, Lvhc;->picker_chats_list_share_files:I
-
-    sput v0, Lpka;->b:I
-
-    sget v0, Lvhc;->picker_chats_list_share_images:I
-
-    sput v0, Lpka;->c:I
-
-    sget v0, Lvhc;->picker_chats_list_share_videos:I
-
-    sput v0, Lpka;->d:I
+    iput p1, p0, Lpka;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 0
+
+    int-to-float p6, p7
+
+    move-object p7, p9
+
+    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
+    .locals 0
+
+    iget p1, p0, Lpka;->a:I
+
+    return p1
 .end method

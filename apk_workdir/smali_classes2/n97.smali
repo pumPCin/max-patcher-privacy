@@ -1,83 +1,241 @@
 .class public final Ln97;
-.super Ltxb;
+.super Ls59;
 .source "SourceFile"
 
 
 # instance fields
-.field public final J0:Lt1e;
+.field public a:[Lm97;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 14
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Ls1e;
+    invoke-direct {p0}, Ls59;-><init>()V
+
+    sget-object v0, Lm97;->u:[Lm97;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lad7;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lm97;->u:[Lm97;
+
+    if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Ls1e;-><init>(Landroid/content/Context;I)V
+    new-array v1, v1, [Lm97;
 
-    invoke-direct {p0, v0}, Lnxc;-><init>(Landroid/view/View;)V
+    sput-object v1, Lm97;->u:[Lm97;
 
-    new-instance v2, Lt1e;
+    goto :goto_0
 
-    const/16 p1, 0x40
+    :catchall_0
+    move-exception v1
 
-    int-to-long v3, p1
+    goto :goto_1
 
-    sget p1, Lvra;->d0:I
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    new-instance v12, Ljef;
+    goto :goto_2
 
-    invoke-direct {v12, p1}, Ljef;-><init>(I)V
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v13, 0x38
+    throw v1
 
-    const/4 v5, 0x0
+    :cond_1
+    :goto_2
+    sget-object v0, Lm97;->u:[Lm97;
 
-    sget-object v6, Loef;->a:Lnef;
+    iput-object v0, p0, Ln97;->a:[Lm97;
 
-    const/4 v7, 0x0
+    const/4 v0, -0x1
 
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    sget-object v10, La1e;->a:La1e;
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v2 .. v13}, Lt1e;-><init>(JILoef;Li1e;Loef;Llp7;Lg1e;Lx0e;Loef;I)V
-
-    iput-object v2, p0, Ln97;->J0:Lt1e;
+    iput v0, p0, Ls59;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x(Lww7;)V
+.method public final computeSerializedSize()I
     .locals 4
 
-    check-cast p1, Lm97;
-
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
-
-    check-cast v0, Ls1e;
-
-    iget-object p1, p1, Lm97;->a:Lhef;
+    iget-object v0, p0, Ln97;->a:[Lm97;
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x1fb
+    if-eqz v0, :cond_2
 
-    iget-object v3, p0, Ln97;->J0:Lt1e;
+    array-length v0, v0
 
-    invoke-static {v3, p1, v1, v2}, Lt1e;->l(Lt1e;Lhef;Lc1e;I)Lt1e;
+    if-lez v0, :cond_2
 
-    move-result-object p1
+    move v0, v1
 
-    invoke-virtual {v0, p1}, Ls1e;->setModelItem(Lj1e;)V
+    :goto_0
+    iget-object v2, p0, Ln97;->a:[Lm97;
 
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_1
+
+    aget-object v2, v2, v1
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-static {v3, v2}, Ly73;->i(ILs59;)I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    move v0, v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+
+    :cond_2
+    return v1
+.end method
+
+.method public final mergeFrom(Lx73;)Ls59;
+    .locals 5
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lx73;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    :cond_1
+    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Ln97;->a:[Lm97;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_2
+    array-length v3, v1
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [Lm97;
+
+    if-eqz v3, :cond_3
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_3
+    :goto_2
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_4
+
+    new-instance v1, Lm97;
+
+    invoke-direct {v1}, Lm97;-><init>()V
+
+    aput-object v1, v4, v3
+
+    invoke-virtual {p1, v1}, Lx73;->j(Ls59;)V
+
+    invoke-virtual {p1}, Lx73;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Lm97;
+
+    invoke-direct {v0}, Lm97;-><init>()V
+
+    aput-object v0, v4, v3
+
+    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
+
+    iput-object v4, p0, Ln97;->a:[Lm97;
+
+    goto :goto_0
+
+    :cond_5
+    :goto_3
+    return-object p0
+.end method
+
+.method public final writeTo(Ly73;)V
+    .locals 3
+
+    iget-object v0, p0, Ln97;->a:[Lm97;
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Ln97;->a:[Lm97;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Ly73;->y(ILs59;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-void
 .end method

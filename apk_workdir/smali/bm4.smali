@@ -1,477 +1,207 @@
-.class public final Lbm4;
+.class public abstract Lbm4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkn6;
+
+# static fields
+.field public static final k:Landroid/util/Size;
+
+.field public static final l:Z
+
+.field public static final m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public static final n:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # instance fields
-.field public final a:Leqd;
+.field public final a:Ljava/lang/Object;
 
-.field public final b:Lvr9;
+.field public b:I
 
-.field public final c:Lbn6;
+.field public c:Z
 
-.field public final d:Lxt6;
+.field public d:Lvs1;
 
-.field public final e:Lfub;
+.field public final e:Lys1;
 
-.field public final f:Lbw1;
+.field public f:Lvs1;
 
-.field public final g:Landroid/util/SparseArray;
+.field public final g:Lys1;
 
-.field public h:Z
+.field public final h:Landroid/util/Size;
 
-.field public final i:Lnr0;
+.field public final i:I
 
-.field public final j:Lvx;
-
-.field public final k:Lvx;
-
-.field public l:Lp93;
-
-.field public m:Landroid/opengl/EGLDisplay;
-
-.field public n:Landroid/opengl/EGLSurface;
-
-.field public o:I
+.field public j:Ljava/lang/Class;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr6d;Lxt6;Ljava/util/concurrent/ScheduledExecutorService;Leqd;Lvr9;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Landroid/util/Size;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+
+    sput-object v0, Lbm4;->k:Landroid/util/Size;
+
+    const-string v0, "DeferrableSurface"
+
+    const/4 v2, 0x3
+
+    invoke-static {v2, v0}, Lnc6;->z(ILjava/lang/String;)Z
+
+    move-result v0
+
+    sput-boolean v0, Lbm4;->l:Z
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lbm4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    sput-object v0, Lbm4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/util/Size;I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p5, p0, Lbm4;->a:Leqd;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p6, p0, Lbm4;->b:Lvr9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbm4;->c:Lbn6;
+    iput-object v0, p0, Lbm4;->a:Ljava/lang/Object;
 
-    iput-object p3, p0, Lbm4;->d:Lxt6;
+    const/4 v0, 0x0
 
-    new-instance p2, Lfub;
+    iput v0, p0, Lbm4;->b:I
 
-    invoke-direct {p2, p1}, Lfub;-><init>(Landroid/content/Context;)V
+    iput-boolean v0, p0, Lbm4;->c:Z
 
-    iput-object p2, p0, Lbm4;->e:Lfub;
+    iput-object p1, p0, Lbm4;->h:Landroid/util/Size;
 
-    const/4 p1, -0x1
+    iput p2, p0, Lbm4;->i:I
 
-    iput p1, p0, Lbm4;->o:I
-
-    new-instance p1, Landroid/util/SparseArray;
-
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object p1, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    new-instance p1, Lnr0;
+    new-instance p1, Lam4;
 
     const/4 p2, 0x0
 
-    const/4 p3, 0x1
+    invoke-direct {p1, p0, p2}, Lam4;-><init>(Lbm4;I)V
 
-    invoke-direct {p1, p2, p3}, Lnr0;-><init>(ZI)V
+    invoke-static {p1}, Lggh;->s(Lws1;)Lys1;
 
-    iput-object p1, p0, Lbm4;->i:Lnr0;
+    move-result-object p1
 
-    new-instance p1, Lvx;
+    iput-object p1, p0, Lbm4;->e:Lys1;
 
-    invoke-direct {p1, p3}, Lvx;-><init>(I)V
+    new-instance p2, Lam4;
 
-    iput-object p1, p0, Lbm4;->j:Lvx;
+    const/4 v0, 0x1
 
-    new-instance p1, Lvx;
+    invoke-direct {p2, p0, v0}, Lam4;-><init>(Lbm4;I)V
 
-    invoke-direct {p1, p3}, Lvx;-><init>(I)V
+    invoke-static {p2}, Lggh;->s(Lws1;)Lys1;
 
-    iput-object p1, p0, Lbm4;->k:Lvx;
+    move-result-object p2
 
-    new-instance p1, Lbw1;
+    iput-object p2, p0, Lbm4;->g:Lys1;
 
-    new-instance p6, Lrz3;
+    const-string p2, "DeferrableSurface"
 
-    const/16 v0, 0xa
+    const/4 v0, 0x3
 
-    invoke-direct {p6, v0, p5}, Lrz3;-><init>(ILjava/lang/Object;)V
+    invoke-static {v0, p2}, Lnc6;->z(ILjava/lang/String;)Z
 
-    invoke-direct {p1, p4, p2, p6}, Lbw1;-><init>(Ljava/util/concurrent/ExecutorService;ZLlag;)V
+    move-result p2
 
-    iput-object p1, p0, Lbm4;->f:Lbw1;
+    if-eqz p2, :cond_0
 
-    new-instance p2, Lxl4;
+    sget-object p2, Lbm4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/4 p4, 0x2
+    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    invoke-direct {p2, p0, p4}, Lxl4;-><init>(Lbm4;I)V
+    move-result p2
 
-    invoke-virtual {p1, p2, p3}, Lbw1;->f(Lmag;Z)V
+    sget-object v0, Lbm4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
 
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    const-string v1, "Surface created"
+
+    invoke-virtual {p0, p2, v0, v1}, Lbm4;->e(IILjava/lang/String;)V
+
+    new-instance p2, Ljava/lang/Exception;
+
+    invoke-direct {p2}, Ljava/lang/Exception;-><init>()V
+
+    invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Lyj4;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p0, v1, p2}, Lyj4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {}, Lpr0;->k()Ltq4;
+
+    move-result-object p2
+
+    iget-object p1, p1, Lys1;->b:Lxs1;
+
+    invoke-virtual {p1, v0, p2}, Ld4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()Lxyc;
-    .locals 14
+.method public a()V
+    .locals 6
 
-    monitor-enter p0
+    const-string v0, "surface closed,  useCount="
+
+    iget-object v1, p0, Lbm4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lbm4;->i:Lnr0;
-
-    invoke-virtual {v0}, Lnr0;->j()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Le77;->b:Ld06;
-
-    sget-object v0, Lxyc;->X:Lxyc;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    :try_start_1
-    iget-object v2, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_2
-
-    iget-object v2, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lam4;
-
-    iget-object v2, v2, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v2}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    sget-object v0, Le77;->b:Ld06;
-
-    sget-object v0, Lxyc;->X:Lxyc;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto/16 :goto_3
-
-    :cond_2
-    :try_start_2
-    new-instance v1, Lb77;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, v2}, Lu67;-><init>(I)V
-
-    iget-object v2, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    iget v3, p0, Lbm4;->o:I
-
-    invoke-virtual {v2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lam4;
-
-    iget-object v2, v2, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v2}, Ljava/util/ArrayDeque;->element()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lzl4;
-
-    invoke-virtual {v1, v2}, Lu67;->a(Ljava/lang/Object;)V
-
-    :goto_1
-    iget-object v3, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_9
-
-    iget-object v3, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v3
-
-    iget v4, p0, Lbm4;->o:I
-
-    if-ne v3, v4, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v3, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lam4;
-
-    iget-object v4, v3, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v4}, Ljava/util/ArrayDeque;->size()I
-
-    move-result v4
-
-    const/4 v5, 0x1
-
-    if-ne v4, v5, :cond_4
-
-    iget-boolean v4, v3, Lam4;->b:Z
-
-    if-nez v4, :cond_4
-
-    sget-object v0, Le77;->b:Ld06;
-
-    sget-object v0, Lxyc;->X:Lxyc;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_4
-    :try_start_3
-    iget-object v4, v3, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v4}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    const-wide v5, 0x7fffffffffffffffL
-
-    const/4 v7, 0x0
-
-    :cond_5
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_8
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lzl4;
-
-    iget-wide v9, v8, Lzl4;->c:J
-
-    iget-wide v11, v2, Lzl4;->c:J
-
-    sub-long v11, v9, v11
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->abs(J)J
-
-    move-result-wide v11
-
-    cmp-long v13, v11, v5
-
-    if-gez v13, :cond_6
-
-    move-object v7, v8
-
-    move-wide v5, v11
-
-    :cond_6
-    iget-wide v11, v2, Lzl4;->c:J
-
-    cmp-long v8, v9, v11
-
-    if-gtz v8, :cond_7
-
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-nez v8, :cond_5
-
-    iget-boolean v8, v3, Lam4;->b:Z
-
-    if-eqz v8, :cond_5
-
-    :cond_7
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v7}, Lu67;->a(Ljava/lang/Object;)V
-
-    :cond_8
-    :goto_2
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_9
-    invoke-virtual {v1}, Lb77;->h()Lxyc;
-
-    move-result-object v0
-
-    iget v1, v0, Lxyc;->o:I
-
-    iget-object v2, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
-
-    move-result v2
-
-    if-eq v1, v2, :cond_a
-
-    sget-object v0, Lxyc;->X:Lxyc;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit p0
-
-    return-object v0
-
-    :cond_a
-    monitor-exit p0
-
-    return-object v0
-
-    :goto_3
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized b()V
-    .locals 10
-
-    monitor-enter p0
-
-    :try_start_0
-    invoke-virtual {p0}, Lbm4;->a()Lxyc;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
-
-    move-result v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    iget v1, p0, Lbm4;->o:I
-
-    invoke-virtual {v0, v1}, Lxyc;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lzl4;
-
-    const-string v2, "initialCapacity"
-
-    const/4 v3, 0x4
-
-    invoke-static {v3, v2}, Lpch;->i(ILjava/lang/String;)V
-
-    new-array v2, v3, [Ljava/lang/Object;
+    iget-boolean v2, p0, Lbm4;->c:Z
 
     const/4 v3, 0x0
 
-    move v4, v3
+    if-nez v2, :cond_1
 
-    move v5, v4
+    const/4 v2, 0x1
 
-    :goto_0
-    iget v6, v0, Lxyc;->o:I
+    iput-boolean v2, p0, Lbm4;->c:Z
 
-    if-ge v4, v6, :cond_2
+    iget-object v2, p0, Lbm4;->f:Lvs1;
 
-    invoke-virtual {v0, v4}, Lxyc;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lvs1;->b(Ljava/lang/Object;)Z
 
-    move-result-object v6
+    iget v2, p0, Lbm4;->b:I
 
-    check-cast v6, Lzl4;
+    if-nez v2, :cond_0
 
-    iget-object v6, v6, Lzl4;->b:Lin6;
+    iget-object v2, p0, Lbm4;->d:Lvs1;
 
-    new-instance v7, Lvfe;
-
-    iget v8, v6, Lin6;->c:I
-
-    iget v6, v6, Lin6;->d:I
-
-    invoke-direct {v7, v8, v6}, Lvfe;-><init>(II)V
-
-    array-length v6, v2
-
-    add-int/lit8 v8, v5, 0x1
-
-    invoke-static {v6, v8}, Lu67;->g(II)I
-
-    move-result v6
-
-    array-length v9, v2
-
-    if-gt v6, v9, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2, v6}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v2
-
-    :goto_1
-    aput-object v7, v2, v5
-
-    add-int/lit8 v4, v4, 0x1
-
-    move v5, v8
+    iput-object v3, p0, Lbm4;->d:Lvs1;
 
     goto :goto_0
 
@@ -480,379 +210,416 @@
 
     goto :goto_2
 
-    :cond_2
-    iget-object v4, p0, Lbm4;->d:Lxt6;
-
-    invoke-static {v5, v2}, Le77;->h(I[Ljava/lang/Object;)Lxyc;
-
-    move-result-object v2
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2, v3}, Lxyc;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lvfe;
-
-    iget-object v3, p0, Lbm4;->i:Lnr0;
-
-    iget-object v4, p0, Lbm4;->c:Lbn6;
-
-    iget v5, v2, Lvfe;->a:I
-
-    iget v2, v2, Lvfe;->b:I
-
-    invoke-virtual {v3, v4, v5, v2}, Lnr0;->i(Lbn6;II)V
-
-    iget-object v2, p0, Lbm4;->i:Lnr0;
-
-    invoke-virtual {v2}, Lnr0;->l()Lin6;
-
-    move-result-object v2
-
-    iget-wide v3, v1, Lzl4;->c:J
-
-    iget-object v1, p0, Lbm4;->j:Lvx;
-
-    invoke-virtual {v1, v3, v4}, Lvx;->e(J)V
-
-    iget-object v1, p0, Lbm4;->e:Lfub;
-
-    invoke-virtual {v1, v0, v2}, Lfub;->h(Lxyc;Lin6;)V
-
-    invoke-static {}, Lvhh;->o()J
-
-    move-result-wide v0
-
-    iget-object v5, p0, Lbm4;->k:Lvx;
-
-    invoke-virtual {v5, v0, v1}, Lvx;->e(J)V
-
-    iget-object v0, p0, Lbm4;->b:Lvr9;
-
-    invoke-virtual {v0, p0, v2, v3, v4}, Lvr9;->a(Lkn6;Lin6;J)V
-
-    iget-object v0, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    iget v1, p0, Lbm4;->o:I
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lam4;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lbm4;->f(Lam4;I)V
-
-    invoke-virtual {p0}, Lbm4;->c()V
-
-    iget-boolean v1, p0, Lbm4;->h:Z
-
-    if-eqz v1, :cond_3
-
-    iget-object v0, v0, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lbm4;->a:Leqd;
-
-    invoke-virtual {v0}, Leqd;->f()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_3
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized c()V
-    .locals 3
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
+    :cond_0
+    move-object v2, v3
 
     :goto_0
-    :try_start_0
-    iget-object v1, p0, Lbm4;->g:Landroid/util/SparseArray;
+    const-string v4, "DeferrableSurface"
 
-    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+    const/4 v5, 0x3
 
-    move-result v1
-
-    if-ge v0, v1, :cond_1
-
-    iget-object v1, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->keyAt(I)I
-
-    move-result v1
-
-    iget v2, p0, Lbm4;->o:I
-
-    if-ne v1, v2, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lam4;
-
-    invoke-virtual {p0, v1}, Lbm4;->e(Lam4;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final d(J)V
-    .locals 2
-
-    new-instance v0, Lwl4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lwl4;-><init>(Ljava/lang/Object;JI)V
-
-    const/4 p1, 0x1
-
-    iget-object p2, p0, Lbm4;->f:Lbw1;
-
-    invoke-virtual {p2, v0, p1}, Lbw1;->f(Lmag;Z)V
-
-    return-void
-.end method
-
-.method public final declared-synchronized e(Lam4;)V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lbm4;->g:Landroid/util/SparseArray;
-
-    iget v1, p0, Lbm4;->o:I
-
-    invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lam4;
-
-    iget-object v1, v0, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-boolean v1, v0, Lam4;->b:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, p1, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v0}, Lbm4;->f(Lam4;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_0
-    :try_start_1
-    iget-object v0, v0, Lam4;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzl4;
-
-    if-eqz v0, :cond_1
-
-    iget-wide v0, v0, Lzl4;->c:J
-
-    goto :goto_0
-
-    :cond_1
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    :goto_0
-    iget-object v2, p1, Lam4;->a:Ljava/util/ArrayDeque;
-
-    new-instance v3, Lyl4;
-
-    invoke-direct {v3, v0, v1}, Lyl4;-><init>(J)V
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lvh7;
-
-    invoke-direct {v0, v2, v3}, Lvh7;-><init>(Ljava/lang/Iterable;Lkob;)V
-
-    instance-of v1, v0, Ljava/util/Collection;
-
-    if-eqz v1, :cond_2
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v0}, Lvh7;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x0
-
-    :goto_1
-    move-object v3, v0
-
-    check-cast v3, Lwh7;
-
-    invoke-virtual {v3}, Lwh7;->hasNext()Z
+    invoke-static {v5, v4}, Lnc6;->z(ILjava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_2
 
-    invoke-virtual {v3}, Lwh7;->next()Ljava/lang/Object;
+    const-string v4, "DeferrableSurface"
 
-    const-wide/16 v3, 0x1
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    add-long/2addr v1, v3
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lbm4;->b:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " closed=true "
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    :cond_3
-    invoke-static {v1, v2}, Lv4b;->D(J)I
+    :cond_1
+    move-object v2, v3
 
-    move-result v0
+    :cond_2
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v3}, Lvs1;->b(Ljava/lang/Object;)Z
+
+    :cond_3
+    return-void
 
     :goto_2
-    add-int/lit8 v0, v0, -0x1
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v0}, Lbm4;->f(Lam4;I)V
+    :try_start_1
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    monitor-exit p0
-
-    return-void
-
-    :goto_3
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
+    throw v0
 .end method
 
-.method public final declared-synchronized f(Lam4;I)V
-    .locals 5
+.method public final b()V
+    .locals 6
 
-    monitor-enter p0
+    const-string v0, "use count-1,  useCount="
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lbm4;->a:Ljava/lang/Object;
 
-    :goto_0
-    if-ge v0, p2, :cond_0
+    monitor-enter v1
 
     :try_start_0
-    iget-object v1, p1, Lam4;->a:Ljava/util/ArrayDeque;
+    iget v2, p0, Lbm4;->b:I
 
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+    if-eqz v2, :cond_3
 
-    move-result-object v1
+    add-int/lit8 v2, v2, -0x1
 
-    check-cast v1, Lzl4;
+    iput v2, p0, Lbm4;->b:I
 
-    iget-object v2, v1, Lzl4;->a:Lkn6;
+    const/4 v3, 0x0
 
-    iget-wide v3, v1, Lzl4;->c:J
+    if-nez v2, :cond_0
 
-    invoke-interface {v2, v3, v4}, Lkn6;->d(J)V
+    iget-boolean v2, p0, Lbm4;->c:Z
 
-    add-int/lit8 v0, v0, 0x1
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Lbm4;->d:Lvs1;
+
+    iput-object v3, p0, Lbm4;->d:Lvs1;
 
     goto :goto_0
 
     :catchall_0
-    move-exception p1
+    move-exception v0
 
-    monitor-exit p0
+    goto :goto_1
+
+    :cond_0
+    move-object v2, v3
+
+    :goto_0
+    const-string v4, "DeferrableSurface"
+
+    const/4 v5, 0x3
+
+    invoke-static {v5, v4}, Lnc6;->z(ILjava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "DeferrableSurface"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lbm4;->b:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " closed="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lbm4;->c:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v0, p0, Lbm4;->b:I
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Surface no longer in use"
+
+    sget-object v4, Lbm4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v4
+
+    sget-object v5, Lbm4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v5
+
+    invoke-virtual {p0, v4, v5, v0}, Lbm4;->e(IILjava/lang/String;)V
+
+    :cond_1
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    throw p1
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v3}, Lvs1;->b(Ljava/lang/Object;)Z
+
+    :cond_2
+    return-void
+
+    :cond_3
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Decrementing use count occurs more times than incrementing"
+
+    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :goto_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final c()Lbw7;
+    .locals 4
+
+    iget-object v0, p0, Lbm4;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lbm4;->c:Z
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
+
+    const-string v2, "DeferrableSurface already closed."
+
+    invoke-direct {v1, v2, p0}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Ljava/lang/String;Lbm4;)V
+
+    new-instance v2, Le57;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v3, v1}, Le57;-><init>(ILjava/lang/Object;)V
+
+    monitor-exit v0
+
+    return-object v2
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
 
     :cond_0
-    monitor-exit p0
+    invoke-virtual {p0}, Lbm4;->f()Lbw7;
+
+    move-result-object v1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final d()V
+    .locals 5
+
+    const-string v0, "use count+1, useCount="
+
+    iget-object v1, p0, Lbm4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget v2, p0, Lbm4;->b:I
+
+    if-nez v2, :cond_1
+
+    iget-boolean v3, p0, Lbm4;->c:Z
+
+    if-nez v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
+
+    const-string v2, "Cannot begin use on a closed surface."
+
+    invoke-direct {v0, v2, p0}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Ljava/lang/String;Lbm4;)V
+
+    throw v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v3, 0x1
+
+    add-int/2addr v2, v3
+
+    iput v2, p0, Lbm4;->b:I
+
+    const-string v2, "DeferrableSurface"
+
+    const/4 v4, 0x3
+
+    invoke-static {v4, v2}, Lnc6;->z(ILjava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget v2, p0, Lbm4;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    const-string v2, "New surface in use"
+
+    sget-object v3, Lbm4;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v3
+
+    sget-object v4, Lbm4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    move-result v4
+
+    invoke-virtual {p0, v3, v4, v2}, Lbm4;->e(IILjava/lang/String;)V
+
+    :cond_2
+    const-string v2, "DeferrableSurface"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v0, p0, Lbm4;->b:I
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    monitor-exit v1
 
     return-void
+
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public final e(IILjava/lang/String;)V
+    .locals 2
+
+    sget-boolean v0, Lbm4;->l:Z
+
+    const-string v1, "DeferrableSurface"
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Lnc6;->z(ILjava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "DeferrableSurface usage statistics may be inaccurate since debug logging was not enabled at static initialization time. App restart may be required to enable accurate usage statistics."
+
+    invoke-static {v1, v0}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, "[total_surfaces="
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ", used_surfaces="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "]("
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, "}"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Lnc6;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public abstract f()Lbw7;
 .end method

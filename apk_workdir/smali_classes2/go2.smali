@@ -1,68 +1,202 @@
-.class public final synthetic Lgo2;
+.class public final Lgo2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final c:Lgo2;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/Map;
 
-.field public final synthetic b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;I)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lgo2;
+
+    sget-object v1, Lp65;->a:Lp65;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lgo2;-><init>(ILjava/util/Map;)V
+
+    sput-object v0, Lgo2;->c:Lgo2;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/Map;)V
     .locals 0
 
-    iput p2, p0, Lgo2;->a:I
-
-    iput-object p1, p0, Lgo2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lgo2;->a:Ljava/util/Map;
+
+    iput p1, p0, Lgo2;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgo2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgo2;
+
+    iget-object v1, p0, Lgo2;->a:Ljava/util/Map;
+
+    iget-object v3, p1, Lgo2;->a:Ljava/util/Map;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lgo2;->b:I
+
+    iget p1, p1, Lgo2;->b:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 2
 
-    iget p1, p0, Lgo2;->a:I
+    iget-object v0, p0, Lgo2;->a:Ljava/util/Map;
 
-    const-string v0, "ru.ok.messages.messages.widgets.ChatMsgSearchResultView"
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v1, p0, Lgo2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
+    move-result v0
 
-    packed-switch p1, :pswitch_data_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->P0:I
+    iget v1, p0, Lgo2;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    const-string p1, "Click bottom button"
+    move-result v1
 
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    add-int/2addr v1, v0
 
-    return-void
+    return v1
+.end method
 
-    :pswitch_0
-    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->P0:I
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lgo2;->c:Lgo2;
 
-    const-string p1, "Click top button"
+    invoke-virtual {p0, v0}, Lgo2;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_0
 
-    nop
+    const-class v0, Lgo2;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ".Empty"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x28
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string v1, "size="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgo2;->a:Ljava/util/Map;
+
+    invoke-interface {v1}, Ljava/util/Map;->size()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ",totalUnreadMessagesCount="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Lgo2;->b:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, ",notifications="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,79 +1,100 @@
-.class public abstract Lnhf;
+.class public final synthetic Lnhf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltd6;
 
-# static fields
-.field public static final a:Ls5f;
 
-.field public static final b:Ls5f;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lhif;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lhif;I)V
+    .locals 0
 
-    new-instance v0, Luse;
+    iput p2, p0, Lnhf;->a:I
 
-    const/16 v1, 0x11
+    iput-object p1, p0, Lnhf;->b:Lhif;
 
-    invoke-direct {v0, v1}, Luse;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lnhf;->a:Ls5f;
-
-    new-instance v0, Luse;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Luse;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lnhf;->b:Ls5f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static final a(Ljava/lang/String;)Ljava/io/ByteArrayOutputStream;
-    .locals 3
 
-    const/16 v0, 0x100
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    iget v0, p0, Lnhf;->a:I
 
-    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnhf;->b:Lhif;
+
+    iget-object v0, v0, Lhif;->a:Ljavax/net/ssl/SSLEngine;
+
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
     move-result-object v0
 
-    new-instance v1, Landroid/graphics/Canvas;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    sget-object v0, Laxf;->a:Laxf;
 
-    move-result p0
+    goto :goto_0
 
-    invoke-virtual {v1, p0}, Landroid/graphics/Canvas;->drawColor(I)V
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance p0, Ljava/io/ByteArrayOutputStream;
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    :pswitch_0
+    iget-object v0, p0, Lnhf;->b:Lhif;
 
-    move-result v1
+    iget-object v0, v0, Lhif;->a:Ljavax/net/ssl/SSLEngine;
 
-    invoke-direct {p0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
 
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v0, Laxf;->a:Laxf;
 
-    const/16 v2, 0x64
+    return-object v0
 
-    invoke-virtual {v0, v1, v2, p0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    :pswitch_1
+    iget-object v0, p0, Lnhf;->b:Lhif;
 
-    return-object p0
+    iget-object v0, v0, Lhif;->a:Ljavax/net/ssl/SSLEngine;
+
+    invoke-virtual {v0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

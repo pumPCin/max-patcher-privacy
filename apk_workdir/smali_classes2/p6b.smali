@@ -1,37 +1,63 @@
-.class public abstract synthetic Lp6b;
+.class public final Lp6b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/Integer;
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZZZLjava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    iput-boolean p1, p0, Lp6b;->a:Z
 
-    move-result-object v0
+    iput-boolean p2, p0, Lp6b;->b:Z
 
-    array-length v0, v0
+    iput-object p3, p0, Lp6b;->c:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    iput-object p4, p0, Lp6b;->d:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iput-object p5, p0, Lp6b;->e:Ljava/lang/Integer;
 
-    const/4 v2, 0x0
+    iput-boolean p6, p0, Lp6b;->f:Z
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput-boolean p7, p0, Lp6b;->g:Z
 
-    :catch_0
-    sput-object v0, Lp6b;->$EnumSwitchMapping$0:[I
+    iput-boolean p8, p0, Lp6b;->h:Z
+
+    iput-boolean p9, p0, Lp6b;->i:Z
+
+    iput-boolean p10, p0, Lp6b;->j:Z
+
+    iput-boolean p11, p0, Lp6b;->k:Z
+
+    iput-object p12, p0, Lp6b;->l:Ljava/lang/String;
 
     return-void
 .end method

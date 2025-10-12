@@ -1,100 +1,130 @@
 .class public final Lcu7;
-.super Ljava/lang/Object;
+.super Landroid/text/style/URLSpan;
 .source "SourceFile"
 
-# interfaces
-.implements Lhu7;
 
+# instance fields
+.field public a:Ldu7;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lcu7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public b:I
 
-.field public static final a:Lcu7;
+.field public final c:Z
+
+.field public final o:Lk7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;IZ)V
+    .locals 0
 
-    new-instance v0, Lcu7;
+    invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x0
 
-    sput-object v0, Lcu7;->a:Lcu7;
+    iput-object p1, p0, Lcu7;->a:Ldu7;
 
-    new-instance v0, Lle7;
+    iput p2, p0, Lcu7;->b:I
 
-    const/16 v1, 0x14
+    iput-boolean p3, p0, Lcu7;->c:Z
 
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
+    new-instance p1, Lk7;
 
-    sput-object v0, Lcu7;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcu7;->o:Lk7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return v0
-.end method
+    move-result-wide v0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v2, p0, Lcu7;->o:Lk7;
 
-    const/4 v0, 0x1
+    iget-wide v3, v2, Lk7;->a:J
 
-    if-ne p0, p1, :cond_0
+    sub-long v3, v0, v3
 
-    return v0
+    const-wide/16 v5, 0x12c
+
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_3
+
+    iput-wide v0, v2, Lk7;->a:J
+
+    instance-of v0, p1, Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLinksClickable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    instance-of p1, p1, Lcu7;
+    iget-object v0, p0, Lcu7;->a:Ldu7;
 
-    if-nez p1, :cond_1
+    if-nez v0, :cond_2
 
-    const/4 p1, 0x0
+    instance-of v0, p1, Ldu7;
 
-    return p1
+    if-eqz v0, :cond_1
+
+    move-object v0, p1
+
+    check-cast v0, Ldu7;
+
+    goto :goto_0
 
     :cond_1
-    return v0
+    const/4 v0, 0x0
+
+    :cond_2
+    :goto_0
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object v1, Lhu7;->a:Lhu7;
+
+    invoke-interface {v0, p1, v1, p0}, Ldu7;->b(Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
+
+    :cond_3
+    :goto_1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 2
 
-    const v0, 0x6f539772
+    iget v0, p1, Landroid/text/TextPaint;->bgColor:I
 
-    return v0
-.end method
+    iget v1, p0, Lcu7;->b:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-eq v0, v1, :cond_0
 
-    const-string v0, "ShowContactRemoved"
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    return-object v0
-.end method
+    :cond_0
+    iget-boolean v0, p0, Lcu7;->c:Z
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
     return-void
 .end method

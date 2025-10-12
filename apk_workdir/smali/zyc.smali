@@ -1,130 +1,112 @@
 .class public final Lzyc;
-.super Lp77;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmq7;
 
 
 # instance fields
-.field public final transient X:[Ljava/lang/Object;
+.field public final synthetic X:Lc22;
 
-.field public final transient Y:I
+.field public final synthetic Y:Lps9;
 
-.field public final transient Z:I
+.field public final synthetic Z:Lc2f;
 
-.field public final transient o:Li77;
+.field public final synthetic a:Lvp7;
+
+.field public final synthetic b:Ldwc;
+
+.field public final synthetic c:Ln24;
+
+.field public final synthetic o:Lvp7;
 
 
 # direct methods
-.method public constructor <init>(Li77;[Ljava/lang/Object;II)V
+.method public constructor <init>(Lvp7;Ldwc;Ln24;Lvp7;Lc22;Lps9;Lje6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzyc;->o:Li77;
+    iput-object p1, p0, Lzyc;->a:Lvp7;
 
-    iput-object p2, p0, Lzyc;->X:[Ljava/lang/Object;
+    iput-object p2, p0, Lzyc;->b:Ldwc;
 
-    iput p3, p0, Lzyc;->Y:I
+    iput-object p3, p0, Lzyc;->c:Ln24;
 
-    iput p4, p0, Lzyc;->Z:I
+    iput-object p4, p0, Lzyc;->o:Lvp7;
+
+    iput-object p5, p0, Lzyc;->X:Lc22;
+
+    iput-object p6, p0, Lzyc;->Y:Lps9;
+
+    check-cast p7, Lc2f;
+
+    iput-object p7, p0, Lzyc;->Z:Lc2f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 1
-
-    invoke-virtual {p0}, Lp77;->a()Le77;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Le77;->b(I[Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
+.method public final d(Luq7;Lvp7;)V
     .locals 3
 
-    instance-of v0, p1, Ljava/util/Map$Entry;
+    iget-object p1, p0, Lzyc;->a:Lvp7;
+
+    iget-object v0, p0, Lzyc;->b:Ldwc;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-ne p2, p1, :cond_0
 
-    check-cast p1, Ljava/util/Map$Entry;
+    new-instance p1, Lyyc;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    iget-object p2, p0, Lzyc;->Y:Lps9;
 
-    move-result-object v0
+    iget-object v2, p0, Lzyc;->Z:Lc2f;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-direct {p1, p2, v2, v1}, Lyyc;-><init>(Lps9;Lje6;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p2, 0x3
+
+    iget-object v2, p0, Lzyc;->c:Ln24;
+
+    invoke-static {v2, v1, v1, p1, p2}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    iput-object p1, v0, Ldwc;->a:Ljava/lang/Object;
 
-    iget-object v2, p0, Lzyc;->o:Li77;
-
-    invoke-virtual {v2, v0}, Li77;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 
     :cond_0
-    return v1
-.end method
+    iget-object p1, p0, Lzyc;->o:Lvp7;
 
-.method public final f()Z
-    .locals 1
+    if-ne p2, p1, :cond_2
 
-    const/4 v0, 0x1
+    iget-object p1, v0, Ldwc;->a:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast p1, Leh7;
 
-.method public final g()Lwyf;
-    .locals 2
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lp77;->a()Le77;
+    invoke-interface {p1, v1}, Leh7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    move-result-object v0
+    :cond_1
+    iput-object v1, v0, Ldwc;->a:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    :cond_2
+    sget-object p1, Lvp7;->ON_DESTROY:Lvp7;
 
-    invoke-virtual {v0, v1}, Le77;->l(I)Ld06;
+    if-ne p2, p1, :cond_3
 
-    move-result-object v0
+    iget-object p1, p0, Lzyc;->X:Lc22;
 
-    return-object v0
-.end method
+    sget-object p2, Laxf;->a:Laxf;
 
-.method public final k()Le77;
-    .locals 1
+    invoke-virtual {p1, p2}, Lc22;->resumeWith(Ljava/lang/Object;)V
 
-    new-instance v0, Lyyc;
-
-    invoke-direct {v0, p0}, Lyyc;-><init>(Lzyc;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Lzyc;->Z:I
-
-    return v0
+    :cond_3
+    return-void
 .end method

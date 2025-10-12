@@ -1,115 +1,71 @@
 .class public final Lja6;
-.super Loif;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lia6;
 
 
 # instance fields
-.field public e:Loif;
+.field public final a:I
+
+.field public final b:I
+
+.field public final synthetic c:Landroidx/fragment/app/c;
 
 
 # direct methods
-.method public constructor <init>(Loif;)V
+.method public constructor <init>(Landroidx/fragment/app/c;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lja6;->e:Loif;
+    iput-object p1, p0, Lja6;->c:Landroidx/fragment/app/c;
+
+    iput p2, p0, Lja6;->a:I
+
+    iput p3, p0, Lja6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loif;
-    .locals 1
+.method public final a(Ljava/util/ArrayList;Ljava/util/ArrayList;)Z
+    .locals 5
 
-    iget-object v0, p0, Lja6;->e:Loif;
+    iget-object v0, p0, Lja6;->c:Landroidx/fragment/app/c;
 
-    invoke-virtual {v0}, Loif;->a()Loif;
+    iget-object v1, v0, Landroidx/fragment/app/c;->z:Landroidx/fragment/app/a;
 
-    move-result-object v0
+    iget v2, p0, Lja6;->a:I
 
-    return-object v0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final b()Loif;
-    .locals 1
+    if-gez v2, :cond_0
 
-    iget-object v0, p0, Lja6;->e:Loif;
+    invoke-virtual {v1}, Landroidx/fragment/app/a;->D()Landroidx/fragment/app/c;
 
-    invoke-virtual {v0}, Loif;->b()Loif;
+    move-result-object v1
 
-    move-result-object v0
+    const/4 v3, -0x1
 
-    return-object v0
-.end method
+    const/4 v4, 0x0
 
-.method public final c()J
-    .locals 2
+    invoke-virtual {v1, v3, v4}, Landroidx/fragment/app/c;->T(II)Z
 
-    iget-object v0, p0, Lja6;->e:Loif;
+    move-result v1
 
-    invoke-virtual {v0}, Loif;->c()J
+    if-eqz v1, :cond_0
 
-    move-result-wide v0
+    return v4
 
-    return-wide v0
-.end method
+    :cond_0
+    iget v1, p0, Lja6;->b:I
 
-.method public final d(J)Loif;
-    .locals 1
+    invoke-virtual {v0, p1, p2, v2, v1}, Landroidx/fragment/app/c;->U(Ljava/util/ArrayList;Ljava/util/ArrayList;II)Z
 
-    iget-object v0, p0, Lja6;->e:Loif;
+    move-result p1
 
-    invoke-virtual {v0, p1, p2}, Loif;->d(J)Loif;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lja6;->e:Loif;
-
-    invoke-virtual {v0}, Loif;->e()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lja6;->e:Loif;
-
-    invoke-virtual {v0}, Loif;->f()V
-
-    return-void
-.end method
-
-.method public final g(JLjava/util/concurrent/TimeUnit;)Loif;
-    .locals 1
-
-    iget-object v0, p0, Lja6;->e:Loif;
-
-    invoke-virtual {v0, p1, p2, p3}, Loif;->g(JLjava/util/concurrent/TimeUnit;)Loif;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final h()J
-    .locals 2
-
-    iget-object v0, p0, Lja6;->e:Loif;
-
-    invoke-virtual {v0}, Loif;->h()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return p1
 .end method

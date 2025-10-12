@@ -1,92 +1,96 @@
 .class public final Lch8;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lbh8;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lgz1;
+.field public final a:Landroid/os/Messenger;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lgz1;)V
+.method public constructor <init>(Landroid/os/Messenger;)V
     .locals 0
 
-    iput-object p2, p0, Lch8;->Y:Lgz1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lch8;->a:Landroid/os/Messenger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lrr8;Landroid/os/Bundle;)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez p2, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lch8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance p2, Landroid/os/Bundle;
+
+    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+
+    :cond_0
+    const-string v0, "extra_service_version"
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p2, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    const-string v1, "data_media_item_id"
+
+    const-string v2, "androidx.media3.session.MediaLibraryService"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Landroid/support/v4/media/session/MediaSessionCompat$Token;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p1, v1}, Lbp7;->a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    check-cast p1, Lch8;
+    const-string v1, "data_media_session_token"
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    invoke-virtual {p1, p2}, Lch8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p1, "data_root_hints"
 
-    return-object p2
+    invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lch8;->b(ILandroid/os/Bundle;)V
+
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lch8;
-
-    iget-object v1, p0, Lch8;->Y:Lgz1;
-
-    invoke-direct {v0, p2, v1}, Lch8;-><init>(Lkotlin/coroutines/Continuation;Lgz1;)V
-
-    iput-object p1, v0, Lch8;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(ILandroid/os/Bundle;)V
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
-    iget-object p1, p0, Lch8;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p1, Ljava/lang/Boolean;
+    iput p1, v0, Landroid/os/Message;->what:I
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const/4 p1, 0x2
 
-    move-result p1
+    iput p1, v0, Landroid/os/Message;->arg1:I
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
-    const/4 p1, 0x0
-
-    goto :goto_0
+    invoke-virtual {v0, p2}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
     :cond_0
-    const/16 p1, 0x8
+    iget-object p1, p0, Lch8;->a:Landroid/os/Messenger;
 
-    :goto_0
-    iget-object v0, p0, Lch8;->Y:Lgz1;
+    invoke-virtual {p1, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

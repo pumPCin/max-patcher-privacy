@@ -1,183 +1,291 @@
-.class public final Lwwe;
-.super Ljava/lang/Object;
+.class public abstract Lwwe;
+.super Lvwe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:J
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public static e0(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 10
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    const/16 v0, 0xa
 
-    const-wide/16 v1, 0x7
+    invoke-static {v0}, Lpd7;->e(I)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result-wide v0
+    move-result v1
 
-    sput-wide v0, Lwwe;->d:J
+    if-nez v1, :cond_0
 
-    return-void
-.end method
+    goto :goto_2
 
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    :cond_0
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
-    iput-object p3, p0, Lwwe;->a:Ljava/lang/String;
+    move-result v3
 
-    iput-object p4, p0, Lwwe;->b:Ljava/lang/String;
+    const/16 v4, 0x30
 
-    iput-wide p1, p0, Lwwe;->c:J
+    invoke-static {v3, v4}, Lg8;->h(II)I
 
-    return-void
-.end method
+    move-result v4
 
-.method public static a(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    const v5, -0x7fffffff
 
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
+    if-gez v4, :cond_3
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    const/4 v4, 0x1
 
-    const-string v1, "token"
+    if-ne v1, v4, :cond_1
 
-    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    goto :goto_2
 
-    const-string p2, "appVersion"
+    :cond_1
+    const/16 v6, 0x2d
 
-    invoke-virtual {v0, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    if-ne v3, v6, :cond_2
 
-    const-string p2, "timestamp"
+    const/high16 v5, -0x80000000
 
-    invoke-virtual {v0, p2, p0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    move v3, v4
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p0
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_2
+    const/16 v6, 0x2b
 
-    return-object p0
+    if-ne v3, v6, :cond_6
 
-    :catch_0
-    move-exception p0
+    move v3, v2
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    const-string p2, "Failed to encode token: "
+    :cond_3
+    move v3, v2
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move v4, v3
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_0
+    const v6, -0x38e38e3
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move v7, v6
 
-    move-result-object p0
+    :goto_1
+    if-ge v4, v1, :cond_8
 
-    const-string p1, "FirebaseMessaging"
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
-    invoke-static {p1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v8
 
+    invoke-static {v8, v0}, Ljava/lang/Character;->digit(II)I
+
+    move-result v8
+
+    if-gez v8, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    if-ge v2, v7, :cond_5
+
+    if-ne v7, v6, :cond_6
+
+    div-int/lit8 v7, v5, 0xa
+
+    if-ge v2, v7, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    mul-int/lit8 v2, v2, 0xa
+
+    add-int v9, v5, v8
+
+    if-ge v2, v9, :cond_7
+
+    :cond_6
+    :goto_2
     const/4 p0, 0x0
 
     return-object p0
-.end method
 
-.method public static b(Ljava/lang/String;)Lwwe;
-    .locals 6
+    :cond_7
+    sub-int/2addr v2, v8
 
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    add-int/lit8 v4, v4, 0x1
 
-    move-result v0
+    goto :goto_1
 
-    const/4 v1, 0x0
+    :cond_8
+    if-eqz v3, :cond_9
 
-    if-eqz v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    const-string v0, "{"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    new-instance p0, Lwwe;
-
-    const-string v2, "token"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "appVersion"
-
-    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "timestamp"
-
-    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    invoke-direct {p0, v4, v5, v2, v3}, Lwwe;-><init>(JLjava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "Failed to parse token: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    const-string v0, "FirebaseMessaging"
+    return-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_9
+    neg-int p0, v2
 
-    return-object v1
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static f0(Ljava/lang/String;)Ljava/lang/Long;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    const/16 v1, 0xa
+
+    invoke-static {v1}, Lpd7;->e(I)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    const/16 v5, 0x30
+
+    invoke-static {v4, v5}, Lg8;->h(II)I
+
+    move-result v5
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    if-gez v5, :cond_3
+
+    const/4 v5, 0x1
+
+    if-ne v2, v5, :cond_1
+
+    goto :goto_2
 
     :cond_1
-    new-instance v0, Lwwe;
+    const/16 v8, 0x2d
 
-    const-wide/16 v2, 0x0
+    if-ne v4, v8, :cond_2
 
-    invoke-direct {v0, v2, v3, p0, v1}, Lwwe;-><init>(JLjava/lang/String;Ljava/lang/String;)V
+    const-wide/high16 v6, -0x8000000000000000L
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v8, 0x2b
+
+    if-ne v4, v8, :cond_6
+
+    move/from16 v18, v5
+
+    move v5, v3
+
+    move/from16 v3, v18
+
+    goto :goto_0
+
+    :cond_3
+    move v5, v3
+
+    :goto_0
+    const-wide v8, -0x38e38e38e38e38eL    # -2.772000429909333E291
+
+    const-wide/16 v10, 0x0
+
+    move-wide v12, v8
+
+    :goto_1
+    if-ge v3, v2, :cond_8
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    invoke-static {v4, v1}, Ljava/lang/Character;->digit(II)I
+
+    move-result v4
+
+    if-gez v4, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_5
+
+    cmp-long v12, v12, v8
+
+    if-nez v12, :cond_6
+
+    int-to-long v12, v1
+
+    div-long v12, v6, v12
+
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    int-to-long v14, v1
+
+    mul-long/2addr v10, v14
+
+    int-to-long v14, v4
+
+    add-long v16, v6, v14
+
+    cmp-long v4, v10, v16
+
+    if-gez v4, :cond_7
+
+    :cond_6
+    :goto_2
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_7
+    sub-long/2addr v10, v14
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_8
+    if-eqz v5, :cond_9
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_9
+    neg-long v0, v10
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
 
     return-object v0
 .end method

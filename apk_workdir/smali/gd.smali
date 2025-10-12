@@ -3,155 +3,140 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt57;
+.implements Lahe;
 
 
-# instance fields
-.field public final a:Landroid/media/Image;
+# virtual methods
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-.field public final b:[Lzo6;
+    invoke-static {p1}, Lu4;->x(Ljavax/net/ssl/SSLSocket;)Z
 
-.field public final c:Lea0;
+    move-result p1
 
+    return p1
+.end method
 
-# direct methods
-.method public constructor <init>(Landroid/media/Image;)V
-    .locals 7
+.method public final b()Z
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Llib;->a:Llib;
 
-    iput-object p1, p0, Lgd;->a:Landroid/media/Image;
+    invoke-static {}, Lq62;->j()Z
 
-    invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    array-length v2, v0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    new-array v2, v2, [Lzo6;
+    const/16 v1, 0x1d
 
-    iput-object v2, p0, Lgd;->b:[Lzo6;
+    if-lt v0, v1, :cond_0
 
-    :goto_0
-    array-length v2, v0
+    const/4 v0, 0x1
 
-    if-ge v1, v2, :cond_1
+    return v0
 
-    iget-object v2, p0, Lgd;->b:[Lzo6;
+    :cond_0
+    const/4 v0, 0x0
 
-    new-instance v3, Lzo6;
+    return v0
+.end method
 
-    aget-object v4, v0, v1
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
 
-    const/4 v5, 0x2
+    invoke-static {p1}, Lgx4;->l(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
-    invoke-direct {v3, v5, v4}, Lzo6;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-array v0, v1, [Lzo6;
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    iput-object v0, p0, Lgd;->b:[Lzo6;
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    sget-object v2, Lw7f;->b:Lw7f;
+    const-string v0, ""
 
-    invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-wide v3
+    move-result v0
 
-    new-instance v6, Landroid/graphics/Matrix;
+    if-eqz v0, :cond_2
 
-    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
+    :goto_0
+    const/4 p1, 0x0
 
-    new-instance v1, Lea0;
+    :cond_2
+    :goto_1
+    return-object p1
+.end method
 
-    const/4 v5, 0x0
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    invoke-direct/range {v1 .. v6}, Lea0;-><init>(Lw7f;JILandroid/graphics/Matrix;)V
+    :try_start_0
+    invoke-static {p1}, Lu4;->q(Ljavax/net/ssl/SSLSocket;)V
 
-    iput-object v1, p0, Lgd;->c:Lea0;
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
+
+    move-result-object p2
+
+    sget-object v0, Llib;->a:Llib;
+
+    invoke-static {p3}, Lq62;->d(Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object p3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_0
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p2, p3}, Lgx4;->t(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
 
     return-void
-.end method
 
+    :catch_0
+    move-exception p1
 
-# virtual methods
-.method public final close()V
-    .locals 1
+    goto :goto_0
 
-    iget-object v0, p0, Lgd;->a:Landroid/media/Image;
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    invoke-virtual {v0}, Landroid/media/Image;->close()V
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
 
-    return-void
-.end method
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-.method public final d0()Landroid/media/Image;
-    .locals 1
+    throw p1
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Lgd;->a:Landroid/media/Image;
+    :goto_0
+    new-instance p2, Ljava/io/IOException;
 
-    return-object v0
-.end method
+    const-string p3, "Android internal error"
 
-.method public final getFormat()I
-    .locals 1
+    invoke-direct {p2, p3, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lgd;->a:Landroid/media/Image;
-
-    invoke-virtual {v0}, Landroid/media/Image;->getFormat()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getHeight()I
-    .locals 1
-
-    iget-object v0, p0, Lgd;->a:Landroid/media/Image;
-
-    invoke-virtual {v0}, Landroid/media/Image;->getHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getImageInfo()Lb57;
-    .locals 1
-
-    iget-object v0, p0, Lgd;->c:Lea0;
-
-    return-object v0
-.end method
-
-.method public final getWidth()I
-    .locals 1
-
-    iget-object v0, p0, Lgd;->a:Landroid/media/Image;
-
-    invoke-virtual {v0}, Landroid/media/Image;->getWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final w()[Lzo6;
-    .locals 1
-
-    iget-object v0, p0, Lgd;->b:[Lzo6;
-
-    return-object v0
+    throw p2
 .end method

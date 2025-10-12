@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/api/OkApiService$joinToConversation$request$1;
-.super Lag6;
+.super Lye6;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->joinToConversation(Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lude;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->joinToConversation(Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lrce;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lag6;",
-        "Llf6;"
+        "Lye6;",
+        "Lje6;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lzf6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -65,24 +65,24 @@
     .line 1
     check-cast p1, Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;
 
-    check-cast p2, Lbl0;
+    check-cast p2, Luk0;
 
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/api/OkApiService$joinToConversation$request$1;->invoke(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lbl0;)V
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/api/OkApiService$joinToConversation$request$1;->invoke(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
 
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method
 
-.method public final invoke(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lbl0;)V
+.method public final invoke(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lns1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lps1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/api/OkApiService;
 
-    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->addJoinToConversationParams(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lbl0;)V
+    invoke-virtual {v0, p1, p2}, Lru/ok/android/externcalls/sdk/api/OkApiService;->addJoinToConversationParams(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Luk0;)V
 
     return-void
 .end method

@@ -1,163 +1,129 @@
-.class public abstract Lfua;
+.class public final Lfua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljua;
+
 
 # static fields
-.field public static final a:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfua;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+# instance fields
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lqg8;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
+
+    sput-object v0, Lfua;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lfua;->a:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Lekc;->oneme_settings_media_action_always:I
+    const/4 v0, 0x0
 
-    sput v0, Lfua;->a:I
+    return v0
+.end method
 
-    sget v0, Lekc;->oneme_settings_media_action_disabled:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    sput v0, Lfua;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Lekc;->oneme_settings_media_action_dont_load:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Lfua;->c:I
+    return v0
 
-    sget v0, Lekc;->oneme_settings_media_action_video_quality_1080:I
+    :cond_0
+    instance-of v1, p1, Lfua;
 
-    sput v0, Lfua;->d:I
+    const/4 v2, 0x0
 
-    sget v0, Lekc;->oneme_settings_media_action_video_quality_480:I
+    if-nez v1, :cond_1
 
-    sput v0, Lfua;->e:I
+    return v2
 
-    sget v0, Lekc;->oneme_settings_media_action_video_quality_720:I
+    :cond_1
+    check-cast p1, Lfua;
 
-    sput v0, Lfua;->f:I
+    iget v1, p0, Lfua;->a:I
 
-    sget v0, Lekc;->oneme_settings_media_action_wifi:I
+    iget p1, p1, Lfua;->a:I
 
-    sput v0, Lfua;->g:I
+    if-eq v1, p1, :cond_2
 
-    sget v0, Lekc;->oneme_settings_media_animoji:I
+    return v2
 
-    sput v0, Lfua;->h:I
+    :cond_2
+    return v0
+.end method
 
-    sget v0, Lekc;->oneme_settings_media_audio:I
+.method public final hashCode()I
+    .locals 1
 
-    sput v0, Lfua;->i:I
+    iget v0, p0, Lfua;->a:I
 
-    sget v0, Lekc;->oneme_settings_media_audio_title:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    sput v0, Lfua;->j:I
+    move-result v0
 
-    sget v0, Lekc;->oneme_settings_media_caching:I
+    return v0
+.end method
 
-    sput v0, Lfua;->k:I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    sget v0, Lekc;->oneme_settings_media_gif:I
+    const-string v0, "ContrastIcon(iconRes="
 
-    sput v0, Lfua;->l:I
+    const-string v1, ")"
 
-    sget v0, Lekc;->oneme_settings_media_gif_play:I
+    iget v2, p0, Lfua;->a:I
 
-    sput v0, Lfua;->m:I
+    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    sget v0, Lekc;->oneme_settings_media_gif_title:I
+    move-result-object v0
 
-    sput v0, Lfua;->n:I
+    return-object v0
+.end method
 
-    sget v0, Lekc;->oneme_settings_media_load_media_in_roaming:I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sput v0, Lfua;->o:I
+    iget p2, p0, Lfua;->a:I
 
-    sget v0, Lekc;->oneme_settings_media_photo:I
-
-    sput v0, Lfua;->p:I
-
-    sget v0, Lekc;->oneme_settings_media_photo_title:I
-
-    sput v0, Lfua;->q:I
-
-    sget v0, Lekc;->oneme_settings_media_screen_autoloading_section:I
-
-    sput v0, Lfua;->r:I
-
-    sget v0, Lekc;->oneme_settings_media_screen_autoplaying_section:I
-
-    sput v0, Lfua;->s:I
-
-    sget v0, Lekc;->oneme_settings_media_screen_datapressing_section:I
-
-    sput v0, Lfua;->t:I
-
-    sget v0, Lekc;->oneme_settings_media_screen_toolbar_title:I
-
-    sput v0, Lfua;->u:I
-
-    sget v0, Lekc;->oneme_settings_media_video:I
-
-    sput v0, Lfua;->v:I
-
-    sget v0, Lekc;->oneme_settings_media_video_quality:I
-
-    sput v0, Lfua;->w:I
-
-    sget v0, Lekc;->oneme_settings_media_video_quality_title:I
-
-    sput v0, Lfua;->x:I
-
-    sget v0, Lekc;->oneme_settings_media_video_title:I
-
-    sput v0, Lfua;->y:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

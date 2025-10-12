@@ -1,109 +1,126 @@
 .class public final Lyr;
-.super Ljava/util/AbstractSet;
+.super Lzge;
 .source "SourceFile"
+
+# interfaces
+.implements Ltuc;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final b:Ljava/lang/Object;
+.field public b:Lxq4;
 
 
 # direct methods
-.method public constructor <init>(Lds;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lyr;->a:I
+    iput p2, p0, Lyr;->a:I
 
-    iput-object p1, p0, Lyr;->b:Ljava/lang/Object;
+    new-instance v0, Lxq4;
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    new-instance v1, Ljava/io/File;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-.method public constructor <init>([Lb5g;)V
-    .locals 1
+    move-result-object p1
 
-    const/4 v0, 0x1
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    iput v0, p0, Lyr;->a:I
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
+    invoke-direct {v0, v1, p2}, Lxq4;-><init>(Ljava/io/File;I)V
 
-    iput-object p1, p0, Lyr;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lyr;->b:Lxq4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final a(Landroid/content/Context;)Lzge;
+    .locals 2
 
-    iget v0, p0, Lyr;->a:I
+    new-instance v0, Lxq4;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Ljava/io/File;
 
-    new-instance v0, Ll67;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, [Lb5g;
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Ll67;-><init>([Lb5g;I)V
+    iget p1, p0, Lyr;->a:I
 
-    return-object v0
+    or-int/lit8 p1, p1, 0x1
 
-    :pswitch_0
-    new-instance v0, Lbs;
+    invoke-direct {v0, v1, p1}, Lxq4;-><init>(Ljava/io/File;I)V
 
-    iget-object v1, p0, Lyr;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lyr;->b:Lxq4;
 
-    check-cast v1, Lds;
-
-    invoke-direct {v0, v1}, Lbs;-><init>(Lds;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final size()I
+.method public final b()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
     .locals 1
 
-    iget v0, p0, Lyr;->a:I
+    iget-object v0, p0, Lyr;->b:Lxq4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1, p2, p3}, Lxq4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
 
-    iget-object v0, p0, Lyr;->b:Ljava/lang/Object;
+    move-result p1
 
-    check-cast v0, [Lb5g;
+    return p1
+.end method
 
-    array-length v0, v0
+.method public final d(I)V
+    .locals 0
 
-    div-int/lit8 v0, v0, 0x2
+    iget-object p1, p0, Lyr;->b:Lxq4;
 
-    return v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_0
-    iget-object v0, p0, Lyr;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lds;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, v0, Lade;->c:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    const-string v1, "ApplicationSoSource["
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyr;->b:Lxq4;
+
+    invoke-virtual {v1}, Lxq4;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

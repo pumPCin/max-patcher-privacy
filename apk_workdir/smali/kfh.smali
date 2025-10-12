@@ -1,52 +1,126 @@
 .class public final Lkfh;
-.super Ljava/lang/Object;
+.super Lodh;
 .source "SourceFile"
 
 # interfaces
-.implements Legh;
+.implements Lxfh;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
+.field public final synthetic d:I
 
-.field public final synthetic b:Lum4;
+.field public final synthetic e:Loda;
 
 
 # direct methods
-.method public constructor <init>(Lum4;Landroid/os/Bundle;)V
+.method public constructor <init>(Loda;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lkfh;->d:I
 
-    iput-object p1, p0, Lkfh;->b:Lum4;
+    iput-object p1, p0, Lkfh;->e:Loda;
 
-    iput-object p2, p0, Lkfh;->a:Landroid/os/Bundle;
+    const-string p1, "com.google.android.gms.maps.internal.IOnMapReadyCallback"
+
+    const/4 p2, 0x1
+
+    invoke-direct {p0, p1, p2}, Lodh;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final Y(Lqih;)V
     .locals 1
+
+    iget v0, p0, Lkfh;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lsn6;
+
+    invoke-direct {v0, p1}, Lsn6;-><init>(Lqih;)V
+
+    iget-object p1, p0, Lkfh;->e:Loda;
+
+    invoke-interface {p1, v0}, Loda;->W(Lsn6;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lsn6;
+
+    invoke-direct {v0, p1}, Lsn6;-><init>(Lqih;)V
+
+    iget-object p1, p0, Lkfh;->e:Loda;
+
+    invoke-interface {p1, v0}, Loda;->W(Lsn6;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final a0(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
+    if-ne p1, v0, :cond_2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IGoogleMapDelegate"
+
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lqih;
+
+    if-eqz v3, :cond_1
+
+    move-object p1, v2
+
+    check-cast p1, Lqih;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Lqih;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p1, v1, v3}, Lidh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p1, v2
+
+    :goto_0
+    invoke-static {p2}, Logh;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1}, Lxfh;->Y(Lqih;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
     return v0
-.end method
 
-.method public final b()V
-    .locals 2
+    :cond_2
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lkfh;->b:Lum4;
-
-    iget-object v0, v0, Lum4;->a:Ljava/lang/Object;
-
-    check-cast v0, Lrr7;
-
-    iget-object v1, p0, Lkfh;->a:Landroid/os/Bundle;
-
-    invoke-interface {v0, v1}, Lrr7;->v(Landroid/os/Bundle;)V
-
-    return-void
+    return p1
 .end method

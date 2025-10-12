@@ -3,235 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/hardware/SensorEventListener;
+.implements Lat7;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lhs7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final a:Lhs7;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lhs7;->a:I
+    new-instance v0, Lhs7;
 
-    iput-object p2, p0, Lhs7;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lhs7;->a:Lhs7;
 
-    return-void
-.end method
+    new-instance v0, Llr7;
 
-.method private final a(Landroid/hardware/Sensor;I)V
-    .locals 0
+    const/4 v1, 0x4
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Llr7;-><init>(I)V
 
-.method private final b(Landroid/hardware/Sensor;I)V
-    .locals 0
+    sput-object v0, Lhs7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    .locals 0
+.method public final describeContents()I
+    .locals 1
 
-    iget p1, p0, Lhs7;->a:I
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lhs7;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lhs7;->b:Ljava/lang/Object;
-
-    check-cast v0, Lu6c;
-
-    iget-object v1, v0, Lu6c;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-nez v1, :cond_0
-
-    goto :goto_2
+    return v0
 
     :cond_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+    instance-of p1, p1, Lhs7;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    aget v1, v1, v2
+    const/4 p1, 0x0
 
-    float-to-double v3, v1
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    float-to-double v5, p1
-
-    const-wide/high16 v7, 0x4008000000000000L    # 3.0
-
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v5
-
-    cmpg-double p1, v3, v5
-
-    if-gez p1, :cond_1
-
-    const/4 v2, 0x1
+    return p1
 
     :cond_1
-    iget-boolean p1, v0, Lu6c;->e:Z
+    return v0
+.end method
 
-    if-ne v2, p1, :cond_2
+.method public final hashCode()I
+    .locals 1
 
-    goto :goto_2
+    const v0, 0x2f7912c2
 
-    :cond_2
-    iput-boolean v2, v0, Lu6c;->e:Z
+    return v0
+.end method
 
-    if-eqz v2, :cond_3
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, v0, Lu6c;->h:Ljava/util/LinkedHashSet;
+    const-string v0, "ErrorBrokenLink"
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p2, 0x1
 
-    move-result v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt6c;
-
-    invoke-interface {v0}, Lt6c;->a()V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p1, v0, Lu6c;->h:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt6c;
-
-    invoke-interface {v0}, Lt6c;->b()V
-
-    goto :goto_1
-
-    :cond_4
-    :goto_2
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lhs7;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljd;
-
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    const/4 v3, 0x0
-
-    if-eq v1, v2, :cond_7
-
-    const/16 v2, 0x8
-
-    if-eq v1, v2, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget v1, v1, v3
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
-
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    cmpg-float p1, v1, p1
-
-    if-gez p1, :cond_6
-
-    const/4 v3, 0x1
-
-    :cond_6
-    iput-boolean v3, v0, Ljd;->b:Z
-
-    goto :goto_3
-
-    :cond_7
-    iget-boolean v1, v0, Ljd;->b:Z
-
-    if-eqz v1, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    iget-object v0, v0, Ljd;->c:Ljava/lang/Object;
-
-    check-cast v0, Lmoe;
-
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
-
-    aget p1, p1, v3
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

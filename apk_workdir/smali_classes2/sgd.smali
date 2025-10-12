@@ -3,92 +3,232 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu18;
+.implements Ltd6;
 
 
 # instance fields
-.field public X:Lcc6;
+.field public final synthetic a:I
 
-.field public volatile Y:Lqc6;
-
-.field public volatile Z:Z
-
-.field public final a:Lpmc;
-
-.field public final b:Ltz3;
-
-.field public volatile c:Z
-
-.field public o:Lyb6;
-
-.field public final w0:Lrgd;
+.field public final synthetic b:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/EglBase$Context;Landroid/content/Context;Lpmc;Lose;Lm7d;)V
-    .locals 10
+.method public synthetic constructor <init>(Lyn7;I)V
+    .locals 0
+
+    iput p2, p0, Lsgd;->a:I
+
+    iput-object p1, p0, Lsgd;->b:Lyn7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lsgd;->Z:Z
-
-    new-instance v0, Lrgd;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, v1}, Lrgd;-><init>(Lsgd;I)V
-
-    iput-object v0, p0, Lsgd;->w0:Lrgd;
-
-    new-instance v0, Ltz3;
-
-    const-string v1, "SSSendControl"
-
-    invoke-direct {v0, v1}, Ltz3;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lsgd;->b:Ltz3;
-
-    iput-object p3, p0, Lsgd;->a:Lpmc;
-
-    new-instance v2, Le05;
-
-    const/4 v9, 0x1
-
-    move-object v3, p0
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    move-object v7, p3
-
-    move-object v6, p4
-
-    move-object v8, p5
-
-    invoke-direct/range {v2 .. v9}, Le05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v2}, Ltz3;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Lst0;
+    iget v0, p0, Lsgd;->a:I
 
-    const/4 v1, 0x2
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, p2, v1}, Lst0;-><init>(Ljava/lang/Object;III)V
+    iget-object v0, p0, Lsgd;->b:Lyn7;
 
-    iget-object p1, p0, Lsgd;->b:Ltz3;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Ltz3;->c(Ljava/lang/Runnable;)V
+    move-result-object v1
 
-    return-void
+    check-cast v1, Lxo4;
+
+    invoke-virtual {v1}, Lxo4;->h()Lk2g;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lk2g;->b:Ljava/lang/String;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxo4;
+
+    invoke-virtual {v2}, Lxo4;->h()Lk2g;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lk2g;->d:Ljava/lang/String;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lxo4;
+
+    invoke-virtual {v3}, Lxo4;->h()Lk2g;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lk2g;->g:Ljava/lang/String;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxo4;
+
+    invoke-virtual {v0}, Lxo4;->h()Lk2g;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lk2g;->h:Ljava/lang/String;
+
+    const-string v4, "OKMessages/"
+
+    const-string v5, " ("
+
+    const-string v6, "; "
+
+    invoke-static {v4, v1, v5, v2, v6}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsgd;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsje;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lsgd;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsje;
+
+    check-cast v0, Ltje;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_1
+    invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
+
+    invoke-virtual {v0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    check-cast v0, Ljavax/net/ssl/X509TrustManager;
+    :try_end_1
+    .catch Ljavax/net/ssl/SSLException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_1
+
+    :goto_0
+    new-instance v1, Ljavax/net/ssl/SSLException;
+
+    const-string v2, "Failed to create trust manager"
+
+    invoke-direct {v1, v2, v0}, Ljavax/net/ssl/SSLException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_1
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lsgd;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsje;
+
+    const/4 v1, 0x0
+
+    check-cast v0, Ltje;
+
+    invoke-virtual {v0, v1}, Ltje;->a(Ljava/lang/String;)Lbhe;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

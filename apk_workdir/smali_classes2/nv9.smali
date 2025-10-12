@@ -1,26 +1,16 @@
-.class public interface abstract Lnv9;
+.class public final synthetic Lnv9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lone/me/rlottie/NativeLibraryLoader;
+
 
 # virtual methods
-.method public abstract A(Ljava/lang/Throwable;)V
-.end method
-
-.method public q(III)V
+.method public final load(Ljava/lang/String;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public abstract s()V
-.end method
-
-.method public t()V
-    .locals 0
+    invoke-static {p1}, Lone/me/rlottie/NativeLibraryLoader$Companion;->a(Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method public abstract w()V
 .end method

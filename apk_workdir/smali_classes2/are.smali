@@ -1,279 +1,123 @@
-.class public final synthetic Lare;
-.super Ljava/lang/Object;
+.class public final Lare;
+.super Ly7f;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Ljava/util/ArrayList;
 
-.field public final synthetic b:Lone/me/stickerspreview/StickerPreviewScreen;
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerspreview/StickerPreviewScreen;I)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    iput p2, p0, Lare;->a:I
-
-    iput-object p1, p0, Lare;->b:Lone/me/stickerspreview/StickerPreviewScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 9
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 4
 
-    iget p1, p0, Lare;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x2
+    const-string v0, "marker"
 
-    const/4 v1, 0x0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v2, 0x1
+    move-result v0
 
-    iget-object v3, p0, Lare;->b:Lone/me/stickerspreview/StickerPreviewScreen;
+    if-nez v0, :cond_2
 
-    packed-switch p1, :pswitch_data_0
+    const-string v0, "stickers"
 
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->E0:[Ltm7;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3}, Lone/me/stickerspreview/StickerPreviewScreen;->C0()Lire;
+    move-result p2
 
-    move-result-object p1
+    if-nez p2, :cond_0
 
-    iget-object v3, p1, Lire;->C0:Lsqc;
+    invoke-virtual {p1}, Lc79;->y()V
 
-    iget-object v3, v3, Lsqc;->a:Lfoe;
-
-    invoke-interface {v3}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzqe;
-
-    if-eqz v3, :cond_1
-
-    sget-object v4, Lzqe;->B0:Lzqe;
-
-    invoke-virtual {v3, v4}, Lzqe;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    iget-object v4, p1, Lire;->J0:Lqle;
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v4}, Ld0;->isActive()Z
-
-    move-result v4
-
-    if-ne v4, v2, :cond_0
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    iget-object v2, p1, Lire;->c:Lr8f;
+    invoke-static {p1}, Lg8;->A(Lc79;)I
 
-    check-cast v2, Lwla;
+    move-result p2
 
-    invoke-virtual {v2}, Lwla;->b()Ly24;
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v2
+    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    new-instance v4, Lgre;
+    iput-object v0, p0, Lare;->c:Ljava/util/ArrayList;
 
-    invoke-direct {v4, v3, p1, v1}, Lgre;-><init>(Lzqe;Lire;Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
 
-    invoke-static {p1, v2, v4, v0}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lire;->J0:Lqle;
-
-    :cond_1
     :goto_0
-    return-void
+    if-ge v0, p2, :cond_1
 
-    :pswitch_0
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->E0:[Ltm7;
+    iget-object v1, p0, Lare;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {v3}, Lone/me/stickerspreview/StickerPreviewScreen;->C0()Lire;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lire;->C0:Lsqc;
-
-    iget-object v0, v0, Lsqc;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzqe;
-
-    iget-wide v5, p1, Lire;->b:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v5, v3
-
-    if-lez v1, :cond_3
-
-    if-eqz v0, :cond_3
-
-    sget-object v1, Lzqe;->B0:Lzqe;
-
-    invoke-virtual {v0, v1}, Lzqe;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-wide v7, v0, Lzqe;->a:J
-
-    new-instance v3, Ljud;
-
-    const/4 v4, 0x1
-
-    invoke-direct/range {v3 .. v8}, Ljud;-><init>(IJJ)V
-
-    new-instance v0, Lkud;
-
-    invoke-direct {v0, v3}, Lkud;-><init>(Ljud;)V
-
-    iget-object v1, p1, Lire;->x0:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lnah;
-
-    invoke-virtual {v1, v0}, Lnah;->b(Lstd;)V
-
-    iget-object p1, p1, Lire;->z0:Ljb5;
-
-    sget-object v0, Lj73;->b:Lj73;
-
-    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_1
-    sget-object p1, Lsse;->a:Lsse;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, La5;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lb87;
-
-    if-eqz p1, :cond_4
-
-    new-instance v0, La87;
-
-    sget-object v1, Ly77;->b:Ly77;
-
-    invoke-direct {v0, v1, v2}, La87;-><init>(Ly77;I)V
-
-    new-instance v1, La87;
-
-    sget-object v3, Ly77;->Y:Ly77;
-
-    invoke-direct {v1, v3, v2}, La87;-><init>(Ly77;I)V
-
-    filled-new-array {v0, v1}, [La87;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lqxd;->x([Ljava/lang/Object;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sget-object v1, Lhfd;->S0:Lhfd;
-
-    invoke-virtual {p1, v0, v1}, Lb87;->f(Ljava/util/Set;Lhfd;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->E0:[Ltm7;
-
-    invoke-virtual {v3}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Li8d;->C()Z
-
-    sget-object p1, Ltse;->c:Ltse;
-
-    iget-object v2, v3, Lone/me/stickerspreview/StickerPreviewScreen;->b:Lpr;
-
-    sget-object v4, Lone/me/stickerspreview/StickerPreviewScreen;->E0:[Ltm7;
-
-    aget-object v0, v4, v0
-
-    invoke-virtual {v2, v3}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {p1}, Lc79;->o0()J
 
     move-result-wide v2
 
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p1
+    move-result-object v2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v4, ":chats/forward?messages_ids="
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_1
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    invoke-virtual {p1}, Lc79;->o0()J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lare;->o:J
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-object v0, p0, Lare;->c:Ljava/util/ArrayList;
+
+    iget-wide v1, p0, Lare;->o:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "{stickerIds="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", marker="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-
-    :pswitch_2
-    sget-object p1, Lone/me/stickerspreview/StickerPreviewScreen;->E0:[Ltm7;
-
-    invoke-virtual {v3}, Lb04;->getRouter()Li8d;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Li8d;->C()Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

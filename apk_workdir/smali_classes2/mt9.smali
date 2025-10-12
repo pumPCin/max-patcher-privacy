@@ -1,154 +1,80 @@
-.class public final Lmt9;
+.class public final synthetic Lmt9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lid8;
+
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
+.field public final synthetic a:Lot9;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Lot9;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 1
-    invoke-direct {p0, v0, v1, v1, v1}, Lmt9;-><init>(ZZZZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZ)V
-    .locals 1
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lmt9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    .line 4
-    iput-boolean p1, p0, Lmt9;->e:Z
-
-    .line 5
-    iput-boolean p2, p0, Lmt9;->f:Z
-
-    .line 6
-    iput-boolean p3, p0, Lmt9;->b:Z
-
-    .line 7
-    iput-boolean p4, p0, Lmt9;->g:Z
+    iput-object p1, p0, Lmt9;->a:Lot9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a(Ldd8;)V
     .locals 2
 
-    iget-object v0, p0, Lmt9;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v0, p0, Lmt9;->a:Lot9;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object v1, v0, Lot9;->v0:Lja8;
 
-    move-result-object v0
+    if-eqz v1, :cond_2
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, v1, Lja8;->h:Z
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llt9;
-
-    invoke-interface {v1, p0}, Llt9;->i(Lmt9;)V
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, v0, Lot9;->r0:Lcx7;
 
-.method public final b()Z
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v0, p0, Lmt9;->f:Z
+    sget-object v0, Lqc8;->a:Lqc8;
 
-    return v0
-.end method
+    sget-object v1, Lm59;->a:Lm59;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MediaSettings{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lmt9;->e:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "|audio"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    iget-boolean v1, p0, Lmt9;->f:Z
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "|video"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    iget-boolean v1, p0, Lmt9;->b:Z
-
-    if-eqz v1, :cond_2
-
-    const-string v1, "|screen capture"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_2
-    iget-boolean v1, p0, Lmt9;->g:Z
-
-    if-eqz v1, :cond_3
-
-    const-string v1, "|animoji"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_3
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lkc8;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lm59;
+
+    if-ne v0, v1, :cond_1
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {p1, v0}, Ldd8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ldd8;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {p1, v0}, Ldd8;->a(Ljava/lang/Object;)V
+
+    return-void
 .end method

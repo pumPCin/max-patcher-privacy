@@ -1,53 +1,66 @@
 .class public final Lpjf;
-.super Lnz3;
+.super Lig7;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lfea;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lsjf;
-
-.field public o:Lsjf;
-
-.field public w0:I
-
-
 # direct methods
-.method public constructor <init>(Lsjf;Lnz3;)V
-    .locals 0
+.method public static final d(Lpjf;Landroidx/recyclerview/widget/RecyclerView;)V
+    .locals 1
 
-    iput-object p1, p0, Lpjf;->Z:Lsjf;
+    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
+    instance-of v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    if-nez p0, :cond_1
+
+    const/4 p0, -0x1
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->canScrollVertically(I)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
+
+    move-result p0
+
+    if-gtz p0, :cond_2
+
+    :goto_1
+    const/4 p0, 0x0
+
+    invoke-virtual {p1, p0}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c(Landroidx/recyclerview/widget/RecyclerView;Lxuc;)Lzuc;
     .locals 1
 
-    iput-object p1, p0, Lpjf;->Y:Ljava/lang/Object;
+    new-instance p2, Lxue;
 
-    iget p1, p0, Lpjf;->w0:I
+    const/4 v0, 0x2
 
-    const/high16 v0, -0x80000000
+    invoke-direct {p2, p0, v0, p1}, Lxue;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lpjf;->w0:I
-
-    iget-object p1, p0, Lpjf;->Z:Lsjf;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lsjf;->n(Lfea;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method

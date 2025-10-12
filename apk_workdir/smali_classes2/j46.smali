@@ -1,111 +1,180 @@
-.class public final Lj46;
-.super Lgd4;
+.class public final synthetic Lj46;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# static fields
-.field public static final b:Lj46;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Lbd4;
-
-.field public static final e:Lbd4;
-
-.field public static final f:Lbd4;
-
-.field public static final g:Lbd4;
-
-.field public static final h:Lbd4;
+.field public final synthetic b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Lone/me/folders/pickerfolders/FoldersPickerScreen;I)V
+    .locals 0
 
-    new-instance v0, Lj46;
+    iput p2, p0, Lj46;->a:I
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iput-object p1, p0, Lj46;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    sput-object v0, Lj46;->b:Lj46;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":settings/folder-list"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Lj46;->c:Lbd4;
-
-    const-string v2, "id"
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v6, ":settings/folder"
-
-    invoke-static {v0, v6, v3, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v3
-
-    sput-object v3, Lj46;->d:Lbd4;
-
-    const-string v3, ":settings/folder/edit"
-
-    new-array v6, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v3, v6, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v3
-
-    sput-object v3, Lj46;->e:Lbd4;
-
-    const-string v3, ":settings/folder/create"
-
-    new-array v6, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v3, v6, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v3
-
-    sput-object v3, Lj46;->f:Lbd4;
-
-    const-string v3, ":settings/folder/by-chat"
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v3, v2, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Lj46;->g:Lbd4;
-
-    const-string v2, ":settings/folder/settings"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    const-string v2, ":settings/folder/members-picker"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v0
-
-    sput-object v0, Lj46;->h:Lbd4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lj46;->a:I
+
+    const/4 v1, 0x1
+
+    sget-object v2, Lm2g;->a:Lm2g;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lj46;->b:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Lu26;
+
+    invoke-virtual {v0}, Lhv7;->j()I
+
+    move-result v5
+
+    if-le v5, p1, :cond_1
+
+    if-ltz p1, :cond_1
+
+    invoke-virtual {v0, p1}, Lhv7;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lov7;
+
+    check-cast p1, Ln2g;
+
+    iget-object v0, p1, Ln2g;->a:Lsz5;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, v0, Lsz5;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Ln2g;->b:Lm2g;
+
+    if-eq p1, v2, :cond_2
+
+    invoke-virtual {v4}, Lone/me/folders/pickerfolders/FoldersPickerScreen;->B0()Lw46;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lw46;->x0:Lhne;
+
+    invoke-virtual {p1}, Lhne;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v1, v3
+
+    :cond_2
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v4, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o:Lu26;
+
+    invoke-virtual {v0}, Lhv7;->j()I
+
+    move-result v4
+
+    if-lt v4, p1, :cond_3
+
+    if-ltz p1, :cond_3
+
+    invoke-virtual {v0, p1}, Lhv7;->C(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lov7;
+
+    check-cast p1, Ln2g;
+
+    iget-object p1, p1, Ln2g;->b:Lm2g;
+
+    if-eq p1, v2, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move v1, v3
+
+    :goto_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
+
+    invoke-virtual {v4}, Ljz3;->getOnBackPressedDispatcher()Lida;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lida;->d()V
+
+    :cond_4
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

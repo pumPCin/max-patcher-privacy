@@ -1,78 +1,87 @@
-.class public final Lls;
-.super Lwjb;
+.class public final enum Lls;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Lj0f;
+.implements Lke6;
 
-# instance fields
-.field public final a:Lro0;
 
-.field public final b:Lzde;
+# static fields
+.field public static final enum a:Lls;
+
+.field public static final synthetic b:[Lls;
 
 
 # direct methods
-.method public constructor <init>(Lro0;Lzde;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lls;
 
-    iput-object p1, p0, Lls;->a:Lro0;
+    const-string v1, "INSTANCE"
 
-    iput-object p2, p0, Lls;->b:Lzde;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lls;->a:Lls;
+
+    filled-new-array {v0}, [Lls;
+
+    move-result-object v0
+
+    sput-object v0, Lls;->b:[Lls;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lls;
+    .locals 1
 
-# virtual methods
-.method public final c(IILandroid/graphics/Bitmap$Config;)Lt73;
-    .locals 5
+    const-class v0, Lls;
 
-    invoke-static {p1, p2, p3}, Lbp0;->c(IILandroid/graphics/Bitmap$Config;)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    iget-object v1, p0, Lls;->a:Lro0;
+    check-cast p0, Lls;
 
-    invoke-interface {v1, v0}, Lvmb;->get(I)Ljava/lang/Object;
+    return-object p0
+.end method
+
+.method public static values()[Lls;
+    .locals 1
+
+    sget-object v0, Lls;->b:[Lls;
+
+    invoke-virtual {v0}, [Lls;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/Bitmap;
+    check-cast v0, [Lls;
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+    return-object v0
+.end method
 
-    move-result v2
 
-    mul-int v3, p1, p2
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p3}, Lbp0;->b(Landroid/graphics/Bitmap$Config;)I
+    new-instance p1, Ljava/util/ArrayList;
 
-    move-result v4
-
-    mul-int/2addr v4, v3
-
-    if-lt v2, v4, :cond_0
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
-
-    iget-object p1, p0, Lls;->b:Lzde;
-
-    iget-object p1, p1, Lzde;->b:Ljava/lang/Object;
-
-    check-cast p1, Leqd;
-
-    invoke-static {v0, v1, p1}, Lt73;->t0(Ljava/lang/Object;Lu2d;Ls73;)Llf4;
-
-    move-result-object p1
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     return-object p1
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    const-string p2, "Check failed."
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    throw p1
+    return-object v0
 .end method

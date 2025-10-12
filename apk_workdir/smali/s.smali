@@ -1,5 +1,5 @@
 .class public final Ls;
-.super Lhy9;
+.super Ldw9;
 .source "SourceFile"
 
 
@@ -11,9 +11,9 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Loyf;->a:Loyf;
+    sget-object v0, Laxf;->a:Laxf;
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Ldw9;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Ls;->b:Ljava/lang/String;
 

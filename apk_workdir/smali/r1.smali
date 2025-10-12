@@ -1,124 +1,270 @@
-.class public abstract Lr1;
-.super Ljava/lang/Object;
+.class public final Lr1;
+.super Lpr0;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lim7;
+
+# static fields
+.field public static final c:Lsun/misc/Unsafe;
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final f:J
+
+.field public static final g:J
+
+.field public static final h:J
 
 
-# instance fields
-.field public a:I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
 
-.field public b:Ljava/lang/Object;
+    const-string v0, "a"
+
+    const-string v1, "b"
+
+    const-class v2, Ls1;
+
+    :try_start_0
+    invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
+
+    move-result-object v3
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    :try_start_1
+    new-instance v3, Lq1;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {v3}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lsun/misc/Unsafe;
+    :try_end_1
+    .catch Ljava/security/PrivilegedActionException; {:try_start_1 .. :try_end_1} :catch_2
+
+    :goto_0
+    :try_start_2
+    const-class v4, Lu1;
+
+    const-string v5, "c"
+
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+
+    move-result-wide v5
+
+    sput-wide v5, Lr1;->e:J
+
+    invoke-virtual {v4, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v5}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+
+    move-result-wide v5
+
+    sput-wide v5, Lr1;->d:J
+
+    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+
+    move-result-wide v4
+
+    sput-wide v4, Lr1;->f:J
+
+    invoke-virtual {v2, v0}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+
+    move-result-wide v4
+
+    sput-wide v4, Lr1;->g:J
+
+    invoke-virtual {v2, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lr1;->h:J
+
+    sput-object v3, Lr1;->c:Lsun/misc/Unsafe;
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_1
+
+    return-void
+
+    :catch_1
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :catch_2
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v2, "Could not initialize intrinsics"
+
+    invoke-virtual {v0}, Ljava/security/PrivilegedActionException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
-.method public final hasNext()Z
+.method public final R(Ls1;Ls1;)V
     .locals 3
 
-    iget v0, p0, Lr1;->a:I
+    sget-object v0, Lr1;->c:Lsun/misc/Unsafe;
 
-    const/4 v1, 0x0
+    sget-wide v1, Lr1;->h:J
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
 
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 v2, 0x2
-
-    if-ne v0, v2, :cond_0
-
-    return v1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "hasNext called when the iterator is in the FAILED state."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    return v2
-
-    :cond_2
-    const/4 v0, 0x3
-
-    iput v0, p0, Lr1;->a:I
-
-    invoke-virtual {p0}, Lr1;->a()V
-
-    iget v0, p0, Lr1;->a:I
-
-    if-ne v0, v2, :cond_3
-
-    return v2
-
-    :cond_3
-    return v1
+    return-void
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 4
+.method public final S(Ls1;Ljava/lang/Thread;)V
+    .locals 3
 
-    iget v0, p0, Lr1;->a:I
+    sget-object v0, Lr1;->c:Lsun/misc/Unsafe;
 
-    const/4 v1, 0x0
+    sget-wide v1, Lr1;->g:J
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, p1, v1, v2, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
 
-    if-ne v0, v2, :cond_0
-
-    iput v1, p0, Lr1;->a:I
-
-    iget-object v0, p0, Lr1;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_0
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lr1;->a:I
-
-    invoke-virtual {p0}, Lr1;->a()V
-
-    iget v0, p0, Lr1;->a:I
-
-    if-ne v0, v2, :cond_1
-
-    iput v1, p0, Lr1;->a:I
-
-    iget-object v0, p0, Lr1;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
+    return-void
 .end method
 
-.method public final remove()V
-    .locals 2
+.method public final g(Lu1;Ld1;Ld1;)Z
+    .locals 6
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    sget-object v0, Lr1;->c:Lsun/misc/Unsafe;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    sget-wide v2, Lr1;->d:J
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-object v1, p1
 
-    throw v0
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-static/range {v0 .. v5}, Lo1;->a(Lsun/misc/Unsafe;Lu1;JLd1;Ld1;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final h(Lu1;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 6
+
+    sget-object v0, Lr1;->c:Lsun/misc/Unsafe;
+
+    sget-wide v2, Lr1;->f:J
+
+    move-object v1, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-static/range {v0 .. v5}, Lp1;->a(Lsun/misc/Unsafe;Lu1;JLjava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final i(Lu1;Ls1;Ls1;)Z
+    .locals 6
+
+    sget-object v0, Lr1;->c:Lsun/misc/Unsafe;
+
+    sget-wide v2, Lr1;->e:J
+
+    move-object v1, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-static/range {v0 .. v5}, Ln1;->a(Lsun/misc/Unsafe;Lu1;JLs1;Ls1;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final l(Lu1;)Ld1;
+    .locals 3
+
+    sget-object v0, Ld1;->d:Ld1;
+
+    :cond_0
+    iget-object v1, p1, Lu1;->b:Ld1;
+
+    if-ne v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, p1, v1, v0}, Lr1;->g(Lu1;Ld1;Ld1;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :goto_0
+    return-object v1
+.end method
+
+.method public final m(Lu1;)Ls1;
+    .locals 3
+
+    sget-object v0, Ls1;->c:Ls1;
+
+    :cond_0
+    iget-object v1, p1, Lu1;->c:Ls1;
+
+    if-ne v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0, p1, v1, v0}, Lr1;->i(Lu1;Ls1;Ls1;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :goto_0
+    return-object v1
 .end method

@@ -1,146 +1,94 @@
-.class public final Lhge;
-.super Lv2;
+.class public final synthetic Lhge;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Lige;
+.field public final synthetic b:Lma7;
 
 
 # direct methods
-.method public constructor <init>(Lige;I)V
+.method public synthetic constructor <init>(Lma7;I)V
     .locals 0
 
-    iput p2, p0, Lhge;->c:I
+    iput p2, p0, Lhge;->a:I
 
-    packed-switch p2, :pswitch_data_0
+    iput-object p1, p0, Lhge;->b:Lma7;
 
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lhge;->o:Lige;
-
-    const/16 p1, 0x9
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lhge;->o:Lige;
-
-    const/16 p1, 0x9
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p2
-
-    iput-object p1, p0, Lhge;->o:Lige;
-
-    const/16 p1, 0x9
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    iget v0, p0, Lhge;->c:I
+    iget v0, p0, Lhge;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lhge;->b:Lma7;
 
-    iget-object p1, p0, Lhge;->o:Lige;
+    check-cast v0, Lbge;
 
-    invoke-virtual {p1}, Lige;->a()I
+    iget-object v0, v0, Lbge;->G0:Lbl3;
 
-    move-result p2
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iput p2, p1, Lige;->e:I
-
-    :cond_0
     return-void
 
     :pswitch_0
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result p1
 
-    if-nez p1, :cond_1
+    iget-object v0, p0, Lhge;->b:Lma7;
 
-    iget-object p1, p0, Lhge;->o:Lige;
+    check-cast v0, Lbge;
 
-    iget p2, p1, Lige;->d:F
+    iget-object v1, v0, Lbge;->G0:Lbl3;
 
-    invoke-virtual {p1, p2}, Lige;->c(F)V
+    invoke-virtual {v1}, Landroid/widget/TextView;->getCurrentTextColor()I
 
-    invoke-virtual {p1}, Lige;->a()I
+    move-result v1
 
-    move-result p2
-
-    iput p2, p1, Lige;->e:I
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Luce;->f0(IF)I
 
     move-result p1
 
-    if-nez p1, :cond_2
+    iget-object v0, v0, Lbge;->G0:Lbl3;
 
-    iget-object p1, p0, Lhge;->o:Lige;
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget p2, p1, Lige;->d:F
-
-    invoke-virtual {p1, p2}, Lige;->c(F)V
-
-    invoke-virtual {p1}, Lige;->a()I
-
-    move-result p2
-
-    iput p2, p1, Lige;->e:I
-
-    :cond_2
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -2,105 +2,83 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Ljava/util/Set;
+# interfaces
+.implements Landroid/os/IInterface;
 
 
 # instance fields
-.field public final a:Lgo6;
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lgfh;->b:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lgo6;)V
+.method public constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgfh;->a:Lgo6;
+    iput-object p1, p0, Lgfh;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltkh;)Ltkh;
-    .locals 5
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
 
-    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Z
+    iget-object v0, p0, Lgfh;->c:Landroid/os/IBinder;
 
-    const/4 v1, 0x1
+    return-object v0
+.end method
 
-    if-nez v0, :cond_1
+.method public final k(Lghh;Lml6;)V
+    .locals 3
 
-    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->k:Lmv0;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :cond_1
-    :goto_0
-    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Z
-
-    iget-object v0, p0, Lgfh;->a:Lgo6;
-
-    iget-object v1, v0, Lgo6;->y0:Llo6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lxfh;
-
-    invoke-direct {v2, p1}, Lxfh;-><init>(Ltkh;)V
-
-    iget-object v3, v1, Llo6;->x0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v4, Lofh;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v3
-
-    invoke-direct {v4, v2, v3, v0}, Lofh;-><init>(Lggh;ILgo6;)V
-
-    iget-object v0, v1, Llo6;->B0:Len9;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    :try_start_0
+    const-string v2, "com.google.android.gms.common.internal.IGmsServiceBroker"
 
-    return-object p1
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p1, 0x0
+
+    invoke-static {p2, v0, p1}, Ltfh;->a(Lml6;Landroid/os/Parcel;I)V
+
+    iget-object p2, p0, Lgfh;->c:Landroid/os/IBinder;
+
+    const/16 v2, 0x2e
+
+    invoke-interface {p2, v2, v0, v1, p1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p1
 .end method

@@ -1,83 +1,69 @@
 .class public final Lo90;
-.super Lu44;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Lo90;
+
+
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:J
 
-.field public final b:Lh73;
+.field public final b:I
 
-.field public final c:Lh73;
+.field public final c:I
 
-.field public final d:Ljava/lang/String;
+.field public final d:J
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lh73;Lh73;Ljava/lang/String;)V
+.method static constructor <clinit>()V
+    .locals 8
+
+    new-instance v0, Lo90;
+
+    const-wide/32 v5, 0x240c8400
+
+    const v7, 0x14000
+
+    const/16 v1, 0xc8
+
+    const/16 v2, 0x2710
+
+    const-wide/32 v3, 0xa00000
+
+    invoke-direct/range {v0 .. v7}, Lo90;-><init>(IIJJI)V
+
+    sput-object v0, Lo90;->f:Lo90;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIJJI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_3
+    iput-wide p3, p0, Lo90;->a:J
 
-    iput-object p1, p0, Lo90;->a:Landroid/content/Context;
+    iput p1, p0, Lo90;->b:I
 
-    if-eqz p2, :cond_2
+    iput p2, p0, Lo90;->c:I
 
-    iput-object p2, p0, Lo90;->b:Lh73;
+    iput-wide p5, p0, Lo90;->d:J
 
-    if-eqz p3, :cond_1
-
-    iput-object p3, p0, Lo90;->c:Lh73;
-
-    if-eqz p4, :cond_0
-
-    iput-object p4, p0, Lo90;->d:Ljava/lang/String;
+    iput p7, p0, Lo90;->e:I
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null backendName"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null monotonicClock"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null wallClock"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null applicationContext"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -86,59 +72,47 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lu44;
+    instance-of v1, p1, Lo90;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    check-cast p1, Lu44;
-
-    move-object v1, p1
-
-    check-cast v1, Lo90;
-
-    iget-object v1, v1, Lo90;->a:Landroid/content/Context;
-
-    iget-object v3, p0, Lo90;->a:Landroid/content/Context;
-
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
     check-cast p1, Lo90;
 
-    iget-object v1, p1, Lo90;->b:Lh73;
+    iget-wide v3, p0, Lo90;->a:J
 
-    iget-object v3, p0, Lo90;->b:Lh73;
+    iget-wide v5, p1, Lo90;->a:J
 
-    invoke-virtual {v3, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
+    if-nez v1, :cond_1
 
-    if-eqz v1, :cond_1
+    iget v1, p0, Lo90;->b:I
 
-    iget-object v1, p0, Lo90;->c:Lh73;
+    iget v3, p1, Lo90;->b:I
 
-    iget-object v3, p1, Lo90;->c:Lh73;
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lo90;->c:I
 
-    move-result v1
+    iget v3, p1, Lo90;->c:I
 
-    if-eqz v1, :cond_1
+    if-ne v1, v3, :cond_1
 
-    iget-object v1, p0, Lo90;->d:Ljava/lang/String;
+    iget-wide v3, p0, Lo90;->d:J
 
-    iget-object p1, p1, Lo90;->d:Ljava/lang/String;
+    iget-wide v5, p1, Lo90;->d:J
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p1
+    if-nez v1, :cond_1
 
-    if-eqz p1, :cond_1
+    iget v1, p0, Lo90;->e:I
+
+    iget p1, p1, Lo90;->e:I
+
+    if-ne v1, p1, :cond_1
 
     return v0
 
@@ -147,13 +121,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 7
 
-    iget-object v0, p0, Lo90;->a:Landroid/content/Context;
+    iget-wide v0, p0, Lo90;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -161,31 +139,31 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lo90;->b:Lh73;
+    iget v3, p0, Lo90;->b:I
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    xor-int/2addr v0, v3
 
-    move-result v2
+    mul-int/2addr v0, v1
+
+    iget v3, p0, Lo90;->c:I
+
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lo90;->d:J
+
+    ushr-long v5, v3, v2
+
+    xor-long v2, v5, v3
+
+    long-to-int v2, v2
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lo90;->c:Lh73;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lo90;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
+    iget v1, p0, Lo90;->e:I
 
     xor-int/2addr v0, v1
 
@@ -197,39 +175,47 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CreationContext{applicationContext="
+    const-string v1, "EventStoreConfig{maxStorageSizeInBytes="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lo90;->a:Landroid/content/Context;
+    iget-wide v1, p0, Lo90;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", wallClock="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lo90;->b:Lh73;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", monotonicClock="
+    const-string v1, ", loadBatchSize="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lo90;->c:Lh73;
+    iget v1, p0, Lo90;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", backendName="
+    const-string v1, ", criticalSectionEnterTimeoutMs="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lo90;->d:Ljava/lang/String;
+    iget v1, p0, Lo90;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", eventCleanUpAge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lo90;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxBlobByteSizePerRow="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lo90;->e:I
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

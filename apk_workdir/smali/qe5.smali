@@ -1,142 +1,111 @@
-.class public final synthetic Lqe5;
+.class public final Lqe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrx7;
+.implements Landroid/view/SurfaceHolder$Callback;
+.implements Landroid/view/TextureView$SurfaceTextureListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ldkb;
+.field public final synthetic a:Lwe5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldkb;I)V
+.method public constructor <init>(Lwe5;)V
     .locals 0
 
-    iput p2, p0, Lqe5;->a:I
-
-    iput-object p1, p0, Lqe5;->b:Ldkb;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqe5;->a:Lwe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
+.method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
+    .locals 1
 
-    iget v0, p0, Lqe5;->a:I
+    new-instance v0, Landroid/view/Surface;
 
-    check-cast p1, Ltkb;
+    invoke-direct {v0, p1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lqe5;->a:Lwe5;
 
-    iget-object v0, p0, Lqe5;->b:Ldkb;
+    invoke-virtual {p1, v0}, Lwe5;->m1(Landroid/view/Surface;)V
 
-    iget-object v0, v0, Ldkb;->n:Lfkb;
+    iput-object v0, p1, Lwe5;->b1:Landroid/view/Surface;
 
-    invoke-interface {p1, v0}, Ltkb;->x(Lfkb;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lqe5;->b:Ldkb;
-
-    invoke-static {v0}, Lhf5;->i1(Ldkb;)Z
-
-    move-result v0
-
-    invoke-interface {p1, v0}, Ltkb;->q(Z)V
+    invoke-virtual {p1, p2, p3}, Lwe5;->a1(II)V
 
     return-void
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lqe5;->b:Ldkb;
+.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
+    .locals 1
 
-    iget v0, v0, Ldkb;->m:I
+    const/4 p1, 0x0
 
-    invoke-interface {p1, v0}, Ltkb;->f(I)V
+    iget-object v0, p0, Lqe5;->a:Lwe5;
+
+    invoke-virtual {v0, p1}, Lwe5;->m1(Landroid/view/Surface;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, p1}, Lwe5;->a1(II)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
+    .locals 0
+
+    iget-object p1, p0, Lqe5;->a:Lwe5;
+
+    invoke-virtual {p1, p2, p3}, Lwe5;->a1(II)V
 
     return-void
+.end method
 
-    :pswitch_2
-    iget-object v0, p0, Lqe5;->b:Ldkb;
-
-    iget v0, v0, Ldkb;->e:I
-
-    invoke-interface {p1, v0}, Ltkb;->k(I)V
+.method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_3
-    iget-object v0, p0, Lqe5;->b:Ldkb;
+.method public final surfaceChanged(Landroid/view/SurfaceHolder;III)V
+    .locals 0
 
-    iget-boolean v1, v0, Ldkb;->l:Z
+    iget-object p1, p0, Lqe5;->a:Lwe5;
 
-    iget v0, v0, Ldkb;->e:I
-
-    invoke-interface {p1, v0, v1}, Ltkb;->o(IZ)V
+    invoke-virtual {p1, p3, p4}, Lwe5;->a1(II)V
 
     return-void
+.end method
 
-    :pswitch_4
-    iget-object v0, p0, Lqe5;->b:Ldkb;
+.method public final surfaceCreated(Landroid/view/SurfaceHolder;)V
+    .locals 0
 
-    iget-boolean v1, v0, Ldkb;->g:Z
+    iget-object p1, p0, Lqe5;->a:Lwe5;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v0, v0, Ldkb;->g:Z
+    return-void
+.end method
 
-    invoke-interface {p1, v0}, Ltkb;->h(Z)V
+.method public final surfaceDestroyed(Landroid/view/SurfaceHolder;)V
+    .locals 1
+
+    iget-object p1, p0, Lqe5;->a:Lwe5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0}, Lwe5;->a1(II)V
 
     return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lqe5;->b:Ldkb;
-
-    iget-object v0, v0, Ldkb;->i:Lqof;
-
-    iget-object v0, v0, Lqof;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lwof;
-
-    invoke-interface {p1, v0}, Ltkb;->w(Lwof;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lqe5;->b:Ldkb;
-
-    iget-object v0, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Ltkb;->u(Lcom/google/android/exoplayer2/PlaybackException;)V
-
-    return-void
-
-    :pswitch_7
-    iget-object v0, p0, Lqe5;->b:Ldkb;
-
-    iget-object v0, v0, Ldkb;->f:Lcom/google/android/exoplayer2/ExoPlaybackException;
-
-    invoke-interface {p1, v0}, Ltkb;->C(Lcom/google/android/exoplayer2/PlaybackException;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

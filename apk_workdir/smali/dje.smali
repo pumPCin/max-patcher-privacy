@@ -1,610 +1,551 @@
 .class public final Ldje;
-.super Landroid/text/SpannableStringBuilder;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Class;
+.field public a:D
 
-.field public final b:Ljava/util/ArrayList;
+.field public b:D
+
+.field public c:Z
+
+.field public d:D
+
+.field public e:D
+
+.field public f:D
+
+.field public g:D
+
+.field public h:D
+
+.field public i:D
+
+.field public final j:Lw05;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Ldje;II)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0, p2, p3, p4}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;II)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Ljava/util/ArrayList;
+    const-wide v0, 0x4097700000000000L    # 1500.0
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    .line 2
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
-    iput-object p2, p0, Ldje;->b:Ljava/util/ArrayList;
+    move-result-wide v0
 
-    const-string p2, "watcherClass cannot be null"
+    iput-wide v0, p0, Ldje;->a:D
 
-    invoke-static {p1, p2}, Ll74;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
-    iput-object p1, p0, Ldje;->a:Ljava/lang/Class;
+    .line 3
+    iput-wide v0, p0, Ldje;->b:D
+
+    const/4 v0, 0x0
+
+    .line 4
+    iput-boolean v0, p0, Ldje;->c:Z
+
+    const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
+
+    .line 5
+    iput-wide v0, p0, Ldje;->i:D
+
+    .line 6
+    new-instance v0, Lw05;
+
+    .line 7
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    iput-object v0, p0, Ldje;->j:Lw05;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Class;Ljava/lang/CharSequence;)V
-    .locals 0
+.method public constructor <init>(F)V
+    .locals 2
 
-    invoke-direct {p0, p2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Ljava/util/ArrayList;
+    const-wide v0, 0x4097700000000000L    # 1500.0
 
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+    .line 10
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
-    iput-object p2, p0, Ldje;->b:Ljava/util/ArrayList;
+    move-result-wide v0
 
-    const-string p2, "watcherClass cannot be null"
+    iput-wide v0, p0, Ldje;->a:D
 
-    invoke-static {p1, p2}, Ll74;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
 
-    iput-object p1, p0, Ldje;->a:Ljava/lang/Class;
+    .line 11
+    iput-wide v0, p0, Ldje;->b:D
+
+    const/4 v0, 0x0
+
+    .line 12
+    iput-boolean v0, p0, Ldje;->c:Z
+
+    .line 13
+    new-instance v0, Lw05;
+
+    .line 14
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    iput-object v0, p0, Ldje;->j:Lw05;
+
+    float-to-double v0, p1
+
+    .line 16
+    iput-wide v0, p0, Ldje;->i:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_0
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcje;
-
-    iget-object v1, v1, Lcje;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final append(C)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(C)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;Ljava/lang/Object;I)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;Ljava/lang/Object;I)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(C)Ljava/lang/Appendable;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final b()V
-    .locals 5
-
-    invoke-virtual {p0}, Ldje;->e()V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    iget-object v2, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v1, v3, :cond_0
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcje;
-
-    invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
-
-    move-result v3
-
-    invoke-virtual {p0}, Landroid/text/SpannableStringBuilder;->length()I
-
-    move-result v4
-
-    invoke-virtual {v2, p0, v0, v3, v4}, Lcje;->onTextChanged(Ljava/lang/CharSequence;III)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Ljava/lang/Object;)Lcje;
-    .locals 3
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_1
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcje;
-
-    iget-object v2, v1, Lcje;->a:Ljava/lang/Object;
-
-    if-ne v2, p1, :cond_0
-
-    return-object v1
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final d(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    iget-object v0, p0, Ldje;->a:Ljava/lang/Class;
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final delete(II)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final delete(II)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final e()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_0
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcje;
-
-    iget-object v1, v1, Lcje;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final getSpanEnd(Ljava/lang/Object;)I
-    .locals 1
-
-    invoke-virtual {p0, p1}, Ldje;->d(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ldje;->c(Ljava/lang/Object;)Lcje;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpanFlags(Ljava/lang/Object;)I
-    .locals 1
-
-    invoke-virtual {p0, p1}, Ldje;->d(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ldje;->c(Ljava/lang/Object;)Lcje;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpanStart(Ljava/lang/Object;)I
-    .locals 1
-
-    invoke-virtual {p0, p1}, Ldje;->d(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ldje;->c(Ljava/lang/Object;)Lcje;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    move-object p1, v0
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Ldje;->a:Ljava/lang/Class;
-
-    if-ne v0, p3, :cond_1
-
-    const-class v0, Lcje;
-
-    invoke-super {p0, p1, p2, v0}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lcje;
-
-    array-length p2, p1
-
-    invoke-static {p3, p2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, [Ljava/lang/Object;
-
-    const/4 p3, 0x0
-
-    :goto_0
-    array-length v0, p1
-
-    if-ge p3, v0, :cond_0
-
-    aget-object v0, p1, p3
-
-    iget-object v0, v0, Lcje;->a:Ljava/lang/Object;
-
-    aput-object v0, p2, p3
-
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object p2
-
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final insert(ILjava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final insert(ILjava/lang/CharSequence;II)Landroid/text/Editable;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final insert(ILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final insert(ILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/text/SpannableStringBuilder;->insert(ILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final nextSpanTransition(IILjava/lang/Class;)I
-    .locals 1
-
-    if-eqz p3, :cond_0
-
-    iget-object v0, p0, Ldje;->a:Ljava/lang/Class;
-
-    if-ne v0, p3, :cond_1
-
-    :cond_0
-    const-class p3, Lcje;
-
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->nextSpanTransition(IILjava/lang/Class;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final removeSpan(Ljava/lang/Object;)V
-    .locals 1
-
-    invoke-virtual {p0, p1}, Ldje;->d(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Ldje;->c(Ljava/lang/Object;)Lcje;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    move-object p1, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :cond_1
-    :goto_0
-    invoke-super {p0, p1}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
-
-    if-eqz v0, :cond_2
-
-    iget-object p1, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final bridge synthetic replace(IILjava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3}, Ldje;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    return-object p0
-.end method
-
-.method public final bridge synthetic replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
-    .locals 0
-
-    invoke-virtual/range {p0 .. p5}, Ldje;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    move-object p1, p0
-
-    return-object p1
-.end method
-
-.method public final replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-virtual {p0}, Ldje;->a()V
-
-    invoke-super {p0, p1, p2, p3}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-
-    invoke-virtual {p0}, Ldje;->e()V
-
-    return-object p0
-.end method
-
-.method public final replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-    .locals 0
-
-    invoke-virtual {p0}, Ldje;->a()V
-
-    invoke-super/range {p0 .. p5}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
-
-    move-object p1, p0
-
-    invoke-virtual {p0}, Ldje;->e()V
-
-    return-object p1
-.end method
-
-.method public final setSpan(Ljava/lang/Object;III)V
-    .locals 1
-
-    invoke-virtual {p0, p1}, Ldje;->d(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lcje;
-
-    invoke-direct {v0, p1}, Lcje;-><init>(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldje;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    move-object p1, v0
-
-    :cond_0
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
-
-    return-void
-.end method
-
-.method public final subSequence(II)Ljava/lang/CharSequence;
+.method public final a(F)V
     .locals 2
 
-    new-instance v0, Ldje;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Ldje;->a:Ljava/lang/Class;
+    cmpg-float v0, p1, v0
 
-    invoke-direct {v0, v1, p0, p1, p2}, Ldje;-><init>(Ljava/lang/Class;Ldje;II)V
+    if-ltz v0, :cond_0
 
-    return-object v0
+    float-to-double v0, p1
+
+    iput-wide v0, p0, Ldje;->b:D
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Ldje;->c:Z
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Damping ratio must be non-negative"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final b(F)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p1, v0
+
+    if-lez v0, :cond_0
+
+    float-to-double v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ldje;->a:D
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Ldje;->c:Z
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Spring stiffness constant must be positive."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final c(DDJ)Lw05;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    iget-boolean v1, v0, Ldje;->c:Z
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    if-eqz v1, :cond_0
+
+    :goto_0
+    move-wide/from16 v4, p5
+
+    goto :goto_2
+
+    :cond_0
+    iget-wide v4, v0, Ldje;->i:D
+
+    const-wide v6, 0x7fefffffffffffffL    # Double.MAX_VALUE
+
+    cmpl-double v1, v4, v6
+
+    if-eqz v1, :cond_5
+
+    iget-wide v4, v0, Ldje;->b:D
+
+    cmpl-double v1, v4, v2
+
+    if-lez v1, :cond_1
+
+    neg-double v6, v4
+
+    iget-wide v8, v0, Ldje;->a:D
+
+    mul-double/2addr v6, v8
+
+    mul-double/2addr v4, v4
+
+    sub-double/2addr v4, v2
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v8
+
+    add-double/2addr v4, v6
+
+    iput-wide v4, v0, Ldje;->f:D
+
+    iget-wide v4, v0, Ldje;->b:D
+
+    neg-double v6, v4
+
+    iget-wide v8, v0, Ldje;->a:D
+
+    mul-double/2addr v6, v8
+
+    mul-double/2addr v4, v4
+
+    sub-double/2addr v4, v2
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v8
+
+    sub-double/2addr v6, v4
+
+    iput-wide v6, v0, Ldje;->g:D
+
+    goto :goto_1
+
+    :cond_1
+    const-wide/16 v6, 0x0
+
+    cmpl-double v1, v4, v6
+
+    if-ltz v1, :cond_2
+
+    cmpg-double v1, v4, v2
+
+    if-gez v1, :cond_2
+
+    iget-wide v6, v0, Ldje;->a:D
+
+    mul-double/2addr v4, v4
+
+    sub-double v4, v2, v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v6
+
+    iput-wide v4, v0, Ldje;->h:D
+
+    :cond_2
+    :goto_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Ldje;->c:Z
+
+    goto :goto_0
+
+    :goto_2
+    long-to-double v4, v4
+
+    const-wide v6, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr v4, v6
+
+    iget-wide v6, v0, Ldje;->i:D
+
+    sub-double v6, p1, v6
+
+    iget-wide v8, v0, Ldje;->b:D
+
+    cmpl-double v1, v8, v2
+
+    const-wide v10, 0x4005bf0a8b145769L    # Math.E
+
+    if-lez v1, :cond_3
+
+    iget-wide v1, v0, Ldje;->g:D
+
+    mul-double v8, v1, v6
+
+    sub-double v8, v8, p3
+
+    iget-wide v12, v0, Ldje;->f:D
+
+    sub-double v12, v1, v12
+
+    div-double/2addr v8, v12
+
+    sub-double/2addr v6, v8
+
+    mul-double/2addr v1, v4
+
+    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    mul-double/2addr v1, v6
+
+    iget-wide v12, v0, Ldje;->f:D
+
+    mul-double/2addr v12, v4
+
+    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v12
+
+    mul-double/2addr v12, v8
+
+    add-double/2addr v12, v1
+
+    iget-wide v1, v0, Ldje;->g:D
+
+    mul-double/2addr v6, v1
+
+    mul-double/2addr v1, v4
+
+    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    mul-double/2addr v1, v6
+
+    iget-wide v6, v0, Ldje;->f:D
+
+    mul-double/2addr v8, v6
+
+    mul-double/2addr v6, v4
+
+    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v3
+
+    mul-double/2addr v3, v8
+
+    add-double/2addr v3, v1
+
+    goto/16 :goto_3
+
+    :cond_3
+    if-nez v1, :cond_4
+
+    iget-wide v1, v0, Ldje;->a:D
+
+    mul-double v8, v1, v6
+
+    add-double v8, v8, p3
+
+    mul-double v12, v8, v4
+
+    add-double/2addr v12, v6
+
+    neg-double v1, v1
+
+    mul-double/2addr v1, v4
+
+    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    mul-double/2addr v1, v12
+
+    iget-wide v6, v0, Ldje;->a:D
+
+    neg-double v6, v6
+
+    mul-double/2addr v6, v4
+
+    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v6
+
+    mul-double/2addr v6, v12
+
+    iget-wide v12, v0, Ldje;->a:D
+
+    neg-double v12, v12
+
+    mul-double/2addr v6, v12
+
+    mul-double/2addr v12, v4
+
+    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v3
+
+    mul-double/2addr v3, v8
+
+    add-double/2addr v3, v6
+
+    move-wide v12, v1
+
+    goto :goto_3
+
+    :cond_4
+    iget-wide v12, v0, Ldje;->h:D
+
+    div-double/2addr v2, v12
+
+    iget-wide v12, v0, Ldje;->a:D
+
+    mul-double v14, v8, v12
+
+    mul-double/2addr v14, v6
+
+    add-double v14, v14, p3
+
+    mul-double/2addr v14, v2
+
+    neg-double v1, v8
+
+    mul-double/2addr v1, v12
+
+    mul-double/2addr v1, v4
+
+    invoke-static {v10, v11, v1, v2}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    iget-wide v8, v0, Ldje;->h:D
+
+    mul-double/2addr v8, v4
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v8, v6
+
+    iget-wide v12, v0, Ldje;->h:D
+
+    mul-double/2addr v12, v4
+
+    invoke-static {v12, v13}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v12
+
+    mul-double/2addr v12, v14
+
+    add-double/2addr v12, v8
+
+    mul-double/2addr v12, v1
+
+    iget-wide v1, v0, Ldje;->a:D
+
+    neg-double v8, v1
+
+    mul-double/2addr v8, v12
+
+    iget-wide v10, v0, Ldje;->b:D
+
+    mul-double/2addr v8, v10
+
+    neg-double v10, v10
+
+    mul-double/2addr v10, v1
+
+    mul-double/2addr v10, v4
+
+    const-wide v1, 0x4005bf0a8b145769L    # Math.E
+
+    invoke-static {v1, v2, v10, v11}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v1
+
+    iget-wide v10, v0, Ldje;->h:D
+
+    move-wide/from16 p1, v1
+
+    neg-double v1, v10
+
+    mul-double/2addr v1, v6
+
+    mul-double/2addr v10, v4
+
+    invoke-static {v10, v11}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v6, v1
+
+    iget-wide v1, v0, Ldje;->h:D
+
+    mul-double/2addr v14, v1
+
+    mul-double/2addr v1, v4
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v1
+
+    mul-double/2addr v1, v14
+
+    add-double/2addr v1, v6
+
+    mul-double v1, v1, p1
+
+    add-double v3, v1, v8
+
+    :goto_3
+    iget-wide v1, v0, Ldje;->i:D
+
+    add-double/2addr v12, v1
+
+    double-to-float v1, v12
+
+    iget-object v2, v0, Ldje;->j:Lw05;
+
+    iput v1, v2, Lw05;->a:F
+
+    double-to-float v1, v3
+
+    iput v1, v2, Lw05;->b:F
+
+    return-object v2
+
+    :cond_5
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, "Error: Final position of the spring must be set before the animation starts"
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method

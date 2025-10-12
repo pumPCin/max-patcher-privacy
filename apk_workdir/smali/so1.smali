@@ -3,102 +3,50 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lvd6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Z
 
-.field public final synthetic b:Lwo1;
+.field public final synthetic b:Lxo1;
+
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwo1;I)V
+.method public synthetic constructor <init>(ZLxo1;Ljava/util/List;)V
     .locals 0
 
-    iput p2, p0, Lso1;->a:I
-
-    iput-object p1, p0, Lso1;->b:Lwo1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lso1;->a:Z
+
+    iput-object p2, p0, Lso1;->b:Lxo1;
+
+    iput-object p3, p0, Lso1;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lso1;->a:I
+    check-cast p1, Ljava/lang/Boolean;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lso1;->b:Lwo1;
+    iget-boolean p1, p0, Lso1;->a:Z
 
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
+    iget-object v0, p0, Lso1;->b:Lxo1;
 
-    return-object v0
+    iget-object v1, p0, Lso1;->c:Ljava/util/List;
 
-    :pswitch_0
-    iget-object v0, p0, Lso1;->b:Lwo1;
+    invoke-static {p1, v0, v1}, Lxo1;->x(ZLxo1;Ljava/util/List;)V
 
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
+    sget-object p1, Laxf;->a:Laxf;
 
-    return-object v0
-
-    :pswitch_1
-    new-instance v3, Lvo1;
-
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    invoke-direct {v3, v0}, Lvo1;-><init>(Lwo1;)V
-
-    new-instance v1, Lpf1;
-
-    new-instance v4, Lso1;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v4, v0, v2}, Lso1;-><init>(Lwo1;I)V
-
-    new-instance v5, Lso1;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v5, v0, v2}, Lso1;-><init>(Lwo1;I)V
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x22
-
-    sget-object v2, Lglg;->a:Lglg;
-
-    invoke-direct/range {v1 .. v7}, Lpf1;-><init>(Lglg;Lnf1;Lve6;Lso1;Lv71;I)V
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    iget-object v0, v0, Lwo1;->V0:Lhbg;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lso1;->b:Lwo1;
-
-    iget-object v0, v0, Lwo1;->Y0:Lpo1;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

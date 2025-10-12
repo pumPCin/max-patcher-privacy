@@ -1,217 +1,49 @@
 .class public final Lqhg;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Z
+.field public final synthetic Y:Lrhg;
 
-.field public c:Z
+.field public Z:I
 
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Z
-
-.field public h:Z
-
-.field public i:J
-
-.field public j:J
-
-.field public k:J
-
-.field public l:Ld8c;
-
-.field public m:Lp8g;
-
-.field public n:Ln10;
-
-.field public o:Landroid/graphics/drawable/BitmapDrawable;
-
-.field public p:Landroid/net/Uri;
-
-.field public q:Z
-
-.field public r:Z
-
-.field public s:Z
+.field public o:Lrhg;
 
 
 # direct methods
-.method public constructor <init>(Lqhg;)V
-    .locals 2
+.method public constructor <init>(Lrhg;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqhg;->Y:Lrhg;
 
-    iget-boolean v0, p1, Lqhg;->a:Z
-
-    iput-boolean v0, p0, Lqhg;->a:Z
-
-    iget-boolean v0, p1, Lqhg;->b:Z
-
-    iput-boolean v0, p0, Lqhg;->b:Z
-
-    iget-boolean v0, p1, Lqhg;->c:Z
-
-    iput-boolean v0, p0, Lqhg;->c:Z
-
-    iget-boolean v0, p1, Lqhg;->d:Z
-
-    iput-boolean v0, p0, Lqhg;->d:Z
-
-    iget-boolean v0, p1, Lqhg;->e:Z
-
-    iput-boolean v0, p0, Lqhg;->e:Z
-
-    iget-boolean v0, p1, Lqhg;->f:Z
-
-    iput-boolean v0, p0, Lqhg;->f:Z
-
-    iget-boolean v0, p1, Lqhg;->g:Z
-
-    iput-boolean v0, p0, Lqhg;->g:Z
-
-    iget-boolean v0, p1, Lqhg;->h:Z
-
-    iput-boolean v0, p0, Lqhg;->h:Z
-
-    iget-wide v0, p1, Lqhg;->i:J
-
-    iput-wide v0, p0, Lqhg;->i:J
-
-    iget-wide v0, p1, Lqhg;->j:J
-
-    iput-wide v0, p0, Lqhg;->j:J
-
-    iget-wide v0, p1, Lqhg;->k:J
-
-    iput-wide v0, p0, Lqhg;->k:J
-
-    iget-object v0, p1, Lqhg;->l:Ld8c;
-
-    iput-object v0, p0, Lqhg;->l:Ld8c;
-
-    iget-object v0, p1, Lqhg;->m:Lp8g;
-
-    iput-object v0, p0, Lqhg;->m:Lp8g;
-
-    iget-object v0, p1, Lqhg;->n:Ln10;
-
-    iput-object v0, p0, Lqhg;->n:Ln10;
-
-    iget-object v0, p1, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iput-object v0, p0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iget-object v0, p1, Lqhg;->p:Landroid/net/Uri;
-
-    iput-object v0, p0, Lqhg;->p:Landroid/net/Uri;
-
-    iget-boolean v0, p1, Lqhg;->q:Z
-
-    iput-boolean v0, p0, Lqhg;->q:Z
-
-    iget-boolean v0, p1, Lqhg;->r:Z
-
-    iput-boolean v0, p0, Lqhg;->r:Z
-
-    iget-boolean p1, p1, Lqhg;->s:Z
-
-    iput-boolean p1, p0, Lqhg;->s:Z
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lqhg;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lqhg;
+    iput-object p1, p0, Lqhg;->X:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget p1, p0, Lqhg;->Z:I
 
-    iget-boolean v1, p0, Lqhg;->a:Z
+    const/high16 v0, -0x80000000
 
-    iput-boolean v1, v0, Lqhg;->a:Z
+    or-int/2addr p1, v0
 
-    iget-boolean v1, p0, Lqhg;->b:Z
+    iput p1, p0, Lqhg;->Z:I
 
-    iput-boolean v1, v0, Lqhg;->b:Z
+    iget-object p1, p0, Lqhg;->Y:Lrhg;
 
-    iget-boolean v1, p0, Lqhg;->c:Z
+    invoke-virtual {p1, p0}, Lrhg;->a(Lwy3;)Ljava/lang/Object;
 
-    iput-boolean v1, v0, Lqhg;->c:Z
+    move-result-object p1
 
-    iget-boolean v1, p0, Lqhg;->d:Z
-
-    iput-boolean v1, v0, Lqhg;->d:Z
-
-    iget-boolean v1, p0, Lqhg;->e:Z
-
-    iput-boolean v1, v0, Lqhg;->e:Z
-
-    iget-boolean v1, p0, Lqhg;->f:Z
-
-    iput-boolean v1, v0, Lqhg;->f:Z
-
-    iget-boolean v1, p0, Lqhg;->g:Z
-
-    iput-boolean v1, v0, Lqhg;->g:Z
-
-    iget-boolean v1, p0, Lqhg;->h:Z
-
-    iput-boolean v1, v0, Lqhg;->h:Z
-
-    iget-wide v1, p0, Lqhg;->i:J
-
-    iput-wide v1, v0, Lqhg;->i:J
-
-    iget-wide v1, p0, Lqhg;->j:J
-
-    iput-wide v1, v0, Lqhg;->j:J
-
-    iget-wide v1, p0, Lqhg;->k:J
-
-    iput-wide v1, v0, Lqhg;->k:J
-
-    iget-object v1, p0, Lqhg;->l:Ld8c;
-
-    iput-object v1, v0, Lqhg;->l:Ld8c;
-
-    iget-object v1, p0, Lqhg;->m:Lp8g;
-
-    iput-object v1, v0, Lqhg;->m:Lp8g;
-
-    iget-object v1, p0, Lqhg;->n:Ln10;
-
-    iput-object v1, v0, Lqhg;->n:Ln10;
-
-    iget-object v1, p0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iput-object v1, v0, Lqhg;->o:Landroid/graphics/drawable/BitmapDrawable;
-
-    iget-object v1, p0, Lqhg;->p:Landroid/net/Uri;
-
-    iput-object v1, v0, Lqhg;->p:Landroid/net/Uri;
-
-    iget-boolean v1, p0, Lqhg;->q:Z
-
-    iput-boolean v1, v0, Lqhg;->q:Z
-
-    iget-boolean v1, p0, Lqhg;->r:Z
-
-    iput-boolean v1, v0, Lqhg;->r:Z
-
-    iget-boolean v1, p0, Lqhg;->s:Z
-
-    iput-boolean v1, v0, Lqhg;->s:Z
-
-    return-object v0
+    return-object p1
 .end method

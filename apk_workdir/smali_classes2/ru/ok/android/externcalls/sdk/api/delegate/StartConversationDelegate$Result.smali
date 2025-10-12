@@ -144,7 +144,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->conversationId:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -157,7 +157,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->internalCallerParams:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -220,7 +220,7 @@
 
     const-string v4, "Result(conversationId="
 
-    invoke-static {v4, v0, v2, v1, v3}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4, v0, v2, v1, v3}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,60 +1,118 @@
-.class public abstract Ljn3;
+.class public final Ljn3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:F
+
+.field public final b:D
+
+.field public final c:I
+
+.field public final d:J
+
+.field public e:I
+
+
 # direct methods
-.method public static a()Z
-    .locals 4
+.method public constructor <init>(FJ)V
+    .locals 5
 
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    cmp-long v2, p2, v0
 
-    move-result v1
+    const/4 v3, 0x0
 
-    const/4 v2, 0x2
+    const/4 v4, 0x1
 
-    const/4 v3, 0x1
+    if-lez v2, :cond_0
 
-    if-eq v1, v2, :cond_0
-
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
-
-    move-result v0
-
-    if-le v0, v2, :cond_2
+    move v2, v4
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v1
-
-    if-eq v1, v3, :cond_1
-
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v0
-
-    if-le v0, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->patch()I
-
-    move-result v0
-
-    if-ltz v0, :cond_2
+    move v2, v3
 
     :goto_0
-    return v3
+    invoke-static {v2}, Lq5h;->f(Z)V
+
+    const/4 v2, 0x0
+
+    cmpl-float v2, p1, v2
+
+    if-lez v2, :cond_1
+
+    move v2, v4
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    :goto_1
+    invoke-static {v2}, Lq5h;->f(Z)V
+
+    cmp-long v0, v0, p2
+
+    if-gez v0, :cond_2
+
+    move v3, v4
 
     :cond_2
+    invoke-static {v3}, Lq5h;->f(Z)V
+
+    iput-wide p2, p0, Ljn3;->d:J
+
+    iput p1, p0, Ljn3;->a:F
+
+    long-to-float p2, p2
+
+    const p3, 0x49742400    # 1000000.0f
+
+    div-float/2addr p2, p3
+
+    mul-float/2addr p2, p1
+
+    invoke-static {p2}, Ljava/lang/Math;->round(F)I
+
+    move-result p2
+
+    invoke-static {p2, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    iput p2, p0, Ljn3;->c:I
+
+    div-float/2addr p3, p1
+
+    float-to-double p1, p3
+
+    iput-wide p1, p0, Ljn3;->b:D
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 2
+
+    iget v0, p0, Ljn3;->e:I
+
+    iget v1, p0, Ljn3;->c:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0

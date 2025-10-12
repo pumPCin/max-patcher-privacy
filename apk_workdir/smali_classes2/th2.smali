@@ -1,102 +1,59 @@
-.class public final Lth2;
+.class public abstract synthetic Lth2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxv6;
 
-
-# instance fields
-.field public final X:Lbg3;
-
-.field public final Y:Lec5;
-
-.field public Z:Lok2;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lbw6;
-
-.field public final c:Lked;
-
-.field public final o:Lked;
-
-.field public final w0:Lnu;
-
-.field public final x0:Lnu;
-
-.field public final y0:Lnu;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Lbw6;Lfx1;Lked;Lec5;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lij2;->values()[Lij2;
 
-    new-instance v0, Lbg3;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
-    iput-object v0, p0, Lth2;->X:Lbg3;
+    new-array v0, v0, [I
 
-    new-instance v0, Lnu;
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Lnu;-><init>()V
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lth2;->w0:Lnu;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v0, Lnu;
+    :catch_0
+    const/4 v2, 0x2
 
-    invoke-direct {v0}, Lnu;-><init>()V
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iput-object v0, p0, Lth2;->x0:Lnu;
+    :catch_1
+    const/4 v1, 0x3
 
-    new-instance v0, Lnu;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-direct {v0}, Lnu;-><init>()V
+    :catch_2
+    const/4 v2, 0x4
 
-    iput-object v0, p0, Lth2;->y0:Lnu;
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iput-object p1, p0, Lth2;->b:Lbw6;
-
-    iput-object p0, p1, Lbw6;->i:Lxv6;
-
-    iget-object p1, p2, Lfx1;->b:Ljava/lang/Object;
-
-    check-cast p1, Lm9f;
-
-    check-cast p1, Ln9f;
-
-    invoke-virtual {p1}, Ln9f;->a()Lked;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lth2;->c:Lked;
-
-    iput-object p3, p0, Lth2;->o:Lked;
-
-    iput-object p4, p0, Lth2;->Y:Lec5;
-
-    iput-object p5, p0, Lth2;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final k()V
-    .locals 2
-
-    new-instance v0, Lb3;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, p0}, Lb3;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lth2;->o:Lked;
-
-    invoke-virtual {v1, v0}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+    :catch_3
+    sput-object v0, Lth2;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

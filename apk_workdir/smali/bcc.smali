@@ -3,54 +3,70 @@
 
 
 # static fields
-.field public static ic_call_16:I = 0x7f08054f
+.field public static call_history_empty:I = 0x7f0a0151
 
-.field public static ic_call_22:I = 0x7f080550
+.field public static call_history_info_copy_link:I = 0x7f0a0152
 
-.field public static ic_call_24:I = 0x7f080551
+.field public static call_history_info_open_chat_call:I = 0x7f0a0153
 
-.field public static ic_call_contact_20:I = 0x7f080558
+.field public static call_history_info_recreate:I = 0x7f0a0154
 
-.field public static ic_call_link_preview_36:I = 0x7f080564
+.field public static call_history_info_send_to_chat:I = 0x7f0a0155
 
-.field public static ic_checked_22:I = 0x7f08058e
+.field public static call_history_info_share_link:I = 0x7f0a0156
 
-.field public static ic_copy_20:I = 0x7f0805ac
+.field public static call_history_info_start_call:I = 0x7f0a0157
 
-.field public static ic_copy_28:I = 0x7f0805af
+.field public static call_history_list:I = 0x7f0a0158
 
-.field public static ic_delete_22:I = 0x7f0805be
+.field public static call_history_page_empty:I = 0x7f0a0159
 
-.field public static ic_edit_22:I = 0x7f0805d9
+.field public static call_history_pager:I = 0x7f0a015a
 
-.field public static ic_incoming_audio_call_13:I = 0x7f08063f
+.field public static call_history_screen_banner:I = 0x7f0a015b
 
-.field public static ic_incoming_video_call_15:I = 0x7f080642
+.field public static call_history_screen_contact_call:I = 0x7f0a015c
 
-.field public static ic_link_16:I = 0x7f080653
+.field public static call_history_screen_container:I = 0x7f0a015d
 
-.field public static ic_link_22:I = 0x7f080655
+.field public static call_history_screen_group_call:I = 0x7f0a015e
 
-.field public static ic_loading_16:I = 0x7f080659
+.field public static call_history_screen_toolbar:I = 0x7f0a015f
 
-.field public static ic_more_14:I = 0x7f080696
+.field public static call_history_tabs:I = 0x7f0a0160
 
-.field public static ic_open_call_chat_24:I = 0x7f080736
+.field public static call_info_action_list:I = 0x7f0a016c
 
-.field public static ic_outgoing_audio_call_13:I = 0x7f08073b
+.field public static call_info_action_vh:I = 0x7f0a016d
 
-.field public static ic_outgoing_video_call_15:I = 0x7f08073d
+.field public static call_info_appbarlayout:I = 0x7f0a0170
 
-.field public static ic_reject_audio_call_12:I = 0x7f08076c
+.field public static call_info_button:I = 0x7f0a0171
 
-.field public static ic_reject_video_call_15:I = 0x7f08076d
+.field public static call_info_collapsiblecontainerlinearlayout:I = 0x7f0a0172
 
-.field public static ic_send_link_22:I = 0x7f08078c
+.field public static call_info_coordinator_layout:I = 0x7f0a0173
 
-.field public static ic_share_link_20:I = 0x7f08079a
+.field public static call_info_description:I = 0x7f0a0174
 
-.field public static ic_uncheced_22:I = 0x7f0807c9
+.field public static call_info_icon:I = 0x7f0a0175
 
-.field public static illustration_empty_58:I = 0x7f080818
+.field public static call_info_link_state:I = 0x7f0a0176
 
-.field public static illustration_placeholder_casper:I = 0x7f08081a
+.field public static call_info_onemetoolbar:I = 0x7f0a0177
+
+.field public static call_info_presettings_action_list:I = 0x7f0a0178
+
+.field public static call_info_presettings_change_name_vh:I = 0x7f0a0179
+
+.field public static call_info_presettings_item_vh:I = 0x7f0a017a
+
+.field public static call_info_presettings_toolbar:I = 0x7f0a017b
+
+.field public static call_info_title:I = 0x7f0a017c
+
+.field public static call_presettings_call_permissions_item:I = 0x7f0a01a4
+
+.field public static call_presettings_call_save_changes:I = 0x7f0a01a5
+
+.field public static oneme_calllist_fragment_container:I = 0x7f0a0610

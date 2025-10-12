@@ -1,52 +1,28 @@
-.class public final synthetic Lro1;
+.class public final Lro1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lqo1;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final a:Ljava/util/LinkedHashSet;
 
-.field public final synthetic b:Lwo1;
-
-.field public final synthetic c:Ljava/util/List;
+.field public b:La3g;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLwo1;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lro1;->a:Z
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    iput-object p2, p0, Lro1;->b:Lwo1;
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    iput-object p3, p0, Lro1;->c:Ljava/util/List;
+    iput-object v0, p0, Lro1;->a:Ljava/util/LinkedHashSet;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean p1, p0, Lro1;->a:Z
-
-    iget-object v0, p0, Lro1;->b:Lwo1;
-
-    iget-object v1, p0, Lro1;->c:Ljava/util/List;
-
-    invoke-static {p1, v0, v1}, Lwo1;->w(ZLwo1;Ljava/util/List;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

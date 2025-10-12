@@ -1,362 +1,118 @@
 .class public final Llf7;
-.super Landroid/widget/LinearLayout;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Landroidx/appcompat/widget/AppCompatImageView;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Landroidx/appcompat/widget/AppCompatTextView;
-
-.field public final c:Landroid/graphics/drawable/RippleDrawable;
+.field public final synthetic Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+.method public constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 p1, 0x2
 
-    new-instance v1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    invoke-direct {v1, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/16 v3, 0x18
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lv63;->r0(F)I
-
-    move-result v4
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    invoke-direct {v2, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v3, 0x12
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lv63;->r0(F)I
-
-    move-result v4
-
-    invoke-virtual {v2, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iput-object v1, p0, Llf7;->a:Landroidx/appcompat/widget/AppCompatImageView;
-
-    new-instance v1, Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {v1, p1, v0}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget-object p1, Lrxf;->l:Lpef;
-
-    invoke-static {p1, v1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    iput-object v1, p0, Llf7;->b:Landroidx/appcompat/widget/AppCompatTextView;
-
-    new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
-
-    invoke-direct {p1}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Luxa;->b()Lue0;
-
-    move-result-object v2
-
-    iget v2, v2, Lue0;->h:I
-
-    new-instance v4, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v2
-
-    invoke-direct {v4, v2, v0, p1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iput-object v4, p0, Llf7;->c:Landroid/graphics/drawable/RippleDrawable;
-
-    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/16 v0, 0x38
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    const/4 v2, -0x1
-
-    invoke-direct {p1, v2, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 p1, 0x10
-
-    invoke-virtual {p0, p1}, Landroid/widget/LinearLayout;->setGravity(I)V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, p1
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result p1
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v0
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v5
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, p1, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    invoke-virtual {p0, v4}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    invoke-virtual {v1, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Llf7;->onThemeChanged(Luxa;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getIcon()Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Llf7;->a:Landroidx/appcompat/widget/AppCompatImageView;
+    check-cast p1, Lf6c;
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Llf7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object v0
+    move-result-object p1
+
+    check-cast p1, Llf7;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Llf7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final getText()Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Llf7;->b:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/AppCompatTextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Llf7;->onThemeChanged(Luxa;)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Luxa;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
+    new-instance v0, Llf7;
 
-    move-result-object v0
+    iget-object v1, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    iget v0, v0, Lbdf;->j:I
+    invoke-direct {v0, v1, p2}, Llf7;-><init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    iput-object p1, v0, Llf7;->X:Ljava/lang/Object;
 
-    move-result-object v0
-
-    iget-object v1, p0, Llf7;->a:Landroidx/appcompat/widget/AppCompatImageView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
-
-    move-result-object v0
-
-    iget v0, v0, Lbdf;->j:I
-
-    iget-object v1, p0, Llf7;->b:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Luxa;->c()Lyoe;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lyoe;->a:Lwoe;
-
-    iget-object p1, p1, Lwoe;->a:Lvoe;
-
-    iget p1, p1, Lvoe;->h:I
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    iget-object v0, p0, Llf7;->c:Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final setIcon(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object v0, p0, Llf7;->a:Landroidx/appcompat/widget/AppCompatImageView;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    iget-object p1, p0, Llf7;->X:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast p1, Lf6c;
 
-.method public final setText(Ljava/lang/CharSequence;)V
-    .locals 1
+    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->K0:[Lpl7;
 
-    iget-object v0, p0, Llf7;->b:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Llf7;->Y:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->B0:Ljava/lang/Object;
 
-    return-void
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    iget-object v3, p1, Lf6c;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    iget-object p1, p1, Lf6c;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v3, 0x50
+
+    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

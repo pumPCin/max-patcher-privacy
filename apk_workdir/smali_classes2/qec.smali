@@ -3,24 +3,24 @@
 
 
 # static fields
-.field public static oneme_location_map_bottom_gradient_view:I = 0x7f0a06e3
+.field public static link_context_menu_action_copy_call:I = 0x7f0a0441
 
-.field public static oneme_location_map_bottom_insets_guideline:I = 0x7f0a06e4
+.field public static link_context_menu_action_copy_link:I = 0x7f0a0442
 
-.field public static oneme_location_map_button_current_location:I = 0x7f0a06e5
+.field public static link_context_menu_action_copy_mail:I = 0x7f0a0443
 
-.field public static oneme_location_map_button_geo_layers:I = 0x7f0a06e6
+.field public static link_context_menu_action_copy_profile:I = 0x7f0a0444
 
-.field public static oneme_location_map_button_send:I = 0x7f0a06e7
+.field public static link_context_menu_action_open_call:I = 0x7f0a0445
 
-.field public static oneme_location_map_center_marker:I = 0x7f0a06e8
+.field public static link_context_menu_action_open_link:I = 0x7f0a0446
 
-.field public static oneme_location_map_location_info:I = 0x7f0a06e9
+.field public static link_context_menu_action_open_mail:I = 0x7f0a0447
 
-.field public static oneme_location_map_logo_view:I = 0x7f0a06ea
+.field public static link_context_menu_action_open_profile:I = 0x7f0a0448
 
-.field public static oneme_location_map_toolbar:I = 0x7f0a06eb
+.field public static notification_cancel_request_id:I = 0x7f0a05e6
 
-.field public static oneme_location_map_toolbar_close:I = 0x7f0a06ec
+.field public static notification_content_request_id:I = 0x7f0a05e7
 
-.field public static oneme_location_map_view:I = 0x7f0a06ed
+.field public static text_view_animation_pending_text_tag:I = 0x7f0a0bf6

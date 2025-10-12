@@ -1,58 +1,37 @@
-.class public final Li5b;
+.class public abstract synthetic Li5b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfh1;
 
-
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Li5b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onStateChanged(Lxg1;Lzg1;)V
-    .locals 2
-
-    iget-object v0, p0, Li5b;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Lsw1;->y(I)[I
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    array-length v0, v0
 
-    move-result v1
+    new-array v0, v0, [I
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x1
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v1, Lfh1;
+    :catch_0
+    sput-object v0, Li5b;->$EnumSwitchMapping$0:[I
 
-    invoke-interface {v1, p1, p2}, Lfh1;->onStateChanged(Lxg1;Lzg1;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

@@ -1,3 +1,3 @@
-.class public interface abstract Lwhe;
-.super Ljava/lang/Object;
+.class public abstract Lwhe;
+.super Landroid/view/View;
 .source "SourceFile"

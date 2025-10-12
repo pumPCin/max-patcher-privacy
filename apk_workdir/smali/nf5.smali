@@ -1,31 +1,21 @@
 .class public final Lnf5;
-.super Ljava/lang/Object;
+.super Lv7f;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:Lqbe;
-
-.field public final c:I
-
-.field public final d:J
+.field public final o:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lqbe;IJ)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xb
 
-    iput-object p1, p0, Lnf5;->a:Ljava/util/ArrayList;
+    invoke-direct {p0, p1, v0, p3}, Lv7f;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iput-object p2, p0, Lnf5;->b:Lqbe;
-
-    iput p3, p0, Lnf5;->c:I
-
-    iput-wide p4, p0, Lnf5;->d:J
+    iput-object p2, p0, Lnf5;->o:Ljava/io/File;
 
     return-void
 .end method

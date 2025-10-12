@@ -1,55 +1,29 @@
 .class public final Lvi;
-.super Lnz3;
+.super Llqc;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/util/Map;
-
-.field public Y:Ljava/util/ArrayList;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lkj;
-
-.field public final synthetic w0:Lkj;
-
-.field public x0:I
-
-
 # direct methods
-.method public constructor <init>(Lkj;Lnz3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lvi;->w0:Lkj;
+    .line 1
+    sget-object v0, Lxqc;->b:Lxqc;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v1, 0x0
+
+    invoke-direct {p0, v0, v1, v2}, Llqc;-><init>(Lxqc;J)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(J)V
     .locals 1
 
-    iput-object p1, p0, Lvi;->Z:Ljava/lang/Object;
+    .line 2
+    sget-object v0, Lxqc;->Y:Lxqc;
 
-    iget p1, p0, Lvi;->x0:I
+    invoke-direct {p0, v0, p1, p2}, Llqc;-><init>(Lxqc;J)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvi;->x0:I
-
-    iget-object p1, p0, Lvi;->w0:Lkj;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lkj;->a(Lkj;Ljava/util/Map;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

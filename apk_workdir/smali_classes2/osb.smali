@@ -1,51 +1,15 @@
-.class public final Losb;
-.super Lnz3;
+.class public abstract Losb;
+.super Ldw9;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lab8;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lab8;
-
-.field public o:Lab8;
-
-.field public w0:I
-
-
 # direct methods
-.method public constructor <init>(Lab8;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Losb;->Z:Lab8;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, Losb;->Y:Ljava/lang/Object;
+    sget-object v0, Laxf;->a:Laxf;
 
-    iget p1, p0, Losb;->w0:I
+    invoke-direct {p0, v0}, Ldw9;-><init>(Ljava/lang/Object;)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Losb;->w0:I
-
-    iget-object p1, p0, Losb;->Z:Lab8;
-
-    invoke-virtual {p1, p0}, Lab8;->a(Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

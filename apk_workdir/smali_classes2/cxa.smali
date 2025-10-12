@@ -1,53 +1,73 @@
 .class public final Lcxa;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfxa;
 
 
 # instance fields
-.field public X:Ljava/util/Iterator;
+.field public final a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ldxa;
-
-.field public o:Ldxa;
-
-.field public w0:I
+.field public final b:Lvd6;
 
 
 # direct methods
-.method public constructor <init>(Ldxa;Lnz3;)V
+.method public constructor <init>(ILvd6;)V
     .locals 0
 
-    iput-object p1, p0, Lcxa;->Z:Ldxa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lcxa;->a:I
+
+    iput-object p2, p0, Lcxa;->b:Lvd6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lcxa;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lcxa;
+
+    iget p1, p1, Lcxa;->a:I
+
+    iget v1, p0, Lcxa;->a:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iput-object p1, p0, Lcxa;->Y:Ljava/lang/Object;
+    iget v0, p0, Lcxa;->a:I
 
-    iget p1, p0, Lcxa;->w0:I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcxa;->w0:I
-
-    iget-object p1, p0, Lcxa;->Z:Ldxa;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, p0}, Ldxa;->k(Lwwa;Ljava/io/File;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

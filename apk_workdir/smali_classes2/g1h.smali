@@ -1,19 +1,19 @@
 .class public final Lg1h;
-.super Ljava/lang/Object;
+.super Lj1h;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lum7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
+# instance fields
+.field public final a:Z
 
-    sget-object v0, Lf1h;->a:Lf1h;
 
-    return-object v0
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+
+    iput-boolean p1, p0, Lg1h;->a:Z
+
+    return-void
 .end method

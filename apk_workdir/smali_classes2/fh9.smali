@@ -1,145 +1,132 @@
-.class public final Lfh9;
-.super Lm3f;
+.class public final synthetic Lfh9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput-object p2, p0, Lfh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iput p3, p0, Lfh9;->a:I
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lfh9;->b:J
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lfh9;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lfh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast p1, Ljava/util/Set;
 
-    check-cast p1, Lfh9;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-virtual {p1, p2}, Lfh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p1, Llj2;
 
-    return-object p2
-.end method
+    const/4 v1, 0x4
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-wide v2, p0, Lfh9;->b:J
 
-    new-instance v0, Lfh9;
+    invoke-direct {p1, v2, v3, v1}, Llj2;-><init>(JI)V
 
-    iget-object v1, p0, Lfh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    new-instance v1, Lc16;
 
-    invoke-direct {v0, p2, v1}, Lfh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    const/4 v2, 0x3
 
-    iput-object p1, v0, Lfh9;->X:Ljava/lang/Object;
+    invoke-direct {v1, v2, p1}, Lc16;-><init>(ILvd6;)V
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    :pswitch_0
+    check-cast p1, Lih9;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    new-instance v0, Lih9;
 
-    iget-object p1, p0, Lfh9;->X:Ljava/lang/Object;
+    const-wide/16 v4, 0x0
 
-    check-cast p1, Lghd;
+    const/16 v8, 0x1a
 
-    iget-object v0, p0, Lfh9;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Got new scrollEvent="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-boolean p1, p1, Lghd;->b:Z
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object p1
-
-    const-string v1, "ScrollEvent"
-
-    invoke-virtual {p1, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->u1(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->J0()Lnj9;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lnj9;->b()Z
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object p1
-
-    new-instance v1, Lch9;
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2}, Lch9;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lvc9;)V
+    iget-wide v6, p0, Lfh9;->b:J
 
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
 
-    return-object p1
+    return-object v0
+
+    :pswitch_1
+    check-cast p1, Lih9;
+
+    new-instance v0, Lih9;
+
+    const-wide/16 v6, 0x0
+
+    const/16 v8, 0x26
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lfh9;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    :pswitch_2
+    check-cast p1, Lih9;
+
+    new-instance v0, Lih9;
+
+    const-wide/16 v6, 0x0
+
+    const/16 v8, 0x2e
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    iget-wide v4, p0, Lfh9;->b:J
+
+    invoke-direct/range {v0 .. v8}, Lih9;-><init>(IZZJJI)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

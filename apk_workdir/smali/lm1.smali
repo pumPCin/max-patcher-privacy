@@ -1,46 +1,116 @@
 .class public final Llm1;
-.super Lnz3;
+.super Lc2f;
+.source "SourceFile"
+
+# interfaces
+.implements Lpe6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:J
 
-.field public final synthetic Y:Leg0;
+.field public synthetic Y:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic Z:Z
 
-
-# direct methods
-.method public constructor <init>(Leg0;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Llm1;->Y:Leg0;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public synthetic r0:Lna;
 
 
 # virtual methods
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lkx5;)Ljava/lang/Object;
+    .locals 3
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p4, Lna;
+
+    new-instance p3, Llm1;
+
+    const/4 v2, 0x5
+
+    invoke-direct {p3, v2, p5}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-wide v0, p3, Llm1;->X:J
+
+    iput-boolean p1, p3, Llm1;->Y:Z
+
+    iput-boolean p2, p3, Llm1;->Z:Z
+
+    iput-object p4, p3, Llm1;->r0:Lna;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p3, p1}, Llm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 6
 
-    iput-object p1, p0, Llm1;->o:Ljava/lang/Object;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget p1, p0, Llm1;->X:I
+    iget-wide v0, p0, Llm1;->X:J
 
-    const/high16 v0, -0x80000000
+    iget-boolean p1, p0, Llm1;->Y:Z
 
-    or-int/2addr p1, v0
+    iget-boolean v2, p0, Llm1;->Z:Z
 
-    iput p1, p0, Llm1;->X:I
+    iget-object v3, p0, Llm1;->r0:Lna;
 
-    iget-object p1, p0, Llm1;->Y:Leg0;
+    if-eqz p1, :cond_0
 
-    const/4 v0, 0x0
+    if-nez v2, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Leg0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p1, v3, Lna;->b:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-wide v4, v3, Lna;->c:J
+
+    cmp-long p1, v0, v4
+
+    if-gez p1, :cond_0
+
+    iget-object p1, v3, Lna;->a:Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 

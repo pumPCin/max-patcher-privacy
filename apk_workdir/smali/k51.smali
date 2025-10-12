@@ -1,23 +1,68 @@
-.class public interface abstract Lk51;
-.super Ljava/lang/Object;
+.class public final Lk51;
+.super Lxmg;
 .source "SourceFile"
+
+# interfaces
+.implements Ll51;
+
+
+# static fields
+.field public static final c:Lk51;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lk51;
+
+    sget v1, Lbhc;->call_screen_connection_restoring:I
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lxmg;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lk51;->c:Lk51;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lk51;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public abstract b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x9c8d45e
+
+    return v0
 .end method
 
-.method public abstract getContentDescription()Loef;
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract getIcon()I
-.end method
+    const-string v0, "Restoring"
 
-.method public abstract getId()I
-.end method
-
-.method public abstract getTitle()Loef;
+    return-object v0
 .end method

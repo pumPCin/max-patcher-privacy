@@ -1,270 +1,293 @@
 .class public final Lks6;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Ljava/lang/Iterable;
+.implements Lel7;
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public final a:[Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lmv0;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lmv0;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Handler;)V
+.method public constructor <init>([Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lks6;->a:Landroid/os/Handler;
+    iput-object p1, p0, Lks6;->a:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
+.method public final a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
 
-    const-class p2, Lks6;
+    array-length v1, v0
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 v2, 0x2
 
-    move-result-object p2
+    sub-int/2addr v1, v2
 
-    const-string p3, " cannot be shut down. Use Looper.quitSafely()."
+    const/4 v3, 0x0
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v4, -0x1
 
-    move-result-object p2
+    invoke-static {v1, v3, v4}, Loq0;->h(III)I
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-result v3
 
-    throw p1
-.end method
+    neg-int v2, v2
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 2
+    new-instance v4, Ljc7;
 
-    iget-object v0, p0, Lks6;->a:Landroid/os/Handler;
+    invoke-direct {v4, v1, v3, v2}, Ljc7;-><init>(III)V
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iget v1, v4, Ljc7;->a:I
 
-    move-result p1
+    iget v2, v4, Ljc7;->b:I
 
-    if-eqz p1, :cond_0
+    iget v3, v4, Ljc7;->c:I
 
-    return-void
+    if-ltz v3, :cond_0
+
+    if-gt v1, v2, :cond_2
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    if-lt v1, v2, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :goto_0
+    aget-object v4, v0, v1
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v5, 0x1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {p1, v4, v5}, Lxwe;->k0(Ljava/lang/String;Ljava/lang/String;Z)Z
 
-    const-string v0, " is shutting down"
+    move-result v4
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    add-int/2addr v1, v5
 
-    move-result-object v0
+    aget-object p1, v0, v1
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    return-object p1
 
-    throw p1
-.end method
+    :cond_1
+    if-eq v1, v2, :cond_2
 
-.method public final isShutdown()Z
-    .locals 1
+    add-int/2addr v1, v3
 
-    const/4 v0, 0x0
+    goto :goto_0
 
-    return v0
-.end method
-
-.method public final isTerminated()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    new-instance v0, Lwg4;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lwg4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v0, p2, p3, p4}, Lks6;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
+    :cond_2
+    const/4 p1, 0x0
 
     return-object p1
 .end method
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+.method public final b(I)Ljava/lang/String;
+    .locals 1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final c()Lt55;
     .locals 3
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    new-instance v0, Lt55;
 
-    move-result-wide v0
+    const/16 v1, 0x12
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0, v1}, Lt55;-><init>(I)V
 
-    invoke-virtual {v2, p2, p3, p4}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    iget-object v1, v0, Lt55;->b:Ljava/lang/Object;
 
-    move-result-wide p2
+    check-cast v1, Ljava/util/ArrayList;
 
-    add-long/2addr p2, v0
+    iget-object v2, p0, Lks6;->a:[Ljava/lang/String;
 
-    new-instance p4, Ljs6;
+    invoke-static {v1, v2}, Lc93;->R(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lks6;->a:Landroid/os/Handler;
+    return-object v0
+.end method
 
-    invoke-direct {p4, v0, p2, p3, p1}, Ljs6;-><init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
+.method public final d(I)Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, p4, p2, p3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/lit8 p1, p1, 0x1
+
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lks6;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lks6;
+
+    iget-object p1, p1, Lks6;->a:[Ljava/lang/String;
+
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    return-object p4
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    const/4 p1, 0x0
 
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p3, " is shutting down"
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
-
-    new-instance p2, Lh67;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p3, p1}, Li67;-><init>(ILjava/lang/Object;)V
-
-    return-object p2
+    return p1
 .end method
 
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
 
-    const-class p2, Lks6;
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p2
-
-    const-string p3, " does not yet support fixed-rate scheduling."
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 .end method
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 6
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {p0}, Lks6;->size()I
 
-    const-class p2, Lks6;
+    move-result v0
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    new-array v1, v0, [Ld3b;
 
-    move-result-object p2
+    const/4 v2, 0x0
 
-    const-string p3, " does not yet support fixed-delay scheduling."
+    :goto_0
+    if-ge v2, v0, :cond_0
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lks6;->b(I)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v3
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Lks6;->d(I)Ljava/lang/String;
 
-    throw p1
+    move-result-object v4
+
+    new-instance v5, Ld3b;
+
+    invoke-direct {v5, v3, v4}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    aput-object v5, v1, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lc2;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2, v1}, Lc2;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
 .end method
 
-.method public final shutdown()V
-    .locals 3
+.method public final size()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lks6;->a:[Ljava/lang/String;
 
-    const-class v1, Lks6;
+    array-length v0, v0
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    div-int/lit8 v0, v0, 0x2
 
-    move-result-object v1
-
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return v0
 .end method
 
-.method public final shutdownNow()Ljava/util/List;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-class v1, Lks6;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {p0}, Lks6;->size()I
 
-    move-result-object v1
+    move-result v1
 
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    move-result-object v1
+    invoke-virtual {p0, v2}, Lks6;->b(I)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
-    throw v0
+    invoke-virtual {p0, v2}, Lks6;->d(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ": "
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Lf3g;->p(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v4, "\u2588\u2588"
+
+    :cond_0
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "\n"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

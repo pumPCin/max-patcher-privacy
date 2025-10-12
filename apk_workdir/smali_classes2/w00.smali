@@ -1,245 +1,181 @@
-.class public final Lw00;
-.super Ljava/lang/Object;
+.class public final enum Lw00;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final enum X:Lw00;
 
-.field public b:J
+.field public static final enum Y:Lw00;
 
-.field public c:Ljava/lang/Object;
+.field public static final enum Z:Lw00;
 
-.field public d:Ljava/lang/Object;
+.field public static final enum a:Lw00;
 
-.field public e:Ljava/lang/Object;
+.field public static final enum b:Lw00;
+
+.field public static final enum c:Lw00;
+
+.field public static final enum o:Lw00;
+
+.field public static final enum r0:Lw00;
+
+.field public static final enum s0:Lw00;
+
+.field public static final enum t0:Lw00;
+
+.field public static final enum u0:Lw00;
+
+.field public static final synthetic v0:[Lw00;
 
 
-# virtual methods
-.method public a()V
-    .locals 8
+# direct methods
+.method static constructor <clinit>()V
+    .locals 13
 
-    iget-object v0, p0, Lw00;->e:Ljava/lang/Object;
+    new-instance v0, Lw00;
 
-    check-cast v0, Ldd5;
+    const-string v1, "UNKNOWN"
 
-    iget-object v1, v0, Ldd5;->a:Ljava/util/concurrent/ExecutorService;
+    const/4 v2, 0x0
 
-    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v2
+    sput-object v0, Lw00;->a:Lw00;
 
-    if-nez v2, :cond_6
+    new-instance v1, Lw00;
 
-    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+    const-string v2, "NEW"
 
-    move-result v1
+    const/4 v3, 0x1
 
-    if-nez v1, :cond_6
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v1, p0, Lw00;->c:Ljava/lang/Object;
+    sput-object v1, Lw00;->b:Lw00;
 
-    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v2, Lw00;
 
-    const/4 v2, 0x1
+    const-string v3, "ADD"
 
-    const/4 v3, 0x0
+    const/4 v4, 0x2
 
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result v1
+    sput-object v2, Lw00;->c:Lw00;
 
-    if-eqz v1, :cond_0
+    new-instance v3, Lw00;
 
-    invoke-virtual {v0}, Ldd5;->g()J
+    const-string v4, "REMOVE"
 
-    move-result-wide v1
+    const/4 v5, 0x3
 
-    iget-wide v3, p0, Lw00;->a:J
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v1, v2, v3, v4}, Ldd5;->c(JJ)J
+    sput-object v3, Lw00;->o:Lw00;
 
-    move-result-wide v1
+    new-instance v4, Lw00;
 
-    iput-wide v1, p0, Lw00;->b:J
+    const-string v5, "LEAVE"
 
-    :try_start_0
-    iget-object v1, p0, Lw00;->d:Ljava/lang/Object;
+    const/4 v6, 0x4
 
-    check-cast v1, Ltd4;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v1}, Ldd5;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v4, Lw00;->X:Lw00;
 
-    return-void
+    new-instance v5, Lw00;
 
-    :cond_0
-    invoke-virtual {v0}, Ldd5;->g()J
+    const-string v6, "TITLE"
 
-    move-result-wide v4
+    const/4 v7, 0x5
 
-    iget-wide v6, p0, Lw00;->b:J
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v4, v5, v6, v7}, Ln05;->c(JJ)I
+    sput-object v5, Lw00;->Y:Lw00;
 
-    move-result v1
+    new-instance v6, Lw00;
 
-    if-lez v1, :cond_6
+    const-string v7, "ICON"
 
-    sget-wide v4, Ln05;->b:J
+    const/4 v8, 0x6
 
-    iput-wide v4, p0, Lw00;->b:J
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v1, v0, Ldd5;->b:Lina;
+    sput-object v6, Lw00;->Z:Lw00;
 
-    iget-object v4, v0, Ldd5;->Y:Lx68;
+    new-instance v7, Lw00;
 
-    iget-object v0, v0, Ldd5;->Z:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    const-string v8, "SYSTEM"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lw00;->r0:Lw00;
+
+    new-instance v8, Lw00;
+
+    const-string v9, "JOIN_BY_LINK"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lw00;->s0:Lw00;
+
+    new-instance v9, Lw00;
+
+    const-string v10, "PIN"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lw00;->t0:Lw00;
+
+    new-instance v10, Lw00;
+
+    const-string v11, "BOT_STARTED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lw00;->u0:Lw00;
+
+    filled-new-array/range {v0 .. v10}, [Lw00;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
+    sput-object v0, Lw00;->v0:[Lw00;
 
-    :try_start_1
-    iget v5, v4, Lx68;->f:I
-
-    if-nez v5, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    sget-object v2, Lb75;->a:Lb75;
-
-    goto :goto_3
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_5
-
-    :cond_2
-    iget-object v2, v4, Lx68;->d:[Ljava/lang/Object;
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    array-length v5, v2
-
-    :goto_1
-    if-ge v3, v5, :cond_5
-
-    aget-object v6, v2, v3
-
-    instance-of v7, v6, Lmpg;
-
-    if-eqz v7, :cond_3
-
-    check-cast v6, Lmpg;
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v6, 0x0
-
-    :goto_2
-    if-eqz v6, :cond_4
-
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :cond_4
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_5
-    move-object v2, v4
-
-    :goto_3
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
-
-    iget v0, v1, Lina;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v1, Lina;->d:Ljna;
-
-    iget-object v0, v0, Ljna;->a:Lds8;
-
-    iget-object v0, v0, Lds8;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lxe6;
-
-    invoke-interface {v0, v2}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_4
-
-    :pswitch_0
-    iget-object v0, v1, Lina;->d:Ljna;
-
-    iget-object v0, v0, Ljna;->a:Lds8;
-
-    iget-object v0, v0, Lds8;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lxe6;
-
-    invoke-interface {v0, v2}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_4
     return-void
-
-    :goto_5
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
-
-    throw v1
-
-    :catch_0
-    :cond_6
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public b(Z)Lb5h;
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lw00;
+    .locals 1
 
-    if-eqz p1, :cond_0
+    const-class v0, Lw00;
 
-    iget-object p1, p0, Lw00;->e:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast p1, Ls5f;
+    move-result-object p0
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    check-cast p0, Lw00;
 
-    move-result-object p1
+    return-object p0
+.end method
 
-    check-cast p1, Lw4h;
+.method public static values()[Lw00;
+    .locals 1
 
-    return-object p1
+    sget-object v0, Lw00;->v0:[Lw00;
 
-    :cond_0
-    iget-object p1, p0, Lw00;->d:Ljava/lang/Object;
+    invoke-virtual {v0}, [Lw00;->clone()Ljava/lang/Object;
 
-    check-cast p1, Ls5f;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    check-cast v0, [Lw00;
 
-    move-result-object p1
-
-    check-cast p1, Lu4h;
-
-    return-object p1
+    return-object v0
 .end method

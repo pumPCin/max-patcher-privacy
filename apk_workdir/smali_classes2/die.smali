@@ -1,251 +1,190 @@
 .class public final Ldie;
-.super Ljavax/net/ssl/SSLSocketFactory;
+.super Landroid/text/SpannableString;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Landroid/net/SSLCertificateSocketFactory;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 5
-
-    invoke-direct {p0}, Ljavax/net/ssl/SSLSocketFactory;-><init>()V
-
-    const-class v0, Ldie;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldie;->a:Ljava/lang/String;
-
-    sget-object v1, Lox9;->j:Lqpa;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v2, Ly38;->o:Ly38;
-
-    invoke-virtual {v1, v2}, Lqpa;->b(Ly38;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "init, useX509Extension=true"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    :try_start_0
-    new-instance v0, Landroid/net/SSLSessionCache;
-
-    const-string v1, "tamtam_sslcache"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/net/SSLSessionCache;-><init>(Ljava/io/File;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    iget-object v1, p0, Ldie;->a:Ljava/lang/String;
-
-    const-string v2, "failed to create ssl cache with specified dir"
-
-    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v0, Landroid/net/SSLSessionCache;
-
-    invoke-direct {v0, p1}, Landroid/net/SSLSessionCache;-><init>(Landroid/content/Context;)V
-
-    :goto_1
-    const/16 p1, 0x1388
-
-    invoke-static {p1, v0}, Landroid/net/SSLCertificateSocketFactory;->getDefault(ILandroid/net/SSLSessionCache;)Ljavax/net/ssl/SSLSocketFactory;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/SSLCertificateSocketFactory;
-
-    iput-object p1, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    :try_start_1
-    new-instance v0, Ldbf;
-
-    invoke-direct {v0, p2}, Ldbf;-><init>(Ljava/lang/String;)V
-
-    filled-new-array {v0}, [Ldbf;
-
-    move-result-object p2
-
-    check-cast p2, [Ljavax/net/ssl/TrustManager;
-
-    invoke-virtual {p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setTrustManagers([Ljavax/net/ssl/TrustManager;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method static constructor <clinit>()V
+    .locals 0
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    iget-object p2, p0, Ldie;->a:Ljava/lang/String;
-
-    const-string v0, "failed set tam trust manager to default ssl socket factory"
-
-    invoke-static {p2, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final createSocket()Ljava/net/Socket;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 10
 
-    .line 1
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
+    instance-of v0, p1, Landroid/text/Spanned;
 
-    invoke-virtual {v0}, Landroid/net/SSLCertificateSocketFactory;->createSocket()Ljava/net/Socket;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    if-eqz v0, :cond_7
 
-    const/4 v2, 0x1
-
-    .line 2
-    invoke-virtual {v0, v1, v2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object v1
-.end method
-
-.method public final createSocket(Ljava/lang/String;I)Ljava/net/Socket;
-    .locals 1
-
-    .line 7
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/lang/String;I)Ljava/net/Socket;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    .line 8
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object p1
-.end method
-
-.method public final createSocket(Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;
-    .locals 1
-
-    .line 9
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/lang/String;ILjava/net/InetAddress;I)Ljava/net/Socket;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    .line 10
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object p1
-.end method
-
-.method public final createSocket(Ljava/net/InetAddress;I)Ljava/net/Socket;
-    .locals 1
-
-    .line 3
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/net/InetAddress;I)Ljava/net/Socket;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    .line 4
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object p1
-.end method
-
-.method public final createSocket(Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/Socket;
-    .locals 1
-
-    .line 11
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/net/InetAddress;ILjava/net/InetAddress;I)Ljava/net/Socket;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    .line 12
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object p1
-.end method
-
-.method public final createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
-    .locals 1
-
-    .line 5
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/net/SSLCertificateSocketFactory;->createSocket(Ljava/net/Socket;Ljava/lang/String;IZ)Ljava/net/Socket;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    .line 6
-    invoke-virtual {v0, p1, p2}, Landroid/net/SSLCertificateSocketFactory;->setUseSessionTickets(Ljava/net/Socket;Z)V
-
-    return-object p1
-.end method
-
-.method public final getDefaultCipherSuites()[Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
-
-    invoke-virtual {v0}, Landroid/net/SSLCertificateSocketFactory;->getDefaultCipherSuites()[Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_2
+
+    :cond_0
+    move-object v0, p1
+
+    check-cast v0, Landroid/text/Spanned;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const-class v3, Ljava/lang/Object;
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Landroid/text/SpannableString;->length()I
+
+    move-result v4
+
+    invoke-virtual {p0, v1, v4, v3}, Landroid/text/SpannableString;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v3
+
+    array-length v4, v3
+
+    array-length v5, v2
+
+    if-eq v4, v5, :cond_1
+
+    return v1
+
+    :cond_1
+    array-length v4, v3
+
+    move v5, v1
+
+    :goto_0
+    if-ge v5, v4, :cond_6
+
+    aget-object v6, v3, v5
+
+    aget-object v7, v2, v5
+
+    if-ne v6, p0, :cond_3
+
+    if-ne p1, v7, :cond_2
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v8
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v9
+
+    if-ne v8, v9, :cond_2
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v8
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v9
+
+    if-ne v8, v9, :cond_2
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v6
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v7
+
+    if-eq v6, v7, :cond_4
+
+    :cond_2
+    return v1
+
+    :cond_3
+    invoke-static {v6, v7}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_5
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v8
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v9
+
+    if-ne v8, v9, :cond_5
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v8
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v9
+
+    if-ne v8, v9, :cond_5
+
+    invoke-virtual {p0, v6}, Landroid/text/SpannableString;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v6
+
+    invoke-interface {v0, v7}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v7
+
+    if-eq v6, v7, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return v1
+
+    :cond_6
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_7
+    :goto_2
+    return v1
 .end method
 
-.method public final getSupportedCipherSuites()[Ljava/lang/String;
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ldie;->b:Landroid/net/SSLCertificateSocketFactory;
+    invoke-static {p0}, Lw7;->d(Landroid/text/Spanned;)I
 
-    invoke-virtual {v0}, Landroid/net/SSLCertificateSocketFactory;->getSupportedCipherSuites()[Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

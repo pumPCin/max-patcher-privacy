@@ -1,48 +1,56 @@
 .class public final Ld13;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lov7;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Ld13;
 
-.field public final synthetic Y:Le13;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:J
 
 
 # direct methods
-.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ld13;->Y:Le13;
+    new-instance v0, Ld13;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ld13;->a:Ld13;
+
+    sget v0, Lhcc;->oneme_chat_list_loading_view_type:I
+
+    sput v0, Ld13;->b:I
+
+    sget v0, Lhcc;->oneme_chat_list_loading_id:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Ld13;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Ld13;->c:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iput-object p1, p0, Ld13;->o:Ljava/lang/Object;
+    sget v0, Ld13;->b:I
 
-    iget p1, p0, Ld13;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ld13;->X:I
-
-    iget-object p1, p0, Ld13;->Y:Le13;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Le13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

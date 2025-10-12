@@ -1,116 +1,51 @@
 .class public final Llo0;
-.super Lt78;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lmo0;
+
+.field public Z:I
+
+.field public o:Lmo0;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(Lmo0;Lwy3;)V
     .locals 0
 
-    iput p2, p0, Llo0;->g:I
+    iput-object p1, p0, Llo0;->Y:Lmo0;
 
-    invoke-direct {p0, p1}, Lt78;-><init>(I)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Llo0;->g:I
+    iput-object p1, p0, Llo0;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Llo0;->Z:I
 
-    invoke-super {p0, p1}, Lt78;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Llo0;->Z:I
+
+    iget-object p1, p0, Llo0;->Y:Lmo0;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lmo0;->b(Lx47;Lwy3;)Ljava/io/Serializable;
 
     move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    check-cast p1, Lkke;
-
-    iget p1, p1, Lkke;->a:I
-
-    invoke-static {p1}, Le6e;->b(I)Landroid/graphics/Path;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    iget p1, p0, Llo0;->g:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    check-cast p2, Ljava/lang/String;
-
-    check-cast p3, Landroid/graphics/Bitmap;
-
-    check-cast p4, Landroid/graphics/Bitmap;
-
-    invoke-virtual {p3}, Landroid/graphics/Bitmap;->recycle()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h(Ljava/lang/Object;)I
-    .locals 1
-
-    iget v0, p0, Llo0;->g:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lt78;->h(Ljava/lang/Object;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Landroid/graphics/Bitmap;
-
-    invoke-static {p1}, Lbp0;->d(Landroid/graphics/Bitmap;)I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-ge p1, v0, :cond_0
-
-    move p1, v0
-
-    :cond_0
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

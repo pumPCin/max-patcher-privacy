@@ -2,200 +2,191 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final g:Ljava/util/ArrayDeque;
+.field public static final r0:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public static final h:Ljava/lang/Object;
+.field public static s0:Lol9;
+
+.field public static volatile t0:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # instance fields
-.field public final a:Landroid/media/MediaCodec;
+.field public final X:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final b:Landroid/os/HandlerThread;
+.field public final Y:Ljava/util/concurrent/CountDownLatch;
 
-.field public c:Lix;
+.field public final synthetic Z:Lehh;
 
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Lig4;
 
-.field public final e:Lai3;
+.field public final b:Lml9;
 
-.field public f:Z
+.field public volatile c:I
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 8
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    new-instance v7, Lb30;
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    const/4 v0, 0x4
 
-    sput-object v0, Llx;->g:Ljava/util/ArrayDeque;
+    invoke-direct {v7, v0}, Lb30;-><init>(I)V
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xa
 
-    sput-object v0, Llx;->h:Ljava/lang/Object;
+    invoke-direct {v6, v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
+
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    const-wide/16 v3, 0x1
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/4 v1, 0x5
+
+    const/16 v2, 0x80
+
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Llx;->r0:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sput-object v0, Llx;->t0:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;)V
-    .locals 3
-
-    new-instance v0, Lai3;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lai3;-><init>(IZ)V
+.method public constructor <init>(Lehh;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llx;->a:Landroid/media/MediaCodec;
+    iput-object p1, p0, Llx;->Z:Lehh;
 
-    iput-object p2, p0, Llx;->b:Landroid/os/HandlerThread;
+    const/4 p1, 0x1
 
-    iput-object v0, p0, Llx;->e:Lai3;
+    iput p1, p0, Llx;->c:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput-object p1, p0, Llx;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object v0, p0, Llx;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    iput-object v0, p0, Llx;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    new-instance v0, Lig4;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1, p0}, Lig4;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Llx;->a:Lig4;
+
+    new-instance v1, Lml9;
+
+    invoke-direct {v1, p0, v0}, Lml9;-><init>(Llx;Lig4;)V
+
+    iput-object v1, p0, Llx;->b:Lml9;
+
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    iput-object v0, p0, Llx;->Y:Ljava/util/concurrent/CountDownLatch;
 
     return-void
-.end method
-
-.method public static b()Ljx;
-    .locals 2
-
-    sget-object v0, Llx;->g:Ljava/util/ArrayDeque;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljx;
-
-    invoke-direct {v1}, Ljx;-><init>()V
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljx;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 5
 
-    iget-boolean v0, p0, Llx;->f:Z
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Llx;->c:Lix;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Llx;->e:Lai3;
+    const-class v0, Llx;
 
     monitor-enter v0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v1, 0x0
+    :try_start_0
+    sget-object v1, Llx;->s0:Lol9;
 
-    :try_start_1
-    iput-boolean v1, v0, Lai3;->b:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-nez v1, :cond_0
 
-    :try_start_2
+    new-instance v1, Lol9;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, v4}, Lol9;-><init>(Landroid/os/Looper;IZ)V
+
+    sput-object v1, Llx;->s0:Lol9;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Llx;->s0:Lol9;
+
     monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, p0, Llx;->c:Lix;
+    new-instance v0, Lnl9;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    invoke-direct {v0, p0, p1}, Lnl9;-><init>(Llx;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    const/4 p1, 0x1
 
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+    invoke-virtual {v1, p1, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    invoke-virtual {v0}, Lai3;->a()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    :catchall_0
-    move-exception v1
-
-    :try_start_3
+    :goto_1
+    :try_start_1
     monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :try_start_4
-    throw v1
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
+    throw p1
+.end method
 
-    :catch_0
-    move-exception v0
+.method public final run()V
+    .locals 1
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iget-object v0, p0, Llx;->Z:Lehh;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lehh;->b()V
 
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_0
     return-void
 .end method

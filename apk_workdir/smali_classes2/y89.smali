@@ -1,246 +1,217 @@
-.class public final Ly89;
+.class public final synthetic Ly89;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
-
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:J
-
-.field public final synthetic o:J
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(La99;JJLjava/lang/String;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Ly89;->a:I
 
-    iput v0, p0, Ly89;->a:I
+    iput-object p1, p0, Ly89;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ly89;->X:Ljava/lang/Object;
-
-    iput-wide p2, p0, Ly89;->c:J
-
-    iput-wide p4, p0, Ly89;->o:J
-
-    iput-object p6, p0, Ly89;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcrg;Ljava/lang/String;JJ)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ly89;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ly89;->X:Ljava/lang/Object;
-
-    iput-object p2, p0, Ly89;->b:Ljava/lang/String;
-
-    iput-wide p3, p0, Ly89;->c:J
-
-    iput-wide p5, p0, Ly89;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 6
 
     iget v0, p0, Ly89;->a:I
 
+    const/4 v1, 0x0
+
+    sget-object v2, Lrw4;->t0:Lss6;
+
+    iget-object v3, p0, Ly89;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ly89;->X:Ljava/lang/Object;
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
 
-    check-cast v0, Lcrg;
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object v1, v0, Lcrg;->d:Lp5d;
+    move-result-object v0
 
-    iget-object v0, v0, Lcrg;->a:Lx5d;
+    invoke-virtual {v2, v0}, Lss6;->w(Landroid/content/Context;)Lzma;
 
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
+    move-result-object v0
+
+    iget-object v0, v0, Lzma;->c:Llwa;
+
+    return-object v0
+
+    :pswitch_0
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
+
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lss6;->w(Landroid/content/Context;)Lzma;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzma;->c:Llwa;
+
+    return-object v0
+
+    :pswitch_1
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
+
+    new-instance v0, Ll8c;
+
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    const/4 v3, 0x1
+    invoke-direct {v0, v2}, Ll8c;-><init>(Landroid/content/Context;)V
 
-    iget-object v4, p0, Ly89;->b:Ljava/lang/String;
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    if-nez v4, :cond_0
+    const/16 v4, 0x34
 
-    invoke-interface {v2, v3}, Lf2f;->Z(I)V
+    int-to-float v4, v4
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Li8e;->I(F)I
+
+    move-result v4
+
+    const/4 v5, -0x1
+
+    invoke-direct {v2, v5, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget v2, Ll7d;->v:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4, v2}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ll8c;->setEndIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v2, Lz89;
+
+    invoke-direct {v2, v3, v1}, Lz89;-><init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    invoke-virtual {v0, v2}, Ll8c;->setEndIconClickListener(Landroid/view/View$OnClickListener;)V
+
+    new-instance v1, Ler;
+
+    const/4 v2, 0x3
+
+    const/4 v4, 0x7
+
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v2, v5, v4}, Ler;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ll8c;->getTitleView()Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lmdf;->c(Landroid/widget/TextView;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->P0(Ll8c;Z)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {v2, v3, v4}, Lf2f;->f(ILjava/lang/String;)V
+    new-instance v1, Luq0;
 
-    :goto_0
-    const/4 v3, 0x2
+    invoke-direct {v1, v0, v3}, Luq0;-><init>(Ll8c;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
 
-    iget-wide v4, p0, Ly89;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Ly89;->o:J
-
-    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v2}, Lh2f;->C()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
-
-    return-object v3
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v3
-
-    :try_start_3
-    invoke-virtual {v0}, Lx5d;->k()V
-
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Ly89;->X:Ljava/lang/Object;
-
-    check-cast v0, La99;
-
-    iget-object v1, v0, La99;->c:Lqh;
-
-    iget-object v0, v0, La99;->a:Lx5d;
-
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-wide v4, p0, Ly89;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
-
-    const/4 v3, 0x2
-
-    iget-wide v4, p0, Ly89;->o:J
-
-    invoke-interface {v2, v3, v4, v5}, Lf2f;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Ly89;->b:Ljava/lang/String;
-
-    if-nez v4, :cond_1
-
-    invoke-interface {v2, v3}, Lf2f;->Z(I)V
-
-    goto :goto_2
+    invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     :cond_1
-    invoke-interface {v2, v3, v4}, Lf2f;->f(ILjava/lang/String;)V
-
-    :goto_2
-    :try_start_4
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    :try_start_5
-    invoke-interface {v2}, Lh2f;->C()I
-
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :try_start_6
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
-
-    const/4 v0, 0x0
-
+    :goto_0
     return-object v0
 
-    :catchall_2
-    move-exception v0
+    :pswitch_2
+    iget-object v0, v3, Lone/me/sdk/messagewrite/MessageWriteWidget;->Y:Lyn7;
 
-    goto :goto_3
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    :catchall_3
-    move-exception v3
+    move-result-object v0
 
-    :try_start_7
-    invoke-virtual {v0}, Lx5d;->k()V
+    check-cast v0, Lgq;
 
-    throw v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+    check-cast v0, Lz2g;
 
-    :goto_3
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    const-string v2, "app.messages.send.by.enter"
 
-    throw v0
+    iget-object v0, v0, Lv3;->h:Lbo7;
+
+    invoke-virtual {v0, v2, v1}, Lbo7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

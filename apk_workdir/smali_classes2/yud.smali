@@ -1,109 +1,58 @@
 .class public final Lyud;
-.super Lqud;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lgn1;
 
 
 # instance fields
-.field public C0:Lrob;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lyud;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final y(Lm82;J)J
-    .locals 7
+.method public final a(Lw4d;)V
+    .locals 2
 
-    iget-object v0, p0, Lyud;->C0:Lrob;
+    iget-object v0, p0, Lyud;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    const/4 v1, 0x0
-
-    sget-object v2, Lvp5;->a:Lvp5;
-
-    if-eqz v0, :cond_0
-
-    iget-object v3, v0, Lrob;->b:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/concurrent/CountDownLatch;
-
-    const-wide/16 v4, 0x1f40
-
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v3, v4, v5, v6}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    iget-object v0, v0, Lrob;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Lwp5;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    move-object v0, v2
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lgn1;
+
+    invoke-interface {v1, p1}, Lgn1;->a(Lw4d;)V
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v1
-
-    :cond_1
-    :goto_0
-    invoke-static {v0, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-super {p0, p1, p2, p3}, Lqud;->y(Lm82;J)J
-
-    move-result-wide p1
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p0}, Lstd;->n()Lo49;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2, p3}, Lo49;->p(J)Lq49;
-
-    move-result-object p1
-
-    const-wide/16 p2, 0x0
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Lk10;->o:Lk10;
-
-    invoke-virtual {p1, v0}, Lq49;->c(Lk10;)Lo10;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    :goto_1
-    return-wide p2
-
-    :cond_4
-    invoke-virtual {p0}, Lstd;->m()Lo49;
-
-    move-result-object v2
-
-    iget-object v0, v0, Lo10;->r:Ljava/lang/String;
-
-    sget-object v3, Lh10;->o:Lh10;
-
-    invoke-virtual {v2, p1, v0, v3}, Lo49;->t(Lq49;Ljava/lang/String;Lh10;)Lw29;
-
-    move-wide p1, p2
-
-    :goto_2
-    iput-object v1, p0, Lyud;->C0:Lrob;
-
-    return-wide p1
+    return-void
 .end method

@@ -1,273 +1,125 @@
-.class public final Ls69;
-.super Ljava/lang/Object;
+.class public final enum Ls69;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final synthetic X:[Ls69;
 
-.field public final b:J
+.field public static final a:Ljava/util/HashMap;
 
-.field public final c:Landroid/text/Layout;
+.field public static final enum b:Ls69;
 
-.field public final d:Lp69;
+.field public static final enum c:Ls69;
 
-.field public final e:Lk69;
-
-.field public final f:Z
+.field public static final enum o:Ls69;
 
 
 # direct methods
-.method public constructor <init>(JJLandroid/text/Layout;Lp69;Lk69;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ls69;->a:J
-
-    iput-wide p3, p0, Ls69;->b:J
-
-    iput-object p5, p0, Ls69;->c:Landroid/text/Layout;
-
-    iput-object p6, p0, Ls69;->d:Lp69;
-
-    iput-object p7, p0, Ls69;->e:Lk69;
-
-    iput-boolean p8, p0, Ls69;->f:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Ls69;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls69;
+    const-string v1, "UNKNOWN"
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return v2
+    sput-object v0, Ls69;->b:Ls69;
 
-    :cond_1
-    check-cast p1, Ls69;
+    new-instance v1, Ls69;
 
-    iget-wide v3, p0, Ls69;->a:J
+    const-string v3, "EDITED"
 
-    iget-wide v5, p1, Ls69;->a:J
+    const/4 v4, 0x1
 
-    cmp-long v1, v3, v5
+    invoke-direct {v1, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-eqz v1, :cond_2
+    new-instance v3, Ls69;
 
-    return v2
+    const-string v4, "REMOVED"
 
-    :cond_2
-    iget-wide v3, p0, Ls69;->b:J
+    const/4 v5, 0x2
 
-    iget-wide v5, p1, Ls69;->b:J
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    cmp-long v1, v3, v5
+    sput-object v3, Ls69;->c:Ls69;
 
-    if-eqz v1, :cond_3
+    new-instance v4, Ls69;
 
-    return v2
+    const-string v5, "DELAYED_FIRE_ERROR"
 
-    :cond_3
-    iget-object v1, p0, Ls69;->c:Landroid/text/Layout;
+    const/4 v6, 0x3
 
-    iget-object v3, p1, Ls69;->c:Landroid/text/Layout;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput-object v4, Ls69;->o:Ls69;
 
-    move-result v1
+    filled-new-array {v0, v1, v3, v4}, [Ls69;
 
-    if-nez v1, :cond_4
+    move-result-object v0
 
-    return v2
+    sput-object v0, Ls69;->X:[Ls69;
 
-    :cond_4
-    iget-object v1, p0, Ls69;->d:Lp69;
+    new-instance v0, Ljava/util/HashMap;
 
-    iget-object v3, p1, Ls69;->d:Lp69;
+    const/4 v1, 0x4
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    move-result v1
+    invoke-static {}, Ls69;->values()[Ls69;
 
-    if-nez v1, :cond_5
+    move-result-object v1
 
-    return v2
+    array-length v3, v1
 
-    :cond_5
-    iget-object v1, p0, Ls69;->e:Lk69;
+    :goto_0
+    if-ge v2, v3, :cond_0
 
-    iget-object v3, p1, Ls69;->e:Lk69;
+    aget-object v4, v1, v2
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result v1
+    move-result-object v5
 
-    if-nez v1, :cond_6
+    invoke-virtual {v0, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Ls69;->f:Z
-
-    iget-boolean p1, p1, Ls69;->f:Z
-
-    if-eq v1, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Ls69;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Ls69;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Ls69;->c:Landroid/text/Layout;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    sput-object v0, Ls69;->a:Ljava/util/HashMap;
 
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Ls69;->d:Lp69;
-
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Ls69;->e:Lk69;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Ls69;->f:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Ls69;
+    .locals 1
 
-    const-string v0, "MessageLink(messageId="
+    const-class v0, Ls69;
 
-    const-string v1, ", messageLinkId="
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-wide v2, p0, Ls69;->a:J
+    move-result-object p0
 
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p0, Ls69;
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    iget-wide v1, p0, Ls69;->b:J
+.method public static values()[Ls69;
+    .locals 1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    sget-object v0, Ls69;->X:[Ls69;
 
-    const-string v1, ", senderLayout="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ls69;->c:Landroid/text/Layout;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", replyModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ls69;->d:Lp69;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forwardModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ls69;->e:Lk69;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isFloating="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Ls69;->f:Z
-
-    invoke-static {v0, v1, v3, v2}, Lfl7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Ls69;
 
     return-object v0
 .end method

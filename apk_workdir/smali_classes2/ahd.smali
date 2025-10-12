@@ -1,51 +1,400 @@
-.class public abstract synthetic Lahd;
+.class public final Lahd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltd6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lo5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lo5;I)V
+    .locals 0
 
-    invoke-static {}, Lzgd;->values()[Lzgd;
+    iput p2, p0, Lahd;->a:I
+
+    iput-object p1, p0, Lahd;->b:Lo5;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lahd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lvp3;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    return-object v0
 
-    new-array v0, v0, [I
+    :pswitch_0
+    iget-object v0, p0, Lahd;->b:Lo5;
 
-    const/4 v1, 0x1
+    const-class v1, Lzl5;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
-    :catch_0
-    const/4 v2, 0x2
+    return-object v0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :pswitch_1
+    iget-object v0, p0, Lahd;->b:Lo5;
 
-    :catch_1
-    const/4 v1, 0x3
+    const-class v1, Ltb5;
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :catch_2
-    sput-object v0, Lahd;->$EnumSwitchMapping$0:[I
+    move-result-object v0
 
-    return-void
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lxc;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lxo4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lbm3;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lkw4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lvp3;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lzb2;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_8
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lu8f;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_9
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lcl;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_a
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lc39;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_b
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lvw4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_c
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lcfa;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_d
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lin5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_e
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lbu4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_f
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lyq4;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_10
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lnnb;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_11
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lwk5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_12
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lck5;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_13
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lfpe;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_14
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Larc;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_15
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lcl;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_16
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lm63;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_17
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lcx7;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_18
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lzb2;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_19
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lc39;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1a
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lzb2;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1b
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lq53;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1c
+    iget-object v0, p0, Lahd;->b:Lo5;
+
+    const-class v1, Lspa;
+
+    invoke-virtual {v0, v1}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

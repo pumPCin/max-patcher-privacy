@@ -2,42 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lhc0;
+# interfaces
+.implements Ljc0;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lhc0;
-
-    const-wide/16 v1, 0x0
-
-    const-string v3, ""
-
-    invoke-direct {v0, v3, v1, v2}, Lhc0;-><init>(Ljava/lang/CharSequence;J)V
-
-    sput-object v0, Lhc0;->c:Lhc0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/CharSequence;J)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lhc0;->a:J
+    iput-object p1, p0, Lhc0;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lhc0;->b:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lhc0;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,7 +28,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -65,22 +48,24 @@
     :cond_1
     check-cast p1, Lhc0;
 
-    iget-wide v3, p0, Lhc0;->a:J
+    iget-object v1, p0, Lhc0;->a:Ljava/lang/String;
 
-    iget-wide v5, p1, Lhc0;->a:J
+    iget-object v3, p1, Lhc0;->a:Ljava/lang/String;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lhc0;->b:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lhc0;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Lhc0;->b:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lhc0;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -95,17 +80,17 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lhc0;->a:J
+    iget-object v0, p0, Lhc0;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lhc0;->b:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lhc0;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
@@ -115,31 +100,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AvatarAbbreviationModel(sourceId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lhc0;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhc0;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, ", path="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "CropAvatar(uriAsString="
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lhc0;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lhc0;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

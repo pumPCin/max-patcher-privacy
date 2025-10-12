@@ -1,89 +1,36 @@
-.class public final Lwh8;
+.class public abstract Lwh8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroid/media/browse/MediaBrowser;
-
-.field public final c:Landroid/os/Bundle;
-
-.field public final d:Luh8;
-
-.field public final e:Lds;
-
-.field public f:Lrob;
-
-.field public g:Landroid/os/Messenger;
-
-.field public h:Lxs8;
-
-
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lalh;Landroid/os/Bundle;)V
-    .locals 2
+.method public static a(Lmh8;Likb;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p1, p1, Likb;->a:Lhkb;
 
-    new-instance v0, Luh8;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0, p0}, Luh8;-><init>(Lwh8;)V
+    iget-object p1, p1, Lhkb;->a:Landroid/media/metrics/LogSessionId;
 
-    iput-object v0, p0, Lwh8;->d:Luh8;
+    invoke-static {}, Lbn8;->f()Landroid/media/metrics/LogSessionId;
 
-    new-instance v0, Lds;
+    invoke-static {p1}, Lbn8;->y(Landroid/media/metrics/LogSessionId;)Z
 
-    const/4 v1, 0x0
+    move-result v0
 
-    invoke-direct {v0, v1}, Lade;-><init>(I)V
+    if-nez v0, :cond_0
 
-    iput-object v0, p0, Lwh8;->e:Lds;
+    iget-object p0, p0, Lmh8;->b:Landroid/media/MediaFormat;
 
-    iput-object p1, p0, Lwh8;->a:Landroid/content/Context;
+    const-string v0, "log-session-id"
 
-    new-instance v0, Landroid/os/Bundle;
+    invoke-static {p1}, Ljx3;->p(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
 
-    if-eqz p4, :cond_0
+    move-result-object p1
 
-    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    goto :goto_0
+    invoke-virtual {p0, v0, p1}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    :goto_0
-    iput-object v0, p0, Lwh8;->c:Landroid/os/Bundle;
-
-    const-string p4, "extra_client_version"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    const-string p4, "extra_calling_pid"
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v1
-
-    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iput-object p0, p3, Lalh;->c:Ljava/lang/Object;
-
-    new-instance p4, Landroid/media/browse/MediaBrowser;
-
-    iget-object p3, p3, Lalh;->b:Ljava/lang/Object;
-
-    check-cast p3, Lvh8;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
-
-    iput-object p4, p0, Lwh8;->b:Landroid/media/browse/MediaBrowser;
-
     return-void
 .end method

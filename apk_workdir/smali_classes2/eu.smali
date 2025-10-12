@@ -1,43 +1,61 @@
 .class public final Leu;
-.super Ljava/lang/Object;
+.super Lti0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Loqe;
+.field public final b:I
 
-.field public final b:Lxob;
-
-.field public final c:Ltk;
-
-.field public final d:Lok5;
-
-.field public final e:Lil5;
-
-.field public final f:Lnid;
-
-.field public final g:Lkj;
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Loqe;Lxob;Lub2;Ltk;Lok5;Lil5;Lnid;Lkj;)V
+.method public constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lti0;-><init>(J)V
 
-    iput-object p1, p0, Leu;->a:Loqe;
+    iput p1, p0, Leu;->b:I
 
-    iput-object p2, p0, Leu;->b:Lxob;
-
-    iput-object p4, p0, Leu;->c:Ltk;
-
-    iput-object p5, p0, Leu;->d:Lok5;
-
-    iput-object p6, p0, Leu;->e:Lil5;
-
-    iput-object p7, p0, Leu;->f:Lnid;
-
-    iput-object p8, p0, Leu;->g:Lkj;
+    iput-object p4, p0, Leu;->c:Ljava/util/List;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AssetsGetByIdsEvent{type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Leu;->b:I
+
+    invoke-static {v1}, Lsw1;->v(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", ids="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Leu;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

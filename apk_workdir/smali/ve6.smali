@@ -2,10 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqf6;
-
 
 # virtual methods
-.method public abstract invoke()Ljava/lang/Object;
+.method public abstract getFunctionDelegate()Loe6;
 .end method

@@ -1,26 +1,59 @@
-.class public interface abstract Ly12;
-.super Ljava/lang/Object;
+.class public final Ly12;
+.super Lahh;
 .source "SourceFile"
 
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
+
+# instance fields
+.field public final f:Landroid/graphics/Typeface;
+
+.field public final g:Lx12;
+
+.field public h:Z
+
+
+# direct methods
+.method public constructor <init>(Lx12;Landroid/graphics/Typeface;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Ly12;->f:Landroid/graphics/Typeface;
+
+    iput-object p1, p0, Ly12;->g:Lx12;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract d(Ly24;)V
+.method public final p(I)V
+    .locals 1
+
+    iget-boolean p1, p0, Ly12;->h:Z
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Ly12;->g:Lx12;
+
+    iget-object v0, p0, Ly12;->f:Landroid/graphics/Typeface;
+
+    invoke-interface {p1, v0}, Lx12;->p(Landroid/graphics/Typeface;)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public abstract e(Lxe6;)V
-.end method
+.method public final q(Landroid/graphics/Typeface;Z)V
+    .locals 0
 
-.method public abstract f(Ljava/lang/Object;Lnf6;)V
-.end method
+    iget-boolean p2, p0, Ly12;->h:Z
 
-.method public abstract isCancelled()Z
-.end method
+    if-nez p2, :cond_0
 
-.method public abstract j(Ljava/lang/Object;Lnf6;)Lkotlinx/coroutines/internal/Symbol;
-.end method
+    iget-object p2, p0, Ly12;->g:Lx12;
 
-.method public abstract l(Ljava/lang/Object;)V
+    invoke-interface {p2, p1}, Lx12;->p(Landroid/graphics/Typeface;)V
+
+    :cond_0
+    return-void
 .end method

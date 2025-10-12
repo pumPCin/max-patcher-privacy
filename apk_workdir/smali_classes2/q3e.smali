@@ -1,55 +1,98 @@
 .class public final Lq3e;
-.super Lnz3;
+.super Luc0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/List;
-
-.field public Y:Lvrb;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lf4e;
-
-.field public final synthetic w0:Lf4e;
-
-.field public x0:I
+.field public final b:Lzcf;
 
 
 # direct methods
-.method public constructor <init>(Lf4e;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Lzcf;)V
+    .locals 1
 
-    iput-object p1, p0, Lq3e;->w0:Lf4e;
+    const/16 v0, 0x14
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+
+    iput-object p1, p0, Lq3e;->b:Lzcf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lq3e;->Z:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lq3e;->x0:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lq3e;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lq3e;->x0:I
+    goto :goto_0
 
-    iget-object p1, p0, Lq3e;->w0:Lf4e;
+    :cond_1
+    check-cast p1, Lq3e;
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lq3e;->b:Lzcf;
 
-    invoke-static {p1, v0, p0}, Lf4e;->q(Lf4e;Lsw7;Lnz3;)Ljava/lang/Object;
+    iget-object p1, p1, Lq3e;->b:Lzcf;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lzcf;->equals(Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lq3e;->b:Lzcf;
+
+    invoke-virtual {v0}, Lzcf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(message="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq3e;->b:Lzcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

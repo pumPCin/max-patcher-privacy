@@ -1,39 +1,27 @@
 .class public final Lz72;
-.super Lx72;
+.super La82;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lz72;
+.field public static final c:Lz72;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lz72;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lz72;->a:Lz72;
+    new-instance v1, Lfs;
+
+    invoke-direct {v1}, Lfs;-><init>()V
+
+    iput-object v1, v0, La82;->b:Ljava/lang/Object;
+
+    sput-object v0, Lz72;->c:Lz72;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(C)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CharMatcher.none()"
-
-    return-object v0
 .end method

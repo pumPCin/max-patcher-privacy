@@ -1,67 +1,97 @@
 .class public final Lq06;
-.super Ltde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr06;
 
-# static fields
-.field public static final J0:Landroid/graphics/drawable/ShapeDrawable;
+
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41800000    # 16.0f
-
-    mul-float/2addr v1, v2
-
-    const/16 v2, 0x8
-
-    new-array v3, v2, [F
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v2, :cond_0
-
-    aput v1, v3, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Landroid/graphics/drawable/shapes/RoundRectShape;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v3, v2, v2}, Landroid/graphics/drawable/shapes/RoundRectShape;-><init>([FLandroid/graphics/RectF;[F)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;->setShape(Landroid/graphics/drawable/shapes/Shape;)V
-
-    sput-object v0, Lq06;->J0:Landroid/graphics/drawable/ShapeDrawable;
+    iput-object p1, p0, Lq06;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x(Lww7;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lq06;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lq06;
+
+    iget-object v1, p0, Lq06;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lq06;->a:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lq06;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenPicker(includes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq06;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

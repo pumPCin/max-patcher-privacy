@@ -64,8 +64,10 @@
 .method public a(Ljava/lang/Runnable;)Ljava/lang/Runnable;
     .locals 2
 
+    .line 1
     monitor-enter p0
 
+    .line 2
     :try_start_0
     iget-object v0, p0, Lcom/my/tracker/obfuscated/h$a;->a:Ljava/util/ArrayDeque;
 
@@ -75,18 +77,21 @@
 
     check-cast v0, Lcom/my/tracker/obfuscated/h$a$a;
 
+    .line 3
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-nez v0, :cond_0
 
+    .line 4
     new-instance v0, Lcom/my/tracker/obfuscated/h$a$a;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lcom/my/tracker/obfuscated/h$a$a;-><init>(Lcom/my/tracker/obfuscated/h$a;)V
 
+    .line 5
     :cond_0
     iput-object p1, v0, Lcom/my/tracker/obfuscated/h$a$a;->b:Ljava/lang/Runnable;
 
@@ -95,6 +100,7 @@
     :catchall_0
     move-exception p1
 
+    .line 6
     :try_start_1
     monitor-exit p0
     :try_end_1
@@ -106,17 +112,21 @@
 .method public a(Lcom/my/tracker/obfuscated/h$a$a;)V
     .locals 1
 
+    .line 7
     monitor-enter p0
 
     const/4 v0, 0x0
 
+    .line 8
     :try_start_0
     iput-object v0, p1, Lcom/my/tracker/obfuscated/h$a$a;->b:Ljava/lang/Runnable;
 
+    .line 9
     iget-object v0, p0, Lcom/my/tracker/obfuscated/h$a;->a:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
+    .line 10
     monitor-exit p0
 
     return-void

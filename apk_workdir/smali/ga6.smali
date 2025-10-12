@@ -1,60 +1,76 @@
-.class public abstract Lga6;
+.class public final Lga6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lend;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lga6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Lend;
+.field public a:Ljava/lang/String;
+
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lend;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz94;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lz94;-><init>(I)V
+
+    sput-object v0, Lga6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lga6;->a:Lend;
+    iput-object p1, p0, Lga6;->a:Ljava/lang/String;
+
+    iput p2, p0, Lga6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lga6;->a:Lend;
-
-    invoke-interface {v0}, Lend;->b()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public e(J)Lcnd;
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v0, p0, Lga6;->a:Lend;
+    iget-object p2, p0, Lga6;->a:Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Lend;->e(J)Lcnd;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget p2, p0, Lga6;->b:I
 
-    return-object p1
-.end method
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public f()J
-    .locals 2
-
-    iget-object v0, p0, Lga6;->a:Lend;
-
-    invoke-interface {v0}, Lend;->f()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-void
 .end method

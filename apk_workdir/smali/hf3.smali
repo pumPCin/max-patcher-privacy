@@ -2,192 +2,230 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnDrawListener;
+.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Executor;
+
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:J
 
-.field public b:I
+.field public b:Ljava/lang/Runnable;
 
-.field public c:I
+.field public c:Z
 
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/io/Serializable;
-
-.field public f:Ljava/io/Serializable;
-
-.field public g:Ljava/lang/Object;
+.field public final synthetic o:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;[Ljava/lang/Class;)V
-    .locals 3
+.method public constructor <init>(Landroidx/fragment/app/b;)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lhf3;->o:Landroidx/fragment/app/b;
 
-    iput-object v0, p0, Lhf3;->a:Ljava/lang/String;
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    new-instance v0, Ljava/util/HashSet;
+    move-result-wide v0
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    const/16 p1, 0x2710
 
-    iput-object v0, p0, Lhf3;->d:Ljava/lang/Object;
+    int-to-long v2, p1
 
-    new-instance v1, Ljava/util/HashSet;
+    add-long/2addr v0, v2
 
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+    iput-wide v0, p0, Lhf3;->a:J
 
-    iput-object v1, p0, Lhf3;->e:Ljava/io/Serializable;
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lhf3;->b:I
-
-    iput v1, p0, Lhf3;->c:I
-
-    new-instance v2, Ljava/util/HashSet;
-
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v2, p0, Lhf3;->f:Ljava/io/Serializable;
-
-    invoke-static {p1}, Lc8c;->a(Ljava/lang/Class;)Lc8c;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    array-length p1, p2
-
-    :goto_0
-    if-ge v1, p1, :cond_0
-
-    aget-object v0, p2, v1
-
-    const-string v2, "Null interface"
-
-    invoke-static {v0, v2}, Lnu3;->h(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lhf3;->d:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/HashSet;
-
-    invoke-static {v0}, Lc8c;->a(Ljava/lang/Class;)Lc8c;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljo4;)V
-    .locals 2
+.method public final a(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p1, Ljo4;->a:Lc8c;
-
-    iget-object v1, p0, Lhf3;->d:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/HashSet;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-boolean v0, p0, Lhf3;->c:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lhf3;->e:Ljava/io/Serializable;
+    const/4 v0, 0x1
 
-    check-cast v0, Ljava/util/HashSet;
+    iput-boolean v0, p0, Lhf3;->c:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
+
+    iput-object p1, p0, Lhf3;->b:Ljava/lang/Runnable;
+
+    iget-object p1, p0, Lhf3;->o:Landroidx/fragment/app/b;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Lhf3;->c:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {p1}, Landroid/view/View;->postInvalidate()V
 
-    const-string v0, "Components are not allowed to depend on interfaces they themselves provide."
+    return-void
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    new-instance v0, Low1;
 
-    throw p1
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v1, p0}, Low1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+
+    return-void
 .end method
 
-.method public b()Lif3;
-    .locals 9
+.method public final onDraw()V
+    .locals 6
 
-    iget-object v0, p0, Lhf3;->g:Ljava/lang/Object;
+    iget-object v0, p0, Lhf3;->b:Ljava/lang/Runnable;
 
-    check-cast v0, Lxf3;
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
+    iput-object v0, p0, Lhf3;->b:Ljava/lang/Runnable;
+
+    iget-object v0, p0, Lhf3;->o:Landroidx/fragment/app/b;
+
+    iget-object v0, v0, Lkf3;->Z:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsd6;
+
+    iget-object v2, v0, Lsd6;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-boolean v0, v0, Lsd6;->c:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v2
+
     if-eqz v0, :cond_1
 
-    new-instance v1, Lif3;
+    iput-boolean v1, p0, Lhf3;->c:Z
 
-    iget-object v2, p0, Lhf3;->a:Ljava/lang/String;
+    iget-object v0, p0, Lhf3;->o:Landroidx/fragment/app/b;
 
-    new-instance v3, Ljava/util/HashSet;
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    iget-object v0, p0, Lhf3;->d:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ljava/util/HashSet;
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    move-result-object v0
 
-    new-instance v4, Ljava/util/HashSet;
+    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v0, p0, Lhf3;->e:Ljava/io/Serializable;
+    return-void
 
-    check-cast v0, Ljava/util/HashSet;
+    :catchall_0
+    move-exception v0
 
-    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    iget v5, p0, Lhf3;->b:I
-
-    iget v6, p0, Lhf3;->c:I
-
-    iget-object v0, p0, Lhf3;->g:Ljava/lang/Object;
-
-    move-object v7, v0
-
-    check-cast v7, Lxf3;
-
-    iget-object v0, p0, Lhf3;->f:Ljava/io/Serializable;
-
-    move-object v8, v0
-
-    check-cast v8, Ljava/util/HashSet;
-
-    invoke-direct/range {v1 .. v8}, Lif3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILxf3;Ljava/util/Set;)V
-
-    return-object v1
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Missing required property: factory."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    monitor-exit v2
 
     throw v0
+
+    :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lhf3;->a:J
+
+    cmp-long v0, v2, v4
+
+    if-lez v0, :cond_1
+
+    iput-boolean v1, p0, Lhf3;->c:Z
+
+    iget-object v0, p0, Lhf3;->o:Landroidx/fragment/app/b;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lhf3;->o:Landroidx/fragment/app/b;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
+
+    return-void
 .end method

@@ -1,67 +1,45 @@
-.class public abstract Lmi8;
-.super Lo43;
+.class public final Lmi8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final y0:J
+.field public final a:Landroid/content/Context;
+
+.field public b:Z
+
+.field public c:Lbi8;
+
+.field public d:Loh8;
+
+.field public e:J
+
+.field public f:Z
+
+.field public g:Landroid/os/Handler;
+
+.field public h:Lqe5;
+
+.field public i:I
 
 
 # direct methods
-.method public constructor <init>(Lk94;Lr94;Lt76;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
+    iput-object p1, p0, Lmi8;->a:Landroid/content/Context;
 
-    move-object v1, p1
+    sget-object v0, Lbi8;->M:Lai8;
 
-    move-object v2, p2
+    iput-object v0, p0, Lmi8;->c:Lbi8;
 
-    move-object v4, p3
+    new-instance v0, Lc0;
 
-    move v5, p4
+    invoke-direct {v0, p1}, Lc0;-><init>(Landroid/content/Context;)V
 
-    move-object/from16 v6, p5
-
-    move-wide/from16 v7, p6
-
-    move-wide/from16 v9, p8
-
-    invoke-direct/range {v0 .. v10}, Lo43;-><init>(Lk94;Lr94;ILt76;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lmi8;->y0:J
+    iput-object v0, p0, Lmi8;->d:Loh8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a()J
-    .locals 5
-
-    iget-wide v0, p0, Lmi8;->y0:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-
-    :cond_0
-    return-wide v2
-.end method
-
-.method public abstract b()Z
 .end method

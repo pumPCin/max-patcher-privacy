@@ -1,204 +1,92 @@
 .class public final Lpp4;
-.super Ljava/lang/Object;
+.super Ld40;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lpp4;
-
-.field public static final f:Ljava/lang/String;
-
-.field public static final g:Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String;
-
-.field public static final i:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:I
+.field public final synthetic w0:Ls96;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic x0:Landroidx/fragment/app/DialogFragment;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lmp4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmp4;-><init>(I)V
-
-    invoke-virtual {v0}, Lmp4;->b()Lpp4;
-
-    move-result-object v0
-
-    sput-object v0, Lpp4;->e:Lpp4;
-
-    sget v0, Lt4g;->a:I
-
-    const/16 v0, 0x24
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lpp4;->f:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lpp4;->g:Ljava/lang/String;
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lpp4;->h:Ljava/lang/String;
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lpp4;->i:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lmp4;)V
-    .locals 1
+.method public constructor <init>(Landroidx/fragment/app/DialogFragment;Ls96;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Lmp4;->a:I
+    iput-object p1, p0, Lpp4;->x0:Landroidx/fragment/app/DialogFragment;
 
-    iput v0, p0, Lpp4;->a:I
-
-    iget v0, p1, Lmp4;->b:I
-
-    iput v0, p0, Lpp4;->b:I
-
-    iget v0, p1, Lmp4;->c:I
-
-    iput v0, p0, Lpp4;->c:I
-
-    iget-object p1, p1, Lmp4;->d:Ljava/io/Serializable;
-
-    check-cast p1, Ljava/lang/String;
-
-    iput-object p1, p0, Lpp4;->d:Ljava/lang/String;
+    iput-object p2, p0, Lpp4;->w0:Ls96;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lpp4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpp4;
-
-    iget v1, p0, Lpp4;->a:I
-
-    iget v3, p1, Lpp4;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lpp4;->b:I
-
-    iget v3, p1, Lpp4;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lpp4;->c:I
-
-    iget v3, p1, Lpp4;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lpp4;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lpp4;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final H(I)Landroid/view/View;
     .locals 2
 
-    const/16 v0, 0x20f
+    iget-object v0, p0, Lpp4;->w0:Ls96;
 
-    iget v1, p0, Lpp4;->a:I
+    invoke-virtual {v0}, Ls96;->I()Z
 
-    add-int/2addr v0, v1
+    move-result v1
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v1, :cond_0
 
-    iget v1, p0, Lpp4;->b:I
+    invoke-virtual {v0, p1}, Ls96;->H(I)Landroid/view/View;
 
-    add-int/2addr v0, v1
+    move-result-object p1
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-object p1
 
-    iget v1, p0, Lpp4;->c:I
+    :cond_0
+    iget-object v0, p0, Lpp4;->x0:Landroidx/fragment/app/DialogFragment;
 
-    add-int/2addr v0, v1
+    iget-object v0, v0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lpp4;->d:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
-    if-nez v1, :cond_0
+    move-result-object p1
 
-    const/4 v1, 0x0
+    return-object p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final I()Z
+    .locals 1
+
+    iget-object v0, p0, Lpp4;->w0:Ls96;
+
+    invoke-virtual {v0}, Ls96;->I()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lpp4;->x0:Landroidx/fragment/app/DialogFragment;
+
+    iget-boolean v0, v0, Landroidx/fragment/app/DialogFragment;->x1:Z
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    const/4 v0, 0x0
 
-    move-result v1
+    return v0
 
+    :cond_1
     :goto_0
-    add-int/2addr v0, v1
+    const/4 v0, 0x1
 
     return v0
 .end method

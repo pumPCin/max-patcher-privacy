@@ -1,33 +1,53 @@
 .class public final Lut4;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ltt4;
+.field public X:Lq10;
 
-.field public final b:Landroid/view/GestureDetector;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public c:I
+.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+.field public o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lut4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
 
-    new-instance v0, Landroid/view/GestureDetector;
-
-    new-instance v1, Lxz;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2, p0}, Lxz;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
-
-    iput-object v0, p0, Lut4;->b:Landroid/view/GestureDetector;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lut4;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lut4;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lut4;->r0:I
+
+    iget-object p1, p0, Lut4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->b(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lq10;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,146 +1,350 @@
 .class public final Lp0b;
-.super Lhy9;
+.super Landroid/view/OrientationEventListener;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic d:I
+
+
 # instance fields
-.field public final b:J
+.field public final a:Landroid/content/Context;
 
-.field public final c:Z
+.field public final b:Lxce;
 
-.field public final d:Ljava/lang/String;
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Z)V
+.method public constructor <init>(Landroid/content/Context;Lxce;)V
     .locals 1
 
-    sget-object v0, Loyf;->a:Loyf;
+    const/4 v0, 0x3
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, v0}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;I)V
 
-    iput-wide p1, p0, Lp0b;->b:J
+    iput-object p1, p0, Lp0b;->a:Landroid/content/Context;
 
-    iput-boolean p4, p0, Lp0b;->c:Z
-
-    iput-object p3, p0, Lp0b;->d:Ljava/lang/String;
+    iput-object p2, p0, Lp0b;->b:Lxce;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Z
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lp0b;->a:Landroid/content/Context;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of v1, p1, Lp0b;
+    const-string v1, "accelerometer_rotation"
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    return v2
+    move-result v0
 
-    :cond_1
-    check-cast p1, Lp0b;
+    const/4 v1, 0x1
 
-    iget-wide v3, p0, Lp0b;->b:J
+    if-ne v0, v1, :cond_0
 
-    iget-wide v5, p1, Lp0b;->b:J
+    move v2, v1
 
-    cmp-long v1, v3, v5
+    :cond_0
+    xor-int/lit8 v0, v2, 0x1
 
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lp0b;->c:Z
-
-    iget-boolean v3, p1, Lp0b;->c:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lp0b;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lp0b;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final onOrientationChanged(I)V
+    .locals 10
 
-    iget-wide v0, p0, Lp0b;->b:J
+    const/4 v0, -0x1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    if-ne p1, v0, :cond_0
 
-    move-result v0
+    goto/16 :goto_8
 
-    const/16 v1, 0x1f
+    :cond_0
+    iget-object v0, p0, Lp0b;->a:Landroid/content/Context;
 
-    mul-int/2addr v0, v1
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iget-boolean v2, p0, Lp0b;->c:Z
+    move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result v0
+    move-result-object v1
 
-    iget-object v1, p0, Lp0b;->d:Ljava/lang/String;
+    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    const-string v2, "window"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/WindowManager;
+
+    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/Display;->getRotation()I
+
+    move-result v2
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v4, :cond_2
+
+    :cond_1
+    if-eq v1, v4, :cond_5
+
+    :cond_2
+    if-eq v2, v5, :cond_3
+
+    if-ne v2, v3, :cond_4
+
+    :cond_3
+    if-ne v1, v5, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    move v1, v5
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    move v1, v4
+
+    :goto_1
+    const/16 v2, 0x12c
+
+    const/4 v6, 0x4
+
+    const/16 v7, 0x3c
+
+    const/16 v8, 0xdc
+
+    const/16 v9, 0x8c
+
+    if-ne v1, v5, :cond_a
+
+    if-lt p1, v7, :cond_6
+
+    if-gt p1, v9, :cond_6
+
+    :goto_2
+    move p1, v5
+
+    goto :goto_5
+
+    :cond_6
+    if-lt p1, v9, :cond_7
+
+    if-gt p1, v8, :cond_7
+
+    :goto_3
+    move p1, v6
+
+    goto :goto_5
+
+    :cond_7
+    if-lt p1, v8, :cond_9
+
+    if-gt p1, v2, :cond_9
+
+    :cond_8
+    move p1, v4
+
+    goto :goto_5
+
+    :cond_9
+    :goto_4
+    move p1, v3
+
+    goto :goto_5
+
+    :cond_a
+    if-lt p1, v7, :cond_b
+
+    if-gt p1, v9, :cond_b
+
+    goto :goto_4
+
+    :cond_b
+    if-lt p1, v9, :cond_c
+
+    if-gt p1, v8, :cond_c
+
+    goto :goto_2
+
+    :cond_c
+    if-lt p1, v8, :cond_8
+
+    if-gt p1, v2, :cond_8
+
+    goto :goto_3
+
+    :goto_5
+    invoke-virtual {p0}, Lp0b;->a()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    iget-object v2, p0, Lp0b;->b:Lxce;
 
-    return v1
-.end method
+    if-eqz v1, :cond_13
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget v1, p0, Lp0b;->c:I
 
-    const-string v0, "OpenChatCall(chatId="
+    if-eqz v1, :cond_d
 
-    const-string v1, ", isVideo="
+    if-eq p1, v1, :cond_d
 
-    iget-wide v2, p0, Lp0b;->b:J
+    goto/16 :goto_8
 
-    iget-boolean v4, p0, Lp0b;->c:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    :cond_d
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v1, ", link="
-
-    const-string v2, ")"
-
-    iget-object v3, p0, Lp0b;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v3, v2}, Lhqd;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v0
 
-    return-object v0
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-eqz v0, :cond_11
+
+    if-eq v0, v5, :cond_10
+
+    if-eq v0, v4, :cond_e
+
+    const/4 v3, 0x0
+
+    goto :goto_6
+
+    :cond_e
+    sget-object v0, Lo0b;->$EnumSwitchMapping$0:[I
+
+    invoke-static {p1}, Lsw1;->u(I)I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    if-ne p1, v5, :cond_f
+
+    move v3, v5
+
+    goto :goto_6
+
+    :cond_f
+    move v3, v4
+
+    goto :goto_6
+
+    :cond_10
+    sget-object v0, Lo0b;->$EnumSwitchMapping$0:[I
+
+    invoke-static {p1}, Lsw1;->u(I)I
+
+    move-result p1
+
+    aget p1, v0, p1
+
+    if-ne p1, v4, :cond_12
+
+    move v3, v6
+
+    goto :goto_6
+
+    :cond_11
+    move v3, p1
+
+    :cond_12
+    :goto_6
+    iput v3, p0, Lp0b;->c:I
+
+    if-eqz v2, :cond_18
+
+    invoke-virtual {p0}, Lp0b;->a()Z
+
+    move-result p1
+
+    invoke-virtual {v2, v3, p1}, Lxce;->t(IZ)V
+
+    return-void
+
+    :cond_13
+    iget v1, p0, Lp0b;->c:I
+
+    if-eqz v1, :cond_17
+
+    if-eq p1, v1, :cond_14
+
+    goto :goto_7
+
+    :cond_14
+    if-ne p1, v1, :cond_15
+
+    goto :goto_8
+
+    :cond_15
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    if-ne v0, v4, :cond_16
+
+    if-eq p1, v3, :cond_18
+
+    if-ne p1, v6, :cond_16
+
+    goto :goto_8
+
+    :cond_16
+    if-ne v0, v5, :cond_17
+
+    if-eq p1, v4, :cond_18
+
+    if-ne p1, v5, :cond_17
+
+    goto :goto_8
+
+    :cond_17
+    :goto_7
+    iput p1, p0, Lp0b;->c:I
+
+    if-eqz v2, :cond_18
+
+    invoke-virtual {p0}, Lp0b;->a()Z
+
+    move-result v0
+
+    invoke-virtual {v2, p1, v0}, Lxce;->t(IZ)V
+
+    :cond_18
+    :goto_8
+    return-void
 .end method

@@ -1,202 +1,77 @@
-.class public final Lzng;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public abstract Lzng;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfqf;
 
-
-# instance fields
-.field public final a:Landroid/view/ViewGroup;
-
-.field public final b:Landroid/view/View;
-
-.field public final c:Landroid/view/View;
-
-.field public d:Z
-
-.field public final synthetic e:Laog;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Laog;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lzng;->e:Laog;
+    const-string v0, "WakeLocks"
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lzng;->d:Z
-
-    iput-object p2, p0, Lzng;->a:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, Lzng;->b:Landroid/view/View;
-
-    iput-object p4, p0, Lzng;->c:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Liqf;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c(Liqf;)V
-    .locals 0
-
-    invoke-virtual {p1, p0}, Liqf;->D(Lfqf;)Liqf;
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 3
-
-    sget v0, Lmdc;->save_overlay_view:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lzng;->c:Landroid/view/View;
-
-    invoke-virtual {v2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lzng;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
+    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lzng;->b:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lzng;->d:Z
+    sput-object v0, Lzng;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final h(Liqf;)V
-    .locals 0
+.method public static final a(Landroid/content/Context;Ljava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    .locals 2
 
-    iget-boolean p1, p0, Lzng;->d:Z
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    if-eqz p1, :cond_0
+    move-result-object p0
 
-    invoke-virtual {p0}, Lzng;->g()V
+    const-string v0, "power"
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object p0
 
-    invoke-virtual {p0}, Lzng;->g()V
+    check-cast p0, Landroid/os/PowerManager;
 
-    return-void
-.end method
+    const-string v0, "WorkManager: "
 
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p0}, Lzng;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnimationPause(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, Lzng;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object v0, p0, Lzng;->b:Landroid/view/View;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
+    invoke-virtual {p0, v0, p1}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final onAnimationResume(Landroid/animation/Animator;)V
-    .locals 1
+    sget-object v0, Laog;->a:Laog;
 
-    iget-object p1, p0, Lzng;->b:Landroid/view/View;
+    monitor-enter v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    :try_start_0
+    sget-object v1, Laog;->b:Ljava/util/WeakHashMap;
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lzng;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, Lzng;->e:Laog;
-
-    invoke-virtual {p1}, Liqf;->d()V
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;Z)V
-    .locals 1
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p0, Lzng;->c:Landroid/view/View;
-
-    sget p2, Lmdc;->save_overlay_view:I
-
-    iget-object v0, p0, Lzng;->b:Landroid/view/View;
-
-    invoke-virtual {p1, p2, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lzng;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
+    invoke-virtual {v1, p0, p1}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
+    check-cast p1, Ljava/lang/String;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 p1, 0x1
+    monitor-exit v0
 
-    iput-boolean p1, p0, Lzng;->d:Z
+    return-object p0
 
-    :cond_0
-    return-void
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+
+    throw p0
 .end method

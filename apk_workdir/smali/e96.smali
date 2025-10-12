@@ -1,48 +1,127 @@
 .class public final Le96;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lpb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lg96;
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lg96;I)V
     .locals 0
 
-    iput-object p1, p0, Le96;->Y:Lpb;
+    iput p2, p0, Le96;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Le96;->b:Lg96;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 12
 
-    iput-object p1, p0, Le96;->o:Ljava/lang/Object;
+    iget v0, p0, Le96;->a:I
 
-    iget p1, p0, Le96;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Le96;->b:Lg96;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Lg96;->a()V
 
-    iput p1, p0, Le96;->X:I
+    iget-object v1, v0, Lg96;->o:Landroid/view/View;
 
-    iget-object p1, p0, Le96;->Y:Lpb;
+    invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
-    const/4 v0, 0x0
+    move-result v2
 
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz v2, :cond_2
 
-    move-result-object p1
+    invoke-virtual {v1}, Landroid/view/View;->isLongClickable()Z
 
-    return-object p1
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lg96;->c()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-interface {v2, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v8, 0x3
+
+    const/4 v9, 0x0
+
+    move-wide v6, v4
+
+    invoke-static/range {v4 .. v11}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
+
+    iput-boolean v3, v0, Lg96;->Z:Z
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Le96;->b:Lg96;
+
+    iget-object v0, v0, Lg96;->o:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

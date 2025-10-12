@@ -2,5 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpv9;
+
+# virtual methods
+.method public abstract h(Ljava/lang/String;)V
+.end method
+
+.method public abstract j(Ljava/lang/String;Ljava/lang/Throwable;)V
+.end method
+
+.method public abstract p(Ljava/lang/Throwable;)V
+.end method

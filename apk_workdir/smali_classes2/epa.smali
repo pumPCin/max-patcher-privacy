@@ -4,6 +4,44 @@
 
 
 # static fields
+.field public static final A:I
+
+.field public static final B:I
+
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
 .field public static final a:I
 
 .field public static final b:I
@@ -40,82 +78,206 @@
 
 .field public static final r:I
 
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_animals_and_plants:I
+    sget v0, Lbdc;->chat_screen_message_send_error_delete_action:I
 
     sput v0, Lepa;->a:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_classic:I
+    sget v0, Lbdc;->chat_screen_message_send_error_resend_action_multi:I
 
     sput v0, Lepa;->b:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_flags:I
+    sget v0, Lbdc;->chat_screen_message_send_error_resend_action_solo:I
 
     sput v0, Lepa;->c:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_food_and_drink:I
+    sget v0, Lbdc;->messages_list_chat_description_view_id:I
 
     sput v0, Lepa;->d:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_gestures_and_people:I
+    sget v0, Lbdc;->messages_list_chat_description_view_type:I
 
     sput v0, Lepa;->e:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_objects:I
+    sget v0, Lbdc;->messages_list_confirm_cancel:I
 
     sput v0, Lepa;->f:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_sport_and_activity:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_extremism:I
 
     sput v0, Lepa;->g:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_symbols:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_fake:I
 
     sput v0, Lepa;->h:I
 
-    sget v0, Lijc;->oneme_media_keyboard_emoji_travels_and_transport:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_other:I
 
     sput v0, Lepa;->i:I
 
-    sget v0, Lijc;->oneme_media_keyboard_favorite:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_porno:I
 
     sput v0, Lepa;->j:I
 
-    sget v0, Lijc;->oneme_media_keyboard_popular:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_spam:I
 
     sput v0, Lepa;->k:I
 
-    sget v0, Lijc;->oneme_media_keyboard_recent:I
+    sget v0, Lbdc;->messages_list_confirm_complaint_threat:I
 
     sput v0, Lepa;->l:I
 
-    sget v0, Lijc;->oneme_media_keyboard_recent_clear_action:I
+    sget v0, Lbdc;->messages_list_confirm_delete:I
 
     sput v0, Lepa;->m:I
 
-    sget v0, Lijc;->oneme_media_keyboard_recent_clear_cancel:I
+    sget v0, Lbdc;->messages_list_confirm_delete_for_all:I
 
     sput v0, Lepa;->n:I
 
-    sget v0, Lijc;->oneme_media_keyboard_recent_clear_title:I
+    sget v0, Lbdc;->messages_list_confirm_pin_with_notify:I
 
     sput v0, Lepa;->o:I
 
-    sget v0, Lijc;->oneme_media_keyboard_tab_emoji:I
+    sget v0, Lbdc;->messages_list_confirm_pin_without_notify:I
 
     sput v0, Lepa;->p:I
 
-    sget v0, Lijc;->oneme_media_keyboard_tab_gifs:I
+    sget v0, Lbdc;->messages_list_context_action_copy:I
 
     sput v0, Lepa;->q:I
 
-    sget v0, Lijc;->oneme_media_keyboard_tab_stickers:I
+    sget v0, Lbdc;->messages_list_context_action_copy_photo:I
 
     sput v0, Lepa;->r:I
+
+    sget v0, Lbdc;->messages_list_context_action_delete:I
+
+    sput v0, Lepa;->s:I
+
+    sget v0, Lbdc;->messages_list_context_action_delete_for_all:I
+
+    sput v0, Lepa;->t:I
+
+    sget v0, Lbdc;->messages_list_context_action_edit:I
+
+    sput v0, Lepa;->u:I
+
+    sget v0, Lbdc;->messages_list_context_action_forward:I
+
+    sput v0, Lepa;->v:I
+
+    sget v0, Lbdc;->messages_list_context_action_mark_as_unread:I
+
+    sput v0, Lepa;->w:I
+
+    sget v0, Lbdc;->messages_list_context_action_pin:I
+
+    sput v0, Lepa;->x:I
+
+    sget v0, Lbdc;->messages_list_context_action_reply:I
+
+    sput v0, Lepa;->y:I
+
+    sget v0, Lbdc;->messages_list_context_action_report:I
+
+    sput v0, Lepa;->z:I
+
+    sget v0, Lbdc;->messages_list_context_action_save_to_gallery:I
+
+    sput v0, Lepa;->A:I
+
+    sget v0, Lbdc;->messages_list_context_action_select:I
+
+    sput v0, Lepa;->B:I
+
+    sget v0, Lbdc;->messages_list_context_action_unpin:I
+
+    sput v0, Lepa;->C:I
+
+    sget v0, Lbdc;->messages_list_context_actions_view_type:I
+
+    sput v0, Lepa;->D:I
+
+    sget v0, Lbdc;->messages_list_context_content_container:I
+
+    sput v0, Lepa;->E:I
+
+    sget v0, Lbdc;->messages_list_context_member_view_type:I
+
+    sput v0, Lepa;->F:I
+
+    sget v0, Lbdc;->messages_list_context_members_member_cell:I
+
+    sput v0, Lepa;->G:I
+
+    sget v0, Lbdc;->messages_list_context_members_member_reaction:I
+
+    sput v0, Lepa;->H:I
+
+    sget v0, Lbdc;->messages_list_context_reactions_container:I
+
+    sput v0, Lepa;->I:I
+
+    sget v0, Lbdc;->messages_list_item_alias:I
+
+    sput v0, Lepa;->J:I
+
+    sget v0, Lbdc;->messages_list_item_date:I
+
+    sput v0, Lepa;->K:I
+
+    sget v0, Lbdc;->messages_list_item_keyboard_buttons:I
+
+    sput v0, Lepa;->L:I
+
+    sget v0, Lbdc;->messages_list_item_single_image:I
+
+    sput v0, Lepa;->M:I
+
+    sget v0, Lbdc;->messages_list_item_text:I
+
+    sput v0, Lepa;->N:I
+
+    sget v0, Lbdc;->messages_list_item_title:I
+
+    sput v0, Lepa;->O:I
+
+    sget v0, Lbdc;->messages_list_item_video_duration:I
+
+    sput v0, Lepa;->P:I
+
+    sget v0, Lbdc;->messages_list_recycler_view:I
+
+    sput v0, Lepa;->Q:I
+
+    sget v0, Lbdc;->messages_list_scroll_btn:I
+
+    sput v0, Lepa;->R:I
+
+    sget v0, Lbdc;->messages_list_share_contact_for_bot_action:I
+
+    sput v0, Lepa;->S:I
 
     return-void
 .end method

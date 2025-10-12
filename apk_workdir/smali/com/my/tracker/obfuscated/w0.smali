@@ -7,6 +7,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
     .locals 2
 
+    .line 1
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -22,12 +23,14 @@
 
     move-result-object p0
 
+    .line 2
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     invoke-virtual {p0, p1}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
+    .line 3
     invoke-virtual {p2, p0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -39,6 +42,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     new-instance p2, Ljava/lang/StringBuilder;
 
     const-string v0, "SystemUtils: exception when access to application info with key - "
@@ -61,6 +65,7 @@
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
+    .line 5
     const-string v0, "SystemUtils: value in system properties is null for "
 
     const/4 v1, 0x0
@@ -80,6 +85,7 @@
 
     move-result-object v4
 
+    .line 6
     invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -88,12 +94,14 @@
 
     move-result-object v3
 
+    .line 7
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
+    .line 8
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -102,6 +110,7 @@
 
     return-object v2
 
+    .line 9
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -122,6 +131,7 @@
     :catchall_0
     move-exception v0
 
+    .line 10
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "SystemUtils: error occurred when getting value for property - "

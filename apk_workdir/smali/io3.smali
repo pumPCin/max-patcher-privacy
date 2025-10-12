@@ -3,110 +3,264 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final i:Lio3;
+
+
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:I
+.field public final b:Z
 
-.field public c:F
+.field public final c:Z
 
-.field public d:F
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:Ljava/util/Set;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 11
+
+    new-instance v0, Lio3;
+
+    const-wide/16 v8, -0x1
+
+    sget-object v10, Ly65;->a:Ly65;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const-wide/16 v6, -0x1
+
+    invoke-direct/range {v0 .. v10}, Lio3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    sput-object v0, Lio3;->i:Lio3;
+
+    return-void
+.end method
+
+.method public constructor <init>(IZZZZJJLjava/util/Set;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lio3;->a:I
+
+    iput-boolean p2, p0, Lio3;->b:Z
+
+    iput-boolean p3, p0, Lio3;->c:Z
+
+    iput-boolean p4, p0, Lio3;->d:Z
+
+    iput-boolean p5, p0, Lio3;->e:Z
+
+    iput-wide p6, p0, Lio3;->f:J
+
+    iput-wide p8, p0, Lio3;->g:J
+
+    iput-object p10, p0, Lio3;->h:Ljava/util/Set;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object v0, Lzlc;->PropertySet:[I
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_4
-
-    invoke-virtual {p1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
-
-    move-result v1
-
-    sget v2, Lzlc;->PropertySet_android_alpha:I
-
-    if-ne v1, v2, :cond_0
-
-    iget v2, p0, Lio3;->c:F
-
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lio3;->c:F
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    sget v2, Lzlc;->PropertySet_android_visibility:I
+    if-eqz p1, :cond_9
 
-    if-ne v1, v2, :cond_1
+    const-class v0, Lio3;
 
-    iget v2, p0, Lio3;->a:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+    move-result-object v1
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iput v1, p0, Lio3;->a:I
+    move-result v0
 
-    sget-object v2, Lko3;->d:[I
+    if-nez v0, :cond_1
 
-    aget v1, v2, v1
-
-    iput v1, p0, Lio3;->a:I
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    sget v2, Lzlc;->PropertySet_visibilityMode:I
+    check-cast p1, Lio3;
 
-    if-ne v1, v2, :cond_2
+    iget-boolean v0, p0, Lio3;->b:Z
 
-    iget v2, p0, Lio3;->b:I
+    iget-boolean v1, p1, Lio3;->b:Z
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getInt(II)I
+    if-eq v0, v1, :cond_2
 
-    move-result v1
-
-    iput v1, p0, Lio3;->b:I
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    sget v2, Lzlc;->PropertySet_motionProgress:I
+    iget-boolean v0, p0, Lio3;->c:Z
 
-    if-ne v1, v2, :cond_3
+    iget-boolean v1, p1, Lio3;->c:Z
 
-    iget v2, p0, Lio3;->d:F
+    if-eq v0, v1, :cond_3
 
-    invoke-virtual {p1, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result v1
-
-    iput v1, p0, Lio3;->d:F
+    goto :goto_0
 
     :cond_3
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    iget-boolean v0, p0, Lio3;->d:Z
+
+    iget-boolean v1, p1, Lio3;->d:Z
+
+    if-eq v0, v1, :cond_4
 
     goto :goto_0
 
     :cond_4
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    iget-boolean v0, p0, Lio3;->e:Z
 
-    return-void
+    iget-boolean v1, p1, Lio3;->e:Z
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-wide v0, p0, Lio3;->f:J
+
+    iget-wide v2, p1, Lio3;->f:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-wide v0, p0, Lio3;->g:J
+
+    iget-wide v2, p1, Lio3;->g:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lio3;->a:I
+
+    iget v1, p1, Lio3;->a:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v0, p0, Lio3;->h:Ljava/util/Set;
+
+    iget-object p1, p1, Lio3;->h:Ljava/util/Set;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_9
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget v0, p0, Lio3;->a:I
+
+    invoke-static {v0}, Lsw1;->u(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lio3;->b:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lio3;->c:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lio3;->d:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lio3;->e:Z
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lio3;->f:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lio3;->g:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lio3;->h:Ljava/util/Set;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method

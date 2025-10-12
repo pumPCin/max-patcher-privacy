@@ -1,25 +1,14 @@
-.class public final Livc;
+.class public interface abstract Livc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+# virtual methods
+.method public abstract a(Landroid/view/MotionEvent;)V
+.end method
 
-.field public b:Ljava/lang/CharSequence;
+.method public abstract c(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
+.end method
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object v0, p0, Livc;->a:Ljava/util/LinkedHashSet;
-
-    return-void
+.method public abstract e(Z)V
 .end method

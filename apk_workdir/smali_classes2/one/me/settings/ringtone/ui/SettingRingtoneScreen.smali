@@ -2,15 +2,19 @@
 .super Lone/me/sdk/arch/Widget;
 .source "SourceFile"
 
+# interfaces
+.implements Lmy3;
+
 
 # annotations
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u00012\u00020\u0002B\u0007\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00a8\u0006\u0005"
     }
     d2 = {
         "Lone/me/settings/ringtone/ui/SettingRingtoneScreen;",
         "Lone/me/sdk/arch/Widget;",
+        "Lmy3;",
         "<init>",
         "()V",
         "settings-ringtone_release"
@@ -26,26 +30,30 @@
 
 
 # static fields
-.field public static final synthetic Y:[Ltm7;
+.field public static final synthetic r0:[Lpl7;
 
 
 # instance fields
-.field public final X:Li4e;
+.field public final X:Lyn7;
 
-.field public final a:Led7;
+.field public final Y:Lvoc;
 
-.field public final b:Ljava/lang/Object;
+.field public final Z:Ly2e;
 
-.field public final c:Lbp7;
+.field public final a:Lyb7;
 
-.field public final o:Lmqc;
+.field public final b:La4d;
+
+.field public final c:Ljava/lang/Object;
+
+.field public o:Lfy3;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Lt5c;
+    new-instance v0, Lf4c;
 
     const-class v1, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
 
@@ -55,25 +63,25 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v1, Lxxc;->a:Lyxc;
+    sget-object v1, Lewc;->a:Lfwc;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Ltm7;
+    new-array v1, v1, [Lpl7;
 
     aput-object v0, v1, v4
 
-    sput-object v1, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:[Ltm7;
+    sput-object v1, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->r0:[Lpl7;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 10
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -81,219 +89,326 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILof4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILaf4;)V
 
-    sget-object v0, Led7;->d:Led7;
+    sget-object v1, Lyb7;->d:Lyb7;
 
-    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->a:Led7;
+    iput-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->a:Lyb7;
 
-    new-instance v0, Lwzd;
+    new-instance v1, La4d;
 
-    invoke-direct {v0, v1}, Lwzd;-><init>(I)V
+    new-instance v3, Lgyd;
 
-    invoke-static {v2, v0}, Lvr0;->r(ILve6;)Lbp7;
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v4}, Lgyd;-><init>(I)V
+
+    const/4 v4, 0x6
+
+    invoke-direct {v1, v3, v0, v4}, La4d;-><init>(Ltd6;Ltd6;I)V
+
+    iput-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->b:La4d;
+
+    new-instance v0, Lgyd;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lgyd;-><init>(I)V
+
+    invoke-static {v2, v0}, Lwee;->u(ILtd6;)Lyn7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->b:Ljava/lang/Object;
+    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->c:Ljava/lang/Object;
 
-    new-instance v0, Lm6d;
+    new-instance v0, Lr4d;
 
-    const/16 v1, 0xb
+    const/16 v1, 0xc
 
-    invoke-direct {v0, v1, p0}, Lm6d;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lr4d;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Lpxb;
+    new-instance v1, Ldwb;
 
     const/16 v2, 0xc
 
-    invoke-direct {v1, v2, v0}, Lpxb;-><init>(ILve6;)V
+    invoke-direct {v1, v2, v0}, Ldwb;-><init>(ILtd6;)V
 
-    const-class v0, Lb0e;
+    const-class v0, Lpyd;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->c:Lbp7;
+    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->X:Lyn7;
 
-    sget v1, Lnua;->g:I
+    sget v0, Lfta;->g:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:Lvoc;
+
+    new-instance v3, Ly2e;
+
+    new-instance v0, Liyd;
+
+    invoke-direct {v0, p0}, Liyd;-><init>(Ljava/lang/Object;)V
+
+    sget-object v1, Lz2e;->a:Lz2e;
+
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->o:Lmqc;
+    const-class v2, Lzla;
 
-    new-instance v4, Li4e;
+    invoke-virtual {v1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    new-instance v1, Lzo6;
+    move-result-object v1
 
-    const/16 v2, 0x1c
+    check-cast v1, Lzla;
 
-    invoke-direct {v1, v2, p0}, Lzo6;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v1}, Lzla;->a()Ljava/util/concurrent/ExecutorService;
 
-    sget-object v2, Lj4e;->a:Lj4e;
+    move-result-object v1
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
+    invoke-direct {v3, v0, v1}, Ly2e;-><init>(Liyd;Ljava/util/concurrent/ExecutorService;)V
 
-    move-result-object v2
+    iput-object v3, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Z:Ly2e;
 
-    const-class v3, Ljna;
-
-    invoke-virtual {v2, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljna;
-
-    invoke-virtual {v2}, Ljna;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v2
-
-    invoke-direct {v4, v1, v2}, Li4e;-><init>(Lzo6;Ljava/util/concurrent/ExecutorService;)V
-
-    iput-object v4, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->X:Li4e;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
 
     move-result-object v0
 
-    check-cast v0, Lb0e;
+    iget-object v0, v0, Lpyd;->s0:Lbpc;
 
-    iget-object v0, v0, Lb0e;->Y:Lsqc;
+    new-instance v1, Lqgb;
 
-    new-instance v2, Lxhb;
+    const/4 v7, 0x4
 
-    const/4 v8, 0x4
+    const/4 v8, 0x6
 
-    const/4 v9, 0x6
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
+    const-class v4, Ly2e;
 
-    const-class v5, Li4e;
+    const-string v5, "submitList"
 
-    const-string v6, "submitList"
+    const-string v6, "submitList(Ljava/util/List;)V"
 
-    const-string v7, "submitList(Ljava/util/List;)V"
+    invoke-direct/range {v1 .. v8}, Lqgb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-direct/range {v2 .. v9}, Lxhb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    new-instance v1, Ljx5;
+    new-instance v2, Lnw5;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v0, v2, v3}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v2, v0, v1, v3}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lgq7;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v2, v0}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Led7;
+.method public final B0()Lpyd;
     .locals 1
 
-    iget-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->a:Led7;
+    iget-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->X:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpyd;
+
+    return-object v0
+.end method
+
+.method public final F(ILandroid/os/Bundle;)V
+    .locals 4
+
+    if-eqz p2, :cond_1
+
+    const-string p1, "ringtone_file_path"
+
+    invoke-virtual {p2, p1}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
+
+    move-result-object p2
+
+    iget-object v0, p2, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p2, Lpyd;->c:Lyn7;
+
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Le7f;
+
+    check-cast v1, Lmka;
+
+    invoke-virtual {v1}, Lmka;->b()Lh24;
+
+    move-result-object v1
+
+    new-instance v2, Llyd;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p2, p1, v3}, Llyd;-><init>(Lpyd;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v3, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final getInsetsConfig()Lyb7;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->a:Lyb7;
+
+    return-object v0
+.end method
+
+.method public final getScreenDelegate()Lsdd;
+    .locals 1
+
+    iget-object v0, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->b:La4d;
 
     return-object v0
 .end method
 
 .method public final onActivityResult(IILandroid/content/Intent;)V
-    .locals 2
+    .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lb04;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Ljz3;->onActivityResult(IILandroid/content/Intent;)V
+
+    const/16 p2, 0x3e6
+
+    const/4 v0, 0x0
+
+    if-eq p1, p2, :cond_4
 
     const/16 p2, 0x3e7
 
     if-eq p1, p2, :cond_0
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_0
-    const/4 p1, 0x0
-
     if-eqz p3, :cond_1
 
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
-    move-result-object p2
+    move-result-object p1
 
-    if-eqz p2, :cond_1
+    if-eqz p1, :cond_1
 
-    const-string p3, "android.intent.extra.ringtone.PICKED_URI"
+    const-string p2, "android.intent.extra.ringtone.PICKED_URI"
 
-    invoke-virtual {p2, p3}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/BaseBundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object p1
 
     goto :goto_0
 
     :cond_1
-    move-object p2, p1
+    move-object p1, v0
 
     :goto_0
-    instance-of p3, p2, Landroid/net/Uri;
+    instance-of p2, p1, Landroid/net/Uri;
 
-    if-eqz p3, :cond_2
+    if-eqz p2, :cond_2
 
-    check-cast p2, Landroid/net/Uri;
+    move-object v0, p1
+
+    check-cast v0, Landroid/net/Uri;
+
+    :cond_2
+    if-nez v0, :cond_3
 
     goto :goto_1
 
-    :cond_2
-    move-object p2, p1
-
-    :goto_1
-    if-nez p2, :cond_3
-
-    :goto_2
-    return-void
-
     :cond_3
-    iget-object p3, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->c:Lbp7;
-
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lb0e;
-
-    invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lv4d;
-
-    invoke-direct {v0, p2}, Lv4d;-><init>(Ljava/lang/String;)V
-
-    new-instance p2, La0e;
-
-    invoke-direct {p2, p3, v0, p1}, La0e;-><init>(Lb0e;Lw4d;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x1
-
-    invoke-static {p3, p1, p2, v0}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
 
     move-result-object p1
 
-    iget-object p2, p3, Lb0e;->o:Lg65;
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    sget-object v0, Lb0e;->w0:[Ltm7;
+    move-result-object p2
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    aget-object v0, v0, v1
+    new-instance p3, La3d;
 
-    invoke-virtual {p2, p3, v0, p1}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    invoke-direct {p3, p2}, La3d;-><init>(Ljava/lang/String;)V
 
+    invoke-virtual {p1, p3}, Lpyd;->v(Lb3d;)V
+
+    return-void
+
+    :cond_4
+    if-eqz p3, :cond_6
+
+    invoke-virtual {p3}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+
+    move-result-object p1
+
+    if-nez p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
+
+    move-result-object p2
+
+    iget-object p3, p2, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p2, Lpyd;->c:Lyn7;
+
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Le7f;
+
+    check-cast v1, Lmka;
+
+    invoke-virtual {v1}, Lmka;->b()Lh24;
+
+    move-result-object v1
+
+    new-instance v2, Lnyd;
+
+    invoke-direct {v2, p2, p1, v0}, Lnyd;-><init>(Lpyd;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p3, v1, v0, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    :cond_6
+    :goto_1
     return-void
 .end method
 
@@ -320,7 +435,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p1, Ltya;
+    new-instance p1, Ljxa;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -328,9 +443,9 @@
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, p2, v1}, Ltya;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p2, v1}, Ljxa;-><init>(Landroid/content/Context;I)V
 
-    sget p2, Lnua;->h:I
+    sget p2, Lfta;->h:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -342,25 +457,25 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p2, Lpua;->g:I
+    sget p2, Lhta;->l:I
 
-    invoke-virtual {p1, p2}, Ltya;->setTitle(I)V
+    invoke-virtual {p1, p2}, Ljxa;->setTitle(I)V
 
-    sget-object p2, Llya;->a:Llya;
+    sget-object p2, Lbxa;->a:Lbxa;
 
-    invoke-virtual {p1, p2}, Ltya;->setForm(Llya;)V
+    invoke-virtual {p1, p2}, Ljxa;->setForm(Lbxa;)V
 
-    new-instance p2, Lbya;
+    new-instance p2, Lrwa;
 
-    new-instance v1, Lkgb;
+    new-instance v1, Lcdb;
 
-    const/16 v2, 0x15
+    const/16 v2, 0x17
 
-    invoke-direct {v1, v2, p0}, Lkgb;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lcdb;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, v1}, Lbya;-><init>(Lxe6;)V
+    invoke-direct {p2, v1}, Lrwa;-><init>(Lvd6;)V
 
-    invoke-virtual {p1, p2}, Ltya;->setLeftActions(Lhya;)V
+    invoke-virtual {p1, p2}, Ljxa;->setLeftActions(Lxwa;)V
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -374,7 +489,7 @@
 
     invoke-direct {p1, p2, v1}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p2, Lnua;->g:I
+    sget p2, Lfta;->g:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -392,23 +507,23 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p2, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->X:Li4e;
+    iget-object p2, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Z:Ly2e;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
 
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Luwc;)V
+    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lcvc;)V
 
-    new-instance v4, Ljsc;
+    new-instance v4, Ll8d;
 
-    const/16 p2, 0x10
+    const/16 p2, 0xa
 
-    invoke-direct {v4, p2, p0}, Ljsc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v4, p2, p0}, Ll8d;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Lzmd;
+    new-instance v2, Lild;
 
-    sget-object p2, Lbx4;->y0:Lsed;
+    sget-object p2, Lrw4;->t0:Lss6;
 
-    invoke-virtual {p2, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-virtual {p2, p1}, Lss6;->v(Landroid/view/View;)Llwa;
 
     move-result-object v3
 
@@ -418,17 +533,17 @@
 
     const/4 v5, 0x0
 
-    invoke-direct/range {v2 .. v7}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
+    invoke-direct/range {v2 .. v7}, Lild;-><init>(Llwa;Lgld;Lk;Lryc;I)V
 
-    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
+    invoke-virtual {p1, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
 
-    new-instance p2, Lm4e;
+    new-instance p2, Lc3e;
 
     const/4 p3, 0x0
 
-    invoke-direct {p2, p3}, Lm4e;-><init>(I)V
+    invoke-direct {p2, p3}, Lc3e;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lvwc;)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -440,7 +555,7 @@
 
     invoke-direct {p1, p2, v1, p3}, Lm;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v0}, Lk74;->K(Lnf6;Landroid/view/View;)V
+    invoke-static {p1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
 
     return-object v0
 .end method
@@ -448,15 +563,15 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    sget-object v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:[Ltm7;
+    sget-object v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->r0:[Lpl7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->o:Lmqc;
+    iget-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:Lvoc;
 
-    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -464,9 +579,26 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lpwc;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
 
-    invoke-super {p0, p1}, Lb04;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ljz3;->onDestroyView(Landroid/view/View;)V
+
+    iget-object p1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->o:Lfy3;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lfy3;->dismiss()V
+
+    :cond_0
+    iput-object v1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->o:Lfy3;
+
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpyd;->v0:Lmce;
+
+    invoke-virtual {p1}, Lmce;->f()V
 
     return-void
 .end method
@@ -476,47 +608,43 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
 
-    iget-object p1, p0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->c:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->B0()Lpyd;
 
     move-result-object p1
 
-    check-cast p1, Lb0e;
+    iget-object p1, p1, Lpyd;->t0:Lya5;
 
-    iget-object p1, p1, Lb0e;->Z:Ljb5;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcs7;->L()Les7;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
     move-result-object v0
 
-    sget-object v1, Ler7;->o:Ler7;
+    sget-object v1, Lwp7;->o:Lwp7;
 
-    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {p1, v0, v1}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object p1
 
-    new-instance v0, Lxzd;
+    new-instance v0, Lhyd;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lxzd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/ringtone/ui/SettingRingtoneScreen;)V
+    invoke-direct {v0, v1, p0}, Lhyd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/ringtone/ui/SettingRingtoneScreen;)V
 
-    new-instance v1, Ljx5;
+    new-instance v1, Lnw5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method

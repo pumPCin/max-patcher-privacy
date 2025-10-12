@@ -2,43 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgv8;
-
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:J
 
-.field public b:Llif;
+.field public final b:J
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Llif;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JJZZZ)V
     .locals 0
+
+    iput-object p1, p0, Lff5;->f:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lff5;->a:J
+
+    iput-wide p4, p0, Lff5;->b:J
+
+    iput-boolean p6, p0, Lff5;->c:Z
+
+    iput-boolean p7, p0, Lff5;->d:Z
+
+    iput-boolean p8, p0, Lff5;->e:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lff5;->a:Ljava/lang/Object;
-
-    iput-object p2, p0, Lff5;->b:Llif;
-
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lff5;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final b()Llif;
-    .locals 1
-
-    iget-object v0, p0, Lff5;->b:Llif;
-
-    return-object v0
 .end method

@@ -1,45 +1,22 @@
-.class public abstract Llr2;
+.class public final Llr2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lur2;
 
-# static fields
-.field public static final a:Lbp7;
+
+# instance fields
+.field public final a:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Z)V
+    .locals 0
 
-    sget-object v0, Lmr2;->a:Lmr2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lwpd;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    sput-object v1, Llr2;->a:Lbp7;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lava;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lz9b;
-
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+    iput-boolean p1, p0, Llr2;->a:Z
 
     return-void
 .end method

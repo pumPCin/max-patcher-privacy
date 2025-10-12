@@ -1,23 +1,42 @@
-.class public abstract Lugh;
-.super Ljava/lang/Object;
+.class public final Lugh;
+.super Ldalvik/system/PathClassLoader;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ln8f;
+# virtual methods
+.method public final loadClass(Ljava/lang/String;Z)Ljava/lang/Class;
+    .locals 1
 
+    const-string v0, "java."
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    new-instance v0, Ln8f;
+    move-result v0
 
-    const-string v1, "PhoneskyVerificationUtils"
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ln8f;-><init>(Ljava/lang/String;)V
+    const-string v0, "android."
 
-    sput-object v0, Lugh;->a:Ln8f;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    return-void
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Ljava/lang/ClassLoader;->findClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    :cond_0
+    invoke-super {p0, p1, p2}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;Z)Ljava/lang/Class;
+
+    move-result-object p1
+
+    return-object p1
 .end method

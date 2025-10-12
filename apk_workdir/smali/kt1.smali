@@ -1,246 +1,106 @@
 .class public final Lkt1;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lt6c;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:Lpt1;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lrt1;
 
 
 # direct methods
-.method public constructor <init>(Lpt1;)V
+.method public constructor <init>(Lrt1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkt1;->Y:Lrt1;
 
-    iput-object p1, p0, Lkt1;->a:Lpt1;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lkt1;->a:Lpt1;
+    check-cast p1, Ldh1;
 
-    iget-object v1, v0, Lpt1;->j:Lu6c;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, v0, Lpt1;->d:Lp5b;
+    invoke-virtual {p0, p1, p2}, Lkt1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-object v3, v2
+    move-result-object p1
 
-    check-cast v3, Le6b;
+    check-cast p1, Lkt1;
 
-    iget-object v3, v3, Le6b;->E0:Lmoe;
+    sget-object p2, Laxf;->a:Laxf;
 
-    invoke-virtual {v3}, Lmoe;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lkt1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    return-object p2
+.end method
 
-    check-cast v3, Lq5b;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v3, v3, Lq5b;->a:Lg5b;
+    new-instance v0, Lkt1;
 
-    iget-object v4, v0, Lpt1;->b:Lp11;
+    iget-object v1, p0, Lkt1;->Y:Lrt1;
 
-    check-cast v4, Lq11;
+    invoke-direct {v0, v1, p2}, Lkt1;-><init>(Lrt1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v4}, Lq11;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iput-object p1, v0, Lkt1;->X:Ljava/lang/Object;
 
-    move-result-object v4
+    return-object v0
+.end method
 
-    invoke-virtual {v4}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->getDeviceType()Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object v4
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-virtual {v4}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget-object p1, p0, Lkt1;->X:Ljava/lang/Object;
 
-    move-result-object v4
+    check-cast p1, Ldh1;
 
-    const-string v5, "speakerphone"
+    iget-object v0, p0, Lkt1;->Y:Lrt1;
 
-    invoke-static {v4, v5}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lrt1;->c()Lz54;
 
-    move-result v4
+    move-result-object v1
 
-    iget-object v5, v0, Lpt1;->h:Lifd;
+    iget-boolean v1, v1, Lz54;->i:Z
 
-    invoke-virtual {v5}, Lifd;->c()Z
+    if-eqz v1, :cond_0
 
-    move-result v5
+    const/4 v1, 0x1
 
-    iget-object v6, v0, Lpt1;->a:Lst1;
-
-    check-cast v6, Lhu1;
-
-    invoke-virtual {v6}, Lhu1;->m()Lp64;
-
-    move-result-object v6
-
-    iget-boolean v6, v6, Lp64;->i:Z
-
-    const/4 v7, 0x1
-
-    const/4 v8, 0x0
-
-    if-nez v6, :cond_1
-
-    check-cast v2, Le6b;
-
-    iget-object v2, v2, Le6b;->E0:Lmoe;
-
-    invoke-virtual {v2}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lq5b;
-
-    iget-boolean v2, v2, Lq5b;->h:Z
-
-    if-eqz v2, :cond_0
+    invoke-virtual {v0, p1, v1}, Lrt1;->h(Ldh1;Z)V
 
     goto :goto_0
 
     :cond_0
-    move v2, v8
+    invoke-virtual {v0}, Lrt1;->d()Lw3b;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_1
+    iget-object p1, p1, Lw3b;->a:Lfh1;
+
+    invoke-interface {p1}, Lfh1;->getId()Ldh1;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lrt1;->i(Ldh1;)V
+
     :goto_0
-    move v2, v7
+    sget-object p1, Laxf;->a:Laxf;
 
-    :goto_1
-    invoke-virtual {v0}, Lpt1;->f()Lmoe;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lhgd;
-
-    iget-object v6, v6, Lhgd;->a:Ligd;
-
-    sget-object v9, Ligd;->a:Ligd;
-
-    if-ne v6, v9, :cond_3
-
-    invoke-virtual {v0}, Lpt1;->f()Lmoe;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhgd;
-
-    iget-object v0, v0, Lhgd;->b:Lwfd;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Lwfd;->c:Lch1;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_2
-    iget-object v6, v3, Lg5b;->a:Leh1;
-
-    invoke-interface {v6}, Leh1;->getId()Lch1;
-
-    move-result-object v6
-
-    invoke-static {v0, v6}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, v3, Lg5b;->a:Leh1;
-
-    invoke-interface {v0}, Leh1;->m()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    move v7, v8
-
-    :cond_4
-    :goto_3
-    if-nez v2, :cond_7
-
-    if-nez v4, :cond_7
-
-    if-nez v5, :cond_7
-
-    if-eqz v7, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v0, v1, Lu6c;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_6
-    return-void
-
-    :goto_4
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-array v2, v8, [Ljava/lang/Object;
-
-    const-string v3, "ProximityHelperTag"
-
-    invoke-static {v3, v0, v1, v2}, Lox9;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_7
-    :goto_5
-    invoke-virtual {v1}, Lu6c;->c()V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lkt1;->a:Lpt1;
-
-    iget-object v0, v0, Lpt1;->j:Lu6c;
-
-    invoke-virtual {v0}, Lu6c;->c()V
-
-    return-void
+    return-object p1
 .end method

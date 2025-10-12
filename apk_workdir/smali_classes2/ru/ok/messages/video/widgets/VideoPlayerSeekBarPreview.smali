@@ -4,29 +4,19 @@
 
 # interfaces
 .implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
-.implements Ljgf;
+.implements Lyef;
 
 
 # static fields
-.field public static final synthetic I0:I
+.field public static final synthetic D0:I
 
 
 # instance fields
-.field public A0:Llo4;
+.field public A0:J
 
-.field public B0:Llo4;
+.field public B0:I
 
-.field public final C0:I
-
-.field public final D0:I
-
-.field public E0:J
-
-.field public F0:J
-
-.field public G0:I
-
-.field public H0:I
+.field public C0:I
 
 .field public final a:Ljava/util/HashSet;
 
@@ -34,15 +24,25 @@
 
 .field public final c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-.field public final o:Lic6;
+.field public final o:Lob6;
 
-.field public final w0:Log;
+.field public final r0:Lug;
 
-.field public x0:Lsd8;
+.field public s0:Llc8;
 
-.field public y0:Lno7;
+.field public t0:Lkn7;
 
-.field public z0:Lp8g;
+.field public u0:Lb7g;
+
+.field public v0:Lvn4;
+
+.field public w0:Lvn4;
+
+.field public final x0:I
+
+.field public final y0:I
+
+.field public z0:J
 
 
 # direct methods
@@ -57,27 +57,27 @@
 
     iput-object p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->a:Ljava/util/HashSet;
 
-    invoke-static {}, Ltq4;->a()Ltq4;
+    invoke-static {}, Lgq4;->a()Lgq4;
 
     const/high16 p2, 0x42f00000    # 120.0f
 
     float-to-int p2, p2
 
-    invoke-static {p2}, Lxq4;->b(I)I
+    invoke-static {p2}, Lkq4;->b(I)I
 
     move-result p2
 
-    iput p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->C0:I
+    iput p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->x0:I
 
     const/high16 p2, 0x43120000    # 146.0f
 
     float-to-int p2, p2
 
-    invoke-static {p2}, Lxq4;->b(I)I
+    invoke-static {p2}, Lkq4;->b(I)I
 
     move-result p2
 
-    iput p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+    iput p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->y0:I
 
     const/4 p2, 0x1
 
@@ -89,13 +89,13 @@
 
     invoke-virtual {p0, p2}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
 
-    sget p2, Lghc;->view_video_player_seekbar_preview:I
+    sget p2, Lmfc;->view_video_player_seekbar_preview:I
 
     invoke-static {p1, p2, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
-    sget p2, Ljgc;->video_frame_preview:I
+    sget p2, Lpec;->video_frame_preview:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -105,7 +105,7 @@
 
     iput-object p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    sget p2, Ljgc;->video_player_seek_bar:I
+    sget p2, Lpec;->video_player_seek_bar:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -117,69 +117,69 @@
 
     invoke-virtual {p1, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    invoke-static {}, Lem;->b()Lsg3;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    check-cast p1, Lyka;
+    check-cast p1, Lnja;
 
-    invoke-virtual {p1}, Lyka;->c()Log;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Log;
-
-    invoke-static {}, Lem;->b()Lsg3;
+    invoke-virtual {p1}, Lnja;->b()Lug;
 
     move-result-object p1
 
-    check-cast p1, Lyka;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->r0:Lug;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class p2, Lhc6;
-
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    check-cast p1, Lhc6;
+    check-cast p1, Lnja;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object p1
+
+    const-class p2, Lnb6;
+
+    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnb6;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance p2, Lic6;
+    new-instance p2, Lob6;
 
-    iget-object v0, p1, Lhc6;->d:Lbp7;
+    iget-object v0, p1, Lnb6;->d:Lyn7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lm9f;
+    check-cast v0, Lz7f;
 
-    iget-object v1, p1, Lhc6;->b:Lbp7;
+    iget-object v1, p1, Lnb6;->b:Lyn7;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lec5;
+    check-cast v1, Ltb5;
 
-    iget-object v2, p1, Lhc6;->a:Lo57;
+    iget-object v2, p1, Lnb6;->a:Lk47;
 
-    iget-object p1, p1, Lhc6;->c:Lbp7;
+    iget-object p1, p1, Lnb6;->c:Lyn7;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lop4;
+    check-cast p1, Lap4;
 
-    invoke-direct {p2, v0, v1, v2, p1}, Lic6;-><init>(Lm9f;Lec5;Lo57;Lop4;)V
+    invoke-direct {p2, v0, v1, v2, p1}, Lob6;-><init>(Lz7f;Ltb5;Lk47;Lap4;)V
 
-    iput-object p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lic6;
+    iput-object p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lob6;
 
     invoke-virtual {p0}, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c()V
 
@@ -191,17 +191,17 @@
 .method public final a()V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:Llo4;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lvn4;
 
     iget-object v1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Llo4;->k()V
+    invoke-virtual {v0}, Lvn4;->s()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:Llo4;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lvn4;
 
     const/4 v0, 0x4
 
@@ -218,28 +218,28 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:Llo4;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lvn4;
 
     if-eqz v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Log;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->r0:Lug;
 
-    invoke-virtual {v0, v1}, Log;->e(Landroid/view/View;)Llo4;
+    invoke-virtual {v0, v1}, Lug;->f(Landroid/view/View;)Lvn4;
 
     move-result-object v0
 
-    new-instance v1, Lphg;
+    new-instance v1, Legg;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lphg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    invoke-direct {v1, p0, v2}, Legg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
 
-    invoke-virtual {v0, v1}, Llo4;->z(Lk98;)V
+    invoke-virtual {v0, v1}, Lvn4;->G(Lfn7;)V
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:Llo4;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lvn4;
 
     :cond_2
     :goto_0
@@ -253,19 +253,19 @@
 
     move-result-object v0
 
-    sget-object v1, Lvaf;->a0:Ls5f;
+    sget-object v1, Lh9f;->a0:Lh4f;
 
-    invoke-static {v0}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+    invoke-static {v0}, Luce;->e0(Landroid/content/Context;)Lh9f;
 
     move-result-object v0
 
-    iget v1, v0, Lvaf;->w:I
+    iget v1, v0, Lh9f;->w:I
 
     iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBar;
 
     invoke-virtual {v2, v1}, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->setProgressColor(I)V
 
-    iget v0, v0, Lvaf;->w:I
+    iget v0, v0, Lh9f;->w:I
 
     invoke-virtual {v2, v0}, Lru/ok/messages/video/widgets/VideoPlayerSeekBar;->setThumbColor(I)V
 
@@ -281,40 +281,40 @@
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->x0:Lsd8;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->s0:Llc8;
 
-    invoke-static {v0}, Liad;->b(Lss4;)V
+    invoke-static {v0}, Lo8d;->b(Lfs4;)V
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->y0:Lno7;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lkn7;
 
-    invoke-static {v0}, Liad;->b(Lss4;)V
+    invoke-static {v0}, Lo8d;->b(Lfs4;)V
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:Llo4;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lvn4;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Llo4;->k()V
+    invoke-virtual {v0}, Lvn4;->s()V
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:Llo4;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lvn4;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Llo4;->k()V
+    invoke-virtual {v0}, Lvn4;->s()V
 
     :cond_1
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lic6;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lob6;
 
-    iget-object v1, v0, Lic6;->h:Lt08;
+    iget-object v1, v0, Lob6;->h:Llz7;
 
     if-eqz v1, :cond_3
 
-    iget-object v2, v1, Lt08;->g:Lno7;
+    iget-object v2, v1, Llz7;->g:Lkn7;
 
-    invoke-static {v2}, Liad;->b(Lss4;)V
+    invoke-static {v2}, Lo8d;->b(Lfs4;)V
 
     :try_start_0
-    iget-object v2, v1, Lt08;->h:Landroid/media/MediaMetadataRetriever;
+    iget-object v2, v1, Llz7;->h:Landroid/media/MediaMetadataRetriever;
 
     invoke-virtual {v2}, Landroid/media/MediaMetadataRetriever;->release()V
     :try_end_0
@@ -325,20 +325,20 @@
     :catchall_0
     move-exception v2
 
-    const-string v3, "t08"
+    const-string v3, "lz7"
 
     const-string v4, "fail to release"
 
-    invoke-static {v3, v4, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     const-wide/16 v2, 0x0
 
-    iput-wide v2, v1, Lt08;->j:J
+    iput-wide v2, v1, Llz7;->j:J
 
-    iget-object v1, v1, Lt08;->f:Lwl0;
+    iget-object v1, v1, Llz7;->f:Lpl0;
 
-    invoke-virtual {v1}, Lwl0;->z()Ljava/lang/Object;
+    invoke-virtual {v1}, Lpl0;->x()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -371,28 +371,28 @@
     goto :goto_1
 
     :cond_3
-    iget-object v0, v0, Lic6;->i:Ljzc;
+    iget-object v0, v0, Lob6;->i:Lqxc;
 
     if-eqz v0, :cond_5
 
-    iget-object v1, v0, Ljzc;->g:Lg0;
+    iget-object v1, v0, Lqxc;->g:Lo0;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lg0;->a()Z
+    invoke-virtual {v1}, Lo0;->a()Z
 
-    iput-object v2, v0, Ljzc;->g:Lg0;
+    iput-object v2, v0, Lqxc;->g:Lo0;
 
     :cond_4
-    iget-object v1, v0, Ljzc;->h:Lg0;
+    iget-object v1, v0, Lqxc;->h:Lo0;
 
     if-eqz v1, :cond_5
 
-    invoke-virtual {v1}, Lg0;->a()Z
+    invoke-virtual {v1}, Lo0;->a()Z
 
-    iput-object v2, v0, Ljzc;->h:Lg0;
+    iput-object v2, v0, Lqxc;->h:Lo0;
 
     :cond_5
     iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->a:Ljava/util/HashSet;
@@ -431,7 +431,7 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
     if-nez p1, :cond_1
 
@@ -447,13 +447,13 @@
     :cond_2
     int-to-long p1, p2
 
-    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lic6;
+    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lob6;
 
     iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBar;
 
     iget-object v1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
     if-nez v2, :cond_3
 
@@ -461,7 +461,7 @@
     return-void
 
     :cond_3
-    invoke-virtual {p3}, Lic6;->b()Z
+    invoke-virtual {p3}, Lob6;->b()Z
 
     move-result v2
 
@@ -471,11 +471,11 @@
 
     if-eqz v2, :cond_a
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
-    check-cast v2, Luk0;
+    check-cast v2, Lnk0;
 
-    iget-wide v5, v2, Luk0;->a:J
+    iget-wide v5, v2, Lnk0;->a:J
 
     const-wide/16 v7, 0x0
 
@@ -483,7 +483,7 @@
 
     if-eqz v2, :cond_4
 
-    iget-wide v5, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->E0:J
+    iget-wide v5, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:J
 
     sub-long/2addr v5, p1
 
@@ -493,11 +493,11 @@
 
     long-to-double v5, v5
 
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
-    check-cast v2, Luk0;
+    check-cast v2, Lnk0;
 
-    iget-wide v7, v2, Luk0;->a:J
+    iget-wide v7, v2, Lnk0;->a:J
 
     long-to-double v7, v7
 
@@ -510,9 +510,9 @@
     if-lez v2, :cond_a
 
     :cond_4
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->y0:Lno7;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lkn7;
 
-    invoke-static {v2}, Liad;->c(Lss4;)Z
+    invoke-static {v2}, Lo8d;->c(Lfs4;)Z
 
     move-result v2
 
@@ -520,73 +520,73 @@
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Lxed;->a()Lked;
+    invoke-static {}, Lcdd;->a()Lpcd;
 
     move-result-object v5
 
     const-wide/16 v6, 0x3e8
 
-    invoke-static {v6, v7, v2, v5}, Lraa;->t(JLjava/util/concurrent/TimeUnit;Lked;)Lvda;
+    invoke-static {v6, v7, v2, v5}, Ls8a;->r(JLjava/util/concurrent/TimeUnit;Lpcd;)Lwba;
 
     move-result-object v2
 
-    invoke-static {}, Lrd;->a()Lked;
+    invoke-static {}, Lyd;->a()Lpcd;
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lraa;->m(Lked;)Loca;
+    invoke-virtual {v2, v5}, Ls8a;->l(Lpcd;)Lpaa;
 
     move-result-object v2
 
-    new-instance v5, Lohg;
+    new-instance v5, Ldgg;
 
-    invoke-direct {v5, p0, v3}, Lohg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    invoke-direct {v5, p0, v3}, Ldgg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
 
-    new-instance v6, Lgqf;
+    new-instance v6, Ls1g;
 
-    const/16 v7, 0x1d
+    const/16 v7, 0x9
 
-    invoke-direct {v6, v7}, Lgqf;-><init>(I)V
+    invoke-direct {v6, v7}, Ls1g;-><init>(I)V
 
-    sget-object v7, Loch;->c:Lcg6;
+    sget-object v7, Lnjg;->c:Laf6;
 
-    new-instance v8, Lno7;
+    new-instance v8, Lkn7;
 
-    invoke-direct {v8, v5, v6, v7}, Lno7;-><init>(Lwo3;Lwo3;Le6;)V
+    invoke-direct {v8, v5, v6, v7}, Lkn7;-><init>(Lno3;Lno3;Ll6;)V
 
-    invoke-virtual {v2, v8}, Lraa;->a(Lxda;)V
+    invoke-virtual {v2, v8}, Ls8a;->a(Lyba;)V
 
-    iput-object v8, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->y0:Lno7;
+    iput-object v8, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lkn7;
 
     :cond_5
-    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->x0:Lsd8;
+    iget-object v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->s0:Llc8;
 
-    invoke-static {v2}, Liad;->b(Lss4;)V
+    invoke-static {v2}, Lo8d;->b(Lfs4;)V
 
-    iget-object v2, p3, Lfc6;->e:Lp8g;
+    iget-object v2, p3, Llb6;->e:Lb7g;
 
     const/4 v5, 0x1
 
     if-nez v2, :cond_6
 
-    const-string p3, "ic6"
+    const-string p3, "ob6"
 
     const-string v2, "You should call setVideoContent before extractFrame!"
 
-    invoke-static {p3, v2, v4}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p3, v2, v4}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object p3, Lxd8;->a:Lxd8;
+    sget-object p3, Lqc8;->a:Lqc8;
 
     goto :goto_3
 
     :cond_6
-    check-cast v2, Luk0;
+    check-cast v2, Lnk0;
 
-    invoke-interface {v2}, Lp8g;->i()Landroid/net/Uri;
+    invoke-interface {v2}, Lb7g;->e()Landroid/net/Uri;
 
     move-result-object v2
 
-    sget v6, Lr4g;->a:I
+    sget v6, Le3g;->a:I
 
     invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -609,42 +609,42 @@
     goto :goto_2
 
     :cond_7
-    iget-object p3, p3, Lic6;->i:Ljzc;
+    iget-object p3, p3, Lob6;->i:Lqxc;
 
-    iget-object v2, p3, Ljzc;->h:Lg0;
+    iget-object v2, p3, Lqxc;->h:Lo0;
 
     if-eqz v2, :cond_8
 
-    invoke-virtual {v2}, Lg0;->a()Z
+    invoke-virtual {v2}, Lo0;->a()Z
 
-    iput-object v4, p3, Ljzc;->h:Lg0;
+    iput-object v4, p3, Lqxc;->h:Lo0;
 
     :cond_8
     new-instance v2, Lcw1;
 
-    const/16 v6, 0x9
+    const/16 v6, 0x8
 
     invoke-direct {v2, p3, p1, p2, v6}, Lcw1;-><init>(Ljava/lang/Object;JI)V
 
-    new-instance p3, Lwd8;
+    new-instance p3, Lpc8;
 
-    invoke-direct {p3, v2}, Lwd8;-><init>(Lne8;)V
+    invoke-direct {p3, v2}, Lpc8;-><init>(Lgd8;)V
 
     goto :goto_3
 
     :cond_9
     :goto_2
-    iget-object p3, p3, Lic6;->h:Lt08;
+    iget-object p3, p3, Lob6;->h:Llz7;
 
-    iget v2, p3, Lt08;->i:I
+    iget v2, p3, Llz7;->i:I
 
     sub-int/2addr v2, v5
 
     long-to-float v6, p1
 
-    iget-wide v7, p3, Lt08;->j:J
+    iget-wide v7, p3, Llz7;->j:J
 
-    iget v9, p3, Lt08;->i:I
+    iget v9, p3, Llz7;->i:I
 
     int-to-long v9, v9
 
@@ -666,77 +666,104 @@
 
     move-result v2
 
-    iget-object p3, p3, Lt08;->f:Lwl0;
+    iget-object p3, p3, Llz7;->f:Lpl0;
 
-    new-instance v6, Lxd4;
+    new-instance v6, Lhd4;
 
     const/4 v7, 0x4
 
-    invoke-direct {v6, v2, v7}, Lxd4;-><init>(II)V
+    invoke-direct {v6, v2, v7}, Lhd4;-><init>(II)V
 
-    invoke-virtual {p3, v6}, Lraa;->g(Llob;)Luaa;
+    invoke-virtual {p3, v6}, Ls8a;->g(Ldnb;)Lv8a;
 
     move-result-object p3
 
-    new-instance v6, Lsba;
+    new-instance v6, Lt9a;
 
-    invoke-direct {v6, p3}, Lsba;-><init>(Luaa;)V
+    invoke-direct {v6, p3}, Lt9a;-><init>(Lv8a;)V
 
-    new-instance p3, Lxd4;
+    new-instance p3, Lhd4;
 
     const/4 v7, 0x5
 
-    invoke-direct {p3, v2, v7}, Lxd4;-><init>(II)V
+    invoke-direct {p3, v2, v7}, Lhd4;-><init>(II)V
 
-    new-instance v2, Lbe8;
+    new-instance v2, Luc8;
 
-    invoke-direct {v2, v6, p3, v3}, Lbe8;-><init>(Lrd8;Ljava/lang/Object;I)V
+    invoke-direct {v2, v6, p3, v3}, Luc8;-><init>(Lkc8;Ljava/lang/Object;I)V
 
     move-object p3, v2
 
     :goto_3
-    invoke-static {}, Lrd;->a()Lked;
+    invoke-static {}, Lyd;->a()Lpcd;
 
     move-result-object v2
 
-    invoke-virtual {p3, v2}, Lrd8;->f(Lked;)Lje8;
+    new-instance v6, Ldgg;
 
-    move-result-object p3
-
-    new-instance v2, Lohg;
-
-    invoke-direct {v2, p0, v5}, Lohg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    invoke-direct {v6, p0, v5}, Ldgg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
 
     new-instance v5, Lcw1;
 
-    const/16 v6, 0xc
+    const/16 v7, 0xb
 
-    invoke-direct {v5, p0, p1, p2, v6}, Lcw1;-><init>(Ljava/lang/Object;JI)V
+    invoke-direct {v5, p0, p1, p2, v7}, Lcw1;-><init>(Ljava/lang/Object;JI)V
 
-    new-instance v6, Lj5;
+    new-instance v7, Lhj0;
 
-    const/16 v7, 0x19
+    const/16 v8, 0x15
 
-    invoke-direct {v6, v7, p0}, Lj5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v7, v8, p0}, Lhj0;-><init>(ILjava/lang/Object;)V
 
-    new-instance v7, Lsd8;
+    new-instance v8, Llc8;
 
-    invoke-direct {v7, v2, v5, v6}, Lsd8;-><init>(Lwo3;Lwo3;Le6;)V
+    invoke-direct {v8, v6, v5, v7}, Llc8;-><init>(Lno3;Lno3;Ll6;)V
 
-    invoke-virtual {p3, v7}, Lrd8;->a(Lke8;)V
+    :try_start_0
+    new-instance v5, Lbd8;
 
-    iput-object v7, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->x0:Lsd8;
+    invoke-direct {v5, v8, v2, v3}, Lbd8;-><init>(Ljava/lang/Object;Lpcd;I)V
 
-    iput-wide p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->E0:J
+    invoke-virtual {p3, v5}, Lkc8;->a(Ldd8;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iput-object v8, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->s0:Llc8;
+
+    iput-wide p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:J
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    new-instance p2, Ljava/lang/NullPointerException;
+
+    const-string p3, "subscribeActual failed"
+
+    invoke-direct {p2, p3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p2
+
+    :catch_0
+    move-exception p1
+
+    throw p1
 
     :cond_a
-    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:Llo4;
+    :goto_4
+    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lvn4;
 
     if-eqz p3, :cond_b
 
-    invoke-virtual {p3}, Llo4;->k()V
+    invoke-virtual {p3}, Lvn4;->s()V
 
-    iput-object v4, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:Llo4;
+    iput-object v4, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lvn4;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -751,44 +778,44 @@
 
     if-eqz p3, :cond_d
 
-    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:Llo4;
+    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lvn4;
 
     if-eqz p3, :cond_c
 
-    goto :goto_4
+    goto :goto_5
 
     :cond_c
     const/4 p3, 0x0
 
     invoke-virtual {v1, p3}, Landroid/view/View;->setAlpha(F)V
 
-    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Log;
+    iget-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->r0:Lug;
 
-    invoke-virtual {p3, v1}, Log;->d(Landroid/view/View;)Llo4;
+    invoke-virtual {p3, v1}, Lug;->e(Landroid/view/View;)Lvn4;
 
     move-result-object p3
 
-    new-instance v2, Lphg;
+    new-instance v2, Legg;
 
-    invoke-direct {v2, p0, v3}, Lphg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
+    invoke-direct {v2, p0, v3}, Legg;-><init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
 
-    invoke-virtual {p3, v2}, Llo4;->z(Lk98;)V
+    invoke-virtual {p3, v2}, Lvn4;->G(Lfn7;)V
 
-    iput-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:Llo4;
+    iput-object p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lvn4;
 
     :cond_d
-    :goto_4
-    iget-object p3, v1, Lru/ok/messages/video/widgets/VideoFramePreview;->x0:Landroidx/appcompat/widget/AppCompatTextView;
+    :goto_5
+    iget-object p3, v1, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget-object v2, Liff;->b:[Ljava/lang/String;
+    sget-object v2, Lwdf;->b:[Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lox9;->e(J)Ljava/lang/String;
+    invoke-static {p1, p2}, Lpr0;->e(J)Ljava/lang/String;
 
     move-result-object p1
 
     invoke-virtual {p3, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {p0}, Lvu0;->q(Landroid/view/View;)Z
+    invoke-static {p0}, Lx2d;->B(Landroid/view/View;)Z
 
     move-result p1
 
@@ -842,7 +869,7 @@
 
     move-result p1
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->H0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->C0:I
 
     sub-int/2addr p1, p2
 
@@ -858,7 +885,7 @@
 
     move-result p1
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->G0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:I
 
     neg-int p2, p2
 
@@ -868,7 +895,7 @@
 
     move-result p1
 
-    goto :goto_5
+    goto :goto_6
 
     :cond_e
     invoke-virtual {v0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
@@ -907,7 +934,7 @@
 
     sub-float/2addr p1, p3
 
-    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->G0:I
+    iget p2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->B0:I
 
     int-to-float p2, p2
 
@@ -919,7 +946,7 @@
 
     move-result p2
 
-    iget p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->H0:I
+    iget p3, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->C0:I
 
     add-int/2addr p2, p3
 
@@ -935,7 +962,7 @@
 
     move-result p1
 
-    :goto_5
+    :goto_6
     invoke-virtual {v1, p1}, Landroid/view/View;->setTranslationX(F)V
 
     return-void
@@ -998,7 +1025,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
     if-nez p1, :cond_1
 
@@ -1022,10 +1049,10 @@
     return-void
 .end method
 
-.method public setVideoContent(Lp8g;)V
+.method public setVideoContent(Lb7g;)V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1036,17 +1063,17 @@
     goto :goto_2
 
     :cond_0
-    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->z0:Lp8g;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->u0:Lb7g;
 
-    invoke-interface {p1}, Lp8g;->getWidth()I
+    invoke-interface {p1}, Lb7g;->getWidth()I
 
     move-result v0
 
-    invoke-interface {p1}, Lp8g;->getHeight()I
+    invoke-interface {p1}, Lb7g;->getHeight()I
 
     move-result v1
 
-    iget v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->C0:I
+    iget v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->x0:I
 
     const/4 v3, 0x1
 
@@ -1061,7 +1088,7 @@
     :cond_1
     if-ge v0, v1, :cond_2
 
-    invoke-static {v2, v2, v0, v1}, Lpih;->B(IIII)[I
+    invoke-static {v2, v2, v0, v1}, Lbbh;->j(IIII)[I
 
     move-result-object v0
 
@@ -1072,9 +1099,9 @@
     goto :goto_1
 
     :cond_2
-    iget v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
+    iget v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->y0:I
 
-    invoke-static {v2, v2, v0, v1}, Lpih;->B(IIII)[I
+    invoke-static {v2, v2, v0, v1}, Lbbh;->j(IIII)[I
 
     move-result-object v0
 
@@ -1101,11 +1128,11 @@
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v5, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lic6;
+    iget-object v5, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->o:Lob6;
 
-    invoke-virtual {v5, p1, v2, v0}, Lic6;->a(Lp8g;II)V
+    invoke-virtual {v5, p1, v2, v0}, Lob6;->a(Lb7g;II)V
 
-    invoke-virtual {v5}, Lic6;->b()Z
+    invoke-virtual {v5}, Lob6;->b()Z
 
     move-result p1
 
@@ -1113,7 +1140,7 @@
 
     invoke-virtual {v1, v3}, Lru/ok/messages/video/widgets/VideoFramePreview;->setPreviewEnabled(Z)V
 
-    iget-object p1, v5, Lfc6;->e:Lp8g;
+    iget-object p1, v5, Llb6;->e:Lb7g;
 
     const/4 v0, 0x0
 
@@ -1121,14 +1148,14 @@
 
     if-nez p1, :cond_4
 
-    const-string p1, "ic6"
+    const-string p1, "ob6"
 
-    invoke-static {p1, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_4
-    invoke-virtual {v5}, Lic6;->b()Z
+    invoke-virtual {v5}, Lob6;->b()Z
 
     move-result p1
 
@@ -1138,15 +1165,15 @@
     return-void
 
     :cond_5
-    iget-object p1, v5, Lfc6;->e:Lp8g;
+    iget-object p1, v5, Llb6;->e:Lb7g;
 
-    check-cast p1, Luk0;
+    check-cast p1, Lnk0;
 
-    invoke-interface {p1}, Lp8g;->i()Landroid/net/Uri;
+    invoke-interface {p1}, Lb7g;->e()Landroid/net/Uri;
 
     move-result-object p1
 
-    sget v2, Lr4g;->a:I
+    sget v2, Le3g;->a:I
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -1169,33 +1196,33 @@
     goto :goto_3
 
     :cond_6
-    iget-object p1, v5, Lic6;->i:Ljzc;
+    iget-object p1, v5, Lob6;->i:Lqxc;
 
-    iget-object v2, p1, Lfc6;->e:Lp8g;
+    iget-object v2, p1, Llb6;->e:Lb7g;
 
-    const-string v3, "jzc"
+    const-string v3, "qxc"
 
     if-nez v2, :cond_7
 
-    invoke-static {v3, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_7
-    check-cast v2, Luk0;
+    check-cast v2, Lnk0;
 
-    iget-object v1, v2, Luk0;->f:Lvx;
+    iget-object v1, v2, Lnk0;->f:Lky;
 
     if-nez v1, :cond_8
 
     const-string p1, "Video collage is null"
 
-    invoke-static {v3, p1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, p1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_8
-    iget-object v1, v1, Lvx;->Y:Ljava/lang/Object;
+    iget-object v1, v1, Lky;->Y:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
@@ -1203,98 +1230,98 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lc67;->d(Landroid/net/Uri;)Lc67;
+    invoke-static {v1}, Ly47;->d(Landroid/net/Uri;)Ly47;
 
     move-result-object v1
 
-    iget-object v2, p1, Ljzc;->f:Lo57;
+    iget-object v2, p1, Lqxc;->f:Lk47;
 
-    invoke-virtual {v1}, Lc67;->a()Lb67;
+    invoke-virtual {v1}, Ly47;->a()Lx47;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1, v0}, Lo57;->e(Lb67;Lol9;)Lg0;
+    invoke-virtual {v2, v1, v0}, Lk47;->e(Lx47;Lyj9;)Lo0;
 
     move-result-object v0
 
-    iput-object v0, p1, Ljzc;->g:Lg0;
+    iput-object v0, p1, Lqxc;->g:Lo0;
 
     return-void
 
     :cond_9
     :goto_3
-    iget-object p1, v5, Lic6;->h:Lt08;
+    iget-object p1, v5, Lob6;->h:Llz7;
 
-    iget-object v2, p1, Lfc6;->a:Lm9f;
+    iget-object v2, p1, Llb6;->a:Lz7f;
 
-    iget-object v3, p1, Lfc6;->e:Lp8g;
+    iget-object v3, p1, Llb6;->e:Lb7g;
 
     if-nez v3, :cond_a
 
-    const-string p1, "t08"
+    const-string p1, "lz7"
 
-    invoke-static {p1, v1, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_a
-    new-instance v0, Lkp5;
+    new-instance v0, Lw06;
 
-    const/16 v1, 0x11
+    const/16 v1, 0xb
 
-    invoke-direct {v0, v1, p1}, Lkp5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lw06;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Lbf3;
+    new-instance v1, Lse3;
 
     const/4 v3, 0x2
 
-    invoke-direct {v1, v3, v0}, Lbf3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, v0}, Lse3;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v2, Ln9f;
+    check-cast v2, La8f;
 
-    invoke-virtual {v2}, Ln9f;->a()Lked;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lraa;->q(Lked;)Lhba;
+    invoke-virtual {v2}, La8f;->a()Lpcd;
 
     move-result-object v0
 
-    invoke-virtual {v2}, Ln9f;->b()Lked;
+    invoke-virtual {v1, v0}, Ls8a;->p(Lpcd;)Li9a;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, La8f;->b()Lpcd;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lraa;->m(Lked;)Loca;
+    invoke-virtual {v0, v1}, Ls8a;->l(Lpcd;)Lpaa;
 
     move-result-object v0
 
-    iget-object v1, p1, Lt08;->f:Lwl0;
+    iget-object v1, p1, Llz7;->f:Lpl0;
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lkp5;
+    new-instance v2, Lw06;
 
-    const/16 v3, 0x12
+    const/16 v3, 0xc
 
-    invoke-direct {v2, v3, v1}, Lkp5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lw06;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Los5;
+    new-instance v1, Lws6;
 
-    const/16 v3, 0x1a
+    const/16 v3, 0xd
 
-    invoke-direct {v1, v3}, Los5;-><init>(I)V
+    invoke-direct {v1, v3}, Lws6;-><init>(I)V
 
-    sget-object v3, Loch;->c:Lcg6;
+    sget-object v3, Lnjg;->c:Laf6;
 
-    new-instance v4, Lno7;
+    new-instance v4, Lkn7;
 
-    invoke-direct {v4, v2, v1, v3}, Lno7;-><init>(Lwo3;Lwo3;Le6;)V
+    invoke-direct {v4, v2, v1, v3}, Lkn7;-><init>(Lno3;Lno3;Ll6;)V
 
-    invoke-virtual {v0, v4}, Lraa;->a(Lxda;)V
+    invoke-virtual {v0, v4}, Ls8a;->a(Lyba;)V
 
-    iput-object v4, p1, Lt08;->g:Lno7;
+    iput-object v4, p1, Llz7;->g:Lkn7;
 
     return-void
 

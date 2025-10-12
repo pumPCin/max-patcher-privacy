@@ -1,87 +1,48 @@
 .class public final Lfp3;
-.super Lcy;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public final X:J
+.field public X:I
 
-.field public final Y:Ljava/lang/String;
+.field public final synthetic Y:Lgp3;
 
-.field public final Z:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
-
-.field public final w0:Ljava/lang/String;
-
-.field public final x0:Ljava/lang/String;
-
-.field public final y0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
-    .locals 1
+.method public constructor <init>(Lgp3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Li00;->A0:Li00;
+    iput-object p1, p0, Lfp3;->Y:Lgp3;
 
-    invoke-direct {p0, v0, p9, p10}, Lcy;-><init>(Li00;ZZ)V
-
-    iput-object p1, p0, Lfp3;->o:Ljava/lang/String;
-
-    iput-wide p2, p0, Lfp3;->X:J
-
-    iput-object p4, p0, Lfp3;->Y:Ljava/lang/String;
-
-    iput-object p7, p0, Lfp3;->x0:Ljava/lang/String;
-
-    iput-object p8, p0, Lfp3;->y0:Ljava/lang/String;
-
-    iput-object p5, p0, Lfp3;->Z:Ljava/lang/String;
-
-    iput-object p6, p0, Lfp3;->w0:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    iput-object p1, p0, Lfp3;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lfp3;->X:I
 
-    iget-object v1, p0, Lfp3;->o:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    or-int/2addr p1, v0
 
-    move-result v2
+    iput p1, p0, Lfp3;->X:I
 
-    if-nez v2, :cond_0
+    iget-object p1, p0, Lfp3;->Y:Lgp3;
 
-    const-string v2, "vcfBody"
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lgp3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_0
-    const-wide/16 v1, 0x0
+    move-result-object p1
 
-    iget-wide v3, p0, Lfp3;->X:J
-
-    cmp-long v1, v3, v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "contactId"
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    return-object v0
+    return-object p1
 .end method

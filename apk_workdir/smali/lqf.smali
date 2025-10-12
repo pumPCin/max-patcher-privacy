@@ -1,38 +1,23 @@
-.class public abstract Llqf;
+.class public final Llqf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfqf;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:[B
 
 
-# virtual methods
-.method public a(Liqf;)V
+# direct methods
+.method public constructor <init>([BLjava/lang/String;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public b()V
-    .locals 0
+    iput-object p2, p0, Llqf;->a:Ljava/lang/String;
 
-    return-void
-.end method
-
-.method public c(Liqf;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public h(Liqf;)V
-    .locals 0
+    iput-object p1, p0, Llqf;->b:[B
 
     return-void
 .end method

@@ -1,117 +1,55 @@
-.class public final enum Lnwg;
-.super Ljava/lang/Enum;
+.class public final Lnwg;
+.super Lwy3;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lnwg;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field public X:Ltwg;
 
+.field public Y:Lf0d;
 
-# static fields
-.field public static final Companion:Lmwg;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public static final synthetic X:[Lnwg;
+.field public o:Lqwg;
 
-.field public static final a:Ljava/lang/Object;
+.field public final synthetic r0:Lqwg;
 
-.field public static final enum b:Lnwg;
-
-.field public static final enum c:Lnwg;
-
-.field public static final enum o:Lnwg;
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lqwg;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lnwg;
+    iput-object p1, p0, Lnwg;->r0:Lqwg;
 
-    const-string v1, "IMPACT_OCCURED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnwg;->b:Lnwg;
-
-    new-instance v1, Lnwg;
-
-    const-string v2, "NOTIFICATION_OCCURED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnwg;->c:Lnwg;
-
-    new-instance v2, Lnwg;
-
-    const-string v3, "SELECTION_CHANGED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnwg;->o:Lnwg;
-
-    filled-new-array {v0, v1, v2}, [Lnwg;
-
-    move-result-object v0
-
-    sput-object v0, Lnwg;->X:[Lnwg;
-
-    new-instance v0, Lmwg;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnwg;->Companion:Lmwg;
-
-    new-instance v0, Lgeg;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lgeg;-><init>(I)V
-
-    invoke-static {v4, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    sput-object v0, Lnwg;->a:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnwg;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Lnwg;
+    iput-object p1, p0, Lnwg;->Z:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lnwg;->s0:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lnwg;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lnwg;->s0:I
 
-.method public static values()[Lnwg;
-    .locals 1
+    iget-object p1, p0, Lnwg;->r0:Lqwg;
 
-    sget-object v0, Lnwg;->X:[Lnwg;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lqwg;->e(Ljava/lang/String;Lwy3;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Lnwg;
-
-    return-object v0
+    return-object p1
 .end method

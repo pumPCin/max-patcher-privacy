@@ -1,8 +1,6 @@
-.class public interface abstract Ljpf;
+.class public interface abstract annotation Ljpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract l(Lkpf;)V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

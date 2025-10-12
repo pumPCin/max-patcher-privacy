@@ -1,48 +1,29 @@
 .class public final Lvu7;
-.super Lnz3;
+.super Ldv7;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lkz;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final X:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkz;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 9
 
-    iput-object p1, p0, Lvu7;->Y:Lkz;
+    const-wide/16 v5, 0x0
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v1, 0x0
+
+    move-object v0, p0
+
+    move-wide v3, p1
+
+    invoke-direct/range {v0 .. v8}, Ldv7;-><init>(JJJJ)V
+
+    iput-object p3, v0, Lvu7;->X:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lvu7;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lvu7;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvu7;->X:I
-
-    iget-object p1, p0, Lvu7;->Y:Lkz;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lkz;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,51 +1,46 @@
-.class public final Ljqd;
-.super Lnz3;
+.class public final synthetic Ljqd;
+.super Lye6;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# instance fields
-.field public X:Ljava/util/LinkedHashSet;
 
-.field public Y:Ljava/util/Iterator;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lu9h;
-
-.field public final synthetic w0:Lu9h;
-
-.field public x0:I
+# static fields
+.field public static final a:Ljqd;
 
 
 # direct methods
-.method public constructor <init>(Lu9h;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Ljqd;->w0:Lu9h;
+    new-instance v0, Ljqd;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v4, "iterator()Ljava/util/Iterator;"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lxpd;
+
+    const-string v3, "iterator"
+
+    invoke-direct/range {v0 .. v5}, Lye6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Ljqd;->a:Ljqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Ljqd;->Z:Ljava/lang/Object;
+    check-cast p1, Lxpd;
 
-    iget p1, p0, Ljqd;->x0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ljqd;->x0:I
-
-    iget-object p1, p0, Ljqd;->w0:Lu9h;
-
-    invoke-virtual {p1, p0}, Lu9h;->k(Lnz3;)Ljava/io/Serializable;
+    invoke-interface {p1}, Lxpd;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 

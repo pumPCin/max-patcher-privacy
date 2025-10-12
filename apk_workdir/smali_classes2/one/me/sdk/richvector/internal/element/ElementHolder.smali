@@ -16,7 +16,7 @@
         "",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Loyf;",
+        "Laxf;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",

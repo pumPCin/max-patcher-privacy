@@ -1,189 +1,170 @@
 .class public final Lpke;
-.super Ljava/lang/Object;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
-
-.field public static final b:Ljava/util/regex/Pattern;
-
-.field public static final c:Ljava/util/regex/Pattern;
-
-.field public static final d:Ljava/util/regex/Pattern;
+# interfaces
+.implements Lh94;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    const-string v0, "\\{([^}]*)\\}"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lpke;->a:Ljava/util/regex/Pattern;
-
-    const-string v0, "\\s*\\d+(?:\\.\\d+)?\\s*"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget v2, Lr4g;->a:I
-
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v3, "\\\\pos\\((%1$s),(%1$s)\\)"
-
-    invoke-static {v2, v3, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    sput-object v1, Lpke;->b:Ljava/util/regex/Pattern;
-
-    const-string v1, "\\\\move\\(%1$s,%1$s,(%1$s),(%1$s)(?:,%1$s,%1$s)?\\)"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v2, v1, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lpke;->c:Ljava/util/regex/Pattern;
-
-    const-string v0, "\\\\an(\\d+)"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lpke;->d:Ljava/util/regex/Pattern;
+# virtual methods
+.method public final onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Landroid/graphics/PointF;
-    .locals 6
+.method public final onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 9
 
-    sget-object v0, Lpke;->b:Ljava/util/regex/Pattern;
+    const-string p2, "type"
 
-    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    const-string p3, "name"
 
-    move-result-object v0
+    filled-new-array {p2, p3}, [Ljava/lang/String;
 
-    sget-object v1, Lpke;->c:Ljava/util/regex/Pattern;
+    move-result-object v3
 
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    const/4 v7, 0x0
 
-    move-result-object v1
+    const/4 v8, 0x0
 
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+    const-string v2, "sqlite_master"
 
-    move-result v2
+    const/4 v4, 0x0
 
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
+    const/4 v5, 0x0
 
-    move-result v3
+    const/4 v6, 0x0
 
-    const/4 v4, 0x2
+    move-object v1, p1
 
-    const/4 v5, 0x1
+    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    if-eqz v2, :cond_1
+    move-result-object p1
 
-    if-eqz v3, :cond_0
+    :cond_0
+    :goto_0
+    :try_start_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    move-result p2
 
-    move-result v1
+    if-eqz p2, :cond_1
 
-    add-int/lit8 v1, v1, 0x52
+    const/4 p2, 0x0
+
+    invoke-interface {p1, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    const/4 p3, 0x1
+
+    invoke-interface {p1, p3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    const-string v0, "sqlite_sequence"
+
+    invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "DROP "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " IF EXISTS "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_1
+    .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object p2, v0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    move-object p3, v0
+
+    :try_start_2
+    const-string v0, "SADatabaseProvider"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "Override has both \\pos(x,y) and \\move(x1,y1,x2,y2); using \\pos values. override=\'"
+    const-string v3, "Error executing "
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\'"
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p2
 
-    const-string v1, "SsaStyle.Overrides"
-
-    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    invoke-virtual {v0, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-static {v0, p2, p3}, Lhq;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
     :cond_1
-    if-eqz v3, :cond_2
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
-    invoke-virtual {v1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    :goto_1
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    :try_start_3
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    move-result-object v0
+    goto :goto_2
 
-    :goto_0
-    new-instance v1, Landroid/graphics/PointF;
+    :catchall_1
+    move-exception v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object p1, v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result p0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v0
-
-    invoke-direct {v1, p0, v0}, Landroid/graphics/PointF;-><init>(FF)V
-
-    return-object v1
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_2
-    const/4 p0, 0x0
+    :goto_2
+    throw p2
+.end method
 
-    return-object p0
+.method public final onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
+
+    return-void
 .end method

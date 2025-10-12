@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract k0(Lypd;)V
+.method public abstract setSenderName(Landroid/text/Layout;)V
+.end method
+
+.method public abstract setSenderNameColor(I)V
 .end method

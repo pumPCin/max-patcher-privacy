@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lp01;
-
-.field public final synthetic c:Z
+.field public final synthetic b:Lgp1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp01;ZI)V
+.method public synthetic constructor <init>(Lgp1;I)V
     .locals 0
 
-    iput p3, p0, Lxz0;->a:I
+    iput p2, p0, Lxz0;->a:I
 
-    iput-object p1, p0, Lxz0;->b:Lp01;
-
-    iput-boolean p2, p0, Lxz0;->c:Z
+    iput-object p1, p0, Lxz0;->b:Lgp1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,294 +27,123 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final onParticipantStateChanged(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V
+    .locals 4
 
-    iget v0, p0, Lxz0;->a:I
+    iget p1, p0, Lxz0;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lxz0;->b:Lp01;
+    iget-object p1, p0, Lxz0;->b:Lgp1;
 
-    iget-boolean v1, p0, Lxz0;->c:Z
+    check-cast p1, Lw4b;
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lw4b;->c()V
 
-    sget-object v2, Lox9;->j:Lqpa;
+    return-void
 
-    const/4 v3, 0x0
+    :pswitch_0
+    iget-object p1, p0, Lxz0;->b:Lgp1;
 
-    if-nez v2, :cond_0
+    check-cast p1, Lj01;
+
+    invoke-virtual {p1}, Lj01;->d()Lv04;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lv04;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    sget-object v4, Ly38;->o:Ly38;
+    move-object v0, v1
 
-    invoke-virtual {v2, v4}, Lqpa;->b(Ly38;)Z
+    :goto_0
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;->getChanges()Ljava/util/Collection;
 
-    move-result v5
+    move-result-object p2
 
-    if-eqz v5, :cond_1
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Screen sharing in call wasn\'t changed on "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " due to: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v4, v1, p1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p2
 
     :cond_1
-    :goto_0
-    iget-object p1, v0, Lp01;->H0:Le8e;
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0}, Lp01;->e()Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;
+    move-result v2
 
-    move-result-object v0
+    if-eqz v2, :cond_2
 
-    const/4 v1, 0x0
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    move-result-object v2
 
-    const/4 v2, 0x1
+    move-object v3, v2
 
-    invoke-static {v0, v3, v2, v3}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->getMediaOptionsForCall$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Lnwd;ILjava/lang/Object;)Lpo8;
+    check-cast v3, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    move-result-object v0
+    invoke-virtual {v3}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    if-eqz v0, :cond_2
+    move-result-object v3
 
-    iget-object v0, v0, Lpo8;->c:Loo8;
+    invoke-static {v3, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_2
+    move-result v3
 
-    invoke-static {v0}, Lp01;->h(Loo8;)Z
+    if-eqz v3, :cond_1
 
-    move-result v0
-
-    goto :goto_1
+    move-object v1, v2
 
     :cond_2
-    move v0, v1
+    check-cast v1, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    :goto_1
-    new-instance v2, Lua;
+    if-eqz v1, :cond_3
 
-    invoke-direct {v2, v1, v0}, Lua;-><init>(ZZ)V
+    iget-object p2, p1, Lj01;->x0:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p1, v2}, Le8e;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
 
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
+    move-result v0
 
-    return-object p1
+    xor-int/lit8 v0, v0, 0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lxz0;->b:Lp01;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
 
-    iget-boolean v1, p0, Lxz0;->c:Z
+    move-result v1
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-virtual {p2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    sget-object v2, Lox9;->j:Lqpa;
+    move-result p2
 
-    const/4 v3, 0x0
+    if-eqz p2, :cond_3
 
-    if-nez v2, :cond_3
+    iget-object p1, p1, Lj01;->C0:Lt6e;
 
-    goto :goto_3
+    sget-object p2, Lsa;->a:Lsa;
+
+    invoke-virtual {p1, p2}, Lt6e;->h(Ljava/lang/Object;)Z
 
     :cond_3
-    sget-object v4, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v4}, Lqpa;->b(Ly38;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Cameras in call wasn\'t changed on "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " due to: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v4, v1, p1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
-    :goto_3
-    iget-object p1, v0, Lp01;->H0:Le8e;
-
-    invoke-virtual {v0}, Lp01;->e()Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_5
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v3, v2, v3}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->getMediaOptionsForCall$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Lnwd;ILjava/lang/Object;)Lpo8;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, v0, Lpo8;->b:Loo8;
-
-    if-eqz v0, :cond_5
-
-    invoke-static {v0}, Lp01;->h(Loo8;)Z
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_5
-    move v0, v1
-
-    :goto_4
-    new-instance v2, Loa;
-
-    invoke-direct {v2, v1, v0}, Loa;-><init>(ZZ)V
-
-    invoke-virtual {p1, v2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :pswitch_1
-    iget-object v0, p0, Lxz0;->b:Lp01;
-
-    iget-boolean v1, p0, Lxz0;->c:Z
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    sget-object v4, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v4}, Lqpa;->b(Ly38;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_7
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Microphone in call wasn\'t changed on "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, " due to: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v4, v1, p1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_7
-    :goto_5
-    iget-object p1, v0, Lp01;->H0:Le8e;
-
-    invoke-virtual {v0}, Lp01;->e()Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_8
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v3, v2, v3}, Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;->getMediaOptionsForCall$default(Lru/ok/android/externcalls/sdk/media/mute/MediaMuteManager;Lnwd;ILjava/lang/Object;)Lpo8;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, v0, Lpo8;->a:Loo8;
-
-    if-eqz v0, :cond_8
-
-    invoke-static {v0}, Lp01;->h(Loo8;)Z
-
-    move-result v0
-
-    goto :goto_6
-
-    :cond_8
-    move v0, v1
-
-    :goto_6
-    new-instance v2, Lqa;
-
-    invoke-direct {v2, v1, v0}, Lqa;-><init>(ZZ)V
-
-    invoke-virtual {p1, v2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    goto/16 :goto_2
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -3,109 +3,54 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ll6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:J
 
-.field public final synthetic b:Ljl5;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljl5;I)V
+.method public synthetic constructor <init>(JJ)V
     .locals 0
 
-    iput p2, p0, Lak5;->a:I
-
-    iput-object p1, p0, Lak5;->b:Ljl5;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lak5;->a:J
+
+    iput-wide p3, p0, Lak5;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 5
+.method public final run()V
+    .locals 3
 
-    iget v0, p0, Lak5;->a:I
+    iget-wide v0, p0, Lak5;->a:J
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lak5;->b:Ljl5;
-
-    invoke-virtual {v0}, Ljl5;->c()Ljava/util/ArrayList;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
+    iget-wide v1, p0, Lak5;->b:J
 
-    :pswitch_0
-    iget-object v0, p0, Lak5;->b:Ljl5;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    const/4 v1, 0x0
-
-    const-string v2, "SELECT COUNT(*) FROM favorite_stickers"
-
-    invoke-static {v1, v2}, Lo6d;->c(ILjava/lang/String;)Lo6d;
-
-    move-result-object v2
-
-    iget-object v0, v0, Ljl5;->a:Lx5d;
-
-    invoke-virtual {v0}, Lx5d;->b()V
-
-    invoke-virtual {v0, v2}, Lx5d;->n(Lg2f;)Landroid/database/Cursor;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    :try_start_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
+    const-string v1, "ck5"
 
-    move-result v3
+    const-string v2, "setFavoriteStickerSetMoved: success move stickerSetId=%d, to position of stickerSetId=%d"
 
-    if-eqz v3, :cond_0
+    invoke-static {v1, v2, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    const-wide/16 v3, 0x0
-
-    :goto_0
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v2}, Lo6d;->n()V
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-
-    :goto_1
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v2}, Lo6d;->n()V
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

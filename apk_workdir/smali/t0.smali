@@ -1,45 +1,16 @@
 .class public final Lt0;
-.super Ljava/lang/Object;
+.super Lli0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lt0;
-
-
-# instance fields
-.field public final a:Ljava/lang/Throwable;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lt0;
-
-    new-instance v1, Ls0;
-
-    const-string v2, "Failure occurred while trying to finish a future."
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Ls0;-><init>(Ljava/lang/String;I)V
-
-    invoke-direct {v0, v1}, Lt0;-><init>(Ljava/lang/Throwable;)V
-
-    sput-object v0, Lt0;->b:Lt0;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Throwable;)V
+# virtual methods
+.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p3, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p3}, Landroid/graphics/drawable/Animatable;->start()V
 
-    iput-object p1, p0, Lt0;->a:Ljava/lang/Throwable;
-
+    :cond_0
     return-void
 .end method

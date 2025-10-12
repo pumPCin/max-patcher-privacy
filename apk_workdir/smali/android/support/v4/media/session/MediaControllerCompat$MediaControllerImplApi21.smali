@@ -108,6 +108,7 @@
 .method public static getMediaController(Landroid/app/Activity;)Landroid/support/v4/media/session/MediaControllerCompat;
     .locals 2
 
+    .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getMediaController()Landroid/media/session/MediaController;
 
     move-result-object v0
@@ -118,13 +119,16 @@
 
     return-object p0
 
+    .line 3
     :cond_0
     invoke-virtual {v0}, Landroid/media/session/MediaController;->getSessionToken()Landroid/media/session/MediaSession$Token;
 
     move-result-object v0
 
+    .line 4
     new-instance v1, Landroid/support/v4/media/session/MediaControllerCompat;
 
+    .line 5
     invoke-static {v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->fromToken(Ljava/lang/Object;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object v0
@@ -185,6 +189,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 4
 
+    .line 1
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->getFlags()J
 
     move-result-wide v0
@@ -199,14 +204,17 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 3
     const-string v1, "android.support.v4.media.session.command.ARGUMENT_MEDIA_DESCRIPTION"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    .line 4
     const-string p1, "android.support.v4.media.session.command.ADD_QUEUE_ITEM"
 
     const/4 v1, 0x0
@@ -215,6 +223,7 @@
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -228,6 +237,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 4
 
+    .line 6
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->getFlags()J
 
     move-result-wide v0
@@ -242,18 +252,22 @@
 
     if-eqz v0, :cond_0
 
+    .line 7
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 8
     const-string v1, "android.support.v4.media.session.command.ARGUMENT_MEDIA_DESCRIPTION"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    .line 9
     const-string p1, "android.support.v4.media.session.command.ARGUMENT_INDEX"
 
     invoke-virtual {v0, p1, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
+    .line 10
     const-string p1, "android.support.v4.media.session.command.ADD_QUEUE_ITEM_AT"
 
     const/4 p2, 0x0
@@ -262,6 +276,7 @@
 
     return-void
 
+    .line 11
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -321,6 +336,7 @@
 .method public getMediaController()Ljava/lang/Object;
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->mControllerFwk:Landroid/media/session/MediaController;
 
     return-object v0

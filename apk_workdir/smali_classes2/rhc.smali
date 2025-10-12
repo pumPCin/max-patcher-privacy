@@ -3,68 +3,110 @@
 
 
 # static fields
-.field public static auth_call_code_hint:I = 0x7f110000
+.field public static oneme_login_confirm_description:I = 0x7f130863
 
-.field public static auth_call_description:I = 0x7f110001
+.field public static oneme_login_confirm_info_loading_1:I = 0x7f130864
 
-.field public static call_dialog_participants:I = 0x7f110002
+.field public static oneme_login_confirm_info_loading_2:I = 0x7f130865
 
-.field public static call_dialog_participants_when_join:I = 0x7f110003
+.field public static oneme_login_confirm_info_loading_3:I = 0x7f130866
 
-.field public static call_history_dlg_delete:I = 0x7f110004
+.field public static oneme_login_confirm_resend:I = 0x7f130867
 
-.field public static delete_favorite_sticker_question:I = 0x7f11000d
+.field public static oneme_login_confirm_timer:I = 0x7f130868
 
-.field public static delete_recent_sticker_question:I = 0x7f11000e
+.field public static oneme_login_confirm_title:I = 0x7f130869
 
-.field public static field_length_exceeded_error:I = 0x7f110011
+.field public static oneme_login_error_connection_description:I = 0x7f13086a
 
-.field public static folder_filtered_title_bot_plural:I = 0x7f110012
+.field public static oneme_login_error_connection_title:I = 0x7f13086b
 
-.field public static folder_filtered_title_channel_plural:I = 0x7f110013
+.field public static oneme_login_input_continue:I = 0x7f13086c
 
-.field public static folder_filtered_title_chat_plural:I = 0x7f110014
+.field public static oneme_login_input_default_phone_hint:I = 0x7f13086d
 
-.field public static folder_filtered_title_contact_plural:I = 0x7f110015
+.field public static oneme_login_input_description:I = 0x7f13086e
 
-.field public static folder_filtered_title_not_contact_plural:I = 0x7f110016
+.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f13086f
 
-.field public static inactive_ttl:I = 0x7f110018
+.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130870
 
-.field public static max_attach_count_error:I = 0x7f11001a
+.field public static oneme_login_input_name_confirmation_description:I = 0x7f130871
 
-.field public static max_favorite_sticker_sets_count_reached:I = 0x7f11001b
+.field public static oneme_login_input_name_confirmation_return:I = 0x7f130872
 
-.field public static max_favorite_stickers_count_reached:I = 0x7f11001c
+.field public static oneme_login_input_name_confirmation_title:I = 0x7f130873
 
-.field public static max_message_length_error:I = 0x7f11001d
+.field public static oneme_login_input_name_contact_permission_description:I = 0x7f130874
 
-.field public static menu_copy_success:I = 0x7f11001e
+.field public static oneme_login_input_name_contact_permission_title:I = 0x7f130875
 
-.field public static message_compose_forward_or_share__forwarded_messages:I = 0x7f11001f
+.field public static oneme_login_input_name_continue_button_active:I = 0x7f130876
 
-.field public static mutual_friends:I = 0x7f110021
+.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f130877
 
-.field public static n_contacts:I = 0x7f110022
+.field public static oneme_login_input_name_description:I = 0x7f130878
 
-.field public static phone_weight:I = 0x7f11002f
+.field public static oneme_login_input_name_hint_name:I = 0x7f130879
 
-.field public static pin_lock_wrong_code_with_attempts:I = 0x7f110034
+.field public static oneme_login_input_name_hint_surname:I = 0x7f13087a
 
-.field public static question_delete_messages:I = 0x7f11003c
+.field public static oneme_login_input_name_hint_surname_short:I = 0x7f13087b
 
-.field public static results_more:I = 0x7f11003d
+.field public static oneme_login_input_name_surname_placeholder:I = 0x7f13087c
 
-.field public static selected_messages:I = 0x7f11003e
+.field public static oneme_login_input_name_title:I = 0x7f13087d
 
-.field public static sticker_removed_from_favorites:I = 0x7f11003f
+.field public static oneme_login_input_need_help:I = 0x7f13087e
 
-.field public static sticker_removed_from_recents:I = 0x7f110040
+.field public static oneme_login_input_need_help_email_title:I = 0x7f13087f
 
-.field public static sticker_set_description:I = 0x7f110041
+.field public static oneme_login_input_title:I = 0x7f130880
 
-.field public static sticker_set_description_with_author:I = 0x7f110042
+.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f130881
 
-.field public static to_chats:I = 0x7f110043
+.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f130882
 
-.field public static you_sent_messages:I = 0x7f110073
+.field public static oneme_login_neuro_avatars_continue_without_avatar_button:I = 0x7f130883
+
+.field public static oneme_login_neuro_avatars_description:I = 0x7f130884
+
+.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f130885
+
+.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f130886
+
+.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f130887
+
+.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f130888
+
+.field public static oneme_login_neuro_avatars_save_button:I = 0x7f130889
+
+.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f13088a
+
+.field public static oneme_login_neuro_avatars_title:I = 0x7f13088b
+
+.field public static oneme_login_sms_count_exceeded_description:I = 0x7f13088c
+
+.field public static oneme_login_sms_count_exceeded_title:I = 0x7f13088d
+
+.field public static oneme_login_welcome_continue_btn:I = 0x7f13088e
+
+.field public static oneme_login_welcome_description:I = 0x7f13088f
+
+.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130890
+
+.field public static oneme_login_welcome_switch_btn:I = 0x7f130891
+
+.field public static oneme_login_welcome_terms:I = 0x7f130892
+
+.field public static oneme_login_welcome_title:I = 0x7f130893
+
+.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f130894
+
+.field public static oneme_registration_neuro_avatars_change_photo:I = 0x7f130950
+
+.field public static oneme_registration_neuro_avatars_choose_avatar:I = 0x7f130951
+
+.field public static oneme_registration_neuro_avatars_choose_photo:I = 0x7f130952
+
+.field public static oneme_registration_neuro_avatars_or:I = 0x7f130953

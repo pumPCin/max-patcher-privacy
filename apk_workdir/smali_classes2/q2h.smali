@@ -1,160 +1,477 @@
-.class public final Lq2h;
-.super Ljava/lang/Object;
+.class public final enum Lq2h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final Companion:Lp2h;
+.field public static final enum X:Lq2h;
+
+.field public static final enum Y:Lq2h;
+
+.field public static final enum Z:Lq2h;
+
+.field public static final enum o:Lq2h;
+
+.field public static final enum r0:Lq2h;
+
+.field public static final enum s0:Lq2h;
+
+.field public static final enum t0:Lq2h;
+
+.field public static final enum u0:Lq2h;
+
+.field public static final enum v0:Lq2h;
+
+.field public static final synthetic w0:[Lq2h;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:[J
 
-.field public final b:Ljava/lang/String;
+.field public final b:[I
+
+.field public final c:[J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 23
 
-    new-instance v0, Lp2h;
+    new-instance v0, Lq2h;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x1
 
-    sput-object v0, Lq2h;->Companion:Lp2h;
+    new-array v3, v6, [J
 
-    return-void
-.end method
+    const/4 v7, 0x0
 
-.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    const-wide/16 v8, 0x7
 
-    and-int/lit8 v0, p1, 0x3
+    aput-wide v8, v3, v7
 
-    const/4 v1, 0x3
+    const/16 v10, 0x41
 
-    if-ne v1, v0, :cond_0
+    filled-new-array {v10}, [I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v4
 
-    iput-object p2, p0, Lq2h;->a:Ljava/lang/String;
+    new-array v5, v6, [J
 
-    iput-object p3, p0, Lq2h;->b:Ljava/lang/String;
+    const-wide/16 v1, 0x3c
 
-    return-void
+    aput-wide v1, v5, v7
 
-    :cond_0
-    sget-object p2, Lo2h;->a:Lo2h;
-
-    invoke-virtual {p2}, Lo2h;->d()Ldsd;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lv63;->y0(IILdsd;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq2h;
+    const-string v1, "IMPACT_LIGHT"
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct/range {v0 .. v5}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
 
-    return v2
+    sput-object v0, Lq2h;->o:Lq2h;
 
-    :cond_1
-    check-cast p1, Lq2h;
+    new-instance v1, Lq2h;
 
-    iget-object v1, p0, Lq2h;->a:Ljava/lang/String;
+    new-array v14, v6, [J
 
-    iget-object v3, p1, Lq2h;->a:Ljava/lang/String;
+    aput-wide v8, v14, v7
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/16 v2, 0x91
 
-    move-result v1
+    filled-new-array {v2}, [I
 
-    if-nez v1, :cond_2
+    move-result-object v15
 
-    return v2
+    new-array v2, v6, [J
 
-    :cond_2
-    iget-object v1, p0, Lq2h;->b:Ljava/lang/String;
+    const-wide/16 v3, 0x46
 
-    iget-object p1, p1, Lq2h;->b:Ljava/lang/String;
+    aput-wide v3, v2, v7
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v12, "IMPACT_MEDIUM"
 
-    move-result p1
+    const/4 v13, 0x1
 
-    if-nez p1, :cond_3
+    move-object v11, v1
 
-    return v2
+    move-object/from16 v16, v2
 
-    :cond_3
-    return v0
-.end method
+    invoke-direct/range {v11 .. v16}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
 
-.method public final hashCode()I
-    .locals 2
+    sput-object v1, Lq2h;->X:Lq2h;
 
-    iget-object v0, p0, Lq2h;->a:Ljava/lang/String;
+    new-instance v2, Lq2h;
 
-    if-nez v0, :cond_0
+    new-array v14, v6, [J
 
-    const/4 v0, 0x0
+    aput-wide v8, v14, v7
 
-    goto :goto_0
+    const/16 v3, 0xff
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    filled-new-array {v3}, [I
 
-    move-result v0
+    move-result-object v15
 
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
+    new-array v4, v6, [J
 
-    iget-object v1, p0, Lq2h;->b:Ljava/lang/String;
+    const-wide/16 v8, 0x50
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    aput-wide v8, v4, v7
 
-    move-result v1
+    const-string v12, "IMPACT_HEAVY"
 
-    add-int/2addr v1, v0
+    const/4 v13, 0x2
 
-    return v1
-.end method
+    move-object v11, v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    move-object/from16 v16, v4
 
-    const-string v0, ", requestId="
+    invoke-direct/range {v11 .. v16}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
 
-    const-string v1, ")"
+    sput-object v2, Lq2h;->Y:Lq2h;
 
-    const-string v2, "WebAppStorageClearRequest(queryId="
+    new-instance v11, Lq2h;
 
-    iget-object v3, p0, Lq2h;->a:Ljava/lang/String;
+    new-array v14, v6, [J
 
-    iget-object v4, p0, Lq2h;->b:Ljava/lang/String;
+    const-wide/16 v4, 0x3
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    aput-wide v4, v14, v7
+
+    const/16 v4, 0xe1
+
+    filled-new-array {v4}, [I
+
+    move-result-object v15
+
+    new-array v5, v6, [J
+
+    const-wide/16 v8, 0x32
+
+    aput-wide v8, v5, v7
+
+    const-string v12, "IMPACT_RIGID"
+
+    const/4 v13, 0x3
+
+    move-object/from16 v16, v5
+
+    invoke-direct/range {v11 .. v16}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v11, Lq2h;->Z:Lq2h;
+
+    new-instance v12, Lq2h;
+
+    new-array v15, v6, [J
+
+    const-wide/16 v8, 0xa
+
+    aput-wide v8, v15, v7
+
+    const/16 v5, 0xaf
+
+    filled-new-array {v5}, [I
+
+    move-result-object v16
+
+    new-array v8, v6, [J
+
+    const-wide/16 v13, 0x37
+
+    aput-wide v13, v8, v7
+
+    const-string v13, "IMPACT_SOFT"
+
+    const/4 v14, 0x4
+
+    move-object/from16 v17, v8
+
+    invoke-direct/range {v12 .. v17}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v12, Lq2h;->r0:Lq2h;
+
+    new-instance v13, Lq2h;
+
+    const/4 v8, 0x7
+
+    new-array v9, v8, [J
+
+    fill-array-data v9, :array_0
+
+    new-array v14, v8, [I
+
+    fill-array-data v14, :array_1
+
+    new-array v15, v8, [J
+
+    fill-array-data v15, :array_2
+
+    move-object/from16 v17, v14
+
+    const-string v14, "NOTIFICATION_ERROR"
+
+    move-object/from16 v18, v15
+
+    const/4 v15, 0x5
+
+    move-object/from16 v16, v9
+
+    invoke-direct/range {v13 .. v18}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v13, Lq2h;->s0:Lq2h;
+
+    new-instance v14, Lq2h;
+
+    const/4 v9, 0x3
+
+    new-array v15, v9, [J
+
+    fill-array-data v15, :array_3
+
+    filled-new-array {v5, v7, v3}, [I
+
+    move-result-object v18
+
+    new-array v3, v9, [J
+
+    fill-array-data v3, :array_4
+
+    move-object/from16 v17, v15
+
+    const-string v15, "NOTIFICATION_SUCCESS"
+
+    const/16 v16, 0x6
+
+    move-object/from16 v19, v3
+
+    invoke-direct/range {v14 .. v19}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v14, Lq2h;->t0:Lq2h;
+
+    new-instance v15, Lq2h;
+
+    new-array v3, v9, [J
+
+    fill-array-data v3, :array_5
+
+    filled-new-array {v4, v7, v5}, [I
+
+    move-result-object v19
+
+    new-array v4, v9, [J
+
+    fill-array-data v4, :array_6
+
+    const-string v16, "NOTIFICATION_WARNING"
+
+    const/16 v17, 0x7
+
+    move-object/from16 v18, v3
+
+    move-object/from16 v20, v4
+
+    invoke-direct/range {v15 .. v20}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v15, Lq2h;->u0:Lq2h;
+
+    new-instance v16, Lq2h;
+
+    new-array v3, v6, [J
+
+    const-wide/16 v4, 0x1
+
+    aput-wide v4, v3, v7
+
+    filled-new-array {v10}, [I
+
+    move-result-object v20
+
+    new-array v4, v6, [J
+
+    const-wide/16 v5, 0x1e
+
+    aput-wide v5, v4, v7
+
+    const-string v17, "SELECTION_CHANGE"
+
+    const/16 v18, 0x8
+
+    move-object/from16 v19, v3
+
+    move-object/from16 v21, v4
+
+    invoke-direct/range {v16 .. v21}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    sput-object v16, Lq2h;->v0:Lq2h;
+
+    new-instance v17, Lq2h;
+
+    const/4 v3, 0x4
+
+    new-array v3, v3, [J
+
+    fill-array-data v3, :array_7
+
+    const/16 v4, 0x64
+
+    filled-new-array {v7, v4, v7, v4}, [I
+
+    move-result-object v21
+
+    new-array v4, v8, [J
+
+    fill-array-data v4, :array_8
+
+    const-string v18, "APP_ERROR"
+
+    const/16 v19, 0x9
+
+    move-object/from16 v20, v3
+
+    move-object/from16 v22, v4
+
+    invoke-direct/range {v17 .. v22}, Lq2h;-><init>(Ljava/lang/String;I[J[I[J)V
+
+    move-object v3, v11
+
+    move-object v4, v12
+
+    move-object v5, v13
+
+    move-object v6, v14
+
+    move-object v7, v15
+
+    move-object/from16 v8, v16
+
+    move-object/from16 v9, v17
+
+    filled-new-array/range {v0 .. v9}, [Lq2h;
 
     move-result-object v0
+
+    sput-object v0, Lq2h;->w0:[Lq2h;
+
+    return-void
+
+    :array_0
+    .array-data 8
+        0xe
+        0x30
+        0xe
+        0x30
+        0xe
+        0x30
+        0x14
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0xc8
+        0x0
+        0xc8
+        0x0
+        0xff
+        0x0
+        0x91
+    .end array-data
+
+    :array_2
+    .array-data 8
+        0x28
+        0x3c
+        0x28
+        0x3c
+        0x41
+        0x3c
+        0x28
+    .end array-data
+
+    :array_3
+    .array-data 8
+        0xe
+        0x41
+        0xe
+    .end array-data
+
+    :array_4
+    .array-data 8
+        0x32
+        0x3c
+        0x41
+    .end array-data
+
+    :array_5
+    .array-data 8
+        0xe
+        0x40
+        0xe
+    .end array-data
+
+    :array_6
+    .array-data 8
+        0x41
+        0x3c
+        0x28
+    .end array-data
+
+    :array_7
+    .array-data 8
+        0x1e
+        0xa
+        0x96
+        0xa
+    .end array-data
+
+    :array_8
+    .array-data 8
+        0x28
+        0x3c
+        0x28
+        0x3c
+        0x41
+        0x3c
+        0x28
+    .end array-data
+.end method
+
+.method public constructor <init>(Ljava/lang/String;I[J[I[J)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lq2h;->a:[J
+
+    iput-object p4, p0, Lq2h;->b:[I
+
+    iput-object p5, p0, Lq2h;->c:[J
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lq2h;
+    .locals 1
+
+    const-class v0, Lq2h;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lq2h;
+
+    return-object p0
+.end method
+
+.method public static values()[Lq2h;
+    .locals 1
+
+    sget-object v0, Lq2h;->w0:[Lq2h;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lq2h;
 
     return-object v0
 .end method

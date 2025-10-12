@@ -1,47 +1,33 @@
 .class public final Lty1;
-.super Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
+.super Ljnb;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final onActive(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+.method public final f(Ljava/util/ArrayList;Llqd;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Ljnb;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->captureBurstRequests(Ljava/util/List;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public final onCaptureQueueEmpty(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+.method public final w(Landroid/hardware/camera2/CaptureRequest;Llqd;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Ljnb;->a:Ljava/lang/Object;
 
-.method public final onClosed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    check-cast v0, Landroid/hardware/camera2/CameraCaptureSession;
 
-    return-void
-.end method
+    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraCaptureSession;->setSingleRepeatingRequest(Landroid/hardware/camera2/CaptureRequest;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)I
 
-.method public final onConfigureFailed(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
+    move-result p1
 
-    return-void
-.end method
-
-.method public final onConfigured(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onReady(Landroid/hardware/camera2/CameraCaptureSession;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onSurfacePrepared(Landroid/hardware/camera2/CameraCaptureSession;Landroid/view/Surface;)V
-    .locals 0
-
-    return-void
+    return p1
 .end method

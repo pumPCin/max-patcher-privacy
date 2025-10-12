@@ -1,133 +1,47 @@
 .class public final Lvba;
-.super Lel0;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Lfs4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic Y:I
+.field public final synthetic a:I
 
-.field public final Z:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxda;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p3, p0, Lvba;->Y:I
+    iput p1, p0, Lvba;->a:I
 
-    invoke-direct {p0, p1}, Lel0;-><init>(Lxda;)V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p2, p0, Lvba;->Z:Ljava/lang/Object;
+    iput-object p2, p0, Lvba;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+.method public final f()V
+    .locals 1
 
-    iget v0, p0, Lvba;->Y:I
+    iget v0, p0, Lvba;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p0, Lel0;->o:Z
+    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p0, Lel0;->X:I
-
-    iget-object v1, p0, Lel0;->a:Lxda;
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x0
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    :try_start_0
-    iget-object v0, p0, Lvba;->Z:Ljava/lang/Object;
-
-    check-cast v0, Lmf6;
-
-    invoke-interface {v0, p1}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "The mapper function returned a null value."
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lel0;->b:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lel0;->onError(Ljava/lang/Throwable;)V
-
-    :goto_0
     return-void
 
     :pswitch_0
-    iget v0, p0, Lel0;->X:I
+    invoke-static {p0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    iget-object v1, p0, Lel0;->a:Lxda;
-
-    if-nez v0, :cond_2
-
-    :try_start_1
-    iget-object v0, p0, Lvba;->Z:Ljava/lang/Object;
-
-    check-cast v0, Llob;
-
-    invoke-interface {v0, p1}, Llob;->test(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lel0;->b:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lel0;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_1
     return-void
 
     nop
@@ -138,32 +52,35 @@
     .end packed-switch
 .end method
 
-.method public final poll()Ljava/lang/Object;
+.method public final g()Z
     .locals 2
 
-    iget v0, p0, Lvba;->Y:I
+    iget v0, p0, Lvba;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lel0;->c:Lq8c;
-
-    invoke-interface {v0}, Lpde;->poll()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lfs4;
 
-    iget-object v1, p0, Lvba;->Z:Ljava/lang/Object;
+    invoke-static {v0}, Ljs4;->b(Lfs4;)Z
 
-    check-cast v1, Lmf6;
+    move-result v0
 
-    invoke-interface {v1, v0}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "The mapper function returned a null value."
+    sget-object v1, Ljs4;->a:Ljs4;
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
@@ -171,30 +88,64 @@
     const/4 v0, 0x0
 
     :goto_0
-    return-object v0
+    return v0
 
-    :cond_1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lvba;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lvba;->b:Ljava/lang/Object;
+
+    check-cast v0, Llde;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Llde;->a(Ljava/lang/Object;)V
+
+    return-void
+
     :pswitch_0
-    iget-object v0, p0, Lel0;->c:Lq8c;
+    iget-object v0, p0, Lvba;->b:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lpde;->poll()Ljava/lang/Object;
+    check-cast v0, Lyba;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lvba;->Z:Ljava/lang/Object;
-
-    check-cast v1, Llob;
-
-    invoke-interface {v1, v0}, Llob;->test(Ljava/lang/Object;)Z
+    invoke-virtual {p0}, Lvba;->g()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_0
 
-    :cond_2
-    return-object v0
+    const-wide/16 v1, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lyba;->e(Ljava/lang/Object;)V
+
+    sget-object v1, Lj65;->a:Lj65;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Lyba;->b()V
+
+    :cond_0
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

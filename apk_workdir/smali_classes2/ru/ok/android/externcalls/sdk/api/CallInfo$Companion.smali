@@ -22,25 +22,25 @@
         "",
         "<init>",
         "()V",
-        "Lvl7;",
+        "Lrk7;",
         "reader",
         "Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "parse",
-        "(Lvl7;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
+        "(Lrk7;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "",
         "conversationId",
         "startConversationDelegateResultParse",
-        "(Lvl7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
+        "(Lrk7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;",
         "result",
         "createFromStartConversationDelegateResult$calls_sdk_release",
         "(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;",
         "createFromStartConversationDelegateResult",
-        "Lpl7;",
+        "Llk7;",
         "PARSER",
-        "Lpl7;",
+        "Llk7;",
         "getPARSER",
-        "()Lpl7;",
+        "()Llk7;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Laf4;)V
     .locals 0
 
     .line 1
@@ -72,17 +72,17 @@
     return-void
 .end method
 
-.method public static final synthetic access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lvl7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method public static final synthetic access$parse(Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;Lrk7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->parse(Lvl7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->parse(Lrk7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final parse(Lvl7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method private final parse(Lrk7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 14
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -91,13 +91,13 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lvl7;->s()V
+    invoke-interface {p1}, Lrk7;->s()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    sget-object v2, Lb75;->a:Lb75;
+    sget-object v2, Lo65;->a:Lo65;
 
     move-object v4, v0
 
@@ -120,13 +120,13 @@
     move-object v11, v10
 
     :goto_0
-    invoke-interface {p1}, Lvl7;->hasNext()Z
+    invoke-interface {p1}, Lrk7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    invoke-interface {p1}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     goto/16 :goto_1
 
     :cond_0
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v4
 
@@ -168,7 +168,7 @@
     goto/16 :goto_1
 
     :cond_1
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvl7;)Ljava/util/List;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lrk7;)Ljava/util/List;
 
     move-result-object v11
 
@@ -186,7 +186,7 @@
     goto/16 :goto_1
 
     :cond_2
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvl7;)Ljava/util/List;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lrk7;)Ljava/util/List;
 
     move-result-object v10
 
@@ -204,7 +204,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-interface {p1}, Lvl7;->e0()Z
+    invoke-interface {p1}, Lrk7;->U()Z
 
     move-result v9
 
@@ -222,7 +222,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-interface {p1}, Lvl7;->E()I
+    invoke-interface {p1}, Lrk7;->z()I
 
     move-result v13
 
@@ -240,7 +240,7 @@
     goto :goto_1
 
     :cond_5
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v6
 
@@ -258,7 +258,7 @@
     goto :goto_1
 
     :cond_6
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v5
 
@@ -276,7 +276,7 @@
     goto :goto_1
 
     :cond_7
-    invoke-interface {p1}, Lvl7;->e0()Z
+    invoke-interface {p1}, Lrk7;->U()Z
 
     move-result v12
 
@@ -294,7 +294,7 @@
     goto :goto_1
 
     :cond_8
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v7
 
@@ -310,19 +310,19 @@
     if-nez v0, :cond_9
 
     :goto_1
-    invoke-interface {p1}, Lvl7;->B()V
+    invoke-interface {p1}, Lrk7;->y()V
 
     goto/16 :goto_0
 
     :cond_9
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v8
 
     goto/16 :goto_0
 
     :cond_a
-    invoke-interface {p1}, Lvl7;->q()V
+    invoke-interface {p1}, Lrk7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/CallInfo;
 
@@ -347,16 +347,16 @@
     .end sparse-switch
 .end method
 
-.method private final startConversationDelegateResultParse(Lvl7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method private final startConversationDelegateResultParse(Lrk7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 14
 
-    invoke-interface {p1}, Lvl7;->s()V
+    invoke-interface {p1}, Lrk7;->s()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    sget-object v2, Lb75;->a:Lb75;
+    sget-object v2, Lo65;->a:Lo65;
 
     move-object v4, v0
 
@@ -371,13 +371,13 @@
     move-object v11, v10
 
     :goto_0
-    invoke-interface {p1}, Lvl7;->hasNext()Z
+    invoke-interface {p1}, Lrk7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    invoke-interface {p1}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -401,7 +401,7 @@
     goto :goto_1
 
     :cond_0
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v4
 
@@ -419,7 +419,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {p1}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p1}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v7
 
@@ -437,7 +437,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-interface {p1}, Lvl7;->e0()Z
+    invoke-interface {p1}, Lrk7;->U()Z
 
     move-result v9
 
@@ -455,7 +455,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-interface {p1}, Lvl7;->E()I
+    invoke-interface {p1}, Lrk7;->z()I
 
     move-result v13
 
@@ -473,7 +473,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lvl7;)Ljava/util/List;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lrk7;)Ljava/util/List;
 
     move-result-object v10
 
@@ -489,19 +489,19 @@
     if-nez v0, :cond_5
 
     :goto_1
-    invoke-interface {p1}, Lvl7;->B()V
+    invoke-interface {p1}, Lrk7;->y()V
 
     goto :goto_0
 
     :cond_5
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lvl7;)Ljava/util/List;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lrk7;)Ljava/util/List;
 
     move-result-object v11
 
     goto :goto_0
 
     :cond_6
-    invoke-interface {p1}, Lvl7;->q()V
+    invoke-interface {p1}, Lrk7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/CallInfo;
 
@@ -533,35 +533,35 @@
 .method public final createFromStartConversationDelegateResult$calls_sdk_release(Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 2
 
-    new-instance v0, Lsjb;
+    new-instance v0, Ljib;
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->getInternalCallerParams()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lsjb;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljib;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/delegate/StartConversationDelegate$Result;->getConversationId()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->startConversationDelegateResultParse(Lvl7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/api/CallInfo$Companion;->startConversationDelegateResultParse(Lrk7;Ljava/lang/String;)Lru/ok/android/externcalls/sdk/api/CallInfo;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final getPARSER()Lpl7;
+.method public final getPARSER()Llk7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/api/CallInfo;->access$getPARSER$cp()Lpl7;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/api/CallInfo;->access$getPARSER$cp()Llk7;
 
     move-result-object v0
 

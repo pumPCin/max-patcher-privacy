@@ -3,19 +3,19 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxc1;
+.implements Lvc1;
 
 
 # static fields
-.field public static final X:Li1e;
+.field public static final X:Lxzd;
 
 .field public static final a:Ltc1;
 
 .field public static final b:J
 
-.field public static final c:Ljef;
+.field public static final c:Lxcf;
 
-.field public static final o:Ljp7;
+.field public static final o:Lgo7;
 
 
 # direct methods
@@ -28,43 +28,43 @@
 
     sput-object v0, Ltc1;->a:Ltc1;
 
-    sget-wide v0, Lnja;->a:J
+    sget-wide v0, Luha;->d:J
 
     sput-wide v0, Ltc1;->b:J
 
-    sget v0, Lpja;->e:I
+    sget v0, Lz7d;->K2:I
 
-    new-instance v1, Ljef;
+    new-instance v1, Lxcf;
 
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
 
-    sput-object v1, Ltc1;->c:Ljef;
+    sput-object v1, Ltc1;->c:Lxcf;
 
-    new-instance v0, Ljp7;
+    new-instance v0, Lgo7;
 
-    sget v1, Llja;->d:I
+    sget v1, Lsha;->i:I
 
     const/4 v2, 0x0
 
     const/4 v3, 0x6
 
-    invoke-direct {v0, v1, v2, v3}, Ljp7;-><init>(III)V
+    invoke-direct {v0, v1, v2, v3}, Lgo7;-><init>(III)V
 
-    sput-object v0, Ltc1;->o:Ljp7;
+    sput-object v0, Ltc1;->o:Lgo7;
 
-    sget-object v0, Li1e;->a:Li1e;
+    sget-object v0, Lxzd;->a:Lxzd;
 
-    sput-object v0, Ltc1;->X:Li1e;
+    sput-object v0, Ltc1;->X:Lxzd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()Llp7;
+.method public final e()Lio7;
     .locals 1
 
-    sget-object v0, Ltc1;->o:Ljp7;
+    sget-object v0, Ltc1;->o:Lgo7;
 
     return-object v0
 .end method
@@ -99,18 +99,18 @@
     return-wide v0
 .end method
 
-.method public final getTitle()Loef;
+.method public final getTitle()Lcdf;
     .locals 1
 
-    sget-object v0, Ltc1;->c:Ljef;
+    sget-object v0, Ltc1;->c:Lxcf;
 
     return-object v0
 .end method
 
-.method public final getType()Li1e;
+.method public final getType()Lxzd;
     .locals 1
 
-    sget-object v0, Ltc1;->X:Li1e;
+    sget-object v0, Ltc1;->X:Lxzd;
 
     return-object v0
 .end method
@@ -118,7 +118,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x122eeb95
+    const v0, 0x1f0af277
 
     return v0
 .end method
@@ -126,7 +126,7 @@
 .method public final m()I
     .locals 1
 
-    sget v0, Lmja;->m:I
+    sget v0, Ltha;->m:I
 
     return v0
 .end method
@@ -142,7 +142,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "CopyLink"
+    const-string v0, "SendToChat"
 
     return-object v0
 .end method
@@ -150,7 +150,7 @@
 .method public final u()I
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x2
 
     return v0
 .end method

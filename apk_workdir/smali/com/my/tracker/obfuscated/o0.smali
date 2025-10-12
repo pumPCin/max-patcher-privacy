@@ -41,11 +41,13 @@
 .method public static a(ILjava/lang/String;Ljava/lang/String;)Lcom/my/tracker/obfuscated/o0$a;
     .locals 2
 
+    .line 5
     :try_start_0
     const-string v0, "PreInstallHandler: converting raw data to json"
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 6
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -54,6 +56,7 @@
 
     move-result-object v0
 
+    .line 7
     new-instance v1, Lcom/my/tracker/obfuscated/o0$a;
 
     invoke-direct {v1, p0, v0, p2}, Lcom/my/tracker/obfuscated/o0$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
@@ -65,15 +68,18 @@
     :catchall_0
     move-exception v0
 
+    .line 8
     const-string v1, "PreInstallHandler error: exception when converting raw data to json"
 
     invoke-static {v1, v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 9
     :try_start_1
     const-string v0, "PreInstallHandler: converting raw data to json with pid"
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 10
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
@@ -88,6 +94,7 @@
 
     move-result-object p1
 
+    .line 11
     new-instance v0, Lcom/my/tracker/obfuscated/o0$a;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/my/tracker/obfuscated/o0$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
@@ -99,10 +106,12 @@
     :catchall_1
     move-exception p1
 
+    .line 12
     const-string p2, "PreInstallHandler error: exception when converting raw data to json with pid"
 
     invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 13
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string p2, "PreInstallHandler: nothing has been found for source: "
@@ -125,6 +134,7 @@
 .method public static a(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/z0;Landroid/content/Context;)Lcom/my/tracker/obfuscated/o0;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/my/tracker/obfuscated/o0;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/my/tracker/obfuscated/o0;-><init>(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/z0;Landroid/content/Context;)V
@@ -135,6 +145,7 @@
 .method public static a(Landroid/content/res/Resources;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -149,6 +160,7 @@
 
     move-result-object p1
 
+    .line 3
     const-string v0, "string"
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -161,6 +173,7 @@
 
     return-object p0
 
+    .line 4
     :cond_0
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -174,6 +187,7 @@
 .method public a()Lcom/my/tracker/obfuscated/o0$a;
     .locals 2
 
+    .line 14
     iget-object v0, p0, Lcom/my/tracker/obfuscated/o0;->b:Lcom/my/tracker/obfuscated/z0;
 
     invoke-virtual {v0}, Lcom/my/tracker/obfuscated/z0;->p()Z
@@ -184,12 +198,14 @@
 
     if-nez v0, :cond_0
 
+    .line 15
     const-string v0, "PreInstallHandler: tracking preinstall is disabled"
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-object v1
 
+    .line 16
     :cond_0
     invoke-virtual {p0}, Lcom/my/tracker/obfuscated/o0;->b()Lcom/my/tracker/obfuscated/o0$a;
 
@@ -202,6 +218,7 @@
     :cond_1
     const/4 v0, 0x1
 
+    .line 17
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/o0;->a(I)Lcom/my/tracker/obfuscated/o0$a;
 
     move-result-object v0
@@ -210,6 +227,7 @@
 
     return-object v0
 
+    .line 18
     :cond_2
     iget-object v0, p0, Lcom/my/tracker/obfuscated/o0;->b:Lcom/my/tracker/obfuscated/z0;
 
@@ -221,6 +239,7 @@
 
     const/4 v0, 0x2
 
+    .line 19
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/o0;->a(I)Lcom/my/tracker/obfuscated/o0$a;
 
     move-result-object v0
@@ -240,6 +259,7 @@
 
     if-ne p1, v0, :cond_0
 
+    .line 20
     const-string v0, "ro.mytracker.preinstall.path"
 
     goto :goto_0
@@ -249,19 +269,23 @@
 
     if-ne p1, v0, :cond_3
 
+    .line 21
     const-string v0, "ro.appsflyer.preinstall.path"
 
+    .line 22
     :goto_0
     invoke-static {v0}, Lcom/my/tracker/obfuscated/w0;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
+    .line 23
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 24
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v2, "PreInstallHandler: empty path for source: "
@@ -278,17 +302,20 @@
 
     return-object v1
 
+    .line 25
     :cond_1
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/o0;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 26
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
+    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v2, "PreInstallHandler: empty data for source: "
@@ -305,6 +332,7 @@
 
     return-object v1
 
+    .line 28
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -320,12 +348,14 @@
 
     invoke-static {v1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 29
     invoke-static {p1, v2, v0}, Lcom/my/tracker/obfuscated/o0;->a(ILjava/lang/String;Ljava/lang/String;)Lcom/my/tracker/obfuscated/o0$a;
 
     move-result-object p1
 
     return-object p1
 
+    .line 30
     :cond_3
     const-string p1, "PreInstallHandler: wrong property property key"
 
@@ -341,6 +371,7 @@
 
     const/4 v1, 0x0
 
+    .line 31
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -354,12 +385,14 @@
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 32
     iget-object v0, p0, Lcom/my/tracker/obfuscated/o0;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 33
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -374,10 +407,12 @@
 
     move-result-object v0
 
+    .line 34
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
+    .line 35
     new-instance v3, Ljava/io/BufferedReader;
 
     new-instance v4, Ljava/io/FileReader;
@@ -388,6 +423,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
+    .line 36
     :cond_0
     :try_start_1
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -396,6 +432,7 @@
 
     if-eqz v4, :cond_1
 
+    .line 37
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,6 +449,7 @@
 
     invoke-static {v5}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 38
     invoke-virtual {v4, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -424,10 +462,12 @@
 
     if-le v5, v2, :cond_0
 
+    .line 39
     invoke-virtual {v4, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
 
+    .line 40
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
@@ -436,6 +476,7 @@
 
     if-nez v5, :cond_0
 
+    .line 41
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -462,6 +503,7 @@
 
     move-object v3, v1
 
+    .line 42
     :goto_0
     :try_start_4
     new-instance v2, Ljava/lang/StringBuilder;
@@ -484,6 +526,7 @@
 
     if-eqz v3, :cond_2
 
+    .line 43
     :try_start_5
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -504,6 +547,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
+    .line 44
     :catchall_5
     :cond_3
     throw p1

@@ -2,26 +2,25 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final a:J
+
+# instance fields
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-    sget v0, Ln05;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x5
+    iput p1, p0, Lfkd;->a:I
 
-    sget-object v1, Ls05;->o:Ls05;
-
-    invoke-static {v0, v1}, Lyhh;->O(ILs05;)J
-
-    move-result-wide v0
-
-    sput-wide v0, Lfkd;->a:J
+    iput-object p2, p0, Lfkd;->b:Ljava/lang/String;
 
     return-void
 .end method

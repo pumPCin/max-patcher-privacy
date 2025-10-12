@@ -1,113 +1,69 @@
 .class public final Lft7;
-.super Lbj0;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lnr6;
+.field public X:Lku5;
 
-.field public final Y:Ln8g;
+.field public Y:Landroid/net/Uri;
 
-.field public final Z:Ljava/lang/Long;
+.field public Z:Lr82;
 
-.field public final b:Ljava/lang/Long;
+.field public o:Lst7;
 
-.field public final c:J
+.field public r0:J
 
-.field public final o:Lpv3;
+.field public synthetic s0:Ljava/lang/Object;
 
-.field public final w0:Ljava/lang/String;
+.field public final synthetic t0:Lst7;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/Long;JLpv3;Lnr6;Ln8g;Ljava/lang/Long;Ljava/lang/String;)V
+.method public constructor <init>(Lst7;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+    iput-object p1, p0, Lft7;->t0:Lst7;
 
-    iput-object p3, p0, Lft7;->b:Ljava/lang/Long;
-
-    iput-wide p4, p0, Lft7;->c:J
-
-    iput-object p6, p0, Lft7;->o:Lpv3;
-
-    iput-object p7, p0, Lft7;->X:Lnr6;
-
-    iput-object p8, p0, Lft7;->Y:Ln8g;
-
-    iput-object p9, p0, Lft7;->Z:Ljava/lang/Long;
-
-    iput-object p10, p0, Lft7;->w0:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lft7;->s0:Ljava/lang/Object;
 
-    const-string v1, "LinkInfoEvent{chatId="
+    iget p1, p0, Lft7;->u0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lft7;->b:Ljava/lang/Long;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lft7;->u0:I
 
-    const-string v1, ", messageId="
+    const-wide/16 v4, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    iget-wide v1, p0, Lft7;->c:J
+    iget-object v0, p0, Lft7;->t0:Lst7;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, ", contactSearchResult="
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lft7;->o:Lpv3;
+    move-object v7, p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v0 .. v7}, Lst7;->f(Lku5;Landroid/net/Uri;Lr82;JLrm4;Lwy3;)Ljava/lang/Object;
 
-    const-string v1, ", groupChatInfo="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->X:Lnr6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoConference="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->Y:Ln8g;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stickerSetId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->Z:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startPayload=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lft7;->w0:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

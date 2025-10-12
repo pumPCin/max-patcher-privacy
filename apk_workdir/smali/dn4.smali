@@ -1,31 +1,108 @@
-.class public final Ldn4;
-.super Lnz3;
+.class public final synthetic Ldn4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lfn4;
+
+.field public final synthetic c:Ljava/lang/Runnable;
+
+.field public final synthetic o:Lhjb;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lfn4;Ljava/lang/Runnable;Lhjb;I)V
+    .locals 0
+
+    iput p4, p0, Ldn4;->a:I
+
+    iput-object p1, p0, Ldn4;->b:Lfn4;
+
+    iput-object p2, p0, Ldn4;->c:Ljava/lang/Runnable;
+
+    iput-object p3, p0, Ldn4;->o:Lhjb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 5
 
-    iput-object p1, p0, Ldn4;->o:Ljava/lang/Object;
+    iget v0, p0, Ldn4;->a:I
 
-    iget p1, p0, Ldn4;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ldn4;->b:Lfn4;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
 
-    iput p1, p0, Ldn4;->X:I
+    new-instance v1, Lbn4;
 
-    invoke-static {p0}, Lid7;->e(Lnz3;)V
+    const/4 v2, 0x1
 
-    sget-object p1, Lf34;->a:Lf34;
+    iget-object v3, p0, Ldn4;->c:Ljava/lang/Runnable;
 
-    return-object p1
+    iget-object v4, p0, Ldn4;->o:Lhjb;
+
+    invoke-direct {v1, v3, v4, v2}, Lbn4;-><init>(Ljava/lang/Runnable;Lhjb;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ldn4;->b:Lfn4;
+
+    iget-object v0, v0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lbn4;
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Ldn4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Ldn4;->o:Lhjb;
+
+    invoke-direct {v1, v3, v4, v2}, Lbn4;-><init>(Ljava/lang/Runnable;Lhjb;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldn4;->b:Lfn4;
+
+    iget-object v0, v0, Lfn4;->a:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lbn4;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ldn4;->c:Ljava/lang/Runnable;
+
+    iget-object v4, p0, Ldn4;->o:Lhjb;
+
+    invoke-direct {v1, v3, v4, v2}, Lbn4;-><init>(Ljava/lang/Runnable;Lhjb;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

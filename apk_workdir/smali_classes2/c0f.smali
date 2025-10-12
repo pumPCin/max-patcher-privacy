@@ -3,216 +3,142 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Lno3;
+.implements Lbze;
 
 
-# static fields
-.field public static final a:Lc0f;
-
-.field private static final descriptor:Ldsd;
+# instance fields
+.field public final synthetic a:Ld0f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ld0f;)V
+    .locals 0
 
-    new-instance v0, Lc0f;
+    iput-object p1, p0, Lc0f;->a:Ld0f;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lc0f;->a:Lc0f;
-
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.SuccessResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "status"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lc0f;->descriptor:Ldsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 10
+.method public a()Ljava/util/List;
+    .locals 2
 
-    sget-object v0, Lc0f;->descriptor:Ldsd;
+    iget-object v0, p0, Lc0f;->a:Ld0f;
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    iget-object v1, v0, Ld0f;->n:Lr82;
 
-    move-result-object p1
+    invoke-virtual {v1}, Lr82;->j()Ljava/util/ArrayList;
 
-    sget-object v1, Lg0f;->c:[Lum7;
+    move-result-object v1
 
-    const/4 v2, 0x1
+    iget-object v0, v0, Ld0f;->m:Lyn7;
 
-    const/4 v3, 0x0
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    move v6, v2
+    check-cast v0, Ldv3;
 
-    move v7, v3
+    invoke-virtual {v0, v1}, Ldv3;->b(Ljava/util/List;)V
 
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v6, :cond_3
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v8
-
-    const/4 v9, -0x1
-
-    if-eq v8, v9, :cond_2
-
-    if-eqz v8, :cond_1
-
-    if-ne v8, v2, :cond_0
-
-    sget-object v8, Luxe;->a:Luxe;
-
-    invoke-virtual {p1, v0, v2, v5}, Lp8;->s(Ldsd;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/String;
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    aget-object v8, v1, v3
-
-    invoke-virtual {p1, v0, v3, v8, v4}, Lp8;->t(Ldsd;ILum7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lf0f;
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v6, v3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance p1, Lg0f;
-
-    invoke-direct {p1, v7, v4, v5}, Lg0f;-><init>(ILf0f;Ljava/lang/String;)V
-
-    return-object p1
+    return-object v1
 .end method
 
-.method public final b(Le04;Ljava/lang/Object;)V
-    .locals 4
+.method public accept(Ljava/lang/Object;)V
+    .locals 7
 
-    check-cast p2, Lg0f;
+    iget-object v0, p0, Lc0f;->a:Ld0f;
 
-    sget-object v0, Lc0f;->descriptor:Ldsd;
+    check-cast p1, Ln92;
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    new-instance v1, Liq0;
 
-    move-result-object p1
+    iget-object v2, p1, Ln92;->c:Ljava/util/List;
 
-    sget-object v1, Lg0f;->c:[Lum7;
+    iget-object v3, p1, Ln92;->o:Ljava/util/HashMap;
 
-    const/4 v2, 0x0
+    invoke-direct {v1, v2, v3}, Liq0;-><init>(Ljava/util/List;Ljava/util/Map;)V
 
-    aget-object v1, v1, v2
+    iget-object v2, v0, Ld0f;->d:Lhq0;
 
-    iget-object v3, p2, Lg0f;->a:Lf0f;
+    iget-object v3, v0, Ld0f;->n:Lr82;
 
-    iget-object p2, p2, Lg0f;->b:Ljava/lang/String;
+    iget-wide v3, v3, Lr82;->a:J
 
-    invoke-virtual {p1, v0, v2, v1, v3}, Le04;->i(Ldsd;ILum7;Ljava/lang/Object;)V
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Le04;->s()Z
+    sget-object v5, Lo8d;->a:Ld7;
 
-    move-result v1
+    new-instance v6, Lgq0;
 
-    if-eqz v1, :cond_0
+    invoke-direct {v6, v2, v3, v4, v1}, Lgq0;-><init>(Lhq0;JLiq0;)V
+
+    new-instance v1, Lfx0;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, v2}, Lfx0;-><init>(I)V
+
+    iget-object v2, v5, Ld7;->b:Ljava/lang/Object;
+
+    check-cast v2, Lpcd;
+
+    invoke-static {v6, v1, v2}, Lo8d;->a(Ll6;Lno3;Lpcd;)Lss1;
+
+    iget-object v1, v0, Ld0f;->f:Lvm6;
+
+    iget-object v2, p1, Ln92;->c:Ljava/util/List;
+
+    iget-object p1, p1, Ln92;->o:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-nez v2, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     goto :goto_0
 
     :cond_0
-    if-eqz p2, :cond_1
+    new-instance v3, Lb00;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v1, v4, p1}, Lb00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v3}, Ld40;->E(Ljava/util/List;Lke6;)Ljava/util/ArrayList;
+
+    move-result-object p1
 
     :goto_0
-    sget-object v1, Luxe;->a:Luxe;
+    monitor-enter v0
 
-    const/4 v1, 0x1
+    :try_start_0
+    iget-object v1, v0, Ld0f;->p:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, v0, v1, p2}, Le04;->h(Ldsd;ILjava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    :cond_1
-    invoke-virtual {p1}, Le04;->m()V
+    iget-object v1, v0, Ld0f;->p:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final c()[Lum7;
-    .locals 4
+    :catchall_0
+    move-exception p1
 
-    sget-object v0, Lg0f;->c:[Lum7;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    sget-object v2, Luxe;->a:Luxe;
-
-    invoke-static {}, Lipe;->q()Lum7;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Lum7;
-
-    aput-object v0, v3, v1
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    return-object v3
-.end method
-
-.method public final d()Ldsd;
-    .locals 1
-
-    sget-object v0, Lc0f;->descriptor:Ldsd;
-
-    return-object v0
+    throw p1
 .end method

@@ -1,21 +1,22 @@
 .class public final Lywb;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Laxb;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Long;)V
+    .locals 0
 
-    const/16 v0, 0xd
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
-
-    iput-object p1, p0, Lywb;->b:Landroid/content/Intent;
+    iput-object p1, p0, Lywb;->a:Ljava/lang/Long;
 
     return-void
 .end method
@@ -43,11 +44,11 @@
     :cond_1
     check-cast p1, Lywb;
 
-    iget-object v1, p0, Lywb;->b:Landroid/content/Intent;
+    iget-object v1, p0, Lywb;->a:Ljava/lang/Long;
 
-    iget-object p1, p1, Lywb;->b:Landroid/content/Intent;
+    iget-object p1, p1, Lywb;->a:Ljava/lang/Long;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -62,8 +63,15 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lywb;->b:Landroid/content/Intent;
+    iget-object v0, p0, Lywb;->a:Ljava/lang/Long;
 
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -76,11 +84,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "SelectPhotoFromCamera(intent="
+    const-string v1, "UpdateSuccess(requestId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lywb;->b:Landroid/content/Intent;
+    iget-object v1, p0, Lywb;->a:Ljava/lang/Long;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

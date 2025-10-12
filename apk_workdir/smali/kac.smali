@@ -3,14 +3,8 @@
 
 
 # static fields
-.field public static fragment_close_enter:I = 0x7f020005
+.field public static fast_forward_24:I = 0x7f0803d4
 
-.field public static fragment_close_exit:I = 0x7f020006
+.field public static fast_rewind_24:I = 0x7f0803d5
 
-.field public static fragment_fade_enter:I = 0x7f020007
-
-.field public static fragment_fade_exit:I = 0x7f020008
-
-.field public static fragment_open_enter:I = 0x7f020009
-
-.field public static fragment_open_exit:I = 0x7f02000a
+.field public static save_to_gallery_24:I = 0x7f080949

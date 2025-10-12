@@ -3,10 +3,18 @@
 
 
 # static fields
-.field public static channel_screen_confirmation_delete_description:I = 0x7f110008
+.field public static audio_onboarding_intro:I = 0x7f130087
 
-.field public static channel_screen_confirmation_delete_title:I = 0x7f110009
+.field public static pinbars_group_call_bar_button_text:I = 0x7f130b15
 
-.field public static chat_screen_action_copy_success:I = 0x7f11000b
+.field public static pinbars_group_call_bar_title:I = 0x7f130b16
 
-.field public static chat_screen_confirmation_delete_title:I = 0x7f11000c
+.field public static pinbars_snackbar_unpinned:I = 0x7f130b17
+
+.field public static unknown_contact_add_to_contact:I = 0x7f130e27
+
+.field public static unknown_contact_block_contact:I = 0x7f130e28
+
+.field public static unknown_contact_snackbar_add_contact:I = 0x7f130e29
+
+.field public static videomsg_player_type:I = 0x7f130e57

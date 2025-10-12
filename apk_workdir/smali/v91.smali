@@ -1,50 +1,63 @@
 .class public final Lv91;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
 
-# interfaces
-.implements Ljo1;
 
-
-# instance fields
-.field public final synthetic a:Laa1;
+# static fields
+.field public static final b:Lv91;
 
 
 # direct methods
-.method public constructor <init>(Laa1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv91;
 
-    iput-object p1, p0, Lv91;->a:Laa1;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Lv91;->b:Lv91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lv91;->a:Laa1;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0, v1}, Laa1;->h(Z)V
+    return v0
 
-    return-void
+    :cond_0
+    instance-of p1, p1, Lv91;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final j()V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Lv91;->a:Laa1;
+    const v0, -0x5d3948c3
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    iput-boolean v1, v0, Laa1;->A0:Z
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Laa1;->f(Z)V
+    const-string v0, "OpenActiveCall"
 
-    return-void
+    return-object v0
 .end method

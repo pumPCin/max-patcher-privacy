@@ -34,10 +34,12 @@
 .method private constructor <init>(IB)V
     .locals 2
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 8
     new-array v0, v0, [B
 
     const/4 v1, 0x0
@@ -50,8 +52,10 @@
 
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
 
+    .line 9
     iput p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
 
+    .line 10
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->validate()V
 
     return-void
@@ -60,8 +64,10 @@
 .method public varargs constructor <init>(I[Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)V
     .locals 3
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     new-instance v0, Ljava/util/BitSet;
 
     const/16 v1, 0x8
@@ -70,10 +76,12 @@
 
     iput-object v0, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
 
+    .line 3
     iput p1, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->version:I
 
     if-eqz p2, :cond_0
 
+    .line 4
     array-length p1, p2
 
     const/4 v0, 0x0
@@ -83,6 +91,7 @@
 
     aget-object v1, p2, v0
 
+    .line 5
     iget-object v2, p0, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->bitSet:Ljava/util/BitSet;
 
     invoke-static {v1}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;->access$100(Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG$Bits;)I
@@ -95,6 +104,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FLG;->validate()V
 
@@ -185,7 +195,7 @@
 
     const-string v3, " is unsupported"
 
-    invoke-static {v1, v2, v3}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

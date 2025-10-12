@@ -1,19 +1,21 @@
 .class public final Lh0c;
-.super Ll0c;
+.super Luc0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xf
 
-    iput-object p1, p0, Lh0c;->a:Ljava/lang/CharSequence;
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+
+    iput-object p1, p0, Lh0c;->b:Landroid/content/Intent;
 
     return-void
 .end method
@@ -41,11 +43,11 @@
     :cond_1
     check-cast p1, Lh0c;
 
-    iget-object v1, p0, Lh0c;->a:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lh0c;->b:Landroid/content/Intent;
 
-    iget-object p1, p1, Lh0c;->a:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lh0c;->b:Landroid/content/Intent;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -57,39 +59,14 @@
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const v0, 0x8000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lh0c;->a:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lh0c;->b:Landroid/content/Intent;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const v0, 0x8000
 
     return v0
 .end method
@@ -99,11 +76,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "LinkWithQrCodeItem(link="
+    const-string v1, "CropAvatarOld(intent="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lh0c;->a:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lh0c;->b:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

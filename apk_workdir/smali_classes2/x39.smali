@@ -1,191 +1,120 @@
-.class public final synthetic Lx39;
+.class public final Lx39;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Ly39;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lq39;
-
-.field public final synthetic c:Lz39;
+.field public final b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldh9;Lz39;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lx39;->a:I
+.method public constructor <init>(JJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx39;->b:Lq39;
+    iput-wide p1, p0, Lx39;->a:J
 
-    iput-object p2, p0, Lx39;->c:Lz39;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lz39;Ldh9;)V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lx39;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx39;->c:Lz39;
-
-    iput-object p2, p0, Lx39;->b:Lq39;
+    iput-wide p3, p0, Lx39;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lx39;->a:I
+    const/4 v0, 0x1
 
-    sget-object v1, Loyf;->a:Loyf;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Lx39;->c:Lz39;
+    return v0
 
-    iget-object v3, p0, Lx39;->b:Lq39;
-
-    packed-switch v0, :pswitch_data_0
-
-    move-object v5, p1
-
-    check-cast v5, Lkoc;
-
-    iget-wide v6, v2, Lz39;->N0:J
-
-    check-cast v3, Ldh9;
-
-    iget-object p1, v3, Ldh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
-
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->O0()Lng9;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lng9;->B1:Lmoe;
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lfd9;
-
-    invoke-interface {v0, v6, v7}, Lld9;->d(J)Lone/me/messages/list/loader/MessageModel;
-
-    move-result-object v0
+    :cond_0
+    instance-of v1, p1, Lx39;
 
     const/4 v2, 0x0
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_1
 
-    move-object v4, v2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v4, Lcqc;
-
-    iget-wide v6, v0, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    iget-wide v8, v0, Lone/me/messages/list/loader/MessageModel;->b:J
-
-    iget-object v10, v0, Lone/me/messages/list/loader/MessageModel;->I0:Ly79;
-
-    invoke-direct/range {v4 .. v10}, Lcqc;-><init>(Lkoc;JJLy79;)V
-
-    :goto_0
-    if-nez v4, :cond_1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->K0()Ljqc;
+    check-cast p1, Lx39;
 
-    move-result-object p1
+    iget-wide v3, p0, Lx39;->a:J
 
-    invoke-virtual {p1}, Ljqc;->q()Lru/ok/onechat/reactions/ReactionsViewModel;
+    iget-wide v5, p1, Lx39;->a:J
 
-    move-result-object p1
+    cmp-long v1, v3, v5
 
-    invoke-virtual {p1, v4}, Lru/ok/onechat/reactions/ReactionsViewModel;->l(Lcqc;)V
+    if-eqz v1, :cond_2
 
-    iget-object p1, v4, Lcqc;->d:Ly79;
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p1, Ly79;->c:Lsoc;
-
-    if-eqz p1, :cond_2
-
-    iget-object v2, p1, Lsoc;->b:Lkoc;
+    return v2
 
     :cond_2
-    invoke-static {v2, v5}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-wide v3, p0, Lx39;->b:J
 
-    move-result p1
+    iget-wide v5, p1, Lx39;->b:J
+
+    cmp-long p1, v3, v5
 
     if-eqz p1, :cond_3
 
-    goto :goto_1
+    return v2
 
     :cond_3
-    sget-object p1, Lec9;->a:Lec9;
+    return v0
+.end method
 
-    invoke-virtual {p1}, Lec9;->b()Lb87;
+.method public final hashCode()I
+    .locals 3
 
-    move-result-object p1
+    iget-wide v0, p0, Lx39;->a:J
 
-    if-eqz p1, :cond_4
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v0, La87;
+    move-result v0
 
-    sget-object v2, Ly77;->X:Ly77;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/4 v3, 0x1
+    iget-wide v1, p0, Lx39;->b:J
 
-    invoke-direct {v0, v2, v3}, La87;-><init>(Ly77;I)V
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ByRange(startTime="
+
+    const-string v1, ", endTime="
+
+    iget-wide v2, p0, Lx39;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sget-object v2, Lhfd;->S0:Lhfd;
+    const-string v1, ")"
 
-    invoke-virtual {p1, v0, v2}, Lb87;->f(Ljava/util/Set;Lhfd;)V
+    iget-wide v2, p0, Lx39;->b:J
 
-    :cond_4
-    :goto_1
-    return-object v1
+    invoke-static {v0, v2, v3, v1}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v2, v3, p1}, Lz39;->L(Lq39;Ljava/lang/String;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

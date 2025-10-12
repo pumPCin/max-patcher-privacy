@@ -1,154 +1,109 @@
-.class public final synthetic Lbha;
-.super Ljava/lang/Object;
+.class public final enum Lbha;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
 
+# static fields
+.field public static final enum X:Lbha;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final synthetic Y:[Lbha;
 
-.field public final synthetic b:Llha;
+.field public static final enum a:Lbha;
+
+.field public static final enum b:Lbha;
+
+.field public static final enum c:Lbha;
+
+.field public static final enum o:Lbha;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llha;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p2, p0, Lbha;->a:I
+    new-instance v0, Lbha;
 
-    iput-object p1, p0, Lbha;->b:Llha;
+    const-string v1, "ACCENT"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lbha;->a:Lbha;
+
+    new-instance v1, Lbha;
+
+    const-string v2, "NEGATIVE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lbha;->b:Lbha;
+
+    new-instance v2, Lbha;
+
+    const-string v3, "NEUTRAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lbha;->c:Lbha;
+
+    new-instance v3, Lbha;
+
+    const-string v4, "NEUTRAL_THEMED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lbha;->o:Lbha;
+
+    new-instance v4, Lbha;
+
+    const-string v5, "CONTRAST_STATIC"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lbha;->X:Lbha;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lbha;
+
+    move-result-object v0
+
+    sput-object v0, Lbha;->Y:[Lbha;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lbha;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+    const-class v0, Lbha;
 
-    iget v0, p0, Lbha;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lbha;->b:Llha;
+    check-cast p0, Lbha;
 
-    invoke-static {v0}, Llha;->a(Llha;)Landroid/graphics/drawable/LayerDrawable;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public static values()[Lbha;
+    .locals 1
 
-    return-object v0
+    sget-object v0, Lbha;->Y:[Lbha;
 
-    :pswitch_0
-    sget v0, Locc;->call_fill_16:I
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    iget-object v2, p0, Lbha;->b:Llha;
-
-    invoke-virtual {v1, v2}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    const/4 v1, -0x1
-
-    invoke-static {v0, v1}, Lv4b;->H(Landroid/graphics/drawable/Drawable;I)V
+    check-cast v0, [Lbha;
 
     return-object v0
-
-    :pswitch_1
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    const/4 v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    sget-object v2, Lbx4;->y0:Lsed;
-
-    iget-object v3, p0, Lbha;->b:Llha;
-
-    invoke-virtual {v2, v3}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Luxa;->b()Lue0;
-
-    move-result-object v4
-
-    iget v4, v4, Lue0;->l:I
-
-    invoke-virtual {v0, v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
-
-    invoke-virtual {v2, v3}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->k:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x42000000    # 32.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

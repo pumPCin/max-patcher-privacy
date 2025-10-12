@@ -3,10 +3,16 @@
 
 
 # static fields
-.field public static call_share_message_failed_create_p2p_invite_link:I = 0x7f130244
+.field public static copy:I = 0x7f13042c
 
-.field public static call_share_picker_confirm_p2p_invite_cancel:I = 0x7f130245
+.field public static expand_button_title:I = 0x7f1304e2
 
-.field public static call_share_picker_confirm_p2p_invite_retry:I = 0x7f130246
+.field public static not_set:I = 0x7f13076f
 
-.field public static call_share_search_hint:I = 0x7f130247
+.field public static preference_copied:I = 0x7f130b30
+
+.field public static summary_collapsed_preference_list:I = 0x7f130d2e
+
+.field public static v7_preference_off:I = 0x7f130e37
+
+.field public static v7_preference_on:I = 0x7f130e38

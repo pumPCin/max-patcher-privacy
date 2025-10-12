@@ -1,361 +1,296 @@
-.class public final Ltb8;
-.super Ljava/lang/Object;
+.class public Ltb8;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
-
-# interfaces
-.implements Lwo8;
-.implements Luo8;
 
 
 # instance fields
-.field public X:Lwo8;
+.field public a:Lk4e;
 
-.field public Y:Luo8;
+.field public b:Lh35;
 
-.field public Z:J
+.field public c:Landroid/content/res/ColorStateList;
 
-.field public final a:Lvu8;
+.field public d:Landroid/content/res/ColorStateList;
 
-.field public final b:J
+.field public e:Landroid/content/res/ColorStateList;
 
-.field public final c:Lmd4;
+.field public f:Landroid/graphics/PorterDuff$Mode;
 
-.field public o:Llj0;
+.field public g:Landroid/graphics/Rect;
+
+.field public final h:F
+
+.field public i:F
+
+.field public j:F
+
+.field public k:I
+
+.field public l:F
+
+.field public m:F
+
+.field public n:I
+
+.field public o:I
+
+.field public p:I
+
+.field public final q:Landroid/graphics/Paint$Style;
 
 
 # direct methods
-.method public constructor <init>(Lvu8;Lmd4;J)V
-    .locals 0
+.method public constructor <init>(Lk4e;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    iput-object p1, p0, Ltb8;->a:Lvu8;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ltb8;->c:Lmd4;
+    .line 2
+    iput-object v0, p0, Ltb8;->c:Landroid/content/res/ColorStateList;
 
-    iput-wide p3, p0, Ltb8;->b:J
+    .line 3
+    iput-object v0, p0, Ltb8;->d:Landroid/content/res/ColorStateList;
 
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+    .line 4
+    iput-object v0, p0, Ltb8;->e:Landroid/content/res/ColorStateList;
 
-    iput-wide p1, p0, Ltb8;->Z:J
+    .line 5
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
+    iput-object v1, p0, Ltb8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 6
+    iput-object v0, p0, Ltb8;->g:Landroid/graphics/Rect;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 7
+    iput v1, p0, Ltb8;->h:F
+
+    .line 8
+    iput v1, p0, Ltb8;->i:F
+
+    const/16 v1, 0xff
+
+    .line 9
+    iput v1, p0, Ltb8;->k:I
+
+    const/4 v1, 0x0
+
+    .line 10
+    iput v1, p0, Ltb8;->l:F
+
+    .line 11
+    iput v1, p0, Ltb8;->m:F
+
+    const/4 v1, 0x0
+
+    .line 12
+    iput v1, p0, Ltb8;->n:I
+
+    .line 13
+    iput v1, p0, Ltb8;->o:I
+
+    .line 14
+    iput v1, p0, Ltb8;->p:I
+
+    .line 15
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v1, p0, Ltb8;->q:Landroid/graphics/Paint$Style;
+
+    .line 16
+    iput-object p1, p0, Ltb8;->a:Lk4e;
+
+    .line 17
+    iput-object v0, p0, Ltb8;->b:Lh35;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ltb8;)V
+    .locals 2
+
+    .line 18
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 19
+    iput-object v0, p0, Ltb8;->c:Landroid/content/res/ColorStateList;
+
+    .line 20
+    iput-object v0, p0, Ltb8;->d:Landroid/content/res/ColorStateList;
+
+    .line 21
+    iput-object v0, p0, Ltb8;->e:Landroid/content/res/ColorStateList;
+
+    .line 22
+    sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v1, p0, Ltb8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 23
+    iput-object v0, p0, Ltb8;->g:Landroid/graphics/Rect;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 24
+    iput v0, p0, Ltb8;->h:F
+
+    .line 25
+    iput v0, p0, Ltb8;->i:F
+
+    const/16 v0, 0xff
+
+    .line 26
+    iput v0, p0, Ltb8;->k:I
+
+    const/4 v0, 0x0
+
+    .line 27
+    iput v0, p0, Ltb8;->l:F
+
+    .line 28
+    iput v0, p0, Ltb8;->m:F
+
+    const/4 v0, 0x0
+
+    .line 29
+    iput v0, p0, Ltb8;->n:I
+
+    .line 30
+    iput v0, p0, Ltb8;->o:I
+
+    .line 31
+    iput v0, p0, Ltb8;->p:I
+
+    .line 32
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Ltb8;->q:Landroid/graphics/Paint$Style;
+
+    .line 33
+    iget-object v0, p1, Ltb8;->a:Lk4e;
+
+    iput-object v0, p0, Ltb8;->a:Lk4e;
+
+    .line 34
+    iget-object v0, p1, Ltb8;->b:Lh35;
+
+    iput-object v0, p0, Ltb8;->b:Lh35;
+
+    .line 35
+    iget v0, p1, Ltb8;->j:F
+
+    iput v0, p0, Ltb8;->j:F
+
+    .line 36
+    iget-object v0, p1, Ltb8;->c:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Ltb8;->c:Landroid/content/res/ColorStateList;
+
+    .line 37
+    iget-object v0, p1, Ltb8;->d:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Ltb8;->d:Landroid/content/res/ColorStateList;
+
+    .line 38
+    iget-object v0, p1, Ltb8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    iput-object v0, p0, Ltb8;->f:Landroid/graphics/PorterDuff$Mode;
+
+    .line 39
+    iget-object v0, p1, Ltb8;->e:Landroid/content/res/ColorStateList;
+
+    iput-object v0, p0, Ltb8;->e:Landroid/content/res/ColorStateList;
+
+    .line 40
+    iget v0, p1, Ltb8;->k:I
+
+    iput v0, p0, Ltb8;->k:I
+
+    .line 41
+    iget v0, p1, Ltb8;->h:F
+
+    iput v0, p0, Ltb8;->h:F
+
+    .line 42
+    iget v0, p1, Ltb8;->p:I
+
+    iput v0, p0, Ltb8;->p:I
+
+    .line 43
+    iget v0, p1, Ltb8;->n:I
+
+    iput v0, p0, Ltb8;->n:I
+
+    .line 44
+    iget v0, p1, Ltb8;->i:F
+
+    iput v0, p0, Ltb8;->i:F
+
+    .line 45
+    iget v0, p1, Ltb8;->l:F
+
+    iput v0, p0, Ltb8;->l:F
+
+    .line 46
+    iget v0, p1, Ltb8;->m:F
+
+    iput v0, p0, Ltb8;->m:F
+
+    .line 47
+    iget v0, p1, Ltb8;->o:I
+
+    iput v0, p0, Ltb8;->o:I
+
+    .line 48
+    iget-object v0, p1, Ltb8;->q:Landroid/graphics/Paint$Style;
+
+    iput-object v0, p0, Ltb8;->q:Landroid/graphics/Paint$Style;
+
+    .line 49
+    iget-object v0, p1, Ltb8;->g:Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_0
+
+    .line 50
+    new-instance v0, Landroid/graphics/Rect;
+
+    iget-object p1, p1, Ltb8;->g:Landroid/graphics/Rect;
+
+    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+
+    iput-object v0, p0, Ltb8;->g:Landroid/graphics/Rect;
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lvu8;)V
-    .locals 4
-
-    iget-wide v0, p0, Ltb8;->Z:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v0, p0, Ltb8;->b:J
-
-    :goto_0
-    iget-object v2, p0, Ltb8;->o:Llj0;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v3, p0, Ltb8;->c:Lmd4;
-
-    invoke-virtual {v2, p1, v3, v0, v1}, Llj0;->c(Lvu8;Lmd4;J)Lwo8;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ltb8;->X:Lwo8;
-
-    iget-object v2, p0, Ltb8;->Y:Luo8;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {p1, p0, v0, v1}, Lwo8;->r(Luo8;J)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c(JLgnd;)J
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0, p1, p2, p3}, Lwo8;->c(JLgnd;)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final d()J
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0}, Lvrd;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final e(Lwo8;)V
+.method public final getChangingConfigurations()I
     .locals 1
 
-    iget-object p1, p0, Ltb8;->Y:Luo8;
-
-    sget v0, Lt4g;->a:I
-
-    invoke-interface {p1, p0}, Luo8;->e(Lwo8;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lwo8;->f()V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Ltb8;->o:Llj0;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Llj0;->k()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g(J)J
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lwo8;->g(J)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final h(Lvrd;)V
-    .locals 1
-
-    check-cast p1, Lwo8;
-
-    iget-object p1, p0, Ltb8;->Y:Luo8;
-
-    sget v0, Lt4g;->a:I
-
-    invoke-interface {p1, p0}, Ltrd;->h(Lvrd;)V
-
-    return-void
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lvrd;->i()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final k([Leg5;[Z[Lobd;[ZJ)J
-    .locals 12
-
-    iget-wide v0, p0, Ltb8;->Z:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iget-wide v4, p0, Ltb8;->b:J
-
-    cmp-long v4, p5, v4
-
-    if-nez v4, :cond_0
-
-    move-wide v10, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide/from16 v10, p5
-
-    :goto_0
-    iput-wide v2, p0, Ltb8;->Z:J
-
-    iget-object v5, p0, Ltb8;->X:Lwo8;
-
-    sget v0, Lt4g;->a:I
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    move-object v8, p3
-
-    move-object/from16 v9, p4
-
-    invoke-interface/range {v5 .. v11}, Lwo8;->k([Leg5;[Z[Lobd;[ZJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final m()J
+.method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    iget-object v0, p0, Ltb8;->X:Lwo8;
+    new-instance v0, Lub8;
 
-    sget v1, Lt4g;->a:I
+    invoke-direct {v0, p0}, Lub8;-><init>(Ltb8;)V
 
-    invoke-interface {v0}, Lwo8;->m()J
+    const/4 v1, 0x1
 
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final n()Lxnf;
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0}, Lwo8;->n()Lxnf;
-
-    move-result-object v0
+    iput-boolean v1, v0, Lub8;->X:Z
 
     return-object v0
-.end method
-
-.method public final o()J
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0}, Lvrd;->o()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final p(J)V
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lvrd;->p(J)V
-
-    return-void
-.end method
-
-.method public final r(Luo8;J)V
-    .locals 2
-
-    iput-object p1, p0, Ltb8;->Y:Luo8;
-
-    iget-object p1, p0, Ltb8;->X:Lwo8;
-
-    if-eqz p1, :cond_1
-
-    iget-wide p2, p0, Ltb8;->Z:J
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v0, p2, v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide p2, p0, Ltb8;->b:J
-
-    :goto_0
-    invoke-interface {p1, p0, p2, p3}, Lwo8;->r(Luo8;J)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final s(La08;)Z
-    .locals 1
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lvrd;->s(La08;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final u(JZ)V
-    .locals 2
-
-    iget-object v0, p0, Ltb8;->X:Lwo8;
-
-    sget v1, Lt4g;->a:I
-
-    invoke-interface {v0, p1, p2, p3}, Lwo8;->u(JZ)V
-
-    return-void
 .end method

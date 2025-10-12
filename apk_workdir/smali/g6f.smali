@@ -3,118 +3,217 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/util/ArrayList;
-
-
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0x32
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    sput-object v0, Lg6f;->b:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Handler;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg6f;->a:Landroid/os/Handler;
+    iput-object p1, p0, Lg6f;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lg6f;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lg6f;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lg6f;->d:Ljava/util/List;
+
+    iput-object p5, p0, Lg6f;->e:Ljava/util/List;
 
     return-void
 .end method
 
-.method public static b()Le6f;
-    .locals 2
-
-    sget-object v0, Lg6f;->b:Ljava/util/ArrayList;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Le6f;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le6f;
-
-    :goto_0
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-.end method
-
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)Le6f;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-static {}, Lg6f;->b()Le6f;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    iget-object v1, p0, Lg6f;->a:Landroid/os/Handler;
+    return p1
 
-    invoke-virtual {v1, p1, p2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    :cond_0
+    instance-of v0, p1, Lg6f;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    iput-object p1, v0, Le6f;->a:Landroid/os/Message;
+    if-nez v0, :cond_1
 
-    return-object v0
-.end method
+    return v1
 
-.method public final c(I)Z
-    .locals 1
+    :cond_1
+    check-cast p1, Lg6f;
 
-    iget-object v0, p0, Lg6f;->a:Landroid/os/Handler;
+    iget-object v0, p1, Lg6f;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    iget-object v2, p0, Lg6f;->a:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v0, p0, Lg6f;->b:Ljava/lang/String;
+
+    iget-object v2, p1, Lg6f;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-object v0, p0, Lg6f;->c:Ljava/lang/String;
+
+    iget-object v2, p1, Lg6f;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    return v1
+
+    :cond_4
+    iget-object v0, p0, Lg6f;->d:Ljava/util/List;
+
+    iget-object v2, p1, Lg6f;->d:Ljava/util/List;
+
+    invoke-static {v0, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    return v1
+
+    :cond_5
+    iget-object v0, p0, Lg6f;->e:Ljava/util/List;
+
+    iget-object p1, p1, Lg6f;->e:Ljava/util/List;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lg6f;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lg6f;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lg6f;->c:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lg6f;->d:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Ljjd;->f(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lg6f;->e:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ForeignKey{referenceTable=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lg6f;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', onDelete=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg6f;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " +\', onUpdate=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg6f;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', columnNames="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg6f;->d:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", referenceColumnNames="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lg6f;->e:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

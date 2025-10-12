@@ -1,152 +1,152 @@
-.class public final Loub;
-.super Ljava/lang/Object;
+.class public final enum Loub;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Loub;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final synthetic X:Laa5;
+
+.field public static final enum b:Loub;
+
+.field public static final enum c:Loub;
+
+.field public static final synthetic o:[Loub;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ltya;
-
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltya;Landroid/widget/ScrollView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Loub;->a:I
+    new-instance v0, Loub;
 
-    iput-object p1, p0, Loub;->b:Ltya;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Loub;->c:Landroid/widget/ScrollView;
+    const-string v2, "local_chat"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v3, "LOCAL_CHAT"
+
+    invoke-direct {v0, v3, v1, v2}, Loub;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Loub;->b:Loub;
+
+    new-instance v1, Loub;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server_chat"
+
+    const-string v4, "SERVER_CHAT"
+
+    invoke-direct {v1, v4, v2, v3}, Loub;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    new-instance v2, Loub;
+
+    const/4 v3, 0x2
+
+    const-string v4, "contact"
+
+    const-string v5, "CONTACT"
+
+    invoke-direct {v2, v5, v3, v4}, Loub;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Loub;->c:Loub;
+
+    filled-new-array {v0, v1, v2}, [Loub;
+
+    move-result-object v0
+
+    sput-object v0, Loub;->o:[Loub;
+
+    new-instance v1, Laa5;
+
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Loub;->X:Laa5;
+
+    new-instance v0, Lnua;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lnua;-><init>(I)V
+
+    sput-object v0, Loub;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Loub;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Loub;
+    .locals 1
+
+    const-class v0, Loub;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Loub;
+
+    return-object p0
+.end method
+
+.method public static values()[Loub;
+    .locals 1
+
+    sget-object v0, Loub;->o:[Loub;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loub;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final describeContents()I
+    .locals 1
 
-    iget v0, p0, Loub;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Loub;->b:Ltya;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p2
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Loub;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Loub;->b:Ltya;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_2
-    if-eqz v1, :cond_3
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Loub;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/view/View;->setPadding(IIII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

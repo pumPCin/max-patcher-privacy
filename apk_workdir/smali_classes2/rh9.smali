@@ -1,91 +1,162 @@
 .class public final Lrh9;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lvc9;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+.field public X:I
+
+.field public final synthetic Y:Lvh9;
+
+.field public final synthetic Z:J
+
+.field public final synthetic r0:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Lvh9;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrh9;->Y:Lvh9;
 
-    iput-object p1, p0, Lrh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-wide p2, p0, Lrh9;->Z:J
+
+    iput-wide p4, p0, Lrh9;->r0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p6}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lox9;->j:Lqpa;
+    check-cast p1, Ln24;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    invoke-virtual {p0, p1, p2}, Lrh9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    sget-object v1, Ly38;->o:Ly38;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
+    check-cast p1, Lrh9;
 
-    move-result v2
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lrh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
+
+    new-instance v0, Lrh9;
+
+    iget-wide v2, p0, Lrh9;->Z:J
+
+    iget-wide v4, p0, Lrh9;->r0:J
+
+    iget-object v1, p0, Lrh9;->Y:Lvh9;
+
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lrh9;-><init>(Lvh9;JJLkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 14
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    sget-object v1, Lo24;->a:Lo24;
+
+    iget v2, p0, Lrh9;->X:I
+
+    const/4 v3, 0x1
 
     if-eqz v2, :cond_1
 
-    const-string v2, "Player autoplay. Try start autoplay after recycler layout."
+    if-ne v2, v3, :cond_0
 
-    const/4 v3, 0x0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-string v4, "AutoPlayRegulator"
+    return-object v0
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrh9;->Y:Lvh9;
+
+    iget-object p1, p1, Lvh9;->i:Ljava/lang/String;
+
+    iget-wide v4, p0, Lrh9;->Z:J
+
+    sget-object v2, Lyt3;->n:Lhoa;
+
+    if-nez v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v6, Lr28;->o:Lr28;
+
+    invoke-virtual {v2, v6}, Lhoa;->b(Lr28;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    const-string v7, "Scrolling to unread message with sortTime="
+
+    invoke-static {v4, v5, v7}, Ln29;->g(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v6, p1, v4, v5}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
     :goto_0
-    iget-object v0, p0, Lrh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object v7, p0, Lrh9;->Y:Lvh9;
 
-    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->h1:[Ltm7;
+    iget-wide v8, p0, Lrh9;->Z:J
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->L0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-wide v10, p0, Lrh9;->r0:J
 
-    move-result-object v0
+    iput v3, p0, Lrh9;->X:I
 
-    iget-object v1, p0, Lrh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    const/4 v12, 0x1
 
-    new-instance v2, Lsg6;
+    const/4 v13, 0x4
 
-    const/16 v3, 0x11
+    invoke-static/range {v7 .. v13}, Lvh9;->d(Lvh9;JJII)V
 
-    invoke-direct {v2, v0, v3, v1}, Lsg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-ne v0, v1, :cond_4
 
-    invoke-static {v0, v2}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
+    return-object v1
 
-    iget-object v0, p0, Lrh9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->I0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Lxt9;
-
-    invoke-virtual {v0, p0}, Lxt9;->h(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final getTag()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "AutoPlayRegulator"
-
+    :cond_4
     return-object v0
 .end method

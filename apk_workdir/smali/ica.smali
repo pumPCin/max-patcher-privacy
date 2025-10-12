@@ -2,215 +2,660 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxda;
-.implements Lss4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final b:Lxda;
+.field public b:J
 
-.field public c:Lss4;
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public final f:[I
+
+.field public final g:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxda;I)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    iput p2, p0, Lica;->a:I
-
-    iput-object p1, p0, Lica;->b:Lxda;
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/16 p1, 0xff
 
-.method private final a(Ljava/lang/Object;)V
-    .locals 0
+    new-array v0, p1, [I
+
+    iput-object v0, p0, Lica;->f:[I
+
+    new-instance v0, Lt3g;
+
+    invoke-direct {v0, p1}, Lt3g;-><init>(I)V
+
+    iput-object v0, p0, Lica;->g:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0xff
+
+    new-array v0, p1, [I
+
+    iput-object v0, p0, Lica;->f:[I
+
+    new-instance v0, Lo3b;
+
+    invoke-direct {v0, p1}, Lo3b;-><init>(I)V
+
+    iput-object v0, p0, Lica;->g:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public a(Luh5;Z)Z
+    .locals 6
 
-    iget v0, p0, Lica;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iput v0, p0, Lica;->a:I
 
-    iget-object v0, p0, Lica;->b:Lxda;
+    const-wide/16 v1, 0x0
 
-    invoke-interface {v0}, Lxda;->b()V
+    iput-wide v1, p0, Lica;->b:J
 
-    return-void
+    iput v0, p0, Lica;->c:I
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
+    iput v0, p0, Lica;->d:I
 
-    invoke-interface {v0}, Lxda;->b()V
+    iput v0, p0, Lica;->e:I
 
-    return-void
+    iget-object v1, p0, Lica;->g:Ljava/lang/Object;
 
-    nop
+    check-cast v1, Lt3g;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const/16 v2, 0x1b
 
-.method public final c(Lss4;)V
-    .locals 1
+    invoke-virtual {v1, v2}, Lt3g;->B(I)V
 
-    iget v0, p0, Lica;->a:I
+    iget-object v3, v1, Lt3g;->a:[B
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    invoke-interface {p1, v3, v0, v2, p2}, Luh5;->n([BIIZ)Z
 
-    iput-object p1, p0, Lica;->c:Lss4;
+    move-result v2
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p1, p0, Lica;->b:Lxda;
+    goto :goto_0
 
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+    :catch_0
+    move-exception v2
 
-    return-void
+    if-eqz p2, :cond_7
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
+    move v2, v0
 
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    :goto_0
+    if-eqz v2, :cond_6
 
-    move-result v0
+    invoke-virtual {v1}, Lt3g;->t()J
 
-    if-eqz v0, :cond_0
+    move-result-wide v2
 
-    iput-object p1, p0, Lica;->c:Lss4;
+    const-wide/32 v4, 0x4f676753
 
-    iget-object p1, p0, Lica;->b:Lxda;
+    cmp-long v2, v2, v4
 
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+    if-eqz v2, :cond_0
+
+    goto :goto_3
 
     :cond_0
-    return-void
+    invoke-virtual {v1}, Lt3g;->s()I
 
-    nop
+    move-result v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v2, :cond_2
+
+    if-eqz p2, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    const-string p1, "unsupported bit stream revision"
+
+    invoke-static {p1}, Lcom/google/android/exoplayer2/ParserException;->c(Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_2
+    invoke-virtual {v1}, Lt3g;->s()I
+
+    move-result v2
+
+    iput v2, p0, Lica;->a:I
+
+    invoke-virtual {v1}, Lt3g;->i()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lica;->b:J
+
+    invoke-virtual {v1}, Lt3g;->j()J
+
+    invoke-virtual {v1}, Lt3g;->j()J
+
+    invoke-virtual {v1}, Lt3g;->j()J
+
+    invoke-virtual {v1}, Lt3g;->s()I
+
+    move-result v2
+
+    iput v2, p0, Lica;->c:I
+
+    add-int/lit8 v3, v2, 0x1b
+
+    iput v3, p0, Lica;->d:I
+
+    invoke-virtual {v1, v2}, Lt3g;->B(I)V
+
+    iget-object v2, v1, Lt3g;->a:[B
+
+    iget v3, p0, Lica;->c:I
+
+    :try_start_1
+    invoke-interface {p1, v2, v0, v3, p2}, Luh5;->n([BIIZ)Z
+
+    move-result p1
+    :try_end_1
+    .catch Ljava/io/EOFException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    if-eqz p2, :cond_5
+
+    move p1, v0
+
+    :goto_1
+    if-nez p1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    iget p1, p0, Lica;->c:I
+
+    if-ge v0, p1, :cond_4
+
+    invoke-virtual {v1}, Lt3g;->s()I
+
+    move-result p1
+
+    iget-object p2, p0, Lica;->f:[I
+
+    aput p1, p2, v0
+
+    iget p2, p0, Lica;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lica;->e:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_5
+    throw p1
+
+    :cond_6
+    :goto_3
+    return v0
+
+    :cond_7
+    throw v2
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
+.method public b(Lvh5;Z)Z
+    .locals 6
 
-    iget v0, p0, Lica;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    iput v0, p0, Lica;->a:I
 
-    return-void
+    const-wide/16 v1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
+    iput-wide v1, p0, Lica;->b:J
 
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+    iput v0, p0, Lica;->c:I
 
-    return-void
+    iput v0, p0, Lica;->d:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput v0, p0, Lica;->e:I
+
+    iget-object v1, p0, Lica;->g:Ljava/lang/Object;
+
+    check-cast v1, Lo3b;
+
+    const/16 v2, 0x1b
+
+    invoke-virtual {v1, v2}, Lo3b;->D(I)V
+
+    iget-object v3, v1, Lo3b;->a:[B
+
+    :try_start_0
+    invoke-interface {p1, v3, v0, v2, p2}, Lvh5;->n([BIIZ)Z
+
+    move-result v2
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    if-eqz p2, :cond_7
+
+    move v2, v0
+
+    :goto_0
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v1}, Lo3b;->w()J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0x4f676753
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    invoke-virtual {v1}, Lo3b;->u()I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    if-eqz p2, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    const-string p1, "unsupported bit stream revision"
+
+    invoke-static {p1}, Landroidx/media3/common/ParserException;->c(Ljava/lang/String;)Landroidx/media3/common/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_2
+    invoke-virtual {v1}, Lo3b;->u()I
+
+    move-result v2
+
+    iput v2, p0, Lica;->a:I
+
+    invoke-virtual {v1}, Lo3b;->j()J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lica;->b:J
+
+    invoke-virtual {v1}, Lo3b;->l()J
+
+    invoke-virtual {v1}, Lo3b;->l()J
+
+    invoke-virtual {v1}, Lo3b;->l()J
+
+    invoke-virtual {v1}, Lo3b;->u()I
+
+    move-result v2
+
+    iput v2, p0, Lica;->c:I
+
+    add-int/lit8 v3, v2, 0x1b
+
+    iput v3, p0, Lica;->d:I
+
+    invoke-virtual {v1, v2}, Lo3b;->D(I)V
+
+    iget-object v2, v1, Lo3b;->a:[B
+
+    iget v3, p0, Lica;->c:I
+
+    :try_start_1
+    invoke-interface {p1, v2, v0, v3, p2}, Lvh5;->n([BIIZ)Z
+
+    move-result p1
+    :try_end_1
+    .catch Ljava/io/EOFException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    if-eqz p2, :cond_5
+
+    move p1, v0
+
+    :goto_1
+    if-nez p1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    iget p1, p0, Lica;->c:I
+
+    if-ge v0, p1, :cond_4
+
+    invoke-virtual {v1}, Lo3b;->u()I
+
+    move-result p1
+
+    iget-object p2, p0, Lica;->f:[I
+
+    aput p1, p2, v0
+
+    iget p2, p0, Lica;->e:I
+
+    add-int/2addr p2, p1
+
+    iput p2, p0, Lica;->e:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_5
+    throw p1
+
+    :cond_6
+    :goto_3
+    return v0
+
+    :cond_7
+    throw v2
 .end method
 
-.method public final g()V
-    .locals 1
+.method public c(Luh5;J)Z
+    .locals 9
 
-    iget v0, p0, Lica;->a:I
+    iget-object v0, p0, Lica;->g:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lt3g;
 
-    iget-object v0, p0, Lica;->c:Lss4;
+    invoke-interface {p1}, Luh5;->getPosition()J
 
-    invoke-interface {v0}, Lss4;->g()V
+    move-result-wide v1
 
-    return-void
+    invoke-interface {p1}, Luh5;->o()J
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
+    move-result-wide v3
 
-    invoke-interface {v0}, Lss4;->g()V
+    cmp-long v1, v1, v3
 
-    return-void
+    const/4 v2, 0x0
 
-    nop
+    const/4 v3, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v1, :cond_0
 
-.method public final h()Z
-    .locals 1
+    move v1, v3
 
-    iget v0, p0, Lica;->a:I
+    goto :goto_0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    move v1, v2
 
-    iget-object v0, p0, Lica;->c:Lss4;
+    :goto_0
+    invoke-static {v1}, Lnjg;->e(Z)V
 
-    invoke-interface {v0}, Lss4;->h()Z
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lt3g;->B(I)V
+
+    :goto_1
+    const-wide/16 v4, -0x1
+
+    cmp-long v4, p2, v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {p1}, Luh5;->getPosition()J
+
+    move-result-wide v5
+
+    const-wide/16 v7, 0x4
+
+    add-long/2addr v5, v7
+
+    cmp-long v5, v5, p2
+
+    if-gez v5, :cond_3
+
+    :cond_1
+    iget-object v5, v0, Lt3g;->a:[B
+
+    :try_start_0
+    invoke-interface {p1, v5, v2, v1, v3}, Luh5;->n([BIIZ)Z
+
+    move-result v5
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move v5, v2
+
+    :goto_2
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v0, v2}, Lt3g;->E(I)V
+
+    invoke-virtual {v0}, Lt3g;->t()J
+
+    move-result-wide v4
+
+    const-wide/32 v6, 0x4f676753
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_2
+
+    invoke-interface {p1}, Luh5;->x()V
+
+    return v3
+
+    :cond_2
+    invoke-interface {p1, v3}, Luh5;->y(I)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_3
+    if-eqz v4, :cond_4
+
+    invoke-interface {p1}, Luh5;->getPosition()J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, p2
+
+    if-gez v0, :cond_5
+
+    :cond_4
+    invoke-interface {p1}, Luh5;->R()I
 
     move-result v0
 
-    return v0
+    const/4 v1, -0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lica;->c:Lss4;
+    if-eq v0, v1, :cond_5
 
-    invoke-interface {v0}, Lss4;->h()Z
+    goto :goto_3
+
+    :cond_5
+    return v2
+.end method
+
+.method public d(Lvh5;J)Z
+    .locals 9
+
+    iget-object v0, p0, Lica;->g:Ljava/lang/Object;
+
+    check-cast v0, Lo3b;
+
+    invoke-interface {p1}, Lvh5;->getPosition()J
+
+    move-result-wide v1
+
+    invoke-interface {p1}, Lvh5;->o()J
+
+    move-result-wide v3
+
+    cmp-long v1, v1, v3
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-nez v1, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    invoke-static {v1}, Lq5h;->f(Z)V
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lo3b;->D(I)V
+
+    :goto_1
+    const-wide/16 v4, -0x1
+
+    cmp-long v4, p2, v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {p1}, Lvh5;->getPosition()J
+
+    move-result-wide v5
+
+    const-wide/16 v7, 0x4
+
+    add-long/2addr v5, v7
+
+    cmp-long v5, v5, p2
+
+    if-gez v5, :cond_3
+
+    :cond_1
+    iget-object v5, v0, Lo3b;->a:[B
+
+    :try_start_0
+    invoke-interface {p1, v5, v2, v1, v3}, Lvh5;->n([BIIZ)Z
+
+    move-result v5
+    :try_end_0
+    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    move v5, v2
+
+    :goto_2
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v0, v2}, Lo3b;->G(I)V
+
+    invoke-virtual {v0}, Lo3b;->w()J
+
+    move-result-wide v4
+
+    const-wide/32 v6, 0x4f676753
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_2
+
+    invoke-interface {p1}, Lvh5;->x()V
+
+    return v3
+
+    :cond_2
+    invoke-interface {p1, v3}, Lvh5;->y(I)V
+
+    goto :goto_1
+
+    :cond_3
+    :goto_3
+    if-eqz v4, :cond_4
+
+    invoke-interface {p1}, Lvh5;->getPosition()J
+
+    move-result-wide v0
+
+    cmp-long v0, v0, p2
+
+    if-gez v0, :cond_5
+
+    :cond_4
+    invoke-interface {p1, v3}, Lvh5;->u(I)I
 
     move-result v0
 
-    return v0
+    const/4 v1, -0x1
 
-    nop
+    if-eq v0, v1, :cond_5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    goto :goto_3
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Lica;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lica;->b:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lica;->b:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    return v2
 .end method

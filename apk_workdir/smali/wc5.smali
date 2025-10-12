@@ -1,239 +1,211 @@
 .class public final Lwc5;
-.super Lked;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Z
+# static fields
+.field public static final d:Ljava/nio/charset/Charset;
 
-.field public final d:Ljava/util/concurrent/Executor;
+.field public static final e:[Ljava/lang/String;
+
+.field public static final f:[I
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
+.method static constructor <clinit>()V
+    .locals 15
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+
+    sput-object v0, Lwc5;->d:Ljava/nio/charset/Charset;
+
+    const-string v13, "DOUBLE"
+
+    const-string v14, "IFD"
+
+    const-string v1, ""
+
+    const-string v2, "BYTE"
+
+    const-string v3, "STRING"
+
+    const-string v4, "USHORT"
+
+    const-string v5, "ULONG"
+
+    const-string v6, "URATIONAL"
+
+    const-string v7, "SBYTE"
+
+    const-string v8, "UNDEFINED"
+
+    const-string v9, "SSHORT"
+
+    const-string v10, "SLONG"
+
+    const-string v11, "SRATIONAL"
+
+    const-string v12, "SINGLE"
+
+    filled-new-array/range {v1 .. v14}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lwc5;->e:[Ljava/lang/String;
+
+    const/16 v0, 0xe
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lwc5;->f:[I
+
+    return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x1
+        0x1
+        0x2
+        0x4
+        0x8
+        0x4
+        0x8
+        0x1
+    .end array-data
+.end method
+
+.method public constructor <init>(I[BI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwc5;->d:Ljava/util/concurrent/Executor;
+    iput p1, p0, Lwc5;->a:I
 
-    iput-boolean p2, p0, Lwc5;->c:Z
+    iput p3, p0, Lwc5;->b:I
+
+    iput-object p2, p0, Lwc5;->c:[B
 
     return-void
 .end method
 
+.method public static a(JLjava/nio/ByteOrder;)Lwc5;
+    .locals 2
 
-# virtual methods
-.method public final a()Lied;
-    .locals 3
+    const/4 v0, 0x1
 
-    new-instance v0, Luc5;
+    new-array v0, v0, [J
 
-    iget-object v1, p0, Lwc5;->d:Ljava/util/concurrent/Executor;
+    const/4 v1, 0x0
 
-    iget-boolean v2, p0, Lwc5;->c:Z
+    aput-wide p0, v0, v1
 
-    invoke-direct {v0, v1, v2}, Luc5;-><init>(Ljava/util/concurrent/Executor;Z)V
+    invoke-static {v0, p2}, Lwc5;->b([JLjava/nio/ByteOrder;)Lwc5;
 
-    return-object v0
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final b(Ljava/lang/Runnable;)Lss4;
-    .locals 3
+.method public static b([JLjava/nio/ByteOrder;)Lwc5;
+    .locals 5
 
-    iget-object v0, p0, Lwc5;->d:Ljava/util/concurrent/Executor;
+    sget-object v0, Lwc5;->f:[I
 
-    :try_start_0
-    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x4
 
-    iget-boolean v2, p0, Lwc5;->c:Z
+    aget v0, v0, v1
 
-    if-eqz v1, :cond_0
+    array-length v2, p0
 
-    :try_start_1
-    new-instance v1, Ljdd;
+    mul-int/2addr v0, v2
 
-    invoke-direct {v1, p1, v2}, Lh0;-><init>(Ljava/lang/Runnable;Z)V
+    new-array v0, v0, [B
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    invoke-virtual {v1, p1}, Lh0;->a(Ljava/util/concurrent/Future;)V
+    array-length p1, p0
 
-    return-object v1
+    const/4 v2, 0x0
 
-    :catch_0
-    move-exception p1
+    :goto_0
+    if-ge v2, p1, :cond_0
+
+    aget-wide v3, p0, v2
+
+    long-to-int v3, v3
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    if-eqz v2, :cond_1
+    new-instance p1, Lwc5;
 
-    new-instance v1, Ltc5;
+    array-length p0, p0
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
-    invoke-direct {v1, p1, v2}, Ltc5;-><init>(Ljava/lang/Runnable;Lts4;)V
+    move-result-object v0
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-object v1
-
-    :cond_1
-    new-instance v1, Lsc5;
-
-    invoke-direct {v1, p1}, Lsc5;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-object v1
-
-    :goto_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    sget-object p1, Lw65;->a:Lw65;
+    invoke-direct {p1, v1, v0, p0}, Lwc5;-><init>(I[BI)V
 
     return-object p1
 .end method
 
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 4
 
-    const-string v0, "run is null"
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lwc5;->d:Ljava/util/concurrent/Executor;
+    const-string v1, "("
 
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_0
+    sget-object v1, Lwc5;->e:[Ljava/lang/String;
 
-    :try_start_0
-    new-instance v1, Ljdd;
+    iget v2, p0, Lwc5;->a:I
 
-    iget-boolean v2, p0, Lwc5;->c:Z
+    aget-object v1, v1, v2
 
-    invoke-direct {v1, p1, v2}, Lh0;-><init>(Ljava/lang/Runnable;Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    const-string v1, ", data length:"
 
-    invoke-interface {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lwc5;->c:[B
 
-    invoke-virtual {v1, p1}, Lh0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    array-length v1, v1
 
-    return-object v1
+    const-string v2, ")"
 
-    :catch_0
-    move-exception p1
+    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    sget-object p1, Lw65;->a:Lw65;
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lrc5;
-
-    invoke-direct {v0, p1}, Lrc5;-><init>(Ljava/lang/Runnable;)V
-
-    sget-object p1, Lvc5;->a:Lked;
-
-    new-instance v1, Ltg6;
-
-    const/4 v2, 0x7
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p0, v0, v3, v2}, Ltg6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p1, v1, p2, p3, p4}, Lked;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    move-result-object p1
-
-    iget-object p2, v0, Lrc5;->a:Lb22;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p2, p1}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 9
-
-    iget-object v0, p0, Lwc5;->d:Ljava/util/concurrent/Executor;
-
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v1, :cond_0
-
-    :try_start_0
-    new-instance v3, Lidd;
-
-    iget-boolean v1, p0, Lwc5;->c:Z
-
-    invoke-direct {v3, p1, v1}, Lh0;-><init>(Ljava/lang/Runnable;Z)V
-
-    move-object v2, v0
-
-    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-wide v4, p2
-
-    move-wide v6, p4
-
-    move-object v8, p6
-
-    invoke-interface/range {v2 .. v8}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    invoke-virtual {v3, p1}, Lh0;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v3
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    sget-object p1, Lw65;->a:Lw65;
-
-    return-object p1
-
-    :cond_0
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-wide v3, p2
-
-    move-wide v5, p4
-
-    move-object v7, p6
-
-    invoke-super/range {v1 .. v7}, Lked;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lss4;
-
-    move-result-object p1
-
-    return-object p1
 .end method

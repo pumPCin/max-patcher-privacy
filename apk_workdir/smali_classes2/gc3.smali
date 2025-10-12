@@ -1,170 +1,140 @@
 .class public final Lgc3;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lnf6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:I
 
-.field public synthetic Y:Lsp3;
+.field public final b:I
 
-.field public synthetic Z:Luxa;
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(III)V
     .locals 0
 
-    iput p3, p0, Lgc3;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lgc3;->a:I
+
+    iput p2, p0, Lgc3;->b:I
+
+    iput p3, p0, Lgc3;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lgc3;->X:I
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lsp3;
+    goto :goto_1
 
-    check-cast p2, Luxa;
+    :cond_0
+    instance-of v0, p1, Lgc3;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_0
 
-    new-instance v0, Lgc3;
+    :cond_1
+    check-cast p1, Lgc3;
 
-    const/4 v1, 0x3
+    iget v0, p0, Lgc3;->a:I
 
-    const/4 v2, 0x1
+    iget v1, p1, Lgc3;->a:I
 
-    invoke-direct {v0, v1, p3, v2}, Lgc3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-eq v0, v1, :cond_2
 
-    iput-object p1, v0, Lgc3;->Y:Lsp3;
+    goto :goto_0
 
-    iput-object p2, v0, Lgc3;->Z:Luxa;
+    :cond_2
+    iget v0, p0, Lgc3;->b:I
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget v1, p1, Lgc3;->b:I
 
-    invoke-virtual {v0, p1}, Lgc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v0, v1, :cond_3
 
-    return-object p1
+    goto :goto_0
 
-    :pswitch_0
-    new-instance v0, Lgc3;
+    :cond_3
+    iget v0, p0, Lgc3;->c:I
 
-    const/4 v1, 0x3
+    iget p1, p1, Lgc3;->c:I
 
-    const/4 v2, 0x0
+    if-eq v0, p1, :cond_4
 
-    invoke-direct {v0, v1, p3, v2}, Lgc3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    :goto_0
+    const/4 p1, 0x0
 
-    iput-object p1, v0, Lgc3;->Y:Lsp3;
+    return p1
 
-    iput-object p2, v0, Lgc3;->Z:Luxa;
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lgc3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final hashCode()I
+    .locals 3
 
-    iget v0, p0, Lgc3;->X:I
+    iget v0, p0, Lgc3;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lgc3;->Y:Lsp3;
+    const/16 v1, 0x1f
 
-    iget-object v0, p0, Lgc3;->Z:Luxa;
+    mul-int/2addr v0, v1
 
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    iget v2, p0, Lgc3;->b:I
 
-    move-result-object v0
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
 
-    iget v0, v0, Lue0;->l:I
+    move-result v0
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    iget v1, p0, Lgc3;->c:I
 
-    const/high16 v2, -0x10000
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    move-result v1
 
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
+    add-int/2addr v1, v0
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    return v1
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v3, 0x0
+    const-string v0, ", neutralFadeSecondary="
 
-    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    const-string v1, ", neutralThemed="
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    const-string v2, "CommonStatesBackgroundDisabledColors(accent="
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget v3, p0, Lgc3;->a:I
 
-    return-object p1
+    iget v4, p0, Lgc3;->b:I
 
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgc3;->Y:Lsp3;
-
-    iget-object v0, p0, Lgc3;->Z:Luxa;
-
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->l:I
+    const-string v1, ")"
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    iget v2, p0, Lgc3;->c:I
 
-    const/high16 v2, -0x10000
-
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
-
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, v2, v1}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

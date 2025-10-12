@@ -1,57 +1,44 @@
 .class public final Lcg3;
-.super Lvu0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsi9;
 
 
 # instance fields
-.field public final synthetic i:I
+.field public final a:Lax0;
 
-.field public final j:Ljava/lang/Object;
+.field public final b:Lax0;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lcg3;->i:I
-
-    iput-object p2, p0, Lcg3;->j:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Lax0;
+
+    new-instance v1, Luo7;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, v2}, Luo7;-><init>(I)V
+
+    invoke-direct {v0, v1}, Lax0;-><init>(Lh88;)V
+
+    iput-object v0, p0, Lcg3;->a:Lax0;
+
+    new-instance v0, Lax0;
+
+    new-instance v1, Lss6;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-direct {v0, v1}, Lax0;-><init>(Lh88;)V
+
+    iput-object v0, p0, Lcg3;->b:Lax0;
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final b(Ljava/io/Serializable;)Lvu0;
-    .locals 1
-
-    iget v0, p0, Lcg3;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcg3;->j:Ljava/lang/Object;
-
-    check-cast v0, Ljava/io/PrintWriter;
-
-    invoke-virtual {v0, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/Object;)V
-
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Lcg3;->j:Ljava/lang/Object;
-
-    check-cast v0, Ljava/io/PrintStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/PrintStream;->print(Ljava/lang/Object;)V
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,12 +1,12 @@
 .class public final Li;
-.super Lgd4;
+.super Lrc4;
 .source "SourceFile"
 
 
 # static fields
 .field public static final b:Li;
 
-.field public static final c:Lbd4;
+.field public static final c:Lmc4;
 
 
 # direct methods
@@ -15,7 +15,7 @@
 
     new-instance v0, Li;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    invoke-direct {v0}, Lrc4;-><init>()V
 
     sput-object v0, Li;->b:Li;
 
@@ -29,11 +29,11 @@
 
     const-string v4, ":settings/aboutapp"
 
-    invoke-static {v0, v4, v1, v2, v3}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
     move-result-object v0
 
-    sput-object v0, Li;->c:Lbd4;
+    sput-object v0, Li;->c:Lmc4;
 
     return-void
 .end method

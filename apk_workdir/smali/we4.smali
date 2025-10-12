@@ -1,23 +1,60 @@
-.class public final synthetic Lwe4;
-.super Ljava/lang/Object;
+.class public abstract Lwe4;
+.super Lhi0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# virtual methods
+.method public final finalize()V
+    .locals 3
 
-.field public final synthetic b:Ljava/lang/Object;
+    invoke-interface {p0}, Lj73;->isClosed()Z
 
+    move-result v0
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lwe4;->a:I
-
-    iput-object p2, p0, Lwe4;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz v0, :cond_0
 
     return-void
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "CloseableImage"
+
+    const-string v2, "finalize: %s %x still open."
+
+    invoke-static {v1, v2, v0}, Lai5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :try_start_0
+    invoke-interface {p0}, Lj73;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    throw v0
 .end method

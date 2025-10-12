@@ -3,151 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
-.implements Landroid/view/View$OnAttachStateChangeListener;
-
-
-# static fields
-.field public static final X:Landroid/os/Handler;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Landroid/view/View;
+.field public final synthetic X:J
 
-.field public final b:Lve6;
+.field public final synthetic a:I
 
-.field public c:Landroid/view/ViewTreeObserver;
+.field public final synthetic b:Lrfa;
 
-.field public o:Z
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lofa;->X:Landroid/os/Handler;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/View;Lve6;)V
+.method public synthetic constructor <init>(Lrfa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
     .locals 0
 
+    iput p6, p0, Lofa;->a:I
+
+    iput-object p1, p0, Lofa;->b:Lrfa;
+
+    iput-object p2, p0, Lofa;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Lofa;->o:Ljava/lang/Runnable;
+
+    iput-wide p4, p0, Lofa;->X:J
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lofa;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lofa;->b:Lve6;
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lofa;->c:Landroid/view/ViewTreeObserver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 4
+.method public final run()V
+    .locals 5
 
-    iget-boolean v0, p0, Lofa;->o:Z
+    iget v0, p0, Lofa;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lofa;->o:Ljava/lang/Runnable;
 
-    iget-object v0, p0, Lofa;->b:Lve6;
+    iget-wide v1, p0, Lofa;->X:J
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    iget-object v3, p0, Lofa;->b:Lrfa;
 
-    move-result-object v0
+    iget-object v4, p0, Lofa;->c:Landroid/graphics/drawable/Drawable;
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    iput-boolean v1, p0, Lofa;->o:Z
-
-    new-instance v1, Li56;
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v1, v2, p0}, Li56;-><init>(ILjava/lang/Object;)V
-
-    sget-object v2, Lofa;->X:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move v1, v0
-
-    :cond_0
-    if-nez v1, :cond_1
-
-    const-string v0, "skipping frame"
-
-    const/4 v2, 0x0
-
-    const-string v3, "OneShotOnPreDrawListener"
-
-    invoke-static {v3, v0, v2}, Lox9;->x(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    return v1
-.end method
-
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lofa;->c:Landroid/view/ViewTreeObserver;
+    invoke-static {v3, v4, v0, v1, v2}, Lrfa;->c(Lrfa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     return-void
-.end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lofa;->o:Ljava/lang/Runnable;
 
-    iget-object p1, p0, Lofa;->c:Landroid/view/ViewTreeObserver;
+    iget-wide v1, p0, Lofa;->X:J
 
-    invoke-virtual {p1}, Landroid/view/ViewTreeObserver;->isAlive()Z
+    iget-object v3, p0, Lofa;->b:Lrfa;
 
-    move-result p1
+    iget-object v4, p0, Lofa;->c:Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lofa;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lofa;->c:Landroid/view/ViewTreeObserver;
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    :goto_0
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-static {v3, v4, v0, v1, v2}, Lrfa;->c(Lrfa;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

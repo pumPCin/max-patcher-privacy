@@ -2,123 +2,120 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzh9;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lyn7;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lyn7;
+
+.field public final c:Lyn7;
+
+.field public final d:Lyn7;
+
+.field public final e:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lyh9;->a:J
+    iput-object p1, p0, Lyh9;->a:Lyn7;
 
-    iput-object p3, p0, Lyh9;->b:Ljava/lang/String;
+    iput-object p2, p0, Lyh9;->b:Lyn7;
+
+    iput-object p3, p0, Lyh9;->c:Lyn7;
+
+    iput-object p4, p0, Lyh9;->d:Lyn7;
+
+    iput-object p5, p0, Lyh9;->e:Lyn7;
 
     return-void
 .end method
 
+.method public static synthetic b(Lyh9;JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;Lc2f;I)Ljava/lang/Object;
+    .locals 8
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    and-int/lit8 p7, p7, 0x8
 
-    const/4 v0, 0x1
+    if-eqz p7, :cond_0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    const/4 p5, 0x0
 
     :cond_0
-    instance-of v1, p1, Lyh9;
+    move-object v5, p5
 
-    const/4 v2, 0x0
+    const/4 v6, 0x0
 
-    if-nez v1, :cond_1
+    move-object v0, p0
 
-    return v2
+    move-wide v1, p1
 
-    :cond_1
-    check-cast p1, Lyh9;
+    move-object v3, p3
 
-    iget-wide v3, p0, Lyh9;->a:J
+    move-object v4, p4
 
-    iget-wide v5, p1, Lyh9;->a:J
+    move-object v7, p6
 
-    cmp-long v1, v3, v5
+    invoke-virtual/range {v0 .. v7}, Lyh9;->a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;ZLc2f;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    move-result-object p0
 
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lyh9;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lyh9;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
 
-    iget-wide v0, p0, Lyh9;->a:J
+# virtual methods
+.method public final a(JLjava/lang/CharSequence;Ljava/lang/Long;Ll76;ZLc2f;)Ljava/lang/Object;
+    .locals 10
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v0, p0, Lyh9;->a:Lyn7;
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lyh9;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "DownloadFailed(messageId="
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lyh9;->a:J
-
-    iget-object v4, p0, Lyh9;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ")"
+    check-cast v0, Le7f;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lmka;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lmka;->b()Lh24;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lxh9;
+
+    const/4 v9, 0x0
+
+    move-object v2, p0
+
+    move-wide v3, p1
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    move-object v8, p5
+
+    move/from16 v7, p6
+
+    invoke-direct/range {v1 .. v9}, Lxh9;-><init>(Lyh9;JLjava/lang/CharSequence;Ljava/lang/Long;ZLl76;Lkotlin/coroutines/Continuation;)V
+
+    move-object/from16 p1, p7
+
+    invoke-static {v0, v1, p1}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

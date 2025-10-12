@@ -1,126 +1,237 @@
-.class public final synthetic Lo37;
+.class public Lo37;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+
+# static fields
+.field public static final c:Lo37;
 
 
 # instance fields
-.field public final synthetic a:Lkbh;
+.field public final a:Landroid/graphics/Bitmap$Config;
 
-.field public final synthetic b:I
+.field public final b:Landroid/graphics/Bitmap$Config;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkbh;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lw4d;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lw4d;-><init>(I)V
+
+    new-instance v1, Lo37;
+
+    invoke-direct {v1, v0}, Lo37;-><init>(Lw4d;)V
+
+    sput-object v1, Lo37;->c:Lo37;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lw4d;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo37;->a:Lkbh;
+    iget-object v0, p1, Lw4d;->b:Ljava/lang/Object;
 
-    iput p2, p0, Lo37;->b:I
+    check-cast v0, Landroid/graphics/Bitmap$Config;
+
+    iput-object v0, p0, Lo37;->a:Landroid/graphics/Bitmap$Config;
+
+    iget-object p1, p1, Lw4d;->c:Ljava/lang/Object;
+
+    check-cast p1, Landroid/graphics/Bitmap$Config;
+
+    iput-object p1, p0, Lo37;->b:Landroid/graphics/Bitmap$Config;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lo37;->a:Lkbh;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lkbh;->b:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast v0, Landroidx/work/impl/WorkDatabase;
+    return v0
 
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->t()Lrob;
+    :cond_0
+    const/4 v1, 0x0
 
-    move-result-object v1
+    if-eqz p1, :cond_4
 
-    const-string v2, "next_job_scheduler_id"
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1, v2}, Lrob;->m(Ljava/lang/String;)Ljava/lang/Long;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, 0x0
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lo37;
+
+    iget-object v2, p0, Lo37;->a:Landroid/graphics/Bitmap$Config;
+
+    iget-object v3, p1, Lo37;->a:Landroid/graphics/Bitmap$Config;
+
+    if-eq v2, v3, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v2, p0, Lo37;->b:Landroid/graphics/Bitmap$Config;
+
+    iget-object p1, p1, Lo37;->b:Landroid/graphics/Bitmap$Config;
+
+    if-eq v2, p1, :cond_3
+
+    return v1
+
+    :cond_3
+    return v0
+
+    :cond_4
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lo37;->a:Landroid/graphics/Bitmap$Config;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    const v1, -0x20f0b425
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lo37;->b:Landroid/graphics/Bitmap$Config;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-wide v4
-
-    long-to-int v1, v4
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    move v1, v3
+    const/4 v1, 0x0
 
     :goto_0
-    const v4, 0x7fffffff
+    add-int/2addr v0, v1
 
-    if-ne v1, v4, :cond_1
+    mul-int/lit16 v0, v0, 0x745f
 
-    move v4, v3
+    return v0
+.end method
 
-    goto :goto_1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :cond_1
-    add-int/lit8 v4, v1, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_1
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->t()Lrob;
+    const-string v1, "ImageDecodeOptions{"
 
-    move-result-object v5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v6, Lqob;
+    invoke-static {p0}, Lggh;->F(Ljava/lang/Object;)Lly7;
 
-    int-to-long v7, v4
+    move-result-object v1
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v2, "minDecodeIntervalMs"
 
-    move-result-object v4
+    const/16 v3, 0x64
 
-    invoke-direct {v6, v2, v4}, Lqob;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v1, v3, v2}, Lly7;->j(ILjava/lang/String;)V
 
-    invoke-virtual {v5, v6}, Lrob;->q(Lqob;)V
+    const-string v2, "maxDimensionPx"
 
-    if-ltz v1, :cond_2
+    const v3, 0x7fffffff
 
-    iget v4, p0, Lo37;->b:I
+    invoke-virtual {v1, v3, v2}, Lly7;->j(ILjava/lang/String;)V
 
-    if-gt v1, v4, :cond_2
+    const-string v2, "decodePreviewFrame"
 
-    move v3, v1
+    const/4 v3, 0x0
 
-    goto :goto_2
+    invoke-virtual {v1, v2, v3}, Lly7;->k(Ljava/lang/String;Z)V
 
-    :cond_2
-    invoke-virtual {v0}, Landroidx/work/impl/WorkDatabase;->t()Lrob;
+    const-string v2, "useLastFrameForPreview"
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v3}, Lly7;->k(Ljava/lang/String;Z)V
 
-    new-instance v1, Lqob;
+    const-string v2, "useEncodedImageForPreview"
 
-    const/4 v4, 0x1
+    invoke-virtual {v1, v2, v3}, Lly7;->k(Ljava/lang/String;Z)V
 
-    int-to-long v4, v4
+    const-string v2, "decodeAllFrames"
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1, v2, v3}, Lly7;->k(Ljava/lang/String;Z)V
 
-    move-result-object v4
+    const-string v2, "forceStaticImage"
 
-    invoke-direct {v1, v2, v4}, Lqob;-><init>(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v1, v2, v3}, Lly7;->k(Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v1}, Lrob;->q(Lqob;)V
+    iget-object v2, p0, Lo37;->a:Landroid/graphics/Bitmap$Config;
 
-    :goto_2
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "bitmapConfigName"
+
+    invoke-virtual {v1, v2, v3}, Lly7;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lo37;->b:Landroid/graphics/Bitmap$Config;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "animatedBitmapConfigName"
+
+    invoke-virtual {v1, v2, v3}, Lly7;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v2, 0x0
+
+    const-string v3, "customImageDecoder"
+
+    invoke-virtual {v1, v2, v3}, Lly7;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "bitmapTransformation"
+
+    invoke-virtual {v1, v2, v3}, Lly7;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v3, "colorSpace"
+
+    invoke-virtual {v1, v2, v3}, Lly7;->l(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lly7;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

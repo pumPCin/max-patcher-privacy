@@ -1,14 +1,13 @@
-.class public interface abstract Lzlg;
+.class public abstract Lzlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(I)V
-.end method
+# direct methods
+.method public static a(Landroid/view/View;IIII)V
+    .locals 0
 
-.method public abstract b(I)V
-.end method
+    invoke-static {p0, p1, p2, p3, p4}, Lfyc;->x(Landroid/view/View;IIII)V
 
-.method public abstract c(IF)V
+    return-void
 .end method

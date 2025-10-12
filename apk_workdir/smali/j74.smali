@@ -1,105 +1,43 @@
 .class public final Lj74;
-.super Lad8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic O0:I
-
-
 # instance fields
-.field public N0:Li74;
+.field public final a:Lu66;
+
+.field public final b:La67;
+
+.field public final c:Lmmd;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
 
 
-# virtual methods
-.method public final f(Landroid/graphics/Canvas;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lu66;Ljava/util/ArrayList;Lmmd;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 0
 
-    iget-object v0, p0, Lj74;->N0:Li74;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, v0, Li74;->r:Landroid/graphics/RectF;
+    iput-object p1, p0, Lj74;->a:Lu66;
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
+    invoke-static {p2}, La67;->j(Ljava/util/Collection;)La67;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    iput-object p1, p0, Lj74;->b:La67;
 
-    invoke-super {p0, p1}, Lad8;->f(Landroid/graphics/Canvas;)V
+    iput-object p3, p0, Lj74;->c:Lmmd;
 
-    return-void
+    iput-object p4, p0, Lj74;->d:Ljava/lang/String;
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iput-object p5, p0, Lj74;->e:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lj74;->N0:Li74;
-
-    iget-object v0, v0, Li74;->r:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
-
-    invoke-super {p0, p1}, Lad8;->f(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final mutate()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    new-instance v0, Li74;
-
-    iget-object v1, p0, Lj74;->N0:Li74;
-
-    invoke-direct {v0, v1}, Li74;-><init>(Li74;)V
-
-    iput-object v0, p0, Lj74;->N0:Li74;
-
-    return-object p0
-.end method
-
-.method public final q(FFFF)V
-    .locals 2
-
-    iget-object v0, p0, Lj74;->N0:Li74;
-
-    iget-object v0, v0, Li74;->r:Landroid/graphics/RectF;
-
-    iget v1, v0, Landroid/graphics/RectF;->left:F
-
-    cmpl-float v1, p1, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->top:F
-
-    cmpl-float v1, p2, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->right:F
-
-    cmpl-float v1, p3, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->bottom:F
-
-    cmpl-float v1, p4, v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
-
-    invoke-virtual {p0}, Lad8;->invalidateSelf()V
+    iput-object p6, p0, Lj74;->f:Ljava/util/ArrayList;
 
     return-void
 .end method

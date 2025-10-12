@@ -1,181 +1,162 @@
-.class public final synthetic Lhug;
+.class public final Lhug;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltj6;
 
+# instance fields
+.field public final a:Lyn7;
 
-# static fields
-.field public static final a:Lhug;
+.field public final b:Lt6e;
 
-.field private static final descriptor:Ldsd;
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lyn7;Lyn7;)V
+    .locals 2
 
-    new-instance v0, Lhug;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhug;->a:Lyn7;
 
-    sput-object v0, Lhug;->a:Lhug;
+    const/4 v0, 0x0
 
-    new-instance v1, Lnmb;
+    const/4 v1, 0x7
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.brightness.WebAppChangeScreenBrightness"
+    invoke-static {v0, v0, v1}, Lu6e;->b(III)Lt6e;
 
-    const/4 v3, 0x2
+    move-result-object v0
 
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
+    iput-object v0, p0, Lhug;->b:Lt6e;
 
-    const-string v0, "requestId"
+    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object p2
 
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
+    check-cast p2, Le7f;
 
-    const-string v0, "maxBrightness"
+    check-cast p2, Lmka;
 
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
+    invoke-virtual {p2}, Lmka;->a()Lh24;
 
-    sput-object v1, Lhug;->descriptor:Ldsd;
+    move-result-object p2
+
+    invoke-static {p2}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lhug;->c:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Liv0;
+
+    invoke-virtual {p1, p0}, Liv0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object v0, Lhug;->descriptor:Ldsd;
-
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    move v6, v5
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lp8;->p(Ldsd;I)Z
-
-    move-result v6
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance p1, Ljug;
-
-    invoke-direct {p1, v3, v5, v6}, Ljug;-><init>(Ljava/lang/String;IZ)V
-
-    return-object p1
-.end method
-
-.method public final b(Le04;Ljava/lang/Object;)V
+.method public final a(Lfug;)V
     .locals 3
 
-    check-cast p2, Ljug;
+    new-instance v0, Lgug;
 
-    sget-object v0, Lhug;->descriptor:Ldsd;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    invoke-direct {v0, p0, p1, v1}, Lgug;-><init>(Lhug;Lfug;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p1
+    const/4 p1, 0x3
 
-    iget-object v1, p2, Ljug;->a:Ljava/lang/String;
+    iget-object v2, p0, Lhug;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget-boolean p2, p2, Ljug;->b:Z
-
-    invoke-virtual {p1, v0, v1, p2}, Le04;->e(Ldsd;IZ)V
-
-    invoke-virtual {p1}, Le04;->m()V
+    invoke-static {v2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
 
     return-void
 .end method
 
-.method public final c()[Lum7;
+.method public final onEvent(Lsi0;)V
     .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
 
-    const/4 v0, 0x2
+    .line 2
+    new-instance v0, Leug;
 
-    new-array v0, v0, [Lum7;
+    iget-wide v1, p1, Lti0;->a:J
 
-    sget-object v1, Luxe;->a:Luxe;
+    invoke-direct {v0, v1, v2}, Leug;-><init>(J)V
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, v0}, Lhug;->a(Lfug;)V
 
-    aput-object v1, v0, v2
-
-    sget-object v1, Lkq0;->a:Lkq0;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    return-object v0
+    return-void
 .end method
 
-.method public final d()Ldsd;
-    .locals 1
+.method public final onEvent(Lvn5;)V
+    .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
 
-    sget-object v0, Lhug;->descriptor:Ldsd;
+    .line 6
+    new-instance v0, Lcug;
 
-    return-object v0
+    .line 7
+    iget-wide v1, p1, Lvn5;->b:J
+
+    .line 8
+    invoke-direct {v0, v1, v2}, Lcug;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lhug;->a(Lfug;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lxn5;)V
+    .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
+
+    .line 3
+    new-instance v0, Leug;
+
+    .line 4
+    iget-wide v1, p1, Lxn5;->b:J
+
+    .line 5
+    invoke-direct {v0, v1, v2}, Leug;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lhug;->a(Lfug;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lyn5;)V
+    .locals 3
+    .annotation runtime Lpxe;
+    .end annotation
+
+    .line 9
+    new-instance v0, Ldug;
+
+    iget-wide v1, p1, Lti0;->a:J
+
+    invoke-direct {v0, v1, v2}, Ldug;-><init>(J)V
+
+    invoke-virtual {p0, v0}, Lhug;->a(Lfug;)V
+
+    return-void
+.end method
+
+.method public final onEvent(Lzn5;)V
+    .locals 0
+    .annotation runtime Lpxe;
+    .end annotation
+
+    const/4 p1, 0x0
+
+    .line 1
+    throw p1
 .end method

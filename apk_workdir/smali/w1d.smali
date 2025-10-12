@@ -1,20 +1,57 @@
-.class public interface abstract Lw1d;
-.super Ljava/lang/Object;
+.class public abstract Lw1d;
+.super Lv1d;
 .source "SourceFile"
 
 # interfaces
-.implements Lprb;
+.implements Lwe6;
+
+
+# instance fields
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    invoke-direct {p0, p2}, Lv1d;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    iput p1, p0, Lw1d;->b:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract b(Lvxd;)V
+.method public final getArity()I
+    .locals 1
+
+    iget v0, p0, Lw1d;->b:I
+
+    return v0
 .end method
 
-.method public abstract f(Lmrb;Ljava/lang/Throwable;)V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract g(Lmrb;)V
-.end method
+    iget-object v0, p0, Lji0;->a:Lkotlin/coroutines/Continuation;
 
-.method public abstract h(Lmrb;)V
+    if-nez v0, :cond_0
+
+    sget-object v0, Lewc;->a:Lfwc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Lfwc;->a(Lwe6;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    invoke-super {p0}, Lji0;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:Lei;
-
-.field public final b:Landroid/content/Context;
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lei;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lki;->a:Lei;
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object p2, p0, Lki;->b:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lki;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method

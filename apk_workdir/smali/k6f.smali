@@ -1,47 +1,49 @@
-.class public final Lk6f;
+.class public Lk6f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Ljava/lang/String;
+.field public static final b:Lk6f;
 
 
 # instance fields
-.field public final a:Landroid/content/ComponentName;
+.field public final a:Landroid/util/ArrayMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "SystemJobInfoConverter"
+    new-instance v0, Lk6f;
 
-    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Landroid/util/ArrayMap;
 
-    move-result-object v0
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    sput-object v0, Lk6f;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lk6f;-><init>(Landroid/util/ArrayMap;)V
+
+    sput-object v0, Lk6f;->b:Lk6f;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Landroid/util/ArrayMap;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/content/ComponentName;
-
-    const-class v1, Landroidx/work/impl/background/systemjob/SystemJobService;
-
-    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    iput-object v0, p0, Lk6f;->a:Landroid/content/ComponentName;
+    iput-object p1, p0, Lk6f;->a:Landroid/util/ArrayMap;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "android.hardware.camera2.CaptureRequest.setTag.CX"
+
+    return-object v0
 .end method

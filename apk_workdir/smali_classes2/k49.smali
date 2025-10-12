@@ -1,121 +1,144 @@
 .class public final Lk49;
-.super Lm3f;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+# static fields
+.field public static final a:Lk49;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lk49;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    new-instance v0, Lk49;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lk49;->a:Lk49;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-virtual {p0, p1, p2}, Lk49;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    check-cast p1, Lk49;
+    const/4 v2, 0x1
 
-    sget-object p2, Loyf;->a:Loyf;
+    if-eq v0, v2, :cond_0
 
-    invoke-virtual {p1, p2}, Lk49;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    return-object p2
-.end method
+    return v1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :cond_0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
-    new-instance v0, Lk49;
+    move-result v3
 
-    iget-object v1, p0, Lk49;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    float-to-int v3, v3
 
-    invoke-direct {v0, p2, v1}, Lk49;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
 
-    iput-object p1, v0, Lk49;->X:Ljava/lang/Object;
+    move-result p3
 
-    return-object v0
-.end method
+    float-to-int p3, p3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result v4
 
-    iget-object p1, p0, Lk49;->X:Ljava/lang/Object;
+    sub-int/2addr v3, v4
 
-    check-cast p1, Ljava/util/List;
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
 
-    new-instance v0, Lzy3;
+    move-result v4
 
-    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    sub-int/2addr p3, v4
 
-    iget-object v1, p0, Lk49;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
-    invoke-virtual {v1}, Lb04;->getArgs()Landroid/os/Bundle;
+    move-result v4
 
-    move-result-object v2
+    add-int/2addr v4, v3
 
-    const-string v3, "actions"
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
 
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+    move-result v3
 
-    move-result-object v2
+    add-int/2addr v3, p3
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
-    invoke-static {v2}, Lva8;->f(Landroid/os/Bundle;)Ljava/util/List;
+    move-result-object p3
 
-    move-result-object v2
+    invoke-virtual {p3, v3}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v3
+
+    int-to-float v4, v4
+
+    invoke-virtual {p3, v3, v4}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result p3
+
+    const-class v3, Landroid/text/style/ClickableSpan;
+
+    invoke-interface {p2, p3, p3, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Landroid/text/style/ClickableSpan;
+
+    array-length v3, p3
+
+    if-nez v3, :cond_1
+
+    move v3, v2
 
     goto :goto_0
 
-    :cond_0
-    const/4 v2, 0x0
+    :cond_1
+    move v3, v1
 
     :goto_0
-    if-nez v2, :cond_1
+    if-nez v3, :cond_4
 
-    sget-object v2, Lb75;->a:Lb75;
+    aget-object p3, p3, v1
 
-    :cond_1
-    invoke-direct {v0, v2}, Lzy3;-><init>(Ljava/util/List;)V
+    if-eqz v0, :cond_3
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    if-eq v0, v2, :cond_2
 
-    move-result-object v0
+    goto :goto_1
 
-    invoke-static {v0, p1}, Le93;->y0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    :cond_2
+    invoke-virtual {p3, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
 
-    move-result-object p1
+    goto :goto_1
 
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:Lb46;
+    :cond_3
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
-    invoke-virtual {v0, p1}, Lpw7;->E(Ljava/util/List;)V
+    move-result p1
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
-    return-object p1
+    move-result p3
+
+    invoke-static {p2, p1, p3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    :goto_1
+    return v2
+
+    :cond_4
+    return v1
 .end method

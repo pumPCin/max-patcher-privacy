@@ -1,214 +1,239 @@
-.class public final Ljj1;
+.class public final synthetic Ljj1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Landroid/graphics/PointF;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic Y:Lkl1;
+
+.field public final synthetic a:Landroid/animation/ObjectAnimator;
+
+.field public final synthetic b:Llj1;
 
 .field public final synthetic c:Z
 
-.field public final synthetic d:Landroid/view/View;
-
-.field public final synthetic e:Z
-
-.field public final synthetic f:Landroid/view/View;
-
-.field public final synthetic g:Z
-
-.field public final synthetic h:Lxg;
+.field public final synthetic o:Landroid/view/View;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxg;Landroid/view/View;ZLandroid/view/View;ZLandroid/view/View;ZI)V
+.method public synthetic constructor <init>(Landroid/animation/ObjectAnimator;Llj1;ZLandroid/view/View;Landroid/graphics/PointF;Lkl1;)V
     .locals 0
-
-    iput p8, p0, Ljj1;->a:I
-
-    iput-object p1, p0, Ljj1;->h:Lxg;
-
-    iput-object p2, p0, Ljj1;->b:Landroid/view/View;
-
-    iput-boolean p3, p0, Ljj1;->c:Z
-
-    iput-object p4, p0, Ljj1;->d:Landroid/view/View;
-
-    iput-boolean p5, p0, Ljj1;->e:Z
-
-    iput-object p6, p0, Ljj1;->f:Landroid/view/View;
-
-    iput-boolean p7, p0, Ljj1;->g:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Ljj1;->a:Landroid/animation/ObjectAnimator;
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    iput-object p2, p0, Ljj1;->b:Llj1;
 
-    return-void
-.end method
+    iput-boolean p3, p0, Ljj1;->c:Z
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    iput-object p4, p0, Ljj1;->o:Landroid/view/View;
+
+    iput-object p5, p0, Ljj1;->X:Landroid/graphics/PointF;
+
+    iput-object p6, p0, Ljj1;->Y:Lkl1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 10
 
-    iget p1, p0, Ljj1;->a:I
+    iget-object p1, p0, Ljj1;->b:Llj1;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p1, Llj1;->v0:Lyn7;
 
-    iget-object p1, p0, Ljj1;->h:Lxg;
+    sget v1, Llj1;->w0:I
 
-    check-cast p1, Lko1;
+    iget-wide v1, p1, Ldh;->o:J
 
-    iget-object v0, p0, Ljj1;->d:Landroid/view/View;
+    iget-object p1, p0, Ljj1;->a:Landroid/animation/ObjectAnimator;
 
-    iget-boolean v1, p0, Ljj1;->e:Z
-
-    invoke-static {p1, v0, v1}, Lko1;->o(Lko1;Landroid/view/View;Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ljj1;->h:Lxg;
-
-    check-cast p1, Lkj1;
-
-    iget-object v0, p0, Ljj1;->d:Landroid/view/View;
-
-    iget-boolean v1, p0, Ljj1;->e:Z
-
-    invoke-static {p1, v0, v1}, Lkj1;->o(Lkj1;Landroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget p1, p0, Ljj1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Ljj1;->h:Lxg;
-
-    check-cast p1, Lko1;
-
-    iget-object v0, p0, Ljj1;->b:Landroid/view/View;
+    invoke-virtual {p1, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     iget-boolean v1, p0, Ljj1;->c:Z
 
-    invoke-static {p1, v0, v1}, Lko1;->o(Lko1;Landroid/view/View;Z)V
+    const/4 v2, 0x1
 
-    return-void
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    iget-object p1, p0, Ljj1;->h:Lxg;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    check-cast p1, Lkj1;
-
-    iget-object v0, p0, Ljj1;->b:Landroid/view/View;
-
-    iget-boolean v1, p0, Ljj1;->c:Z
-
-    invoke-static {p1, v0, v1}, Lkj1;->o(Lkj1;Landroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    iget p1, p0, Ljj1;->a:I
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Ljj1;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, Ljj1;->f:Landroid/view/View;
-
-    instance-of v0, p1, Lll1;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lll1;
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    int-to-float v3, v2
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    sub-float p1, v3, p1
 
     :goto_0
+    iget-object v3, p0, Ljj1;->o:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    iget-object v6, p0, Ljj1;->X:Landroid/graphics/PointF;
+
+    iget v7, v6, Landroid/graphics/PointF;->x:F
+
+    int-to-float v2, v2
+
+    sub-float/2addr v2, p1
+
+    mul-float v8, v7, v2
+
+    iget v9, v6, Landroid/graphics/PointF;->y:F
+
+    mul-float/2addr v9, v2
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->min(FF)F
+
+    move-result v2
+
+    iget v7, v6, Landroid/graphics/PointF;->y:F
+
+    invoke-static {v7, v9}, Ljava/lang/Math;->min(FF)F
+
+    move-result v7
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, p1
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, p1
+
+    iget p1, v6, Landroid/graphics/PointF;->x:F
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lma1;
+
+    check-cast v8, Lna1;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v8, 0x76
+
+    int-to-float v8, v8
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v9
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v9
+
+    invoke-static {v8}, Li8e;->I(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    add-float/2addr p1, v8
+
+    invoke-static {p1, v4}, Ljava/lang/Math;->max(FF)F
+
+    move-result p1
+
+    iget v4, v6, Landroid/graphics/PointF;->y:F
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lma1;
+
+    check-cast v0, Lna1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/16 v0, 0xae
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v6
+
+    invoke-static {v0}, Li8e;->I(F)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    add-float/2addr v4, v0
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    new-instance v4, Landroid/graphics/RectF;
+
+    invoke-direct {v4, v2, v7, p1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iget-object p1, p0, Ljj1;->Y:Lkl1;
+
     if-eqz p1, :cond_1
 
-    iget-boolean v0, p0, Ljj1;->g:Z
-
-    invoke-interface {p1, v0}, Lll1;->b(Z)V
+    invoke-interface {p1, v4, v1}, Lkl1;->d(Landroid/graphics/RectF;Z)V
 
     :cond_1
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {v4, p1}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x41a00000    # 20.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v3, p1, v0}, Lnjg;->c(Landroid/view/View;Landroid/graphics/Rect;F)V
+
     return-void
-
-    :pswitch_0
-    iget-object p1, p0, Ljj1;->f:Landroid/view/View;
-
-    instance-of v0, p1, Ljl1;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Ljl1;
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_1
-    if-eqz p1, :cond_3
-
-    iget-boolean v0, p0, Ljj1;->g:Z
-
-    invoke-interface {p1, v0}, Ljl1;->e(Z)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

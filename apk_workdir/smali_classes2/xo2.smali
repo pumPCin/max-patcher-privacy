@@ -1,144 +1,361 @@
 .class public final Lxo2;
-.super Lfwe;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lrff;
 
 
 # instance fields
-.field public final o:Landroid/widget/TextView;
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 5
+.method public constructor <init>(ZZZZZZZZZZZZ)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lfwe;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxo2;->o:Landroid/widget/TextView;
+    iput-boolean p1, p0, Lxo2;->a:Z
 
-    new-instance v0, Lywc;
+    iput-boolean p2, p0, Lxo2;->b:Z
 
-    const/4 v1, -0x1
+    iput-boolean p3, p0, Lxo2;->c:Z
 
-    const/4 v2, -0x2
+    iput-boolean p4, p0, Lxo2;->d:Z
 
-    invoke-direct {v0, v1, v2}, Lywc;-><init>(II)V
+    iput-boolean p5, p0, Lxo2;->e:Z
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iput-boolean p6, p0, Lxo2;->f:Z
 
-    const/16 v0, 0x10
+    iput-boolean p7, p0, Lxo2;->g:Z
 
-    int-to-float v0, v0
+    iput-boolean p8, p0, Lxo2;->h:Z
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    iput-boolean p9, p0, Lxo2;->i:Z
 
-    move-result-object v1
+    iput-boolean p10, p0, Lxo2;->j:Z
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iput-boolean p11, p0, Lxo2;->k:Z
 
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lv63;->r0(F)I
-
-    move-result v3
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    invoke-virtual {p1, v1, v3, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    sget-object v0, Lrxf;->q:Lpef;
-
-    invoke-static {v0, p1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lxo2;->onThemeChanged(Luxa;)V
+    iput-boolean p12, p0, Lxo2;->l:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Luxa;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lxo2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxo2;
+
+    iget-boolean v1, p0, Lxo2;->a:Z
+
+    iget-boolean v3, p1, Lxo2;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lxo2;->b:Z
+
+    iget-boolean v3, p1, Lxo2;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lxo2;->c:Z
+
+    iget-boolean v3, p1, Lxo2;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lxo2;->d:Z
+
+    iget-boolean v3, p1, Lxo2;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lxo2;->e:Z
+
+    iget-boolean v3, p1, Lxo2;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lxo2;->f:Z
+
+    iget-boolean v3, p1, Lxo2;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Lxo2;->g:Z
+
+    iget-boolean v3, p1, Lxo2;->g:Z
+
+    if-eq v1, v3, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-boolean v1, p0, Lxo2;->h:Z
+
+    iget-boolean v3, p1, Lxo2;->h:Z
+
+    if-eq v1, v3, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-boolean v1, p0, Lxo2;->i:Z
+
+    iget-boolean v3, p1, Lxo2;->i:Z
+
+    if-eq v1, v3, :cond_a
+
+    return v2
+
+    :cond_a
+    iget-boolean v1, p0, Lxo2;->j:Z
+
+    iget-boolean v3, p1, Lxo2;->j:Z
+
+    if-eq v1, v3, :cond_b
+
+    return v2
+
+    :cond_b
+    iget-boolean v1, p0, Lxo2;->k:Z
+
+    iget-boolean v3, p1, Lxo2;->k:Z
+
+    if-eq v1, v3, :cond_c
+
+    return v2
+
+    :cond_c
+    iget-boolean v1, p0, Lxo2;->l:Z
+
+    iget-boolean p1, p1, Lxo2;->l:Z
+
+    if-eq v1, p1, :cond_d
+
+    return v2
+
+    :cond_d
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Lxo2;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lxo2;->b:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->c:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->d:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->e:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->f:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->g:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->h:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->i:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->j:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Lxo2;->k:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lxo2;->l:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", onlyOwnerCanChangeIconTitle="
+
+    const-string v1, ", official="
+
+    const-string v2, "ChatOptions(signAdmin="
+
+    iget-boolean v3, p0, Lxo2;->a:Z
+
+    iget-boolean v4, p0, Lxo2;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lbk7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget v0, v0, Lbdf;->i:I
+    const-string v1, ", onlyAdminCanAddMember="
 
-    iget-object v1, p0, Lxo2;->o:Landroid/widget/TextView;
+    const-string v2, ", allCanPinMessage="
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    iget-boolean v3, p0, Lxo2;->c:Z
 
-    invoke-interface {p1}, Luxa;->b()Lue0;
+    iget-boolean v4, p0, Lxo2;->d:Z
 
-    move-result-object p1
+    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    iget p1, p1, Lue0;->k:I
+    const-string v1, ", ok="
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    const-string v2, ", onlyAdminCanCall="
 
-    return-void
+    iget-boolean v3, p0, Lxo2;->e:Z
+
+    iget-boolean v4, p0, Lxo2;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", sentByPhone="
+
+    const-string v2, ", serviceChat="
+
+    iget-boolean v3, p0, Lxo2;->g:Z
+
+    iget-boolean v4, p0, Lxo2;->h:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", membersCanSeePrivateLink="
+
+    const-string v2, ", contentLevelChat="
+
+    iget-boolean v3, p0, Lxo2;->i:Z
+
+    iget-boolean v4, p0, Lxo2;->j:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    iget-boolean v1, p0, Lxo2;->k:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", aPlusChannel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxo2;->l:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

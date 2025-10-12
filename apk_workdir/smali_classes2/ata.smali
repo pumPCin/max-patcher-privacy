@@ -4,160 +4,132 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:J
 
-.field public static final b:I
+.field public static final b:J
 
-.field public static final c:I
+.field public static final c:J
 
-.field public static final d:I
+.field public static final d:J
 
-.field public static final e:I
+.field public static final e:J
 
-.field public static final f:I
+.field public static final f:J
 
-.field public static final g:I
+.field public static final g:J
 
-.field public static final h:I
+.field public static final h:J
 
-.field public static final i:I
+.field public static final i:J
 
-.field public static final j:I
+.field public static final j:J
 
-.field public static final k:I
+.field public static final k:J
 
-.field public static final l:I
+.field public static final l:J
 
-.field public static final m:I
+.field public static final m:J
 
-.field public static final n:I
+.field public static final n:J
 
-.field public static final o:I
+.field public static final o:J
 
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
+.field public static final synthetic p:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Lpcc;->emoji_sprite_0:I
+    sget v0, Lzdc;->oneme_settings_privacy_content_level_access:I
 
-    sput v0, Lata;->a:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_1:I
+    sput-wide v0, Lata;->a:J
 
-    sput v0, Lata;->b:I
+    sget v0, Lzdc;->oneme_settings_privacy_info_header:I
 
-    sget v0, Lpcc;->emoji_sprite_10:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->c:I
+    sput-wide v0, Lata;->b:J
 
-    sget v0, Lpcc;->emoji_sprite_11:I
+    sget v0, Lzdc;->oneme_settings_privacy_safe_files:I
 
-    sput v0, Lata;->d:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_12:I
+    sput-wide v0, Lata;->c:J
 
-    sput v0, Lata;->e:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-    sget v0, Lpcc;->emoji_sprite_13:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->f:I
+    sput-wide v0, Lata;->d:J
 
-    sget v0, Lpcc;->emoji_sprite_14:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_black_list:I
 
-    sput v0, Lata;->g:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_15:I
+    sput-wide v0, Lata;->e:J
 
-    sput v0, Lata;->h:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_call_me:I
 
-    sget v0, Lpcc;->emoji_sprite_16:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->i:I
+    sput-wide v0, Lata;->f:J
 
-    sget v0, Lpcc;->emoji_sprite_17:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_finished_sessions:I
 
-    sput v0, Lata;->j:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_18:I
+    sput-wide v0, Lata;->g:J
 
-    sput v0, Lata;->k:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_how_session:I
 
-    sget v0, Lpcc;->emoji_sprite_19:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->l:I
+    sput-wide v0, Lata;->h:J
 
-    sget v0, Lpcc;->emoji_sprite_2:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_safe_mode:I
 
-    sput v0, Lata;->m:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_20:I
+    sput-wide v0, Lata;->i:J
 
-    sput v0, Lata;->n:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_search_by_phone:I
 
-    sget v0, Lpcc;->emoji_sprite_21:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->o:I
+    sput-wide v0, Lata;->j:J
 
-    sget v0, Lpcc;->emoji_sprite_22:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_see_online_state:I
 
-    sput v0, Lata;->p:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_23:I
+    sput-wide v0, Lata;->k:J
 
-    sput v0, Lata;->q:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_twofa:I
 
-    sget v0, Lpcc;->emoji_sprite_24:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->r:I
+    sput-wide v0, Lata;->l:J
 
-    sget v0, Lpcc;->emoji_sprite_3:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_twofa_profile_delete:I
 
-    sput v0, Lata;->s:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_4:I
+    sput-wide v0, Lata;->m:J
 
-    sput v0, Lata;->t:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_twofa_warning_item:I
 
-    sget v0, Lpcc;->emoji_sprite_5:I
+    int-to-long v0, v0
 
-    sput v0, Lata;->u:I
+    sput-wide v0, Lata;->n:J
 
-    sget v0, Lpcc;->emoji_sprite_6:I
+    sget v0, Lzdc;->oneme_settings_privacy_screen_web_apps:I
 
-    sput v0, Lata;->v:I
+    int-to-long v0, v0
 
-    sget v0, Lpcc;->emoji_sprite_7:I
-
-    sput v0, Lata;->w:I
-
-    sget v0, Lpcc;->emoji_sprite_8:I
-
-    sput v0, Lata;->x:I
-
-    sget v0, Lpcc;->emoji_sprite_9:I
-
-    sput v0, Lata;->y:I
+    sput-wide v0, Lata;->o:J
 
     return-void
 .end method

@@ -1,236 +1,150 @@
-.class public final Ldpe;
+.class public final synthetic Ldpe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lke6;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lfpe;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
+.field public final synthetic c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(IIIIIII)V
+.method public synthetic constructor <init>(Lfpe;Ljava/util/List;I)V
     .locals 0
 
+    iput p3, p0, Ldpe;->a:I
+
+    iput-object p1, p0, Ldpe;->b:Lfpe;
+
+    iput-object p2, p0, Ldpe;->c:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ldpe;->a:I
-
-    iput p2, p0, Ldpe;->b:I
-
-    iput p3, p0, Ldpe;->c:I
-
-    iput p4, p0, Ldpe;->d:I
-
-    iput p5, p0, Ldpe;->e:I
-
-    iput p6, p0, Ldpe;->f:I
-
-    iput p7, p0, Ldpe;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Ldpe;->a:I
 
-    goto :goto_1
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ldpe;->c:Ljava/util/List;
+
+    iget-object v4, p0, Ldpe;->b:Lfpe;
+
+    check-cast p1, Ljava/util/List;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v3}, Lrce;->g(Ljava/lang/Object;)Lnba;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Ldpe;
+    invoke-static {v3}, Lrce;->g(Ljava/lang/Object;)Lnba;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {v4, p1}, Lfpe;->d(Ljava/util/List;)Lkde;
 
-    :cond_1
-    check-cast p1, Ldpe;
+    move-result-object p1
 
-    iget v0, p0, Ldpe;->a:I
+    const/4 v3, 0x2
 
-    iget v1, p1, Ldpe;->a:I
+    new-array v3, v3, [Ldee;
 
-    if-eq v0, v1, :cond_2
+    aput-object v0, v3, v2
 
-    goto :goto_0
+    aput-object p1, v3, v1
 
-    :cond_2
-    iget v0, p0, Ldpe;->b:I
+    invoke-static {v3}, Lrx5;->a([Ljava/lang/Object;)Lrx5;
 
-    iget v1, p1, Ldpe;->b:I
+    move-result-object p1
 
-    if-eq v0, v1, :cond_3
+    const v0, 0x7fffffff
 
-    goto :goto_0
+    const-string v1, "maxConcurrency"
 
-    :cond_3
-    iget v0, p0, Ldpe;->c:I
+    invoke-static {v0, v1}, Lug5;->y(ILjava/lang/String;)V
 
-    iget v1, p1, Ldpe;->c:I
+    new-instance v0, Lgy5;
 
-    if-eq v0, v1, :cond_4
+    invoke-direct {v0, p1}, Lgy5;-><init>(Lrx5;)V
 
-    goto :goto_0
+    new-instance p1, Ljava/util/ArrayList;
 
-    :cond_4
-    iget v0, p0, Ldpe;->d:I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iget v1, p1, Ldpe;->d:I
+    new-instance v1, Lrdd;
 
-    if-eq v0, v1, :cond_5
+    const/16 v2, 0xd
 
-    goto :goto_0
+    invoke-direct {v1, v2}, Lrdd;-><init>(I)V
 
-    :cond_5
-    iget v0, p0, Ldpe;->e:I
+    new-instance v2, Lcf6;
 
-    iget v1, p1, Ldpe;->e:I
+    invoke-direct {v2, p1}, Lcf6;-><init>(Ljava/lang/Object;)V
 
-    if-eq v0, v1, :cond_6
+    new-instance p1, Lvx5;
 
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Ldpe;->f:I
-
-    iget v1, p1, Ldpe;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Ldpe;->g:I
-
-    iget p1, p1, Ldpe;->g:I
-
-    if-eq v0, p1, :cond_8
+    invoke-direct {p1, v0, v2, v1}, Lvx5;-><init>(Lrx5;Lcf6;Lrl0;)V
 
     :goto_0
-    const/4 p1, 0x0
+    return-object p1
 
-    return p1
-
-    :cond_8
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ldpe;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ldpe;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldpe;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldpe;->d:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldpe;->e:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldpe;->f:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Ldpe;->g:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", contrastStatic="
-
-    const-string v1, ", negative="
-
-    const-string v2, "StatesTextDisabledColors(contrast="
-
-    iget v3, p0, Ldpe;->a:I
-
-    iget v4, p0, Ldpe;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    invoke-static {v3}, Ls8a;->i(Ljava/lang/Iterable;)Lse3;
 
     move-result-object v0
 
-    const-string v1, ", neutralThemed="
+    new-instance v3, Lib2;
 
-    const-string v2, ", primary="
+    const/16 v5, 0x17
 
-    iget v3, p0, Ldpe;->c:I
+    invoke-direct {v3, v5, p1}, Lib2;-><init>(ILjava/util/List;)V
 
-    iget v4, p0, Ldpe;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", primaryStatic="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Ldpe;->e:I
-
-    iget v4, p0, Ldpe;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget v2, p0, Ldpe;->g:I
-
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ls8a;->g(Ldnb;)Lv8a;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Ls8a;->s()Lw8a;
+
+    move-result-object v0
+
+    new-instance v3, Ldpe;
+
+    invoke-direct {v3, v4, p1, v1}, Ldpe;-><init>(Lfpe;Ljava/util/List;I)V
+
+    new-instance p1, Lbde;
+
+    invoke-direct {p1, v0, v3, v2}, Lbde;-><init>(Lrce;Lke6;I)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

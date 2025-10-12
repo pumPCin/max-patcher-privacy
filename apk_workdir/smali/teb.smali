@@ -1,19 +1,64 @@
-.class public abstract Lteb;
+.class public final synthetic Lteb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    sget v0, Loka;->a0:I
+    iput p2, p0, Lteb;->a:I
 
-    sput v0, Lteb;->a:I
+    iput-object p1, p0, Lteb;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lteb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lteb;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lteb;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lteb;->b:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

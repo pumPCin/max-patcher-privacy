@@ -1,7 +1,6 @@
-.class public final Lmlh;
+.class public interface abstract Lmlh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Landroid/database/Cursor;
+# interfaces
+.implements Landroid/os/IInterface;

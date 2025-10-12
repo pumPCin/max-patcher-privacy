@@ -1,64 +1,22 @@
 .class public final Loc0;
-.super Ljava/lang/Object;
+.super Landroid/util/LruCache;
 .source "SourceFile"
-
-# interfaces
-.implements Lsc0;
-
-
-# static fields
-.field public static final a:Loc0;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Loc0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Loc0;->a:Loc0;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Ljava/lang/Long;
 
-    if-ne p0, p1, :cond_0
+    check-cast p3, Landroid/graphics/Bitmap;
 
-    return v0
+    check-cast p4, Landroid/graphics/Bitmap;
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p3}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
-    instance-of p1, p1, Loc0;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x41a3d8e8
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "CameraPermissionDeclined"
-
-    return-object v0
+    return-void
 .end method

@@ -1,106 +1,53 @@
 .class public final Lh0g;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements La9d;
 
 
 # instance fields
-.field public final a:Ljava/util/Map;
+.field public X:Lfw7;
+
+.field public Y:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+.field public final synthetic r0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Map;)V
+.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lh0g;->r0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-    iput-object p1, p0, Lh0g;->a:Ljava/util/Map;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lh0g;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh0g;
-
-    iget-object v0, p0, Lh0g;->a:Ljava/util/Map;
-
-    iget-object p1, p1, Lh0g;->a:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lh0g;->a:Ljava/util/Map;
+    iput-object p1, p0, Lh0g;->Z:Ljava/lang/Object;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    iget p1, p0, Lh0g;->s0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    or-int/2addr p1, v0
 
-    move-result v0
+    iput p1, p0, Lh0g;->s0:I
 
-    return v0
-.end method
+    iget-object p1, p0, Lh0g;->r0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, "UpdateDisplayLayoutCommandV2Response{participantsToErrorMap="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh0g;->a:Ljava/util/Map;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

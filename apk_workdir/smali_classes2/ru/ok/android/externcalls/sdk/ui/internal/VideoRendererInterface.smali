@@ -18,13 +18,13 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface;",
         "",
-        "Lef1;",
+        "Lff1;",
         "renderer",
         "Lorg/webrtc/RendererCommon$GlDrawer;",
         "drawer",
-        "Loyf;",
+        "Laxf;",
         "init",
-        "(Lef1;Lorg/webrtc/RendererCommon$GlDrawer;)V",
+        "(Lff1;Lorg/webrtc/RendererCommon$GlDrawer;)V",
         "Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;",
         "listener",
         "addFrameSizeListener",
@@ -55,7 +55,7 @@
         "Lkotlin/Function0;",
         "onDone",
         "releaseEglSurface",
-        "(Lve6;)V",
+        "(Ltd6;)V",
         "release",
         "Companion",
         "FrameSizeListener",
@@ -100,7 +100,7 @@
 .method public abstract disableFpsReduction()V
 .end method
 
-.method public abstract init(Lef1;Lorg/webrtc/RendererCommon$GlDrawer;)V
+.method public abstract init(Lff1;Lorg/webrtc/RendererCommon$GlDrawer;)V
 .end method
 
 .method public abstract onFrame(Lorg/webrtc/VideoFrame;)V
@@ -112,11 +112,11 @@
 .method public abstract release()V
 .end method
 
-.method public abstract releaseEglSurface(Lve6;)V
+.method public abstract releaseEglSurface(Ltd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lve6;",
+            "Ltd6;",
             ")V"
         }
     .end annotation

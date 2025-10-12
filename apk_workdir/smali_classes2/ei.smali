@@ -1,23 +1,21 @@
 .class public final Lei;
-.super Ljava/lang/Object;
+.super Lci;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+# static fields
+.field public static final u:Lei;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lei;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lei;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    sput-object v0, Lei;->u:Lei;
 
     return-void
 .end method

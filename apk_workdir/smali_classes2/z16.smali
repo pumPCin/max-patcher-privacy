@@ -1,112 +1,98 @@
-.class public final synthetic Lz16;
-.super Ljava/lang/Object;
+.class public final Lz16;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Predicate;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lxe6;
+.field public final synthetic X:La26;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILxe6;)V
+.method public constructor <init>(La26;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lz16;->a:I
+    iput-object p1, p0, Lz16;->X:La26;
 
-    iput-object p2, p0, Lz16;->b:Lxe6;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ln24;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lz16;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lz16;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lz16;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lz16;->a:I
+    new-instance p1, Lz16;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lz16;->X:La26;
 
-    iget-object v0, p0, Lz16;->b:Lxe6;
+    invoke-direct {p1, v0, p2}, Lz16;-><init>(La26;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, Lqj2;
+    return-object p1
+.end method
 
-    invoke-virtual {v0, p1}, Lqj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-result-object p1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object p1, p0, Lz16;->X:La26;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object p1, p1, La26;->c:Lyn7;
 
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, p0, Lz16;->b:Lxe6;
-
-    check-cast v0, Leq;
-
-    invoke-virtual {v0, p1}, Leq;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Boolean;
+    check-cast p1, Lrta;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    sget v0, Lz7d;->N2:I
 
-    move-result p1
+    new-instance v1, Lxcf;
 
-    return p1
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
 
-    :pswitch_1
-    iget-object v0, p0, Lz16;->b:Lxe6;
+    invoke-virtual {p1, v1}, Lrta;->g(Lcdf;)V
 
-    check-cast v0, Lsu;
+    sget v0, Lz7d;->M2:I
 
-    invoke-virtual {v0, p1}, Lsu;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lxcf;
 
-    move-result-object p1
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-virtual {p1, v1}, Lrta;->a(Lcdf;)V
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_2
-    iget-object v0, p0, Lz16;->b:Lxe6;
-
-    check-cast v0, Lqj2;
-
-    invoke-virtual {v0, p1}, Lqj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lrta;->i()Lqta;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -2,63 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liae;
 
+# instance fields
+.field public final a:Lyn7;
 
-# static fields
-.field public static final a:Lhae;
+.field public final b:Lyn7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyn7;Lyn7;)V
+    .locals 0
 
-    new-instance v0, Lhae;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lhae;->a:Lyn7;
 
-    sput-object v0, Lhae;->a:Lhae;
+    iput-object p2, p0, Lhae;->b:Lyn7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lhae;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x6b151edc
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "RequestShowLocationPermissionEvent"
-
-    return-object v0
 .end method

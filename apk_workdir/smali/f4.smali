@@ -1,293 +1,249 @@
-.class public abstract synthetic Lf4;
+.class public abstract Lf4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static bridge synthetic A(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
-    .locals 0
+# instance fields
+.field public a:[Lg4;
 
-    invoke-virtual {p0, p1}, Landroid/text/PrecomputedText$Params$Builder;->setHyphenationFrequency(I)Landroid/text/PrecomputedText$Params$Builder;
+.field public b:I
 
-    move-result-object p0
+.field public c:I
 
-    return-object p0
-.end method
+.field public o:Lxxe;
 
-.method public static bridge synthetic B()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
 
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_HIDE_TOOLTIP:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+# virtual methods
+.method public final f()Lg4;
+    .locals 4
 
-    return-object v0
-.end method
+    monitor-enter p0
 
-.method public static bridge synthetic C(Landroid/view/WindowManager$LayoutParams;)V
-    .locals 1
+    :try_start_0
+    iget-object v0, p0, Lf4;->a:[Lg4;
 
-    const/4 v0, 0x3
+    if-nez v0, :cond_0
 
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
-
-    return-void
-.end method
-
-.method public static bridge synthetic D(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHeading(Z)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic a(Landroid/media/MediaDrm;[B)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/MediaDrm;->getSecurityLevel([B)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPid()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/text/PrecomputedText$Params;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/text/PrecomputedText$Params;->getBreakStrategy()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic d(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic e(Landroid/app/NotificationManager;Ljava/lang/String;)Landroid/app/NotificationChannelGroup;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/NotificationManager;->getNotificationChannelGroup(Ljava/lang/String;)Landroid/app/NotificationChannelGroup;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(Lbi8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/service/media/MediaBrowserService;->getCurrentBrowserInfo()Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g(Landroid/media/session/MediaSession;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSession;->getCurrentControllerInfo()Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic h(Landroid/os/Looper;)Landroid/os/Handler;
-    .locals 0
-
-    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic i(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/text/PrecomputedText$Params$Builder;->setBreakStrategy(I)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/text/PrecomputedText$Params$Builder;Landroid/text/TextDirectionHeuristic;)Landroid/text/PrecomputedText$Params$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/text/PrecomputedText$Params$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/PrecomputedText$Params$Builder;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static synthetic k(Landroid/text/TextPaint;)Landroid/text/PrecomputedText$Params$Builder;
-    .locals 1
-
-    new-instance v0, Landroid/text/PrecomputedText$Params$Builder;
-
-    invoke-direct {v0, p0}, Landroid/text/PrecomputedText$Params$Builder;-><init>(Landroid/text/TextPaint;)V
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic l(Landroid/text/PrecomputedText$Params;)Landroid/text/TextDirectionHeuristic;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/text/PrecomputedText$Params;->getTextDirection()Landroid/text/TextDirectionHeuristic;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Landroid/text/PrecomputedText$Params;)Landroid/text/TextPaint;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/text/PrecomputedText$Params;->getTextPaint()Landroid/text/TextPaint;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
-
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_TOOLTIP:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic o(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getTooltipText()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic p()Ljava/lang/String;
-    .locals 1
-
-    invoke-static {}, Landroid/app/Application;->getProcessName()Ljava/lang/String;
+    invoke-virtual {p0}, Lf4;->k()[Lg4;
 
     move-result-object v0
 
+    iput-object v0, p0, Lf4;->a:[Lg4;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    iget v1, p0, Lf4;->b:I
+
+    array-length v2, v0
+
+    if-lt v1, v2, :cond_1
+
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, [Lg4;
+
+    iput-object v1, p0, Lf4;->a:[Lg4;
+
+    check-cast v0, [Lg4;
+
+    :cond_1
+    :goto_0
+    iget v1, p0, Lf4;->c:I
+
+    :cond_2
+    aget-object v2, v0, v1
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {p0}, Lf4;->j()Lg4;
+
+    move-result-object v2
+
+    aput-object v2, v0, v1
+
+    :cond_3
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v3, v0
+
+    if-lt v1, v3, :cond_4
+
+    const/4 v1, 0x0
+
+    :cond_4
+    invoke-virtual {v2, p0}, Lg4;->a(Lf4;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iput v1, p0, Lf4;->c:I
+
+    iget v0, p0, Lf4;->b:I
+
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lf4;->b:I
+
+    iget-object v0, p0, Lf4;->o:Lxxe;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0, v1}, Lxxe;->z(I)V
+
+    :cond_5
+    return-object v2
+
+    :goto_1
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final i()Lane;
+    .locals 5
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lf4;->o:Lxxe;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lxxe;
+
+    iget v1, p0, Lf4;->b:I
+
+    const v2, 0x7fffffff
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v4, v2, v3}, Lt6e;-><init>(III)V
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    iput-object v0, p0, Lf4;->o:Lxxe;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
     return-object v0
+
+    :goto_1
+    monitor-exit p0
+
+    throw v0
 .end method
 
-.method public static bridge synthetic q(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract j()Lg4;
 .end method
 
-.method public static synthetic r(IILjava/lang/String;)V
-    .locals 1
+.method public abstract k()[Lg4;
+.end method
 
-    new-instance v0, Landroid/media/session/MediaSessionManager$RemoteUserInfo;
+.method public final l(Lg4;)V
+    .locals 6
 
-    invoke-direct {v0, p2, p0, p1}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;-><init>(Ljava/lang/String;II)V
+    monitor-enter p0
 
+    :try_start_0
+    iget v0, p0, Lf4;->b:I
+
+    const/4 v1, -0x1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lf4;->b:I
+
+    iget-object v2, p0, Lf4;->o:Lxxe;
+
+    const/4 v3, 0x0
+
+    if-nez v0, :cond_0
+
+    iput v3, p0, Lf4;->c:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1, p0}, Lg4;->b(Lf4;)[Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    array-length v0, p1
+
+    :goto_1
+    if-ge v3, v0, :cond_2
+
+    aget-object v4, p1, v3
+
+    if-eqz v4, :cond_1
+
+    sget-object v5, Laxf;->a:Laxf;
+
+    invoke-interface {v4, v5}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+
+    :cond_1
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v1}, Lxxe;->z(I)V
+
+    :cond_3
     return-void
-.end method
 
-.method public static bridge synthetic s(Landroid/text/PrecomputedText$Params$Builder;)V
-    .locals 0
+    :goto_2
+    monitor-exit p0
 
-    invoke-virtual {p0}, Landroid/text/PrecomputedText$Params$Builder;->build()Landroid/text/PrecomputedText$Params;
-
-    return-void
-.end method
-
-.method public static bridge synthetic t(Landroid/view/WindowManager$LayoutParams;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
-
-    return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setPaneTitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setScreenReaderFocusable(Z)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic w(Landroid/app/NotificationChannelGroup;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationChannelGroup;->isBlocked()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic x(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/session/MediaSessionManager$RemoteUserInfo;->getUid()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic y(Landroid/text/PrecomputedText$Params;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/text/PrecomputedText$Params;->getHyphenationFrequency()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic z(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
-
-    move-result p0
-
-    return p0
+    throw p1
 .end method

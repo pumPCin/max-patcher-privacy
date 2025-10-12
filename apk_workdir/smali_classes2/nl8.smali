@@ -1,108 +1,61 @@
 .class public final Lnl8;
-.super Lm3f;
+.super Lsl8;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
-
-# instance fields
-.field public synthetic X:Z
-
-.field public final synthetic Y:Lone/me/sdk/gallery/MediaGalleryWidget;
+# static fields
+.field public static final a:Lnl8;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lnl8;->Y:Lone/me/sdk/gallery/MediaGalleryWidget;
+    new-instance v0, Lnl8;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lnl8;->a:Lnl8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return v0
 
-    invoke-virtual {p0, p1, p2}, Lnl8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of p1, p1, Lnl8;
 
-    move-result-object p1
+    if-nez p1, :cond_1
 
-    check-cast p1, Lnl8;
+    const/4 p1, 0x0
 
-    sget-object p2, Loyf;->a:Loyf;
+    return p1
 
-    invoke-virtual {p1, p2}, Lnl8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    :cond_1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lnl8;
+    const v0, -0x47a05548
 
-    iget-object v1, p0, Lnl8;->Y:Lone/me/sdk/gallery/MediaGalleryWidget;
+    return v0
+.end method
 
-    invoke-direct {v0, v1, p2}, Lnl8;-><init>(Lone/me/sdk/gallery/MediaGalleryWidget;Lkotlin/coroutines/Continuation;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lnl8;->X:Z
+    const-string v0, "DeleteText"
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-boolean p1, p0, Lnl8;->X:Z
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "isItemsLoading = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "MediaGalleryWidget"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget-object v0, Lone/me/sdk/gallery/MediaGalleryWidget;->Z:[Ltm7;
-
-    iget-object v0, p0, Lnl8;->Y:Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    invoke-virtual {v0}, Lone/me/sdk/gallery/MediaGalleryWidget;->B0()Ln95;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ln95;->setRefreshingNext(Z)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

@@ -4,132 +4,55 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhjb;
 
-.field public b:Z
-
-.field public c:J
-
-.field public d:I
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Object;
+.field public final b:Lqt5;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lrt5;->a:I
+.method public constructor <init>(Lc09;Lqlb;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iget v0, p2, Lqlb;->d:I
 
-.method public constructor <init>(IJLjava/lang/String;Ljava/lang/String;Z)V
-    .locals 1
+    if-lez v0, :cond_0
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
-    iput v0, p0, Lrt5;->a:I
+    goto :goto_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_0
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Lrt5;->e:Ljava/lang/Object;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    iput p1, p0, Lrt5;->d:I
+    new-instance v0, Lqt5;
 
-    iput-wide p2, p0, Lrt5;->c:J
+    invoke-static {}, Lk0a;->m()Lk0a;
 
-    iput-boolean p6, p0, Lrt5;->b:Z
+    move-result-object v1
 
-    iput-object p5, p0, Lrt5;->f:Ljava/lang/Object;
+    invoke-direct {v0, p1, p2, v1}, Lui6;-><init>(Lc09;Lqlb;Lk0a;)V
 
-    return-void
-.end method
+    iput-object v0, p0, Lrt5;->b:Lqt5;
 
-.method public constructor <init>(Landroid/graphics/Bitmap;JLandroid/graphics/Point;IZ)V
-    .locals 1
+    new-instance p1, Lhjb;
 
-    const/4 v0, 0x3
+    const/16 p2, 0xe
 
-    iput v0, p0, Lrt5;->a:I
+    invoke-direct {p1, p2, p0}, Lhjb;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrt5;->e:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lrt5;->c:J
-
-    iput-object p4, p0, Lrt5;->f:Ljava/lang/Object;
-
-    iput p5, p0, Lrt5;->d:I
-
-    iput-boolean p6, p0, Lrt5;->b:Z
+    iput-object p1, p0, Lrt5;->a:Lhjb;
 
     return-void
-.end method
 
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-# virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 8
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    iget v0, p0, Lrt5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lrt5;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iget v1, p0, Lrt5;->d:I
-
-    iget-wide v2, p0, Lrt5;->c:J
-
-    iget-boolean v4, p0, Lrt5;->b:Z
-
-    const-string v5, "\', bytesSent="
-
-    const-string v6, ", bytesReceived=0, responseTime="
-
-    const-string v7, "SessionLogEvent{opcode=\'"
-
-    invoke-static {v1, v7, v0, v5, v6}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retry=false, error="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

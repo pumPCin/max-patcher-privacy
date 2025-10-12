@@ -1,129 +1,598 @@
-.class public final synthetic Lud4;
+.class public final Lud4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsx7;
-.implements Lch4;
-.implements Lus1;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/util/SparseArray;
 
-.field public final synthetic b:I
+.field public b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public c:Lc50;
+
+.field public d:I
+
+.field public e:[Ltw1;
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;II)V
-    .locals 0
-
-    iput-object p1, p0, Lud4;->c:Ljava/lang/Object;
-
-    iput p2, p0, Lud4;->a:I
-
-    iput p3, p0, Lud4;->b:I
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/util/SparseArray;
+
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lud4;->a:Landroid/util/SparseArray;
+
+    sget-object v0, Lc50;->e:Lc50;
+
+    iput-object v0, p0, Lud4;->c:Lc50;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lud4;->d:I
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ltw1;
+
+    iput-object v0, p0, Lud4;->e:[Ltw1;
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide v0, p0, Lud4;->f:J
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lud4;->g:J
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    iput-wide v0, p0, Lud4;->i:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/media/MediaCodecInfo;)I
-    .locals 3
+.method public final a(Lc50;J)I
+    .locals 7
 
-    iget-object v0, p0, Lud4;->c:Ljava/lang/Object;
+    invoke-virtual {p0}, Lud4;->c()V
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p0}, Lud4;->c()V
 
-    iget v1, p0, Lud4;->a:I
+    iget-object v0, p0, Lud4;->c:Lc50;
 
-    iget v2, p0, Lud4;->b:I
+    iget v1, p1, Lc50;->a:I
 
-    invoke-static {p1, v0, v1, v2}, Lv85;->g(Landroid/media/MediaCodecInfo;Ljava/lang/String;II)Landroid/util/Size;
+    iget v2, v0, Lc50;->a:I
 
-    move-result-object p1
+    if-ne v1, v2, :cond_0
 
-    if-nez p1, :cond_0
+    invoke-static {p1}, Lhq;->f(Lc50;)Z
 
-    const p1, 0x7fffffff
+    move-result v1
 
-    return p1
+    if-eqz v1, :cond_0
 
-    :cond_0
-    mul-int/2addr v1, v2
-
-    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+    invoke-static {v0}, Lhq;->f(Lc50;)Z
 
     move-result v0
 
-    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+    if-eqz v0, :cond_0
 
-    move-result p1
+    iget-wide v0, p0, Lud4;->f:J
 
-    mul-int/2addr p1, v0
+    sub-long/2addr p2, v0
 
-    sub-int/2addr v1, p1
+    iget v0, p1, Lc50;->a:I
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+    invoke-static {v0, p2, p3}, Lg3g;->p(IJ)J
 
-    move-result p1
+    move-result-wide v5
 
-    return p1
+    iget p2, p0, Lud4;->b:I
+
+    add-int/lit8 p3, p2, 0x1
+
+    iput p3, p0, Lud4;->b:I
+
+    iget-object p3, p0, Lud4;->a:Landroid/util/SparseArray;
+
+    new-instance v1, Ltd4;
+
+    iget v0, p1, Lc50;->b:I
+
+    iget-object v2, p0, Lud4;->c:Lc50;
+
+    iget v2, v2, Lc50;->b:I
+
+    invoke-static {v0, v2}, Lp72;->a(II)Lp72;
+
+    move-result-object v4
+
+    move-object v2, p0
+
+    move-object v3, p1
+
+    invoke-direct/range {v1 .. v6}, Ltd4;-><init>(Lud4;Lc50;Lp72;J)V
+
+    invoke-virtual {p3, p2, v1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
+
+    sget-object p1, Lgb4;->a:Ljava/util/LinkedHashMap;
+
+    const-class p1, Lgb4;
+
+    monitor-enter p1
+
+    monitor-exit p1
+
+    return p2
+
+    :cond_0
+    move-object v2, p0
+
+    move-object v3, p1
+
+    new-instance p1, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Can not add source. MixerFormat="
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p3, v2, Lud4;->c:Lc50;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, v3}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Lc50;)V
+
+    throw p1
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 3
+.method public final b(J)Ltw1;
+    .locals 4
 
-    iget-object v0, p0, Lud4;->c:Ljava/lang/Object;
+    iget v0, p0, Lud4;->d:I
 
-    check-cast v0, Lwc;
+    iget-object v1, p0, Lud4;->c:Lc50;
 
-    iget v1, p0, Lud4;->b:I
+    iget v1, v1, Lc50;->d:I
 
-    check-cast p1, Lxc;
+    mul-int/2addr v0, v1
 
-    iget v2, p0, Lud4;->a:I
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    invoke-interface {p1, v0, v2, v1}, Lxc;->M(Lwc;II)V
+    move-result-object v0
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
+
+    new-instance v1, Ltw1;
+
+    iget v2, p0, Lud4;->d:I
+
+    int-to-long v2, v2
+
+    add-long/2addr v2, p1
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, v1, Ltw1;->c:Ljava/lang/Object;
+
+    iput-wide p1, v1, Ltw1;->a:J
+
+    iput-wide v2, v1, Ltw1;->b:J
+
+    return-object v1
+.end method
+
+.method public final c()V
+    .locals 2
+
+    iget-object v0, p0, Lud4;->c:Lc50;
+
+    sget-object v1, Lc50;->e:Lc50;
+
+    invoke-virtual {v0, v1}, Lc50;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    const-string v1, "Audio mixer is not configured."
+
+    invoke-static {v1, v0}, Lq5h;->j(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
-.method public o(Lts1;)Ljava/lang/String;
+.method public final d(Lc50;)V
+    .locals 6
+
+    iget-object v0, p0, Lud4;->c:Lc50;
+
+    sget-object v1, Lc50;->e:Lc50;
+
+    invoke-virtual {v0, v1}, Lc50;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const-string v1, "Audio mixer already configured."
+
+    invoke-static {v1, v0}, Lq5h;->j(Ljava/lang/Object;Z)V
+
+    invoke-static {p1}, Lhq;->f(Lc50;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lud4;->c:Lc50;
+
+    iget p1, p1, Lc50;->a:I
+
+    const/16 v0, 0x1f4
+
+    mul-int/2addr v0, p1
+
+    div-int/lit16 v0, v0, 0x3e8
+
+    iput v0, p0, Lud4;->d:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lud4;->f:J
+
+    sget-object p1, Lgb4;->a:Ljava/util/LinkedHashMap;
+
+    const-class p1, Lgb4;
+
+    monitor-enter p1
+
+    monitor-exit p1
+
+    invoke-virtual {p0, v0, v1}, Lud4;->b(J)Ltw1;
+
+    move-result-object p1
+
+    iget v0, p0, Lud4;->d:I
+
+    int-to-long v0, v0
+
+    invoke-virtual {p0, v0, v1}, Lud4;->b(J)Ltw1;
+
+    move-result-object v0
+
+    filled-new-array {p1, v0}, [Ltw1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lud4;->e:[Ltw1;
+
+    iget-wide v0, p0, Lud4;->i:J
+
+    iget-wide v2, p0, Lud4;->h:J
+
+    iget p1, p0, Lud4;->d:I
+
+    int-to-long v4, p1
+
+    add-long/2addr v2, v4
+
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lud4;->g:J
+
+    return-void
+
+    :cond_0
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
+
+    const-string v1, "Can not mix to this AudioFormat."
+
+    invoke-direct {v0, v1, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Lc50;)V
+
+    throw v0
+.end method
+
+.method public final e()Z
     .locals 4
 
-    iget-object v0, p0, Lud4;->c:Ljava/lang/Object;
+    invoke-virtual {p0}, Lud4;->c()V
 
-    check-cast v0, Lqk4;
+    iget-wide v0, p0, Lud4;->h:J
 
-    new-instance v1, Lp90;
+    iget-wide v2, p0, Lud4;->i:J
 
-    iget v2, p0, Lud4;->a:I
+    cmp-long v2, v0, v2
 
-    iget v3, p0, Lud4;->b:I
+    if-gez v2, :cond_1
 
-    invoke-direct {v1, v2, v3, p1}, Lp90;-><init>(IILts1;)V
+    iget-wide v2, p0, Lud4;->j:J
 
-    new-instance v2, Luu1;
+    cmp-long v0, v0, v2
 
-    const/16 v3, 0x1d
+    if-ltz v0, :cond_0
 
-    invoke-direct {v2, v0, v3, v1}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v0, p0, Lud4;->a:Landroid/util/SparseArray;
 
-    new-instance v1, Lmk4;
+    invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
-    const/4 v3, 0x0
+    move-result v0
 
-    invoke-direct {v1, p1, v3}, Lmk4;-><init>(Lts1;I)V
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v2, v1}, Lqk4;->c(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
+    goto :goto_0
 
-    const-string p1, "DefaultSurfaceProcessor#snapshot"
+    :cond_0
+    const/4 v0, 0x0
 
-    return-object p1
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final f(ILjava/nio/ByteBuffer;)V
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    invoke-virtual {v0}, Lud4;->c()V
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->hasRemaining()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    iget-object v3, v0, Lud4;->a:Landroid/util/SparseArray;
+
+    invoke-static {v3, v1}, Lg3g;->k(Landroid/util/SparseArray;I)Z
+
+    move-result v4
+
+    const-string v5, "Source not found."
+
+    invoke-static {v5, v4}, Lq5h;->j(Ljava/lang/Object;Z)V
+
+    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Ltd4;
+
+    iget-wide v3, v8, Ltd4;->a:J
+
+    iget-wide v5, v0, Lud4;->g:J
+
+    cmp-long v1, v3, v5
+
+    if-ltz v1, :cond_1
+
+    goto/16 :goto_3
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    iget-object v3, v8, Ltd4;->b:Lc50;
+
+    iget v3, v3, Lc50;->d:I
+
+    div-int/2addr v1, v3
+
+    iget-wide v3, v8, Ltd4;->a:J
+
+    int-to-long v5, v1
+
+    add-long/2addr v3, v5
+
+    iget-wide v5, v0, Lud4;->g:J
+
+    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v9
+
+    iget-object v1, v8, Ltd4;->c:Lp72;
+
+    iget-boolean v1, v1, Lp72;->d:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v8, v9, v10, v2}, Ltd4;->a(JLjava/nio/ByteBuffer;)V
+
+    return-void
+
+    :cond_2
+    iget-wide v3, v8, Ltd4;->a:J
+
+    iget-wide v5, v0, Lud4;->h:J
+
+    cmp-long v1, v3, v5
+
+    if-gez v1, :cond_3
+
+    invoke-static {v9, v10, v5, v6}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v3
+
+    invoke-virtual {v8, v3, v4, v2}, Ltd4;->a(JLjava/nio/ByteBuffer;)V
+
+    iget-wide v3, v8, Ltd4;->a:J
+
+    cmp-long v1, v3, v9
+
+    if-nez v1, :cond_3
+
+    goto/16 :goto_3
+
+    :cond_3
+    iget-object v11, v0, Lud4;->e:[Ltw1;
+
+    array-length v12, v11
+
+    const/4 v14, 0x0
+
+    :goto_0
+    if-ge v14, v12, :cond_7
+
+    aget-object v1, v11, v14
+
+    iget-wide v3, v8, Ltd4;->a:J
+
+    iget-wide v5, v1, Ltw1;->b:J
+
+    iget-object v7, v1, Ltw1;->c:Ljava/lang/Object;
+
+    check-cast v7, Ljava/nio/ByteBuffer;
+
+    cmp-long v5, v3, v5
+
+    if-ltz v5, :cond_4
+
+    move v15, v14
+
+    goto :goto_2
+
+    :cond_4
+    iget-wide v5, v1, Ltw1;->a:J
+
+    sub-long/2addr v3, v5
+
+    long-to-int v3, v3
+
+    iget-object v4, v0, Lud4;->c:Lc50;
+
+    iget v4, v4, Lc50;->d:I
+
+    mul-int/2addr v3, v4
+
+    invoke-virtual {v7}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {v7, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-wide v3, v1, Ltw1;->b:J
+
+    invoke-static {v9, v10, v3, v4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v3
+
+    move-wide v5, v3
+
+    iget-object v4, v0, Lud4;->c:Lc50;
+
+    move v15, v14
+
+    iget-wide v13, v8, Ltd4;->a:J
+
+    cmp-long v1, v5, v13
+
+    if-ltz v1, :cond_5
+
+    const/4 v1, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_1
+    invoke-static {v1}, Lq5h;->f(Z)V
+
+    iget-wide v13, v8, Ltd4;->a:J
+
+    sub-long v13, v5, v13
+
+    long-to-int v1, v13
+
+    iget-object v2, v8, Ltd4;->b:Lc50;
+
+    move-wide v13, v5
+
+    iget-object v5, v8, Ltd4;->c:Lp72;
+
+    iget-object v3, v8, Ltd4;->d:Lud4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-object v3, v7
+
+    const/4 v7, 0x1
+
+    move v6, v1
+
+    move-object/from16 v1, p2
+
+    invoke-static/range {v1 .. v7}, Lhq;->z(Ljava/nio/ByteBuffer;Lc50;Ljava/nio/ByteBuffer;Lc50;Lp72;IZ)V
+
+    iput-wide v13, v8, Ltd4;->a:J
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->reset()Ljava/nio/Buffer;
+
+    iget-wide v1, v8, Ltd4;->a:J
+
+    cmp-long v1, v1, v9
+
+    if-nez v1, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    add-int/lit8 v14, v15, 0x1
+
+    move-object/from16 v2, p2
+
+    goto :goto_0
+
+    :cond_7
+    :goto_3
+    return-void
 .end method

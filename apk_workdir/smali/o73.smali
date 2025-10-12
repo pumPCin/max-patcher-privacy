@@ -1,249 +1,76 @@
-.class public final Lo73;
-.super Lkf4;
+.class public abstract Lo73;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Z
-
-.field public o:Lj6f;
+# static fields
+.field public static final a:Ljava/util/logging/Logger;
 
 
-# virtual methods
-.method public final close()V
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, Lo73;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v0
+
+    sput-object v0, Lo73;->a:Ljava/util/logging/Logger;
+
+    return-void
+.end method
+
+.method public static a(Ljava/io/Closeable;)V
     .locals 3
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo73;->o:Lj6f;
-
-    if-nez v0, :cond_0
-
-    monitor-exit p0
+    if-nez p0, :cond_0
 
     return-void
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
     :cond_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lo73;->o:Lj6f;
-
-    monitor-exit p0
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-object v2, v0, Lj6f;->c:Ljava/lang/Object;
-
-    check-cast v2, Lt73;
-
-    invoke-static {v2}, Lt73;->W(Lt73;)V
-
-    iput-object v1, v0, Lj6f;->c:Ljava/lang/Object;
-
-    iget-object v2, v0, Lj6f;->o:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/ArrayList;
-
-    invoke-static {v2}, Lt73;->X(Ljava/util/ArrayList;)V
-
-    iput-object v1, v0, Lj6f;->o:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    monitor-exit v0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :catchall_1
-    move-exception v1
+    :catch_0
+    move-exception p0
 
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
-    throw v1
+    const-string v1, "IOException thrown while closing Closeable."
 
-    :goto_0
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    sget-object v2, Lo73;->a:Ljava/util/logging/Logger;
 
-    throw v0
+    invoke-virtual {v2, v0, v1, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method
 
-.method public final declared-synchronized getHeight()I
+.method public static b(Ljava/io/InputStream;)V
     .locals 1
-
-    monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lo73;->o:Lj6f;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Lj6f;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->h()I
-
-    move-result v0
+    invoke-static {p0}, Lo73;->a(Ljava/io/Closeable;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_0
-    monitor-exit p0
+    return-void
 
-    return v0
+    :catch_0
+    move-exception p0
 
-    :catchall_0
-    move-exception v0
+    new-instance v0, Ljava/lang/AssertionError;
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
     throw v0
-.end method
-
-.method public final declared-synchronized getSizeInBytes()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo73;->o:Lj6f;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Lj6f;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->j()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized getWidth()I
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo73;->o:Lj6f;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, v0, Lj6f;->a:Ljava/lang/Object;
-
-    check-cast v0, Lcom/facebook/animated/gif/GifImage;
-
-    invoke-virtual {v0}, Lcom/facebook/animated/gif/GifImage;->k()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized isClosed()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo73;->o:Lj6f;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final isStateful()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lo73;->X:Z
-
-    return v0
 .end method

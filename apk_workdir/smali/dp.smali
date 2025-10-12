@@ -1,56 +1,41 @@
-.class public final Ldp;
+.class public abstract Ldp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lek9;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;)V
+.method public static a(Landroid/widget/TextView;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
 
-    iput p1, p0, Ldp;->a:I
+    move-result p0
 
-    iput-object p2, p0, Ldp;->b:Ljava/lang/String;
+    return p0
+.end method
+
+.method public static b(Landroid/widget/TextView;IIII)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
 
     return-void
 .end method
 
+.method public static c(Landroid/widget/TextView;[II)V
+    .locals 0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "Ait(controlCode="
+.method public static d(Landroid/widget/TextView;Ljava/lang/String;)Z
+    .locals 0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
 
-    iget v1, p0, Ldp;->a:I
+    move-result p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ",url="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldp;->b:Ljava/lang/String;
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p0
 .end method

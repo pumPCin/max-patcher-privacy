@@ -1,35 +1,27 @@
-.class public interface abstract Le27;
+.class public final Le27;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final a:Ljava/lang/String;
+.field public b:Z
+
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(IIZ)V
+    .locals 0
 
-    const/16 v0, 0x24
+    iput p1, p0, Le27;->a:I
 
-    const/16 v1, 0x2e
+    iput-boolean p3, p0, Le27;->b:Z
 
-    const-string v2, "androidx$room$IMultiInstanceInvalidationCallback"
+    iput p2, p0, Le27;->c:I
 
-    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Le27;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract l([Ljava/lang/String;)V
 .end method

@@ -1,210 +1,188 @@
-.class public final Lml;
+.class public final synthetic Lml;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsl;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic X:Ldwc;
 
-.field public b:Z
+.field public final synthetic Y:Ldwc;
 
-.field public c:Z
+.field public final synthetic a:Ljava/lang/String;
 
-.field public d:Z
+.field public final synthetic b:Lim;
 
-.field public e:Z
+.field public final synthetic c:Lnl;
+
+.field public final synthetic o:Lru/ok/android/api/core/ApiInvocationException;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;Lim;Lnl;Lru/ok/android/api/core/ApiInvocationException;Ldwc;Ldwc;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lml;->a:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p2, p0, Lml;->b:Lim;
 
-    iput-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    iput-object p3, p0, Lml;->c:Lnl;
 
-    const/4 v0, 0x1
+    iput-object p4, p0, Lml;->o:Lru/ok/android/api/core/ApiInvocationException;
 
-    iput-boolean v0, p0, Lml;->b:Z
+    iput-object p5, p0, Lml;->X:Ldwc;
+
+    iput-object p6, p0, Lml;->Y:Ldwc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lll;)V
-    .locals 2
+.method public final c(Lql;)Lql;
+    .locals 8
 
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lml;->X:Ldwc;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lml;->Y:Ldwc;
 
-    iget-boolean v0, p0, Lml;->b:Z
+    iget-object v2, p0, Lml;->c:Lnl;
 
-    invoke-virtual {p1}, Lll;->a()Z
+    iget-object v2, v2, Lnl;->c:Lkm;
 
-    move-result v1
+    iget-object v3, p1, Lql;->c:Ljava/lang/String;
 
-    and-int/2addr v0, v1
+    iget-object v4, p0, Lml;->a:Ljava/lang/String;
 
-    iput-boolean v0, p0, Lml;->b:Z
+    invoke-static {v3, v4}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v0, p0, Lml;->c:Z
+    move-result v4
 
-    invoke-virtual {p1}, Lll;->c()Z
+    if-nez v4, :cond_0
 
-    move-result v1
+    goto :goto_0
 
-    or-int/2addr v0, v1
+    :cond_0
+    if-nez v3, :cond_1
 
-    iput-boolean v0, p0, Lml;->c:Z
+    goto :goto_0
 
-    iget-boolean v0, p0, Lml;->d:Z
+    :cond_1
+    new-instance v3, Lql;
 
-    invoke-virtual {p1}, Lll;->b()Z
+    iget-object v4, p1, Lql;->a:Ljava/lang/String;
 
-    move-result v1
+    iget-object p1, p1, Lql;->b:Ljava/lang/String;
 
-    xor-int/lit8 v1, v1, 0x1
+    const/4 v5, 0x0
 
-    or-int/2addr v0, v1
+    invoke-direct {v3, v4, p1, v5, v5}, Lql;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v0, p0, Lml;->d:Z
+    move-object p1, v3
 
-    iget-boolean v0, p0, Lml;->e:Z
+    :goto_0
+    :try_start_0
+    iget-object v3, p1, Lql;->c:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lll;->b()Z
+    sget-object v4, Lim;->o:Lim;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result p1
+    iget-object v5, p0, Lml;->b:Lim;
 
-    or-int/2addr p1, v0
+    iget-object v6, p0, Lml;->o:Lru/ok/android/api/core/ApiInvocationException;
 
-    iput-boolean p1, p0, Lml;->e:Z
+    if-eq v5, v4, :cond_7
 
-    return-void
-.end method
+    sget-object v7, Lim;->c:Lim;
 
-.method public final b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    if-ne v5, v7, :cond_3
 
-    new-instance v0, Lqxe;
-
-    invoke-direct {v0, p1, p2}, Lwxe;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lml;->a(Lll;)V
-
-    return-void
-.end method
-
-.method public final c(Lcm7;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lml;->d:Z
-
-    if-nez v0, :cond_0
+    if-eqz v3, :cond_2
 
     goto :goto_1
 
-    :cond_0
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-le v1, v2, :cond_1
-
-    new-instance v1, Lmz4;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2}, Lmz4;-><init>(I)V
-
-    invoke-static {v0, v1}, Lj93;->X(Ljava/util/List;Ljava/util/Comparator;)V
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
     :cond_2
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_1
+    iget-object v3, p1, Lql;->b:Ljava/lang/String;
 
-    move-result v1
+    if-eqz v3, :cond_4
 
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lll;
-
-    invoke-virtual {v1}, Lll;->b()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {v1, p1}, Lll;->d(Lcm7;)V
-
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_3
     :goto_1
-    return-void
-.end method
+    move-object v2, p1
 
-.method public final d(Lcm7;)V
-    .locals 3
+    goto :goto_2
 
-    iget-boolean v0, p0, Lml;->e:Z
+    :catchall_0
+    move-exception v1
 
-    if-nez v0, :cond_0
+    goto :goto_3
 
-    goto :goto_1
+    :cond_4
+    invoke-interface {v2, p1}, Lkm;->d(Lql;)Lql;
 
-    :cond_0
-    iget-object v0, p0, Lml;->a:Ljava/util/ArrayList;
+    move-result-object v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    :goto_2
+    iget-object v3, v2, Lql;->c:Ljava/lang/String;
 
-    move-result-object v0
+    if-ne v5, v4, :cond_5
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-nez v3, :cond_5
 
-    move-result v1
+    :try_start_2
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
 
-    if-eqz v1, :cond_2
+    const-string v3, "Couldn\'t provide session"
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v1, v3, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v1
+    iput-object v1, v0, Ldwc;->a:Ljava/lang/Object;
 
-    check-cast v1, Lll;
+    return-object v2
 
-    invoke-virtual {v1}, Lll;->b()Z
+    :cond_5
+    if-ne v5, v7, :cond_6
 
-    move-result v2
+    if-nez v3, :cond_6
 
-    if-nez v2, :cond_1
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
 
-    goto :goto_0
+    const-string v3, "Couldn\'t provide anonymous session"
 
-    :cond_1
-    invoke-virtual {v1, p1}, Lll;->d(Lcm7;)V
+    invoke-direct {v1, v3, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_0
+    iput-object v1, v0, Ldwc;->a:Ljava/lang/Object;
 
-    :cond_2
-    :goto_1
-    return-void
+    return-object v2
+
+    :cond_6
+    iput-object v2, v1, Ldwc;->a:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_7
+    new-instance v1, Lru/ok/android/api/core/ApiScopeException;
+
+    const-string v2, "No user for session"
+
+    invoke-direct {v1, v2, v6}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_3
+    iput-object v1, v0, Ldwc;->a:Ljava/lang/Object;
+
+    return-object p1
 .end method

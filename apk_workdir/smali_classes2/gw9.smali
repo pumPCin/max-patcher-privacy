@@ -1,110 +1,51 @@
-.class public final synthetic Lgw9;
-.super Ljava/lang/Object;
+.class public final Lgw9;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Le6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lps9;
 
-.field public final synthetic b:Liw9;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lhw9;
+
+.field public o:Lhw9;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Liw9;I)V
+.method public constructor <init>(Lhw9;Lwy3;)V
     .locals 0
 
-    iput p2, p0, Lgw9;->a:I
+    iput-object p1, p0, Lgw9;->Z:Lhw9;
 
-    iput-object p1, p0, Lgw9;->b:Liw9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lgw9;->a:I
+    iput-object p1, p0, Lgw9;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lgw9;->r0:I
 
-    new-instance v0, Lmj0;
+    const/high16 v0, -0x80000000
 
-    const/16 v1, 0x1c
+    or-int/2addr p1, v0
 
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
+    iput p1, p0, Lgw9;->r0:I
 
-    iget-object v1, p0, Lgw9;->b:Liw9;
+    iget-object p1, p0, Lgw9;->Z:Lhw9;
 
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    invoke-static {p1, p0}, Lhw9;->a(Lhw9;Lwy3;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    new-instance v0, Lfw9;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
-
-    iget-object v1, p0, Lgw9;->b:Liw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_1
-    new-instance v0, Lmj0;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
-
-    iget-object v1, p0, Lgw9;->b:Liw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_2
-    new-instance v0, Lfw9;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
-
-    iget-object v1, p0, Lgw9;->b:Liw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_3
-    new-instance v0, Lfw9;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lfw9;-><init>(I)V
-
-    iget-object v1, p0, Lgw9;->b:Liw9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

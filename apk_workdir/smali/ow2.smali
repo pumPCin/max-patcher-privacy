@@ -4,194 +4,169 @@
 
 
 # instance fields
-.field public final synthetic a:La5;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lc56;
+
+.field public final c:Lhne;
+
+.field public final d:La13;
 
 
 # direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lc56;Le7f;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Low2;->a:La5;
+    iput-object p1, p0, Low2;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Low2;->b:Lc56;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
+
+    move-result-object v0
+
+    iput-object v0, p0, Low2;->c:Lhne;
+
+    new-instance v1, La13;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v1, v0, v2}, La13;-><init>(Liu5;I)V
+
+    iput-object v1, p0, Low2;->d:La13;
+
+    check-cast p3, Lmka;
+
+    invoke-virtual {p3}, Lmka;->a()Lh24;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    invoke-interface {p2}, Lc56;->y()Liu5;
+
+    move-result-object p2
+
+    new-instance v1, Lxb;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, p2, p0, v2}, Lxb;-><init>(Liu5;Ljava/lang/Object;I)V
+
+    new-instance p2, Lmw2;
+
+    invoke-direct {p2, p0, p1}, Lmw2;-><init>(Low2;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p1, Lnw5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v1, p2, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
+
+    invoke-virtual {p3}, Lmka;->a()Lh24;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Luce;->H(Liu5;Lf24;)Liu5;
+
+    move-result-object p1
+
+    invoke-static {p1, v0}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lnx2;
-    .locals 19
+.method public final a()Lsz5;
+    .locals 5
 
-    move-object/from16 v1, p1
+    iget-object v0, p0, Low2;->a:Ljava/lang/String;
 
-    new-instance v0, Lqc1;
+    const-string v1, "folder "
 
-    const/4 v2, 0x2
+    :try_start_0
+    iget-object v2, p0, Low2;->c:Lhne;
 
-    move-object/from16 v11, p0
+    invoke-virtual {v2}, Lhne;->getValue()Ljava/lang/Object;
 
-    iget-object v3, v11, Low2;->a:La5;
+    move-result-object v2
 
-    invoke-direct {v0, v1, v2, v3}, Lqc1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    check-cast v2, Lsz5;
 
-    new-instance v2, Ls5f;
+    if-nez v2, :cond_1
 
-    invoke-direct {v2, v0}, Ls5f;-><init>(Lve6;)V
+    iget-object v2, p0, Low2;->b:Lc56;
 
-    new-instance v0, Lqc1;
+    invoke-interface {v2, v0}, Lc56;->B(Ljava/lang/String;)Lsz5;
 
-    const/4 v4, 0x3
+    move-result-object v2
 
-    invoke-direct {v0, v3, v4, v2}, Lqc1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v2, :cond_0
 
-    new-instance v4, Ls5f;
+    return-object v2
 
-    invoke-direct {v4, v0}, Ls5f;-><init>(Lve6;)V
+    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v14, Law2;
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-class v0, Lae2;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    const-string v1, " not found"
 
-    move-result-object v0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v14, v0, v2, v4}, Law2;-><init>(Lbp7;Ls5f;Ls5f;)V
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v0, Lnw2;
+    move-result-object v1
 
-    invoke-direct {v0, v2, v3, v4}, Lnw2;-><init>(Ls5f;La5;Ls5f;)V
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    new-instance v4, Ls5f;
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-direct {v4, v0}, Ls5f;-><init>(Lve6;)V
+    move-result-object v1
 
-    new-instance v12, Lbw6;
+    invoke-direct {v2, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    new-instance v13, Lgx0;
+    throw v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/16 v0, 0x9
+    :catchall_0
+    move-exception v1
 
-    const/4 v5, 0x0
+    goto :goto_0
 
-    invoke-direct {v13, v2, v3, v5, v0}, Lgx0;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    :cond_1
+    return-object v2
 
-    new-instance v15, Lh2a;
+    :goto_0
+    const-class v2, Low2;
 
-    const/16 v0, 0x10
+    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    invoke-direct {v15, v0}, Lh2a;-><init>(I)V
+    move-result-object v2
 
-    new-instance v0, Lmc5;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v5, "ChatsListLoader:"
+    const-string v4, "fail to get folderValue for id "
 
-    invoke-virtual {v5, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v5
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v5}, Lmc5;-><init>(Ljava/lang/String;)V
-
-    const/16 v18, 0x20
-
-    const/16 v16, 0x14
-
-    move-object/from16 v17, v0
-
-    invoke-direct/range {v12 .. v18}, Lbw6;-><init>(Lgv6;Lj94;Lj94;ILmc5;I)V
-
-    new-instance v0, Llj2;
-
-    const/16 v5, 0x14
-
-    invoke-direct {v0, v5, v14}, Llj2;-><init>(ILjava/lang/Object;)V
-
-    move-object v5, v2
-
-    move-object v2, v4
-
-    new-instance v4, Ls5f;
-
-    invoke-direct {v4, v0}, Ls5f;-><init>(Lve6;)V
-
-    const-class v0, Lr8f;
-
-    invoke-virtual {v3, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lr8f;
-
-    const-class v7, Lz24;
-
-    invoke-virtual {v3, v7}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lz24;
-
-    const-class v8, Lni0;
-
-    invoke-virtual {v3, v8}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lni0;
-
-    invoke-virtual {v5}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Luw2;
-
-    invoke-virtual {v3, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lr8f;
+    invoke-static {v2, v0, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v9, v6
-
-    move-object v6, v7
-
-    new-instance v7, Lt06;
-
-    invoke-direct {v7, v8, v5, v0}, Lt06;-><init>(Lni0;Luw2;Lr8f;)V
-
-    const-class v0, Las3;
-
-    invoke-virtual {v3, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v8, v0
-
-    check-cast v8, Las3;
-
-    const-class v0, Lm13;
-
-    invoke-virtual {v3, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v10
-
-    const-class v0, Lru/ok/tamtam/logout/a;
-
-    invoke-virtual {v3, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/tamtam/logout/a;
-
-    move-object v5, v9
-
-    move-object v9, v0
-
-    new-instance v0, Lnx2;
-
-    move-object v3, v12
-
-    invoke-direct/range {v0 .. v10}, Lnx2;-><init>(Ljava/lang/String;Ls5f;Lbw6;Ls5f;Lr8f;Lz24;Lt06;Las3;Lru/ok/tamtam/logout/a;Lbp7;)V
-
-    return-object v0
+    throw v1
 .end method

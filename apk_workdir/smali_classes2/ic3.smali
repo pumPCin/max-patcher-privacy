@@ -6,22 +6,14 @@
 # instance fields
 .field public final a:Ljc3;
 
-.field public final b:Lkc3;
-
-.field public final c:Llc3;
-
 
 # direct methods
-.method public constructor <init>(Ljc3;Lkc3;Llc3;)V
+.method public constructor <init>(Ljc3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lic3;->a:Ljc3;
-
-    iput-object p2, p0, Lic3;->b:Lkc3;
-
-    iput-object p3, p0, Lic3;->c:Llc3;
 
     return-void
 .end method
@@ -29,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -51,48 +43,22 @@
 
     iget-object v1, p0, Lic3;->a:Ljc3;
 
-    iget-object v3, p1, Lic3;->a:Ljc3;
+    iget-object p1, p1, Lic3;->a:Ljc3;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lic3;->b:Lkc3;
-
-    iget-object v3, p1, Lic3;->b:Lkc3;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lic3;->c:Llc3;
-
-    iget-object p1, p1, Lic3;->c:Llc3;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Lic3;->a:Ljc3;
 
@@ -100,29 +66,7 @@
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lic3;->b:Lkc3;
-
-    iget v2, v2, Lkc3;->a:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lic3;->c:Llc3;
-
-    iget v1, v1, Llc3;->a:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -130,27 +74,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CommonShadowsColors(elevation2="
+    const-string v1, "CommonStatesIconColors(disabled="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p0, Lic3;->a:Ljc3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", topBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lic3;->b:Lkc3;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", writeBar="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lic3;->c:Llc3;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

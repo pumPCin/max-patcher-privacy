@@ -7,101 +7,92 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lqj8;
 
-.field public final synthetic b:Lt76;
+.field public final synthetic b:Ljava/util/List;
+
+.field public final synthetic c:I
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILt76;)V
+.method public synthetic constructor <init>(Lqj8;Ljava/util/List;IJ)V
     .locals 0
 
-    iput p1, p0, Lhj8;->a:I
-
-    iput-object p2, p0, Lhj8;->b:Lt76;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhj8;->a:Lqj8;
+
+    iput-object p2, p0, Lhj8;->b:Ljava/util/List;
+
+    iput p3, p0, Lhj8;->c:I
+
+    iput-wide p4, p0, Lhj8;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/Object;)I
-    .locals 4
+.method public final e(Lw07;I)V
+    .locals 8
 
-    iget v0, p0, Lhj8;->a:I
+    iget-object v0, p0, Lhj8;->a:Lqj8;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v2, v0, Lqj8;->c:Lak8;
 
-    check-cast p1, Lbj8;
+    new-instance v4, Lxu0;
 
-    iget-object v0, p1, Lbj8;->b:Ljava/lang/String;
+    invoke-static {}, La67;->i()Lx57;
 
-    iget-object v1, p0, Lhj8;->b:Lt76;
+    move-result-object v0
 
-    iget-object v2, v1, Lt76;->n:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    iget-object v3, p0, Lhj8;->b:Ljava/util/List;
 
-    move-result v2
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    const/4 v3, 0x0
+    move-result v5
 
-    if-nez v2, :cond_0
+    if-ge v1, v5, :cond_0
 
-    invoke-static {v1}, Lqj8;->b(Lt76;)Ljava/lang/String;
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast v3, Lll8;
 
-    move-result v0
+    const/4 v5, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v3, v5}, Lll8;->d(Z)Landroid/os/Bundle;
 
-    :cond_0
-    invoke-virtual {p1, v1, v3}, Lbj8;->c(Lt76;Z)Z
+    move-result-object v3
 
-    move-result v0
+    invoke-virtual {v0, v3}, Lq57;->a(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1, v1}, Lbj8;->d(Lt76;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 v3, 0x1
-
-    :cond_1
-    return v3
-
-    :pswitch_0
-    iget-object v0, p0, Lhj8;->b:Lt76;
-
-    check-cast p1, Lbj8;
-
-    :try_start_0
-    invoke-virtual {p1, v0}, Lbj8;->e(Lt76;)Z
-
-    move-result p1
-    :try_end_0
-    .catch Landroidx/media3/exoplayer/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :catch_0
-    const/4 p1, -0x1
+    :cond_0
+    invoke-virtual {v0}, Lx57;->h()Lexc;
 
-    :goto_0
-    return p1
+    move-result-object v0
 
-    nop
+    invoke-direct {v4, v0}, Lxu0;-><init>(Ljava/util/List;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget v5, p0, Lhj8;->c:I
+
+    iget-wide v6, p0, Lhj8;->o:J
+
+    move-object v1, p1
+
+    move v3, p2
+
+    invoke-interface/range {v1 .. v7}, Lw07;->r(Lq07;ILandroid/os/IBinder;IJ)V
+
+    return-void
 .end method

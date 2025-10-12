@@ -30,92 +30,62 @@
 
 .field public static final m:I
 
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Loec;->oneme_media_keyboard_bottom_panel:I
+    sget v0, Lsac;->contact_icon_corner:I
 
     sput v0, Ldpa;->a:I
 
-    sget v0, Loec;->oneme_media_keyboard_emoji_container:I
+    sget v0, Lsac;->geo_icon_corner:I
 
     sput v0, Ldpa;->b:I
 
-    sget v0, Loec;->oneme_media_keyboard_emoji_list:I
+    sget v0, Lsac;->ic_call_incoming_audio_24:I
 
     sput v0, Ldpa;->c:I
 
-    sget v0, Loec;->oneme_media_keyboard_emoji_tabs:I
+    sget v0, Lsac;->ic_call_incoming_audio_missed_24:I
 
     sput v0, Ldpa;->d:I
 
-    sget v0, Loec;->oneme_media_keyboard_fake_search_view:I
+    sget v0, Lsac;->ic_call_incoming_video_missed_24:I
 
     sput v0, Ldpa;->e:I
 
-    sget v0, Loec;->oneme_media_keyboard_pager:I
+    sget v0, Lsac;->ic_call_incomnig_video_24:I
 
     sput v0, Ldpa;->f:I
 
-    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_action:I
+    sget v0, Lsac;->ic_call_outgoing_audio_24:I
 
     sput v0, Ldpa;->g:I
 
-    sget v0, Loec;->oneme_media_keyboard_recent_clear_confirmation_cancel:I
+    sget v0, Lsac;->ic_call_outgoing_video_24:I
 
     sput v0, Ldpa;->h:I
 
-    sget v0, Loec;->oneme_media_keyboard_remove_action:I
+    sget v0, Lsac;->ic_chat_16:I
 
     sput v0, Ldpa;->i:I
 
-    sget v0, Loec;->oneme_media_keyboard_settings_action:I
+    sget v0, Lsac;->ic_contact_16:I
 
     sput v0, Ldpa;->j:I
 
-    sget v0, Loec;->oneme_media_keyboard_showcase_action:I
+    sget v0, Lsac;->ic_geolocation_filled_28:I
 
     sput v0, Ldpa;->k:I
 
-    sget v0, Loec;->oneme_media_keyboard_stickers_container:I
+    sget v0, Lsac;->link_icon_corner:I
 
     sput v0, Ldpa;->l:I
 
-    sget v0, Loec;->oneme_media_keyboard_stickers_header_title:I
+    sget v0, Lsac;->miniapp_icon_corner:I
 
     sput v0, Ldpa;->m:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_list:I
-
-    sput v0, Ldpa;->n:I
-
-    sget v0, Loec;->oneme_media_keyboard_stickers_tabs:I
-
-    sput v0, Ldpa;->o:I
-
-    sget v0, Loec;->oneme_media_keyboard_tabs:I
-
-    sput v0, Ldpa;->p:I
-
-    sget v0, Loec;->oneme_media_keyboard_view_type_category_emoji:I
-
-    sput v0, Ldpa;->q:I
-
-    sget v0, Loec;->oneme_media_keyboard_view_type_fake_search:I
-
-    sput v0, Ldpa;->r:I
 
     return-void
 .end method

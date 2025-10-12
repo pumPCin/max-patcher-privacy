@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract e()V
+.method public abstract a(Lw66;Landroid/view/Surface;Z)Lze4;
 .end method
 
-.method public abstract h(Ln8e;Ljava/lang/Throwable;)V
+.method public abstract b(Lw66;)Lze4;
 .end method

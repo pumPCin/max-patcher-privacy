@@ -4,100 +4,173 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:I
+.field public final b:J
 
-.field public c:F
 
-.field public d:F
+# direct methods
+.method public constructor <init>(IJ)V
+    .locals 0
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:J
+    if-eqz p1, :cond_0
 
-.field public g:J
+    iput p1, p0, Lv80;->a:I
 
-.field public h:F
+    iput-wide p2, p0, Lv80;->b:J
 
-.field public i:I
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null status"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
 
 
 # virtual methods
-.method public final a(J)F
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-wide v0, p0, Lv80;->e:J
+    if-ne p1, p0, :cond_0
 
-    cmp-long v2, p1, v0
-
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_0
-
-    return v3
+    goto :goto_0
 
     :cond_0
-    iget-wide v4, p0, Lv80;->g:J
+    instance-of v0, p1, Lv80;
 
-    const-wide/16 v6, 0x0
+    if-eqz v0, :cond_1
 
-    cmp-long v2, v4, v6
+    check-cast p1, Lv80;
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    iget v0, p0, Lv80;->a:I
 
-    if-ltz v2, :cond_2
+    iget v1, p1, Lv80;->a:I
 
-    cmp-long v2, p1, v4
+    invoke-static {v0, v1}, Lsw1;->c(II)Z
 
-    if-gez v2, :cond_1
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v0, p0, Lv80;->b:J
+
+    iget-wide v2, p1, Lv80;->b:J
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget v0, p0, Lv80;->a:I
+
+    invoke-static {v0}, Lsw1;->u(I)I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    const/16 v1, 0x20
+
+    iget-wide v2, p0, Lv80;->b:J
+
+    ushr-long v4, v2, v1
+
+    xor-long v1, v4, v2
+
+    long-to-int v1, v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackendResponse{status="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lv80;->a:I
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INVALID_PAYLOAD"
 
     goto :goto_0
 
     :cond_1
-    sub-long/2addr p1, v4
+    const-string v1, "FATAL_ERROR"
 
-    iget v0, p0, Lv80;->h:F
-
-    sub-float v1, v6, v0
-
-    long-to-float p1, p1
-
-    iget p2, p0, Lv80;->i:I
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    invoke-static {p1, v3, v6}, Lgx7;->b(FFF)F
-
-    move-result p1
-
-    mul-float/2addr p1, v0
-
-    add-float/2addr p1, v1
-
-    return p1
+    goto :goto_0
 
     :cond_2
+    const-string v1, "TRANSIENT_ERROR"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "OK"
+
     :goto_0
-    sub-long/2addr p1, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    long-to-float p1, p1
+    const-string v1, ", nextRequestWaitMillis="
 
-    iget p2, p0, Lv80;->a:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    int-to-float p2, p2
+    iget-wide v1, p0, Lv80;->b:J
 
-    div-float/2addr p1, p2
+    const-string v3, "}"
 
-    invoke-static {p1, v3, v6}, Lgx7;->b(FFF)F
+    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    move-result p1
+    move-result-object v0
 
-    const/high16 p2, 0x3f000000    # 0.5f
-
-    mul-float/2addr p1, p2
-
-    return p1
+    return-object v0
 .end method

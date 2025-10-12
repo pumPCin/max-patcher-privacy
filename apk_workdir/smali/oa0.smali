@@ -1,25 +1,36 @@
 .class public final Loa0;
-.super Lbz9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Laz9;
+.field public final a:Lupb;
 
-.field public final b:Lzy9;
+.field public final b:Lp47;
 
 
 # direct methods
-.method public constructor <init>(Laz9;Lzy9;)V
+.method public constructor <init>(Lupb;Lp47;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loa0;->a:Laz9;
+    if-eqz p1, :cond_0
 
-    iput-object p2, p0, Loa0;->b:Lzy9;
+    iput-object p1, p0, Loa0;->a:Lupb;
+
+    iput-object p2, p0, Loa0;->b:Lp47;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null processingRequest"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -34,109 +45,61 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lbz9;
+    instance-of v1, p1, Loa0;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
-    check-cast p1, Lbz9;
+    check-cast p1, Loa0;
 
-    iget-object v1, p0, Loa0;->a:Laz9;
+    iget-object v1, p0, Loa0;->a:Lupb;
 
-    if-nez v1, :cond_1
-
-    move-object v1, p1
-
-    check-cast v1, Loa0;
-
-    iget-object v1, v1, Loa0;->a:Laz9;
-
-    if-nez v1, :cond_3
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, p1
-
-    check-cast v3, Loa0;
-
-    iget-object v3, v3, Loa0;->a:Laz9;
+    iget-object v3, p1, Loa0;->a:Lupb;
 
     invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
-    :goto_0
-    iget-object v1, p0, Loa0;->b:Lzy9;
+    iget-object v1, p0, Loa0;->b:Lp47;
 
-    if-nez v1, :cond_2
-
-    check-cast p1, Loa0;
-
-    iget-object p1, p1, Loa0;->b:Lzy9;
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_2
-    check-cast p1, Loa0;
-
-    iget-object p1, p1, Loa0;->b:Lzy9;
+    iget-object p1, p1, Loa0;->b:Lp47;
 
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_1
 
-    :goto_1
     return v0
 
-    :cond_3
+    :cond_1
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Loa0;->a:Lupb;
 
-    iget-object v1, p0, Loa0;->a:Laz9;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    if-nez v1, :cond_0
+    move-result v0
 
-    move v1, v0
+    const v1, 0xf4243
 
-    goto :goto_0
+    xor-int/2addr v0, v1
 
-    :cond_0
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Loa0;->b:Lp47;
+
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v2
-
-    iget-object v2, p0, Loa0;->b:Lzy9;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_1
     xor-int/2addr v0, v1
 
     return v0
@@ -147,19 +110,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "NetworkConnectionInfo{networkType="
+    const-string v1, "InputPacket{processingRequest="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Loa0;->a:Laz9;
+    iget-object v1, p0, Loa0;->a:Lupb;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mobileSubtype="
+    const-string v1, ", imageProxy="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Loa0;->b:Lzy9;
+    iget-object v1, p0, Loa0;->b:Lp47;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

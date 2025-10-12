@@ -1,154 +1,195 @@
-.class public final Lnqc;
-.super Lfwe;
+.class public final synthetic Lnqc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Ldnb;
+.implements Lke6;
 
 
 # instance fields
-.field public final o:Landroid/widget/TextView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Loqc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;)V
-    .locals 4
+.method public synthetic constructor <init>(Loqc;I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lfwe;-><init>(Landroid/view/View;)V
+    iput p2, p0, Lnqc;->a:I
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lnqc;->b:Loqc;
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lnqc;->o:Landroid/widget/TextView;
-
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {p1, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/4 v1, 0x4
-
-    int-to-float v2, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    iput v2, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    iput v2, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
-
-    sget-object p1, Lrxf;->q:Lpef;
-
-    invoke-static {p1, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    const/4 p1, 0x2
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lv63;->r0(F)I
-
-    move-result p1
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p1, v1, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    sget-object p1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {p1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lnqc;->onThemeChanged(Luxa;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Luxa;)V
-    .locals 2
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
+    iget v0, p0, Lnqc;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget v0, v0, Lbdf;->i:I
+    check-cast p1, Lr82;
 
-    iget-object v1, p0, Lnqc;->o:Landroid/widget/TextView;
+    iget-object v0, p0, Lnqc;->b:Loqc;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Luxa;->b()Lue0;
+    new-instance v1, Lkh5;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v0, v2, p1}, Lkh5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lfe3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v1}, Lfe3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lro3;
+
+    iget-object v0, p0, Lnqc;->b:Loqc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lkh5;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v0, v2, p1}, Lkh5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lfe3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, v1}, Lfe3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public test(Ljava/lang/Object;)Z
+    .locals 4
+
+    iget v0, p0, Lnqc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lr82;
+
+    iget-object v0, p0, Lnqc;->b:Loqc;
+
+    iget-object v0, v0, Loqc;->a:Lzb2;
+
+    invoke-virtual {v0, p1}, Lzb2;->N(Lr82;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lr82;->b:Luc2;
+
+    iget-wide v0, v0, Luc2;->Y:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lr82;->L()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Lr82;->l()Lro3;
 
     move-result-object p1
 
-    iget p1, p1, Lue0;->h:I
+    if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lfwe;->a:Landroid/view/View;
+    invoke-virtual {p1}, Lro3;->s()Z
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    move-result p1
 
-    return-void
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    :pswitch_0
+    check-cast p1, Lro3;
+
+    iget-object v0, p0, Lnqc;->b:Loqc;
+
+    iget-object v0, v0, Loqc;->a:Lzb2;
+
+    invoke-virtual {p1}, Lro3;->n()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lzb2;->F(J)Lr82;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Lr82;->b:Luc2;
+
+    iget-wide v0, p1, Luc2;->X:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 p1, 0x0
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    const/4 p1, 0x1
+
+    :goto_3
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,81 +1,82 @@
-.class public final enum Lw52;
-.super Ljava/lang/Enum;
+.class public final Lw52;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final enum a:Lw52;
 
-.field public static final enum b:Lw52;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final synthetic c:[Lw52;
-
-.field public static final synthetic o:Lla5;
+.field public final synthetic Y:Lz52;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lz52;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lw52;
+    iput-object p1, p0, Lw52;->Y:Lz52;
 
-    const-string v1, "PUBLIC"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lw52;->a:Lw52;
-
-    new-instance v1, Lw52;
-
-    const-string v2, "PRIVATE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lw52;->b:Lw52;
-
-    filled-new-array {v0, v1}, [Lw52;
-
-    move-result-object v0
-
-    sput-object v0, Lw52;->c:[Lw52;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lw52;->o:Lla5;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lw52;
-    .locals 1
 
-    const-class v0, Lw52;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Losb;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lw52;
+    invoke-virtual {p0, p1, p2}, Lw52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lw52;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lw52;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Lw52;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Lw52;->c:[Lw52;
+    new-instance v0, Lw52;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Lw52;->Y:Lz52;
 
-    move-result-object v0
+    invoke-direct {v0, v1, p2}, Lw52;-><init>(Lz52;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lw52;
+    iput-object p1, v0, Lw52;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw52;->X:Ljava/lang/Object;
+
+    check-cast p1, Losb;
+
+    iget-object v0, p0, Lw52;->Y:Lz52;
+
+    iget-object v0, v0, Lz52;->r0:Lya5;
+
+    invoke-static {v0, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

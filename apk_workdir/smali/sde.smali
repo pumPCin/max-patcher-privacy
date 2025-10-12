@@ -1,223 +1,215 @@
 .class public final Lsde;
-.super Lg04;
+.super Lxi0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final X:Z
+.field public A0:J
 
-.field public Y:Z
+.field public B0:Z
 
-.field public Z:Landroid/view/ViewGroup;
+.field public final y0:I
 
-.field public o:Z
-
-.field public w0:Le04;
+.field public final z0:Lu66;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lt84;Lb94;Lu66;ILjava/lang/Object;JJJILu66;)V
+    .locals 16
 
-    const/4 v0, 0x1
+    const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-direct {p0, v0}, Lsde;-><init>(Z)V
+    const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
 
-    return-void
-.end method
+    move-object/from16 v0, p0
 
-.method public constructor <init>(Z)V
-    .locals 0
+    move-object/from16 v1, p1
 
-    invoke-direct {p0}, Lg04;-><init>()V
+    move-object/from16 v2, p2
 
-    iput-boolean p1, p0, Lsde;->o:Z
+    move-object/from16 v3, p3
 
-    const/4 p1, 0x1
+    move/from16 v4, p4
 
-    iput-boolean p1, p0, Lsde;->X:Z
+    move-object/from16 v5, p5
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-wide/from16 v14, p10
+
+    invoke-direct/range {v0 .. v15}, Lxi0;-><init>(Lt84;Lb94;Lu66;ILjava/lang/Object;JJJJJ)V
+
+    move/from16 v1, p12
+
+    iput v1, v0, Lsde;->y0:I
+
+    move-object/from16 v1, p13
+
+    iput-object v1, v0, Lsde;->z0:Lu66;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Lsde;->w0:Le04;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Le04;->n()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lsde;->w0:Le04;
-
-    iget-object v1, p0, Lsde;->Z:Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :cond_1
-    iput-object v0, p0, Lsde;->Z:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-.method public final b()Lg04;
-    .locals 2
-
-    new-instance v0, Lsde;
-
-    iget-boolean v1, p0, Lsde;->o:Z
-
-    invoke-direct {v0, v1}, Lsde;-><init>(Z)V
-
-    return-object v0
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lsde;->o:Z
-
-    return v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lsde;->X:Z
-
-    return v0
-.end method
-
-.method public final f(Lg04;Lb04;)V
+.method public final b()V
     .locals 0
 
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lsde;->Y:Z
-
     return-void
 .end method
 
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLe04;)V
+.method public final c()Z
     .locals 1
 
-    iget-boolean v0, p0, Lsde;->Y:Z
+    iget-boolean v0, p0, Lsde;->B0:Z
 
-    if-eqz v0, :cond_0
+    return v0
+.end method
 
-    return-void
+.method public final load()V
+    .locals 14
+
+    iget-object v1, p0, Lh43;->s0:Ljoe;
+
+    iget-object v0, p0, Lxi0;->w0:Lw4d;
+
+    invoke-static {v0}, Lnjg;->n(Ljava/lang/Object;)V
+
+    iget-object v2, v0, Lw4d;->c:Ljava/lang/Object;
+
+    check-cast v2, [Ls9d;
+
+    array-length v3, v2
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_0
+    const/4 v6, 0x1
+
+    if-ge v5, v3, :cond_1
+
+    aget-object v7, v2, v5
+
+    iget-wide v8, v7, Ls9d;->F:J
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v8, v8, v10
+
+    if-eqz v8, :cond_0
+
+    iput-wide v10, v7, Ls9d;->F:J
+
+    iput-boolean v6, v7, Ls9d;->z:Z
 
     :cond_0
-    if-eqz p2, :cond_2
+    add-int/lit8 v5, v5, 0x1
 
-    if-eqz p4, :cond_1
-
-    iget-boolean p4, p0, Lsde;->o:Z
-
-    if-eqz p4, :cond_2
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    iget v2, p0, Lsde;->y0:I
+
+    invoke-virtual {v0, v2}, Lw4d;->K(I)Lsmf;
+
+    move-result-object v7
+
+    iget-object v0, p0, Lsde;->z0:Lu66;
+
+    invoke-interface {v7, v0}, Lsmf;->d(Lu66;)V
+
+    :try_start_0
+    iget-object v0, p0, Lh43;->b:Lb94;
+
+    iget-wide v2, p0, Lsde;->A0:J
+
+    invoke-virtual {v0, v2, v3}, Lb94;->b(J)Lb94;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljoe;->P(Lb94;)J
+
+    move-result-wide v2
+
+    const-wide/16 v8, -0x1
+
+    cmp-long v0, v2, v8
+
+    if-eqz v0, :cond_2
+
+    iget-wide v8, p0, Lsde;->A0:J
+
+    add-long/2addr v2, v8
 
     :cond_2
-    if-eqz p3, :cond_3
+    move-wide v12, v2
 
-    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    goto :goto_1
 
-    move-result-object p2
+    :catchall_0
+    move-exception v0
 
-    if-nez p2, :cond_3
+    goto :goto_3
 
-    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    :goto_1
+    new-instance v8, Lsg4;
+
+    iget-object v9, p0, Lh43;->s0:Ljoe;
+
+    iget-wide v10, p0, Lsde;->A0:J
+
+    invoke-direct/range {v8 .. v13}, Lsg4;-><init>(Ln84;JJ)V
+
+    :goto_2
+    const/4 v0, -0x1
+
+    if-eq v4, v0, :cond_3
+
+    iget-wide v2, p0, Lsde;->A0:J
+
+    int-to-long v4, v4
+
+    add-long/2addr v2, v4
+
+    iput-wide v2, p0, Lsde;->A0:J
+
+    const v0, 0x7fffffff
+
+    invoke-interface {v7, v8, v0, v6}, Lsmf;->a(Ln84;IZ)I
+
+    move-result v4
+
+    goto :goto_2
 
     :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    iget-wide v2, p0, Lsde;->A0:J
 
-    move-result-object p2
+    long-to-int v11, v2
 
-    if-eqz p2, :cond_4
+    iget-wide v8, p0, Lh43;->Z:J
 
-    invoke-virtual {p5}, Le04;->n()V
+    const/4 v12, 0x0
 
-    return-void
+    const/4 v13, 0x0
 
-    :cond_4
-    iput-object p5, p0, Lsde;->w0:Le04;
+    const/4 v10, 0x1
 
-    iput-object p1, p0, Lsde;->Z:Landroid/view/ViewGroup;
+    invoke-interface/range {v7 .. v13}, Lsmf;->b(JIIILqmf;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-static {v1}, Ltvf;->n(Lt84;)V
 
-    return-void
-.end method
-
-.method public final h(Landroid/os/Bundle;)V
-    .locals 1
-
-    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
-
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lsde;->o:Z
+    iput-boolean v6, p0, Lsde;->B0:Z
 
     return-void
-.end method
 
-.method public final i(Landroid/os/Bundle;)V
-    .locals 2
+    :goto_3
+    invoke-static {v1}, Ltvf;->n(Lt84;)V
 
-    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
-
-    iget-boolean v1, p0, Lsde;->o:Z
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 1
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object p1, p0, Lsde;->w0:Le04;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Le04;->n()V
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lsde;->w0:Le04;
-
-    iget-object v0, p0, Lsde;->Z:Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :cond_1
-    iput-object p1, p0, Lsde;->Z:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
-
-    return-void
+    throw v0
 .end method

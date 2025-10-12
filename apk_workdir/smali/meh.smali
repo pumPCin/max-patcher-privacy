@@ -1,248 +1,181 @@
-.class public final synthetic Lmeh;
-.super Ljava/lang/Object;
+.class public final Lmeh;
+.super Ltdh;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lq57;
 
-.field public final synthetic b:Lof;
+.field public final c:Lfaf;
 
-.field public final synthetic c:[B
-
-.field public final synthetic o:I
+.field public final d:Lrcd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lof;[BII)V
+.method public constructor <init>(ILq57;Lfaf;Lrcd;)V
     .locals 0
 
-    iput p4, p0, Lmeh;->a:I
+    invoke-direct {p0, p1}, Lreh;-><init>(I)V
 
-    iput-object p1, p0, Lmeh;->b:Lof;
+    iput-object p3, p0, Lmeh;->c:Lfaf;
 
-    iput-object p2, p0, Lmeh;->c:[B
+    iput-object p2, p0, Lmeh;->b:Lq57;
 
-    iput p3, p0, Lmeh;->o:I
+    iput-object p4, p0, Lmeh;->d:Lrcd;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p3, 0x2
 
+    if-ne p1, p3, :cond_1
+
+    iget-boolean p1, p2, Lq57;->a:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Best-effort write calls cannot pass methods that should auto-resolve missing features."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    iget v0, p0, Lmeh;->a:I
+    iget-object v0, p0, Lmeh;->d:Lrcd;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v0, p0, Lmeh;->o:I
+    invoke-static {p1}, Loza;->m(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
 
-    iget-object v1, p0, Lmeh;->b:Lof;
+    move-result-object p1
 
-    iget-object v2, v1, Lof;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lmeh;->c:Lfaf;
 
-    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-virtual {v0, p1}, Lfaf;->c(Ljava/lang/Exception;)Z
 
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    return-void
+.end method
 
-    move-result-object v2
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lmeh;->c:Lfaf;
 
-    move-result v3
+    invoke-virtual {v0, p1}, Lfaf;->c(Ljava/lang/Exception;)Z
 
-    if-eqz v3, :cond_2
+    return-void
+.end method
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final c(Lqdh;)V
+    .locals 2
 
-    move-result-object v3
-
-    check-cast v3, Lu8d;
+    iget-object v0, p0, Lmeh;->c:Lfaf;
 
     :try_start_0
-    iget-object v4, v3, Lu8d;->b:Lpmc;
+    iget-object v1, p0, Lmeh;->b:Lq57;
 
-    iget-object v3, v3, Lu8d;->a:Ljava/lang/String;
+    iget-object p1, p1, Lqdh;->d:Lbl;
 
-    sget-object v5, Lcdh;->a:[I
-
-    invoke-static {v0}, Lqw1;->u(I)I
-
-    move-result v6
-
-    aget v5, v5, v6
+    invoke-virtual {v1, p1, v0}, Lq57;->e(Lbl;Lfaf;)V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v6, 0x1
+    return-void
 
-    iget-object v7, p0, Lmeh;->c:[B
+    :catch_0
+    move-exception p1
 
-    if-eq v5, v6, :cond_1
+    goto :goto_0
 
-    const/4 v6, 0x2
-
-    if-eq v5, v6, :cond_0
-
-    :try_start_1
-    const-string v5, "<unknown>"
-
-    goto :goto_1
-
-    :cond_0
-    invoke-static {v7}, Lju6;->a([B)Ljava/lang/String;
-
-    move-result-object v5
+    :catch_1
+    move-exception p1
 
     goto :goto_1
 
-    :cond_1
-    new-instance v5, Ljava/lang/String;
+    :catch_2
+    move-exception p1
 
-    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
+    goto :goto_2
+
+    :goto_0
+    invoke-virtual {v0, p1}, Lfaf;->c(Ljava/lang/Exception;)Z
+
+    return-void
 
     :goto_1
-    const-string v6, "-> "
+    invoke-static {p1}, Lreh;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v5
+    invoke-virtual {p0, p1}, Lmeh;->a(Lcom/google/android/gms/common/api/Status;)V
 
-    invoke-interface {v4, v3, v5}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v3
-
-    iget-object v4, v1, Lof;->a:Ljava/lang/Object;
-
-    check-cast v4, Lpmc;
-
-    const-string v5, "CallsListeners"
-
-    const-string v6, "rtc.command.handle.listeners.ondatasend"
-
-    invoke-interface {v4, v5, v6, v3}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_2
     return-void
-
-    :pswitch_0
-    iget v0, p0, Lmeh;->o:I
-
-    iget-object v1, p0, Lmeh;->b:Lof;
-
-    iget-object v2, v1, Lof;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
 
     :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    throw p1
+.end method
 
-    move-result v3
+.method public final d(Lbzb;Z)V
+    .locals 4
 
-    if-eqz v3, :cond_5
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object p2
 
-    move-result-object v3
+    iget-object v0, p1, Lbzb;->c:Ljava/lang/Object;
 
-    check-cast v3, Lu8d;
+    check-cast v0, Ljava/util/Map;
 
-    :try_start_2
-    iget-object v4, v3, Lu8d;->b:Lpmc;
+    iget-object v1, p0, Lmeh;->c:Lfaf;
 
-    iget-object v3, v3, Lu8d;->a:Ljava/lang/String;
+    invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v5, Lcdh;->a:[I
+    iget-object p2, v1, Lfaf;->a:Lflh;
 
-    invoke-static {v0}, Lqw1;->u(I)I
+    new-instance v0, Lazb;
 
-    move-result v6
+    const/16 v2, 0xf
 
-    aget v5, v5, v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    const/4 v3, 0x0
 
-    const/4 v6, 0x1
+    invoke-direct {v0, p1, v1, v3, v2}, Lazb;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    iget-object v7, p0, Lmeh;->c:[B
+    invoke-virtual {p2, v0}, Lflh;->i(Lkda;)Lflh;
 
-    if-eq v5, v6, :cond_4
-
-    const/4 v6, 0x2
-
-    if-eq v5, v6, :cond_3
-
-    :try_start_3
-    const-string v5, "<unknown>"
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {v7}, Lju6;->a([B)Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_3
-
-    :cond_4
-    new-instance v5, Ljava/lang/String;
-
-    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
-
-    :goto_3
-    const-string v6, "<- "
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v4, v3, v5}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v3
-
-    iget-object v4, v1, Lof;->a:Ljava/lang/Object;
-
-    check-cast v4, Lpmc;
-
-    const-string v5, "CallsListeners"
-
-    const-string v6, "rtc.command.handle.listeners.ondatareceive"
-
-    invoke-interface {v4, v5, v6, v3}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_5
     return-void
+.end method
 
-    nop
+.method public final f(Lqdh;)Z
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p0, Lmeh;->b:Lq57;
+
+    iget-boolean p1, p1, Lq57;->a:Z
+
+    return p1
+.end method
+
+.method public final g(Lqdh;)[Lyl5;
+    .locals 0
+
+    iget-object p1, p0, Lmeh;->b:Lq57;
+
+    iget-object p1, p1, Lq57;->c:[Ljava/lang/Object;
+
+    check-cast p1, [Lyl5;
+
+    return-object p1
 .end method

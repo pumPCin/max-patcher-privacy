@@ -1,85 +1,59 @@
-.class public final enum Lf34;
-.super Ljava/lang/Enum;
+.class public final Lf34;
+.super Ljava/io/FilterOutputStream;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lf34;
-
-.field public static final enum b:Lf34;
-
-.field public static final enum c:Lf34;
-
-.field public static final synthetic o:[Lf34;
+# instance fields
+.field public a:J
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+# virtual methods
+.method public final close()V
+    .locals 1
 
-    new-instance v0, Lf34;
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    const-string v1, "COROUTINE_SUSPENDED"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lf34;->a:Lf34;
-
-    new-instance v1, Lf34;
-
-    const-string v2, "UNDECIDED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf34;->b:Lf34;
-
-    new-instance v2, Lf34;
-
-    const-string v3, "RESUMED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lf34;->c:Lf34;
-
-    filled-new-array {v0, v1, v2}, [Lf34;
-
-    move-result-object v0
-
-    sput-object v0, Lf34;->o:[Lf34;
+    invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf34;
-    .locals 1
+.method public final write(I)V
+    .locals 4
 
-    const-class v0, Lf34;
+    .line 3
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
 
-    move-result-object p0
+    .line 4
+    iget-wide v0, p0, Lf34;->a:J
 
-    check-cast p0, Lf34;
+    const-wide/16 v2, 0x1
 
-    return-object p0
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lf34;->a:J
+
+    return-void
 .end method
 
-.method public static values()[Lf34;
-    .locals 1
+.method public final write([BII)V
+    .locals 2
 
-    sget-object v0, Lf34;->o:[Lf34;
+    .line 1
+    iget-object v0, p0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    move-result-object v0
+    .line 2
+    iget-wide p1, p0, Lf34;->a:J
 
-    check-cast v0, [Lf34;
+    int-to-long v0, p3
 
-    return-object v0
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lf34;->a:J
+
+    return-void
 .end method

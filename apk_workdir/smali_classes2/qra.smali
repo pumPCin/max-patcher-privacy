@@ -1,19 +1,19 @@
-.class public final Lqra;
+.class public abstract Lqra;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lndc;->dynamic_font_sizes:I
 
-    iput-object p1, p0, Lqra;->a:Lbp7;
+    sput v0, Lqra;->a:I
 
     return-void
 .end method

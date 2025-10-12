@@ -1,22 +1,19 @@
 .class public final Ljsb;
-.super Ljava/lang/Object;
+.super Losb;
 .source "SourceFile"
-
-# interfaces
-.implements Lksb;
 
 
 # instance fields
-.field public final a:Lnef;
+.field public final b:Lzcf;
 
 
 # direct methods
-.method public constructor <init>(Lnef;)V
+.method public constructor <init>(Lzcf;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Losb;-><init>()V
 
-    iput-object p1, p0, Ljsb;->a:Lnef;
+    iput-object p1, p0, Ljsb;->b:Lzcf;
 
     return-void
 .end method
@@ -40,11 +37,11 @@
     :cond_1
     check-cast p1, Ljsb;
 
-    iget-object v0, p0, Ljsb;->a:Lnef;
+    iget-object v0, p0, Ljsb;->b:Lzcf;
 
-    iget-object p1, p1, Ljsb;->a:Lnef;
+    iget-object p1, p1, Ljsb;->b:Lzcf;
 
-    invoke-virtual {v0, p1}, Lnef;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lzcf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -65,9 +62,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ljsb;->a:Lnef;
+    iget-object v0, p0, Ljsb;->b:Lzcf;
 
-    invoke-virtual {v0}, Lnef;->hashCode()I
+    invoke-virtual {v0}, Lzcf;->hashCode()I
 
     move-result v0
 
@@ -79,11 +76,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Text(text="
+    const-string v1, "ShareLinkToChat(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ljsb;->a:Lnef;
+    iget-object v1, p0, Ljsb;->b:Lzcf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

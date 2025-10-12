@@ -1,68 +1,158 @@
-.class public abstract Lt2;
-.super Ljava/util/AbstractMap;
+.class public final Lt2;
+.super Ll2;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Map;
-.implements Lmm7;
+.implements Ljava/util/ListIterator;
+
+
+# instance fields
+.field public final synthetic X:Lu2;
+
+
+# direct methods
+.method public constructor <init>(Lu2;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lt2;->X:Lu2;
+
+    invoke-direct {p0, p1}, Ll2;-><init>(Lu2;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lu2;I)V
+    .locals 1
+
+    .line 2
+    iput-object p1, p0, Lt2;->X:Lu2;
+
+    .line 3
+    iget-object v0, p1, Lu2;->b:Ljava/util/Collection;
+
+    .line 4
+    check-cast v0, Ljava/util/List;
+
+    .line 5
+    invoke-interface {v0, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p2
+
+    invoke-direct {p0, p1, p2}, Ll2;-><init>(Lu2;Ljava/util/ListIterator;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Ljava/util/Set;
+.method public final add(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-object v0, p0, Lt2;->X:Lu2;
+
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
+
+    move-result-object v2
+
+    invoke-interface {v2, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
+
+    iget-object p1, v0, Lu2;->Y:Lh2;
+
+    iget v2, p1, Lh2;->X:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p1, Lh2;->X:I
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lu2;->a()V
+
+    :cond_0
+    return-void
 .end method
 
-.method public bridge abstract b()Ljava/util/Set;
-.end method
-
-.method public bridge c()Ljava/util/Collection;
+.method public final b()Ljava/util/ListIterator;
     .locals 1
 
-    invoke-super {p0}, Ljava/util/AbstractMap;->values()Ljava/util/Collection;
+    invoke-virtual {p0}, Ll2;->a()V
 
-    move-result-object v0
+    iget-object v0, p0, Ll2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
 
     return-object v0
 .end method
 
-.method public final bridge entrySet()Ljava/util/Set;
+.method public final hasPrevious()Z
     .locals 1
 
-    invoke-virtual {p0}, Lt2;->a()Ljava/util/Set;
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public bridge abstract getSize()I
-.end method
-
-.method public final bridge keySet()Ljava/util/Set;
-    .locals 1
-
-    invoke-virtual {p0}, Lt2;->b()Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge size()I
-    .locals 1
-
-    invoke-virtual {p0}, Lt2;->getSize()I
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final bridge values()Ljava/util/Collection;
+.method public final nextIndex()I
     .locals 1
 
-    invoke-virtual {p0}, Lt2;->c()Ljava/util/Collection;
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lt2;->b()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
+
+    return-void
 .end method

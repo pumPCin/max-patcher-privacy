@@ -1,48 +1,88 @@
-.class public final Ldt2;
-.super Lnz3;
+.class public final synthetic Ldt2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lum1;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lht2;
 
 
 # direct methods
-.method public constructor <init>(Lum1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lht2;I)V
     .locals 0
 
-    iput-object p1, p0, Ldt2;->Y:Lum1;
+    iput p2, p0, Ldt2;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldt2;->b:Lht2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iput-object p1, p0, Ldt2;->o:Ljava/lang/Object;
+    iget v0, p0, Ldt2;->a:I
 
-    iget p1, p0, Ldt2;->X:I
+    sget-object v1, Lor2;->a:Lor2;
 
-    const/high16 v0, -0x80000000
+    sget-object v2, Laxf;->a:Laxf;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Ldt2;->b:Lht2;
 
-    iput p1, p0, Ldt2;->X:I
+    check-cast p1, Landroid/view/View;
 
-    iget-object p1, p0, Ldt2;->Y:Lum1;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    sget-object v0, Lht2;->f1:[Lpl7;
 
-    invoke-virtual {p1, v0, p0}, Lum1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v3}, Lht2;->v()Le7f;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    check-cast v0, Lmka;
+
+    invoke-virtual {v0}, Lmka;->b()Lh24;
+
+    move-result-object v0
+
+    new-instance v1, Lds2;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v3, p1, v4}, Lds2;-><init>(Lht2;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v3, v0, v1, p1}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    return-object v2
+
+    :pswitch_0
+    iget-object p1, v3, Lht2;->b1:Lya5;
+
+    invoke-static {p1, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    return-object v2
+
+    :pswitch_1
+    iget-object p1, v3, Lht2;->b1:Lya5;
+
+    invoke-static {p1, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

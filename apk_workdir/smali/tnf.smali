@@ -1,131 +1,76 @@
 .class public final Ltnf;
-.super Ljava/lang/Object;
+.super Lpcd;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:J
-
-.field public c:I
-
-.field public d:I
-
-.field public e:[J
-
-.field public f:[I
-
-.field public g:[I
-
-.field public h:[J
-
-.field public i:[Z
-
-.field public j:Z
-
-.field public k:[Z
-
-.field public l:Z
-
-.field public m:J
-
-.field public n:Z
-
-.field public o:Ljava/lang/Object;
-
-.field public p:Ljava/lang/Object;
-
-.field public final q:Ljava/lang/Object;
+# static fields
+.field public static final c:Ltnf;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Ltnf;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Ltnf;->e:[J
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Ltnf;->f:[I
-
-    new-array v0, p1, [I
-
-    iput-object v0, p0, Ltnf;->g:[I
-
-    new-array v0, p1, [J
-
-    iput-object v0, p0, Ltnf;->h:[J
-
-    new-array v0, p1, [Z
-
-    iput-object v0, p0, Ltnf;->i:[Z
-
-    new-array p1, p1, [Z
-
-    iput-object p1, p0, Ltnf;->k:[Z
-
-    new-instance p1, Lg5g;
-
-    const/4 v0, 0x2
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lg5g;-><init>(IZ)V
-
-    iput-object p1, p0, Ltnf;->q:Ljava/lang/Object;
+    sput-object v0, Ltnf;->c:Ltnf;
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+# virtual methods
+.method public final a()Lncd;
+    .locals 1
 
-    new-array v0, p1, [J
+    new-instance v0, Lsnf;
 
-    iput-object v0, p0, Ltnf;->e:[J
+    invoke-direct {v0}, Lsnf;-><init>()V
 
-    new-array v0, p1, [I
+    return-object v0
+.end method
 
-    iput-object v0, p0, Ltnf;->f:[I
+.method public final b(Ljava/lang/Runnable;)Lfs4;
+    .locals 0
 
-    new-array v0, p1, [I
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    iput-object v0, p0, Ltnf;->g:[I
+    sget-object p1, Lj65;->a:Lj65;
 
-    new-array v0, p1, [J
+    return-object p1
+.end method
 
-    iput-object v0, p0, Ltnf;->h:[J
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+    .locals 0
 
-    new-array v0, p1, [Z
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->sleep(J)V
 
-    iput-object v0, p0, Ltnf;->i:[Z
+    const-string p2, "run is null"
 
-    new-array p1, p1, [Z
+    invoke-static {p1, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-object p1, p0, Ltnf;->k:[Z
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance p1, Ly4b;
+    goto :goto_0
 
-    invoke-direct {p1}, Ly4b;-><init>()V
+    :catch_0
+    move-exception p1
 
-    iput-object p1, p0, Ltnf;->q:Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    return-void
+    move-result-object p2
 
-    nop
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
+
+    :goto_0
+    sget-object p1, Lj65;->a:Lj65;
+
+    return-object p1
 .end method

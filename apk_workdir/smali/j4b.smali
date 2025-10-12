@@ -1,76 +1,48 @@
-.class public abstract Lj4b;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lj4b;
+.super Lwy3;
 
 
 # instance fields
-.field public final a:Landroid/database/DataSetObservable;
+.field public X:I
 
-.field public b:Landroid/database/DataSetObserver;
+.field public final synthetic Y:Lk4b;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lk4b;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj4b;->Y:Lk4b;
 
-    new-instance v0, Landroid/database/DataSetObservable;
-
-    invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
-
-    iput-object v0, p0, Lj4b;->a:Landroid/database/DataSetObservable;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(ILjava/lang/Object;)V
-.end method
-
-.method public final b()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    monitor-enter p0
+    iput-object p1, p0, Lj4b;->o:Ljava/lang/Object;
 
-    :try_start_0
-    iget-object v0, p0, Lj4b;->b:Landroid/database/DataSetObserver;
+    iget p1, p0, Lj4b;->X:I
 
-    if-eqz v0, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Landroid/database/DataSetObserver;->onChanged()V
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lj4b;->X:I
 
-    :catchall_0
-    move-exception v0
+    iget-object p1, p0, Lj4b;->Y:Lk4b;
 
-    goto :goto_1
+    const/4 v0, 0x0
 
-    :cond_0
-    :goto_0
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v0, p0}, Lk4b;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lj4b;->a:Landroid/database/DataSetObservable;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public abstract c(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
-.end method
-
-.method public abstract d(Landroidx/viewpager/widget/ViewPager;)V
+    return-object p1
 .end method

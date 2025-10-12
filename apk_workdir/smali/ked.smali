@@ -1,158 +1,136 @@
-.class public abstract Lked;
-.super Ljava/lang/Object;
+.class public final Lked;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final a:Z
 
-.field public static final b:J
+# instance fields
+.field public synthetic X:J
+
+.field public final synthetic Y:Lmed;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lmed;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v0, "rx3.scheduler.use-nanotime"
+    iput-object p1, p0, Lked;->Y:Lmed;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
+    const/4 p1, 0x2
 
-    move-result v0
-
-    sput-boolean v0, Lked;->a:Z
-
-    const-string v0, "rx3.scheduler.drift-tolerance"
-
-    const-wide/16 v1, 0xf
-
-    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    const-string v2, "rx3.scheduler.drift-tolerance-unit"
-
-    const-string v3, "minutes"
-
-    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "seconds"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v3, "milliseconds"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    :goto_0
-    sput-wide v0, Lked;->b:J
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lied;
-.end method
-
-.method public b(Ljava/lang/Runnable;)Lss4;
-    .locals 3
-
-    const-wide/16 v0, 0x0
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lked;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-virtual {p0}, Lked;->a()Lied;
+    check-cast p1, Ljava/lang/Number;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    const-string v1, "run is null"
+    move-result-wide v0
 
-    invoke-static {p1, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v1, Lged;
-
-    invoke-direct {v1, p1, v0}, Lged;-><init>(Ljava/lang/Runnable;Lied;)V
-
-    invoke-virtual {v0, v1, p2, p3, p4}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    return-object v1
-.end method
-
-.method public d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lss4;
-    .locals 7
-
-    invoke-virtual {p0}, Lked;->a()Lied;
-
-    move-result-object v0
-
-    new-instance v1, Lms6;
-
-    invoke-direct {v1, p1, v0}, Lms6;-><init>(Ljava/lang/Runnable;Lied;)V
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move-object v6, p6
-
-    invoke-virtual/range {v0 .. v6}, Lied;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lss4;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    sget-object p2, Lw65;->a:Lw65;
+    invoke-virtual {p0, p1, p2}, Lked;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne p1, p2, :cond_0
+    move-result-object p1
+
+    check-cast p1, Lked;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lked;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lked;
+
+    iget-object v1, p0, Lked;->Y:Lmed;
+
+    invoke-direct {v0, v1, p2}, Lked;-><init>(Lmed;Lkotlin/coroutines/Continuation;)V
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lked;->X:J
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-wide v0, p0, Lked;->X:J
+
+    sget-object p1, Lmed;->A0:[Lpl7;
+
+    iget-object p1, p0, Lked;->Y:Lmed;
+
+    iget-object v2, p1, Lmed;->c:Lyn7;
+
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltt1;
+
+    iget-object v3, p1, Lmed;->Z:Lyn7;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Le7f;
+
+    check-cast v3, Lmka;
+
+    invoke-virtual {v3}, Lmka;->b()Lh24;
+
+    move-result-object v3
+
+    new-instance v4, Leed;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v0, v1, p1, v5}, Leed;-><init>(JLmed;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x2
+
+    invoke-static {v2, v3, v5, v4, v0}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lmed;->w0:Lk5d;
+
+    sget-object v2, Lmed;->A0:[Lpl7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2, v0}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
-
-    :cond_0
-    return-object v1
 .end method

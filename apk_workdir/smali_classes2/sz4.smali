@@ -1,150 +1,71 @@
 .class public final Lsz4;
-.super Ljava/lang/Object;
+.super Lfq1;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Lhh1;Lxg1;Lwkc;Lzkc;Lvd1;Ljgf;)V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Lvr9;
 
-    iput-object p1, p0, Lsz4;->a:Ljava/lang/String;
+    invoke-direct {v2}, Lvr9;-><init>()V
 
-    iput-object p2, p0, Lsz4;->b:Ljava/lang/String;
+    const/4 v9, 0x0
 
-    iput p3, p0, Lsz4;->c:I
+    const/4 v10, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v8, p5
+
+    move-object/from16 v11, p6
+
+    invoke-direct/range {v0 .. v11}, Lfq1;-><init>(Lhh1;Lvr9;Lxg1;Lwkc;Lzkc;Lgs5;Ly6e;Lvd1;Lwd8;Lodd;Ljgf;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final A()Ljava/lang/String;
+    .locals 1
 
-    const/4 v0, 0x1
+    const-string v0, "DummyCallTopology"
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsz4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsz4;
-
-    iget-object v1, p1, Lsz4;->a:Ljava/lang/String;
-
-    iget-object v3, p0, Lsz4;->a:Ljava/lang/String;
-
-    invoke-static {v3, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lsz4;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lsz4;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lsz4;->c:I
-
-    iget p1, p1, Lsz4;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final R(Lq6b;)V
+    .locals 0
 
-    iget-object v0, p0, Lsz4;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lsz4;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget v1, p0, Lsz4;->c:I
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final t()Ljava/lang/Runnable;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "DropRecord(event=\'"
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final v()Lnkf;
+    .locals 1
 
-    iget-object v1, p0, Lsz4;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', reason=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsz4;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', count="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lsz4;->c:I
-
-    const/16 v2, 0x29
-
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Lnkf;->a:Lnkf;
 
     return-object v0
 .end method

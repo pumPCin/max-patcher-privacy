@@ -1,215 +1,75 @@
 .class public final Lyh7;
-.super Ljava/lang/Object;
+.super Lc22;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public a:Ljava/util/Iterator;
+.field public final Y:Lgi7;
 
-.field public b:Ljava/util/Iterator;
 
-.field public c:Ljava/util/Iterator;
+# direct methods
+.method public constructor <init>(Lgi7;Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-.field public o:Ljava/util/ArrayDeque;
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0, p2}, Lc22;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, p0, Lyh7;->Y:Lgi7;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 3
+.method public final m(Lgi7;)Ljava/lang/Throwable;
+    .locals 2
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lyh7;->b:Ljava/util/Iterator;
+    iget-object v0, p0, Lyh7;->Y:Lgi7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    :goto_1
-    iget-object v0, p0, Lyh7;->c:Ljava/util/Iterator;
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    iget-object v0, p0, Lyh7;->c:Ljava/util/Iterator;
-
-    goto :goto_3
-
-    :cond_2
-    :goto_2
-    iget-object v0, p0, Lyh7;->o:Ljava/util/ArrayDeque;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lyh7;->o:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+    invoke-virtual {v0}, Lgi7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Iterator;
-
-    iput-object v0, p0, Lyh7;->c:Ljava/util/Iterator;
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_3
-    iput-object v0, p0, Lyh7;->c:Ljava/util/Iterator;
-
-    if-nez v0, :cond_4
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_4
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Iterator;
-
-    iput-object v0, p0, Lyh7;->b:Ljava/util/Iterator;
-
-    instance-of v1, v0, Lyh7;
+    instance-of v1, v0, Lai7;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lyh7;
+    move-object v1, v0
 
-    iget-object v1, v0, Lyh7;->b:Ljava/util/Iterator;
+    check-cast v1, Lai7;
 
-    iput-object v1, p0, Lyh7;->b:Ljava/util/Iterator;
+    invoke-virtual {v1}, Lai7;->c()Ljava/lang/Throwable;
 
-    iget-object v1, p0, Lyh7;->o:Ljava/util/ArrayDeque;
+    move-result-object v1
 
-    if-nez v1, :cond_5
+    if-eqz v1, :cond_0
 
-    new-instance v1, Ljava/util/ArrayDeque;
+    return-object v1
 
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+    :cond_0
+    instance-of v1, v0, Lwe3;
 
-    iput-object v1, p0, Lyh7;->o:Ljava/util/ArrayDeque;
+    if-eqz v1, :cond_1
 
-    :cond_5
-    iget-object v1, p0, Lyh7;->o:Ljava/util/ArrayDeque;
+    check-cast v0, Lwe3;
 
-    iget-object v2, p0, Lyh7;->c:Ljava/util/Iterator;
+    iget-object p1, v0, Lwe3;->a:Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
+    return-object p1
 
-    iget-object v1, v0, Lyh7;->o:Ljava/util/ArrayDeque;
+    :cond_1
+    invoke-interface {p1}, Leh7;->getCancellationException()Ljava/util/concurrent/CancellationException;
 
-    if-eqz v1, :cond_6
+    move-result-object p1
 
-    :goto_4
-    iget-object v1, v0, Lyh7;->o:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    iget-object v1, p0, Lyh7;->o:Ljava/util/ArrayDeque;
-
-    iget-object v2, v0, Lyh7;->o:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v2}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Iterator;
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_6
-    iget-object v0, v0, Lyh7;->c:Ljava/util/Iterator;
-
-    iput-object v0, p0, Lyh7;->c:Ljava/util/Iterator;
-
-    goto :goto_0
-
-    :cond_7
-    const/4 v0, 0x1
-
-    return v0
+    return-object p1
 .end method
 
-.method public final next()Ljava/lang/Object;
+.method public final u()Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0}, Lyh7;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lyh7;->b:Ljava/util/Iterator;
-
-    iput-object v0, p0, Lyh7;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
+    const-string v0, "AwaitContinuation"
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    iget-object v0, p0, Lyh7;->a:Ljava/util/Iterator;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lyh7;->a:Ljava/util/Iterator;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "no calls to next() since the last call to remove()"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

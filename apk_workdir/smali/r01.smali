@@ -1,88 +1,216 @@
-.class public final synthetic Lr01;
+.class public final Lr01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ls01;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxcf;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
-    .locals 0
+.method public constructor <init>(Lxcf;)V
+    .locals 1
 
-    iput p2, p0, Lr01;->a:I
-
-    iput-object p1, p0, Lr01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    sget v0, Lfia;->q:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lr01;->a:Lxcf;
+
+    sget p1, Leia;->e:I
+
+    iput p1, p0, Lr01;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final a()Lcdf;
+    .locals 1
 
-    iget v0, p0, Lr01;->a:I
-
-    iget-object v1, p0, Lr01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
-
-    new-instance v0, Ls01;
-
-    invoke-direct {v0, v1}, Ls01;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v4, Lh8d;
+    if-ne p0, p1, :cond_0
 
-    const/16 v0, 0xc
+    goto :goto_1
 
-    invoke-direct {v4, v0, v1}, Lh8d;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    instance-of v0, p1, Lr01;
 
-    new-instance v2, Lzmd;
+    if-nez v0, :cond_1
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    goto :goto_0
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :cond_1
+    check-cast p1, Lr01;
 
-    move-result-object v3
+    iget-object v0, p0, Lr01;->a:Lxcf;
 
-    invoke-virtual {v0, v3}, Lsed;->m(Landroid/content/Context;)Lloa;
+    iget-object p1, p1, Lr01;->a:Lxcf;
+
+    invoke-virtual {v0, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    sget-wide v0, Lfia;->a:J
+
+    cmp-long p1, v0, v0
+
+    if-eqz p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final f()I
+    .locals 1
+
+    const/4 v0, 0x4
+
+    return v0
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    sget-wide v0, Lfia;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getTitle()Lcdf;
+    .locals 1
+
+    iget-object v0, p0, Lr01;->a:Lxcf;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lr01;->a:Lxcf;
+
+    iget v0, v0, Lxcf;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    sget-wide v2, Lfia;->a:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v2, v0, v1}, Lsab;->i(III)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lr01;->b:I
+
+    return v0
+.end method
+
+.method public final t()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    sget-wide v0, Lfia;->a:J
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "HeaderBottom(title="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lr01;->a:Lxcf;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", sectionId=0, itemId="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", sectionItemType="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ljjd;->o(I)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v3, v0, Lloa;->c:Luxa;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v5, Lk;
+    const-string v0, ", descriptionRes=null)"
 
-    const/16 v0, 0x10
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v5, v0, v1}, Lk;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v6, 0x0
+    move-result-object v0
 
-    const/16 v7, 0x14
-
-    invoke-direct/range {v2 .. v7}, Lzmd;-><init>(Luxa;Lxmd;Lk;Lbob;I)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

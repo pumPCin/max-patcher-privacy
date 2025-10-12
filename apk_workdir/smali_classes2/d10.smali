@@ -4,48 +4,24 @@
 
 
 # instance fields
-.field public a:J
+.field public a:Ljava/lang/String;
 
-.field public b:J
+.field public b:Ljava/lang/String;
 
-.field public c:J
+.field public c:I
 
-.field public d:J
+.field public d:I
 
-.field public e:I
+.field public e:Z
 
-.field public f:Ljava/lang/String;
+.field public f:[B
 
+.field public g:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Ld10;)V
-    .locals 2
+.field public h:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public i:Ljava/lang/String;
 
-    iget-wide v0, p1, Ld10;->a:J
+.field public j:Ljava/lang/String;
 
-    iput-wide v0, p0, Ld10;->a:J
-
-    iget-wide v0, p1, Ld10;->b:J
-
-    iput-wide v0, p0, Ld10;->b:J
-
-    iget-wide v0, p1, Ld10;->c:J
-
-    iput-wide v0, p0, Ld10;->c:J
-
-    iget-wide v0, p1, Ld10;->d:J
-
-    iput-wide v0, p0, Ld10;->d:J
-
-    iget v0, p1, Ld10;->e:I
-
-    iput v0, p0, Ld10;->e:I
-
-    iget-object p1, p1, Ld10;->f:Ljava/lang/String;
-
-    iput-object p1, p0, Ld10;->f:Ljava/lang/String;
-
-    return-void
-.end method
+.field public k:Ljava/lang/String;

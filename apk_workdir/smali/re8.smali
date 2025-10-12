@@ -1,198 +1,136 @@
 .class public final Lre8;
-.super Lxm4;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lke8;
-.implements Lnee;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public synthetic X:Z
 
-.field public o:Lss4;
+.field public final synthetic Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
+
+.field public final synthetic Z:Landroid/widget/FrameLayout;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxda;I)V
+.method public constructor <init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lre8;->c:I
+    iput-object p1, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    invoke-direct {p0, p1}, Lxm4;-><init>(Lxda;)V
+    iput-object p2, p0, Lre8;->Z:Landroid/widget/FrameLayout;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    and-int/lit8 v0, v0, 0x36
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1, p2}, Lre8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
 
-    :cond_0
-    const/4 v0, 0x2
+    check-cast p1, Lre8;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object v0, p0, Lxm4;->a:Lxda;
+    invoke-virtual {p1, p2}, Lre8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-interface {v0}, Lxda;->b()V
-
-    return-void
+    return-object p2
 .end method
 
-.method public final c(Lss4;)V
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v0, p0, Lre8;->c:I
+    new-instance v0, Lre8;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    iget-object v0, p0, Lre8;->o:Lss4;
+    iget-object v2, p0, Lre8;->Z:Landroid/widget/FrameLayout;
 
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    invoke-direct {v0, v1, v2, p2}, Lre8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;Landroid/widget/FrameLayout;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    check-cast p1, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-object p1, p0, Lre8;->o:Lss4;
+    move-result p1
 
-    iget-object p1, p0, Lxm4;->a:Lxda;
+    iput-boolean p1, v0, Lre8;->X:Z
 
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lre8;->o:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lre8;->o:Lss4;
-
-    iget-object p1, p0, Lxm4;->a:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final g()V
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lre8;->c:I
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean p1, p0, Lre8;->X:Z
 
-    invoke-super {p0}, Lxm4;->g()V
+    iget-object v0, p0, Lre8;->Y:Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;
 
-    iget-object v0, p0, Lre8;->o:Lss4;
+    if-eqz p1, :cond_0
 
-    invoke-interface {v0}, Lss4;->g()V
+    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->o:Ltm0;
 
-    return-void
+    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
 
-    :pswitch_0
-    invoke-super {p0}, Lxm4;->g()V
+    move-result-object p1
 
-    iget-object v0, p0, Lre8;->o:Lss4;
+    check-cast p1, Ldy1;
 
-    invoke-interface {v0}, Lss4;->g()V
+    invoke-interface {p1}, Ldy1;->getRootView()Landroid/view/View;
 
-    return-void
+    move-result-object p1
 
-    nop
+    new-instance v1, Lpe8;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const/4 v2, 0x2
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+    invoke-direct {v1, v0, v2}, Lpe8;-><init>(Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;I)V
 
-    iget v0, p0, Lre8;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    and-int/lit8 v0, v0, 0x36
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    invoke-static {p1, v1}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x2
+    iget-object p1, v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->c:Ltm0;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+    sget-object v0, Lone/me/chatscreen/mediabar/permission/MediaBarPermissionWidget;->Z:[Lpl7;
 
-    iget-object v0, p0, Lxm4;->a:Lxda;
+    const/4 v1, 0x0
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+    aget-object v0, v0, v1
+
+    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/LinearLayout;
 
     :goto_0
-    return-void
+    iget-object v0, p0, Lre8;->Z:Landroid/widget/FrameLayout;
 
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    move-result v0
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    and-int/lit8 v0, v0, 0x36
+    sget-object p1, Laxf;->a:Laxf;
 
-    if-eqz v0, :cond_1
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    iget-object v0, p0, Lxm4;->a:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

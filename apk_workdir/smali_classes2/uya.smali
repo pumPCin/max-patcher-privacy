@@ -1,64 +1,55 @@
-.class public final synthetic Luya;
-.super Ljava/lang/Object;
+.class public final Luya;
+.super Lu98;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:F
+.field public final w0:Ldya;
 
-.field public final synthetic b:Landroid/view/animation/Interpolator;
+.field public final x0:Ldya;
 
 
 # direct methods
-.method public synthetic constructor <init>(FLandroid/view/animation/LinearInterpolator;)V
-    .locals 0
+.method public constructor <init>(Ldya;Ldya;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x7
 
-    iput p1, p0, Luya;->a:F
+    invoke-direct {p0, v0}, Lu98;-><init>(I)V
 
-    iput-object p2, p0, Luya;->b:Landroid/view/animation/Interpolator;
+    iput-object p1, p0, Luya;->w0:Ldya;
+
+    iput-object p2, p0, Luya;->x0:Ldya;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final m(Lmmf;[ILjg0;La67;)Lb9;
+    .locals 7
 
-    check-cast p1, Landroid/view/View;
+    new-instance v0, Lvya;
 
-    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
+    sget v1, Lhnf;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+    sget v1, Lhnf;->a:I
 
-    move-result v1
+    iget-object v1, p1, Lmmf;->d:[Lw66;
 
-    const/4 v2, 0x2
+    iget-object v5, p0, Luya;->w0:Ldya;
 
-    new-array v2, v2, [F
+    iget-object v6, p0, Luya;->x0:Ldya;
 
-    const/4 v3, 0x0
+    move-object v1, p1
 
-    aput v1, v2, v3
+    move-object v2, p2
 
-    const/4 v1, 0x1
+    move-object v3, p3
 
-    iget v3, p0, Luya;->a:F
+    move-object v4, p4
 
-    aput v3, v2, v1
+    invoke-direct/range {v0 .. v6}, Lvya;-><init>(Lmmf;[ILjg0;La67;Ldya;Ldya;)V
 
-    invoke-static {p1, v0, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    iget-object v0, p0, Luya;->b:Landroid/view/animation/Interpolator;
-
-    invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    return-object p1
+    return-object v0
 .end method

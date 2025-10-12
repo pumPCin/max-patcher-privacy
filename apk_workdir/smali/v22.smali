@@ -3,18 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lus1;
+.implements Lqo3;
 
 
 # instance fields
-.field public final synthetic a:Lx22;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lme4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx22;)V
+.method public synthetic constructor <init>(Lme4;I)V
     .locals 0
 
-    iput-object p1, p0, Lv22;->a:Lx22;
+    iput p2, p0, Lv22;->a:I
+
+    iput-object p1, p0, Lv22;->b:Lme4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,101 +27,140 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    iget-object v0, p0, Lv22;->a:Lx22;
+    iget v0, p0, Lv22;->a:I
 
-    iget-object v1, v0, Lx22;->a:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    monitor-enter v1
+    check-cast p1, Ljb0;
 
-    :try_start_0
-    iget v2, v0, Lx22;->i:I
+    invoke-static {}, Lg8;->g()V
 
-    const/4 v3, 0x5
+    iget-object v0, p0, Lv22;->b:Lme4;
 
-    if-ne v2, v3, :cond_0
+    iget-object v0, v0, Lme4;->a:Ljava/lang/Object;
 
-    iget-object v2, v0, Lx22;->f:Lrvd;
+    check-cast v0, Lupb;
 
-    invoke-virtual {v0, v2}, Lx22;->k(Lrvd;)V
+    if-eqz v0, :cond_3
 
-    goto :goto_0
+    iget v1, v0, Lupb;->a:I
 
-    :catchall_0
-    move-exception v0
+    iget v2, p1, Ljb0;->a:I
+
+    if-ne v1, v2, :cond_3
+
+    iget-object p1, p1, Ljb0;->b:Landroidx/camera/core/ImageCaptureException;
+
+    iget-object v0, v0, Lupb;->f:Li0d;
+
+    iget-object v1, v0, Li0d;->a:Lkb0;
+
+    invoke-static {}, Lg8;->g()V
+
+    iget-boolean v2, v0, Li0d;->g:Z
+
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
     :cond_0
-    :goto_0
-    monitor-exit v1
+    invoke-static {}, Lg8;->g()V
 
-    return-void
+    iget v2, v1, Lkb0;->a:I
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-.end method
-
-.method public o(Lts1;)Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lv22;->a:Lx22;
-
-    const-string v1, "Release[session="
-
-    iget-object v2, v0, Lx22;->a:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    iget-object v3, v0, Lx22;->k:Lts1;
-
-    if-nez v3, :cond_0
+    if-lez v2, :cond_1
 
     const/4 v3, 0x1
 
+    sub-int/2addr v2, v3
+
+    iput v2, v1, Lkb0;->a:I
+
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v3, 0x0
 
     :goto_0
-    const-string v4, "Release completer expected to be null"
+    if-nez v3, :cond_2
 
-    invoke-static {v4, v3}, Ll74;->m(Ljava/lang/String;Z)V
+    invoke-static {}, Lg8;->g()V
 
-    iput-object p1, v0, Lx22;->k:Lts1;
+    iget-object v2, v1, Lkb0;->b:Ljava/util/concurrent/Executor;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    new-instance v4, Lwud;
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v5, 0x11
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v4, v1, v5, p1}, Lwud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const-string v0, "]"
+    invoke-interface {v2, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_2
+    invoke-virtual {v0}, Li0d;->a()V
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v2, v0, Li0d;->e:Lvs1;
 
-    move-result-object p1
+    invoke-virtual {v2, p1}, Lvs1;->d(Ljava/lang/Throwable;)Z
 
-    monitor-exit v2
+    if-eqz v3, :cond_3
 
-    return-object p1
+    iget-object p1, v0, Li0d;->b:Lr6f;
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {p1, v1}, Lr6f;->d(Lkb0;)V
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_3
+    :goto_1
+    return-void
 
-    throw p1
+    :pswitch_0
+    check-cast p1, Lupb;
+
+    iget-object v0, p0, Lv22;->b:Lme4;
+
+    invoke-virtual {v0, p1}, Lme4;->e(Lupb;)V
+
+    iget-object v0, v0, Lme4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lax0;
+
+    iget-object v1, v0, Lax0;->b:Ljava/lang/Object;
+
+    check-cast v1, Lupb;
+
+    if-nez v1, :cond_4
+
+    const/4 v1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v1, 0x0
+
+    :goto_2
+    const-string v2, "Pending request should be null"
+
+    invoke-static {v2, v1}, Lnjg;->l(Ljava/lang/String;Z)V
+
+    iput-object p1, v0, Lax0;->b:Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lv22;->b:Lme4;
+
+    check-cast p1, Lupb;
+
+    invoke-virtual {v0, p1}, Lme4;->e(Lupb;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

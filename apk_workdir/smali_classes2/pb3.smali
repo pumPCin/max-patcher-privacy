@@ -1,51 +1,44 @@
 .class public final Lpb3;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrb3;
 
-# instance fields
-.field public X:Lpt2;
 
-.field public synthetic Y:Ljava/lang/Object;
+# static fields
+.field public static final a:Lpb3;
 
-.field public final synthetic Z:Lsb3;
-
-.field public o:Lsb3;
-
-.field public w0:I
+.field public static final b:J
 
 
 # direct methods
-.method public constructor <init>(Lsb3;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lpb3;->Z:Lsb3;
+    new-instance v0, Lpb3;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpb3;->a:Lpb3;
+
+    const-class v0, Lpb3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    const-wide/16 v0, 0x1
+
+    sput-wide v0, Lpb3;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final getId()J
+    .locals 2
 
-    iput-object p1, p0, Lpb3;->Y:Ljava/lang/Object;
+    sget-wide v0, Lpb3;->b:J
 
-    iget p1, p0, Lpb3;->w0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lpb3;->w0:I
-
-    iget-object p1, p0, Lpb3;->Z:Lsb3;
-
-    invoke-static {p1, p0}, Lsb3;->b(Lsb3;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method

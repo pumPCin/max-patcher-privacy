@@ -1,156 +1,61 @@
 .class public final Lsu2;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnf6;
 
-
-# instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Lrxa;
-
-.field public synthetic Z:Luxa;
+# static fields
+.field public static final a:Lsu2;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lsu2;->X:I
+    new-instance v0, Lsu2;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsu2;->a:Lsu2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lsu2;->X:I
-
-    check-cast p1, Lrxa;
-
-    check-cast p2, Luxa;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lsu2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, p3, v2}, Lsu2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lsu2;->Y:Lrxa;
-
-    iput-object p2, v0, Lsu2;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lsu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lsu2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lsu2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lsu2;->Y:Lrxa;
-
-    iput-object p2, v0, Lsu2;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lsu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance v0, Lsu2;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lsu2;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lsu2;->Y:Lrxa;
-
-    iput-object p2, v0, Lsu2;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lsu2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lsu2;->X:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    return v0
 
-    iget-object p1, p0, Lsu2;->Y:Lrxa;
+    :cond_0
+    instance-of p1, p1, Lsu2;
 
-    iget-object v0, p0, Lsu2;->Z:Luxa;
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, v0}, Lrxa;->onThemeChanged(Luxa;)V
+    const/4 p1, 0x0
 
-    sget-object p1, Loyf;->a:Loyf;
+    return p1
 
-    return-object p1
+    :cond_1
+    return v0
+.end method
 
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p0, Lsu2;->Y:Lrxa;
+    const v0, 0x67a4b98e
 
-    iget-object v0, p0, Lsu2;->Z:Luxa;
+    return v0
+.end method
 
-    invoke-virtual {p1, v0}, Lrxa;->onThemeChanged(Luxa;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sget-object p1, Loyf;->a:Loyf;
+    const-string v0, "CreateChannelError"
 
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsu2;->Y:Lrxa;
-
-    iget-object v0, p0, Lsu2;->Z:Luxa;
-
-    invoke-virtual {p1, v0}, Lrxa;->onThemeChanged(Luxa;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,23 +1,21 @@
 .class public final Lk0c;
-.super Ll0c;
+.super Luc0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xf
 
-    iput p1, p0, Lk0c;->a:I
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-    iput p1, p0, Lk0c;->b:I
+    iput-wide p1, p0, Lk0c;->b:J
 
     return-void
 .end method
@@ -25,7 +23,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -45,62 +43,42 @@
     :cond_1
     check-cast p1, Lk0c;
 
-    iget v1, p0, Lk0c;->a:I
+    iget-wide v3, p0, Lk0c;->b:J
 
-    iget p1, p1, Lk0c;->a:I
+    iget-wide v5, p1, Lk0c;->b:J
 
-    if-ne v1, p1, :cond_2
+    cmp-long p1, v3, v5
 
-    return v0
+    if-eqz p1, :cond_2
+
+    return v2
 
     :cond_2
-    return v2
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/high16 v0, 0x20000
-
-    int-to-long v0, v0
-
-    return-wide v0
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Lk0c;->a:I
+    iget-wide v0, p0, Lk0c;->b:J
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lk0c;->b:I
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    iget v0, p0, Lk0c;->a:I
+    const-string v0, "InviteByLink(chatId="
 
-    invoke-static {v0}, Li28;->C(I)Ljava/lang/String;
+    const-string v1, ")"
 
-    move-result-object v0
+    iget-wide v2, p0, Lk0c;->b:J
 
-    const-string v1, "RknLabel(itemViewType="
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

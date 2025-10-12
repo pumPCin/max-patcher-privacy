@@ -1,43 +1,19 @@
-.class public abstract Lcga;
+.class public final Lcga;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
+# instance fields
+.field public final synthetic a:Lo5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo5;)V
+    .locals 0
 
-    sget v0, Lrdc;->oneme_force_update_app_icon:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lcga;->a:I
-
-    sget v0, Lrdc;->oneme_force_update_subtitle:I
-
-    sput v0, Lcga;->b:I
-
-    sget v0, Lrdc;->oneme_force_update_title:I
-
-    sput v0, Lcga;->c:I
-
-    sget v0, Lrdc;->oneme_force_update_update_button:I
-
-    sput v0, Lcga;->d:I
-
-    sget v0, Lrdc;->oneme_force_update_update_icon:I
-
-    sput v0, Lcga;->e:I
+    iput-object p1, p0, Lcga;->a:Lo5;
 
     return-void
 .end method

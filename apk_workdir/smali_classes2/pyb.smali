@@ -1,136 +1,161 @@
 .class public final Lpyb;
-.super Lm3f;
+.super Lqyb;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lrsb;
 
-.field public final synthetic Y:Lryb;
-
-.field public final synthetic Z:Laj0;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lryb;Laj0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lrsb;I)V
     .locals 0
 
-    iput-object p1, p0, Lpyb;->Y:Lryb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lpyb;->Z:Laj0;
+    iput-object p1, p0, Lpyb;->a:Lrsb;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lpyb;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpyb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpyb;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lpyb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    new-instance p1, Lpyb;
-
-    iget-object v0, p0, Lpyb;->Y:Lryb;
-
-    iget-object v1, p0, Lpyb;->Z:Laj0;
-
-    invoke-direct {p1, v0, v1, p2}, Lpyb;-><init>(Lryb;Laj0;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lpyb;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Lpyb;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lpyb;
 
-    iget-object p1, p0, Lpyb;->Y:Lryb;
+    iget-object v0, p0, Lpyb;->a:Lrsb;
 
-    iget-object v0, p1, Lryb;->a:Le8e;
+    iget-object v1, p1, Lpyb;->a:Lrsb;
 
-    new-instance v2, Liyb;
+    invoke-virtual {v0, v1}, Lrsb;->equals(Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lpyb;->Z:Laj0;
+    move-result v0
 
-    iget-wide v4, v3, Lbj0;->a:J
+    if-nez v0, :cond_2
 
-    new-instance v6, Ljava/lang/Long;
-
-    invoke-direct {v6, v4, v5}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v3, v3, Laj0;->b:Lv8f;
-
-    invoke-static {p1, v3}, Lryb;->a(Lryb;Lv8f;)Loef;
-
-    move-result-object p1
-
-    invoke-direct {v2, v6, p1}, Liyb;-><init>(Ljava/lang/Long;Loef;)V
-
-    iput v1, p0, Lpyb;->X:I
-
-    invoke-virtual {v0, v2, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget v0, p0, Lpyb;->b:I
 
-    return-object p1
+    iget p1, p1, Lpyb;->b:I
+
+    if-ne v0, p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-object v0, p0, Lpyb;->a:Lrsb;
+
+    iget-wide v0, v0, Lrsb;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lpyb;->a:Lrsb;
+
+    invoke-virtual {v0}, Lrsb;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, v0, v1}, Lsab;->i(III)I
+
+    move-result v0
+
+    iget v1, p0, Lpyb;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lpyb;->b:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget v0, p0, Lpyb;->b:I
+
+    invoke-static {v0}, Ldt;->M(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Result(cellModel="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lpyb;->a:Lrsb;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", type="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "CHAT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", itemViewType="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,124 +1,262 @@
-.class public final Lsj7;
+.class public abstract Lsj7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyc4;
-
 
 # static fields
-.field public static final a:Lsj7;
+.field public static final d:Lrj7;
 
-.field public static final b:Ltj7;
+
+# instance fields
+.field public final a:Lvj7;
+
+.field public final b:Lyh2;
+
+.field public final c:Lho4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 9
 
-    new-instance v0, Lsj7;
+    new-instance v0, Lrj7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lvj7;
 
-    sput-object v0, Lsj7;->a:Lsj7;
+    const/4 v8, 0x1
 
-    sget-object v0, Ltj7;->b:Ltj7;
+    const/4 v2, 0x3
 
-    sput-object v0, Lsj7;->b:Ltj7;
+    const-string v3, "    "
+
+    const-string v4, "type"
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x1
+
+    invoke-direct/range {v1 .. v8}, Lvj7;-><init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
+
+    sget-object v2, Lb19;->d:Lyh2;
+
+    invoke-direct {v0, v1, v2}, Lsj7;-><init>(Lvj7;Lyh2;)V
+
+    sput-object v0, Lsj7;->d:Lrj7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lvj7;Lyh2;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsj7;->a:Lvj7;
+
+    iput-object p2, p0, Lsj7;->b:Lyh2;
+
+    new-instance p1, Lho4;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lho4;-><init>(I)V
+
+    iput-object p1, p0, Lsj7;->c:Lho4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgd4;
-    .locals 1
+.method public final a(Lql7;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object v0, Lsj7;->b:Ltj7;
+    new-instance v0, Linf;
 
-    return-object v0
-.end method
+    invoke-direct {v0, p2}, Linf;-><init>(Ljava/lang/String;)V
 
-.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
-    .locals 8
+    new-instance v1, Lx8;
 
-    sget-object v0, Lsj7;->b:Ltj7;
+    sget-object v2, Ln9h;->c:Ln9h;
 
-    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
+    invoke-interface {p1}, Lql7;->d()Lmqd;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v0
+    invoke-direct {v1, p0, v2, v0, v3}, Lx8;-><init>(Lsj7;Ln9h;Linf;Lmqd;)V
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1, p1}, Lx8;->u(Lql7;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
+
+    invoke-virtual {v0}, Linf;->o()B
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    if-ne v1, v2, :cond_0
 
     return-object p1
 
     :cond_0
-    new-instance v5, Lhd4;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lpf7;
+    const-string v1, "Expected EOF after parsing, but had "
 
-    const/4 v1, 0x7
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lpf7;-><init>(I)V
+    iget v1, v0, Linf;->b:I
 
-    new-instance v1, Lpf7;
+    add-int/lit8 v1, v1, -0x1
 
-    const/16 v2, 0x8
+    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
 
-    invoke-direct {v1, v2}, Lpf7;-><init>(I)V
+    move-result p2
 
-    invoke-direct {v5, v0, v1}, Lhd4;-><init>(Lve6;Lve6;)V
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ltj7;->b:Ltj7;
+    const-string p2, " instead"
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ltj7;->c:Lbd4;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    const/4 p2, 0x0
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x6
 
-    new-instance v6, Lon1;
+    invoke-static {v0, p1, p2, v1}, Linf;->x(Linf;Ljava/lang/String;II)V
 
-    const/4 v0, 0x7
+    const/4 p1, 0x0
 
-    invoke-direct {v6, p3, v0}, Lon1;-><init>(Landroid/os/Bundle;I)V
+    throw p1
+.end method
 
-    new-instance v0, Ljd4;
+.method public final b(Lql7;Ljava/lang/Object;)Ljava/lang/String;
+    .locals 6
 
-    const/16 v7, 0x8
+    new-instance v0, Lwi;
+
+    const/16 v1, 0x9
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lwi;-><init>(IZ)V
+
+    sget-object v1, Lz72;->c:Lz72;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v1, La82;->b:Ljava/lang/Object;
+
+    check-cast v2, Lfs;
+
+    invoke-virtual {v2}, Lfs;->isEmpty()Z
+
+    move-result v3
 
     const/4 v4, 0x0
 
-    move-object v1, p1
+    if-eqz v3, :cond_0
 
-    move-object v2, p2
+    move-object v2, v4
 
-    move-object v3, p3
+    goto :goto_0
 
-    invoke-direct/range {v0 .. v7}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
+    :cond_0
+    invoke-virtual {v2}, Lfs;->removeLast()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v2
+
+    :goto_0
+    check-cast v2, [C
+
+    if-eqz v2, :cond_1
+
+    iget v3, v1, La82;->a:I
+
+    array-length v4, v2
+
+    sub-int/2addr v3, v4
+
+    iput v3, v1, La82;->a:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v4, v2
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
 
     :cond_1
-    move-object v2, p2
+    :goto_1
+    monitor-exit v1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    if-nez v4, :cond_2
 
-    const-string p2, "unknown screen "
+    const/16 v1, 0x80
 
-    invoke-static {p2, v2}, Lqw1;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
+    new-array v4, v1, [C
 
-    move-result-object p2
+    :cond_2
+    iput-object v4, v0, Lwi;->c:Ljava/lang/Object;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :try_start_1
+    new-instance v1, Lmz3;
+
+    sget-object v2, Ln9h;->c:Ln9h;
+
+    sget-object v3, Ln9h;->r0:Laa5;
+
+    invoke-virtual {v3}, Lj0;->getSize()I
+
+    move-result v3
+
+    new-array v3, v3, [Lmz3;
+
+    new-instance v4, Ler0;
+
+    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, v4, Ler0;->b:Ljava/lang/Object;
+
+    const/4 v5, 0x1
+
+    iput-boolean v5, v4, Ler0;->a:Z
+
+    invoke-direct {v1, v4, p0, v2, v3}, Lmz3;-><init>(Ler0;Lsj7;Ln9h;[Lmz3;)V
+
+    invoke-virtual {v1, p1, p2}, Lmz3;->j(Lql7;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Lwi;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {v0}, Lwi;->o()V
+
+    return-object p1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-virtual {v0}, Lwi;->o()V
+
+    throw p1
+
+    :goto_2
+    monitor-exit v1
 
     throw p1
 .end method

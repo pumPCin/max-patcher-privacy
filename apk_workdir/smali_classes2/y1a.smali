@@ -2,63 +2,52 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz1a;
-
 
 # static fields
-.field public static final b:Ly1a;
+.field public static final synthetic b:[Lpl7;
+
+
+# instance fields
+.field public final a:Lys4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    new-instance v0, Ly1a;
+    new-instance v0, Lf4c;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-class v1, Ly1a;
 
-    sput-object v0, Ly1a;->b:Ly1a;
+    const-string v2, "liveLocationManager"
+
+    const-string v3, "getLiveLocationManager()Lru/ok/tamtam/location/live/manager/LiveLocationManager;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v1, Lewc;->a:Lfwc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lpl7;
+
+    aput-object v0, v1, v4
+
+    sput-object v1, Ly1a;->b:[Lpl7;
 
     return-void
 .end method
 
+.method public constructor <init>(Lys4;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Ly1a;->a:Lys4;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ly1a;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x38b39d6b
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "System"
-
-    return-object v0
+    return-void
 .end method

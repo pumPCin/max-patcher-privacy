@@ -1,100 +1,69 @@
 .class public final Lqt7;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
-# interfaces
-.implements Lhu7;
 
+# instance fields
+.field public X:Lku5;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lqt7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public Y:Landroid/net/Uri;
 
-.field public static final a:Lqt7;
+.field public Z:Ljava/lang/String;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:Lku5;
+
+.field public s0:J
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lst7;
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lst7;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lqt7;
+    iput-object p1, p0, Lqt7;->u0:Lst7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqt7;->a:Lqt7;
-
-    new-instance v0, Lle7;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
-
-    sput-object v0, Lqt7;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lqt7;->t0:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Lqt7;->v0:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    const/4 v0, 0x1
+    or-int/2addr p1, v0
 
-    if-ne p0, p1, :cond_0
+    iput p1, p0, Lqt7;->v0:I
 
-    return v0
+    const-wide/16 v3, 0x0
 
-    :cond_0
-    instance-of p1, p1, Lqt7;
+    const/4 v5, 0x0
 
-    if-nez p1, :cond_1
+    iget-object v0, p0, Lqt7;->u0:Lst7;
 
-    const/4 p1, 0x0
+    const/4 v1, 0x0
 
-    return p1
+    const/4 v2, 0x0
 
-    :cond_1
-    return v0
-.end method
+    move-object v6, p0
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual/range {v0 .. v6}, Lst7;->k(Lku5;Landroid/net/Uri;JLjava/lang/String;Lwy3;)Ljava/lang/Object;
 
-    const v0, 0x4dc7cdd3    # 4.1901936E8f
+    move-result-object p1
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ErrorPrivateChannel"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

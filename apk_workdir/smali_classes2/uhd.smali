@@ -1,69 +1,102 @@
 .class public final Luhd;
-.super Lyya;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsy9;
+.implements Lqjd;
+
+
+# static fields
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public b:Z
+.field public final a:Lyn7;
+
+.field public final b:Lyn7;
+
+.field public final c:Lyn7;
+
+.field public final d:Lyn7;
+
+.field public final e:Lyn7;
+
+.field public final f:Lh4f;
 
 
-# virtual methods
-.method public final onOverScrolled(IIZZ)V
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    if-gtz p2, :cond_0
+    const-class v0, Lshd;
 
-    if-eqz p4, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-boolean v0, p0, Luhd;->b:Z
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
+    sput-object v0, Luhd;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+    .locals 0
 
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-object p2, p0, Luhd;->a:Lyn7;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    iput-object p4, p0, Luhd;->b:Lyn7;
 
-    move-result v1
+    iput-object p1, p0, Luhd;->c:Lyn7;
 
-    const/4 v2, 0x1
+    iput-object p3, p0, Luhd;->d:Lyn7;
 
-    if-eq v1, v2, :cond_1
+    iput-object p5, p0, Luhd;->e:Lyn7;
 
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    new-instance p1, Lr4d;
 
-    move-result p1
+    const/16 p2, 0x8
 
-    if-nez p1, :cond_0
+    invoke-direct {p1, p2, p0}, Lr4d;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_0
+    new-instance p2, Lh4f;
 
-    :cond_0
-    return v0
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    iput-object p2, p0, Luhd;->f:Lh4f;
 
-    iput-boolean p1, p0, Luhd;->b:Z
+    return-void
+.end method
 
-    return v0
+
+# virtual methods
+.method public final a(ILjava/lang/Object;Ljava/lang/String;)Luu5;
+    .locals 2
+
+    check-cast p2, Laxf;
+
+    new-instance p1, Lthd;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p3, p0, p2}, Lthd;-><init>(Ljava/lang/String;Luhd;Lkotlin/coroutines/Continuation;)V
+
+    new-instance p3, Ly8d;
+
+    invoke-direct {p3, p1}, Ly8d;-><init>(Lje6;)V
+
+    new-instance p1, Lol2;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x3
+
+    invoke-direct {p1, v0, p2, v1}, Lol2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance p2, Luu5;
+
+    invoke-direct {p2, p3, p1}, Luu5;-><init>(Liu5;Lle6;)V
+
+    return-object p2
 .end method

@@ -1,271 +1,378 @@
-.class public abstract Ly9h;
+.class public final Ly9h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvld;
 
-# static fields
-.field public static final a:Ljava/lang/reflect/Method;
 
-.field public static final b:Ljava/lang/reflect/Method;
+# instance fields
+.field public final X:J
 
-.field public static final c:Ljava/lang/reflect/Method;
+.field public final Y:J
 
-.field public static final d:Ljava/lang/reflect/Method;
+.field public final Z:[J
 
-.field public static e:Ljava/lang/Boolean;
+.field public final a:J
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(JIJIJ[J)V
+    .locals 0
 
-    const-class v0, Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "add"
+    iput-wide p1, p0, Ly9h;->a:J
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    iput p3, p0, Ly9h;->b:I
 
-    const-class v3, Landroid/os/WorkSource;
+    iput-wide p4, p0, Ly9h;->c:J
 
-    invoke-static {}, Landroid/os/Process;->myUid()I
+    iput p6, p0, Ly9h;->o:I
 
-    const/4 v4, 0x0
+    iput-wide p7, p0, Ly9h;->X:J
 
-    :try_start_0
-    filled-new-array {v2}, [Ljava/lang/Class;
+    iput-object p9, p0, Ly9h;->Z:[J
 
-    move-result-object v5
+    const-wide/16 p3, -0x1
 
-    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    cmp-long p5, p7, p3
 
-    move-result-object v5
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez p5, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-object v5, v4
+    :cond_0
+    add-long p3, p1, p7
 
     :goto_0
-    sput-object v5, Ly9h;->a:Ljava/lang/reflect/Method;
-
-    :try_start_1
-    filled-new-array {v2, v0}, [Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_1
-
-    :catch_1
-    move-object v1, v4
-
-    :goto_1
-    sput-object v1, Ly9h;->b:Ljava/lang/reflect/Method;
-
-    :try_start_2
-    const-string v1, "size"
-
-    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_2
-
-    :catch_2
-    move-object v1, v4
-
-    :goto_2
-    sput-object v1, Ly9h;->c:Ljava/lang/reflect/Method;
-
-    :try_start_3
-    const-string v1, "get"
-
-    filled-new-array {v2}, [Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    const-string v1, "getName"
-
-    filled-new-array {v2}, [Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v5, 0x1c
-
-    const-string v6, "WorkSourceUtil"
-
-    if-lt v1, v5, :cond_0
-
-    :try_start_5
-    const-string v1, "createWorkChain"
-
-    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
-
-    goto :goto_3
-
-    :catch_5
-    move-exception v1
-
-    const-string v7, "Missing WorkChain API createWorkChain"
-
-    invoke-static {v6, v7, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    :goto_3
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v1, v5, :cond_1
-
-    :try_start_6
-    const-string v1, "android.os.WorkSource$WorkChain"
-
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-
-    const-string v7, "addNode"
-
-    filled-new-array {v2, v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v7, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
-
-    goto :goto_4
-
-    :catch_6
-    move-exception v0
-
-    const-string v1, "Missing WorkChain class"
-
-    invoke-static {v6, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_1
-    :goto_4
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-lt v0, v5, :cond_2
-
-    :try_start_7
-    const-string v0, "isEmpty"
-
-    invoke-virtual {v3, v0, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_7
-
-    const/4 v1, 0x1
-
-    :try_start_8
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_8
-
-    goto :goto_5
-
-    :catch_7
-    :cond_2
-    move-object v0, v4
-
-    :catch_8
-    :goto_5
-    sput-object v0, Ly9h;->d:Ljava/lang/reflect/Method;
-
-    sput-object v4, Ly9h;->e:Ljava/lang/Boolean;
+    iput-wide p3, p0, Ly9h;->Y:J
 
     return-void
 .end method
 
-.method public static a(Landroid/os/WorkSource;ILjava/lang/String;)V
-    .locals 3
 
-    const-string v0, "Unable to assign blame through WorkSource"
+# virtual methods
+.method public final a(J)J
+    .locals 13
 
-    const-string v1, "WorkSourceUtil"
+    iget-wide v0, p0, Ly9h;->a:J
 
-    sget-object v2, Ly9h;->b:Ljava/lang/reflect/Method;
+    sub-long/2addr p1, v0
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p0}, Ly9h;->c()Z
 
-    if-nez p2, :cond_0
+    move-result v0
 
-    const-string p2, ""
+    if-eqz v0, :cond_3
+
+    iget v0, p0, Ly9h;->b:I
+
+    int-to-long v0, v0
+
+    cmp-long v0, p1, v0
+
+    if-gtz v0, :cond_0
+
+    goto :goto_2
 
     :cond_0
-    :try_start_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Ly9h;->Z:[J
 
-    move-result-object p1
+    invoke-static {v0}, Lq5h;->l(Ljava/lang/Object;)V
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    long-to-double p1, p1
 
-    move-result-object p1
+    const-wide/high16 v1, 0x4070000000000000L    # 256.0
 
-    invoke-virtual {v2, p0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    mul-double/2addr p1, v1
 
-    return-void
+    iget-wide v1, p0, Ly9h;->X:J
 
-    :catch_0
-    move-exception p0
+    long-to-double v1, v1
 
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    div-double/2addr p1, v1
 
-    return-void
+    double-to-long v1, p1
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v1, v2, v3}, Lg3g;->e([JJZ)I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    iget-wide v4, p0, Ly9h;->c:J
+
+    mul-long/2addr v2, v4
+
+    const-wide/16 v6, 0x64
+
+    div-long/2addr v2, v6
+
+    aget-wide v8, v0, v1
+
+    add-int/lit8 v10, v1, 0x1
+
+    int-to-long v11, v10
+
+    mul-long/2addr v4, v11
+
+    div-long/2addr v4, v6
+
+    const/16 v6, 0x63
+
+    if-ne v1, v6, :cond_1
+
+    const-wide/16 v0, 0x100
+
+    goto :goto_0
 
     :cond_1
-    sget-object p2, Ly9h;->a:Ljava/lang/reflect/Method;
+    aget-wide v6, v0, v10
 
-    if-eqz p2, :cond_2
+    move-wide v0, v6
 
-    :try_start_1
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :goto_0
+    cmp-long v6, v8, v0
 
-    move-result-object p1
+    if-nez v6, :cond_2
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    const-wide/16 p1, 0x0
 
-    move-result-object p1
-
-    invoke-virtual {p2, p0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    return-void
-
-    :catch_1
-    move-exception p0
-
-    invoke-static {v1, v0, p0}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    goto :goto_1
 
     :cond_2
-    return-void
+    long-to-double v6, v8
+
+    sub-double/2addr p1, v6
+
+    sub-long/2addr v0, v8
+
+    long-to-double v0, v0
+
+    div-double/2addr p1, v0
+
+    :goto_1
+    sub-long/2addr v4, v2
+
+    long-to-double v0, v4
+
+    mul-double/2addr p1, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v2
+
+    return-wide p1
+
+    :cond_3
+    :goto_2
+    const-wide/16 p1, 0x0
+
+    return-wide p1
+.end method
+
+.method public final b()J
+    .locals 2
+
+    iget-wide v0, p0, Ly9h;->Y:J
+
+    return-wide v0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-object v0, p0, Ly9h;->Z:[J
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final e(J)Llld;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0}, Ly9h;->c()Z
+
+    move-result v1
+
+    iget v2, v0, Ly9h;->b:I
+
+    iget-wide v3, v0, Ly9h;->a:J
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Llld;
+
+    new-instance v5, Lrld;
+
+    int-to-long v6, v2
+
+    add-long/2addr v3, v6
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct {v5, v6, v7, v3, v4}, Lrld;-><init>(JJ)V
+
+    invoke-direct {v1, v5, v5}, Llld;-><init>(Lrld;Lrld;)V
+
+    return-object v1
+
+    :cond_0
+    const-wide/16 v10, 0x0
+
+    iget-wide v12, v0, Ly9h;->c:J
+
+    move-wide/from16 v8, p1
+
+    invoke-static/range {v8 .. v13}, Lg3g;->j(JJJ)J
+
+    move-result-wide v5
+
+    long-to-double v7, v5
+
+    const-wide/high16 v9, 0x4059000000000000L    # 100.0
+
+    mul-double/2addr v7, v9
+
+    iget-wide v11, v0, Ly9h;->c:J
+
+    long-to-double v11, v11
+
+    div-double/2addr v7, v11
+
+    const-wide/16 v11, 0x0
+
+    cmpg-double v1, v7, v11
+
+    if-gtz v1, :cond_1
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_1
+    cmpl-double v1, v7, v9
+
+    if-ltz v1, :cond_2
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v11, 0x4070000000000000L    # 256.0
+
+    goto :goto_1
+
+    :cond_2
+    double-to-int v1, v7
+
+    iget-object v9, v0, Ly9h;->Z:[J
+
+    invoke-static {v9}, Lq5h;->l(Ljava/lang/Object;)V
+
+    aget-wide v10, v9, v1
+
+    long-to-double v10, v10
+
+    const/16 v12, 0x63
+
+    if-ne v1, v12, :cond_3
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    const-wide/high16 v12, 0x4070000000000000L    # 256.0
+
+    goto :goto_0
+
+    :cond_3
+    add-int/lit8 v12, v1, 0x1
+
+    const-wide/high16 p1, 0x4070000000000000L    # 256.0
+
+    aget-wide v13, v9, v12
+
+    long-to-double v12, v13
+
+    :goto_0
+    int-to-double v14, v1
+
+    sub-double/2addr v7, v14
+
+    sub-double/2addr v12, v10
+
+    mul-double/2addr v12, v7
+
+    add-double v11, v12, v10
+
+    :goto_1
+    div-double v11, v11, p1
+
+    iget-wide v7, v0, Ly9h;->X:J
+
+    long-to-double v9, v7
+
+    mul-double/2addr v11, v9
+
+    invoke-static {v11, v12}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v13
+
+    int-to-long v1, v2
+
+    const-wide/16 v9, 0x1
+
+    sub-long v17, v7, v9
+
+    move-wide v15, v1
+
+    invoke-static/range {v13 .. v18}, Lg3g;->j(JJJ)J
+
+    move-result-wide v1
+
+    new-instance v7, Llld;
+
+    new-instance v8, Lrld;
+
+    add-long/2addr v3, v1
+
+    invoke-direct {v8, v5, v6, v3, v4}, Lrld;-><init>(JJ)V
+
+    invoke-direct {v7, v8, v8}, Llld;-><init>(Lrld;Lrld;)V
+
+    return-object v7
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Ly9h;->c:J
+
+    return-wide v0
+.end method
+
+.method public final g()I
+    .locals 1
+
+    iget v0, p0, Ly9h;->o:I
+
+    return v0
 .end method

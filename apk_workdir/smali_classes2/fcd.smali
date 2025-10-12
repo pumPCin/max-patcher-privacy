@@ -1,193 +1,125 @@
 .class public final Lfcd;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Lx5d;
-
-.field public final b:Lp5d;
-
-.field public final c:Lp5d;
-
-.field public final d:Lp5d;
+.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfcd;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iput-object p1, p0, Lfcd;->a:Lx5d;
+    const/4 p1, 0x2
 
-    new-instance v0, Lp5d;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lp5d;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lfcd;->b:Lp5d;
-
-    new-instance v0, Lp5d;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lp5d;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lfcd;->c:Lp5d;
-
-    new-instance v0, Lp5d;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, p1, v1}, Lp5d;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lfcd;->d:Lp5d;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)Lgcd;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Law9;
 
-    const-string v1, "SELECT * FROM saved_msg_chat WHERE user_id = ?"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Lo6d;->c(ILjava/lang/String;)Lo6d;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0, p1, p2}, Lo6d;->k(IJ)V
-
-    iget-object p1, p0, Lfcd;->a:Lx5d;
-
-    invoke-virtual {p1}, Lx5d;->b()V
-
-    invoke-virtual {p1, v1}, Lx5d;->n(Lg2f;)Landroid/database/Cursor;
+    invoke-virtual {p0, p1, p2}, Lfcd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    :try_start_0
-    const-string p2, "user_id"
+    check-cast p1, Lfcd;
 
-    invoke-static {p1, p2}, Lpch;->w(Landroid/database/Cursor;Ljava/lang/String;)I
+    sget-object p2, Laxf;->a:Laxf;
 
-    move-result p2
-
-    const-string v0, "chat_id"
-
-    invoke-static {p1, v0}, Lpch;->w(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1, p2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v2
-
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v4
-
-    new-instance p2, Lgcd;
-
-    invoke-direct {p2, v2, v3, v4, v5}, Lgcd;-><init>(JJ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lo6d;->n()V
+    invoke-virtual {p1, p2}, Lfcd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
-
-    :goto_1
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lo6d;->n()V
-
-    throw p2
 .end method
 
-.method public final b(JJ)V
-    .locals 4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lfcd;->a:Lx5d;
+    new-instance p1, Lfcd;
 
-    invoke-virtual {v0}, Lx5d;->b()V
+    iget-object v0, p0, Lfcd;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-object v1, p0, Lfcd;->b:Lp5d;
+    invoke-direct {p1, v0, p2}, Lfcd;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
+    return-object p1
+.end method
 
-    move-result-object v2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v3, 0x1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-interface {v2, v3, p1, p2}, Lf2f;->k(IJ)V
+    iget-object p1, p0, Lfcd;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    const/4 p1, 0x2
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    invoke-interface {v2, p1, p3, p4}, Lf2f;->k(IJ)V
+    move-result-object v0
 
-    :try_start_0
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v0, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->f:Lbpc;
 
-    :try_start_1
-    invoke-interface {v2}, Lh2f;->n0()J
+    iget-object v0, v0, Lbpc;->a:Lane;
 
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-interface {v0}, Lane;->getValue()Ljava/lang/Object;
 
-    :try_start_2
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    check-cast v0, Lo94;
 
-    return-void
+    sget-object v1, Laxf;->a:Laxf;
 
-    :catchall_0
-    move-exception p1
+    if-nez v0, :cond_0
 
-    goto :goto_0
+    return-object v1
 
-    :catchall_1
-    move-exception p1
+    :cond_0
+    new-instance v2, Lzbd;
 
-    :try_start_3
-    invoke-virtual {v0}, Lx5d;->k()V
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    throw p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    move-result-object v3
 
-    :goto_0
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    iget-object v3, v3, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Lkcd;
 
-    throw p1
+    sget-object v4, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lpl7;
+
+    const/4 v5, 0x0
+
+    aget-object v4, v4, v5
+
+    iget-object v3, v3, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/Boolean;
+
+    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v3
+
+    iget-object v4, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
+
+    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/os/Parcelable;
+
+    invoke-direct {v2, v0, v3, v4}, Lzbd;-><init>(Lo94;ZLandroid/os/Parcelable;)V
+
+    invoke-virtual {p1, v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->K0(Lacd;)V
+
+    invoke-virtual {p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->B0()V
+
+    return-object v1
 .end method

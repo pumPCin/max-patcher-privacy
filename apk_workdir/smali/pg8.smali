@@ -1,54 +1,89 @@
-.class public final synthetic Lpg8;
-.super Ln8;
+.class public final Lpg8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnf6;
 
+# instance fields
+.field public final a:Landroid/content/Context;
 
-# static fields
-.field public static final w0:Lpg8;
+.field public final b:Landroid/media/browse/MediaBrowser;
+
+.field public final c:Landroid/os/Bundle;
+
+.field public final d:Lng8;
+
+.field public final e:Lrs;
+
+.field public f:Lw98;
+
+.field public g:Landroid/os/Messenger;
+
+.field public h:Lrr8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lly7;Landroid/os/Bundle;)V
+    .locals 2
 
-    new-instance v0, Lpg8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    new-instance v0, Lng8;
 
-    const/4 v2, 0x4
+    invoke-direct {v0, p0}, Lng8;-><init>(Lpg8;)V
 
-    const/4 v3, 0x3
+    iput-object v0, p0, Lpg8;->d:Lng8;
 
-    const-class v4, Ln4b;
+    new-instance v0, Lrs;
 
-    invoke-direct {v0, v3, v4, v1, v2}, Ln8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lpg8;->w0:Lpg8;
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
+
+    iput-object v0, p0, Lpg8;->e:Lrs;
+
+    iput-object p1, p0, Lpg8;->a:Landroid/content/Context;
+
+    new-instance v0, Landroid/os/Bundle;
+
+    if-eqz p4, :cond_0
+
+    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    :goto_0
+    iput-object v0, p0, Lpg8;->c:Landroid/os/Bundle;
+
+    const-string p4, "extra_client_version"
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p4, "extra_calling_pid"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    iput-object p0, p3, Lly7;->c:Ljava/lang/Object;
+
+    new-instance p4, Landroid/media/browse/MediaBrowser;
+
+    iget-object p3, p3, Lly7;->b:Ljava/lang/Object;
+
+    check-cast p3, Log8;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
+
+    iput-object p4, p0, Lpg8;->b:Landroid/media/browse/MediaBrowser;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Ljava/util/List;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    sget-object p3, Lxg8;->O0:[Ltm7;
-
-    new-instance p3, Ln4b;
-
-    invoke-direct {p3, p1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p3
 .end method

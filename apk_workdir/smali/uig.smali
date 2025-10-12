@@ -1,35 +1,33 @@
-.class public interface abstract Luig;
+.class public abstract Luig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final v0:Lhl6;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 0
 
-    new-instance v0, Lhl6;
+    invoke-virtual {p0, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Luig;->v0:Lhl6;
+    return-object p0
+.end method
+
+.method public static b(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/view/View;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->requestApplyInsets()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract g(Lwig;)V
-.end method
-
-.method public abstract onFirstFrameRendered()V
-.end method
-
-.method public abstract t(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
-.end method
-
-.method public abstract v()V
 .end method

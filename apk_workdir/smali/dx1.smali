@@ -1,148 +1,194 @@
-.class public final Ldx1;
+.class public Ldx1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkx1;
 
-
-# instance fields
-.field public final a:Ljw1;
-
-.field public b:Z
+# static fields
+.field public static final a:Ldx1;
 
 
 # direct methods
-.method public constructor <init>(Ljw1;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldx1;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Ldx1;->b:Z
-
-    iput-object p1, p0, Ldx1;->a:Ljw1;
+    sput-object v0, Ldx1;->a:Ldx1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Ljx7;
-    .locals 4
+.method public a(Lf2g;Lq30;)V
+    .locals 17
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    move-object/from16 v0, p1
 
-    invoke-static {v0}, Lpch;->A(Ljava/lang/Object;)Li67;
-
-    move-result-object v0
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_2
-
-    const/4 v3, 0x2
-
-    if-eq v1, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "TriggerAf? AF mode auto"
-
-    const-string v3, "Camera2CapturePipeline"
-
-    invoke-static {v3, v1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
-
-    invoke-virtual {p1, v1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const-string p1, "Trigger AF"
-
-    invoke-static {v3, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-boolean v2, p0, Ldx1;->b:Z
-
-    iget-object p1, p0, Ldx1;->a:Ljw1;
-
-    iget-object p1, p1, Ljw1;->h:Lm06;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Lm06;->f(Z)V
-
-    :cond_3
-    :goto_0
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Ldx1;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Camera2CapturePipeline"
-
-    const-string v1, "cancel TriggerAF"
-
-    invoke-static {v0, v1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ldx1;->a:Ljw1;
-
-    iget-object v0, v0, Ljw1;->h:Lm06;
-
-    const/4 v1, 0x1
+    move-object/from16 v1, p2
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lm06;->a(ZZ)V
+    sget-object v3, Lf2g;->g0:Le90;
+
+    invoke-interface {v0, v3, v2}, Lyoc;->d(Le90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lt22;
+
+    sget-object v3, Lg0b;->c:Lg0b;
+
+    sget-object v4, Lt22;->i:Le90;
+
+    new-instance v4, Ljava/util/HashSet;
+
+    invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
+
+    invoke-static {}, Lbs9;->c()Lbs9;
+
+    move-result-object v5
+
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Ljs9;->a()Ljs9;
+
+    move-result-object v7
+
+    new-instance v8, Lt22;
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-static {v5}, Lg0b;->a(Lth3;)Lg0b;
+
+    move-result-object v10
+
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13, v6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v4, Lk6f;->b:Lk6f;
+
+    new-instance v4, Landroid/util/ArrayMap;
+
+    invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
+
+    iget-object v5, v7, Lk6f;->a:Landroid/util/ArrayMap;
+
+    invoke-virtual {v5}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    invoke-virtual {v5, v7}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    invoke-virtual {v4, v7, v11}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_0
+    new-instance v15, Lk6f;
+
+    invoke-direct {v15, v4}, Lk6f;-><init>(Landroid/util/ArrayMap;)V
+
+    const/4 v11, -0x1
+
+    const/4 v12, 0x0
+
+    const/16 v16, 0x0
+
+    move v14, v12
+
+    invoke-direct/range {v8 .. v16}, Lt22;-><init>(Ljava/util/ArrayList;Lg0b;IZLjava/util/ArrayList;ZLk6f;Lly1;)V
+
+    if-eqz v2, :cond_1
+
+    iget v11, v2, Lt22;->c:I
+
+    iget-object v3, v2, Lt22;->e:Ljava/util/List;
+
+    invoke-virtual {v1, v3}, Lq30;->a(Ljava/util/Collection;)V
+
+    iget-object v3, v2, Lt22;->b:Lg0b;
+
+    :cond_1
+    invoke-static {v3}, Lbs9;->k(Lth3;)Lbs9;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lq30;->f:Ljava/lang/Object;
+
+    new-instance v2, Lyx1;
+
+    sget-object v2, Lyx1;->b:Le90;
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {v0, v2, v3}, Lth3;->d(Le90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v1, Lq30;->c:I
+
+    new-instance v2, Lcx1;
+
+    invoke-direct {v2}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
+
+    sget-object v3, Lyx1;->Y:Le90;
+
+    invoke-interface {v0, v3, v2}, Lth3;->d(Le90;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+
+    new-instance v3, Ls22;
+
+    invoke-direct {v3, v2}, Ls22;-><init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
+
+    invoke-virtual {v1, v3}, Lq30;->b(Ley1;)V
+
+    invoke-static {v0}, Lwka;->n(Lth3;)Lwka;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lwka;->g()Lood;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lq30;->c(Lth3;)V
+
     return-void
 .end method

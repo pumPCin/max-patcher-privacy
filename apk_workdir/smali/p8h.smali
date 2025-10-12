@@ -1,124 +1,105 @@
-.class public abstract Lp8h;
-.super Ljava/lang/Object;
+.class public final Lp8h;
+.super Le3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic o:I
+
+
 # direct methods
-.method public static a(I)I
-    .locals 4
+.method public synthetic constructor <init>(Lc4d;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lp8h;->o:I
 
-    const/4 v1, 0x1
+    invoke-direct {p0, p1}, Le3;-><init>(Lc4d;)V
 
-    move v2, v1
+    return-void
+.end method
 
-    :goto_0
-    const/16 v3, 0x100
 
-    if-gt v2, v3, :cond_9
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    and-int v3, p0, v2
+    iget v0, p0, Lp8h;->o:I
 
-    if-eqz v3, :cond_8
+    packed-switch v0, :pswitch_data_0
 
-    if-eq v2, v1, :cond_7
+    const-string v0, "DELETE FROM worktag WHERE work_spec_id=?"
 
-    const/4 v3, 0x2
+    return-object v0
 
-    if-eq v2, v3, :cond_6
+    :pswitch_0
+    const-string v0, "UPDATE workspec SET run_attempt_count=0 WHERE id=?"
 
-    const/4 v3, 0x4
+    return-object v0
 
-    if-eq v2, v3, :cond_5
+    :pswitch_1
+    const-string v0, "UPDATE workspec SET run_attempt_count=run_attempt_count+1 WHERE id=?"
 
-    const/16 v3, 0x8
+    return-object v0
 
-    if-eq v2, v3, :cond_4
+    :pswitch_2
+    const-string v0, "UPDATE workspec SET last_enqueue_time=? WHERE id=?"
 
-    const/16 v3, 0x10
+    return-object v0
 
-    if-eq v2, v3, :cond_3
+    :pswitch_3
+    const-string v0, "UPDATE workspec SET output=? WHERE id=?"
 
-    const/16 v3, 0x20
+    return-object v0
 
-    if-eq v2, v3, :cond_2
+    :pswitch_4
+    const-string v0, "UPDATE workspec SET period_count=period_count+1 WHERE id=?"
 
-    const/16 v3, 0x40
+    return-object v0
 
-    if-eq v2, v3, :cond_1
+    :pswitch_5
+    const-string v0, "UPDATE workspec SET state=? WHERE id=?"
 
-    const/16 v3, 0x80
+    return-object v0
 
-    if-eq v2, v3, :cond_0
+    :pswitch_6
+    const-string v0, "DELETE FROM workspec WHERE id=?"
 
-    goto :goto_2
+    return-object v0
 
-    :cond_0
-    invoke-static {}, Lm8h;->r()I
+    :pswitch_7
+    const-string v0, "UPDATE workspec SET generation=generation+1 WHERE id=?"
 
-    move-result v3
+    return-object v0
 
-    :goto_1
-    or-int/2addr v0, v3
+    :pswitch_8
+    const-string v0, "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))"
 
-    goto :goto_2
+    return-object v0
 
-    :cond_1
-    invoke-static {}, Lm8h;->p()I
+    :pswitch_9
+    const-string v0, "UPDATE workspec SET schedule_requested_at=-1 WHERE state NOT IN (2, 3, 5)"
 
-    move-result v3
+    return-object v0
 
-    goto :goto_1
+    :pswitch_a
+    const-string v0, "UPDATE workspec SET schedule_requested_at=? WHERE id=?"
 
-    :cond_2
-    invoke-static {}, Lm8h;->n()I
+    return-object v0
 
-    move-result v3
+    nop
 
-    goto :goto_1
-
-    :cond_3
-    invoke-static {}, Lm8h;->l()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {}, Lv3b;->b()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {}, Lm8h;->j()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_6
-    invoke-static {}, Lm8h;->h()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_7
-    invoke-static {}, Lm8h;->a()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_8
-    :goto_2
-    shl-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_9
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

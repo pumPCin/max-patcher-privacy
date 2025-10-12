@@ -3,22 +3,27 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt1f;
+.implements Lno3;
+.implements Lke6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lub2;
+.field public final synthetic b:J
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;I)V
+.method public synthetic constructor <init>(IJJ)V
     .locals 0
 
-    iput p2, p0, Leb2;->a:I
+    iput p1, p0, Leb2;->a:I
 
-    iput-object p1, p0, Leb2;->b:Lub2;
+    iput-wide p2, p0, Leb2;->b:J
+
+    iput-wide p4, p0, Leb2;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,326 +32,178 @@
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 21
+.method public accept(Ljava/lang/Object;)V
+    .locals 7
 
-    move-object/from16 v1, p0
+    check-cast p1, Lec2;
 
-    iget v0, v1, Leb2;->a:I
+    iget-wide v0, p0, Leb2;->b:J
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v1, Leb2;->b:Lub2;
-
-    iget-object v0, v0, Lub2;->a:Lm82;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, v1, Leb2;->b:Lub2;
-
-    sget-object v2, Lub2;->I:Lc00;
-
-    invoke-virtual {v0, v2}, Lub2;->E(Ljava/util/Comparator;)Ljava/util/List;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    iget-wide v1, p0, Leb2;->c:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    filled-new-array {v0, v3, v4}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const-string v3, "zb2"
 
-    move-result v2
+    const-string v5, "reactions, updateLastReaction chatId = %d, lastReactedMessageId = %d, lastREaction = %s"
 
-    if-nez v2, :cond_0
+    invoke-static {v3, v5, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    const-wide/16 v5, 0x0
 
-    goto :goto_1
+    cmp-long v0, v1, v5
+
+    if-nez v0, :cond_0
+
+    iput-wide v5, p1, Lec2;->j0:J
+
+    iput-object v4, p1, Lec2;->k0:Ljava/lang/String;
+
+    return-void
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-wide v5, p1, Lec2;->j0:J
 
-    move-result-object v2
+    cmp-long v0, v5, v1
 
-    check-cast v2, Lm82;
+    if-eqz v0, :cond_1
 
-    iget-object v2, v2, Lm82;->b:Lpc2;
-
-    iget-wide v2, v2, Lpc2;->k:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
+    iput-wide v1, p1, Lec2;->j0:J
 
     :cond_1
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p1, Lec2;->k0:Ljava/lang/String;
 
-    move-result v3
+    if-eqz v0, :cond_3
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v3
-
-    check-cast v3, Lm82;
-
-    iget-object v3, v3, Lm82;->b:Lpc2;
-
-    iget-wide v3, v3, Lpc2;->k:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/Long;->compareTo(Ljava/lang/Object;)I
-
-    move-result v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-lez v4, :cond_1
-
-    move-object v2, v3
+    if-nez v0, :cond_2
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_3
-
     :cond_2
-    move-object v0, v2
-
-    :goto_1
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    goto :goto_2
+    return-void
 
     :cond_3
-    const-wide/16 v2, 0x0
+    :goto_0
+    iput-object v4, p1, Lec2;->k0:Ljava/lang/String;
 
-    :goto_2
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-void
+.end method
 
-    move-result-object v0
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    return-object v0
+    iget v0, p0, Leb2;->a:I
 
-    :goto_3
-    new-instance v2, Ljava/lang/RuntimeException;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    check-cast p1, Ljava/lang/Throwable;
 
-    throw v2
+    const-wide/16 v0, 0x0
+
+    iget-wide v2, p0, Leb2;->b:J
+
+    cmp-long v0, v2, v0
+
+    if-lez v0, :cond_0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v4, p0, Leb2;->c:J
+
+    sub-long/2addr v0, v4
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    new-instance v0, Lru/ok/tamtam/rx/TamTamObservables$TamObservableException;
+
+    const-string v1, "timeout reached"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Ls8a;->f(Ljava/lang/Throwable;)Lse3;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1}, Ls8a;->f(Ljava/lang/Throwable;)Lse3;
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    move-object v6, p1
+
+    check-cast v6, Lpk5;
+
+    new-instance v0, Ltp3;
+
+    const/4 v1, 0x1
+
+    iget-wide v2, p0, Leb2;->b:J
+
+    iget-wide v4, p0, Leb2;->c:J
+
+    invoke-direct/range {v0 .. v6}, Ltp3;-><init>(IJJLjava/lang/Object;)V
+
+    new-instance p1, Lfe3;
+
+    invoke-direct {p1, v1, v0}, Lfe3;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
 
     :pswitch_1
-    iget-object v0, v1, Leb2;->b:Lub2;
+    check-cast p1, Lhk5;
 
-    iget-object v2, v0, Lub2;->l:Ljt4;
+    invoke-virtual {p1}, Lhk5;->a()Lbde;
 
-    iget-object v3, v0, Lub2;->a:Lm82;
+    move-result-object p1
 
-    if-eqz v3, :cond_4
+    new-instance v0, Leb2;
 
-    goto/16 :goto_6
+    const/4 v1, 0x2
 
-    :cond_4
-    iget-object v3, v0, Lub2;->n:Lxob;
+    iget-wide v2, p0, Leb2;->b:J
 
-    check-cast v3, Lzob;
+    iget-wide v4, p0, Leb2;->c:J
 
-    iget-object v3, v3, Lzob;->a:Lt63;
+    invoke-direct/range {v0 .. v5}, Leb2;-><init>(IJJ)V
 
-    invoke-virtual {v3}, Lxid;->p()J
+    new-instance v1, Lde3;
 
-    move-result-wide v3
+    const/4 v2, 0x2
 
-    const-wide/16 v5, -0x1
+    invoke-direct {v1, p1, v2, v0}, Lde3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    cmp-long v3, v3, v5
-
-    if-eqz v3, :cond_7
-
-    invoke-virtual {v0}, Lub2;->K()J
-
-    move-result-wide v9
-
-    invoke-virtual {v2}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lu94;
-
-    check-cast v3, Lb94;
-
-    iget-object v3, v3, Lb94;->b:Lu5d;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Ls5d;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v3, v9, v10, v5}, Ls5d;-><init>(Lu5d;JI)V
-
-    iget-object v3, v3, Lu5d;->a:Ly5d;
-
-    invoke-virtual {v3}, Ly5d;->m()Lx5d;
-
-    move-result-object v3
-
-    check-cast v3, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    new-instance v5, Lt5d;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v6, v4}, Lt5d;-><init>(ILve6;)V
-
-    invoke-virtual {v3, v5}, Lx5d;->o(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lqc2;
-
-    const/16 v20, 0x0
-
-    if-nez v3, :cond_6
-
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const-wide/16 v4, 0x0
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
-
-    move-result-object v11
-
-    const-wide/16 v17, 0x0
-
-    const/16 v19, 0x0
-
-    const-wide/16 v4, 0x0
-
-    const/4 v8, 0x2
-
-    const-wide/16 v12, 0x0
-
-    const/4 v14, 0x3
-
-    const-wide/16 v15, 0x0
-
-    move-wide v6, v4
-
-    invoke-static/range {v4 .. v19}, Lub2;->t(JJIJLjava/util/Map;JIJJLgqe;)Lpc2;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lu94;
-
-    check-cast v2, Lb94;
-
-    iget-object v2, v2, Lb94;->b:Lu5d;
-
-    invoke-virtual {v2, v3}, Lu5d;->e(Lpc2;)J
-
-    move-result-wide v4
-
-    new-instance v2, Lqc2;
-
-    invoke-direct {v2, v4, v5, v3}, Lqc2;-><init>(JLpc2;)V
-
-    move-object v3, v2
-
-    :cond_5
-    :goto_4
-    move-object/from16 v2, v20
-
-    goto :goto_5
-
-    :cond_6
-    invoke-virtual {v2}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lu94;
-
-    check-cast v2, Lb94;
-
-    iget-object v2, v2, Lb94;->c:Ll6d;
-
-    iget-object v4, v3, Lqc2;->b:Lpc2;
-
-    iget-wide v4, v4, Lpc2;->j:J
-
-    invoke-virtual {v2}, Ll6d;->d()Ljc9;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v4, v5}, Ljc9;->d(J)Lf59;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v2, v4}, Ll6d;->b(Lf59;)Lq49;
-
-    move-result-object v20
-
-    goto :goto_4
-
-    :goto_5
-    iget-object v4, v0, Lub2;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-wide v5, v3, Lyi0;->a:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, v3, v2}, Lub2;->g(Lqc2;Lq49;)Lm82;
-
-    move-result-object v3
-
-    iput-object v3, v0, Lub2;->a:Lm82;
-
-    :goto_6
-    return-object v3
-
-    :cond_7
-    new-instance v0, Lru/ok/tamtam/exception/UserNotFoundException;
-
-    const-string v2, "no user id"
-
-    invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-object v1
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x1
         :pswitch_1
         :pswitch_0
     .end packed-switch

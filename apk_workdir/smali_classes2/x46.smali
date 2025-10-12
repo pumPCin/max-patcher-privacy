@@ -1,292 +1,891 @@
 .class public final Lx46;
-.super Lm3f;
+.super Ls59;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:La56;
-
-.field public final synthetic w0:Lp06;
+.field public b:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(La56;Lp06;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
-    iput-object p1, p0, Lx46;->Z:La56;
+    iput p1, p0, Lx46;->a:I
 
-    iput-object p2, p0, Lx46;->w0:Lp06;
+    packed-switch p1, :pswitch_data_0
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ls59;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object p1, Lggh;->p:[J
+
+    iput-object p1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ls59;->cachedSize:I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ls59;-><init>()V
+
+    const-string p1, ""
+
+    iput-object p1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ls59;->cachedSize:I
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ls59;-><init>()V
+
+    sget-object p1, Ly46;->i:[Ly46;
+
+    if-nez p1, :cond_1
+
+    sget-object p1, Lad7;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    sget-object v0, Ly46;->i:[Ly46;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ly46;
+
+    sput-object v0, Ly46;->i:[Ly46;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p1
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_1
+    :goto_2
+    sget-object p1, Ly46;->i:[Ly46;
+
+    iput-object p1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ls59;->cachedSize:I
+
+    return-void
+
+    :pswitch_2
+    invoke-direct {p0}, Ls59;-><init>()V
+
+    sget-object p1, Lggh;->o:[I
+
+    iput-object p1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Ls59;->cachedSize:I
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final computeSerializedSize()I
+    .locals 5
 
-    check-cast p1, Le34;
+    iget v0, p0, Lx46;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lx46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
 
-    move-result-object p1
+    check-cast v0, Ljava/lang/String;
 
-    check-cast p1, Lx46;
+    const-string v1, ""
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lx46;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lx46;
-
-    iget-object v1, p0, Lx46;->Z:La56;
-
-    iget-object v2, p0, Lx46;->w0:Lp06;
-
-    invoke-direct {v0, v1, v2, p2}, Lx46;-><init>(La56;Lp06;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lx46;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Lx46;->X:I
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x2
-
-    sget-object v3, Loyf;->a:Loyf;
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lx46;->Z:La56;
-
-    const/4 v6, 0x0
-
-    sget-object v7, Lf34;->a:Lf34;
-
-    if-eqz v0, :cond_3
-
-    if-eq v0, v4, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v3
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto/16 :goto_6
-
-    :cond_2
-    :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lx46;->Y:Ljava/lang/Object;
-
-    check-cast p1, Le34;
-
-    iget-object p1, v5, La56;->w0:Lmoe;
-
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-interface {p1, v0}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
 
-    :cond_4
-    invoke-interface {p1}, Ljava/util/ListIterator;->hasPrevious()Z
+    check-cast v0, Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ly73;->l(ILjava/lang/String;)I
 
     move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {p1}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lc4g;
-
-    iget-object v0, v0, Lc4g;->b:Lb4g;
-
-    sget-object v8, Lb4g;->b:Lb4g;
-
-    if-ne v0, v8, :cond_4
-
-    invoke-interface {p1}, Ljava/util/ListIterator;->nextIndex()I
-
-    move-result p1
 
     goto :goto_0
 
-    :cond_5
-    const/4 p1, -0x1
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    add-int/2addr p1, v4
+    return v0
 
-    iget-object v0, p0, Lx46;->w0:Lp06;
+    :pswitch_0
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
 
-    const v8, 0x1fffb
+    check-cast v0, [Ly46;
 
-    invoke-static {v0, v6, p1, v8}, Lp06;->a(Lp06;Ljava/lang/String;II)Lp06;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    if-eqz v0, :cond_3
 
-    sget-boolean v0, Lk2a;->Y:Z
+    array-length v0, v0
 
-    if-eqz v0, :cond_8
+    if-lez v0, :cond_3
 
-    :try_start_1
-    iget-object v0, v5, La56;->X:Ld16;
+    move v0, v1
 
-    iput v4, p0, Lx46;->X:I
+    :goto_1
+    iget-object v2, p0, Lx46;->b:Ljava/io/Serializable;
 
-    iget-object v1, v0, Ld16;->c:Ljava/lang/Object;
+    check-cast v2, [Ly46;
 
-    check-cast v1, Lkotlinx/coroutines/internal/ContextScope;
+    array-length v3, v2
 
-    invoke-interface {v1}, Le34;->getCoroutineContext()Lw24;
+    if-ge v1, v3, :cond_2
 
-    move-result-object v1
+    aget-object v2, v2, v1
 
-    new-instance v4, Lb16;
+    if-eqz v2, :cond_1
 
-    invoke-direct {v4, v0, p1, v6}, Lb16;-><init>(Ld16;Lp06;Lkotlin/coroutines/Continuation;)V
+    const/4 v3, 0x1
 
-    invoke-static {v1, v4, p0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v3, v2}, Ly73;->i(ILs59;)I
 
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result v2
 
-    if-ne p1, v7, :cond_6
+    add-int/2addr v2, v0
+
+    move v0, v2
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :cond_6
-    move-object p1, v3
+    :cond_2
+    move v1, v0
 
+    :cond_3
+    return v1
+
+    :pswitch_1
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, [I
+
+    array-length v0, v0
+
+    const/4 v1, 0x0
+
+    if-lez v0, :cond_5
+
+    move v0, v1
+
+    :goto_2
+    iget-object v2, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v2, [I
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_4
+
+    aget v2, v2, v1
+
+    invoke-static {v2}, Ly73;->g(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    array-length v1, v2
+
+    add-int/2addr v1, v0
+
+    :cond_5
+    return v1
+
+    :pswitch_2
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, [J
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_7
+
+    array-length v0, v0
+
+    if-lez v0, :cond_7
+
+    move v0, v1
+
+    :goto_3
+    iget-object v2, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v2, [J
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_6
+
+    aget-wide v3, v2, v1
+
+    invoke-static {v3, v4}, Ly73;->k(J)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    array-length v1, v2
+
+    add-int/2addr v1, v0
+
+    :cond_7
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final mergeFrom(Lx73;)Ls59;
+    .locals 6
+
+    iget v0, p0, Lx46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lx73;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lx73;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    goto :goto_0
+
+    :cond_2
     :goto_1
-    if-ne p1, v7, :cond_7
+    return-object p0
+
+    :cond_3
+    :goto_2
+    :pswitch_0
+    invoke-virtual {p1}, Lx73;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_4
+
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
 
     goto :goto_5
 
-    :cond_7
-    :goto_2
-    move-object v0, v3
+    :cond_4
+    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [Ly46;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_5
+
+    move v3, v2
+
+    goto :goto_3
+
+    :cond_5
+    array-length v3, v1
+
+    :goto_3
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [Ly46;
+
+    if-eqz v3, :cond_6
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_6
+    :goto_4
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_7
+
+    new-instance v1, Ly46;
+
+    invoke-direct {v1}, Ly46;-><init>()V
+
+    aput-object v1, v4, v3
+
+    invoke-virtual {p1, v1}, Lx73;->j(Ls59;)V
+
+    invoke-virtual {p1}, Lx73;->s()I
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_4
 
-    :goto_3
-    new-instance v0, Lv3d;
+    :cond_7
+    new-instance v0, Ly46;
 
-    invoke-direct {v0, p1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0}, Ly46;-><init>()V
 
-    :goto_4
-    invoke-static {v0}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    aput-object v0, v4, v3
 
-    move-result-object p1
+    invoke-virtual {p1, v0}, Lx73;->j(Ls59;)V
 
-    if-eqz p1, :cond_9
+    iput-object v4, p0, Lx46;->b:Ljava/io/Serializable;
 
-    iput-object v0, p0, Lx46;->Y:Ljava/lang/Object;
-
-    iput v2, p0, Lx46;->X:I
-
-    iget-object p1, v5, La56;->c:Lr8f;
-
-    check-cast p1, Lwla;
-
-    invoke-virtual {p1}, Lwla;->c()Le88;
-
-    move-result-object p1
-
-    new-instance v0, Lz46;
-
-    invoke-direct {v0, v5, v6}, Lz46;-><init>(La56;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, v0, p0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_9
-
-    goto :goto_5
+    goto :goto_2
 
     :cond_8
-    iget-object v0, v5, La56;->b:Lz56;
-
-    iput v1, p0, Lx46;->X:I
-
-    invoke-interface {v0, p1, p0}, Lz56;->m(Lp06;Lx46;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_9
-
     :goto_5
-    return-object v7
+    return-object p0
 
     :cond_9
     :goto_6
-    return-object v3
+    :pswitch_1
+    invoke-virtual {p1}, Lx73;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_11
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_e
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_a
+
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_9
+
+    goto :goto_a
+
+    :cond_a
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lx73;->e(I)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Lx73;->c()I
+
+    move-result v1
+
+    move v3, v2
+
+    :goto_7
+    invoke-virtual {p1}, Lx73;->b()I
+
+    move-result v4
+
+    if-lez v4, :cond_b
+
+    invoke-virtual {p1}, Lx73;->p()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_7
+
+    :cond_b
+    invoke-virtual {p1, v1}, Lx73;->t(I)V
+
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [I
+
+    array-length v4, v1
+
+    add-int/2addr v3, v4
+
+    new-array v5, v3, [I
+
+    if-eqz v4, :cond_c
+
+    invoke-static {v1, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_c
+    :goto_8
+    if-ge v4, v3, :cond_d
+
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v1
+
+    aput v1, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_8
+
+    :cond_d
+    iput-object v5, p0, Lx46;->b:Ljava/io/Serializable;
+
+    invoke-virtual {p1, v0}, Lx73;->d(I)V
+
+    goto :goto_6
+
+    :cond_e
+    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [I
+
+    array-length v3, v1
+
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [I
+
+    if-eqz v3, :cond_f
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_f
+    :goto_9
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_10
+
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v1
+
+    aput v1, v4, v3
+
+    invoke-virtual {p1}, Lx73;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_9
+
+    :cond_10
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v0
+
+    aput v0, v4, v3
+
+    iput-object v4, p0, Lx46;->b:Ljava/io/Serializable;
+
+    goto :goto_6
+
+    :cond_11
+    :goto_a
+    return-object p0
+
+    :cond_12
+    :goto_b
+    :pswitch_2
+    invoke-virtual {p1}, Lx73;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_18
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_13
+
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    goto/16 :goto_11
+
+    :cond_13
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lx73;->e(I)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Lx73;->c()I
+
+    move-result v1
+
+    move v3, v2
+
+    :goto_c
+    invoke-virtual {p1}, Lx73;->b()I
+
+    move-result v4
+
+    if-lez v4, :cond_14
+
+    invoke-virtual {p1}, Lx73;->q()J
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_c
+
+    :cond_14
+    invoke-virtual {p1, v1}, Lx73;->t(I)V
+
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [J
+
+    if-nez v1, :cond_15
+
+    move v4, v2
+
+    goto :goto_d
+
+    :cond_15
+    array-length v4, v1
+
+    :goto_d
+    add-int/2addr v3, v4
+
+    new-array v5, v3, [J
+
+    if-eqz v4, :cond_16
+
+    invoke-static {v1, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_16
+    :goto_e
+    if-ge v4, v3, :cond_17
+
+    invoke-virtual {p1}, Lx73;->q()J
+
+    move-result-wide v1
+
+    aput-wide v1, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_e
+
+    :cond_17
+    iput-object v5, p0, Lx46;->b:Ljava/io/Serializable;
+
+    invoke-virtual {p1, v0}, Lx73;->d(I)V
+
+    goto :goto_b
+
+    :cond_18
+    invoke-static {p1, v1}, Lggh;->u(Lx73;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [J
+
+    if-nez v1, :cond_19
+
+    move v3, v2
+
+    goto :goto_f
+
+    :cond_19
+    array-length v3, v1
+
+    :goto_f
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [J
+
+    if-eqz v3, :cond_1a
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_1a
+    :goto_10
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_1b
+
+    invoke-virtual {p1}, Lx73;->q()J
+
+    move-result-wide v1
+
+    aput-wide v1, v4, v3
+
+    invoke-virtual {p1}, Lx73;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_10
+
+    :cond_1b
+    invoke-virtual {p1}, Lx73;->q()J
+
+    move-result-wide v0
+
+    aput-wide v0, v4, v3
+
+    iput-object v4, p0, Lx46;->b:Ljava/io/Serializable;
+
+    goto/16 :goto_b
+
+    :cond_1c
+    :goto_11
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final writeTo(Ly73;)V
+    .locals 4
+
+    iget v0, p0, Lx46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Ly73;->E(ILjava/lang/String;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, [Ly46;
+
+    if-eqz v0, :cond_2
+
+    array-length v0, v0
+
+    if-lez v0, :cond_2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [Ly46;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_2
+
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Ly73;->y(ILs59;)V
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, [I
+
+    array-length v0, v0
+
+    if-lez v0, :cond_3
+
+    const/4 v0, 0x0
+
+    :goto_1
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [I
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_3
+
+    aget v1, v1, v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v2, v1}, Ly73;->w(II)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v0, [J
+
+    if-eqz v0, :cond_4
+
+    array-length v0, v0
+
+    if-lez v0, :cond_4
+
+    const/4 v0, 0x0
+
+    :goto_2
+    iget-object v1, p0, Lx46;->b:Ljava/io/Serializable;
+
+    check-cast v1, [J
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_4
+
+    aget-wide v2, v1, v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v2, v3}, Ly73;->x(IJ)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

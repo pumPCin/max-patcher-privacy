@@ -1,19 +1,45 @@
-.class public abstract Lhdh;
-.super Ljava/lang/Object;
+.class public final synthetic Lhdh;
+.super Lf4c;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final a:Lhdh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    const-class v0, Lhdh;
+    new-instance v0, Lhdh;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    const-string v1, "getFreezeCount()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lake;
+
+    const-string v4, "freezeCount"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lhdh;->a:Lhdh;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Lake;
+
+    iget-wide v0, p1, Lake;->v:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

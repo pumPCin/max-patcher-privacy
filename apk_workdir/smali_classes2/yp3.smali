@@ -1,48 +1,121 @@
 .class public final Lyp3;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:J
 
-.field public final synthetic Y:Lfa2;
+.field public b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ljava/lang/String;
 
+.field public d:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public e:J
 
-    iput-object p1, p0, Lyp3;->Y:Lfa2;
+.field public f:Ljava/util/List;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public g:J
 
-    return-void
-.end method
+.field public h:J
+
+.field public i:Leq3;
+
+.field public j:I
+
+.field public k:Lfq3;
+
+.field public l:I
+
+.field public m:I
+
+.field public n:Ljava/util/List;
+
+.field public o:Ljava/lang/String;
+
+.field public p:Ljava/lang/String;
+
+.field public q:Ljava/lang/String;
+
+.field public r:J
+
+.field public s:J
+
+.field public t:J
+
+.field public u:Lbq3;
+
+.field public v:[I
+
+.field public w:Ldq3;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lgq3;
     .locals 1
 
-    iput-object p1, p0, Lyp3;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lyp3;->k:Lfq3;
 
-    iget p1, p0, Lyp3;->X:I
+    if-nez v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    sget-object v0, Lfq3;->b:Lfq3;
 
-    or-int/2addr p1, v0
+    iput-object v0, p0, Lyp3;->k:Lfq3;
 
-    iput p1, p0, Lyp3;->X:I
+    :cond_0
+    iget v0, p0, Lyp3;->l:I
 
-    iget-object p1, p0, Lyp3;->Y:Lfa2;
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lyp3;->l:I
+
+    :cond_1
+    iget-object v0, p0, Lyp3;->n:Ljava/util/List;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lyp3;->n:Ljava/util/List;
+
+    :cond_2
+    iget-object v0, p0, Lyp3;->f:Ljava/util/List;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_3
+    sget-object v0, Laq3;->e:Laq3;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lyp3;->f:Ljava/util/List;
+
+    :cond_4
+    iget-object v0, p0, Lyp3;->v:[I
+
+    if-nez v0, :cond_5
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    move-result-object p1
+    iput-object v0, p0, Lyp3;->v:[I
 
-    return-object p1
+    :cond_5
+    new-instance v0, Lgq3;
+
+    invoke-direct {v0, p0}, Lgq3;-><init>(Lyp3;)V
+
+    return-object v0
 .end method

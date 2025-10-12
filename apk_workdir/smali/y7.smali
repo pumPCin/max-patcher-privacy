@@ -1,363 +1,349 @@
 .class public final Ly7;
-.super Lgh5;
+.super Ln6d;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic l:I
+.field public j:Ljava/lang/Object;
+
+.field public final k:Lzs5;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p1, p0, Ly7;->l:I
+    invoke-direct {p0}, Ln6d;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzs5;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lzs5;-><init>(I)V
+
+    iput-object v0, p0, Ly7;->k:Lzs5;
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ln6d;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j(Ljava/lang/Object;)Landroid/content/Intent;
-    .locals 5
+.method public final K(ILjava/lang/String;)V
+    .locals 1
 
-    iget v0, p0, Ly7;->l:I
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    check-cast p1, Lud7;
+    invoke-virtual {v0, p1, p2}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->C0(ILjava/lang/String;)V
 
-    new-instance v0, Landroid/content/Intent;
+    return-void
+.end method
 
-    const-string v1, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+.method public final N(Ljava/lang/String;[Ljava/lang/String;I)V
+    .locals 1
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    iget-object v1, p1, Lud7;->b:Landroid/content/Intent;
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v2, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+    invoke-static {v0, p1, p2, p3}, Lbbh;->A(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Ljava/lang/String;[Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+    return-void
+.end method
 
-    move-result-object v3
+.method public final O(Landroid/os/Bundle;)V
+    .locals 2
 
-    if-eqz v3, :cond_0
+    invoke-super {p0, p1}, Ln6d;->O(Landroid/os/Bundle;)V
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    iget-object v0, p0, Ly7;->k:Lzs5;
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v2, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
+    const-string v1, "TransactionIndexer.currentIndex"
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p1, Lud7;->a:Landroid/content/IntentSender;
-
-    iget v2, p1, Lud7;->o:I
-
-    iget p1, p1, Lud7;->c:I
-
-    new-instance v3, Lud7;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v1, v4, p1, v2}, Lud7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
-
-    move-object p1, v3
-
-    :cond_0
-    const-string v1, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const/4 p1, 0x2
-
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
+    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
 
     move-result p1
 
-    if-eqz p1, :cond_1
+    iput p1, v0, Lzs5;->b:I
 
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "CreateIntent created the following intent: "
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "FragmentManager"
-
-    invoke-static {v1, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-object v0
-
-    :pswitch_0
-    check-cast p1, Landroid/content/Intent;
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, [Ljava/lang/String;
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "androidx.activity.result.contract.extra.PERMISSIONS"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public s(Landroidx/fragment/app/b;Ljava/lang/Object;)Lx7;
-    .locals 4
+.method public final P(Landroid/os/Bundle;)V
+    .locals 2
 
-    iget v0, p0, Ly7;->l:I
+    invoke-super {p0, p1}, Ln6d;->P(Landroid/os/Bundle;)V
 
-    packed-switch v0, :pswitch_data_0
+    const-string v0, "TransactionIndexer.currentIndex"
 
-    invoke-super {p0, p1, p2}, Lgh5;->s(Landroidx/fragment/app/b;Ljava/lang/Object;)Lx7;
+    iget-object v1, p0, Ly7;->k:Lzs5;
 
-    move-result-object p1
+    iget v1, v1, Lzs5;->b:I
 
-    return-object p1
+    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    :pswitch_0
-    check-cast p2, [Ljava/lang/String;
+    return-void
+.end method
 
-    array-length v0, p2
+.method public final U(Landroid/content/Intent;)V
+    .locals 3
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    new-instance p1, Lx7;
+    check-cast v0, Landroidx/fragment/app/a;
 
-    sget-object p2, Lc75;->a:Lc75;
+    iget-object v1, v0, Landroidx/fragment/app/a;->E0:Lw96;
 
-    invoke-direct {p1, p2}, Lx7;-><init>(Ljava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    goto :goto_2
-
-    :cond_0
-    array-length v0, p2
+    iget-object v0, v1, Lw96;->x0:Landroidx/fragment/app/b;
 
     const/4 v1, 0x0
 
-    move v2, v1
+    invoke-virtual {v0, p1, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    aget-object v3, p2, v2
-
-    invoke-static {p1, v3}, Lo7;->d(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    array-length p1, p2
-
-    invoke-static {p1}, Lwa8;->V(I)I
-
-    move-result p1
-
-    const/16 v0, 0x10
-
-    if-ge p1, v0, :cond_3
-
-    move p1, v0
-
-    :cond_3
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashMap;-><init>(I)V
-
-    array-length p1, p2
-
-    :goto_1
-    if-ge v1, p1, :cond_4
-
-    aget-object v2, p2, v1
-
-    sget-object v3, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Lx7;
-
-    invoke-direct {p1, v0}, Lx7;-><init>(Ljava/lang/Object;)V
-
-    :goto_2
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final y(Landroid/content/Intent;I)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Ly7;->l:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lv7;
-
-    invoke-direct {v0, p1, p2}, Lv7;-><init>(Landroid/content/Intent;I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lv7;
-
-    invoke-direct {v0, p1, p2}, Lv7;-><init>(Landroid/content/Intent;I)V
-
-    return-object v0
-
-    :pswitch_1
-    const/4 v0, -0x1
-
-    if-eq p2, v0, :cond_0
-
-    goto :goto_2
+    return-void
 
     :cond_0
-    if-nez p1, :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_2
+    const-string v1, "Fragment "
 
-    :cond_1
-    const-string p2, "androidx.activity.result.contract.extra.PERMISSIONS"
+    const-string v2, " not attached to Activity"
 
-    invoke-virtual {p1, p2}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-static {v1, v0, v2}, Lc85;->k(Ljava/lang/String;Landroidx/fragment/app/a;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    const-string v0, "androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
+    throw p1
+.end method
 
-    move-result-object p1
+.method public final V(Ljava/lang/String;Landroid/content/Intent;I)V
+    .locals 2
 
-    if-eqz p1, :cond_5
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    if-nez p2, :cond_2
+    const/4 v1, 0x0
 
-    goto :goto_2
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    :cond_2
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->E0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    array-length v1, p1
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+.method public final W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .locals 1
 
-    array-length v1, p1
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    move v3, v2
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->E0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
 
-    :goto_0
-    if-ge v3, v1, :cond_4
+    return-void
+.end method
 
-    aget v4, p1, v3
+.method public final X(Ljava/lang/String;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    .locals 10
 
-    if-nez v4, :cond_3
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
 
-    const/4 v4, 0x1
+    move-object v2, v0
 
-    goto :goto_1
+    check-cast v2, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    :cond_3
-    move v4, v2
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_1
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    new-instance v1, Lfe;
 
-    move-result-object v4
+    move-object v3, p2
 
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move v4, p3
 
-    add-int/lit8 v3, v3, 0x1
+    move-object v5, p4
+
+    move v6, p5
+
+    move/from16 v7, p6
+
+    move/from16 v8, p7
+
+    move-object/from16 v9, p8
+
+    invoke-direct/range {v1 .. v9}, Lfe;-><init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+
+    invoke-virtual {v2, p3, p1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->C0(ILjava/lang/String;)V
+
+    invoke-virtual {v1}, Lfe;->invoke()Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final Z(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
+
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Lbbh;->B(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final a0(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Lk52;)V
+    .locals 2
+
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
+
+    if-ne v0, p1, :cond_1
+
+    iget-object v0, p0, Ln6d;->i:Landroid/view/ViewGroup;
+
+    if-eq v0, p2, :cond_0
 
     goto :goto_0
 
-    :cond_4
-    invoke-static {p2}, Lhs;->f0([Ljava/lang/Object;)Ljava/util/ArrayList;
+    :cond_0
+    return-void
 
-    move-result-object p1
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Ln6d;->i:Landroid/view/ViewGroup;
 
-    invoke-static {p1, v0}, Le93;->O0(Ljava/lang/Iterable;Ljava/util/List;)Ljava/util/ArrayList;
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    instance-of v1, v0, Lnz3;
 
-    invoke-static {p1}, Lwa8;->Z(Ljava/util/ArrayList;)Ljava/util/Map;
+    if-eqz v1, :cond_2
 
-    move-result-object p1
+    check-cast v0, Lnz3;
 
-    goto :goto_3
+    invoke-virtual {p0, v0}, Ln6d;->L(Lnz3;)V
 
-    :cond_5
-    :goto_2
-    sget-object p1, Lc75;->a:Lc75;
+    :cond_2
+    invoke-virtual {p0, p2}, Ln6d;->a(Lnz3;)V
 
-    :goto_3
-    return-object p1
+    iput-object p1, p0, Ly7;->j:Ljava/lang/Object;
 
-    nop
+    iput-object p2, p0, Ln6d;->i:Landroid/view/ViewGroup;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance p1, Lum7;
+
+    const/16 v0, 0x14
+
+    invoke-direct {p1, v0, p0}, Lum7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final d()Landroid/app/Activity;
+    .locals 1
+
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    iget-object v0, v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Loq7;
+
+    iget-object v0, v0, Loq7;->b:Landroid/app/Activity;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final i()Ln6d;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final j()Ljava/util/List;
+    .locals 1
+
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
+
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    iget-object v0, v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Loq7;
+
+    iget-object v0, v0, Loq7;->j:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final k()Lzs5;
+    .locals 1
+
+    iget-object v0, p0, Ly7;->k:Lzs5;
+
+    return-object v0
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Ly7;->j:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ly7;->d()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ly7;->d()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p(Landroid/app/Activity;Z)V
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Ln6d;->p(Landroid/app/Activity;Z)V
+
+    if-nez p2, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Ly7;->j:Ljava/lang/Object;
+
+    :cond_0
+    return-void
 .end method

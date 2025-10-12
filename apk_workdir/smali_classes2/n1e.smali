@@ -1,121 +1,63 @@
-.class public final synthetic Ln1e;
-.super Ljava/lang/Object;
+.class public final Ln1e;
+.super Luc0;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-
-# instance fields
-.field public final synthetic a:Ls1e;
-
-.field public final synthetic b:Lp1e;
+# static fields
+.field public static final b:Ln1e;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls1e;Lp1e;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ln1e;
 
-    iput-object p1, p0, Ln1e;->a:Ls1e;
+    const/16 v1, 0x12
 
-    iput-object p2, p0, Ln1e;->b:Lp1e;
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Ln1e;->b:Ln1e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->isPressed()Z
+    const/4 v0, 0x1
 
-    move-result p1
+    if-ne p0, p1, :cond_0
 
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Ln1e;->a:Ls1e;
-
-    invoke-virtual {p1}, Ls1e;->getModelItem()Lj1e;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj1e;->d()Lg1e;
-
-    move-result-object v0
-
-    instance-of v0, v0, Le1e;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Ls1e;->getModelItem()Lj1e;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lj1e;->d()Lg1e;
-
-    move-result-object v0
-
-    instance-of v1, v0, Le1e;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Le1e;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-object v0, v2
+    instance-of p1, p1, Ln1e;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    if-nez p1, :cond_1
 
-    iget-boolean v0, v0, Le1e;->a:Z
+    const/4 p1, 0x0
 
-    if-ne v0, p2, :cond_1
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    invoke-virtual {p1}, Ls1e;->getModelItem()Lj1e;
+    return v0
+.end method
 
-    move-result-object v0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-interface {v0}, Lj1e;->d()Lg1e;
+    const v0, -0xc7cb8f7
 
-    move-result-object v0
+    return v0
+.end method
 
-    instance-of v1, v0, Le1e;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    if-eqz v1, :cond_2
+    const-string v0, "SelectPhotoFromGallery"
 
-    move-object v2, v0
-
-    check-cast v2, Le1e;
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    iput-boolean p2, v2, Le1e;->a:Z
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p1}, Ls1e;->getModelItem()Lj1e;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lww7;->getItemId()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Ln1e;->b:Lp1e;
-
-    invoke-interface {p1, v0, v1, p2}, Lp1e;->b(JZ)V
-
-    :cond_4
-    return-void
+    return-object v0
 .end method

@@ -1,29 +1,31 @@
-.class public abstract Ling;
-.super Ljava/lang/Object;
+.class public final Ling;
+.super Lhng;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ling;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # direct methods
-.method public static a(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-static {p0, p1}, Lyzc;->y(Landroid/view/View;Landroid/graphics/Matrix;)V
+    new-instance v0, Lpzd;
 
-    return-void
-.end method
+    const/16 v1, 0x1d
 
-.method public static b(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
 
-    invoke-static {p0, p1}, Lyzc;->C(Landroid/view/View;Landroid/graphics/Matrix;)V
-
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lyzc;->D(Landroid/view/View;Landroid/graphics/Matrix;)V
+    sput-object v0, Ling;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method

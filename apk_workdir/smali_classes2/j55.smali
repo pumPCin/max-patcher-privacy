@@ -1,43 +1,77 @@
-.class public interface abstract Lj55;
+.class public final Lj55;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Landroid/graphics/Rect;
+
+
+# instance fields
+.field public final a:Lh4f;
+
+.field public final b:Lh4f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    sput-object v0, Lj55;->c:Landroid/graphics/Rect;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ln32;
+
+    invoke-direct {v0, p0, p1}, Ln32;-><init>(Lj55;Landroid/content/Context;)V
+
+    new-instance p1, Lh4f;
+
+    invoke-direct {p1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    iput-object p1, p0, Lj55;->a:Lh4f;
+
+    new-instance p1, Lky3;
+
+    const/16 v0, 0xb
+
+    invoke-direct {p1, v0, p0}, Lky3;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lh4f;
+
+    invoke-direct {v0, p1}, Lh4f;-><init>(Ltd6;)V
+
+    iput-object v0, p0, Lj55;->b:Lh4f;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(ILjava/lang/CharSequence;)Z
-.end method
+.method public final a()F
+    .locals 1
 
-.method public b(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 0
+    iget-object v0, p0, Lj55;->a:Lh4f;
 
-    invoke-interface {p0, p2}, Lj55;->e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    check-cast v0, Ljava/lang/Number;
 
-.method public abstract c(Ljava/lang/CharSequence;)Ljava/util/List;
-.end method
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
-.method public d(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
-    .locals 0
+    move-result v0
 
-    const-string p1, ""
-
-    return-object p1
-.end method
-
-.method public abstract e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-.end method
-
-.method public f(Ljava/lang/CharSequence;)Ljava/util/List;
-    .locals 0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public abstract g(Ljava/lang/CharSequence;)Z
+    return v0
 .end method

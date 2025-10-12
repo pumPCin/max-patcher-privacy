@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Lim7;
+.implements Lel7;
 
 
 # annotations
@@ -14,7 +14,7 @@
         "Ljava/util/Collection<",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         ">;",
-        "Lim7;"
+        "Lel7;"
     }
 .end annotation
 
@@ -30,10 +30,10 @@
         "externalId",
         "getByExternal",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
-        "Lxg1;",
+        "Lyg1;",
         "internalId",
         "getByInternal",
-        "(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
+        "(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "",
         "hasOtherParticipants",
         "()Z",
@@ -216,7 +216,7 @@
     return-object p1
 .end method
 
-.method public abstract getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+.method public abstract getByInternal(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 .end method
 
 .method public abstract getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;

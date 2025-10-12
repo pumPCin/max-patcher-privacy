@@ -1,32 +1,32 @@
 .class public Lcom/facebook/imagepipeline/memory/BufferMemoryChunkPool;
-.super Lg19;
+.super Lxz8;
 .source "SourceFile"
 
 
 # annotations
-.annotation build Lit4;
+.annotation build Lws4;
 .end annotation
 
 
 # direct methods
-.method public constructor <init>(Lj19;Lxmb;Lymb;)V
+.method public constructor <init>(Lc09;Lqlb;Lrlb;)V
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
-    invoke-direct {p0, p1, p2, p3}, Lg19;-><init>(Lj19;Lxmb;Lymb;)V
+    invoke-direct {p0, p1, p2, p3}, Lxz8;-><init>(Lc09;Lqlb;Lrlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/lang/Object;
+.method public final e(I)Ljava/lang/Object;
     .locals 1
 
-    new-instance v0, Lyt0;
+    new-instance v0, Lst0;
 
-    invoke-direct {v0, p1}, Lyt0;-><init>(I)V
+    invoke-direct {v0, p1}, Lst0;-><init>(I)V
 
     return-object v0
 .end method

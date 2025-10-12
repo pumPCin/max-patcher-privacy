@@ -4,260 +4,250 @@
 
 
 # instance fields
-.field public a:Lq1d;
+.field public final a:Lyn7;
 
-.field public b:Le6c;
+.field public final b:Lyn7;
 
-.field public c:I
+.field public final c:Lh4f;
 
-.field public d:Ljava/lang/String;
-
-.field public e:Lps6;
-
-.field public f:Lot6;
-
-.field public g:Lf3d;
-
-.field public h:Ld3d;
-
-.field public i:Ld3d;
-
-.field public j:Ld3d;
-
-.field public k:J
-
-.field public l:J
-
-.field public m:Lrtd;
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p3, p0, Lc3d;->a:Lyn7;
 
-    iput v0, p0, Lc3d;->c:I
+    iput-object p4, p0, Lc3d;->b:Lyn7;
 
-    new-instance v0, Lot6;
+    move-object p3, p2
 
-    invoke-direct {v0}, Lot6;-><init>()V
+    move-object p2, p1
 
-    iput-object v0, p0, Lc3d;->f:Lot6;
+    new-instance p1, Lm44;
 
-    return-void
-.end method
+    move-object v0, p6
 
-.method public static b(Ld3d;Ljava/lang/String;)V
-    .locals 1
+    move-object p6, p4
 
-    if-eqz p0, :cond_4
+    move-object p4, p5
 
-    iget-object v0, p0, Ld3d;->Z:Lf3d;
+    move-object p5, v0
 
-    if-nez v0, :cond_3
+    invoke-direct/range {p1 .. p6}, Lm44;-><init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
 
-    iget-object v0, p0, Ld3d;->w0:Ld3d;
+    new-instance p2, Lh4f;
 
-    if-nez v0, :cond_2
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
 
-    iget-object v0, p0, Ld3d;->x0:Ld3d;
+    iput-object p2, p0, Lc3d;->c:Lh4f;
 
-    if-nez v0, :cond_1
-
-    iget-object p0, p0, Ld3d;->y0:Ld3d;
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string p0, ".priorResponse != null"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    const-string p0, ".cacheResponse != null"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    const-string p0, ".networkResponse != null"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    const-string p0, ".body != null"
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ld3d;
-    .locals 17
+.method public final a()Lhj1;
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lc3d;->c:Lh4f;
 
-    iget v5, v0, Lc3d;->c:I
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
 
-    if-ltz v5, :cond_0
+    move-result-object v0
 
-    const/4 v1, 0x1
+    check-cast v0, Lhj1;
+
+    return-object v0
+.end method
+
+.method public final b()V
+    .locals 6
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lc3d;->d:I
+
+    invoke-virtual {p0}, Lc3d;->a()Lhj1;
+
+    move-result-object v0
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    if-eqz v1, :cond_4
+    sget-object v2, Lr28;->o:Lr28;
 
-    iget-object v2, v0, Lc3d;->a:Lq1d;
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
 
-    if-eqz v2, :cond_3
+    move-result v3
 
-    iget-object v3, v0, Lc3d;->b:Le6c;
+    if-eqz v3, :cond_1
 
-    if-eqz v3, :cond_2
+    const-string v3, "startBusy ringtone"
 
-    iget-object v4, v0, Lc3d;->d:Ljava/lang/String;
+    const/4 v4, 0x0
 
-    if-eqz v4, :cond_1
+    const-string v5, "RingtoneManagerTag"
 
-    iget-object v6, v0, Lc3d;->e:Lps6;
-
-    iget-object v1, v0, Lc3d;->f:Lot6;
-
-    invoke-virtual {v1}, Lot6;->c()Lpt6;
-
-    move-result-object v7
-
-    iget-object v8, v0, Lc3d;->g:Lf3d;
-
-    iget-object v9, v0, Lc3d;->h:Ld3d;
-
-    iget-object v10, v0, Lc3d;->i:Ld3d;
-
-    iget-object v11, v0, Lc3d;->j:Ld3d;
-
-    iget-wide v12, v0, Lc3d;->k:J
-
-    iget-wide v14, v0, Lc3d;->l:J
-
-    iget-object v1, v0, Lc3d;->m:Lrtd;
-
-    move-object/from16 v16, v1
-
-    new-instance v1, Ld3d;
-
-    invoke-direct/range {v1 .. v16}, Ld3d;-><init>(Lq1d;Le6c;Ljava/lang/String;ILps6;Lpt6;Lf3d;Ld3d;Ld3d;Ld3d;JJLrtd;)V
-
-    return-object v1
+    invoke-virtual {v1, v2, v5, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    :goto_0
+    invoke-virtual {v0}, Lhj1;->a()Z
 
-    const-string v2, "message == null"
+    move-result v1
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_2
 
-    throw v1
+    return-void
 
     :cond_2
-    new-instance v1, Ljava/lang/IllegalStateException;
+    iget-object v1, v0, Lhj1;->j:Lohe;
 
-    const-string v2, "protocol == null"
+    iget-object v1, v1, Lohe;->f:Lkhe;
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x0
 
-    throw v1
+    invoke-virtual {v0, v1, v2}, Lhj1;->c(Lnhe;Z)V
 
-    :cond_3
-    new-instance v1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v2, "request == null"
+.method public final c()V
+    .locals 3
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x5
 
-    throw v1
+    iput v0, p0, Lc3d;->d:I
 
-    :cond_4
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lc3d;->a()Lhj1;
 
-    const-string v2, "code < 0: "
+    move-result-object v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Lhj1;->h:Lh4f;
 
-    iget v2, v0, Lc3d;->c:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/IllegalStateException;
+    check-cast v1, Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v1
+    move-result v1
 
-    invoke-direct {v2, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    throw v2
+    iget-object v1, v0, Lhj1;->j:Lohe;
+
+    iget-object v1, v1, Lohe;->d:Lkhe;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lhj1;->c(Lnhe;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d()V
+    .locals 6
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lc3d;->d:I
+
+    invoke-virtual {p0}, Lc3d;->a()Lhj1;
+
+    move-result-object v0
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lr28;->o:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "startEnd ringtone"
+
+    const/4 v4, 0x0
+
+    const-string v5, "RingtoneManagerTag"
+
+    invoke-virtual {v1, v2, v5, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Lhj1;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return-void
+
+    :cond_2
+    iget-object v1, v0, Lhj1;->j:Lohe;
+
+    iget-object v1, v1, Lohe;->a:Lkhe;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lhj1;->c(Lnhe;Z)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 3
+
+    iget v0, p0, Lc3d;->d:I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x4
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput v2, p0, Lc3d;->d:I
+
+    invoke-virtual {p0}, Lc3d;->a()Lhj1;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lhj1;->e()V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    iput v2, p0, Lc3d;->d:I
+
+    return-void
 .end method

@@ -1,97 +1,85 @@
 .class public final Lgh2;
-.super Lbj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llh2;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:Ljava/util/Set;
-
-.field public final b:J
-
-.field public final c:I
-
-.field public final o:I
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(JJIIILjava/util/Set;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lbj0;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Lgh2;->b:J
-
-    iput p5, p0, Lgh2;->c:I
-
-    iput p6, p0, Lgh2;->o:I
-
-    iput p7, p0, Lgh2;->X:I
-
-    iput-object p8, p0, Lgh2;->Y:Ljava/util/Set;
+    iput-wide p1, p0, Lgh2;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lgh2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgh2;
+
+    iget-wide v3, p0, Lgh2;->a:J
+
+    iget-wide v5, p1, Lgh2;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lgh2;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "Add(messageId="
 
-    const-string v1, "ChatMediaEvent{messageId="
+    const-string v1, ")"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lgh2;->a:J
 
-    iget-wide v1, p0, Lgh2;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lgh2;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", backwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lgh2;->o:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", responseCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lgh2;->X:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", types="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgh2;->Y:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "} "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-super {p0}, Lbj0;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lajf;->o(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

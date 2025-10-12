@@ -1,64 +1,67 @@
 .class public final Lxu4;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
-# interfaces
-.implements Lyu4;
 
+# instance fields
+.field public X:Le39;
 
-# static fields
-.field public static final a:Lxu4;
+.field public Y:J
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lyu4;
+
+.field public final synthetic r0:Lyu4;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyu4;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lxu4;
+    iput-object p1, p0, Lxu4;->r0:Lyu4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxu4;->a:Lxu4;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lxu4;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lxu4;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lxu4;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lxu4;->s0:I
 
-    const/4 p1, 0x0
+    const-wide/16 v6, 0x0
 
-    return p1
+    const/4 v8, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Lxu4;->r0:Lyu4;
 
-.method public final hashCode()I
-    .locals 1
+    const/4 v1, 0x0
 
-    const v0, 0x26c2381a
+    const/4 v2, 0x0
 
-    return v0
-.end method
+    const/4 v3, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const-wide/16 v4, 0x0
 
-    const-string v0, "MaxFailedCount"
+    move-object v9, p0
 
-    return-object v0
+    invoke-virtual/range {v0 .. v9}, Lyu4;->k(Le39;Lj10;IJJLjava/io/File;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,129 +1,51 @@
 .class public final Lova;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Ltva;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lova;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Luva;
+
+.field public Z:I
+
+.field public o:Ljava/util/Iterator;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ltc8;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
-
-    sput-object v0, Lova;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Luva;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lova;->Y:Luva;
 
-    iput p1, p0, Lova;->a:I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Lova;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lova;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lova;->Z:I
+
+    iget-object p1, p0, Lova;->Y:Luva;
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, v0, p0}, Luva;->a(Ljava/io/File;Ljava/lang/String;Lwy3;)Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    move-result-object p1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lova;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lova;
-
-    iget v1, p0, Lova;->a:I
-
-    iget p1, p1, Lova;->a:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lova;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ContrastIcon(iconRes="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lova;->a:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lova;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

@@ -1,49 +1,75 @@
-.class public final Lokd;
-.super Lnz3;
+.class public interface abstract Lokd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Lpkd;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lpkd;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lokd;->X:Lpkd;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Lyzd;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()Lcdf;
     .locals 1
-
-    iput-object p1, p0, Lokd;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lokd;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lokd;->Y:I
-
-    iget-object p1, p0, Lokd;->X:Lpkd;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Lpkd;->b(Lpkd;Ljava/lang/Throwable;Lnz3;)Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public b()Lnzd;
+    .locals 1
 
-    return-object p1
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public c()Lcdf;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public d()Lvzd;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public e()Lio7;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public abstract f()I
+.end method
+
+.method public g()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getType()Lxzd;
+    .locals 1
+
+    sget-object v0, Lxzd;->b:Lxzd;
+
+    return-object v0
+.end method
+
+.method public r()Lvd6;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

@@ -1,380 +1,177 @@
-.class public final Li32;
-.super Lm3f;
+.class public final synthetic Li32;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnf6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Landroidx/appcompat/widget/AppCompatImageView;
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;III)V
     .locals 0
 
-    iput p3, p0, Li32;->X:I
+    iput p4, p0, Li32;->a:I
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li32;->o:Ljava/lang/Object;
+
+    iput p2, p0, Li32;->b:I
+
+    iput p3, p0, Li32;->c:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 9
 
-    iget v0, p0, Li32;->X:I
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    check-cast p2, Luxa;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Li32;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance p2, Li32;
+    iget-object v0, p0, Li32;->o:Ljava/lang/Object;
 
-    const/4 v0, 0x3
+    check-cast v0, Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    const/4 v1, 0x3
+    iget-object v1, v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->Y:Landroid/animation/IntEvaluator;
 
-    invoke-direct {p2, v0, p3, v1}, Li32;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    iput-object p1, p2, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
+    move-result p1
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget v2, p0, Li32;->b:I
 
-    invoke-virtual {p2, p1}, Li32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Li32;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Li32;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p2, p1}, Li32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p2, Li32;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Li32;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p2, p1}, Li32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_2
-    new-instance p2, Li32;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Li32;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p2, p1}, Li32;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Li32;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->i:I
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    sget v1, Lcpa;->i:I
-
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Luxa;->c()Lyoe;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lyoe;->a:Lwoe;
-
-    iget-object v0, v0, Lwoe;->a:Lvoe;
-
-    iget v0, v0, Lvoe;->h:I
-
-    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v2, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v2}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    const/4 v3, -0x1
+    iget v3, p0, Li32;->c:I
 
-    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v2}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->i:I
-
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    sget v1, Lxsa;->a:I
-
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Luxa;->c()Lyoe;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lyoe;->a:Lwoe;
-
-    iget-object v0, v0, Lwoe;->a:Lvoe;
-
-    iget v0, v0, Lvoe;->h:I
-
-    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v2, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v2}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v1, v2}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v2
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v2, Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3, v1}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v2}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Luxa;->getIcon()Lk27;
-
-    move-result-object v0
-
-    iget v0, v0, Lk27;->i:I
-
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
-
-    sget v0, Lxsa;->w:I
-
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Li32;->Y:Landroidx/appcompat/widget/AppCompatImageView;
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->c()Lyoe;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lyoe;->a:Lwoe;
-
-    iget-object v1, v1, Lwoe;->a:Lvoe;
-
-    iget v1, v1, Lvoe;->h:I
-
-    new-instance v2, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v3, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v3}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v2, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v2}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    const/4 v4, -0x1
+    invoke-virtual {v1, p1, v2, v3}, Landroid/animation/IntEvaluator;->evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
 
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+    move-result-object p1
 
-    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
+    iget-object v1, v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->L0:Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object v1
+    move-result v2
 
-    const/4 v4, 0x0
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    invoke-direct {v3, v1, v4, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    iget-object v0, v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->B0:Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-virtual {p1, v3}, Landroidx/appcompat/widget/AppCompatImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    sget v1, Lg9d;->p0:I
+    move-result p1
 
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/ColorDrawable;->setAlpha(I)V
 
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Li32;->o:Ljava/lang/Object;
 
-    invoke-interface {v0}, Luxa;->getIcon()Lk27;
+    check-cast v0, Lk32;
 
-    move-result-object v0
+    iget v1, v0, Lk32;->o:F
 
-    iget v0, v0, Lk27;->j:I
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    move-result p1
 
-    move-result-object v0
+    iget-object v2, v0, Lk32;->X:[Ljava/lang/Float;
 
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    iget v3, p0, Li32;->b:I
 
-    sget-object p1, Loyf;->a:Loyf;
+    aget-object v4, v2, v3
 
-    return-object p1
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-eqz v4, :cond_0
+
+    move v4, v6
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v5
+
+    :goto_0
+    const/high16 v7, 0x3f800000    # 1.0f
+
+    if-eqz v4, :cond_1
+
+    sub-float v8, v1, v7
+
+    mul-float/2addr v8, p1
+
+    add-float/2addr v8, v7
+
+    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v8
+
+    aput-object v8, v2, v3
+
+    :cond_1
+    iget v3, p0, Li32;->c:I
+
+    aget-object v8, v2, v3
+
+    if-eqz v8, :cond_2
+
+    move v5, v6
+
+    :cond_2
+    if-eqz v5, :cond_3
+
+    sub-float v6, v1, v7
+
+    mul-float/2addr v6, p1
+
+    sub-float/2addr v1, v6
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v2, v3
+
+    :cond_3
+    if-nez v4, :cond_4
+
+    if-eqz v5, :cond_5
+
+    :cond_4
+    iget-object p1, v0, Lk32;->a:Ltua;
+
+    invoke-virtual {p1}, Ltua;->invoke()Ljava/lang/Object;
+
+    :cond_5
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

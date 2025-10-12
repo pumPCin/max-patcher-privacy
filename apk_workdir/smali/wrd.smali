@@ -1,31 +1,30 @@
-.class public final Lwrd;
-.super Lm1;
+.class public abstract Lwrd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final w0:Lgwd;
-
-
 # direct methods
-.method public constructor <init>(ILgwd;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lwrd;->w0:Lgwd;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m()V
+.method public static a(Landroid/app/Service;ILandroid/app/Notification;I)V
     .locals 1
 
-    iget-object v0, p0, Lwrd;->w0:Lgwd;
+    if-eqz p3, :cond_1
 
-    invoke-super {p0, v0}, Lm1;->k(Ljava/lang/Object;)Z
+    const/4 v0, -0x1
+
+    if-ne p3, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    and-int/lit16 p3, p3, 0xff
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Service;->startForeground(ILandroid/app/Notification;I)V
 
     return-void
 .end method

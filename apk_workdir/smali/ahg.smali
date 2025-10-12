@@ -1,305 +1,112 @@
-.class public final Lahg;
-.super Lm3f;
+.class public final synthetic Lahg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public final synthetic b:Lp50;
+
+.field public final synthetic c:Ltb4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public synthetic constructor <init>(Lp50;Ltb4;I)V
     .locals 0
 
-    iput-object p2, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iput p3, p0, Lahg;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lahg;->b:Lp50;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lahg;->c:Ltb4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lahg;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lahg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lahg;->b:Lp50;
 
-    check-cast p1, Lahg;
+    iget-object v1, p0, Lahg;->c:Ltb4;
 
-    sget-object p2, Loyf;->a:Loyf;
+    monitor-enter v1
 
-    invoke-virtual {p1, p2}, Lahg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    monitor-exit v1
 
-    return-object p2
-.end method
+    iget-object v0, v0, Lp50;->b:Lqe5;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    sget v2, Lg3g;->a:I
 
-    new-instance v0, Lahg;
+    iget-object v0, v0, Lqe5;->a:Lwe5;
 
-    iget-object v1, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iget-object v0, v0, Lwe5;->D0:Lsd4;
 
-    invoke-direct {v0, p2, v1}, Lahg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    iget-object v2, v0, Lsd4;->o:Lr26;
 
-    iput-object p1, v0, Lahg;->X:Ljava/lang/Object;
+    iget-object v2, v2, Lr26;->e:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v2, Lot8;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v0, v2}, Lsd4;->E(Lot8;)Ldd;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v2
 
-    iget-object p1, p0, Lahg;->X:Ljava/lang/Object;
+    new-instance v3, Lb00;
 
-    check-cast p1, Licg;
+    const/16 v4, 0x17
 
-    iget-object v0, p0, Lahg;->Y:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    invoke-direct {v3, v2, v4, v1}, Lb00;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v1, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->C0:Ll2d;
+    const/16 v1, 0x3fc
 
-    iget-object v2, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->Z:Ljava/lang/Object;
+    invoke-virtual {v0, v2, v1, v3}, Lsd4;->I(Ldd;ILkw7;)V
 
-    sget-object v3, Lfcg;->a:Lfcg;
+    return-void
 
-    invoke-static {p1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    iget-object v0, p0, Lahg;->b:Lp50;
 
-    move-result v3
+    iget-object v1, p0, Lahg;->c:Ltb4;
 
-    if-eqz v3, :cond_4
+    iget-object v0, v0, Lp50;->b:Lqe5;
 
-    invoke-interface {v2}, Lbp7;->a()Z
+    sget v2, Lg3g;->a:I
 
-    move-result p1
+    iget-object v0, v0, Lqe5;->a:Lwe5;
 
-    if-nez p1, :cond_0
+    iget-object v0, v0, Lwe5;->D0:Lsd4;
 
-    goto/16 :goto_1
+    invoke-virtual {v0}, Lsd4;->H()Ldd;
 
-    :cond_0
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+    move-result-object v2
 
-    move-result-object p1
+    new-instance v3, Lfd4;
 
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
+    const/4 v4, 0x2
 
-    move-result-object v0
+    invoke-direct {v3, v2, v1, v4}, Lfd4;-><init>(Ldd;Ltb4;I)V
 
-    invoke-interface {v0}, Llhg;->a()F
+    const/16 v1, 0x3f7
 
-    move-result v0
+    invoke-virtual {v0, v2, v1, v3}, Lsd4;->I(Ldd;ILkw7;)V
 
-    const/4 v2, 0x0
+    return-void
 
-    cmpg-float v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    invoke-virtual {v1}, Ll2d;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Ll2d;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxdg;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lxdg;->c(Z)V
-
-    :cond_1
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Ll2d;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v1}, Ll2d;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxdg;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lxdg;->c(Z)V
-
-    :cond_3
-    :goto_0
-    invoke-interface {p1, v2}, Llhg;->d(F)V
-
-    goto/16 :goto_1
-
-    :cond_4
-    instance-of v1, p1, Lhcg;
-
-    if-eqz v1, :cond_7
-
-    invoke-interface {v2}, Lbp7;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    goto/16 :goto_1
-
-    :cond_5
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->x0()Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->pause()V
-
-    :cond_6
-    check-cast p1, Lhcg;
-
-    iget p1, p1, Lhcg;->a:F
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->getDuration()J
-
-    move-result-wide v1
-
-    long-to-float v1, v1
-
-    mul-float/2addr p1, v1
-
-    float-to-long v1, p1
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object p1
-
-    invoke-interface {p1, v1, v2}, Llhg;->seekTo(J)V
-
-    goto :goto_1
-
-    :cond_7
-    instance-of v1, p1, Lgcg;
-
-    if-eqz v1, :cond_a
-
-    invoke-interface {v2}, Lbp7;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    goto :goto_1
-
-    :cond_8
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->x0()Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->pause()V
-
-    :cond_9
-    check-cast p1, Lgcg;
-
-    iget p1, p1, Lgcg;->a:F
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Llhg;->getDuration()J
-
-    move-result-wide v1
-
-    long-to-float v1, v1
-
-    mul-float/2addr p1, v1
-
-    float-to-long v1, p1
-
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object p1
-
-    invoke-interface {p1, v1, v2}, Llhg;->seekTo(J)V
-
-    goto :goto_1
-
-    :cond_a
-    sget-object v1, Lfcg;->b:Lfcg;
-
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_c
-
-    invoke-interface {v2}, Lbp7;->a()Z
-
-    move-result p1
-
-    if-nez p1, :cond_b
-
-    goto :goto_1
-
-    :cond_b
-    invoke-virtual {v0}, Lone/me/chatscreen/videomsg/VideoMessageWidget;->I0()Llhg;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Llhg;->play()V
-
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :cond_c
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

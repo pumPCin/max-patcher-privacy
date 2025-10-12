@@ -1,67 +1,30 @@
-.class public final synthetic Ls22;
-.super Ljava/lang/Object;
+.class public final Ls22;
+.super Ley1;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lzh8;
+.field public final a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzh8;I)V
-    .locals 0
-
-    iput p2, p0, Ls22;->a:I
-
-    iput-object p1, p0, Ls22;->b:Lzh8;
+.method public constructor <init>(Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    if-eqz p1, :cond_0
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Ls22;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls22;->b:Lzh8;
-
-    invoke-virtual {v0}, Lzh8;->a()V
+    iput-object p1, p0, Ls22;->a:Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ls22;->b:Lzh8;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lzh8;->a()V
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    :pswitch_1
-    iget-object v0, p0, Ls22;->b:Lzh8;
+    const-string v0, "captureCallback is null"
 
-    invoke-virtual {v0}, Lzh8;->a()V
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

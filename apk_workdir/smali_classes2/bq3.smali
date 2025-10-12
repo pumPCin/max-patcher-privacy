@@ -1,106 +1,85 @@
 .class public final Lbq3;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lfq3;
-
-.field public final synthetic Y:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lfq3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lbq3;->X:Lfq3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lbq3;->Y:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbq3;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Le34;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lbq3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Lbq3;
+
+    if-eqz v0, :cond_1
 
     check-cast p1, Lbq3;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v0, p0, Lbq3;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lbq3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lbq3;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance p1, Lbq3;
+    iget-object v0, p0, Lbq3;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lbq3;->X:Lfq3;
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
 
-    iget-object v1, p0, Lbq3;->Y:Ljava/lang/String;
+    move-result v0
 
-    invoke-direct {p1, v0, v1, p2}, Lbq3;-><init>(Lfq3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lbq3;->X:Lfq3;
+    const-string v1, "MenuButton{text=\'"
 
-    iget-object v0, p1, Lfq3;->p:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Lfq3;->l:Lbp7;
+    iget-object v1, p0, Lbq3;->a:Ljava/lang/String;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    const-string v2, "\'}"
 
-    move-result-object p1
+    invoke-static {v0, v1, v2}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-object v1, p1
+    move-result-object v0
 
-    check-cast v1, Ltk;
-
-    const/4 v6, 0x0
-
-    iget-object v7, p0, Lbq3;->Y:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-static/range {v1 .. v7}, Ltk;->b(Ltk;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lf10;Ljava/lang/String;Ljava/lang/String;)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

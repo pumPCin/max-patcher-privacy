@@ -1,114 +1,75 @@
 .class public final Lgka;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lfv6;
 
 
 # instance fields
-.field public final b:J
+.field public X:Le39;
 
-.field public final c:Lbp7;
+.field public Y:Lez;
+
+.field public Z:Z
+
+.field public o:Lkka;
+
+.field public r0:Z
+
+.field public s0:Z
+
+.field public t0:Z
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lkka;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;J)V
+.method public constructor <init>(Lkka;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgka;->v0:Lkka;
 
-    iput-wide p2, p0, Lgka;->b:J
-
-    iput-object p1, p0, Lgka;->c:Lbp7;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    new-instance v0, Lfka;
+    iput-object p1, p0, Lgka;->u0:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lgka;->w0:I
 
-    invoke-direct {v0, p0, v1}, Lfka;-><init>(Lgka;Lkotlin/coroutines/Continuation;)V
+    const/high16 v0, -0x80000000
 
-    sget-object v1, Lv65;->a:Lv65;
+    or-int/2addr p1, v0
 
-    invoke-static {v1, v0}, Lq9e;->x(Lw24;Llf6;)Ljava/lang/Object;
+    iput p1, p0, Lgka;->w0:I
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    check-cast v0, Lm82;
+    const/4 v6, 0x0
 
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-wide v0, v0, Lpc2;->w:J
-
-    return-wide v0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    new-instance v0, Lfka;
+    iget-object v0, p0, Lgka;->v0:Lkka;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lfka;-><init>(Lgka;Lkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
 
-    sget-object v1, Lv65;->a:Lv65;
+    const/4 v3, 0x0
 
-    invoke-static {v1, v0}, Lq9e;->x(Lw24;Llf6;)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    move-object v7, p0
 
-    check-cast v0, Lm82;
+    invoke-virtual/range {v0 .. v7}, Lkka;->f(Le39;Lez;ZZZZLwy3;)Ljava/lang/Object;
 
-    iget-object v0, v0, Lm82;->b:Lpc2;
+    move-result-object p1
 
-    iget-wide v0, v0, Lpc2;->j:J
-
-    return-wide v0
-.end method
-
-.method public final i()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 2
-
-    new-instance v0, Lfka;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lfka;-><init>(Lgka;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v1, Lv65;->a:Lv65;
-
-    invoke-static {v1, v0}, Lq9e;->x(Lw24;Llf6;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm82;
-
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-object v0, v0, Lpc2;->n:Ljc2;
-
-    sget-object v1, Lhn4;->X:Lhn4;
-
-    invoke-virtual {v0, v1}, Ljc2;->d(Lhn4;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,142 +1,168 @@
 .class public final Lwsc;
-.super Ll9f;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lle6;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic X:I
 
-.field public o:Z
+.field public synthetic Y:Landroid/widget/FrameLayout;
+
+.field public final synthetic Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput p3, p0, Lwsc;->X:I
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    iput-boolean p1, p0, Lwsc;->o:Z
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lwsc;->X:I
 
-    const-string v0, "tls"
+    check-cast p1, Landroid/widget/FrameLayout;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p2, Llwa;
 
-    move-result v0
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    const-string v0, "redirectHost"
+    new-instance p2, Lwsc;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    move-result p2
+    const/4 v1, 0x1
 
-    if-nez p2, :cond_0
+    invoke-direct {p2, v0, p3, v1}, Lwsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-virtual {p1}, Ls89;->B()V
+    iput-object p1, p2, Lwsc;->Y:Landroid/widget/FrameLayout;
 
-    return-void
+    sget-object p1, Laxf;->a:Laxf;
 
-    :cond_0
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    invoke-virtual {p2, p1}, Lwsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p2, Lwsc;
+
+    iget-object v0, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lwsc;-><init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lwsc;->Y:Landroid/widget/FrameLayout;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lwsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lwsc;->X:I
+
+    sget-object v1, Laxf;->a:Laxf;
+
+    sget-object v2, Lrw4;->t0:Lss6;
+
+    iget-object v3, p0, Lwsc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lwsc;->Y:Landroid/widget/FrameLayout;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
+
+    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->I0:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-virtual {v2, p1}, Lss6;->v(Landroid/view/View;)Llwa;
 
     move-result-object p1
 
-    iput-object p1, p0, Lwsc;->c:Ljava/lang/String;
+    invoke-interface {p1}, Llwa;->f()Lo4;
 
-    return-void
+    move-result-object p1
 
-    :cond_1
-    invoke-virtual {p1}, Ls89;->y0()Z
+    iget p1, p1, Lo4;->c:I
+
+    const v2, 0x3e4ccccd    # 0.2f
+
+    invoke-static {p1, v2}, Luce;->f0(IF)I
 
     move-result p1
 
-    iput-boolean p1, p0, Lwsc;->o:Z
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    return-void
-.end method
+    return-object v1
 
-.method public final d()Ljava/lang/String;
-    .locals 3
+    :pswitch_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
+    iget-object p1, p0, Lwsc;->Y:Landroid/widget/FrameLayout;
 
-    invoke-static {v0}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lpl7;
 
-    move-result v0
+    iget-object v0, v3, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->J0:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Lwsc;->c:Ljava/lang/String;
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v2, p1}, Lss6;->v(Landroid/view/View;)Llwa;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    invoke-interface {p1}, Llwa;->f()Lo4;
 
-    iget-object v0, p0, Lwsc;->c:Ljava/lang/String;
+    move-result-object p1
 
-    iget-boolean v1, p0, Lwsc;->o:Z
+    iget p1, p1, Lo4;->c:I
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    const-string v3, "{redirectHost=\'"
+    return-object v1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', tls="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

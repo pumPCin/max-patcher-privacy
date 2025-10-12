@@ -1,143 +1,95 @@
 .class public final Lfe0;
-.super Lwi7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-
 # instance fields
-.field private volatile synthetic _disposer$volatile:Ljava/lang/Object;
+.field public final a:F
 
-.field public final b:Lz12;
+.field public final b:F
 
-.field public c:Lvs4;
+.field public final c:F
 
-.field public final synthetic o:Lhe0;
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/window/BackEvent;)V
+    .locals 4
 
-    const-class v0, Ljava/lang/Object;
+    sget-object v0, Lhl;->a:Lhl;
 
-    const-string v1, "_disposer$volatile"
+    invoke-virtual {v0, p1}, Lhl;->d(Landroid/window/BackEvent;)F
 
-    const-class v2, Lfe0;
+    move-result v1
 
-    invoke-static {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {v0, p1}, Lhl;->e(Landroid/window/BackEvent;)F
 
-    move-result-object v0
+    move-result v2
 
-    sput-object v0, Lfe0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {v0, p1}, Lhl;->b(Landroid/window/BackEvent;)F
 
-    return-void
-.end method
+    move-result v3
 
-.method public constructor <init>(Lhe0;Lz12;)V
-    .locals 0
+    invoke-virtual {v0, p1}, Lhl;->c(Landroid/window/BackEvent;)I
 
-    iput-object p1, p0, Lfe0;->o:Lhe0;
+    move-result p1
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lfe0;->b:Lz12;
+    iput v1, p0, Lfe0;->a:F
+
+    iput v2, p0, Lfe0;->b:F
+
+    iput v3, p0, Lfe0;->c:F
+
+    iput p1, p0, Lfe0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    const-string v1, "BackEventCompat{touchX="
 
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lfe0;->b:Lz12;
+    iget v1, p0, Lfe0;->a:F
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, ", touchY="
 
-    new-instance v1, Lff3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    iget v1, p0, Lfe0;->b:F
 
-    invoke-direct {v1, p1, v2}, Lff3;-><init>(Ljava/lang/Throwable;Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v1, ", progress="
 
-    invoke-virtual {v0, v1, p1}, Lz12;->y(Ljava/lang/Object;Lnf6;)Lkotlinx/coroutines/internal/Symbol;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget v1, p0, Lfe0;->c:F
 
-    if-eqz p1, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lz12;->l(Ljava/lang/Object;)V
+    const-string v1, ", swipeEdge="
 
-    sget-object p1, Lfe0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p0, Lfe0;->d:I
 
-    move-result-object p1
+    const/16 v2, 0x7d
 
-    check-cast p1, Lge0;
+    invoke-static {v0, v1, v2}, Lnd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    if-eqz p1, :cond_2
+    move-result-object v0
 
-    invoke-virtual {p1}, Lge0;->a()V
-
-    return-void
-
-    :cond_0
-    sget-object p1, Lhe0;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    iget-object v1, p0, Lfe0;->o:Lhe0;
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    iget-object p1, v1, Lhe0;->a:[Lsm4;
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    array-length v2, p1
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    array-length v2, p1
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    aget-object v4, p1, v3
-
-    invoke-interface {v4}, Lsm4;->m()Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0, v1}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

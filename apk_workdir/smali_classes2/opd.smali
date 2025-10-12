@@ -1,152 +1,98 @@
 .class public final Lopd;
-.super Lqpd;
+.super Landroid/view/View;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public a:Landroid/text/Layout;
 
-.field public final c:J
-
-.field public final d:I
+.field public b:I
 
 
-# direct methods
-.method public constructor <init>(JLjava/lang/String;I)V
+# virtual methods
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    iget-object v0, p0, Lopd;->a:Landroid/text/Layout;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMeasure(II)V
     .locals 0
 
-    invoke-direct {p0, p3}, Lqpd;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lopd;->a:Landroid/text/Layout;
 
-    iput-object p3, p0, Lopd;->b:Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    iput-wide p1, p0, Lopd;->c:J
+    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
 
-    iput p4, p0, Lopd;->d:I
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    move p1, p2
+
+    :goto_0
+    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Ljava/lang/String;
+.method public final setLayout(Landroid/text/Layout;)V
     .locals 1
 
-    iget-object v0, p0, Lopd;->b:Ljava/lang/String;
+    iput-object p1, p0, Lopd;->a:Landroid/text/Layout;
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    move-result-object p1
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_0
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lopd;->b:I
 
-    return v0
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_0
-    instance-of v1, p1, Lopd;
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lopd;
-
-    iget-object v1, p0, Lopd;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lopd;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lopd;->c:J
-
-    iget-wide v5, p1, Lopd;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lopd;->d:I
-
-    iget p1, p1, Lopd;->d:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final setTextColor(I)V
+    .locals 1
 
-    iget-object v0, p0, Lopd;->b:Ljava/lang/String;
+    iput p1, p0, Lopd;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v0, p0, Lopd;->a:Landroid/text/Layout;
 
-    move-result v0
+    if-eqz v0, :cond_0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lopd;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget v1, p0, Lopd;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "Neuro(uri="
-
-    const-string v1, ", photoId="
-
-    iget-wide v2, p0, Lopd;->c:J
-
-    iget-object v4, p0, Lopd;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lhqd;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
-    const-string v1, ", categoryId="
+    if-eqz v0, :cond_0
 
-    const-string v2, ")"
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget v3, p0, Lopd;->d:I
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    invoke-static {v0, v1, v3, v2}, Lvl3;->f(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

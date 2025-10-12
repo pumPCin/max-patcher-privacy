@@ -1,49 +1,21 @@
-.class public final Lzu4;
-.super Lnz3;
+.class public abstract Lzu4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ljv4;
-
-.field public Z:I
-
-.field public o:Ljv4;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Ljv4;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lzu4;->Y:Ljv4;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lzu4;->X:Ljava/lang/Object;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget p1, p0, Lzu4;->Z:I
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Lzu4;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lzu4;->Z:I
-
-    iget-object p1, p0, Lzu4;->Y:Ljv4;
-
-    invoke-virtual {p1, p0}, Ljv4;->b(Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

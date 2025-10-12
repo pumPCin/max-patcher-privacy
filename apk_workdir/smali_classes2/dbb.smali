@@ -1,461 +1,209 @@
 .class public final Ldbb;
-.super Ll9f;
+.super Lnj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic c:I
 
-.field public Y:I
-
-.field public Z:I
-
-.field public c:Ljava/lang/String;
-
-.field public o:I
-
-.field public w0:I
-
-.field public x0:I
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public synthetic constructor <init>(II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput p2, p0, Ldbb;->c:I
+
+    iput p1, p0, Ldbb;->d:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
+.method public final a(Landroid/graphics/Bitmap;Lnib;)Lm73;
     .locals 7
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p2, p0, Ldbb;->c:I
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    packed-switch p2, :pswitch_data_0
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    iget p2, p0, Ldbb;->d:I
+
+    if-lez p2, :cond_0
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    const/4 v1, 0x4
+    int-to-float v0, v0
 
-    const/4 v2, 0x3
+    const/high16 v1, 0x40000000    # 2.0f
 
-    const/4 v3, 0x0
+    div-float/2addr v0, v1
 
-    const/4 v4, 0x2
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    const/4 v5, 0x1
+    move-result v2
 
-    const/4 v6, -0x1
+    int-to-float v2, v2
 
-    sparse-switch v0, :sswitch_data_0
+    div-float/2addr v2, v1
 
-    :goto_0
-    move p2, v6
-
-    goto :goto_1
-
-    :sswitch_0
-    const-string v0, "requestType"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
+    invoke-virtual {v5, p2, v0, v2}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
     :cond_0
-    const/4 p2, 0x6
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    goto :goto_1
+    move-result v3
 
-    :sswitch_1
-    const-string v0, "retries"
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result p2
+    const/4 v6, 0x1
 
-    if-nez p2, :cond_1
+    const/4 v1, 0x0
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_1
-    const/4 p2, 0x5
+    move-object v0, p1
 
-    goto :goto_1
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
-    :sswitch_2
-    const-string v0, "tokenType"
+    move-result-object p1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance p2, Ls0b;
 
-    move-result p2
+    const/4 v0, 0x5
 
-    if-nez p2, :cond_2
+    invoke-direct {p2, v0}, Ls0b;-><init>(I)V
 
-    goto :goto_0
+    sget-object v0, Lm73;->Y:Le49;
 
-    :cond_2
-    move p2, v1
+    invoke-static {p1, p2, v0}, Lm73;->h0(Ljava/lang/Object;La1d;Ll73;)Lxe4;
 
-    goto :goto_1
+    move-result-object p1
 
-    :sswitch_3
-    const-string v0, "token"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move p2, v2
-
-    goto :goto_1
-
-    :sswitch_4
-    const-string v0, "callDelay"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    move p2, v4
-
-    goto :goto_1
-
-    :sswitch_5
-    const-string v0, "codeLength"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move p2, v5
-
-    goto :goto_1
-
-    :sswitch_6
-    const-string v0, "codeDelay"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    move p2, v3
-
-    :goto_1
-    packed-switch p2, :pswitch_data_0
-
-    invoke-virtual {p1}, Ls89;->B()V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    move-object v0, p1
 
-    move-result-object p1
+    new-instance v5, Landroid/graphics/Matrix;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+    iget p1, p0, Ldbb;->d:I
+
+    if-lez p1, :cond_1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p2
 
-    sparse-switch p2, :sswitch_data_1
+    div-int/lit8 p2, p2, 0x2
 
-    :goto_2
-    move v3, v6
+    int-to-float p2, p2
 
-    goto :goto_3
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    :sswitch_7
-    const-string p2, "CALL"
+    move-result v1
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    div-int/lit8 v1, v1, 0x2
 
-    move-result p1
+    int-to-float v1, v1
 
-    if-nez p1, :cond_7
+    invoke-virtual {v5, p1, p2, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    goto :goto_2
+    :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
-    :cond_7
-    move v3, v4
+    move-result v3
 
-    goto :goto_3
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    :sswitch_8
-    const-string p2, "SMS"
+    move-result v4
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/4 v6, 0x1
 
-    move-result p1
+    const/4 v1, 0x0
 
-    if-nez p1, :cond_8
+    const/4 v2, 0x0
 
-    goto :goto_2
-
-    :cond_8
-    move v3, v5
-
-    goto :goto_3
-
-    :sswitch_9
-    const-string p2, "CALL_DELAY"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_9
-
-    goto :goto_2
-
-    :cond_9
-    :goto_3
-    packed-switch v3, :pswitch_data_1
-
-    move v1, v5
-
-    goto :goto_4
-
-    :pswitch_1
-    move v1, v4
-
-    goto :goto_4
-
-    :pswitch_2
-    move v1, v2
-
-    :goto_4
-    :pswitch_3
-    iput v1, p0, Ldbb;->x0:I
-
-    return-void
-
-    :pswitch_4
-    invoke-static {p1}, Lvb4;->V(Ls89;)I
-
-    move-result p1
-
-    iput p1, p0, Ldbb;->o:I
-
-    return-void
-
-    :pswitch_5
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    invoke-static {p1}, Lq89;->v(Ljava/lang/String;)I
+    new-instance p2, Ls0b;
 
-    move-result p1
+    const/4 v0, 0x4
 
-    iput p1, p0, Ldbb;->w0:I
+    invoke-direct {p2, v0}, Ls0b;-><init>(I)V
 
-    return-void
+    sget-object v0, Lm73;->Y:Le49;
 
-    :pswitch_6
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    invoke-static {p1, p2, v0}, Lm73;->h0(Ljava/lang/Object;La1d;Ll73;)Lxe4;
 
     move-result-object p1
 
-    iput-object p1, p0, Ldbb;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_7
-    invoke-static {p1}, Lvb4;->V(Ls89;)I
-
-    move-result p1
-
-    iput p1, p0, Ldbb;->Z:I
-
-    return-void
-
-    :pswitch_8
-    invoke-static {p1}, Lvb4;->V(Ls89;)I
-
-    move-result p1
-
-    iput p1, p0, Ldbb;->Y:I
-
-    return-void
-
-    :pswitch_9
-    invoke-static {p1}, Lvb4;->V(Ls89;)I
-
-    move-result p1
-
-    iput p1, p0, Ldbb;->X:I
-
-    return-void
+    return-object p1
 
     nop
 
-    :sswitch_data_0
-    .sparse-switch
-        -0x44b0386a -> :sswitch_6
-        -0x43af10cd -> :sswitch_5
-        -0x3fdce63b -> :sswitch_4
-        0x696b9f9 -> :sswitch_3
-        0x86f18d3 -> :sswitch_2
-        0x4177e946 -> :sswitch_1
-        0x448d1669 -> :sswitch_0
-    .end sparse-switch
-
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
         :pswitch_0
-    .end packed-switch
-
-    :sswitch_data_1
-    .sparse-switch
-        -0x3a3927be -> :sswitch_9
-        0x14139 -> :sswitch_8
-        0x1f725e -> :sswitch_7
-    .end sparse-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_3
     .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 10
+.method public final b()Lex0;
+    .locals 2
 
-    iget-object v0, p0, Ldbb;->c:Ljava/lang/String;
+    iget v0, p0, Ldbb;->c:I
 
-    invoke-static {v0}, Lk98;->u(Ljava/lang/CharSequence;)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget v0, p0, Ldbb;->d:I
 
-    iget v1, p0, Ldbb;->o:I
-
-    iget v2, p0, Ldbb;->X:I
-
-    iget v3, p0, Ldbb;->Y:I
-
-    iget v4, p0, Ldbb;->w0:I
-
-    iget v5, p0, Ldbb;->Z:I
-
-    iget v6, p0, Ldbb;->x0:I
-
-    const-string v7, "\', retries="
-
-    const-string v8, ", codeDelay="
-
-    const-string v9, "{token=\'"
-
-    invoke-static {v1, v9, v0, v7, v8}, Lvpb;->k(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, ", codeLength="
+    new-instance v1, Lxbe;
 
-    const-string v7, ", tokenType="
+    invoke-direct {v1, v0}, Lxbe;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v2, v1, v3, v7}, Lvl3;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    return-object v1
 
-    invoke-static {v4}, Lq89;->q(I)Ljava/lang/String;
+    :pswitch_0
+    iget v0, p0, Ldbb;->d:I
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", callDelay="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", requestType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    if-eq v6, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v6, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v6, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v6, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "CALL"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "CALL_DELAY"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "SMS"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "UNKNOWN"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lxbe;
+
+    invoke-direct {v1, v0}, Lxbe;-><init>(Ljava/lang/String;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

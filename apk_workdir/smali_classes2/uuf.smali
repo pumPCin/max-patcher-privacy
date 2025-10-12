@@ -1,103 +1,137 @@
 .class public final Luuf;
-.super Lgd4;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final b:Luuf;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final d:Lbd4;
-
-.field public static final e:Lbd4;
-
-.field public static final f:Lbd4;
-
-.field public static final g:Lbd4;
+.field public final synthetic Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+    .locals 0
+
+    iput-object p2, p0, Luuf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Luuf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Luuf;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Luuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Luuf;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iget-object v1, p0, Luuf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
-    sput-object v0, Luuf;->b:Luuf;
+    invoke-direct {v0, p2, v1}, Luuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
 
-    const-string v1, "state"
+    iput-object p1, v0, Luuf;->X:Ljava/lang/Object;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const-string v2, ":settings/privacy/onboarding-twofa"
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const/4 v3, 0x0
+    iget-object p1, p0, Luuf;->X:Ljava/lang/Object;
 
-    const/16 v4, 0xe
+    check-cast p1, Lztf;
 
-    invoke-static {v0, v2, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    sget-object v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lpl7;
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    sput-object v1, Luuf;->c:Lbd4;
+    iget-object v0, p0, Luuf;->Y:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
-    const-string v1, "src"
-
-    const-string v2, "track_id"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    invoke-virtual {v0}, Ljz3;->getRouter()Ln6d;
 
     move-result-object v1
 
-    const-string v5, ":settings/privacy/creation-twofa"
+    invoke-virtual {v1}, Ln6d;->C()Z
 
-    invoke-static {v0, v5, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    iget-object v1, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->X:Ljava/lang/Object;
 
-    move-result-object v1
-
-    sput-object v1, Luuf;->d:Lbd4;
-
-    const/4 v1, 0x0
-
-    new-array v5, v1, [Ljava/lang/String;
-
-    const-string v6, ":settings/privacy/profile-deletion"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v5
-
-    sput-object v5, Luuf;->e:Lbd4;
-
-    const-string v5, ":twofa/password/check"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v5, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    sput-object v1, Luuf;->f:Lbd4;
+    check-cast v1, Lfd7;
 
-    const-string v1, "phone"
+    iget-object v6, p1, Lztf;->b:Ljava/lang/String;
 
-    filled-new-array {v2, v1}, [Ljava/lang/String;
+    iget-object v0, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->b:Ljava/lang/Object;
 
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    const-string v4, ":twofa/auth/password/check"
-
-    invoke-static {v0, v4, v1, v3, v2}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sput-object v0, Luuf;->g:Lbd4;
+    check-cast v0, Led7;
 
-    return-void
+    iget-object v7, p1, Lztf;->c:Lhd7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lone/me/settings/twofa/creation/TwoFACreationScreen;
+
+    const-string v4, "CREATE_PASSWORD"
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v3, "RESTORE"
+
+    invoke-direct/range {v2 .. v7}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lhd7;)V
+
+    const/4 p1, 0x0
+
+    invoke-static {v2, p1, p1}, Lomc;->e(Ljz3;Ldh;Ldh;)Lq6d;
+
+    move-result-object p1
+
+    const-string v0, "CREATE_PASSWORD"
+
+    invoke-virtual {v1, p1, v0}, Lfd7;->a(Lq6d;Ljava/lang/String;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

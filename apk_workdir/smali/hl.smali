@@ -3,109 +3,71 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Llo4;
-
-.field public final c:Lrk;
-
-.field public final d:Ljava/lang/String;
+# static fields
+.field public static final a:Lhl;
 
 
 # direct methods
-.method public constructor <init>(Llo4;Lrk;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhl;
 
-    iput-object p1, p0, Lhl;->b:Llo4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhl;->c:Lrk;
-
-    iput-object p3, p0, Lhl;->d:Ljava/lang/String;
-
-    filled-new-array {p1, p2, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p1
-
-    iput p1, p0, Lhl;->a:I
+    sput-object v0, Lhl;->a:Lhl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(FFFI)Landroid/window/BackEvent;
+    .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Landroid/window/BackEvent;
 
-    if-nez p1, :cond_0
+    invoke-direct {v0, p1, p2, p3, p4}, Landroid/window/BackEvent;-><init>(FFFI)V
 
-    return v0
+    return-object v0
+.end method
 
-    :cond_0
-    const/4 v1, 0x1
+.method public final b(Landroid/window/BackEvent;)F
+    .locals 0
 
-    if-ne p1, p0, :cond_1
-
-    return v1
-
-    :cond_1
-    instance-of v2, p1, Lhl;
-
-    if-nez v2, :cond_2
-
-    return v0
-
-    :cond_2
-    check-cast p1, Lhl;
-
-    iget-object v2, p0, Lhl;->b:Llo4;
-
-    iget-object v3, p1, Lhl;->b:Llo4;
-
-    invoke-static {v2, v3}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lhl;->c:Lrk;
-
-    iget-object v3, p1, Lhl;->c:Lrk;
-
-    invoke-static {v2, v3}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lhl;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lhl;->d:Ljava/lang/String;
-
-    invoke-static {v2, p1}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Landroid/window/BackEvent;->getProgress()F
 
     move-result p1
 
-    if-eqz p1, :cond_3
-
-    return v1
-
-    :cond_3
-    return v0
+    return p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final c(Landroid/window/BackEvent;)I
+    .locals 0
 
-    iget v0, p0, Lhl;->a:I
+    invoke-virtual {p1}, Landroid/window/BackEvent;->getSwipeEdge()I
 
-    return v0
+    move-result p1
+
+    return p1
+.end method
+
+.method public final d(Landroid/window/BackEvent;)F
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/window/BackEvent;->getTouchX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final e(Landroid/window/BackEvent;)F
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/window/BackEvent;->getTouchY()F
+
+    move-result p1
+
+    return p1
 .end method

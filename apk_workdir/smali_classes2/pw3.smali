@@ -1,63 +1,49 @@
 .class public final Lpw3;
-.super Lc7d;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lpw3;
+# instance fields
+.field public final synthetic X:Lrw3;
 
-.field public static final c:Lbd4;
+.field public Y:I
 
-.field public static final d:Lbd4;
-
-.field public static final e:Lbd4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lrw3;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lpw3;
+    iput-object p1, p0, Lpw3;->X:Lrw3;
 
-    invoke-direct {v0}, Lgd4;-><init>()V
-
-    sput-object v0, Lpw3;->b:Lpw3;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":contact-list/create-contact"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Lpw3;->c:Lbd4;
-
-    const-string v2, ":contact-list/share-invite"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Lpw3;->d:Lbd4;
-
-    const-string v2, ":call-contact"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v0
-
-    sput-object v0, Lpw3;->e:Lbd4;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lpw3;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lpw3;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lpw3;->Y:I
+
+    iget-object p1, p0, Lpw3;->X:Lrw3;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1, p0}, Lrw3;->b(JLwy3;)Ljava/lang/Comparable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

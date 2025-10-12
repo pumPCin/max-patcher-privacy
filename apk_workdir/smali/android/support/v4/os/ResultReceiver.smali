@@ -57,12 +57,15 @@
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
+    .line 2
     iput-boolean v0, p0, Landroid/support/v4/os/ResultReceiver;->mLocal:Z
 
+    .line 3
     iput-object p1, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
     return-void
@@ -71,16 +74,20 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
+    .line 5
     iput-boolean v0, p0, Landroid/support/v4/os/ResultReceiver;->mLocal:Z
 
     const/4 v0, 0x0
 
+    .line 6
     iput-object v0, p0, Landroid/support/v4/os/ResultReceiver;->mHandler:Landroid/os/Handler;
 
+    .line 7
     invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p1

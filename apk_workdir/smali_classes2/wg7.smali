@@ -1,47 +1,117 @@
-.class public final Lwg7;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.class public abstract synthetic Lwg7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic K0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+# static fields
+.field public static final synthetic a:[I
+
+.field public static final synthetic b:[I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lwg7;->K0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-    invoke-direct {p0, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
-    .locals 2
-
-    sget-object p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->L0:[Ltm7;
-
-    iget-object p1, p0, Lwg7;->K0:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
-
-    iget-object v0, p1, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->I0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {}, Luhg;->values()[Luhg;
 
     move-result-object v0
 
-    check-cast v0, Lug7;
+    array-length v0, v0
 
-    invoke-virtual {p1}, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->R0()Ly7c;
+    new-array v0, v0, [I
 
-    move-result-object p1
+    sput-object v0, Lwg7;->b:[I
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Lug7;->q(Lz7c;Z)V
+    const/4 v2, 0x0
 
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v0, 0x2
+
+    :try_start_1
+    sget-object v3, Lwg7;->b:[I
+
+    aput v0, v3, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    :try_start_2
+    sget-object v4, Lwg7;->b:[I
+
+    aput v3, v4, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v4, 0x4
+
+    :try_start_3
+    sget-object v5, Lwg7;->b:[I
+
+    aput v4, v5, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v5, Lwg7;->b:[I
+
+    const/4 v6, 0x5
+
+    aput v6, v5, v0
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    invoke-static {}, Lin8;->values()[Lin8;
+
+    move-result-object v5
+
+    array-length v5, v5
+
+    new-array v5, v5, [I
+
+    sput-object v5, Lwg7;->a:[I
+
+    :try_start_5
+    aput v1, v5, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v2, Lwg7;->a:[I
+
+    aput v0, v2, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v1, Lwg7;->a:[I
+
+    aput v3, v1, v0
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    sget-object v0, Lwg7;->a:[I
+
+    aput v4, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
     return-void
 .end method

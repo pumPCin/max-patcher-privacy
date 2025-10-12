@@ -1,68 +1,100 @@
-.class public final synthetic Lr97;
-.super Ljava/lang/Object;
+.class public final Lr97;
+.super Ls59;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p1, p0, Lr97;->a:I
+    invoke-direct {p0}, Ls59;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    iput v0, p0, Lr97;->a:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Ls59;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyAsLong(Ljava/lang/Object;)J
+.method public final computeSerializedSize()I
     .locals 2
 
     iget v0, p0, Lr97;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
-    sget-object v0, Lvga;->a:Lvga;
+    const/4 v1, 0x1
 
-    sget-object v1, Lone/me/android/OneMeApplication;->x0:Lkga;
+    invoke-static {v1, v0}, Ly73;->n(II)I
 
-    invoke-virtual {v0, p1}, Lvga;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v0
 
-    move-result-object p1
+    return v0
 
-    check-cast p1, Ljava/lang/Number;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    return v0
+.end method
 
-    move-result-wide v0
+.method public final mergeFrom(Lx73;)Ls59;
+    .locals 2
 
-    return-wide v0
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lx73;->s()I
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    move-result v0
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    const/16 v1, 0x8
 
-    check-cast p1, Le3a;
+    if-eq v0, v1, :cond_1
 
-    iget-wide v0, p1, Le3a;->a:J
+    invoke-virtual {p1, v0}, Lx73;->u(I)Z
 
-    return-wide v0
+    move-result v0
 
-    nop
+    if-nez v0, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lx73;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lr97;->a:I
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Ly73;)V
+    .locals 2
+
+    iget v0, p0, Lr97;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Ly73;->G(II)V
+
+    :cond_0
+    return-void
 .end method

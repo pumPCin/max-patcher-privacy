@@ -1,102 +1,99 @@
-.class public final synthetic Lku;
-.super Ljava/lang/Object;
+.class public final Lku;
+.super Ly7f;
 .source "SourceFile"
-
-# interfaces
-.implements Lwo3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public c:Z
 
-.field public final synthetic b:Lth2;
+.field public o:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lth2;I)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    iput p2, p0, Lku;->a:I
-
-    iput-object p1, p0, Lku;->b:Lth2;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 2
 
-    iget v0, p0, Lku;->a:I
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Ljava/lang/Throwable;
+    const-string v0, "success"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lku;->b:Lth2;
+    move-result v0
 
-    iget-object v1, v0, Lth2;->a:Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    const-string v2, "load: exception"
+    const-string v0, "updateTime"
 
-    invoke-static {v1, v2, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, v0, Lth2;->Y:Lec5;
+    move-result p2
 
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
+    if-nez p2, :cond_0
 
-    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v1}, Lec5;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p1}, Lc79;->y()V
 
     return-void
 
-    :pswitch_0
-    iget-object p1, p0, Lku;->b:Lth2;
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p1, Lth2;->w0:Lnu;
+    invoke-static {p1, v0, v1}, Lg8;->H(Lc79;J)J
 
-    invoke-virtual {p1}, Lnu;->b()V
+    move-result-wide p1
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lku;->b:Lth2;
-
-    iget-object v1, v0, Lth2;->a:Ljava/lang/String;
-
-    const-string v2, "loadPrev: exception"
-
-    invoke-static {v1, v2, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v0, Lth2;->Y:Lec5;
-
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
-
-    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v0, v1}, Lec5;->a(Ljava/lang/Throwable;)V
+    iput-wide p1, p0, Lku;->o:J
 
     return-void
 
-    :pswitch_2
-    iget-object p1, p0, Lku;->b:Lth2;
+    :cond_1
+    invoke-static {p1}, Lg8;->B(Lc79;)Z
 
-    iget-object p1, p1, Lth2;->x0:Lnu;
+    move-result p1
 
-    invoke-virtual {p1}, Lnu;->b()V
+    iput-boolean p1, p0, Lku;->c:Z
 
     return-void
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-boolean v0, p0, Lku;->c:Z
+
+    iget-wide v1, p0, Lku;->o:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response{success="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

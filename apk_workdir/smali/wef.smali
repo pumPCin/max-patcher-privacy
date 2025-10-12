@@ -1,39 +1,28 @@
-.class public abstract Lwef;
-.super Ljava/lang/Object;
+.class public final Lwef;
+.super Lqce;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/text/PrecomputedText;)Ljava/lang/CharSequence;
-    .locals 0
+# virtual methods
+.method public final A(Lov7;)V
+    .locals 2
 
-    return-object p0
-.end method
+    check-cast p1, Lref;
 
-.method public static b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
-    .locals 0
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/icu/text/DecimalFormatSymbols;->getDigitStrings()[Ljava/lang/String;
+    check-cast v0, Ltef;
 
-    move-result-object p0
+    iget-object v1, p1, Lref;->b:Ljava/lang/String;
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ltef;->setThemeName(Ljava/lang/String;)V
 
-.method public static c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
-    .locals 0
+    iget-object p1, p1, Lref;->o:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextMetricsParams()Landroid/text/PrecomputedText$Params;
+    if-eqz p1, :cond_0
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Ltef;->setBackgroundPattern(Landroid/graphics/drawable/Drawable;)V
 
-    return-object p0
-.end method
-
-.method public static d(Landroid/widget/TextView;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
-
+    :cond_0
     return-void
 .end method

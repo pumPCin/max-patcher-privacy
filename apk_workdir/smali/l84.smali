@@ -1,216 +1,198 @@
 .class public final Ll84;
-.super Ljava/lang/Object;
+.super Lkz7;
 .source "SourceFile"
 
-# interfaces
-.implements Lb5b;
 
-
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+# instance fields
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lf8h;I)V
+    .locals 0
 
-    const-string v0, "(.+?)(Z|((\\+|-|\u2212)(\\d\\d)(:?(\\d\\d))?))"
+    iput p3, p0, Ll84;->c:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Ll84;->a:Ljava/util/regex/Pattern;
+    invoke-direct {p0, p1, p2}, Lkz7;-><init>(Ljava/util/concurrent/Executor;Lf8h;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Landroid/net/Uri;Ln94;)Ljava/lang/Object;
-    .locals 10
+.method public final d(Lx47;)Lj75;
+    .locals 4
 
-    const-string p1, "Couldn\'t parse timestamp: "
+    iget v0, p0, Ll84;->c:I
 
-    new-instance v0, Ljava/io/BufferedReader;
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Ljava/io/InputStreamReader;
+    new-instance v0, Ljava/io/FileInputStream;
 
-    sget-object v2, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-direct {v1, p2, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
-
-    invoke-direct {v0, v1}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-
-    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    sget-object v1, Ll84;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {v1, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    invoke-virtual {p1}, Lx47;->d()Ljava/io/File;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/text/SimpleDateFormat;
-
-    const-string v2, "yyyy-MM-dd\'T\'HH:mm:ss"
-
-    sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-direct {p2, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    const-string v2, "UTC"
-
-    invoke-static {v2}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v2
-
-    invoke-virtual {p2, v2}, Ljava/text/DateFormat;->setTimeZone(Ljava/util/TimeZone;)V
-
-    invoke-virtual {p2, p1}, Ljava/text/DateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
-
-    move-result-wide p1
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "Z"
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const-string v2, "+"
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-wide/16 v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const-wide/16 v2, -0x1
-
-    :goto_0
-    const/4 v4, 0x5
-
-    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    const/4 v6, 0x7
-
-    invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    move-result v6
+    invoke-virtual {p1}, Lx47;->d()Ljava/io/File;
 
-    if-eqz v6, :cond_2
+    move-result-object p1
 
-    const-wide/16 v6, 0x0
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    goto :goto_1
+    move-result-wide v1
 
-    :cond_2
-    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    long-to-int p1, v1
 
-    move-result-wide v6
-
-    :goto_1
-    const-wide/16 v8, 0x3c
-
-    mul-long/2addr v4, v8
-
-    add-long/2addr v4, v6
-
-    const-wide/32 v6, 0xea60
-
-    mul-long/2addr v4, v6
-
-    mul-long/2addr v4, v2
-
-    sub-long/2addr p1, v4
-
-    :goto_2
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0, v0, p1}, Lkz7;->c(Ljava/io/InputStream;I)Lj75;
 
     move-result-object p1
 
     return-object p1
 
-    :catch_0
-    move-exception p1
+    :pswitch_0
+    iget-object p1, p1, Lx47;->b:Landroid/net/Uri;
 
-    goto :goto_3
-
-    :cond_3
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+    const/4 v0, 0x5
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "data:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v0, 0x2c
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    add-int/lit8 v2, v0, 0x1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p1
+
+    const-string v0, ";"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    array-length v0, p1
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget-object p1, p1, v0
+
+    const-string v0, "base64"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-static {v2, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v2}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p1
+
+    :goto_1
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    array-length p1, p1
+
+    invoke-virtual {p0, v0, p1}, Lkz7;->c(Ljava/io/InputStream;I)Lj75;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw p1
-    :try_end_0
-    .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_3
-    invoke-static {p1, v0}, Landroidx/media3/common/ParserException;->b(Ljava/lang/Exception;Ljava/lang/String;)Landroidx/media3/common/ParserException;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final e()Ljava/lang/String;
+    .locals 1
 
-    throw p1
+    iget v0, p0, Ll84;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "LocalFileFetchProducer"
+
+    return-object v0
+
+    :pswitch_0
+    const-string v0, "DataFetchProducer"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,200 +1,152 @@
-.class public final Liwg;
+.class public final synthetic Liwg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lri6;
+
 
 # static fields
-.field public static final Companion:Lhwg;
+.field public static final a:Liwg;
 
-.field public static final c:[Lum7;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lnwg;
+.field private static final descriptor:Lmqd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    new-instance v0, Lhwg;
+    new-instance v0, Liwg;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Liwg;->Companion:Lhwg;
+    sput-object v0, Liwg;->a:Liwg;
 
-    sget-object v0, Lnwg;->Companion:Lmwg;
+    new-instance v1, Lflb;
 
-    invoke-virtual {v0}, Lmwg;->serializer()Lum7;
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenMaxLinkRequest"
 
-    move-result-object v0
+    const/4 v3, 0x1
 
-    const/4 v1, 0x2
+    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
 
-    new-array v1, v1, [Lum7;
+    const-string v0, "url"
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
 
-    aput-object v2, v1, v3
-
-    const/4 v2, 0x1
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Liwg;->c:[Lum7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILjava/lang/String;Lnwg;)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Liwg;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Liwg;->b:Lnwg;
-
-    return-void
-
-    :cond_0
-    sget-object p2, Lgwg;->a:Lgwg;
-
-    invoke-virtual {p2}, Lgwg;->d()Ldsd;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lv63;->y0(IILdsd;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lnwg;)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Liwg;->a:Ljava/lang/String;
-
-    .line 4
-    iput-object p2, p0, Liwg;->b:Lnwg;
+    sput-object v1, Liwg;->descriptor:Lmqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Lx8;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v0, 0x1
+    sget-object v0, Liwg;->descriptor:Lmqd;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Liwg;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    move v4, v1
+
+    move v5, v2
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eq v6, v7, :cond_1
+
+    if-nez v6, :cond_0
+
+    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    move v5, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
 
     :cond_1
-    check-cast p1, Liwg;
+    move v4, v2
 
-    iget-object v1, p0, Liwg;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Liwg;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Liwg;->b:Lnwg;
+    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
 
-    iget-object p1, p1, Liwg;->b:Lnwg;
+    new-instance p1, Lkwg;
 
-    if-eq v1, p1, :cond_3
+    invoke-direct {p1, v5, v3}, Lkwg;-><init>(ILjava/lang/String;)V
 
-    return v2
-
-    :cond_3
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final b(Lmz3;Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Liwg;->a:Ljava/lang/String;
+    check-cast p2, Lkwg;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    sget-object v0, Liwg;->descriptor:Lmqd;
 
-    move-result v0
+    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p1
 
-    iget-object v1, p0, Liwg;->b:Lnwg;
+    iget-object p2, p2, Lkwg;->a:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 v1, 0x0
 
-    move-result v1
+    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
 
-    add-int/2addr v1, v0
+    invoke-virtual {p1}, Lmz3;->m()V
 
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final c()[Lql7;
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "WebAppHapticFeedbackResponse(requestId="
+    new-array v0, v0, [Lql7;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget-object v1, Llwe;->a:Llwe;
 
-    iget-object v1, p0, Liwg;->a:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v0, v2
 
-    const-string v1, ", status="
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final d()Lmqd;
+    .locals 1
 
-    iget-object v1, p0, Liwg;->b:Lnwg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Liwg;->descriptor:Lmqd;
 
     return-object v0
 .end method

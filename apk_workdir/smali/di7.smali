@@ -1,62 +1,50 @@
-.class public abstract Ldi7;
-.super Ljava/lang/Object;
+.class public final synthetic Ldi7;
+.super Lye6;
 .source "SourceFile"
+
+# interfaces
+.implements Lle6;
 
 
 # static fields
-.field public static final a:Ljava/lang/Integer;
+.field public static final a:Ldi7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 6
 
-    const/4 v0, 0x0
+    new-instance v0, Ldi7;
 
-    :try_start_0
-    const-string v1, "android.os.Build$VERSION"
+    const-string v4, "onAwaitInternalRegFunc(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    const/4 v5, 0x0
 
-    move-result-object v1
+    const/4 v1, 0x3
 
-    const-string v2, "SDK_INT"
+    const-class v2, Lgi7;
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    const-string v3, "onAwaitInternalRegFunc"
 
-    move-result-object v1
+    invoke-direct/range {v0 .. v5}, Lye6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v2, v1, Ljava/lang/Integer;
-
-    if-eqz v2, :cond_0
-
-    check-cast v1, Ljava/lang/Integer;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    if-lez v2, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    sput-object v0, Ldi7;->a:Ljava/lang/Integer;
+    sput-object v0, Ldi7;->a:Ldi7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lgi7;
+
+    check-cast p2, Lpnd;
+
+    invoke-static {p1, p2, p3}, Lgi7;->access$onAwaitInternalRegFunc(Lgi7;Lpnd;Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

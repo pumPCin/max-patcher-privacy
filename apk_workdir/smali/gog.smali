@@ -1,23 +1,14 @@
-.class public abstract Lgog;
+.class public interface abstract Lgog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract a(J)V
+.end method
 
-.field public final b:Ljava/lang/Long;
+.method public abstract b(IJ)V
+.end method
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Long;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Lgog;->a:I
-
-    iput-object p1, p0, Lgog;->b:Ljava/lang/Long;
-
-    return-void
+.method public abstract c(Lvh5;J)Z
 .end method

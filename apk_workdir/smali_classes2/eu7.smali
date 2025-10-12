@@ -1,68 +1,91 @@
-.class public final Leu7;
+.class public final synthetic Leu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Leu7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lve6;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:Lgu7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lle7;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
-
-    sput-object v0, Leu7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(J)V
+.method public constructor <init>(Lgu7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Leu7;->a:J
+    iput-object p1, p0, Leu7;->a:Lgu7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Leu7;
 
-    return v0
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Leu7;->getFunctionDelegate()Loe6;
+
+    move-result-object v0
+
+    check-cast p1, Lve6;
+
+    invoke-interface {p1}, Lve6;->getFunctionDelegate()Loe6;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final getFunctionDelegate()Loe6;
+    .locals 7
 
-    iget-wide v0, p0, Leu7;->a:J
+    new-instance v0, Lye6;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    const-string v6, "onProfileTagClicked(Landroid/view/View;Ljava/lang/String;)V"
 
-    return-void
+    const/4 v2, 0x0
+
+    const/4 v1, 0x2
+
+    const-class v3, Lgu7;
+
+    iget-object v4, p0, Leu7;->a:Lgu7;
+
+    const-string v5, "onProfileTagClicked"
+
+    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Leu7;->getFunctionDelegate()Loe6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

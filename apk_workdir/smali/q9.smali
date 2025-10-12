@@ -3,135 +3,208 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls24;
+.implements Lzpb;
 
 
 # instance fields
-.field public final a:Ls24;
+.field public final synthetic a:I
 
-.field public final b:F
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(FLs24;)V
-    .locals 1
+.method public synthetic constructor <init>(Lzpb;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lq9;->a:I
+
+    iput-object p1, p0, Lq9;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :goto_0
-    instance-of v0, p2, Lq9;
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public constructor <init>([Lwff;)V
+    .locals 1
 
-    check-cast p2, Lq9;
+    const/4 v0, 0x3
 
-    iget-object p2, p2, Lq9;->a:Ls24;
+    iput v0, p0, Lq9;->a:I
 
-    move-object v0, p2
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Lq9;
+    .line 3
+    check-cast p1, [Lwff;
 
-    iget v0, v0, Lq9;->b:F
+    iput-object p1, p0, Lq9;->b:Ljava/lang/Object;
 
-    add-float/2addr p1, v0
+    const/4 v0, 0x0
 
-    goto :goto_0
+    .line 4
+    array-length p1, p1
 
-    :cond_0
-    iput-object p2, p0, Lq9;->a:Ls24;
-
-    iput p1, p0, Lq9;->b:F
+    invoke-static {v0, p1}, Li8e;->i(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/RectF;)F
-    .locals 1
+.method public final a(Lii0;Laqb;)V
+    .locals 3
 
-    iget-object v0, p0, Lq9;->a:Ls24;
+    iget v0, p0, Lq9;->a:I
 
-    invoke-interface {v0, p1}, Ls24;->a(Landroid/graphics/RectF;)F
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    move-object v0, p2
 
-    iget v0, p0, Lq9;->b:F
+    check-cast v0, Loj0;
 
-    add-float/2addr p1, v0
+    iget-object v0, v0, Loj0;->a:Lx47;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lx47;->h:Lu0d;
 
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq9;
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_0
 
-    return v2
+    invoke-virtual {p1, v1, v2}, Lii0;->g(ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1, p2}, Lq9;->c(ILii0;Laqb;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    invoke-virtual {p1, v1, v2}, Lii0;->g(ILjava/lang/Object;)V
 
     :cond_1
-    check-cast p1, Lq9;
+    :goto_0
+    return-void
 
-    iget-object v1, p0, Lq9;->a:Ls24;
+    :pswitch_0
+    new-instance v0, Lp9;
 
-    iget-object v3, p1, Lq9;->a:Ls24;
+    const/4 v1, 0x3
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, p1, v1}, Lp9;-><init>(Lii0;I)V
 
-    move-result v1
+    iget-object p1, p0, Lq9;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    check-cast p1, Lzpb;
 
-    iget v1, p0, Lq9;->b:F
+    invoke-interface {p1, v0, p2}, Lzpb;->a(Lii0;Laqb;)V
 
-    iget p1, p1, Lq9;->b:F
+    return-void
 
-    cmpl-float p1, v1, p1
+    :pswitch_1
+    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
 
-    if-nez p1, :cond_2
+    check-cast v0, Lzpb;
 
-    return v0
+    new-instance v1, Lp9;
 
-    :cond_2
-    return v2
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2}, Lp9;-><init>(Lii0;I)V
+
+    invoke-interface {v0, v1, p2}, Lzpb;->a(Lii0;Laqb;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
+
+    check-cast v0, Lzpb;
+
+    new-instance v1, Lp9;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lp9;-><init>(Lii0;I)V
+
+    invoke-interface {v0, v1, p2}, Lzpb;->a(Lii0;Laqb;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public c(ILii0;Laqb;)Z
+    .locals 4
 
-    iget v0, p0, Lq9;->b:F
+    iget-object v0, p0, Lq9;->b:Ljava/lang/Object;
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    check-cast v0, [Lwff;
 
-    move-result-object v0
+    move-object v1, p3
 
-    iget-object v1, p0, Lq9;->a:Ls24;
+    check-cast v1, Loj0;
 
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
+    iget-object v1, v1, Loj0;->a:Lx47;
 
-    move-result-object v0
+    iget-object v1, v1, Lx47;->h:Lu0d;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    :goto_0
+    array-length v2, v0
 
-    move-result v0
+    const/4 v3, -0x1
 
-    return v0
+    if-ge p1, v2, :cond_1
+
+    aget-object v2, v0, p1
+
+    invoke-interface {v2, v1}, Lwff;->b(Lu0d;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move p1, v3
+
+    :goto_1
+    if-ne p1, v3, :cond_2
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    aget-object v0, v0, p1
+
+    new-instance v1, Lvff;
+
+    invoke-direct {v1, p0, p2, p3, p1}, Lvff;-><init>(Lq9;Lii0;Laqb;I)V
+
+    invoke-interface {v0, v1, p3}, Lzpb;->a(Lii0;Laqb;)V
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

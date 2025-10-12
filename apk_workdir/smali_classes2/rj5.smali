@@ -1,175 +1,180 @@
-.class public final Lrj5;
-.super Landroid/graphics/drawable/Drawable;
+.class public final synthetic Lrj5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll6;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final synthetic a:I
 
-.field public final b:Landroid/graphics/Bitmap;
+.field public final synthetic b:J
 
-.field public c:I
+.field public final synthetic c:I
 
-.field public final d:I
-
-.field public final e:I
+.field public final synthetic d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;)V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/lang/Object;JII)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    iput p5, p0, Lrj5;->a:I
 
-    new-instance v0, Landroid/graphics/Paint;
+    iput-object p1, p0, Lrj5;->d:Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    iput-wide p2, p0, Lrj5;->b:J
 
-    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+    iput p4, p0, Lrj5;->c:I
 
-    iput-object v0, p0, Lrj5;->a:Landroid/graphics/Paint;
-
-    const/16 v0, 0xff
-
-    iput v0, p0, Lrj5;->c:I
-
-    iput-object p1, p0, Lrj5;->b:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    iput p1, p0, Lrj5;->d:I
-
-    iget-object p1, p0, Lrj5;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p1
-
-    iput p1, p0, Lrj5;->e:I
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput p1, p0, Lrj5;->e:I
-
-    iput p1, p0, Lrj5;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 4
+.method public final run()V
+    .locals 6
 
-    iget-object v0, p0, Lrj5;->b:Landroid/graphics/Bitmap;
+    iget v0, p0, Lrj5;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+    iget-object v0, p0, Lrj5;->d:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Lpk5;
 
-    if-nez v0, :cond_0
+    iget-wide v1, p0, Lrj5;->b:J
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-object v3, v0, Lpk5;->a:Lc4d;
 
-    move-result-object v0
+    invoke-virtual {v3}, Lc4d;->c()V
 
-    iget-object v1, p0, Lrj5;->a:Landroid/graphics/Paint;
+    :try_start_0
+    invoke-virtual {v0}, Lpk5;->c()Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lrj5;->b:Landroid/graphics/Bitmap;
+    move-result-object v4
 
-    const/4 v3, 0x0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p1, v2, v3, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ltz v1, :cond_0
+
+    iget v2, p0, Lrj5;->c:I
+
+    if-ltz v2, :cond_0
+
+    :try_start_1
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_0
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lpk5;->a(Ljava/util/List;)V
 
     :cond_0
-    return-void
-.end method
+    invoke-virtual {v3}, Lc4d;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-.method public final getAlpha()I
-    .locals 1
-
-    iget v0, p0, Lrj5;->c:I
-
-    return v0
-.end method
-
-.method public final getIntrinsicHeight()I
-    .locals 1
-
-    iget v0, p0, Lrj5;->e:I
-
-    return v0
-.end method
-
-.method public final getIntrinsicWidth()I
-    .locals 1
-
-    iget v0, p0, Lrj5;->d:I
-
-    return v0
-.end method
-
-.method public final getMinimumHeight()I
-    .locals 1
-
-    iget v0, p0, Lrj5;->e:I
-
-    return v0
-.end method
-
-.method public final getMinimumWidth()I
-    .locals 1
-
-    iget v0, p0, Lrj5;->d:I
-
-    return v0
-.end method
-
-.method public final getOpacity()I
-    .locals 1
-
-    const/4 v0, -0x3
-
-    return v0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 1
-
-    iput p1, p0, Lrj5;->c:I
-
-    iget-object v0, p0, Lrj5;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
+    invoke-virtual {v3}, Lc4d;->k()V
 
     return-void
-.end method
 
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, p0, Lrj5;->a:Landroid/graphics/Paint;
+    invoke-virtual {v3}, Lc4d;->k()V
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lrj5;->d:Ljava/lang/Object;
+
+    check-cast v0, Lxk5;
+
+    iget-wide v1, p0, Lrj5;->b:J
+
+    iget-object v3, v0, Lxk5;->a:Lc4d;
+
+    invoke-virtual {v3}, Lc4d;->c()V
+
+    :try_start_2
+    invoke-virtual {v0}, Lxk5;->c()Ljava/util/ArrayList;
+
+    move-result-object v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ltz v1, :cond_1
+
+    iget v2, p0, Lrj5;->c:I
+
+    if-ltz v2, :cond_1
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v5
+
+    if-ge v2, v5, :cond_1
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v4}, Lxk5;->a(Ljava/util/List;)V
+
+    :cond_1
+    invoke-virtual {v3}, Lc4d;->q()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    invoke-virtual {v3}, Lc4d;->k()V
 
     return-void
-.end method
 
-.method public final setFilterBitmap(Z)V
-    .locals 1
+    :catchall_1
+    move-exception v0
 
-    iget-object v0, p0, Lrj5;->a:Landroid/graphics/Paint;
+    invoke-virtual {v3}, Lc4d;->k()V
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
+    throw v0
 
-    return-void
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

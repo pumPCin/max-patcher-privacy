@@ -1,465 +1,110 @@
 .class public final Lne7;
-.super Ljava/lang/Object;
+.super Lwue;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lne7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lfef;
 
 
 # instance fields
-.field public final X:Lltf;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lme7;
-
-.field public final o:Ljava/lang/String;
+.field public final o:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    .locals 3
 
-    new-instance v0, Lma4;
+    invoke-direct {p0, p1}, Lwue;-><init>(Landroid/view/View;)V
 
-    const/16 v1, 0x1d
+    iput-object p1, p0, Lne7;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-direct {v0, v1}, Lma4;-><init>(I)V
+    new-instance v0, Lfvc;
 
-    sput-object v0, Lne7;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v1, -0x1
 
-    return-void
-.end method
+    const/4 v2, -0x2
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
-    .locals 0
+    invoke-direct {v0, v1, v2}, Lfvc;-><init>(II)V
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2
-    iput-object p1, p0, Lne7;->a:Ljava/lang/String;
+    const/16 v0, 0xc
 
-    .line 3
-    iput-object p2, p0, Lne7;->b:Ljava/lang/String;
+    int-to-float v0, v0
 
-    .line 4
-    iput-object p3, p0, Lne7;->c:Lme7;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    .line 5
-    iput-object p4, p0, Lne7;->o:Ljava/lang/String;
+    move-result-object v1
 
-    .line 6
-    iput-object p5, p0, Lne7;->X:Lltf;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;I)V
-    .locals 2
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    and-int/lit8 v0, p6, 0x1
+    mul-float/2addr v1, v0
 
-    const/4 v1, 0x0
+    invoke-static {v1}, Li8e;->I(F)I
 
-    if-eqz v0, :cond_0
+    move-result v1
 
-    move-object p1, v1
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    :cond_0
-    and-int/lit8 v0, p6, 0x2
+    move-result-object v2
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-object p2, v1
+    move-result-object v2
 
-    :cond_1
-    and-int/lit8 v0, p6, 0x4
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    if-eqz v0, :cond_2
+    mul-float/2addr v0, v2
 
-    move-object p3, v1
+    invoke-static {v0}, Li8e;->I(F)I
 
-    :cond_2
-    and-int/lit8 v0, p6, 0x8
+    move-result v0
 
-    if-eqz v0, :cond_3
+    const/4 v2, 0x0
 
-    move-object p4, v1
+    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    :cond_3
-    and-int/lit8 p6, p6, 0x10
+    sget-object v0, Lrw4;->t0:Lss6;
 
-    if-eqz p6, :cond_4
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
 
-    move-object p6, v1
+    move-result-object p1
 
-    :goto_0
-    move-object p5, p4
-
-    move-object p4, p3
-
-    move-object p3, p2
-
-    move-object p2, p1
-
-    move-object p1, p0
-
-    goto :goto_1
-
-    :cond_4
-    move-object p6, p5
-
-    goto :goto_0
-
-    .line 7
-    :goto_1
-    invoke-direct/range {p1 .. p6}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
+    invoke-virtual {p0, p1}, Lne7;->onThemeChanged(Llwa;)V
 
     return-void
-.end method
-
-.method public static a(Lne7;Ljava/lang/String;Ljava/lang/String;Lme7;I)Lne7;
-    .locals 6
-
-    and-int/lit8 v0, p4, 0x1
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p0, Lne7;->a:Ljava/lang/String;
-
-    :cond_0
-    move-object v1, p1
-
-    and-int/lit8 p1, p4, 0x2
-
-    if-eqz p1, :cond_1
-
-    iget-object p2, p0, Lne7;->b:Ljava/lang/String;
-
-    :cond_1
-    move-object v2, p2
-
-    and-int/lit8 p1, p4, 0x4
-
-    if-eqz p1, :cond_2
-
-    iget-object p3, p0, Lne7;->c:Lme7;
-
-    :cond_2
-    move-object v3, p3
-
-    iget-object v4, p0, Lne7;->o:Ljava/lang/String;
-
-    iget-object v5, p0, Lne7;->X:Lltf;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lne7;
-
-    invoke-direct/range {v0 .. v5}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final onThemeChanged(Llwa;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    sget-object v0, Ldwf;->q:Lddf;
 
-    return v0
-.end method
+    iget-object v1, p0, Lne7;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-static {v0, v1}, Lddf;->d(Lddf;Landroid/widget/TextView;)V
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lne7;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lne7;
-
-    iget-object v1, p0, Lne7;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lne7;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lne7;->c:Lme7;
-
-    iget-object v3, p1, Lne7;->c:Lme7;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lne7;->o:Ljava/lang/String;
-
-    iget-object v3, p1, Lne7;->o:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lne7;->X:Lltf;
-
-    iget-object p1, p1, Lne7;->X:Lltf;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lne7;->a:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->b:Ljava/lang/String;
-
-    if-nez v2, :cond_1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->c:Lme7;
-
-    if-nez v2, :cond_2
-
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v2}, Lme7;->hashCode()I
-
-    move-result v2
-
-    :goto_2
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->o:Ljava/lang/String;
-
-    if-nez v2, :cond_3
-
-    move v2, v0
-
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_3
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lne7;->X:Lltf;
-
-    if-nez v2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_4
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", hint="
-
-    const-string v1, ", emailData="
-
-    const-string v2, "InternalTwoFANavData(password="
-
-    iget-object v3, p0, Lne7;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lne7;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {p1}, Llwa;->getText()Lobf;
 
     move-result-object v0
 
-    iget-object v1, p0, Lne7;->c:Lme7;
+    iget v0, v0, Lobf;->i:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const-string v1, ", phoneForLogin="
+    invoke-interface {p1}, Llwa;->b()Lme0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Lne7;->o:Ljava/lang/String;
+    iget p1, p1, Lme0;->l:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", twoFAConfig="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lne7;->X:Lltf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    iget-object v0, p0, Lne7;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lne7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lne7;->c:Lme7;
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v2, p1, p2}, Lme7;->writeToParcel(Landroid/os/Parcel;I)V
-
-    :goto_0
-    iget-object v2, p0, Lne7;->o:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lne7;->X:Lltf;
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v2, p1, p2}, Lltf;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
     return-void
 .end method

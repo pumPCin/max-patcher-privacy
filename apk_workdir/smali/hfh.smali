@@ -1,62 +1,143 @@
 .class public final Lhfh;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljfh;
+
+
+# static fields
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public a:Landroid/content/Context;
+.field public volatile a:Ljfh;
 
-.field public final b:Lbjb;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbjb;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p1, p0, Lhfh;->b:Lbjb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhfh;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Ljfh;)Ljfh;
+    .locals 2
+
+    instance-of v0, p0, Lhfh;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lhfh;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Lhfh;->c:Ljava/lang/Object;
+
+    iput-object v1, v0, Lhfh;->b:Ljava/lang/Object;
+
+    iput-object p0, v0, Lhfh;->a:Ljfh;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+.method public final i()Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    const-string v0, "Scoped provider was invoked recursively returning different results: "
 
-    move-result-object p1
+    iget-object v1, p0, Lhfh;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    sget-object v2, Lhfh;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
+    if-ne v1, v2, :cond_3
 
-    move-result-object p1
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v1, p0, Lhfh;->b:Ljava/lang/Object;
+
+    if-ne v1, v2, :cond_2
+
+    iget-object v1, p0, Lhfh;->a:Ljfh;
+
+    invoke-interface {v1}, Ljfh;->i()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lhfh;->b:Ljava/lang/Object;
+
+    if-eq v3, v2, :cond_1
+
+    if-ne v3, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance v2, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    const-string p2, "com.google.android.gms"
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result p1
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez p1, :cond_1
+    const-string v0, " & "
 
-    return-void
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_1
-    iget-object p1, p0, Lhfh;->b:Lbjb;
+    :goto_0
+    iput-object v1, p0, Lhfh;->b:Ljava/lang/Object;
 
-    iget-object p1, p1, Lbjb;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    const/4 p1, 0x0
+    iput-object v0, p0, Lhfh;->a:Ljfh;
 
-    throw p1
+    :cond_2
+    monitor-exit p0
+
+    return-object v1
+
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_3
+    return-object v1
 .end method

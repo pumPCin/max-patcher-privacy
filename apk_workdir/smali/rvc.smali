@@ -1,48 +1,19 @@
 .class public final Lrvc;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Ldoa;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Ldoa;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lrvc;->Y:Ldoa;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.super Lbvc;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
+    .locals 0
 
-    iput-object p1, p0, Lrvc;->o:Ljava/lang/Object;
+    new-instance p2, Landroid/widget/EdgeEffect;
 
-    iget p1, p0, Lrvc;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrvc;->X:I
-
-    iget-object p1, p0, Lrvc;->Y:Ldoa;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ldoa;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    return-object p1
+    invoke-direct {p2, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
+    return-object p2
 .end method

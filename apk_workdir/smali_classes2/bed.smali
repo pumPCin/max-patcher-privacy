@@ -1,128 +1,198 @@
 .class public final Lbed;
-.super Lm3f;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final a:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    iput-object p1, p0, Lbed;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lbed;->a:Ljava/util/HashSet;
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    check-cast p1, Lda4;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lbed;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lbed;
+    const-string v0, "android.intent.action.SCREEN_OFF"
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, p2}, Lbed;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    return-object p2
-.end method
+    const-string v0, "umg"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-eqz p1, :cond_1
 
-    new-instance v0, Lbed;
+    iget-object p1, p0, Lbed;->a:Ljava/util/HashSet;
 
-    iget-object v1, p0, Lbed;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-direct {v0, v1, p2}, Lbed;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lbed;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lbed;->X:Ljava/lang/Object;
-
-    check-cast p1, Lda4;
-
-    iget-object v0, p0, Lbed;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->Z0()Lxdd;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lxdd;->c()Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->H0()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget v2, Ln9d;->y:I
-
-    iget-object v3, p1, Lda4;->a:Lpa4;
-
-    iget-object v3, v3, Lpa4;->X:Ljava/lang/String;
-
-    iget-object v4, p1, Lda4;->b:Lphf;
-
-    iget-object p1, p1, Lda4;->c:Lphf;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v4, ":"
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    filled-new-array {v3, p1}, [Ljava/lang/Object;
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lumg;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "onScreenOff"
+
+    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v1, p2, Lumg;->l:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p2, Lumg;->l:Z
+
+    iget-boolean v1, p2, Lumg;->k:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p2}, Lumg;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, v2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    const-string p2, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lbed;->a:Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lru/ok/utils/widgets/LongRoundedTitleSubtitleButton;->setSubtitle(Ljava/lang/CharSequence;)V
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result p2
 
-    return-object p1
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lumg;
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lr28;->o:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onScreenOn, isAppVisible="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v4, p2, Lumg;->k:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isScreenOn="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p2, Lumg;->l:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    iget-boolean v1, p2, Lumg;->l:Z
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p2, Lumg;->l:Z
+
+    iget-boolean v1, p2, Lumg;->k:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2}, Lumg;->b()V
+
+    goto :goto_1
+
+    :cond_5
+    return-void
 .end method

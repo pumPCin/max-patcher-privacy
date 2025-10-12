@@ -1,118 +1,125 @@
 .class public final Lkm1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lrf6;
+.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:J
+.field public X:I
 
-.field public synthetic Y:Z
+.field public final synthetic Y:Lym1;
 
-.field public synthetic Z:Z
+.field public final synthetic Z:I
 
-.field public synthetic w0:Lfa;
+.field public final synthetic r0:Landroid/os/Bundle;
+
+
+# direct methods
+.method public constructor <init>(Lym1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lkm1;->Y:Lym1;
+
+    iput p2, p0, Lkm1;->Z:I
+
+    iput-object p3, p0, Lkm1;->r0:Landroid/os/Bundle;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lgy5;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast p1, Ln24;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-wide v0
+    invoke-virtual {p0, p1, p2}, Lkm1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p2, Ljava/lang/Boolean;
+    move-result-object p1
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Lkm1;
 
-    move-result p1
+    sget-object p2, Laxf;->a:Laxf;
 
-    check-cast p3, Ljava/lang/Boolean;
-
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p4, Lfa;
-
-    new-instance p3, Lkm1;
-
-    const/4 v2, 0x5
-
-    invoke-direct {p3, v2, p5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-wide v0, p3, Lkm1;->X:J
-
-    iput-boolean p1, p3, Lkm1;->Y:Z
-
-    iput-boolean p2, p3, Lkm1;->Z:Z
-
-    iput-object p4, p3, Lkm1;->w0:Lfa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {p3, p1}, Lkm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lkm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 .end method
 
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lkm1;
+
+    iget v0, p0, Lkm1;->Z:I
+
+    iget-object v1, p0, Lkm1;->r0:Landroid/os/Bundle;
+
+    iget-object v2, p0, Lkm1;->Y:Lym1;
+
+    invoke-direct {p1, v2, v0, v1, p2}, Lkm1;-><init>(Lym1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Lkm1;->X:I
 
-    iget-wide v0, p0, Lkm1;->X:J
+    const/4 v1, 0x1
 
-    iget-boolean p1, p0, Lkm1;->Y:Z
+    if-eqz v0, :cond_1
 
-    iget-boolean v2, p0, Lkm1;->Z:Z
+    if-ne v0, v1, :cond_0
 
-    iget-object v3, p0, Lkm1;->w0:Lfa;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_0
-
-    if-nez v2, :cond_0
-
-    iget-object p1, v3, Lfa;->b:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-wide v4, v3, Lfa;->c:J
-
-    cmp-long p1, v0, v4
-
-    if-gez p1, :cond_0
-
-    iget-object p1, v3, Lfa;->a:Ljava/util/Map;
-
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkm1;->Y:Lym1;
+
+    iget-object p1, p1, Lym1;->r0:Lmq1;
+
+    iput v1, p0, Lkm1;->X:I
+
+    iget v0, p0, Lkm1;->Z:I
+
+    iget-object v1, p0, Lkm1;->r0:Landroid/os/Bundle;
+
+    invoke-virtual {p1, v0, v1, p0}, Lmq1;->c(ILandroid/os/Bundle;Lwy3;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     return-object p1
 .end method

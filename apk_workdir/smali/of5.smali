@@ -1,31 +1,23 @@
 .class public final Lof5;
-.super Ljava/lang/Object;
+.super Llxf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-.field public final b:I
+    const-string v0, "ExoSoSource"
 
-.field public final c:I
+    return-object v0
+.end method
 
-.field public final d:Lqbe;
-
-
-# direct methods
-.method public constructor <init>(IIILqbe;)V
+.method public final g(Z)Lcom/facebook/soloader/e;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p1, Lcom/facebook/soloader/c;
 
-    iput p1, p0, Lof5;->a:I
+    invoke-direct {p1, p0, p0}, Lcom/facebook/soloader/c;-><init>(Lof5;Lof5;)V
 
-    iput p2, p0, Lof5;->b:I
-
-    iput p3, p0, Lof5;->c:I
-
-    iput-object p4, p0, Lof5;->d:Lqbe;
-
-    return-void
+    return-object p1
 .end method

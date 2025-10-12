@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;",
         "provider",
-        "Loyf;",
+        "Laxf;",
         "setApplicationNameProvider",
         "(Lru/ok/android/externcalls/sdk/analytics/ApplicationNameProvider;)V",
         "Lru/ok/android/externcalls/sdk/analytics/UploadConfigProvider;",

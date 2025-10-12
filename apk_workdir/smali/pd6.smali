@@ -2,300 +2,365 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ExecutorService;
+
+# static fields
+.field public static final d:[Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Ljava/util/Set;
+
+.field public final c:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v7, "prefix="
 
-    iput-object p1, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
+    const-string v8, "uncompress="
 
-    new-instance p1, Lph5;
+    const-string v0, "tokenize="
 
-    const/16 v0, 0xe
+    const-string v1, "compress="
 
-    invoke-direct {p1, v0}, Lph5;-><init>(I)V
+    const-string v2, "content="
 
-    const/4 v0, 0x3
+    const-string v3, "languageid="
 
-    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
+    const-string v4, "matchinfo="
 
-    move-result-object p1
+    const-string v5, "notindexed="
 
-    iput-object p1, p0, Lpd6;->b:Ljava/lang/Object;
+    const-string v6, "order="
+
+    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lpd6;->d:[Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
+    .locals 0
 
-# virtual methods
-.method public final a()Z
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    .line 2
+    iput-object p1, p0, Lpd6;->a:Ljava/lang/String;
 
-    move-result-object v0
+    .line 3
+    iput-object p2, p0, Lpd6;->b:Ljava/util/Set;
 
-    iget-object v1, p0, Lpd6;->b:Ljava/lang/Object;
+    .line 4
+    iput-object p3, p0, Lpd6;->c:Ljava/util/Set;
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/HashSet;Ljava/lang/String;)V
+    .locals 0
+
+    .line 5
+    invoke-static {p3}, Lpu0;->t(Ljava/lang/String;)Ljava/util/Set;
+
+    move-result-object p3
+
+    invoke-direct {p0, p1, p2, p3}, Lpd6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
+
+    return-void
+.end method
+
+.method public static final a(Lfc6;Ljava/lang/String;)Lpd6;
+    .locals 4
+
+    new-instance v0, Luvd;
+
+    invoke-direct {v0}, Luvd;-><init>()V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "PRAGMA table_info(`"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "`)"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Thread;
+    invoke-virtual {p0, v1}, Lfc6;->h0(Ljava/lang/String;)Landroid/database/Cursor;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    const/4 v0, 0x1
+    :try_start_0
+    invoke-interface {v1}, Landroid/database/Cursor;->getColumnCount()I
 
-    return v0
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    const-string v2, "name"
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    :goto_0
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Luvd;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_3
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
 
-    return v0
+    invoke-static {v0}, Lzvd;->g(Luvd;)Luvd;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "SELECT * FROM sqlite_master WHERE `name` = \'"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x27
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lfc6;->h0(Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object p0
+
+    :try_start_1
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "sql"
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    const-string v1, ""
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :goto_1
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+
+    invoke-static {v1}, Lpu0;->t(Ljava/lang/String;)Ljava/util/Set;
+
+    move-result-object p0
+
+    new-instance v1, Lpd6;
+
+    invoke-direct {v1, p1, v0, p0}, Lpd6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
+
+    return-object v1
+
+    :goto_2
+    :try_start_2
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {p0, p1}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :goto_3
+    :try_start_3
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    :catchall_3
+    move-exception p1
+
+    invoke-static {v1, p0}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 1
 
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lpd6;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    :cond_1
+    check-cast p1, Lpd6;
+
+    iget-object v0, p1, Lpd6;->a:Ljava/lang/String;
+
+    iget-object v2, p0, Lpd6;->a:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v0, p0, Lpd6;->b:Ljava/util/Set;
+
+    iget-object v2, p1, Lpd6;->b:Ljava/util/Set;
+
+    invoke-static {v0, v2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-object v0, p0, Lpd6;->c:Ljava/util/Set;
+
+    iget-object p1, p1, Lpd6;->c:Ljava/util/Set;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lpd6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lpd6;->b:Ljava/util/Set;
+
+    invoke-static {v2, v0, v1}, Lc85;->f(Ljava/util/Set;II)I
+
+    move-result v0
+
+    iget-object v1, p0, Lpd6;->c:Ljava/util/Set;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    invoke-virtual {p0}, Lpd6;->a()Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v1, "FtsTableInfo{name=\'"
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    iget-object v1, p0, Lpd6;->a:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    new-instance v0, Le30;
+    const-string v1, "\', columns="
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1}, Le30;-><init>(Ljava/lang/Runnable;I)V
+    iget-object v1, p0, Lpd6;->b:Ljava/util/Set;
 
-    iget-object p1, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    const-string v1, ", options="
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
-    .locals 1
+    iget-object v1, p0, Lpd6;->c:Ljava/util/Set;
 
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    const-string v1, "\'}"
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 1
+    move-result-object v0
 
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final isShutdown()Z
-    .locals 1
-
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isTerminated()Z
-    .locals 1
-
-    iget-object v0, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final shutdown()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final shutdownNow()Ljava/util/List;
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 2
-
-    invoke-virtual {p0}, Lpd6;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-static {p1}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Le30;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Le30;-><init>(Ljava/lang/Runnable;I)V
-
-    iget-object p1, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 2
-
-    invoke-virtual {p0}, Lpd6;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    invoke-static {p2}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Le30;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Le30;-><init>(Ljava/lang/Runnable;I)V
-
-    iget-object p1, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p1, v0, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 2
-
-    invoke-virtual {p0}, Lpd6;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    new-instance v0, Lp5;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p1}, Lp5;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lpd6;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

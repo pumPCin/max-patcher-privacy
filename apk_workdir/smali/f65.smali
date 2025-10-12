@@ -3,96 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/method/TransformationMethod;
+.implements Ln87;
 
 
 # instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf65;->a:Landroid/text/method/TransformationMethod;
+    iput-boolean p1, p0, Lf65;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+.method public final b()Lm0a;
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    const/4 v0, 0x0
 
-    move-result v0
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final isActive()Z
+    .locals 1
 
-    return-object p1
+    iget-boolean v0, p0, Lf65;->a:Z
 
-    :cond_0
-    iget-object v0, p0, Lf65;->a:Landroid/text/method/TransformationMethod;
+    return v0
+.end method
 
-    if-eqz v0, :cond_1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-interface {v0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "Empty{"
 
-    :cond_1
-    if-eqz p1, :cond_3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Ll45;->a()Ll45;
+    iget-boolean v1, p0, Lf65;->a:Z
 
-    move-result-object p2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p2}, Ll45;->b()I
-
-    move-result p2
-
-    const/4 v0, 0x1
-
-    if-eq p2, v0, :cond_2
+    const-string v1, "Active"
 
     goto :goto_0
 
-    :cond_2
-    invoke-static {}, Ll45;->a()Ll45;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Ll45;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    :cond_3
-    :goto_0
-    return-object p1
-.end method
-
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 6
-
-    iget-object v0, p0, Lf65;->a:Landroid/text/method/TransformationMethod;
-
-    if-eqz v0, :cond_0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    move v4, p4
-
-    move-object v5, p5
-
-    invoke-interface/range {v0 .. v5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-
     :cond_0
-    return-void
+    const-string v1, "New"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

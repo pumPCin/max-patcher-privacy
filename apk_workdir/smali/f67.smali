@@ -1,41 +1,43 @@
-.class public abstract Lf67;
-.super Ljava/lang/Object;
+.class public final Lf67;
+.super Ljava/util/HashMap;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a(Landroid/widget/ImageView;)Landroid/content/res/ColorStateList;
-    .locals 0
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintList()Landroid/content/res/ColorStateList;
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object p0
+    const/4 v1, 0x1
 
-    return-object p0
-.end method
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-.method public static b(Landroid/widget/ImageView;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getImageTintMode()Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Landroid/widget/ImageView;Landroid/content/res/ColorStateList;)V
-    .locals 0
+.method public static b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    new-instance v0, Ljava/util/HashMap;
 
-    return-void
-.end method
+    const/4 v1, 0x2
 
-.method public static d(Landroid/widget/ImageView;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(I)V
 
-    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    invoke-virtual {v0, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p0
+
+    return-object p0
 .end method

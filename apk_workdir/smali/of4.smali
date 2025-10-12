@@ -1,3 +1,3 @@
-.class public abstract Lof4;
-.super Ljava/lang/Object;
+.class public final Lof4;
+.super Ljava/io/IOException;
 .source "SourceFile"

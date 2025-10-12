@@ -1,48 +1,42 @@
 .class public final Lom2;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lpm2;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lrb9;
 
 
 # direct methods
-.method public constructor <init>(Lpm2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lrb9;)V
     .locals 0
 
-    iput-object p1, p0, Lom2;->Y:Lpm2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lom2;->a:Lrb9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lom2;->o:Ljava/lang/Object;
+    check-cast p1, Lhl2;
 
-    iget p1, p0, Lom2;->X:I
+    new-instance p1, Lhl2;
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lom2;->a:Lrb9;
 
-    or-int/2addr p1, v0
+    iget-boolean v1, v0, Lrb9;->c:Z
 
-    iput p1, p0, Lom2;->X:I
+    iget-boolean v0, v0, Lrb9;->b:Z
 
-    iget-object p1, p0, Lom2;->Y:Lpm2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpm2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
+    invoke-direct {p1, v1, v0}, Lhl2;-><init>(ZZ)V
 
     return-object p1
 .end method

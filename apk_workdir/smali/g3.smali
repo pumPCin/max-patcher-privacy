@@ -1,102 +1,108 @@
 .class public abstract Lg3;
-.super Lbnc;
+.super Lf2;
 .source "SourceFile"
+
+# interfaces
+.implements Lb67;
+.implements Ljava/util/Collection;
+.implements Lel7;
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 2
-
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
-
-    move-result v0
-
-    rsub-int/lit8 v1, p1, 0x20
-
-    ushr-int/2addr v0, v1
-
-    neg-int p1, p1
-
-    shr-int/lit8 p1, p1, 0x1f
-
-    and-int/2addr p1, v0
-
-    return p1
-.end method
-
-.method public final b()I
+.method public final contains(Ljava/lang/Object;)Z
     .locals 1
 
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextInt()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c(I)I
-    .locals 1
-
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/Random;->nextInt(I)I
+    invoke-virtual {p0, p1}, Lf2;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
+    const/4 v0, -0x1
+
+    if-eq p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
     return p1
 .end method
 
-.method public final d()J
+.method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public abstract g()Ljava/util/Random;
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Random;->nextBoolean()Z
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
 
-    return v0
-.end method
+    const/4 v1, 0x1
 
-.method public final i()F
-    .locals 1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lg3;->g()Ljava/util/Random;
+    return v1
 
-    move-result-object v0
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Ljava/util/Random;->nextFloat()F
+    move-result-object p1
+
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lg3;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v1
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lf2;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lf2;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 1
+
+    new-instance v0, Ly57;
+
+    invoke-direct {v0, p0, p1, p2}, Ly57;-><init>(Lg3;II)V
+
+    return-object v0
 .end method

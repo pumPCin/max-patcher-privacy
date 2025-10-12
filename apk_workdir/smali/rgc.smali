@@ -3,6 +3,14 @@
 
 
 # static fields
-.field public static report_drawn:I = 0x7f0a0a0e
+.field public static about_app_send_report:I = 0x7f13001d
 
-.field public static view_tree_on_back_pressed_dispatcher_owner:I = 0x7f0a0d43
+.field public static about_app_send_report_dialog_accept:I = 0x7f13001e
+
+.field public static about_app_send_report_dialog_decline:I = 0x7f13001f
+
+.field public static about_app_send_report_dialog_title:I = 0x7f130020
+
+.field public static about_app_settings_toolbar_title:I = 0x7f130021
+
+.field public static about_app_settings_version:I = 0x7f130022

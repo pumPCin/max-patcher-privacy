@@ -1,85 +1,117 @@
-.class public abstract synthetic Lwle;
-.super Ljava/lang/Object;
+.class public final Lwle;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lcme;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcme;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lwle;->Z:Lcme;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const/4 p1, 0x2
 
-    move-result-object v1
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    array-length v1, v1
+    return-void
+.end method
 
-    new-array v1, v1, [I
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lvr3;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwle;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwle;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lwle;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lwle;
+
+    iget-object v1, p0, Lwle;->Z:Lcme;
+
+    invoke-direct {v0, v1, p2}, Lwle;-><init>(Lcme;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lwle;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lwle;->X:I
+
+    sget-object v1, Laxf;->a:Laxf;
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    if-eqz v0, :cond_1
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-ne v0, v2, :cond_0
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    :catch_1
-    sput-object v1, Lwle;->$EnumSwitchMapping$0:[I
+    return-object v1
 
-    invoke-static {}, Lk10;->values()[Lk10;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    array-length v1, v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    new-array v1, v1, [I
+    throw p1
 
-    :try_start_2
-    aput v2, v1, v0
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    :catch_2
-    const/4 v2, 0x3
+    iget-object p1, p0, Lwle;->Y:Ljava/lang/Object;
 
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    check-cast p1, Lvr3;
 
-    :catch_3
-    const/4 v0, 0x4
+    iget-object v0, p0, Lwle;->Z:Lcme;
 
-    :try_start_4
-    aput v2, v1, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    iget-object v0, v0, Lcme;->t0:Lhne;
 
-    :catch_4
-    const/16 v2, 0x9
+    iput v2, p0, Lwle;->X:I
 
-    :try_start_5
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-virtual {v0, p1}, Lhne;->setValue(Ljava/lang/Object;)V
 
-    :catch_5
-    sput-object v1, Lwle;->$EnumSwitchMapping$1:[I
+    sget-object p1, Lo24;->a:Lo24;
 
-    return-void
+    if-ne v1, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    return-object v1
 .end method

@@ -1,191 +1,156 @@
-.class public abstract enum Ldbd;
-.super Ljava/lang/Enum;
+.class public final Ldbd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lebd;
 
-# static fields
-.field public static final synthetic a:[Ldbd;
+
+# instance fields
+.field public final a:Lebd;
+
+.field public final b:Lebd;
+
+.field public final c:Landroid/graphics/Rect;
+
+.field public final d:Landroid/graphics/Rect;
+
+.field public final e:[F
+
+.field public final f:[F
+
+.field public final g:[F
+
+.field public h:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ldbd;
-
-    sput-object v0, Ldbd;->a:[Ldbd;
-
-    return-void
-.end method
-
-.method public static a(I[B)V
-    .locals 0
-
-    if-ltz p0, :cond_0
-
-    array-length p1, p1
-
-    if-ge p0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
-
-    invoke-direct {p1, p0}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(I)V
-
-    throw p1
-.end method
-
-.method public static b(I[BI)V
-    .locals 0
-
-    if-ltz p2, :cond_1
-
-    if-lez p2, :cond_0
-
-    invoke-static {p0, p1}, Ldbd;->a(I[B)V
-
-    add-int/2addr p0, p2
-
-    add-int/lit8 p0, p0, -0x1
-
-    invoke-static {p0, p1}, Ldbd;->a(I[B)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "lengths must be >= 0"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static c(I[B)I
+.method public constructor <init>(Lggh;Lggh;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 2
 
-    sget-object v0, Lu4g;->a:Ljava/nio/ByteOrder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    const/16 v0, 0x9
 
-    if-ne v0, v1, :cond_0
+    new-array v1, v0, [F
 
-    aget-byte v0, p1, p0
+    iput-object v1, p0, Ldbd;->e:[F
 
-    and-int/lit16 v0, v0, 0xff
+    new-array v1, v0, [F
 
-    shl-int/lit8 v0, v0, 0x18
+    iput-object v1, p0, Ldbd;->f:[F
 
-    add-int/lit8 v1, p0, 0x1
+    new-array v0, v0, [F
 
-    aget-byte v1, p1, v1
+    iput-object v0, p0, Ldbd;->g:[F
 
-    and-int/lit16 v1, v1, 0xff
+    iput-object p1, p0, Ldbd;->a:Lebd;
 
-    shl-int/lit8 v1, v1, 0x10
+    iput-object p2, p0, Ldbd;->b:Lebd;
 
-    or-int/2addr v0, v1
+    iput-object p3, p0, Ldbd;->c:Landroid/graphics/Rect;
 
-    add-int/lit8 v1, p0, 0x2
+    iput-object p4, p0, Ldbd;->d:Landroid/graphics/Rect;
 
-    aget-byte v1, p1, v1
+    return-void
+.end method
 
-    and-int/lit16 v1, v1, 0xff
 
-    shl-int/lit8 v1, v1, 0x8
+# virtual methods
+.method public final a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+    .locals 8
 
-    or-int/2addr v0, v1
+    iget-object v0, p0, Ldbd;->a:Lebd;
 
-    add-int/lit8 p0, p0, 0x3
+    iget-object v2, p0, Ldbd;->c:Landroid/graphics/Rect;
 
-    aget-byte p0, p1, p0
+    move-object v1, p1
 
-    and-int/lit16 p0, p0, 0xff
+    move v3, p3
 
-    or-int/2addr p0, v0
+    move v4, p4
 
-    return p0
+    move v5, p5
+
+    move v6, p6
+
+    invoke-interface/range {v0 .. v6}, Lebd;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+
+    iget-object v7, p0, Ldbd;->e:[F
+
+    invoke-virtual {p1, v7}, Landroid/graphics/Matrix;->getValues([F)V
+
+    iget-object v0, p0, Ldbd;->b:Lebd;
+
+    iget-object v2, p0, Ldbd;->d:Landroid/graphics/Rect;
+
+    invoke-interface/range {v0 .. v6}, Lebd;->a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+
+    iget-object v0, p0, Ldbd;->f:[F
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->getValues([F)V
+
+    const/4 v2, 0x0
+
+    :goto_0
+    const/16 v3, 0x9
+
+    iget-object v4, p0, Ldbd;->g:[F
+
+    if-ge v2, v3, :cond_0
+
+    aget v3, v7, v2
+
+    iget v5, p0, Ldbd;->h:F
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    sub-float/2addr v6, v5
+
+    mul-float/2addr v6, v3
+
+    aget v3, v0, v2
+
+    mul-float/2addr v3, v5
+
+    add-float/2addr v3, v6
+
+    aput v3, v4, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {p0, p1}, Ldbd;->d(I[B)I
+    invoke-virtual {p1, v4}, Landroid/graphics/Matrix;->setValues([F)V
 
-    move-result p0
-
-    return p0
+    return-object p1
 .end method
 
-.method public static d(I[B)I
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    aget-byte v0, p1, p0
+    iget-object v0, p0, Ldbd;->a:Lebd;
 
-    and-int/lit16 v0, v0, 0xff
-
-    add-int/lit8 v1, p0, 0x1
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, p0, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x10
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 p0, p0, 0x3
-
-    aget-byte p0, p1, p0
-
-    and-int/lit16 p0, p0, 0xff
-
-    shl-int/lit8 p0, p0, 0x18
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ldbd;
-    .locals 1
-
-    const-class v0, Ldbd;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lnd5;->n(Ljava/lang/Object;)V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public static values()[Ldbd;
-    .locals 1
-
-    sget-object v0, Ldbd;->a:[Ldbd;
-
-    invoke-virtual {v0}, [Ldbd;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Ldbd;
+    iget-object v1, p0, Ldbd;->b:Lebd;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, " (null) -> "
+
+    const-string v3, " (null))"
+
+    const-string v4, "InterpolatingScaleType("
+
+    invoke-static {v4, v0, v2, v1, v3}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

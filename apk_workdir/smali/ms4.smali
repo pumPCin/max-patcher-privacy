@@ -1,99 +1,131 @@
 .class public final Lms4;
-.super Ljava/lang/Object;
+.super Lrh7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/view/DisplayCutout;
+.field public final synthetic b:I
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/DisplayCutout;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lms4;->b:I
 
-    iput-object p1, p0, Lms4;->a:Landroid/view/DisplayCutout;
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+
+    iput-object p2, p0, Lms4;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final c()Z
+    .locals 1
+
+    iget v0, p0, Lms4;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_1
+    const/4 v0, 0x0
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lms4;->b:I
 
-    const/4 p1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return p1
+    iget-object p1, p0, Lms4;->c:Ljava/lang/Object;
 
-    :cond_0
-    if-eqz p1, :cond_2
+    check-cast p1, Lyh7;
 
-    const-class v0, Lms4;
+    iget-object v0, p0, Lrh7;->a:Lgi7;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lms4;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lms4;->a:Landroid/view/DisplayCutout;
-
-    iget-object p1, p1, Lms4;->a:Landroid/view/DisplayCutout;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_2
     :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lms4;->a:Landroid/view/DisplayCutout;
-
-    invoke-static {v0}, Lf4;->d(Landroid/view/DisplayCutout;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisplayCutoutCompat{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lms4;->a:Landroid/view/DisplayCutout;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lgi7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    instance-of v1, v0, Lwe3;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lwe3;
+
+    iget-object v0, v0, Lwe3;->a:Ljava/lang/Throwable;
+
+    new-instance v1, Lb2d;
+
+    invoke-direct {v1, v0}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p1, v1}, Lc22;->resumeWith(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v0}, Lhi7;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lc22;->resumeWith(Ljava/lang/Object;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lms4;->c:Ljava/lang/Object;
+
+    check-cast v0, Lvd6;
+
+    invoke-interface {v0, p1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lms4;->c:Ljava/lang/Object;
+
+    check-cast p1, Lis4;
+
+    invoke-interface {p1}, Lis4;->dispose()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

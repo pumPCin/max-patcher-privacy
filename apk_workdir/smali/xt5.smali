@@ -1,45 +1,92 @@
 .class public final Lxt5;
-.super Lym0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxt5;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
 
 
 # direct methods
-.method public static f(I[B)I
+.method static constructor <clinit>()V
     .locals 2
 
-    aget-byte v0, p1, p0
+    new-instance v0, Lz94;
 
-    and-int/lit16 v0, v0, 0xff
+    const/16 v1, 0xc
 
-    shl-int/lit8 v0, v0, 0x18
+    invoke-direct {v0, v1}, Lz94;-><init>(I)V
 
-    add-int/lit8 v1, p0, 0x1
+    sput-object v0, Lxt5;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    aget-byte v1, p1, v1
+    return-void
+.end method
 
-    and-int/lit16 v1, v1, 0xff
 
-    shl-int/lit8 v1, v1, 0x10
+# virtual methods
+.method public final describeContents()I
+    .locals 1
 
-    or-int/2addr v0, v1
+    const/4 v0, 0x0
 
-    add-int/lit8 v1, p0, 0x2
+    return v0
+.end method
 
-    aget-byte v1, p1, v1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    and-int/lit16 v1, v1, 0xff
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    shl-int/lit8 v1, v1, 0x8
+    const-string v1, "SavedState{mAnchorPosition="
 
-    or-int/2addr v0, v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    add-int/lit8 p0, p0, 0x3
+    iget v1, p0, Lxt5;->a:I
 
-    aget-byte p0, p1, p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    and-int/lit16 p0, p0, 0xff
+    const-string v1, ", mAnchorOffset="
 
-    or-int/2addr p0, v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    iget v1, p0, Lxt5;->b:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lnd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lxt5;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lxt5;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

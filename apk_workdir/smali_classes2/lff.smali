@@ -1,138 +1,159 @@
 .class public final Llff;
-.super Ljava/lang/Object;
+.super Lyjg;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Lpl7;
+
+
 # instance fields
-.field public final a:I
+.field public final b:Lhne;
 
-.field public final b:I
+.field public final c:Lk5d;
 
-.field public final c:I
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(III)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lds9;
 
-    iput p1, p0, Llff;->a:I
+    const-string v1, "loadJob"
 
-    iput p2, p0, Llff;->b:I
+    const-string v2, "getLoadJob()Lkotlinx/coroutines/Job;"
 
-    iput p3, p0, Llff;->c:I
+    const-class v3, Llff;
+
+    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lewc;->a:Lfwc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lpl7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Llff;->X:[Lpl7;
 
     return-void
 .end method
 
+.method public constructor <init>(Lzla;)V
+    .locals 7
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0}, Lyjg;-><init>()V
 
-    const/4 v0, 0x1
+    sget-object v0, Lo65;->a:Lo65;
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Line;->a(Ljava/lang/Object;)Lhne;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of v1, p1, Llff;
+    iput-object v0, p0, Llff;->b:Lhne;
+
+    invoke-static {}, Lkv9;->G()Lk5d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llff;->c:Lk5d;
+
+    invoke-virtual {p1}, Lzla;->d()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    new-instance v2, Ld3b;
+
+    const-string v3, "single"
+
+    invoke-direct {v2, v3, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object v1, p1, Lzla;->k:Lcc5;
+
+    sget-object v3, Lzla;->p:[Lpl7;
+
+    const/4 v4, 0x5
+
+    aget-object v4, v3, v4
+
+    invoke-virtual {p1, v1}, Lzla;->e(Lcc5;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    new-instance v4, Ld3b;
+
+    const-string v5, "trnsmt"
+
+    invoke-direct {v4, v5, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object v1, p1, Lzla;->j:Lcc5;
+
+    const/4 v5, 0x4
+
+    aget-object v5, v3, v5
+
+    invoke-virtual {p1, v1}, Lzla;->e(Lcc5;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v1
+
+    new-instance v5, Ld3b;
+
+    const-string v6, "net"
+
+    invoke-direct {v5, v6, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-object v1, p1, Lzla;->i:Lcc5;
+
+    const/4 v6, 0x3
+
+    aget-object v3, v3, v6
+
+    invoke-virtual {p1, v1}, Lzla;->e(Lcc5;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p1
+
+    new-instance v1, Ld3b;
+
+    const-string v3, "single-low"
+
+    invoke-direct {v1, v3, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v2, v4, v5, v1}, [Ld3b;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Llff;->o:Ljava/util/List;
+
+    new-instance p1, Lkff;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v1}, Lkff;-><init>(Llff;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x1
+
+    invoke-static {p0, v1, p1, v2}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    move-result-object p1
+
+    sget-object v1, Llff;->X:[Lpl7;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    aget-object v1, v1, v2
 
-    return v2
+    invoke-virtual {v0, p0, v1, p1}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
-    :cond_1
-    check-cast p1, Llff;
-
-    iget v1, p0, Llff;->a:I
-
-    iget v3, p1, Llff;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Llff;->b:I
-
-    iget v3, p1, Llff;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Llff;->c:I
-
-    iget p1, p1, Llff;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Llff;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Llff;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Llff;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", descriptionRes="
-
-    const-string v1, ", buttonRes="
-
-    const-string v2, "TextsUiModel(titleRes="
-
-    iget v3, p0, Llff;->a:I
-
-    iget v4, p0, Llff;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Llff;->c:I
-
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

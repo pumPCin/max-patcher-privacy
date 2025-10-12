@@ -2,78 +2,270 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lth5;
+
 
 # instance fields
-.field public a:Lnxc;
+.field public final synthetic a:I
 
-.field public b:Lnxc;
+.field public final b:Ljava/lang/Object;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>(I)V
+    .locals 3
 
-.field public e:I
+    const/4 v0, 0x1
 
-.field public f:I
+    iput v0, p0, Lki4;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    and-int/lit8 p1, p1, 0x1
+
+    if-eqz p1, :cond_0
+
+    .line 2
+    new-instance p1, Lrde;
+
+    const/4 v0, 0x2
+
+    const-string v1, "image/jpeg"
+
+    const v2, 0xffd8
+
+    invoke-direct {p1, v2, v0, v1}, Lrde;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lki4;->b:Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 3
+    :cond_0
+    new-instance p1, Lyi7;
+
+    invoke-direct {p1}, Lyi7;-><init>()V
+
+    iput-object p1, p0, Lki4;->b:Ljava/lang/Object;
+
+    :goto_0
+    return-void
+.end method
+
+.method public constructor <init>(Lw66;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lki4;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lki4;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(JJ)V
+    .locals 0
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final d(JJ)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lki4;->a:I
 
-    const-string v1, "ChangeInfo{oldHolder="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lki4;->b:Ljava/lang/Object;
 
-    iget-object v1, p0, Lki4;->a:Lnxc;
+    check-cast v0, Lth5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, p1, p2, p3, p4}, Lth5;->d(JJ)V
 
-    const-string v1, ", newHolder="
+    :pswitch_0
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget-object v1, p0, Lki4;->b:Lnxc;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final i(Lvh5;)Z
+    .locals 1
 
-    const-string v1, ", fromX="
+    iget v0, p0, Lki4;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, p0, Lki4;->c:I
+    iget-object v0, p0, Lki4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    check-cast v0, Lth5;
 
-    const-string v1, ", fromY="
+    invoke-interface {v0, p1}, Lth5;->i(Lvh5;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    iget v1, p0, Lki4;->d:I
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :pswitch_0
+    const/4 p1, 0x1
 
-    const-string v1, ", toX="
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iget v1, p0, Lki4;->e:I
+.method public final n(Lxh5;)V
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget v0, p0, Lki4;->a:I
 
-    const-string v1, ", toY="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lki4;->b:Ljava/lang/Object;
 
-    iget v1, p0, Lki4;->f:I
+    check-cast v0, Lth5;
 
-    const/16 v2, 0x7d
+    invoke-interface {v0, p1}, Lth5;->n(Lxh5;)V
 
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x3
+
+    invoke-interface {p1, v0, v1}, Lxh5;->A(II)Ltmf;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lsd0;
+
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {v1, v2, v3}, Lsd0;-><init>(J)V
+
+    invoke-interface {p1, v1}, Lxh5;->O(Lnld;)V
+
+    invoke-interface {p1}, Lxh5;->v()V
+
+    iget-object p1, p0, Lki4;->b:Ljava/lang/Object;
+
+    check-cast p1, Lw66;
+
+    invoke-virtual {p1}, Lw66;->a()Lt66;
+
+    move-result-object v1
+
+    const-string v2, "text/x-unknown"
+
+    invoke-static {v2}, Ltj9;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lt66;->m:Ljava/lang/String;
+
+    iget-object p1, p1, Lw66;->n:Ljava/lang/String;
+
+    iput-object p1, v1, Lt66;->j:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lajf;->t(Lt66;Ltmf;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final o(Lvh5;Lk7;)I
+    .locals 1
+
+    iget v0, p0, Lki4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lki4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lth5;
+
+    invoke-interface {v0, p1, p2}, Lth5;->o(Lvh5;Lk7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const p2, 0x7fffffff
+
+    invoke-interface {p1, p2}, Lvh5;->u(I)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    :goto_0
+    return p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget v0, p0, Lki4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lki4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lth5;
+
+    invoke-interface {v0}, Lth5;->release()V
+
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

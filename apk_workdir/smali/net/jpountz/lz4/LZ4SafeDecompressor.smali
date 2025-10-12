@@ -23,6 +23,7 @@
 .method public final decompress([BII[BI)I
     .locals 8
 
+    .line 1
     array-length v0, p4
 
     sub-int v7, v0, p5
@@ -52,6 +53,7 @@
 .method public final decompress([B[B)I
     .locals 6
 
+    .line 2
     array-length v3, p1
 
     const/4 v5, 0x0
@@ -74,6 +76,7 @@
 .method public final decompress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
     .locals 7
 
+    .line 7
     invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v2
@@ -100,12 +103,14 @@
 
     move-result p1
 
+    .line 8
     invoke-virtual {v1}, Ljava/nio/Buffer;->limit()I
 
     move-result p2
 
     invoke-virtual {v1, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 9
     invoke-virtual {v4}, Ljava/nio/Buffer;->position()I
 
     move-result p2
@@ -122,6 +127,7 @@
 
     const/4 v0, 0x0
 
+    .line 6
     array-length v1, p1
 
     invoke-virtual {p0, p1, v0, v1, p2}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BIII)[B
@@ -134,6 +140,7 @@
 .method public final decompress([BIII)[B
     .locals 7
 
+    .line 3
     new-array v4, p4, [B
 
     const/4 v5, 0x0
@@ -148,12 +155,14 @@
 
     move v6, p4
 
+    .line 4
     invoke-virtual/range {v0 .. v6}, Lnet/jpountz/lz4/LZ4SafeDecompressor;->decompress([BII[BII)I
 
     move-result p1
 
     if-eq p1, v6, :cond_0
 
+    .line 5
     invoke-static {v4, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object p1

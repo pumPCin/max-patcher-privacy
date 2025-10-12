@@ -1,26 +1,36 @@
 .class public final Lyrg;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lfsg;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lcsg;
+
+.field public final synthetic r0:Llrg;
+
+.field public final synthetic s0:Ljpg;
 
 
 # direct methods
-.method public constructor <init>(Lfsg;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljpg;Llrg;Lcsg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lyrg;->Y:Lfsg;
+    iput-object p3, p0, Lyrg;->Z:Lcsg;
+
+    iput-object p2, p0, Lyrg;->r0:Llrg;
+
+    iput-object p1, p0, Lyrg;->s0:Ljpg;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +40,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ljava/lang/Throwable;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +50,7 @@
 
     check-cast p1, Lyrg;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lyrg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,19 +60,25 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 4
 
-    new-instance p1, Lyrg;
+    new-instance v0, Lyrg;
 
-    iget-object v0, p0, Lyrg;->Y:Lfsg;
+    iget-object v1, p0, Lyrg;->r0:Llrg;
 
-    invoke-direct {p1, v0, p2}, Lyrg;-><init>(Lfsg;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Lyrg;->s0:Ljpg;
 
-    return-object p1
+    iget-object v3, p0, Lyrg;->Z:Lcsg;
+
+    invoke-direct {v0, v2, v1, v3, p2}, Lyrg;-><init>(Ljpg;Llrg;Lcsg;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lyrg;->Y:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 8
 
     iget v0, p0, Lyrg;->X:I
 
@@ -72,9 +88,9 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-object p1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -86,60 +102,51 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lyrg;->Y:Lfsg;
+    iget-object p1, p0, Lyrg;->Y:Ljava/lang/Object;
 
-    iget-object v0, p1, Lfsg;->h:Lbp7;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    sget-object v0, Lcsg;->i:Ljava/util/List;
 
-    move-result-object v0
-
-    check-cast v0, Lcrg;
-
-    iget-wide v2, p1, Lfsg;->a:J
-
-    iget-wide v4, p1, Lfsg;->b:J
-
-    iput v1, p0, Lyrg;->X:I
+    iget-object v0, p0, Lyrg;->Z:Lcsg;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 p1, 0x2
+    invoke-static {p1}, Lcsg;->f(Ljava/lang/Throwable;)Loj7;
 
-    const-string v6, "SELECT token FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
+    move-result-object v4
 
-    invoke-static {p1, v6}, Lo6d;->c(ILjava/lang/String;)Lo6d;
+    invoke-virtual {v0}, Lcsg;->g()Lwb3;
 
-    move-result-object v6
+    move-result-object v2
 
-    invoke-virtual {v6, v1, v2, v3}, Lo6d;->k(IJ)V
+    iget-object v3, v0, Lcsg;->g:Lfu0;
 
-    invoke-virtual {v6, p1, v4, v5}, Lo6d;->k(IJ)V
+    iget-object p1, p0, Lyrg;->s0:Ljpg;
 
-    new-instance p1, Landroid/os/CancellationSignal;
+    iget-object v6, p1, Ljpg;->b:Ljava/lang/String;
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    iput v1, p0, Lyrg;->X:I
 
-    iget-object v1, v0, Lcrg;->a:Lx5d;
+    iget-object v5, p0, Lyrg;->r0:Llrg;
 
-    new-instance v2, Larg;
+    move-object v7, p0
 
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v0, v6, v3}, Larg;-><init>(Lcrg;Lo6d;I)V
-
-    invoke-static {v1, p1, v2, p0}, Lihf;->g(Lx5d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual/range {v2 .. v7}, Lwb3;->a(Ls62;Loj7;Ldwg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    sget-object v0, Lo24;->a:Lo24;
 
     if-ne p1, v0, :cond_2
 
     return-object v0
 
     :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
+
     return-object p1
 .end method

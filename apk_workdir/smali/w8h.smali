@@ -1,27 +1,13 @@
 .class public final Lw8h;
-.super Ljava/lang/Object;
+.super Lx8h;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Intent;
+# virtual methods
+.method public final a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lgw7;
+    .locals 0
 
-.field public final b:Ltbf;
+    const/4 p1, 0x0
 
-
-# direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ltbf;
-
-    invoke-direct {v0}, Ltbf;-><init>()V
-
-    iput-object v0, p0, Lw8h;->b:Ltbf;
-
-    iput-object p1, p0, Lw8h;->a:Landroid/content/Intent;
-
-    return-void
+    return-object p1
 .end method

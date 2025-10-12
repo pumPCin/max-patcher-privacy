@@ -1,44 +1,53 @@
-.class public final synthetic Ll8e;
-.super Ljava/lang/Object;
+.class public final Ll8e;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lop5;
 
 
 # instance fields
-.field public final synthetic a:Lbp7;
+.field public X:Lr82;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ln8e;
+
+.field public o:Ln8e;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbp7;)V
+.method public constructor <init>(Ln8e;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll8e;->Z:Ln8e;
 
-    iput-object p1, p0, Ll8e;->a:Lbp7;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ly24;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Ll8e;->a:Lbp7;
+    iput-object p1, p0, Ll8e;->Y:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iget p1, p0, Ll8e;->r0:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Lr8f;
+    or-int/2addr p1, v0
 
-    check-cast v0, Lwla;
+    iput p1, p0, Ll8e;->r0:I
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    iget-object p1, p0, Ll8e;->Z:Ln8e;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-static {p1, v0, p0}, Ln8e;->p(Ln8e;Lr82;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

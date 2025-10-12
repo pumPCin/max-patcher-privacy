@@ -1,86 +1,91 @@
 .class public final Lbxg;
-.super Lcxg;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbxg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    iput-object p1, p0, Lbxg;->a:Ljava/lang/String;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lbxg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lbxg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lbxg;
 
-    iget-object v1, p0, Lbxg;->a:Ljava/lang/String;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object p1, p1, Lbxg;->a:Ljava/lang/String;
+    invoke-virtual {p1, p2}, Lbxg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lbxg;
+
+    iget-object v1, p0, Lbxg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
+
+    invoke-direct {v0, p2, v1}, Lbxg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+
+    iput-object p1, v0, Lbxg;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lbxg;->a:Ljava/lang/String;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object p1, p0, Lbxg;->X:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Lz1g;
 
-    return v0
-.end method
+    iget-boolean v0, p1, Lz1g;->b:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    if-nez v0, :cond_0
 
-    const-string v0, "OpenLinkExternal(url="
+    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->N0:[Lpl7;
 
-    const-string v1, ")"
+    iget-object v0, p0, Lbxg;->Y:Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    iget-object v2, p0, Lbxg;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/webapp/rootscreen/WebAppRootScreen;->Q0()Lcgd;
 
     move-result-object v0
 
-    return-object v0
+    iget-object p1, p1, Lz1g;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

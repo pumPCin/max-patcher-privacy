@@ -1,226 +1,688 @@
 .class public final Lhmb;
-.super Ljava/lang/Object;
+.super Lkv9;
 .source "SourceFile"
-
-# interfaces
-.implements Lplb;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public c:I
 
-.field public final b:Lec5;
-
-.field public final c:Lfe5;
-
-.field public final d:Lbp7;
-
-.field public final e:Lwlb;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Lbp7;
-
-.field public final h:Lgs;
+.field public final synthetic d:Limb;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lec5;Lfe5;Lbp7;Lwlb;Lbp7;)V
+.method public constructor <init>(Limb;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhmb;->a:Landroid/app/Application;
-
-    iput-object p2, p0, Lhmb;->b:Lec5;
-
-    iput-object p3, p0, Lhmb;->c:Lfe5;
-
-    iput-object p4, p0, Lhmb;->d:Lbp7;
-
-    iput-object p5, p0, Lhmb;->e:Lwlb;
-
-    const-class p1, Lhmb;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhmb;->f:Ljava/lang/String;
-
-    iput-object p6, p0, Lhmb;->g:Lbp7;
-
-    new-instance p1, Lgs;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lgs;-><init>(I)V
-
-    iput-object p1, p0, Lhmb;->h:Lgs;
+    iput-object p1, p0, Lhmb;->d:Limb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llhg;)V
-    .locals 6
+.method public final C(Landroid/view/View;II)V
+    .locals 3
 
-    iget-object v0, p0, Lhmb;->f:Ljava/lang/String;
+    iget-object p1, p0, Lhmb;->d:Limb;
 
-    sget-object v1, Lox9;->j:Lqpa;
+    invoke-static {p1}, Limb;->e(Limb;)Lzlb;
 
-    const/4 v2, 0x0
+    move-result-object p2
 
-    if-nez v1, :cond_0
+    invoke-virtual {p2, p3}, Lzlb;->a(I)V
+
+    invoke-virtual {p1}, Limb;->getCallback()Lcmb;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p1, Limb;->s0:Lmjg;
+
+    iget v0, v0, Lmjg;->a:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_3
+
+    invoke-virtual {p1}, Limb;->getScrollState()Lgmb;
+
+    move-result-object v0
+
+    sget-object v1, Lgmb;->a:Lgmb;
+
+    if-ne v0, v1, :cond_3
+
+    invoke-virtual {p2}, Lcmb;->e()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Limb;->getStackFromBottom()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget v1, p0, Lhmb;->c:I
+
+    sub-int v2, p3, v1
+
+    int-to-float v2, v2
+
+    sub-int v1, v0, v1
+
+    :goto_0
+    int-to-float v1, v1
+
+    div-float/2addr v2, v1
+
+    goto :goto_1
+
+    :cond_1
+    iget v1, p0, Lhmb;->c:I
+
+    sub-int v2, v1, p3
+
+    int-to-float v2, v2
+
+    sub-int/2addr v1, v0
 
     goto :goto_0
 
-    :cond_0
-    sget-object v3, Ly38;->o:Ly38;
+    :goto_1
+    const/4 v1, 0x1
 
-    invoke-virtual {v1, v3}, Lqpa;->b(Ly38;)Z
+    int-to-float v1, v1
 
-    move-result v4
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
-    if-eqz v4, :cond_1
+    move-result v2
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    sub-float/2addr v1, v2
 
-    const-string v5, "Players pool. Free player, "
+    invoke-static {p1, v1}, Limb;->g(Limb;F)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Limb;->getStackFromBottom()Z
 
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    move-result-object v4
+    if-lt p3, v0, :cond_2
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {p2}, Lcmb;->h()V
 
-    :cond_1
-    :goto_0
-    invoke-interface {p1}, Llhg;->stop()V
+    :cond_2
+    invoke-virtual {p1}, Limb;->getStackFromBottom()Z
 
-    invoke-interface {p1, v2}, Llhg;->Z(Landroid/view/Surface;)V
+    move-result p1
 
-    iget-object v0, p0, Lhmb;->h:Lgs;
+    if-nez p1, :cond_3
 
-    invoke-virtual {v0, p1}, Lgs;->add(Ljava/lang/Object;)Z
+    if-gt p3, v0, :cond_3
+
+    invoke-virtual {p2}, Lcmb;->h()V
+
+    :cond_3
+    invoke-virtual {p2, p3}, Lcmb;->m(I)V
 
     return-void
 .end method
 
-.method public final get()Llhg;
-    .locals 10
+.method public final D(Landroid/view/View;FF)V
+    .locals 11
 
-    iget-object v0, p0, Lhmb;->h:Lgs;
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
-    invoke-virtual {v0}, Lgs;->isEmpty()Z
+    move-result p2
 
-    move-result v0
+    iput p2, p0, Lhmb;->c:I
 
-    if-eqz v0, :cond_1
+    iget-object p2, p0, Lhmb;->d:Limb;
 
-    iget-object v0, p0, Lhmb;->f:Ljava/lang/String;
-
-    const-string v1, "Players pool. Pool is empty create new player"
-
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lhmb;->g:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Limb;->getCallback()Lcmb;
 
     move-result-object v0
 
-    check-cast v0, Llm5;
+    if-nez v0, :cond_0
 
-    check-cast v0, Lnm5;
-
-    invoke-virtual {v0}, Lnm5;->o()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lc0b;
-
-    iget-object v1, p0, Lhmb;->a:Landroid/app/Application;
-
-    iget-object v2, p0, Lhmb;->b:Lec5;
-
-    iget-object v3, p0, Lhmb;->e:Lwlb;
-
-    invoke-direct {v0, v1, v2, v3}, Lc0b;-><init>(Landroid/content/Context;Lec5;Lwlb;)V
-
-    return-object v0
+    return-void
 
     :cond_0
-    new-instance v4, Lmhg;
+    float-to-double v1, p3
 
-    iget-object v5, p0, Lhmb;->a:Landroid/app/Application;
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
 
-    iget-object v6, p0, Lhmb;->b:Lec5;
+    move-result-wide v3
 
-    iget-object v7, p0, Lhmb;->c:Lfe5;
+    const-wide/high16 v5, 0x4069000000000000L    # 200.0
 
-    iget-object v8, p0, Lhmb;->d:Lbp7;
+    cmpl-double v3, v3, v5
 
-    iget-object v9, p0, Lhmb;->e:Lwlb;
+    const/4 v4, 0x2
 
-    invoke-direct/range {v4 .. v9}, Lmhg;-><init>(Landroid/content/Context;Lec5;Lfe5;Lbp7;Lwlb;)V
+    sget-object v5, Lgmb;->c:Lgmb;
 
-    return-object v4
+    sget-object v6, Lgmb;->b:Lgmb;
+
+    sget-object v7, Lgmb;->a:Lgmb;
+
+    const/4 v8, 0x0
+
+    if-lez v3, :cond_a
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v1
+
+    const-wide v9, 0x40bf400000000000L    # 8000.0
+
+    cmpg-double v1, v1, v9
+
+    if-gez v1, :cond_8
+
+    invoke-virtual {v0}, Lcmb;->b()I
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    sget-object v2, Ldmb;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v1}, Lsw1;->u(I)I
+
+    move-result v1
+
+    aget v1, v2, v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_2
+
+    if-ne v1, v4, :cond_1
+
+    invoke-virtual {p2}, Limb;->getScrollState()Lgmb;
+
+    move-result-object v5
+
+    goto/16 :goto_2
 
     :cond_1
-    iget-object v0, p0, Lhmb;->h:Lgs;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget v1, v0, Lgs;->c:I
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Lgs;->d(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llhg;
-
-    iget-object v1, p0, Lhmb;->f:Ljava/lang/String;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
+    throw p1
 
     :cond_2
-    sget-object v3, Ly38;->o:Ly38;
+    invoke-virtual {p2}, Limb;->getStackFromBottom()Z
 
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
+    move-result v1
 
-    move-result v4
+    if-eqz v1, :cond_5
 
-    if-eqz v4, :cond_3
+    iget v1, p0, Lhmb;->c:I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcmb;->c()I
 
-    const-string v5, "Players pool. Pool has player, "
+    move-result v2
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ge v1, v2, :cond_4
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    cmpl-float p3, p3, v8
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-lez p3, :cond_e
 
     :cond_3
     :goto_0
-    return-object v0
+    move-object v5, v6
+
+    goto/16 :goto_2
+
+    :cond_4
+    cmpl-float p3, p3, v8
+
+    if-lez p3, :cond_3
+
+    :goto_1
+    move-object v5, v7
+
+    goto/16 :goto_2
+
+    :cond_5
+    iget v1, p0, Lhmb;->c:I
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v2
+
+    if-le v1, v2, :cond_6
+
+    cmpg-float p3, p3, v8
+
+    if-gez p3, :cond_e
+
+    goto :goto_0
+
+    :cond_6
+    cmpg-float p3, p3, v8
+
+    if-gez p3, :cond_3
+
+    goto :goto_1
+
+    :cond_7
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_8
+    invoke-virtual {p2}, Limb;->getStackFromBottom()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    cmpl-float p3, p3, v8
+
+    if-lez p3, :cond_e
+
+    goto :goto_1
+
+    :cond_9
+    cmpg-float p3, p3, v8
+
+    if-gez p3, :cond_e
+
+    goto :goto_1
+
+    :cond_a
+    invoke-virtual {p2}, Limb;->getStackFromBottom()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_c
+
+    iget p3, p0, Lhmb;->c:I
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v1
+
+    div-int/2addr v1, v4
+
+    if-ge p3, v1, :cond_b
+
+    goto :goto_2
+
+    :cond_b
+    iget p3, p0, Lhmb;->c:I
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcmb;->e()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    div-int/2addr v2, v4
+
+    add-int/2addr v2, v1
+
+    if-le p3, v2, :cond_3
+
+    goto :goto_1
+
+    :cond_c
+    iget p3, p0, Lhmb;->c:I
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v1
+
+    div-int/2addr v1, v4
+
+    if-le p3, v1, :cond_d
+
+    goto :goto_2
+
+    :cond_d
+    iget p3, p0, Lhmb;->c:I
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcmb;->e()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Lcmb;->c()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    div-int/2addr v2, v4
+
+    add-int/2addr v2, v1
+
+    if-ge p3, v2, :cond_3
+
+    goto :goto_1
+
+    :cond_e
+    :goto_2
+    invoke-virtual {p2}, Limb;->getScrollState()Lgmb;
+
+    move-result-object p3
+
+    invoke-virtual {v0, p3, v5}, Lcmb;->g(Lgmb;Lgmb;)Lgmb;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Limb;->setScrollState(Lgmb;)V
+
+    iget p3, p0, Lhmb;->c:I
+
+    invoke-static {p2}, Limb;->f(Limb;)I
+
+    move-result v1
+
+    if-ne p3, v1, :cond_f
+
+    invoke-virtual {p2}, Limb;->getScrollState()Lgmb;
+
+    move-result-object p3
+
+    if-ne p3, v7, :cond_f
+
+    invoke-virtual {v0}, Lcmb;->h()V
+
+    invoke-static {p2, v8}, Limb;->g(Limb;F)V
+
+    return-void
+
+    :cond_f
+    iget-object p3, p2, Limb;->s0:Lmjg;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p1
+
+    invoke-static {p2}, Limb;->f(Limb;)I
+
+    move-result v1
+
+    invoke-virtual {p3, p1, v1}, Lmjg;->o(II)Z
+
+    invoke-virtual {p2}, Limb;->getScrollState()Lgmb;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcmb;->l(Lgmb;)V
+
+    invoke-virtual {p2}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final L(Landroid/view/View;I)Z
+    .locals 1
+
+    iget-object p2, p0, Lhmb;->d:Limb;
+
+    invoke-virtual {p2}, Limb;->getCallback()Lcmb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcmb;->f()Landroid/view/View;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ne p1, v0, :cond_1
+
+    iget-boolean p1, p2, Limb;->o:Z
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g(Landroid/view/View;I)I
+    .locals 4
+
+    iget-object p1, p0, Lhmb;->d:Limb;
+
+    invoke-virtual {p1}, Limb;->getStackFromBottom()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Limb;->getCallback()Lcmb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcmb;->a()I
+
+    move-result v0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_0
+    move-object v0, v1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Limb;->getCallback()Lcmb;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcmb;->e()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :goto_1
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v2
+
+    :goto_2
+    invoke-virtual {p1}, Limb;->getStackFromBottom()Z
+
+    move-result v3
+
+    invoke-virtual {p1}, Limb;->getCallback()Lcmb;
+
+    move-result-object p1
+
+    if-eqz v3, :cond_3
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lcmb;->e()I
+
+    move-result p1
+
+    :goto_3
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    goto :goto_4
+
+    :cond_3
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lcmb;->a()I
+
+    move-result p1
+
+    goto :goto_3
+
+    :cond_4
+    :goto_4
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    :cond_5
+    invoke-static {p2, v0, v2}, Lk84;->f(III)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final u(I)I
+    .locals 4
+
+    iget-object p1, p0, Lhmb;->d:Limb;
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p1}, Limb;->getCallback()Lcmb;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcmb;->f()Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v0
+
+    goto :goto_1
+
+    :goto_0
+    new-instance v1, Lb2d;
+
+    invoke-direct {v1, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v1
+
+    :goto_1
+    invoke-static {p1}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "PopupLayout"
+
+    const-string v3, "getOrderedChildIndex fail, issue ONEME-9645"
+
+    invoke-static {v2, v3, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    instance-of v1, p1, Lb2d;
+
+    if-eqz v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move-object v0, p1
+
+    :goto_2
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_3
+
+    :cond_3
+    const/4 p1, -0x1
+
+    :goto_3
+    return p1
+.end method
+
+.method public final w(Landroid/view/View;)I
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    return p1
 .end method

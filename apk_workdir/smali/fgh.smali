@@ -1,3 +1,3 @@
 .class public final Lfgh;
-.super Lweh;
+.super Lidh;
 .source "SourceFile"

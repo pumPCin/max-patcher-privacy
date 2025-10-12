@@ -1,53 +1,92 @@
-.class public final Lbj;
-.super Lnz3;
+.class public final synthetic Lbj;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public X:Lvpc;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lkj;
-
-.field public o:Lkj;
-
-.field public w0:I
+.field public final synthetic b:Lrj;
 
 
 # direct methods
-.method public constructor <init>(Lkj;Lnz3;)V
+.method public synthetic constructor <init>(Lrj;I)V
     .locals 0
 
-    iput-object p1, p0, Lbj;->Z:Lkj;
+    iput p2, p0, Lbj;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lbj;->b:Lrj;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lbj;->Y:Ljava/lang/Object;
+    iget v0, p0, Lbj;->a:I
 
-    iget p1, p0, Lbj;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lbj;->b:Lrj;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Lrj;->b:Ld4d;
 
-    iput p1, p0, Lbj;->w0:I
+    invoke-virtual {v0}, Ld4d;->m()Lc4d;
 
-    iget-object p1, p0, Lbj;->Z:Lkj;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
 
-    invoke-virtual {p1, v0, p0}, Lkj;->f(Lvpc;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->L()Leoc;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lbj;->b:Lrj;
+
+    iget-object v0, v0, Lrj;->b:Ld4d;
+
+    invoke-virtual {v0}, Ld4d;->m()Lc4d;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->t()Lzj;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lbj;->b:Lrj;
+
+    iget-object v0, v0, Lrj;->b:Ld4d;
+
+    invoke-virtual {v0}, Ld4d;->m()Lc4d;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    invoke-virtual {v0}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->s()Lzh;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

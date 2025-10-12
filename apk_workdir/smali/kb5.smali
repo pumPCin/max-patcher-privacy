@@ -54,7 +54,7 @@
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "EventHandler method cannot be null."
+    const-string p2, "EventProducer method cannot be null."
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -63,7 +63,7 @@
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "EventHandler target cannot be null."
+    const-string p2, "EventProducer target cannot be null."
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -72,8 +72,8 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 3
 
     iget-boolean v0, p0, Lkb5;->d:Z
 
@@ -84,78 +84,78 @@
 
     iget-object v1, p0, Lkb5;->a:Ljava/lang/Object;
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
     :try_end_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    return-object v0
 
     :catch_0
-    move-exception p1
+    move-exception v0
 
     goto :goto_0
 
     :catch_1
-    move-exception p1
+    move-exception v0
 
     goto :goto_1
 
     :goto_0
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    instance-of v0, v0, Ljava/lang/Error;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Error;
-
-    throw p1
-
-    :cond_0
-    throw p1
-
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lkb5;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    instance-of v1, v1, Ljava/lang/Error;
 
-    const-string v1, " has been invalidated and can no longer handle events."
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/lang/Error;
 
-    throw p1
+    throw v0
+
+    :cond_0
+    throw v0
+
+    :goto_1
+    new-instance v1, Ljava/lang/AssertionError;
+
+    invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lkb5;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " has been invalidated and can no longer produce events."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
@@ -223,7 +223,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "[EventHandler "
+    const-string v1, "[EventProducer "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

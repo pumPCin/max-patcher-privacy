@@ -2,223 +2,134 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lqde;
+# interfaces
+.implements Lgkb;
 
 
 # instance fields
-.field public final a:[Ljava/lang/Comparable;
+.field public final a:Landroid/app/Application;
 
-.field public final b:[Ljava/lang/Object;
+.field public final b:Ltb5;
 
-.field public final c:I
+.field public final c:Ltd5;
+
+.field public final d:Lyn7;
+
+.field public final e:Lnkb;
+
+.field public final f:Lyn7;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Lq0d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [Ljava/lang/Comparable;
-
-    new-instance v1, Lqde;
-
-    invoke-direct {v1, v0, v0}, Lqde;-><init>([Ljava/lang/Comparable;[Ljava/lang/Object;)V
-
-    sput-object v1, Lqde;->d:Lqde;
-
-    return-void
-.end method
-
-.method public constructor <init>([Ljava/lang/Comparable;[Ljava/lang/Object;)V
-    .locals 3
+.method public constructor <init>(Landroid/app/Application;Ltb5;Ltd5;Lyn7;Lnkb;Lyn7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, p1
+    iput-object p1, p0, Lqde;->a:Landroid/app/Application;
 
-    array-length v1, p2
+    iput-object p2, p0, Lqde;->b:Ltb5;
 
-    if-ne v0, v1, :cond_0
+    iput-object p3, p0, Lqde;->c:Ltd5;
 
-    iput-object p1, p0, Lqde;->a:[Ljava/lang/Comparable;
+    iput-object p4, p0, Lqde;->d:Lyn7;
 
-    iput-object p2, p0, Lqde;->b:[Ljava/lang/Object;
+    iput-object p5, p0, Lqde;->e:Lnkb;
 
-    array-length p1, p1
+    iput-object p6, p0, Lqde;->f:Lyn7;
 
-    iput p1, p0, Lqde;->c:I
+    const-class p1, Lqde;
 
-    return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "different array sizes: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    array-length p1, p1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, " keys and "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    array-length p1, p2
-
-    const-string p2, " values"
-
-    invoke-static {v1, p1, p2}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lqde;->g:Ljava/lang/String;
 
-    throw v0
+    new-instance p1, Lr4d;
+
+    const/16 p2, 0x10
+
+    invoke-direct {p1, p2, p0}, Lr4d;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lq0d;
+
+    invoke-direct {p2, p1}, Lq0d;-><init>(Ltd6;)V
+
+    iput-object p2, p0, Lqde;->h:Lq0d;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lqde;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lqde;
-
-    iget v1, p1, Lqde;->c:I
-
-    iget v3, p0, Lqde;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p1, Lqde;->a:[Ljava/lang/Comparable;
-
-    iget-object v3, p0, Lqde;->a:[Ljava/lang/Comparable;
-
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object p1, p1, Lqde;->b:[Ljava/lang/Object;
-
-    iget-object v1, p0, Lqde;->b:[Ljava/lang/Object;
-
-    invoke-static {p1, v1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final a(Lagg;)V
     .locals 2
 
-    iget-object v0, p0, Lqde;->a:[Ljava/lang/Comparable;
+    iget-object v0, p0, Lqde;->g:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    const-string v1, "Single player handler. Free player"
 
-    move-result v0
+    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqde;->b:[Ljava/lang/Object;
+    invoke-interface {p1}, Lagg;->stop()V
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    const/4 v0, 0x0
 
-    move-result v1
+    invoke-interface {p1, v0}, Lagg;->Z(Landroid/view/Surface;)V
 
-    mul-int/lit8 v1, v1, 0x1f
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final get()Lagg;
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lqde;->g:Ljava/lang/String;
 
-    const-string v1, "["
+    sget-object v1, Lyt3;->n:Lhoa;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    iget v2, p0, Lqde;->c:I
-
-    if-ge v1, v2, :cond_1
-
-    if-eqz v1, :cond_0
-
-    const/16 v2, 0x2c
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :cond_0
-    const-string v2, "{"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lqde;->a:[Ljava/lang/Comparable;
-
-    aget-object v2, v2, v1
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " : "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lqde;->b:[Ljava/lang/Object;
-
-    aget-object v2, v2, v1
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x7d
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v1, v1, 0x1
+    if-nez v1, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    sget-object v2, Lr28;->o:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    iget-object v3, p0, Lqde;->h:Lq0d;
+
+    invoke-virtual {v3}, Lq0d;->a()Z
+
+    move-result v3
+
+    const-string v4, "Single player handler. Player exist: "
+
+    invoke-static {v4, v3}, Ln29;->h(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_1
-    const/16 v1, 0x5d
+    :goto_0
+    iget-object v0, p0, Lqde;->h:Lq0d;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lq0d;->getValue()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lagg;
 
     return-object v0
 .end method

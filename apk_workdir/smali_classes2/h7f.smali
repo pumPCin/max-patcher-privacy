@@ -2,627 +2,283 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lem3;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final X:Lyn7;
 
-.field public final b:J
+.field public final Y:Lyn7;
 
-.field public final c:Ljava/lang/String;
+.field public final Z:Lyn7;
 
-.field public final d:Ljava/lang/String;
+.field public final a:Lyn7;
 
-.field public final e:Ljava/lang/String;
+.field public final b:Lyn7;
 
-.field public final f:Ljava/lang/String;
+.field public final c:Lyn7;
 
-.field public final g:Ljava/lang/String;
+.field public final o:Lyn7;
 
-.field public final h:Ljava/lang/String;
+.field public r0:Lss1;
 
-.field public final i:Ljava/lang/String;
+.field public s0:Lkn7;
 
-.field public final j:Ljava/lang/String;
+.field public t0:Lw9h;
 
-.field public final k:Z
+.field public u0:I
 
-.field public final l:Z
-
-.field public final m:Ljava/util/Map;
-
-.field public final n:Ljava/util/Set;
+.field public v0:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/util/Map;Ljava/util/Set;)V
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lh7f;->a:Ljava/lang/String;
+    iput-object p1, p0, Lh7f;->a:Lyn7;
 
-    iput-wide p2, p0, Lh7f;->b:J
+    iput-object p2, p0, Lh7f;->b:Lyn7;
 
-    iput-object p4, p0, Lh7f;->c:Ljava/lang/String;
+    iput-object p3, p0, Lh7f;->c:Lyn7;
 
-    iput-object p5, p0, Lh7f;->d:Ljava/lang/String;
+    iput-object p4, p0, Lh7f;->o:Lyn7;
 
-    iput-object p6, p0, Lh7f;->e:Ljava/lang/String;
+    iput-object p5, p0, Lh7f;->X:Lyn7;
 
-    iput-object p7, p0, Lh7f;->f:Ljava/lang/String;
+    iput-object p6, p0, Lh7f;->Y:Lyn7;
 
-    iput-object p8, p0, Lh7f;->g:Ljava/lang/String;
-
-    iput-object p9, p0, Lh7f;->h:Ljava/lang/String;
-
-    iput-object p10, p0, Lh7f;->i:Ljava/lang/String;
-
-    iput-object p11, p0, Lh7f;->j:Ljava/lang/String;
-
-    iput-boolean p12, p0, Lh7f;->k:Z
-
-    iput-boolean p13, p0, Lh7f;->l:Z
-
-    iput-object p14, p0, Lh7f;->m:Ljava/util/Map;
-
-    iput-object p15, p0, Lh7f;->n:Ljava/util/Set;
+    iput-object p7, p0, Lh7f;->Z:Lyn7;
 
     return-void
 .end method
 
-.method public static a(Lh7f;ZLjava/util/Map;I)Lh7f;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move/from16 v1, p3
-
-    iget-object v2, v0, Lh7f;->a:Ljava/lang/String;
-
-    move-object v4, v2
-
-    iget-wide v2, v0, Lh7f;->b:J
-
-    move-object v5, v4
-
-    iget-object v4, v0, Lh7f;->c:Ljava/lang/String;
-
-    move-object v6, v5
-
-    iget-object v5, v0, Lh7f;->d:Ljava/lang/String;
-
-    move-object v7, v6
-
-    iget-object v6, v0, Lh7f;->e:Ljava/lang/String;
-
-    move-object v8, v7
-
-    iget-object v7, v0, Lh7f;->f:Ljava/lang/String;
-
-    move-object v9, v8
-
-    iget-object v8, v0, Lh7f;->g:Ljava/lang/String;
-
-    move-object v10, v9
-
-    iget-object v9, v0, Lh7f;->h:Ljava/lang/String;
-
-    move-object v11, v10
-
-    iget-object v10, v0, Lh7f;->i:Ljava/lang/String;
-
-    move-object v12, v11
-
-    iget-object v11, v0, Lh7f;->j:Ljava/lang/String;
-
-    and-int/lit16 v13, v1, 0x400
-
-    if-eqz v13, :cond_0
-
-    iget-boolean v13, v0, Lh7f;->k:Z
-
-    goto :goto_0
-
-    :cond_0
-    move/from16 v13, p1
-
-    :goto_0
-    iget-boolean v14, v0, Lh7f;->l:Z
-
-    and-int/lit16 v1, v1, 0x1000
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lh7f;->m:Ljava/util/Map;
-
-    goto :goto_1
-
-    :cond_1
-    move-object/from16 v1, p2
-
-    :goto_1
-    iget-object v15, v0, Lh7f;->n:Ljava/util/Set;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lh7f;
-
-    move/from16 v16, v14
-
-    move-object v14, v1
-
-    move-object v1, v12
-
-    move v12, v13
-
-    move/from16 v13, v16
-
-    invoke-direct/range {v0 .. v15}, Lh7f;-><init>(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/util/Map;Ljava/util/Set;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lh7f;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lh7f;
-
-    iget-object v1, p0, Lh7f;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lh7f;->b:J
-
-    iget-wide v5, p1, Lh7f;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lh7f;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lh7f;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lh7f;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lh7f;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->f:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lh7f;->g:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->g:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-object v1, p0, Lh7f;->h:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->h:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    return v2
-
-    :cond_9
-    iget-object v1, p0, Lh7f;->i:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->i:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_a
-
-    return v2
-
-    :cond_a
-    iget-object v1, p0, Lh7f;->j:Ljava/lang/String;
-
-    iget-object v3, p1, Lh7f;->j:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_b
-
-    return v2
-
-    :cond_b
-    iget-boolean v1, p0, Lh7f;->k:Z
-
-    iget-boolean v3, p1, Lh7f;->k:Z
-
-    if-eq v1, v3, :cond_c
-
-    return v2
-
-    :cond_c
-    iget-boolean v1, p0, Lh7f;->l:Z
-
-    iget-boolean v3, p1, Lh7f;->l:Z
-
-    if-eq v1, v3, :cond_d
-
-    return v2
-
-    :cond_d
-    iget-object v1, p0, Lh7f;->m:Ljava/util/Map;
-
-    iget-object v3, p1, Lh7f;->m:Ljava/util/Map;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_e
-
-    return v2
-
-    :cond_e
-    iget-object v1, p0, Lh7f;->n:Ljava/util/Set;
-
-    iget-object p1, p1, Lh7f;->n:Ljava/util/Set;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_f
-
-    return v2
-
-    :cond_f
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final b()V
+    .locals 5
 
-    iget-object v0, p0, Lh7f;->a:Ljava/lang/String;
+    iget-object v0, p0, Lh7f;->Z:Lyn7;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lh7f;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh7f;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lh7f;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lh7f;->e:Ljava/lang/String;
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lh7f;->f:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh7f;->g:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh7f;->h:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh7f;->i:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lh7f;->j:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    const/4 v2, 0x1
-
-    iget-boolean v3, p0, Lh7f;->k:Z
-
-    if-eqz v3, :cond_2
-
-    move v3, v2
-
-    :cond_2
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v3, p0, Lh7f;->l:Z
-
-    if-eqz v3, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move v2, v3
-
-    :goto_2
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lh7f;->m:Ljava/util/Map;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lh7f;->n:Ljava/util/Set;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SystemState(versionName="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh7f;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", versionCode="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lh7f;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", packageName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", environment="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buildUuid="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sessionUuid="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", device="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deviceId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", vendor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", osVersion="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isInBackground="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lh7f;->k:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isRooted="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lh7f;->l:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", properties="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->m:Ljava/util/Map;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hostedLibrariesInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lh7f;->n:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lfm3;
+
+    invoke-interface {v0}, Lfm3;->b()Lvm3;
+
+    move-result-object v0
+
+    sget-object v1, Lvm3;->b:Lvm3;
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v0, p0, Lh7f;->s0:Lkn7;
+
+    invoke-static {v0}, Lo8d;->b(Lfs4;)V
+
+    iget-object v0, p0, Lh7f;->t0:Lw9h;
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lh7f;->u0:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    const-string v3, "LoadEmojiFontWorker"
+
+    const-string v4, "onDownloadEmojiFontProgressChange %d"
+
+    invoke-static {v3, v4, v2}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, v0, Lw9h;->b:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+    new-instance v2, Ltx7;
+
+    invoke-direct {v2, v1}, Ltx7;-><init>(I)V
+
+    invoke-static {v0, v2}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lvx7;)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lh7f;->t0:Lw9h;
+
+    invoke-virtual {p0, v0}, Lh7f;->c(Lw9h;)V
+
+    return-void
+.end method
+
+.method public final c(Lw9h;)V
+    .locals 4
+
+    const-string v0, "Load font"
+
+    const-string v1, "h7f"
+
+    invoke-static {v1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lh7f;->t0:Lw9h;
+
+    iget-object v0, p0, Lh7f;->r0:Lss1;
+
+    invoke-static {v0}, Lo8d;->c(Lfs4;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string p1, "Font already loading"
+
+    invoke-static {v1, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lw5;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1, p0}, Lw5;-><init>(ILjava/lang/Object;)V
+
+    new-instance v1, Lnba;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, v0}, Lnba;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lh7f;->X:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz7f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    check-cast v0, La8f;
+
+    invoke-virtual {v0}, La8f;->a()Lpcd;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lrce;->m(Lpcd;)Lkde;
+
+    move-result-object v0
+
+    sget-object v1, Lcdd;->d:Ltnf;
+
+    invoke-virtual {v0, v1}, Lrce;->i(Lpcd;)Lkde;
+
+    move-result-object v0
+
+    new-instance v1, Lf7f;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, p1, v2}, Lf7f;-><init>(Lh7f;Lw9h;I)V
+
+    new-instance v2, Lf7f;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, p1, v3}, Lf7f;-><init>(Lh7f;Lw9h;I)V
+
+    new-instance p1, Lss1;
+
+    const/4 v3, 0x2
+
+    invoke-direct {p1, v1, v3, v2}, Lss1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lrce;->k(Llde;)V
+
+    iput-object p1, p0, Lh7f;->r0:Lss1;
+
+    return-void
+.end method
+
+.method public final d(Ljava/io/File;Lw9h;)V
+    .locals 3
+
+    const-string v0, "h7f"
+
+    const-string v1, "Tam emoji font loaded"
+
+    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lt56;
+
+    new-instance v1, Lx4f;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v1, Lx4f;->a:Ljava/lang/Object;
+
+    iget-object p1, p0, Lh7f;->X:Lyn7;
+
+    iput-object p1, v1, Lx4f;->b:Ljava/lang/Object;
+
+    iget-object p1, p0, Lh7f;->Y:Lyn7;
+
+    iput-object p1, v1, Lx4f;->c:Ljava/lang/Object;
+
+    invoke-direct {v0, v1}, Lt56;-><init>(Lx35;)V
+
+    if-eqz p2, :cond_0
+
+    const-string p1, "onDownloadEmojiFontSuccess %s"
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "LoadEmojiFontWorker"
+
+    invoke-static {v2, p1, v1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object p1, p2, Lw9h;->b:Ljava/lang/Object;
+
+    check-cast p1, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
+
+    new-instance p2, Lux7;
+
+    invoke-direct {p2, v0}, Lux7;-><init>(Lt56;)V
+
+    invoke-static {p1, p2}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lvx7;)V
+
+    :cond_0
+    iget-object p1, p0, Lh7f;->Z:Lyn7;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfm3;
+
+    invoke-interface {p1, p0}, Lfm3;->e(Lem3;)V
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lh7f;->t0:Lw9h;
+
+    return-void
 .end method

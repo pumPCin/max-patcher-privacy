@@ -1,84 +1,91 @@
-.class public final Lvlg;
+.class public abstract Lvlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/view/View;
+# static fields
+.field public static final a:Lbmg;
 
-.field public b:I
-
-.field public c:I
-
-.field public d:I
+.field public static final b:Lz42;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvlg;->a:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
+.method static constructor <clinit>()V
     .locals 4
 
-    iget v0, p0, Lvlg;->d:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v1, p0, Lvlg;->a:Landroid/view/View;
+    const/16 v1, 0x1d
 
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+    if-lt v0, v1, :cond_0
 
-    move-result v2
+    new-instance v0, Lcmg;
 
-    iget v3, p0, Lvlg;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sub-int/2addr v2, v3
+    sput-object v0, Lvlg;->a:Lbmg;
 
-    sub-int/2addr v0, v2
+    goto :goto_0
 
-    sget-object v2, Lskg;->a:Ljava/util/WeakHashMap;
+    :cond_0
+    new-instance v0, Lbmg;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+    sput-object v0, Lvlg;->a:Lbmg;
 
-    move-result v0
+    :goto_0
+    new-instance v0, Lz42;
 
-    iget v2, p0, Lvlg;->c:I
+    const-string v1, "translationAlpha"
 
-    sub-int/2addr v0, v2
+    const/16 v2, 0xb
 
-    rsub-int/lit8 v0, v0, 0x0
+    const-class v3, Ljava/lang/Float;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->offsetLeftAndRight(I)V
+    invoke-direct {v0, v3, v1, v2}, Lz42;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lvlg;->b:Lz42;
+
+    new-instance v0, Lz42;
+
+    const-string v1, "clipBounds"
+
+    const/16 v2, 0xc
+
+    const-class v3, Landroid/graphics/Rect;
+
+    invoke-direct {v0, v3, v1, v2}, Lz42;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
 
     return-void
 .end method
 
-.method public final b(I)Z
+.method public static a(Landroid/view/View;IIII)V
+    .locals 6
+
+    sget-object v0, Lvlg;->a:Lbmg;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lbmg;->V(Landroid/view/View;IIII)V
+
+    return-void
+.end method
+
+.method public static b(Landroid/view/View;I)V
     .locals 1
 
-    iget v0, p0, Lvlg;->d:I
+    sget-object v0, Lvlg;->a:Lbmg;
 
-    if-eq v0, p1, :cond_0
+    invoke-virtual {v0, p0, p1}, Lbmg;->D(Landroid/view/View;I)V
 
-    iput p1, p0, Lvlg;->d:I
-
-    invoke-virtual {p0}, Lvlg;->a()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

@@ -1,113 +1,114 @@
 .class public final Lye1;
-.super Lv2;
+.super Lyjg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lye1;
+# instance fields
+.field public final X:Lyn7;
+
+.field public final Y:Lyn7;
+
+.field public final Z:Lyn7;
+
+.field public final b:Lqe1;
+
+.field public final c:Lym1;
+
+.field public final o:Lyn7;
+
+.field public final r0:Lyn7;
+
+.field public final s0:Lyn7;
+
+.field public final t0:Lxb;
+
+.field public final u0:Lya5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lqe1;Lym1;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
+    .locals 0
 
-    new-instance v0, Lye1;
+    invoke-direct {p0}, Lyjg;-><init>()V
 
-    const/16 v1, 0x8
+    iput-object p1, p0, Lye1;->b:Lqe1;
 
-    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+    iput-object p2, p0, Lye1;->c:Lym1;
 
-    sput-object v0, Lye1;->c:Lye1;
+    iput-object p3, p0, Lye1;->o:Lyn7;
 
-    return-void
-.end method
+    iput-object p5, p0, Lye1;->X:Lyn7;
 
-.method public static c1(Lye1;J)Lzc4;
-    .locals 1
+    iput-object p6, p0, Lye1;->Y:Lyn7;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p4, p0, Lye1;->Z:Lyn7;
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    iput-object p7, p0, Lye1;->r0:Lyn7;
 
-    const-string v0, ":profile?id="
+    iput-object p8, p0, Lye1;->s0:Lyn7;
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {p4}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result-object p2
 
-    const-string p1, "&type="
+    check-cast p2, Lded;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p2, Lmed;
 
-    const-string p1, "local_chat"
+    iget-object p2, p2, Lmed;->z0:Lhne;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p3, Lxb;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 p5, 0x8
 
-    move-result-object p0
+    invoke-direct {p3, p2, p0, p5}, Lxb;-><init>(Liu5;Ljava/lang/Object;I)V
 
-    new-instance p1, Lzc4;
+    iput-object p3, p0, Lye1;->t0:Lxb;
 
-    invoke-direct {p1, p0}, Lzc4;-><init>(Ljava/lang/String;)V
+    new-instance p2, Lya5;
 
-    return-object p1
-.end method
+    const/4 p3, 0x0
 
+    invoke-direct {p2, p3}, Lya5;-><init>(I)V
 
-# virtual methods
-.method public final d1(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    iput-object p2, p0, Lye1;->u0:Lya5;
 
-    new-instance v0, Landroid/content/Intent;
+    sget-object p2, Lqe1;->b:Lqe1;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    if-ne p1, p2, :cond_0
 
-    const-string v1, "android.intent.action.SEND"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "android.intent.extra.TEXT"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p1, "text/plain"
-
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    invoke-interface {p4}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v1, Ln4b;
+    check-cast p1, Lded;
 
-    const-string v2, "oneme:share:data"
+    check-cast p1, Lmed;
 
-    invoke-direct {v1, v2, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object p1, p1, Lmed;->t0:Lhne;
 
-    new-instance v0, Ln4b;
+    new-instance p2, Lvg0;
 
-    const-string v2, "oneme:share:title"
+    const/16 p3, 0xc
 
-    invoke-direct {v0, v2, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, p1, p3}, Lvg0;-><init>(Liu5;I)V
 
-    new-instance p2, Ln4b;
+    new-instance p1, Lve1;
 
-    const-string v2, "tag"
+    const/4 p3, 0x0
 
-    invoke-direct {p2, v2, p3}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, p0, p3}, Lve1;-><init>(Lye1;Lkotlin/coroutines/Continuation;)V
 
-    filled-new-array {v1, v0, p2}, [Ln4b;
+    new-instance p3, Lnw5;
 
-    move-result-object p2
+    const/4 p4, 0x1
 
-    invoke-static {p2}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+    invoke-direct {p3, p2, p1, p4}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    move-result-object p2
+    iget-object p1, p0, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string p3, ":chats/share"
+    invoke-static {p3, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
-    invoke-virtual {p1, p3, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
+    :cond_0
     return-void
 .end method

@@ -1,201 +1,181 @@
-.class public final Lyzg;
-.super Lm3f;
+.class public final synthetic Lyzg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lri6;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Lyzg;
 
-.field public final synthetic Y:Li0h;
-
-.field public final synthetic Z:Ljava/lang/String;
-
-.field public final synthetic w0:[B
-
-.field public final synthetic x0:Ljava/lang/String;
-
-.field public final synthetic y0:Ljava/lang/String;
+.field private static final descriptor:Lmqd;
 
 
 # direct methods
-.method public constructor <init>(Li0h;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lyzg;->Y:Li0h;
+    new-instance v0, Lyzg;
 
-    iput-object p2, p0, Lyzg;->Z:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lyzg;->w0:[B
+    sput-object v0, Lyzg;->a:Lyzg;
 
-    iput-object p4, p0, Lyzg;->x0:Ljava/lang/String;
+    new-instance v1, Lflb;
 
-    iput-object p5, p0, Lyzg;->y0:Ljava/lang/String;
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupScreenCaptureBehaviorResponse"
 
-    const/4 p1, 0x2
+    const/4 v3, 0x2
 
-    invoke-direct {p0, p1, p6}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+
+    const-string v0, "requestId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "isScreenCaptureEnabled"
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lyzg;->descriptor:Lmqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lx8;)Ljava/lang/Object;
+    .locals 9
 
-    check-cast p1, Le34;
+    sget-object v0, Lyzg;->descriptor:Lmqd;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyzg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
 
     move-result-object p1
 
-    check-cast p1, Lyzg;
+    const/4 v1, 0x1
 
-    sget-object p2, Loyf;->a:Loyf;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, p2}, Lyzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object p1
+    move v4, v1
 
-    return-object p1
-.end method
+    move v5, v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    move v6, v5
 
-    new-instance v0, Lyzg;
+    :goto_0
+    if-eqz v4, :cond_3
 
-    iget-object v4, p0, Lyzg;->x0:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
 
-    iget-object v5, p0, Lyzg;->y0:Ljava/lang/String;
+    move-result v7
 
-    iget-object v1, p0, Lyzg;->Y:Li0h;
+    const/4 v8, -0x1
 
-    iget-object v2, p0, Lyzg;->Z:Ljava/lang/String;
+    if-eq v7, v8, :cond_2
 
-    iget-object v3, p0, Lyzg;->w0:[B
+    if-eqz v7, :cond_1
 
-    move-object v6, p2
+    if-ne v7, v1, :cond_0
 
-    invoke-direct/range {v0 .. v6}, Lyzg;-><init>(Li0h;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, v0, v1}, Lx8;->p(Lmqd;I)Z
 
-    return-object v0
-.end method
+    move-result v6
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    or-int/lit8 v5, v5, 0x2
 
-    iget v0, p0, Lyzg;->X:I
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object v1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
 
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, v2}, Lx8;->w(Lmqd;I)Ljava/lang/String;
 
-    iget-object p1, p0, Lyzg;->Y:Li0h;
+    move-result-object v3
 
-    iget-object p1, p1, Li0h;->M0:Lp30;
-
-    iput v2, p0, Lyzg;->X:I
-
-    iget-object v0, p1, Lp30;->X:Ljava/lang/Object;
-
-    check-cast v0, Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwk7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Li2h;->Companion:Lg2h;
-
-    invoke-virtual {v2}, Lg2h;->serializer()Lum7;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lyzg;->Z:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3}, Lwk7;->a(Lum7;Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Li2h;
-
-    iget-object v2, p0, Lyzg;->w0:[B
-
-    if-eqz v2, :cond_2
-
-    iget-object v3, p0, Lyzg;->x0:Ljava/lang/String;
-
-    if-eqz v3, :cond_2
-
-    iget-object v4, p0, Lyzg;->y0:Ljava/lang/String;
-
-    if-eqz v4, :cond_2
-
-    new-instance v5, Lu1h;
-
-    invoke-direct {v5, v3, v4, v2}, Lu1h;-><init>(Ljava/lang/String;Ljava/lang/String;[B)V
+    or-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
     :cond_2
-    const/4 v5, 0x0
+    move v4, v2
 
-    :goto_0
-    iget-object p1, p1, Lp30;->Y:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast p1, Llu0;
+    :cond_3
+    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
 
-    new-instance v2, Lkk7;
+    new-instance p1, La0h;
 
-    invoke-direct {v2, v0, v5}, Lkk7;-><init>(Li2h;Lu1h;)V
+    invoke-direct {p1, v3, v5, v6}, La0h;-><init>(Ljava/lang/String;IZ)V
 
-    invoke-interface {p1, v2, p0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return-object p1
+.end method
+
+.method public final b(Lmz3;Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p2, La0h;
+
+    sget-object v0, Lyzg;->descriptor:Lmqd;
+
+    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    iget-object v1, p2, La0h;->a:Ljava/lang/String;
 
-    if-ne p1, v0, :cond_3
+    const/4 v2, 0x0
 
-    goto :goto_1
+    invoke-virtual {p1, v0, v2, v1}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
 
-    :cond_3
-    move-object p1, v1
+    const/4 v1, 0x1
 
-    :goto_1
-    if-ne p1, v0, :cond_4
+    iget-boolean p2, p2, La0h;->b:Z
+
+    invoke-virtual {p1, v0, v1, p2}, Lmz3;->e(Lmqd;IZ)V
+
+    invoke-virtual {p1}, Lmz3;->m()V
+
+    return-void
+.end method
+
+.method public final c()[Lql7;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lql7;
+
+    sget-object v1, Llwe;->a:Llwe;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcq0;->a:Lcq0;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
 
     return-object v0
+.end method
 
-    :cond_4
-    return-object v1
+.method public final d()Lmqd;
+    .locals 1
+
+    sget-object v0, Lyzg;->descriptor:Lmqd;
+
+    return-object v0
 .end method

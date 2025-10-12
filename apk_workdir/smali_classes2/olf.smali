@@ -2,168 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltlf;
 
-# instance fields
-.field public final a:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
+    }
+    d2 = {
+        "Lolf;",
+        "Ltlf;",
+        "<init>",
+        "()V",
+        "tracer-commons_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lolf;->a:I
-
-    iput p2, p0, Lolf;->b:I
-
-    iput p3, p0, Lolf;->c:I
-
-    iput p4, p0, Lolf;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final appToken()Ljava/lang/String;
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    const-string v0, "uhiEuhaOmhldPqWb01EFotBM4JlJMdJd5OaPN9Fcsqw"
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lolf;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lolf;
-
-    iget v0, p0, Lolf;->a:I
-
-    iget v1, p1, Lolf;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lolf;->b:I
-
-    iget v1, p1, Lolf;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lolf;->c:I
-
-    iget v1, p1, Lolf;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lolf;->d:I
-
-    iget p1, p1, Lolf;->d:I
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final buildUuid()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lolf;->a:I
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, -0x1
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lolf;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lolf;->c:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v1, p0, Lolf;->d:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final environment()Ljava/lang/String;
+    .locals 1
 
-    const-string v0, ", contrastStatic=-1, primary="
+    const-string v0, "release"
 
-    const-string v1, ", secondary="
+    return-object v0
+.end method
 
-    const-string v2, "TopbarTextDefaultColors(contrast="
+.method public final namespace()Ljava/lang/String;
+    .locals 1
 
-    iget v3, p0, Lolf;->a:I
+    const-string v0, "ru.ok.tracer"
 
-    iget v4, p0, Lolf;->b:I
+    return-object v0
+.end method
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+.method public final versionName()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
-
-    const-string v1, ", themed="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lolf;->c:I
-
-    iget v4, p0, Lolf;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "1.1.1"
 
     return-object v0
 .end method

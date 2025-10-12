@@ -3,148 +3,259 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lorg/webrtc/VideoFrame$TextureBuffer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lorg/webrtc/VideoFrame$TextureBuffer;
 
-.field public final synthetic b:Lq5d;
+.field public final b:I
+
+.field public final c:Landroid/os/Handler;
+
+.field public final d:Lorg/webrtc/YuvConverter;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq5d;I)V
+.method public constructor <init>(Lorg/webrtc/VideoFrame$TextureBuffer;ILandroid/os/Handler;Lorg/webrtc/YuvConverter;)V
     .locals 0
 
-    iput p2, p0, Lm5d;->a:I
-
-    iput-object p1, p0, Lm5d;->b:Lq5d;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    iput p2, p0, Lm5d;->b:I
+
+    iput-object p3, p0, Lm5d;->c:Landroid/os/Handler;
+
+    iput-object p4, p0, Lm5d;->d:Lorg/webrtc/YuvConverter;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final cropAndScale(IIIIII)Lorg/webrtc/VideoFrame$Buffer;
+    .locals 9
 
-    iget v0, p0, Lm5d;->a:I
+    new-instance v5, Landroid/graphics/Matrix;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
 
-    iget-object v0, p0, Lm5d;->b:Lq5d;
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$TextureBuffer;->getTransformMatrix()Landroid/graphics/Matrix;
 
-    iget-object v1, v0, Lq5d;->g:Lfc9;
+    move-result-object v1
 
-    iget-object v0, v0, Lq5d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    invoke-direct {v5, v1}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
 
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
+    iget v1, p0, Lm5d;->b:I
 
-    move-result-object v2
+    if-eqz v1, :cond_0
 
-    :try_start_0
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/high16 v2, 0x3f000000    # 0.5f
 
-    :try_start_1
-    invoke-interface {v2}, Lh2f;->C()I
+    invoke-virtual {v5, v2, v2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    int-to-float v1, v1
 
-    :try_start_2
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-virtual {v5, v1}, Landroid/graphics/Matrix;->preRotate(F)Z
 
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    const/high16 v1, -0x41000000    # -0.5f
 
-    sget-object v0, Loyf;->a:Loyf;
+    invoke-virtual {v5, v1, v1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    :cond_0
+    int-to-float p1, p1
+
+    invoke-virtual {p0}, Lm5d;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr p1, v1
+
+    int-to-float p2, p2
+
+    invoke-virtual {p0}, Lm5d;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    div-float/2addr p2, v1
+
+    invoke-virtual {v5, p1, p2}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    int-to-float p1, p3
+
+    invoke-virtual {p0}, Lm5d;->getWidth()I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    div-float/2addr p1, p2
+
+    int-to-float p2, p4
+
+    invoke-virtual {p0}, Lm5d;->getHeight()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p2, p3
+
+    invoke-virtual {v5, p1, p2}, Landroid/graphics/Matrix;->preScale(FF)Z
+
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->retain()V
+
+    move-object p1, v0
+
+    new-instance v0, Lorg/webrtc/TextureBufferImpl;
+
+    invoke-interface {p1}, Lorg/webrtc/VideoFrame$TextureBuffer;->getType()Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+
+    move-result-object v3
+
+    invoke-interface {p1}, Lorg/webrtc/VideoFrame$TextureBuffer;->getTextureId()I
+
+    move-result v4
+
+    new-instance v8, La4b;
+
+    const/16 p1, 0xd
+
+    invoke-direct {v8, p1, p0}, La4b;-><init>(ILjava/lang/Object;)V
+
+    iget-object v6, p0, Lm5d;->c:Landroid/os/Handler;
+
+    iget-object v7, p0, Lm5d;->d:Lorg/webrtc/YuvConverter;
+
+    move v1, p5
+
+    move v2, p6
+
+    invoke-direct/range {v0 .. v8}, Lorg/webrtc/TextureBufferImpl;-><init>(IILorg/webrtc/VideoFrame$TextureBuffer$Type;ILandroid/graphics/Matrix;Landroid/os/Handler;Lorg/webrtc/YuvConverter;Ljava/lang/Runnable;)V
 
     return-object v0
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final getHeight()I
+    .locals 2
 
-    goto :goto_0
+    iget v0, p0, Lm5d;->b:I
 
-    :catchall_1
-    move-exception v3
+    rem-int/lit16 v0, v0, 0xb4
 
-    :try_start_3
-    invoke-virtual {v0}, Lx5d;->k()V
+    iget-object v1, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
 
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    if-nez v0, :cond_0
 
-    :goto_0
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+    invoke-interface {v1}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
 
-    throw v0
+    move-result v0
 
-    :pswitch_0
-    iget-object v0, p0, Lm5d;->b:Lq5d;
+    return v0
 
-    iget-object v1, v0, Lq5d;->d:Lfc9;
+    :cond_0
+    invoke-interface {v1}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
 
-    iget-object v0, v0, Lq5d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+    move-result v0
 
-    invoke-virtual {v1}, Lw2;->f()Lh2f;
+    return v0
+.end method
 
-    move-result-object v2
+.method public final getTextureId()I
+    .locals 1
 
-    :try_start_4
-    invoke-virtual {v0}, Lx5d;->c()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
 
-    :try_start_5
-    invoke-interface {v2}, Lh2f;->C()I
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$TextureBuffer;->getTextureId()I
 
-    invoke-virtual {v0}, Lx5d;->q()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+    move-result v0
 
-    :try_start_6
-    invoke-virtual {v0}, Lx5d;->k()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    return v0
+.end method
 
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+.method public final getTransformMatrix()Landroid/graphics/Matrix;
+    .locals 1
 
-    sget-object v0, Loyf;->a:Loyf;
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$TextureBuffer;->getTransformMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
 
     return-object v0
+.end method
 
-    :catchall_2
-    move-exception v0
+.method public final getType()Lorg/webrtc/VideoFrame$TextureBuffer$Type;
+    .locals 1
 
-    goto :goto_1
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
 
-    :catchall_3
-    move-exception v3
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$TextureBuffer;->getType()Lorg/webrtc/VideoFrame$TextureBuffer$Type;
 
-    :try_start_7
-    invoke-virtual {v0}, Lx5d;->k()V
+    move-result-object v0
 
-    throw v3
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+    return-object v0
+.end method
 
-    :goto_1
-    invoke-virtual {v1, v2}, Lw2;->v(Lh2f;)V
+.method public final getWidth()I
+    .locals 2
 
-    throw v0
+    iget v0, p0, Lm5d;->b:I
 
-    nop
+    rem-int/lit16 v0, v0, 0xb4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    if-nez v0, :cond_0
+
+    invoke-interface {v1}, Lorg/webrtc/VideoFrame$Buffer;->getWidth()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-interface {v1}, Lorg/webrtc/VideoFrame$Buffer;->getHeight()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->release()V
+
+    return-void
+.end method
+
+.method public final retain()V
+    .locals 1
+
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->retain()V
+
+    return-void
+.end method
+
+.method public final toI420()Lorg/webrtc/VideoFrame$I420Buffer;
+    .locals 1
+
+    iget-object v0, p0, Lm5d;->a:Lorg/webrtc/VideoFrame$TextureBuffer;
+
+    invoke-interface {v0}, Lorg/webrtc/VideoFrame$Buffer;->toI420()Lorg/webrtc/VideoFrame$I420Buffer;
+
+    move-result-object v0
+
+    return-object v0
 .end method

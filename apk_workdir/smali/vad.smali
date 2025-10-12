@@ -1,8 +1,8 @@
-.class public abstract Lvad;
+.class public interface abstract Lvad;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Ltad;)V
+.method public abstract a()Landroid/os/Bundle;
 .end method

@@ -1,179 +1,376 @@
 .class public final Lslb;
-.super Ljava/lang/Object;
+.super Ljava/io/InputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:Lg65;
+.field public Y:Z
 
-.field public final c:Ljava/lang/Object;
+.field public final a:Ljava/io/InputStream;
+
+.field public final b:[B
+
+.field public final c:La1d;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/io/InputStream;[BLa1d;)V
+    .locals 0
 
-    new-instance v0, Lslb;
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    const-string v1, ""
+    iput-object p1, p0, Lslb;->a:Ljava/io/InputStream;
 
-    invoke-direct {v0, v1}, Lslb;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
-.end method
+    iput-object p2, p0, Lslb;->b:[B
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lslb;->c:La1d;
 
-    iput-object p1, p0, Lslb;->a:Ljava/lang/String;
-
-    sget p1, Lt4g;->a:I
-
-    const/16 v0, 0x1f
-
-    if-lt p1, v0, :cond_0
-
-    new-instance p1, Lg65;
-
-    const/16 v0, 0x18
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lg65;-><init>(IZ)V
-
-    invoke-static {}, Lho8;->f()Landroid/media/metrics/LogSessionId;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lg65;->b:Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
     const/4 p1, 0x0
 
-    :goto_0
-    iput-object p1, p0, Lslb;->b:Lg65;
+    iput p1, p0, Lslb;->o:I
 
-    new-instance p1, Ljava/lang/Object;
+    iput p1, p0, Lslb;->X:I
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lslb;->c:Ljava/lang/Object;
+    iput-boolean p1, p0, Lslb;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()Landroid/media/metrics/LogSessionId;
-    .locals 1
+.method public final available()I
+    .locals 2
 
-    monitor-enter p0
+    iget v0, p0, Lslb;->X:I
 
-    :try_start_0
-    iget-object v0, p0, Lslb;->b:Lg65;
+    iget v1, p0, Lslb;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-gt v0, v1, :cond_0
 
-    iget-object v0, v0, Lg65;->b:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Landroid/media/metrics/LogSessionId;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_0
 
-    monitor-exit p0
+    :cond_0
+    const/4 v0, 0x0
 
-    return-object v0
+    :goto_0
+    invoke-static {v0}, Li8e;->k(Z)V
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p0}, Lslb;->m()V
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget v0, p0, Lslb;->o:I
+
+    iget v1, p0, Lslb;->X:I
+
+    sub-int/2addr v0, v1
+
+    iget-object v1, p0, Lslb;->a:Ljava/io/InputStream;
+
+    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-boolean v0, p0, Lslb;->Y:Z
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lslb;->Y:Z
+
+    iget-object v0, p0, Lslb;->c:La1d;
+
+    iget-object v1, p0, Lslb;->b:[B
+
+    invoke-interface {v0, v1}, La1d;->d(Ljava/lang/Object;)V
+
+    invoke-super {p0}, Ljava/io/InputStream;->close()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final finalize()V
+    .locals 3
+
+    iget-boolean v0, p0, Lslb;->Y:Z
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lai5;->a:Ld38;
+
+    const/4 v1, 0x6
+
+    invoke-interface {v0, v1}, Ld38;->h(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lai5;->a:Ld38;
+
+    const-string v1, "PooledByteInputStream"
+
+    const-string v2, "Finalized without closing"
+
+    invoke-interface {v0, v1, v2}, Ld38;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    invoke-virtual {p0}, Lslb;->close()V
+
+    :cond_1
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    return-void
+.end method
+
+.method public final m()V
+    .locals 2
+
+    iget-boolean v0, p0, Lslb;->Y:Z
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/io/IOException;
+
+    const-string v1, "stream already closed"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public final read()I
     .locals 4
 
-    const/4 v0, 0x1
+    .line 1
+    iget v0, p0, Lslb;->X:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lslb;
+    iget v1, p0, Lslb;->o:I
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-gt v0, v1, :cond_0
 
-    return v2
+    const/4 v0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {v0}, Li8e;->k(Z)V
+
+    .line 2
+    invoke-virtual {p0}, Lslb;->m()V
+
+    .line 3
+    iget v0, p0, Lslb;->X:I
+
+    iget v1, p0, Lslb;->o:I
+
+    iget-object v3, p0, Lslb;->b:[B
+
+    if-ge v0, v1, :cond_1
+
+    goto :goto_1
+
+    .line 4
     :cond_1
-    check-cast p1, Lslb;
+    iget-object v0, p0, Lslb;->a:Ljava/io/InputStream;
 
-    iget-object v1, p0, Lslb;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lslb;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lslb;->b:Lg65;
-
-    iget-object v3, p1, Lslb;->b:Lg65;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lslb;->c:Ljava/lang/Object;
-
-    iget-object p1, p1, Lslb;->c:Ljava/lang/Object;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lslb;->b:Lg65;
-
-    iget-object v1, p0, Lslb;->c:Ljava/lang/Object;
-
-    iget-object v2, p0, Lslb;->a:Ljava/lang/String;
-
-    filled-new-array {v2, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
 
+    if-gtz v0, :cond_2
+
+    const/4 v0, -0x1
+
     return v0
+
+    .line 5
+    :cond_2
+    iput v0, p0, Lslb;->o:I
+
+    .line 6
+    iput v2, p0, Lslb;->X:I
+
+    .line 7
+    :goto_1
+    iget v0, p0, Lslb;->X:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lslb;->X:I
+
+    aget-byte v0, v3, v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    return v0
+.end method
+
+.method public final read([BII)I
+    .locals 4
+
+    .line 8
+    iget v0, p0, Lslb;->X:I
+
+    iget v1, p0, Lslb;->o:I
+
+    const/4 v2, 0x0
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {v0}, Li8e;->k(Z)V
+
+    .line 9
+    invoke-virtual {p0}, Lslb;->m()V
+
+    .line 10
+    iget v0, p0, Lslb;->X:I
+
+    iget v1, p0, Lslb;->o:I
+
+    iget-object v3, p0, Lslb;->b:[B
+
+    if-ge v0, v1, :cond_1
+
+    goto :goto_1
+
+    .line 11
+    :cond_1
+    iget-object v0, p0, Lslb;->a:Ljava/io/InputStream;
+
+    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    const/4 p1, -0x1
+
+    return p1
+
+    .line 12
+    :cond_2
+    iput v0, p0, Lslb;->o:I
+
+    .line 13
+    iput v2, p0, Lslb;->X:I
+
+    .line 14
+    :goto_1
+    iget v0, p0, Lslb;->o:I
+
+    iget v1, p0, Lslb;->X:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {v0, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result p3
+
+    .line 15
+    iget v0, p0, Lslb;->X:I
+
+    invoke-static {v3, v0, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 16
+    iget p1, p0, Lslb;->X:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lslb;->X:I
+
+    return p3
+.end method
+
+.method public final skip(J)J
+    .locals 5
+
+    iget v0, p0, Lslb;->X:I
+
+    iget v1, p0, Lslb;->o:I
+
+    if-gt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Li8e;->k(Z)V
+
+    invoke-virtual {p0}, Lslb;->m()V
+
+    iget v0, p0, Lslb;->o:I
+
+    iget v1, p0, Lslb;->X:I
+
+    sub-int v2, v0, v1
+
+    int-to-long v2, v2
+
+    cmp-long v4, v2, p1
+
+    if-ltz v4, :cond_1
+
+    int-to-long v0, v1
+
+    add-long/2addr v0, p1
+
+    long-to-int v0, v0
+
+    iput v0, p0, Lslb;->X:I
+
+    return-wide p1
+
+    :cond_1
+    iput v0, p0, Lslb;->X:I
+
+    iget-object v0, p0, Lslb;->a:Ljava/io/InputStream;
+
+    sub-long/2addr p1, v2
+
+    invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
+
+    move-result-wide p1
+
+    add-long/2addr p1, v2
+
+    return-wide p1
 .end method

@@ -1,47 +1,77 @@
-.class public abstract Lhhh;
+.class public final Lhhh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkih;
+.implements Landroid/os/IInterface;
 
-# static fields
-.field public static final a:Ljava/text/DecimalFormat;
 
-.field public static final b:Ljava/text/DecimalFormat;
+# instance fields
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    new-instance v0, Ljava/text/DecimalFormat;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-static {v1}, Ljava/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Ljava/text/DecimalFormatSymbols;
-
-    move-result-object v2
-
-    const-string v3, ".000000"
-
-    invoke-direct {v0, v3, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V
-
-    sput-object v0, Lhhh;->a:Ljava/text/DecimalFormat;
-
-    new-instance v0, Ljava/text/DecimalFormat;
-
-    invoke-static {v1}, Ljava/text/DecimalFormatSymbols;->getInstance(Ljava/util/Locale;)Ljava/text/DecimalFormatSymbols;
-
-    move-result-object v1
-
-    const-string v2, ".##"
-
-    invoke-direct {v0, v2, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V
-
-    sput-object v0, Lhhh;->b:Ljava/text/DecimalFormat;
-
-    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
-
-    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
+    iput-object p1, p0, Lhhh;->c:Landroid/os/IBinder;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lhhh;->c:Landroid/os/IBinder;
+
+    return-object v0
+.end method
+
+.method public final k(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    :try_start_0
+    iget-object v1, p0, Lhhh;->c:Landroid/os/IBinder;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

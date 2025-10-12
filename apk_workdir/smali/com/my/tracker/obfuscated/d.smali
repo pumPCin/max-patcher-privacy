@@ -41,6 +41,7 @@
 
     const-string v0, "AppSetIdProvider: app set id has been collected, value: "
 
+    .line 18
     :try_start_0
     iget-object v1, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -52,6 +53,7 @@
 
     if-eqz v1, :cond_0
 
+    .line 19
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -73,6 +75,7 @@
 
     goto :goto_0
 
+    .line 20
     :cond_0
     iget-object v0, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -80,6 +83,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 21
     :try_start_1
     iget-object v1, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -87,10 +91,12 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Object;->wait(J)V
 
+    .line 22
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 23
     :try_start_2
     const-string v0, "AppSetIdProvider: timeout for collecting id has exceeded"
 
@@ -103,6 +109,7 @@
     :catchall_1
     move-exception v1
 
+    .line 24
     :try_start_3
     monitor-exit v0
     :try_end_3
@@ -113,6 +120,7 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
+    .line 25
     :goto_0
     const-string v1, "AppSetIdProvider: attempt to block thread retrieving app set id finished unsuccessfully"
 
@@ -121,26 +129,32 @@
     return-void
 .end method
 
-.method private a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lvp;)V
+.method private a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Ljq;)V
     .locals 1
 
-    iget v0, p4, Lvp;->b:I
+    .line 2
+    iget v0, p4, Ljq;->b:I
 
     if-eq v0, p1, :cond_0
 
+    .line 3
     invoke-virtual {p2, v0}, Lcom/my/tracker/obfuscated/p0;->a(I)V
 
+    .line 4
     :cond_0
-    iget-object p1, p4, Lvp;->a:Ljava/lang/String;
+    iget-object p1, p4, Ljq;->a:Ljava/lang/String;
 
+    .line 5
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p3
 
     if-nez p3, :cond_1
 
+    .line 6
     invoke-virtual {p2, p1}, Lcom/my/tracker/obfuscated/p0;->f(Ljava/lang/String;)V
 
+    .line 7
     const-string p2, "AppSetIdProvider: new id value has been received: "
 
     invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
@@ -149,6 +163,7 @@
 
     invoke-static {p2}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 8
     :cond_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -162,6 +177,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_2
     iget-object p2, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -173,6 +189,7 @@
 
     goto :goto_1
 
+    .line 10
     :cond_3
     :goto_0
     iget-object p1, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
@@ -181,16 +198,19 @@
 
     invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
+    .line 11
     :goto_1
     iget-object p1, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     monitor-enter p1
 
+    .line 12
     :try_start_0
     iget-object p2, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {p2}, Ljava/lang/Object;->notify()V
 
+    .line 13
     monitor-exit p1
 
     return-void
@@ -205,10 +225,11 @@
     throw p2
 .end method
 
-.method public static synthetic a(Lcom/my/tracker/obfuscated/d;ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lvp;)V
+.method public static synthetic a(Lcom/my/tracker/obfuscated/d;ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Ljq;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/my/tracker/obfuscated/d;->a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lvp;)V
+    .line 1
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/my/tracker/obfuscated/d;->a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Ljq;)V
 
     return-void
 .end method
@@ -268,23 +289,23 @@
 
     :cond_2
     :try_start_0
-    new-instance v0, Lbjb;
+    new-instance v0, Ll5c;
 
-    invoke-direct {v0, p1}, Lbjb;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Ll5c;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0}, Lbjb;->h()Lvmh;
+    invoke-virtual {v0}, Ll5c;->j()Lflh;
 
     move-result-object p1
 
-    new-instance v0, Lwc0;
+    new-instance v0, Lnc0;
 
     const/4 v5, 0x5
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lwc0;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct/range {v0 .. v5}, Lnc0;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {p1, v6, v0}, Lvmh;->d(Ljava/util/concurrent/Executor;Lsfa;)Lvmh;
+    invoke-virtual {p1, v6, v0}, Lflh;->d(Ljava/util/concurrent/Executor;Luda;)Lflh;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -310,16 +331,20 @@
 .method public a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/c;
     .locals 1
 
+    .line 14
     iget-boolean v0, p0, Lcom/my/tracker/obfuscated/d;->b:Z
 
     if-nez v0, :cond_0
 
+    .line 15
     invoke-direct {p0, p1}, Lcom/my/tracker/obfuscated/d;->b(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
+    .line 16
     iput-boolean p1, p0, Lcom/my/tracker/obfuscated/d;->b:Z
 
+    .line 17
     :cond_0
     iget-object p1, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 

@@ -3,284 +3,295 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lobd;
+.implements Lsee;
 
 
 # instance fields
-.field public X:Lac5;
+.field public final X:J
 
-.field public Y:Z
+.field public final synthetic Y:Lzrd;
 
-.field public Z:I
+.field public final a:Lsee;
 
-.field public final a:Lt76;
+.field public b:Z
 
-.field public final b:Llo4;
-
-.field public c:[J
+.field public c:J
 
 .field public o:Z
 
-.field public w0:J
-
 
 # direct methods
-.method public constructor <init>(Lac5;Lt76;Z)V
-    .locals 2
+.method public constructor <init>(Lzrd;Lsee;J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lxb5;->a:Lt76;
+    iput-object p1, p0, Lxb5;->Y:Lzrd;
 
-    iput-object p1, p0, Lxb5;->X:Lac5;
+    iput-object p2, p0, Lxb5;->a:Lsee;
 
-    new-instance p2, Llo4;
-
-    const/16 v0, 0x12
-
-    invoke-direct {p2, v0}, Llo4;-><init>(I)V
-
-    iput-object p2, p0, Lxb5;->b:Llo4;
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    iput-wide v0, p0, Lxb5;->w0:J
-
-    iget-object p2, p1, Lac5;->b:[J
-
-    iput-object p2, p0, Lxb5;->c:[J
-
-    invoke-virtual {p0, p1, p3}, Lxb5;->a(Lac5;Z)V
+    iput-wide p3, p0, Lxb5;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lac5;Z)V
-    .locals 9
+.method public final J(Lht0;J)V
+    .locals 4
 
-    iget v0, p0, Lxb5;->Z:I
+    iget-boolean v0, p0, Lxb5;->o:Z
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_2
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    const-wide/16 v0, -0x1
 
-    if-nez v0, :cond_0
+    iget-wide v2, p0, Lxb5;->X:J
 
-    move-wide v5, v2
+    cmp-long v0, v2, v0
 
-    goto :goto_0
+    if-eqz v0, :cond_1
 
-    :cond_0
-    iget-object v4, p0, Lxb5;->c:[J
+    iget-wide v0, p0, Lxb5;->c:J
 
-    sub-int/2addr v0, v1
+    add-long/2addr v0, p2
 
-    aget-wide v5, v4, v0
+    cmp-long v0, v0, v2
 
-    :goto_0
-    iput-boolean p2, p0, Lxb5;->o:Z
-
-    iput-object p1, p0, Lxb5;->X:Lac5;
-
-    iget-object p1, p1, Lac5;->b:[J
-
-    iput-object p1, p0, Lxb5;->c:[J
-
-    iget-wide v7, p0, Lxb5;->w0:J
-
-    cmp-long p2, v7, v2
-
-    if-eqz p2, :cond_2
-
-    invoke-static {p1, v7, v8, v1}, Lt4g;->a([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lxb5;->Z:I
-
-    iget-boolean p2, p0, Lxb5;->o:Z
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p0, Lxb5;->c:[J
-
-    array-length p2, p2
-
-    if-ne p1, p2, :cond_1
-
-    move-wide v2, v7
-
-    :cond_1
-    iput-wide v2, p0, Lxb5;->w0:J
-
-    return-void
-
-    :cond_2
-    cmp-long p2, v5, v2
-
-    if-eqz p2, :cond_3
-
-    const/4 p2, 0x0
-
-    invoke-static {p1, v5, v6, p2}, Lt4g;->a([JJZ)I
-
-    move-result p1
-
-    iput p1, p0, Lxb5;->Z:I
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final h(J)I
-    .locals 3
-
-    iget v0, p0, Lxb5;->Z:I
-
-    iget-object v1, p0, Lxb5;->c:[J
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, p1, p2, v2}, Lt4g;->a([JJZ)I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p1
-
-    iget p2, p0, Lxb5;->Z:I
-
-    sub-int p2, p1, p2
-
-    iput p1, p0, Lxb5;->Z:I
-
-    return p2
-.end method
-
-.method public final q(Lrob;Lkc4;I)I
-    .locals 6
-
-    iget v0, p0, Lxb5;->Z:I
-
-    iget-object v1, p0, Lxb5;->c:[J
-
-    array-length v1, v1
-
-    const/4 v2, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v1, v2
+    if-gtz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    new-instance p1, Ljava/net/ProtocolException;
 
-    :goto_0
-    const/4 v3, -0x4
+    const-string v0, "expected "
 
-    const/4 v4, 0x4
+    const-string v1, " bytes but received "
 
-    if-eqz v1, :cond_1
+    invoke-static {v2, v3, v0, v1}, Lsw1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v5, p0, Lxb5;->o:Z
+    move-result-object v0
 
-    if-nez v5, :cond_1
+    iget-wide v1, p0, Lxb5;->c:J
 
-    iput v4, p2, Lsx;->b:I
+    add-long/2addr v1, p2
 
-    return v3
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    and-int/lit8 v5, p3, 0x2
+    :goto_0
+    :try_start_0
+    iget-object v0, p0, Lxb5;->a:Lsee;
 
-    if-nez v5, :cond_6
+    invoke-interface {v0, p1, p2, p3}, Lsee;->J(Lht0;J)V
 
-    iget-boolean v5, p0, Lxb5;->Y:Z
+    iget-wide v0, p0, Lxb5;->c:J
 
-    if-nez v5, :cond_2
+    add-long/2addr v0, p2
 
-    goto :goto_1
+    iput-wide v0, p0, Lxb5;->c:J
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_2
-    if-eqz v1, :cond_3
+    return-void
 
-    const/4 p1, -0x3
+    :catch_0
+    move-exception p1
 
-    return p1
-
-    :cond_3
-    and-int/lit8 p1, p3, 0x1
-
-    if-nez p1, :cond_4
-
-    add-int/lit8 p1, v0, 0x1
-
-    iput p1, p0, Lxb5;->Z:I
-
-    :cond_4
-    and-int/lit8 p1, p3, 0x4
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lxb5;->X:Lac5;
-
-    iget-object p1, p1, Lac5;->a:[Lub5;
-
-    aget-object p1, p1, v0
-
-    iget-object p3, p0, Lxb5;->b:Llo4;
-
-    invoke-virtual {p3, p1}, Llo4;->n(Lub5;)[B
+    invoke-virtual {p0, p1}, Lxb5;->n(Ljava/io/IOException;)Ljava/io/IOException;
 
     move-result-object p1
 
-    array-length p3, p1
+    throw p1
 
-    invoke-virtual {p2, p3}, Lkc4;->w(I)V
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p3, p2, Lkc4;->X:Ljava/nio/ByteBuffer;
+    const-string p2, "closed"
 
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :cond_5
-    iget-object p1, p0, Lxb5;->c:[J
+    throw p1
+.end method
 
-    aget-wide v0, p1, v0
+.method public final close()V
+    .locals 4
 
-    iput-wide v0, p2, Lkc4;->Z:J
+    iget-boolean v0, p0, Lxb5;->o:Z
 
-    iput v2, p2, Lsx;->b:I
+    if-eqz v0, :cond_0
 
-    return v3
+    return-void
 
-    :cond_6
-    :goto_1
-    iget-object p2, p0, Lxb5;->a:Lt76;
+    :cond_0
+    const/4 v0, 0x1
 
-    iput-object p2, p1, Lrob;->c:Ljava/lang/Object;
+    iput-boolean v0, p0, Lxb5;->o:Z
 
-    iput-boolean v2, p0, Lxb5;->Y:Z
+    const-wide/16 v0, -0x1
 
-    const/4 p1, -0x5
+    iget-wide v2, p0, Lxb5;->X:J
 
-    return p1
+    cmp-long v0, v2, v0
+
+    if-eqz v0, :cond_2
+
+    iget-wide v0, p0, Lxb5;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Ljava/net/ProtocolException;
+
+    const-string v1, "unexpected end of stream"
+
+    invoke-direct {v0, v1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    :goto_0
+    :try_start_0
+    invoke-virtual {p0}, Lxb5;->m()V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lxb5;->n(Ljava/io/IOException;)Ljava/io/IOException;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Lxb5;->n(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final flush()V
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0}, Lxb5;->o()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Lxb5;->n(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object v0
+
+    throw v0
+.end method
+
+.method public final m()V
+    .locals 1
+
+    iget-object v0, p0, Lxb5;->a:Lsee;
+
+    invoke-interface {v0}, Lsee;->close()V
+
+    return-void
+.end method
+
+.method public final n(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 3
+
+    iget-boolean v0, p0, Lxb5;->b:Z
+
+    if-eqz v0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lxb5;->b:Z
+
+    iget-object v1, p0, Lxb5;->Y:Lzrd;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2, v0, p1}, Lzrd;->d(ZZLjava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final o()V
+    .locals 1
+
+    iget-object v0, p0, Lxb5;->a:Lsee;
+
+    invoke-interface {v0}, Lsee;->flush()V
+
+    return-void
+.end method
+
+.method public final p()Ldhf;
+    .locals 1
+
+    iget-object v0, p0, Lxb5;->a:Lsee;
+
+    invoke-interface {v0}, Lsee;->p()Ldhf;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lxb5;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x28
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxb5;->a:Lsee;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

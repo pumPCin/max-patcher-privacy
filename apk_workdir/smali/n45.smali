@@ -1,70 +1,150 @@
 .class public final Ln45;
-.super Ljava/lang/Object;
+.super Lw35;
 .source "SourceFile"
-
-# interfaces
-.implements Lni4;
 
 
 # instance fields
-.field public final synthetic a:Les7;
+.field public final a:Ljava/lang/ref/WeakReference;
+
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/emoji2/text/EmojiCompatInitializer;Les7;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/TextView;Lo45;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln45;->a:Les7;
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Ln45;->a:Ljava/lang/ref/WeakReference;
+
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Ln45;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResume(Lcs7;)V
-    .locals 3
+.method public final i()V
+    .locals 5
 
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p0, Ln45;->a:Ljava/lang/ref/WeakReference;
 
-    const/16 v0, 0x1c
-
-    if-lt p1, v0, :cond_0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqh3;->a(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    check-cast v0, Landroid/widget/TextView;
+
+    iget-object v1, p0, Ln45;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/text/InputFilter;
+
+    if-eqz v1, :cond_6
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v3, 0x0
 
     :goto_0
-    new-instance v0, Lqfh;
+    array-length v4, v2
 
-    const/4 v1, 0x3
+    if-ge v3, v4, :cond_6
 
-    invoke-direct {v0, v1}, Lqfh;-><init>(I)V
+    aget-object v4, v2, v3
 
-    const-wide/16 v1, 0x1f4
+    if-ne v4, v1, :cond_5
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0}, Landroid/view/View;->isAttachedToWindow()Z
 
-    iget-object p1, p0, Ln45;->a:Les7;
+    move-result v1
 
-    invoke-virtual {p1, p0}, Les7;->f(Lyr7;)V
+    if-eqz v1, :cond_6
 
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-static {}, Ly35;->a()Ly35;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ly35;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v2}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+
+    move-result v1
+
+    invoke-static {v2}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+
+    move-result v3
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    instance-of v0, v2, Landroid/text/Spannable;
+
+    if-eqz v0, :cond_6
+
+    check-cast v2, Landroid/text/Spannable;
+
+    if-ltz v1, :cond_3
+
+    if-ltz v3, :cond_3
+
+    invoke-static {v2, v1, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    return-void
+
+    :cond_3
+    if-ltz v1, :cond_4
+
+    invoke-static {v2, v1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    return-void
+
+    :cond_4
+    if-ltz v3, :cond_6
+
+    invoke-static {v2, v3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    return-void
+
+    :cond_5
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    :goto_1
     return-void
 .end method

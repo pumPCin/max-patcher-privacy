@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Le6;
+.implements Ll6;
 
 
 # instance fields
@@ -13,20 +13,16 @@
 
 .field public final synthetic c:Z
 
-.field public final synthetic d:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ZIJ)V
+.method public synthetic constructor <init>(IJZ)V
     .locals 0
 
-    iput p3, p0, Lzj5;->a:I
+    iput p1, p0, Lzj5;->a:I
 
-    iput-object p1, p0, Lzj5;->d:Ljava/lang/Object;
+    iput-wide p2, p0, Lzj5;->b:J
 
-    iput-wide p4, p0, Lzj5;->b:J
-
-    iput-boolean p2, p0, Lzj5;->c:Z
+    iput-boolean p4, p0, Lzj5;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,164 +32,56 @@
 
 # virtual methods
 .method public final run()V
-    .locals 7
+    .locals 4
 
     iget v0, p0, Lzj5;->a:I
 
+    iget-boolean v1, p0, Lzj5;->c:Z
+
+    iget-wide v2, p0, Lzj5;->b:J
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lzj5;->d:Ljava/lang/Object;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v0, Lbl5;
+    move-result-object v0
 
-    iget-object v1, v0, Lbl5;->a:Lx5d;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    move-result-object v1
 
-    :try_start_0
-    invoke-virtual {v0}, Lbl5;->c()Ljava/util/ArrayList;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    iget-wide v3, p0, Lzj5;->b:J
+    const-string v1, "wk5"
 
-    iget-boolean v5, p0, Lzj5;->c:Z
+    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
 
-    if-nez v5, :cond_0
-
-    :try_start_1
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v0, v2}, Lbl5;->a(Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-ne v5, v6, :cond_1
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lbl5;->a(Ljava/util/List;)V
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-virtual {v1}, Lx5d;->k()V
+    invoke-static {v1, v2, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    throw v0
 
     :pswitch_0
-    iget-object v0, p0, Lzj5;->d:Ljava/lang/Object;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v0, Ljl5;
+    move-result-object v0
 
-    iget-object v1, v0, Ljl5;->a:Lx5d;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v1}, Lx5d;->c()V
+    move-result-object v1
 
-    :try_start_2
-    invoke-virtual {v0}, Ljl5;->c()Ljava/util/ArrayList;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    move-result-object v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    move-result-object v0
 
-    iget-wide v3, p0, Lzj5;->b:J
+    const-string v1, "ck5"
 
-    iget-boolean v5, p0, Lzj5;->c:Z
+    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
 
-    if-nez v5, :cond_2
-
-    :try_start_3
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v0, v2}, Ljl5;->a(Ljava/util/List;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-ne v5, v6, :cond_3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Ljl5;->a(Ljava/util/List;)V
-
-    :cond_3
-    :goto_1
-    invoke-virtual {v1}, Lx5d;->q()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    invoke-virtual {v1}, Lx5d;->k()V
+    invoke-static {v1, v2, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
-
-    :catchall_1
-    move-exception v0
-
-    invoke-virtual {v1}, Lx5d;->k()V
-
-    throw v0
 
     nop
 

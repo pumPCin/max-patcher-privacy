@@ -21,6 +21,7 @@
 .method public static getDecompressedLength(Ljava/nio/ByteBuffer;)I
     .locals 1
 
+    .line 3
     invoke-virtual {p0}, Ljava/nio/Buffer;->position()I
 
     move-result v0
@@ -35,6 +36,7 @@
 .method public static getDecompressedLength(Ljava/nio/ByteBuffer;I)I
     .locals 2
 
+    .line 4
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -83,6 +85,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-static {p0, v0}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->getDecompressedLength([BI)I
 
     move-result p0
@@ -93,6 +96,7 @@
 .method public static getDecompressedLength([BI)I
     .locals 2
 
+    .line 2
     aget-byte v0, p0, p1
 
     and-int/lit16 v0, v0, 0xff
@@ -133,10 +137,12 @@
 .method public decompress(Ljava/nio/ByteBuffer;ILjava/nio/ByteBuffer;I)I
     .locals 6
 
+    .line 11
     invoke-static {p1, p2}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->getDecompressedLength(Ljava/nio/ByteBuffer;I)I
 
     move-result v5
 
+    .line 12
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
     add-int/lit8 v2, p2, 0x4
@@ -159,10 +165,12 @@
 .method public decompress([BI[BI)I
     .locals 6
 
+    .line 2
     invoke-static {p1, p2}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->getDecompressedLength([BI)I
 
     move-result v5
 
+    .line 3
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
     add-int/lit8 v2, p2, 0x4
@@ -187,6 +195,7 @@
 
     const/4 v0, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0, p2, v0}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompress([BI[BI)I
 
     move-result p1
@@ -197,6 +206,7 @@
 .method public decompress(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)V
     .locals 7
 
+    .line 7
     invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
 
     move-result v0
@@ -205,6 +215,7 @@
 
     move-result v6
 
+    .line 8
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
     invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
@@ -225,6 +236,7 @@
 
     move-result p1
 
+    .line 9
     invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
 
     move-result p2
@@ -235,6 +247,7 @@
 
     invoke-virtual {v2, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
+    .line 10
     invoke-virtual {v4}, Ljava/nio/Buffer;->position()I
 
     move-result p1
@@ -251,6 +264,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p0, p1, v0}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompress([BI)[B
 
     move-result-object p1
@@ -261,10 +275,12 @@
 .method public decompress([BI)[B
     .locals 2
 
+    .line 5
     invoke-static {p1, p2}, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->getDecompressedLength([BI)I
 
     move-result v0
 
+    .line 6
     iget-object v1, p0, Lnet/jpountz/lz4/LZ4DecompressorWithLength;->decompressor:Lnet/jpountz/lz4/LZ4FastDecompressor;
 
     add-int/lit8 p2, p2, 0x4

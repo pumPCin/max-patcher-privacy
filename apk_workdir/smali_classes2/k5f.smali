@@ -1,84 +1,61 @@
-.class public final Lk5f;
-.super Lbj0;
+.class public final synthetic Lk5f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
 
 # instance fields
-.field public final b:Z
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lu5f;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Ljava/lang/String;Lu5f;)V
     .locals 0
 
-    invoke-direct {p0}, Lbj0;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lk5f;->b:Z
+    iput-object p1, p0, Lk5f;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lk5f;->b:Lu5f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onPushTokenGenerated(Ljava/lang/String;)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lk5f;->a:Ljava/lang/String;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lk5f;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lk5f;
-
-    iget-boolean v0, p0, Lk5f;->b:Z
-
-    iget-boolean p1, p1, Lk5f;->b:Z
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lk5f;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget-object v0, p0, Lk5f;->b:Lu5f;
 
-    const-string v0, "SyncMutedChatsEvent(isSuccessful="
+    iget-object v1, v0, Lu5f;->b:Ljava/lang/String;
 
-    const-string v1, ")"
+    const-string v2, "checkTokenChanged: token changed"
 
-    iget-boolean v2, p0, Lk5f;->b:Z
+    invoke-static {v1, v2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    iget-object v0, v0, Lu5f;->Z:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+    invoke-interface {v0, p1}, Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;->onPushTokenGenerated(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

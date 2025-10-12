@@ -3,22 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lcn;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+.field public final synthetic b:Lhj5;
+
+.field public final synthetic c:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+.method public synthetic constructor <init>(Lhj5;Lone/me/sdk/arch/Widget;I)V
     .locals 0
 
-    iput p2, p0, Lhd1;->a:I
+    iput p3, p0, Lhd1;->a:I
 
-    iput-object p1, p0, Lhd1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iput-object p1, p0, Lhd1;->b:Lhj5;
+
+    iput-object p2, p0, Lhd1;->c:Lone/me/sdk/arch/Widget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,129 +31,245 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final h0(Ldn;I)V
+    .locals 7
 
     iget v0, p0, Lhd1;->a:I
 
-    iget-object v1, p0, Lhd1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    const/4 v1, 0x0
+
+    const v2, 0x3dcccccd    # 0.1f
+
+    const/4 v3, 0x3
+
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    iget-object v5, p0, Lhd1;->c:Lone/me/sdk/arch/Widget;
+
+    iget-object v6, p0, Lhd1;->b:Lhj5;
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->F0:Lxt6;
+    check-cast v5, Lone/me/profile/ProfileScreen;
 
-    new-instance v0, Lmh1;
+    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
 
-    new-instance v2, Lhd1;
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
 
-    const/4 v3, 0x0
+    move-result p1
 
-    invoke-direct {v2, v1, v3}, Lhd1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    new-instance v4, Ls5f;
+    move-result p2
 
-    invoke-direct {v4, v2}, Ls5f;-><init>(Lve6;)V
+    int-to-float p2, p2
 
-    new-instance v2, Ld7h;
+    int-to-float p1, p1
 
-    invoke-direct {v2, v1, v3}, Ld7h;-><init>(Lone/me/sdk/arch/Widget;I)V
+    div-float/2addr p2, p1
 
-    invoke-direct {v0, v4, v2}, Lmh1;-><init>(Ls5f;Ld7h;)V
+    invoke-virtual {v6, p2}, Lx58;->getInterpolation(F)F
 
-    return-object v0
+    move-result p1
+
+    iget-object p2, v5, Lone/me/profile/ProfileScreen;->r0:Lvoc;
+
+    sget-object v0, Lone/me/profile/ProfileScreen;->C0:[Lpl7;
+
+    aget-object v0, v0, v3
+
+    invoke-interface {p2, v5, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/LinearLayout;
+
+    sub-float/2addr v4, p1
+
+    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
+
+    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->E0()Ljxa;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljxa;->setTitleAlpha(F)V
+
+    return-void
 
     :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->F0:Lxt6;
+    check-cast v5, Lone/me/profileedit/ProfileEditScreen;
 
-    new-instance v2, Lsd0;
+    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->x0:[Lpl7;
 
-    sget v0, Llja;->a:I
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result p1
 
-    move-result-object v3
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    invoke-static {v3, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move-result p2
 
-    move-result-object v3
+    int-to-float p2, p2
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    int-to-float p1, p1
 
-    move-result-object v5
+    div-float/2addr p2, p1
 
-    new-instance v6, Lc8;
+    invoke-virtual {v6, p2}, Lx58;->getInterpolation(F)F
 
-    const/16 v0, 0x19
+    move-result p1
 
-    invoke-direct {v6, v0}, Lc8;-><init>(I)V
+    iget-object p2, v5, Lone/me/profileedit/ProfileEditScreen;->s0:Lvoc;
 
-    new-instance v7, Lc8;
+    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->x0:[Lpl7;
 
-    const/16 v0, 0x1a
+    aget-object v0, v0, v3
 
-    invoke-direct {v7, v0}, Lc8;-><init>(I)V
+    invoke-interface {p2, v5, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
-    sget-object v4, Lcha;->a:Lcha;
+    move-result-object p2
 
-    invoke-direct/range {v2 .. v7}, Lsd0;-><init>(Landroid/graphics/drawable/Drawable;Lfha;Landroid/content/Context;Lxe6;Lxe6;)V
+    check-cast p2, Landroid/widget/LinearLayout;
 
-    return-object v2
+    sub-float/2addr v4, p1
+
+    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
+
+    invoke-virtual {v5}, Lone/me/profileedit/ProfileEditScreen;->B0()Ljxa;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljxa;->setTitleAlpha(F)V
+
+    return-void
 
     :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->F0:Lxt6;
+    check-cast v5, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
 
-    new-instance v2, Lvd0;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Lpl7;
 
-    sget v0, Llja;->c:I
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result p1
 
-    move-result-object v3
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    invoke-static {v3, v0}, Lpy3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    move-result p2
 
-    move-result-object v3
+    int-to-float p2, p2
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    int-to-float p1, p1
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    div-float/2addr p2, p1
 
-    move-result-object v1
+    invoke-virtual {v6, p2}, Lx58;->getInterpolation(F)F
 
-    invoke-virtual {v0, v1}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    move-result p1
 
-    move-result-object v0
+    sub-float/2addr v4, p1
 
-    invoke-virtual {v0}, Lbx4;->h()Luxa;
+    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Landroid/widget/LinearLayout;
 
-    move-result-object v5
+    move-result-object p2
 
-    new-instance v6, Ljd1;
+    invoke-virtual {p2, v4}, Landroid/view/View;->setAlpha(F)V
 
-    const/4 v0, 0x1
+    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Landroid/widget/LinearLayout;
 
-    invoke-direct {v6, v0}, Ljd1;-><init>(I)V
+    move-result-object p2
 
-    new-instance v7, Ljd1;
+    cmpl-float v0, v4, v2
 
-    const/4 v0, 0x2
+    if-lez v0, :cond_0
 
-    invoke-direct {v7, v0}, Ljd1;-><init>(I)V
+    const/4 v1, 0x1
 
-    sget-object v4, Leha;->a:Leha;
+    :cond_0
+    invoke-static {p2, v1}, Lnjg;->J(Landroid/view/ViewGroup;Z)V
 
-    invoke-direct/range {v2 .. v7}, Lvd0;-><init>(Landroid/graphics/drawable/Drawable;Lfha;Luxa;Lxe6;Lxe6;)V
+    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->F0()Ljxa;
 
-    return-object v2
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljxa;->setTitleAlpha(F)V
+
+    return-void
 
     :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->F0:Lxt6;
+    check-cast v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
 
-    invoke-virtual {v1}, Lb04;->getRouter()Li8d;
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Lxcd;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
 
-    return-object v0
+    move-result p1
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result p2
+
+    int-to-float p2, p2
+
+    int-to-float p1, p1
+
+    div-float/2addr p2, p1
+
+    invoke-virtual {v6, p2}, Lx58;->getInterpolation(F)F
+
+    move-result p1
+
+    sub-float/2addr v4, p1
+
+    iget-object p2, v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->Z:Lvoc;
+
+    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->B0:[Lpl7;
+
+    aget-object v3, v0, v1
+
+    invoke-interface {p2, v5, v3}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setAlpha(F)V
+
+    aget-object v0, v0, v1
+
+    invoke-interface {p2, v5, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/widget/LinearLayout;
+
+    cmpl-float v0, v4, v2
+
+    if-lez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x4
+
+    :goto_0
+    invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_2
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_2
+    invoke-virtual {v5}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->D0()Ljxa;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljxa;->setTitleAlpha(F)V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -1,64 +1,78 @@
-.class public final synthetic Lmk4;
+.class public final Lmk4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Z
 
-.field public final synthetic b:Lts1;
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lts1;I)V
-    .locals 0
-
-    iput p2, p0, Lmk4;->a:I
-
-    iput-object p1, p0, Lmk4;->b:Lts1;
+.method public constructor <init>(Lu66;I)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget p1, p1, Lu66;->o:I
+
+    const/4 v0, 0x1
+
+    and-int/2addr p1, v0
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Lmk4;->a:Z
+
+    invoke-static {p2, v1}, Lcl4;->c(IZ)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lmk4;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 3
 
-    iget v0, p0, Lmk4;->a:I
+    check-cast p1, Lmk4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v0, p0, Lmk4;->b:Z
 
-    iget-object v0, p0, Lmk4;->b:Lts1;
+    iget-boolean v1, p1, Lmk4;->b:Z
 
-    const/4 v1, 0x0
+    sget-object v2, Lxc3;->a:Lvc3;
 
-    invoke-virtual {v0, v1}, Lts1;->b(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0, v1}, Lvc3;->d(ZZ)Lxc3;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/Exception;
+    iget-boolean v1, p0, Lmk4;->a:Z
 
-    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
+    iget-boolean p1, p1, Lmk4;->a:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lxc3;->d(ZZ)Lxc3;
 
-    iget-object v1, p0, Lmk4;->b:Lts1;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lts1;->d(Ljava/lang/Throwable;)Z
+    invoke-virtual {p1}, Lxc3;->f()I
 
-    return-void
+    move-result p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

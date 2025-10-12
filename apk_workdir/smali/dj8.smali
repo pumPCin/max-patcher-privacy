@@ -1,59 +1,30 @@
 .class public final Ldj8;
-.super Ljava/lang/Object;
+.super Lcj8;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Ldj8;
+# virtual methods
+.method public final I(F)V
+    .locals 1
 
+    const/4 v0, 0x0
 
-# instance fields
-.field public final a:J
+    cmpl-float v0, p1, v0
 
-.field public final b:J
+    if-eqz v0, :cond_0
 
-.field public final c:J
+    iget-object v0, p0, Lcj8;->g:Landroid/media/session/MediaController$TransportControls;
 
-.field public final d:Ldif;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Ldj8;
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v0 .. v6}, Ldj8;-><init>(JJJ)V
-
-    sput-object v0, Ldj8;->e:Ldj8;
+    invoke-static {v0, p1}, Lgx4;->r(Landroid/media/session/MediaController$TransportControls;F)V
 
     return-void
-.end method
 
-.method public constructor <init>(JJJ)V
-    .locals 0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "speed must not be zero"
 
-    iput-wide p1, p0, Ldj8;->a:J
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iput-wide p3, p0, Ldj8;->b:J
-
-    iput-wide p5, p0, Ldj8;->c:J
-
-    new-instance p1, Ldif;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2}, Ldif;-><init>(I)V
-
-    iput-object p1, p0, Ldj8;->d:Ldif;
-
-    return-void
+    throw p1
 .end method

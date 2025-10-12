@@ -3,56 +3,127 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lur7;
-.implements Ljava/io/Closeable;
+.implements Lfs4;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Ljava/lang/Runnable;
 
-.field public final b:Lkcd;
+.field public final b:Lncd;
 
-.field public c:Z
+.field public c:Ljava/lang/Thread;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkcd;)V
+.method public constructor <init>(Ljava/lang/Runnable;Lncd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llcd;->a:Ljava/lang/String;
+    iput-object p1, p0, Llcd;->a:Ljava/lang/Runnable;
 
-    iput-object p2, p0, Llcd;->b:Lkcd;
+    iput-object p2, p0, Llcd;->b:Lncd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final f()V
+    .locals 2
+
+    iget-object v0, p0, Llcd;->c:Ljava/lang/Thread;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Llcd;->b:Lncd;
+
+    instance-of v1, v0, Lsz9;
+
+    if-eqz v1, :cond_1
+
+    check-cast v0, Lsz9;
+
+    iget-boolean v1, v0, Lsz9;->b:Z
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lsz9;->b:Z
+
+    iget-object v0, v0, Lsz9;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Llcd;->b:Lncd;
+
+    invoke-interface {v0}, Lfs4;->f()V
 
     return-void
 .end method
 
-.method public final d(Lcs7;Ldr7;)V
+.method public final g()Z
     .locals 1
 
-    sget-object v0, Ldr7;->ON_DESTROY:Ldr7;
+    iget-object v0, p0, Llcd;->b:Lncd;
 
-    if-ne p2, v0, :cond_0
+    invoke-interface {v0}, Lfs4;->g()Z
 
-    const/4 p2, 0x0
+    move-result v0
 
-    iput-boolean p2, p0, Llcd;->c:Z
+    return v0
+.end method
 
-    invoke-interface {p1}, Lcs7;->L()Les7;
+.method public final run()V
+    .locals 2
 
-    move-result-object p1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-virtual {p1, p0}, Les7;->f(Lyr7;)V
+    move-result-object v0
 
-    :cond_0
+    iput-object v0, p0, Llcd;->c:Ljava/lang/Thread;
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Llcd;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Llcd;->f()V
+
+    iput-object v0, p0, Llcd;->c:Ljava/lang/Thread;
+
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Lwee;->y(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0}, Llcd;->f()V
+
+    iput-object v0, p0, Llcd;->c:Ljava/lang/Thread;
+
+    throw v1
 .end method

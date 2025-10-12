@@ -1,224 +1,372 @@
 .class public final Lcbb;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcbb;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:Ljava/lang/Long;
+.field public final X:Landroid/net/Uri;
 
-.field public Y:I
+.field public final a:Landroid/net/Uri;
 
-.field public c:Ljava/lang/String;
+.field public final b:Landroid/net/Uri;
 
-.field public o:Lds3;
+.field public final c:Lk44;
+
+.field public final o:Lr25;
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    new-instance v0, Lnua;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lnua;-><init>(I)V
+
+    sput-object v0, Lcbb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/net/Uri;Landroid/net/Uri;Lk44;Lr25;Landroid/net/Uri;)V
+    .locals 0
 
-# virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lcbb;->a:Landroid/net/Uri;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    iput-object p2, p0, Lcbb;->b:Landroid/net/Uri;
 
-    move-result v0
+    iput-object p3, p0, Lcbb;->c:Lk44;
 
-    const/4 v1, -0x1
+    iput-object p4, p0, Lcbb;->o:Lr25;
 
-    sparse-switch v0, :sswitch_data_0
+    iput-object p5, p0, Lcbb;->X:Landroid/net/Uri;
 
-    goto :goto_0
+    return-void
+.end method
 
-    :sswitch_0
-    const-string v0, "tokenType"
+.method public static a(Lcbb;Ltz7;)Landroid/net/Uri;
+    .locals 1
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-nez p0, :cond_0
 
-    move-result p2
+    invoke-virtual {p1}, Ltz7;->a()Ljava/lang/String;
 
-    if-nez p2, :cond_0
+    move-result-object p0
 
-    goto :goto_0
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_0
-    const/4 v1, 0x3
+    iget-object v0, p0, Lcbb;->b:Landroid/net/Uri;
 
-    goto :goto_0
+    if-eqz v0, :cond_1
 
-    :sswitch_1
-    const-string v0, "token"
+    return-object v0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    :cond_1
+    iget-object p0, p0, Lcbb;->a:Landroid/net/Uri;
 
-    move-result p2
+    if-eqz p0, :cond_2
 
-    if-nez p2, :cond_1
+    return-object p0
+
+    :cond_2
+    invoke-virtual {p1}, Ltz7;->a()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Lcbb;Ltz7;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    :cond_0
+    iget-object v1, p0, Lcbb;->o:Lr25;
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lcbb;->c:Lk44;
+
+    if-nez v1, :cond_2
+
+    invoke-static {p0, p1}, Lcbb;->a(Lcbb;Ltz7;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    invoke-virtual {p1}, Ltz7;->a()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "phone"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
+    return v0
 
     :cond_2
-    const/4 v1, 0x1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_6
+
+    const-class v1, Lcbb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
 
     goto :goto_0
 
-    :sswitch_3
-    const-string v0, "profile"
+    :cond_1
+    check-cast p1, Lcbb;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcbb;->a:Landroid/net/Uri;
 
-    move-result p2
+    iget-object v2, p1, Lcbb;->a:Landroid/net/Uri;
 
-    if-nez p2, :cond_3
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    iget-object v1, p0, Lcbb;->b:Landroid/net/Uri;
+
+    iget-object v2, p1, Lcbb;->b:Landroid/net/Uri;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v0
 
     :cond_3
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcbb;->c:Lk44;
 
-    :goto_0
-    packed-switch v1, :pswitch_data_0
+    iget-object v2, p1, Lcbb;->c:Lk44;
 
-    invoke-virtual {p1}, Ls89;->B()V
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v1
 
-    :pswitch_0
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    if-nez v1, :cond_4
 
-    move-result-object p1
+    return v0
 
-    invoke-static {p1}, Lq89;->v(Ljava/lang/String;)I
+    :cond_4
+    iget-object v1, p0, Lcbb;->o:Lr25;
+
+    iget-object v2, p1, Lcbb;->o:Lr25;
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v0
+
+    :cond_5
+    iget-object v0, p0, Lcbb;->X:Landroid/net/Uri;
+
+    iget-object p1, p1, Lcbb;->X:Landroid/net/Uri;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iput p1, p0, Lcbb;->Y:I
+    return p1
 
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lvb4;->a0(Ls89;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcbb;->c:Ljava/lang/String;
-
-    return-void
-
-    :pswitch_2
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lvb4;->X(Ls89;J)J
-
-    move-result-wide p1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcbb;->X:Ljava/lang/Long;
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1}, Lds3;->g(Ls89;)Lds3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcbb;->o:Lds3;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x12717657 -> :sswitch_3
-        0x65b3d6e -> :sswitch_2
-        0x696b9f9 -> :sswitch_1
-        0x86f18d3 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_6
+    :goto_0
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lcbb;->c:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lcbb;->o:Lds3;
+    iget-object v1, p0, Lcbb;->a:Landroid/net/Uri;
 
-    iget-object v2, p0, Lcbb;->X:Ljava/lang/Long;
+    if-eqz v1, :cond_0
 
-    iget v3, p0, Lcbb;->Y:I
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move-result v1
 
-    const-string v5, "{token=\'"
+    goto :goto_0
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_0
+    move v1, v0
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    const-string v0, "\', profile="
+    iget-object v2, p0, Lcbb;->b:Landroid/net/Uri;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
 
-    const-string v0, ", phone="
+    move-result v2
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :cond_1
+    move v2, v0
 
-    const-string v0, ", tokenType="
+    :goto_1
+    add-int/2addr v1, v2
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-static {v3}, Lq89;->q(I)Ljava/lang/String;
+    iget-object v2, p0, Lcbb;->c:Lk44;
 
-    move-result-object v0
+    if-eqz v2, :cond_2
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Lk44;->hashCode()I
 
-    const-string v0, "}"
+    move-result v2
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    move v2, v0
 
-    move-result-object v0
+    :goto_2
+    add-int/2addr v1, v2
 
-    return-object v0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lcbb;->o:Lr25;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2}, Lr25;->hashCode()I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_3
+    move v2, v0
+
+    :goto_3
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lcbb;->X:Landroid/net/Uri;
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    :cond_4
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lcbb;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lcbb;->b:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lcbb;->c:Lk44;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lcbb;->o:Lr25;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lcbb;->X:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

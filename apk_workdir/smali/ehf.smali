@@ -1,108 +1,92 @@
 .class public final Lehf;
-.super Lsnc;
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final b:Z
-
-.field public final c:Z
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(JLwy3;)V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lf24;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput-boolean v0, p0, Lehf;->b:Z
+    invoke-direct {p0, v0, p3}, Lkotlinx/coroutines/internal/ScopeCoroutine;-><init>(Lf24;Lkotlin/coroutines/Continuation;)V
 
-    iput-boolean v0, p0, Lehf;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lehf;->b:Z
-
-    iput-boolean p1, p0, Lehf;->c:Z
+    iput-wide p1, p0, Lehf;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final nameString$kotlinx_coroutines_core()Ljava/lang/String;
+    .locals 4
 
-    instance-of v0, p1, Lehf;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_0
-
-    :cond_0
-    check-cast p1, Lehf;
-
-    iget-boolean v0, p0, Lehf;->c:Z
-
-    iget-boolean v1, p1, Lehf;->c:Z
-
-    if-ne v0, v1, :cond_1
-
-    iget-boolean v0, p0, Lehf;->b:Z
-
-    iget-boolean p1, p1, Lehf;->b:Z
-
-    if-ne v0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lehf;->b:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lehf;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-super {p0}, Ll0;->nameString$kotlinx_coroutines_core()Ljava/lang/String;
 
     move-result-object v1
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "(timeMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lehf;->a:J
+
+    const/16 v3, 0x29
+
+    invoke-static {v0, v1, v2, v3}, Lsab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    return-object v0
+.end method
 
-    move-result v0
+.method public final run()V
+    .locals 3
 
-    return v0
+    invoke-virtual {p0}, Ll0;->getContext()Lf24;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lbv0;->q(Lf24;)Lmm4;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Timed out waiting for "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lehf;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " ms"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lkotlinx/coroutines/TimeoutCancellationException;
+
+    invoke-direct {v1, v0, p0}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Leh7;)V
+
+    invoke-virtual {p0, v1}, Lgi7;->cancelCoroutine(Ljava/lang/Throwable;)Z
+
+    return-void
 .end method

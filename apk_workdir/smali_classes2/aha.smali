@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ltd6;
 
 
 # instance fields
@@ -11,18 +11,18 @@
 
 .field public final synthetic b:Landroid/content/Context;
 
-.field public final synthetic c:Llha;
+.field public final synthetic c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Llha;I)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lone/me/sdk/uikit/common/button/OneMeButton;I)V
     .locals 0
 
     iput p3, p0, Laha;->a:I
 
     iput-object p1, p0, Laha;->b:Landroid/content/Context;
 
-    iput-object p2, p0, Laha;->c:Llha;
+    iput-object p2, p0, Laha;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,155 +32,75 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
     iget v0, p0, Laha;->a:I
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    sget v1, Locc;->ic_delete_filled_apart_24:I
+    iget-object v1, p0, Laha;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
 
     iget-object v2, p0, Laha;->b:Landroid/content/Context;
 
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Lpl7;
 
-    invoke-virtual {v1, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    new-instance v0, Lska;
 
-    move-result-object v3
+    invoke-direct {v0, v2}, Lska;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v3}, Lbx4;->h()Luxa;
+    sget v2, Lm7d;->f:I
 
-    move-result-object v3
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    invoke-interface {v3}, Luxa;->getIcon()Lk27;
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->b(I)I
 
-    const/4 v3, -0x1
+    move-result v2
 
-    const-string v4, "cross"
-
-    invoke-static {v0, v4, v3}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-static {v1, v2}, Lhqd;->g(Lsed;Landroid/content/Context;)Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->j:I
-
-    const-string v2, "circle_background"
-
-    invoke-static {v0, v2, v1}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    iget-object v1, p0, Laha;->c:Llha;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    invoke-virtual {v1, v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
     return-object v0
 
     :pswitch_0
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Lpl7;
 
-    sget v1, Locc;->ic_online_24:I
+    new-instance v0, Lfra;
 
-    iget-object v2, p0, Laha;->b:Landroid/content/Context;
+    invoke-direct {v0, v2}, Lfra;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+    sget v2, Lm7d;->h:I
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
 
-    invoke-static {v1, v2}, Lhqd;->g(Lsed;Landroid/content/Context;)Lk27;
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v3
+    const/4 v3, -0x2
 
-    iget v3, v3, Lk27;->e:I
+    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    const-string v4, "online"
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v0, v4, v3}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
+    new-instance v2, Lum7;
 
-    invoke-virtual {v1, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    const/16 v3, 0xc
 
-    move-result-object v1
+    invoke-direct {v2, v3, v0, v1}, Lum7;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Lbx4;->h()Luxa;
+    invoke-static {v0, v2}, Lwxa;->a(Landroid/view/View;Ljava/lang/Runnable;)Lwxa;
 
-    move-result-object v1
+    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    invoke-interface {v1}, Luxa;->b()Lue0;
+    move-result v2
 
-    move-result-object v1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget v1, v1, Lue0;->l:I
+    move-result-object v2
 
-    invoke-static {v0, v4, v1}, Lk74;->T(Lc6g;Ljava/lang/String;I)V
-
-    iget-object v1, p0, Laha;->c:Llha;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    sget v1, Lxcc;->ic_add_button_28:I
-
-    iget-object v2, p0, Laha;->b:Landroid/content/Context;
-
-    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lbx4;->h()Luxa;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Luxa;->b()Lue0;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lue0;->a:Lte0;
-
-    iget v3, v3, Lte0;->g:I
-
-    const-string v4, "background"
-
-    invoke-static {v0, v4, v3}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lbx4;->h()Luxa;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Luxa;->getIcon()Lk27;
-
-    move-result-object v1
-
-    iget v1, v1, Lk27;->b:I
-
-    const-string v2, "plus"
-
-    invoke-static {v0, v2, v1}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    iget-object v1, p0, Laha;->c:Llha;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    invoke-static {v1, v0, v2}, Lov9;->c(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
 
     return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

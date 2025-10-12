@@ -1,17 +1,17 @@
-.class public final Lrn1;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.class public interface abstract Lrn1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public K0:Lqn1;
-
-
 # virtual methods
-.method public final setListener(Lqn1;)V
-    .locals 0
+.method public abstract c()V
+.end method
 
-    iput-object p1, p0, Lrn1;->K0:Lqn1;
+.method public abstract e()V
+.end method
 
-    return-void
+.method public abstract g()V
+.end method
+
+.method public abstract k()V
 .end method

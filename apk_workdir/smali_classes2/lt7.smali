@@ -1,92 +1,133 @@
 .class public final Llt7;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Llt7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lje6;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:Lst7;
 
-.field public final c:Z
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic Z:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lle7;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
-
-    sput-object v0, Llt7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lst7;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llt7;->Y:Lst7;
 
-    iput-wide p1, p0, Llt7;->a:J
+    iput-object p2, p0, Llt7;->Z:Ljava/lang/String;
 
-    iput-object p3, p0, Llt7;->b:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-boolean p5, p0, Llt7;->c:Z
-
-    iput-object p4, p0, Llt7;->o:Ljava/lang/String;
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p1, Ln24;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Llt7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Llt7;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Llt7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Llt7;->a:J
+    new-instance p1, Llt7;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    iget-object v0, p0, Llt7;->Y:Lst7;
 
-    iget-object p2, p0, Llt7;->b:Ljava/lang/String;
+    iget-object v1, p0, Llt7;->Z:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1, p2}, Llt7;-><init>(Lst7;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    iget-boolean p2, p0, Llt7;->c:Z
+    return-object p1
+.end method
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p2, p0, Llt7;->o:Ljava/lang/String;
+    iget v0, p0, Llt7;->X:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    const/4 v1, 0x1
 
-    return-void
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llt7;->Y:Lst7;
+
+    iget-object p1, p1, Lst7;->q:Lyn7;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lc56;
+
+    invoke-interface {p1}, Lc56;->y()Liu5;
+
+    move-result-object p1
+
+    new-instance v0, Lkt7;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Llt7;->Z:Ljava/lang/String;
+
+    invoke-direct {v0, p1, v3, v2}, Lkt7;-><init>(Liu5;Ljava/lang/String;I)V
+
+    iput v1, p0, Llt7;->X:I
+
+    invoke-static {v0, p0}, Luce;->D(Liu5;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

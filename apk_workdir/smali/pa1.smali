@@ -1,153 +1,105 @@
 .class public final Lpa1;
-.super Lm3f;
+.super Ltbe;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.field public final X:Lwka;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+.method public constructor <init>(Lwka;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    iput-object p2, p0, Lpa1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    invoke-direct {p0, p2}, Ltbe;-><init>(Ljava/util/concurrent/Executor;)V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lpa1;->X:Lwka;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final H(Lqce;I)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    instance-of v0, p1, Loa1;
 
-    invoke-virtual {p0, p1, p2}, Lpa1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    check-cast p1, Loa1;
 
-    check-cast p1, Lpa1;
+    invoke-virtual {p0, p2}, Lhv7;->C(I)Ljava/lang/Object;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object p2
 
-    invoke-virtual {p1, p2}, Lpa1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p2, Lov7;
 
-    return-object p2
-.end method
+    instance-of v0, p2, Lvc1;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-nez v0, :cond_0
 
-    new-instance v0, Lpa1;
-
-    iget-object v1, p0, Lpa1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-direct {v0, p2, v1}, Lpa1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
-
-    iput-object p1, v0, Lpa1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lpa1;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    iget-object v0, v0, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->X:Lbp7;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpa1;->X:Ljava/lang/Object;
-
-    check-cast p1, Lhy9;
-
-    instance-of v1, p1, Lba1;
-
-    const-class v2, Lone/me/android/calls/CallNotifierFixActivity;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lob1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-virtual {p1}, Lob1;->b()Landroid/app/Application;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "action-open-call"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/high16 v1, 0x10000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    invoke-virtual {p1}, Lob1;->b()Landroid/app/Application;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lca1;
+    invoke-virtual {p1, p2}, Loa1;->A(Lov7;)V
 
-    if-eqz v1, :cond_1
+    iget-object p1, p1, Luvc;->a:Landroid/view/View;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast p1, Lh0e;
 
-    move-result-object v0
+    new-instance v0, Lrb;
 
-    check-cast v0, Lob1;
+    check-cast p2, Lvc1;
 
-    check-cast p1, Lca1;
+    const/4 v1, 0x3
 
-    iget-object v1, p1, Lca1;->b:Lg31;
+    iget-object v2, p0, Lpa1;->X:Lwka;
 
-    iget-boolean p1, p1, Lca1;->c:Z
+    invoke-direct {v0, v2, v1, p2}, Lrb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1, v0}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    new-instance v3, Landroid/content/Intent;
+    return-void
 
-    invoke-virtual {v0}, Lob1;->b()Landroid/app/Application;
+    :cond_1
+    invoke-virtual {p0, p2}, Lhv7;->C(I)Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object p2
 
-    invoke-direct {v3, v4, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    check-cast p2, Lov7;
 
-    invoke-static {v3, v1, p1}, Lob1;->a(Landroid/content/Intent;Lg31;Z)V
+    invoke-virtual {p1, p2}, Lqce;->A(Lov7;)V
 
-    invoke-virtual {v0}, Lob1;->b()Landroid/app/Application;
+    return-void
+.end method
+
+.method public final bridge synthetic r(Luvc;I)V
+    .locals 0
+
+    check-cast p1, Lqce;
+
+    invoke-virtual {p0, p1, p2}, Lpa1;->H(Lqce;I)V
+
+    return-void
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Luvc;
+    .locals 2
+
+    new-instance p2, Loa1;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {p1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    new-instance v0, Lh0e;
 
-    :cond_1
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    const/4 v1, 0x0
 
-    return-object p1
+    invoke-direct {v0, p1, v1}, Lh0e;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p2, v0}, Luvc;-><init>(Landroid/view/View;)V
+
+    return-object p2
 .end method

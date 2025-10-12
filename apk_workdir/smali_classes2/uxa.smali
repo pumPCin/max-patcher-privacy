@@ -1,41 +1,19 @@
-.class public interface abstract Luxa;
+.class public abstract Luxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Liu2;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Lue0;
-.end method
 
-.method public abstract c()Lyoe;
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract d()Lkp6;
-.end method
+    sget v0, Llec;->webview:I
 
-.method public abstract e()La4;
-.end method
+    sput v0, Luxa;->a:I
 
-.method public abstract f(I)I
-.end method
-
-.method public abstract g()Lz6g;
-.end method
-
-.method public abstract getIcon()Lk27;
-.end method
-
-.method public abstract getName()Ljava/lang/String;
-.end method
-
-.method public abstract getText()Lbdf;
-.end method
-
-.method public abstract h()Ls93;
-.end method
-
-.method public abstract i()Ljye;
+    return-void
 .end method

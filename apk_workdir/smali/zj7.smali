@@ -1,48 +1,130 @@
 .class public final Lzj7;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ls75;
+
+
+# static fields
+.field public static final e:Lwj7;
+
+.field public static final f:Lxj7;
+
+.field public static final g:Lxj7;
+
+.field public static final h:Lyj7;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/HashMap;
 
-.field public final synthetic Y:Lpb;
+.field public final b:Ljava/util/HashMap;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Lwj7;
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzj7;->Y:Lpb;
+    new-instance v0, Lwj7;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lwj7;-><init>(I)V
+
+    sput-object v0, Lzj7;->e:Lwj7;
+
+    new-instance v0, Lxj7;
+
+    invoke-direct {v0, v1}, Lxj7;-><init>(I)V
+
+    sput-object v0, Lzj7;->f:Lxj7;
+
+    new-instance v0, Lxj7;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lxj7;-><init>(I)V
+
+    sput-object v0, Lzj7;->g:Lxj7;
+
+    new-instance v0, Lyj7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzj7;->h:Lyj7;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lzj7;->a:Ljava/util/HashMap;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Lzj7;->b:Ljava/util/HashMap;
+
+    sget-object v2, Lzj7;->e:Lwj7;
+
+    iput-object v2, p0, Lzj7;->c:Lwj7;
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p0, Lzj7;->d:Z
+
+    sget-object v2, Lzj7;->f:Lxj7;
+
+    const-class v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lzj7;->g:Lxj7;
+
+    const-class v3, Ljava/lang/Boolean;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v2, Lzj7;->h:Lyj7;
+
+    const-class v3, Ljava/util/Date;
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Ljava/lang/Class;Ln8a;)Ls75;
     .locals 1
 
-    iput-object p1, p0, Lzj7;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lzj7;->a:Ljava/util/HashMap;
 
-    iget p1, p0, Lzj7;->X:I
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    iget-object p2, p0, Lzj7;->b:Ljava/util/HashMap;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput p1, p0, Lzj7;->X:I
-
-    iget-object p1, p0, Lzj7;->Y:Lpb;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method

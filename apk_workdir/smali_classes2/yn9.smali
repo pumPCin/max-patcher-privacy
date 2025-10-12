@@ -1,41 +1,136 @@
 .class public final Lyn9;
-.super Ljava/lang/Object;
+.super Ly7f;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lbo9;
+.field public final c:J
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Lgo9;
-
-.field public final e:Lo7;
-
-.field public final f:Lno9;
+.field public final o:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(Lbo9;Ljava/lang/String;Ljava/lang/String;Lgo9;Lo7;Lno9;)V
+.method public constructor <init>(JLjava/util/LinkedHashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyn9;->a:Lbo9;
+    iput-wide p1, p0, Lyn9;->c:J
 
-    iput-object p2, p0, Lyn9;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lyn9;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lyn9;->d:Lgo9;
-
-    iput-object p5, p0, Lyn9;->e:Lo7;
-
-    iput-object p6, p0, Lyn9;->f:Lno9;
+    iput-object p3, p0, Lyn9;->o:Ljava/util/LinkedHashSet;
 
     return-void
+.end method
+
+.method public static final d(Lc79;)Lyn9;
+    .locals 12
+
+    invoke-virtual {p0}, Lc79;->m()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p0}, Lg8;->I(Lc79;)I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    new-instance v1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    move v5, v2
+
+    move-wide v6, v3
+
+    :goto_1
+    if-ge v5, v0, :cond_6
+
+    invoke-static {p0}, Lg8;->K(Lc79;)Ljava/lang/String;
+
+    move-result-object v8
+
+    if-nez v8, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    const-string v9, "chatId"
+
+    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_3
+
+    invoke-static {p0, v3, v4}, Lg8;->H(Lc79;J)J
+
+    move-result-wide v6
+
+    goto :goto_3
+
+    :cond_3
+    const-string v9, "messageIds"
+
+    invoke-virtual {v8, v9}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    invoke-static {p0}, Lg8;->A(Lc79;)I
+
+    move-result v8
+
+    move v9, v2
+
+    :goto_2
+    if-ge v9, v8, :cond_5
+
+    invoke-virtual {p0}, Lc79;->o0()J
+
+    move-result-wide v10
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v10
+
+    invoke-interface {v1, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {p0}, Lc79;->y()V
+
+    :cond_5
+    :goto_3
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_6
+    new-instance p0, Lyn9;
+
+    invoke-direct {p0, v6, v7, v1}, Lyn9;-><init>(JLjava/util/LinkedHashSet;)V
+
+    return-object p0
 .end method
 
 
@@ -43,151 +138,65 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x1
-
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lyn9;
+    instance-of v0, p1, Lyn9;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lyn9;
 
-    iget-object v1, p0, Lyn9;->a:Lbo9;
+    iget-wide v0, p0, Lyn9;->c:J
 
-    iget-object v3, p1, Lyn9;->a:Lbo9;
+    iget-wide v2, p1, Lyn9;->c:J
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v0, v0, v2
 
-    move-result v1
+    if-eqz v0, :cond_2
 
-    if-nez v1, :cond_2
-
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget-object v1, p0, Lyn9;->b:Ljava/lang/String;
+    iget-object v0, p0, Lyn9;->o:Ljava/util/LinkedHashSet;
 
-    iget-object v3, p1, Lyn9;->b:Ljava/lang/String;
+    iget-object p1, p1, Lyn9;->o:Ljava/util/LinkedHashSet;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lyn9;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lyn9;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lyn9;->d:Lgo9;
-
-    iget-object v3, p1, Lyn9;->d:Lgo9;
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lyn9;->e:Lo7;
-
-    iget-object v3, p1, Lyn9;->e:Lo7;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lyn9;->f:Lno9;
-
-    iget-object p1, p1, Lyn9;->f:Lno9;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_7
+    if-nez p1, :cond_3
 
-    return v2
+    :goto_0
+    const/4 p1, 0x0
 
-    :cond_7
-    return v0
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lyn9;->a:Lbo9;
-
-    iget-wide v0, v0, Lbo9;->a:J
+    iget-wide v0, p0, Lyn9;->c:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    const/16 v1, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lyn9;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lyn9;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lyn9;->d:Lgo9;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lyn9;->e:Lo7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lyn9;->f:Lno9;
-
-    iget-object v1, v1, Lno9;->a:Ljava/util/ArrayList;
+    iget-object v1, p0, Lyn9;->o:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -199,55 +208,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Movie(movieId="
+    const-string v1, "Response(chatId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lyn9;->a:Lbo9;
+    iget-wide v1, p0, Lyn9;->c:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", externalMovieId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyn9;->b:Ljava/lang/String;
+    const-string v1, ", messageIds="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", title="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyn9;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sourceType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyn9;->d:Lgo9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", duration="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyn9;->e:Lo7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", thumbnail="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lyn9;->f:Lno9;
+    iget-object v1, p0, Lyn9;->o:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

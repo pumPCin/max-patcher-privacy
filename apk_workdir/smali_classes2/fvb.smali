@@ -1,52 +1,63 @@
-.class public final synthetic Lfvb;
-.super Ln8;
+.class public final Lfvb;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lnf6;
 
 
 # static fields
-.field public static final w0:Lfvb;
+.field public static final b:Lfvb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
     new-instance v0, Lfvb;
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    const/16 v1, 0xd
 
-    const/4 v2, 0x4
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
 
-    const/4 v3, 0x3
-
-    const-class v4, Ln4b;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ln8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lfvb;->w0:Lfvb;
+    sput-object v0, Lfvb;->b:Lfvb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lm82;
+    const/4 v0, 0x1
 
-    check-cast p2, Lap3;
+    if-ne p0, p1, :cond_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    return v0
 
-    sget-object p3, Lovb;->J0:[Ltm7;
+    :cond_0
+    instance-of p1, p1, Lfvb;
 
-    new-instance p3, Ln4b;
+    if-nez p1, :cond_1
 
-    invoke-direct {p3, p1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
-    return-object p3
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x57bae991
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ChangePhone"
+
+    return-object v0
 .end method

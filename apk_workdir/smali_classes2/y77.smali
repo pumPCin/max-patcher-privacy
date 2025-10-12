@@ -1,183 +1,122 @@
-.class public final enum Ly77;
-.super Ljava/lang/Enum;
+.class public final Ly77;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ly77;
-
-.field public static final enum Y:Ly77;
-
-.field public static final enum Z:Ly77;
-
-.field public static final enum b:Ly77;
-
-.field public static final enum c:Ly77;
-
-.field public static final enum o:Ly77;
-
-.field public static final enum w0:Ly77;
-
-.field public static final enum x0:Ly77;
-
-.field public static final synthetic y0:[Ly77;
-
-.field public static final synthetic z0:Lla5;
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Le87;
+
+.field public final synthetic Z:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Le87;ILkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ly77;->Y:Le87;
+
+    iput p2, p0, Ly77;->Z:I
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ln24;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ly77;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ly77;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Ly77;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
     new-instance v0, Ly77;
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Ly77;->Y:Le87;
 
-    const-string v2, "messageSent"
+    iget v2, p0, Ly77;->Z:I
 
-    const-string v3, "SEND_5_MESSAGES"
+    invoke-direct {v0, v1, v2, p2}, Ly77;-><init>(Le87;ILkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v3, v1, v2}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Ly77;->b:Ly77;
-
-    new-instance v1, Ly77;
-
-    const/4 v2, 0x1
-
-    const-string v3, "folderCreated"
-
-    const-string v4, "CREATE_FOLDER"
-
-    invoke-direct {v1, v4, v2, v3}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Ly77;->c:Ly77;
-
-    new-instance v2, Ly77;
-
-    const/4 v3, 0x2
-
-    const-string v4, "voiceMessageSent"
-
-    const-string v5, "SEND_AUDIO_MESSAGE"
-
-    invoke-direct {v2, v5, v3, v4}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Ly77;->o:Ly77;
-
-    new-instance v3, Ly77;
-
-    const/4 v4, 0x3
-
-    const-string v5, "reactionSet"
-
-    const-string v6, "ADD_2_REACTIONS"
-
-    invoke-direct {v3, v6, v4, v5}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Ly77;->X:Ly77;
-
-    new-instance v4, Ly77;
-
-    const/4 v5, 0x4
-
-    const-string v6, "stickerSent"
-
-    const-string v7, "SEND_3_STICKERS"
-
-    invoke-direct {v4, v7, v5, v6}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Ly77;->Y:Ly77;
-
-    new-instance v5, Ly77;
-
-    const/4 v6, 0x5
-
-    const-string v7, "groupChatCreated"
-
-    const-string v8, "CREATE_2_GROUP_CHATS"
-
-    invoke-direct {v5, v8, v6, v7}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Ly77;->Z:Ly77;
-
-    new-instance v6, Ly77;
-
-    const/4 v7, 0x6
-
-    const-string v8, "pinMade"
-
-    const-string v9, "MADE_2_PIN"
-
-    invoke-direct {v6, v9, v7, v8}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Ly77;->w0:Ly77;
-
-    new-instance v7, Ly77;
-
-    const/4 v8, 0x7
-
-    const-string v9, "callMade"
-
-    const-string v10, "PARTICIPATED_IN_CALL"
-
-    invoke-direct {v7, v10, v8, v9}, Ly77;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Ly77;->x0:Ly77;
-
-    filled-new-array/range {v0 .. v7}, [Ly77;
-
-    move-result-object v0
-
-    sput-object v0, Ly77;->y0:[Ly77;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ly77;->z0:Lla5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Ly77;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ly77;
-    .locals 1
-
-    const-class v0, Ly77;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ly77;
-
-    return-object p0
-.end method
-
-.method public static values()[Ly77;
-    .locals 1
-
-    sget-object v0, Ly77;->y0:[Ly77;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ly77;
+    iput-object p1, v0, Ly77;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly77;->X:Ljava/lang/Object;
+
+    check-cast p1, Ln24;
+
+    new-instance v0, Lw77;
+
+    iget-object v1, p0, Ly77;->Y:Le87;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lw77;-><init>(Le87;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {p1, v2, v2, v0, v3}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object v0
+
+    new-instance v4, Lqq1;
+
+    const/4 v5, 0x1
+
+    iget v6, p0, Ly77;->Z:I
+
+    invoke-direct {v4, v6, v5}, Lqq1;-><init>(II)V
+
+    invoke-virtual {v0, v4}, Lgi7;->invokeOnCompletion(Lvd6;)Lis4;
+
+    new-instance v0, Lx77;
+
+    invoke-direct {v0, v1, v2}, Lx77;-><init>(Le87;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v2, v2, v0, v3}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object p1
+
+    new-instance v0, Lqq1;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v6, v1}, Lqq1;-><init>(II)V
+
+    invoke-virtual {p1, v0}, Lgi7;->invokeOnCompletion(Lvd6;)Lis4;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

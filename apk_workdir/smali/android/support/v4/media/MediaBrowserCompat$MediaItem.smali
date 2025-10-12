@@ -61,14 +61,17 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->mFlags:I
 
+    .line 9
     sget-object v0, Landroid/support/v4/media/MediaDescriptionCompat;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -85,10 +88,12 @@
 .method public constructor <init>(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
+    .line 2
     invoke-virtual {p1}, Landroid/support/v4/media/MediaDescriptionCompat;->getMediaId()Ljava/lang/String;
 
     move-result-object v0
@@ -99,12 +104,15 @@
 
     if-nez v0, :cond_0
 
+    .line 3
     iput p2, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->mFlags:I
 
+    .line 4
     iput-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->mDescription:Landroid/support/v4/media/MediaDescriptionCompat;
 
     return-void
 
+    .line 5
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -114,6 +122,7 @@
 
     throw p1
 
+    .line 6
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

@@ -1,98 +1,78 @@
 .class public final Lz46;
-.super Lm3f;
+.super Lv7f;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:La56;
+.field public final o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(La56;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 1
 
-    iput-object p1, p0, Lz46;->X:La56;
+    sget-object v0, Lcza;->O2:Lcza;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lv7f;-><init>(Lcza;)V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lz46;->o:Ljava/util/ArrayList;
+
+    const-string v0, "foldersOrder"
+
+    invoke-virtual {p0, v0, p1}, Lv7f;->h(Ljava/lang/String;Ljava/util/List;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lz46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lz46;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lz46;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Lz46;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lz46;->X:La56;
+    goto :goto_1
 
-    invoke-direct {p1, v0, p2}, Lz46;-><init>(La56;Lkotlin/coroutines/Continuation;)V
+    :cond_0
+    instance-of v0, p1, Lz46;
 
-    return-object p1
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lz46;
+
+    iget-object v0, p0, Lz46;->o:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lz46;->o:Ljava/util/ArrayList;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Lz46;->o:Ljava/util/ArrayList;
 
-    iget-object p1, p0, Lz46;->X:La56;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object p1, p1, La56;->Z:Lbp7;
+    move-result v0
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lava;
-
-    sget v0, Lt9d;->m3:I
-
-    new-instance v1, Ljef;
-
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lava;->g(Loef;)V
-
-    sget v0, Lt9d;->l3:I
-
-    new-instance v1, Ljef;
-
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lava;->a(Loef;)V
-
-    invoke-virtual {p1}, Lava;->i()Lzua;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

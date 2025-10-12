@@ -1,65 +1,67 @@
-.class public final Ls01;
+.class public interface abstract Ls01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf04;
-
-
-# instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ls01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
-
-    return-void
-.end method
+.implements Lyzd;
 
 
 # virtual methods
-.method public final a(Lb04;Lb04;Z)V
-    .locals 0
+.method public a()Lcdf;
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
-.method public final b(Lb04;Lb04;Z)V
-    .locals 0
+.method public b()Lnzd;
+    .locals 1
 
-    if-eqz p3, :cond_0
+    const/4 v0, 0x0
 
-    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0:[Ltm7;
+    return-object v0
+.end method
 
-    iget-object p1, p0, Ls01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.method public c()Lcdf;
+    .locals 1
 
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->B0()Lb11;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Lb11;->q()Luz0;
+.method public d()Lvzd;
+    .locals 1
 
-    move-result-object p2
+    const/4 v0, 0x0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    check-cast p2, Lp01;
+.method public e()Lio7;
+    .locals 1
 
-    iget-object p2, p2, Lp01;->K0:Lmoe;
+    const/4 v0, 0x0
 
-    invoke-virtual {p2}, Lmoe;->getValue()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object p2
+.method public abstract f()I
+.end method
 
-    check-cast p2, Lr9;
+.method public g()Z
+    .locals 1
 
-    invoke-virtual {p1, p2}, Lb11;->r(Lr9;)V
+    const/4 v0, 0x1
 
-    :cond_0
-    return-void
+    return v0
+.end method
+
+.method public getType()Lxzd;
+    .locals 1
+
+    sget-object v0, Lxzd;->b:Lxzd;
+
+    return-object v0
 .end method

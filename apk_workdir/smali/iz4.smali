@@ -1,23 +1,46 @@
-.class public abstract Liz4;
+.class public final synthetic Liz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/AutoCompleteTextView$OnDismissListener;
+
+
+# instance fields
+.field public final synthetic a:Ljz4;
+
 
 # direct methods
-.method public static a(Landroid/widget/AbsListView;)Z
+.method public synthetic constructor <init>(Ljz4;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/AbsListView;->isSelectedChildViewEnabled()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Liz4;->a:Ljz4;
 
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/widget/AbsListView;Z)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/AbsListView;->setSelectedChildViewEnabled(Z)V
+# virtual methods
+.method public final onDismiss()V
+    .locals 4
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Liz4;->a:Ljz4;
+
+    iput-boolean v0, v1, Ljz4;->m:Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v1, Ljz4;->o:J
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Ljz4;->t(Z)V
 
     return-void
 .end method

@@ -4,313 +4,414 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public b:J
 
-.field public final c:Ljava/lang/String;
+.field public c:J
 
-.field public final d:Ljava/lang/String;
+.field public d:J
 
-.field public final e:Ljava/lang/String;
+.field public e:J
 
-.field public final f:Ljava/lang/String;
+.field public f:J
 
-.field public final g:Ljava/lang/String;
+.field public g:J
+
+.field public final h:[Z
+
+.field public i:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lxs5;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lxxe;->a:I
+    const/16 p1, 0xf
 
-    const/4 v0, 0x1
+    new-array p1, p1, [Z
 
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    move v1, v0
-
-    :goto_1
-    xor-int/2addr v0, v1
-
-    const-string v1, "ApplicationId must be set."
-
-    invoke-static {v1, v0}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    iput-object p1, p0, Lxs5;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lxs5;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lxs5;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lxs5;->d:Ljava/lang/String;
-
-    iput-object p5, p0, Lxs5;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Lxs5;->f:Ljava/lang/String;
-
-    iput-object p7, p0, Lxs5;->g:Ljava/lang/String;
+    iput-object p1, p0, Lxs5;->h:[Z
 
     return-void
-.end method
 
-.method public static a(Landroid/content/Context;)Lxs5;
-    .locals 9
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ln0c;
+    const/16 p1, 0xf
 
-    invoke-direct {v0, p0}, Ln0c;-><init>(Landroid/content/Context;)V
+    new-array p1, p1, [Z
 
-    const-string p0, "google_app_id"
+    iput-object p1, p0, Lxs5;->h:[Z
 
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object v2
+    nop
 
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v1, Lxs5;
-
-    const-string p0, "google_api_key"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string p0, "firebase_database_url"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string p0, "ga_trackingId"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string p0, "gcm_defaultSenderId"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string p0, "google_storage_bucket"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    const-string p0, "project_id"
-
-    invoke-virtual {v0, p0}, Ln0c;->o(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct/range {v1 .. v8}, Lxs5;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()Z
+    .locals 4
 
-    instance-of v0, p1, Lxs5;
+    iget v0, p0, Lxs5;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
+
+    iget-wide v0, p0, Lxs5;->e:J
+
+    const-wide/16 v2, 0xf
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    iget v0, p0, Lxs5;->i:I
 
     if-nez v0, :cond_0
 
-    return v1
+    const/4 v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    check-cast p1, Lxs5;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lxs5;->b:Ljava/lang/String;
+    :goto_0
+    return v0
 
-    iget-object v2, p1, Lxs5;->b:Ljava/lang/String;
+    :pswitch_0
+    iget-wide v0, p0, Lxs5;->e:J
 
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-wide/16 v2, 0xf
 
-    move-result v0
+    cmp-long v0, v0, v2
 
-    if-eqz v0, :cond_1
+    if-lez v0, :cond_1
 
-    iget-object v0, p0, Lxs5;->a:Ljava/lang/String;
+    iget v0, p0, Lxs5;->i:I
 
-    iget-object v2, p1, Lxs5;->a:Ljava/lang/String;
+    if-nez v0, :cond_1
 
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lxs5;->c:Ljava/lang/String;
-
-    iget-object v2, p1, Lxs5;->c:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lxs5;->d:Ljava/lang/String;
-
-    iget-object v2, p1, Lxs5;->d:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lxs5;->e:Ljava/lang/String;
-
-    iget-object v2, p1, Lxs5;->e:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lxs5;->f:Ljava/lang/String;
-
-    iget-object v2, p1, Lxs5;->f:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lxs5;->g:Ljava/lang/String;
-
-    iget-object p1, p1, Lxs5;->g:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_1
 
     :cond_1
-    return v1
-.end method
+    const/4 v0, 0x0
 
-.method public final hashCode()I
-    .locals 7
-
-    iget-object v5, p0, Lxs5;->f:Ljava/lang/String;
-
-    iget-object v6, p0, Lxs5;->g:Ljava/lang/String;
-
-    iget-object v0, p0, Lxs5;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lxs5;->a:Ljava/lang/String;
-
-    iget-object v2, p0, Lxs5;->c:Ljava/lang/String;
-
-    iget-object v3, p0, Lxs5;->d:Ljava/lang/String;
-
-    iget-object v4, p0, Lxs5;->e:Ljava/lang/String;
-
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result v0
-
+    :goto_1
     return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final b(J)V
+    .locals 10
 
-    new-instance v0, Llo4;
+    iget v0, p0, Lxs5;->a:I
 
-    invoke-direct {v0, p0}, Llo4;-><init>(Ljava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "applicationId"
+    iget-wide v0, p0, Lxs5;->e:J
 
-    iget-object v2, p0, Lxs5;->b:Ljava/lang/String;
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    cmp-long v2, v0, v2
 
-    const-string v1, "apiKey"
+    const-wide/16 v3, 0x1
 
-    iget-object v2, p0, Lxs5;->a:Ljava/lang/String;
+    if-nez v2, :cond_0
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-wide p1, p0, Lxs5;->b:J
 
-    const-string v1, "databaseUrl"
+    goto :goto_0
 
-    iget-object v2, p0, Lxs5;->c:Ljava/lang/String;
+    :cond_0
+    cmp-long v2, v0, v3
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    if-nez v2, :cond_1
 
-    const-string v1, "gcmSenderId"
+    iget-wide v0, p0, Lxs5;->b:J
 
-    iget-object v2, p0, Lxs5;->e:Ljava/lang/String;
+    sub-long v0, p1, v0
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-wide v0, p0, Lxs5;->c:J
 
-    const-string v1, "storageBucket"
+    iput-wide v0, p0, Lxs5;->g:J
 
-    iget-object v2, p0, Lxs5;->f:Ljava/lang/String;
+    iput-wide v3, p0, Lxs5;->f:J
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    goto :goto_0
 
-    const-string v1, "projectId"
+    :cond_1
+    iget-wide v5, p0, Lxs5;->d:J
 
-    iget-object v2, p0, Lxs5;->g:Ljava/lang/String;
+    sub-long v5, p1, v5
 
-    invoke-virtual {v0, v2, v1}, Llo4;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    const-wide/16 v7, 0xf
 
-    invoke-virtual {v0}, Llo4;->toString()Ljava/lang/String;
+    rem-long/2addr v0, v7
 
-    move-result-object v0
+    long-to-int v0, v0
 
-    return-object v0
+    iget-wide v1, p0, Lxs5;->c:J
+
+    sub-long v1, v5, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v1
+
+    const-wide/32 v7, 0xf4240
+
+    cmp-long v1, v1, v7
+
+    iget-object v2, p0, Lxs5;->h:[Z
+
+    const/4 v7, 0x1
+
+    if-gtz v1, :cond_2
+
+    iget-wide v8, p0, Lxs5;->f:J
+
+    add-long/2addr v8, v3
+
+    iput-wide v8, p0, Lxs5;->f:J
+
+    iget-wide v8, p0, Lxs5;->g:J
+
+    add-long/2addr v8, v5
+
+    iput-wide v8, p0, Lxs5;->g:J
+
+    aget-boolean v1, v2, v0
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    aput-boolean v1, v2, v0
+
+    iget v0, p0, Lxs5;->i:I
+
+    sub-int/2addr v0, v7
+
+    iput v0, p0, Lxs5;->i:I
+
+    goto :goto_0
+
+    :cond_2
+    aget-boolean v1, v2, v0
+
+    if-nez v1, :cond_3
+
+    aput-boolean v7, v2, v0
+
+    iget v0, p0, Lxs5;->i:I
+
+    add-int/2addr v0, v7
+
+    iput v0, p0, Lxs5;->i:I
+
+    :cond_3
+    :goto_0
+    iget-wide v0, p0, Lxs5;->e:J
+
+    add-long/2addr v0, v3
+
+    iput-wide v0, p0, Lxs5;->e:J
+
+    iput-wide p1, p0, Lxs5;->d:J
+
+    return-void
+
+    :pswitch_0
+    iget-wide v0, p0, Lxs5;->e:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    const-wide/16 v3, 0x1
+
+    if-nez v2, :cond_4
+
+    iput-wide p1, p0, Lxs5;->b:J
+
+    goto :goto_1
+
+    :cond_4
+    cmp-long v2, v0, v3
+
+    if-nez v2, :cond_5
+
+    iget-wide v0, p0, Lxs5;->b:J
+
+    sub-long v0, p1, v0
+
+    iput-wide v0, p0, Lxs5;->c:J
+
+    iput-wide v0, p0, Lxs5;->g:J
+
+    iput-wide v3, p0, Lxs5;->f:J
+
+    goto :goto_1
+
+    :cond_5
+    iget-wide v5, p0, Lxs5;->d:J
+
+    sub-long v5, p1, v5
+
+    const-wide/16 v7, 0xf
+
+    rem-long/2addr v0, v7
+
+    long-to-int v0, v0
+
+    iget-wide v1, p0, Lxs5;->c:J
+
+    sub-long v1, v5, v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(J)J
+
+    move-result-wide v1
+
+    const-wide/32 v7, 0xf4240
+
+    cmp-long v1, v1, v7
+
+    iget-object v2, p0, Lxs5;->h:[Z
+
+    const/4 v7, 0x1
+
+    if-gtz v1, :cond_6
+
+    iget-wide v8, p0, Lxs5;->f:J
+
+    add-long/2addr v8, v3
+
+    iput-wide v8, p0, Lxs5;->f:J
+
+    iget-wide v8, p0, Lxs5;->g:J
+
+    add-long/2addr v8, v5
+
+    iput-wide v8, p0, Lxs5;->g:J
+
+    aget-boolean v1, v2, v0
+
+    if-eqz v1, :cond_7
+
+    const/4 v1, 0x0
+
+    aput-boolean v1, v2, v0
+
+    iget v0, p0, Lxs5;->i:I
+
+    sub-int/2addr v0, v7
+
+    iput v0, p0, Lxs5;->i:I
+
+    goto :goto_1
+
+    :cond_6
+    aget-boolean v1, v2, v0
+
+    if-nez v1, :cond_7
+
+    aput-boolean v7, v2, v0
+
+    iget v0, p0, Lxs5;->i:I
+
+    add-int/2addr v0, v7
+
+    iput v0, p0, Lxs5;->i:I
+
+    :cond_7
+    :goto_1
+    iget-wide v0, p0, Lxs5;->e:J
+
+    add-long/2addr v0, v3
+
+    iput-wide v0, p0, Lxs5;->e:J
+
+    iput-wide p1, p0, Lxs5;->d:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c()V
+    .locals 2
+
+    iget v0, p0, Lxs5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lxs5;->e:J
+
+    iput-wide v0, p0, Lxs5;->f:J
+
+    iput-wide v0, p0, Lxs5;->g:J
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lxs5;->i:I
+
+    iget-object v1, p0, Lxs5;->h:[Z
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([ZZ)V
+
+    return-void
+
+    :pswitch_0
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lxs5;->e:J
+
+    iput-wide v0, p0, Lxs5;->f:J
+
+    iput-wide v0, p0, Lxs5;->g:J
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lxs5;->i:I
+
+    iget-object v1, p0, Lxs5;->h:[Z
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([ZZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,288 +1,216 @@
 .class public final La86;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ll8c;
+
+.field public final synthetic Z:Lone/me/chats/forward/ForwardPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(La5;)V
-    .locals 1
+.method public constructor <init>(Ll8c;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La86;->Y:Ll8c;
 
-    const-class v0, Lj96;
+    iput-object p2, p0, La86;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    const/4 p1, 0x2
 
-    move-result-object p1
-
-    iput-object p1, p0, La86;->a:Lbp7;
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static c(Lg96;ZZ)Lr99;
-    .locals 8
 
-    new-instance v0, Lr99;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v2, p0, Lg96;->a:Loef;
+    check-cast p1, Lk86;
 
-    iget-boolean v3, p0, Lg96;->b:Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v4, p0, Lg96;->c:Lfy;
+    invoke-virtual {p0, p1, p2}, La86;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
+    move-result-object p1
 
-    if-eqz p1, :cond_1
+    check-cast p1, La86;
 
-    :cond_0
-    :goto_0
-    move-object v6, v1
+    sget-object p2, Laxf;->a:Laxf;
 
-    goto :goto_1
+    invoke-virtual {p1, p2}, La86;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    if-eqz p2, :cond_2
+    return-object p2
+.end method
 
-    sget p1, Lg9d;->I1:I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v0, La86;
 
-    move-result-object v1
+    iget-object v1, p0, La86;->Y:Ll8c;
 
-    goto :goto_0
+    iget-object v2, p0, La86;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    :cond_2
-    if-nez p2, :cond_0
+    invoke-direct {v0, v1, v2, p2}, La86;-><init>(Ll8c;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
 
-    sget p1, Lg9d;->H1:I
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :goto_1
-    iget-boolean v7, p0, Lg96;->d:Z
-
-    const/4 v1, 0x3
-
-    move v5, p2
-
-    invoke-direct/range {v0 .. v7}, Lr99;-><init>(ILoef;ZLfy;ZLjava/lang/Integer;Z)V
+    iput-object p1, v0, La86;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-# virtual methods
-.method public final a(Lq49;Ljava/lang/Long;ZZLnz3;)Ljava/lang/Object;
-    .locals 4
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    instance-of v0, p5, Ly76;
+    iget-object p1, p0, La86;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lk86;
 
-    move-object v0, p5
+    sget-object v0, Laxf;->a:Laxf;
 
-    check-cast v0, Ly76;
+    const/16 v1, 0x8
 
-    iget v1, v0, Ly76;->x0:I
+    iget-object v2, p0, La86;->Y:Ll8c;
 
-    const/high16 v2, -0x80000000
+    if-nez p1, :cond_0
 
-    and-int v3, v1, v2
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Ly76;->x0:I
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    new-instance v0, Ly76;
+    sget-object v3, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
-    invoke-direct {v0, p0, p5}, Ly76;-><init>(La86;Lnz3;)V
+    iget-object v3, p0, La86;->Z:Lone/me/chats/forward/ForwardPickerScreen;
 
-    :goto_0
-    iget-object p5, v0, Ly76;->Z:Ljava/lang/Object;
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
-    iget v1, v0, Ly76;->x0:I
+    move-result-object v4
 
-    const/4 v2, 0x1
+    iget-object v4, v4, Lodb;->Z:Lbpc;
 
-    if-eqz v1, :cond_2
+    iget-object v4, v4, Lbpc;->a:Lane;
 
-    if-ne v1, v2, :cond_1
+    invoke-interface {v4}, Lane;->getValue()Ljava/lang/Object;
 
-    iget-boolean p4, v0, Ly76;->X:Z
+    move-result-object v4
 
-    iget-boolean p3, v0, Ly76;->o:Z
+    check-cast v4, Ljava/util/Collection;
 
-    iget-object p1, v0, Ly76;->Y:La86;
+    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-static {p5}, Lps;->L(Ljava/lang/Object;)V
+    move-result v4
 
-    goto :goto_1
+    if-nez v4, :cond_1
 
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v3}, Lone/me/chats/forward/ForwardPickerScreen;->R0()Z
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result v4
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v4, :cond_1
 
-    throw p1
-
-    :cond_2
-    invoke-static {p5}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p5, p0, La86;->a:Lbp7;
-
-    invoke-interface {p5}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p5
-
-    check-cast p5, Lj96;
-
-    iput-object p0, v0, Ly76;->Y:La86;
-
-    iput-boolean p3, v0, Ly76;->o:Z
-
-    iput-boolean p4, v0, Ly76;->X:Z
-
-    iput v2, v0, Ly76;->x0:I
-
-    invoke-virtual {p5, p1, p2, v0}, Lj96;->a(Lq49;Ljava/lang/Long;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p5
-
-    sget-object p1, Lf34;->a:Lf34;
-
-    if-ne p5, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    move-object p1, p0
-
-    :goto_1
-    check-cast p5, Lg96;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p5, p3, p4}, La86;->c(Lg96;ZZ)Lr99;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b(JLnz3;Ljava/util/List;Z)Ljava/lang/Object;
-    .locals 4
-
-    instance-of v0, p3, Lz76;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p3
-
-    check-cast v0, Lz76;
-
-    iget v1, v0, Lz76;->w0:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lz76;->w0:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lz76;
-
-    invoke-direct {v0, p0, p3}, Lz76;-><init>(La86;Lnz3;)V
-
-    :goto_0
-    iget-object p3, v0, Lz76;->Y:Ljava/lang/Object;
-
-    iget v1, v0, Lz76;->w0:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    iget-boolean p5, v0, Lz76;->o:Z
-
-    iget-object p1, v0, Lz76;->X:La86;
-
-    invoke-static {p3}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
+    const/4 v1, 0x0
 
     :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v1, p1, Lk86;->a:Lcdf;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    throw p1
+    move-result-object v4
 
-    :cond_2
-    invoke-static {p3}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v1, v4}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    iget-object p3, p0, La86;->a:Lbp7;
+    move-result-object v1
 
-    invoke-interface {p3}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_5
 
-    move-result-object p3
+    invoke-virtual {v2, v1}, Ll8c;->setTitle(Ljava/lang/CharSequence;)V
 
-    check-cast p3, Lj96;
+    iget-object v1, p1, Lk86;->c:Lty;
 
-    iput-object p0, v0, Lz76;->X:La86;
+    invoke-virtual {v2, v1}, Ll8c;->setAttachDescription(Lty;)V
 
-    iput-boolean p5, v0, Lz76;->o:Z
+    invoke-virtual {v3}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Z
 
-    iput v2, v0, Lz76;->w0:I
+    move-result v1
 
-    invoke-virtual {p3, p1, p2, v0, p4}, Lj96;->b(JLnz3;Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    sget-object p1, Lf34;->a:Lf34;
-
-    if-ne p3, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    move-object p1, p0
-
-    :goto_1
-    check-cast p3, Lg96;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v1, :cond_2
 
     const/4 p1, 0x0
 
-    invoke-static {p3, p1, p5}, La86;->c(Lg96;ZZ)Lr99;
+    invoke-virtual {v2, p1}, Ll8c;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v2, p1}, Ll8c;->setStartIconClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+
+    :cond_2
+    iget-boolean p1, p1, Lk86;->d:Z
+
+    if-nez p1, :cond_3
+
+    return-object v0
+
+    :cond_3
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object p1
 
-    return-object p1
+    iget-object p1, p1, Lodb;->c:Lmfb;
+
+    check-cast p1, Ls76;
+
+    invoke-virtual {p1}, Ls76;->f()V
+
+    :cond_4
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lodb;->c:Lmfb;
+
+    check-cast p1, Ls76;
+
+    invoke-virtual {p1}, Ls76;->g()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ll8c;->setStartIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Ll55;
+
+    const/4 v1, 0x2
+
+    invoke-direct {p1, v3, v1, v2}, Ll55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2, p1}, Ll8c;->setStartIconClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

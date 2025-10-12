@@ -1,58 +1,59 @@
-.class public final synthetic Lqo6;
+.class public final Lqo6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lifa;
-.implements Lkfa;
-
-
-# instance fields
-.field public final synthetic a:Lc38;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lc38;)V
-    .locals 0
-
-    iput-object p1, p0, Lqo6;->a:Lc38;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lqo6;->a:Lc38;
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1}, Lc38;->g(Ljava/lang/Exception;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
-.end method
-
-.method public v(Lcom/google/android/gms/tasks/Task;)V
-    .locals 1
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lqo6;->a:Lc38;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {v0}, Lc38;->f()V
-
-    return-void
+    return v0
 
     :cond_0
+    instance-of v1, p1, Lqo6;
+
+    if-nez v1, :cond_1
+
     const/4 p1, 0x0
 
-    invoke-interface {v0, p1}, Lc38;->g(Ljava/lang/Exception;)V
+    return p1
 
-    return-void
+    :cond_1
+    check-cast p1, Lqo6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const v0, -0xf2f2f3
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "GradientsLoadingIconPrimaryStaticColors(filled=-15921907, transparent=-15921907)"
+
+    return-object v0
 .end method

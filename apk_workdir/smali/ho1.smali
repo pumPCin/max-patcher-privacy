@@ -1,26 +1,26 @@
 .class public final Lho1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lji1;
+.field public final synthetic Y:Lone/me/calls/share/CallSharePickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lji1;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
     .locals 0
 
-    iput-object p2, p0, Lho1;->Y:Lji1;
+    iput-object p2, p0, Lho1;->Y:Lone/me/calls/share/CallSharePickerScreen;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lho1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lho1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,9 +50,9 @@
 
     new-instance v0, Lho1;
 
-    iget-object v1, p0, Lho1;->Y:Lji1;
+    iget-object v1, p0, Lho1;->Y:Lone/me/calls/share/CallSharePickerScreen;
 
-    invoke-direct {v0, p2, v1}, Lho1;-><init>(Lkotlin/coroutines/Continuation;Lji1;)V
+    invoke-direct {v0, p2, v1}, Lho1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
 
     iput-object p1, v0, Lho1;->X:Ljava/lang/Object;
 
@@ -60,105 +60,36 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lho1;->X:Ljava/lang/Object;
 
-    check-cast p1, Lbo1;
+    check-cast p1, Ljava/util/Set;
 
-    iget-object v0, p1, Lbo1;->c:Lao1;
-
-    instance-of v0, v0, Lxn1;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    iget-object v2, p0, Lho1;->Y:Lji1;
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p1, Lbo1;->c:Lao1;
-
-    sget-object v3, Lxn1;->a:Lxn1;
-
-    invoke-static {v0, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    sget-object v3, Lzn1;->a:Lzn1;
-
-    invoke-static {v0, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    iget-object p1, p1, Lbo1;->b:Lwn1;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lwn1;->b:Loef;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    invoke-virtual {v2, p1}, Lji1;->setBody(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2, v1}, Lji1;->setLoading(Z)V
-
-    goto :goto_2
-
-    :cond_2
-    sget-object p1, Lyn1;->a:Lyn1;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-nez p1, :cond_0
 
-    const/4 p1, 0x1
+    sget-object p1, Lone/me/calls/share/CallSharePickerScreen;->y0:Lyb7;
 
-    invoke-virtual {v2, p1}, Lji1;->setLoading(Z)V
+    iget-object p1, p0, Lho1;->Y:Lone/me/calls/share/CallSharePickerScreen;
 
-    goto :goto_2
+    invoke-virtual {p1}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    move-result-object p1
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-object p1, p1, Lodb;->c:Lmfb;
 
-    throw p1
+    check-cast p1, Lfo1;
 
-    :cond_4
-    :goto_2
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Lfo1;->f()V
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

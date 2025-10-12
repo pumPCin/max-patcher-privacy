@@ -1,48 +1,23 @@
 .class public final Lxi3;
-.super Lnz3;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lu3;
 
-.field public final synthetic Y:Le13;
+.field public b:Ljava/lang/Boolean;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ljava/lang/Float;
 
 
 # direct methods
-.method public constructor <init>(Le13;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lu3;)V
     .locals 0
 
-    iput-object p1, p0, Lxi3;->Y:Le13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxi3;->a:Lu3;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lxi3;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lxi3;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxi3;->X:I
-
-    iget-object p1, p0, Lxi3;->Y:Le13;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Le13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

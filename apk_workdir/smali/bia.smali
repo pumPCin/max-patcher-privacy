@@ -1,118 +1,55 @@
-.class public final Lbia;
+.class public abstract Lbia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx58;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:La5;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
 
 
 # direct methods
-.method public synthetic constructor <init>(La5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lbia;->a:I
+    sget v0, Ldcc;->call_share_picker_confirm_p2p_invite_cancel:I
 
-    iput-object p1, p0, Lbia;->b:La5;
+    sput v0, Lbia;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ldcc;->call_share_picker_confirm_p2p_invite_retry:I
 
-    return-void
-.end method
+    sput v0, Lbia;->b:I
 
+    sget v0, Ldcc;->call_share_picker_quote_view_progress:I
 
-# virtual methods
-.method public final f()V
-    .locals 3
+    sput v0, Lbia;->c:I
 
-    iget v0, p0, Lbia;->a:I
+    sget v0, Ldcc;->call_share_picker_quote_view_title:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lbia;->d:I
 
-    iget-object v0, p0, Lbia;->b:La5;
+    sget v0, Ldcc;->oneme_message_input_right_outer_icon:I
 
-    const-class v1, Ll63;
+    sput v0, Lbia;->e:I
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    sget v0, Ldcc;->oneme_picker_quote_view:I
 
-    move-result-object v0
+    sput v0, Lbia;->f:I
 
-    check-cast v0, Ll63;
+    sget v0, Ldcc;->oneme_picker_toolbar:I
 
-    invoke-interface {v0}, Ll63;->a()V
+    sput v0, Lbia;->g:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbia;->b:La5;
-
-    const-class v1, Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, v0}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lbx4;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lzb4;
-
-    iget-object v1, v0, Lzb4;->a:Ljava/lang/Object;
-
-    check-cast v1, Ls5f;
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/content/SharedPreferences;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    sget-object v2, Lz1a;->a:Lh2a;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v2, Ly1a;->b:Ly1a;
-
-    iput-object v2, v0, Lzb4;->c:Ljava/lang/Object;
-
-    const-string v0, "nightmode"
-
-    invoke-static {v2}, Lh2a;->E(Lz1a;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    sget-object v0, Lloa;->d:Lloa;
-
-    iget-object v0, v0, Lloa;->a:Ljava/lang/String;
-
-    const-string v2, "themename"
-
-    invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

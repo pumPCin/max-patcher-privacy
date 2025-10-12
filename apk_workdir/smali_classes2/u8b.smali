@@ -1,23 +1,28 @@
-.class public final Lu8b;
+.class public interface abstract Lu8b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
+# virtual methods
+.method public abstract c()I
+.end method
 
+.method public abstract e()V
+.end method
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method public abstract f()[B
+.end method
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public abstract getId()J
+.end method
 
-    move-result-object p1
+.method public abstract getType()Lv8b;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public h()I
+    .locals 1
 
-    iput-object p1, p0, Lu8b;->a:Ljava/lang/Integer;
+    const/4 v0, 0x5
 
-    return-void
+    return v0
 .end method

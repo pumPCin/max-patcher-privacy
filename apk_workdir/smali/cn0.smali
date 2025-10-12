@@ -9,48 +9,68 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroidx/biometric/BiometricFragment;
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/biometric/BiometricFragment;I)V
-    .locals 0
+.method public constructor <init>(Landroidx/biometric/BiometricFragment;)V
+    .locals 1
 
-    iput p2, p0, Lcn0;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
+    iput v0, p0, Lcn0;->a:I
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/biometric/BiometricFragment;ILjava/lang/CharSequence;)V
+.method public constructor <init>(Landroidx/biometric/BiometricViewModel;I)V
     .locals 0
-
-    const/4 p2, 0x0
 
     iput p2, p0, Lcn0;->a:I
 
+    packed-switch p2, :pswitch_data_0
+
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
+    .line 4
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
-.end method
 
-.method public constructor <init>(Landroidx/biometric/BiometricFragment;Lmn0;)V
-    .locals 0
-
-    const/4 p2, 0x3
-
-    iput p2, p0, Lcn0;->a:I
-
+    .line 5
+    :pswitch_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
+    .line 6
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
@@ -62,85 +82,73 @@
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
+    iget-object v0, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->q1:Landroidx/biometric/BiometricViewModel;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
+    move-result-object v1
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    new-instance v1, Lon0;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
-
-    :cond_0
-    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
-
-    invoke-virtual {v0}, Lox9;->F()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
-
-    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->q1:Landroidx/biometric/BiometricViewModel;
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->t:Z
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->n:Z
 
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->m:Z
+
+    :cond_1
     return-void
 
     :pswitch_1
-    iget-object v0, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
+    iget-object v0, p0, Lcn0;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->q1:Landroidx/biometric/BiometricViewModel;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
+    move-result-object v1
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_2
 
-    new-instance v1, Lon0;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
+    check-cast v0, Landroidx/biometric/BiometricFragment;
 
-    :cond_1
-    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
-
-    invoke-virtual {v0}, Lox9;->E()V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lcn0;->b:Landroidx/biometric/BiometricFragment;
-
-    iget-object v0, v0, Landroidx/biometric/BiometricFragment;->q1:Landroidx/biometric/BiometricViewModel;
-
-    iget-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
-
-    if-nez v1, :cond_2
-
-    new-instance v1, Lon0;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
+    invoke-virtual {v0}, Landroidx/biometric/BiometricFragment;->L0()V
 
     :cond_2
-    iget-object v0, v0, Landroidx/biometric/BiometricViewModel;->b:Lox9;
-
-    invoke-virtual {v0}, Lox9;->D()V
-
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

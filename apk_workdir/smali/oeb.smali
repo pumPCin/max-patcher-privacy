@@ -4,13 +4,5 @@
 
 
 # virtual methods
-.method public Y(Ljgb;Z)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public abstract i0(Ljgb;Z)V
+.method public abstract e(J)Liu5;
 .end method

@@ -1,69 +1,341 @@
 .class public abstract Lii0;
-.super Lxi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final f(Lg0;)V
+# instance fields
+.field public a:Z
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    invoke-virtual {p1}, Lg0;->h()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    iput-boolean v0, p0, Lii0;->a:Z
+
+    return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    and-int/2addr p0, v0
+
+    if-ne p0, v0, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static b(I)Z
+    .locals 0
+
+    invoke-static {p0}, Lii0;->a(I)Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
+.method public static l(II)Z
+    .locals 0
+
+    and-int/2addr p0, p1
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final declared-synchronized c()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lii0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
 
     return-void
 
     :cond_0
-    invoke-virtual {p1}, Lg0;->e()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    :try_start_1
+    iput-boolean v0, p0, Lii0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast p1, Lt73;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lt73;->i0()Ljava/lang/Object;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lt73;->i0()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v0
+    :try_start_2
+    invoke-virtual {p0}, Lii0;->d()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    :try_start_0
-    invoke-virtual {p0, v0}, Lii0;->g(Landroid/graphics/Bitmap;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {p1}, Lt73;->W(Lt73;)V
-
-    return-void
 
     :catchall_0
     move-exception v0
 
-    invoke-static {p1}, Lt73;->W(Lt73;)V
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    :try_start_3
+    invoke-virtual {p0, v0}, Lii0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     throw v0
 .end method
 
-.method public abstract g(Landroid/graphics/Bitmap;)V
+.method public abstract d()V
+.end method
+
+.method public final declared-synchronized e(Ljava/lang/Throwable;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lii0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :try_start_1
+    iput-boolean v0, p0, Lii0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {p0, p1}, Lii0;->f(Ljava/lang/Throwable;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    :try_start_3
+    invoke-virtual {p0, p1}, Lii0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract f(Ljava/lang/Throwable;)V
+.end method
+
+.method public final declared-synchronized g(ILjava/lang/Object;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lii0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-static {p1}, Lii0;->a(I)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lii0;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {p0, p1, p2}, Lii0;->h(ILjava/lang/Object;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    :try_start_3
+    invoke-virtual {p0, p1}, Lii0;->k(Ljava/lang/Exception;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract h(ILjava/lang/Object;)V
+.end method
+
+.method public final declared-synchronized i(F)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lii0;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
+    :try_start_1
+    invoke-virtual {p0, p1}, Lii0;->j(F)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    :try_start_2
+    invoke-virtual {p0, p1}, Lii0;->k(Ljava/lang/Exception;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
+.end method
+
+.method public abstract j(F)V
+.end method
+
+.method public final k(Ljava/lang/Exception;)V
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    sget-object v1, Lai5;->a:Ld38;
+
+    const/4 v2, 0x6
+
+    invoke-interface {v1, v2}, Ld38;->h(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lai5;->a:Ld38;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, p1, v0}, Ld38;->f(Ljava/lang/Exception;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

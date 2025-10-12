@@ -1,106 +1,275 @@
-.class public final synthetic Lb98;
+.class public final Lb98;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt1f;
-
 
 # instance fields
-.field public final synthetic X:Z
+.field public final a:Lq7f;
 
-.field public final synthetic Y:Lktd;
+.field public final b:Ljava/util/Map;
 
-.field public final synthetic a:Lub2;
+.field public final c:Ljava/util/Map;
 
-.field public final synthetic b:Lkq3;
+.field public final d:Ljava/util/Map;
 
-.field public final synthetic c:Ltv3;
+.field public final e:Ljava/util/Map;
 
-.field public final synthetic o:Llld;
+.field public final f:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;Lkq3;Ltv3;Llld;ZLktd;)V
-    .locals 0
+.method public constructor <init>(Lq7f;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb98;->a:Lub2;
+    iput-object p1, p0, Lb98;->a:Lq7f;
 
-    iput-object p2, p0, Lb98;->b:Lkq3;
+    new-instance p1, Lic8;
 
-    iput-object p3, p0, Lb98;->c:Ltv3;
+    const/16 v0, 0xa
 
-    iput-object p4, p0, Lb98;->o:Llld;
+    const/4 v1, 0x0
 
-    iput-boolean p5, p0, Lb98;->X:Z
+    invoke-direct {p1, v0, v1}, Lic8;-><init>(II)V
 
-    iput-object p6, p0, Lb98;->Y:Lktd;
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb98;->b:Ljava/util/Map;
+
+    new-instance p1, Lic8;
+
+    invoke-direct {p1, v0, v1}, Lic8;-><init>(II)V
+
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb98;->c:Ljava/util/Map;
+
+    new-instance p1, Lic8;
+
+    invoke-direct {p1, v0, v1}, Lic8;-><init>(II)V
+
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb98;->d:Ljava/util/Map;
+
+    new-instance p1, Lic8;
+
+    invoke-direct {p1, v0, v1}, Lic8;-><init>(II)V
+
+    invoke-static {p1}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb98;->e:Ljava/util/Map;
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object p1, p0, Lb98;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 8
+.method public final a(Landroid/content/Context;Lma8;ZZ)Ly88;
+    .locals 9
 
-    iget-object v0, p0, Lb98;->Y:Lktd;
+    sget v0, Lv7d;->f0:I
 
-    check-cast v0, Lgjd;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    iget-object v0, v0, Lgjd;->k:Lk2d;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lk2d;->getValue()Ljava/lang/Object;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_b
+
+    iget-object v1, p0, Lb98;->b:Ljava/util/Map;
+
+    iget-object v2, p0, Lb98;->d:Ljava/util/Map;
+
+    iget-object v3, p0, Lb98;->c:Ljava/util/Map;
+
+    const-string v4, "Wrong marker weight"
+
+    const/4 v5, 0x1
+
+    iget-object v6, p0, Lb98;->a:Lq7f;
+
+    if-eqz p3, :cond_5
+
+    if-eqz p4, :cond_2
+
+    invoke-interface {v3, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Ljava/lang/String;
+    check-cast v0, Ly88;
 
-    new-instance v1, Leld;
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v2, p0, Lb98;->a:Lub2;
+    move-result v7
 
-    iget-object v3, p0, Lb98;->b:Lkq3;
+    if-eqz v7, :cond_1
 
-    iget-object v4, p0, Lb98;->c:Ltv3;
+    if-ne v7, v5, :cond_0
 
-    iget-object v5, p0, Lb98;->o:Llld;
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v6, p0, Lb98;->X:Z
+    sget v4, Lv7d;->b0:I
 
-    invoke-direct/range {v1 .. v6}, Leld;-><init>(Lub2;Lkq3;Ltv3;Llld;Z)V
-
-    move-object v4, v5
-
-    move v5, v6
-
-    const/4 v6, 0x0
-
-    if-eqz v0, :cond_1
-
-    array-length v7, v0
-
-    if-nez v7, :cond_0
-
-    move-object v0, v6
+    goto :goto_1
 
     :cond_0
-    if-eqz v0, :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v6, Lfld;
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v6, v0, v2, v4}, Lfld;-><init>([Ljava/lang/String;Lub2;Llld;)V
+    throw p1
 
     :cond_1
-    move-object v7, v6
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v6, v1
+    sget v4, Lv7d;->c0:I
 
-    new-instance v1, Ldld;
+    goto :goto_1
 
-    invoke-direct/range {v1 .. v7}, Ldld;-><init>(Lub2;Lkq3;Llld;ZLeld;Lfld;)V
+    :cond_2
+    invoke-interface {v2, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v1
+    move-result-object v0
+
+    check-cast v0, Ly88;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    if-ne v7, v5, :cond_3
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget v4, Lv7d;->d0:I
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget v4, Lv7d;->e0:I
+
+    goto :goto_1
+
+    :cond_5
+    invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ly88;
+
+    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v8
+
+    if-eqz v8, :cond_7
+
+    if-ne v8, v5, :cond_6
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_0
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v4}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_7
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :goto_0
+    move v4, v0
+
+    move-object v0, v7
+
+    :goto_1
+    if-nez v0, :cond_a
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    iget-object v5, v6, Lq7f;->a:Landroid/content/Context;
+
+    invoke-static {v0, v5}, Ljjd;->g(Lss6;Landroid/content/Context;)Lg17;
+
+    move-result-object v0
+
+    iget v0, v0, Lg17;->k:I
+
+    invoke-static {v4, v0, p1}, Ld40;->S(IILandroid/content/Context;)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lfn7;->p(Landroid/graphics/Bitmap;)Lwn0;
+
+    move-result-object v0
+
+    new-instance v4, Ly88;
+
+    invoke-direct {v4, p1, v0}, Ly88;-><init>(Landroid/graphics/Bitmap;Lwn0;)V
+
+    if-eqz p3, :cond_9
+
+    if-eqz p4, :cond_8
+
+    invoke-interface {v3, p2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v4
+
+    :cond_8
+    invoke-interface {v2, p2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v4
+
+    :cond_9
+    invoke-interface {v1, p2, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v4
+
+    :cond_a
+    return-object v0
+
+    :cond_b
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "This thread is main!"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

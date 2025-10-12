@@ -1,131 +1,119 @@
-.class public final Lu48;
-.super Lv48;
+.class public final synthetic Lu48;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public final d:Loef;
+.field public final synthetic a:I
 
-.field public final e:Loef;
+.field public final synthetic b:Lm58;
 
 
 # direct methods
-.method public constructor <init>(Loef;Loef;)V
-    .locals 1
+.method public synthetic constructor <init>(Lm58;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lu48;->a:I
 
-    invoke-direct {p0, p1, v0}, Lv48;-><init>(Loef;Ljava/lang/Throwable;)V
+    iput-object p1, p0, Lu48;->b:Lm58;
 
-    iput-object p1, p0, Lu48;->d:Loef;
-
-    iput-object p2, p0, Lu48;->e:Loef;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lu48;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lu48;->b:Lm58;
 
-    :cond_0
-    instance-of v1, p1, Lu48;
+    iget-object v1, v0, Lm58;->X:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    iget-object v0, v0, Lm58;->Y:Lhne;
+
+    invoke-static {v1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v2, v1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v2
+    :goto_0
+    sget-object v0, Laxf;->a:Laxf;
 
-    :cond_1
-    check-cast p1, Lu48;
+    return-object v0
 
-    iget-object v1, p0, Lu48;->d:Loef;
+    :pswitch_0
+    iget-object v0, p0, Lu48;->b:Lm58;
 
-    iget-object v3, p1, Lu48;->d:Loef;
+    iget-object v1, v0, Lm58;->Z:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v1
 
-    if-nez v1, :cond_2
+    check-cast v1, Ljava/util/List;
 
-    return v2
+    iget-object v0, v0, Lm58;->r0:Lhne;
 
-    :cond_2
-    iget-object v1, p0, Lu48;->e:Loef;
+    invoke-static {v1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
 
-    iget-object p1, p1, Lu48;->e:Loef;
+    move-result-object v1
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x0
 
-    move-result p1
+    invoke-virtual {v0, v2, v1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez p1, :cond_3
+    goto :goto_0
 
-    return v2
+    :pswitch_1
+    iget-object v0, p0, Lu48;->b:Lm58;
 
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lu48;->d:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lu48;->e:Loef;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SmsCountExceeded(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu48;->d:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lu48;->e:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lm58;->r()La01;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lb58;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v3, v2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1}, Luce;->F(Liu5;Lje6;)La13;
+
+    move-result-object v0
+
+    new-instance v1, Ld58;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Ld58;-><init>(La13;I)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

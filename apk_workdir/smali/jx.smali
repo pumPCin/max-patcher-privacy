@@ -1,31 +1,40 @@
 .class public final Ljx;
-.super Ljava/lang/Object;
+.super Lhm4;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
-
-.field public b:I
-
-.field public final c:Landroid/media/MediaCodec$CryptoInfo;
-
-.field public d:J
-
-.field public e:I
+.field public final c:Lkx;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lyba;Lkx;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lhm4;-><init>(Lyba;)V
 
-    new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
+    iput-object p2, p0, Ljx;->c:Lkx;
 
-    invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Ljx;->c:Landroid/media/MediaCodec$CryptoInfo;
 
+# virtual methods
+.method public final f()V
+    .locals 2
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndSet(I)I
+
+    move-result v1
+
+    if-eq v1, v0, :cond_0
+
+    iget-object v0, p0, Ljx;->c:Lkx;
+
+    invoke-virtual {v0, p0}, Lkx;->w(Ljx;)V
+
+    :cond_0
     return-void
 .end method

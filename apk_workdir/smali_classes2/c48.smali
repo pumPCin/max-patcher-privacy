@@ -1,89 +1,174 @@
-.class public abstract synthetic Lc48;
-.super Ljava/lang/Object;
+.class public final enum Lc48;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements La7b;
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final enum X:Lc48;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public static final enum Y:Lc48;
+
+.field public static final enum Z:Lc48;
+
+.field public static final enum b:Lc48;
+
+.field public static final enum c:Lc48;
+
+.field public static final enum o:Lc48;
+
+.field public static final enum r0:Lc48;
+
+.field public static final synthetic s0:[Lc48;
+
+
+# instance fields
+.field public final a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 10
 
-    const/4 v0, 0x3
+    new-instance v0, Lc48;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    const/4 v1, 0x0
 
-    move-result-object v1
+    const/16 v2, 0x64
 
-    array-length v1, v1
+    const-string v3, "SOCKET_CLOSED"
 
-    new-array v1, v1, [I
+    invoke-direct {v0, v3, v1, v2}, Lc48;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lc48;->b:Lc48;
+
+    new-instance v1, Lc48;
 
     const/4 v2, 0x1
 
-    const/4 v3, 0x0
+    const/16 v3, 0x6e
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const-string v4, "SESSION_FORCE_UPDATE"
 
-    :catch_0
-    const/4 v4, 0x2
+    invoke-direct {v1, v4, v2, v3}, Lc48;-><init>(Ljava/lang/String;II)V
 
-    :try_start_1
-    aput v4, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    sput-object v1, Lc48;->c:Lc48;
 
-    :catch_1
-    :try_start_2
-    aput v0, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    new-instance v2, Lc48;
 
-    :catch_2
-    sput-object v1, Lc48;->$EnumSwitchMapping$0:[I
+    const/4 v3, 0x2
 
-    const/4 v1, 0x4
+    const/16 v4, 0x6f
 
-    invoke-static {v1}, Lqw1;->y(I)[I
+    const-string v5, "SESSION_RESTART"
 
-    move-result-object v5
+    invoke-direct {v2, v5, v3, v4}, Lc48;-><init>(Ljava/lang/String;II)V
 
-    array-length v5, v5
+    sput-object v2, Lc48;->o:Lc48;
 
-    new-array v5, v5, [I
+    new-instance v3, Lc48;
 
-    :try_start_3
-    aput v2, v5, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    const/4 v4, 0x3
 
-    :catch_3
-    :try_start_4
-    aput v4, v5, v4
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    const/16 v5, 0x78
 
-    :catch_4
-    :try_start_5
-    aput v0, v5, v0
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    const-string v6, "LOGIN_DROP_CACHE"
 
-    :catch_5
-    :try_start_6
-    aput v1, v5, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    invoke-direct {v3, v6, v4, v5}, Lc48;-><init>(Ljava/lang/String;II)V
 
-    :catch_6
-    sput-object v5, Lc48;->$EnumSwitchMapping$1:[I
+    sput-object v3, Lc48;->X:Lc48;
+
+    new-instance v4, Lc48;
+
+    const/4 v5, 0x4
+
+    const/16 v6, 0x79
+
+    const-string v7, "LOGIN_BACK_BLOCKED"
+
+    invoke-direct {v4, v7, v5, v6}, Lc48;-><init>(Ljava/lang/String;II)V
+
+    sput-object v4, Lc48;->Y:Lc48;
+
+    new-instance v5, Lc48;
+
+    const/4 v6, 0x5
+
+    const/16 v7, 0x7a
+
+    const-string v8, "LOGIN_RESTART"
+
+    invoke-direct {v5, v8, v6, v7}, Lc48;-><init>(Ljava/lang/String;II)V
+
+    sput-object v5, Lc48;->Z:Lc48;
+
+    new-instance v6, Lc48;
+
+    const/4 v7, 0x6
+
+    const/16 v8, 0x7b
+
+    const-string v9, "LOGIN_UNKNOWN"
+
+    invoke-direct {v6, v9, v7, v8}, Lc48;-><init>(Ljava/lang/String;II)V
+
+    sput-object v6, Lc48;->r0:Lc48;
+
+    filled-new-array/range {v0 .. v6}, [Lc48;
+
+    move-result-object v0
+
+    sput-object v0, Lc48;->s0:[Lc48;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lc48;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lc48;
+    .locals 1
+
+    const-class v0, Lc48;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lc48;
+
+    return-object p0
+.end method
+
+.method public static values()[Lc48;
+    .locals 1
+
+    sget-object v0, Lc48;->s0:[Lc48;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lc48;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    iget v0, p0, Lc48;->a:I
+
+    return v0
 .end method

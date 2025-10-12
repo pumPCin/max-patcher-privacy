@@ -1,237 +1,246 @@
-.class public final Lyp9;
-.super Lxl;
+.class public final synthetic Lyp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loaf;
+.implements Lvd6;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:I
 
-.field public final Y:Ljava/util/List;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
+.field public final synthetic b:Laq9;
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/util/List;)V
+.method public synthetic constructor <init>(Laq9;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    iput p2, p0, Lyp9;->a:I
 
-    iput-wide p3, p0, Lyp9;->o:J
+    iput-object p1, p0, Lyp9;->b:Laq9;
 
-    iput-wide p5, p0, Lyp9;->X:J
-
-    iput-object p7, p0, Lyp9;->Y:Ljava/util/List;
-
-    const-class p1, Lyp9;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyp9;->Z:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ll9f;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lzp9;
+    iget v0, p0, Lyp9;->a:I
 
-    iget-object p1, p1, Lzp9;->c:Lds;
+    check-cast p1, Ljava/lang/Integer;
 
-    invoke-virtual {p1}, Lds;->keySet()Ljava/util/Set;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, Las;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Las;->a:Lds;
+    iget-object v0, p0, Lyp9;->b:Laq9;
 
-    iget v0, v0, Lade;->c:I
+    iget-object v0, v0, Laq9;->b:Lsb9;
 
-    const-string v1, "reactions: onSuccess: reactionsCount = "
+    invoke-virtual {v0, p1}, Lsb9;->M(I)Lone/me/messages/list/loader/MessageModel;
 
-    iget-object v2, p0, Lyp9;->Z:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v0, v1, v2}, Lvl3;->i(ILjava/lang/String;Ljava/lang/String;)V
+    if-nez p1, :cond_0
 
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    const/16 v1, 0xa
-
-    iget-object v2, p0, Lyp9;->Y:Ljava/util/List;
-
-    invoke-static {v2, v1}, Lg93;->V(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-static {v1}, Lwa8;->V(I)I
-
-    move-result v1
-
-    const/16 v3, 0x10
-
-    if-ge v1, v3, :cond_0
-
-    move v1, v3
+    goto :goto_0
 
     :cond_0
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(I)V
+    iget p1, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
 
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v3, v2
-
-    check-cast v3, Ljava/lang/Number;
-
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lv79;
-
-    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lxl;->c:Lyl;
+    invoke-static {p1}, Lq79;->e(I)Z
 
-    if-eqz p1, :cond_2
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const/4 p1, 0x1
 
     goto :goto_1
 
     :cond_2
+    :goto_0
     const/4 p1, 0x0
 
     :goto_1
-    iget-object p1, p1, Lyl;->I:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    check-cast p1, Lb89;
+    return-object p1
 
-    iget-wide v1, p0, Lyp9;->o:J
+    :pswitch_0
+    iget-object v0, p0, Lyp9;->b:Laq9;
 
-    invoke-virtual {p1, v1, v2, v0}, Lb89;->f(JLjava/util/Map;)V
+    iget-object v0, v0, Laq9;->b:Lsb9;
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Lsb9;->M(I)Lone/me/messages/list/loader/MessageModel;
 
-.method public final e(Lv8f;)V
-    .locals 4
+    move-result-object p1
 
-    iget-object v0, p1, Lv8f;->X:Lf8f;
+    const/4 v0, 0x0
 
-    const-string v1, "reactions, onFail %s"
+    if-nez p1, :cond_3
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    goto :goto_4
 
-    move-result-object v2
+    :cond_3
+    iget-object v1, p1, Lone/me/messages/list/loader/MessageModel;->t0:Lez;
 
-    iget-object v3, p0, Lyp9;->Z:Ljava/lang/String;
+    iget-object v1, v1, Lez;->b:Lf00;
 
-    invoke-static {v3, v0, v1, v2}, Lox9;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    instance-of v2, v1, Lx9g;
 
-    invoke-virtual {p0}, Lxl;->l()Lov0;
+    if-eqz v2, :cond_4
 
-    move-result-object v0
+    check-cast v1, Lx9g;
 
-    new-instance v1, Laj0;
+    goto :goto_2
 
-    iget-wide v2, p0, Lxl;->a:J
+    :cond_4
+    const/4 v1, 0x0
 
-    invoke-direct {v1, v2, v3, p1}, Laj0;-><init>(JLv8f;)V
+    :goto_2
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Lov0;->c(Ljava/lang/Object;)V
+    if-eqz v1, :cond_5
 
-    return-void
-.end method
+    invoke-virtual {v1}, Lx9g;->d()Lsdg;
 
-.method public final i()Li9f;
-    .locals 5
+    move-result-object v3
 
-    iget-object v0, p0, Lyp9;->Y:Ljava/util/List;
+    if-eqz v3, :cond_5
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    iget-wide v4, v3, Lsdg;->b:J
+
+    iget-wide v6, v1, Lx9g;->a:J
+
+    cmp-long v1, v4, v6
+
+    if-nez v1, :cond_5
+
+    iget v1, v3, Lsdg;->X:I
+
+    if-eq v1, v2, :cond_5
+
+    const/4 v3, 0x5
+
+    if-eq v1, v3, :cond_5
+
+    move v1, v2
+
+    goto :goto_3
+
+    :cond_5
+    move v1, v0
+
+    :goto_3
+    iget-boolean v3, p1, Lone/me/messages/list/loader/MessageModel;->F0:Z
+
+    if-nez v3, :cond_6
+
+    if-eqz v1, :cond_8
+
+    :cond_6
+    invoke-virtual {p1}, Lone/me/messages/list/loader/MessageModel;->n()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_8
 
-    new-instance v1, Ll38;
+    iget-object p1, p1, Lone/me/messages/list/loader/MessageModel;->z0:Lh33;
 
-    sget-object v2, Ln0b;->A1:Ln0b;
+    if-eqz p1, :cond_7
 
-    const/4 v3, 0x7
+    goto :goto_4
 
-    invoke-direct {v1, v2, v3}, Ll38;-><init>(Ln0b;I)V
+    :cond_7
+    move v0, v2
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    :cond_8
+    :goto_4
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lyp9;->b:Laq9;
+
+    iget-object v1, v0, Laq9;->b:Lsb9;
+
+    invoke-virtual {v1}, Lhv7;->j()I
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-le v2, p1, :cond_a
 
-    const-string v2, "chatId"
+    if-ltz p1, :cond_a
 
-    iget-wide v3, p0, Lyp9;->X:J
+    invoke-virtual {v1, p1}, Lsb9;->M(I)Lone/me/messages/list/loader/MessageModel;
 
-    invoke-virtual {v1, v3, v4, v2}, Li9f;->j(JLjava/lang/String;)V
+    move-result-object p1
 
-    const-string v2, "messageIds"
+    if-nez p1, :cond_9
 
-    invoke-virtual {v1, v2, v0}, Li9f;->h(Ljava/lang/String;Ljava/util/List;)V
+    goto :goto_5
 
-    return-object v1
+    :cond_9
+    iget-object v0, v0, Laq9;->c:Lup9;
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-wide v1, p1, Lone/me/messages/list/loader/MessageModel;->a:J
 
-    const-string v1, "mesageIds can\'t be empty"
+    iget-object p1, v0, Lup9;->g:Lbpc;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lbpc;->a:Lane;
 
-    throw v0
+    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    move-result-object p1
 
-    const-string v1, "messageIds is empty, MsgGetReactions requires at least one messageId"
+    check-cast p1, Llp9;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Llp9;->a:Ljava/util/Set;
 
-    throw v0
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    goto :goto_6
+
+    :cond_a
+    :goto_5
+    const/4 p1, 0x0
+
+    :goto_6
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

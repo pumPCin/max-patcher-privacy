@@ -12,8 +12,8 @@
         "Lone/video/player/error/OneVideoPlaybackException;",
         "Ljava/lang/Exception;",
         "Lkotlin/Exception;",
-        "tza",
-        "uza",
+        "jya",
+        "kya",
         "one-video-player_release"
     }
     k = 0x1
@@ -31,7 +31,7 @@
 
 .field public a:Ljava/lang/String;
 
-.field public b:Luza;
+.field public b:Lkya;
 
 .field public c:Lone/video/exo/error/OneVideoExoSourceException;
 

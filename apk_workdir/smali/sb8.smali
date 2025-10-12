@@ -1,322 +1,170 @@
 .class public final Lsb8;
-.super Ljava/lang/Object;
+.super Ljo;
 .source "SourceFile"
 
-# interfaces
-.implements Lvo8;
-.implements Lto8;
+
+# static fields
+.field public static final t0:I
+
+.field public static final u0:[[I
 
 
 # instance fields
-.field public X:Lvo8;
+.field public r0:Landroid/content/res/ColorStateList;
 
-.field public Y:Lto8;
-
-.field public Z:J
-
-.field public final a:Luu8;
-
-.field public final b:J
-
-.field public final c:Lld4;
-
-.field public o:Lkj0;
+.field public s0:Z
 
 
 # direct methods
-.method public constructor <init>(Luu8;Lld4;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lkjc;->Widget_MaterialComponents_CompoundButton_RadioButton:I
 
-    iput-object p1, p0, Lsb8;->a:Luu8;
+    sput v0, Lsb8;->t0:I
 
-    iput-object p2, p0, Lsb8;->c:Lld4;
+    const v0, 0x101009e
 
-    iput-wide p3, p0, Lsb8;->b:J
+    const v1, 0x10100a0
 
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+    filled-new-array {v0, v1}, [I
 
-    iput-wide p1, p0, Lsb8;->Z:J
+    move-result-object v2
 
-    return-void
-.end method
+    const v3, -0x10100a0
 
+    filled-new-array {v0, v3}, [I
 
-# virtual methods
-.method public final E(Lto8;J)V
-    .locals 2
+    move-result-object v0
 
-    iput-object p1, p0, Lsb8;->Y:Lto8;
+    const v4, -0x101009e
 
-    iget-object p1, p0, Lsb8;->X:Lvo8;
+    filled-new-array {v4, v1}, [I
 
-    if-eqz p1, :cond_1
+    move-result-object v1
 
-    iget-wide p2, p0, Lsb8;->Z:J
+    filled-new-array {v4, v3}, [I
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    move-result-object v3
 
-    cmp-long v0, p2, v0
+    filled-new-array {v2, v0, v1, v3}, [[I
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
-
-    :cond_0
-    iget-wide p2, p0, Lsb8;->b:J
-
-    :goto_0
-    invoke-interface {p1, p0, p2, p3}, Lvo8;->E(Lto8;J)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final F([Ldg5;[Z[Lnbd;[ZJ)J
-    .locals 12
-
-    iget-wide v0, p0, Lsb8;->Z:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    if-eqz v4, :cond_0
-
-    iget-wide v4, p0, Lsb8;->b:J
-
-    cmp-long v4, p5, v4
-
-    if-nez v4, :cond_0
-
-    iput-wide v2, p0, Lsb8;->Z:J
-
-    move-wide v10, v0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide/from16 v10, p5
-
-    :goto_0
-    iget-object v5, p0, Lsb8;->X:Lvo8;
-
-    sget v0, Lr4g;->a:I
-
-    move-object v6, p1
-
-    move-object v7, p2
-
-    move-object v8, p3
-
-    move-object/from16 v9, p4
-
-    invoke-interface/range {v5 .. v11}, Lvo8;->F([Ldg5;[Z[Lnbd;[ZJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final b(Lurd;)V
-    .locals 1
-
-    check-cast p1, Lvo8;
-
-    iget-object p1, p0, Lsb8;->Y:Lto8;
-
-    sget v0, Lr4g;->a:I
-
-    invoke-interface {p1, p0}, Lsrd;->b(Lurd;)V
+    sput-object v0, Lsb8;->u0:[[I
 
     return-void
 .end method
 
-.method public final c(Lvo8;)V
-    .locals 1
+.method private getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
+    .locals 6
 
-    iget-object p1, p0, Lsb8;->Y:Lto8;
+    iget-object v0, p0, Lsb8;->r0:Landroid/content/res/ColorStateList;
 
-    sget v0, Lr4g;->a:I
+    if-nez v0, :cond_0
 
-    invoke-interface {p1, p0}, Lto8;->c(Lvo8;)V
+    sget v0, Lb9c;->colorControlActivated:I
 
-    return-void
-.end method
-
-.method public final d()J
-    .locals 2
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0}, Lurd;->d()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lvo8;->f()V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lsb8;->o:Lkj0;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lkj0;->g()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final g(J)J
-    .locals 2
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lvo8;->g(J)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final i()Z
-    .locals 1
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lurd;->i()Z
+    invoke-static {p0, v0}, Lomc;->r(Landroid/view/View;I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    sget v1, Lb9c;->colorOnSurface:I
 
-    const/4 v0, 0x1
+    invoke-static {p0, v1}, Lomc;->r(Landroid/view/View;I)I
 
-    return v0
+    move-result v1
 
-    :cond_0
-    const/4 v0, 0x0
+    sget v2, Lb9c;->colorSurface:I
 
-    return v0
-.end method
+    invoke-static {p0, v2}, Lomc;->r(Landroid/view/View;I)I
 
-.method public final m()J
-    .locals 2
+    move-result v2
 
-    iget-object v0, p0, Lsb8;->X:Lvo8;
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    sget v1, Lr4g;->a:I
+    invoke-static {v2, v3, v0}, Lomc;->w(IFI)I
 
-    invoke-interface {v0}, Lvo8;->m()J
+    move-result v0
 
-    move-result-wide v0
+    const v3, 0x3f0a3d71    # 0.54f
 
-    return-wide v0
-.end method
+    invoke-static {v2, v3, v1}, Lomc;->w(IFI)I
 
-.method public final n()Lwnf;
-    .locals 2
+    move-result v3
 
-    iget-object v0, p0, Lsb8;->X:Lvo8;
+    const v4, 0x3ec28f5c    # 0.38f
 
-    sget v1, Lr4g;->a:I
+    invoke-static {v2, v4, v1}, Lomc;->w(IFI)I
 
-    invoke-interface {v0}, Lvo8;->n()Lwnf;
+    move-result v5
+
+    invoke-static {v2, v4, v1}, Lomc;->w(IFI)I
+
+    move-result v1
+
+    filled-new-array {v0, v3, v5, v1}, [I
 
     move-result-object v0
+
+    new-instance v1, Landroid/content/res/ColorStateList;
+
+    sget-object v2, Lsb8;->u0:[[I
+
+    invoke-direct {v1, v2, v0}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
+
+    iput-object v1, p0, Lsb8;->r0:Landroid/content/res/ColorStateList;
+
+    :cond_0
+    iget-object v0, p0, Lsb8;->r0:Landroid/content/res/ColorStateList;
 
     return-object v0
 .end method
 
-.method public final o()J
-    .locals 2
 
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0}, Lurd;->o()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final p(J)V
-    .locals 2
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lurd;->p(J)V
-
-    return-void
-.end method
-
-.method public final u(JLfnd;)J
-    .locals 2
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0, p1, p2, p3}, Lvo8;->u(JLfnd;)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final w(J)V
-    .locals 2
-
-    iget-object v0, p0, Lsb8;->X:Lvo8;
-
-    sget v1, Lr4g;->a:I
-
-    invoke-interface {v0, p1, p2}, Lvo8;->w(J)V
-
-    return-void
-.end method
-
-.method public final x(J)Z
+# virtual methods
+.method public final onAttachedToWindow()V
     .locals 1
 
-    iget-object v0, p0, Lsb8;->X:Lvo8;
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    iget-boolean v0, p0, Lsb8;->s0:Z
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lurd;->x(J)Z
+    invoke-static {p0}, Lkg3;->a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
 
-    move-result p1
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lsb8;->setUseMaterialThemeColors(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setUseMaterialThemeColors(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lsb8;->s0:Z
 
     if-eqz p1, :cond_0
 
-    const/4 p1, 0x1
+    invoke-direct {p0}, Lsb8;->getMaterialThemeColorsTintList()Landroid/content/res/ColorStateList;
 
-    return p1
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lkg3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+
+    return-void
 
     :cond_0
     const/4 p1, 0x0
 
-    return p1
+    invoke-static {p0, p1}, Lkg3;->c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
+
+    return-void
 .end method

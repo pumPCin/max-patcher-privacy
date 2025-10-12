@@ -1,93 +1,205 @@
 .class public final Lseb;
-.super Ltde;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# virtual methods
-.method public final F(Lreb;)V
-    .locals 5
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-    check-cast v0, Lsp3;
+.field public final synthetic Y:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iget-wide v1, p1, Lreb;->z0:J
+.field public final synthetic Z:Landroid/view/View;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v1
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    iput-object p2, p0, Lseb;->Y:Lone/me/chats/picker/contacts/PickerContactsListWidget;
 
-    iget-boolean v1, p1, Lreb;->y0:Z
+    iput-object p3, p0, Lseb;->Z:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lsp3;->setActivated(Z)V
+    const/4 p2, 0x2
 
-    iget-object v1, p1, Lreb;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Lsp3;->setName(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lreb;->o:Loef;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v2
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lsp3;->setMessage(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0, v2}, Lsp3;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-wide v1, p1, Lreb;->b:J
-
-    iget-object v3, p1, Lreb;->x0:Ljava/lang/CharSequence;
-
-    iget-object v4, p1, Lreb;->X:Landroid/net/Uri;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-nez v4, :cond_2
-
-    :cond_1
-    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    :cond_2
-    invoke-virtual {v0, v1, v2, v3, v4}, Lsp3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    iget-boolean p1, p1, Lreb;->Z:Z
-
-    invoke-virtual {v0, p1}, Lsp3;->setVerified(Z)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic x(Lww7;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lreb;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1}, Lseb;->F(Lreb;)V
+    invoke-virtual {p0, p1, p2}, Lseb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
+
+    check-cast p1, Lseb;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lseb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lseb;
+
+    iget-object v1, p0, Lseb;->Y:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+
+    iget-object v2, p0, Lseb;->Z:Landroid/view/View;
+
+    invoke-direct {v0, p2, v1, v2}, Lseb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/contacts/PickerContactsListWidget;Landroid/view/View;)V
+
+    iput-object p1, v0, Lseb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lseb;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lseb;->Y:Lone/me/chats/picker/contacts/PickerContactsListWidget;
+
+    iget-object v1, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->t0:Ltm0;
+
+    iget-object v2, v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->Z:Lidb;
+
+    invoke-virtual {v2, p1}, Lhv7;->E(Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->C0()Lodb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lodb;->t0:Lbpc;
+
+    iget-object v2, v2, Lbpc;->a:Lane;
+
+    invoke-interface {v2}, Lane;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-static {v2}, Lpwe;->D0(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x4
+
+    if-nez v2, :cond_5
+
+    iget-object v2, p0, Lseb;->Z:Landroid/view/View;
+
+    instance-of v5, v2, Landroid/view/ViewGroup;
+
+    if-eqz v5, :cond_0
+
+    check-cast v2, Landroid/view/ViewGroup;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/view/View;
+
+    invoke-static {v5, v2}, Lcea;->c(Landroid/view/View;Landroid/view/ViewGroup;)V
+
+    :cond_1
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->D0()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v0
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v2, v4
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    move v2, v3
+
+    :goto_2
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lrla;
+
+    if-eqz p1, :cond_4
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v3, v4
+
+    :goto_3
+    invoke-virtual {v0, v3}, Lrla;->setVisibility(I)V
+
+    goto :goto_4
+
+    :cond_5
+    invoke-virtual {v0}, Lone/me/chats/picker/contacts/PickerContactsListWidget;->D0()Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrla;
+
+    invoke-virtual {p1, v4}, Lrla;->setVisibility(I)V
+
+    :goto_4
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

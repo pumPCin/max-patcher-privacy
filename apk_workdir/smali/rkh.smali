@@ -1,10 +1,14 @@
-.class public abstract Lrkh;
-.super Lcfh;
+.class public interface abstract Lrkh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lykh;
+.implements Landroid/os/IInterface;
 
 
-# static fields
-.field public static final synthetic d:I
+# virtual methods
+.method public abstract g(Lcom/google/android/gms/common/api/Status;)V
+.end method
+
+.method public abstract n(Lcom/google/android/gms/common/api/Status;)V
+.end method

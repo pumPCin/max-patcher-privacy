@@ -1,100 +1,245 @@
-.class public final Lcpf;
+.class public abstract Lcpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu24;
-
 
 # static fields
-.field public static final c:Lmed;
+.field public static final a:Ln80;
 
+.field public static final b:Ljava/lang/ThreadLocal;
 
-# instance fields
-.field public final a:Loz3;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final c:Ljava/util/ArrayList;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lmed;
+    new-instance v0, Ln80;
 
-    const/16 v1, 0x12
+    invoke-direct {v0}, Ln80;-><init>()V
 
-    invoke-direct {v0, v1}, Lmed;-><init>(I)V
+    sput-object v0, Lcpf;->a:Ln80;
 
-    sput-object v0, Lcpf;->c:Lmed;
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Lcpf;->b:Ljava/lang/ThreadLocal;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    sput-object v0, Lcpf;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method public constructor <init>(Loz3;)V
-    .locals 1
+.method public static a(Landroid/view/ViewGroup;Lwof;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lcpf;->c:Ljava/util/ArrayList;
 
-    iput-object p1, p0, Lcpf;->a:Loz3;
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {p0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Lcpf;->a:Ln80;
+
+    :cond_0
+    invoke-virtual {p1}, Lwof;->k()Lwof;
+
+    move-result-object p1
+
+    invoke-static {}, Lcpf;->c()Lrs;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lube;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwof;
+
+    invoke-virtual {v1, p0}, Lwof;->C(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, p0, v0}, Lwof;->i(Landroid/view/ViewGroup;Z)V
+
+    sget v0, Lsbc;->transition_current_scene:I
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    sget v1, Lsbc;->transition_current_scene:I
 
-    iput-object p1, p0, Lcpf;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-virtual {p0, v1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
+    new-instance v0, Lbpf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lbpf;->a:Lwof;
+
+    iput-object p0, v0, Lbpf;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    return-void
+
+    :cond_2
+    new-instance p0, Ljava/lang/ClassCastException;
+
+    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw p0
+
+    :cond_3
     return-void
 .end method
 
+.method public static b(Landroid/view/ViewGroup;)V
+    .locals 3
 
-# virtual methods
-.method public final fold(Ljava/lang/Object;Llf6;)Ljava/lang/Object;
-    .locals 0
+    sget-object v0, Lcpf;->c:Ljava/util/ArrayList;
 
-    invoke-interface {p2, p1, p0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    invoke-static {}, Lcpf;->c()Lrs;
 
-    return-object p1
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lube;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_0
+    if-ltz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lwof;
+
+    invoke-virtual {v2, p0}, Lwof;->q(Landroid/view/ViewGroup;)V
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public final get(Lv24;)Lu24;
-    .locals 0
+.method public static c()Lrs;
+    .locals 3
 
-    invoke-static {p0, p1}, Lhoc;->j(Lu24;Lv24;)Lu24;
+    sget-object v0, Lcpf;->b:Ljava/lang/ThreadLocal;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    return-object p1
-.end method
+    move-result-object v1
 
-.method public final getKey()Lv24;
-    .locals 1
+    check-cast v1, Ljava/lang/ref/WeakReference;
 
-    sget-object v0, Lcpf;->c:Lmed;
+    if-eqz v1, :cond_0
 
-    return-object v0
-.end method
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-.method public final minusKey(Lv24;)Lw24;
-    .locals 0
+    move-result-object v1
 
-    invoke-static {p0, p1}, Lhoc;->v(Lu24;Lv24;)Lw24;
+    check-cast v1, Lrs;
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    return-object p1
-.end method
+    return-object v1
 
-.method public final plus(Lw24;)Lw24;
-    .locals 0
+    :cond_0
+    new-instance v1, Lrs;
 
-    invoke-static {p0, p1}, Lkmc;->t(Lw24;Lw24;)Lw24;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Lube;-><init>(I)V
 
-    return-object p1
+    new-instance v2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v2, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v0, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    return-object v1
 .end method

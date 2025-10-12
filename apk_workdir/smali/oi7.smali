@@ -1,52 +1,43 @@
 .class public final Loi7;
-.super Ljava/lang/Object;
+.super Lrc4;
 .source "SourceFile"
 
-# interfaces
-.implements Lpi7;
 
+# static fields
+.field public static final b:Loi7;
 
-# instance fields
-.field public final a:Landroid/content/Intent;
-
-.field public final b:I
-
-.field public final synthetic c:Lui7;
+.field public static final c:Lmc4;
 
 
 # direct methods
-.method public constructor <init>(Lui7;Landroid/content/Intent;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loi7;
 
-    iput-object p1, p0, Loi7;->c:Lui7;
+    invoke-direct {v0}, Lrc4;-><init>()V
 
-    iput-object p2, p0, Loi7;->a:Landroid/content/Intent;
+    sput-object v0, Loi7;->b:Loi7;
 
-    iput p3, p0, Loi7;->b:I
+    const-string v1, "id"
+
+    const-string v2, "link"
+
+    filled-new-array {v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xe
+
+    const-string v4, ":join"
+
+    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+
+    move-result-object v0
+
+    sput-object v0, Loi7;->c:Lmc4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Loi7;->c:Lui7;
-
-    iget v1, p0, Loi7;->b:I
-
-    invoke-virtual {v0, v1}, Landroid/app/Service;->stopSelf(I)V
-
-    return-void
-.end method
-
-.method public final getIntent()Landroid/content/Intent;
-    .locals 1
-
-    iget-object v0, p0, Loi7;->a:Landroid/content/Intent;
-
-    return-object v0
 .end method

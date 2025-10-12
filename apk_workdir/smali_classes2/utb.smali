@@ -1,84 +1,103 @@
 .class public final Lutb;
-.super Laub;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final b:J
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lcub;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lcub;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Laub;-><init>()V
+    iput-object p1, p0, Lutb;->Y:Lcub;
 
-    iput-wide p1, p0, Lutb;->b:J
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ld3b;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lutb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lutb;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lutb;
 
-    iget-wide v3, p0, Lutb;->b:J
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-wide v5, p1, Lutb;->b:J
+    invoke-virtual {p1, p2}, Lutb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lutb;->b:J
+    new-instance v0, Lutb;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lutb;->Y:Lcub;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Lutb;-><init>(Lcub;Lkotlin/coroutines/Continuation;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OpenAddSubscribersAndUpdateBackstack(id="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lutb;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lutb;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lutb;->X:Ljava/lang/Object;
+
+    check-cast p1, Ld3b;
+
+    iget-object v0, p1, Ld3b;->a:Ljava/lang/Object;
+
+    check-cast v0, Lr82;
+
+    iget-object p1, p1, Ld3b;->b:Ljava/lang/Object;
+
+    check-cast p1, Lro3;
+
+    iget-object v1, p0, Lutb;->Y:Lcub;
+
+    iget-boolean v2, v1, Lcub;->y0:Z
+
+    if-nez v2, :cond_0
+
+    iget-object v2, v1, Lcub;->w0:Lhne;
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v0, p1, v3}, Lcub;->r(Lcub;Lr82;Lro3;Z)Lqtb;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v0, p1}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

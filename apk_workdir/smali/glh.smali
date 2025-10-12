@@ -4,30 +4,20 @@
 
 
 # static fields
-.field public static final a:[Lqkh;
+.field public static final a:Ljuf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const/4 v0, 0x2
+    new-instance v0, Ljuf;
 
-    new-array v0, v0, [Lqkh;
+    const-string v1, "PhoneskyVerificationUtils"
 
-    sget-object v1, Lllh;->a:Lxjh;
+    invoke-direct {v0, v1}, Ljuf;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lllh;->b:Lxjh;
-
-    const/4 v2, 0x1
-
-    aput-object v1, v0, v2
-
-    sput-object v0, Lglh;->a:[Lqkh;
+    sput-object v0, Lglh;->a:Ljuf;
 
     return-void
 .end method

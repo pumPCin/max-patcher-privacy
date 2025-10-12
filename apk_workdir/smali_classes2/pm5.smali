@@ -1,19 +1,19 @@
-.class public interface abstract Lpm5;
+.class public final Lpm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ll62;
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    sget-object v0, Ll62;->o:Ll62;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lpm5;->a:Ll62;
+    iput-object p1, p0, Lpm5;->a:Ljava/util/List;
 
     return-void
 .end method

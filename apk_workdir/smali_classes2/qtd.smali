@@ -1,91 +1,66 @@
-.class public abstract Lqtd;
+.class public final Lqtd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final X:Z
 
-.field public static final c:I
+.field public final a:J
 
-.field public static final d:I
+.field public final b:Ljava/lang/String;
 
-.field public static final e:I
+.field public final c:Ljava/lang/String;
 
-.field public static final f:I
-
-.field public static final g:I
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1d
+    iput-wide p1, p0, Lqtd;->a:J
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lqtd;->b:Ljava/lang/String;
 
-    if-lt v0, v1, :cond_1
+    iput-object p4, p0, Lqtd;->c:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    iput-object p5, p0, Lqtd;->o:Ljava/lang/String;
 
-    sput v1, Lqtd;->a:I
-
-    const/4 v1, 0x2
-
-    sput v1, Lqtd;->b:I
-
-    const/16 v1, 0x8
-
-    sput v1, Lqtd;->c:I
-
-    const/16 v1, 0x20
-
-    sput v1, Lqtd;->d:I
-
-    const/4 v1, -0x1
-
-    sput v1, Lqtd;->g:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    const/16 v0, 0x40
-
-    sput v0, Lqtd;->e:I
-
-    const/16 v0, 0x80
-
-    sput v0, Lqtd;->f:I
+    iput-boolean p6, p0, Lqtd;->X:Z
 
     return-void
+.end method
 
-    :cond_0
-    sput v2, Lqtd;->e:I
 
-    sput v2, Lqtd;->f:I
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    return-void
+    const-string v0, "Session{="
 
-    :cond_1
-    sput v2, Lqtd;->a:I
+    const-string v1, ", current="
 
-    sput v2, Lqtd;->b:I
+    iget-wide v2, p0, Lqtd;->a:J
 
-    sput v2, Lqtd;->c:I
+    iget-boolean v4, p0, Lqtd;->X:Z
 
-    sput v2, Lqtd;->d:I
+    invoke-static {v2, v3, v0, v1, v4}, Lnd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    sput v2, Lqtd;->e:I
+    move-result-object v0
 
-    sput v2, Lqtd;->f:I
+    const-string v1, "}"
 
-    sput v2, Lqtd;->g:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

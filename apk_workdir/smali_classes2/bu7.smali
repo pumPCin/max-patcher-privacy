@@ -1,93 +1,44 @@
-.class public final Lbu7;
+.class public final synthetic Lbu7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu7;
-.implements Lfu7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lbu7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lzt7;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:Lgu7;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lle7;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
-
-    sput-object v0, Lbu7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lgu7;Ljava/lang/Object;)V
     .locals 0
 
+    iput-object p1, p0, Lbu7;->a:Lgu7;
+
+    iput-object p2, p0, Lbu7;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lbu7;->a:J
-
-    iput-object p3, p0, Lbu7;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lbu7;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public b(Landroid/view/View;Ljava/lang/String;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    sget-object v0, Lhu7;->Y:Lhu7;
 
-    return v0
-.end method
+    iget-object v1, p0, Lbu7;->b:Ljava/lang/Object;
 
-.method public final n()Ljava/lang/String;
-    .locals 1
+    check-cast v1, Landroid/text/style/ClickableSpan;
 
-    iget-object v0, p0, Lbu7;->c:Ljava/lang/String;
+    iget-object v2, p0, Lbu7;->a:Lgu7;
 
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    iget-wide v0, p0, Lbu7;->a:J
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
-
-    iget-object p2, p0, Lbu7;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-object p2, p0, Lbu7;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {v2, p1, p2, v0, v1}, Lgu7;->b(Landroid/view/View;Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
 
     return-void
 .end method

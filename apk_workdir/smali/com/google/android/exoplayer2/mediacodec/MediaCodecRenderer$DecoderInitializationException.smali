@@ -8,31 +8,37 @@
 
 .field public final b:Z
 
-.field public final c:Laj8;
+.field public final c:Luh8;
 
 .field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLaj8;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLuh8;Ljava/lang/String;)V
     .locals 0
 
+    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 6
     iput-object p3, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->a:Ljava/lang/String;
 
+    .line 7
     iput-boolean p4, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->b:Z
 
-    iput-object p5, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Laj8;
+    .line 8
+    iput-object p5, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Luh8;
 
+    .line 9
     iput-object p6, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->o:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lr76;Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
+.method public constructor <init>(Lu66;Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
     .locals 10
 
+    .line 1
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -63,10 +69,11 @@
 
     move-result-object v4
 
-    iget-object v6, p1, Lr76;->A0:Ljava/lang/String;
+    iget-object v6, p1, Lu66;->v0:Ljava/lang/String;
 
     if-gez p4, :cond_0
 
+    .line 2
     const-string p1, "neg_"
 
     goto :goto_0
@@ -74,6 +81,7 @@
     :cond_0
     const-string p1, ""
 
+    .line 3
     :goto_0
     invoke-static {p4}, Ljava/lang/Math;->abs(I)I
 
@@ -109,7 +117,8 @@
 
     move v7, p3
 
-    invoke-direct/range {v3 .. v9}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLaj8;Ljava/lang/String;)V
+    .line 4
+    invoke-direct/range {v3 .. v9}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLuh8;Ljava/lang/String;)V
 
     return-void
 .end method

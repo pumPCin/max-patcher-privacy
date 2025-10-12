@@ -1,51 +1,68 @@
-.class public final Lb39;
-.super Lnz3;
+.class public final synthetic Lb39;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lc39;
 
-.field public final synthetic Y:Lf39;
+.field public final synthetic b:Le39;
 
-.field public Z:I
+.field public final synthetic c:Ljava/lang/String;
 
-.field public o:Lf39;
+.field public final synthetic d:Lno3;
 
 
 # direct methods
-.method public constructor <init>(Lf39;Lnz3;)V
+.method public synthetic constructor <init>(Lc39;Le39;Ljava/lang/String;Lno3;)V
     .locals 0
 
-    iput-object p1, p0, Lb39;->Y:Lf39;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lb39;->a:Lc39;
+
+    iput-object p2, p0, Lb39;->b:Le39;
+
+    iput-object p3, p0, Lb39;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lb39;->d:Lno3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 8
 
-    iput-object p1, p0, Lb39;->X:Ljava/lang/Object;
+    iget-object v0, p0, Lb39;->d:Lno3;
 
-    iget p1, p0, Lb39;->Z:I
+    iget-object v1, p0, Lb39;->b:Le39;
 
-    const/high16 v0, -0x80000000
+    iget-wide v2, v1, Lqi0;->a:J
 
-    or-int/2addr p1, v0
+    iget-object v4, p0, Lb39;->a:Lc39;
 
-    iput p1, p0, Lb39;->Z:I
+    iget-object v5, p0, Lb39;->c:Ljava/lang/String;
 
-    iget-object p1, p0, Lb39;->Y:Lf39;
+    invoke-virtual {v4, v2, v3, v5, v0}, Lc39;->s(JLjava/lang/String;Lno3;)V
 
-    const/4 v0, 0x0
+    iget-object v0, v4, Lc39;->b:Liv0;
 
-    invoke-virtual {p1, v0, p0}, Lf39;->a(Ljava/util/List;Lnz3;)Ljava/lang/Object;
+    new-instance v2, Lzyf;
 
-    move-result-object p1
+    iget-wide v4, v1, Le39;->r0:J
 
-    return-object p1
+    iget-wide v6, v1, Lqi0;->a:J
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v2 .. v7}, Lzyf;-><init>(IJJ)V
+
+    invoke-virtual {v0, v2}, Liv0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

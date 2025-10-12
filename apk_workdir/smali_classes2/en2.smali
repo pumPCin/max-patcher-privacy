@@ -1,150 +1,132 @@
 .class public final Len2;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Loef;
-
-.field public final c:Z
+.field public final synthetic Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public constructor <init>(ILoef;Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Len2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    iput p1, p0, Len2;->a:I
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Len2;->b:Loef;
-
-    iput-boolean p3, p0, Len2;->c:Z
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Len2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Len2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Len2;
 
-    iget v1, p0, Len2;->a:I
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget v3, p1, Len2;->a:I
+    invoke-virtual {p1, p2}, Len2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Len2;->b:Loef;
-
-    iget-object v3, p1, Len2;->b:Loef;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Len2;->c:Z
-
-    iget-boolean p1, p1, Len2;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Len2;->a:I
+    new-instance v0, Len2;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, p0, Len2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Len2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Len2;->b:Loef;
-
-    invoke-static {v0, v1, v2}, Lqe0;->b(IILoef;)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Len2;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatMembersInfo(titleRes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Len2;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", subtitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Len2;->b:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isAdminWithPermission="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Len2;->c:Z
-
-    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Len2;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Len2;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    iget-object v0, p0, Len2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
+
+    if-eqz p1, :cond_0
+
+    sget-object v1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->E0()Ljxa;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Lgxa;
+
+    sget v4, Lz7d;->w1:I
+
+    sget v5, Lv7d;->R0:I
+
+    const/16 v6, 0x2775
+
+    invoke-direct {v3, v6, v4, v5}, Lgxa;-><init>(III)V
+
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    new-instance v4, Lhj2;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v5, v0}, Lhj2;-><init>(ILjava/lang/Object;)V
+
+    new-instance v5, Ljs1;
+
+    const/4 v6, 0x1
+
+    invoke-direct {v5, p1, v6, v0}, Ljs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2, v3, v4, v5}, Ljxa;->c(Ljava/lang/String;Ljava/util/List;Ltd6;Lvd6;)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->E0()Ljxa;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljxa;->a()V
+
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

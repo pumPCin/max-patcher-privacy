@@ -12,23 +12,46 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 6420
-  versionName: 25.12.1
+  versionCode: 6424
+  versionName: 25.13.0
 resourcesAreCompressed: false
 sharedLibrary: false
 sparseResources: false
 unknownFiles:
+  play-services-appset.properties: 8
+  app-update-ktx.properties: 8
+  firebase-encoders-proto.properties: 8
+  firebase-annotations.properties: 8
+  play-services-maps.properties: 8
+  play-services-auth.properties: 8
+  firebase-encoders.properties: 8
+  play-services-base.properties: 8
+  kotlin-tooling-metadata.json: 8
+  play-services-auth-base.properties: 8
+  play-services-ads-identifier.properties: 8
+  play-services-tasks.properties: 8
+  review-ktx.properties: 8
+  core-common.properties: 8
+  app-update.properties: 8
+  firebase-encoders-json.properties: 8
+  firebase-iid-interop.properties: 8
+  play-services-cloud-messaging.properties: 8
+  play-services-location.properties: 8
+  play-services-basement.properties: 8
+  firebase-measurement-connector.properties: 8
+  play-services-stats.properties: 8
+  play-services-auth-api-phone.properties: 8
+  review.properties: 8
   net/jpountz/util/darwin/x86_64/liblz4-java.dylib: 8
   okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
 doNotCompress:
+- resources.arsc
+- META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/i24
+- META-INF/services/ck7
+- META-INF/services/ulf
+- webp
+- png
+- mp3
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
-- META-INF/services/dnf
-- META-INF/services/gl7
-- META-INF/services/ru.ok.android.onelog.OneLogAppender
-- META-INF/services/z24
-- META-INF/version-control-info.textproto
-- mp3
-- png
-- resources.arsc
-- webp

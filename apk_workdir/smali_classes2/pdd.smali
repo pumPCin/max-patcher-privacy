@@ -1,118 +1,231 @@
-.class public final synthetic Lpdd;
-.super Ljava/lang/Object;
+.class public final Lpdd;
+.super Landroid/media/projection/MediaProjection$Callback;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
 
-.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final b:Lwkc;
+
+.field public volatile c:Z
+
+.field public volatile d:Z
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
+.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Lwkc;)V
     .locals 0
 
-    iput p2, p0, Lpdd;->a:I
+    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
 
-    iput-object p1, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    iput-object p3, p0, Lpdd;->b:Lwkc;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lpdd;->h:Ljava/util/concurrent/Executor;
+
+    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
+
+    iput-object p2, p0, Lpdd;->a:Lorg/webrtc/ScreenCapturerAndroid;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a(II)V
+    .locals 4
 
-    iget v0, p0, Lpdd;->a:I
+    iget-object v0, p0, Lpdd;->b:Lwkc;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "x"
 
-    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    const-string v2, "@30"
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
+    const-string v3, "changeFormat, "
 
-    move-result-object v0
-
-    const-string v1, "ScheduledSendPickerDialogFragment:arg_input"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v1, "ScheduledSendPickerDialogFragment:who"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lpdd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->G0()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v1, "ScheduledSendPickerViewModel:delayed_attrs"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+    invoke-static {v3, p1, v1, p2, v2}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    instance-of v2, v1, Lin4;
+    const-string v2, "ScreenCapturerAdapter"
 
-    if-eqz v2, :cond_0
+    invoke-interface {v0, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v1, Lin4;
+    iget v0, p0, Lpdd;->g:I
+
+    const/16 v1, 0x1e
+
+    if-ne v0, p1, :cond_1
+
+    iget v0, p0, Lpdd;->f:I
+
+    if-ne v0, p2, :cond_1
+
+    iget v0, p0, Lpdd;->e:I
+
+    if-eq v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
 
+    :cond_1
     :goto_0
-    if-eqz v1, :cond_1
+    iput v1, p0, Lpdd;->e:I
 
-    iget-boolean v0, v1, Lin4;->b:Z
+    iput p2, p0, Lpdd;->f:I
+
+    iput p1, p0, Lpdd;->g:I
+
+    iget-boolean v0, p0, Lpdd;->d:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lpdd;->b:Lwkc;
+
+    const-string v3, "Screen capture is already started, just change capture format"
+
+    invoke-interface {v0, v2, v3}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v0, p0, Lpdd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    :cond_1
-    const-string v1, "ScheduledSendPickerDialogFragment:send_with_notification"
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    iget-object p2, p0, Lpdd;->b:Lwkc;
 
-    move-result v0
+    new-instance v0, Ljava/lang/RuntimeException;
 
+    const-string v1, "Cant change screen capture format"
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string p1, "screen.capture.change.format"
+
+    invoke-interface {p2, v2, p1, v0}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_1
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final b()V
+    .locals 3
 
-    return-object v0
+    const-string v0, "ScreenCapturerAdapter"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "release"
+
+    iget-object v2, p0, Lpdd;->b:Lwkc;
+
+    invoke-interface {v2, v0, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lpdd;->c()V
+
+    iget-object v0, p0, Lpdd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 5
+
+    iget-object v0, p0, Lpdd;->b:Lwkc;
+
+    const-string v1, "stop"
+
+    const-string v2, "ScreenCapturerAdapter"
+
+    invoke-interface {v0, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v0, p0, Lpdd;->d:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lpdd;->b:Lwkc;
+
+    const-string v1, "Screen capturer is not yet started"
+
+    invoke-interface {v0, v2, v1}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lpdd;->d:Z
+
+    :try_start_0
+    iget-object v0, p0, Lpdd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lpdd;->b:Lwkc;
+
+    new-instance v3, Ljava/lang/RuntimeException;
+
+    const-string v4, "Stop screen capture failed"
+
+    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, "screen.capture.stop"
+
+    invoke-interface {v1, v2, v0, v3}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final onStop()V
+    .locals 3
+
+    iget-object v0, p0, Lpdd;->b:Lwkc;
+
+    const-string v1, "ScreenCapturerAdapter"
+
+    const-string v2, "onStop, screen capture session stopped"
+
+    invoke-interface {v0, v1, v2}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lpdd;->c:Z
+
+    iget-object v0, p0, Lpdd;->h:Ljava/util/concurrent/Executor;
+
+    new-instance v1, La4b;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v1, v2, p0}, La4b;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

@@ -2,167 +2,244 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu47;
-
 
 # instance fields
-.field public final a:Lu47;
+.field public final synthetic a:I
 
-.field public final b:Lu47;
+.field public final b:J
 
-.field public final c:Lxjb;
+.field public final c:J
 
-.field public final d:Loe;
+.field public d:J
 
-.field public final e:Ljava/util/Map;
+.field public e:J
+
+.field public f:J
+
+.field public g:J
+
+.field public h:J
+
+.field public i:J
+
+.field public j:F
+
+.field public k:F
+
+.field public l:F
+
+.field public m:J
+
+.field public n:J
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>(Loe;Lme;Lxjb;Ljava/util/HashMap;)V
-    .locals 2
+.method public synthetic constructor <init>(IJJ)V
+    .locals 0
+
+    iput p1, p0, Lci4;->a:I
+
+    iput-wide p2, p0, Lci4;->b:J
+
+    iput-wide p4, p0, Lci4;->c:J
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lci4;->d:J
+
+    iput-wide p1, p0, Lci4;->e:J
+
+    iput-wide p1, p0, Lci4;->g:J
+
+    iput-wide p1, p0, Lci4;->h:J
+
+    const p1, 0x3f7851ec    # 0.97f
+
+    iput p1, p0, Lci4;->k:F
+
+    const p1, 0x3f83d70a    # 1.03f
+
+    iput p1, p0, Lci4;->j:F
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Lci4;->l:F
+
+    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
+
+    iput-wide p1, p0, Lci4;->m:J
+
+    iput-wide p1, p0, Lci4;->f:J
+
+    iput-wide p1, p0, Lci4;->i:J
+
+    iput-wide p1, p0, Lci4;->n:J
+
+    iput-wide p1, p0, Lci4;->o:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Loe;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Loe;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lci4;->d:Loe;
-
-    iput-object p1, p0, Lci4;->a:Lu47;
-
-    iput-object p2, p0, Lci4;->b:Lu47;
-
-    iput-object p3, p0, Lci4;->c:Lxjb;
-
-    iput-object p4, p0, Lci4;->e:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lw75;ILh8c;Ls47;)Lq73;
-    .locals 2
+.method public final a()V
+    .locals 7
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lci4;->a:I
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p1, Lw75;->b:Lx47;
+    iget-wide v0, p0, Lci4;->d:J
 
-    if-eqz v0, :cond_0
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    sget-object v1, Lx47;->c:Lx47;
+    cmp-long v4, v0, v2
 
-    if-ne v0, v1, :cond_1
+    if-eqz v4, :cond_3
 
-    :cond_0
-    invoke-virtual {p1}, Lw75;->n()Ljava/io/InputStream;
+    iget-wide v4, p0, Lci4;->e:J
 
-    move-result-object v1
+    cmp-long v6, v4, v2
 
-    if-eqz v1, :cond_1
-
-    sget-object v0, Ly47;->d:Ljava/lang/Object;
-
-    :try_start_0
-    invoke-static {v1}, Lnf2;->v(Ljava/io/InputStream;)Lx47;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    iput-object v0, p1, Lw75;->b:Lx47;
+    if-eqz v6, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_0
+    iget-wide v4, p0, Lci4;->g:J
 
-    invoke-static {p1}, Lipe;->w(Ljava/lang/Throwable;)V
+    cmp-long v6, v4, v2
 
-    const/4 p1, 0x0
+    if-eqz v6, :cond_1
 
-    throw p1
+    cmp-long v6, v0, v4
+
+    if-gez v6, :cond_1
+
+    move-wide v0, v4
 
     :cond_1
-    :goto_0
-    iget-object v1, p0, Lci4;->e:Ljava/util/Map;
+    iget-wide v4, p0, Lci4;->h:J
 
-    if-eqz v1, :cond_2
+    cmp-long v6, v4, v2
 
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v6, :cond_2
 
-    move-result-object v0
+    cmp-long v6, v0, v4
 
-    check-cast v0, Lu47;
+    if-lez v6, :cond_2
 
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lu47;->a(Lw75;ILh8c;Ls47;)Lq73;
-
-    move-result-object p1
-
-    return-object p1
+    goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lci4;->d:Loe;
+    move-wide v4, v0
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Loe;->a(Lw75;ILh8c;Ls47;)Lq73;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_3
+    move-wide v4, v2
 
-    return-object p1
-.end method
+    :goto_0
+    iget-wide v0, p0, Lci4;->f:J
 
-.method public final b(Lw75;Ls47;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-    .locals 2
+    cmp-long v0, v0, v4
 
-    iget-object v0, p0, Lci4;->c:Lxjb;
+    if-nez v0, :cond_4
 
-    iget-object p2, p2, Ls47;->a:Landroid/graphics/Bitmap$Config;
+    goto :goto_1
 
-    invoke-interface {v0, p1, p2}, Lxjb;->a(Lw75;Landroid/graphics/Bitmap$Config;)Lt73;
+    :cond_4
+    iput-wide v4, p0, Lci4;->f:J
 
-    move-result-object p2
+    iput-wide v4, p0, Lci4;->i:J
 
-    :try_start_0
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-wide v2, p0, Lci4;->n:J
 
-    sget-object v0, Ln77;->d:Ln77;
+    iput-wide v2, p0, Lci4;->o:J
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    iput-wide v2, p0, Lci4;->m:J
 
-    iget v1, p1, Lw75;->c:I
+    :goto_1
+    return-void
 
-    invoke-virtual {p1}, Lw75;->r0()V
+    :pswitch_0
+    iget-wide v0, p0, Lci4;->d:J
 
-    iget p1, p1, Lw75;->o:I
+    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    invoke-static {p2, v0, v1, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lt73;Lh8c;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    cmp-long v4, v0, v2
 
-    move-result-object p1
+    if-eqz v4, :cond_7
 
-    const-string v0, "is_rounded"
+    iget-wide v4, p0, Lci4;->e:J
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    cmp-long v6, v4, v2
 
-    invoke-interface {p1, v0, v1}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v6, :cond_5
 
-    invoke-virtual {p2}, Lt73;->close()V
+    move-wide v0, v4
 
-    return-object p1
+    :cond_5
+    iget-wide v4, p0, Lci4;->g:J
 
-    :catchall_0
-    move-exception p1
+    cmp-long v6, v4, v2
 
-    invoke-static {p2}, Lt73;->W(Lt73;)V
+    if-eqz v6, :cond_6
 
-    throw p1
+    cmp-long v6, v0, v4
+
+    if-gez v6, :cond_6
+
+    move-wide v0, v4
+
+    :cond_6
+    iget-wide v4, p0, Lci4;->h:J
+
+    cmp-long v6, v4, v2
+
+    if-eqz v6, :cond_8
+
+    cmp-long v6, v0, v4
+
+    if-lez v6, :cond_8
+
+    move-wide v0, v4
+
+    goto :goto_2
+
+    :cond_7
+    move-wide v0, v2
+
+    :cond_8
+    :goto_2
+    iget-wide v4, p0, Lci4;->f:J
+
+    cmp-long v4, v4, v0
+
+    if-nez v4, :cond_9
+
+    goto :goto_3
+
+    :cond_9
+    iput-wide v0, p0, Lci4;->f:J
+
+    iput-wide v0, p0, Lci4;->i:J
+
+    iput-wide v2, p0, Lci4;->n:J
+
+    iput-wide v2, p0, Lci4;->o:J
+
+    iput-wide v2, p0, Lci4;->m:J
+
+    :goto_3
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

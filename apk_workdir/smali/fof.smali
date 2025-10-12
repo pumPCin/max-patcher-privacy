@@ -4,89 +4,206 @@
 
 
 # instance fields
-.field public final a:[Ldg5;
+.field public final a:I
 
-.field public b:I
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
 
 
 # direct methods
-.method public varargs constructor <init>([Ldg5;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfof;->a:[Ldg5;
+    iput p2, p0, Lfof;->a:I
 
-    array-length p1, p1
+    iput-object p1, p0, Lfof;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lfof;->c:Ljava/lang/String;
+
+    iput p3, p0, Lfof;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lvr0;
     .locals 2
+
+    new-instance v0, Lvr0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget v1, p0, Lfof;->a:I
+
+    iput v1, v0, Lvr0;->a:I
+
+    iget-object v1, p0, Lfof;->b:Ljava/lang/String;
+
+    iput-object v1, v0, Lvr0;->c:Ljava/lang/Object;
+
+    iget-object v1, p0, Lfof;->c:Ljava/lang/String;
+
+    iput-object v1, v0, Lvr0;->d:Ljava/lang/Object;
+
+    iget v1, p0, Lfof;->d:I
+
+    iput v1, v0, Lvr0;->b:I
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 
     :cond_0
-    if-eqz p1, :cond_2
+    instance-of v1, p1, Lfof;
 
-    const-class v0, Lfof;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v1, :cond_1
 
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
     check-cast p1, Lfof;
 
-    iget-object v0, p0, Lfof;->a:[Ldg5;
+    iget v1, p0, Lfof;->a:I
 
-    iget-object p1, p1, Lfof;->a:[Ldg5;
+    iget v3, p1, Lfof;->a:I
 
-    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_2
 
-    move-result p1
+    iget-object v1, p0, Lfof;->b:Ljava/lang/String;
 
-    return p1
+    iget-object v3, p1, Lfof;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lfof;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lfof;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Lfof;->d:I
+
+    iget p1, p1, Lfof;->d:I
+
+    if-ne v1, p1, :cond_2
+
+    return v0
 
     :cond_2
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Lfof;->b:I
+    iget v0, p0, Lfof;->a:I
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lfof;->a:[Ldg5;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    iget-object v2, p0, Lfof;->b:Ljava/lang/String;
 
-    move-result v0
+    if-eqz v2, :cond_0
 
-    const/16 v1, 0x20f
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    add-int/2addr v1, v0
+    move-result v2
 
-    iput v1, p0, Lfof;->b:I
+    goto :goto_0
 
     :cond_0
-    iget v0, p0, Lfof;->b:I
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lfof;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lfof;->d:I
+
+    add-int/2addr v0, v1
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TransformationRequest{outputHeight="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lfof;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioMimeType=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfof;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', videoMimeType=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfof;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', hdrMode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lfof;->d:I
+
+    const/16 v2, 0x7d
+
+    invoke-static {v0, v1, v2}, Lnd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

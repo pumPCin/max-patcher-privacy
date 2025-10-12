@@ -1,84 +1,223 @@
-.class public final synthetic Lmsc;
-.super Ljava/lang/Object;
+.class public final Lmsc;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lmf6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lnsc;
-
-.field public final synthetic c:Ljava/util/ArrayList;
+.field public final synthetic Y:Lqsc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnsc;Ljava/util/ArrayList;I)V
+.method public constructor <init>(Lqsc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lmsc;->a:I
+    iput-object p1, p0, Lmsc;->Y:Lqsc;
 
-    iput-object p1, p0, Lmsc;->b:Lnsc;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lmsc;->c:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lmsc;->a:I
+    check-cast p1, Ln24;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+    invoke-virtual {p0, p1, p2}, Lmsc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lksc;
+    move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lmsc;
 
-    iget-object v2, p0, Lmsc;->b:Lnsc;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object v3, p0, Lmsc;->c:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Lmsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v2, p1, v3, v1}, Lksc;-><init>(Lnsc;Ljava/lang/Object;Ljava/util/List;I)V
-
-    new-instance p1, Loe3;
-
-    invoke-direct {p1, v1, v0}, Loe3;-><init>(ILjava/lang/Object;)V
+    move-result-object p1
 
     return-object p1
+.end method
 
-    :pswitch_0
-    check-cast p1, Lzrc;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v0, Lksc;
+    new-instance p1, Lmsc;
 
-    const/4 v1, 0x2
+    iget-object v0, p0, Lmsc;->Y:Lqsc;
 
-    iget-object v2, p0, Lmsc;->b:Lnsc;
-
-    iget-object v3, p0, Lmsc;->c:Ljava/util/ArrayList;
-
-    invoke-direct {v0, v2, p1, v3, v1}, Lksc;-><init>(Lnsc;Ljava/lang/Object;Ljava/util/List;I)V
-
-    new-instance p1, Loe3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, v0}, Loe3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Lmsc;-><init>(Lqsc;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    sget-object v1, Lo24;->a:Lo24;
+
+    iget v2, p0, Lmsc;->X:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    iget-object p1, p1, Lqsc;->w0:Lhne;
+
+    invoke-virtual {p1}, Lhne;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    instance-of p1, p1, Lgsc;
+
+    if-eqz p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    invoke-virtual {p1}, Lqsc;->x()Law7;
+
+    move-result-object p1
+
+    new-instance v2, Ljava/lang/Long;
+
+    invoke-direct {v2, v4, v5}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-interface {p1, v2}, Law7;->b(Ljava/lang/Long;)V
+
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    iput v3, p0, Lmsc;->X:I
+
+    invoke-static {p1, v4, v5, p0}, Lqsc;->s(Lqsc;JLwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_3
+
+    return-object v1
+
+    :cond_3
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    iget-object v2, p1, Lqsc;->c:Lvrc;
+
+    iget-object p1, p1, Lqsc;->b:Ljrc;
+
+    iget-object v2, v2, Lvrc;->c:Lya5;
+
+    new-instance v4, Lqrc;
+
+    invoke-direct {v4, p1, v3}, Lqrc;-><init>(Ljrc;Z)V
+
+    invoke-static {v2, v4}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    iget-object v2, p1, Lqsc;->H0:Ljava/lang/String;
+
+    sget-object v3, Lyt3;->n:Lhoa;
+
+    if-nez v3, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    sget-object v4, Lr28;->o:Lr28;
+
+    invoke-virtual {v3, v4}, Lhoa;->b(Lr28;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_5
+
+    iget-object p1, p1, Lqsc;->b:Ljrc;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v5, "Recoding of "
+
+    const-string v6, " started successfully "
+
+    invoke-static {v5, p1, v6}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v3, v4, v2, p1, v1}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_1
+    return-object v0
+
+    :cond_6
+    iget-object p1, p0, Lmsc;->Y:Lqsc;
+
+    iget-object v2, p1, Lqsc;->w0:Lhne;
+
+    invoke-virtual {v2}, Lhne;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_7
+
+    goto :goto_2
+
+    :cond_7
+    const/4 v3, 0x0
+
+    :goto_2
+    invoke-virtual {p1, v1, v3}, Lqsc;->A(Lcdf;Z)V
+
+    return-object v0
 .end method

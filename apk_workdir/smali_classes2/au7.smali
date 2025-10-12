@@ -1,85 +1,99 @@
 .class public final Lau7;
-.super Ljava/lang/Object;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Lhu7;
-.implements Lfu7;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lau7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lda8;
 
 
 # instance fields
-.field public final a:J
+.field public a:I
 
 .field public final b:Ljava/lang/String;
 
+.field public c:Lzt7;
+
+.field public final o:I
+
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lle7;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lle7;-><init>(I)V
-
-    sput-object v0, Lau7;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    iput-wide p1, p0, Lau7;->a:J
+    iput p2, p0, Lau7;->a:I
 
-    iput-object p3, p0, Lau7;->b:Ljava/lang/String;
+    invoke-static {p1}, Lpwe;->a1(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lau7;->b:Ljava/lang/String;
+
+    const/4 p1, 0x6
+
+    iput p1, p0, Lau7;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final copy()Lo14;
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lau7;
 
-    return v0
-.end method
+    iget-object v1, p0, Lau7;->b:Ljava/lang/String;
 
-.method public final n()Ljava/lang/String;
-    .locals 1
+    iget v2, p0, Lau7;->a:I
 
-    iget-object v0, p0, Lau7;->b:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lau7;-><init>(Ljava/lang/String;I)V
 
     return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lau7;->o:I
+
+    return v0
+.end method
+
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    iget-wide v0, p0, Lau7;->a:J
+    iget-object v0, p0, Lau7;->c:Lzt7;
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-eqz v0, :cond_0
 
-    iget-object p2, p0, Lau7;->b:Ljava/lang/String;
+    iget-object v1, p0, Lau7;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1}, Lzt7;->b(Landroid/view/View;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lau7;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v0, p0, Lau7;->a:I
+
+    iput v0, p1, Landroid/text/TextPaint;->linkColor:I
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
 
     return-void
 .end method

@@ -1,30 +1,23 @@
 .class public final Lntf;
-.super Ljava/lang/Object;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lotf;
 
-
-# instance fields
-.field public final a:Ljef;
-
-.field public final b:Ljef;
-
-.field public final c:Ljava/util/List;
+# static fields
+.field public static final c:Lntf;
 
 
 # direct methods
-.method public constructor <init>(Ljef;Ljef;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lntf;
 
-    iput-object p1, p0, Lntf;->a:Ljef;
+    const/16 v1, 0x8
 
-    iput-object p2, p0, Lntf;->b:Ljef;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    iput-object p3, p0, Lntf;->c:Ljava/util/List;
+    sput-object v0, Lntf;->c:Lntf;
 
     return-void
 .end method

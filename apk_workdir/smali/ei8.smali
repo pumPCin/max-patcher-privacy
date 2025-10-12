@@ -2,178 +2,127 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:Landroid/os/Bundle;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lk12;
+.field public final b:Z
 
-.field public final synthetic a:Lii8;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(IILk12;Lii8;Landroid/os/Bundle;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lei8;->Y:Lk12;
+    iput-object p1, p0, Lei8;->a:Ljava/lang/String;
 
-    iput-object p4, p0, Lei8;->a:Lii8;
+    iput-boolean p2, p0, Lei8;->b:Z
 
-    iput-object p6, p0, Lei8;->b:Ljava/lang/String;
-
-    iput p1, p0, Lei8;->c:I
-
-    iput p2, p0, Lei8;->o:I
-
-    iput-object p5, p0, Lei8;->X:Landroid/os/Bundle;
+    iput-boolean p3, p0, Lei8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v5, p0, Lei8;->a:Lii8;
+    const/4 v0, 0x1
 
-    iget-object v0, v5, Lii8;->a:Landroid/os/Messenger;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+    return v0
 
-    move-result-object v6
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lei8;->Y:Lk12;
+    if-eqz p1, :cond_2
 
-    iget-object v1, v0, Lk12;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lau8;
+    move-result-object v2
 
-    iget-object v1, v1, Lau8;->X:Lds;
+    const-class v3, Lei8;
 
-    invoke-virtual {v1, v6}, Lade;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v2, v3, :cond_1
 
-    move-object v1, v0
+    goto :goto_0
 
-    new-instance v0, Lai8;
+    :cond_1
+    check-cast p1, Lei8;
 
-    iget-object v1, v1, Lk12;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lei8;->a:Ljava/lang/String;
 
-    check-cast v1, Lau8;
+    iget-object v3, p1, Lei8;->a:Ljava/lang/String;
 
-    iget v3, p0, Lei8;->c:I
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    iget v4, p0, Lei8;->o:I
+    move-result v2
 
-    iget-object v2, p0, Lei8;->b:Ljava/lang/String;
+    if-eqz v2, :cond_2
 
-    invoke-direct/range {v0 .. v5}, Lai8;-><init>(Lau8;Ljava/lang/String;IILii8;)V
+    iget-boolean v2, p0, Lei8;->b:Z
 
-    iput-object v0, v1, Lau8;->Y:Lai8;
+    iget-boolean v3, p1, Lei8;->b:Z
 
-    iget-object v3, p0, Lei8;->X:Landroid/os/Bundle;
+    if-ne v2, v3, :cond_2
 
-    invoke-virtual {v1, v3}, Lau8;->b(Landroid/os/Bundle;)Lgz3;
+    iget-boolean v2, p0, Lei8;->c:Z
 
-    move-result-object v3
+    iget-boolean p1, p1, Lei8;->c:Z
 
-    const/4 v4, 0x0
+    if-ne v2, p1, :cond_2
 
-    iput-object v4, v1, Lau8;->Y:Lai8;
+    return v0
 
-    const-string v7, "MBServiceCompat"
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    if-nez v3, :cond_0
+.method public final hashCode()I
+    .locals 5
 
-    const-string v0, "No root for client "
+    iget-object v0, p0, Lei8;->a:Ljava/lang/String;
 
-    const-string v1, " from service "
+    const/16 v1, 0x1f
 
-    invoke-static {v0, v2, v1}, Lqw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v1, v0}, Ljl3;->c(IILjava/lang/String;)I
 
-    move-result-object v0
+    move-result v0
 
-    const-class v1, Lei8;
+    iget-boolean v2, p0, Lei8;->b:Z
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/16 v3, 0x4d5
 
-    move-result-object v1
+    const/16 v4, 0x4cf
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    const/4 v0, 0x2
-
-    :try_start_0
-    invoke-virtual {v5, v0, v4}, Lii8;->b(ILandroid/os/Bundle;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    const-string v0, "Calling onConnectFailed() failed. Ignoring. pkg="
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    move v2, v4
 
     goto :goto_0
 
     :cond_0
-    :try_start_1
-    iget-object v4, v1, Lau8;->X:Lds;
+    move v2, v3
 
-    invoke-virtual {v4, v6, v0}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_0
+    add-int/2addr v0, v2
 
-    const/4 v4, 0x0
+    mul-int/2addr v0, v1
 
-    invoke-interface {v6, v0, v4}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
+    iget-boolean v1, p0, Lei8;->c:Z
 
-    iget-object v0, v1, Lau8;->w0:Lxs8;
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_1
-
-    iget-object v3, v3, Lgz3;->a:Landroid/os/Bundle;
-
-    invoke-virtual {v5, v0, v3}, Lii8;->a(Lxs8;Landroid/os/Bundle;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
-
-    return-void
-
-    :catch_1
-    const-string v0, "Calling onConnect() failed. Dropping client. pkg="
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v0, v1, Lau8;->X:Lds;
-
-    invoke-virtual {v0, v6}, Lade;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move v3, v4
 
     :cond_1
-    :goto_0
-    return-void
+    add-int/2addr v0, v3
+
+    return v0
 .end method

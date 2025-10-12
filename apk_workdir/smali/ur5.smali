@@ -3,389 +3,127 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lim7;
+.implements Lqe0;
 
 
-# instance fields
-.field public final synthetic X:Lord;
-
-.field public final synthetic a:I
-
-.field public final b:Ljava/util/Iterator;
-
-.field public c:I
-
-.field public o:Ljava/lang/Object;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Liu5;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput v0, p0, Lur5;->a:I
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lur5;->X:Lord;
-
-    iget-object p1, p1, Liu5;->d:Ljava/lang/Object;
-
-    check-cast p1, Lord;
-
-    invoke-interface {p1}, Lord;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lur5;->b:Ljava/util/Iterator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lvr5;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lur5;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lur5;->X:Lord;
-
-    iget-object p1, p1, Lvr5;->a:Lord;
-
-    invoke-interface {p1}, Lord;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lur5;->b:Ljava/util/Iterator;
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lur5;->c:I
+    sput-object v0, Lur5;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 4
+.method public final a(Z)V
+    .locals 5
 
-    iget-object v0, p0, Lur5;->X:Lord;
+    sget-object v0, Lwr5;->j:Ljava/lang/Object;
 
-    check-cast v0, Lvr5;
+    monitor-enter v0
+
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    sget-object v2, Lwr5;->k:Lrs;
+
+    invoke-virtual {v2}, Lrs;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :cond_0
-    iget-object v1, p0, Lur5;->b:Ljava/util/Iterator;
-
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, v0, Lvr5;->c:Lxe6;
+    check-cast v2, Lwr5;
 
-    invoke-interface {v2, v1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, v2, Lwr5;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    const-string v3, "FirebaseApp"
+
+    const-string v4, "Notifying background state change listeners."
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v2, v2, Lwr5;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    iget-boolean v3, v0, Lvr5;->b:Z
-
-    if-ne v2, v3, :cond_0
-
-    iput-object v1, p0, Lur5;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lur5;->c:I
-
-    return-void
-
     :cond_1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lur5;->c:I
-
-    return-void
-.end method
-
-.method public b()Z
-    .locals 4
-
-    iget-object v0, p0, Lur5;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Iterator;
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput v1, p0, Lur5;->c:I
-
-    return v1
-
-    :cond_0
-    iget-object v0, p0, Lur5;->b:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lur5;->X:Lord;
-
-    check-cast v2, Liu5;
-
-    iget-object v3, v2, Liu5;->b:Ljava/lang/Object;
-
-    iget-object v2, v2, Liu5;->c:Lxe6;
-
-    invoke-interface {v2, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {v3, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iput-object v0, p0, Lur5;->o:Ljava/lang/Object;
-
-    iput v1, p0, Lur5;->c:I
-
-    return v1
-
-    :cond_1
-    const/4 v0, 0x2
-
-    iput v0, p0, Lur5;->c:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lur5;->o:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasNext()Z
-    .locals 2
-
-    iget v0, p0, Lur5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lur5;->c:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lur5;->b()Z
-
-    move-result v1
-
     :goto_0
-    return v1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    :pswitch_0
-    iget v0, p0, Lur5;->c:I
+    move-result v3
 
-    const/4 v1, -0x1
+    if-eqz v3, :cond_0
 
-    if-ne v0, v1, :cond_2
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lur5;->a()V
+    move-result-object v3
 
-    :cond_2
-    iget v0, p0, Lur5;->c:I
+    check-cast v3, Ltr5;
 
-    const/4 v1, 0x1
+    iget-object v3, v3, Ltr5;->a:Lwr5;
 
-    if-ne v0, v1, :cond_3
+    if-nez p1, :cond_1
+
+    iget-object v3, v3, Lwr5;->h:Ld5c;
+
+    invoke-interface {v3}, Ld5c;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lbh4;
+
+    invoke-virtual {v3}, Lbh4;->b()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
-    :cond_3
-    const/4 v1, 0x0
+    :cond_2
+    monitor-exit v0
+
+    return-void
 
     :goto_1
-    return v1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lur5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lur5;->c:I
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Lur5;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lur5;->c:I
-
-    iget-object v0, p0, Lur5;->o:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    iget v0, p0, Lur5;->c:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_3
-
-    invoke-virtual {p0}, Lur5;->a()V
-
-    :cond_3
-    iget v0, p0, Lur5;->c:I
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lur5;->o:Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lur5;->o:Ljava/lang/Object;
-
-    iput v1, p0, Lur5;->c:I
-
-    return-object v0
-
-    :cond_4
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    iget v0, p0, Lur5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

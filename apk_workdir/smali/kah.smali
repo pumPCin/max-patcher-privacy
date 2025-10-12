@@ -1,172 +1,88 @@
-.class public abstract Lkah;
+.class public final synthetic Lkah;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lws1;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lji4;
+
+.field public final synthetic c:Lw90;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lji4;Lw90;I)V
+    .locals 0
 
-    const-string v0, "WorkerFactory"
+    iput p3, p0, Lkah;->a:I
 
-    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lkah;->b:Lji4;
 
-    move-result-object v0
+    iput-object p2, p0, Lkah;->c:Lw90;
 
-    sput-object v0, Lkah;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lox7;
-.end method
+.method public final w(Lvs1;)Ljava/lang/String;
+    .locals 5
 
-.method public final b(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lox7;
-    .locals 6
+    iget v0, p0, Lkah;->a:I
 
-    sget-object v0, Lkah;->a:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2, p3}, Lkah;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lox7;
+    iget-object v0, p0, Lkah;->b:Lji4;
 
-    move-result-object v1
+    iget-object v1, v0, Lji4;->c:Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    check-cast v1, Llqd;
 
-    :try_start_0
-    invoke-static {p2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    new-instance v2, Llah;
 
-    move-result-object v2
+    const/4 v3, 0x1
 
-    const-class v3, Lox7;
+    iget-object v4, p0, Lkah;->c:Lw90;
 
-    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+    invoke-direct {v2, v0, p1, v4, v3}, Llah;-><init>(Lji4;Lvs1;Lw90;I)V
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
 
-    goto :goto_0
+    const-string p1, "setLinearZoom"
 
-    :catchall_0
-    move-exception v2
+    return-object p1
 
-    invoke-static {}, Lbf0;->n()Lbf0;
+    :pswitch_0
+    iget-object v0, p0, Lkah;->b:Lji4;
 
-    move-result-object v3
+    iget-object v1, v0, Lji4;->c:Ljava/lang/Object;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    check-cast v1, Llqd;
 
-    const-string v5, "Invalid class: "
+    new-instance v2, Llah;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v3, 0x0
 
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lkah;->c:Lw90;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v2, v0, p1, v4, v3}, Llah;-><init>(Lji4;Lvs1;Lw90;I)V
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
 
-    invoke-virtual {v3, v0, v4, v2}, Lbf0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string p1, "setZoomRatio"
 
-    const/4 v2, 0x0
+    return-object p1
 
-    :goto_0
-    if-eqz v2, :cond_0
+    nop
 
-    :try_start_1
-    const-class v3, Landroid/content/Context;
-
-    const-class v4, Landroidx/work/WorkerParameters;
-
-    filled-new-array {v3, v4}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    filled-new-array {p1, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lox7;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-object v1, p1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {}, Lbf0;->n()Lbf0;
-
-    move-result-object p3
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Could not instantiate "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p3, v0, v2, p1}, Lbf0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    :goto_1
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lox7;->isUsed()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p3, ") returned an instance of a ListenableWorker ("
-
-    const-string v0, ") which has already been invoked. createWorker() must always return a new instance of a ListenableWorker."
-
-    const-string v1, "WorkerFactory ("
-
-    invoke-static {v1, p1, p3, p2, v0}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    :goto_2
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

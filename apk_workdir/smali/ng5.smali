@@ -2,34 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqg5;
 
-# instance fields
-.field public final a:J
 
-.field public final b:Lt76;
-
-.field public final c:Lt76;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/lang/String;
+# static fields
+.field public static final a:Lng5;
 
 
 # direct methods
-.method public constructor <init>(JLt76;Lt76;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lng5;
 
-    iput-wide p1, p0, Lng5;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lng5;->b:Lt76;
-
-    iput-object p4, p0, Lng5;->c:Lt76;
-
-    iput-object p5, p0, Lng5;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lng5;->e:Ljava/lang/String;
+    sput-object v0, Lng5;->a:Lng5;
 
     return-void
 .end method

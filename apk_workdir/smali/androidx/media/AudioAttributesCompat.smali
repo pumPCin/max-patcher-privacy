@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls6g;
+.implements Lf5g;
 
 
 # static fields
@@ -56,6 +56,7 @@
 .method public constructor <init>()V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -64,8 +65,10 @@
 .method public constructor <init>(Landroidx/media/AudioAttributesImplApi26;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 3
     iput-object p1, p0, Landroidx/media/AudioAttributesCompat;->a:Landroidx/media/AudioAttributesImpl;
 
     return-void

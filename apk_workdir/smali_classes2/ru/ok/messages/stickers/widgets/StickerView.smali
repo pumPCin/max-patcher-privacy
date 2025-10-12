@@ -3,34 +3,31 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lq07;
-.implements Lnv9;
-.implements Lan7;
-.implements Ljgf;
+.implements Lnz6;
+.implements Lwl7;
+.implements Lyef;
 
 
 # static fields
-.field public static final synthetic B0:I
+.field public static final synthetic v0:I
 
 
 # instance fields
-.field public final A0:Lyn7;
+.field public final a:Loz6;
 
-.field public final a:Lr07;
-
-.field public final b:Ls07;
+.field public final b:Lpz6;
 
 .field public final c:I
 
 .field public final o:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-.field public w0:Z
+.field public r0:Z
 
-.field public x0:Z
+.field public s0:Lere;
 
-.field public y0:Llse;
+.field public t0:I
 
-.field public z0:I
+.field public final u0:Lum7;
 
 
 # direct methods
@@ -41,85 +38,83 @@
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-static {}, Lem;->b()Lsg3;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    check-cast p1, Lyka;
+    check-cast p1, Lnja;
 
-    invoke-virtual {p1}, Lyka;->h()Lpr5;
+    invoke-virtual {p1}, Lnja;->e()Lyq5;
 
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object p1
-
-    check-cast p1, Lyka;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    const-class p2, Lr07;
+    check-cast p1, Lnja;
 
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr07;
-
-    iput-object p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->a:Lr07;
-
-    invoke-static {}, Lem;->b()Lsg3;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object p1
 
-    check-cast p1, Lyka;
+    const-class p2, Loz6;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class p2, Ls07;
-
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ls07;
+    check-cast p1, Loz6;
 
-    iput-object p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->b:Ls07;
+    iput-object p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->a:Loz6;
 
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object p1
-
-    check-cast p1, Lyka;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
+    invoke-static {}, Lum;->b()Ljg3;
 
     move-result-object p1
 
-    const-class p2, Ljj0;
+    check-cast p1, Lnja;
 
-    invoke-virtual {p1, p2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object p1
 
-    check-cast p1, Ljj0;
+    const-class p2, Lpz6;
+
+    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpz6;
+
+    iput-object p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->b:Lpz6;
+
+    invoke-static {}, Lum;->b()Ljg3;
+
+    move-result-object p1
+
+    check-cast p1, Lnja;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object p1
+
+    const-class p2, Lbj0;
+
+    invoke-virtual {p1, p2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lbj0;
 
     const/4 p1, 0x1
 
-    iput-boolean p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->w0:Z
+    iput-boolean p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->r0:Z
 
-    iput-boolean v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->x0:Z
+    new-instance p2, Lum7;
 
-    new-instance p2, Lyn7;
+    const/16 v1, 0x1a
 
-    const/16 v1, 0x19
+    invoke-direct {p2, v1, p0}, Lum7;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, v1, p0}, Lyn7;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lru/ok/messages/stickers/widgets/StickerView;->A0:Lyn7;
+    iput-object p2, p0, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
 
     new-instance p2, Ljava/util/WeakHashMap;
 
@@ -131,11 +126,11 @@
 
     const/16 p2, 0x80
 
-    invoke-static {p2}, Lxq4;->b(I)I
+    invoke-static {p2}, Lkq4;->b(I)I
 
     const/16 p2, 0x90
 
-    invoke-static {p2}, Lxq4;->b(I)I
+    invoke-static {p2}, Lkq4;->b(I)I
 
     move-result p2
 
@@ -151,19 +146,19 @@
 
     iput-object p2, p0, Lru/ok/messages/stickers/widgets/StickerView;->o:Lcom/facebook/drawee/view/SimpleDraweeView;
 
-    iget-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->A0:Lyn7;
+    iget-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
 
     invoke-virtual {p0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {p2}, Ljy4;->getHierarchy()Lgy4;
+    invoke-virtual {p2}, Lwx4;->getHierarchy()Ltx4;
 
     move-result-object v1
 
-    check-cast v1, Lyj6;
+    check-cast v1, Lwi6;
 
-    iget-object v1, v1, Lyj6;->e:Lti5;
+    iget-object v1, v1, Lwi6;->e:Lgi5;
 
-    invoke-virtual {v1, p1}, Lti5;->c(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, p1}, Lgi5;->c(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -172,19 +167,19 @@
     goto :goto_0
 
     :cond_0
-    iget-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->A0:Lyn7;
+    iget-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
 
-    new-instance v2, Lyn7;
+    new-instance v2, Lum7;
 
-    iget-object v1, v1, Lyn7;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lum7;->b:Ljava/lang/Object;
 
     check-cast v1, Lru/ok/messages/stickers/widgets/StickerView;
 
-    const/16 v3, 0x19
+    const/16 v3, 0x1a
 
-    invoke-direct {v2, v3, v1}, Lyn7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lum7;-><init>(ILjava/lang/Object;)V
 
-    iput-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->A0:Lyn7;
+    iput-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
 
     const-wide/16 v3, 0x64
 
@@ -217,35 +212,37 @@
 
     invoke-virtual {v1, p1}, Lone/me/rlottie/RLottieImageView;->setAutoRepeat(Z)V
 
-    new-instance p1, Ljsc;
+    new-instance p1, Ll8d;
 
-    const/16 v2, 0x1a
+    const/16 v2, 0x14
 
-    invoke-direct {p1, v2, p0}, Ljsc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v2, p0}, Ll8d;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v1, p1}, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->setOnFirstFrameListener(Lkn7;)V
+    invoke-virtual {v1, p1}, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->setOnFirstFrameListener(Lhm7;)V
 
-    new-instance p1, Lmqe;
+    new-instance p1, Lvqe;
 
-    invoke-direct {p1, v2}, Lmqe;-><init>(I)V
+    const/4 v2, 0x6
 
-    invoke-virtual {v1, p1}, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->setFailureListener(Ljn7;)V
+    invoke-direct {p1, v2}, Lvqe;-><init>(I)V
+
+    invoke-virtual {v1, p1}, Lru/ok/tamtam/stickers/lottie/KeyboardLottieAnimationView;->setFailureListener(Lgm7;)V
 
     const/16 p1, 0x8
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-static {p1}, Lxq4;->b(I)I
+    invoke-static {p1}, Lkq4;->b(I)I
 
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v1, 0x1c
 
-    invoke-static {v1}, Lxq4;->b(I)I
+    invoke-static {v1}, Lkq4;->b(I)I
 
     move-result v2
 
-    invoke-static {v1}, Lxq4;->b(I)I
+    invoke-static {v1}, Lkq4;->b(I)I
 
     move-result v1
 
@@ -253,13 +250,13 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1}, Lxq4;->b(I)I
+    invoke-static {v1}, Lkq4;->b(I)I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
 
-    invoke-static {v1}, Lxq4;->b(I)I
+    invoke-static {v1}, Lkq4;->b(I)I
 
     move-result v1
 
@@ -269,25 +266,25 @@
 
     iput v1, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    new-instance p1, Lya4;
+    new-instance p1, Lja4;
 
-    new-instance v1, Lnxa;
+    new-instance v1, La5b;
 
-    const/16 v2, 0x16
+    const/16 v2, 0x13
 
-    invoke-direct {v1, v2, p0}, Lnxa;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, La5b;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1, v1, v0}, Lya4;-><init>(Landroid/view/View$OnClickListener;I)V
+    invoke-direct {p1, v1, v0}, Lja4;-><init>(Landroid/view/View$OnClickListener;I)V
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    new-instance p1, Lya4;
+    new-instance p1, Lja4;
 
-    new-instance v1, Lnxa;
+    new-instance v1, La5b;
 
-    invoke-direct {v1, v2, p0}, Lnxa;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, La5b;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1, v1, v0}, Lya4;-><init>(Landroid/view/View$OnClickListener;I)V
+    invoke-direct {p1, v1, v0}, Lja4;-><init>(Landroid/view/View$OnClickListener;I)V
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -306,36 +303,10 @@
 
 
 # virtual methods
-.method public final A(Ljava/lang/Throwable;)V
-    .locals 1
-
-    const-string p1, "ru.ok.messages.stickers.widgets.StickerView"
-
-    const-string v0, "videoPlayerError"
-
-    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lru/ok/messages/stickers/widgets/StickerView;->o:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setClickable(Z)V
-
-    return-void
-.end method
-
-.method public final D(ILandroid/view/KeyEvent;)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method public final a()V
     .locals 0
 
-    invoke-virtual {p0}, Lru/ok/messages/stickers/widgets/StickerView;->g()V
+    invoke-virtual {p0}, Lru/ok/messages/stickers/widgets/StickerView;->f()V
 
     return-void
 .end method
@@ -353,44 +324,117 @@
 
     move-result-object v0
 
-    sget-object v1, Lvaf;->a0:Ls5f;
+    sget-object v1, Lh9f;->a0:Lh4f;
 
-    invoke-static {v0}, Lnf2;->J(Landroid/content/Context;)Lvaf;
+    invoke-static {v0}, Luce;->e0(Landroid/content/Context;)Lh9f;
 
     return-void
 .end method
 
-.method public final g()V
+.method public final d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e(Ljava/io/File;)V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->clearAnimation()V
+
+    new-instance p1, Lere;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, p0, v0}, Lere;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    invoke-static {}, Lum;->b()Ljg3;
+
+    move-result-object p1
+
+    check-cast p1, Lnja;
+
+    invoke-virtual {p1}, Lnja;->l()Ld7f;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Ld7f;->a()Lz6f;
+
+    move-result-object p1
+
+    check-cast p1, Lhhd;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object p1
+
+    const-class v0, Lkg2;
+
+    invoke-virtual {p1, v0}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkg2;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lkg2;->d(Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-static {}, Lum;->b()Ljg3;
+
+    move-result-object p1
+
+    check-cast p1, Lnja;
+
+    invoke-virtual {p1}, Lnja;->n()Ld88;
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final f()V
     .locals 4
 
-    iget v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->z0:I
+    iget v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->t0:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->z0:I
+    iput v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->t0:I
 
     const/4 v1, 0x6
 
     if-le v0, v1, :cond_0
 
-    new-instance v0, Llse;
+    new-instance v0, Lere;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Llse;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
+    invoke-direct {v0, p0, v1}, Lere;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_0
-    new-instance v1, Llse;
+    new-instance v1, Lere;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Llse;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
+    invoke-direct {v1, p0, v2}, Lere;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
 
-    iput-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->y0:Llse;
+    iput-object v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->s0:Lere;
 
     mul-int/2addr v0, v0
 
@@ -423,7 +467,7 @@
     return v0
 .end method
 
-.method public getSticker()Lcqe;
+.method public getSticker()Lvoe;
     .locals 1
 
     const/4 v0, 0x0
@@ -431,88 +475,15 @@
     return-object v0
 .end method
 
-.method public final i()V
+.method public final h()V
     .locals 0
 
-    return-void
-.end method
-
-.method public final j(Ljava/io/File;)V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->clearAnimation()V
-
-    new-instance p1, Llse;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, p0, v0}, Llse;-><init>(Lru/ok/messages/stickers/widgets/StickerView;I)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object p1
-
-    check-cast p1, Lyka;
-
-    invoke-virtual {p1}, Lyka;->p()Lq8f;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lq8f;->b()Ll8f;
-
-    move-result-object p1
-
-    check-cast p1, Lzid;
-
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    const-class v0, Lfg2;
-
-    invoke-virtual {p1, v0}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfg2;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lfg2;->e(Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {}, Lem;->b()Lsg3;
-
-    move-result-object p1
-
-    check-cast p1, Lyka;
-
-    invoke-virtual {p1}, Lyka;->r()Lj98;
-
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final k()V
-    .locals 0
-
-    invoke-virtual {p0}, Lru/ok/messages/stickers/widgets/StickerView;->g()V
+    invoke-virtual {p0}, Lru/ok/messages/stickers/widgets/StickerView;->f()V
 
     return-void
 .end method
 
-.method public final n(FJ)V
+.method public final i(FJ)V
     .locals 0
 
     return-void
@@ -523,7 +494,7 @@
 
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    iget-object v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->A0:Lyn7;
+    iget-object v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->u0:Lum7;
 
     invoke-virtual {p0, v0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
@@ -533,27 +504,25 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->a:Lr07;
+    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->a:Loz6;
 
-    iget-object v2, v2, Lr07;->a:Lfd;
+    iget-object v2, v2, Loz6;->a:Lmd;
 
-    invoke-virtual {v2, p0}, Lfd;->h(Lru/ok/messages/stickers/widgets/StickerView;)V
+    invoke-virtual {v2, p0}, Lmd;->h(Lru/ok/messages/stickers/widgets/StickerView;)V
 
-    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->b:Ls07;
+    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->b:Lpz6;
 
-    iget-object v2, v2, Ls07;->a:Lfd;
+    iget-object v2, v2, Lpz6;->a:Lmd;
 
-    invoke-virtual {v2, p0}, Lfd;->h(Lru/ok/messages/stickers/widgets/StickerView;)V
+    invoke-virtual {v2, p0}, Lmd;->h(Lru/ok/messages/stickers/widgets/StickerView;)V
 
-    iput-boolean v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->w0:Z
+    iput-boolean v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->r0:Z
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->x0:Z
+    iput v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->t0:I
 
-    iput v1, p0, Lru/ok/messages/stickers/widgets/StickerView;->z0:I
-
-    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->y0:Llse;
+    iget-object v2, p0, Lru/ok/messages/stickers/widgets/StickerView;->s0:Lere;
 
     if-eqz v2, :cond_0
 
@@ -573,12 +542,6 @@
     return-void
 .end method
 
-.method public final s()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public setClickable(Z)V
     .locals 1
 
@@ -591,13 +554,13 @@
     return-void
 .end method
 
-.method public setListener(Lmse;)V
+.method public setListener(Lfre;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setLottieLayer(Lk78;)V
+.method public setLottieLayer(Ld68;)V
     .locals 0
 
     return-void
@@ -615,7 +578,7 @@
     return-void
 .end method
 
-.method public setStickerMediaPlayerController(Lvp8;)V
+.method public setStickerMediaPlayerController(Lpo8;)V
     .locals 0
 
     return-void
@@ -627,31 +590,10 @@
     return-void
 .end method
 
-.method public final w()V
-    .locals 2
+.method public final t(ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    const-string v0, "ru.ok.messages.stickers.widgets.StickerView"
+    const/4 p1, 0x0
 
-    const-string v1, "onVideoEnd"
-
-    invoke-static {v0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->x0:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Lru/ok/messages/stickers/widgets/StickerView;->w0:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    return-void
+    return p1
 .end method

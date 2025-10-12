@@ -1,9 +1,9 @@
 .class public final Lci1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lci1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lci1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,42 +60,45 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 4
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lci1;->X:Ljava/lang/Object;
 
-    check-cast p1, Lhy9;
+    check-cast p1, Lei1;
 
-    instance-of v0, p1, Lj73;
+    iget-object v0, p0, Lci1;->Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->Z:Lvoc;
 
-    iget-object p1, p0, Lci1;->Y:Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;
+    sget-object v2, Lone/me/calllist/ui/callpresettings/CallPresettingsScreen;->r0:[Lpl7;
 
-    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
+    const/4 v3, 0x2
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Li8d;->B(Lb04;)Z
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-boolean p1, p1, Lei1;->a:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lzc4;
+    const/16 p1, 0x8
 
-    if-eqz v0, :cond_1
-
-    sget-object v0, Ln81;->c:Ln81;
-
-    check-cast p1, Lzc4;
-
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
-
-    :cond_1
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

@@ -1,189 +1,189 @@
-.class public final Lfrg;
+.class public final synthetic Lfrg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lhrg;
+.implements Lri6;
 
 
-# instance fields
-.field public final a:Ljef;
+# static fields
+.field public static final a:Lfrg;
 
-.field public final b:Loef;
-
-.field public final c:Ljava/util/List;
+.field private static final descriptor:Lmqd;
 
 
 # direct methods
-.method public constructor <init>(Ljef;Loef;Ljava/util/List;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    sget v0, Lg9d;->a:I
+    new-instance v0, Lfrg;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfrg;->a:Ljef;
+    sput-object v0, Lfrg;->a:Lfrg;
 
-    iput-object p2, p0, Lfrg;->b:Loef;
+    new-instance v1, Lflb;
 
-    iput-object p3, p0, Lfrg;->c:Ljava/util/List;
+    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryGetInfoRequest"
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v0, v3}, Lflb;-><init>(Ljava/lang/String;Lri6;I)V
+
+    const-string v0, "queryId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    const-string v0, "requestId"
+
+    invoke-virtual {v1, v0, v2}, Lflb;->k(Ljava/lang/String;Z)V
+
+    sput-object v1, Lfrg;->descriptor:Lmqd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Lx8;)Ljava/lang/Object;
+    .locals 9
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lfrg;->descriptor:Lmqd;
 
-    goto :goto_1
+    invoke-virtual {p1, v0}, Lx8;->k(Lmqd;)Lx8;
 
-    :cond_0
-    instance-of v0, p1, Lfrg;
+    move-result-object p1
 
-    if-nez v0, :cond_1
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    move v5, v1
+
+    move v6, v2
+
+    move-object v4, v3
+
+    :goto_0
+    if-eqz v5, :cond_3
+
+    invoke-virtual {p1, v0}, Lx8;->q(Lmqd;)I
+
+    move-result v7
+
+    const/4 v8, -0x1
+
+    if-eq v7, v8, :cond_2
+
+    if-eqz v7, :cond_1
+
+    if-ne v7, v1, :cond_0
+
+    invoke-virtual {p1, v0, v1}, Lx8;->w(Lmqd;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    or-int/lit8 v6, v6, 0x2
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
+
+    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+
+    throw p1
+
     :cond_1
-    check-cast p1, Lfrg;
+    sget-object v7, Llwe;->a:Llwe;
 
-    sget v0, Lg9d;->a:I
+    invoke-virtual {p1, v0, v2, v3}, Lx8;->s(Lmqd;ILjava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v3
 
-    iget-object v0, p0, Lfrg;->a:Ljef;
+    check-cast v3, Ljava/lang/String;
 
-    iget-object v1, p1, Lfrg;->a:Ljef;
-
-    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    or-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lfrg;->b:Loef;
-
-    iget-object v1, p1, Lfrg;->b:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
+    move v5, v2
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lfrg;->c:Ljava/util/List;
+    invoke-virtual {p1, v0}, Lx8;->z(Lmqd;)V
 
-    iget-object p1, p1, Lfrg;->c:Ljava/util/List;
+    new-instance p1, Lhrg;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p1, v6, v3, v4}, Lhrg;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final b(Lmz3;Ljava/lang/Object;)V
     .locals 3
 
-    sget v0, Lg9d;->A:I
+    check-cast p2, Lhrg;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    sget-object v0, Lfrg;->descriptor:Lmqd;
 
-    move-result v0
+    invoke-virtual {p1, v0}, Lmz3;->b(Lmqd;)Lmz3;
 
-    const/16 v1, 0x1f
+    move-result-object p1
 
-    mul-int/2addr v0, v1
+    sget-object v1, Llwe;->a:Llwe;
 
-    iget-object v2, p0, Lfrg;->a:Ljef;
+    iget-object v1, p2, Lhrg;->a:Ljava/lang/String;
 
-    iget v2, v2, Ljef;->b:I
+    const/4 v2, 0x0
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-virtual {p1, v0, v2, v1}, Lmz3;->h(Lmqd;ILjava/lang/Object;)V
 
-    move-result v0
+    iget-object p2, p2, Lhrg;->b:Ljava/lang/String;
 
-    iget-object v2, p0, Lfrg;->b:Loef;
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1, v2}, Lqe0;->b(IILoef;)I
+    invoke-virtual {p1, v0, v1, p2}, Lmz3;->l(Lmqd;ILjava/lang/String;)V
 
-    move-result v0
+    invoke-virtual {p1}, Lmz3;->m()V
 
-    iget-object v1, p0, Lfrg;->c:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final c()[Lql7;
     .locals 3
 
-    sget v0, Lg9d;->A:I
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "RequestBiometryAccess(icon="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", title="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lfrg;->a:Ljef;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", description="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lfrg;->b:Loef;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", buttons="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lfrg;->c:Ljava/util/List;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Loza;->p()Lql7;
 
     move-result-object v0
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Lql7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sget-object v0, Llwe;->a:Llwe;
+
+    const/4 v2, 0x1
+
+    aput-object v0, v1, v2
+
+    return-object v1
+.end method
+
+.method public final d()Lmqd;
+    .locals 1
+
+    sget-object v0, Lfrg;->descriptor:Lmqd;
 
     return-object v0
 .end method

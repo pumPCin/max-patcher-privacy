@@ -2,22 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
-
 
 # virtual methods
-.method public abstract F()Landroid/media/MediaCodec$BufferInfo;
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract J()Z
+.method public abstract b()Landroid/media/MediaFormat;
 .end method
 
-.method public abstract b0()J
-.end method
-
-.method public abstract r()Ljava/nio/ByteBuffer;
-.end method
-
-.method public abstract size()J
+.method public abstract c()Lqgf;
 .end method

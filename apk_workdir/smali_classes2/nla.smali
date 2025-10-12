@@ -1,79 +1,80 @@
 .class public final Lnla;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public A0:Z
+.field public final synthetic a:I
 
-.field public B0:Z
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public C0:J
+.field public final synthetic c:Lw37;
 
-.field public D0:J
-
-.field public E0:I
-
-.field public F0:I
-
-.field public G0:I
-
-.field public synthetic H0:Ljava/lang/Object;
-
-.field public final synthetic I0:Lula;
-
-.field public J0:I
-
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public w0:Ljava/lang/Object;
-
-.field public x0:Ljava/lang/Object;
-
-.field public y0:Ljava/lang/CharSequence;
-
-.field public z0:Lv39;
+.field public final synthetic o:Landroid/graphics/drawable/Animatable;
 
 
 # direct methods
-.method public constructor <init>(Lula;Lnz3;)V
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lw37;Landroid/graphics/drawable/Animatable;I)V
     .locals 0
 
-    iput-object p1, p0, Lnla;->I0:Lula;
+    iput p5, p0, Lnla;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnla;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p3, p0, Lnla;->c:Lw37;
+
+    iput-object p4, p0, Lnla;->o:Landroid/graphics/drawable/Animatable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    iput-object p1, p0, Lnla;->H0:Ljava/lang/Object;
+    iget v0, p0, Lnla;->a:I
 
-    iget p1, p0, Lnla;->J0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lnla;->c:Lw37;
 
-    or-int/2addr p1, v0
+    iget-object v1, p0, Lnla;->o:Landroid/graphics/drawable/Animatable;
 
-    iput p1, p0, Lnla;->J0:I
+    iget-object v2, p0, Lnla;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    iget-object p1, p0, Lnla;->I0:Lula;
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->i(Lw37;Landroid/graphics/drawable/Animatable;)V
 
-    const/4 v0, 0x0
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    invoke-static {p1, v0, v0, p0}, Lula;->a(Lula;Lja8;Luy;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lnla;->c:Lw37;
+
+    iget-object v1, p0, Lnla;->o:Landroid/graphics/drawable/Animatable;
+
+    iget-object v2, p0, Lnla;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->i(Lw37;Landroid/graphics/drawable/Animatable;)V
+
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,183 +1,126 @@
-.class public abstract Ltxe;
+.class public final Ltxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp6e;
 
-# static fields
-.field public static final a:[Ljava/lang/String;
 
-.field public static final b:[B
+# instance fields
+.field public final a:Lp6e;
+
+.field public final b:Lzq2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lya5;Lzq2;)V
+    .locals 0
 
-    const/16 v0, 0x5d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [Ljava/lang/String;
+    iput-object p1, p0, Ltxe;->a:Lp6e;
 
-    const/4 v2, 0x0
-
-    move v3, v2
-
-    :goto_0
-    const/16 v4, 0x20
-
-    if-ge v3, v4, :cond_0
-
-    shr-int/lit8 v4, v3, 0xc
-
-    invoke-static {v4}, Ltxe;->a(I)C
-
-    move-result v4
-
-    shr-int/lit8 v5, v3, 0x8
-
-    invoke-static {v5}, Ltxe;->a(I)C
-
-    move-result v5
-
-    shr-int/lit8 v6, v3, 0x4
-
-    invoke-static {v6}, Ltxe;->a(I)C
-
-    move-result v6
-
-    invoke-static {v3}, Ltxe;->a(I)C
-
-    move-result v7
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "\\u"
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v1, v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const-string v3, "\\\""
-
-    const/16 v5, 0x22
-
-    aput-object v3, v1, v5
-
-    const-string v3, "\\\\"
-
-    const/16 v6, 0x5c
-
-    aput-object v3, v1, v6
-
-    const-string v3, "\\t"
-
-    const/16 v7, 0x9
-
-    aput-object v3, v1, v7
-
-    const-string v3, "\\b"
-
-    const/16 v8, 0x8
-
-    aput-object v3, v1, v8
-
-    const-string v3, "\\n"
-
-    const/16 v9, 0xa
-
-    aput-object v3, v1, v9
-
-    const-string v3, "\\r"
-
-    const/16 v10, 0xd
-
-    aput-object v3, v1, v10
-
-    const-string v3, "\\f"
-
-    const/16 v11, 0xc
-
-    aput-object v3, v1, v11
-
-    sput-object v1, Ltxe;->a:[Ljava/lang/String;
-
-    new-array v0, v0, [B
-
-    :goto_1
-    if-ge v2, v4, :cond_1
-
-    const/4 v1, 0x1
-
-    aput-byte v1, v0, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    aput-byte v5, v0, v5
-
-    aput-byte v6, v0, v6
-
-    const/16 v1, 0x74
-
-    aput-byte v1, v0, v7
-
-    const/16 v1, 0x62
-
-    aput-byte v1, v0, v8
-
-    const/16 v1, 0x6e
-
-    aput-byte v1, v0, v9
-
-    const/16 v1, 0x72
-
-    aput-byte v1, v0, v10
-
-    const/16 v1, 0x66
-
-    aput-byte v1, v0, v11
-
-    sput-object v0, Ltxe;->b:[B
+    iput-object p2, p0, Ltxe;->b:Lzq2;
 
     return-void
 .end method
 
-.method public static final a(I)C
+
+# virtual methods
+.method public final b()Ljava/util/List;
     .locals 1
 
-    and-int/lit8 p0, p0, 0xf
+    iget-object v0, p0, Ltxe;->a:Lp6e;
 
-    const/16 v0, 0xa
+    invoke-interface {v0}, Lp6e;->b()Ljava/util/List;
 
-    if-ge p0, v0, :cond_0
+    move-result-object v0
 
-    add-int/lit8 p0, p0, 0x30
+    return-object v0
+.end method
 
-    :goto_0
-    int-to-char p0, p0
+.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 4
 
-    return p0
+    instance-of v0, p2, Lsxe;
 
-    :cond_0
-    add-int/lit8 p0, p0, 0x57
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lsxe;
+
+    iget v1, v0, Lsxe;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lsxe;->Y:I
 
     goto :goto_0
+
+    :cond_0
+    new-instance v0, Lsxe;
+
+    invoke-direct {v0, p0, p2}, Lsxe;-><init>(Ltxe;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lsxe;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lsxe;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v2, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p2}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p2}, Lcea;->z(Ljava/lang/Object;)V
+
+    new-instance p2, Lrxe;
+
+    iget-object v1, p0, Ltxe;->b:Lzq2;
+
+    invoke-direct {p2, p1, v1}, Lrxe;-><init>(Lku5;Lzq2;)V
+
+    iput v2, v0, Lsxe;->Y:I
+
+    iget-object p1, p0, Ltxe;->a:Lp6e;
+
+    invoke-interface {p1, p2, v0}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_3
+
+    return-object p2
+
+    :cond_3
+    :goto_1
+    new-instance p1, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p1}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p1
 .end method

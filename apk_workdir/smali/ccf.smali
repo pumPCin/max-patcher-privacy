@@ -1,103 +1,106 @@
 .class public final Lccf;
-.super Lqbf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public a:I
+
+.field public final synthetic b:Landroid/widget/EditText;
+
+.field public final synthetic c:Lcom/google/android/material/textfield/TextInputLayout;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;JLvbf;)V
+.method public constructor <init>(Lcom/google/android/material/textfield/TextInputLayout;Landroid/widget/EditText;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p4}, Lqbf;-><init>(JLvbf;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lccf;->a:Ljava/lang/Runnable;
+    iput-object p1, p0, Lccf;->c:Lcom/google/android/material/textfield/TextInputLayout;
+
+    iput-object p2, p0, Lccf;->b:Landroid/widget/EditText;
+
+    invoke-virtual {p2}, Landroid/widget/TextView;->getLineCount()I
+
+    move-result p1
+
+    iput p1, p0, Lccf;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 3
 
-    :try_start_0
-    iget-object v0, p0, Lccf;->a:Ljava/lang/Runnable;
+    iget-object v0, p0, Lccf;->c:Lcom/google/android/material/textfield/TextInputLayout;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->K1:Z
 
-    iget-object v0, p0, Lqbf;->taskContext:Lvbf;
+    xor-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
+    invoke-virtual {v0, v1, v2}, Lcom/google/android/material/textfield/TextInputLayout;->u(ZZ)V
+
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->x0:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->n(Landroid/text/Editable;)V
+
+    :cond_0
+    iget-boolean v1, v0, Lcom/google/android/material/textfield/TextInputLayout;->F0:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/textfield/TextInputLayout;->v(Landroid/text/Editable;)V
+
+    :cond_1
+    iget-object p1, p0, Lccf;->b:Landroid/widget/EditText;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLineCount()I
+
+    move-result v1
+
+    iget v2, p0, Lccf;->a:I
+
+    if-eq v1, v2, :cond_3
+
+    if-ge v1, v2, :cond_2
+
+    sget-object v2, Lijg;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getMinimumHeight()I
+
+    move-result v2
+
+    iget v0, v0, Lcom/google/android/material/textfield/TextInputLayout;->D1:I
+
+    if-eq v2, v0, :cond_2
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setMinimumHeight(I)V
+
+    :cond_2
+    iput v1, p0, Lccf;->a:I
+
+    :cond_3
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lqbf;->taskContext:Lvbf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    throw v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "Task["
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lccf;->a:Ljava/lang/Runnable;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x40
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Lvb4;->q(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v2, p0, Lqbf;->submissionTime:J
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqbf;->taskContext:Lvbf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

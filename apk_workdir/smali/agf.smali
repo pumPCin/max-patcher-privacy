@@ -1,257 +1,139 @@
-.class public abstract Lagf;
-.super Ljava/lang/Object;
+.class public final Lagf;
+.super Le4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:[I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lagf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:[I
+
+# instance fields
+.field public X:F
+
+.field public a:Ldgh;
+
+.field public b:Z
+
+.field public c:F
+
+.field public o:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Lvac;->colorPrimary:I
+    new-instance v0, Lgng;
 
-    filled-new-array {v0}, [I
+    const/16 v1, 0x1b
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lgng;-><init>(I)V
 
-    sput-object v0, Lagf;->a:[I
-
-    sget v0, Lvac;->colorPrimaryVariant:I
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lagf;->b:[I
+    sput-object v0, Lagf;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+.method public constructor <init>()V
     .locals 1
 
-    sget-object v0, Lqlc;->ThemeEnforcement:[I
-
-    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    sget p2, Lqlc;->ThemeEnforcement_enforceMaterialTheme:I
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    if-eqz p2, :cond_1
-
-    new-instance p1, Landroid/util/TypedValue;
-
-    invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object p2
-
-    sget p3, Lvac;->isMaterialTheme:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    invoke-virtual {p2, p3, p1, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+    iput-boolean v0, p0, Lagf;->b:Z
 
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    iget p2, p1, Landroid/util/TypedValue;->type:I
-
-    const/16 p3, 0x12
-
-    if-ne p2, p3, :cond_1
-
-    iget p1, p1, Landroid/util/TypedValue;->data:I
-
-    if-nez p1, :cond_1
-
-    :cond_0
-    sget-object p1, Lagf;->b:[I
-
-    const-string p2, "Theme.MaterialComponents"
-
-    invoke-static {p0, p1, p2}, Lagf;->c(Landroid/content/Context;[ILjava/lang/String;)V
-
-    :cond_1
-    sget-object p1, Lagf;->a:[I
-
-    const-string p2, "Theme.AppCompat"
-
-    invoke-static {p0, p1, p2}, Lagf;->c(Landroid/content/Context;[ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static varargs b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
-    .locals 5
-
-    sget-object v0, Lqlc;->ThemeEnforcement:[I
-
-    invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    sget v1, Lqlc;->ThemeEnforcement_enforceTextAppearance:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
-
-    :cond_0
-    array-length v1, p5
-
-    const/4 v3, 0x1
-
-    const/4 v4, -0x1
-
-    if-nez v1, :cond_1
-
-    sget p0, Lqlc;->ThemeEnforcement_android_textAppearance:I
-
-    invoke-virtual {v0, p0, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p0
-
-    if-eq p0, v4, :cond_4
-
-    :goto_0
-    move v2, v3
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p0
-
-    array-length p1, p5
-
-    move p2, v2
-
-    :goto_1
-    if-ge p2, p1, :cond_3
-
-    aget p3, p5, p2
-
-    invoke-virtual {p0, p3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result p3
-
-    if-ne p3, v4, :cond_2
-
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    goto :goto_2
-
-    :cond_2
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    goto :goto_0
-
-    :cond_4
-    :goto_2
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    if-eqz v2, :cond_5
-
-    return-void
-
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "This component requires that you specify a valid TextAppearance attribute. Update your app theme to inherit from Theme.MaterialComponents (or a descendant)."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static c(Landroid/content/Context;[ILjava/lang/String;)V
-    .locals 2
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
-    move-result-object p0
+    iput-boolean v0, p0, Lagf;->o:Z
 
     const/4 v0, 0x0
 
-    :goto_0
-    array-length v1, p1
-
-    if-ge v0, v1, :cond_1
-
-    invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "The style on this component requires your app theme to be "
-
-    const-string v0, " (or a descendant)."
-
-    invoke-static {p1, p2, v0}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+    iput v0, p0, Lagf;->X:F
 
     return-void
 .end method
 
-.method public static varargs d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
-    .locals 0
 
-    invoke-static {p0, p1, p3, p4}, Lagf;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+# virtual methods
+.method public final b(Lbgf;)V
+    .locals 1
 
-    invoke-static/range {p0 .. p5}, Lagf;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+    new-instance v0, Lofh;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-direct {v0, p1}, Lofh;-><init>(Lbgf;)V
 
-    move-result-object p0
+    iput-object v0, p0, Lagf;->a:Ldgh;
 
-    return-object p0
+    return-void
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lnjg;->S(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-object v0, p0, Lagf;->a:Ldgh;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    :goto_0
+    const/4 v1, 0x2
+
+    invoke-static {p1, v1, v0}, Lnjg;->N(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    iget-boolean v0, p0, Lagf;->b:Z
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x4
+
+    invoke-static {p1, v1, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lagf;->c:F
+
+    invoke-static {p1, v2, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-boolean v0, p0, Lagf;->o:Z
+
+    const/4 v1, 0x5
+
+    invoke-static {p1, v1, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lagf;->X:F
+
+    const/4 v1, 0x6
+
+    invoke-static {p1, v1, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    invoke-static {p1, p2}, Lnjg;->T(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

@@ -1,14 +1,21 @@
-.class public abstract Lhh0;
-.super Ljava/lang/Object;
+.class public final Lhh0;
+.super Lrp;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Comparator;
-.end method
+# static fields
+.field public static final a:Lhh0;
 
-.method public abstract b()Lxe6;
-.end method
 
-.method public abstract c()Lve6;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lhh0;
+
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Lhh0;->a:Lhh0;
+
+    return-void
 .end method

@@ -1,248 +1,173 @@
-.class public final enum Lfxf;
-.super Ljava/lang/Enum;
+.class public final Lfxf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lfxf;
-
-.field public static final enum Y:Lfxf;
-
-.field public static final enum Z:Lfxf;
-
-.field public static final b:Ljava/util/LinkedHashMap;
-
-.field public static final enum c:Lfxf;
-
-.field public static final enum o:Lfxf;
-
-.field public static final enum w0:Lfxf;
-
-.field public static final enum x0:Lfxf;
-
-.field public static final enum y0:Lfxf;
-
-.field public static final synthetic z0:[Lfxf;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ln24;
+
+.field public final b:Lrw3;
+
+.field public final c:Le7f;
+
+.field public final d:Lyn7;
+
+.field public final e:Lyn7;
+
+.field public final f:Lyn7;
+
+.field public final g:Lyn7;
+
+.field public final h:Lhne;
+
+.field public final i:Lbpc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lane;Lkotlinx/coroutines/internal/ContextScope;Lrw3;Le7f;Lyn7;Lyn7;Lyn7;Lyn7;)V
+    .locals 8
 
-    new-instance v0, Lfxf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "INTEGER"
+    iput-object p2, p0, Lfxf;->a:Ln24;
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lfxf;->b:Lrw3;
 
-    invoke-direct {v0, v1, v2, v2}, Lfxf;-><init>(Ljava/lang/String;II)V
+    iput-object p4, p0, Lfxf;->c:Le7f;
 
-    sput-object v0, Lfxf;->c:Lfxf;
+    iput-object p6, p0, Lfxf;->d:Lyn7;
 
-    new-instance v1, Lfxf;
+    iput-object p7, p0, Lfxf;->e:Lyn7;
 
-    const-string v2, "FLOAT"
+    move-object/from16 p6, p8
 
-    const/4 v3, 0x1
+    iput-object p6, p0, Lfxf;->f:Lyn7;
 
-    invoke-direct {v1, v2, v3, v3}, Lfxf;-><init>(Ljava/lang/String;II)V
+    iput-object p5, p0, Lfxf;->g:Lyn7;
 
-    sput-object v1, Lfxf;->o:Lfxf;
+    const/4 p5, 0x0
 
-    new-instance v2, Lfxf;
+    invoke-static {p5}, Line;->a(Ljava/lang/Object;)Lhne;
 
-    const-string v3, "LONG"
+    move-result-object p6
 
-    const/4 v4, 0x2
+    iput-object p6, p0, Lfxf;->h:Lhne;
 
-    invoke-direct {v2, v3, v4, v4}, Lfxf;-><init>(Ljava/lang/String;II)V
+    new-instance v0, Lbpc;
 
-    sput-object v2, Lfxf;->X:Lfxf;
+    invoke-direct {v0, p6}, Lbpc;-><init>(Lis9;)V
 
-    new-instance v3, Lfxf;
+    iput-object v0, p0, Lfxf;->i:Lbpc;
 
-    const-string v4, "STRING"
+    invoke-interface {p1}, Lane;->getValue()Ljava/lang/Object;
 
-    const/4 v5, 0x3
+    move-result-object p1
 
-    invoke-direct {v3, v4, v5, v5}, Lfxf;-><init>(Ljava/lang/String;II)V
+    check-cast p1, Lr82;
 
-    sput-object v3, Lfxf;->Y:Lfxf;
-
-    new-instance v4, Lfxf;
-
-    const-string v5, "STRINGS_SET"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6, v6}, Lfxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lfxf;->Z:Lfxf;
-
-    new-instance v5, Lfxf;
-
-    const-string v6, "BOOLEAN"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7, v7}, Lfxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lfxf;->w0:Lfxf;
-
-    new-instance v6, Lfxf;
-
-    const-string v7, "BIG_STRING"
-
-    const/4 v8, 0x6
-
-    const/16 v9, 0x10
-
-    invoke-direct {v6, v7, v8, v9}, Lfxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lfxf;->x0:Lfxf;
-
-    new-instance v7, Lfxf;
-
-    const/4 v8, 0x7
-
-    const/16 v10, 0x11
-
-    const-string v11, "BIG_STRINGS_SET"
-
-    invoke-direct {v7, v11, v8, v10}, Lfxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v7, Lfxf;->y0:Lfxf;
-
-    filled-new-array/range {v0 .. v7}, [Lfxf;
-
-    move-result-object v0
-
-    sput-object v0, Lfxf;->z0:[Lfxf;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    const/16 v0, 0xa
-
-    invoke-static {v1, v0}, Lg93;->V(Ljava/lang/Iterable;I)I
-
-    move-result v0
-
-    invoke-static {v0}, Lwa8;->V(I)I
-
-    move-result v0
-
-    if-ge v0, v9, :cond_0
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v9, v0
+    invoke-virtual {p1}, Lr82;->L()Z
 
-    :goto_0
-    new-instance v0, Ljava/util/LinkedHashMap;
+    move-result p6
 
-    invoke-direct {v0, v9}, Ljava/util/LinkedHashMap;-><init>(I)V
+    if-eqz p6, :cond_3
 
-    new-instance v2, Lu1;
+    invoke-virtual {p1}, Lr82;->B()Z
 
-    const/4 v3, 0x0
+    move-result p6
 
-    invoke-direct {v2, v3, v1}, Lu1;-><init>(ILjava/lang/Object;)V
+    if-nez p6, :cond_1
 
-    :goto_1
-    invoke-virtual {v2}, Lu1;->hasNext()Z
+    invoke-virtual {p1}, Lr82;->Q()Z
 
-    move-result v1
+    move-result p6
 
-    if-eqz v1, :cond_1
+    if-nez p6, :cond_1
 
-    invoke-virtual {v2}, Lu1;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v3, v1
-
-    check-cast v3, Lfxf;
-
-    iget v3, v3, Lfxf;->a:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    sput-object v0, Lfxf;->b:Ljava/util/LinkedHashMap;
+    invoke-virtual {p1}, Lr82;->l()Lro3;
 
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Lro3;->t()Z
+
+    move-result p6
+
+    if-eqz p6, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lro3;->n()J
+
+    move-result-wide p5
+
+    invoke-static {p5, p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p5
+
+    :cond_3
+    :goto_0
+    if-eqz p5, :cond_4
+
+    invoke-virtual {p5}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p5
+
+    invoke-virtual {p3, p5, p6}, Lrw3;->c(J)Lbpc;
+
+    move-result-object p1
+
+    new-instance p3, La13;
+
+    const/16 p5, 0x9
+
+    invoke-direct {p3, p1, p5}, La13;-><init>(Liu5;I)V
+
+    new-instance v0, Lqgb;
+
+    const/4 v6, 0x4
+
+    const/16 v7, 0x1b
+
+    const/4 v1, 0x2
+
+    const-class v3, Lfxf;
+
+    const-string v4, "handleContact"
+
+    const-string v5, "handleContact(Lru/ok/tamtam/contacts/Contact;)V"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Lqgb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance p1, Lnw5;
+
+    const/4 p5, 0x1
+
+    invoke-direct {p1, p3, v0, p5}, Lnw5;-><init>(Liu5;Lje6;I)V
+
+    check-cast p4, Lmka;
+
+    invoke-virtual {p4}, Lmka;->b()Lh24;
+
+    move-result-object p3
+
+    invoke-static {p1, p3}, Luce;->H(Liu5;Lf24;)Liu5;
+
+    move-result-object p1
+
+    invoke-static {p1, p2}, Luce;->N(Liu5;Ln24;)Loke;
+
+    :cond_4
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lfxf;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lfxf;
-    .locals 1
-
-    const-class v0, Lfxf;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lfxf;
-
-    return-object p0
-.end method
-
-.method public static values()[Lfxf;
-    .locals 1
-
-    sget-object v0, Lfxf;->z0:[Lfxf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lfxf;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    sget-object v0, Lfxf;->y0:Lfxf;
-
-    if-ne p0, v0, :cond_0
-
-    sget-object v0, Lfxf;->x0:Lfxf;
-
-    invoke-virtual {v0}, Lfxf;->a()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    iget v0, p0, Lfxf;->a:I
-
-    return v0
 .end method

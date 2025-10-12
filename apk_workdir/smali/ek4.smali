@@ -1,99 +1,110 @@
 .class public final Lek4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lq5h;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewGroup;
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic b:Landroid/view/View;
+.field public final c:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lmje;
-
-.field public final synthetic e:Lfk4;
+.field public volatile d:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/View;ZLmje;Lfk4;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lek4;->a:Landroid/view/ViewGroup;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lek4;->b:Landroid/view/View;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-boolean p3, p0, Lek4;->c:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lek4;->d:Lmje;
+    iput-object v0, p0, Lek4;->b:Ljava/lang/Object;
 
-    iput-object p5, p0, Lek4;->e:Lfk4;
+    new-instance v0, Lb30;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lb30;-><init>(I)V
+
+    const/4 v1, 0x4
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lek4;->c:Ljava/util/concurrent/ExecutorService;
 
     return-void
 .end method
 
+.method public static M(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 4
 
-# virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object p1, p0, Lek4;->a:Landroid/view/ViewGroup;
+    const/16 v1, 0x1c
 
-    iget-object v0, p0, Lek4;->b:Landroid/view/View;
+    if-lt v0, v1, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+    invoke-static {p0}, Ldk4;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    iget-boolean v1, p0, Lek4;->c:Z
+    move-result-object p0
 
-    iget-object v2, p0, Lek4;->d:Lmje;
-
-    if-eqz v1, :cond_0
-
-    iget v1, v2, Lmje;->a:I
-
-    invoke-static {v1, v0, p1}, Lhqd;->a(ILandroid/view/View;Landroid/view/ViewGroup;)V
+    return-object p0
 
     :cond_0
-    iget-object p1, p0, Lek4;->e:Lfk4;
+    :try_start_0
+    const-class v0, Landroid/os/Handler;
 
-    iget-object v0, p1, Lfk4;->c:Ldk4;
+    const-class v1, Landroid/os/Looper;
 
-    iget-object v0, v0, Lv2;->b:Ljava/lang/Object;
+    const-class v2, Landroid/os/Handler$Callback;
 
-    check-cast v0, Lmje;
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    invoke-virtual {v0, p1}, Lmje;->c(Llje;)V
+    filled-new-array {v1, v2, v3}, [Ljava/lang/Class;
 
-    const/4 p1, 0x2
+    move-result-object v1
 
-    invoke-static {p1}, Landroidx/fragment/app/c;->L(I)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    move-result p1
+    move-result-object v0
 
-    if-eqz p1, :cond_1
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const-string v0, "Animator from operation "
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, " has ended."
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Landroid/os/Handler;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
 
-    move-result-object p1
+    :catch_0
+    new-instance v0, Landroid/os/Handler;
 
-    const-string v0, "FragmentManager"
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    return-object v0
 
-    :cond_1
-    return-void
+    :catch_1
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-object v0
 .end method

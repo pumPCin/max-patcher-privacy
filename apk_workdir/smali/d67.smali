@@ -1,17 +1,73 @@
-.class public interface abstract Ld67;
+.class public final Ld67;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/lang/Object;
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ld67;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Ld67;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Ld67;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+.method public final a()Ljava/lang/IllegalArgumentException;
+    .locals 5
 
-.method public abstract b(Lw75;Li19;Lj7d;Lo2d;Landroid/graphics/ColorSpace;)Lst5;
-.end method
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-.method public abstract c(Lx47;)Z
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public abstract d(Lw75;Lj7d;Lo2d;)Z
+    const-string v2, "Multiple entries with same key: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Ld67;->a:Ljava/lang/Object;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, "="
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Ld67;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, " and "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Ld67;->c:Ljava/lang/Object;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method

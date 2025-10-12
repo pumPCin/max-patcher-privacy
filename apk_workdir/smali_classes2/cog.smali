@@ -3,194 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lni4;
+.implements Lc7d;
 
 
 # instance fields
-.field public final synthetic a:Ldog;
+.field public final a:Lum9;
 
 
 # direct methods
-.method public constructor <init>(Ldog;)V
+.method public constructor <init>(Lum9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcog;->a:Ldog;
+    iput-object p1, p0, Lcog;->a:Lum9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResume(Lcs7;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onResume, owner="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isAppVisible="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->k:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isScreenOn="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->l:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "dog"
-
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final onStart(Lcs7;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onStart, owner="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isAppVisible="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->k:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isScreenOn="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->l:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "dog"
-
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->k:Z
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, p0, Lcog;->a:Ldog;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p1, Ldog;->k:Z
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lcog;->a:Ldog;
+    return v0
 
-    iget-boolean p1, p1, Ldog;->l:Z
+    :cond_0
+    instance-of v1, p1, Lcog;
 
-    if-eqz p1, :cond_1
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lcog;->a:Ldog;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ldog;->b()V
+    return v2
 
     :cond_1
-    :goto_0
-    return-void
+    check-cast p1, Lcog;
+
+    iget-object v1, p0, Lcog;->a:Lum9;
+
+    iget-object p1, p1, Lcog;->a:Lum9;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onStop(Lcs7;)V
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lcog;->a:Lum9;
+
+    iget-object v0, v0, Lum9;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "onStop, owner="
+    const-string v1, "WatchTogetherUpdateNotification(updates="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcog;->a:Lum9;
 
-    const-string p1, ", isAppVisible="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ")"
 
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->k:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, ", isScreenOn="
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->l:Z
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "dog"
-
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    iget-boolean p1, p1, Ldog;->k:Z
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, Ldog;->k:Z
-
-    iget-object p1, p0, Lcog;->a:Ldog;
-
-    invoke-virtual {p1}, Ldog;->a()V
-
-    return-void
+    return-object v0
 .end method

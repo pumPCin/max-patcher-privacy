@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt9c;
+.implements La8c;
 
 
 # static fields

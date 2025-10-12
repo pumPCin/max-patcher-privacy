@@ -1,120 +1,116 @@
-.class public final synthetic Lhjg;
+.class public final Lhjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final d:Ljava/util/ArrayList;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Ljava/util/WeakHashMap;
 
-.field public final synthetic b:Lhcb;
+.field public b:Landroid/util/SparseArray;
+
+.field public c:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhcb;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lhjg;->a:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p1, p0, Lhjg;->b:Lhcb;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lhjg;->d:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Landroid/view/View;)Landroid/view/View;
+    .locals 3
 
-    iget v0, p0, Lhjg;->a:I
+    iget-object v0, p0, Lhjg;->a:Ljava/util/WeakHashMap;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lhjg;->b:Lhcb;
-
-    iget-object v0, v0, Lhcb;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+    invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    const-string v2, "incrementUsage: mVideoUsage = "
+    goto :goto_1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_0
+    instance-of v0, p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v0, p1
 
-    move-result-object v0
+    check-cast v0, Landroid/view/ViewGroup;
 
-    const-string v1, "VideoUsageControl"
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    invoke-static {v1, v0}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v1
 
-    return-void
+    add-int/lit8 v1, v1, -0x1
 
-    :pswitch_0
-    iget-object v0, p0, Lhjg;->b:Lhcb;
+    :goto_0
+    if-ltz v1, :cond_2
 
-    iget-object v0, v0, Lhcb;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+    invoke-virtual {p0, v2}, Lhjg;->a(Landroid/view/View;)Landroid/view/View;
 
-    move-result v0
+    move-result-object v2
 
-    const-string v1, "decrementUsage: mVideoUsage = "
+    if-eqz v2, :cond_1
 
-    const-string v2, "VideoUsageControl"
+    return-object v2
 
-    if-gez v0, :cond_0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", which is less than 0!"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    :cond_2
+    sget v0, Lgdc;->tag_unhandled_key_listeners:I
 
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Ljava/util/ArrayList;
 
-    move-result-object v0
+    if-eqz p1, :cond_4
 
-    invoke-static {v2, v0}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    :goto_0
-    return-void
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    add-int/lit8 v0, v0, -0x1
+
+    if-gez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p1, v0}, Lajf;->n(Ljava/util/ArrayList;I)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

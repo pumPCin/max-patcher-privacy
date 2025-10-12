@@ -13,7 +13,7 @@
         "Lone/me/sdk/bottomsheet/BottomSheetWidget;",
         "<init>",
         "()V",
-        "b63",
+        "w53",
         "chats-list_release"
     }
     k = 0x1
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILof4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILaf4;)V
 
     return-void
 .end method
@@ -48,9 +48,9 @@
 
     move-result-object p1
 
-    new-instance v0, Ld63;
+    new-instance v0, Ly53;
 
-    invoke-direct {v0, p2, p0, p1}, Ld63;-><init>(Landroid/widget/FrameLayout;Lone/me/chats/search/views/ClearRecentSearchBottomSheet;Landroid/content/Context;)V
+    invoke-direct {v0, p2, p0, p1}, Ly53;-><init>(Landroid/widget/FrameLayout;Lone/me/chats/search/views/ClearRecentSearchBottomSheet;Landroid/content/Context;)V
 
     return-object v0
 .end method

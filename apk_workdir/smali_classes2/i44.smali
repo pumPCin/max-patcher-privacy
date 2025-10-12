@@ -1,171 +1,264 @@
 .class public final Li44;
-.super Ljava/lang/Object;
+.super Lnm;
 .source "SourceFile"
 
 # interfaces
-.implements Lww7;
+.implements La9f;
+.implements Lu8b;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Ljava/lang/String;
 
-.field public final b:I
-
-.field public final c:Ljef;
+.field public final o:Lzl;
 
 
 # direct methods
-.method public constructor <init>(IILjef;)V
+.method public constructor <init>(JLzl;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lnm;-><init>(J)V
 
-    iput p1, p0, Li44;->a:I
+    iput-object p3, p0, Li44;->o:Lzl;
 
-    iput p2, p0, Li44;->b:I
+    const-class p1, Li44;
 
-    iput-object p3, p0, Li44;->c:Ljef;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Li44;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Li44;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Li44;
-
-    iget v0, p0, Li44;->a:I
-
-    iget v1, p1, Li44;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Li44;->b:I
-
-    iget v1, p1, Li44;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Li44;->c:Ljef;
-
-    iget-object p1, p1, Li44;->c:Ljef;
-
-    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget v0, p0, Li44;->a:I
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Li44;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Li44;->b:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Li44;->c:Ljef;
-
-    iget v1, v1, Ljef;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
+.method public final c()I
     .locals 1
 
-    sget v0, Liwa;->n:I
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final d(Ly7f;)V
+    .locals 1
 
-    const-string v0, ", icon="
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v1, ", text="
+    const-string v0, "onSuccess: logEntry="
 
-    const-string v2, "CreateButton(id="
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Li44;->a:I
+    iget-object v0, p0, Li44;->o:Lzl;
 
-    iget v4, p0, Li44;->b:I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object v0, p0, Li44;->X:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 3
+
+    invoke-virtual {p0}, Lnm;->s()Ltaf;
 
     move-result-object v0
 
-    iget-object v1, p0, Li44;->c:Ljef;
+    iget-wide v1, p0, Lnm;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ltaf;->d(J)V
+
+    return-void
+.end method
+
+.method public final f()[B
+    .locals 4
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$CritLog;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$CritLog;-><init>()V
+
+    iget-wide v1, p0, Lnm;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->requestId:J
+
+    iget-object v1, p0, Li44;->o:Lzl;
+
+    iget-wide v2, v1, Lzl;->a:J
+
+    iput-wide v2, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->time:J
+
+    iget-wide v2, v1, Lzl;->b:J
+
+    iput-wide v2, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->userId:J
+
+    iget-wide v2, v1, Lzl;->c:J
+
+    iput-wide v2, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->sessionId:J
+
+    iget-object v2, v1, Lzl;->d:Ljava/lang/String;
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->type:Ljava/lang/String;
+
+    iget-object v2, v1, Lzl;->e:Ljava/lang/String;
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->event:Ljava/lang/String;
+
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    iget-object v1, v1, Lzl;->f:Ljava/util/Map;
+
+    invoke-static {v1, v2}, Lg8;->N(Ljava/util/Map;Ljava/io/ByteArrayOutputStream;)V
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v1
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$CritLog;->params:[B
+
+    invoke-static {v0}, Ls59;->toByteArray(Ls59;)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final g(Li7f;)V
+    .locals 6
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "onFail: logEntry="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Li44;->o:Lzl;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    iget-object v2, p0, Li44;->X:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p1, Li7f;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lte0;->h(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {p0}, Li44;->e()V
+
+    iget-object v2, p0, Lnm;->c:Lom;
+
+    if-eqz v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    iget-object v2, v2, Lom;->u:Lyn7;
+
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ltb5;
+
+    iget-object v3, p1, Li7f;->c:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "Could not send crit event "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ".\nError: "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ".\nMessage: "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object p1, p1, Li7f;->X:Lt6f;
+
+    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
+
+    const-string v3, "ONEME-18649"
+
+    invoke-direct {v1, v0, v3, p1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {v2, v1}, Ltb5;->b(Ltb5;Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lnm;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lv8b;
+    .locals 1
+
+    sget-object v0, Lv8b;->b1:Lv8b;
+
+    return-object v0
+.end method
+
+.method public final h()I
+    .locals 1
+
+    const v0, 0xf4240
+
+    return v0
+.end method
+
+.method public final i()Lv7f;
+    .locals 2
+
+    new-instance v0, Lje2;
+
+    iget-object v1, p0, Li44;->o:Lzl;
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lje2;-><init>(Ljava/util/List;)V
 
     return-object v0
 .end method

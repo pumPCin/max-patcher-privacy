@@ -1,59 +1,117 @@
-.class public abstract synthetic Luzg;
+.class public final Luzg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final Companion:Ltzg;
+
+
+# instance fields
+.field public final a:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Ld4b;->values()[Ld4b;
+    new-instance v0, Ltzg;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    sput-object v0, Luzg;->Companion:Ltzg;
 
-    new-array v0, v0, [I
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IZ)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x1
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    if-ne v1, v0, :cond_0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x4
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Luzg;->$EnumSwitchMapping$0:[I
+    iput-boolean p2, p0, Luzg;->a:Z
 
     return-void
+
+    :cond_0
+    sget-object p2, Lszg;->a:Lszg;
+
+    invoke-virtual {p2}, Lszg;->d()Lmqd;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Luzg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Luzg;
+
+    iget-boolean v1, p0, Luzg;->a:Z
+
+    iget-boolean p1, p1, Luzg;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-boolean v0, p0, Luzg;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "WebAppSetupClosingBehaviorRequest(needConfirmation="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Luzg;->a:Z
+
+    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

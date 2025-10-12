@@ -176,12 +176,14 @@
 .method public onAddQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public onAddQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 
@@ -262,7 +264,7 @@
     goto :goto_2
 
     :cond_2
-    invoke-interface {v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->getCurrentControllerInfo()Lvt8;
+    invoke-interface {v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->getCurrentControllerInfo()Lps8;
 
     move-result-object v0
 
@@ -463,12 +465,14 @@
 .method public onSetRating(Landroid/support/v4/media/RatingCompat;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public onSetRating(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

@@ -1,105 +1,163 @@
 .class public final Lts9;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lws9;
+.field public a:I
 
-.field public final synthetic Y:F
+.field public b:I
 
+.field public c:Z
 
-# direct methods
-.method public constructor <init>(Lws9;FLkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public d:Z
 
-    iput-object p1, p0, Lts9;->X:Lws9;
+.field public e:Z
 
-    iput p2, p0, Lts9;->Y:F
+.field public f:Ljava/lang/Object;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public g:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a()V
+    .locals 6
 
-    check-cast p1, Le34;
+    iget-object v0, p0, Lts9;->g:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p1, p2}, Lts9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object p1
+    move-result-object v1
 
-    check-cast p1, Lts9;
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result v2
 
-    invoke-virtual {p1, p2}, Lts9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
-    return-object p2
-.end method
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v2
 
-    new-instance p1, Lts9;
+    check-cast v2, Lss9;
 
-    iget-object v0, p0, Lts9;->X:Lws9;
+    iget-object v3, p0, Lts9;->f:Ljava/lang/Object;
 
-    iget v1, p0, Lts9;->Y:F
+    check-cast v3, Landroid/media/MediaMuxer;
 
-    invoke-direct {p1, v0, v1, p2}, Lts9;-><init>(Lws9;FLkotlin/coroutines/Continuation;)V
+    iget v4, v2, Lss9;->a:I
 
-    return-object p1
-.end method
+    iget-object v5, v2, Lss9;->b:Ljava/nio/ByteBuffer;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object v2, v2, Lss9;->c:Landroid/media/MediaCodec$BufferInfo;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lts9;->X:Lws9;
-
-    iget-object p1, p1, Lws9;->m:Lak8;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lak8;->t()V
-
-    iget-object p1, p1, Lak8;->c:Lzj8;
-
-    invoke-interface {p1}, Lzj8;->isConnected()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string v0, "The controller is not connected. Ignoring setPlaybackSpeed()."
-
-    invoke-static {p1, v0}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v4, v5, v2}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
     goto :goto_0
 
     :cond_0
-    iget v0, p0, Lts9;->Y:F
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    invoke-interface {p1, v0}, Lzj8;->setPlaybackSpeed(F)V
+    return-void
+.end method
+
+.method public b()Z
+    .locals 6
+
+    iget-boolean v0, p0, Lts9;->d:Z
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v3, -0x1
+
+    if-eqz v0, :cond_0
+
+    iget v4, p0, Lts9;->a:I
+
+    if-ne v4, v3, :cond_1
+
+    :cond_0
+    if-nez v0, :cond_2
+
+    iget v0, p0, Lts9;->a:I
+
+    if-ne v0, v3, :cond_2
 
     :cond_1
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    move v0, v2
 
-    return-object p1
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    :goto_0
+    iget-boolean v4, p0, Lts9;->e:Z
+
+    if-eqz v4, :cond_3
+
+    iget v5, p0, Lts9;->b:I
+
+    if-ne v5, v3, :cond_4
+
+    :cond_3
+    if-nez v4, :cond_5
+
+    iget v4, p0, Lts9;->b:I
+
+    if-ne v4, v3, :cond_5
+
+    :cond_4
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_5
+    move v3, v1
+
+    :goto_1
+    if-eqz v0, :cond_6
+
+    if-eqz v3, :cond_6
+
+    return v2
+
+    :cond_6
+    return v1
+.end method
+
+.method public c()V
+    .locals 2
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lts9;->a:I
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lts9;->b:I
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lts9;->c:Z
+
+    iput-boolean v1, p0, Lts9;->d:Z
+
+    iput-boolean v1, p0, Lts9;->e:Z
+
+    iget-object v1, p0, Lts9;->f:Ljava/lang/Object;
+
+    check-cast v1, [I
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v1, v0}, Ljava/util/Arrays;->fill([II)V
+
+    :cond_0
+    return-void
 .end method

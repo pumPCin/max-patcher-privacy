@@ -1,142 +1,113 @@
-.class public final Lu6g;
-.super Landroid/text/style/ImageSpan;
+.class public final enum Lu6g;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lrff;
+
+# static fields
+.field public static final synthetic X:[Lu6g;
+
+.field public static final synthetic Y:Laa5;
+
+.field public static final enum b:Lu6g;
+
+.field public static final enum c:Lu6g;
+
+.field public static final enum o:Lu6g;
 
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
-    .locals 0
+# instance fields
+.field public final a:Lp6c;
 
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move-result-object p2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    new-instance v0, Lu6g;
 
-    invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
+    const/4 v1, 0x0
 
-    move-result-object p3
+    sget-object v2, Lp6c;->Z:Lp6c;
 
-    iget p4, p3, Landroid/graphics/Paint$FontMetricsInt;->descent:I
+    const-string v3, "WITHOUT_COMPRESS"
 
-    iget p3, p3, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
+    invoke-direct {v0, v3, v1, v2}, Lu6g;-><init>(Ljava/lang/String;ILp6c;)V
 
-    sub-int p3, p4, p3
+    sput-object v0, Lu6g;->b:Lu6g;
 
-    add-int/2addr p7, p4
+    new-instance v1, Lu6g;
 
-    div-int/lit8 p3, p3, 0x2
+    const/4 v2, 0x1
 
-    sub-int/2addr p7, p3
+    sget-object v3, Lp6c;->r0:Lp6c;
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    const-string v4, "OPTIMAL"
 
-    move-result-object p3
+    invoke-direct {v1, v4, v2, v3}, Lu6g;-><init>(Ljava/lang/String;ILp6c;)V
 
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
+    sput-object v1, Lu6g;->c:Lu6g;
 
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    new-instance v2, Lu6g;
 
-    move-result-object p4
+    const/4 v3, 0x2
 
-    iget p4, p4, Landroid/graphics/Rect;->top:I
+    sget-object v4, Lp6c;->s0:Lp6c;
 
-    sub-int/2addr p3, p4
+    const-string v5, "MAXIMUM"
 
-    div-int/lit8 p3, p3, 0x2
+    invoke-direct {v2, v5, v3, v4}, Lu6g;-><init>(Ljava/lang/String;ILp6c;)V
 
-    sub-int/2addr p7, p3
+    sput-object v2, Lu6g;->o:Lu6g;
 
-    int-to-float p3, p7
-
-    invoke-virtual {p1, p5, p3}, Landroid/graphics/Canvas;->translate(FF)V
-
-    invoke-virtual {p2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final getSize(Landroid/graphics/Paint;Ljava/lang/CharSequence;IILandroid/graphics/Paint$FontMetricsInt;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p2
-
-    if-eqz p5, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
-
-    move-result-object p1
-
-    iget p3, p1, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    iget p1, p1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    sub-int/2addr p3, p1
-
-    iget p4, p2, Landroid/graphics/Rect;->bottom:I
-
-    iget v0, p2, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr p4, v0
-
-    div-int/lit8 p3, p3, 0x2
-
-    add-int/2addr p3, p1
-
-    div-int/lit8 p4, p4, 0x2
-
-    sub-int p1, p3, p4
-
-    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
-
-    iput p1, p5, Landroid/graphics/Paint$FontMetricsInt;->top:I
-
-    add-int/2addr p3, p4
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
-
-    iput p3, p5, Landroid/graphics/Paint$FontMetricsInt;->descent:I
-
-    :cond_0
-    iget p1, p2, Landroid/graphics/Rect;->right:I
-
-    return p1
-.end method
-
-.method public final onThemeChanged(Luxa;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/text/style/DynamicDrawableSpan;->getDrawable()Landroid/graphics/drawable/Drawable;
+    filled-new-array {v0, v1, v2}, [Lu6g;
 
     move-result-object v0
 
-    instance-of v1, v0, Lrff;
+    sput-object v0, Lu6g;->X:[Lu6g;
 
-    if-eqz v1, :cond_0
+    new-instance v1, Laa5;
 
-    check-cast v0, Lrff;
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
 
-    goto :goto_0
+    sput-object v1, Lu6g;->Y:Laa5;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1}, Lrff;->onThemeChanged(Luxa;)V
-
-    :cond_1
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILp6c;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lu6g;->a:Lp6c;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lu6g;
+    .locals 1
+
+    const-class v0, Lu6g;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lu6g;
+
+    return-object p0
+.end method
+
+.method public static values()[Lu6g;
+    .locals 1
+
+    sget-object v0, Lu6g;->X:[Lu6g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lu6g;
+
+    return-object v0
 .end method

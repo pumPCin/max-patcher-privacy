@@ -1,51 +1,90 @@
 .class public final Lw64;
-.super Lb95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final a:Lo6c;
+
+.field public final b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(La95;I)V
+.method public constructor <init>(Lo6c;Z)V
     .locals 0
 
-    iput p2, p0, Lw64;->e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lb95;-><init>(La95;)V
+    iput-object p1, p0, Lw64;->a:Lo6c;
+
+    iput-boolean p2, p0, Lw64;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public r()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lw64;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lb95;->b:La95;
+    instance-of v0, p1, Lw64;
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, La95;->G0:Landroid/view/View$OnLongClickListener;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, La95;->y0:Lcom/google/android/material/internal/CheckableImageButton;
+    check-cast p1, Lw64;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    iget-object v0, p1, Lw64;->a:Lo6c;
 
-    invoke-static {v0, v1}, Lhv0;->P(Lcom/google/android/material/internal/CheckableImageButton;Landroid/view/View$OnLongClickListener;)V
+    iget-object v2, p0, Lw64;->a:Lo6c;
 
-    return-void
+    invoke-virtual {v0, v2}, Lo6c;->equals(Ljava/lang/Object;)Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p1, p1, Lw64;->b:Z
+
+    iget-boolean v0, p0, Lw64;->b:Z
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lw64;->a:Lo6c;
+
+    invoke-virtual {v0}, Lo6c;->hashCode()I
+
+    move-result v0
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v1, p0, Lw64;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->hashCode()I
+
+    move-result v1
+
+    xor-int/2addr v0, v1
+
+    return v0
 .end method

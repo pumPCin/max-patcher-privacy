@@ -1,148 +1,273 @@
-.class public final synthetic Lb60;
+.class public final Lb60;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ld60;
+.field public b:I
 
-.field public final synthetic c:Z
+.field public c:J
+
+.field public d:J
+
+.field public e:J
+
+.field public f:J
+
+.field public final g:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld60;ZI)V
-    .locals 0
+.method public constructor <init>(Landroid/media/AudioTrack;I)V
+    .locals 1
 
-    iput p3, p0, Lb60;->a:I
+    iput p2, p0, Lb60;->a:I
 
-    iput-object p1, p0, Lb60;->b:Ld60;
-
-    iput-boolean p2, p0, Lb60;->c:Z
+    packed-switch p2, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    sget p2, Le3g;->a:I
+
+    const/16 v0, 0x13
+
+    if-lt p2, v0, :cond_0
+
+    new-instance p2, Lwq5;
+
+    invoke-direct {p2, p1}, Lwq5;-><init>(Landroid/media/AudioTrack;)V
+
+    iput-object p2, p0, Lb60;->g:Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lb60;->a()V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lb60;->g:Ljava/lang/Object;
+
+    const/4 p1, 0x3
+
+    invoke-virtual {p0, p1}, Lb60;->b(I)V
+
+    :goto_0
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p2, La60;
+
+    invoke-direct {p2, p1}, La60;-><init>(Landroid/media/AudioTrack;)V
+
+    iput-object p2, p0, Lb60;->g:Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lb60;->a()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()V
+    .locals 1
 
     iget v0, p0, Lb60;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lb60;->b:Ld60;
+    iget-object v0, p0, Lb60;->g:Ljava/lang/Object;
 
-    iget v1, v0, Ld60;->g:I
+    check-cast v0, La60;
 
-    invoke-static {v1}, Lqw1;->u(I)I
+    if-eqz v0, :cond_0
 
-    move-result v1
+    const/4 v0, 0x0
 
-    const/4 v2, 0x2
+    invoke-virtual {p0, v0}, Lb60;->b(I)V
 
-    if-eqz v1, :cond_1
+    :cond_0
+    return-void
 
-    const/4 v3, 0x1
+    :pswitch_0
+    iget-object v0, p0, Lb60;->g:Ljava/lang/Object;
 
-    if-eq v1, v3, :cond_1
+    check-cast v0, Lwq5;
 
-    if-eq v1, v2, :cond_0
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lb60;->b(I)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(I)V
+    .locals 6
+
+    iget v0, p0, Lb60;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iput p1, p0, Lb60;->b:I
+
+    const-wide/16 v0, 0x2710
+
+    if-eqz p1, :cond_3
+
+    const/4 v2, 0x1
+
+    if-eq p1, v2, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_1
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    const-wide/32 v0, 0x7a120
+
+    iput-wide v0, p0, Lb60;->d:J
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "AudioSource is released"
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
+    throw p1
 
     :cond_1
-    iget-boolean v1, v0, Ld60;->r:Z
+    const-wide/32 v0, 0x989680
 
-    iget-boolean v3, p0, Lb60;->c:Z
-
-    if-ne v1, v3, :cond_2
+    iput-wide v0, p0, Lb60;->d:J
 
     goto :goto_0
 
     :cond_2
-    iput-boolean v3, v0, Ld60;->r:Z
+    iput-wide v0, p0, Lb60;->d:J
 
-    iget v1, v0, Ld60;->g:I
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {v0}, Ld60;->a()V
+    goto :goto_0
 
     :cond_3
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Lb60;->e:J
+
+    const-wide/16 v2, -0x1
+
+    iput-wide v2, p0, Lb60;->f:J
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    div-long/2addr v2, v4
+
+    iput-wide v2, p0, Lb60;->c:J
+
+    iput-wide v0, p0, Lb60;->d:J
+
     :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lb60;->b:Ld60;
+    iput p1, p0, Lb60;->b:I
 
-    iget v1, v0, Ld60;->g:I
+    const-wide/16 v0, 0x2710
 
-    invoke-static {v1}, Lqw1;->u(I)I
+    if-eqz p1, :cond_7
 
-    move-result v1
+    const/4 v2, 0x1
 
-    const/4 v2, 0x2
+    if-eq p1, v2, :cond_6
 
-    if-eqz v1, :cond_5
+    const/4 v0, 0x2
 
-    if-eq v1, v2, :cond_4
+    if-eq p1, v0, :cond_5
+
+    const/4 v0, 0x3
+
+    if-eq p1, v0, :cond_5
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_4
+
+    const-wide/32 v0, 0x7a120
+
+    iput-wide v0, p0, Lb60;->d:J
 
     goto :goto_1
 
     :cond_4
-    new-instance v0, Ljava/lang/AssertionError;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v1, "AudioSource is released"
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
+    throw p1
 
     :cond_5
-    iget-object v1, v0, Ld60;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    const-wide/32 v0, 0x989680
 
-    const/4 v3, 0x0
+    iput-wide v0, p0, Lb60;->d:J
 
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    goto :goto_1
 
-    iget-object v1, v0, Ld60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    :cond_6
+    iput-wide v0, p0, Lb60;->d:J
 
-    const/4 v3, 0x0
+    goto :goto_1
 
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :cond_7
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v2}, Ld60;->d(I)V
+    iput-wide v2, p0, Lb60;->e:J
 
-    iget-object v1, v0, Ld60;->a:Lcsd;
+    const-wide/16 v2, -0x1
 
-    new-instance v2, Lb60;
+    iput-wide v2, p0, Lb60;->f:J
 
-    const/4 v3, 0x1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    iget-boolean v4, p0, Lb60;->c:Z
+    move-result-wide v2
 
-    invoke-direct {v2, v0, v4, v3}, Lb60;-><init>(Ld60;ZI)V
+    const-wide/16 v4, 0x3e8
 
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
+    div-long/2addr v2, v4
 
-    invoke-virtual {v0}, Ld60;->f()V
+    iput-wide v2, p0, Lb60;->c:J
+
+    iput-wide v0, p0, Lb60;->d:J
 
     :goto_1
     return-void

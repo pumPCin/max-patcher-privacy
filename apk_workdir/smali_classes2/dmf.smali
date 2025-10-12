@@ -3,56 +3,240 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcmf;
-
-
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Ldmf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    return-void
-.end method
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # virtual methods
-.method public final a(Lylf;)V
-    .locals 2
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 15
 
-    iget-object v0, p0, Ldmf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sget-boolean v0, Lflf;->b:Z
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    return-void
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    :cond_0
+    :try_start_0
+    sget-object v0, Lklf;->b:Lq13;
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move-result v1
+    if-eqz v0, :cond_8
 
-    if-eqz v1, :cond_0
+    sget-boolean v1, Lflf;->b:Z
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    move-result-object v1
+    return-void
 
-    check-cast v1, Lcmf;
+    :cond_1
+    iget-object v1, v0, Lq13;->b:Ljava/lang/Object;
 
-    invoke-interface {v1, p1}, Lcmf;->a(Lylf;)V
+    check-cast v1, Livd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v4, v2, v3}, Livd;->d(Livd;ZLf4e;I)V
+
+    const-string v1, ".shutdown.until.ts"
+
+    const-string v2, "system."
+
+    const-string v3, "CRASH_REPORT"
+
+    sget-object v5, Lxcd;->b:Lt8b;
+
+    if-eqz v5, :cond_7
+
+    const-string v6, "system.shutdown.until.ts"
+
+    invoke-static {v5, v6}, Lw7;->b(Lt8b;Ljava/lang/String;)Z
+
+    move-result v6
+
+    const/4 v7, 0x1
+
+    if-eqz v6, :cond_2
 
     goto :goto_0
 
-    :cond_0
+    :cond_2
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v5, v1}, Lw7;->b(Lt8b;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    :goto_0
+    move v4, v7
+
+    :cond_3
+    if-eqz v4, :cond_4
+
+    return-void
+
+    :cond_4
+    iget-object v1, v0, Lq13;->a:Ljava/lang/Object;
+
+    move-object v8, v1
+
+    check-cast v8, Lq34;
+
+    iget-object v1, v0, Lq13;->b:Ljava/lang/Object;
+
+    check-cast v1, Livd;
+
+    invoke-virtual {v1}, Livd;->c()Lv5f;
+
+    move-result-object v11
+
+    iget-object v1, v0, Lq13;->c:Ljava/lang/Object;
+
+    check-cast v1, Lm6f;
+
+    iget-object v2, v1, Lm6f;->e:Ljava/util/ArrayList;
+
+    monitor-enter v2
+
+    :try_start_1
+    iget-object v1, v1, Lm6f;->e:Ljava/util/ArrayList;
+
+    invoke-static {v1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v12
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v2
+
+    invoke-static {}, Ljava/lang/Thread;->getAllStackTraces()Ljava/util/Map;
+
+    move-result-object v13
+
+    iget-object v1, v0, Lq13;->o:Ljava/lang/Object;
+
+    check-cast v1, Lw28;
+
+    iget-object v1, v1, Lw28;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-static {v1}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v14
+
+    const/4 v9, 0x1
+
+    move-object/from16 v10, p2
+
+    invoke-virtual/range {v8 .. v14}, Lq34;->b(ILjava/lang/Throwable;Lv5f;Ljava/util/List;Ljava/util/Map;Ljava/util/List;)Lm34;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_9
+
+    new-instance v2, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-direct {v2, v7}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    new-instance v3, Lxi;
+
+    const/16 v4, 0x13
+
+    invoke-direct {v3, v0, v1, v2, v4}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v3}, Lcmf;->b(Ljava/lang/Runnable;)V
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const-wide/16 v3, 0x1388
+
+    goto :goto_1
+
+    :cond_5
+    const-wide/32 v3, 0x5f5e100
+
+    :goto_1
+    iget-object v0, v0, Lq13;->X:Ljava/lang/Object;
+
+    check-cast v0, Ljvd;
+
+    :try_start_2
+    iget-object v0, v0, Ljvd;->a:Landroid/os/ConditionVariable;
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v0, v3, v4}, Landroid/os/ConditionVariable;->block(J)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    :cond_6
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v3, v4, v0}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+
+    throw v0
+
+    :cond_7
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Tracer settings are not initialized."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_8
+    :try_start_3
+    const-string v0, "Required value was null."
+
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_3
+    .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_1
+
+    :catch_1
+    :cond_9
+    :goto_2
     return-void
 .end method

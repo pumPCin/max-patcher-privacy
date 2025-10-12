@@ -2,43 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lro0;
+
+# instance fields
+.field public final a:I
+
+.field public final b:[I
+
+.field public final c:[I
+
+.field public final d:[I
 
 
-# virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 4
-
-    int-to-double v0, p1
-
-    const-wide/high16 v2, 0x4000000000000000L    # 2.0
-
-    div-double/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v0
-
-    double-to-int p1, v0
-
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final i(Ljava/lang/Object;)V
+# direct methods
+.method public constructor <init>(I[I[I[I)V
     .locals 0
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+    iput p1, p0, Lg05;->a:I
+
+    iput-object p2, p0, Lg05;->b:[I
+
+    iput-object p3, p0, Lg05;->c:[I
+
+    iput-object p4, p0, Lg05;->d:[I
 
     return-void
 .end method

@@ -1,193 +1,175 @@
-.class public final Ll1d;
-.super Lp1d;
+.class public abstract Ll1d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq84;
+.implements Ljava/io/Closeable;
 
 
-# instance fields
-.field public final Y:Lund;
+# virtual methods
+.method public abstract N()Llu0;
+.end method
 
+.method public final O()Ljava/lang/String;
+    .locals 9
 
-# direct methods
-.method public constructor <init>(Lt76;Le77;Lund;Ljava/util/ArrayList;)V
-    .locals 0
+    invoke-virtual {p0}, Ll1d;->N()Llu0;
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lp1d;-><init>(Lt76;Ljava/util/List;Ldod;Ljava/util/List;)V
+    move-result-object v0
 
-    iput-object p3, p0, Ll1d;->Y:Lund;
+    :try_start_0
+    invoke-virtual {p0}, Ll1d;->o()Lfv8;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4
+
+    sget-object v2, Ln82;->a:Ljava/nio/charset/Charset;
+
+    const-string v3, "charset"
+
+    iget-object v1, v1, Lfv8;->c:[Ljava/lang/String;
+
+    new-instance v4, Llc7;
+
+    array-length v5, v1
+
+    const/4 v6, 0x1
+
+    sub-int/2addr v5, v6
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v7, v5, v6}, Ljc7;-><init>(III)V
+
+    const/4 v5, 0x2
+
+    invoke-static {v4, v5}, Lk84;->E(Ljc7;I)Ljc7;
+
+    move-result-object v4
+
+    iget v5, v4, Ljc7;->a:I
+
+    iget v7, v4, Ljc7;->b:I
+
+    iget v4, v4, Ljc7;->c:I
+
+    if-ltz v4, :cond_0
+
+    if-gt v5, v7, :cond_2
+
+    goto :goto_0
+
+    :cond_0
+    if-lt v5, v7, :cond_2
+
+    :goto_0
+    aget-object v8, v1, v5
+
+    invoke-static {v8, v3, v6}, Lxwe;->k0(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    add-int/2addr v5, v6
+
+    aget-object v1, v1, v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :cond_1
+    if-eq v5, v7, :cond_2
+
+    add-int/2addr v5, v4
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
+    :goto_1
+    if-eqz v1, :cond_3
+
+    :try_start_1
+    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v2
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catch_0
+    :cond_3
+    if-eqz v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :try_start_2
+    sget-object v2, Ln82;->a:Ljava/nio/charset/Charset;
+
+    :goto_2
+    invoke-static {v0, v2}, Lf3g;->r(Llu0;Ljava/nio/charset/Charset;)Ljava/nio/charset/Charset;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Llu0;->K(Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_3
+    throw v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception v2
+
+    invoke-static {v0, v1}, Lrkc;->g(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+.end method
+
+.method public final close()V
+    .locals 1
+
+    invoke-virtual {p0}, Ll1d;->N()Llu0;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lf3g;->c(Ljava/io/Closeable;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final B()J
-    .locals 2
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    iget-wide v0, v0, Lund;->d:J
-
-    return-wide v0
-.end method
-
-.method public final C(J)J
+.method public final m()Ljava/io/InputStream;
     .locals 1
 
-    iget-object v0, p0, Ll1d;->Y:Lund;
+    invoke-virtual {p0}, Ll1d;->N()Llu0;
 
-    invoke-virtual {v0, p1, p2}, Lund;->e(J)J
+    move-result-object v0
 
-    move-result-wide p1
+    invoke-interface {v0}, Llu0;->d0()Ljava/io/InputStream;
 
-    return-wide p1
-.end method
-
-.method public final D(JJ)J
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->c(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final b()Lq84;
-    .locals 0
-
-    return-object p0
+.method public abstract n()J
 .end method
 
-.method public final c(J)J
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p1, p2}, Lund;->h(J)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final d()Lenc;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final h(JJ)J
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->f(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final j(JJ)J
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->d(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final k(JJ)J
-    .locals 3
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    iget-object v1, v0, Lund;->f:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    const-wide p1, -0x7fffffffffffffffL    # -4.9E-324
-
-    return-wide p1
-
-    :cond_0
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->d(JJ)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->c(JJ)J
-
-    move-result-wide p3
-
-    add-long/2addr p3, v1
-
-    invoke-virtual {v0, p3, p4}, Lund;->h(J)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, p3, p4, p1, p2}, Lund;->f(JJ)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v1
-
-    iget-wide p3, v0, Lund;->i:J
-
-    sub-long/2addr p1, p3
-
-    return-wide p1
-.end method
-
-.method public final l(J)Lenc;
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p0, p1, p2}, Lund;->i(Ll1d;J)Lenc;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final t(JJ)J
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lund;->g(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public final z()Z
-    .locals 1
-
-    iget-object v0, p0, Ll1d;->Y:Lund;
-
-    invoke-virtual {v0}, Lund;->j()Z
-
-    move-result v0
-
-    return v0
+.method public abstract o()Lfv8;
 .end method

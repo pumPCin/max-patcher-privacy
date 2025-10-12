@@ -1,55 +1,53 @@
 .class public final Lktf;
-.super Lbp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmtf;
 
-# static fields
-.field public static final a:Lktf;
+
+# instance fields
+.field public final a:Lcdf;
+
+.field public final b:I
+
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(IILcdf;)V
+    .locals 0
 
-    new-instance v0, Lktf;
+    and-int/lit8 p2, p2, 0x2
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    if-eqz p2, :cond_0
 
-    sput-object v0, Lktf;->a:Lktf;
+    .line 5
+    sget p1, Lv7d;->Y0:I
+
+    :cond_0
+    const/4 p2, 0x1
+
+    .line 6
+    invoke-direct {p0, p1, p3, p2}, Lktf;-><init>(ILcdf;Z)V
 
     return-void
 .end method
 
+.method public constructor <init>(ILcdf;Z)V
+    .locals 0
 
-# virtual methods
-.method public final b()Lbp7;
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    .line 2
+    iput-object p2, p0, Lktf;->a:Lcdf;
 
-    move-result-object v0
+    .line 3
+    iput p1, p0, Lktf;->b:I
 
-    const-class v1, Ltk;
+    .line 4
+    iput-boolean p3, p0, Lktf;->c:Z
 
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Lbp7;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lr8f;
-
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

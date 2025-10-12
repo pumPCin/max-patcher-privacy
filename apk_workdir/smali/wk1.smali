@@ -1,19 +1,19 @@
 .class public final Lwk1;
-.super Lgl1;
+.super Lhl1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final D:Ljava/lang/CharSequence;
+.field public final D:Ldh1;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Ldh1;)V
     .locals 0
 
-    invoke-direct {p0}, Lgl1;-><init>()V
+    invoke-direct {p0}, Lhl1;-><init>()V
 
-    iput-object p1, p0, Lwk1;->D:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lwk1;->D:Ldh1;
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     :cond_1
     check-cast p1, Lwk1;
 
-    iget-object v1, p0, Lwk1;->D:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lwk1;->D:Ldh1;
 
-    iget-object p1, p1, Lwk1;->D:Ljava/lang/CharSequence;
+    iget-object p1, p1, Lwk1;->D:Ldh1;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -60,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lwk1;->D:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lwk1;->D:Ldh1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ldh1;->hashCode()I
 
     move-result v0
 
@@ -74,11 +74,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RecordStart(name="
+    const-string v1, "RaiseHandDialog(participantId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lwk1;->D:Ljava/lang/CharSequence;
+    iget-object v1, p0, Lwk1;->D:Ldh1;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -1,173 +1,69 @@
 .class public final Ltge;
-.super Ljava/lang/Object;
+.super Ljvc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public a:Z
 
-.field public final b:J
-
-.field public final c:I
+.field public final synthetic b:Li94;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Li94;)V
     .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(IJJ)V
-    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    cmp-long v0, p2, p4
+    iput-object p1, p0, Ltge;->b:Li94;
 
-    if-gez v0, :cond_0
+    const/4 p1, 0x0
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lpih;->i(Z)V
-
-    iput-wide p2, p0, Ltge;->a:J
-
-    iput-wide p4, p0, Ltge;->b:J
-
-    iput p1, p0, Ltge;->c:I
+    iput-boolean p1, p0, Ltge;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    if-nez p2, :cond_0
 
-    if-ne p0, p1, :cond_0
+    iget-boolean p1, p0, Ltge;->a:Z
 
-    return v0
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Ltge;->a:Z
+
+    iget-object p1, p0, Ltge;->b:Li94;
+
+    invoke-virtual {p1}, Li94;->l()V
 
     :cond_0
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    if-eqz p1, :cond_2
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
 
-    const-class v2, Ltge;
+    if-nez p2, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
+    if-eqz p3, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    return-void
+
     :cond_1
-    check-cast p1, Ltge;
-
-    iget-wide v2, p0, Ltge;->a:J
-
-    iget-wide v4, p1, Ltge;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Ltge;->b:J
-
-    iget-wide v4, p1, Ltge;->b:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Ltge;->c:I
-
-    iget p1, p1, Ltge;->c:I
-
-    if-ne v2, p1, :cond_2
-
-    return v0
-
-    :cond_2
     :goto_0
-    return v1
-.end method
+    const/4 p1, 0x1
 
-.method public final hashCode()I
-    .locals 3
+    iput-boolean p1, p0, Ltge;->a:Z
 
-    iget-wide v0, p0, Ltge;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Ltge;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iget v2, p0, Ltge;->c:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    filled-new-array {v0, v1, v2}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget v0, Lt4g;->a:I
-
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v0, "Segment: startTimeMs="
-
-    const-string v1, ", endTimeMs="
-
-    iget-wide v2, p0, Ltge;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Ltge;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", speedDivisor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltge;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

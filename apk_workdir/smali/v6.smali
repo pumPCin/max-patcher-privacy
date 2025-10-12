@@ -1,168 +1,181 @@
 .class public final Lv6;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lx6;
+.implements Lfs4;
 
 
 # instance fields
-.field public final synthetic o:Lw6;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lw6;Landroid/content/Context;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    iput-object p1, p0, Lv6;->o:Lw6;
+    iput p1, p0, Lv6;->a:I
 
-    const/4 p1, 0x0
-
-    sget v0, Lxac;->actionOverflowButtonStyle:I
-
-    invoke-direct {p0, p2, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContentDescription()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lqkf;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    new-instance p1, Lr6;
-
-    invoke-direct {p1, p0, p0}, Lr6;-><init>(Lv6;Lv6;)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-direct {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final performClick()Z
+.method public final f()V
     .locals 2
 
-    invoke-super {p0}, Landroid/view/View;->performClick()Z
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result v0
-
-    const/4 v1, 0x1
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    return v1
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lv6;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    goto :goto_0
+
+    :pswitch_0
+    check-cast v0, Ll6;
+
+    :try_start_0
+    invoke-interface {v0}, Ll6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final g()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Landroid/view/View;->playSoundEffect(I)V
-
-    iget-object v0, p0, Lv6;->o:Lw6;
-
-    invoke-virtual {v0}, Lw6;->k()Z
-
-    return v1
+    return v0
 .end method
 
-.method public final setFrame(IIII)Z
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->setFrame(IIII)Z
+    iget v0, p0, Lv6;->a:I
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string v1, "RunnableDisposable(disposed="
 
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p3
-
-    if-eqz p2, :cond_0
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p4
-
-    invoke-static {p2, p4}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+    invoke-virtual {p0}, Lv6;->g()Z
 
     move-result v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result v2
+    const-string v1, ", "
 
-    sub-int/2addr v1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v3
+    const-string v1, ")"
 
-    sub-int/2addr v2, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr p2, v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    div-int/lit8 p2, p2, 0x2
+    move-result-object v0
 
-    add-int/2addr p4, v2
+    return-object v0
 
-    div-int/lit8 p4, p4, 0x2
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sub-int v1, p2, v0
+    const-string v1, "ActionDisposable(disposed="
 
-    sub-int v2, p4, v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    add-int/2addr p2, v0
+    invoke-virtual {p0}, Lv6;->g()Z
 
-    add-int/2addr p4, v0
+    move-result v1
 
-    invoke-static {p3, v1, v2, p2, p4}, Llx4;->f(Landroid/graphics/drawable/Drawable;IIII)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return p1
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

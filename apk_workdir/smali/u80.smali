@@ -1,126 +1,117 @@
 .class public final Lu80;
-.super Ln96;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final a:I
 
-.field public Y:Z
-
-.field public Z:F
-
-.field public w0:Z
+.field public final b:J
 
 
-# virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 7
+# direct methods
+.method public constructor <init>(IJ)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput p1, p0, Lu80;->a:I
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iput-wide p2, p0, Lu80;->b:J
 
-    move-result-object v1
-
-    iget v2, v1, Landroid/graphics/Rect;->right:I
-
-    iget v3, v1, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v2, v3
-
-    iget v4, v1, Landroid/graphics/Rect;->bottom:I
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v4, v1
-
-    iget v5, p0, Lu80;->Z:F
-
-    iget-boolean v6, p0, Lu80;->Y:Z
-
-    if-nez v6, :cond_0
-
-    const/high16 v6, 0x43b40000    # 360.0f
-
-    sub-float v5, v6, v5
-
-    :cond_0
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    div-int/lit8 v4, v4, 0x2
-
-    add-int/2addr v4, v1
-
-    int-to-float v1, v4
-
-    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    invoke-super {p0, p1}, Ln96;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    iget-boolean p1, p0, Lu80;->w0:Z
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lu80;->w0:Z
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x14
-
-    add-long/2addr v0, v2
-
-    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    :cond_1
     return-void
 .end method
 
-.method public final run()V
-    .locals 3
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-boolean v0, p0, Lu80;->w0:Z
+    const/4 v0, 0x1
 
-    iget v0, p0, Lu80;->Z:F
+    if-ne p1, p0, :cond_0
 
-    iget v1, p0, Lu80;->X:I
+    return v0
 
-    int-to-float v1, v1
+    :cond_0
+    instance-of v1, p1, Lu80;
 
-    const/high16 v2, 0x41a00000    # 20.0f
+    const/4 v2, 0x0
 
-    div-float/2addr v2, v1
+    if-eqz v1, :cond_1
 
-    const/high16 v1, 0x43b40000    # 360.0f
+    check-cast p1, Lu80;
 
-    mul-float/2addr v2, v1
+    iget v1, p0, Lu80;->a:I
 
-    float-to-int v1, v2
+    iget v3, p1, Lu80;->a:I
 
-    int-to-float v1, v1
+    if-ne v1, v3, :cond_1
 
-    add-float/2addr v0, v1
+    iget-wide v3, p0, Lu80;->b:J
 
-    iput v0, p0, Lu80;->Z:F
+    iget-wide v5, p1, Lu80;->b:J
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    cmp-long p1, v3, v5
 
-    return-void
+    if-nez p1, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    iget v0, p0, Lu80;->a:I
+
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    const/16 v1, 0x20
+
+    iget-wide v2, p0, Lu80;->b:J
+
+    ushr-long v4, v2, v1
+
+    xor-long v1, v4, v2
+
+    long-to-int v1, v1
+
+    xor-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "PacketInfo{sizeInBytes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lu80;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", timestampNs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lu80;->b:J
+
+    const-string v3, "}"
+
+    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

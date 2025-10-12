@@ -55,8 +55,10 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 1
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     sget-object v0, Landroid/os/ResultReceiver;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -73,8 +75,10 @@
 .method public constructor <init>(Landroid/os/ResultReceiver;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper;->mResultReceiver:Landroid/os/ResultReceiver;
 
     return-void

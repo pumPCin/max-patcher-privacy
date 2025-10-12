@@ -1,153 +1,59 @@
 .class public final Ld76;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Le76;
 
-.field public final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Landroid/app/Notification;
+.field public final synthetic Z:Le76;
+
+.field public o:Z
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(ILandroid/app/Notification;I)V
+.method public constructor <init>(Le76;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ld76;->Z:Le76;
 
-    iput p1, p0, Ld76;->a:I
-
-    iput-object p2, p0, Ld76;->c:Landroid/app/Notification;
-
-    iput p3, p0, Ld76;->b:I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Ld76;->Y:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iget p1, p0, Ld76;->r0:I
 
-    return p1
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    const/4 v0, 0x0
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_4
+    iput p1, p0, Ld76;->r0:I
 
-    const-class v1, Ld76;
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v5, 0x0
 
-    move-result-object v2
+    iget-object v0, p0, Ld76;->Z:Le76;
 
-    if-eq v1, v2, :cond_1
+    const/4 v4, 0x0
 
-    goto :goto_0
+    move-object v3, p0
 
-    :cond_1
-    check-cast p1, Ld76;
+    invoke-virtual/range {v0 .. v5}, Le76;->b(JLwy3;Ljava/util/List;Z)Ljava/lang/Object;
 
-    iget v1, p0, Ld76;->a:I
+    move-result-object p1
 
-    iget v2, p1, Ld76;->a:I
-
-    if-eq v1, v2, :cond_2
-
-    return v0
-
-    :cond_2
-    iget v1, p0, Ld76;->b:I
-
-    iget v2, p1, Ld76;->b:I
-
-    if-eq v1, v2, :cond_3
-
-    return v0
-
-    :cond_3
-    iget-object v0, p0, Ld76;->c:Landroid/app/Notification;
-
-    iget-object p1, p1, Ld76;->c:Landroid/app/Notification;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    :goto_0
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Ld76;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ld76;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ld76;->c:Landroid/app/Notification;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ForegroundInfo{mNotificationId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ld76;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mForegroundServiceType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ld76;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mNotification="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ld76;->c:Landroid/app/Notification;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

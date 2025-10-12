@@ -1,46 +1,31 @@
-.class public final Ldfh;
+.class public abstract Ldfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lye0;
 
-
-# instance fields
-.field public final synthetic a:Llo6;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Llo6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldfh;->a:Llo6;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Z)V
+.method static constructor <clinit>()V
     .locals 2
 
-    iget-object v0, p0, Ldfh;->a:Llo6;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object v0, v0, Llo6;->B0:Len9;
+    const/16 v1, 0x1f
 
-    const/4 v1, 0x1
+    if-lt v0, v1, :cond_0
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/high16 v0, 0x2000000
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    :cond_0
+    const/4 v0, 0x0
 
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    :goto_0
+    sput v0, Ldfh;->a:I
 
     return-void
 .end method

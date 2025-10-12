@@ -1,75 +1,70 @@
 .class public final Lkhd;
-.super Lv2;
+.super Ljn7;
 .source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbw7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
+.method public synthetic constructor <init>(Lbw7;I)V
     .locals 0
 
-    iput p2, p0, Lkhd;->c:I
+    iput p2, p0, Lkhd;->a:I
 
-    const/16 p2, 0xa
+    iput-object p1, p0, Lkhd;->b:Lbw7;
 
-    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lkhd;->c:I
+    iget v0, p0, Lkhd;->a:I
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    const-string p1, "ContextMenu.ScrollHelper"
+    check-cast p1, Ljava/lang/Throwable;
 
-    const-string p2, "ScrollView scroll is not yet supported!"
+    iget-object p1, p0, Lkhd;->b:Lbw7;
 
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v0, 0x0
 
-    return-void
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 
     :pswitch_0
-    const-string p1, "ContextMenu.ScrollHelper"
+    check-cast p1, Ljava/lang/Throwable;
 
-    const-string p2, "NestedScrollView scroll is not yet supported!"
+    iget-object p1, p0, Lkhd;->b:Lbw7;
 
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v0, 0x0
 
-    return-void
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :pswitch_1
-    const-string p1, "ContextMenu.ScrollHelper"
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-string p2, "HorizontalScrollView scroll is not yet supported!"
-
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :pswitch_2
-    const-string p1, "ContextMenu.ScrollHelper"
-
-    const-string p2, "AdapterView scroll is not yet supported!"
-
-    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

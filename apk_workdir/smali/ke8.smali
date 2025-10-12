@@ -1,17 +1,22 @@
-.class public interface abstract Lke8;
+.class public final Lke8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lle8;
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;)V
-.end method
 
-.method public abstract b()V
-.end method
+# instance fields
+.field public final a:I
 
-.method public abstract c(Lss4;)V
-.end method
 
-.method public abstract onError(Ljava/lang/Throwable;)V
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lke8;->a:I
+
+    return-void
 .end method

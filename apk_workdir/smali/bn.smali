@@ -1,25 +1,29 @@
-.class public abstract Lbn;
-.super Ljava/lang/Object;
+.class public final Lbn;
+.super Landroid/widget/LinearLayout$LayoutParams;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:I
+
+.field public b:Lw98;
+
+.field public c:Landroid/view/animation/Interpolator;
+
+
 # direct methods
-.method public static a(Landroid/os/PowerManager;)Z
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+    const/4 v0, -0x1
 
-    move-result p0
+    const/4 v1, -0x2
 
-    return p0
-.end method
+    invoke-direct {p0, v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-.method public static b(Ljava/util/Locale;)Ljava/lang/String;
-    .locals 0
+    const/4 v0, 0x1
 
-    invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
+    iput v0, p0, Lbn;->a:I
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

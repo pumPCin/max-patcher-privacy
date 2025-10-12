@@ -1,97 +1,98 @@
 .class public final Ln16;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lo16;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic X:Lr16;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Lr16;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln16;->X:Lr16;
 
-    iput-object p1, p0, Ln16;->a:Ljava/util/List;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ln24;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ln16;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ln16;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ln16;
 
-    iget-object v1, p0, Ln16;->a:Ljava/util/List;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object p1, p1, Ln16;->a:Ljava/util/List;
+    invoke-virtual {p1, p2}, Ln16;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Ln16;->a:Ljava/util/List;
+    new-instance p1, Ln16;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Ln16;->X:Lr16;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Ln16;-><init>(Lr16;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-string v1, "OpenPicker(includes="
+    iget-object p1, p0, Ln16;->X:Lr16;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lr16;->s0:Lyn7;
 
-    iget-object v1, p0, Ln16;->a:Ljava/util/List;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ")"
+    check-cast p1, Lrta;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lz7d;->N2:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v1, Lxcf;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
 
-    return-object v0
+    invoke-virtual {p1, v1}, Lrta;->g(Lcdf;)V
+
+    sget v0, Lz7d;->M2:I
+
+    new-instance v1, Lxcf;
+
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lrta;->a(Lcdf;)V
+
+    invoke-virtual {p1}, Lrta;->i()Lqta;
+
+    move-result-object p1
+
+    return-object p1
 .end method

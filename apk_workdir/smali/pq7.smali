@@ -1,76 +1,83 @@
-.class public final Lpq7;
-.super Ljava/io/OutputStream;
+.class public abstract Lpq7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final a:Ljava/util/LinkedHashMap;
 
 
-# virtual methods
-.method public final write(I)V
-    .locals 4
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-wide v0, p0, Lpq7;->a:J
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const-wide/16 v2, 0x1
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lpq7;->a:J
+    sput-object v0, Lpq7;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
-.method public final write([B)V
-    .locals 4
-
-    iget-wide v0, p0, Lpq7;->a:J
-
-    array-length p1, p1
-
-    int-to-long v2, p1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lpq7;->a:J
-
-    return-void
-.end method
-
-.method public final write([BII)V
+.method public static final a(Landroid/app/Activity;Z)Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
     .locals 2
 
-    if-ltz p2, :cond_0
+    sget-object v0, Lpq7;->a:Ljava/util/LinkedHashMap;
 
-    array-length v0, p1
+    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-gt p2, v0, :cond_0
+    move-result-object v0
 
-    if-ltz p3, :cond_0
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    add-int/2addr p2, p3
+    if-nez v0, :cond_1
 
-    array-length p1, p1
+    const/4 v0, 0x0
 
-    if-gt p2, p1, :cond_0
+    const-string v1, "LifecycleHandler"
 
-    if-ltz p2, :cond_0
+    if-eqz p1, :cond_0
 
-    iget-wide p1, p0, Lpq7;->a:J
+    instance-of p1, p0, Landroidx/fragment/app/b;
 
-    int-to-long v0, p3
+    if-eqz p1, :cond_0
 
-    add-long/2addr p1, v0
+    move-object p1, p0
 
-    iput-wide p1, p0, Lpq7;->a:J
+    check-cast p1, Landroidx/fragment/app/b;
 
-    return-void
+    invoke-virtual {p1}, Landroidx/fragment/app/b;->D()Lla6;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    move-object v0, p1
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+    move-result-object p1
 
-    throw p1
+    invoke-virtual {p1, v1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->D0(Landroid/app/Activity;)V
+
+    :cond_2
+    return-object v0
 .end method

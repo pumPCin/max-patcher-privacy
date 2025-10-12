@@ -3,22 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lus1;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
+.field public final synthetic X:Lf2g;
+
+.field public final synthetic Y:Lab0;
+
+.field public final synthetic Z:Ljava/util/List;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Luw1;
+.field public final synthetic b:Lww1;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Lztd;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luw1;I)V
+.method public synthetic constructor <init>(Lww1;Ljava/lang/String;Lztd;Lf2g;Lab0;Ljava/util/List;I)V
     .locals 0
 
-    iput p2, p0, Lmw1;->a:I
+    iput p7, p0, Lmw1;->a:I
 
-    iput-object p1, p0, Lmw1;->b:Luw1;
+    iput-object p1, p0, Lmw1;->b:Lww1;
+
+    iput-object p2, p0, Lmw1;->c:Ljava/lang/String;
+
+    iput-object p3, p0, Lmw1;->o:Lztd;
+
+    iput-object p4, p0, Lmw1;->X:Lf2g;
+
+    iput-object p5, p0, Lmw1;->Y:Lab0;
+
+    iput-object p6, p0, Lmw1;->Z:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,135 +47,176 @@
 
 
 # virtual methods
-.method public o(Lts1;)Ljava/lang/String;
-    .locals 5
+.method public final run()V
+    .locals 8
 
     iget v0, p0, Lmw1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lmw1;->b:Luw1;
+    iget-object v0, p0, Lmw1;->b:Lww1;
 
-    :try_start_0
-    iget-object v1, v0, Luw1;->c:Lcsd;
+    iget-object v2, p0, Lmw1;->c:Ljava/lang/String;
 
-    new-instance v2, Luu1;
+    iget-object v3, p0, Lmw1;->o:Lztd;
 
-    const/4 v3, 0x6
+    iget-object v4, p0, Lmw1;->X:Lf2g;
 
-    invoke-direct {v2, v0, v3, p1}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v5, p0, Lmw1;->Y:Lab0;
 
-    invoke-virtual {v1, v2}, Lcsd;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v6, p0, Lmw1;->Z:Ljava/util/List;
 
-    goto :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :catch_0
-    new-instance v0, Ljava/lang/RuntimeException;
+    const-string v7, "Use case "
 
-    const-string v1, "Unable to check if MeteringRepeating is attached. Camera executor shut down."
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Lts1;->d(Ljava/lang/Throwable;)Z
+    const-string v7, " ACTIVE"
 
-    :goto_0
-    const-string p1, "isMeteringRepeatingAttached"
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v0, v1, v7}, Lww1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lww1;->a:Ld2g;
+
+    iget-object v1, v1, Ld2g;->c:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v1, v2}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lc2g;
+
+    if-nez v7, :cond_0
+
+    new-instance v7, Lc2g;
+
+    invoke-direct {v7, v3, v4, v5, v6}, Lc2g;-><init>(Lztd;Lf2g;Lab0;Ljava/util/List;)V
+
+    invoke-interface {v1, v2, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, v7, Lc2g;->f:Z
+
+    iget-object v1, v0, Lww1;->a:Ld2g;
+
+    invoke-virtual/range {v1 .. v6}, Ld2g;->f(Ljava/lang/String;Lztd;Lf2g;Lab0;Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lww1;->K()V
+
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lmw1;->b:Luw1;
+    iget-object v0, p0, Lmw1;->b:Lww1;
 
-    :try_start_1
-    iget-object v1, v0, Luw1;->a:Ls3g;
+    iget-object v2, p0, Lmw1;->c:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ls3g;->b()Lqvd;
+    iget-object v3, p0, Lmw1;->o:Lztd;
+
+    iget-object v4, p0, Lmw1;->X:Lf2g;
+
+    iget-object v5, p0, Lmw1;->Y:Lab0;
+
+    iget-object v6, p0, Lmw1;->Z:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v7, "Use case "
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " UPDATED"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lqvd;->b()Lrvd;
+    const/4 v7, 0x0
+
+    invoke-virtual {v0, v1, v7}, Lww1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v1, v0, Lww1;->a:Ld2g;
+
+    invoke-virtual/range {v1 .. v6}, Ld2g;->f(Ljava/lang/String;Lztd;Lf2g;Lab0;Ljava/util/List;)V
+
+    invoke-virtual {v0}, Lww1;->K()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lmw1;->b:Lww1;
+
+    iget-object v2, p0, Lmw1;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lmw1;->o:Lztd;
+
+    iget-object v4, p0, Lmw1;->X:Lf2g;
+
+    iget-object v5, p0, Lmw1;->Y:Lab0;
+
+    iget-object v6, p0, Lmw1;->Z:Ljava/util/List;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v7, "Use case "
+
+    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, " RESET"
+
+    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Ljava/util/ArrayList;
+    const/4 v7, 0x0
 
-    iget-object v1, v1, Lrvd;->c:Ljava/util/List;
+    invoke-virtual {v0, v1, v7}, Lww1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iget-object v1, v0, Lww1;->a:Ld2g;
 
-    iget-object v1, v0, Luw1;->M0:Lstg;
+    invoke-virtual/range {v1 .. v6}, Ld2g;->f(Ljava/lang/String;Lztd;Lf2g;Lab0;Ljava/util/List;)V
 
-    iget-object v1, v1, Lstg;->f:Ljava/lang/Object;
+    invoke-virtual {v0}, Lww1;->p()V
 
-    check-cast v1, Lsz1;
+    invoke-virtual {v0}, Lww1;->D()V
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lww1;->K()V
 
-    new-instance v1, Lnw1;
+    iget v1, v0, Lww1;->R0:I
 
-    invoke-direct {v1, v0, p1}, Lnw1;-><init>(Luw1;Lts1;)V
+    const/16 v2, 0x9
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-ne v1, v2, :cond_1
 
-    iget-object v1, v0, Luw1;->b:Lk02;
+    invoke-virtual {v0}, Lww1;->B()V
 
-    iget-object v3, v0, Luw1;->x0:Lxw1;
-
-    iget-object v3, v3, Lxw1;->a:Ljava/lang/String;
-
-    iget-object v4, v0, Luw1;->c:Lcsd;
-
-    invoke-static {v2}, Lhv0;->v(Ljava/util/ArrayList;)Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    move-result-object v2
-
-    iget-object v1, v1, Lk02;->a:Llo4;
-
-    invoke-virtual {v1, v3, v4, v2}, Llo4;->w(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    :try_end_1
-    .catch Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v1
-
-    :goto_1
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Unable to open camera for configAndClose: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1}, Luw1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1, v1}, Lts1;->d(Ljava/lang/Throwable;)Z
-
-    :goto_2
-    const-string p1, "configAndCloseTask"
-
-    return-object p1
+    :cond_1
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

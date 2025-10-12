@@ -1,207 +1,59 @@
-.class public final Ldjh;
-.super Lcom/google/android/gms/common/internal/a;
+.class public abstract Ldjh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final N0:Lade;
-
-.field public final O0:Lade;
-
-.field public final P0:Lade;
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Lefh;Lefh;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/16 v3, 0x17
+    new-instance v0, Ljava/util/HashSet;
 
-    const/4 v7, 0x0
+    const-string v1, "unity"
 
-    move-object v0, p0
+    const-string v2, "native"
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILp30;Ljo6;Lko6;I)V
-
-    new-instance p1, Lade;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lade;-><init>(I)V
-
-    iput-object p1, v0, Ldjh;->N0:Lade;
-
-    new-instance p1, Lade;
-
-    invoke-direct {p1, p2}, Lade;-><init>(I)V
-
-    iput-object p1, v0, Ldjh;->O0:Lade;
-
-    new-instance p1, Lade;
-
-    invoke-direct {p1, p2}, Lade;-><init>(I)V
-
-    iput-object p1, v0, Ldjh;->P0:Lade;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final g()I
-    .locals 1
-
-    const v0, 0xb2c988
-
-    return v0
-.end method
-
-.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 3
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
-
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
     move-result-object v1
 
-    instance-of v2, v1, Llmh;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    if-eqz v2, :cond_1
+    move-result-object v1
 
-    check-cast v1, Llmh;
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    return-object v1
+    new-instance v0, Ljava/util/HashMap;
 
-    :cond_1
-    new-instance v1, Llmh;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/4 v2, 0x2
+    sput-object v0, Ldjh;->a:Ljava/util/HashMap;
 
-    invoke-direct {v1, p1, v0, v2}, Lweh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    return-object v1
-.end method
+    move-result v0
 
-.method public final m()[Lkm5;
-    .locals 1
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    sget-object v0, Lvr0;->c:[Lkm5;
+    move-result v1
 
-    return-object v0
-.end method
+    const-string v2, "]  PID: ["
 
-.method public final p()Ljava/lang/String;
-    .locals 1
+    const-string v3, "] "
 
-    const-string v0, "com.google.android.gms.location.internal.IGoogleLocationManagerService"
+    const-string v4, "UID: ["
 
-    return-object v0
-.end method
+    invoke-static {v4, v0, v2, v1, v3}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
-.method public final q()Ljava/lang/String;
-    .locals 1
+    move-result-object v0
 
-    const-string v0, "com.google.android.location.internal.GoogleLocationManagerService.START"
+    const-string v1, "PlayCoreVersion"
 
-    return-object v0
-.end method
-
-.method public final s()V
-    .locals 2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    iget-object v0, p0, Ldjh;->N0:Lade;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Ldjh;->N0:Lade;
-
-    invoke-virtual {v1}, Lade;->clear()V
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    iget-object v1, p0, Ldjh;->O0:Lade;
-
-    monitor-enter v1
-
-    :try_start_1
-    iget-object v0, p0, Ldjh;->O0:Lade;
-
-    invoke-virtual {v0}, Lade;->clear()V
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    iget-object v0, p0, Ldjh;->P0:Lade;
-
-    monitor-enter v0
-
-    :try_start_2
-    iget-object v1, p0, Ldjh;->P0:Lade;
-
-    invoke-virtual {v1}, Lade;->clear()V
-
-    monitor-exit v0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v1
-
-    :catchall_1
-    move-exception v0
-
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_4
-    monitor-exit v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
-
-    throw v1
-.end method
-
-.method public final t()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

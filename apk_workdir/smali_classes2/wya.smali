@@ -1,57 +1,128 @@
 .class public final Lwya;
-.super Landroid/webkit/WebViewClient;
+.super Ldl4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lxya;
-
-.field public final synthetic b:Lyya;
+.field public final j:Luya;
 
 
 # direct methods
-.method public constructor <init>(Lxya;Lyya;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Luya;Lbc4;)V
+    .locals 4
 
-    iput-object p1, p0, Lwya;->a:Lxya;
+    invoke-static {}, Lshd;->l()Lkv7;
 
-    iput-object p2, p0, Lwya;->b:Lyya;
+    move-result-object v0
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    iget-boolean v1, p3, Lbc4;->b:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "video/av01"
+
+    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-boolean v1, p3, Lbc4;->a:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "video/x-vnd.on2.vp9"
+
+    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    const-string v1, "video/avc"
+
+    invoke-virtual {v0, v1}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lshd;->e(Ljava/util/List;)Lkv7;
+
+    move-result-object v0
+
+    invoke-static {}, Lshd;->l()Lkv7;
+
+    move-result-object v1
+
+    iget-boolean p3, p3, Lbc4;->c:Z
+
+    if-eqz p3, :cond_2
+
+    const-string p3, "audio/opus"
+
+    invoke-virtual {v1, p3}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    const-string p3, "audio/mp4a-latm"
+
+    invoke-virtual {v1, p3}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    const-string p3, "audio/mp4"
+
+    invoke-virtual {v1, p3}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v1}, Lshd;->e(Ljava/util/List;)Lkv7;
+
+    move-result-object p3
+
+    new-instance v1, Lok4;
+
+    invoke-direct {v1}, Lok4;-><init>()V
+
+    const/4 v2, 0x0
+
+    new-array v3, v2, [Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lkv7;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    array-length v3, v0
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    invoke-static {v0}, La67;->k([Ljava/lang/Object;)Lexc;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lenf;->m:La67;
+
+    new-array v0, v2, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Lkv7;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Ljava/lang/String;
+
+    array-length v0, p3
+
+    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p3}, La67;->k([Ljava/lang/Object;)Lexc;
+
+    move-result-object p3
+
+    iput-object p3, v1, Lenf;->t:La67;
+
+    new-instance p3, Lqk4;
+
+    invoke-direct {p3, v1}, Lqk4;-><init>(Lok4;)V
+
+    invoke-direct {p0, p1, p3, p2}, Ldl4;-><init>(Landroid/content/Context;Lgnf;Lu98;)V
+
+    iput-object p2, p0, Lwya;->j:Luya;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
-    .locals 1
-
-    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lwya;->a:Lxya;
-
-    iget-object p2, p2, Lxya;->a:Li0h;
-
-    iget-object p2, p2, Li0h;->c1:Ljb5;
-
-    new-instance v0, Lzyg;
-
-    invoke-direct {v0, p1}, Lzyg;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwya;->b:Lyya;
-
-    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
-
-    const/4 p1, 0x1
-
-    return p1
 .end method

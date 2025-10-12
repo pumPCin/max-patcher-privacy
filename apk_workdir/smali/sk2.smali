@@ -1,9 +1,9 @@
 .class public final Lsk2;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Lsk2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lsk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,39 +60,47 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lsk2;->X:Ljava/lang/Object;
 
-    check-cast p1, Lml2;
+    check-cast p1, Ldw9;
+
+    instance-of v0, p1, Lkc4;
+
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lsk2;->Y:Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    iget-object v1, v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->I0:Lvi2;
+    invoke-static {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->L0(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;)Z
 
-    invoke-virtual {v1}, Lvi2;->j()I
+    move-result v1
 
-    move-result v2
+    if-eqz v1, :cond_0
 
-    iget-object v3, p1, Lml2;->a:Ljava/util/List;
+    invoke-virtual {v0}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;->P0()Lagg;
 
-    new-instance v4, Lbl2;
+    move-result-object v0
 
-    invoke-direct {v4, v0, v2, p1}, Lbl2;-><init>(Lone/me/chatmedia/viewer/ChatMediaViewerScreen;ILml2;)V
+    invoke-interface {v0}, Lagg;->pause()V
 
-    iget-object p1, v1, Lvi2;->C0:Lru;
+    const/4 v1, 0x0
 
-    new-instance v0, Lzv1;
+    invoke-interface {v0, v1}, Lagg;->Z(Landroid/view/Surface;)V
 
-    const/16 v1, 0x10
+    invoke-interface {v0}, Lagg;->stop()V
 
-    invoke-direct {v0, v1, v4}, Lzv1;-><init>(ILjava/lang/Object;)V
+    :cond_0
+    sget-object v0, Llk2;->c:Llk2;
 
-    invoke-virtual {p1, v3, v0}, Lru;->b(Ljava/util/List;Ljava/lang/Runnable;)V
+    check-cast p1, Lkc4;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, p1}, Ld3;->r0(Lkc4;)V
+
+    :cond_1
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

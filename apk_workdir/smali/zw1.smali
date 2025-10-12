@@ -1,47 +1,85 @@
 .class public final Lzw1;
-.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.super Lmw8;
 .source "SourceFile"
 
 
+# instance fields
+.field public m:Lxw7;
+
+.field public final n:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Lmw8;-><init>()V
+
+    iput-object p1, p0, Lzw1;->n:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
-    .locals 0
+.method public final d()Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lzw1;->m:Lxw7;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lzw1;->n:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Lxw7;->d()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
+.method public final l(Lxw7;Lzba;)V
     .locals 0
 
-    return-void
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
-.method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-    .locals 0
+.method public final m(Lnr9;)V
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Lzw1;->m:Lxw7;
 
-.method public final onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    iget-object v1, p0, Lmw8;->l:Ld9d;
 
-.method public final onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
-    .locals 0
+    invoke-virtual {v1, v0}, Ld9d;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 0
+    check-cast v0, Llw8;
 
-    return-void
-.end method
+    if-eqz v0, :cond_0
 
-.method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 0
+    iget-object v1, v0, Llw8;->a:Lxw7;
+
+    invoke-virtual {v1, v0}, Lxw7;->j(Lzba;)V
+
+    :cond_0
+    iput-object p1, p0, Lzw1;->m:Lxw7;
+
+    new-instance v0, Lyw1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lyw1;-><init>(ILjava/lang/Object;)V
+
+    invoke-super {p0, p1, v0}, Lmw8;->l(Lxw7;Lzba;)V
 
     return-void
 .end method

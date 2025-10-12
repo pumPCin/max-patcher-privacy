@@ -1,125 +1,118 @@
-.class public final Lvbd;
-.super Lm3f;
+.class public final synthetic Lvbd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ltd6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lybd;
-
-.field public final synthetic Z:Ljava/lang/String;
-
-.field public final synthetic w0:Z
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lybd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
     .locals 0
 
-    iput-object p1, p0, Lvbd;->Y:Lybd;
+    iput p2, p0, Lvbd;->a:I
 
-    iput-object p2, p0, Lvbd;->Z:Ljava/lang/String;
+    iput-object p1, p0, Lvbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iput-boolean p3, p0, Lvbd;->w0:Z
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvbd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvbd;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lvbd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    new-instance p1, Lvbd;
+    iget v0, p0, Lvbd;->a:I
 
-    iget-object v0, p0, Lvbd;->Z:Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v1, p0, Lvbd;->w0:Z
+    iget-object v0, p0, Lvbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-object v2, p0, Lvbd;->Y:Lybd;
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
 
-    invoke-direct {p1, v2, v0, v1, p2}, Lvbd;-><init>(Lybd;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    const-string v1, "ScheduledSendPickerDialogFragment:arg_input"
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    iget v0, p0, Lvbd;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Lvbd;->X:I
-
-    iget-object p1, p0, Lvbd;->Y:Lybd;
-
-    iget-object v0, p0, Lvbd;->Z:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lvbd;->w0:Z
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v0, v1, v2, p0}, Lybd;->a(Lybd;Ljava/lang/String;ZZLnz3;)Ljava/lang/Comparable;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    move-result-object v0
 
     return-object v0
 
-    :cond_2
-    return-object p1
+    :pswitch_0
+    iget-object v0, p0, Lvbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "ScheduledSendPickerDialogFragment:who"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lvbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->s0()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "ScheduledSendPickerViewModel:delayed_attrs"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getSerializable(Ljava/lang/String;)Ljava/io/Serializable;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lsm4;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Lsm4;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    if-eqz v1, :cond_1
+
+    iget-boolean v0, v1, Lsm4;->b:Z
+
+    goto :goto_1
+
+    :cond_1
+    const-string v1, "ScheduledSendPickerDialogFragment:send_with_notification"
+
+    invoke-virtual {v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,28 +3,14 @@
 
 
 # static fields
-.field public static media_editor_bottom_background_id:I = 0x7f0a04dc
+.field public static cancel:I = 0x7f0a0225
 
-.field public static media_editor_close_id:I = 0x7f0a04dd
+.field public static music_player_control_thumb_bg:I = 0x7f0a05d1
 
-.field public static media_editor_content_id:I = 0x7f0a04de
+.field public static music_player_control_thumb_circle:I = 0x7f0a05d2
 
-.field public static media_editor_crop_id:I = 0x7f0a04df
+.field public static presense_accent:I = 0x7f0a08f8
 
-.field public static media_editor_done_id:I = 0x7f0a04e0
+.field public static presense_bg:I = 0x7f0a08f9
 
-.field public static media_editor_flip_horizontally_id:I = 0x7f0a04e1
-
-.field public static media_editor_reset_id:I = 0x7f0a04e2
-
-.field public static media_editor_rotate_id:I = 0x7f0a04e3
-
-.field public static media_picker_album_container_id:I = 0x7f0a04e6
-
-.field public static media_picker_container_id:I = 0x7f0a04e7
-
-.field public static media_picker_content_id:I = 0x7f0a04e8
-
-.field public static media_picker_divider_id:I = 0x7f0a04e9
-
-.field public static media_picker_toolbar_id:I = 0x7f0a04ea
+.field public static ripple_bg:I = 0x7f0a09f8

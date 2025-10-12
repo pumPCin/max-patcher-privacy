@@ -1,95 +1,48 @@
-.class public final synthetic Lli6;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewStub$OnInflateListener;
+.class public final Lli6;
+.super Lwy3;
 
 
 # instance fields
-.field public final synthetic a:Lmi6;
+.field public X:I
+
+.field public final synthetic Y:Ly03;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmi6;)V
+.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lli6;->Y:Ly03;
 
-    iput-object p1, p0, Lli6;->a:Lmi6;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget p1, Leta;->b:I
+    iput-object p1, p0, Lli6;->o:Ljava/lang/Object;
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget p1, p0, Lli6;->X:I
 
-    move-result-object v6
+    const/high16 v0, -0x80000000
 
-    sget p1, Leta;->a:I
+    or-int/2addr p1, v0
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iput p1, p0, Lli6;->X:I
 
-    move-result-object p1
+    iget-object p1, p0, Lli6;->Y:Ly03;
 
-    move-object v1, p1
+    const/4 v0, 0x0
 
-    check-cast v1, Lone/me/sdk/gallery/view/NumericCheckButton;
-
-    iget-object p1, p0, Lli6;->a:Lmi6;
-
-    iput-object v1, p1, Lmi6;->K0:Lone/me/sdk/gallery/view/NumericCheckButton;
-
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0, p0}, Ly03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const/16 p2, 0xa
-
-    int-to-float p2, p2
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p1
-
-    invoke-static {p2}, Lv63;->r0(F)I
-
-    move-result v2
-
-    if-nez v6, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lpg3;
-
-    const/4 v7, 0x1
-
-    move v3, v2
-
-    move v4, v2
-
-    move v5, v2
-
-    invoke-direct/range {v0 .. v7}, Lpg3;-><init>(Landroid/view/View;IIIILandroid/view/View;I)V
-
-    invoke-virtual {v6, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    return-object p1
 .end method

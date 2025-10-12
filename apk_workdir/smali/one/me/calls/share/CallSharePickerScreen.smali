@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lul3;
+.implements Lll3;
 
 
 # annotations
@@ -16,9 +16,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lone/me/chats/picker/AbstractPickerScreen<",
-        "Leo1;",
+        "Lfo1;",
         ">;",
-        "Lul3;"
+        "Lll3;"
     }
 .end annotation
 
@@ -29,8 +29,8 @@
     d2 = {
         "Lone/me/calls/share/CallSharePickerScreen;",
         "Lone/me/chats/picker/AbstractPickerScreen;",
-        "Leo1;",
-        "Lul3;",
+        "Lfo1;",
+        "Lll3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -48,28 +48,28 @@
 
 
 # static fields
-.field public static final D0:Led7;
+.field public static final y0:Lyb7;
 
 
 # instance fields
-.field public final A0:Lmoe;
+.field public final t0:La4d;
 
-.field public final B0:Lu9h;
+.field public final u0:Lyb7;
 
-.field public C0:Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+.field public final v0:Lhne;
 
-.field public final y0:Lfub;
+.field public final w0:Lx4f;
 
-.field public final z0:Led7;
+.field public x0:Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 5
 
-    new-instance v0, Led7;
+    new-instance v0, Lyb7;
 
-    new-instance v1, Ljr0;
+    new-instance v1, Lcr0;
 
     const/4 v2, 0x3
 
@@ -77,11 +77,11 @@
 
     const/4 v4, 0x4
 
-    invoke-direct {v1, v4, v2, v3}, Ljr0;-><init>(IIZ)V
+    invoke-direct {v1, v4, v2, v3}, Lcr0;-><init>(IIZ)V
 
-    invoke-direct {v0, v4, v1}, Led7;-><init>(ILjr0;)V
+    invoke-direct {v0, v4, v1}, Lyb7;-><init>(ILcr0;)V
 
-    sput-object v0, Lone/me/calls/share/CallSharePickerScreen;->D0:Led7;
+    sput-object v0, Lone/me/calls/share/CallSharePickerScreen;->y0:Lyb7;
 
     return-void
 .end method
@@ -91,59 +91,59 @@
 
     invoke-direct {p0, p1}, Lone/me/chats/picker/AbstractPickerScreen;-><init>(Landroid/os/Bundle;)V
 
-    new-instance p1, Lfub;
+    new-instance p1, La4d;
 
-    sget-object v0, Lhfd;->O0:Lhfd;
+    sget-object v0, Lmdd;->J0:Lmdd;
 
-    invoke-direct {p1, v0}, Lfub;-><init>(Lhfd;)V
+    invoke-direct {p1, v0}, La4d;-><init>(Lmdd;)V
 
-    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->y0:Lfub;
+    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->t0:La4d;
 
-    sget-object p1, Led7;->c:Led7;
+    sget-object p1, Lyb7;->c:Lyb7;
 
-    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->z0:Led7;
+    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->u0:Lyb7;
 
-    sget p1, Lvja;->d:I
+    sget p1, Lcia;->d:I
 
-    new-instance v0, Ljef;
+    new-instance v0, Lxcf;
 
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
+    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
 
-    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+    invoke-static {v0}, Line;->a(Ljava/lang/Object;)Lhne;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->A0:Lmoe;
+    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->v0:Lhne;
 
-    new-instance p1, Lu9h;
+    new-instance p1, Lx4f;
 
-    sget-object v0, Lmn1;->a:Lmn1;
+    sget-object v0, Lnn1;->a:Lnn1;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lr8f;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    const-class v2, Le7f;
+
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v0
 
-    const-class v2, Lm13;
+    const-class v2, Lg13;
 
-    invoke-virtual {v0, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v0, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v0
 
     const/4 v2, 0x4
 
-    invoke-direct {p1, v1, v0, v2}, Lu9h;-><init>(Lbp7;Lbp7;I)V
+    invoke-direct {p1, v1, v0, v2}, Lx4f;-><init>(Lyn7;Lyn7;I)V
 
-    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->B0:Lu9h;
+    iput-object p1, p0, Lone/me/calls/share/CallSharePickerScreen;->w0:Lx4f;
 
     return-void
 .end method
@@ -153,19 +153,19 @@
 .method public final B0()Ljava/lang/Iterable;
     .locals 13
 
-    new-instance v0, Lji1;
+    new-instance v0, Lki1;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lji1;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lki1;-><init>(Landroid/content/Context;)V
 
-    sget v1, Luja;->f:I
+    sget v1, Lbia;->f:I
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    new-instance v1, Lgd0;
+    new-instance v1, Lxc0;
 
     const/4 v2, 0x3
 
@@ -173,9 +173,9 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v3}, Lgd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v2, v4, v3}, Lxc0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v1, v0}, Lk74;->K(Lnf6;Landroid/view/View;)V
+    invoke-static {v1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -191,7 +191,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -203,109 +203,109 @@
 
     mul-float/2addr v1, v2
 
-    invoke-static {v1}, Lv63;->r0(F)I
+    invoke-static {v1}, Li8e;->I(F)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setMinHeight(I)V
 
-    new-instance v5, Lw11;
+    new-instance v5, Lr71;
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v1
 
-    iget-object v7, v1, Lveb;->c:Lugb;
+    iget-object v7, v1, Lodb;->c:Lmfb;
 
     const/4 v11, 0x0
 
-    const/16 v12, 0x8
+    const/4 v12, 0x7
 
     const/4 v6, 0x0
 
-    const-class v8, Leo1;
+    const-class v8, Lfo1;
 
     const-string v9, "onShareConfirmed"
 
     const-string v10, "onShareConfirmed$calls_share_release()V"
 
-    invoke-direct/range {v5 .. v12}, Lw11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v5 .. v12}, Lr71;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-virtual {v0, v5}, Lji1;->setOnConfirmClickListener$calls_share_release(Lve6;)V
+    invoke-virtual {v0, v5}, Lki1;->setOnConfirmClickListener$calls_share_release(Ltd6;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lveb;->Z:Lsqc;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Lcs7;->L()Les7;
-
-    move-result-object v2
-
-    sget-object v3, Ler7;->o:Ler7;
-
-    invoke-static {v1, v2, v3}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v1
 
-    new-instance v2, Lgo1;
+    iget-object v1, v1, Lodb;->Z:Lbpc;
 
-    invoke-direct {v2, v4, p0}, Lgo1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
-
-    new-instance v5, Ljx5;
-
-    const/4 v6, 0x1
-
-    invoke-direct {v5, v1, v2, v6}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
-
-    move-result-object v1
-
-    invoke-static {v5, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lveb;->c:Lugb;
-
-    check-cast v1, Leo1;
-
-    iget-object v1, v1, Leo1;->g:Lsqc;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcs7;->L()Les7;
+    invoke-interface {v2}, Luq7;->x()Lwq7;
 
     move-result-object v2
 
-    invoke-static {v1, v2, v3}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    sget-object v3, Lwp7;->o:Lwp7;
+
+    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object v1
 
     new-instance v2, Lho1;
 
-    invoke-direct {v2, v4, v0}, Lho1;-><init>(Lkotlin/coroutines/Continuation;Lji1;)V
+    invoke-direct {v2, v4, p0}, Lho1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
 
-    new-instance v3, Ljx5;
+    new-instance v5, Lnw5;
 
-    const/4 v4, 0x1
+    const/4 v6, 0x1
 
-    invoke-direct {v3, v1, v2, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v5, v1, v2, v6}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v5, v1}, Luce;->N(Liu5;Ln24;)Loke;
+
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lodb;->c:Lmfb;
+
+    check-cast v1, Lfo1;
+
+    iget-object v1, v1, Lfo1;->g:Lbpc;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Luq7;->x()Lwq7;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+
+    move-result-object v1
+
+    new-instance v2, Lio1;
+
+    invoke-direct {v2, v4, v0}, Lio1;-><init>(Lkotlin/coroutines/Continuation;Lki1;)V
+
+    new-instance v3, Lnw5;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v1, v2, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Luce;->N(Liu5;Ln24;)Loke;
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -314,50 +314,50 @@
     return-object v0
 .end method
 
-.method public final C0()Lvfb;
+.method public final C0()Loeb;
     .locals 5
 
-    new-instance v0, Lr26;
+    new-instance v0, Lh8h;
 
-    new-instance v1, Ld71;
+    new-instance v1, Lu61;
 
-    sget-object v2, Lmn1;->a:Lmn1;
+    sget-object v2, Lnn1;->a:Lnn1;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lm13;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v3
 
-    invoke-direct {v1, v3}, Ld71;-><init>(Lbp7;)V
+    const-class v4, Lg13;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lhx3;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
+    invoke-direct {v1, v3}, Lu61;-><init>(Lyn7;)V
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lrw3;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    const-class v4, Lr63;
+    const-class v4, Lm63;
 
-    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v2, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v2
 
-    iget-object v4, p0, Lone/me/calls/share/CallSharePickerScreen;->B0:Lu9h;
+    iget-object v4, p0, Lone/me/calls/share/CallSharePickerScreen;->w0:Lx4f;
 
-    invoke-direct {v0, v4, v1, v3, v2}, Lr26;-><init>(Lu9h;Ld71;Lbp7;Lbp7;)V
+    invoke-direct {v0, v4, v1, v3, v2}, Lh8h;-><init>(Lx4f;Lu61;Lyn7;Lyn7;)V
 
     return-object v0
 .end method
@@ -375,19 +375,19 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Ltd2;->b:Ltd2;
+    sget-object v4, Lyd2;->b:Lyd2;
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLxe6;Ltd2;ILof4;)V
+    invoke-direct/range {v0 .. v6}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLvd6;Lyd2;ILaf4;)V
 
     return-object v0
 .end method
 
-.method public final E0(Landroid/content/Context;)Ltya;
+.method public final E0(Landroid/content/Context;)Ljxa;
     .locals 4
 
-    invoke-virtual {p0}, Lb04;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Ljz3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -401,20 +401,20 @@
 
     if-nez v0, :cond_0
 
-    sget v0, Lt9d;->f3:I
+    sget v0, Lz7d;->H2:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_0
-    new-instance v1, Ltya;
+    new-instance v1, Ljxa;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, p1, v2}, Ltya;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, p1, v2}, Ljxa;-><init>(Landroid/content/Context;I)V
 
-    sget p1, Luja;->g:I
+    sget p1, Lbia;->g:I
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setId(I)V
 
@@ -424,15 +424,15 @@
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
 
-    invoke-virtual {v1, v0}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
 
-    new-instance p1, Ln4b;
+    new-instance p1, Ld3b;
 
     const/4 v0, 0x4
 
     int-to-float v0, v0
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -444,7 +444,7 @@
 
     mul-float/2addr v2, v0
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Li8e;->I(F)I
 
     move-result v2
 
@@ -452,7 +452,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -464,7 +464,7 @@
 
     mul-float/2addr v0, v3
 
-    invoke-static {v0}, Lv63;->r0(F)I
+    invoke-static {v0}, Li8e;->I(F)I
 
     move-result v0
 
@@ -472,61 +472,61 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v2, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v2, v0}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v1, p1}, Ltya;->setActionsHorizontalPadding(Ln4b;)V
+    invoke-virtual {v1, p1}, Ljxa;->setActionsHorizontalPadding(Ld3b;)V
 
-    sget-object p1, Llya;->a:Llya;
+    sget-object p1, Lbxa;->a:Lbxa;
 
-    invoke-virtual {v1, p1}, Ltya;->setForm(Llya;)V
+    invoke-virtual {v1, p1}, Ljxa;->setForm(Lbxa;)V
 
-    new-instance p1, Lbya;
+    new-instance p1, Lrwa;
 
     new-instance v0, Lk;
 
-    const/16 v2, 0x17
+    const/16 v2, 0x18
 
     invoke-direct {v0, v2, p0}, Lk;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Lbya;-><init>(Lxe6;)V
+    invoke-direct {p1, v0}, Lrwa;-><init>(Lvd6;)V
 
-    invoke-virtual {v1, p1}, Ltya;->setLeftActions(Lhya;)V
+    invoke-virtual {v1, p1}, Ljxa;->setLeftActions(Lxwa;)V
 
-    sget-object p1, Leya;->a:Leya;
+    sget-object p1, Luwa;->a:Luwa;
 
-    invoke-virtual {v1, p1}, Ltya;->setRightActions(Ljya;)V
+    invoke-virtual {v1, p1}, Ljxa;->setRightActions(Lzwa;)V
 
     return-object v1
 .end method
 
-.method public final F0()Lugb;
+.method public final F0()Lmfb;
     .locals 9
 
-    sget-object v0, Lmn1;->a:Lmn1;
+    sget-object v0, Lnn1;->a:Lnn1;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lr8f;
+    const-class v2, Le7f;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v6
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lst1;
+    const-class v2, Lut1;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v7
 
-    new-instance v4, Lxm9;
+    new-instance v4, Lwgd;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
@@ -534,31 +534,31 @@
 
     const/16 v1, 0x9
 
-    invoke-direct {v4, v1}, Lxm9;-><init>(I)V
+    invoke-direct {v4, v1}, Lwgd;-><init>(I)V
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v0
 
-    const-class v1, Lh7e;
+    const-class v1, Lv5e;
 
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v8
 
-    new-instance v3, Leo1;
+    new-instance v3, Lfo1;
 
-    iget-object v5, p0, Lone/me/calls/share/CallSharePickerScreen;->B0:Lu9h;
+    iget-object v5, p0, Lone/me/calls/share/CallSharePickerScreen;->w0:Lx4f;
 
-    invoke-direct/range {v3 .. v8}, Leo1;-><init>(Lxm9;Lu9h;Lbp7;Lbp7;Lbp7;)V
+    invoke-direct/range {v3 .. v8}, Lfo1;-><init>(Lwgd;Lx4f;Lyn7;Lyn7;Lyn7;)V
 
     return-object v3
 .end method
 
-.method public final H0()Lfoe;
+.method public final H0()Lane;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->A0:Lmoe;
+    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->v0:Lhne;
 
     return-object v0
 .end method
@@ -574,7 +574,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lhs;->q0([J)Ljava/util/Set;
+    invoke-static {p1}, Lvs;->W([J)Ljava/util/Set;
 
     move-result-object p1
 
@@ -586,24 +586,24 @@
     :goto_0
     if-nez p1, :cond_1
 
-    sget-object p1, Ll75;->a:Ll75;
+    sget-object p1, Ly65;->a:Ly65;
 
     :cond_1
     return-object p1
 .end method
 
-.method public final getInsetsConfig()Led7;
+.method public final getInsetsConfig()Lyb7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->z0:Led7;
+    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->u0:Lyb7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lmfd;
+.method public final getScreenDelegate()Lsdd;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->y0:Lfub;
+    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->t0:La4d;
 
     return-object v0
 .end method
@@ -611,40 +611,40 @@
 .method public final i(ILandroid/os/Bundle;)V
     .locals 0
 
-    sget p2, Luja;->b:I
+    sget p2, Lbia;->b:I
 
     if-ne p1, p2, :cond_0
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lveb;->c:Lugb;
+    iget-object p1, p1, Lodb;->c:Lmfb;
 
-    check-cast p1, Leo1;
+    check-cast p1, Lfo1;
 
-    invoke-virtual {p1}, Leo1;->f()V
+    invoke-virtual {p1}, Lfo1;->f()V
 
     return-void
 
     :cond_0
-    sget p2, Luja;->a:I
+    sget p2, Lbia;->a:I
 
     if-ne p1, p2, :cond_1
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lveb;->c:Lugb;
+    iget-object p1, p1, Lodb;->c:Lmfb;
 
-    check-cast p1, Leo1;
+    check-cast p1, Lfo1;
 
-    iget-object p1, p1, Leo1;->h:Le8e;
+    iget-object p1, p1, Lfo1;->h:Lt6e;
 
-    sget-object p2, Lj73;->b:Lj73;
+    sget-object p2, Lc73;->b:Lc73;
 
-    invoke-virtual {p1, p2}, Le8e;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Lt6e;->h(Ljava/lang/Object;)Z
 
     :cond_1
     return-void
@@ -653,9 +653,9 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lb04;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ljz3;->onDestroyView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->C0:Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    iget-object v0, p0, Lone/me/calls/share/CallSharePickerScreen;->x0:Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
     const/4 v1, 0x0
 
@@ -664,6 +664,11 @@
     invoke-virtual {v0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
 
     :cond_0
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -688,6 +693,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :catchall_0
+    :goto_0
     return-void
 .end method
 
@@ -696,7 +702,7 @@
 
     invoke-super {p0, p1}, Lone/me/chats/picker/AbstractPickerScreen;->onViewCreated(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->K0()Ltya;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->K0()Ljxa;
 
     move-result-object p1
 
@@ -706,51 +712,51 @@
 
     move-result-object p1
 
-    sget-object v0, Lone/me/calls/share/CallSharePickerScreen;->D0:Led7;
+    sget-object v0, Lone/me/calls/share/CallSharePickerScreen;->y0:Lyb7;
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lio7;->a(Landroid/view/View;Led7;Lxe6;)V
+    invoke-static {p1, v0, v1}, Lpr0;->c(Landroid/view/View;Lyb7;Lvd6;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lveb;->c:Lugb;
-
-    check-cast p1, Leo1;
-
-    iget-object p1, p1, Leo1;->i:Lrqc;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcs7;->L()Les7;
-
-    move-result-object v0
-
-    sget-object v2, Ler7;->o:Ler7;
-
-    invoke-static {p1, v0, v2}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object p1
 
-    new-instance v0, Lio1;
+    iget-object p1, p1, Lodb;->c:Lmfb;
 
-    invoke-direct {v0, v1, p0}, Lio1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
+    check-cast p1, Lfo1;
 
-    new-instance v1, Ljx5;
+    iget-object p1, p1, Lfo1;->i:Lapc;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Luq7;->x()Lwq7;
+
+    move-result-object v0
+
+    sget-object v2, Lwp7;->o:Lwp7;
+
+    invoke-static {p1, v0, v2}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
+
+    move-result-object p1
+
+    new-instance v0, Ljo1;
+
+    invoke-direct {v0, v1, p0}, Ljo1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/share/CallSharePickerScreen;)V
+
+    new-instance v1, Lnw5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method

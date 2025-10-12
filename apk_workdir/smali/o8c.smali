@@ -1,60 +1,72 @@
-.class public final synthetic Lo8c;
+.class public abstract Lo8c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static design_appbar_state_list_animator:I = 0x7f020000
 
-.field public final synthetic b:Lp8c;
+.field public static design_fab_hide_motion_spec:I = 0x7f020001
 
+.field public static design_fab_show_motion_spec:I = 0x7f020002
 
-# direct methods
-.method public synthetic constructor <init>(Lp8c;I)V
-    .locals 0
+.field public static fragment_close_enter:I = 0x7f020005
 
-    iput p2, p0, Lo8c;->a:I
+.field public static fragment_close_exit:I = 0x7f020006
 
-    iput-object p1, p0, Lo8c;->b:Lp8c;
+.field public static fragment_fade_enter:I = 0x7f020007
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static fragment_fade_exit:I = 0x7f020008
 
-    return-void
-.end method
+.field public static fragment_open_enter:I = 0x7f020009
 
+.field public static fragment_open_exit:I = 0x7f02000a
 
-# virtual methods
-.method public final run()V
-    .locals 1
+.field public static m3_appbar_state_list_animator:I = 0x7f02000b
 
-    iget v0, p0, Lo8c;->a:I
+.field public static m3_btn_elevated_btn_state_list_anim:I = 0x7f02000c
 
-    packed-switch v0, :pswitch_data_0
+.field public static m3_btn_state_list_anim:I = 0x7f02000d
 
-    iget-object v0, p0, Lo8c;->b:Lp8c;
+.field public static m3_card_elevated_state_list_anim:I = 0x7f02000e
 
-    iget-object v0, v0, Lp8c;->c:Llee;
+.field public static m3_card_state_list_anim:I = 0x7f02000f
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static m3_chip_state_list_anim:I = 0x7f020010
 
-    return-void
+.field public static m3_elevated_chip_state_list_anim:I = 0x7f020011
 
-    :pswitch_0
-    iget-object v0, p0, Lo8c;->b:Lp8c;
+.field public static m3_extended_fab_change_size_collapse_motion_spec:I = 0x7f020012
 
-    iget-object v0, v0, Lp8c;->c:Llee;
+.field public static m3_extended_fab_change_size_expand_motion_spec:I = 0x7f020013
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static m3_extended_fab_hide_motion_spec:I = 0x7f020014
 
-    return-void
+.field public static m3_extended_fab_show_motion_spec:I = 0x7f020015
 
-    nop
+.field public static m3_extended_fab_state_list_animator:I = 0x7f020016
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static mtrl_btn_state_list_anim:I = 0x7f020017
+
+.field public static mtrl_btn_unelevated_state_list_anim:I = 0x7f020018
+
+.field public static mtrl_card_state_list_anim:I = 0x7f020019
+
+.field public static mtrl_chip_state_list_anim:I = 0x7f02001a
+
+.field public static mtrl_extended_fab_change_size_collapse_motion_spec:I = 0x7f02001b
+
+.field public static mtrl_extended_fab_change_size_expand_motion_spec:I = 0x7f02001c
+
+.field public static mtrl_extended_fab_hide_motion_spec:I = 0x7f02001d
+
+.field public static mtrl_extended_fab_show_motion_spec:I = 0x7f02001e
+
+.field public static mtrl_extended_fab_state_list_animator:I = 0x7f02001f
+
+.field public static mtrl_fab_hide_motion_spec:I = 0x7f020020
+
+.field public static mtrl_fab_show_motion_spec:I = 0x7f020021
+
+.field public static mtrl_fab_transformation_sheet_collapse_spec:I = 0x7f020022
+
+.field public static mtrl_fab_transformation_sheet_expand_spec:I = 0x7f020023

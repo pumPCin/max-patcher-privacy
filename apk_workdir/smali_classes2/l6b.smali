@@ -1,268 +1,131 @@
 .class public final Ll6b;
-.super Ljava/lang/Object;
+.super Loq0;
 .source "SourceFile"
-
-# interfaces
-.implements Lorg/webrtc/CameraVideoCapturer;
 
 
 # instance fields
-.field public X:Lorg/webrtc/SurfaceTextureHelper;
+.field public final synthetic f:I
 
-.field public volatile Y:Lorg/webrtc/VideoSink;
-
-.field public final a:Lorg/webrtc/CameraVideoCapturer;
-
-.field public final b:Lx02;
-
-.field public final c:Lpmc;
-
-.field public o:Lorg/webrtc/YuvConverter;
+.field public final synthetic g:Lo6b;
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/CameraVideoCapturer;Lx02;Lpmc;)V
+.method public synthetic constructor <init>(Lo6b;I)V
     .locals 0
 
+    iput p2, p0, Ll6b;->f:I
+
+    iput-object p1, p0, Ll6b;->g:Lo6b;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    iput-object p2, p0, Ll6b;->b:Lx02;
-
-    iput-object p3, p0, Ll6b;->c:Lpmc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final addMediaRecorderToCamera(Landroid/media/MediaRecorder;Lorg/webrtc/CameraVideoCapturer$MediaRecorderHandler;)V
-    .locals 1
-
-    const-string p1, "PatchedVideoCapturer"
-
-    const-string p2, "addMediaRecorderToCamera"
-
-    iget-object v0, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v0, p1, p2}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final changeCaptureFormat(III)V
-    .locals 1
-
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0, p1, p2, p3}, Lorg/webrtc/VideoCapturer;->changeCaptureFormat(III)V
-
-    return-void
-.end method
-
-.method public final dispose()V
-    .locals 1
-
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoCapturer;->dispose()V
-
-    return-void
-.end method
-
-.method public final initialize(Lorg/webrtc/SurfaceTextureHelper;Landroid/content/Context;Lorg/webrtc/CapturerObserver;)V
+.method public final onCreateFailure(Ljava/lang/String;)V
     .locals 5
 
-    const-string v0, "Cant get yuv converter"
+    iget v0, p0, Ll6b;->f:I
 
-    const-string v1, "initialize"
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v2, p0, Ll6b;->c:Lpmc;
+    iget-object v0, p0, Ll6b;->g:Lo6b;
 
-    const-string v3, "PatchedVideoCapturer"
+    iget-object v1, v0, Lo6b;->z:Lxg1;
 
-    invoke-interface {v2, v3, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v1, Lxg1;->C:Lvg1;
 
-    iget-object v1, p0, Ll6b;->X:Lorg/webrtc/SurfaceTextureHelper;
+    iget-boolean v1, v1, Lvg1;->z:Z
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    iput-object p1, p0, Ll6b;->X:Lorg/webrtc/SurfaceTextureHelper;
+    new-instance v1, Llw9;
 
-    :try_start_0
-    const-class v1, Lorg/webrtc/SurfaceTextureHelper;
+    sget-object v2, Lkw9;->b:Lkw9;
 
-    const-string v4, "yuvConverter"
+    iget-object v3, v0, Lo6b;->J:Lorg/webrtc/PeerConnection;
 
-    invoke-virtual {v1, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
 
-    move-result-object v1
+    move-result-object v3
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    invoke-virtual {v1, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    invoke-direct {v1, v2, p1, v4, v3}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lorg/webrtc/YuvConverter;
-
-    iput-object v1, p0, Ll6b;->o:Lorg/webrtc/YuvConverter;
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v1
+    invoke-virtual {v0, v1}, Lo6b;->h(Llw9;)V
 
     goto :goto_0
 
-    :catch_1
-    move-exception v1
+    :cond_0
+    invoke-virtual {v0, p1}, Lo6b;->i(Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ll6b;->g:Lo6b;
+
+    iget-object v1, v0, Lo6b;->z:Lxg1;
+
+    iget-object v1, v1, Lxg1;->C:Lvg1;
+
+    iget-boolean v1, v1, Lvg1;->z:Z
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Llw9;
+
+    sget-object v2, Lkw9;->a:Lkw9;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, p1, v3, v3}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1}, Lo6b;->h(Llw9;)V
 
     goto :goto_1
 
-    :goto_0
-    invoke-interface {v2, v3, v0, v1}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
+    :cond_1
+    invoke-virtual {v0, p1}, Lo6b;->i(Ljava/lang/String;)V
 
     :goto_1
-    invoke-interface {v2, v3, v0, v1}, Lpmc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-void
 
-    :goto_2
-    new-instance v0, Lr6d;
+    nop
 
-    const/4 v1, 0x0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-direct {v0, p0, p3, v1}, Lr6d;-><init>(Ljava/lang/Object;Ljava/lang/Object;Z)V
+.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
+    .locals 1
 
-    iget-object p3, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
+    iget v0, p0, Ll6b;->f:I
 
-    invoke-interface {p3, p1, p2, v0}, Lorg/webrtc/VideoCapturer;->initialize(Lorg/webrtc/SurfaceTextureHelper;Landroid/content/Context;Lorg/webrtc/CapturerObserver;)V
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ll6b;->g:Lo6b;
+
+    invoke-virtual {v0, p1}, Lo6b;->n(Lorg/webrtc/SessionDescription;)V
 
     return-void
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_0
+    iget-object v0, p0, Ll6b;->g:Lo6b;
 
-    const-string p2, "Repeated initialization"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final isScreencast()Z
-    .locals 3
-
-    const-string v0, "PatchedVideoCapturer"
-
-    const-string v1, "isScreencast"
-
-    iget-object v2, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoCapturer;->isScreencast()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final removeMediaRecorderFromCamera(Lorg/webrtc/CameraVideoCapturer$MediaRecorderHandler;)V
-    .locals 2
-
-    const-string p1, "PatchedVideoCapturer"
-
-    const-string v0, "removeMediaRecorderFromCamera"
-
-    iget-object v1, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v1, p1, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lo6b;->n(Lorg/webrtc/SessionDescription;)V
 
     return-void
-.end method
 
-.method public final startCapture(III)V
-    .locals 3
+    nop
 
-    const-string v0, "PatchedVideoCapturer"
-
-    const-string v1, "startCapture"
-
-    iget-object v2, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0, p1, p2, p3}, Lorg/webrtc/VideoCapturer;->startCapture(III)V
-
-    return-void
-.end method
-
-.method public final stopCapture()V
-    .locals 3
-
-    const-string v0, "PatchedVideoCapturer"
-
-    const-string v1, "stopCapture"
-
-    iget-object v2, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoCapturer;->stopCapture()V
-
-    return-void
-.end method
-
-.method public final switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
-    .locals 3
-
-    .line 1
-    const-string v0, "PatchedVideoCapturer"
-
-    const-string v1, "switchCamera"
-
-    iget-object v2, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0, p1}, Lorg/webrtc/CameraVideoCapturer;->switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;)V
-
-    return-void
-.end method
-
-.method public final switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
-    .locals 3
-
-    .line 3
-    const-string v0, "PatchedVideoCapturer"
-
-    const-string v1, "switchCamera"
-
-    iget-object v2, p0, Ll6b;->c:Lpmc;
-
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 4
-    iget-object v0, p0, Ll6b;->a:Lorg/webrtc/CameraVideoCapturer;
-
-    invoke-interface {v0, p1, p2}, Lorg/webrtc/CameraVideoCapturer;->switchCamera(Lorg/webrtc/CameraVideoCapturer$CameraSwitchHandler;Ljava/lang/String;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,23 +1,21 @@
 .class public final Lkre;
-.super Ljava/lang/Object;
+.super Lrp;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final a:Lkre;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public d:J
+    new-instance v0, Lkre;
 
-.field public e:J
+    invoke-direct {v0}, Lrp;-><init>()V
 
-.field public f:J
+    sput-object v0, Lkre;->a:Lkre;
 
-.field public g:Ljava/lang/String;
-
-.field public h:Ljava/util/List;
-
-.field public i:Z
+    return-void
+.end method

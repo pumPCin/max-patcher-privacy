@@ -1,80 +1,53 @@
-.class public final synthetic Lqv9;
+.class public final Lqv9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lh4f;
 
-.field public final synthetic b:Lrv9;
+.field public final b:Lk5d;
+
+.field public final c:Lxce;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Lhga;
+
+.field public final g:Lp11;
+
+.field public final h:Landroid/content/res/Resources;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrv9;I)V
+.method public constructor <init>(Landroid/content/Context;Lh4f;Lk5d;Lxce;ILhga;Lp11;)V
     .locals 0
 
-    iput p2, p0, Lqv9;->a:I
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    iput-object p1, p0, Lqv9;->b:Lrv9;
+    move-result-object p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p2, p0, Lqv9;->a:Lh4f;
 
+    iput-object p3, p0, Lqv9;->b:Lk5d;
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    iput-object p4, p0, Lqv9;->c:Lxce;
 
-    iget v0, p0, Lqv9;->a:I
+    iput p5, p0, Lqv9;->d:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p2, 0x6
 
-    new-instance v0, Lmj0;
+    iput p2, p0, Lqv9;->e:I
 
-    const/16 v1, 0x13
+    iput-object p6, p0, Lqv9;->f:Lhga;
 
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
+    iput-object p7, p0, Lqv9;->g:Lp11;
 
-    iget-object v1, p0, Lqv9;->b:Lrv9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
+    iput-object p1, p0, Lqv9;->h:Landroid/content/res/Resources;
 
     return-void
-
-    :pswitch_0
-    new-instance v0, Lmj0;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
-
-    iget-object v1, p0, Lqv9;->b:Lrv9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_1
-    new-instance v0, Lmj0;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lmj0;-><init>(I)V
-
-    iget-object v1, p0, Lqv9;->b:Lrv9;
-
-    invoke-virtual {v1, v0}, Lw2;->p(Lzo3;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

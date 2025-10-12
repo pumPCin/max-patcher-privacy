@@ -1,51 +1,72 @@
-.class public final Lxud;
-.super Lpud;
+.class public final synthetic Lxud;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public k:Lrob;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvd6;
 
 
 # direct methods
-.method public constructor <init>(JLp2;)V
+.method public synthetic constructor <init>(ILvd6;)V
     .locals 0
 
-    invoke-static {p3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    iput p1, p0, Lxud;->a:I
 
-    move-result-object p3
+    iput-object p2, p0, Lxud;->b:Lvd6;
 
-    invoke-direct {p0, p1, p2, p3}, Lpud;-><init>(JLjava/util/List;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsud;
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    new-instance v0, Lyud;
+    iget v0, p0, Lxud;->a:I
 
-    invoke-direct {v0, p0}, Lqud;-><init>(Lpud;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lxud;->k:Lrob;
+    iget-object v0, p0, Lxud;->b:Lvd6;
 
-    iput-object v1, v0, Lyud;->C0:Lrob;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->a(Lvd6;)V
 
-    return-object v0
-.end method
+    return-void
 
-.method public final b()Lqud;
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lxud;->b:Lvd6;
 
-    new-instance v0, Lyud;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->b(Lvd6;)V
 
-    invoke-direct {v0, p0}, Lqud;-><init>(Lpud;)V
+    return-void
 
-    iget-object v1, p0, Lxud;->k:Lrob;
+    :pswitch_1
+    iget-object v0, p0, Lxud;->b:Lvd6;
 
-    iput-object v1, v0, Lyud;->C0:Lrob;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->h(Lvd6;)V
 
-    return-object v0
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lxud;->b:Lvd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->a(Lvd6;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

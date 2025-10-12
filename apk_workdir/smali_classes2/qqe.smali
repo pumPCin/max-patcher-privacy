@@ -1,144 +1,121 @@
-.class public final Lqqe;
+.class public final synthetic Lqqe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lno3;
+.implements Lke6;
+
 
 # instance fields
-.field public final a:Ltk;
-
-.field public final b:Loqe;
-
-.field public final c:Lked;
-
-.field public final d:Liaf;
+.field public final synthetic a:Ltqe;
 
 
 # direct methods
-.method public constructor <init>(Ltk;Loqe;Lked;Liaf;)V
+.method public synthetic constructor <init>(Ltqe;)V
     .locals 0
 
+    iput-object p1, p0, Lqqe;->a:Ltqe;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqqe;->a:Ltk;
-
-    iput-object p2, p0, Lqqe;->b:Loqe;
-
-    iput-object p3, p0, Lqqe;->c:Lked;
-
-    iput-object p4, p0, Lqqe;->d:Liaf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Luz5;
+.method public accept(Ljava/lang/Object;)V
+    .locals 5
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object v0, p0, Lqqe;->a:Ltqe;
+
+    iget-object v0, v0, Ltqe;->a:Lwqe;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Ls8a;->i(Ljava/lang/Iterable;)Lse3;
+
+    move-result-object v1
+
+    new-instance v2, Lvqe;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3}, Lvqe;-><init>(I)V
+
+    new-instance v3, Ll9a;
+
+    const/4 v4, 0x5
+
+    invoke-direct {v3, v1, v2, v4}, Ll9a;-><init>(Ls8a;Lke6;I)V
+
+    invoke-virtual {v3}, Ls8a;->s()Lw8a;
+
+    move-result-object v1
+
+    new-instance v2, Lrqe;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Lrqe;-><init>(Lwqe;I)V
+
+    new-instance v0, Lde3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v0, v1, v3, v2}, Lde3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0}, Lce3;->k()Ls8a;
+
+    move-result-object v0
+
+    sget-object v1, Lnjg;->o:Lwgd;
+
+    new-instance v2, Lib2;
+
+    const/16 v3, 0x1a
+
+    invoke-direct {v2, v3, p1}, Lib2;-><init>(ILjava/util/List;)V
+
+    new-instance v3, Luj5;
+
+    const/4 v4, 0x6
+
+    invoke-direct {v3, v4, p1}, Luj5;-><init>(ILjava/util/List;)V
+
+    invoke-static {v0, v1, v2, v3}, Ljgh;->E(Ls8a;Lno3;Lno3;Ll6;)V
+
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    new-instance v0, Ll38;
+    check-cast p1, Liqe;
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lqqe;->a:Ltqe;
 
-    const/16 v2, 0x19
+    iget-object v1, v0, Ltqe;->b:Lyqe;
 
-    invoke-direct {v0, v1, v2}, Ll38;-><init>(Ln0b;I)V
+    iget-object v2, p1, Liqe;->h:Ljava/util/List;
 
-    invoke-static {p1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    check-cast v1, Lfpe;
 
-    move-result v1
+    invoke-virtual {v1, v2}, Lfpe;->b(Ljava/util/List;)Lbde;
 
-    if-nez v1, :cond_0
+    move-result-object v1
 
-    const-string v1, "token"
+    new-instance v2, Ll8d;
 
-    invoke-virtual {v0, v1, p1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v3, 0x12
 
-    iget-object p1, p0, Lqqe;->c:Lked;
+    invoke-direct {v2, v0, v3, p1}, Ll8d;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lqqe;->a:Ltk;
-
-    check-cast v1, Lbga;
-
-    invoke-virtual {v1, v0, p1}, Lbga;->J(Li9f;Lked;)Lmee;
-
-    move-result-object p1
-
-    new-instance v0, Lkk2;
-
-    const/16 v1, 0xa
-
-    const-class v2, Lpqe;
-
-    invoke-direct {v0, v1, v2}, Lkk2;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
-
-    move-result-object p1
-
-    new-instance v0, Lmqe;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lmqe;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
-
-    move-result-object p1
-
-    new-instance v0, Lmqe;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lmqe;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lude;->h(Lmf6;)Ldee;
-
-    move-result-object p1
-
-    new-instance v0, Ljsc;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1, p0}, Ljsc;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Ldee;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v0, v2}, Ldee;-><init>(Lude;Lmf6;I)V
-
-    new-instance p1, Lmqe;
-
-    const/16 v0, 0xe
-
-    invoke-direct {p1, v0}, Lmqe;-><init>(I)V
-
-    new-instance v0, Laee;
-
-    invoke-direct {v0, v1, p1, v2}, Laee;-><init>(Lude;Lwo3;I)V
-
-    iget-object p1, p0, Lqqe;->d:Liaf;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lfaf;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, p1, v3, v2}, Lfaf;-><init>(Liaf;II)V
-
-    invoke-virtual {v0, v1}, Lude;->j(Lfaf;)Luz5;
+    invoke-virtual {v1, v2}, Lrce;->h(Lke6;)Lbde;
 
     move-result-object p1
 
     return-object p1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "token cannot be null"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

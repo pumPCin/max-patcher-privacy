@@ -3,4 +3,6 @@
 
 
 # static fields
-.field public static oneme_devmenu_logsviewer_show_log_recycler_view:I = 0x7f0a069c
+.field public static oneme_stickers_search_stickers_list:I = 0x7f0a0879
+
+.field public static oneme_stickers_search_toolbar:I = 0x7f0a087a

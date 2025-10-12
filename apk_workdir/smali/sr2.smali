@@ -3,46 +3,44 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzr2;
-
-
-# static fields
-.field public static final d:Lmed;
+.implements Lur2;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:Le86;
+.field public final b:Ljava/lang/Integer;
 
-.field public final c:Z
+.field public final c:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(ILjava/lang/Integer;Ljava/lang/Integer;I)V
     .locals 2
 
-    new-instance v0, Lmed;
+    and-int/lit8 v0, p4, 0x2
 
-    const/16 v1, 0x9
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lmed;-><init>(I)V
+    if-eqz v0, :cond_0
 
-    sput-object v0, Lsr2;->d:Lmed;
+    move-object p2, v1
 
-    return-void
-.end method
+    :cond_0
+    and-int/lit8 p4, p4, 0x4
 
-.method public constructor <init>(ILe86;Z)V
-    .locals 0
+    if-eqz p4, :cond_1
 
+    move-object p3, v1
+
+    :cond_1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lsr2;->a:I
 
-    iput-object p2, p0, Lsr2;->b:Le86;
+    iput-object p2, p0, Lsr2;->b:Ljava/lang/Integer;
 
-    iput-boolean p3, p0, Lsr2;->c:Z
+    iput-object p3, p0, Lsr2;->c:Ljava/lang/Integer;
 
     return-void
 .end method

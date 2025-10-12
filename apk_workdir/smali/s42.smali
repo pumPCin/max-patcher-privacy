@@ -1,56 +1,59 @@
-.class public final synthetic Ls42;
+.class public final Ls42;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmag;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lfo3;
 
-.field public final synthetic b:Lhn6;
+.field public b:Lfo3;
+
+.field public c:Lfo3;
+
+.field public d:Lfo3;
+
+.field public e:Lfo3;
+
+.field public f:Lfo3;
+
+.field public g:Lfo3;
+
+.field public h:Ljava/util/ArrayList;
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public final l:I
+
+.field public final m:Z
+
+.field public n:Z
+
+.field public o:Z
+
+.field public p:Z
+
+.field public q:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhn6;I)V
-    .locals 0
-
-    iput p2, p0, Ls42;->a:I
-
-    iput-object p1, p0, Ls42;->b:Lhn6;
+.method public constructor <init>(Lfo3;IZ)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
+    iput v0, p0, Ls42;->k:F
 
-# virtual methods
-.method public final run()V
-    .locals 1
+    iput-object p1, p0, Ls42;->a:Lfo3;
 
-    iget v0, p0, Ls42;->a:I
+    iput p2, p0, Ls42;->l:I
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls42;->b:Lhn6;
-
-    invoke-interface {v0}, Lhn6;->c()V
+    iput-boolean p3, p0, Ls42;->m:Z
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ls42;->b:Lhn6;
-
-    invoke-interface {v0}, Lhn6;->flush()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -2,172 +2,105 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf7d;
+
 
 # instance fields
-.field public final a:Le34;
-
-.field public final b:Lhx3;
-
-.field public final c:Lr8f;
-
-.field public final d:Lbp7;
-
-.field public final e:Lbp7;
-
-.field public final f:Lbp7;
-
-.field public final g:Lbp7;
-
-.field public final h:Lmoe;
-
-.field public final i:Lsqc;
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lfoe;Lkotlinx/coroutines/internal/ContextScope;Lhx3;Lr8f;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 8
+.method public constructor <init>(Ljava/util/Map;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ltyf;->a:Le34;
+    iput-object p1, p0, Ltyf;->a:Ljava/util/Map;
 
-    iput-object p3, p0, Ltyf;->b:Lhx3;
+    return-void
+.end method
 
-    iput-object p4, p0, Ltyf;->c:Lr8f;
 
-    iput-object p6, p0, Ltyf;->d:Lbp7;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iput-object p7, p0, Ltyf;->e:Lbp7;
+    if-ne p0, p1, :cond_0
 
-    move-object/from16 p6, p8
+    const/4 p1, 0x1
 
-    iput-object p6, p0, Ltyf;->f:Lbp7;
-
-    iput-object p5, p0, Ltyf;->g:Lbp7;
-
-    const/4 p5, 0x0
-
-    invoke-static {p5}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p6
-
-    iput-object p6, p0, Ltyf;->h:Lmoe;
-
-    new-instance v0, Lsqc;
-
-    invoke-direct {v0, p6}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object v0, p0, Ltyf;->i:Lsqc;
-
-    invoke-interface {p1}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm82;
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
+    return p1
 
     :cond_0
-    invoke-virtual {p1}, Lm82;->L()Z
+    if-eqz p1, :cond_2
 
-    move-result p6
+    const-class v0, Ltyf;
 
-    if-eqz p6, :cond_3
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lm82;->B()Z
+    move-result-object v1
 
-    move-result p6
-
-    if-nez p6, :cond_1
-
-    invoke-virtual {p1}, Lm82;->Q()Z
-
-    move-result p6
-
-    if-nez p6, :cond_1
+    if-eq v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p1}, Lm82;->l()Lap3;
+    check-cast p1, Ltyf;
 
-    move-result-object p1
+    iget-object v0, p0, Ltyf;->a:Ljava/util/Map;
 
-    if-eqz p1, :cond_3
+    iget-object p1, p1, Ltyf;->a:Ljava/util/Map;
 
-    invoke-virtual {p1}, Lap3;->t()Z
+    invoke-interface {v0, p1}, Ljava/util/Map;->equals(Ljava/lang/Object;)Z
 
-    move-result p6
+    move-result p1
 
-    if-eqz p6, :cond_2
-
-    goto :goto_0
+    return p1
 
     :cond_2
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide p5
-
-    invoke-static {p5, p6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p5
-
-    :cond_3
     :goto_0
-    if-eqz p5, :cond_4
+    const/4 p1, 0x0
 
-    invoke-virtual {p5}, Ljava/lang/Long;->longValue()J
+    return p1
+.end method
 
-    move-result-wide p5
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p3, p5, p6}, Lhx3;->c(J)Lsqc;
+    iget-object v0, p0, Ltyf;->a:Ljava/util/Map;
 
-    move-result-object p1
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    new-instance p3, Lg13;
+    move-result-object v0
 
-    const/16 p5, 0x9
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    invoke-direct {p3, p1, p5}, Lg13;-><init>(Lev5;I)V
+    move-result v0
 
-    new-instance v0, Lxhb;
+    return v0
+.end method
 
-    const/4 v6, 0x4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/16 v7, 0x1b
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x2
+    const-string v1, "UpdateDisplayLayoutCommandV2Response{participantsToErrorMap="
 
-    const-class v3, Ltyf;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v4, "handleContact"
+    iget-object v1, p0, Ltyf;->a:Ljava/util/Map;
 
-    const-string v5, "handleContact(Lru/ok/tamtam/contacts/Contact;)V"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object v2, p0
+    const/16 v1, 0x7d
 
-    invoke-direct/range {v0 .. v7}, Lxhb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    new-instance p1, Ljx5;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 p5, 0x1
+    move-result-object v0
 
-    invoke-direct {p1, p3, v0, p5}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    check-cast p4, Lwla;
-
-    invoke-virtual {p4}, Lwla;->b()Ly24;
-
-    move-result-object p3
-
-    invoke-static {p1, p3}, Ltp;->G(Lev5;Lw24;)Lev5;
-
-    move-result-object p1
-
-    invoke-static {p1, p2}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    :cond_4
-    return-void
+    return-object v0
 .end method

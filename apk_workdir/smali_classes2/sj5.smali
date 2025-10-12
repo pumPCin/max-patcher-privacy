@@ -1,0 +1,43 @@
+.class public final Lsj5;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lhra;
+
+
+# direct methods
+.method public constructor <init>(Lhra;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsj5;->a:Lhra;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lbde;
+    .locals 3
+
+    iget-object v0, p0, Lsj5;->a:Lhra;
+
+    invoke-virtual {v0}, Ld4d;->n()Lnba;
+
+    move-result-object v0
+
+    new-instance v1, Luc5;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, v2}, Luc5;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lrce;->h(Lke6;)Lbde;
+
+    move-result-object v0
+
+    return-object v0
+.end method

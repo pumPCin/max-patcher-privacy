@@ -1,13 +1,24 @@
 .class public final Lpg5;
-.super Ljava/io/ByteArrayOutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lqg5;
 
-# virtual methods
-.method public final m()[B
+
+# static fields
+.field public static final a:Lpg5;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    iget-object v0, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
+    new-instance v0, Lpg5;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lpg5;->a:Lpg5;
+
+    return-void
 .end method

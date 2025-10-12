@@ -1,793 +1,332 @@
 .class public final Ltaa;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lxda;
-.implements Lss4;
+.implements Lyba;
+.implements Lfs4;
+
+
+# static fields
+.field public static final X:[Lsaa;
+
+.field public static final Y:[Lsaa;
 
 
 # instance fields
-.field public final X:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final synthetic a:I
+.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public b:Ljava/lang/Object;
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public c:Lss4;
-
-.field public o:Z
+.field public o:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Llob;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Ltaa;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ltaa;->X:Ljava/lang/Object;
+    new-array v1, v0, [Lsaa;
 
-    iput-object p2, p0, Ltaa;->b:Ljava/lang/Object;
+    sput-object v1, Ltaa;->X:[Lsaa;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [Lsaa;
+
+    sput-object v0, Ltaa;->Y:[Lsaa;
 
     return-void
 .end method
 
-.method public constructor <init>(Lnee;)V
+.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;)V
     .locals 1
 
-    const/4 v0, 0x2
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput v0, p0, Ltaa;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput-object p1, p0, Ltaa;->X:Ljava/lang/Object;
+    iput-object v0, p0, Ltaa;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p1, p0, Ltaa;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Ltaa;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object p1, Ltaa;->X:[Lsaa;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 3
-
-    iget v0, p0, Ltaa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltaa;->o:Z
-
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
+.method public final a(Lsaa;)V
+    .locals 6
 
     :cond_0
-    return-void
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lxda;
+    check-cast v0, [Lsaa;
 
-    invoke-interface {v0}, Lxda;->b()V
+    array-length v1, v0
 
-    return-void
+    if-nez v1, :cond_1
 
-    :pswitch_1
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lnee;
-
-    iget-boolean v1, p0, Ltaa;->o:Z
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
+    goto :goto_3
 
     :cond_1
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Ltaa;->o:Z
-
-    iget-object v1, p0, Ltaa;->b:Ljava/lang/Object;
-
     const/4 v2, 0x0
 
-    iput-object v2, p0, Ltaa;->b:Ljava/lang/Object;
+    move v3, v2
 
-    if-nez v1, :cond_2
+    :goto_0
+    if-ge v3, v1, :cond_3
 
-    move-object v1, v2
+    aget-object v4, v0, v3
+
+    if-ne v4, p1, :cond_2
+
+    goto :goto_1
 
     :cond_2
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    new-instance v1, Ljava/util/NoSuchElementException;
+    const/4 v3, -0x1
 
-    invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
+    :goto_1
+    if-gez v3, :cond_4
 
-    invoke-interface {v0, v1}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_2
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-nez v0, :cond_4
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltaa;->o:Z
-
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lnee;
-
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v1}, Lnee;->a(Ljava/lang/Object;)V
+    goto :goto_3
 
     :cond_4
-    return-void
+    const/4 v4, 0x1
 
-    :pswitch_3
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
+    if-eq v1, v4, :cond_5
 
-    check-cast v0, Lxda;
+    add-int/lit8 v5, v1, -0x1
 
-    iget-boolean v1, p0, Ltaa;->o:Z
+    new-array v5, v5, [Lsaa;
 
-    if-nez v1, :cond_5
+    invoke-static {v0, v2, v5, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/4 v1, 0x1
+    add-int/lit8 v2, v3, 0x1
 
-    iput-boolean v1, p0, Ltaa;->o:Z
+    sub-int/2addr v1, v3
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sub-int/2addr v1, v4
 
-    invoke-interface {v0, v1}, Lxda;->f(Ljava/lang/Object;)V
+    invoke-static {v0, v2, v5, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-interface {v0}, Lxda;->b()V
+    goto :goto_2
 
     :cond_5
-    return-void
+    sget-object v5, Ltaa;->X:[Lsaa;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lss4;)V
-    .locals 1
-
-    iget v0, p0, Ltaa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    :goto_2
+    invoke-virtual {p0, v0, v5}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Ltaa;->c:Lss4;
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
+    :goto_3
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Ltaa;->c:Lss4;
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iput-object p1, p0, Ltaa;->c:Lss4;
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnee;
-
-    invoke-interface {p1, p0}, Lnee;->c(Lss4;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iput-object p1, p0, Ltaa;->c:Lss4;
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnee;
-
-    invoke-interface {p1, p0}, Lnee;->c(Lss4;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iput-object p1, p0, Ltaa;->c:Lss4;
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+.method public final b()V
+    .locals 4
 
-    iget v0, p0, Ltaa;->a:I
+    iget-object v0, p0, Ltaa;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Ljs4;->a:Ljs4;
 
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    check-cast v0, Lxda;
+    sget-object v0, Ltaa;->Y:[Lsaa;
 
-    iget-boolean v1, p0, Ltaa;->o:Z
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+    check-cast v0, [Lsaa;
 
-    :try_start_0
-    iget-object v1, p0, Ltaa;->b:Ljava/lang/Object;
+    array-length v1, v0
 
-    check-cast v1, Lhcf;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1, p1}, Lhcf;->test(Ljava/lang/Object;)Z
+    :goto_0
+    if-ge v2, v1, :cond_0
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    aget-object v3, v0, v2
 
-    if-eqz p1, :cond_0
+    iget-object v3, v3, Lsaa;->a:Lyba;
 
-    const/4 p1, 0x1
+    invoke-interface {v3}, Lyba;->b()V
 
-    iput-boolean p1, p0, Ltaa;->o:Z
-
-    iget-object p1, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    invoke-interface {v0}, Lxda;->b()V
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
+.method public final c(Lfs4;)V
+    .locals 1
 
-    iget-object v0, p0, Ltaa;->c:Lss4;
+    iget-object v0, p0, Ltaa;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-interface {v0}, Lss4;->g()V
+    invoke-static {v0, p1}, Ljs4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
 
-    invoke-virtual {p0, p1}, Ltaa;->onError(Ljava/lang/Throwable;)V
+    return-void
+.end method
+
+.method public final e(Ljava/lang/Object;)V
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsaa;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, v0, v2
+
+    iget-object v3, v3, Lsaa;->a:Lyba;
+
+    invoke-interface {v3, p1}, Lyba;->e(Ljava/lang/Object;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
 
     :cond_0
-    :goto_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
+.method public final f()V
+    .locals 2
 
-    check-cast v0, Lxda;
+    sget-object v0, Ltaa;->Y:[Lsaa;
 
-    iget-boolean v1, p0, Ltaa;->o:Z
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    iget-object v0, p0, Ltaa;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
-    :try_start_1
-    iget-object v1, p0, Ltaa;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    check-cast v1, Lecf;
+    move-result-object v0
 
-    invoke-virtual {v1, p1}, Lecf;->test(Ljava/lang/Object;)Z
+    if-eq v0, p0, :cond_0
 
-    move-result v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :goto_0
+    iget-object v0, p0, Ltaa;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    if-nez v1, :cond_2
+    invoke-static {v0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Ltaa;->o:Z
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v1, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v1}, Lss4;->g()V
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
     return-void
-
-    :pswitch_1
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-eqz v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v0, p0, Ltaa;->b:Ljava/lang/Object;
-
-    if-eqz v0, :cond_4
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ltaa;->o:Z
-
-    iget-object p1, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnee;
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Sequence contains more than one element!"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1, v0}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_4
-    iput-object p1, p0, Ltaa;->b:Ljava/lang/Object;
-
-    :goto_2
-    return-void
-
-    :pswitch_2
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-eqz v0, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    :try_start_2
-    iget-object v0, p0, Ltaa;->b:Ljava/lang/Object;
-
-    check-cast v0, Llob;
-
-    invoke-interface {v0, p1}, Llob;->test(Ljava/lang/Object;)Z
-
-    move-result p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    if-eqz p1, :cond_6
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ltaa;->o:Z
-
-    iget-object p1, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    iget-object p1, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnee;
-
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, v0}, Lnee;->a(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :catchall_2
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Ltaa;->onError(Ljava/lang/Throwable;)V
-
-    :cond_6
-    :goto_3
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lxda;
-
-    iget-boolean v1, p0, Ltaa;->o:Z
-
-    if-eqz v1, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    :try_start_3
-    iget-object v1, p0, Ltaa;->b:Ljava/lang/Object;
-
-    check-cast v1, Llob;
-
-    invoke-interface {v1, p1}, Llob;->test(Ljava/lang/Object;)Z
-
-    move-result p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    if-eqz p1, :cond_8
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Ltaa;->o:Z
-
-    iget-object p1, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    goto :goto_4
-
-    :catchall_3
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Ltaa;->onError(Ljava/lang/Throwable;)V
-
-    :cond_8
-    :goto_4
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final g()V
-    .locals 1
+.method public final g()Z
+    .locals 2
 
-    iget v0, p0, Ltaa;->a:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object v0, p0, Ltaa;->c:Lss4;
+    sget-object v1, Ltaa;->Y:[Lsaa;
 
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget v0, p0, Ltaa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_1
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_2
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_3
-    iget-object v0, p0, Ltaa;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Ltaa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-nez v0, :cond_0
+    if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Ltaa;->o:Z
+    return v0
 
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
+    :cond_0
+    const/4 v0, 0x0
 
-    check-cast v0, Lxda;
+    return v0
+.end method
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
+
+    iget-object v0, p0, Ltaa;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v2, Ljs4;->a:Ljs4;
+
+    if-eq v1, v2, :cond_1
+
+    iput-object p1, p0, Ltaa;->o:Ljava/lang/Throwable;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    sget-object v0, Ltaa;->Y:[Lsaa;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsaa;
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_0
+
+    aget-object v3, v0, v2
+
+    iget-object v3, v3, Lsaa;->a:Lyba;
+
+    invoke-interface {v3, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    :goto_0
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_1
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    goto :goto_1
 
     :cond_1
-    const/4 v0, 0x1
+    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
 
-    iput-boolean v0, p0, Ltaa;->o:Z
-
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lnee;
-
-    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
     return-void
-
-    :pswitch_2
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltaa;->o:Z
-
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lnee;
-
-    invoke-interface {v0, p1}, Lnee;->onError(Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-
-    :pswitch_3
-    iget-boolean v0, p0, Ltaa;->o:Z
-
-    if-eqz v0, :cond_3
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ltaa;->o:Z
-
-    iget-object v0, p0, Ltaa;->X:Ljava/lang/Object;
-
-    check-cast v0, Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

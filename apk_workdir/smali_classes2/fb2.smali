@@ -3,112 +3,178 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lzb2;
 
-.field public final synthetic b:Lub2;
+.field public final synthetic b:J
 
-.field public final synthetic c:J
+.field public final synthetic c:Lr82;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;JI)V
+.method public synthetic constructor <init>(Lzb2;JLr82;Z)V
     .locals 0
 
-    iput p4, p0, Lfb2;->a:I
-
-    iput-object p1, p0, Lfb2;->b:Lub2;
-
-    iput-wide p2, p0, Lfb2;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfb2;->a:Lzb2;
+
+    iput-wide p2, p0, Lfb2;->b:J
+
+    iput-object p4, p0, Lfb2;->c:Lr82;
+
+    iput-boolean p5, p0, Lfb2;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 4
+.method public final run()V
+    .locals 17
 
-    iget v0, p0, Lfb2;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lfb2;->a:Lzb2;
 
-    iget-object v0, p0, Lfb2;->b:Lub2;
+    iget-object v2, v1, Lzb2;->h:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-object v0, v0, Lub2;->g:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v3, v1, Lzb2;->f:Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget-wide v1, p0, Lfb2;->c:J
+    iget-wide v4, v0, Lfb2;->b:J
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object v6
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v6}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v6
 
-    check-cast v0, Lm82;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz v0, :cond_0
+    move-result-object v7
 
-    return-object v0
+    iget-object v8, v0, Lfb2;->c:Lr82;
+
+    invoke-virtual {v3, v7, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1}, Lzb2;->J()J
+
+    move-result-wide v9
+
+    iget-object v3, v8, Lr82;->b:Luc2;
+
+    invoke-virtual {v3, v9, v10}, Luc2;->e(J)Z
+
+    move-result v7
+
+    iget-wide v9, v3, Luc2;->a:J
+
+    if-nez v7, :cond_0
+
+    iget-object v11, v1, Lzb2;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-wide v12, v3, Luc2;->l:J
+
+    invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+    if-nez v7, :cond_1
 
-    const-string v3, "chat not found: "
+    const-wide/16 v11, 0x0
 
-    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+    cmp-long v7, v9, v11
 
-    move-result-object v1
+    if-eqz v7, :cond_2
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    iget-object v7, v1, Lzb2;->g:Ljava/util/concurrent/ConcurrentHashMap;
 
-    throw v0
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :pswitch_0
-    iget-object v0, p0, Lfb2;->b:Lub2;
+    move-result-object v9
 
-    iget-object v0, v0, Lub2;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {v7, v9, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v1, p0, Lfb2;->c:J
+    :cond_2
+    iget-object v3, v3, Luc2;->H:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3}, Ld40;->A(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3, v8}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lm82;
+    :cond_3
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    if-eqz v0, :cond_1
+    move-result-object v3
 
-    return-object v0
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    new-instance v0, Lru/ok/tamtam/exception/ChatNotFoundException;
+    :goto_0
+    if-eqz v6, :cond_4
 
-    const-string v3, "chat not found: "
+    iget-boolean v2, v0, Lfb2;->o:Z
 
-    invoke-static {v1, v2, v3}, Lq89;->i(JLjava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_4
 
-    move-result-object v1
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
-    throw v0
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    nop
+    move-result-object v10
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object v13, Lrm4;->X:Lrm4;
+
+    new-instance v9, Lv23;
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v15, 0x1
+
+    sget-object v16, Ly65;->a:Ly65;
+
+    invoke-direct/range {v9 .. v16}, Lv23;-><init>(Ljava/util/Collection;ZZLrm4;Lsi0;ZLjava/util/Set;)V
+
+    iget-object v2, v1, Lzb2;->l:Liv0;
+
+    invoke-virtual {v2, v9}, Liv0;->c(Ljava/lang/Object;)V
+
+    invoke-static {v8}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    iget-object v1, v1, Lzb2;->E:Lyb2;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v2}, Lyb2;->x(Ljava/util/Collection;)V
+
+    :cond_4
+    return-void
 .end method

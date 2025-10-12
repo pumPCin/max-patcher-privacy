@@ -1,164 +1,101 @@
-.class public final Lxbd;
-.super Lii0;
+.class public final synthetic Lxbd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Lg0;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lz12;
-
-.field public final synthetic c:Lybd;
-
-.field public final synthetic d:Z
-
-.field public final synthetic e:Z
+.field public final synthetic b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lg0;Lz12;Lybd;ZZ)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;I)V
     .locals 0
 
+    iput p2, p0, Lxbd;->a:I
+
+    iput-object p1, p0, Lxbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxbd;->a:Lg0;
-
-    iput-object p2, p0, Lxbd;->b:Lz12;
-
-    iput-object p3, p0, Lxbd;->c:Lybd;
-
-    iput-boolean p4, p0, Lxbd;->d:Z
-
-    iput-boolean p5, p0, Lxbd;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lxbd;->b:Lz12;
+    iget p1, p0, Lxbd;->a:I
 
-    invoke-virtual {v0}, Lz12;->r()Z
+    packed-switch p1, :pswitch_data_0
 
-    move-result v1
+    const-string p1, "ScheduledSendPickerDialogFragment"
 
-    if-eqz v1, :cond_0
+    const-string v0, "handle nav click"
 
-    new-instance v1, Ljava/lang/Throwable;
+    invoke-static {p1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "Cancelled with fresco pipeline"
+    new-instance p1, Lybd;
 
-    invoke-direct {v1, v2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lxbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    invoke-virtual {v0, v1}, Lz12;->h(Ljava/lang/Throwable;)Z
+    iget-object v1, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->C1:Ljava/lang/Object;
 
-    :cond_0
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/os/Parcelable;
+
+    invoke-direct {p1, v1}, Lybd;-><init>(Landroid/os/Parcelable;)V
+
+    invoke-virtual {v0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->K0(Lacd;)V
+
+    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->B0()V
+
     return-void
-.end method
 
-.method public final e(Lg0;)V
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Lxbd;->b:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-object p1, p0, Lxbd;->b:Lz12;
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J0()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Lz12;->resumeWith(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
-.end method
+    const-string v0, "ScheduledSendPickerViewModel"
 
-.method public final g(Landroid/graphics/Bitmap;)V
-    .locals 6
+    const-string v1, "onSendClick"
 
-    iget-object v0, p0, Lxbd;->a:Lg0;
+    invoke-static {v0, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lg0;->h()Z
+    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->h()Z
 
     move-result v0
 
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->m:Lhne;
+
+    new-instance v0, Law9;
+
+    invoke-direct {v0}, Law9;-><init>()V
+
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lxbd;->b:Lz12;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v2, v1}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
+    invoke-virtual {p1, v1, v0}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_0
-    if-nez p1, :cond_1
-
-    invoke-virtual {v2, v1}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
     return-void
 
-    :cond_1
-    new-instance v0, Lzo0;
-
-    iget-boolean v1, p0, Lxbd;->d:Z
-
-    iget-object v3, p0, Lxbd;->c:Lybd;
-
-    if-eqz v1, :cond_2
-
-    iget-object v4, v3, Lybd;->c:Lv6b;
-
-    iget-object v4, v4, Lv6b;->a:Landroid/content/Context;
-
-    invoke-virtual {v4}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v4
-
-    sget-object v5, Lv6b;->b:Ljava/lang/String;
-
-    invoke-static {v4, v5}, Lqw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_0
-
-    :cond_2
-    sget-object v4, Landroid/os/Environment;->DIRECTORY_PICTURES:Ljava/lang/String;
-
-    :goto_0
-    invoke-direct {v0, v4, p1}, Lzo0;-><init>(Ljava/lang/String;Landroid/graphics/Bitmap;)V
-
-    iget-object p1, v3, Lybd;->a:Lffd;
-
-    iget-boolean v3, p0, Lxbd;->e:Z
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1, v3}, Lffd;->f(Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v0, v1}, Lffd;->b(Lgfd;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {p1, v3}, Lffd;->f(Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {p1, v0, v1}, Lffd;->a(Lgfd;Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-virtual {v2, p1}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

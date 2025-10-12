@@ -1,36 +1,27 @@
-.class public final Lnid;
+.class public abstract Lnid;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzl0;
-
 
 # static fields
-.field public static final a:Lnid;
+.field public static final a:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lnid;
+    sget v0, Lyz4;->o:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x5
 
-    sput-object v0, Lnid;->a:Lnid;
+    sget-object v1, Ld05;->o:Ld05;
+
+    invoke-static {v0, v1}, Lx2d;->M(ILd05;)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lnid;->a:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, [B
-
-    check-cast p2, Ljava/lang/Integer;
-
-    return-object p1
 .end method

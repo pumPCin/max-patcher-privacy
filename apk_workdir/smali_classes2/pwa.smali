@@ -1,157 +1,92 @@
-.class public abstract Lpwa;
+.class public final Lpwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final X:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static final c:I
+.field public final a:Ljava/lang/String;
 
-.field public static final d:I
+.field public final b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-.field public static final e:I
+.field public final c:I
 
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
+.field public final o:Leff;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Thread$UncaughtExceptionHandler;ILeff;)V
+    .locals 0
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_cancel:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lpwa;->a:I
+    iput-object p1, p0, Lpwa;->a:Ljava/lang/String;
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_delete_set_action:I
+    iput-object p2, p0, Lpwa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    sput v0, Lpwa;->b:I
+    iput p3, p0, Lpwa;->c:I
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_delete_stickers_action:I
+    iput-object p4, p0, Lpwa;->o:Leff;
 
-    sput v0, Lpwa;->c:I
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_favorite_clear_action:I
+    const/4 p2, 0x1
 
-    sput v0, Lpwa;->d:I
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    sget v0, Lcgc;->oneme_stickers_settings_confirm_recent_clear_action:I
-
-    sput v0, Lpwa;->e:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_content_recycler:I
-
-    sput v0, Lpwa;->f:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_emoji_suggest_view_type:I
-
-    sput v0, Lpwa;->g:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_favorite_view_type:I
-
-    sput v0, Lpwa;->h:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_copy_link:I
-
-    sput v0, Lpwa;->i:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_delete_set:I
-
-    sput v0, Lpwa;->j:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_forward:I
-
-    sput v0, Lpwa;->k:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_menu_share:I
-
-    sput v0, Lpwa;->l:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_recent_view_type:I
-
-    sput v0, Lpwa;->m:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_drag:I
-
-    sput v0, Lpwa;->n:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_icon:I
-
-    sput v0, Lpwa;->o:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_subtitle:I
-
-    sput v0, Lpwa;->p:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_item_title:I
-
-    sput v0, Lpwa;->q:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_set_view_type:I
-
-    sput v0, Lpwa;->r:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_sets_title_view_type:I
-
-    sput v0, Lpwa;->s:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_favorite_menu_clear:I
-
-    sput v0, Lpwa;->t:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_menu_change:I
-
-    sput v0, Lpwa;->u:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_multiselect_delete:I
-
-    sput v0, Lpwa;->v:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_stickers_recent_menu_clear:I
-
-    sput v0, Lpwa;->w:I
-
-    sget v0, Lcgc;->oneme_stickers_settings_toolbar:I
-
-    sput v0, Lpwa;->x:I
+    iput-object p1, p0, Lpwa;->X:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 3
+
+    iget-object v0, p0, Lpwa;->X:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p0, Lpwa;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "-"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lowa;
+
+    invoke-direct {v1, v0, p1}, Lowa;-><init>(Ljava/lang/String;Ljava/lang/Runnable;)V
+
+    iget-object p1, p0, Lpwa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    iget p1, p0, Lpwa;->c:I
+
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
+
+    iget-object p1, p0, Lpwa;->o:Leff;
+
+    iput-object p1, v1, Lowa;->b:Ljava/lang/Object;
+
+    return-object v1
 .end method

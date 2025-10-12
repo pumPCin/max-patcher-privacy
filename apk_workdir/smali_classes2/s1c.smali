@@ -1,21 +1,23 @@
 .class public final Ls1c;
-.super Ldd0;
+.super Lz1c;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:Lcdf;
+
+.field public final b:Lvd6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Lcdf;Lvd6;)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
+    iput-object p1, p0, Ls1c;->a:Lcdf;
 
-    iput-object p1, p0, Ls1c;->b:Landroid/content/Intent;
+    iput-object p2, p0, Ls1c;->b:Lvd6;
 
     return-void
 .end method
@@ -23,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -43,32 +45,55 @@
     :cond_1
     check-cast p1, Ls1c;
 
-    iget-object v1, p0, Ls1c;->b:Landroid/content/Intent;
+    iget-object v1, p0, Ls1c;->a:Lcdf;
 
-    iget-object p1, p1, Ls1c;->b:Landroid/content/Intent;
+    iget-object v3, p1, Ls1c;->a:Lcdf;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_2
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Ls1c;->b:Lvd6;
+
+    iget-object p1, p1, Ls1c;->b:Lvd6;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Ls1c;->b:Landroid/content/Intent;
+    iget-object v0, p0, Ls1c;->a:Lcdf;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ls1c;->b:Lvd6;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -76,11 +101,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CropAvatarOld(intent="
+    const-string v1, "ShowAbortionSnackbar(titleRes="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ls1c;->b:Landroid/content/Intent;
+    iget-object v1, p0, Ls1c;->a:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", abortAction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls1c;->b:Lvd6;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

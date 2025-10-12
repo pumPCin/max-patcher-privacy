@@ -2,23 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lir4;
 
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-# static fields
-.field public static final a:Lmo6;
+    const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
 
-# direct methods
-.method static constructor <clinit>()V
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lmo6;
+
+    if-nez v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Lmo6;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    new-instance v0, Lmo6;
+    const-string v0, "GradientsLoadingIconContrastStaticColors(filled=-1, transparent=-1)"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lmo6;->a:Lmo6;
-
-    return-void
+    return-object v0
 .end method

@@ -1,45 +1,58 @@
-.class public final Lq6f;
-.super Lrr8;
+.class public final synthetic Lq6f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lr6f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Lr6f;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lq6f;->a:I
 
-    iput-object p1, p0, Lq6f;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lq6f;->b:Lr6f;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(I)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lq6f;->a:Ljava/lang/Object;
+    iget v0, p0, Lq6f;->a:I
 
-    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$RouteInfo;->requestSetVolume(I)V
+    iget-object v0, p0, Lq6f;->b:Lr6f;
 
-    return-void
-.end method
-
-.method public final i(I)V
-    .locals 1
-
-    iget-object v0, p0, Lq6f;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/media/MediaRouter$RouteInfo;
-
-    invoke-virtual {v0, p1}, Landroid/media/MediaRouter$RouteInfo;->requestUpdateVolume(I)V
+    invoke-virtual {v0}, Lr6f;->c()V
 
     return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lq6f;->b:Lr6f;
+
+    iput-object v0, v1, Lr6f;->o:Li0d;
+
+    invoke-virtual {v1}, Lr6f;->c()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

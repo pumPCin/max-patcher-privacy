@@ -1,196 +1,242 @@
 .class public final Ltke;
-.super Lm3f;
+.super Lamc;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final d:Ljava/lang/String;
+
+.field public static final e:Ljava/lang/String;
 
 
 # instance fields
-.field public X:I
+.field public final b:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:J
+.field public final c:F
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-wide p1, p0, Ltke;->Z:J
+    sget v0, Lg3g;->a:I
 
-    const/4 p1, 0x2
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ltke;->d:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ltke;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-lez p1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 2
+    :goto_0
+    const-string v1, "maxStars must be a positive integer"
+
+    invoke-static {v1, v0}, Lq5h;->e(Ljava/lang/Object;Z)V
+
+    .line 3
+    iput p1, p0, Ltke;->b:I
+
+    const/high16 p1, -0x40800000    # -1.0f
+
+    .line 4
+    iput p1, p0, Ltke;->c:F
+
+    return-void
+.end method
+
+.method public constructor <init>(IF)V
+    .locals 4
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-lez p1, :cond_0
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v0
+
+    .line 6
+    :goto_0
+    const-string v3, "maxStars must be a positive integer"
+
+    invoke-static {v3, v2}, Lq5h;->e(Ljava/lang/Object;Z)V
+
+    const/4 v2, 0x0
+
+    cmpl-float v2, p2, v2
+
+    if-ltz v2, :cond_1
+
+    int-to-float v2, p1
+
+    cmpg-float v2, p2, v2
+
+    if-gtz v2, :cond_1
+
+    move v0, v1
+
+    .line 7
+    :cond_1
+    const-string v1, "starRating is out of range [0, maxStars]"
+
+    invoke-static {v1, v0}, Lq5h;->e(Ljava/lang/Object;Z)V
+
+    .line 8
+    iput p1, p0, Ltke;->b:I
+
+    .line 9
+    iput p2, p0, Ltke;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()Z
+    .locals 2
 
-    check-cast p1, Le34;
+    iget v0, p0, Ltke;->c:F
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/high16 v1, -0x40800000    # -1.0f
 
-    invoke-virtual {p0, p1, p2}, Ltke;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    cmpl-float v0, v0, v1
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    check-cast p1, Ltke;
+    const/4 v0, 0x1
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ltke;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Ltke;
-
-    iget-wide v1, p0, Ltke;->Z:J
-
-    invoke-direct {v0, v1, v2, p2}, Ltke;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Ltke;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    iget v1, p0, Ltke;->X:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v1, p0, Ltke;->Y:Ljava/lang/Object;
-
-    check-cast v1, Le34;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return v0
+.end method
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final c()Landroid/os/Bundle;
+    .locals 3
 
-    throw p1
+    new-instance v0, Landroid/os/Bundle;
 
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    iget-object p1, p0, Ltke;->Y:Ljava/lang/Object;
+    sget-object v1, Lamc;->a:Ljava/lang/String;
 
-    check-cast p1, Le34;
+    const/4 v2, 0x2
 
-    move-object v1, p1
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    :cond_2
-    :goto_0
-    invoke-static {v1}, Lipe;->r(Le34;)Z
+    sget-object v1, Ltke;->d:Ljava/lang/String;
 
-    move-result p1
+    iget v2, p0, Ltke;->b:I
 
-    if-eqz p1, :cond_5
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    iget-wide v3, p0, Ltke;->Z:J
+    sget-object v1, Ltke;->e:Ljava/lang/String;
 
-    iput-object v1, p0, Ltke;->Y:Ljava/lang/Object;
+    iget v2, p0, Ltke;->c:F
 
-    iput v2, p0, Ltke;->X:I
-
-    invoke-static {v3, v4, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_3
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     return-object v0
+.end method
 
-    :cond_3
-    :goto_1
-    :try_start_0
-    sget-object p1, Lyka;->a:Lyka;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
+    instance-of v0, p1, Ltke;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    const-class v3, Luke;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    return v1
 
-    move-result-object p1
+    :cond_0
+    check-cast p1, Ltke;
 
-    check-cast p1, Luke;
+    iget v0, p0, Ltke;->b:I
 
-    check-cast p1, Lvke;
+    iget v2, p1, Ltke;->b:I
 
-    iget-object p1, p1, Lvke;->a:Ljava/lang/String;
+    if-ne v0, v2, :cond_1
 
-    sget-object v3, Lox9;->j:Lqpa;
+    iget v0, p0, Ltke;->c:F
 
-    if-nez v3, :cond_4
+    iget p1, p1, Ltke;->c:F
 
-    goto :goto_0
+    cmpl-float p1, v0, p1
 
-    :cond_4
-    sget-object v4, Ly38;->o:Ly38;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v3, v4}, Lqpa;->b(Ly38;)Z
+    const/4 p1, 0x1
 
-    move-result v5
+    return p1
 
-    if-eqz v5, :cond_2
+    :cond_1
+    return v1
+.end method
 
-    const-string v5, "verifyIntegrity"
+.method public final hashCode()I
+    .locals 2
 
-    const/4 v6, 0x0
+    iget v0, p0, Ltke;->b:I
 
-    invoke-virtual {v3, v4, p1, v5, v6}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljavax/net/ssl/SSLException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_0
+    move-result-object v0
 
-    :catch_0
-    move-exception p1
+    iget v1, p0, Ltke;->c:F
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v0
 
-    const-string v4, "ssl integrity verification failed"
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    invoke-static {v3, v4, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v0
 
-    goto :goto_0
-
-    :cond_5
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return v0
 .end method

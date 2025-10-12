@@ -1,106 +1,206 @@
 .class public final Lfa7;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/media/MediaCodec;
 
-.field public final synthetic b:Landroid/widget/TextView;
+.field public final b:I
 
-.field public final synthetic c:I
+.field public final c:Ljava/nio/ByteBuffer;
 
-.field public final synthetic d:Landroid/widget/TextView;
+.field public final d:Lys1;
 
-.field public final synthetic e:Lha7;
+.field public final e:Lvs1;
+
+.field public final f:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public g:J
+
+.field public h:Z
 
 
 # direct methods
-.method public constructor <init>(Lha7;ILandroid/widget/TextView;ILandroid/widget/TextView;)V
-    .locals 0
+.method public constructor <init>(Landroid/media/MediaCodec;I)V
+    .locals 4
 
-    iput-object p1, p0, Lfa7;->e:Lha7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lfa7;->a:I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p3, p0, Lfa7;->b:Landroid/widget/TextView;
+    const/4 v1, 0x0
 
-    iput p4, p0, Lfa7;->c:I
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object p5, p0, Lfa7;->d:Landroid/widget/TextView;
+    iput-object v0, p0, Lfa7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Lfa7;->g:J
+
+    iput-boolean v1, p0, Lfa7;->h:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lfa7;->a:Landroid/media/MediaCodec;
+
+    invoke-static {p2}, Lnjg;->i(I)V
+
+    iput p2, p0, Lfa7;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfa7;->c:Ljava/nio/ByteBuffer;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    new-instance p2, Lkt0;
+
+    const/4 v0, 0x5
+
+    invoke-direct {p2, p1, v0}, Lkt0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+
+    invoke-static {p2}, Lggh;->s(Lws1;)Lys1;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lfa7;->d:Lys1;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lvs1;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lfa7;->e:Lvs1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+.method public final a()V
+    .locals 9
 
-    iget p1, p0, Lfa7;->a:I
+    iget-object v1, p0, Lfa7;->e:Lvs1;
 
-    iget-object v0, p0, Lfa7;->e:Lha7;
-
-    iput p1, v0, Lha7;->n:I
-
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Lha7;->l:Landroid/animation/AnimatorSet;
-
-    iget-object v1, p0, Lfa7;->b:Landroid/widget/TextView;
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget v1, p0, Lfa7;->c:I
+    iget-object v0, p0, Lfa7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_0
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    iget-object v0, v0, Lha7;->r:Landroidx/appcompat/widget/AppCompatTextView;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return-void
 
     :cond_0
-    iget-object p1, p0, Lfa7;->d:Landroid/widget/TextView;
+    :try_start_0
+    iget-object v2, p0, Lfa7;->a:Landroid/media/MediaCodec;
 
-    if-eqz p1, :cond_1
+    iget v3, p0, Lfa7;->b:I
+
+    const-wide/16 v6, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-virtual/range {v2 .. v8}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-virtual {v1, v0}, Lvs1;->b(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    return-void
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    :catch_0
+    move-exception v0
 
-    :cond_1
+    invoke-virtual {v1, v0}, Lvs1;->d(Ljava/lang/Throwable;)Z
+
     return-void
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+.method public final b()V
+    .locals 10
 
-    iget-object p1, p0, Lfa7;->d:Landroid/widget/TextView;
+    iget-object v1, p0, Lfa7;->e:Lvs1;
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lfa7;->c:Ljava/nio/ByteBuffer;
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Lfa7;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    const/4 v3, 0x1
 
-    const/4 v0, 0x0
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    return-void
 
     :cond_0
+    :try_start_0
+    iget-object v3, p0, Lfa7;->a:Landroid/media/MediaCodec;
+
+    iget v4, p0, Lfa7;->b:I
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->limit()I
+
+    move-result v6
+
+    iget-wide v7, p0, Lfa7;->g:J
+
+    iget-boolean v0, p0, Lfa7;->h:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x4
+
+    :goto_0
+    move v9, v0
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    invoke-virtual/range {v3 .. v9}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Lvs1;->b(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v1, v0}, Lvs1;->d(Ljava/lang/Throwable;)Z
+
     return-void
 .end method

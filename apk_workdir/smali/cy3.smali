@@ -1,23 +1,15 @@
-.class public interface abstract Lcy3;
+.class public abstract Lcy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()Landroid/content/ClipData;
-.end method
+# direct methods
+.method public static a(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    .locals 0
 
-.method public abstract c()Landroid/net/Uri;
-.end method
+    invoke-virtual {p0}, Landroid/content/Context;->getMainExecutor()Ljava/util/concurrent/Executor;
 
-.method public abstract getExtras()Landroid/os/Bundle;
-.end method
+    move-result-object p0
 
-.method public abstract getFlags()I
-.end method
-
-.method public abstract h()Landroid/view/ContentInfo;
-.end method
-
-.method public abstract l()I
+    return-object p0
 .end method

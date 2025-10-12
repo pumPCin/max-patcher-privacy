@@ -1,66 +1,31 @@
-.class public final synthetic Lcla;
+.class public abstract Lcla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lfla;
+.field public static final b:I
 
-.field public final synthetic b:Lcom/google/android/material/chip/Chip;
-
-.field public final synthetic c:J
-
-.field public final synthetic d:J
-
-.field public final synthetic e:Ljava/lang/CharSequence;
-
-.field public final synthetic f:Ljava/lang/String;
+.field public static final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfla;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lihc;->oneme_chat_complaint_description:I
 
-    iput-object p1, p0, Lcla;->a:Lfla;
+    sput v0, Lcla;->a:I
 
-    iput-object p2, p0, Lcla;->b:Lcom/google/android/material/chip/Chip;
+    sget v0, Lihc;->oneme_chat_complaint_success_snackbar_title:I
 
-    iput-wide p3, p0, Lcla;->c:J
+    sput v0, Lcla;->b:I
 
-    iput-wide p5, p0, Lcla;->d:J
+    sget v0, Lihc;->oneme_chat_complaint_title:I
 
-    iput-object p7, p0, Lcla;->e:Ljava/lang/CharSequence;
-
-    iput-object p8, p0, Lcla;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 9
-
-    iget-object v7, p0, Lcla;->e:Ljava/lang/CharSequence;
-
-    iget-object v8, p0, Lcla;->f:Ljava/lang/String;
-
-    iget-object v0, p0, Lcla;->a:Lfla;
-
-    iget-object v1, p0, Lcla;->b:Lcom/google/android/material/chip/Chip;
-
-    iget-wide v3, p0, Lcla;->c:J
-
-    iget-wide v5, p0, Lcla;->d:J
-
-    move v2, p2
-
-    invoke-virtual/range {v0 .. v8}, Lfla;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
+    sput v0, Lcla;->c:I
 
     return-void
 .end method

@@ -1,41 +1,31 @@
 .class public final Lx57;
-.super Ljava/lang/Object;
+.super Lq57;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lx57;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lx57;
-
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {v0, v1, v2, v1, v2}, Lx57;-><init>(JJ)V
-
-    sput-object v0, Lx57;->c:Lx57;
-
-    return-void
-.end method
-
-.method public constructor <init>(JJ)V
+# virtual methods
+.method public final c(Ljava/lang/Object;)Lq57;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Lq57;->a(Ljava/lang/Object;)V
 
-    iput-wide p1, p0, Lx57;->a:J
+    return-object p0
+.end method
 
-    iput-wide p3, p0, Lx57;->b:J
+.method public final h()Lexc;
+    .locals 2
 
-    return-void
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lq57;->a:Z
+
+    iget-object v0, p0, Lq57;->c:[Ljava/lang/Object;
+
+    iget v1, p0, Lq57;->b:I
+
+    invoke-static {v1, v0}, La67;->h(I[Ljava/lang/Object;)Lexc;
+
+    move-result-object v0
+
+    return-object v0
 .end method

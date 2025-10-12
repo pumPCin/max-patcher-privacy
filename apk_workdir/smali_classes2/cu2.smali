@@ -1,85 +1,42 @@
-.class public final Lcu2;
-.super Le0;
+.class public interface abstract Lcu2;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lz24;
-
-
-# instance fields
-.field public final synthetic a:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Lv24;I)V
-    .locals 0
-
-    iput p2, p0, Lcu2;->a:I
-
-    invoke-direct {p0, p1}, Le0;-><init>(Lv24;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final i(Lw24;Ljava/lang/Throwable;)V
-    .locals 2
+.method public abstract e(I)I
+.end method
 
-    iget v0, p0, Lcu2;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    instance-of p1, p2, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
+.method public f(Z)Lps0;
+    .locals 0
 
     if-eqz p1, :cond_0
 
-    move-object p1, p2
-
-    check-cast p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    new-instance p1, Lone/me/sdk/design/theme/ChromaIllegalApplyThemeException;
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    :cond_1
-    sget-object p2, Li6g;->a:Li6g;
-
-    invoke-virtual {p2}, Li6g;->c()Lg44;
-
-    move-result-object p2
-
-    const-string v0, "ONEME-8759"
-
-    invoke-virtual {p2, v0, p1}, Lg44;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    const-string v0, "fail in %s"
-
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-interface {p0}, Lcu2;->g()Lps0;
 
     move-result-object p1
 
-    const-string v1, "eu2"
+    return-object p1
 
-    invoke-static {v1, p2, v0, p1}, Lox9;->n(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    invoke-interface {p0}, Lcu2;->n()Lps0;
 
-    return-void
+    move-result-object p1
 
-    nop
+    return-object p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract g()Lps0;
+.end method
+
+.method public abstract i()Lp9h;
+.end method
+
+.method public abstract n()Lps0;
+.end method
+
+.method public abstract o()Lxjf;
+.end method
+
+.method public abstract s()Ltb3;
 .end method

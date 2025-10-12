@@ -1,293 +1,122 @@
 .class public final Like;
-.super Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmde;
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final Y:Ljava/lang/Integer;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Like;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final X:I
+.field public X:I
 
-.field public final a:I
+.field public Y:[I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicLong;
+.field public Z:Ljava/util/ArrayList;
 
-.field public c:J
+.field public a:I
 
-.field public final o:Ljava/util/concurrent/atomic/AtomicLong;
+.field public b:I
+
+.field public c:I
+
+.field public o:[I
+
+.field public r0:Z
+
+.field public s0:Z
+
+.field public t0:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "jctools.spsc.max.lookahead.step"
+    new-instance v0, Lpzd;
 
-    const/16 v1, 0x1000
+    const/16 v1, 0xd
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
 
-    move-result-object v0
-
-    sput-object v0, Like;->Y:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    add-int/lit8 v0, p1, -0x1
-
-    invoke-static {v0}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
-
-    move-result v0
-
-    rsub-int/lit8 v0, v0, 0x20
-
-    const/4 v1, 0x1
-
-    shl-int v0, v1, v0
-
-    invoke-direct {p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result v0
-
-    sub-int/2addr v0, v1
-
-    iput v0, p0, Like;->a:I
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v0, p0, Like;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v0, p0, Like;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    div-int/lit8 p1, p1, 0x4
-
-    sget-object v0, Like;->Y:Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    iput p1, p0, Like;->X:I
+    sput-object v0, Like;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 8
+.method public final describeContents()I
+    .locals 1
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Like;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v1
-
-    long-to-int v3, v1
-
-    iget v4, p0, Like;->a:I
-
-    and-int/2addr v3, v4
-
-    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_1
-
-    move-object v4, v5
-
-    goto :goto_1
-
-    :cond_1
-    const-wide/16 v6, 0x1
-
-    add-long/2addr v1, v6
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    invoke-virtual {p0, v3, v5}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    :goto_1
-    if-nez v4, :cond_0
-
-    invoke-virtual {p0}, Like;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final isEmpty()Z
-    .locals 4
-
-    iget-object v0, p0, Like;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Like;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 8
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    if-eqz p1, :cond_2
+    iget p2, p0, Like;->a:I
 
-    iget-object v0, p0, Like;->b:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    iget p2, p0, Like;->b:I
 
-    move-result-wide v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    long-to-int v3, v1
+    iget p2, p0, Like;->c:I
 
-    iget v4, p0, Like;->a:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    and-int/2addr v3, v4
+    iget p2, p0, Like;->c:I
 
-    iget-wide v5, p0, Like;->c:J
+    if-lez p2, :cond_0
 
-    cmp-long v5, v1, v5
+    iget-object p2, p0, Like;->o:[I
 
-    if-ltz v5, :cond_1
-
-    iget v5, p0, Like;->X:I
-
-    int-to-long v5, v5
-
-    add-long/2addr v5, v1
-
-    long-to-int v7, v5
-
-    and-int/2addr v4, v7
-
-    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-nez v4, :cond_0
-
-    iput-wide v5, p0, Like;->c:J
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
     :cond_0
-    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+    iget p2, p0, Like;->X:I
 
-    move-result-object v4
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-eqz v4, :cond_1
+    iget p2, p0, Like;->X:I
 
-    const/4 p1, 0x0
+    if-lez p2, :cond_1
 
-    return p1
+    iget-object p2, p0, Like;->Y:[I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
 
     :cond_1
-    :goto_0
-    invoke-virtual {p0, v3, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+    iget-boolean p2, p0, Like;->r0:Z
 
-    const-wide/16 v3, 0x1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    add-long/2addr v1, v3
+    iget-boolean p2, p0, Like;->s0:Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 p1, 0x1
+    iget-boolean p2, p0, Like;->t0:Z
 
-    return p1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
+    iget-object p2, p0, Like;->Z:Ljava/util/ArrayList;
 
-    const-string v0, "Null is not a valid element"
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 8
-
-    iget-object v0, p0, Like;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v1
-
-    long-to-int v3, v1
-
-    iget v4, p0, Like;->a:I
-
-    and-int/2addr v3, v4
-
-    invoke-virtual {p0, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    if-nez v4, :cond_0
-
-    return-object v5
-
-    :cond_0
-    const-wide/16 v6, 0x1
-
-    add-long/2addr v1, v6
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    invoke-virtual {p0, v3, v5}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    return-object v4
+    return-void
 .end method

@@ -4,7 +4,7 @@
 
 
 # annotations
-.annotation build Lit4;
+.annotation build Lws4;
 .end annotation
 
 
@@ -19,7 +19,7 @@
 
 .method private static createBitmap(IILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p2, :cond_0
@@ -48,7 +48,7 @@
 
 .method private static getInTempStorageFromOptions(Landroid/graphics/BitmapFactory$Options;)[B
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -69,7 +69,7 @@
 
 .method private static getScaleFromOptions(Landroid/graphics/BitmapFactory$Options;)F
     .locals 3
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -117,11 +117,12 @@
 
 .method public static hookDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 3
     invoke-static {p0, p1, p2, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -131,11 +132,13 @@
 
 .method public static hookDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
-    invoke-static {}, Lipe;->j()V
+    .line 1
+    invoke-static {}, Lwee;->p()V
 
+    .line 2
     invoke-static {p0, p1, p2, p3}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->originalDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -145,11 +148,12 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p0, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -159,11 +163,12 @@
 
 .method public static hookDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 1
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -171,6 +176,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 2
     :try_start_1
     invoke-static {v1, v0, p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -178,6 +184,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 3
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -188,6 +195,7 @@
     :catchall_0
     move-exception p0
 
+    .line 4
     :try_start_3
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -212,11 +220,12 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 17
     invoke-static {p0, v0, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -226,15 +235,17 @@
 
 .method public static hookDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 7
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
-    invoke-static {}, Lipe;->j()V
+    .line 1
+    invoke-static {}, Lwee;->p()V
 
     const-wide/16 v0, 0x0
 
     const/4 v2, 0x0
 
+    .line 2
     invoke-static {p0, v0, v1, v2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeSeek(Ljava/io/FileDescriptor;JZ)J
 
     move-result-wide v0
@@ -245,10 +256,12 @@
 
     if-eqz v3, :cond_2
 
+    .line 3
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
 
+    .line 4
     invoke-virtual {v3}, Ljava/io/InputStream;->markSupported()Z
 
     move-result v4
@@ -257,18 +270,21 @@
 
     if-nez v4, :cond_0
 
+    .line 5
     new-instance v4, Ljava/io/BufferedInputStream;
 
     invoke-direct {v4, v3, v5}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
     move-object v3, v4
 
+    .line 6
     :cond_0
     :try_start_0
     invoke-virtual {v3, v5}, Ljava/io/InputStream;->mark(I)V
 
     if-eqz p2, :cond_1
 
+    .line 7
     iget-object v4, p2, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
     if-eqz v4, :cond_1
@@ -279,15 +295,18 @@
 
     goto :goto_0
 
+    .line 8
     :cond_1
     new-array v4, v5, [B
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
+    .line 9
     :goto_0
     :try_start_1
     invoke-virtual {v3, v4, v2, v5}, Ljava/io/InputStream;->read([BII)I
 
+    .line 10
     invoke-virtual {v3}, Ljava/io/InputStream;->reset()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
@@ -296,15 +315,18 @@
     :catch_0
     const/4 v2, 0x1
 
+    .line 11
     :try_start_2
     invoke-static {p0, v0, v1, v2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->nativeSeek(Ljava/io/FileDescriptor;JZ)J
 
+    .line 12
     invoke-static {p0, p1, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->originalDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 13
     :try_start_3
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -321,9 +343,11 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
+    .line 14
     :catchall_2
     throw p0
 
+    .line 15
     :cond_2
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -333,6 +357,7 @@
 
     move-result-object p0
 
+    .line 16
     invoke-static {p1}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->setPaddingDefaultValues(Landroid/graphics/Rect;)V
 
     return-object p0
@@ -340,11 +365,12 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 8
     invoke-static {p0, p1, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -354,15 +380,17 @@
 
 .method public static hookDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     const/4 v1, 0x0
 
+    .line 2
     :try_start_0
     invoke-virtual {p0, p1, v0}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
 
@@ -370,6 +398,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 3
     :try_start_1
     invoke-static {p0, v0, p1, v1, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -379,6 +408,7 @@
 
     if-eqz p1, :cond_1
 
+    .line 4
     :try_start_2
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -391,6 +421,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 5
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -417,12 +448,14 @@
 
     if-eqz p2, :cond_3
 
+    .line 6
     iget-object p0, p2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
     if-nez p0, :cond_2
 
     goto :goto_2
 
+    .line 7
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -439,7 +472,7 @@
 
 .method public static hookDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-nez p4, :cond_0
@@ -498,11 +531,12 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     const/4 v0, 0x0
 
+    .line 5
     invoke-static {p0, v0, v0}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -512,17 +546,20 @@
 
 .method public static hookDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 2
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
-    invoke-static {}, Lipe;->j()V
+    .line 1
+    invoke-static {}, Lwee;->p()V
 
+    .line 2
     invoke-virtual {p0}, Ljava/io/InputStream;->markSupported()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
+    .line 3
     new-instance v0, Ljava/io/BufferedInputStream;
 
     const/16 v1, 0x14
@@ -531,6 +568,7 @@
 
     move-object p0, v0
 
+    .line 4
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/facebook/webpsupport/WebpBitmapFactoryImpl;->originalDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -540,25 +578,26 @@
 .end method
 
 .method private static native nativeDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 .end method
 
 .method private static native nativeDecodeStream(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;F[B)Landroid/graphics/Bitmap;
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 .end method
 
 .method private static native nativeSeek(Ljava/io/FileDescriptor;JZ)J
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 .end method
 
 .method private static originalDecodeByteArray([BII)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 2
     invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -568,9 +607,10 @@
 
 .method private static originalDecodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2, p3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -580,9 +620,10 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -592,9 +633,10 @@
 
 .method private static originalDecodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -604,9 +646,10 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeFileDescriptor(Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -616,9 +659,10 @@
 
 .method private static originalDecodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeFileDescriptor(Ljava/io/FileDescriptor;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -628,9 +672,10 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 2
     invoke-static {p0, p1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -640,9 +685,10 @@
 
 .method private static originalDecodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -652,7 +698,7 @@
 
 .method private static originalDecodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     invoke-static {p0, p1, p2, p3, p4}, Landroid/graphics/BitmapFactory;->decodeResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
@@ -664,9 +710,10 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 2
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -676,9 +723,10 @@
 
 .method private static originalDecodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
+    .line 1
     invoke-static {p0, p1, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -688,7 +736,7 @@
 
 .method private static setBitmapSize(Landroid/graphics/BitmapFactory$Options;II)V
     .locals 0
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -703,7 +751,7 @@
 
 .method private static setOutDimensions(Landroid/graphics/BitmapFactory$Options;II)Z
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -728,7 +776,7 @@
 
 .method private static setPaddingDefaultValues(Landroid/graphics/Rect;)V
     .locals 1
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p0, :cond_0
@@ -755,7 +803,7 @@
         }
     .end annotation
 
-    .annotation build Lit4;
+    .annotation build Lws4;
     .end annotation
 
     if-eqz p0, :cond_0

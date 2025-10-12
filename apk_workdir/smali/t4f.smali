@@ -2,137 +2,65 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lr9g;
-
 
 # instance fields
-.field public final a:Lr9g;
-
-
-# direct methods
-.method public constructor <init>(Lr9g;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {p1}, Lr9g;->b0()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ll74;->i(Z)V
-
-    iput-object p1, p0, Lt4f;->a:Lr9g;
-
-    return-void
-.end method
+.field public a:Landroid/os/Message;
 
 
 # virtual methods
-.method public final T()I
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget-object v0, p0, Lt4f;->a:Lr9g;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Lr9g;->o0()I
+    iput-object v0, p0, Lt4f;->a:Landroid/os/Message;
 
-    move-result v0
+    sget-object v0, Lv4f;->b:Ljava/util/ArrayList;
 
-    return v0
+    monitor-enter v0
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    const/16 v2, 0x32
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public final U()Landroid/util/Range;
+.method public final b()V
     .locals 1
 
-    iget-object v0, p0, Lt4f;->a:Lr9g;
+    iget-object v0, p0, Lt4f;->a:Landroid/os/Message;
 
-    invoke-interface {v0}, Lr9g;->U()Landroid/util/Range;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    return-object v0
-.end method
+    invoke-virtual {p0}, Lt4f;->a()V
 
-.method public final b0()Z
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0}, Lr9g;->b0()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final j0(I)Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0, p1}, Lr9g;->n0(I)Landroid/util/Range;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n0(I)Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0, p1}, Lr9g;->j0(I)Landroid/util/Range;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final o0()I
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0}, Lr9g;->T()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final p0()Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0}, Lr9g;->s0()Landroid/util/Range;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final q0(II)Z
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0, p2, p1}, Lr9g;->q0(II)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final s0()Landroid/util/Range;
-    .locals 1
-
-    iget-object v0, p0, Lt4f;->a:Lr9g;
-
-    invoke-interface {v0}, Lr9g;->p0()Landroid/util/Range;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

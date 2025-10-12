@@ -1,71 +1,177 @@
 .class public final Lmba;
-.super Lx2;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
+
+# interfaces
+.implements Lx6c;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:Lyba;
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnda;I)V
+.method public constructor <init>(Lyba;Ljava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lmba;->b:I
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    invoke-direct {p0, p1}, Lx2;-><init>(Lnda;)V
+    iput-object p1, p0, Lmba;->a:Lyba;
+
+    iput-object p2, p0, Lmba;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(Lxda;)V
+.method public final clear()V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 1
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    return-void
+.end method
+
+.method public final g()Z
     .locals 2
 
-    iget v0, p0, Lmba;->b:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    new-instance v0, Lica;
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p1, v1}, Lica;-><init>(Lxda;I)V
+    if-eq v0, v1, :cond_0
 
-    iget-object p1, p0, Lx2;->a:Lnda;
+    return v1
 
-    invoke-interface {p1, v0}, Lnda;->a(Lxda;)V
+    :cond_0
+    const/4 v0, 0x0
 
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lmba;->b:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final run()V
+    .locals 3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmba;->b:Ljava/lang/Object;
+
+    iget-object v2, p0, Lmba;->a:Lyba;
+
+    invoke-interface {v2, v0}, Lyba;->e(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    invoke-interface {v2}, Lyba;->b()V
+
+    :cond_0
     return-void
+.end method
 
-    :pswitch_0
-    new-instance v0, Lica;
+.method public final t(I)I
+    .locals 0
 
-    const/4 v1, 0x0
+    const/4 p1, 0x1
 
-    invoke-direct {v0, p1, v1}, Lica;-><init>(Lxda;I)V
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
 
-    iget-object p1, p0, Lx2;->a:Lnda;
-
-    invoke-interface {p1, v0}, Lnda;->a(Lxda;)V
-
-    return-void
-
-    :pswitch_1
-    new-instance v0, Llba;
-
-    invoke-direct {v0, p1}, Lel0;-><init>(Lxda;)V
-
-    iget-object p1, p0, Lx2;->a:Lnda;
-
-    invoke-interface {p1, v0}, Lnda;->a(Lxda;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

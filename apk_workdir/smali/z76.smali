@@ -1,59 +1,152 @@
-.class public final Lz76;
-.super Lnz3;
+.class public final synthetic Lz76;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public X:La86;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:La86;
-
-.field public o:Z
-
-.field public w0:I
+.field public final synthetic b:Lone/me/chats/forward/ForwardPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(La86;Lnz3;)V
+.method public synthetic constructor <init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lz76;->Z:La86;
+    iput p2, p0, Lz76;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lz76;->b:Lone/me/chats/forward/ForwardPickerScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 6
 
-    iput-object p1, p0, Lz76;->Y:Ljava/lang/Object;
+    iget v0, p0, Lz76;->a:I
 
-    iget p1, p0, Lz76;->w0:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    sget-object v2, Laxf;->a:Laxf;
 
-    or-int/2addr p1, v0
+    iget-object v3, p0, Lz76;->b:Lone/me/chats/forward/ForwardPickerScreen;
 
-    iput p1, p0, Lz76;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v1, 0x0
+    iget-object v0, v3, Lone/me/chats/forward/ForwardPickerScreen;->F0:Ld86;
 
-    const/4 v5, 0x0
+    invoke-virtual {v0}, Ld86;->l()V
 
-    iget-object v0, p0, Lz76;->Z:La86;
+    return-object v2
 
-    const/4 v4, 0x0
+    :pswitch_0
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
-    move-object v3, p0
+    new-instance v0, Lu49;
 
-    invoke-virtual/range {v0 .. v5}, La86;->b(JLnz3;Ljava/util/List;Z)Ljava/lang/Object;
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
+    invoke-direct {v0, v2}, Lu49;-><init>(Landroid/content/Context;)V
+
+    sget v2, Lbja;->a:I
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+
+    sget v2, Ldja;->a:I
+
+    invoke-virtual {v0, v2}, Lu49;->setInputHint(I)V
+
+    sget-object v2, Lm49;->a:Lm49;
+
+    invoke-virtual {v0, v2}, Lu49;->setRightOuterIconActionState(Lp49;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Lu13;
+
+    const/16 v5, 0xe
+
+    invoke-direct {v4, v3, v5, v0}, Lu13;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v4}, Lug5;->a(Landroid/content/Context;Ltd6;)Lej6;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lu49;->setRightOuterIconTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Lz76;
+
+    invoke-direct {v4, v3, v1}, Lz76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+
+    invoke-static {v2, v4}, Lug5;->a(Landroid/content/Context;Ltd6;)Lej6;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lu49;->setLeftInnerIconTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, v3, Lone/me/chats/forward/ForwardPickerScreen;->F0:Ld86;
+
+    return-object v0
+
+    :pswitch_2
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lss6;->w(Landroid/content/Context;)Lzma;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzma;->c:Llwa;
+
+    return-object v0
+
+    :pswitch_3
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
+
+    invoke-virtual {v3}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lodb;->c:Lmfb;
+
+    check-cast v0, Ls76;
+
+    iget-object v0, v0, Ls76;->r:Lax0;
+
+    invoke-virtual {v0, v1}, Lax0;->M(I)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

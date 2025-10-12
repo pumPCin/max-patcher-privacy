@@ -1,39 +1,25 @@
-.class public final Ll64;
+.class public abstract Ll64;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ll64;
+.field public static final a:Ljava/lang/String;
+
+.field public static final b:Ljava/lang/String;
+
+.field public static final c:Ljava/lang/String;
 
 .field public static final d:Ljava/lang/String;
 
 .field public static final e:Ljava/lang/String;
 
 
-# instance fields
-.field public final a:Le77;
-
-.field public final b:J
-
-
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Ll64;
-
-    sget-object v1, Le77;->b:Ld06;
-
-    sget-object v1, Lxyc;->X:Lxyc;
-
-    const-wide/16 v2, 0x0
-
-    invoke-direct {v0, v2, v3, v1}, Ll64;-><init>(JLjava/util/List;)V
-
-    sput-object v0, Ll64;->c:Ll64;
-
-    sget v0, Lt4g;->a:I
+    sget v0, Lg3g;->a:I
 
     const/4 v0, 0x0
 
@@ -43,9 +29,33 @@
 
     move-result-object v0
 
-    sput-object v0, Ll64;->d:Ljava/lang/String;
+    sput-object v0, Ll64;->a:Ljava/lang/String;
 
     const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll64;->b:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll64;->c:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ll64;->d:Ljava/lang/String;
+
+    const/4 v0, 0x4
 
     invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
@@ -56,18 +66,47 @@
     return-void
 .end method
 
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 0
+.method public static a(Landroid/text/Spanned;Ljava/lang/Object;ILandroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-static {p3}, Le77;->j(Ljava/util/Collection;)Le77;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    move-result-object p3
+    sget-object v1, Ll64;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Ll64;->a:Le77;
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
-    iput-wide p1, p0, Ll64;->b:J
+    move-result v2
 
-    return-void
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Ll64;->b:Ljava/lang/String;
+
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object v1, Ll64;->c:Ljava/lang/String;
+
+    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result p0
+
+    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    sget-object p0, Ll64;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, p0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    if-eqz p3, :cond_0
+
+    sget-object p0, Ll64;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, p0, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
+    return-object v0
 .end method

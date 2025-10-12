@@ -3,11 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo14;
+.implements Lr14;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:Lcdf;
+
+
+# direct methods
+.method public constructor <init>(Lcdf;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lp14;->a:Lcdf;
+
+    return-void
+.end method
 
 
 # virtual methods
@@ -32,11 +44,11 @@
     :cond_1
     check-cast p1, Lp14;
 
-    iget-object v1, p0, Lp14;->a:Ljava/lang/String;
+    iget-object v1, p0, Lp14;->a:Lcdf;
 
-    iget-object p1, p1, Lp14;->a:Ljava/lang/String;
+    iget-object p1, p1, Lp14;->a:Lcdf;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -51,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lp14;->a:Ljava/lang/String;
+    iget-object v0, p0, Lp14;->a:Lcdf;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -61,15 +73,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lp14;->a:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ConversationIdProviderImpl(conversationId="
+    const-string v1, "Failed(message="
 
-    const-string v2, ")"
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, v0, v2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v1, p0, Lp14;->a:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

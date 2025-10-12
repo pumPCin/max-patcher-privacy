@@ -1,25 +1,67 @@
-.class public final Lzha;
+.class public abstract Lzha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
 
 
 # direct methods
-.method public constructor <init>(La5;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lygc;->call_start_group_call_unavailable:I
 
-    const-class v0, Lz9b;
+    sput v0, Lzha;->a:I
 
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    sget v0, Lygc;->call_start_new_dialog_action_cancel:I
 
-    move-result-object p1
+    sput v0, Lzha;->b:I
 
-    iput-object p1, p0, Lzha;->a:Lbp7;
+    sget v0, Lygc;->call_start_new_dialog_action_continue_audio:I
+
+    sput v0, Lzha;->c:I
+
+    sget v0, Lygc;->call_start_new_dialog_action_continue_video:I
+
+    sput v0, Lzha;->d:I
+
+    sget v0, Lygc;->call_start_new_dialog_subtitle:I
+
+    sput v0, Lzha;->e:I
+
+    sget v0, Lygc;->call_start_new_dialog_title:I
+
+    sput v0, Lzha;->f:I
+
+    sget v0, Lygc;->call_start_no_network_connection_neutral_button:I
+
+    sput v0, Lzha;->g:I
+
+    sget v0, Lygc;->call_start_no_network_connection_subtitle:I
+
+    sput v0, Lzha;->h:I
+
+    sget v0, Lygc;->call_start_no_network_connection_title:I
+
+    sput v0, Lzha;->i:I
 
     return-void
 .end method

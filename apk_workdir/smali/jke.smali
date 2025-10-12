@@ -3,401 +3,745 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmde;
-
-
-# static fields
-.field public static final x0:I
-
-.field public static final y0:Ljava/lang/Object;
+.implements Lhch;
 
 
 # instance fields
-.field public X:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public a:I
 
-.field public final Y:I
+.field public b:I
 
-.field public Z:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+.field public c:I
 
-.field public final a:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final d:I
 
-.field public final b:I
+.field public final e:Ljava/lang/Object;
 
-.field public c:J
-
-.field public final o:I
-
-.field public final w0:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final f:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(II[F[F)V
+    .locals 1
 
-    const-string v0, "jctools.spsc.max.lookahead.step"
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x1000
+    .line 2
+    iput p1, p0, Ljke;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+    .line 3
+    iput p2, p0, Ljke;->b:I
+
+    .line 4
+    array-length p1, p3
+
+    const/4 p2, 0x4
+
+    mul-int/2addr p1, p2
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    .line 5
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    move-result v0
+    .line 6
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
-    sput v0, Ljke;->x0:I
+    move-result-object p1
 
-    new-instance v0, Ljava/lang/Object;
+    .line 7
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p3, 0x0
 
-    sput-object v0, Ljke;->y0:Ljava/lang/Object;
+    .line 8
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 9
+    iput-object p1, p0, Ljke;->e:Ljava/lang/Object;
+
+    .line 10
+    array-length p1, p4
+
+    mul-int/2addr p1, p2
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    .line 11
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 12
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p1
+
+    .line 13
+    invoke-virtual {p1, p4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    .line 14
+    invoke-virtual {p1, p3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    .line 15
+    iput-object p1, p0, Ljke;->f:Ljava/lang/Object;
+
+    const/4 p1, 0x5
+
+    .line 16
+    iput p1, p0, Ljke;->d:I
+
+    .line 17
+    iput p2, p0, Ljke;->c:I
 
     return-void
 .end method
 
-.method public constructor <init>(I)V
-    .locals 5
+.method public constructor <init>(Landroidx/recyclerview/widget/StaggeredGridLayoutManager;I)V
+    .locals 0
 
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p1, p0, Ljke;->f:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    .line 19
+    new-instance p1, Ljava/util/ArrayList;
 
-    iput-object v0, p0, Ljke;->a:Ljava/util/concurrent/atomic/AtomicLong;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v1, Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p1, p0, Ljke;->e:Ljava/lang/Object;
 
-    invoke-direct {v1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    const/high16 p1, -0x80000000
 
-    iput-object v1, p0, Ljke;->w0:Ljava/util/concurrent/atomic/AtomicLong;
+    .line 20
+    iput p1, p0, Ljke;->a:I
 
-    const/16 v1, 0x8
+    .line 21
+    iput p1, p0, Ljke;->b:I
 
-    invoke-static {v1, p1}, Ljava/lang/Math;->max(II)I
+    const/4 p1, 0x0
 
-    move-result p1
+    .line 22
+    iput p1, p0, Ljke;->c:I
 
-    const/4 v1, 0x1
-
-    sub-int/2addr p1, v1
-
-    invoke-static {p1}, Ljava/lang/Integer;->numberOfLeadingZeros(I)I
-
-    move-result p1
-
-    rsub-int/lit8 p1, p1, 0x20
-
-    shl-int p1, v1, p1
-
-    add-int/lit8 v1, p1, -0x1
-
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    add-int/lit8 v3, p1, 0x1
-
-    invoke-direct {v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object v2, p0, Ljke;->X:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    iput v1, p0, Ljke;->o:I
-
-    div-int/lit8 v3, p1, 0x4
-
-    sget v4, Ljke;->x0:I
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    iput v3, p0, Ljke;->b:I
-
-    iput-object v2, p0, Ljke;->Z:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    iput v1, p0, Ljke;->Y:I
-
-    add-int/lit8 p1, p1, -0x2
-
-    int-to-long v1, p1
-
-    iput-wide v1, p0, Ljke;->c:J
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
+    .line 23
+    iput p2, p0, Ljke;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 1
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 9
+
+    iget v0, p0, Ljke;->b:I
+
+    iget v1, p0, Ljke;->a:I
+
+    iget-object v2, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/nio/FloatBuffer;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Ljke;->f:Ljava/lang/Object;
+
+    check-cast v2, Ljava/nio/FloatBuffer;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
 
     :cond_0
+    invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+
+    const-string v2, "glEnableVertexAttribArray"
+
+    invoke-static {v2}, Lfn7;->b(Ljava/lang/String;)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
+
+    invoke-static {v2}, Lfn7;->b(Ljava/lang/String;)V
+
+    iget v3, p0, Ljke;->a:I
+
+    iget-object v2, p0, Ljke;->e:Ljava/lang/Object;
+
+    move-object v8, v2
+
+    check-cast v8, Ljava/nio/FloatBuffer;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x8
+
+    const/4 v4, 0x2
+
+    const/16 v5, 0x1406
+
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    const-string v2, "glVertexAttribPointer"
+
+    invoke-static {v2}, Lfn7;->b(Ljava/lang/String;)V
+
+    iget v3, p0, Ljke;->b:I
+
+    iget-object v4, p0, Ljke;->f:Ljava/lang/Object;
+
+    move-object v8, v4
+
+    check-cast v8, Ljava/nio/FloatBuffer;
+
+    const/4 v4, 0x2
+
+    invoke-static/range {v3 .. v8}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
+
+    invoke-static {v2}, Lfn7;->b(Ljava/lang/String;)V
+
+    iget v2, p0, Ljke;->c:I
+
+    const/4 v3, 0x0
+
+    iget v4, p0, Ljke;->d:I
+
+    invoke-static {v4, v3, v2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    const-string v2, "glDrawArrays"
+
+    invoke-static {v2}, Lfn7;->b(Ljava/lang/String;)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    const-string v1, "glDisableVertexAttribArray"
+
+    invoke-static {v1}, Lfn7;->b(Ljava/lang/String;)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
+
+    invoke-static {v1}, Lfn7;->b(Ljava/lang/String;)V
+
+    :cond_1
     :goto_0
-    invoke-virtual {p0}, Ljke;->poll()Ljava/lang/Object;
+    return-void
+.end method
+
+.method public c()V
+    .locals 3
+
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lxw1;->e(Ljava/util/ArrayList;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    check-cast v0, Landroid/view/View;
 
-    invoke-virtual {p0}, Ljke;->isEmpty()Z
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Lgke;
+
+    iget-object v2, p0, Ljke;->f:Ljava/lang/Object;
+
+    check-cast v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-object v2, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
+
+    invoke-virtual {v2, v0}, Loj7;->c(Landroid/view/View;)I
+
+    move-result v0
+
+    iput v0, p0, Ljke;->b:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public d()V
+    .locals 1
+
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    const/high16 v0, -0x80000000
+
+    iput v0, p0, Ljke;->a:I
+
+    iput v0, p0, Ljke;->b:I
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ljke;->c:I
+
+    return-void
+.end method
+
+.method public e()I
+    .locals 4
+
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Ljke;->f:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    sub-int/2addr v0, v3
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Ljke;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-virtual {p0, v2, v0, v2, v3}, Ljke;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f()I
+    .locals 4
+
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Ljke;->f:Ljava/lang/Object;
+
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-boolean v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    invoke-virtual {p0, v3, v0, v3, v2}, Ljke;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    sub-int/2addr v0, v2
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1, v3, v2}, Ljke;->g(IIZZ)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public g(IIZZ)I
+    .locals 11
+
+    iget-object v0, p0, Ljke;->f:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    iget-object v1, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
+
+    invoke-virtual {v1}, Loj7;->m()I
+
+    move-result v1
+
+    iget-object v2, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
+
+    invoke-virtual {v2}, Loj7;->h()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    const/4 v4, 0x1
+
+    if-le p2, p1, :cond_0
+
+    move v5, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v5, v3
+
+    :goto_0
+    if-eq p1, p2, :cond_8
+
+    iget-object v6, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v6, Ljava/util/ArrayList;
+
+    invoke-virtual {v6, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/view/View;
+
+    iget-object v7, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
+
+    invoke-virtual {v7, v6}, Loj7;->f(Landroid/view/View;)I
+
+    move-result v7
+
+    iget-object v8, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
+
+    invoke-virtual {v8, v6}, Loj7;->c(Landroid/view/View;)I
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    if-eqz p4, :cond_2
+
+    if-gt v7, v2, :cond_1
+
+    :goto_1
+    move v10, v4
+
+    goto :goto_2
+
+    :cond_1
+    move v10, v9
+
+    goto :goto_2
+
+    :cond_2
+    if-ge v7, v2, :cond_1
+
+    goto :goto_1
+
+    :goto_2
+    if-eqz p4, :cond_3
+
+    if-lt v8, v1, :cond_4
+
+    :goto_3
+    move v9, v4
+
+    goto :goto_4
+
+    :cond_3
+    if-le v8, v1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    :goto_4
+    if-eqz v10, :cond_7
+
+    if-eqz v9, :cond_7
+
+    if-eqz p3, :cond_5
+
+    invoke-static {v6}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_5
+    if-lt v7, v1, :cond_6
+
+    if-le v8, v2, :cond_7
+
+    :cond_6
+    invoke-static {v6}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_7
+    add-int/2addr p1, v5
+
+    goto :goto_0
+
+    :cond_8
+    return v3
+.end method
+
+.method public h(I)I
+    .locals 2
+
+    iget v0, p0, Ljke;->b:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    return p1
 
     :cond_1
-    return-void
+    invoke-virtual {p0}, Ljke;->c()V
+
+    iget p1, p0, Ljke;->b:I
+
+    return p1
 .end method
 
-.method public final isEmpty()Z
-    .locals 4
+.method public i(II)Landroid/view/View;
+    .locals 6
 
-    iget-object v0, p0, Ljke;->a:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v0, p0, Ljke;->f:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    check-cast v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    move-result-wide v0
+    iget-object v1, p0, Ljke;->e:Ljava/lang/Object;
 
-    iget-object v2, p0, Ljke;->w0:Ljava/util/concurrent/atomic/AtomicLong;
+    check-cast v1, Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    const/4 v2, -0x1
 
-    move-result-wide v2
+    const/4 v3, 0x0
 
-    cmp-long v0, v0, v2
+    if-ne p2, v2, :cond_3
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    const/4 v0, 0x1
+    move-result p2
 
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 14
-
-    if-eqz p1, :cond_3
-
-    iget-object v0, p0, Ljke;->X:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    iget-object v1, p0, Ljke;->a:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v2
-
-    long-to-int v4, v2
-
-    iget v5, p0, Ljke;->o:I
-
-    and-int/2addr v4, v5
-
-    iget-wide v6, p0, Ljke;->c:J
-
-    cmp-long v6, v2, v6
-
-    const-wide/16 v7, 0x1
-
-    const/4 v9, 0x1
-
-    if-gez v6, :cond_0
-
-    invoke-virtual {v0, v4, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    add-long/2addr v2, v7
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    return v9
-
-    :cond_0
-    iget v6, p0, Ljke;->b:I
-
-    int-to-long v10, v6
-
-    add-long/2addr v10, v2
-
-    long-to-int v6, v10
-
-    and-int/2addr v6, v5
-
-    invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-nez v6, :cond_1
-
-    sub-long/2addr v10, v7
-
-    iput-wide v10, p0, Ljke;->c:J
-
-    invoke-virtual {v0, v4, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    add-long/2addr v2, v7
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    return v9
-
-    :cond_1
-    add-long v10, v2, v7
-
-    long-to-int v6, v10
-
-    and-int/2addr v6, v5
-
-    invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-nez v6, :cond_2
-
-    invoke-virtual {v0, v4, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v10, v11}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    return v9
-
-    :cond_2
-    int-to-long v5, v5
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result v12
-
-    new-instance v13, Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    invoke-direct {v13, v12}, Ljava/util/concurrent/atomic/AtomicReferenceArray;-><init>(I)V
-
-    iput-object v13, p0, Ljke;->X:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    add-long/2addr v2, v5
-
-    sub-long/2addr v2, v7
-
-    iput-wide v2, p0, Ljke;->c:J
-
-    invoke-virtual {v13, v4, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result p1
-
-    sub-int/2addr p1, v9
-
-    invoke-virtual {v0, p1, v13}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    sget-object p1, Ljke;->y0:Ljava/lang/Object;
-
-    invoke-virtual {v0, v4, p1}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v10, v11}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
-
-    return v9
-
-    :cond_3
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "Null is not a valid element"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 12
-
-    iget-object v0, p0, Ljke;->Z:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    iget-object v1, p0, Ljke;->w0:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v2
-
-    long-to-int v4, v2
-
-    iget v5, p0, Ljke;->Y:I
-
-    and-int/2addr v4, v5
-
-    invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v6
-
-    sget-object v7, Ljke;->y0:Ljava/lang/Object;
-
-    const/4 v8, 0x1
-
-    if-ne v6, v7, :cond_0
-
-    move v7, v8
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v7, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    const-wide/16 v9, 0x1
+    if-ge v2, p2, :cond_2
 
-    const/4 v11, 0x0
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-eqz v6, :cond_1
+    move-result-object v4
 
-    if-nez v7, :cond_1
+    check-cast v4, Landroid/view/View;
 
-    invoke-virtual {v0, v4, v11}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+    iget-boolean v5, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
 
-    add-long/2addr v2, v9
+    if-eqz v5, :cond_0
 
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
+    invoke-static {v4}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
 
-    return-object v6
+    move-result v5
+
+    if-le v5, p1, :cond_2
+
+    :cond_0
+    iget-boolean v5, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-nez v5, :cond_1
+
+    invoke-static {v4}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
+
+    move-result v5
+
+    if-lt v5, p1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    if-eqz v7, :cond_3
+    invoke-virtual {v4}, Landroid/view/View;->hasFocusable()Z
 
-    add-int/2addr v5, v8
+    move-result v5
 
-    invoke-virtual {v0, v5}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+    if-eqz v5, :cond_2
 
-    move-result-object v6
+    add-int/lit8 v2, v2, 0x1
 
-    check-cast v6, Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    move-object v3, v4
 
-    invoke-virtual {v0, v5, v11}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+    goto :goto_0
 
-    iput-object v6, p0, Ljke;->Z:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+    :cond_2
+    :goto_1
+    return-object v3
 
-    invoke-virtual {v6, v4}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, -0x1
+
+    :goto_2
+    if-ltz p2, :cond_6
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    iget-boolean v4, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-eqz v4, :cond_4
+
+    invoke-static {v2}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
+
+    move-result v4
+
+    if-ge v4, p1, :cond_6
+
+    :cond_4
+    iget-boolean v4, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->w:Z
+
+    if-nez v4, :cond_5
+
+    invoke-static {v2}, Landroidx/recyclerview/widget/a;->M(Landroid/view/View;)I
+
+    move-result v4
+
+    if-gt v4, p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v2}, Landroid/view/View;->hasFocusable()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    add-int/lit8 p2, p2, -0x1
+
+    move-object v3, v2
+
+    goto :goto_2
+
+    :cond_6
+    :goto_3
+    return-object v3
+.end method
+
+.method public j(I)I
+    .locals 2
+
+    iget v0, p0, Ljke;->a:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    return p1
+
+    :cond_1
+    iget-object p1, p0, Ljke;->e:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    check-cast v0, Lgke;
 
-    invoke-virtual {v6, v4, v11}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->lazySet(ILjava/lang/Object;)V
+    iget-object v1, p0, Ljke;->f:Ljava/lang/Object;
 
-    add-long/2addr v2, v9
+    check-cast v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->lazySet(J)V
+    iget-object v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->r:Loj7;
 
-    :cond_2
-    return-object v0
+    invoke-virtual {v1, p1}, Loj7;->f(Landroid/view/View;)I
 
-    :cond_3
-    return-object v11
+    move-result p1
+
+    iput p1, p0, Ljke;->a:I
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget p1, p0, Ljke;->a:I
+
+    return p1
 .end method

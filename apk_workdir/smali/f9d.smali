@@ -1,128 +1,119 @@
 .class public final Lf9d;
-.super Lvi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic Z:I
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lio/antmedia/rtmp_client/RtmpClient;
+.field public final synthetic a:I
 
-.field public Y:Landroid/net/Uri;
+.field public final b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
+    .locals 0
 
-    const-string v0, "media3.datasource.rtmp"
+    iput p2, p0, Lf9d;->a:I
 
-    invoke-static {v0}, Lln8;->a(Ljava/lang/String;)V
+    iput-object p1, p0, Lf9d;->b:Ljava/lang/Runnable;
 
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lvi0;-><init>(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G(Lr94;)J
+.method public final run()V
     .locals 3
 
-    invoke-virtual {p0, p1}, Lvi0;->e(Lr94;)V
+    iget v0, p0, Lf9d;->a:I
 
-    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+    iget-object v0, p0, Lf9d;->b:Ljava/lang/Runnable;
 
-    iput-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    iget-object v1, p1, Lr94;->a:Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
-
-    iget-object v0, p1, Lr94;->a:Landroid/net/Uri;
-
-    iput-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
-
-    invoke-virtual {p0, p1}, Lvi0;->f(Lr94;)V
-
-    const-wide/16 v0, -0x1
-
-    return-wide v0
-.end method
-
-.method public final close()V
-    .locals 2
-
-    iget-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iput-object v1, p0, Lf9d;->Y:Landroid/net/Uri;
-
-    invoke-virtual {p0}, Lvi0;->c()V
-
-    :cond_0
-    iget-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
-
-    iput-object v1, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
-
-    :cond_1
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lf9d;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lf9d;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :pswitch_2
+    :try_start_0
+    iget-object v0, p0, Lf9d;->b:Ljava/lang/Runnable;
+
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Executor"
+
+    const-string v2, "Background execution failure."
+
+    invoke-static {v1, v2, v0}, Lzc6;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final getUri()Landroid/net/Uri;
+.method public toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lf9d;->Y:Landroid/net/Uri;
+    iget v0, p0, Lf9d;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final read([BII)I
-    .locals 2
+    :pswitch_0
+    iget-object v0, p0, Lf9d;->b:Ljava/lang/Runnable;
 
-    iget-object v0, p0, Lf9d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    sget v1, Lt4g;->a:I
+    move-result-object v0
 
-    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
+    return-object v0
 
-    move-result p1
+    nop
 
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_0
-
-    return p2
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lvi0;->a(I)V
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

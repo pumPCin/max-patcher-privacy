@@ -1,42 +1,63 @@
-.class public final synthetic Liv8;
-.super Ljava/lang/Object;
+.class public final Liv8;
+.super Luc0;
 .source "SourceFile"
 
-# interfaces
-.implements Lwu8;
 
-
-# instance fields
-.field public final synthetic a:Lsv8;
+# static fields
+.field public static final b:Liv8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsv8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Liv8;
 
-    iput-object p1, p0, Liv8;->a:Lsv8;
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Liv8;->b:Liv8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkj0;Llif;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p0, Liv8;->a:Lsv8;
+    const/4 v0, 0x1
 
-    iget-object p1, p1, Lsv8;->i:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Luf5;
+    return v0
 
-    iget-object p1, p1, Luf5;->w0:Lg6f;
+    :cond_0
+    instance-of p1, p1, Liv8;
 
-    const/16 p2, 0x16
+    if-nez p1, :cond_1
 
-    invoke-virtual {p1, p2}, Lg6f;->c(I)Z
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x16eb1ef8
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenLocationPicker"
+
+    return-object v0
 .end method

@@ -1,147 +1,84 @@
 .class public final Leda;
-.super Ljava/util/ArrayList;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lada;
+.implements Landroid/window/OnBackAnimationCallback;
 
 
 # instance fields
-.field public volatile a:I
+.field public final synthetic a:Lvd6;
+
+.field public final synthetic b:Lvd6;
+
+.field public final synthetic c:Ltd6;
+
+.field public final synthetic d:Ltd6;
+
+
+# direct methods
+.method public constructor <init>(Lvd6;Lvd6;Ltd6;Ltd6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leda;->a:Lvd6;
+
+    iput-object p2, p0, Leda;->b:Lvd6;
+
+    iput-object p3, p0, Leda;->c:Ltd6;
+
+    iput-object p4, p0, Leda;->d:Ltd6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
+.method public final onBackCancelled()V
     .locals 1
 
-    sget-object v0, La7a;->a:La7a;
+    iget-object v0, p0, Leda;->d:Ltd6;
 
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    iget v0, p0, Leda;->a:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Leda;->a:I
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public final b(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    iget p1, p0, Leda;->a:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    iput p1, p0, Leda;->a:I
-
-    return-void
-.end method
-
-.method public final c(Lyca;)V
-    .locals 5
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p1, Lyca;->b:Lxda;
-
-    const/4 v1, 0x1
-
-    :cond_1
-    iget-boolean v2, p1, Lyca;->o:Z
-
-    if-eqz v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget v2, p0, Leda;->a:I
-
-    iget-object v3, p1, Lyca;->c:Ljava/io/Serializable;
-
-    check-cast v3, Ljava/lang/Integer;
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_6
-
-    invoke-virtual {p0, v3}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-static {v0, v4}, La7a;->a(Lxda;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    iget-boolean v4, p1, Lyca;->o:Z
-
-    if-eqz v4, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lyca;->c:Ljava/io/Serializable;
-
-    neg-int v1, v1
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :goto_1
-    return-void
-.end method
-
-.method public final d(Ljava/lang/Throwable;)V
+.method public final onBackInvoked()V
     .locals 1
 
-    new-instance v0, Ly6a;
+    iget-object v0, p0, Leda;->c:Ltd6;
 
-    invoke-direct {v0, p1}, Ly6a;-><init>(Ljava/lang/Throwable;)V
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    return-void
+.end method
 
-    iget p1, p0, Leda;->a:I
+.method public final onBackProgressed(Landroid/window/BackEvent;)V
+    .locals 1
 
-    add-int/lit8 p1, p1, 0x1
+    new-instance v0, Lfe0;
 
-    iput p1, p0, Leda;->a:I
+    invoke-direct {v0, p1}, Lfe0;-><init>(Landroid/window/BackEvent;)V
+
+    iget-object p1, p0, Leda;->b:Lvd6;
+
+    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final onBackStarted(Landroid/window/BackEvent;)V
+    .locals 1
+
+    new-instance v0, Lfe0;
+
+    invoke-direct {v0, p1}, Lfe0;-><init>(Landroid/window/BackEvent;)V
+
+    iget-object p1, p0, Leda;->a:Lvd6;
+
+    invoke-interface {p1, v0}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

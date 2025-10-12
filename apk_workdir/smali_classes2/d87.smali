@@ -1,116 +1,130 @@
-.class public final synthetic Ld87;
-.super Ljava/lang/Object;
+.class public final Ld87;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lifa;
-.implements Lkfa;
-.implements Lhfa;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Le87;
 
-.field public final synthetic b:Le87;
+.field public final synthetic Y:Llg6;
+
+.field public final synthetic Z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Le87;I)V
+.method public constructor <init>(Le87;Llg6;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ld87;->a:I
+    iput-object p1, p0, Ld87;->X:Le87;
 
-    iput-object p1, p0, Ld87;->b:Le87;
+    iput-object p2, p0, Ld87;->Y:Llg6;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Ld87;->Z:I
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c()V
-    .locals 1
-
-    iget-object v0, p0, Ld87;->b:Le87;
-
-    iget-object v0, v0, Le87;->d:Lmf2;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lmf2;->l()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onFailure(Ljava/lang/Exception;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p1, p0, Ld87;->b:Le87;
+    check-cast p1, Ln24;
 
-    iget-object p1, p1, Le87;->d:Lmf2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Ld87;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {}, Lmf2;->l()V
+    move-result-object p1
 
-    :cond_0
-    return-void
+    check-cast p1, Ld87;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Ld87;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public v(Lcom/google/android/gms/tasks/Task;)V
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget v0, p0, Ld87;->a:I
+    new-instance p1, Ld87;
 
-    iget-object v1, p0, Ld87;->b:Le87;
+    iget-object v0, p0, Ld87;->Y:Llg6;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Ld87;->Z:I
 
-    iget-object p1, v1, Le87;->d:Lmf2;
+    iget-object v2, p0, Ld87;->X:Le87;
 
-    if-eqz p1, :cond_0
+    invoke-direct {p1, v2, v0, v1, p2}, Ld87;-><init>(Le87;Llg6;ILkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Lyka;->a:Lyka;
+    return-object p1
+.end method
 
-    invoke-virtual {p1}, Lyka;->i()Lb87;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    move-result-object p1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_0
+    iget-object p1, p0, Ld87;->X:Le87;
 
-    sget-object v0, Lb87;->p:Ljava/util/List;
+    iget-object v0, p1, Le87;->z0:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Ld87;->Y:Llg6;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v1}, Lb87;->c(ILjava/lang/Integer;)V
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    sget-object v2, Laxf;->a:Laxf;
+
+    if-nez v0, :cond_0
+
+    return-object v2
 
     :cond_0
-    return-void
+    instance-of v3, v1, Lkg6;
 
-    :pswitch_0
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
+    if-eqz v3, :cond_1
 
-    move-result v0
+    const/16 v3, 0x28
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lp4d;
-
-    iput-object p1, v1, Le87;->c:Lp4d;
+    goto :goto_0
 
     :cond_1
-    return-void
+    iget v3, p0, Ld87;->Z:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-gt v4, v3, :cond_2
+
+    return-object v2
+
+    :cond_2
+    iget-object p1, p1, Le87;->z0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v4, v3}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {p1, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v2
 .end method

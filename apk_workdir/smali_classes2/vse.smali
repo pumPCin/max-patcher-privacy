@@ -2,129 +2,149 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyc4;
 
+# instance fields
+.field public final a:J
 
-# static fields
-.field public static final a:Lvse;
-
-.field public static final b:Lwse;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lvse;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput-wide p1, p0, Lvse;->a:J
 
-    sput-object v0, Lvse;->a:Lvse;
+    .line 3
+    iput-object p3, p0, Lvse;->b:Ljava/lang/String;
 
-    sget-object v0, Lwse;->b:Lwse;
+    return-void
+.end method
 
-    sput-object v0, Lvse;->b:Lwse;
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 2
+
+    and-int/lit8 p2, p2, 0x2
+
+    if-eqz p2, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    .line 4
+    invoke-direct {p0, v0, v1, p1}, Lvse;-><init>(JLjava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgd4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    sget-object v0, Lvse;->b:Lwse;
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
-    .locals 8
-
-    sget-object v0, Lvse;->b:Lwse;
-
-    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return v0
 
     :cond_0
-    sget-object v0, Lwse;->b:Lwse;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lwse;->c:Lbd4;
-
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v6, Lhd4;
-
-    new-instance v0, Lwzd;
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v1}, Lwzd;-><init>(I)V
-
-    new-instance v1, Luse;
+    instance-of v1, p1, Lvse;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Luse;-><init>(I)V
+    if-nez v1, :cond_1
 
-    invoke-direct {v6, v0, v1}, Lhd4;-><init>(Lve6;Lve6;)V
-
-    const-string v0, "sticker_id"
-
-    invoke-static {v0, p3}, Lz84;->v(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide v0
-
-    move-wide v2, v0
-
-    new-instance v1, Ljd4;
-
-    new-instance v7, Lgub;
-
-    const/4 v0, 0x3
-
-    invoke-direct {v7, v2, v3, p3, v0}, Lgub;-><init>(JLandroid/os/Parcelable;I)V
-
-    const/4 v5, 0x1
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v7}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;)V
-
-    return-object v1
+    return v2
 
     :cond_1
-    move-object v3, p2
+    check-cast p1, Lvse;
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-wide v3, p0, Lvse;->a:J
 
-    const-string p2, "invalid route "
+    iget-wide v5, p1, Lvse;->a:J
 
-    invoke-static {p2, v3}, Lqw1;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
+    cmp-long v1, v3, v5
 
-    move-result-object p2
+    if-eqz v1, :cond_2
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return v2
 
-    throw p1
+    :cond_2
+    iget-object v1, p0, Lvse;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lvse;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lvse;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lvse;->b:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "QueryState(marker="
+
+    const-string v1, ", query="
+
+    iget-wide v2, p0, Lvse;->a:J
+
+    iget-object v4, p0, Lvse;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

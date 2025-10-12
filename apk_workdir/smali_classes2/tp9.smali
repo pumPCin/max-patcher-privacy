@@ -1,230 +1,111 @@
 .class public final Ltp9;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic g:[Lpl7;
+
+
 # instance fields
-.field public final c:Lx29;
+.field public final a:Ln24;
+
+.field public final b:Le7f;
+
+.field public final c:Lmk;
+
+.field public final d:Lhne;
+
+.field public final e:Lbpc;
+
+.field public final f:Lk5d;
 
 
 # direct methods
-.method public constructor <init>(Lx29;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lds9;
 
-    iput-object p1, p0, Ltp9;->c:Lx29;
+    const-string v1, "newSelectionJob"
+
+    const-string v2, "getNewSelectionJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Ltp9;
+
+    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lewc;->a:Lfwc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lpl7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Ltp9;->g:[Lpl7;
 
     return-void
 .end method
 
-.method public static final d(Ls89;)Ltp9;
-    .locals 7
+.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;Le7f;Lmk;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ls89;->m()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v0
+    iput-object p1, p0, Ltp9;->a:Ln24;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Ltp9;->b:Le7f;
 
-    if-nez v0, :cond_0
+    iput-object p3, p0, Ltp9;->c:Lmk;
 
-    return-object v1
+    new-instance p1, Lkp9;
 
-    :cond_0
-    invoke-virtual {p0}, Ls89;->B0()I
+    const/4 p2, 0x7
 
-    move-result v0
+    invoke-direct {p1, p2}, Lkp9;-><init>(I)V
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Line;->a(Ljava/lang/Object;)Lhne;
 
-    move-object v3, v1
+    move-result-object p1
 
-    :goto_0
-    if-ge v2, v0, :cond_6
+    iput-object p1, p0, Ltp9;->d:Lhne;
 
-    :try_start_0
-    invoke-static {p0}, Lvb4;->a0(Ls89;)Ljava/lang/String;
+    new-instance p2, Lbpc;
 
-    move-result-object v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p2, p1}, Lbpc;-><init>(Lis9;)V
 
-    goto :goto_2
+    iput-object p2, p0, Ltp9;->e:Lbpc;
 
-    :catchall_0
-    move-exception v4
+    invoke-static {}, Lkv9;->G()Lk5d;
 
-    const-string v5, "ServerPayload/PayloadCatching"
+    move-result-object p1
 
-    const-string v6, "payloadCatching catch error"
+    iput-object p1, p0, Ltp9;->f:Lk5d;
 
-    invoke-static {v5, v6, v4}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v5, Lhtd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v5}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Liga;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v4}, Liga;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    sget v5, Lhqd;->a:I
-
-    invoke-static {v5}, Lqw1;->u(I)I
-
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    const/4 p0, 0x1
-
-    if-eq v5, p0, :cond_2
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    throw v4
-
-    :cond_3
-    move-object v4, v1
-
-    :goto_2
-    if-nez v4, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    const-string v5, "message"
-
-    invoke-virtual {v4, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    invoke-static {p0}, La1b;->z(Ls89;)Lx29;
-
-    move-result-object v3
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {p0}, Ls89;->B()V
-
-    :goto_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_6
-    new-instance p0, Ltp9;
-
-    invoke-direct {p0, v3}, Ltp9;-><init>(Lx29;)V
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 3
 
-    const/4 v0, 0x1
+    new-instance v0, Lkp9;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x7
 
-    return v0
+    invoke-direct {v0, v1}, Lkp9;-><init>(I)V
 
-    :cond_0
-    instance-of v1, p1, Ltp9;
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Ltp9;->d:Lhne;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v2, v1, v0}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return v2
-
-    :cond_1
-    check-cast p1, Ltp9;
-
-    iget-object v1, p0, Ltp9;->c:Lx29;
-
-    iget-object p1, p1, Ltp9;->c:Lx29;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ltp9;->c:Lx29;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Lx29;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Response(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltp9;->c:Lx29;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

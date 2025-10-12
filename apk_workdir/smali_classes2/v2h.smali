@@ -1,19 +1,11 @@
-.class public final Lv2h;
-.super Lw2h;
+.class public interface abstract Lv2h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lov7;
 
-# instance fields
-.field public final a:Z
 
-
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-boolean p1, p0, Lv2h;->a:Z
-
-    return-void
+# virtual methods
+.method public abstract f()I
 .end method

@@ -1,59 +1,53 @@
 .class public final Lnqg;
-.super Lv72;
+.super Lwy3;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public X:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+.field public synthetic Y:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+.field public final synthetic Z:Lvqg;
 
-    return v0
+.field public o:Lvqg;
 
-    :cond_0
-    instance-of v1, p1, Lnqg;
+.field public r0:I
 
-    if-nez v1, :cond_1
 
-    const/4 p1, 0x0
+# direct methods
+.method public constructor <init>(Lvqg;Lwy3;)V
+    .locals 0
 
-    return p1
+    iput-object p1, p0, Lnqg;->Z:Lvqg;
 
-    :cond_1
-    check-cast p1, Lnqg;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x2
+    iput-object p1, p0, Lnqg;->Y:Ljava/lang/Object;
 
-    invoke-static {v0}, Lqw1;->u(I)I
+    iget p1, p0, Lnqg;->r0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    return v0
-.end method
+    or-int/2addr p1, v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iput p1, p0, Lnqg;->r0:I
 
-    const-string v0, "CUSTOM"
+    iget-object p1, p0, Lnqg;->Z:Lvqg;
 
-    const-string v1, ")"
+    const/4 v0, 0x0
 
-    const-string v2, "Folder(source="
+    invoke-virtual {p1, v0, p0}, Lvqg;->j(Lmn0;Lwy3;)Ljava/lang/Object;
 
-    invoke-static {v2, v0, v1}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

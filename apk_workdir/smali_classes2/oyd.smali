@@ -1,30 +1,30 @@
 .class public final Loyd;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:Lsyd;
+.field public X:I
 
-.field public Y:Ljb5;
+.field public final synthetic Y:Lpyd;
 
-.field public Z:I
-
-.field public final synthetic w0:Lsyd;
+.field public final synthetic Z:Lb3d;
 
 
 # direct methods
-.method public constructor <init>(Lsyd;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lpyd;Lb3d;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Loyd;->w0:Lsyd;
+    iput-object p1, p0, Loyd;->Y:Lpyd;
+
+    iput-object p2, p0, Loyd;->Z:Lb3d;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +44,7 @@
 
     check-cast p1, Loyd;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Loyd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -54,37 +54,31 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Loyd;
 
-    iget-object v0, p0, Loyd;->w0:Lsyd;
+    iget-object v0, p0, Loyd;->Y:Lpyd;
 
-    invoke-direct {p1, v0, p2}, Loyd;-><init>(Lsyd;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Loyd;->Z:Lb3d;
+
+    invoke-direct {p1, v0, v1, p2}, Loyd;-><init>(Lpyd;Lb3d;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 13
 
-    iget v0, p0, Loyd;->Z:I
+    iget v0, p0, Loyd;->X:I
 
     const/4 v1, 0x1
 
-    iget-object v2, p0, Loyd;->w0:Lsyd;
+    if-eqz v0, :cond_1
 
-    const/4 v3, 0x2
+    if-ne v0, v1, :cond_0
 
-    sget-object v4, Lf34;->a:Lf34;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v1, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     goto/16 :goto_3
 
@@ -98,127 +92,148 @@
     throw p1
 
     :cond_1
-    iget-object v0, p0, Loyd;->Y:Ljb5;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Loyd;->X:Lsyd;
+    iget-object p1, p0, Loyd;->Y:Lpyd;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p1, Lpyd;->b:Ll5a;
+
+    iget-object v2, v0, Ll5a;->b:Lyn7;
+
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lgq;
+
+    check-cast v2, Lz2g;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v3, "app.calls.incoming.ringtone"
+
+    iget-object v4, p0, Loyd;->Z:Lb3d;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v3, v5}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v4, v0, Ll5a;->c:Lb3d;
+
+    instance-of v0, v4, Ly2d;
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x3
 
     goto :goto_0
 
     :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    instance-of v0, v4, Lz2d;
 
-    iget-object v0, v2, Lsyd;->F0:Ljb5;
+    if-eqz v0, :cond_3
 
-    iget-object p1, v2, Lsyd;->c:Lmm6;
+    move v0, v1
 
-    new-instance v5, Ly7c;
+    goto :goto_0
 
-    invoke-virtual {v2}, Lsyd;->t()Lxob;
+    :cond_3
+    instance-of v0, v4, La3d;
 
-    move-result-object v6
+    if-eqz v0, :cond_8
 
-    check-cast v6, Lzob;
+    const/4 v0, 0x2
 
-    iget-object v6, v6, Lzob;->a:Lt63;
+    :goto_0
+    iget-object v2, p1, Lpyd;->Y:Lyn7;
 
-    invoke-virtual {v6}, Lxid;->p()J
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-wide v6
+    move-result-object v2
 
-    sget-object v8, Lbx4;->y0:Lsed;
+    move-object v3, v2
 
-    iget-object v9, v2, Lsyd;->o:Landroid/app/Application;
+    check-cast v3, Lrv1;
 
-    invoke-virtual {v8, v9}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v8
+    const/4 v2, 0x1
 
-    invoke-virtual {v8}, Lbx4;->h()Luxa;
+    if-eq v0, v2, :cond_6
 
-    move-result-object v8
+    const/4 v2, 0x2
 
-    invoke-interface {v8}, Luxa;->getName()Ljava/lang/String;
+    if-eq v0, v2, :cond_5
 
-    move-result-object v8
+    const/4 v2, 0x3
 
-    invoke-direct {v5, v6, v7, v8}, Lz7c;-><init>(JLjava/lang/String;)V
+    if-ne v0, v2, :cond_4
 
-    iput-object v2, p0, Loyd;->X:Lsyd;
+    const-string v0, "CUSTOM"
 
-    iput-object v0, p0, Loyd;->Y:Ljb5;
-
-    iput v1, p0, Loyd;->Z:I
-
-    invoke-virtual {p1, v5, v1, p0}, Lmm6;->a(Lz7c;ZLm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
+    :goto_1
+    move-object v6, v0
 
     goto :goto_2
 
-    :cond_3
-    move-object v1, v2
+    :cond_4
+    const/4 p1, 0x0
 
-    :goto_0
-    check-cast p1, Lt7c;
+    throw p1
 
-    const/4 v5, 0x0
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p1, Lt7c;->a:Landroid/net/Uri;
+    :cond_5
+    const-string v0, "SYSTEM"
 
     goto :goto_1
 
-    :cond_4
-    move-object p1, v5
+    :cond_6
+    const-string v0, "MAX"
 
-    :goto_1
-    new-instance v6, Lz1e;
-
-    invoke-direct {v6, p1}, Lz1e;-><init>(Landroid/net/Uri;)V
-
-    sget-object p1, Lsyd;->P0:[Ltm7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v6}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    invoke-virtual {v2}, Lsyd;->r()Lr8f;
-
-    move-result-object p1
-
-    check-cast p1, Lwla;
-
-    invoke-virtual {p1}, Lwla;->a()Ly24;
-
-    move-result-object p1
-
-    new-instance v0, Lnyd;
-
-    invoke-direct {v0, v3, v5}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object v5, p0, Loyd;->X:Lsyd;
-
-    iput-object v5, p0, Loyd;->Y:Ljb5;
-
-    iput v3, p0, Loyd;->Z:I
-
-    invoke-static {p1, v0, p0}, Lq9e;->G(Lw24;Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_5
+    goto :goto_1
 
     :goto_2
-    return-object v4
+    const/4 v11, 0x0
 
-    :cond_5
+    const/16 v12, 0x1fa
+
+    const-string v4, "CALL_CHANGE_RINGTONE"
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v3 .. v12}, Lrv1;->d(Lrv1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLnv1;I)V
+
+    iput v1, p0, Loyd;->X:I
+
+    invoke-static {p1, p0}, Lpyd;->r(Lpyd;Lc2f;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_7
+
+    return-object v0
+
+    :cond_7
     :goto_3
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
+
+    :cond_8
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

@@ -1,138 +1,60 @@
 .class public final Luih;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Luih;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Landroid/os/Messenger;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lbhh;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Lbhh;-><init>(I)V
-
-    sput-object v0, Luih;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/os/Messenger;
-
-    invoke-direct {v0, p1}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
-
-    iput-object v0, p0, Luih;->a:Landroid/os/Messenger;
-
-    return-void
-.end method
+.super Lcom/google/android/gms/common/internal/a;
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final g()I
     .locals 1
 
-    const/4 v0, 0x0
+    const v0, 0xbdfcb8
 
     return v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final synthetic l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 2
 
     if-nez p1, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Luih;->a:Landroid/os/Messenger;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    check-cast p1, Luih;
-
-    iget-object p1, p1, Luih;->a:Landroid/os/Messenger;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return p1
-
-    :catch_0
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
-.end method
+    return-object p1
 
-.method public final hashCode()I
-    .locals 1
+    :cond_0
+    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
 
-    iget-object v0, p0, Luih;->a:Landroid/os/Messenger;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    instance-of v1, v0, Lmih;
 
-    move-result v0
+    if-eqz v1, :cond_1
 
-    return v0
+    check-cast v0, Lmih;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lmih;
+
+    invoke-direct {v0, p1}, Lmih;-><init>(Landroid/os/IBinder;)V
+
+    return-object v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final p()Ljava/lang/String;
+    .locals 1
 
-    iget-object p2, p0, Luih;->a:Landroid/os/Messenger;
+    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    invoke-virtual {p2}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+.method public final q()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p2
+    const-string v0, "com.google.android.gms.auth.api.phone.service.SmsRetrieverApiService.START"
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
-
-    return-void
+    return-object v0
 .end method

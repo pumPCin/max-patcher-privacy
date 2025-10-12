@@ -3,23 +3,18 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/ViewConfiguration;III)I
+# virtual methods
+.method public a(I)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity(III)I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/view/ViewConfiguration;III)I
+.method public b(IFI)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity(III)I
+    return-void
+.end method
 
-    move-result p0
-
-    return p0
+.method public abstract c(I)V
 .end method

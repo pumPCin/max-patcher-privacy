@@ -1,1357 +1,1255 @@
 .class public final Lak8;
-.super Ljava/lang/Object;
+.super Landroid/os/Binder;
 .source "SourceFile"
 
 # interfaces
-.implements Lxkb;
+.implements Lq07;
 
 
 # instance fields
-.field public final X:Landroid/os/Handler;
-
-.field public final Y:J
-
-.field public Z:Z
-
-.field public final a:Lkif;
-
-.field public b:Z
-
-.field public final c:Lzj8;
-
-.field public final o:Lyj8;
-
-.field public final w0:Ljk8;
+.field public final c:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldxd;Landroid/os/Bundle;Lyj8;Landroid/os/Looper;Ljk8;Lgx0;)V
-    .locals 7
+.method public constructor <init>(Lqj8;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    const-string v0, "context must not be null"
+    const-string v0, "androidx.media3.session.IMediaController"
 
-    invoke-static {p1, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    const-string v0, "token must not be null"
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    invoke-static {p2, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lak8;->c:Ljava/lang/ref/WeakReference;
 
-    const-string v1, "Init "
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public static k(Landroid/os/IBinder;)Lq07;
+    .locals 2
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    if-nez p0, :cond_0
 
-    move-result v1
+    const/4 p0, 0x0
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    return-object p0
 
-    move-result-object v1
+    :cond_0
+    const-string v0, "androidx.media3.session.IMediaController"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " [AndroidXMedia3/1.6.0] ["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lt4g;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v0
 
-    const-string v1, "MediaController"
+    if-eqz v0, :cond_1
 
-    invoke-static {v1, v0}, Lj40;->E(Ljava/lang/String;Ljava/lang/String;)V
+    instance-of v1, v0, Lq07;
 
-    new-instance v0, Lkif;
+    if-eqz v1, :cond_1
 
-    invoke-direct {v0}, Lkif;-><init>()V
+    check-cast v0, Lq07;
 
-    iput-object v0, p0, Lak8;->a:Lkif;
+    return-object v0
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    :cond_1
+    new-instance v0, Lp07;
 
-    iput-wide v0, p0, Lak8;->Y:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lak8;->o:Lyj8;
+    iput-object p0, v0, Lp07;->c:Landroid/os/IBinder;
 
-    new-instance p4, Landroid/os/Handler;
-
-    invoke-direct {p4, p5}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p4, p0, Lak8;->X:Landroid/os/Handler;
-
-    iput-object p6, p0, Lak8;->w0:Ljk8;
-
-    iget-object p4, p2, Ldxd;->a:Lcxd;
-
-    invoke-interface {p4}, Lcxd;->e()Z
-
-    move-result p4
-
-    if-eqz p4, :cond_0
-
-    new-instance v0, Lbl8;
-
-    invoke-virtual {p7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object v2, p0
-
-    move-object v1, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p5
-
-    move-object v6, p7
-
-    invoke-direct/range {v0 .. v6}, Lbl8;-><init>(Landroid/content/Context;Lak8;Ldxd;Landroid/os/Bundle;Landroid/os/Looper;Lko0;)V
-
-    move-object p3, p0
-
-    goto :goto_0
-
-    :cond_0
-    move-object p4, p2
-
-    move-object p6, p5
-
-    move-object p2, p1
-
-    move-object p5, p3
-
-    new-instance p1, Lvk8;
-
-    move-object p3, p0
-
-    invoke-direct/range {p1 .. p6}, Lvk8;-><init>(Landroid/content/Context;Lak8;Ldxd;Landroid/os/Bundle;Landroid/os/Looper;)V
-
-    move-object v0, p1
-
-    :goto_0
-    iput-object v0, p3, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->connect()V
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final A()I
-    .locals 2
+.method public final A(Lzj8;)V
+    .locals 6
 
-    invoke-virtual {p0}, Lak8;->t()V
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    move-result-wide v0
 
-    invoke-interface {v0}, Lzj8;->isConnected()Z
+    :try_start_0
+    iget-object v2, p0, Lak8;->c:Ljava/lang/ref/WeakReference;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->A()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final B()Lmif;
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->B()Lmif;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    sget-object v0, Lmif;->a:Lfif;
-
-    return-object v0
-.end method
-
-.method public final E(Lrm8;)V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    const-string v0, "mediaItems must not be null"
-
-    invoke-static {p1, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string v0, "The controller is not connected. Ignoring setMediaItems()."
-
-    invoke-static {p1, v0}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0, p1}, Lzj8;->E(Lrm8;)V
-
-    return-void
-.end method
-
-.method public final F()Z
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->F()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final H(IJLjava/util/List;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    const-string v0, "mediaItems must not be null"
-
-    invoke-static {p4, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p4}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    invoke-interface {p4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
+    check-cast v2, Lqj8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v2, 0x1
+    if-nez v2, :cond_0
 
-    goto :goto_1
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
 
     :cond_0
-    move v2, v0
+    :try_start_1
+    iget-object v3, v2, Lqj8;->a:Lvi8;
 
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object v3, v3, Lvi8;->X:Landroid/os/Handler;
 
-    const-string v4, "items must not contain null, index="
+    new-instance v4, Lfr5;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v5, 0x18
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v4, v2, v5, p1}, Lfr5;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v3, v4}, Lg3g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v3
-
-    invoke-static {v3, v2}, Lpih;->h(Ljava/lang/Object;Z)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    const-string p1, "MediaController"
-
-    const-string p2, "The controller is not connected. Ignoring setMediaItems()."
-
-    invoke-static {p1, p2}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-void
 
-    :cond_2
-    invoke-interface {v0, p1, p2, p3, p4}, Lzj8;->H(IJLjava/util/List;)V
+    :catchall_0
+    move-exception p1
 
-    return-void
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw p1
 .end method
 
-.method public final J(Ljava/util/List;)V
-    .locals 5
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    const-string v0, "mediaItems must not be null"
-
-    invoke-static {p1, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-ge v1, v2, :cond_1
-
-    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    move v2, v0
-
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "items must not contain null, index="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3, v2}, Lpih;->h(Ljava/lang/Object;Z)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    const-string p1, "MediaController"
-
-    const-string v0, "The controller is not connected. Ignoring setMediaItems()."
-
-    invoke-static {p1, v0}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_2
-    invoke-interface {v0, p1}, Lzj8;->J(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public final a()F
+.method public final S(ILandroid/os/Bundle;Z)V
     .locals 2
 
-    invoke-virtual {p0}, Lak8;->t()V
+    new-instance v0, Lkkb;
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    new-instance v0, Landroid/os/Bundle;
 
-    invoke-interface {v0}, Lzj8;->isConnected()Z
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    move-result v1
+    sget-object v1, Lkkb;->d:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1, p3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-interface {v0}, Lzj8;->a()F
+    sget-object p3, Lkkb;->e:Ljava/lang/String;
 
-    move-result v0
+    const/4 v1, 0x1
 
-    return v0
+    invoke-virtual {v0, p3, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
-    :cond_0
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-virtual {p0, p1, p2, v0}, Lak8;->w(ILandroid/os/Bundle;Landroid/os/Bundle;)V
 
-    return v0
+    return-void
 .end method
 
-.method public final b(Lukb;)V
+.method public final X(ILandroid/os/Bundle;)V
     .locals 1
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    if-nez p2, :cond_0
 
-    invoke-interface {v0, p1}, Lzj8;->N(Lukb;)V
+    return-void
+
+    :cond_0
+    :try_start_0
+    invoke-static {p2}, Loud;->a(Landroid/os/Bundle;)Loud;
+
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {p0, p1, p2}, Lak8;->a0(ILjava/lang/Object;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "MediaControllerStub"
+
+    const-string v0, "Ignoring malformed Bundle for SessionResult"
+
+    invoke-static {p2, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final c()J
-    .locals 2
+.method public final Z()I
+    .locals 1
 
-    invoke-virtual {p0}, Lak8;->t()V
+    iget-object v0, p0, Lak8;->c:Ljava/lang/ref/WeakReference;
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->c()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final d()J
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->R()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final e()Lrm8;
-    .locals 5
-
-    invoke-virtual {p0}, Lak8;->B()Lmif;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lmif;->p()Z
+    check-cast v0, Lqj8;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Lak8;->z()I
-
-    move-result v1
-
-    iget-object v2, p0, Lak8;->a:Lkif;
-
-    const-wide/16 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lmif;->m(ILkif;J)Lkif;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lkif;->c:Lrm8;
-
-    return-object v0
-.end method
-
-.method public final f()Z
-    .locals 5
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    invoke-virtual {p0}, Lak8;->B()Lmif;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lmif;->p()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Lak8;->z()I
-
-    move-result v1
-
-    iget-object v2, p0, Lak8;->a:Lkif;
-
-    const-wide/16 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lmif;->m(ILkif;J)Lkif;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lkif;->h:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final getDuration()J
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->getDuration()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    return-wide v0
-.end method
-
-.method public final getPlaybackState()I
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->getPlaybackState()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final getRepeatMode()I
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->getRepeatMode()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final h()Z
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final i()V
-    .locals 3
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lak8;->X:Landroid/os/Handler;
-
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v2
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, v0, Lqj8;->k:Lmvd;
+
+    if-nez v0, :cond_1
 
     :goto_0
-    invoke-static {v0}, Lpih;->o(Z)V
+    const/4 v0, -0x1
 
-    iget-boolean v0, p0, Lak8;->Z:Z
-
-    xor-int/2addr v0, v2
-
-    invoke-static {v0}, Lpih;->o(Z)V
-
-    iput-boolean v2, p0, Lak8;->Z:Z
-
-    iget-object v0, p0, Lak8;->w0:Ljk8;
-
-    iput-boolean v2, v0, Ljk8;->y0:Z
-
-    iget-object v1, v0, Ljk8;->x0:Lak8;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v0, v1}, Lm1;->k(Ljava/lang/Object;)Z
+    return v0
 
     :cond_1
-    return-void
-.end method
+    iget-object v0, v0, Lmvd;->a:Llvd;
 
-.method public final j()J
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->j()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final k(Lrm8;J)V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    const-string v0, "mediaItems must not be null"
-
-    invoke-static {p1, v0}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string p2, "The controller is not connected. Ignoring setMediaItem()."
-
-    invoke-static {p1, p2}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0, p1, p2, p3}, Lzj8;->k(Lrm8;J)V
-
-    return-void
-.end method
-
-.method public final l()Z
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->l()Z
+    invoke-interface {v0}, Llvd;->f()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
     return v0
 .end method
 
-.method public final l0(I)Z
-    .locals 2
+.method public final a0(ILjava/lang/Object;)V
+    .locals 5
 
-    invoke-virtual {p0}, Lak8;->t()V
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    move-result-wide v0
 
-    invoke-interface {v0}, Lzj8;->isConnected()Z
+    :try_start_0
+    iget-object v2, p0, Lak8;->c:Ljava/lang/ref/WeakReference;
 
-    move-result v1
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v2
 
-    sget-object v0, Lrkb;->b:Lrkb;
+    check-cast v2, Lqj8;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    if-nez v2, :cond_0
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
 
     :cond_0
-    invoke-interface {v0}, Lzj8;->K()Lrkb;
+    :try_start_1
+    iget-object v3, v2, Lqj8;->b:Lvx;
 
-    move-result-object v0
+    invoke-virtual {v3, p1, p2}, Lvx;->y(ILjava/lang/Object;)V
 
-    :goto_0
-    invoke-virtual {v0, p1}, Lrkb;->a(I)Z
+    iget-object p2, v2, Lqj8;->a:Lvi8;
+
+    new-instance v3, Lf30;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v2, p1, v4}, Lf30;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {p2, v3}, Lvi8;->A(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    throw p1
+.end method
+
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final b(I)V
+    .locals 1
+
+    new-instance p1, Lai8;
+
+    const/16 v0, 0x9
+
+    invoke-direct {p1, v0}, Lai8;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Lak8;->A(Lzj8;)V
+
+    return-void
+.end method
+
+.method public final c(ILandroid/app/PendingIntent;)V
+    .locals 1
+
+    new-instance v0, Lyj8;
+
+    invoke-direct {v0, p1, p2}, Lyj8;-><init>(ILandroid/app/PendingIntent;)V
+
+    invoke-virtual {p0, v0}, Lak8;->A(Lzj8;)V
+
+    return-void
+.end method
+
+.method public final onDisconnected()V
+    .locals 2
+
+    new-instance v0, Lai8;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lai8;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lak8;->A(Lzj8;)V
+
+    return-void
+.end method
+
+.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 5
+
+    const-string v0, "androidx.media3.session.IMediaController"
+
+    const/4 v1, 0x1
+
+    if-lt p1, v1, :cond_0
+
+    const v2, 0xffffff
+
+    if-gt p1, v2, :cond_0
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    :cond_0
+    const v2, 0x5f4e5446
+
+    if-eq p1, v2, :cond_15
+
+    const/16 v0, 0xfa1
+
+    const-string v2, "Ignoring malformed Bundle for LibraryParams"
+
+    const-string v3, "MediaControllerStub"
+
+    if-eq p1, v0, :cond_10
+
+    const/16 v0, 0xfa2
+
+    if-eq p1, v0, :cond_c
+
+    const-string v0, "Ignoring malformed Bundle for CommandButton"
+
+    const/4 v2, -0x1
+
+    const/4 v4, 0x0
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result p1
 
     return p1
-.end method
 
-.method public final m()I
-    .locals 2
+    :pswitch_0
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    invoke-virtual {p0}, Lak8;->t()V
+    move-result p1
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-interface {v0}, Lzj8;->isConnected()Z
+    invoke-virtual {p2, p3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
-    move-result v1
+    move-result-object p2
 
-    if-eqz v1, :cond_0
+    if-nez p2, :cond_1
 
-    invoke-interface {v0}, Lzj8;->m()I
+    goto/16 :goto_6
 
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final n()V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v0, "MediaController"
-
-    const-string v1, "The controller is not connected. Ignoring seekTo()."
-
-    invoke-static {v0, v1}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lzj8;->n()V
-
-    return-void
-.end method
-
-.method public final o(Lvo3;)V
-    .locals 2
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lak8;->X:Landroid/os/Handler;
-
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lpih;->o(Z)V
-
-    iget-object v0, p0, Lak8;->o:Lyj8;
-
-    invoke-interface {p1, v0}, Lvo3;->accept(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final p()I
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->p()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final play()V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v0, "MediaController"
-
-    const-string v1, "The controller is not connected. Ignoring play()."
-
-    invoke-static {v0, v1}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lzj8;->play()V
-
-    return-void
-.end method
-
-.method public final prepare()V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v0, "MediaController"
-
-    const-string v1, "The controller is not connected. Ignoring prepare()."
-
-    invoke-static {v0, v1}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v0}, Lzj8;->prepare()V
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 5
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-boolean v0, p0, Lak8;->b:Z
-
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_2
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Release "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " [AndroidXMedia3/1.6.0] ["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lt4g;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "] ["
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lln8;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "MediaController"
-
-    invoke-static {v1, v0}, Lj40;->E(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lak8;->b:Z
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lak8;->X:Landroid/os/Handler;
-
-    invoke-virtual {v3, v2}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
+    :cond_1
     :try_start_0
-    iget-object v2, p0, Lak8;->c:Lzj8;
+    invoke-virtual {p0}, Lak8;->Z()I
 
-    invoke-interface {v2}, Lzj8;->release()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result p3
 
-    goto :goto_0
+    if-ne p3, v2, :cond_2
 
-    :catch_0
-    move-exception v2
+    goto/16 :goto_6
 
-    const-string v4, "Exception while releasing impl"
+    :cond_2
+    invoke-static {}, La67;->i()Lx57;
 
-    invoke-static {v1, v4, v2}, Lj40;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    move-result-object p4
 
     :goto_0
-    iget-boolean v1, p0, Lak8;->Z:Z
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    if-eqz v1, :cond_2
+    move-result v2
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-ge v4, v2, :cond_3
 
-    move-result-object v1
-
-    invoke-virtual {v3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    if-ne v1, v2, :cond_1
+    check-cast v2, Landroid/os/Bundle;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p3, v2}, Lba3;->d(ILandroid/os/Bundle;)Lba3;
+
+    move-result-object v2
+
+    invoke-virtual {p4, v2}, Lq57;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p4}, Lx57;->h()Lexc;
+
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p3, Lmc0;
+
+    invoke-direct {p3, p1, p2}, Lmc0;-><init>(ILexc;)V
+
+    invoke-virtual {p0, p3}, Lak8;->A(Lzj8;)V
+
+    goto/16 :goto_6
+
+    :catch_0
+    move-exception p1
+
+    invoke-static {v3, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :pswitch_1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Bundle;
+
+    :try_start_1
+    invoke-static {p1}, Leud;->a(Landroid/os/Bundle;)Leud;
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    new-instance p1, Lai8;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2}, Lai8;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Lak8;->A(Lzj8;)V
+
+    goto/16 :goto_6
+
+    :catch_1
+    move-exception p1
+
+    const-string p2, "Ignoring malformed Bundle for SessionError"
+
+    invoke-static {v3, p2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/app/PendingIntent;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->c(ILandroid/app/PendingIntent;)V
+
+    return v1
+
+    :pswitch_3
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Landroid/os/Bundle;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p4, p2}, Lak8;->w(ILandroid/os/Bundle;Landroid/os/Bundle;)V
+
+    return v1
+
+    :pswitch_4
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Bundle;
+
+    if-nez p1, :cond_4
+
+    const-string p1, "Ignoring null Bundle for extras"
+
+    invoke-static {v3, p1}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+
+    :cond_4
+    new-instance p2, Lw06;
+
+    const/16 p3, 0x14
+
+    invoke-direct {p2, p3, p1}, Lw06;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Lak8;->A(Lzj8;)V
+
+    return v1
+
+    :pswitch_5
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lak8;->b(I)V
+
+    return v1
+
+    :pswitch_6
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/os/Bundle;
+
+    invoke-static {p2, p1}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Bundle;
+
+    if-eqz p3, :cond_14
+
+    if-nez p1, :cond_5
+
+    goto/16 :goto_6
+
+    :cond_5
+    :try_start_2
+    invoke-static {p3}, Lttd;->a(Landroid/os/Bundle;)Lttd;
+
+    move-result-object p2
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_3
+
+    :try_start_3
+    invoke-static {p1}, Ljjb;->b(Landroid/os/Bundle;)Ljjb;
+
+    move-result-object p1
+    :try_end_3
+    .catch Ljava/lang/RuntimeException; {:try_start_3 .. :try_end_3} :catch_2
+
+    new-instance p3, Lak4;
+
+    const/16 p4, 0x14
+
+    invoke-direct {p3, p2, p4, p1}, Lak4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p3}, Lak8;->A(Lzj8;)V
+
+    goto/16 :goto_6
+
+    :catch_2
+    move-exception p1
+
+    const-string p2, "Ignoring malformed Bundle for Commands"
+
+    invoke-static {v3, p2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :catch_3
+    move-exception p1
+
+    const-string p2, "Ignoring malformed Bundle for SessionCommands"
+
+    invoke-static {v3, p2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :pswitch_7
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->u(ILandroid/os/Bundle;)V
+
+    return v1
+
+    :pswitch_8
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->v(ILandroid/os/Bundle;)V
+
+    return v1
+
+    :pswitch_9
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/os/Bundle;
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    move v4, v1
+
+    :cond_6
+    invoke-virtual {p0, p1, p3, v4}, Lak8;->S(ILandroid/os/Bundle;Z)V
+
+    return v1
+
+    :pswitch_a
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    invoke-virtual {p0}, Lak8;->onDisconnected()V
+
+    return v1
+
+    :pswitch_b
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Landroid/os/Bundle;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    if-eqz p4, :cond_8
+
+    if-nez p2, :cond_7
 
     goto :goto_1
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_7
+    :try_start_4
+    invoke-static {p4}, Lstd;->a(Landroid/os/Bundle;)Lstd;
 
+    move-result-object p3
+    :try_end_4
+    .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_4
+
+    new-instance p4, Lhd4;
+
+    invoke-direct {p4, p1, p3, p2}, Lhd4;-><init>(ILstd;Landroid/os/Bundle;)V
+
+    invoke-virtual {p0, p4}, Lak8;->A(Lzj8;)V
+
+    goto/16 :goto_6
+
+    :catch_4
+    move-exception p1
+
+    const-string p2, "Ignoring malformed Bundle for SessionCommand"
+
+    invoke-static {v3, p2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :cond_8
     :goto_1
-    invoke-static {v0}, Lpih;->o(Z)V
+    const-string p1, "Ignoring custom command with null args."
 
-    iget-object v0, p0, Lak8;->o:Lyj8;
+    invoke-static {v3, p1}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v0, p0}, Lyj8;->d(Lak8;)V
+    goto/16 :goto_6
+
+    :pswitch_c
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p2, p3}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
+
+    move-result-object p2
+
+    if-nez p2, :cond_9
+
+    goto/16 :goto_6
+
+    :cond_9
+    :try_start_5
+    invoke-virtual {p0}, Lak8;->Z()I
+
+    move-result p3
+
+    if-ne p3, v2, :cond_a
+
+    goto/16 :goto_6
+
+    :cond_a
+    invoke-static {}, La67;->i()Lx57;
+
+    move-result-object p4
+
+    :goto_2
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v4, v2, :cond_b
+
+    invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/os/Bundle;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p3, v2}, Lba3;->d(ILandroid/os/Bundle;)Lba3;
+
+    move-result-object v2
+
+    invoke-virtual {p4, v2}, Lq57;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    :cond_2
-    iput-boolean v0, p0, Lak8;->Z:Z
+    :cond_b
+    invoke-virtual {p4}, Lx57;->h()Lexc;
 
-    iget-object v0, p0, Lak8;->w0:Ljk8;
+    move-result-object p2
+    :try_end_5
+    .catch Ljava/lang/RuntimeException; {:try_start_5 .. :try_end_5} :catch_5
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance p3, Lmb2;
 
-    new-instance v1, Ljava/lang/SecurityException;
+    invoke-direct {p3, p1, p2}, Lmb2;-><init>(ILexc;)V
 
-    const-string v2, "Session rejected the connection request."
+    invoke-virtual {p0, p3}, Lak8;->A(Lzj8;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    goto/16 :goto_6
 
-    invoke-virtual {v0, v1}, Lm1;->l(Ljava/lang/Throwable;)Z
+    :catch_5
+    move-exception p1
 
-    :goto_2
-    return-void
+    invoke-static {v3, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_6
+
+    :pswitch_d
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->z(ILandroid/os/Bundle;)V
+
+    return v1
+
+    :pswitch_e
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->X(ILandroid/os/Bundle;)V
+
+    return v1
+
+    :pswitch_f
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    sget-object p3, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p3}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-virtual {p0, p1, p2}, Lak8;->p(ILandroid/os/Bundle;)V
+
+    return v1
+
+    :cond_c
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p3
+
+    sget-object p4, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p4}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_d
+
+    const-string p1, "onSearchResultChanged(): Ignoring empty query"
+
+    invoke-static {v3, p1}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_d
+    if-gez p3, :cond_e
+
+    const-string p1, "onSearchResultChanged(): Ignoring negative itemCount: "
+
+    :goto_3
+    invoke-static {p3, p1, v3}, Lxw1;->m(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_e
+    if-nez p2, :cond_f
+
+    goto :goto_4
+
+    :cond_f
+    :try_start_6
+    invoke-static {p2}, Lgm8;->a(Landroid/os/Bundle;)Lgm8;
+    :try_end_6
+    .catch Ljava/lang/RuntimeException; {:try_start_6 .. :try_end_6} :catch_6
+
+    :goto_4
+    new-instance p1, Lai8;
+
+    const/16 p2, 0xb
+
+    invoke-direct {p1, p2}, Lai8;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Lak8;->A(Lzj8;)V
+
+    goto :goto_6
+
+    :catch_6
+    move-exception p1
+
+    invoke-static {v3, v2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_6
+
+    :cond_10
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p3
+
+    sget-object p4, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p4}, Lxff;->c(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/os/Bundle;
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_11
+
+    const-string p1, "onChildrenChanged(): Ignoring empty parentId"
+
+    invoke-static {v3, p1}, Lhq;->K(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_11
+    if-gez p3, :cond_12
+
+    const-string p1, "onChildrenChanged(): Ignoring negative itemCount: "
+
+    goto :goto_3
+
+    :cond_12
+    if-nez p2, :cond_13
+
+    goto :goto_5
+
+    :cond_13
+    :try_start_7
+    invoke-static {p2}, Lgm8;->a(Landroid/os/Bundle;)Lgm8;
+    :try_end_7
+    .catch Ljava/lang/RuntimeException; {:try_start_7 .. :try_end_7} :catch_7
+
+    :goto_5
+    new-instance p1, Lai8;
+
+    const/16 p2, 0xb
+
+    invoke-direct {p1, p2}, Lai8;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Lak8;->A(Lzj8;)V
+
+    goto :goto_6
+
+    :catch_7
+    move-exception p1
+
+    invoke-static {v3, v2, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_14
+    :goto_6
+    return v1
+
+    :cond_15
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return v1
+
+    :pswitch_data_0
+    .packed-switch 0xbb9
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final r(Ljava/lang/Runnable;)V
+.method public final p(ILandroid/os/Bundle;)V
     .locals 1
 
-    iget-object v0, p0, Lak8;->X:Landroid/os/Handler;
-
-    invoke-static {v0, p1}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final s(Li20;Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string p1, "MediaController"
-
-    const-string p2, "The controller is not connected. Ignoring setAudioAttributes()."
-
-    invoke-static {p1, p2}, Lj40;->W(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez p2, :cond_0
 
     return-void
 
     :cond_0
-    invoke-interface {v0, p1, p2}, Lzj8;->T(Li20;Z)V
+    :try_start_0
+    invoke-static {p2}, Lrm3;->a(Landroid/os/Bundle;)Lrm3;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p2, Lw06;
+
+    const/16 v0, 0x15
+
+    invoke-direct {p2, v0, p1}, Lw06;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Lak8;->A(Lzj8;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "MediaControllerStub"
+
+    const-string v0, "Malformed Bundle for ConnectionResult. Disconnected from the session."
+
+    invoke-static {p2, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Lak8;->onDisconnected()V
 
     return-void
 .end method
 
-.method public final t()V
-    .locals 2
+.method public final u(ILandroid/os/Bundle;)V
+    .locals 1
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    if-nez p2, :cond_0
 
-    move-result-object v0
+    return-void
 
-    iget-object v1, p0, Lak8;->X:Landroid/os/Handler;
+    :cond_0
+    :try_start_0
+    invoke-static {p2}, Ljjb;->b(Landroid/os/Bundle;)Ljjb;
 
-    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v1
+    new-instance p2, Lxj8;
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {p2, p1}, Lxj8;-><init>(Ljjb;)V
 
-    const/4 v0, 0x1
+    invoke-virtual {p0, p2}, Lak8;->A(Lzj8;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "MediaControllerStub"
+
+    const-string v0, "Ignoring malformed Bundle for Commands"
+
+    invoke-static {p2, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final v(ILandroid/os/Bundle;)V
+    .locals 1
+
+    if-nez p2, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    invoke-static {p2}, Lmud;->b(Landroid/os/Bundle;)Lmud;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    new-instance p2, Lw06;
+
+    const/16 v0, 0x13
+
+    invoke-direct {p2, v0, p1}, Lw06;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p2}, Lak8;->A(Lzj8;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "MediaControllerStub"
+
+    const-string v0, "Ignoring malformed Bundle for SessionPositionInfo"
+
+    invoke-static {p2, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final w(ILandroid/os/Bundle;Landroid/os/Bundle;)V
+    .locals 4
+
+    const-string p1, "MediaControllerStub"
+
+    if-eqz p2, :cond_2
+
+    if-nez p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    :try_start_0
+    invoke-virtual {p0}, Lak8;->Z()I
 
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v0, p2}, Lmkb;->m(ILandroid/os/Bundle;)Lmkb;
+
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    new-instance v0, Lkkb;
+
+    sget-object v1, Lkkb;->d:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p3, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    sget-object v3, Lkkb;->e:Ljava/lang/String;
+
+    invoke-virtual {p3, v3, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p3
+
+    invoke-direct {v0, v1, p3}, Lkkb;-><init>(ZZ)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+
+    new-instance p1, Lak4;
+
+    const/16 p3, 0x13
+
+    invoke-direct {p1, p2, p3, v0}, Lak4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Lak8;->A(Lzj8;)V
+
+    return-void
+
+    :catch_0
+    move-exception p2
+
+    const-string p3, "Ignoring malformed Bundle for BundlingExclusions"
+
+    invoke-static {p1, p3, p2}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :catch_1
+    move-exception p2
+
+    const-string p3, "Ignoring malformed Bundle for PlayerInfo"
+
+    invoke-static {p1, p3, p2}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_0
-    const-string v1, "MediaController method is called from a wrong thread. See javadoc of MediaController for details."
-
-    invoke-static {v1, v0}, Lpih;->n(Ljava/lang/Object;Z)V
-
     return-void
 .end method
 
-.method public final u()Landroidx/media3/common/PlaybackException;
-    .locals 2
+.method public final z(ILandroid/os/Bundle;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lak8;->t()V
+    if-nez p2, :cond_0
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->u()Landroidx/media3/common/PlaybackException;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    :try_start_0
+    invoke-static {p2}, Lnp7;->a(Landroid/os/Bundle;)Lnp7;
 
-    return-object v0
-.end method
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final v()J
-    .locals 2
+    invoke-virtual {p0, p1, p2}, Lak8;->a0(ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Lak8;->t()V
+    return-void
 
-    iget-object v0, p0, Lak8;->c:Lzj8;
+    :catch_0
+    move-exception p1
 
-    invoke-interface {v0}, Lzj8;->isConnected()Z
+    const-string p2, "MediaControllerStub"
 
-    move-result v1
+    const-string v0, "Ignoring malformed Bundle for LibraryResult"
 
-    if-eqz v1, :cond_0
+    invoke-static {p2, v0, p1}, Lhq;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-interface {v0}, Lzj8;->v()J
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final x()Luof;
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->x()Luof;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    sget-object v0, Luof;->b:Luof;
-
-    return-object v0
-.end method
-
-.method public final y()I
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->y()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final z()I
-    .locals 2
-
-    invoke-virtual {p0}, Lak8;->t()V
-
-    iget-object v0, p0, Lak8;->c:Lzj8;
-
-    invoke-interface {v0}, Lzj8;->isConnected()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lzj8;->z()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
+    return-void
 .end method

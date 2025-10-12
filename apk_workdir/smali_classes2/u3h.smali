@@ -2,84 +2,88 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llk7;
-
 
 # instance fields
-.field public final a:Z
+.field public final a:Lwyg;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lwyg;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lu3h;->a:Z
+    iput-object p1, p0, Lu3h;->a:Lwyg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final postEvent(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 5
+    .annotation runtime Landroid/webkit/JavascriptInterface;
+    .end annotation
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lu3h;->a:Lwyg;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, v0, Lwyg;->H0:Lxm3;
 
-    return v0
+    iget-object v1, v0, Lxm3;->a:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lu3h;
+    check-cast v1, Ln24;
 
-    const/4 v2, 0x0
+    iget-object v2, v0, Lxm3;->c:Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    check-cast v2, Le7f;
 
-    return v2
+    check-cast v2, Lmka;
 
-    :cond_1
-    check-cast p1, Lu3h;
+    invoke-virtual {v2}, Lmka;->a()Lh24;
 
-    iget-boolean v1, p0, Lu3h;->a:Z
+    move-result-object v2
 
-    iget-boolean p1, p1, Lu3h;->a:Z
+    new-instance v3, Lkj7;
 
-    if-eq v1, p1, :cond_2
+    const/4 v4, 0x0
 
-    return v2
+    invoke-direct {v3, p1, p2, v0, v4}, Lkj7;-><init>(Ljava/lang/String;Ljava/lang/String;Lxm3;Lkotlin/coroutines/Continuation;)V
 
-    :cond_2
-    return v0
+    const/4 p1, 0x2
+
+    invoke-static {v1, v2, v4, v3, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final resolveShare(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
+    .locals 7
+    .annotation runtime Landroid/webkit/JavascriptInterface;
+    .end annotation
 
-    iget-boolean v0, p0, Lu3h;->a:Z
+    iget-object v1, p0, Lu3h;->a:Lwyg;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
+    new-instance v0, Loyg;
 
-    return v0
-.end method
+    const/4 v6, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    move-object v2, p1
 
-    const-string v0, "ShowBackButton(isVisible="
+    move-object v3, p2
 
-    const-string v1, ")"
+    move-object v4, p3
 
-    iget-boolean v2, p0, Lu3h;->a:Z
+    move-object v5, p4
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct/range {v0 .. v6}, Loyg;-><init>(Lwyg;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    const/4 p1, 0x3
 
-    return-object v0
+    const/4 p2, 0x0
+
+    invoke-static {v1, p2, v0, p1}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    return-void
 .end method

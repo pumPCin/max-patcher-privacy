@@ -1,29 +1,39 @@
 .class public final Li38;
-.super Ljava/lang/Object;
+.super Lrp;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Li38;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Li38;
+
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Li38;->a:Li38;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final a(Lq49;)V
-    .locals 0
+.method public final a()Lyn7;
+    .locals 2
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-.method public final b()V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    const-class v1, Lb70;
 
-.method public final c(Ljava/util/ArrayList;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final d(JJJ)V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

@@ -1,193 +1,101 @@
 .class public final Ljy6;
-.super Ljava/lang/Object;
+.super Lfy6;
 .source "SourceFile"
-
-# interfaces
-.implements Lek9;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljy6;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ljy6;->b:Ljava/lang/String;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ljy6;->c:Ljava/util/List;
-
-    return-void
-.end method
+.field public o:Z
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Ljy6;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ljy6;
-
-    iget-object v2, p0, Ljy6;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Ljy6;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ljy6;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Ljy6;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ljy6;->c:Ljava/util/List;
-
-    iget-object p1, p1, Ljy6;->c:Ljava/util/List;
-
-    invoke-interface {v2, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
+.method public final b(Lht0;J)J
     .locals 3
 
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
-    iget-object v1, p0, Ljy6;->a:Ljava/lang/String;
+    cmp-long v0, p2, v0
 
-    if-eqz v1, :cond_0
+    if-ltz v0, :cond_3
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget-boolean v0, p0, Lfy6;->b:Z
 
-    move-result v1
+    if-nez v0, :cond_2
 
-    goto :goto_0
+    iget-boolean v0, p0, Ljy6;->o:Z
+
+    const-wide/16 v1, -0x1
+
+    if-eqz v0, :cond_0
+
+    return-wide v1
 
     :cond_0
-    move v1, v0
+    invoke-super {p0, p1, p2, p3}, Lfy6;->b(Lht0;J)J
 
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    move-result-wide p1
 
-    iget-object v2, p0, Ljy6;->b:Ljava/lang/String;
+    cmp-long p3, p1, v1
 
-    if-eqz v2, :cond_1
+    if-nez p3, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const/4 p1, 0x1
 
-    move-result v0
+    iput-boolean p1, p0, Ljy6;->o:Z
+
+    invoke-virtual {p0}, Lfy6;->m()V
+
+    return-wide v1
 
     :cond_1
-    add-int/2addr v1, v0
+    return-wide p1
 
-    mul-int/lit8 v1, v1, 0x1f
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object v0, p0, Ljy6;->c:Ljava/util/List;
+    const-string p2, "closed"
 
-    invoke-interface {v0}, Ljava/util/List;->hashCode()I
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result v0
+    throw p1
 
-    add-int/2addr v0, v1
+    :cond_3
+    const-string p1, "byteCount < 0: "
 
-    return v0
+    invoke-static {p2, p3, p1}, Ln29;->g(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final close()V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean v0, p0, Lfy6;->b:Z
 
-    const-string v1, "HlsTrackMetadataEntry"
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljy6;->a:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    const-string v2, " ["
-
-    const-string v3, ", "
-
-    invoke-static {v2, v1, v3}, Lqw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Ljy6;->b:Ljava/lang/String;
-
-    const-string v3, "]"
-
-    invoke-static {v1, v2, v3}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    const-string v1, ""
+    iget-boolean v0, p0, Ljy6;->o:Z
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lfy6;->m()V
 
-    move-result-object v0
+    :cond_1
+    const/4 v0, 0x1
 
-    return-object v0
+    iput-boolean v0, p0, Lfy6;->b:Z
+
+    return-void
 .end method

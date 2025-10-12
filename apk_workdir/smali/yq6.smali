@@ -4,243 +4,106 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Ltmf;
 
-.field public b:I
+.field public final b:Z
 
-.field public c:F
+.field public final c:Z
 
-.field public d:I
+.field public final d:Landroid/util/SparseArray;
 
-.field public e:Z
+.field public final e:Landroid/util/SparseArray;
 
-.field public f:I
+.field public final f:Lh42;
 
+.field public g:[B
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.field public h:I
 
-    if-ne p0, p1, :cond_0
+.field public i:I
 
-    goto :goto_1
+.field public j:J
 
-    :cond_0
-    instance-of v0, p1, Lyq6;
+.field public k:Z
 
-    if-nez v0, :cond_1
+.field public l:J
 
-    goto :goto_0
+.field public m:Lwq6;
 
-    :cond_1
-    check-cast p1, Lyq6;
+.field public n:Lwq6;
 
-    iget v0, p0, Lyq6;->a:I
+.field public o:Z
 
-    iget v1, p1, Lyq6;->a:I
+.field public p:J
 
-    if-eq v0, v1, :cond_2
+.field public q:J
 
-    goto :goto_0
+.field public r:Z
 
-    :cond_2
-    iget v0, p0, Lyq6;->b:I
+.field public s:Z
 
-    iget v1, p1, Lyq6;->b:I
 
-    if-eq v0, v1, :cond_3
+# direct methods
+.method public constructor <init>(Ltmf;ZZ)V
+    .locals 1
 
-    goto :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_3
-    iget v0, p0, Lyq6;->c:F
+    iput-object p1, p0, Lyq6;->a:Ltmf;
 
-    iget v1, p1, Lyq6;->c:F
+    iput-boolean p2, p0, Lyq6;->b:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+    iput-boolean p3, p0, Lyq6;->c:Z
 
-    move-result v0
+    new-instance p1, Landroid/util/SparseArray;
 
-    if-eqz v0, :cond_4
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    goto :goto_0
+    iput-object p1, p0, Lyq6;->d:Landroid/util/SparseArray;
 
-    :cond_4
-    iget v0, p0, Lyq6;->d:I
+    new-instance p1, Landroid/util/SparseArray;
 
-    iget v1, p1, Lyq6;->d:I
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
-    if-eq v0, v1, :cond_5
+    iput-object p1, p0, Lyq6;->e:Landroid/util/SparseArray;
 
-    goto :goto_0
+    new-instance p1, Lwq6;
 
-    :cond_5
-    iget-boolean v0, p0, Lyq6;->e:Z
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v1, p1, Lyq6;->e:Z
+    iput-object p1, p0, Lyq6;->m:Lwq6;
 
-    if-eq v0, v1, :cond_6
+    new-instance p1, Lwq6;
 
-    goto :goto_0
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    :cond_6
-    iget v0, p0, Lyq6;->f:I
+    iput-object p1, p0, Lyq6;->n:Lwq6;
 
-    iget p1, p1, Lyq6;->f:I
+    const/16 p1, 0x80
 
-    if-eq v0, p1, :cond_7
+    new-array p1, p1, [B
 
-    :goto_0
-    const/4 p1, 0x0
+    iput-object p1, p0, Lyq6;->g:[B
 
-    return p1
+    new-instance p2, Lh42;
 
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
+    const/4 p3, 0x5
 
-    return p1
-.end method
+    const/4 v0, 0x0
 
-.method public final hashCode()I
-    .locals 3
+    invoke-direct {p2, v0, v0, p3, p1}, Lh42;-><init>(III[B)V
 
-    iget v0, p0, Lyq6;->a:I
+    iput-object p2, p0, Lyq6;->f:Lh42;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iput-boolean v0, p0, Lyq6;->k:Z
 
-    move-result v0
+    iput-boolean v0, p0, Lyq6;->o:Z
 
-    const/16 v1, 0x1f
+    iget-object p1, p0, Lyq6;->n:Lwq6;
 
-    mul-int/2addr v0, v1
+    iput-boolean v0, p1, Lwq6;->b:Z
 
-    iget v2, p0, Lyq6;->b:I
+    iput-boolean v0, p1, Lwq6;->a:Z
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lyq6;->c:F
-
-    invoke-static {v0, v2, v1}, Lvl3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lyq6;->d:I
-
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lyq6;->e:Z
-
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
-
-    move-result v0
-
-    iget v1, p0, Lyq6;->f:I
-
-    invoke-static {v1}, Lqw1;->u(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 9
-
-    iget v0, p0, Lyq6;->a:I
-
-    iget v1, p0, Lyq6;->b:I
-
-    iget v2, p0, Lyq6;->c:F
-
-    iget v3, p0, Lyq6;->d:I
-
-    iget-boolean v4, p0, Lyq6;->e:Z
-
-    iget v5, p0, Lyq6;->f:I
-
-    const-string v6, ", selectedPageIndex="
-
-    const-string v7, ", pageOffsetFraction="
-
-    const-string v8, "PageState(pagesNumber="
-
-    invoke-static {v8, v0, v6, v1, v7}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", selectedBigDotIndex="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", wasShiftedFromZeroToZero="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dotsAnimationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    if-eq v5, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v5, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v5, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v5, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "ALL_DOTS_TO_RIGHT"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "ALL_DOTS_TO_LEFT"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "BIG_DOTS_CHANGE"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "NONE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

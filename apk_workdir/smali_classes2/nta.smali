@@ -1,73 +1,56 @@
-.class public abstract Lnta;
+.class public final synthetic Lnta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
+.field public final synthetic b:Lota;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lota;I)V
+    .locals 0
 
-    sget v0, Lzjc;->permissions_allow_access:I
+    iput p2, p0, Lnta;->a:I
 
-    sput v0, Lnta;->a:I
+    iput-object p1, p0, Lnta;->b:Lota;
 
-    sget v0, Lzjc;->permissions_audio_denied_title:I
-
-    sput v0, Lnta;->b:I
-
-    sget v0, Lzjc;->permissions_audio_request_denied:I
-
-    sput v0, Lnta;->c:I
-
-    sget v0, Lzjc;->permissions_audio_title:I
-
-    sput v0, Lnta;->d:I
-
-    sget v0, Lzjc;->permissions_dialog_no:I
-
-    sput v0, Lnta;->e:I
-
-    sget v0, Lzjc;->permissions_dialog_open_setting:I
-
-    sput v0, Lnta;->f:I
-
-    sget v0, Lzjc;->permissions_dialog_yes:I
-
-    sput v0, Lnta;->g:I
-
-    sget v0, Lzjc;->permissions_video_message_request:I
-
-    sput v0, Lnta;->h:I
-
-    sget v0, Lzjc;->permissions_video_message_request_only_camera_title:I
-
-    sput v0, Lnta;->i:I
-
-    sget v0, Lzjc;->permissions_video_message_request_title:I
-
-    sput v0, Lnta;->j:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lnta;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnta;->b:Lota;
+
+    invoke-virtual {v0}, Lota;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lnta;->b:Lota;
+
+    invoke-virtual {v0}, Lota;->b()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

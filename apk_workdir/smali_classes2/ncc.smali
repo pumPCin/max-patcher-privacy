@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static icon_wrapper_20:I = 0x7f080817
+.field public static oneme_devmenu_logsviewer_show_log_recycler_view:I = 0x7f0a067e

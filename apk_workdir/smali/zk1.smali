@@ -1,5 +1,5 @@
 .class public final Lzk1;
-.super Lgl1;
+.super Lhl1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lzk1;
 
-    invoke-direct {v0}, Lgl1;-><init>()V
+    invoke-direct {v0}, Lhl1;-><init>()V
 
     sput-object v0, Lzk1;->D:Lzk1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7f1049e7
+    const v0, -0x6cfea200
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RecordStopDialog"
+    const-string v0, "RecordStateScreen"
 
     return-object v0
 .end method

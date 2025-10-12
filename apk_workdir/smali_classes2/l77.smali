@@ -1,423 +1,661 @@
 .class public final Ll77;
-.super Lp1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt77;
-.implements Lb5g;
-
-
-# static fields
-.field public static final b:Ll77;
+.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final a:[Lb5g;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ll77;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Lb5g;
-
-    invoke-direct {v0, v1}, Ll77;-><init>([Lb5g;)V
-
-    sput-object v0, Ll77;->b:Ll77;
-
-    return-void
-.end method
-
-.method public constructor <init>([Lb5g;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Ll77;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ll77;->a:[Lb5g;
-
     return-void
 .end method
 
-.method public static x(Ljava/lang/StringBuilder;Lb5g;)V
-    .locals 1
+.method public constructor <init>(Lpyd;)V
+    .locals 0
 
-    move-object v0, p1
+    const/16 p1, 0xf
 
-    check-cast v0, Lp1;
+    iput p1, p0, Ll77;->a:I
 
-    invoke-interface {v0}, Lb5g;->e()I
-
-    move-result v0
-
-    invoke-static {v0}, Lgxf;->g(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lb5g;->a()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 6
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 5
 
-    iget-object v0, p0, Ll77;->a:[Lb5g;
+    iget v0, p0, Ll77;->a:I
 
-    array-length v1, v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v1, :cond_0
+    check-cast p1, Lcom/google/android/gms/common/api/Scope;
 
-    const-string v0, "{}"
+    check-cast p2, Lcom/google/android/gms/common/api/Scope;
 
-    return-object v0
+    iget-object p1, p1, Lcom/google/android/gms/common/api/Scope;->b:Ljava/lang/String;
 
-    :cond_0
-    const-string v1, "{"
+    iget-object p2, p2, Lcom/google/android/gms/common/api/Scope;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aget-object v2, v0, v2
-
-    move-object v3, v2
-
-    check-cast v3, Lp1;
-
-    invoke-interface {v3}, Lb5g;->e()I
-
-    move-result v3
-
-    invoke-static {v3}, Lgxf;->g(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Lb5g;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lo1;->x(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    :goto_0
-    const-string v2, ":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x1
-
-    aget-object v3, v0, v3
-
-    invoke-interface {v3}, Lb5g;->a()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x2
-
-    :goto_1
-    array-length v4, v0
-
-    if-ge v3, v4, :cond_3
-
-    const-string v4, ","
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v4, v0, v3
-
-    move-object v5, v4
-
-    check-cast v5, Lp1;
-
-    invoke-interface {v5}, Lb5g;->e()I
-
-    move-result v5
-
-    invoke-static {v5}, Lgxf;->g(I)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-interface {v4}, Lb5g;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v1, v4}, Lo1;->x(Ljava/lang/StringBuilder;Ljava/lang/String;)V
-
-    :goto_2
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v3, 0x1
-
-    aget-object v4, v0, v4
-
-    invoke-interface {v4}, Lb5g;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v3, v3, 0x2
-
-    goto :goto_1
-
-    :cond_3
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final e()I
-    .locals 1
-
-    const/16 v0, 0x8
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p1, p0, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Lb5g;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lb5g;
-
-    move-object v0, p1
-
-    check-cast v0, Lp1;
-
-    invoke-interface {v0}, Lb5g;->e()I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/16 v1, 0x8
-
-    if-ne v0, v1, :cond_2
-
-    invoke-interface {p1}, Lb5g;->g()Ll77;
-
-    move-result-object p1
-
-    new-instance v0, Lk77;
-
-    iget-object v1, p0, Ll77;->a:[Lb5g;
-
-    invoke-direct {v0, v1}, Lk77;-><init>([Lb5g;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lk77;
-
-    iget-object p1, p1, Ll77;->a:[Lb5g;
-
-    invoke-direct {v1, p1}, Lk77;-><init>([Lb5g;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/AbstractMap;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result p1
 
     return p1
 
-    :cond_2
-    :goto_0
-    const/4 p1, 0x0
+    :pswitch_0
+    check-cast p1, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;
+
+    check-cast p2, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;
+
+    iget v0, p1, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;->width:I
+
+    iget p1, p1, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;->height:I
+
+    mul-int/2addr v0, p1
+
+    iget p1, p2, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;->width:I
+
+    iget p2, p2, Lorg/webrtc/CameraEnumerationAndroid$CaptureFormat;->height:I
+
+    mul-int/2addr p1, p2
+
+    invoke-static {p1, v0}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
 
     return p1
 
-    :cond_3
-    const/4 p1, 0x0
+    :pswitch_1
+    check-cast p1, Lnkg;
 
-    throw p1
-.end method
+    check-cast p2, Lnkg;
 
-.method public final g()Ll77;
-    .locals 0
+    iget p1, p1, Lnkg;->a:I
 
-    return-object p0
-.end method
+    iget p2, p2, Lnkg;->a:I
 
-.method public final hashCode()I
-    .locals 5
+    sub-int/2addr p1, p2
+
+    return p1
+
+    :pswitch_2
+    check-cast p2, Lthg;
+
+    iget-object p2, p2, Lv7f;->c:Ljava/lang/Object;
+
+    check-cast p2, Lck8;
+
+    check-cast p2, Ls8g;
+
+    invoke-virtual {p2}, Ls8g;->b()Lxb6;
+
+    move-result-object p2
+
+    check-cast p1, Lthg;
+
+    iget-object p1, p1, Lv7f;->c:Ljava/lang/Object;
+
+    check-cast p1, Lck8;
+
+    check-cast p1, Ls8g;
+
+    invoke-virtual {p1}, Ls8g;->b()Lxb6;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    check-cast p1, Landroid/view/View;
+
+    check-cast p2, Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+
+    move-result p2
+
+    sub-int/2addr p1, p2
+
+    return p1
+
+    :pswitch_4
+    check-cast p1, Loqe;
+
+    iget-boolean p1, p1, Loqe;->r0:Z
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    check-cast p2, Loqe;
+
+    iget-boolean p2, p2, Loqe;->r0:Z
+
+    xor-int/lit8 p2, p2, 0x1
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_5
+    check-cast p2, Lcx0;
+
+    iget-wide v0, p2, Lcx0;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lcx0;
+
+    iget-wide v0, p1, Lcx0;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_6
+    check-cast p1, Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p1
 
     const/4 v0, 0x0
 
-    move v1, v0
+    new-array v1, v0, [Ljava/lang/String;
 
-    :goto_0
-    iget-object v2, p0, Ll77;->a:[Lb5g;
+    invoke-static {p1, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
 
-    array-length v3, v2
+    move-result-object p1
 
-    if-ge v0, v3, :cond_0
+    new-array v1, v0, [Ljava/nio/file/LinkOption;
 
-    aget-object v3, v2, v0
+    const-class v2, Ljava/nio/file/attribute/BasicFileAttributes;
 
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    invoke-static {p1, v2, v1}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
 
-    move-result v3
+    move-result-object p1
 
-    add-int/lit8 v4, v0, 0x1
+    invoke-interface {p1}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
 
-    aget-object v2, v2, v4
+    move-result-object p1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1}, Ljava/nio/file/attribute/FileTime;->toMillis()J
 
-    move-result v2
+    move-result-wide v3
 
-    xor-int/2addr v2, v3
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    add-int/2addr v1, v2
+    move-result-object p1
 
-    add-int/lit8 v0, v0, 0x2
+    check-cast p2, Ljava/io/File;
+
+    invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-array v1, v0, [Ljava/lang/String;
+
+    invoke-static {p2, v1}, Ljava/nio/file/Paths;->get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;
+
+    move-result-object p2
+
+    new-array v0, v0, [Ljava/nio/file/LinkOption;
+
+    invoke-static {p2, v2, v0}, Ljava/nio/file/Files;->readAttributes(Ljava/nio/file/Path;Ljava/lang/Class;[Ljava/nio/file/LinkOption;)Ljava/nio/file/attribute/BasicFileAttributes;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/nio/file/attribute/BasicFileAttributes;->creationTime()Ljava/nio/file/attribute/FileTime;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/nio/file/attribute/FileTime;->toMillis()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_7
+    check-cast p2, Lr82;
+
+    invoke-virtual {p2}, Lr82;->m()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lr82;
+
+    invoke-virtual {p1}, Lr82;->m()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_8
+    check-cast p2, Lzid;
+
+    iget-object p2, p2, Lzid;->o:Lr82;
+
+    const/4 v0, 0x0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lr82;->m()J
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
 
     goto :goto_0
 
     :cond_0
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Ll77;->a:[Lb5g;
-
-    array-length v1, v0
-
-    if-nez v1, :cond_0
-
-    const-string v0, "{}"
-
-    return-object v0
-
-    :cond_0
-    const-string v1, "{"
-
-    invoke-static {v1}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aget-object v2, v0, v2
-
-    invoke-static {v1, v2}, Ll77;->x(Ljava/lang/StringBuilder;Lb5g;)V
-
-    const-string v2, ":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v3, 0x1
-
-    aget-object v3, v0, v3
-
-    invoke-static {v1, v3}, Ll77;->x(Ljava/lang/StringBuilder;Lb5g;)V
-
-    const/4 v3, 0x2
+    move-object p2, v0
 
     :goto_0
-    array-length v4, v0
+    check-cast p1, Lzid;
 
-    if-ge v3, v4, :cond_1
+    iget-object p1, p1, Lzid;->o:Lr82;
 
-    const-string v4, ","
+    if-eqz p1, :cond_1
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lr82;->m()J
 
-    aget-object v4, v0, v3
+    move-result-wide v0
 
-    invoke-static {v1, v4}, Ll77;->x(Ljava/lang/StringBuilder;Lb5g;)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v4, v3, 0x1
-
-    aget-object v4, v0, v4
-
-    invoke-static {v1, v4}, Ll77;->x(Ljava/lang/StringBuilder;Lb5g;)V
-
-    add-int/lit8 v3, v3, 0x2
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    :cond_1
+    invoke-static {p2, v0}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
 
-.method public final w()Ll77;
-    .locals 0
+    move-result p1
 
-    return-object p0
+    return p1
+
+    :pswitch_9
+    check-cast p1, Lehe;
+
+    check-cast p2, Lehe;
+
+    iget p1, p1, Lehe;->b:I
+
+    iget p2, p2, Lehe;->b:I
+
+    sub-int/2addr p1, p2
+
+    return p1
+
+    :pswitch_a
+    check-cast p2, Lfs3;
+
+    iget-boolean p2, p2, Lfs3;->r0:Z
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    check-cast p1, Lfs3;
+
+    iget-boolean p1, p1, Lfs3;->r0:Z
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_b
+    check-cast p1, Lc7b;
+
+    iget p1, p1, Lc7b;->c:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lc7b;
+
+    iget p2, p2, Lc7b;->c:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_c
+    check-cast p1, Lr6b;
+
+    iget p1, p1, Lr6b;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lr6b;
+
+    iget p2, p2, Lr6b;->b:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_d
+    check-cast p1, Lr6b;
+
+    iget p1, p1, Lr6b;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Lr6b;
+
+    iget p2, p2, Lr6b;->b:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_e
+    check-cast p1, Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    check-cast p2, Ljava/io/File;
+
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_f
+    check-cast p2, Ljava/io/File;
+
+    invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    check-cast p1, Ljava/io/File;
+
+    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_10
+    check-cast p1, Lnd8;
+
+    iget-wide v0, p1, Lnd8;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Lnd8;
+
+    iget-wide v0, p2, Lnd8;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_11
+    check-cast p2, Leo2;
+
+    iget-wide v0, p2, Leo2;->m:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Leo2;
+
+    iget-wide v0, p1, Leo2;->m:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_12
+    check-cast p1, Ll28;
+
+    iget-wide v0, p1, Ll28;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    check-cast p2, Ll28;
+
+    iget-wide v0, p2, Ll28;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_13
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p1}, Le88;->x(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    check-cast p2, Ljava/util/Map$Entry;
+
+    invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-static {p2}, Le88;->x(Ljava/lang/String;)I
+
+    move-result p2
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_14
+    check-cast p2, Lzz7;
+
+    iget-wide v0, p2, Lzz7;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lzz7;
+
+    iget-wide v0, p1, Lzz7;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_15
+    check-cast p2, Lzz7;
+
+    iget-wide v0, p2, Lzz7;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    check-cast p1, Lzz7;
+
+    iget-wide v0, p1, Lzz7;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lq5h;->o(Ljava/lang/Comparable;Ljava/lang/Comparable;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

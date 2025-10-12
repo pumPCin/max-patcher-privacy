@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbd1;
+.implements Lzc1;
 
 
 # static fields
@@ -11,9 +11,9 @@
 
 .field public static final b:J
 
-.field public static final c:Ljef;
+.field public static final c:Lxcf;
 
-.field public static final d:Lwia;
+.field public static final d:Ldha;
 
 
 # direct methods
@@ -26,31 +26,31 @@
 
     sput-object v0, Lyc1;->a:Lyc1;
 
-    sget-wide v0, Lnja;->f:J
+    sget-wide v0, Luha;->c:J
 
     sput-wide v0, Lyc1;->b:J
 
-    sget v0, Lpja;->h:I
+    sget v0, Lwha;->m:I
 
-    new-instance v1, Ljef;
+    new-instance v1, Lxcf;
 
-    invoke-direct {v1, v0}, Ljef;-><init>(I)V
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
 
-    sput-object v1, Lyc1;->c:Ljef;
+    sput-object v1, Lyc1;->c:Lxcf;
 
-    sget-object v0, Lwia;->a:Lwia;
+    sget-object v0, Ldha;->b:Ldha;
 
-    sput-object v0, Lyc1;->d:Lwia;
+    sput-object v0, Lyc1;->d:Ldha;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lwia;
+.method public final a()Ldha;
     .locals 1
 
-    sget-object v0, Lyc1;->d:Lwia;
+    sget-object v0, Lyc1;->d:Ldha;
 
     return-object v0
 .end method
@@ -85,10 +85,10 @@
     return-wide v0
 .end method
 
-.method public final getTitle()Ljef;
+.method public final getTitle()Lxcf;
     .locals 1
 
-    sget-object v0, Lyc1;->c:Ljef;
+    sget-object v0, Lyc1;->c:Lxcf;
 
     return-object v0
 .end method
@@ -96,7 +96,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x2e373d72
+    const v0, -0x1dcefff1
 
     return v0
 .end method
@@ -104,7 +104,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "JoinCall"
+    const-string v0, "TryLoadLinkAgain"
 
     return-object v0
 .end method

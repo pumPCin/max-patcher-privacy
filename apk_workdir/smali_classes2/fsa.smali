@@ -1,61 +1,73 @@
-.class public final Lfsa;
-.super Lgsa;
+.class public abstract Lfsa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lfsa;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lfsa;
+    sget v0, Lgic;->permissions_allow_access:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lfsa;->a:I
 
-    sput-object v0, Lfsa;->a:Lfsa;
+    sget v0, Lgic;->permissions_audio_denied_title:I
+
+    sput v0, Lfsa;->b:I
+
+    sget v0, Lgic;->permissions_audio_request_denied:I
+
+    sput v0, Lfsa;->c:I
+
+    sget v0, Lgic;->permissions_audio_title:I
+
+    sput v0, Lfsa;->d:I
+
+    sget v0, Lgic;->permissions_dialog_no:I
+
+    sput v0, Lfsa;->e:I
+
+    sget v0, Lgic;->permissions_dialog_open_setting:I
+
+    sput v0, Lfsa;->f:I
+
+    sget v0, Lgic;->permissions_dialog_yes:I
+
+    sput v0, Lfsa;->g:I
+
+    sget v0, Lgic;->permissions_video_message_request:I
+
+    sput v0, Lfsa;->h:I
+
+    sget v0, Lgic;->permissions_video_message_request_only_camera_title:I
+
+    sput v0, Lfsa;->i:I
+
+    sget v0, Lgic;->permissions_video_message_request_title:I
+
+    sput v0, Lfsa;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lfsa;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x77f7ff3c
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Themed"
-
-    return-object v0
 .end method

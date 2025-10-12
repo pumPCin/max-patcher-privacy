@@ -36,7 +36,7 @@
         "Lkotlin/Function2;",
         "block",
         "withState",
-        "(JLlf6;)Ljava/lang/Object;",
+        "(JLje6;)Ljava/lang/Object;",
         "addFailReason",
         "(J)I",
         "INITIAL_CAPACITY",
@@ -75,14 +75,16 @@
 .method private constructor <init>()V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Laf4;)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeTaskQueueCore$Companion;-><init>()V
 
     return-void
@@ -149,14 +151,14 @@
     return-wide p1
 .end method
 
-.method public final withState(JLlf6;)Ljava/lang/Object;
+.method public final withState(JLje6;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(J",
-            "Llf6;",
+            "Lje6;",
             ")TT;"
         }
     .end annotation
@@ -185,7 +187,7 @@
 
     move-result-object p1
 
-    invoke-interface {p3, p2, p1}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p2, p1}, Lje6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

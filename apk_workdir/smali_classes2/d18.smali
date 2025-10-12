@@ -1,145 +1,179 @@
 .class public final Ld18;
-.super Lm3f;
+.super Lqy;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:I
+.field public final X:J
 
-.field public final synthetic Y:Le18;
+.field public final Y:J
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final Z:J
+
+.field public final o:Lf18;
+
+.field public final r0:Ljava/util/List;
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:F
+
+.field public final u0:Z
 
 
 # direct methods
-.method public constructor <init>(Le18;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lf18;JJJLjava/util/List;Ljava/lang/String;FZZZ)V
+    .locals 1
 
-    iput-object p1, p0, Ld18;->Y:Le18;
+    sget-object v0, Lm00;->y0:Lm00;
 
-    iput-object p2, p0, Ld18;->Z:Ljava/lang/String;
+    invoke-direct {p0, v0, p12, p13}, Lqy;-><init>(Lm00;ZZ)V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ld18;->o:Lf18;
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Ld18;->X:J
+
+    iput-wide p4, p0, Ld18;->Y:J
+
+    iput-wide p6, p0, Ld18;->Z:J
+
+    iput-object p8, p0, Ld18;->r0:Ljava/util/List;
+
+    iput-object p9, p0, Ld18;->s0:Ljava/lang/String;
+
+    iput-boolean p11, p0, Ld18;->u0:Z
+
+    iput p10, p0, Ld18;->t0:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/util/HashMap;
+    .locals 8
 
-    check-cast p1, Le34;
+    invoke-super {p0}, Lqy;->a()Ljava/util/HashMap;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Ld18;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Ld18;->o:Lf18;
 
-    move-result-object p1
+    iget-wide v2, v1, Lf18;->a:D
 
-    check-cast p1, Ld18;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object v2
 
-    invoke-virtual {p1, p2}, Ld18;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v3, "latitude"
 
-    move-result-object p1
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
-.end method
+    iget-wide v2, v1, Lf18;->b:D
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    new-instance p1, Ld18;
+    move-result-object v2
 
-    iget-object v0, p0, Ld18;->Y:Le18;
+    const-string v3, "longitude"
 
-    iget-object v1, p0, Ld18;->Z:Ljava/lang/String;
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1, v0, v1, p2}, Ld18;-><init>(Le18;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v2, 0x0
 
-    return-object p1
-.end method
+    iget-wide v4, p0, Ld18;->X:J
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    cmp-long v2, v4, v2
 
-    iget v0, p0, Ld18;->X:I
+    if-lez v2, :cond_0
 
-    sget-object v1, Loyf;->a:Loyf;
+    const-string v2, "livePeriod"
 
-    iget-object v2, p0, Ld18;->Z:Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v3, 0x1
+    move-result-object v3
 
-    iget-object v4, p0, Ld18;->Y:Le18;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget v2, p0, Ld18;->t0:F
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v3, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    cmpl-float v4, v2, v3
 
-    throw p1
+    if-lez v4, :cond_1
+
+    const-string v4, "zoom"
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-wide v4, v1, Lf18;->c:D
 
-    iget-object p1, v4, Le18;->g:Ljava/lang/Object;
+    const-wide/16 v6, 0x0
 
-    invoke-interface {p1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    cmpl-double v2, v4, v6
 
-    move-result-object p1
+    if-eqz v2, :cond_2
 
-    check-cast p1, Loh6;
+    const-string v2, "alt"
 
-    if-nez p1, :cond_2
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    return-object v1
+    move-result-object v4
+
+    invoke-virtual {v0, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
-    iget-object v0, v4, Le18;->c:Lp18;
+    iget v2, v1, Lf18;->o:F
 
-    iput v3, p0, Ld18;->X:I
+    cmpl-float v4, v2, v3
 
-    const/16 v3, 0x28
+    if-eqz v4, :cond_3
 
-    check-cast v0, Lk97;
+    const-string v4, "epu"
 
-    invoke-virtual {v0, p1, v3, p0}, Lk97;->c(Loh6;ILm3f;)Ljava/lang/Object;
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object p1
+    move-result-object v2
 
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
-    :goto_0
-    iget-object p1, v4, Le18;->a:Lov0;
+    iget v2, v1, Lf18;->X:F
 
-    new-instance v0, Lf18;
+    cmpl-float v4, v2, v3
 
-    invoke-direct {v0, v2}, Lf18;-><init>(Ljava/lang/String;)V
+    if-eqz v4, :cond_4
 
-    invoke-virtual {p1, v0}, Lov0;->c(Ljava/lang/Object;)V
+    const-string v4, "hdn"
 
-    return-object v1
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    iget v1, v1, Lf18;->Y:F
+
+    cmpl-float v2, v1, v3
+
+    if-eqz v2, :cond_5
+
+    const-string v2, "spd"
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_5
+    return-object v0
 .end method

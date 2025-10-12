@@ -3,91 +3,77 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final Companion:Llpg;
+
+
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:J
+.field public final b:Ljava/lang/String;
 
-.field public final c:J
-
-.field public final d:Ljava/lang/Thread;
-
-.field public final e:Ljava/util/List;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Llpg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lmpg;->Companion:Llpg;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 3
+
+    and-int/lit8 v0, p2, 0x3
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x3
+
+    if-ne v2, v0, :cond_1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lmpg;->a:Ljava/lang/String;
 
-    iput-wide p2, p0, Lmpg;->b:J
+    iput-object p3, p0, Lmpg;->b:Ljava/lang/String;
 
-    iput-wide p4, p0, Lmpg;->c:J
+    and-int/lit8 p1, p2, 0x4
 
-    iput-object p6, p0, Lmpg;->d:Ljava/lang/Thread;
+    if-nez p1, :cond_0
 
-    iput-object p7, p0, Lmpg;->e:Ljava/util/List;
+    iput-object v1, p0, Lmpg;->c:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static a(Lmpg;JLjava/lang/Thread;I)Lmpg;
-    .locals 8
-
-    iget-object v1, p0, Lmpg;->a:Ljava/lang/String;
-
-    iget-wide v2, p0, Lmpg;->b:J
-
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_0
-
-    iget-wide p1, p0, Lmpg;->c:J
 
     :cond_0
-    move-wide v4, p1
+    iput-object p4, p0, Lmpg;->c:Ljava/lang/String;
 
-    iget-object v7, p0, Lmpg;->e:Ljava/util/List;
+    return-void
 
-    new-instance v0, Lmpg;
+    :cond_1
+    sget-object p1, Lkpg;->a:Lkpg;
 
-    move-object v6, p3
+    invoke-virtual {p1}, Lkpg;->d()Lmqd;
 
-    invoke-direct/range {v0 .. v7}, Lmpg;-><init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
+    move-result-object p1
 
-    return-object v0
+    invoke-static {p2, v2, p1}, Lomc;->A(IILmqd;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final b(J)J
-    .locals 4
-
-    iget-wide v0, p0, Lmpg;->b:J
-
-    iget-wide v2, p0, Lmpg;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Ln05;->d(JJ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    move-wide v2, p1
-
-    :cond_0
-    invoke-static {p1, p2, v2, v3}, Ln05;->g(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -111,7 +97,7 @@
 
     iget-object v3, p1, Lmpg;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -120,11 +106,11 @@
     return v2
 
     :cond_2
-    iget-wide v3, p0, Lmpg;->b:J
+    iget-object v1, p0, Lmpg;->b:Ljava/lang/String;
 
-    iget-wide v5, p1, Lmpg;->b:J
+    iget-object v3, p1, Lmpg;->b:Ljava/lang/String;
 
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -133,150 +119,90 @@
     return v2
 
     :cond_3
-    iget-wide v3, p0, Lmpg;->c:J
+    iget-object v1, p0, Lmpg;->c:Ljava/lang/String;
 
-    iget-wide v5, p1, Lmpg;->c:J
+    iget-object p1, p1, Lmpg;->c:Ljava/lang/String;
 
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_4
+    if-nez p1, :cond_4
 
     return v2
 
     :cond_4
-    iget-object v1, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    iget-object v3, p1, Lmpg;->d:Ljava/lang/Thread;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lmpg;->e:Ljava/util/List;
-
-    iget-object p1, p1, Lmpg;->e:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    return v2
-
-    :cond_6
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 4
 
-    iget-object v0, p0, Lmpg;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Lmpg;->a:Ljava/lang/String;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    sget v2, Ln05;->o:I
-
-    iget-wide v2, p0, Lmpg;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lmpg;->c:J
-
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lmpg;->e:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v1
 
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lmpg;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2, v3}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v1
+
+    iget-object v2, p0, Lmpg;->c:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
     add-int/2addr v1, v0
 
     return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
-    iget-wide v0, p0, Lmpg;->b:J
+    const-string v0, ", requestId="
 
-    invoke-static {v0, v1}, Ln05;->j(J)Ljava/lang/String;
+    const-string v1, ", reason="
 
-    move-result-object v0
+    const-string v2, "WebAppBiometryAuthRequest(queryId="
 
-    iget-wide v1, p0, Lmpg;->c:J
+    iget-object v3, p0, Lmpg;->a:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ln05;->j(J)Ljava/lang/String;
+    iget-object v4, p0, Lmpg;->b:Ljava/lang/String;
 
-    move-result-object v1
-
-    const-string v2, ", submitTime="
-
-    const-string v3, ", startTime="
-
-    const-string v4, "WatchdogTask(submitThread="
-
-    iget-object v5, p0, Lmpg;->a:Ljava/lang/String;
-
-    invoke-static {v4, v5, v2, v0, v3}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", runningThread="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lmpg;->d:Ljava/lang/Thread;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", stacktrace="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lmpg;->e:Ljava/util/List;
+    iget-object v2, p0, Lmpg;->c:Ljava/lang/String;
 
-    invoke-static {v0, v2, v1}, Lqw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

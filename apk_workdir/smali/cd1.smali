@@ -3,7 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfd1;
+.implements Ldd1;
+
+
+# instance fields
+.field public final a:Lbdf;
+
+
+# direct methods
+.method public constructor <init>(Lbdf;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcd1;->a:Lbdf;
+
+    return-void
+.end method
 
 
 # virtual methods
@@ -24,11 +40,11 @@
     :cond_1
     check-cast p1, Lcd1;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lcd1;->a:Lbdf;
 
-    sget-object p1, Loef;->a:Lnef;
+    iget-object p1, p1, Lcd1;->a:Lbdf;
 
-    invoke-virtual {p1, p1}, Lnef;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lbdf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -46,10 +62,10 @@
     return p1
 .end method
 
-.method public final getText()Loef;
+.method public final getText()Lcdf;
     .locals 1
 
-    sget-object v0, Loef;->a:Lnef;
+    iget-object v0, p0, Lcd1;->a:Lbdf;
 
     return-object v0
 .end method
@@ -57,9 +73,9 @@
 .method public final hashCode()I
     .locals 1
 
-    sget-object v0, Loef;->a:Lnef;
+    iget-object v0, p0, Lcd1;->a:Lbdf;
 
-    invoke-virtual {v0}, Lnef;->hashCode()I
+    invoke-virtual {v0}, Lbdf;->hashCode()I
 
     move-result v0
 
@@ -71,11 +87,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Error(text="
+    const-string v1, "Success(text="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Loef;->a:Lnef;
+    iget-object v1, p0, Lcd1;->a:Lbdf;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

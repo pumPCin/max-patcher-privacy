@@ -25,27 +25,27 @@
 
 
 # static fields
-.field public static final synthetic y0:I
+.field public static final synthetic t0:I
 
 
 # instance fields
-.field public X:Lmo8;
+.field public X:Lgn8;
 
-.field public Y:Lui4;
+.field public Y:Lgi4;
 
-.field public Z:Lqi;
+.field public Z:Lwi;
 
 .field public final a:Ljava/lang/Object;
 
 .field public final b:Landroid/os/Handler;
 
-.field public final c:Lds;
+.field public final c:Lrs;
 
-.field public o:Lzt8;
+.field public o:Lts8;
 
-.field public w0:Lns8;
+.field public r0:Lhr8;
 
-.field public x0:Lkotlinx/coroutines/internal/ContextScope;
+.field public s0:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
@@ -70,25 +70,25 @@
 
     iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->b:Landroid/os/Handler;
 
-    new-instance v0, Lds;
+    new-instance v0, Lrs;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lade;-><init>(I)V
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
 
-    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lns8;)V
+.method public final a(Lhr8;)V
     .locals 4
 
-    iget-object v0, p1, Lns8;->a:Lft8;
+    iget-object v0, p1, Lhr8;->a:Lzr8;
 
-    invoke-virtual {v0}, Lft8;->h()Z
+    invoke-virtual {v0}, Lzr8;->h()Z
 
     move-result v0
 
@@ -98,24 +98,24 @@
 
     const-string v2, "session is already released"
 
-    invoke-static {v2, v0}, Lpih;->h(Ljava/lang/Object;Z)V
+    invoke-static {v2, v0}, Lq5h;->e(Ljava/lang/Object;Z)V
 
     iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->a:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    iget-object v3, p1, Lns8;->a:Lft8;
+    iget-object v3, p1, Lhr8;->a:Lzr8;
 
-    iget-object v3, v3, Lft8;->i:Ljava/lang/String;
+    iget-object v3, v3, Lzr8;->i:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lade;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lube;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lns8;
+    check-cast v2, Lhr8;
 
     if-eqz v2, :cond_1
 
@@ -130,15 +130,15 @@
     :goto_0
     const-string v3, "Session ID should be unique"
 
-    invoke-static {v3, v1}, Lpih;->h(Ljava/lang/Object;Z)V
+    invoke-static {v3, v1}, Lq5h;->e(Ljava/lang/Object;Z)V
 
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    iget-object v3, p1, Lns8;->a:Lft8;
+    iget-object v3, p1, Lhr8;->a:Lzr8;
 
-    iget-object v3, v3, Lft8;->i:Ljava/lang/String;
+    iget-object v3, v3, Lzr8;->i:Ljava/lang/String;
 
-    invoke-virtual {v1, v3, p1}, Lade;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v3, p1}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     monitor-exit v0
     :try_end_0
@@ -146,19 +146,19 @@
 
     if-nez v2, :cond_2
 
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object v0
 
     iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->b:Landroid/os/Handler;
 
-    new-instance v2, Lb05;
+    new-instance v2, Lk15;
 
-    const/16 v3, 0x18
+    const/16 v3, 0x19
 
-    invoke-direct {v2, p0, v0, p1, v3}, Lb05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p0, v0, p1, v3}, Lk15;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-static {v1, v2}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-static {v1, v2}, Lg3g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     :cond_2
     return-void
@@ -174,7 +174,7 @@
     throw p1
 .end method
 
-.method public final b()Lqi;
+.method public final b()Lwi;
     .locals 3
 
     iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->a:Ljava/lang/Object;
@@ -182,17 +182,17 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lqi;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lwi;
 
     if-nez v1, :cond_0
 
-    new-instance v1, Lqi;
+    new-instance v1, Lwi;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, v2, p0}, Lqi;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lwi;-><init>(ILjava/lang/Object;)V
 
-    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lqi;
+    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lwi;
 
     goto :goto_0
 
@@ -203,7 +203,7 @@
 
     :cond_0
     :goto_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lqi;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Z:Lwi;
 
     monitor-exit v0
 
@@ -217,7 +217,7 @@
     throw v1
 .end method
 
-.method public final c()Lmo8;
+.method public final c()Lgn8;
     .locals 4
 
     iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->a:Ljava/lang/Object;
@@ -225,11 +225,11 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lmo8;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lgn8;
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lui4;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lgi4;
 
     if-nez v1, :cond_0
 
@@ -239,31 +239,31 @@
 
     const-string v2, "Accessing service context before onCreate()"
 
-    invoke-static {v1, v2}, Lpih;->q(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lq5h;->m(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v1, Lnr0;
+    new-instance v1, Lhr0;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lnr0;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lhr0;-><init>(Landroid/content/Context;)V
 
-    iget-boolean v2, v1, Lnr0;->c:Z
+    iget-boolean v2, v1, Lhr0;->c:Z
 
     const/4 v3, 0x1
 
     xor-int/2addr v2, v3
 
-    invoke-static {v2}, Lpih;->o(Z)V
+    invoke-static {v2}, Lq5h;->k(Z)V
 
-    new-instance v2, Lui4;
+    new-instance v2, Lgi4;
 
-    invoke-direct {v2, v1}, Lui4;-><init>(Lnr0;)V
+    invoke-direct {v2, v1}, Lgi4;-><init>(Lhr0;)V
 
-    iput-boolean v3, v1, Lnr0;->c:Z
+    iput-boolean v3, v1, Lhr0;->c:Z
 
-    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lui4;
+    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lgi4;
 
     goto :goto_0
 
@@ -274,20 +274,20 @@
 
     :cond_0
     :goto_0
-    new-instance v1, Lmo8;
+    new-instance v1, Lgn8;
 
-    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lui4;
+    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->Y:Lgi4;
 
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lqi;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lwi;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v2, v3}, Lmo8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;Lui4;Lqi;)V
+    invoke-direct {v1, p0, v2, v3}, Lgn8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;Lgi4;Lwi;)V
 
-    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lmo8;
+    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lgn8;
 
     :cond_1
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lmo8;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->X:Lgn8;
 
     monitor-exit v0
 
@@ -311,9 +311,9 @@
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    invoke-virtual {v2}, Lds;->values()Ljava/util/Collection;
+    invoke-virtual {v2}, Lrs;->values()Ljava/util/Collection;
 
     move-result-object v2
 
@@ -333,7 +333,7 @@
     throw v1
 .end method
 
-.method public final e(Lns8;)Z
+.method public final e(Lhr8;)Z
     .locals 2
 
     iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->a:Ljava/lang/Object;
@@ -341,13 +341,13 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    iget-object p1, p1, Lns8;->a:Lft8;
+    iget-object p1, p1, Lhr8;->a:Lzr8;
 
-    iget-object p1, p1, Lft8;->i:Ljava/lang/String;
+    iget-object p1, p1, Lzr8;->i:Ljava/lang/String;
 
-    invoke-virtual {v1, p1}, Lade;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Lube;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -375,11 +375,11 @@
     monitor-enter v0
 
     :try_start_0
-    new-instance v1, Lzt8;
+    new-instance v1, Lts8;
 
-    invoke-direct {v1, p0}, Lzt8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;)V
+    invoke-direct {v1, p0}, Lts8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;)V
 
-    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lzt8;
+    iput-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lts8;
 
     monitor-exit v0
 
@@ -405,21 +405,21 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lzt8;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lts8;
 
     if-eqz v1, :cond_1
 
-    iget-object v2, v1, Lzt8;->c:Ljava/lang/ref/WeakReference;
+    iget-object v2, v1, Lts8;->c:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/Reference;->clear()V
 
-    iget-object v2, v1, Lzt8;->d:Landroid/os/Handler;
+    iget-object v2, v1, Lts8;->d:Landroid/os/Handler;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    iget-object v1, v1, Lzt8;->f:Ljava/util/Set;
+    iget-object v1, v1, Lts8;->f:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -437,12 +437,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lu17;
+    check-cast v2, Lq07;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    invoke-interface {v2}, Lu17;->onDisconnected()V
+    invoke-interface {v2}, Lq07;->onDisconnected()V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -451,7 +451,7 @@
 
     :cond_0
     :try_start_2
-    iput-object v3, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lzt8;
+    iput-object v3, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lts8;
 
     goto :goto_1
 
@@ -474,25 +474,25 @@
     throw v1
 .end method
 
-.method public final h(Lls8;)Lns8;
+.method public final h(Lfr8;)Lhr8;
     .locals 5
 
-    sget-object v0, Lox9;->j:Lqpa;
+    sget-object v0, Lyt3;->n:Lhoa;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ly38;->o:Ly38;
+    sget-object v1, Lr28;->o:Lr28;
 
-    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->w0:Lns8;
+    iget-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->r0:Lhr8;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -516,11 +516,11 @@
 
     const-string v3, "OneMeMediaSessionService"
 
-    invoke-virtual {v0, v1, v3, p1, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v3, p1, v2}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object p1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->w0:Lns8;
+    iget-object p1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->r0:Lhr8;
 
     return-object p1
 .end method
@@ -539,7 +539,7 @@
     goto/16 :goto_7
 
     :cond_0
-    invoke-virtual {v1}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lqi;
+    invoke-virtual {v1}, Lone/me/android/media/service/OneMeMediaSessionService;->b()Lwi;
 
     move-result-object v3
 
@@ -551,12 +551,12 @@
 
     if-eqz v4, :cond_3
 
-    sget-object v6, Lns8;->b:Ljava/lang/Object;
+    sget-object v6, Lhr8;->b:Ljava/lang/Object;
 
     monitor-enter v6
 
     :try_start_0
-    sget-object v7, Lns8;->c:Ljava/util/HashMap;
+    sget-object v7, Lhr8;->c:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -577,11 +577,11 @@
 
     move-result-object v8
 
-    check-cast v8, Lns8;
+    check-cast v8, Lhr8;
 
-    iget-object v9, v8, Lns8;->a:Lft8;
+    iget-object v9, v8, Lhr8;->a:Lzr8;
 
-    iget-object v9, v9, Lft8;->b:Landroid/net/Uri;
+    iget-object v9, v9, Lzr8;->b:Landroid/net/Uri;
 
     invoke-static {v9, v4}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -635,15 +635,15 @@
 
     if-nez v9, :cond_5
 
-    new-instance v11, Lut8;
+    new-instance v11, Los8;
 
     const-string v3, "android.media.session.MediaController"
 
     const/4 v4, -0x1
 
-    invoke-direct {v11, v3, v4, v4}, Lut8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v11, v3, v4, v4}, Los8;-><init>(Ljava/lang/String;II)V
 
-    new-instance v10, Lls8;
+    new-instance v10, Lfr8;
 
     const/4 v15, 0x0
 
@@ -655,9 +655,9 @@
 
     const/4 v14, 0x0
 
-    invoke-direct/range {v10 .. v16}, Lls8;-><init>(Lut8;IIZLks8;Landroid/os/Bundle;)V
+    invoke-direct/range {v10 .. v16}, Lfr8;-><init>(Los8;IIZLer8;Landroid/os/Bundle;)V
 
-    invoke-virtual {v1, v10}, Lone/me/android/media/service/OneMeMediaSessionService;->h(Lls8;)Lns8;
+    invoke-virtual {v1, v10}, Lone/me/android/media/service/OneMeMediaSessionService;->h(Lfr8;)Lhr8;
 
     move-result-object v9
 
@@ -666,18 +666,18 @@
     goto/16 :goto_7
 
     :cond_4
-    invoke-virtual {v1, v9}, Lone/me/android/media/service/OneMeMediaSessionService;->a(Lns8;)V
+    invoke-virtual {v1, v9}, Lone/me/android/media/service/OneMeMediaSessionService;->a(Lhr8;)V
 
     :cond_5
-    iget-object v3, v9, Lns8;->a:Lft8;
+    iget-object v3, v9, Lhr8;->a:Lzr8;
 
-    iget-object v4, v3, Lft8;->l:Landroid/os/Handler;
+    iget-object v4, v3, Lzr8;->l:Landroid/os/Handler;
 
-    new-instance v5, Lbt8;
+    new-instance v5, Lvr8;
 
-    const/4 v6, 0x3
+    const/4 v6, 0x4
 
-    invoke-direct {v5, v3, v6, v0}, Lbt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v5, v3, v6, v0}, Lvr8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -765,11 +765,11 @@
     goto :goto_5
 
     :goto_6
-    invoke-virtual {v1}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {v1}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object v8
 
-    invoke-virtual {v8, v9}, Lmo8;->a(Lns8;)Lak8;
+    invoke-virtual {v8, v9}, Lgn8;->a(Lhr8;)Lvi8;
 
     move-result-object v12
 
@@ -780,23 +780,23 @@
     :cond_c
     new-instance v0, Landroid/os/Handler;
 
-    invoke-virtual {v9}, Lns8;->a()Lxkb;
+    invoke-virtual {v9}, Lhr8;->a()Lpjb;
 
     move-result-object v3
 
-    check-cast v3, Lif5;
+    check-cast v3, Lwe5;
 
-    iget-object v3, v3, Lif5;->J0:Landroid/os/Looper;
+    iget-object v3, v3, Lwe5;->E0:Landroid/os/Looper;
 
     invoke-direct {v0, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v7, Lly1;
+    new-instance v7, Loy1;
 
     const/16 v13, 0x8
 
-    invoke-direct/range {v7 .. v13}, Lly1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct/range {v7 .. v13}, Loy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-static {v0, v7}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-static {v0, v7}, Lg3g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     :cond_d
     :goto_7
@@ -806,11 +806,11 @@
 .method public final j(Landroid/content/Intent;)V
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object p1
 
-    iget-boolean p1, p1, Lmo8;->z0:Z
+    iget-boolean p1, p1, Lgn8;->u0:Z
 
     const/4 v0, 0x0
 
@@ -833,15 +833,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lns8;
+    check-cast v2, Lhr8;
 
-    invoke-virtual {v2}, Lns8;->a()Lxkb;
+    invoke-virtual {v2}, Lhr8;->a()Lpjb;
 
     move-result-object v2
 
-    check-cast v2, Lv2;
+    check-cast v2, Ld3;
 
-    invoke-virtual {v2}, Lv2;->b()Z
+    invoke-virtual {v2}, Ld3;->y0()Z
 
     move-result v2
 
@@ -855,15 +855,15 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object p1
 
-    iget-object v1, p1, Lmo8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+    iget-object v1, p1, Lgn8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    iput-boolean v0, p1, Lmo8;->B0:Z
+    iput-boolean v0, p1, Lgn8;->w0:Z
 
-    iget-object p1, p1, Lmo8;->X:Landroid/os/Handler;
+    iget-object p1, p1, Lgn8;->X:Landroid/os/Handler;
 
     const/4 v2, 0x1
 
@@ -892,9 +892,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lns8;
+    check-cast v3, Lhr8;
 
-    invoke-virtual {v1, v3, v0}, Lone/me/android/media/service/OneMeMediaSessionService;->l(Lns8;Z)Z
+    invoke-virtual {v1, v3, v0}, Lone/me/android/media/service/OneMeMediaSessionService;->l(Lhr8;Z)Z
 
     add-int/lit8 v2, v2, 0x1
 
@@ -918,15 +918,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lns8;
+    check-cast v2, Lhr8;
 
-    invoke-virtual {v2}, Lns8;->a()Lxkb;
+    invoke-virtual {v2}, Lhr8;->a()Lpjb;
 
     move-result-object v2
 
-    check-cast v2, Lif5;
+    check-cast v2, Lwe5;
 
-    invoke-virtual {v2, v0}, Lif5;->E1(Z)V
+    invoke-virtual {v2, v0}, Lwe5;->j1(Z)V
 
     add-int/lit8 v1, v1, 0x1
 
@@ -938,16 +938,16 @@
     return-void
 .end method
 
-.method public final k(Lns8;Z)V
+.method public final k(Lhr8;Z)V
     .locals 8
 
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object v2
 
-    iget-object v0, v2, Lmo8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+    iget-object v0, v2, Lgn8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    invoke-virtual {v0, p1}, Lone/me/android/media/service/OneMeMediaSessionService;->e(Lns8;)Z
+    invoke-virtual {v0, p1}, Lone/me/android/media/service/OneMeMediaSessionService;->e(Lhr8;)Z
 
     move-result v0
 
@@ -957,35 +957,35 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v2, p1}, Lmo8;->a(Lns8;)Lak8;
+    invoke-virtual {v2, p1}, Lgn8;->a(Lhr8;)Lvi8;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lak8;->B()Lmif;
+    invoke-virtual {v0}, Lvi8;->w()Lbhf;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lmif;->p()Z
+    invoke-virtual {v0}, Lbhf;->p()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    iget v0, v2, Lmo8;->x0:I
+    iget v0, v2, Lgn8;->s0:I
 
     add-int/2addr v0, v1
 
-    iput v0, v2, Lmo8;->x0:I
+    iput v0, v2, Lgn8;->s0:I
 
-    iget-object v1, v2, Lmo8;->w0:Ljava/util/HashMap;
+    iget-object v1, v2, Lgn8;->r0:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljx7;
+    check-cast v1, Lbw7;
 
     if-eqz v1, :cond_0
 
@@ -996,11 +996,11 @@
     if-eqz v4, :cond_0
 
     :try_start_0
-    invoke-static {v1}, Lio7;->j(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+    invoke-static {v1}, Lbv0;->r(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lak8;
+    check-cast v1, Lvi8;
     :try_end_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1010,26 +1010,26 @@
     :cond_0
     if-eqz v3, :cond_2
 
-    invoke-virtual {v3}, Lak8;->t()V
+    invoke-virtual {v3}, Lvi8;->E()V
 
-    iget-object v1, v3, Lak8;->c:Lzj8;
+    iget-object v1, v3, Lvi8;->c:Lui8;
 
-    invoke-interface {v1}, Lzj8;->isConnected()Z
+    invoke-interface {v1}, Lui8;->isConnected()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-interface {v1}, Lzj8;->M()Le77;
+    invoke-interface {v1}, Lui8;->F()La67;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_1
-    sget-object v1, Le77;->b:Ld06;
+    sget-object v1, La67;->b:Lgz5;
 
-    sget-object v1, Lxyc;->X:Lxyc;
+    sget-object v1, Lexc;->X:Lexc;
 
     :goto_0
     move-object v4, v1
@@ -1037,30 +1037,30 @@
     goto :goto_1
 
     :cond_2
-    sget-object v1, Le77;->b:Ld06;
+    sget-object v1, La67;->b:Lgz5;
 
-    sget-object v1, Lxyc;->X:Lxyc;
+    sget-object v1, Lexc;->X:Lexc;
 
     goto :goto_0
 
     :goto_1
-    new-instance v5, Lgx1;
+    new-instance v5, Ljx1;
 
-    invoke-direct {v5, v2, v0, p1}, Lgx1;-><init>(Lmo8;ILns8;)V
+    invoke-direct {v5, v2, v0, p1}, Ljx1;-><init>(Lgn8;ILhr8;)V
 
     new-instance v7, Landroid/os/Handler;
 
-    invoke-virtual {p1}, Lns8;->a()Lxkb;
+    invoke-virtual {p1}, Lhr8;->a()Lpjb;
 
     move-result-object v0
 
-    check-cast v0, Lif5;
+    check-cast v0, Lwe5;
 
-    iget-object v0, v0, Lif5;->J0:Landroid/os/Looper;
+    iget-object v0, v0, Lwe5;->E0:Landroid/os/Looper;
 
     invoke-direct {v7, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v0, Lko8;
+    new-instance v0, Len8;
 
     const/4 v1, 0x0
 
@@ -1068,16 +1068,16 @@
 
     move v6, p2
 
-    invoke-direct/range {v0 .. v6}, Lko8;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
+    invoke-direct/range {v0 .. v6}, Len8;-><init>(ILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Z)V
 
-    invoke-static {v7, v0}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-static {v7, v0}, Lg3g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     return-void
 
     :cond_3
-    iget-object p1, v2, Lmo8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
+    iget-object p1, v2, Lgn8;->a:Lone/me/android/media/service/OneMeMediaSessionService;
 
-    sget p2, Lt4g;->a:I
+    sget p2, Lg3g;->a:I
 
     const/16 v0, 0x18
 
@@ -1093,45 +1093,45 @@
     :goto_2
     const/4 p1, 0x0
 
-    iput-boolean p1, v2, Lmo8;->z0:Z
+    iput-boolean p1, v2, Lgn8;->u0:Z
 
-    iget-object p1, v2, Lmo8;->y0:Lmle;
+    iget-object p1, v2, Lgn8;->t0:Lkke;
 
     if-eqz p1, :cond_5
 
-    iget-object p1, v2, Lmo8;->o:Li7a;
+    iget-object p1, v2, Lgn8;->o:Lj5a;
 
     const/16 p2, 0x3e9
 
-    iget-object p1, p1, Li7a;->b:Landroid/app/NotificationManager;
+    iget-object p1, p1, Lj5a;->b:Landroid/app/NotificationManager;
 
     invoke-virtual {p1, v3, p2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
 
-    iget p1, v2, Lmo8;->x0:I
+    iget p1, v2, Lgn8;->s0:I
 
     add-int/2addr p1, v1
 
-    iput p1, v2, Lmo8;->x0:I
+    iput p1, v2, Lgn8;->s0:I
 
-    iput-object v3, v2, Lmo8;->y0:Lmle;
+    iput-object v3, v2, Lgn8;->t0:Lkke;
 
     :cond_5
     return-void
 .end method
 
-.method public final l(Lns8;Z)Z
+.method public final l(Lhr8;Z)Z
     .locals 1
 
     :try_start_0
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lmo8;->b(Z)Z
+    invoke-virtual {v0, p2}, Lgn8;->b(Z)Z
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lone/me/android/media/service/OneMeMediaSessionService;->k(Lns8;Z)V
+    invoke-virtual {p0, p1, p2}, Lone/me/android/media/service/OneMeMediaSessionService;->k(Lhr8;Z)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1142,13 +1142,13 @@
     :catch_0
     move-exception p1
 
-    sget p2, Lt4g;->a:I
+    sget p2, Lg3g;->a:I
 
     const/16 v0, 0x1f
 
     if-lt p2, v0, :cond_0
 
-    invoke-static {p1}, Lho8;->A(Ljava/lang/IllegalStateException;)Z
+    invoke-static {p1}, Lbn8;->A(Ljava/lang/IllegalStateException;)Z
 
     move-result p2
 
@@ -1158,13 +1158,13 @@
 
     const-string v0, "Failed to start foreground"
 
-    invoke-static {p2, v0, p1}, Lj40;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, v0, p1}, Lhq;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance p1, Li56;
+    new-instance p1, Lq96;
 
-    const/16 p2, 0x14
+    const/16 p2, 0x12
 
-    invoke-direct {p1, p2, p0}, Li56;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lq96;-><init>(ILjava/lang/Object;)V
 
     iget-object p2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->b:Landroid/os/Handler;
 
@@ -1178,7 +1178,7 @@
     throw p1
 .end method
 
-.method public final m(Lns8;)V
+.method public final m(Lhr8;)V
     .locals 4
 
     iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->a:Ljava/lang/Object;
@@ -1186,45 +1186,45 @@
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    iget-object v2, p1, Lns8;->a:Lft8;
+    iget-object v2, p1, Lhr8;->a:Lzr8;
 
-    iget-object v2, v2, Lft8;->i:Ljava/lang/String;
+    iget-object v2, v2, Lzr8;->i:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lade;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Lube;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     const-string v2, "session not found"
 
-    invoke-static {v2, v1}, Lpih;->h(Ljava/lang/Object;Z)V
+    invoke-static {v2, v1}, Lq5h;->e(Ljava/lang/Object;Z)V
 
-    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lds;
+    iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->c:Lrs;
 
-    iget-object v2, p1, Lns8;->a:Lft8;
+    iget-object v2, p1, Lhr8;->a:Lzr8;
 
-    iget-object v2, v2, Lft8;->i:Ljava/lang/String;
+    iget-object v2, v2, Lzr8;->i:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lade;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lube;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lmo8;
+    invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->c()Lgn8;
 
     move-result-object v0
 
     iget-object v1, p0, Lone/me/android/media/service/OneMeMediaSessionService;->b:Landroid/os/Handler;
 
-    new-instance v2, Lbt8;
+    new-instance v2, Lvr8;
 
-    const/4 v3, 0x4
+    const/4 v3, 0x5
 
-    invoke-direct {v2, v0, v3, p1}, Lbt8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v0, v3, p1}, Lvr8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v1, v2}, Lt4g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-static {v1, v2}, Lg3g;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     return-void
 
@@ -1275,15 +1275,15 @@
     goto :goto_0
 
     :cond_2
-    new-instance v1, Lut8;
+    new-instance v1, Los8;
 
     const-string p1, "android.media.session.MediaController"
 
     const/4 v0, -0x1
 
-    invoke-direct {v1, p1, v0, v0}, Lut8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v1, p1, v0, v0}, Los8;-><init>(Ljava/lang/String;II)V
 
-    new-instance v0, Lls8;
+    new-instance v0, Lfr8;
 
     const/4 v5, 0x0
 
@@ -1295,9 +1295,9 @@
 
     const/4 v4, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lls8;-><init>(Lut8;IIZLks8;Landroid/os/Bundle;)V
+    invoke-direct/range {v0 .. v6}, Lfr8;-><init>(Los8;IIZLer8;Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, v0}, Lone/me/android/media/service/OneMeMediaSessionService;->h(Lls8;)Lns8;
+    invoke-virtual {p0, v0}, Lone/me/android/media/service/OneMeMediaSessionService;->h(Lfr8;)Lhr8;
 
     move-result-object p1
 
@@ -1309,40 +1309,40 @@
     return-object p1
 
     :cond_3
-    invoke-virtual {p0, p1}, Lone/me/android/media/service/OneMeMediaSessionService;->a(Lns8;)V
+    invoke-virtual {p0, p1}, Lone/me/android/media/service/OneMeMediaSessionService;->a(Lhr8;)V
 
-    iget-object p1, p1, Lns8;->a:Lft8;
+    iget-object p1, p1, Lhr8;->a:Lzr8;
 
-    iget-object v1, p1, Lft8;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lzr8;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p1, Lft8;->x:Lau8;
+    iget-object v0, p1, Lzr8;->x:Lus8;
 
     if-nez v0, :cond_4
 
-    iget-object v0, p1, Lft8;->k:Lns8;
+    iget-object v0, p1, Lzr8;->k:Lhr8;
 
-    iget-object v0, v0, Lns8;->a:Lft8;
+    iget-object v0, v0, Lhr8;->a:Lzr8;
 
-    iget-object v0, v0, Lft8;->h:Lot8;
+    iget-object v0, v0, Lzr8;->h:Lis8;
 
-    iget-object v0, v0, Lot8;->k:Lys8;
+    iget-object v0, v0, Lis8;->k:Lsr8;
 
-    iget-object v0, v0, Lys8;->a:Ljava/lang/Object;
+    iget-object v0, v0, Lsr8;->a:Ljava/lang/Object;
 
-    check-cast v0, Lss8;
+    check-cast v0, Lmr8;
 
-    iget-object v0, v0, Lss8;->c:Lxs8;
+    iget-object v0, v0, Lmr8;->c:Lrr8;
 
-    new-instance v2, Lau8;
+    new-instance v2, Lus8;
 
-    invoke-direct {v2, p1}, Lau8;-><init>(Lft8;)V
+    invoke-direct {v2, p1}, Lus8;-><init>(Lzr8;)V
 
-    invoke-virtual {v2, v0}, Lau8;->a(Lxs8;)V
+    invoke-virtual {v2, v0}, Lus8;->a(Lrr8;)V
 
-    iput-object v2, p1, Lft8;->x:Lau8;
+    iput-object v2, p1, Lzr8;->x:Lus8;
 
     goto :goto_1
 
@@ -1355,7 +1355,7 @@
 
     :cond_4
     :goto_1
-    iget-object p1, p1, Lft8;->x:Lau8;
+    iget-object p1, p1, Lzr8;->x:Lus8;
 
     monitor-exit v1
     :try_end_0
@@ -1367,7 +1367,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lau8;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    invoke-virtual {p1, v0}, Lus8;->onBind(Landroid/content/Intent;)Landroid/os/IBinder;
 
     move-result-object p1
 
@@ -1387,9 +1387,9 @@
     monitor-enter p1
 
     :try_start_2
-    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lzt8;
+    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->o:Lts8;
 
-    invoke-static {v0}, Lpih;->p(Ljava/lang/Object;)V
+    invoke-static {v0}, Lq5h;->l(Ljava/lang/Object;)V
 
     monitor-exit p1
 
@@ -1408,9 +1408,9 @@
 .method public final onCreate()V
     .locals 13
 
-    sget-object v0, Ly38;->o:Ly38;
+    sget-object v0, Lr28;->o:Lr28;
 
-    sget-object v2, Lox9;->j:Lqpa;
+    sget-object v2, Lyt3;->n:Lhoa;
 
     const/4 v10, 0x0
 
@@ -1421,7 +1421,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2, v0}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v2, v0}, Lhoa;->b(Lr28;)Z
 
     move-result v3
 
@@ -1429,20 +1429,20 @@
 
     const-string v3, "onCreate"
 
-    invoke-virtual {v2, v0, v11, v3, v10}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v0, v11, v3, v10}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
     invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->f()V
 
-    sget-object v2, Lox9;->j:Lqpa;
+    sget-object v2, Lyt3;->n:Lhoa;
 
     if-nez v2, :cond_2
 
     goto :goto_1
 
     :cond_2
-    invoke-virtual {v2, v0}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v2, v0}, Lhoa;->b(Lr28;)Z
 
     move-result v3
 
@@ -1450,53 +1450,53 @@
 
     const-string v3, "createMediaSession"
 
-    invoke-virtual {v2, v0, v11, v3, v10}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v0, v11, v3, v10}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
     :goto_1
-    new-instance v0, Lle5;
+    new-instance v0, Lzd5;
 
-    invoke-direct {v0, p0}, Lle5;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lzd5;-><init>(Landroid/content/Context;)V
 
-    sget-object v2, Lvj8;->a:Lvj8;
+    sget-object v2, Lqi8;->a:Lqi8;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Ltu8;
-
-    invoke-virtual {v2, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    check-cast v2, Ltu8;
+    const-class v3, Lmt8;
 
-    iget-boolean v3, v0, Lle5;->w:Z
+    invoke-virtual {v2, v3}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmt8;
+
+    iget-boolean v3, v0, Lzd5;->w:Z
 
     xor-int/lit8 v3, v3, 0x1
 
-    invoke-static {v3}, Lpih;->o(Z)V
+    invoke-static {v3}, Lq5h;->k(Z)V
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v3, Lwi4;
+    new-instance v3, Lii4;
 
     const/4 v12, 0x2
 
-    invoke-direct {v3, v12, v2}, Lwi4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v12, v2}, Lii4;-><init>(ILjava/lang/Object;)V
 
-    iput-object v3, v0, Lle5;->d:Lr1f;
+    iput-object v3, v0, Lzd5;->d:Li0f;
 
-    invoke-virtual {v0}, Lle5;->a()Lif5;
+    invoke-virtual {v0}, Lzd5;->a()Lwe5;
 
     move-result-object v2
 
-    new-instance v0, Llb5;
+    new-instance v0, Lab5;
 
-    invoke-direct {v0}, Llb5;-><init>()V
+    invoke-direct {v0}, Lab5;-><init>()V
 
-    invoke-virtual {v2, v0}, Lif5;->c1(Lxc;)V
+    invoke-virtual {v2, v0}, Lwe5;->H0(Led;)V
 
     :try_start_0
     new-instance v7, Landroid/os/Bundle;
@@ -1507,27 +1507,27 @@
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    sget-object v0, Le77;->b:Ld06;
+    sget-object v0, La67;->b:Lgz5;
 
-    sget-object v3, Lxyc;->X:Lxyc;
+    sget-object v3, Lexc;->X:Lexc;
 
-    new-instance v6, Lmle;
+    new-instance v6, Lkkh;
 
     const/16 v0, 0x18
 
-    invoke-direct {v6, v0, p0}, Lmle;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v0, p0}, Lkkh;-><init>(ILjava/lang/Object;)V
 
-    new-instance v9, Lgx0;
+    new-instance v9, Lw98;
 
-    new-instance v0, Lm94;
+    new-instance v0, Lx84;
 
-    invoke-direct {v0, p0}, Lm94;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lx84;-><init>(Landroid/content/Context;)V
 
-    const/4 v4, 0x4
+    const/4 v4, 0x6
 
-    invoke-direct {v9, v4, v0}, Lgx0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v9, v4, v0}, Lw98;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Lns8;
+    new-instance v0, Lhr8;
 
     move-object v4, v3
 
@@ -1535,7 +1535,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v9}, Lns8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
+    invoke-direct/range {v0 .. v9}, Lhr8;-><init>(Lone/me/android/media/service/OneMeMediaSessionService;Lwe5;La67;La67;La67;Lkkh;Landroid/os/Bundle;Landroid/os/Bundle;Lw98;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1546,76 +1546,76 @@
 
     const-string v3, "Failed to create media session"
 
-    invoke-static {v11, v3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v11, v3, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v2}, Lif5;->x1()V
+    invoke-virtual {v2}, Lwe5;->c1()V
 
     move-object v0, v10
 
     :goto_2
-    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->w0:Lns8;
+    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->r0:Lhr8;
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lpih;->a()Lp1f;
+    invoke-static {}, Lwy8;->c()Lg0f;
 
     move-result-object v0
 
-    sget-object v2, Lvj8;->a:Lvj8;
+    sget-object v2, Lqi8;->a:Lqi8;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lr8f;
-
-    invoke-virtual {v3, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v3
 
-    check-cast v3, Lr8f;
+    const-class v4, Le7f;
 
-    check-cast v3, Lwla;
-
-    invoke-virtual {v3}, Lwla;->c()Le88;
+    invoke-virtual {v3, v4}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Le88;->getImmediate()Le88;
+    check-cast v3, Le7f;
+
+    check-cast v3, Lmka;
+
+    invoke-virtual {v3}, Lmka;->c()Lz68;
 
     move-result-object v3
 
-    invoke-interface {v0, v3}, Lw24;->plus(Lw24;)Lw24;
+    invoke-virtual {v3}, Lz68;->getImmediate()Lz68;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Lf24;->plus(Lf24;)Lf24;
 
     move-result-object v0
 
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->x0:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->s0:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    check-cast v2, Lr8f;
-
-    check-cast v2, Lwla;
-
-    invoke-virtual {v2}, Lwla;->b()Ly24;
+    invoke-virtual {v2, v4}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
-    new-instance v3, Lbqa;
+    check-cast v2, Le7f;
 
-    invoke-direct {v3, v12, v10}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    check-cast v2, Lmka;
 
-    invoke-static {v0, v2, v10, v3, v12}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    invoke-virtual {v2}, Lmka;->b()Lh24;
+
+    move-result-object v2
+
+    new-instance v3, Lsoa;
+
+    invoke-direct {v3, v12, v10}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v2, v10, v3, v12}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
 
     :cond_4
     return-void
@@ -1626,7 +1626,7 @@
 
     const-string v0, "OneMeMediaSessionService"
 
-    sget-object v1, Lox9;->j:Lqpa;
+    sget-object v1, Lyt3;->n:Lhoa;
 
     const/4 v2, 0x0
 
@@ -1635,9 +1635,9 @@
     goto :goto_0
 
     :cond_0
-    sget-object v3, Ly38;->o:Ly38;
+    sget-object v3, Lr28;->o:Lr28;
 
-    invoke-virtual {v1, v3}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v1, v3}, Lhoa;->b(Lr28;)Z
 
     move-result v4
 
@@ -1645,44 +1645,44 @@
 
     const-string v4, "onDestroy"
 
-    invoke-virtual {v1, v3, v0, v4, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v3, v0, v4, v2}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->x0:Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->s0:Lkotlinx/coroutines/internal/ContextScope;
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0, v2}, Lipe;->d(Le34;Ljava/util/concurrent/CancellationException;)V
+    invoke-static {v0, v2}, Lov9;->l(Ln24;Ljava/util/concurrent/CancellationException;)V
 
     :cond_2
-    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->x0:Lkotlinx/coroutines/internal/ContextScope;
+    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->s0:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->w0:Lns8;
+    iget-object v0, p0, Lone/me/android/media/service/OneMeMediaSessionService;->r0:Lhr8;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lns8;->a()Lxkb;
+    invoke-virtual {v0}, Lhr8;->a()Lpjb;
 
     move-result-object v1
 
-    check-cast v1, Lif5;
+    check-cast v1, Lwe5;
 
-    invoke-virtual {v1}, Lif5;->x1()V
+    invoke-virtual {v1}, Lwe5;->c1()V
 
     :try_start_0
-    sget-object v1, Lns8;->b:Ljava/lang/Object;
+    sget-object v1, Lhr8;->b:Ljava/lang/Object;
 
     monitor-enter v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :try_start_1
-    sget-object v3, Lns8;->c:Ljava/util/HashMap;
+    sget-object v3, Lhr8;->c:Ljava/util/HashMap;
 
-    iget-object v4, v0, Lns8;->a:Lft8;
+    iget-object v4, v0, Lhr8;->a:Lzr8;
 
-    iget-object v4, v4, Lft8;->i:Ljava/lang/String;
+    iget-object v4, v4, Lzr8;->i:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1691,9 +1691,9 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :try_start_2
-    iget-object v0, v0, Lns8;->a:Lft8;
+    iget-object v0, v0, Lhr8;->a:Lzr8;
 
-    invoke-virtual {v0}, Lft8;->q()V
+    invoke-virtual {v0}, Lzr8;->q()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -1714,7 +1714,7 @@
 
     :catch_0
     :goto_1
-    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->w0:Lns8;
+    iput-object v2, p0, Lone/me/android/media/service/OneMeMediaSessionService;->r0:Lhr8;
 
     :cond_3
     invoke-virtual {p0}, Lone/me/android/media/service/OneMeMediaSessionService;->g()V
@@ -1725,16 +1725,16 @@
 .method public final onStartCommand(Landroid/content/Intent;II)I
     .locals 5
 
-    sget-object v0, Lox9;->j:Lqpa;
+    sget-object v0, Lyt3;->n:Lhoa;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ly38;->o:Ly38;
+    sget-object v1, Lr28;->o:Lr28;
 
-    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
 
     move-result v2
 
@@ -1768,7 +1768,7 @@
 
     const-string v4, "OneMeMediaSessionService"
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v4, v2, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
@@ -1782,16 +1782,16 @@
 .method public final onTaskRemoved(Landroid/content/Intent;)V
     .locals 5
 
-    sget-object v0, Lox9;->j:Lqpa;
+    sget-object v0, Lyt3;->n:Lhoa;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ly38;->o:Ly38;
+    sget-object v1, Lr28;->o:Lr28;
 
-    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
+    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
 
     move-result v2
 
@@ -1803,7 +1803,7 @@
 
     const-string v4, "OneMeMediaSessionService"
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1, v4, v2, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0

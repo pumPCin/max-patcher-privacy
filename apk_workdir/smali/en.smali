@@ -1,51 +1,104 @@
-.class public abstract Len;
+.class public final Len;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvad;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
+.method public constructor <init>(Lgn;)V
+    .locals 1
 
-    invoke-static {p0}, Li4;->n(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    iput v0, p0, Len;->a:I
 
-    return-object p0
-.end method
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public static b(Ljava/lang/Object;Lkn;)Landroid/window/OnBackInvokedCallback;
-    .locals 2
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Ldn;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p1}, Ldn;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0}, Li4;->p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    invoke-static {p0, v0}, Li4;->v(Landroid/window/OnBackInvokedDispatcher;Ldn;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Li4;->l(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
-
-    move-result-object p1
-
-    invoke-static {p0}, Li4;->p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Li4;->w(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+    iput-object p1, p0, Len;->b:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Lkn;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Len;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iput-object v0, p0, Len;->b:Ljava/lang/Object;
+
+    .line 3
+    const-string v0, "androidx.savedstate.Restarter"
+
+    invoke-virtual {p1, v0, p0}, Lkn;->f(Ljava/lang/String;Lvad;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Landroid/os/Bundle;
+    .locals 3
+
+    iget v0, p0, Len;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v2, p0, Len;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    const-string v2, "classes_to_restore"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v1, p0, Len;->b:Ljava/lang/Object;
+
+    check-cast v1, Lgn;
+
+    invoke-virtual {v1}, Lgn;->G()Lon;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

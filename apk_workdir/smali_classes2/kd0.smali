@@ -1,90 +1,57 @@
 .class public final Lkd0;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lxe6;
+.field public final a:Landroid/text/TextPaint;
 
-.field public final synthetic Y:Landroid/graphics/Bitmap;
+.field public final b:Lic8;
 
 
 # direct methods
-.method public constructor <init>(Lxe6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lkd0;->X:Lxe6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lkd0;->Y:Landroid/graphics/Bitmap;
+    new-instance v0, Landroid/text/TextPaint;
 
-    const/4 p1, 0x2
+    const/4 v1, 0x1
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
+
+    iput-object v0, p0, Lkd0;->a:Landroid/text/TextPaint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    const-string v1, "sans-serif-medium"
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    new-instance v0, Lic8;
+
+    const/16 v1, 0x64
+
+    invoke-direct {v0, v1, v2}, Lic8;-><init>(II)V
+
+    iput-object v0, p0, Lkd0;->b:Lic8;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkd0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkd0;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lkd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lkd0;
-
-    iget-object v0, p0, Lkd0;->X:Lxe6;
-
-    iget-object v1, p0, Lkd0;->Y:Landroid/graphics/Bitmap;
-
-    invoke-direct {p1, v0, v1, p2}, Lkd0;-><init>(Lxe6;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkd0;->Y:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    new-instance v0, Ljava/lang/Integer;
-
-    invoke-direct {v0, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    iget-object p1, p0, Lkd0;->X:Lxe6;
-
-    invoke-interface {p1, v0}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

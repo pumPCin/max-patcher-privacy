@@ -1,53 +1,52 @@
-.class public final Lvu6;
-.super Ljava/lang/Object;
+.class public final synthetic Lvu6;
+.super Lye6;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# instance fields
-.field public final a:Ljava/util/ArrayList;
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final a:Lvu6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvu6;
 
-    new-instance v0, Ljava/util/ArrayList;
+    const-string v4, "getId()J"
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v5, 0x0
 
-    iput-object v0, p0, Lvu6;->a:Ljava/util/ArrayList;
+    const/4 v1, 0x1
 
-    new-instance v0, Lph5;
+    const-class v2, Leu6;
 
-    const/16 v1, 0x11
+    const-string v3, "getId"
 
-    invoke-direct {v0, v1}, Lph5;-><init>(I)V
+    invoke-direct/range {v0 .. v5}, Lye6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lvu6;->b:Ljava/lang/Object;
-
-    new-instance v0, Lph5;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v2}, Lph5;-><init>(I)V
-
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lvu6;->c:Ljava/lang/Object;
+    sput-object v0, Lvu6;->a:Lvu6;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Leu6;
+
+    invoke-interface {p1}, Leu6;->getId()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
 .end method

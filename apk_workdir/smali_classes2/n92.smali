@@ -1,125 +1,138 @@
-.class public abstract synthetic Ln92;
-.super Ljava/lang/Object;
+.class public final Ln92;
+.super Ly7f;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public c:Ljava/util/List;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public o:Ljava/util/HashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lc79;)V
+    .locals 0
 
-    const/4 v0, 0x7
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    iget-object p1, p0, Ln92;->c:Ljava/util/List;
+
+    if-nez p1, :cond_0
+
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object p1, p0, Ln92;->c:Ljava/util/List;
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 5
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "commands"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const-string v0, "contacts"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lc79;->y()V
+
+    return-void
+
+    :cond_0
+    new-instance p2, Ljava/util/HashMap;
+
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Ln92;->o:Ljava/util/HashMap;
+
+    invoke-static {p1}, Lg8;->I(Lc79;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_1
+
+    invoke-virtual {p1}, Lc79;->o0()J
+
+    move-result-wide v1
+
+    invoke-static {p1}, Lor3;->g(Lc79;)Lor3;
+
+    move-result-object v3
+
+    iget-object v4, p0, Ln92;->o:Ljava/util/HashMap;
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    array-length v1, v1
+    invoke-virtual {v4, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v1, v1, [I
+    add-int/lit8 v0, v0, 0x1
 
-    const/4 v2, 0x1
+    goto :goto_0
 
-    const/4 v3, 0x2
+    :cond_1
+    return-void
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_2
+    new-instance p2, Le49;
 
-    :catch_0
-    :try_start_1
-    aput v3, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/16 v0, 0x8
 
-    :catch_1
-    const/4 v4, 0x3
+    invoke-direct {p2, v0}, Le49;-><init>(I)V
 
-    :try_start_2
-    aput v4, v1, v4
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-static {p1, p2}, Lg8;->Q(Lc79;Loo9;)Ljava/util/ArrayList;
 
-    :catch_2
-    const/4 v5, 0x4
+    move-result-object p1
 
-    :try_start_3
-    aput v5, v1, v5
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    iput-object p1, p0, Ln92;->c:Ljava/util/List;
 
-    :catch_3
-    const/4 v6, 0x0
+    return-void
+.end method
 
-    const/4 v7, 0x5
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    :try_start_4
-    aput v7, v1, v6
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    iget-object v0, p0, Ln92;->c:Ljava/util/List;
 
-    :catch_4
-    const/4 v8, 0x6
+    invoke-static {v0}, Lzvd;->k(Ljava/util/Collection;)I
 
-    :try_start_5
-    aput v8, v1, v7
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    move-result v0
 
-    :catch_5
-    :try_start_6
-    aput v0, v1, v8
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    iget-object v1, p0, Ln92;->o:Ljava/util/HashMap;
 
-    :catch_6
-    sput-object v1, Ln92;->$EnumSwitchMapping$0:[I
+    invoke-static {v1}, Lzvd;->G(Ljava/util/Map;)I
 
-    invoke-static {}, Lm92;->values()[Lm92;
+    move-result v1
+
+    const-string v2, ", contacts="
+
+    const-string v3, "}"
+
+    const-string v4, "{commands="
+
+    invoke-static {v4, v0, v2, v1, v3}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_7
-    aput v2, v0, v6
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
-    aput v3, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    :try_start_9
-    aput v4, v0, v4
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
-
-    :catch_9
-    :try_start_a
-    aput v5, v0, v5
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
-
-    :catch_a
-    :try_start_b
-    aput v7, v0, v2
-    :try_end_b
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
-
-    :catch_b
-    sput-object v0, Ln92;->$EnumSwitchMapping$1:[I
-
-    return-void
+    return-object v0
 .end method

@@ -1,70 +1,51 @@
 .class public final Lhp2;
-.super Ll9f;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Ln82;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lop2;
+
+.field public Z:I
+
+.field public o:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public constructor <init>(Lop2;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput-object p1, p0, Lhp2;->Y:Lop2;
+
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Lhp2;->X:Ljava/lang/Object;
 
-    const-string v0, "chat"
+    iget p1, p0, Lhp2;->Z:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/high16 v0, -0x80000000
 
-    move-result p2
+    or-int/2addr p1, v0
 
-    if-nez p2, :cond_0
+    iput p1, p0, Lhp2;->Z:I
 
-    invoke-virtual {p1}, Ls89;->B()V
+    iget-object p1, p0, Lhp2;->Y:Lop2;
 
-    return-void
+    const/4 v0, 0x0
 
-    :cond_0
-    invoke-static {p1}, Ln82;->d(Ls89;)Ln82;
+    invoke-virtual {p1, v0, v0, p0}, Lop2;->c(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, p0, Lhp2;->c:Ln82;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lhp2;->c:Ln82;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{chat="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

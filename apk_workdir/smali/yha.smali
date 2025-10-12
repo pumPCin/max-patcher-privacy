@@ -1,19 +1,31 @@
-.class public final Lyha;
+.class public abstract Lyha;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:La5;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(La5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lccc;->call_permission_dialog_check_cancel:I
 
-    iput-object p1, p0, Lyha;->a:La5;
+    sput v0, Lyha;->a:I
+
+    sget v0, Lccc;->call_permission_dialog_check_continue:I
+
+    sput v0, Lyha;->b:I
+
+    sget v0, Lccc;->call_start_no_network_connection_neutral_button:I
+
+    sput v0, Lyha;->c:I
 
     return-void
 .end method

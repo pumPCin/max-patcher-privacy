@@ -1,25 +1,48 @@
-.class public abstract synthetic Ljf9;
+.class public final Ljf9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldu7;
 
-# static fields
-.field public static final synthetic a:Lla5;
+
+# instance fields
+.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljf9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lo39;)V
+    .locals 3
+
+    iget-object v0, p0, Ljf9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+
+    const-wide/16 v1, 0x0
+
+    invoke-static {v0, p1, v1, v2}, Lone/me/messages/list/ui/MessagesListWidget;->C0(Lone/me/messages/list/ui/MessagesListWidget;Lo39;J)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
     .locals 2
 
-    invoke-static {}, Lvd3;->values()[Lvd3;
+    iget-object p3, p0, Ljf9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result-object v0
+    const-wide/16 v0, 0x0
 
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ljf9;->a:Lla5;
+    invoke-static {p3, p1, p2, v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->B0(Lone/me/messages/list/ui/MessagesListWidget;Ljava/lang/String;Lhu7;J)V
 
     return-void
 .end method

@@ -13,7 +13,7 @@
         "",
         "",
         "isEnabled",
-        "Loyf;",
+        "Laxf;",
         "enableAsrOnline",
         "(Z)V",
         "onMigratedToServerCallTopology",

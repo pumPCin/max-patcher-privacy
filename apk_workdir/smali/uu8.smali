@@ -1,85 +1,159 @@
-.class public final Luu8;
-.super Lzo8;
+.class public final synthetic Luu8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvu8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 7
+.method public synthetic constructor <init>(Lvu8;I)V
+    .locals 0
 
-    const/4 v3, -0x1
+    iput p2, p0, Luu8;->a:I
 
-    const/4 v6, -0x1
+    iput-object p1, p0, Luu8;->b:Lvu8;
 
-    const/4 v2, -0x1
-
-    const-wide/16 v4, -0x1
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v6}, Lzo8;-><init>(Ljava/lang/Object;IIJI)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;JI)V
-    .locals 7
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x1
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v4, p2
-
-    move v6, p4
-
-    invoke-direct/range {v0 .. v6}, Lzo8;-><init>(Ljava/lang/Object;IIJI)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)Luu8;
-    .locals 9
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Luu8;
+    iget v0, p0, Luu8;->a:I
 
-    iget-object v1, p0, Lzo8;->a:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Luu8;->b:Lvu8;
+
+    iget-object v0, v0, Lvu8;->c:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    const-string v2, "hdr_enabled"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    :cond_0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-object v2, p0
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Luu8;->b:Lvu8;
+
+    iget-object v0, v0, Lvu8;->c:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    const-string v2, "hevc_enabled"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Luu8;->b:Lvu8;
+
+    iget-object v0, v0, Lvu8;->c:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
+    const-string v2, "enabled"
+
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    :cond_2
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Luu8;->b:Lvu8;
+
+    iget-object v1, v0, Lvu8;->a:Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_3
+
+    :try_start_0
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v2, v3
 
     goto :goto_0
 
-    :cond_0
-    new-instance v2, Lzo8;
+    :catch_0
+    move-exception v1
 
-    iget-wide v6, p0, Lzo8;->d:J
+    iget-object v0, v0, Lvu8;->b:Ljava/lang/String;
 
-    iget v8, p0, Lzo8;->e:I
+    const-string v3, "Failed to parse media transform params"
 
-    iget v4, p0, Lzo8;->b:I
+    invoke-static {v0, v3, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget v5, p0, Lzo8;->c:I
-
-    move-object v3, p1
-
-    invoke-direct/range {v2 .. v8}, Lzo8;-><init>(Ljava/lang/Object;IIJI)V
-
+    :cond_3
     :goto_0
-    invoke-direct {v0, v2}, Lzo8;-><init>(Lzo8;)V
+    return-object v2
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

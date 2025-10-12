@@ -1,216 +1,223 @@
-.class public abstract Lude;
+.class public final Lude;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lffe;
+.implements Lv9d;
+
+
+# instance fields
+.field public a:I
+
+.field public b:Z
+
+.field public final synthetic c:Lwde;
 
 
 # direct methods
-.method public static f(Ljava/lang/Throwable;)Lmda;
-    .locals 2
+.method public constructor <init>(Lwde;)V
+    .locals 0
 
-    const-string v0, "throwable is null"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iput-object p1, p0, Lude;->c:Lwde;
 
-    new-instance v0, Leg6;
-
-    invoke-direct {v0, p0}, Leg6;-><init>(Ljava/lang/Object;)V
-
-    new-instance p0, Lmda;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p0, v1, v0}, Lmda;-><init>(ILjava/lang/Object;)V
-
-    return-object p0
-.end method
-
-.method public static g(Ljava/lang/Object;)Lmda;
-    .locals 2
-
-    const-string v0, "item is null"
-
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v0, Lmda;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p0}, Lmda;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final e()Ljava/lang/Object;
-    .locals 2
+.method public final a()V
+    .locals 8
 
-    new-instance v0, Lyp0;
+    iget-boolean v0, p0, Lude;->b:Z
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    iget-object v0, p0, Lude;->c:Lwde;
 
-    invoke-virtual {p0, v0}, Lude;->k(Lnee;)V
+    iget-object v1, v0, Lwde;->X:Lbc6;
 
-    invoke-virtual {v0}, Lyp0;->d()Ljava/lang/Object;
+    iget-object v2, v0, Lwde;->t0:Lw66;
 
-    move-result-object v0
+    iget-object v2, v2, Lw66;->n:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {v2}, Ltj9;->h(Ljava/lang/String;)I
+
+    move-result v2
+
+    iget-object v3, v0, Lwde;->t0:Lw66;
+
+    const/4 v5, 0x0
+
+    const-wide/16 v6, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v1 .. v7}, Lbc6;->G(ILw66;ILjava/lang/Object;J)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lude;->b:Z
+
+    :cond_0
+    return-void
 .end method
 
-.method public final h(Lmf6;)Ldee;
+.method public final b()V
     .locals 2
 
-    const-string v0, "mapper is null"
+    iget-object v0, p0, Lude;->c:Lwde;
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iget-boolean v1, v0, Lwde;->u0:Z
 
-    new-instance v0, Ldee;
+    if-nez v1, :cond_0
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lwde;->s0:Lx08;
 
-    invoke-direct {v0, p0, p1, v1}, Ldee;-><init>(Lude;Lmf6;I)V
+    invoke-virtual {v0}, Lx08;->b()V
 
-    return-object v0
+    :cond_0
+    return-void
 .end method
 
-.method public final i(Lked;)Lmee;
-    .locals 2
+.method public final d()Z
+    .locals 1
 
-    const-string v0, "scheduler is null"
+    iget-object v0, p0, Lude;->c:Lwde;
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    iget-boolean v0, v0, Lwde;->v0:Z
 
-    new-instance v0, Lmee;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lmee;-><init>(Lude;Lked;I)V
-
-    return-object v0
+    return v0
 .end method
 
-.method public final j(Lfaf;)Luz5;
+.method public final e(J)I
     .locals 2
 
-    instance-of v0, p0, Lhg6;
+    invoke-virtual {p0}, Lude;->a()V
 
-    if-eqz v0, :cond_0
+    const-wide/16 v0, 0x0
 
-    move-object v0, p0
+    cmp-long p1, p1, v0
 
-    check-cast v0, Lhg6;
+    if-lez p1, :cond_0
 
-    invoke-interface {v0}, Lhg6;->b()Loy5;
+    iget p1, p0, Lude;->a:I
 
-    move-result-object v0
+    const/4 p2, 0x2
+
+    if-eq p1, p2, :cond_0
+
+    iput p2, p0, Lude;->a:I
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g(Lax0;Lvb4;I)I
+    .locals 9
+
+    invoke-virtual {p0}, Lude;->a()V
+
+    iget-object v0, p0, Lude;->c:Lwde;
+
+    iget-boolean v1, v0, Lwde;->v0:Z
+
+    const/4 v2, 0x2
+
+    if-eqz v1, :cond_0
+
+    iget-object v3, v0, Lwde;->w0:[B
+
+    if-nez v3, :cond_0
+
+    iput v2, p0, Lude;->a:I
+
+    :cond_0
+    iget v3, p0, Lude;->a:I
+
+    const/4 v4, -0x4
+
+    if-ne v3, v2, :cond_1
+
+    const/4 p1, 0x4
+
+    invoke-virtual {p2, p1}, Lhy;->a(I)V
+
+    return v4
+
+    :cond_1
+    and-int/lit8 v5, p3, 0x2
+
+    const/4 v6, 0x1
+
+    if-nez v5, :cond_6
+
+    if-nez v3, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lyy5;
+    :cond_2
+    if-nez v1, :cond_3
 
-    const/4 v1, 0x3
+    const/4 p1, -0x3
 
-    invoke-direct {v0, v1, p0}, Lyy5;-><init>(ILjava/lang/Object;)V
+    return p1
 
+    :cond_3
+    iget-object p1, v0, Lwde;->w0:[B
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2, v6}, Lhy;->a(I)V
+
+    const-wide/16 v7, 0x0
+
+    iput-wide v7, p2, Lvb4;->Z:J
+
+    and-int/lit8 p1, p3, 0x4
+
+    if-nez p1, :cond_4
+
+    iget p1, v0, Lwde;->x0:I
+
+    invoke-virtual {p2, p1}, Lvb4;->w(I)V
+
+    iget-object p1, p2, Lvb4;->X:Ljava/nio/ByteBuffer;
+
+    iget-object p2, v0, Lwde;->w0:[B
+
+    const/4 v1, 0x0
+
+    iget v0, v0, Lwde;->x0:I
+
+    invoke-virtual {p1, p2, v1, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    :cond_4
+    and-int/lit8 p1, p3, 0x1
+
+    if-nez p1, :cond_5
+
+    iput v2, p0, Lude;->a:I
+
+    :cond_5
+    return v4
+
+    :cond_6
     :goto_0
-    new-instance v1, Lpz5;
+    iget-object p2, v0, Lwde;->t0:Lw66;
 
-    invoke-direct {v1, v0, p1}, Lpz5;-><init>(Loy5;Lfaf;)V
+    iput-object p2, p1, Lax0;->b:Ljava/lang/Object;
 
-    new-instance p1, Luz5;
+    iput v6, p0, Lude;->a:I
 
-    const/4 v0, 0x0
+    const/4 p1, -0x5
 
-    invoke-direct {p1, v1, v0}, Luz5;-><init>(Lp0;I)V
-
-    return-object p1
-.end method
-
-.method public final k(Lnee;)V
-    .locals 2
-
-    const-string v0, "observer is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lude;->l(Lnee;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "subscribeActual failed"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_0
-    move-exception p1
-
-    throw p1
-.end method
-
-.method public abstract l(Lnee;)V
-.end method
-
-.method public final m(Lked;)Lmee;
-    .locals 2
-
-    const-string v0, "scheduler is null"
-
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    new-instance v0, Lmee;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, p1, v1}, Lmee;-><init>(Lude;Lked;I)V
-
-    return-object v0
-.end method
-
-.method public final n()Lraa;
-    .locals 2
-
-    instance-of v0, p0, Lig6;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p0
-
-    check-cast v0, Lig6;
-
-    invoke-interface {v0}, Lig6;->d()Lraa;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lbf3;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lbf3;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
+    return p1
 .end method

@@ -1,118 +1,140 @@
-.class public final Lkdd;
-.super Ldd5;
+.class public interface abstract Lkdd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
 
-
-# instance fields
-.field public final z0:Ljava/util/concurrent/ScheduledExecutorService;
+# static fields
+.field public static final a:Ljdd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ScheduledExecutorService;Lina;Lb52;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1, p2, p3}, Ldd5;-><init>(Ljava/util/concurrent/ExecutorService;Lina;Lxe6;)V
+    sget-object v0, Ljdd;->a:Ljdd;
 
-    iput-object p1, p0, Lkdd;->z0:Ljava/util/concurrent/ScheduledExecutorService;
+    sput-object v0, Lkdd;->a:Ljdd;
+
+    return-void
+.end method
+
+.method public static e(Landroid/content/Context;Landroid/net/Uri;)V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.MEDIA_SCANNER_SCAN_FILE"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    sget-object v0, Ljdd;->a:Ljdd;
+
+    sget-object v0, Ljdd;->b:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "sendBroadcastToGallery: failed for uri "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1, p0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Ldd5;->b()Lmpg;
-
-    move-result-object v0
-
-    .line 2
-    iget-object v1, p0, Lkdd;->z0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {p0, p1, v0}, Ldd5;->i(Ljava/lang/Runnable;Lmpg;)Lcd5;
-
-    move-result-object p1
-
-    invoke-interface {v1, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract a(Lldd;Ljava/lang/String;)Landroid/net/Uri;
 .end method
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 3
-    invoke-virtual {p0}, Ldd5;->b()Lmpg;
-
-    move-result-object v0
-
-    .line 4
-    iget-object v1, p0, Lkdd;->z0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {p0, p1, v0}, Ldd5;->h(Ljava/util/concurrent/Callable;Lmpg;)Lbd5;
-
-    move-result-object p1
-
-    invoke-interface {v1, p1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract b(Lldd;Ljava/lang/String;)Landroid/net/Uri;
 .end method
 
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
+.method public c()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {p0}, Ldd5;->b()Lmpg;
+    invoke-interface {p0}, Lkdd;->d()Lro7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lkdd;->z0:Ljava/util/concurrent/ScheduledExecutorService;
+    new-instance v1, Ljava/util/Date;
 
-    invoke-virtual {p0, p1, v0}, Ldd5;->i(Ljava/lang/Runnable;Lmpg;)Lcd5;
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-wide v3, p2
+    invoke-static {v1}, Lro7;->a(Ljava/util/Date;)Ljava/lang/String;
 
-    move-wide v5, p4
+    move-result-object v0
 
-    move-object v7, p6
+    const-string v1, "MOV_"
 
-    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    const-string v2, ".mp4"
 
-    move-result-object p1
+    invoke-static {v1, v0, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
+.method public abstract d()Lro7;
+.end method
 
-    invoke-virtual {p0}, Ldd5;->b()Lmpg;
+.method public f(Z)Ljava/lang/String;
+    .locals 3
+
+    invoke-interface {p0}, Lkdd;->d()Lro7;
 
     move-result-object v0
 
-    iget-object v1, p0, Lkdd;->z0:Ljava/util/concurrent/ScheduledExecutorService;
+    new-instance v1, Ljava/util/Date;
 
-    invoke-virtual {p0, p1, v0}, Ldd5;->i(Ljava/lang/Runnable;Lmpg;)Lcd5;
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-wide v3, p2
+    invoke-static {v1}, Lro7;->a(Ljava/util/Date;)Ljava/lang/String;
 
-    move-wide v5, p4
+    move-result-object v0
 
-    move-object v7, p6
+    if-eqz p1, :cond_0
 
-    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    const-string p1, "gif"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "jpg"
+
+    :goto_0
+    const-string v1, "IMG_"
+
+    const-string v2, "."
+
+    invoke-static {v1, v0, v2, p1}, Lnd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

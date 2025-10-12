@@ -2,197 +2,106 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/hardware/SensorEventListener;
-
-
-# static fields
-.field public static final synthetic d:I
-
 
 # instance fields
-.field public final a:Landroid/hardware/SensorManager;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final b:Landroid/hardware/Sensor;
+.field public final b:Lyn7;
 
-.field public final c:Ljava/util/Set;
+.field public final c:Lyn7;
+
+.field public final d:Lyn7;
+
+.field public final e:Lyn7;
+
+.field public final f:Lyn7;
+
+.field public final g:Lyn7;
+
+.field public final h:Lyn7;
+
+.field public final i:Lyn7;
+
+.field public final j:Lyn7;
+
+.field public final k:Lyn7;
+
+.field public final l:Lyn7;
+
+.field public final m:Lyn7;
+
+.field public final n:Lyn7;
+
+.field public final o:Lyn7;
+
+.field public final p:Lyn7;
+
+.field public final q:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Li24;Le7f;Lyn7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    move-object/from16 v0, p17
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    check-cast v0, Lmka;
 
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lnrd;->c:Ljava/util/Set;
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->synchronizedSet(Ljava/util/Set;)Ljava/util/Set;
-
-    const-string v0, "sensor"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/SensorManager;
-
-    iput-object p1, p0, Lnrd;->a:Landroid/hardware/SensorManager;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    invoke-virtual {v0}, Lmka;->b()Lh24;
 
     move-result-object v0
 
-    iput-object v0, p0, Lnrd;->b:Landroid/hardware/Sensor;
+    move-object/from16 v1, p16
 
-    const/4 v0, 0x5
+    invoke-virtual {v0, v1}, Lm0;->plus(Lf24;)Lf24;
 
-    invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-static {v0}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
 
+    move-result-object v0
 
-# virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    .locals 0
+    iput-object v0, p0, Lnrd;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    return-void
-.end method
+    iput-object p1, p0, Lnrd;->b:Lyn7;
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 5
+    iput-object p2, p0, Lnrd;->c:Lyn7;
 
-    iget-object v0, p0, Lnrd;->c:Ljava/util/Set;
+    iput-object p3, p0, Lnrd;->d:Lyn7;
 
-    monitor-enter v0
+    iput-object p4, p0, Lnrd;->e:Lyn7;
 
-    :try_start_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+    iput-object p5, p0, Lnrd;->f:Lyn7;
 
-    invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
+    iput-object p6, p0, Lnrd;->g:Lyn7;
 
-    move-result v1
+    iput-object p7, p0, Lnrd;->h:Lyn7;
 
-    const/16 v2, 0x8
+    iput-object p8, p0, Lnrd;->i:Lyn7;
 
-    if-ne v1, v2, :cond_5
+    iput-object p9, p0, Lnrd;->j:Lyn7;
 
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+    iput-object p10, p0, Lnrd;->k:Lyn7;
 
-    const/4 v2, 0x0
+    iput-object p11, p0, Lnrd;->l:Lyn7;
 
-    aget v1, v1, v2
+    iput-object p12, p0, Lnrd;->m:Lyn7;
 
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+    iput-object p13, p0, Lnrd;->n:Lyn7;
 
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
+    move-object/from16 p1, p14
 
-    move-result p1
+    iput-object p1, p0, Lnrd;->o:Lyn7;
 
-    cmpg-float p1, v1, p1
+    move-object/from16 p1, p15
 
-    if-gez p1, :cond_0
+    iput-object p1, p0, Lnrd;->p:Lyn7;
 
-    const/4 v2, 0x1
+    move-object/from16 p1, p18
 
-    :cond_0
-    iget-object p1, p0, Lnrd;->c:Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lc30;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v3, "c30"
-
-    const-string v4, "onDeviceNextToEar"
-
-    invoke-static {v3, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v3, v1, Lc30;->c:Lws9;
-
-    iget-boolean v4, v3, Lws9;->x:Z
-
-    if-nez v4, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v1}, Lc30;->k()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    iget-object v1, v1, Lc30;->x0:Ls5f;
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    :cond_3
-    iget-boolean v1, v3, Lws9;->x:Z
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v3}, Lws9;->l()Lsm8;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v1}, Lc30;->m()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_5
-    monitor-exit v0
+    iput-object p1, p0, Lnrd;->q:Lyn7;
 
     return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
 .end method

@@ -1,195 +1,300 @@
-.class public final Lv0a;
-.super Lm3f;
+.class public abstract Lv0a;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ln24;
 
-.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final b:Lyn7;
+
+.field public c:Loke;
+
+.field public d:Ltk9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Ln24;Lyn7;)V
     .locals 0
 
-    iput-object p2, p0, Lv0a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lv0a;->a:Ln24;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lv0a;->b:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lv0a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lv0a;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lv0a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()V
     .locals 2
 
-    new-instance v0, Lv0a;
+    iget-object v0, p0, Lv0a;->c:Loke;
 
-    iget-object v1, p0, Lv0a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, v1}, Lv0a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Lv0a;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv0a;->X:Ljava/lang/Object;
-
-    check-cast p1, Lsc0;
-
-    sget-object v0, Loc0;->a:Loc0;
-
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iget-object v1, p0, Lv0a;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->P0:[Ltm7;
+    invoke-virtual {v0, v1}, Lgi7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
-    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0:Lbp7;
+    :cond_0
+    iput-object v1, p0, Lv0a;->c:Loke;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    move-object v0, p0
 
-    move-result-object p1
+    check-cast v0, Lt0a;
 
-    check-cast p1, Lz9b;
+    iget-object v1, v0, Lt0a;->f:Ljava/util/concurrent/locks/ReentrantLock;
 
-    new-instance v0, Ld7h;
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    const/4 v2, 0x1
+    :try_start_0
+    iget-object v0, v0, Lt0a;->e:Lrr9;
 
-    invoke-direct {v0, v1, v2}, Ld7h;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-virtual {v0}, Lrr9;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p1, v0}, Lz9b;->h(Ld7h;)V
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+.end method
+
+.method public final b()J
+    .locals 5
+
+    sget v0, Lyz4;->o:I
+
+    iget-object v0, p0, Lv0a;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lnnb;
+
+    check-cast v0, Lpnb;
+
+    iget-object v0, v0, Lpnb;->b:Lhlb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-collection-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0xa
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v1, v2, v3}, Lohd;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v0
+
+    sget-object v2, Ld05;->c:Ld05;
+
+    invoke-static {v0, v1, v2}, Lx2d;->N(JLd05;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final c(Lrr9;Lwy3;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    instance-of v1, p2, Lu0a;
+
+    if-eqz v1, :cond_0
+
+    move-object v1, p2
+
+    check-cast v1, Lu0a;
+
+    iget v2, v1, Lu0a;->Z:I
+
+    const/high16 v3, -0x80000000
+
+    and-int v4, v2, v3
+
+    if-eqz v4, :cond_0
+
+    sub-int/2addr v2, v3
+
+    iput v2, v1, Lu0a;->Z:I
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lpc0;
+    new-instance v1, Lu0a;
 
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    check-cast p1, Lpc0;
-
-    iget-object p1, p1, Lpc0;->a:Landroid/content/Intent;
-
-    const/16 v0, 0x22b
-
-    invoke-virtual {v1, p1, v0}, Lb04;->startActivityForResult(Landroid/content/Intent;I)V
-
-    iget-object p1, v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->D0:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lly9;
-
-    sget-object v0, Lhfd;->J0:Lhfd;
-
-    invoke-static {p1, v0}, Lly9;->g(Lly9;Lhfd;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-class p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "failed open camera"
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v0, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v1}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->F0()Ln1a;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ln1a;->b:Lvz9;
-
-    invoke-virtual {p1}, Lvz9;->b()V
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lrc0;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Lrc0;
-
-    iget-object p1, p1, Lrc0;->a:Landroid/content/Intent;
-
-    const/16 v0, 0x29a
-
-    invoke-virtual {v1, p1, v0}, Lb04;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    :cond_2
-    instance-of v0, p1, Lqc0;
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Lhp8;->c:Lhp8;
-
-    check-cast p1, Lqc0;
-
-    iget-object v1, p1, Lqc0;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lqc0;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p1}, Lhp8;->c1(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p2}, Lu0a;-><init>(Lv0a;Lwy3;)V
 
     :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object p2, v1, Lu0a;->X:Ljava/lang/Object;
 
-    return-object p1
+    sget-object v2, Lo24;->a:Lo24;
+
+    iget v3, v1, Lu0a;->Z:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v5, :cond_1
+
+    iget-object p1, v1, Lu0a;->o:Lv0a;
+
+    :try_start_0
+    invoke-static {p2}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lcea;->z(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    sget-object v3, Lyt3;->n:Lhoa;
+
+    if-nez v3, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    sget-object v6, Lr28;->o:Lr28;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {v3, v6}, Lhoa;->b(Lr28;)Z
 
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    const/16 v7, 0x1f
+
+    invoke-static {p1, v7}, Lrr9;->k(Lrr9;I)Ljava/lang/String;
+
+    move-result-object v7
+
+    const-string v8, "request ids "
+
+    invoke-virtual {v8, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v6, p2, v7, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_1
+    invoke-virtual {p1}, Lrr9;->i()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    :try_start_1
+    iget-object p2, p0, Lv0a;->d:Ltk9;
+
+    if-eqz p2, :cond_6
+
+    iput-object p0, v1, Lu0a;->o:Lv0a;
+
+    iput v5, v1, Lu0a;->Z:I
+
+    invoke-virtual {p2, p1, v1}, Ltk9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-ne p1, v2, :cond_6
+
+    return-object v2
+
+    :catchall_1
+    move-exception p2
+
+    move-object p1, p0
+
+    :goto_2
+    invoke-virtual {p1}, Lv0a;->a()V
+
+    instance-of p2, p2, Ljava/util/concurrent/CancellationException;
+
+    if-eqz p2, :cond_7
+
+    :cond_6
+    :goto_3
+    return-object v0
+
+    :cond_7
+    check-cast p1, Lt0a;
+
+    invoke-virtual {p1}, Lv0a;->a()V
+
+    iget-object p2, p1, Lv0a;->a:Ln24;
+
+    new-instance v1, Ls0a;
+
+    invoke-direct {v1, p1, v4}, Ls0a;-><init>(Lt0a;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x3
+
+    invoke-static {p2, v4, v4, v1, v2}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lv0a;->c:Loke;
+
+    return-object v0
+
+    :goto_4
     throw p1
 .end method

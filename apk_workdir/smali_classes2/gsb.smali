@@ -1,22 +1,19 @@
 .class public final Lgsb;
-.super Ljava/lang/Object;
+.super Losb;
 .source "SourceFile"
-
-# interfaces
-.implements Lhsb;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Losb;-><init>()V
 
-    iput-object p1, p0, Lgsb;->a:Landroid/net/Uri;
+    iput-object p1, p0, Lgsb;->b:Ljava/lang/String;
 
     return-void
 .end method
@@ -44,11 +41,11 @@
     :cond_1
     check-cast p1, Lgsb;
 
-    iget-object v1, p0, Lgsb;->a:Landroid/net/Uri;
+    iget-object v1, p0, Lgsb;->b:Ljava/lang/String;
 
-    iget-object p1, p1, Lgsb;->a:Landroid/net/Uri;
+    iget-object p1, p1, Lgsb;->b:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -63,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lgsb;->a:Landroid/net/Uri;
+    iget-object v0, p0, Lgsb;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -73,23 +70,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShareImage(uri="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgsb;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "CopyToClipboard(link="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lgsb;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -2,195 +2,129 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lev5;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic b:Lev5;
+.field public final b:Lwkc;
+
+.field public volatile c:Ljava/lang/String;
+
+.field public volatile d:Lorg/webrtc/PeerConnectionFactory;
+
+.field public final e:Lj8a;
+
+.field public f:Lt55;
+
+.field public g:Lorg/webrtc/audio/JavaAudioDeviceModule;
+
+.field public h:Lorg/webrtc/EglBase;
+
+.field public final i:Lym4;
+
+.field public final j:Lh5b;
+
+.field public k:I
+
+.field public volatile l:Lkn7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lev5;I)V
-    .locals 0
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lorg/webrtc/EglBase;Lwkc;Lxg1;Lym4;Lq61;)V
+    .locals 12
 
-    iput p2, p0, Lb7e;->a:I
-
-    iput-object p1, p0, Lb7e;->b:Lev5;
+    move-object/from16 v0, p5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    iput v1, p0, Lb7e;->k:I
 
-# virtual methods
-.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+    iput-object p1, p0, Lb7e;->a:Ljava/util/concurrent/ExecutorService;
 
-    iget v0, p0, Lb7e;->a:I
+    iput-object p3, p0, Lb7e;->b:Lwkc;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object v0, p0, Lb7e;->i:Lym4;
 
-    new-instance v0, Ldoa;
+    new-instance v2, Lj8a;
 
-    const/16 v1, 0x1c
+    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
+    move-result-object v3
 
-    iget-object p1, p0, Lb7e;->b:Lev5;
+    invoke-direct {v2, v3, p3}, Lj8a;-><init>(Lorg/webrtc/EglBase$Context;Lwkc;)V
 
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-object v2, p0, Lb7e;->e:Lj8a;
 
-    move-result-object p1
+    new-instance v4, Lh5b;
 
-    sget-object p2, Lf34;->a:Lf34;
+    invoke-interface {p2}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
 
-    if-ne p1, p2, :cond_0
+    move-result-object v5
 
-    goto :goto_0
+    move-object/from16 v10, p4
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v2, v10, Lxg1;->x:Lw98;
 
-    :goto_0
-    return-object p1
+    iget-object v3, v2, Lw98;->b:Ljava/lang/Object;
 
-    :pswitch_0
-    new-instance v0, Ldoa;
+    check-cast v3, Ler0;
 
-    const/16 v1, 0x1b
+    iget-boolean v3, v3, Ler0;->a:Z
 
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
+    if-nez v3, :cond_1
 
-    iget-object p1, p0, Lb7e;->b:Lev5;
+    iget-object v2, v2, Lw98;->c:Ljava/lang/Object;
 
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v2, Ler0;
 
-    move-result-object p1
+    iget-boolean v2, v2, Ler0;->a:Z
 
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_1
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_0
+    :goto_0
+    move-object v9, p3
 
-    :goto_1
-    return-object p1
+    move-object/from16 v7, p6
 
-    :pswitch_1
-    new-instance v0, Ldoa;
+    move v6, v1
 
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
-
-    iget-object p1, p0, Lb7e;->b:Lev5;
-
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_2
+    move-object v8, v10
 
     goto :goto_2
 
-    :cond_2
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_1
+    :goto_1
+    const/4 v1, 0x1
+
+    goto :goto_0
 
     :goto_2
-    return-object p1
+    invoke-direct/range {v4 .. v9}, Lh5b;-><init>(Lorg/webrtc/EglBase$Context;ZLp61;Lxg1;Lwkc;)V
 
-    :pswitch_2
-    new-instance v0, Ldoa;
+    iput-object v4, p0, Lb7e;->j:Lh5b;
 
-    const/16 v1, 0x19
+    invoke-virtual {v0, v4}, Lym4;->a(Lpd8;)V
 
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
+    new-instance v6, Loy1;
 
-    iget-object p1, p0, Lb7e;->b:Lev5;
+    const/16 v11, 0x10
 
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-object v7, p0
 
-    move-result-object p1
+    move-object v8, p2
 
-    sget-object p2, Lf34;->a:Lf34;
+    move-object v9, p3
 
-    if-ne p1, p2, :cond_3
+    move-object/from16 v10, p4
 
-    goto :goto_3
+    invoke-direct/range {v6 .. v11}, Loy1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-interface {p1, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    :goto_3
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Ldoa;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
-
-    iget-object p1, p0, Lb7e;->b:Lev5;
-
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    sget-object p1, Loyf;->a:Loyf;
-
-    :goto_4
-    return-object p1
-
-    :pswitch_4
-    new-instance v0, Ldoa;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, p1, v1}, Ldoa;-><init>(Lgv5;I)V
-
-    iget-object p1, p0, Lb7e;->b:Lev5;
-
-    invoke-interface {p1, v0, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lf34;->a:Lf34;
-
-    if-ne p1, p2, :cond_5
-
-    goto :goto_5
-
-    :cond_5
-    sget-object p1, Loyf;->a:Loyf;
-
-    :goto_5
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

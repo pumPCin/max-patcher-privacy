@@ -1,84 +1,35 @@
-.class public final Lg3f;
-.super Lbj0;
+.class public abstract synthetic Lg3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
-
-    invoke-direct {p0}, Lbj0;-><init>()V
-
-    iput-wide p1, p0, Lg3f;->b:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method static constructor <clinit>()V
+    .locals 3
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    invoke-static {v0}, Lsw1;->y(I)[I
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    instance-of v1, p1, Lg3f;
+    array-length v1, v1
+
+    new-array v1, v1, [I
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    :try_start_0
+    aput v0, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    return v2
+    :catch_0
+    sput-object v1, Lg3f;->$EnumSwitchMapping$0:[I
 
-    :cond_1
-    check-cast p1, Lg3f;
-
-    iget-wide v3, p0, Lg3f;->b:J
-
-    iget-wide v5, p1, Lg3f;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lg3f;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "SuspendBotEvent(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lg3f;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

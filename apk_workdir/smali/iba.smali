@@ -1,148 +1,97 @@
 .class public final Liba;
-.super Ljava/lang/Object;
+.super Lkba;
 .source "SourceFile"
-
-# interfaces
-.implements Lxda;
-.implements Lss4;
 
 
 # instance fields
-.field public final a:Lxda;
-
-.field public final b:J
-
-.field public final c:Lied;
-
-.field public o:Lss4;
+.field public final Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Lxda;JLied;)V
-    .locals 1
+.method public constructor <init>(Ltqd;JLjava/util/concurrent/TimeUnit;Lpcd;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct/range {p0 .. p5}, Lkba;-><init>(Ltqd;JLjava/util/concurrent/TimeUnit;Lpcd;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object p1, p0
 
-    iput-object p1, p0, Liba;->a:Lxda;
+    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-wide p2, p0, Liba;->b:J
+    const/4 p3, 0x1
 
-    iput-object p4, p0, Liba;->c:Lied;
+    invoke-direct {p2, p3}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p2, p1, Liba;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final a()V
+    .locals 2
 
-    new-instance v0, Lyn7;
+    const/4 v0, 0x0
 
-    const/16 v1, 0xa
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p0}, Lyn7;-><init>(ILjava/lang/Object;)V
+    move-result-object v0
 
-    iget-wide v1, p0, Liba;->b:J
-
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v4, p0, Liba;->c:Lied;
-
-    invoke-virtual {v4, v0, v1, v2, v3}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    return-void
-.end method
-
-.method public final c(Lss4;)V
-    .locals 1
-
-    iget-object v0, p0, Liba;->o:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v0
+    iget-object v1, p0, Lkba;->a:Ltqd;
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Liba;->o:Lss4;
-
-    iget-object p1, p0, Liba;->a:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
+    invoke-virtual {v1, v0}, Ltqd;->e(Ljava/lang/Object;)V
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, p0, Liba;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 4
-
-    new-instance v0, Lsg6;
-
-    const/16 v1, 0x12
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p0, p1, v2, v1}, Lsg6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-wide v1, p0, Liba;->b:J
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, p0, Liba;->c:Lied;
-
-    invoke-virtual {v3, v0, v1, v2, p1}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget-object v0, p0, Liba;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    iget-object v0, p0, Liba;->c:Lied;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Liba;->c:Lied;
-
-    invoke-interface {v0}, Lss4;->h()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     move-result v0
 
-    return v0
+    if-nez v0, :cond_1
+
+    invoke-virtual {v1}, Ltqd;->b()V
+
+    :cond_1
+    return-void
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
+.method public final run()V
+    .locals 3
 
-    new-instance v0, Ltg6;
+    iget-object v0, p0, Liba;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const/16 v1, 0x11
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    const/4 v2, 0x0
+    move-result v1
 
-    invoke-direct {v0, p0, p1, v2, v1}, Ltg6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    const/4 v2, 0x2
 
-    const-wide/16 v1, 0x0
+    if-ne v1, v2, :cond_1
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v1, 0x0
 
-    iget-object v3, p0, Liba;->c:Lied;
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lied;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
+    move-result-object v1
 
+    iget-object v2, p0, Lkba;->a:Ltqd;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v2, v1}, Ltqd;->e(Ljava/lang/Object;)V
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {v2}, Ltqd;->b()V
+
+    :cond_1
     return-void
 .end method

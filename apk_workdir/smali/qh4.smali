@@ -1,465 +1,185 @@
-.class public final Lqh4;
+.class public abstract Lqh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final d:[I
+.field public static final a:Lt37;
 
+.field public static final b:Lt37;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lt37;
 
-.field public b:Li25;
+.field public static final d:Lt37;
 
-.field public c:Z
+.field public static final e:Lt37;
+
+.field public static final f:Lt37;
+
+.field public static final g:Lt37;
+
+.field public static final h:Lt37;
+
+.field public static final i:Lt37;
+
+.field public static final j:Lt37;
+
+.field public static final k:Lt37;
+
+.field public static final l:Lt37;
+
+.field public static final m:Lt37;
+
+.field public static final n:Lt37;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 15
 
-    const/4 v0, 0x7
+    new-instance v0, Lt37;
 
-    new-array v0, v0, [I
+    const-string v1, "JPEG"
 
-    fill-array-data v0, :array_0
+    const-string v2, "jpeg"
 
-    sput-object v0, Lqh4;->d:[I
+    invoke-direct {v0, v1, v2}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
+    sput-object v0, Lqh4;->a:Lt37;
 
-    nop
+    new-instance v1, Lt37;
 
-    :array_0
-    .array-data 4
-        0x8
-        0xd
-        0xb
-        0x2
-        0x0
-        0x1
-        0x7
-    .end array-data
-.end method
+    const-string v2, "PNG"
 
-.method public constructor <init>(I)V
-    .locals 1
+    const-string v3, "png"
 
-    iput p1, p0, Lqh4;->a:I
+    invoke-direct {v1, v2, v3}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    packed-switch p1, :pswitch_data_0
+    sput-object v1, Lqh4;->b:Lt37;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Lt37;
 
-    return-void
+    const-string v3, "GIF"
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v4, "gif"
 
-    new-instance p1, Li25;
+    invoke-direct {v2, v3, v4}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v0, 0xb
+    sput-object v2, Lqh4;->c:Lt37;
 
-    invoke-direct {p1, v0}, Li25;-><init>(I)V
+    new-instance v3, Lt37;
 
-    iput-object p1, p0, Lqh4;->b:Li25;
+    const-string v4, "BMP"
 
-    return-void
+    const-string v5, "bmp"
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-direct {v3, v4, v5}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public static a(Ljava/util/ArrayList;I)V
-    .locals 3
+    sput-object v3, Lqh4;->d:Lt37;
 
-    const/4 v0, 0x0
+    new-instance v4, Lt37;
 
-    const/4 v1, 0x7
+    const-string v5, "ICO"
 
-    sget-object v2, Lqh4;->d:[I
+    const-string v6, "ico"
 
-    invoke-static {p1, v0, v1, v2}, Lv4b;->s(III[I)I
+    invoke-direct {v4, v5, v6}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    sput-object v4, Lqh4;->e:Lt37;
 
-    const/4 v1, -0x1
+    new-instance v5, Lt37;
 
-    if-eq v0, v1, :cond_1
+    const-string v6, "WEBP_SIMPLE"
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v7, "webp"
+
+    invoke-direct {v5, v6, v7}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v5, Lqh4;->f:Lt37;
+
+    new-instance v6, Lt37;
+
+    const-string v8, "WEBP_LOSSLESS"
+
+    invoke-direct {v6, v8, v7}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v6, Lqh4;->g:Lt37;
+
+    move-object v8, v7
+
+    new-instance v7, Lt37;
+
+    const-string v9, "WEBP_EXTENDED"
+
+    invoke-direct {v7, v9, v8}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v7, Lqh4;->h:Lt37;
+
+    move-object v9, v8
+
+    new-instance v8, Lt37;
+
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+
+    invoke-direct {v8, v10, v9}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v8, Lqh4;->i:Lt37;
+
+    move-object v10, v9
+
+    new-instance v9, Lt37;
+
+    const-string v11, "WEBP_ANIMATED"
+
+    invoke-direct {v9, v11, v10}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v9, Lqh4;->j:Lt37;
+
+    new-instance v10, Lt37;
+
+    const-string v11, "HEIF"
+
+    const-string v12, "heif"
+
+    invoke-direct {v10, v11, v12}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v10, Lqh4;->k:Lt37;
+
+    new-instance v11, Lt37;
+
+    const-string v12, "DNG"
+
+    const-string v13, "dng"
+
+    invoke-direct {v11, v12, v13}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lqh4;->l:Lt37;
+
+    new-instance v11, Lt37;
+
+    const-string v12, "BINARY_XML"
+
+    const-string v13, "xml"
+
+    invoke-direct {v11, v12, v13}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lqh4;->m:Lt37;
+
+    new-instance v12, Lt37;
+
+    const-string v13, "AVIF"
+
+    const-string v14, "avif"
+
+    invoke-direct {v12, v13, v14}, Lt37;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v12, Lqh4;->n:Lt37;
+
+    filled-new-array/range {v0 .. v12}, [Lt37;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
     return-void
-.end method
-
-
-# virtual methods
-.method public b(ILt76;ZLjava/util/ArrayList;Lcof;)Llv0;
-    .locals 6
-
-    iget-object v0, p2, Lt76;->m:Ljava/lang/String;
-
-    invoke-static {v0}, Ljl9;->l(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-boolean p3, p0, Lqh4;->c:Z
-
-    if-nez p3, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    new-instance p3, Lnze;
-
-    iget-object p4, p0, Lqh4;->b:Li25;
-
-    invoke-virtual {p4, p2}, Li25;->b(Lt76;)Luze;
-
-    move-result-object p4
-
-    invoke-direct {p3, p4, p2}, Lnze;-><init>(Luze;Lt76;)V
-
-    goto/16 :goto_3
-
-    :cond_1
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-string v2, "video/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const-string v2, "audio/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const-string v2, "application/webm"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const-string v2, "video/x-matroska"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const-string v2, "audio/x-matroska"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_8
-
-    const-string v2, "application/x-matroska"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    :goto_0
-    const-string v2, "image/jpeg"
-
-    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    new-instance p3, Lyi4;
-
-    invoke-direct {p3, v1}, Lyi4;-><init>(I)V
-
-    goto :goto_3
-
-    :cond_4
-    const-string v1, "image/png"
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    new-instance p3, Lgq0;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p4}, Lgq0;-><init>(I)V
-
-    goto :goto_3
-
-    :cond_5
-    if-eqz p3, :cond_6
-
-    const/4 p3, 0x4
-
-    goto :goto_1
-
-    :cond_6
-    const/4 p3, 0x0
-
-    :goto_1
-    iget-boolean v0, p0, Lqh4;->c:Z
-
-    if-nez v0, :cond_7
-
-    or-int/lit8 p3, p3, 0x20
-
-    :cond_7
-    move v2, p3
-
-    new-instance v0, Lwb6;
-
-    iget-object v1, p0, Lqh4;->b:Li25;
-
-    const/4 v3, 0x0
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-direct/range {v0 .. v5}, Lwb6;-><init>(Lsze;ILtif;Ljava/util/List;Lcof;)V
-
-    move-object p3, v0
-
-    goto :goto_3
-
-    :cond_8
-    :goto_2
-    iget-boolean p3, p0, Lqh4;->c:Z
-
-    if-nez p3, :cond_9
-
-    const/4 v1, 0x3
-
-    :cond_9
-    new-instance p3, Lnd8;
-
-    iget-object p4, p0, Lqh4;->b:Li25;
-
-    invoke-direct {p3, p4, v1}, Lnd8;-><init>(Lsze;I)V
-
-    :goto_3
-    new-instance p4, Llv0;
-
-    invoke-direct {p4, p3, p1, p2}, Llv0;-><init>(Lfi5;ILt76;)V
-
-    return-object p4
-.end method
-
-.method public final c(Lt76;)Lt76;
-    .locals 3
-
-    iget v0, p0, Lqh4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lqh4;->c:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lqh4;->b:Li25;
-
-    invoke-virtual {v0, p1}, Li25;->e(Lt76;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lt76;->a()Lq76;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lt76;->k:Ljava/lang/String;
-
-    const-string v2, "application/x-media3-cues"
-
-    invoke-static {v2}, Ljl9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lq76;->m:Ljava/lang/String;
-
-    iget-object v2, p0, Lqh4;->b:Li25;
-
-    invoke-virtual {v2, p1}, Li25;->s(Lt76;)I
-
-    move-result v2
-
-    iput v2, v0, Lq76;->I:I
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p1, p1, Lt76;->n:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v1, :cond_0
-
-    const-string p1, " "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, ""
-
-    :goto_0
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lq76;->j:Ljava/lang/String;
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    iput-wide v1, v0, Lq76;->r:J
-
-    new-instance p1, Lt76;
-
-    invoke-direct {p1, v0}, Lt76;-><init>(Lq76;)V
-
-    :cond_1
-    return-object p1
-
-    :pswitch_0
-    iget-boolean v0, p0, Lqh4;->c:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lqh4;->b:Li25;
-
-    invoke-virtual {v0, p1}, Li25;->e(Lt76;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p1}, Lt76;->a()Lq76;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lt76;->k:Ljava/lang/String;
-
-    const-string v2, "application/x-media3-cues"
-
-    invoke-static {v2}, Ljl9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lq76;->m:Ljava/lang/String;
-
-    iget-object v2, p0, Lqh4;->b:Li25;
-
-    invoke-virtual {v2, p1}, Li25;->s(Lt76;)I
-
-    move-result v2
-
-    iput v2, v0, Lq76;->I:I
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p1, p1, Lt76;->n:Ljava/lang/String;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v1, :cond_2
-
-    const-string p1, " "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    const-string p1, ""
-
-    :goto_1
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lq76;->j:Ljava/lang/String;
-
-    const-wide v1, 0x7fffffffffffffffL
-
-    iput-wide v1, v0, Lq76;->r:J
-
-    new-instance p1, Lt76;
-
-    invoke-direct {p1, v0}, Lt76;-><init>(Lq76;)V
-
-    :cond_3
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

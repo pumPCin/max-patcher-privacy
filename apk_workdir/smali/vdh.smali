@@ -1,80 +1,52 @@
-.class public final synthetic Lvdh;
+.class public final Lvdh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/my/tracker/obfuscated/n;
+.implements Lpeh;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/os/Bundle;
 
-.field public final synthetic b:Lcom/my/tracker/obfuscated/t;
+.field public final synthetic b:Lem4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/obfuscated/t;I)V
+.method public constructor <init>(Lem4;Landroid/os/Bundle;)V
     .locals 0
 
-    iput p2, p0, Lvdh;->a:I
-
-    iput-object p1, p0, Lvdh;->b:Lcom/my/tracker/obfuscated/t;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvdh;->b:Lem4;
+
+    iput-object p2, p0, Lvdh;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public final a()I
     .locals 1
 
-    iget v0, p0, Lvdh;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lvdh;->b:Lcom/my/tracker/obfuscated/t;
+.method public final b()V
+    .locals 2
 
-    check-cast p1, Lcom/my/tracker/obfuscated/b1;
+    iget-object v0, p0, Lvdh;->b:Lem4;
 
-    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/t;->a(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/b1;)V
+    iget-object v0, v0, Lem4;->a:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Ljq7;
 
-    :pswitch_0
-    iget-object v0, p0, Lvdh;->b:Lcom/my/tracker/obfuscated/t;
+    iget-object v1, p0, Lvdh;->a:Landroid/os/Bundle;
 
-    check-cast p1, Lcom/my/tracker/obfuscated/b1;
-
-    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/t;->j(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/b1;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvdh;->b:Lcom/my/tracker/obfuscated/t;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/t;->c(Ljava/lang/Boolean;)V
+    invoke-interface {v0, v1}, Ljq7;->l(Landroid/os/Bundle;)V
 
     return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lvdh;->b:Lcom/my/tracker/obfuscated/t;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/t;->b(Ljava/lang/Boolean;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

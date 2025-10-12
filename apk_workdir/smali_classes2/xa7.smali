@@ -1,100 +1,48 @@
 .class public final Lxa7;
-.super Lg79;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public a:I
+.field public X:I
+
+.field public final synthetic Y:Ly03;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    iput-object p1, p0, Lxa7;->Y:Ly03;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxa7;->a:I
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lxa7;->a:I
+    iput-object p1, p0, Lxa7;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lxa7;->X:I
 
-    const/4 v1, 0x1
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1, v0}, Le83;->n(II)I
+    or-int/2addr p1, v0
 
-    move-result v0
+    iput p1, p0, Lxa7;->X:I
 
-    return v0
+    iget-object p1, p0, Lxa7;->Y:Ly03;
 
-    :cond_0
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Ly03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final mergeFrom(Ld83;)Lg79;
-    .locals 2
+    move-result-object p1
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lxa7;->a:I
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Le83;)V
-    .locals 2
-
-    iget v0, p0, Lxa7;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Le83;->G(II)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

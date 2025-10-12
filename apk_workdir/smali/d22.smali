@@ -1,49 +1,23 @@
-.class public final Ld22;
-.super Lnz3;
+.class public abstract Ld22;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lum1;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lkotlinx/coroutines/internal/Symbol;
 
 
 # direct methods
-.method public constructor <init>(Lum1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ld22;->X:Lum1;
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "RESUME_TOKEN"
+
+    invoke-direct {v0, v1}, Lkotlinx/coroutines/internal/Symbol;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Ld22;->a:Lkotlinx/coroutines/internal/Symbol;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ld22;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ld22;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ld22;->Y:I
-
-    iget-object p1, p0, Ld22;->X:Lum1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lum1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

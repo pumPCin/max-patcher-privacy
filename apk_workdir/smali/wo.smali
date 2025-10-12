@@ -1,38 +1,51 @@
-.class public abstract Lwo;
-.super Ljava/lang/Object;
+.class public final Lwo;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>()V
-    .locals 0
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwo;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+# instance fields
+.field public a:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lb8;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lb8;-><init>(I)V
+
+    sput-object v0, Lwo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
-.end method
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-.method public b(Landroid/widget/TextView;)Z
-    .locals 2
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    const-string v0, "getHorizontallyScrolling"
+    iget-boolean p2, p0, Lwo;->a:Z
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    int-to-byte p2, p2
 
-    invoke-static {p1, v0, v1}, Lxo;->e(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

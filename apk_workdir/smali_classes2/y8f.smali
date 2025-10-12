@@ -1,14 +1,13 @@
-.class public interface abstract Ly8f;
-.super Ljava/lang/Object;
+.class public final Ly8f;
+.super Lz8f;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(DDDD)F
-.end method
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 0
 
-.method public abstract b(DDDDLnz3;)Ljava/lang/Object;
-.end method
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-.method public abstract c(DDDD)Z
+    return-void
 .end method

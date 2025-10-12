@@ -1,161 +1,97 @@
-.class public abstract Lsh3;
-.super Ljava/lang/Object;
+.class public final enum Lsh3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Loc5;
+.field public static final synthetic X:[Lsh3;
 
-.field public static final b:Ljava/lang/Object;
+.field public static final enum a:Lsh3;
 
-.field public static final c:Ls5f;
+.field public static final enum b:Lsh3;
 
-.field public static final d:Ls5f;
+.field public static final enum c:Lsh3;
 
-.field public static final e:Loc5;
-
-.field public static final f:Ls5f;
-
-.field public static final g:Ls5f;
-
-.field public static final h:Ls5f;
-
-.field public static final i:Ls5f;
+.field public static final enum o:Lsh3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 6
 
-    new-instance v0, Loc5;
+    new-instance v0, Lsh3;
 
-    const/4 v6, 0x1
+    const-string v1, "ALWAYS_OVERRIDE"
 
-    const/16 v7, 0x40
+    const/4 v2, 0x0
 
-    const-string v1, "common"
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v2, 0x1
+    sput-object v0, Lsh3;->a:Lsh3;
 
-    const-wide/16 v3, 0x1388
+    new-instance v1, Lsh3;
 
-    const/4 v5, 0x1
+    const-string v2, "HIGH_PRIORITY_REQUIRED"
 
-    invoke-direct/range {v0 .. v7}, Loc5;-><init>(Ljava/lang/String;IJZZI)V
+    const/4 v3, 0x1
 
-    sput-object v0, Lsh3;->a:Loc5;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v0, Lyp2;
+    sput-object v1, Lsh3;->b:Lsh3;
 
-    const/16 v1, 0x13
+    new-instance v2, Lsh3;
 
-    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
+    const-string v3, "REQUIRED"
 
-    const/4 v1, 0x2
+    const/4 v4, 0x2
 
-    invoke-static {v1, v0}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v0
+    sput-object v2, Lsh3;->c:Lsh3;
 
-    sput-object v0, Lsh3;->b:Ljava/lang/Object;
+    new-instance v3, Lsh3;
 
-    new-instance v0, Lyp2;
+    const-string v4, "OPTIONAL"
 
-    const/16 v2, 0x16
+    const/4 v5, 0x3
 
-    invoke-direct {v0, v2}, Lyp2;-><init>(I)V
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v2, Ls5f;
+    sput-object v3, Lsh3;->o:Lsh3;
 
-    invoke-direct {v2, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v2, Lsh3;->c:Ls5f;
-
-    new-instance v0, Lyp2;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v2}, Lyp2;-><init>(I)V
-
-    new-instance v2, Ls5f;
-
-    invoke-direct {v2, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v2, Lsh3;->d:Ls5f;
-
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+    filled-new-array {v0, v1, v2, v3}, [Lsh3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
-
-    move-result v0
-
-    mul-int/2addr v0, v1
-
-    add-int/lit8 v3, v0, -0x1
-
-    new-instance v1, Loc5;
-
-    const/4 v7, 0x0
-
-    const/16 v8, 0x60
-
-    const-string v2, "computation"
-
-    const-wide/16 v4, 0x1388
-
-    invoke-direct/range {v1 .. v8}, Loc5;-><init>(Ljava/lang/String;IJZZI)V
-
-    sput-object v1, Lsh3;->e:Loc5;
-
-    new-instance v0, Lyp2;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lsh3;->f:Ls5f;
-
-    new-instance v0, Lyp2;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lsh3;->g:Ls5f;
-
-    new-instance v0, Lyp2;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lsh3;->h:Ls5f;
-
-    new-instance v0, Lyp2;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Lyp2;-><init>(I)V
-
-    new-instance v1, Ls5f;
-
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
-
-    sput-object v1, Lsh3;->i:Ls5f;
+    sput-object v0, Lsh3;->X:[Lsh3;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lsh3;
+    .locals 1
+
+    const-class v0, Lsh3;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lsh3;
+
+    return-object p0
+.end method
+
+.method public static values()[Lsh3;
+    .locals 1
+
+    sget-object v0, Lsh3;->X:[Lsh3;
+
+    invoke-virtual {v0}, [Lsh3;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsh3;
+
+    return-object v0
 .end method

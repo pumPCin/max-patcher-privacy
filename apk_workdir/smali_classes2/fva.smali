@@ -1,27 +1,31 @@
-.class public final Lfva;
+.class public abstract Lfva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lmva;
+# static fields
+.field public static final a:I
 
-.field public final b:Ljava/lang/ref/WeakReference;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public constructor <init>(Ldva;Lmva;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lbbc;->dragger_24:I
 
-    iput-object p2, p0, Lfva;->a:Lmva;
+    sput v0, Lfva;->a:I
 
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    sget v0, Lbbc;->draw_sticker_24_gradient:I
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    sput v0, Lfva;->b:I
 
-    iput-object p2, p0, Lfva;->b:Ljava/lang/ref/WeakReference;
+    sget v0, Lbbc;->recent_24:I
+
+    sput v0, Lfva;->c:I
 
     return-void
 .end method

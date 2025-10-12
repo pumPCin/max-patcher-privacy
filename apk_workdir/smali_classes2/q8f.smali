@@ -2,112 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile b:Lq8f;
-
-.field public static final c:Ljava/util/concurrent/CountDownLatch;
+# interfaces
+.implements Ltp0;
 
 
 # instance fields
-.field public final a:Ls5f;
+.field public final a:Landroid/graphics/Paint;
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    sput-object v0, Lq8f;->c:Ljava/util/concurrent/CountDownLatch;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ls5f;)V
-    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq8f;->a:Ls5f;
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    iput-object v0, p0, Lq8f;->a:Landroid/graphics/Paint;
+
+    new-instance v0, Lede;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p1, v1}, Lede;-><init>(Landroid/content/Context;I)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lq8f;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static a()Lq8f;
-    .locals 4
 
-    sget-object v0, Lq8f;->c:Ljava/util/concurrent/CountDownLatch;
+# virtual methods
+.method public final b()V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    iget-object v0, p0, Lq8f;->b:Ljava/lang/Object;
 
-    move-result-wide v0
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    const-wide/16 v2, 0x0
+    move-result-object v0
 
-    cmp-long v0, v0, v2
+    check-cast v0, Lh37;
 
-    if-nez v0, :cond_0
+    iget-object v0, v0, Lh37;->a:Lh4f;
 
-    sget-object v0, Lq8f;->b:Lq8f;
+    invoke-virtual {v0}, Lh4f;->a()Z
 
-    return-object v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/renderscript/RenderScript;
+
+    invoke-virtual {v0}, Landroid/renderscript/RenderScript;->destroy()V
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "TamContextAndroid should call `init` before `getInstance`"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method
 
-.method public static b()Ll8f;
-    .locals 3
+.method public final c(I)V
+    .locals 1
 
-    :try_start_0
-    sget-object v0, Lq8f;->c:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lq8f;->a:Landroid/graphics/Paint;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    goto :goto_0
+    return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public final d(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iget-object v1, p0, Lq8f;->a:Landroid/graphics/Paint;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-virtual {p1, p2, v0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    const-string v1, "TamContextAndroid"
+.method public final e(Landroid/graphics/Bitmap;F)V
+    .locals 2
 
-    const-string v2, "TamContext initialization was interrupted: %s"
+    iget-object v0, p0, Lq8f;->b:Ljava/lang/Object;
 
-    invoke-static {v1, v2, v0}, Lox9;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :goto_0
-    invoke-static {}, Lq8f;->a()Lq8f;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v0, v0, Lq8f;->a:Ls5f;
+    check-cast v0, Lh37;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-static {p2}, Li8e;->I(F)I
 
-    move-result-object v0
+    move-result p2
 
-    check-cast v0, Ll8f;
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-virtual {v0, p1, p2, v1}, Lh37;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+
+    return-void
 .end method

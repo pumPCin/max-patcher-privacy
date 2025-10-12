@@ -1,87 +1,196 @@
 .class public final Ltmg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lzh4;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Landroid/widget/TextView;
+.field public final synthetic a:Lumg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lumg;)V
     .locals 0
 
-    iput-object p1, p0, Ltmg;->Y:Landroid/widget/TextView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltmg;->a:Lumg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onResume(Luq7;)V
+    .locals 2
 
-    check-cast p1, Luxa;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "onResume, owner="
 
-    invoke-virtual {p0, p1, p2}, Ltmg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", isAppVisible="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->k:Z
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", isScreenOn="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->l:Z
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Ltmg;
+    const-string v0, "umg"
 
-    sget-object p2, Loyf;->a:Loyf;
+    invoke-static {v0, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Ltmg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final onStart(Luq7;)V
     .locals 2
 
-    new-instance v0, Ltmg;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Ltmg;->Y:Landroid/widget/TextView;
+    const-string v1, "onStart, owner="
 
-    invoke-direct {v0, v1, p2}, Ltmg;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, v0, Ltmg;->X:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string p1, ", isAppVisible="
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object p1, p0, Ltmg;->a:Lumg;
 
-    iget-object p1, p0, Ltmg;->X:Ljava/lang/Object;
+    iget-boolean p1, p1, Lumg;->k:Z
 
-    check-cast p1, Luxa;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ltmg;->Y:Landroid/widget/TextView;
+    const-string p1, ", isScreenOn="
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object p1, p0, Ltmg;->a:Lumg;
 
-    if-eqz v0, :cond_0
+    iget-boolean p1, p1, Lumg;->l:Z
 
-    invoke-static {v0, p1}, Lsx9;->i(Ljava/lang/CharSequence;Luxa;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "umg"
+
+    invoke-static {v0, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->k:Z
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object p1, p0, Ltmg;->a:Lumg;
 
-    return-object p1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lumg;->k:Z
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->l:Z
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    invoke-virtual {p1}, Lumg;->b()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public final onStop(Luq7;)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "onStop, owner="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", isAppVisible="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->k:Z
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, ", isScreenOn="
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->l:Z
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "umg"
+
+    invoke-static {v0, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    iget-boolean p1, p1, Lumg;->k:Z
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p1, Lumg;->k:Z
+
+    iget-object p1, p0, Ltmg;->a:Lumg;
+
+    invoke-virtual {p1}, Lumg;->a()V
+
+    return-void
 .end method

@@ -1,24 +1,24 @@
 .class public final Lhk2;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lok2;
+.field public final synthetic X:Lkk2;
 
 
 # direct methods
-.method public constructor <init>(Lok2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkk2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lhk2;->X:Lok2;
+    iput-object p1, p0, Lhk2;->X:Lkk2;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,11 +38,13 @@
 
     check-cast p1, Lhk2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lhk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -50,23 +52,45 @@
 
     new-instance p1, Lhk2;
 
-    iget-object v0, p0, Lhk2;->X:Lok2;
+    iget-object v0, p0, Lhk2;->X:Lkk2;
 
-    invoke-direct {p1, v0, p2}, Lhk2;-><init>(Lok2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lhk2;-><init>(Lkk2;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 2
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lhk2;->X:Lok2;
+    sget-object p1, Lkk2;->P0:[Lpl7;
 
-    invoke-static {p1}, Lok2;->s(Lok2;)V
+    iget-object p1, p0, Lhk2;->X:Lkk2;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Lkk2;->A()Lrta;
+
+    move-result-object p1
+
+    sget v0, Lz7d;->F:I
+
+    new-instance v1, Lxcf;
+
+    invoke-direct {v1, v0}, Lxcf;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lrta;->g(Lcdf;)V
+
+    new-instance v0, Lfua;
+
+    sget v1, Ll7d;->I:I
+
+    invoke-direct {v0, v1}, Lfua;-><init>(I)V
+
+    invoke-virtual {p1, v0}, Lrta;->e(Ljua;)V
+
+    invoke-virtual {p1}, Lrta;->i()Lqta;
+
+    move-result-object p1
 
     return-object p1
 .end method

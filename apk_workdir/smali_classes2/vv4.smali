@@ -1,3 +1,3 @@
-.class public interface abstract Lvv4;
-.super Ljava/lang/Object;
+.class public final Lvv4;
+.super Lwi0;
 .source "SourceFile"

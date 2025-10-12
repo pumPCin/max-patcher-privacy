@@ -1,149 +1,206 @@
-.class public abstract Ldd0;
-.super Lhy9;
+.class public final Ldd0;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
+
+
+# instance fields
+.field public X:Lps9;
+
+.field public Y:Lgd0;
+
+.field public Z:I
+
+.field public final synthetic r0:Lgd0;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lgd0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    packed-switch p1, :pswitch_data_0
+    iput-object p1, p0, Ldd0;->r0:Lgd0;
 
-    :pswitch_0
-    sget-object p1, Loyf;->a:Loyf;
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
 
-    :pswitch_2
-    sget-object p1, Loyf;->a:Loyf;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    return-void
+    check-cast p1, Ln24;
 
-    :pswitch_3
-    sget-object p1, Loyf;->a:Loyf;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Ldd0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_4
-    sget-object p1, Loyf;->a:Loyf;
+    check-cast p1, Ldd0;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    sget-object p2, Laxf;->a:Laxf;
 
-    return-void
+    invoke-virtual {p1, p2}, Ldd0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_5
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-object p1
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    return-object p1
+.end method
 
-    return-void
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_6
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance p1, Ldd0;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    iget-object v0, p0, Ldd0;->r0:Lgd0;
 
-    return-void
+    invoke-direct {p1, v0, p2}, Ldd0;-><init>(Lgd0;Lkotlin/coroutines/Continuation;)V
 
-    :pswitch_7
-    sget-object p1, Loyf;->a:Loyf;
+    return-object p1
+.end method
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    return-void
+    sget-object v0, Laxf;->a:Laxf;
 
-    :pswitch_8
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object v1, Lo24;->a:Lo24;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    iget v2, p0, Ldd0;->Z:I
 
-    return-void
+    const/4 v3, 0x1
 
-    :pswitch_9
-    sget-object p1, Loyf;->a:Loyf;
+    if-eqz v2, :cond_1
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    if-ne v2, v3, :cond_0
 
-    return-void
+    iget-object v1, p0, Ldd0;->Y:Lgd0;
 
-    :pswitch_a
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v2, p0, Ldd0;->X:Lps9;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-void
+    goto :goto_0
 
-    :pswitch_b
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_c
-    sget-object p1, Loyf;->a:Loyf;
+    throw p1
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Ldd0;->r0:Lgd0;
 
-    :pswitch_d
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v2, p1, Lgd0;->u0:Lps9;
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    iput-object v2, p0, Ldd0;->X:Lps9;
 
-    return-void
+    iput-object p1, p0, Ldd0;->Y:Lgd0;
 
-    :pswitch_e
-    sget-object p1, Loyf;->a:Loyf;
+    iput v3, p0, Ldd0;->Z:I
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {v2, p0}, Lps9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
+    move-result-object v3
 
-    :pswitch_f
-    sget-object p1, Loyf;->a:Loyf;
+    if-ne v3, v1, :cond_2
 
-    invoke-direct {p0, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
+    return-object v1
 
-    return-void
+    :cond_2
+    move-object v1, p1
 
-    nop
+    :goto_0
+    const/4 p1, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_f
-        :pswitch_e
-        :pswitch_0
-        :pswitch_d
-        :pswitch_0
-        :pswitch_c
-        :pswitch_0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_0
-        :pswitch_0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    :try_start_0
+    iget-wide v3, v1, Lgd0;->X:J
+
+    const/16 v5, 0x20
+
+    shr-long v5, v3, v5
+
+    long-to-int v5, v5
+
+    invoke-static {v5}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v6
+
+    const/high16 v7, -0x40800000    # -1.0f
+
+    cmpg-float v6, v6, v7
+
+    if-nez v6, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const-wide v8, 0xffffffffL
+
+    and-long/2addr v3, v8
+
+    long-to-int v3, v3
+
+    invoke-static {v3}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    cmpg-float v4, v4, v7
+
+    if-nez v4, :cond_4
+
+    :goto_1
+    invoke-virtual {v2, p1}, Lps9;->f(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_4
+    :try_start_1
+    iget-object v1, v1, Lgd0;->Y:Landroid/graphics/Matrix;
+
+    invoke-static {v5}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v4
+
+    const/4 v5, 0x2
+
+    int-to-float v5, v5
+
+    div-float/2addr v4, v5
+
+    invoke-static {v3}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v3
+
+    div-float/2addr v3, v5
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v7, v5, v4, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-virtual {v2, p1}, Lps9;->f(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v2, p1}, Lps9;->f(Ljava/lang/Object;)V
+
+    throw v0
 .end method

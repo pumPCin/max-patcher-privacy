@@ -3,49 +3,21 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public a:Lor3;
 
-    const/4 v0, 0x1
+.field public b:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+.field public c:Ljava/lang/String;
 
-    return v0
+.field public d:Ljava/lang/String;
 
-    :cond_0
-    instance-of v1, p1, Ly6g;
+.field public e:I
 
-    if-nez v1, :cond_1
+.field public f:J
 
-    const/4 p1, 0x0
+.field public g:Ljava/util/List;
 
-    return p1
+.field public h:B
 
-    :cond_1
-    check-cast p1, Ly6g;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const/high16 v0, 0x29000000
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "VfxButtonIconOverlayPlainElevation2Colors(color=687865856)"
-
-    return-object v0
-.end method
+.field public i:J

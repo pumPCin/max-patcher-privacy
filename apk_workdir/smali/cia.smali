@@ -1,42 +1,37 @@
-.class public final Lcia;
+.class public abstract Lcia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Leia;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Leia;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lzgc;->call_share_message_failed_create_p2p_invite_link:I
 
-    iput-object p1, p0, Lcia;->a:Leia;
+    sput v0, Lcia;->a:I
 
-    return-void
-.end method
+    sget v0, Lzgc;->call_share_picker_confirm_p2p_invite_cancel:I
 
+    sput v0, Lcia;->b:I
 
-# virtual methods
-.method public final onPushTokenGenerated(Ljava/lang/String;)V
-    .locals 2
+    sget v0, Lzgc;->call_share_picker_confirm_p2p_invite_retry:I
 
-    iget-object p1, p0, Lcia;->a:Leia;
+    sput v0, Lcia;->c:I
 
-    iget-object v0, p1, Leia;->i:Lmoe;
+    sget v0, Lzgc;->call_share_search_hint:I
 
-    invoke-virtual {p1}, Leia;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Lcia;->d:I
 
     return-void
 .end method

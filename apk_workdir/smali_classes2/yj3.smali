@@ -1,85 +1,81 @@
-.class public abstract synthetic Lyj3;
+.class public final synthetic Lyj3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lone/me/login/confirm/ConfirmPhoneScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lyj3;->a:I
+
+    iput-object p1, p0, Lyj3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const/16 v0, 0x9
+    iget v0, p0, Lyj3;->a:I
 
-    invoke-static {v0}, Lqw1;->y(I)[I
+    sget-object v1, Laxf;->a:Laxf;
 
-    move-result-object v0
+    iget-object v2, p0, Lyj3;->b:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    array-length v0, v0
+    packed-switch v0, :pswitch_data_0
 
-    new-array v0, v0, [I
+    check-cast p1, Ldl3;
 
-    const/4 v1, 0x1
+    sget-object v0, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lpl7;
+
+    sget-object v0, Ldl3;->b:Ldl3;
+
+    if-ne p1, v0, :cond_0
+
+    invoke-virtual {v2}, Lone/me/login/confirm/ConfirmPhoneScreen;->G0()Lpk3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpk3;->A0:Lhne;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1, v2, v0}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :catch_0
-    const/4 v2, 0x2
+    :cond_0
+    return-object v1
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    :catch_1
-    const/4 v1, 0x3
+    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:[Lpl7;
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v2}, Ljz3;->getRouter()Ln6d;
 
-    :catch_2
-    const/4 v2, 0x4
+    move-result-object p1
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-virtual {p1}, Ln6d;->C()Z
 
-    :catch_3
-    const/4 v1, 0x5
+    return-object v1
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    const/4 v1, 0x6
-
-    :try_start_5
-    aput v1, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    const/4 v1, 0x7
-
-    :try_start_6
-    aput v1, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lyj3;->$EnumSwitchMapping$0:[I
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

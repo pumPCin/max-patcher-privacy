@@ -2,1233 +2,351 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsv1;
+
+
+# static fields
+.field public static final synthetic f:[Lpl7;
+
 
 # instance fields
-.field public final a:F
+.field public final a:Ltt1;
 
-.field public final b:F
+.field public final b:Lyn7;
 
-.field public final c:F
+.field public final c:Lyn7;
 
-.field public final d:F
+.field public final d:Lyn7;
 
-.field public final e:F
-
-.field public final f:F
+.field public final e:Lk5d;
 
 
 # direct methods
-.method public constructor <init>(FFFFFF)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lds9;
 
-    iput p1, p0, Lvv1;->a:F
+    const-string v1, "tokenRefreshJob"
 
-    iput p2, p0, Lvv1;->b:F
+    const-string v2, "getTokenRefreshJob()Lkotlinx/coroutines/Job;"
 
-    iput p3, p0, Lvv1;->c:F
+    const-class v3, Lvv1;
 
-    iput p4, p0, Lvv1;->d:F
+    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput p5, p0, Lvv1;->e:F
+    sget-object v1, Lewc;->a:Lfwc;
 
-    iput p6, p0, Lvv1;->f:F
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lpl7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lvv1;->f:[Lpl7;
 
     return-void
 .end method
 
-.method public static a(I)Lvv1;
-    .locals 26
+.method public constructor <init>(Ltt1;Lyn7;Lyn7;Lyn7;)V
+    .locals 0
 
-    sget-object v0, Lrng;->k:Lrng;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->red(I)I
+    iput-object p1, p0, Lvv1;->a:Ltt1;
 
-    move-result v1
+    iput-object p2, p0, Lvv1;->b:Lyn7;
 
-    invoke-static {v1}, Lnu3;->o(I)F
+    iput-object p3, p0, Lvv1;->c:Lyn7;
 
-    move-result v1
+    iput-object p4, p0, Lvv1;->d:Lyn7;
 
-    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->green(I)I
+    invoke-static {}, Lkv9;->G()Lk5d;
 
-    move-result v2
+    move-result-object p1
 
-    invoke-static {v2}, Lnu3;->o(I)F
+    iput-object p1, p0, Lvv1;->e:Lk5d;
 
-    move-result v2
-
-    invoke-static/range {p0 .. p0}, Landroid/graphics/Color;->blue(I)I
-
-    move-result v3
-
-    invoke-static {v3}, Lnu3;->o(I)F
-
-    move-result v3
-
-    sget-object v4, Lnu3;->o:[[F
-
-    const/4 v5, 0x0
-
-    aget-object v6, v4, v5
-
-    aget v7, v6, v5
-
-    mul-float/2addr v7, v1
-
-    const/4 v8, 0x1
-
-    aget v9, v6, v8
-
-    mul-float/2addr v9, v2
-
-    add-float/2addr v9, v7
-
-    const/4 v7, 0x2
-
-    aget v6, v6, v7
-
-    mul-float/2addr v6, v3
-
-    add-float/2addr v6, v9
-
-    aget-object v9, v4, v8
-
-    aget v10, v9, v5
-
-    mul-float/2addr v10, v1
-
-    aget v11, v9, v8
-
-    mul-float/2addr v11, v2
-
-    add-float/2addr v11, v10
-
-    aget v9, v9, v7
-
-    mul-float/2addr v9, v3
-
-    add-float/2addr v9, v11
-
-    aget-object v4, v4, v7
-
-    aget v10, v4, v5
-
-    mul-float/2addr v1, v10
-
-    aget v10, v4, v8
-
-    mul-float/2addr v2, v10
-
-    add-float/2addr v2, v1
-
-    aget v1, v4, v7
-
-    mul-float/2addr v3, v1
-
-    add-float/2addr v3, v2
-
-    sget-object v1, Lnu3;->a:[[F
-
-    aget-object v2, v1, v5
-
-    aget v4, v2, v5
-
-    mul-float/2addr v4, v6
-
-    aget v10, v2, v8
-
-    mul-float/2addr v10, v9
-
-    add-float/2addr v10, v4
-
-    aget v2, v2, v7
-
-    mul-float/2addr v2, v3
-
-    add-float/2addr v2, v10
-
-    aget-object v4, v1, v8
-
-    aget v10, v4, v5
-
-    mul-float/2addr v10, v6
-
-    aget v11, v4, v8
-
-    mul-float/2addr v11, v9
-
-    add-float/2addr v11, v10
-
-    aget v4, v4, v7
-
-    mul-float/2addr v4, v3
-
-    add-float/2addr v4, v11
-
-    aget-object v1, v1, v7
-
-    aget v10, v1, v5
-
-    mul-float/2addr v6, v10
-
-    aget v10, v1, v8
-
-    mul-float/2addr v9, v10
-
-    add-float/2addr v9, v6
-
-    aget v1, v1, v7
-
-    mul-float/2addr v3, v1
-
-    add-float/2addr v3, v9
-
-    iget-object v1, v0, Lrng;->g:[F
-
-    iget v6, v0, Lrng;->i:F
-
-    iget v9, v0, Lrng;->d:F
-
-    iget v10, v0, Lrng;->a:F
-
-    aget v5, v1, v5
-
-    mul-float/2addr v5, v2
-
-    aget v2, v1, v8
-
-    mul-float/2addr v2, v4
-
-    aget v1, v1, v7
-
-    mul-float/2addr v1, v3
-
-    iget v3, v0, Lrng;->h:F
-
-    invoke-static {v5}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
-
-    mul-float/2addr v4, v3
-
-    float-to-double v7, v4
-
-    const-wide/high16 v11, 0x4059000000000000L    # 100.0
-
-    div-double/2addr v7, v11
-
-    const-wide v13, 0x3fdae147ae147ae1L    # 0.42
-
-    invoke-static {v7, v8, v13, v14}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v4, v7
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v7
-
-    mul-float/2addr v7, v3
-
-    float-to-double v7, v7
-
-    div-double/2addr v7, v11
-
-    invoke-static {v7, v8, v13, v14}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v7, v7
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
-
-    move-result v8
-
-    mul-float/2addr v8, v3
-
-    move-wide v15, v11
-
-    float-to-double v11, v8
-
-    div-double/2addr v11, v15
-
-    invoke-static {v11, v12, v13, v14}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v11
-
-    double-to-float v3, v11
-
-    invoke-static {v5}, Ljava/lang/Math;->signum(F)F
-
-    move-result v5
-
-    const/high16 v8, 0x43c80000    # 400.0f
-
-    mul-float/2addr v5, v8
-
-    mul-float/2addr v5, v4
-
-    const v11, 0x41d90a3d    # 27.13f
-
-    add-float/2addr v4, v11
-
-    div-float/2addr v5, v4
-
-    invoke-static {v2}, Ljava/lang/Math;->signum(F)F
-
-    move-result v2
-
-    mul-float/2addr v2, v8
-
-    mul-float/2addr v2, v7
-
-    add-float/2addr v7, v11
-
-    div-float/2addr v2, v7
-
-    invoke-static {v1}, Ljava/lang/Math;->signum(F)F
-
-    move-result v1
-
-    mul-float/2addr v1, v8
-
-    mul-float/2addr v1, v3
-
-    add-float/2addr v3, v11
-
-    div-float/2addr v1, v3
-
-    const-wide/high16 v3, 0x4026000000000000L    # 11.0
-
-    float-to-double v7, v5
-
-    mul-double/2addr v7, v3
-
-    const-wide/high16 v3, -0x3fd8000000000000L    # -12.0
-
-    float-to-double v11, v2
-
-    mul-double/2addr v11, v3
-
-    add-double/2addr v11, v7
-
-    float-to-double v3, v1
-
-    add-double/2addr v11, v3
-
-    double-to-float v7, v11
-
-    const/high16 v8, 0x41300000    # 11.0f
-
-    div-float/2addr v7, v8
-
-    add-float v8, v5, v2
-
-    float-to-double v11, v8
-
-    const-wide/high16 v13, 0x4000000000000000L    # 2.0
-
-    mul-double/2addr v3, v13
-
-    sub-double/2addr v11, v3
-
-    double-to-float v3, v11
-
-    const/high16 v4, 0x41100000    # 9.0f
-
-    div-float/2addr v3, v4
-
-    const/high16 v4, 0x41a00000    # 20.0f
-
-    mul-float v8, v5, v4
-
-    mul-float/2addr v2, v4
-
-    add-float/2addr v8, v2
-
-    const/high16 v11, 0x41a80000    # 21.0f
-
-    mul-float/2addr v11, v1
-
-    add-float/2addr v11, v8
-
-    div-float/2addr v11, v4
-
-    const/high16 v8, 0x42200000    # 40.0f
-
-    mul-float/2addr v5, v8
-
-    add-float/2addr v5, v2
-
-    add-float/2addr v5, v1
-
-    div-float/2addr v5, v4
-
-    float-to-double v1, v3
-
-    move-wide/from16 v17, v13
-
-    float-to-double v13, v7
-
-    invoke-static {v1, v2, v13, v14}, Ljava/lang/Math;->atan2(DD)D
-
-    move-result-wide v1
-
-    double-to-float v1, v1
-
-    const/high16 v2, 0x43340000    # 180.0f
-
-    mul-float/2addr v1, v2
-
-    const v4, 0x40490fdb    # (float)Math.PI
-
-    div-float/2addr v1, v4
-
-    const/4 v8, 0x0
-
-    cmpg-float v8, v1, v8
-
-    const/high16 v12, 0x43b40000    # 360.0f
-
-    if-gez v8, :cond_0
-
-    add-float/2addr v1, v12
-
-    goto :goto_0
-
-    :cond_0
-    cmpl-float v8, v1, v12
-
-    if-ltz v8, :cond_1
-
-    sub-float/2addr v1, v12
-
-    :cond_1
-    :goto_0
-    mul-float/2addr v4, v1
-
-    div-float/2addr v4, v2
-
-    iget v2, v0, Lrng;->b:F
-
-    mul-float/2addr v5, v2
-
-    div-float/2addr v5, v10
-
-    float-to-double v13, v5
-
-    iget v2, v0, Lrng;->j:F
-
-    mul-float/2addr v2, v9
-
-    move/from16 p0, v3
-
-    float-to-double v2, v2
-
-    invoke-static {v13, v14, v2, v3}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v2
-
-    double-to-float v2, v2
-
-    const/high16 v3, 0x42c80000    # 100.0f
-
-    mul-float/2addr v2, v3
-
-    div-float v3, v2, v3
-
-    float-to-double v13, v3
-
-    invoke-static {v13, v14}, Ljava/lang/Math;->sqrt(D)D
-
-    const/high16 v3, 0x40800000    # 4.0f
-
-    add-float/2addr v10, v3
-
-    float-to-double v13, v1
-
-    const-wide v19, 0x403423d70a3d70a4L    # 20.14
-
-    cmpg-double v3, v13, v19
-
-    if-gez v3, :cond_2
-
-    add-float/2addr v12, v1
-
-    goto :goto_1
-
-    :cond_2
-    move v12, v1
-
-    :goto_1
-    float-to-double v12, v12
-
-    const-wide v19, 0x400921fb54442d18L    # Math.PI
-
-    mul-double v12, v12, v19
-
-    const-wide v19, 0x4066800000000000L    # 180.0
-
-    div-double v12, v12, v19
-
-    add-double v12, v12, v17
-
-    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v12
-
-    const-wide v17, 0x400e666666666666L    # 3.8
-
-    add-double v12, v12, v17
-
-    double-to-float v3, v12
-
-    const/high16 v5, 0x3e800000    # 0.25f
-
-    mul-float/2addr v3, v5
-
-    const v5, 0x45706276
-
-    mul-float/2addr v3, v5
-
-    iget v5, v0, Lrng;->e:F
-
-    mul-float/2addr v3, v5
-
-    iget v5, v0, Lrng;->c:F
-
-    mul-float/2addr v3, v5
-
-    mul-float/2addr v7, v7
-
-    mul-float v5, p0, p0
-
-    add-float/2addr v5, v7
-
-    float-to-double v7, v5
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v7
-
-    double-to-float v5, v7
-
-    mul-float/2addr v3, v5
-
-    const v5, 0x3e9c28f6    # 0.305f
-
-    add-float/2addr v11, v5
-
-    div-float/2addr v3, v11
-
-    iget v0, v0, Lrng;->f:F
-
-    float-to-double v7, v0
-
-    const-wide v11, 0x3fd28f5c28f5c28fL    # 0.29
-
-    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    const-wide v11, 0x3ffa3d70a3d70a3dL    # 1.64
-
-    sub-double/2addr v11, v7
-
-    const-wide v7, 0x3fe75c28f5c28f5cL    # 0.73
-
-    invoke-static {v11, v12, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v0, v7
-
-    float-to-double v7, v3
-
-    const-wide v11, 0x3feccccccccccccdL    # 0.9
-
-    invoke-static {v7, v8, v11, v12}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v3, v7
-
-    mul-float/2addr v0, v3
-
-    float-to-double v7, v2
-
-    div-double/2addr v7, v15
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v7
-
-    double-to-float v3, v7
-
-    mul-float v21, v0, v3
-
-    mul-float v6, v6, v21
-
-    mul-float/2addr v0, v9
-
-    div-float/2addr v0, v10
-
-    float-to-double v7, v0
-
-    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
-
-    const v0, 0x3fd9999a    # 1.7f
-
-    mul-float/2addr v0, v2
-
-    const v3, 0x3be56042    # 0.007f
-
-    mul-float/2addr v3, v2
-
-    const/high16 v5, 0x3f800000    # 1.0f
-
-    add-float/2addr v3, v5
-
-    div-float v23, v0, v3
-
-    const v0, 0x3cbac711    # 0.0228f
-
-    mul-float/2addr v6, v0
-
-    add-float/2addr v6, v5
-
-    float-to-double v5, v6
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->log(D)D
-
-    move-result-wide v5
-
-    double-to-float v0, v5
-
-    const v3, 0x422f7048
-
-    mul-float/2addr v0, v3
-
-    float-to-double v3, v4
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v5
-
-    double-to-float v5, v5
-
-    mul-float v24, v0, v5
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v3
-
-    double-to-float v3, v3
-
-    mul-float v25, v0, v3
-
-    new-instance v19, Lvv1;
-
-    move/from16 v20, v1
-
-    move/from16 v22, v2
-
-    invoke-direct/range {v19 .. v25}, Lvv1;-><init>(FFFFFF)V
-
-    return-object v19
-.end method
-
-.method public static b(FFF)Lvv1;
-    .locals 12
-
-    sget-object v0, Lrng;->k:Lrng;
-
-    iget v1, v0, Lrng;->d:F
-
-    float-to-double v1, p0
-
-    const-wide/high16 v3, 0x4059000000000000L    # 100.0
-
-    div-double/2addr v1, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
-
-    iget v3, v0, Lrng;->a:F
-
-    const/high16 v4, 0x40800000    # 4.0f
-
-    add-float/2addr v3, v4
-
-    iget v4, v0, Lrng;->i:F
-
-    mul-float/2addr v4, p1
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v1
-
-    double-to-float v1, v1
-
-    div-float v1, p1, v1
-
-    iget v0, v0, Lrng;->d:F
-
-    mul-float/2addr v1, v0
-
-    div-float/2addr v1, v3
-
-    float-to-double v0, v1
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    const v0, 0x40490fdb    # (float)Math.PI
-
-    mul-float/2addr v0, p2
-
-    const/high16 v1, 0x43340000    # 180.0f
-
-    div-float/2addr v0, v1
-
-    const v1, 0x3fd9999a    # 1.7f
-
-    mul-float/2addr v1, p0
-
-    const v2, 0x3be56042    # 0.007f
-
-    mul-float/2addr v2, p0
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    add-float/2addr v2, v3
-
-    div-float v9, v1, v2
-
-    const-wide v1, 0x3f9758e219652bd4L    # 0.0228
-
-    float-to-double v3, v4
-
-    mul-double/2addr v3, v1
-
-    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr v3, v1
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->log(D)D
-
-    move-result-wide v1
-
-    double-to-float v1, v1
-
-    const v2, 0x422f7048
-
-    mul-float/2addr v1, v2
-
-    float-to-double v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v4
-
-    double-to-float v0, v4
-
-    mul-float v10, v1, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v2
-
-    double-to-float v0, v2
-
-    mul-float v11, v1, v0
-
-    new-instance v5, Lvv1;
-
-    move v8, p0
-
-    move v7, p1
-
-    move v6, p2
-
-    invoke-direct/range {v5 .. v11}, Lvv1;-><init>(FFFFFF)V
-
-    return-object v5
+    return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lrng;)I
-    .locals 19
+.method public final a(Lwy3;)Ljava/lang/Object;
+    .locals 8
 
-    move-object/from16 v0, p0
+    instance-of v0, p1, Ltv1;
 
-    move-object/from16 v1, p1
+    if-eqz v0, :cond_0
 
-    iget v2, v0, Lvv1;->b:F
+    move-object v0, p1
 
-    float-to-double v3, v2
+    check-cast v0, Ltv1;
 
-    const-wide/16 v5, 0x0
+    iget v1, v0, Ltv1;->Z:I
 
-    cmpl-double v3, v3, v5
+    const/high16 v2, -0x80000000
 
-    const-wide/high16 v7, 0x4059000000000000L    # 100.0
+    and-int v3, v1, v2
 
-    iget v4, v0, Lvv1;->c:F
+    if-eqz v3, :cond_0
 
-    if-eqz v3, :cond_1
+    sub-int/2addr v1, v2
 
-    float-to-double v9, v4
-
-    cmpl-double v3, v9, v5
-
-    if-nez v3, :cond_0
+    iput v1, v0, Ltv1;->Z:I
 
     goto :goto_0
 
     :cond_0
-    div-double/2addr v9, v7
+    new-instance v0, Ltv1;
 
-    invoke-static {v9, v10}, Ljava/lang/Math;->sqrt(D)D
+    invoke-direct {v0, p0, p1}, Ltv1;-><init>(Lvv1;Lwy3;)V
 
-    move-result-wide v9
+    :goto_0
+    iget-object p1, v0, Ltv1;->X:Ljava/lang/Object;
 
-    double-to-float v3, v9
+    iget v1, v0, Ltv1;->Z:I
 
-    div-float/2addr v2, v3
+    const/4 v2, 0x1
 
-    goto :goto_1
+    const-string v3, "CallsCredRepositoryTag"
+
+    if-eqz v1, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v0, v0, Ltv1;->o:Lvv1;
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto/16 :goto_1
 
     :cond_1
-    :goto_0
-    const/4 v2, 0x0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_1
-    float-to-double v2, v2
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget v9, v1, Lrng;->f:F
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v10, v1, Lrng;->h:F
+    throw p1
 
-    float-to-double v11, v9
+    :cond_2
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-wide v13, 0x3fd28f5c28f5c28fL    # 0.29
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
+    move-result-object p1
 
-    move-result-wide v11
+    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
 
-    const-wide v13, 0x3ffa3d70a3d70a3dL    # 1.64
+    move-result p1
 
-    sub-double/2addr v13, v11
+    if-eqz p1, :cond_3
 
-    const-wide v11, 0x3fe75c28f5c28f5cL    # 0.73
+    iget-object p1, p0, Lvv1;->d:Lyn7;
 
-    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-wide v11
+    move-result-object p1
 
-    div-double/2addr v2, v11
+    check-cast p1, Lzga;
 
-    const-wide v11, 0x3ff1c71c71c71c72L    # 1.1111111111111112
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v3, v11, v12}, Ljava/lang/Math;->pow(DD)D
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-wide v2
+    const-string v1, "Ok token was called from the main thread."
 
-    double-to-float v2, v2
+    invoke-direct {p1, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v3, v0, Lvv1;->a:F
+    invoke-static {v3, v1, p1}, Lyt3;->L(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const v9, 0x40490fdb    # (float)Math.PI
+    :cond_3
+    iget-object p1, p0, Lvv1;->b:Lyn7;
 
-    mul-float/2addr v3, v9
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    const/high16 v9, 0x43340000    # 180.0f
+    move-result-object v1
 
-    div-float/2addr v3, v9
+    check-cast v1, Lm63;
 
-    float-to-double v11, v3
+    check-cast v1, Lfhd;
 
-    const-wide/high16 v13, 0x4000000000000000L    # 2.0
+    invoke-virtual {v1}, Lfhd;->j()J
 
-    add-double/2addr v13, v11
+    move-result-wide v4
 
-    invoke-static {v13, v14}, Ljava/lang/Math;->cos(D)D
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-wide v13
+    move-result-object p1
 
-    const-wide v15, 0x400e666666666666L    # 3.8
+    check-cast p1, Lm63;
 
-    add-double/2addr v13, v15
+    check-cast p1, Lfhd;
 
-    double-to-float v3, v13
-
-    const/high16 v9, 0x3e800000    # 0.25f
-
-    mul-float/2addr v3, v9
-
-    iget v9, v1, Lrng;->a:F
-
-    float-to-double v13, v4
-
-    div-double/2addr v13, v7
-
-    iget v4, v1, Lrng;->d:F
-
-    float-to-double v7, v4
-
-    const-wide/high16 v15, 0x3ff0000000000000L    # 1.0
-
-    div-double/2addr v15, v7
-
-    iget v4, v1, Lrng;->j:F
-
-    float-to-double v7, v4
-
-    div-double v7, v15, v7
-
-    invoke-static {v13, v14, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v7
-
-    double-to-float v4, v7
-
-    mul-float/2addr v9, v4
-
-    const v4, 0x45706276
-
-    mul-float/2addr v3, v4
-
-    iget v4, v1, Lrng;->e:F
-
-    mul-float/2addr v3, v4
-
-    iget v4, v1, Lrng;->c:F
-
-    mul-float/2addr v3, v4
-
-    iget v4, v1, Lrng;->b:F
-
-    div-float/2addr v9, v4
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v7
-
-    double-to-float v4, v7
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v7
-
-    double-to-float v7, v7
-
-    const v8, 0x3e9c28f6    # 0.305f
-
-    add-float/2addr v8, v9
-
-    const/high16 v11, 0x41b80000    # 23.0f
-
-    mul-float/2addr v8, v11
-
-    mul-float/2addr v8, v2
-
-    mul-float/2addr v3, v11
-
-    const/high16 v11, 0x41300000    # 11.0f
-
-    mul-float/2addr v11, v2
-
-    mul-float/2addr v11, v7
-
-    add-float/2addr v11, v3
-
-    const/high16 v3, 0x42d80000    # 108.0f
-
-    mul-float/2addr v2, v3
-
-    mul-float/2addr v2, v4
-
-    add-float/2addr v2, v11
-
-    div-float/2addr v8, v2
-
-    mul-float/2addr v7, v8
-
-    mul-float/2addr v8, v4
-
-    const/high16 v2, 0x43e60000    # 460.0f
-
-    mul-float/2addr v9, v2
-
-    const v2, 0x43e18000    # 451.0f
-
-    mul-float/2addr v2, v7
-
-    add-float/2addr v2, v9
-
-    const/high16 v3, 0x43900000    # 288.0f
-
-    mul-float/2addr v3, v8
-
-    add-float/2addr v3, v2
-
-    const v2, 0x44af6000    # 1403.0f
-
-    div-float/2addr v3, v2
-
-    const v4, 0x445ec000    # 891.0f
-
-    mul-float/2addr v4, v7
-
-    sub-float v4, v9, v4
-
-    const v11, 0x43828000    # 261.0f
-
-    mul-float/2addr v11, v8
-
-    sub-float/2addr v4, v11
-
-    div-float/2addr v4, v2
-
-    const/high16 v11, 0x435c0000    # 220.0f
-
-    mul-float/2addr v7, v11
-
-    sub-float/2addr v9, v7
-
-    const v7, 0x45c4e000    # 6300.0f
-
-    mul-float/2addr v8, v7
-
-    sub-float/2addr v9, v8
-
-    div-float/2addr v9, v2
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v7, v2
-
-    const-wide v11, 0x403b2147ae147ae1L    # 27.13
-
-    mul-double/2addr v7, v11
-
-    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v13, v2
-
-    const-wide/high16 v15, 0x4079000000000000L    # 400.0
-
-    sub-double v13, v15, v13
-
-    div-double/2addr v7, v13
-
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->max(DD)D
-
-    move-result-wide v7
-
-    double-to-float v2, v7
-
-    invoke-static {v3}, Ljava/lang/Math;->signum(F)F
-
-    move-result v3
-
-    const/high16 v7, 0x42c80000    # 100.0f
-
-    div-float/2addr v7, v10
-
-    mul-float/2addr v3, v7
-
-    float-to-double v13, v2
-
-    move-wide/from16 v17, v11
-
-    const-wide v11, 0x40030c30c30c30c3L    # 2.380952380952381
-
-    invoke-static {v13, v14, v11, v12}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v13
-
-    double-to-float v2, v13
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v13, v2
-
-    mul-double v13, v13, v17
-
-    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v11, v2
-
-    sub-double v10, v15, v11
-
-    div-double/2addr v13, v10
-
-    invoke-static {v5, v6, v13, v14}, Ljava/lang/Math;->max(DD)D
-
-    move-result-wide v10
-
-    double-to-float v2, v10
-
-    invoke-static {v4}, Ljava/lang/Math;->signum(F)F
-
-    move-result v4
-
-    mul-float/2addr v4, v7
-
-    float-to-double v10, v2
-
-    const-wide v12, 0x40030c30c30c30c3L    # 2.380952380952381
-
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v10
-
-    double-to-float v2, v10
-
-    mul-float/2addr v4, v2
-
-    invoke-static {v9}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v10, v2
-
-    mul-double v10, v10, v17
-
-    invoke-static {v9}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    float-to-double v12, v2
-
-    sub-double/2addr v15, v12
-
-    div-double/2addr v10, v15
-
-    invoke-static {v5, v6, v10, v11}, Ljava/lang/Math;->max(DD)D
-
-    move-result-wide v5
-
-    double-to-float v2, v5
-
-    invoke-static {v9}, Ljava/lang/Math;->signum(F)F
-
-    move-result v5
-
-    mul-float/2addr v5, v7
-
-    float-to-double v6, v2
-
-    const-wide v12, 0x40030c30c30c30c3L    # 2.380952380952381
-
-    invoke-static {v6, v7, v12, v13}, Ljava/lang/Math;->pow(DD)D
+    invoke-virtual {p1}, Lfhd;->q()J
 
     move-result-wide v6
 
-    double-to-float v2, v6
+    cmp-long p1, v4, v6
 
-    mul-float/2addr v5, v2
+    if-ltz p1, :cond_6
 
-    iget-object v1, v1, Lrng;->g:[F
+    iget-object p1, p0, Lvv1;->c:Lyn7;
 
-    const/4 v2, 0x0
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    aget v6, v1, v2
+    move-result-object p1
 
-    div-float/2addr v3, v6
+    check-cast p1, Lxha;
 
-    const/4 v6, 0x1
+    iput-object p0, v0, Ltv1;->o:Lvv1;
 
-    aget v7, v1, v6
+    iput v2, v0, Ltv1;->Z:I
 
-    div-float/2addr v4, v7
+    iget-object v1, p1, Lxha;->a:Lyn7;
 
-    const/4 v7, 0x2
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    aget v1, v1, v7
+    move-result-object v1
 
-    div-float/2addr v5, v1
+    check-cast v1, Ld9f;
 
-    sget-object v1, Lnu3;->b:[[F
+    new-instance v2, Lun9;
 
-    aget-object v8, v1, v2
+    iget-object v4, p1, Lxha;->c:Lyn7;
 
-    aget v9, v8, v2
+    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
 
-    mul-float/2addr v9, v3
+    move-result-object v4
 
-    aget v10, v8, v6
+    check-cast v4, Lcfa;
 
-    mul-float/2addr v10, v4
+    invoke-virtual {v4}, Lcfa;->f()Ljava/lang/String;
 
-    add-float/2addr v10, v9
+    move-result-object v4
 
-    aget v8, v8, v7
+    if-eqz v4, :cond_5
 
-    mul-float/2addr v8, v5
+    iget-object p1, p1, Lxha;->b:Lyn7;
 
-    add-float/2addr v8, v10
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    aget-object v9, v1, v6
+    move-result-object p1
 
-    aget v10, v9, v2
+    check-cast p1, Lm63;
 
-    mul-float/2addr v10, v3
+    check-cast p1, Lfhd;
 
-    aget v11, v9, v6
+    invoke-virtual {p1}, Lfhd;->s()J
 
-    mul-float/2addr v11, v4
+    move-result-wide v5
 
-    add-float/2addr v11, v10
+    invoke-direct {v2, v4, v5, v6}, Lun9;-><init>(Ljava/lang/String;J)V
 
-    aget v9, v9, v7
+    invoke-virtual {v1, v2, v0}, Ld9f;->e(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    mul-float/2addr v9, v5
+    move-result-object p1
 
-    add-float/2addr v9, v11
+    sget-object v0, Lo24;->a:Lo24;
 
-    aget-object v1, v1, v7
+    if-ne p1, v0, :cond_4
 
-    aget v2, v1, v2
+    return-object v0
 
-    mul-float/2addr v3, v2
+    :cond_4
+    move-object v0, p0
 
-    aget v2, v1, v6
+    :goto_1
+    check-cast p1, Lwca;
 
-    mul-float/2addr v4, v2
+    iget-object v1, v0, Lvv1;->b:Lyn7;
 
-    add-float/2addr v4, v3
+    invoke-interface {v1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    aget v1, v1, v7
+    move-result-object v1
 
-    mul-float/2addr v5, v1
+    check-cast v1, Lm63;
 
-    add-float/2addr v5, v4
+    iget-object v2, p1, Lwca;->c:Ljava/lang/String;
 
-    float-to-double v10, v8
+    check-cast v1, Lfhd;
 
-    float-to-double v12, v9
+    iget-object v4, v1, Lfhd;->J:Lzrd;
 
-    float-to-double v14, v5
+    sget-object v5, Lfhd;->h0:[Lpl7;
 
-    invoke-static/range {v10 .. v15}, Lz93;->b(DDD)I
+    const/16 v6, 0x1a
 
-    move-result v1
+    aget-object v6, v5, v6
 
-    return v1
+    invoke-virtual {v4, v1, v6, v2}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    iget-object v0, v0, Lvv1;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lm63;
+
+    iget-wide v1, p1, Lwca;->X:J
+
+    check-cast v0, Lfhd;
+
+    iget-object p1, v0, Lfhd;->L:Lzrd;
+
+    const/16 v4, 0x1c
+
+    aget-object v4, v5, v4
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v4, v1}, Lzrd;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    const-string p1, "Ok token updated."
+
+    invoke-static {v3, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Ok token will be expired in "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v3, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_2
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

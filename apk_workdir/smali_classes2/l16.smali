@@ -1,87 +1,82 @@
 .class public final Ll16;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lo16;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lr16;
+
+.field public final synthetic Y:J
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lr16;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll16;->X:Lr16;
 
-    iput-boolean p1, p0, Ll16;->a:Z
+    iput-wide p2, p0, Ll16;->Y:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ln24;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Ll16;
+    invoke-virtual {p0, p1, p2}, Ll16;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Ll16;
 
-    iget-boolean v0, p0, Ll16;->a:Z
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-boolean p1, p1, Ll16;->a:Z
+    invoke-virtual {p1, p2}, Ll16;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Ll16;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    const-string v0, "Close(afterCreate="
+    new-instance p1, Ll16;
 
-    const-string v1, ")"
+    iget-object v0, p0, Ll16;->X:Lr16;
 
-    iget-boolean v2, p0, Ll16;->a:Z
+    iget-wide v1, p0, Ll16;->Y:J
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-direct {p1, v0, v1, v2, p2}, Ll16;-><init>(Lr16;JLkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    return-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    sget-object p1, Lr16;->G0:[Lpl7;
+
+    iget-object p1, p0, Ll16;->X:Lr16;
+
+    iget-wide v0, p0, Ll16;->Y:J
+
+    invoke-virtual {p1, v0, v1}, Lr16;->t(J)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

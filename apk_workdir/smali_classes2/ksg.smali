@@ -1,19 +1,19 @@
 .class public final Lksg;
-.super Losg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lvsg;
+# virtual methods
+.method public final serializer()Lql7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lql7;"
+        }
+    .end annotation
 
+    sget-object v0, Ljsg;->a:Ljsg;
 
-# direct methods
-.method public constructor <init>(Lvsg;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
-
-    iput-object p1, p0, Lksg;->a:Lvsg;
-
-    return-void
+    return-object v0
 .end method

@@ -3,45 +3,19 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static final a(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/Size;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putSize(Ljava/lang/String;Landroid/util/Size;)V
 
-    sget-object v1, Ltu0;->a:Ltu0;
+    return-void
+.end method
 
-    const/16 v2, 0x1e
+.method public static final b(Landroid/os/Bundle;Ljava/lang/String;Landroid/util/SizeF;)V
+    .locals 0
 
-    if-lt v0, v2, :cond_0
+    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->putSizeF(Ljava/lang/String;Landroid/util/SizeF;)V
 
-    invoke-virtual {v1, v2}, Ltu0;->a(I)I
-
-    :cond_0
-    if-lt v0, v2, :cond_1
-
-    const/16 v3, 0x1f
-
-    invoke-virtual {v1, v3}, Ltu0;->a(I)I
-
-    :cond_1
-    if-lt v0, v2, :cond_2
-
-    const/16 v3, 0x21
-
-    invoke-virtual {v1, v3}, Ltu0;->a(I)I
-
-    :cond_2
-    if-lt v0, v2, :cond_3
-
-    const v0, 0xf4240
-
-    invoke-virtual {v1, v0}, Ltu0;->a(I)I
-
-    :cond_3
     return-void
 .end method

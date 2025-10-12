@@ -13,7 +13,7 @@
         "",
         "",
         "millis",
-        "Loyf;",
+        "Laxf;",
         "setTimeout",
         "(J)V",
         "",

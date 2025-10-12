@@ -4,115 +4,431 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
 
-.field public b:I
+.field public final b:Ljava/lang/Object;
 
-.field public c:Ljava/lang/Long;
+.field public volatile c:I
 
-.field public d:Ljava/lang/Long;
+.field public d:Lfs;
+
+.field public e:I
+
+.field public f:Ljava/io/File;
+
+.field public g:I
+
+.field public final h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public final i:J
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Lw28;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method static constructor <clinit>()V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>(Lw28;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lw28;->a:I
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iget v0, p1, Lw28;->b:I
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iput v0, p0, Lw28;->b:I
+    move-result-object p1
 
-    .line 4
-    iget-object v0, p1, Lw28;->c:Ljava/lang/Long;
+    if-eqz p1, :cond_0
 
-    iput-object v0, p0, Lw28;->c:Ljava/lang/Long;
+    iput-object p1, p0, Lw28;->a:Landroid/content/Context;
 
-    .line 5
-    iget-object p1, p1, Lw28;->d:Ljava/lang/Long;
+    new-instance p1, Ljava/lang/Object;
 
-    iput-object p1, p0, Lw28;->d:Ljava/lang/Long;
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw28;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lw28;->c:I
+
+    iput p1, p0, Lw28;->e:I
+
+    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object p1, p0, Lw28;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lw28;->i:J
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 2
+.method public final a(I)V
+    .locals 10
 
-    iget v0, p0, Lw28;->a:I
+    iget v0, p0, Lw28;->c:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p1}, Lsw1;->b(II)I
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-ltz v0, :cond_0
 
-    return-object v0
+    return-void
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_0
+    iget-object v0, p0, Lw28;->b:Ljava/lang/Object;
 
-    const-string v1, "LocationProviderRequest{priority="
+    monitor-enter v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget v1, p0, Lw28;->c:I
 
-    iget v1, p0, Lw28;->b:I
+    invoke-static {v1, p1}, Lsw1;->b(II)I
 
-    invoke-static {v1}, Lfl7;->r(I)Ljava/lang/String;
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-ltz v2, :cond_1
+
+    monitor-exit v0
+
+    return-void
+
+    :cond_1
+    :try_start_1
+    iget-object v2, p0, Lw28;->a:Landroid/content/Context;
+
+    invoke-static {}, Lbbh;->o()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_2
+
+    const-string v3, "tracer"
+
+    goto :goto_0
+
+    :cond_2
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v6, "tracer-"
+
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v6, 0x3a
+
+    const/16 v7, 0x2d
+
+    invoke-static {v3, v6, v7, v5}, Lxwe;->m0(Ljava/lang/String;CCZ)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_0
+    new-instance v4, Ljava/io/File;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-direct {v4, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    const-string v2, "logs"
+
+    invoke-static {v4, v2}, Lzq5;->R(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    const-string v3, "a.log"
+
+    invoke-static {v2, v3}, Lzq5;->R(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v3
+
+    const-string v4, "b.log"
+
+    invoke-static {v2, v4}, Lzq5;->R(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v4
+
+    const-string v6, "stash-a.log"
+
+    invoke-static {v2, v6}, Lzq5;->R(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v6
+
+    const-string v7, "stash-b.log"
+
+    invoke-static {v2, v7}, Lzq5;->R(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-static {v1}, Lsw1;->u(I)I
+
+    move-result v1
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x1
+
+    const/4 v9, 0x2
+
+    if-eqz v1, :cond_8
+
+    if-eq v1, v8, :cond_5
+
+    if-ne v1, v9, :cond_4
+
+    sget-object v1, Lv28;->$EnumSwitchMapping$1:[I
+
+    invoke-static {p1}, Lsw1;->u(I)I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    if-ne v1, v7, :cond_3
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lw28;->d:Lfs;
+
+    goto/16 :goto_3
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_4
+
+    :cond_3
+    new-instance p1, Ljava/lang/AssertionError;
+
+    const-string v1, "Unreachable code"
+
+    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/AssertionError;
+
+    const-string v1, "Unreachable code"
+
+    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :cond_5
+    invoke-static {p1}, Lsw1;->u(I)I
+
+    move-result v1
+
+    if-eq v1, v9, :cond_7
+
+    if-ne v1, v7, :cond_6
+
+    filled-new-array {v6, v2}, [Ljava/io/File;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
 
-    const-string v1, ", interval="
+    goto/16 :goto_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_6
+    new-instance p1, Ljava/lang/AssertionError;
 
-    iget-object v1, p0, Lw28;->c:Ljava/lang/Long;
+    const-string v1, "Unreachable code"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    const-string v1, ", fastestInterval="
+    throw p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_7
+    filled-new-array {v6, v2}, [Ljava/io/File;
 
-    iget-object v1, p0, Lw28;->d:Ljava/lang/Long;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lku3;->c([Ljava/io/File;)Lfs;
 
-    const/16 v1, 0x7d
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    iput-object v1, p0, Lw28;->d:Lfs;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    filled-new-array {v6, v2}, [Ljava/io/File;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    goto :goto_3
+
+    :cond_8
+    invoke-static {p1}, Lsw1;->u(I)I
+
+    move-result v1
+
+    if-eq v1, v8, :cond_b
+
+    if-eq v1, v9, :cond_a
+
+    if-ne v1, v7, :cond_9
+
+    filled-new-array {v6, v2}, [Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
+
+    filled-new-array {v3, v4}, [Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
+
+    goto :goto_3
+
+    :cond_9
+    new-instance p1, Ljava/lang/AssertionError;
+
+    const-string v1, "Unreachable code"
+
+    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :cond_a
+    filled-new-array {v3, v4}, [Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lku3;->c([Ljava/io/File;)Lfs;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lw28;->d:Lfs;
+
+    filled-new-array {v3, v4}, [Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
+
+    goto :goto_3
+
+    :cond_b
+    filled-new-array {v6, v2}, [Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lku3;->a([Ljava/io/File;)V
+
+    new-instance v1, Ld3b;
+
+    invoke-direct {v1, v3, v6}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v3, Ld3b;
+
+    invoke-direct {v3, v4, v2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, v3}, [Ld3b;
+
+    move-result-object v1
+
+    :goto_1
+    if-ge v5, v9, :cond_d
+
+    aget-object v2, v1, v5
+
+    iget-object v3, v2, Ld3b;->a:Ljava/lang/Object;
+
+    check-cast v3, Ljava/io/File;
+
+    iget-object v2, v2, Ld3b;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/io/File;
+
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
+
+    move-result v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v4, :cond_c
+
+    goto :goto_2
+
+    :cond_c
+    :try_start_2
+    invoke-virtual {v3, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_2
+
+    :catch_0
+    :try_start_3
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    invoke-static {v2}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :goto_2
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_1
+
+    :cond_d
+    :goto_3
+    iput p1, p0, Lw28;->c:I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    monitor-exit v0
+
+    return-void
+
+    :goto_4
+    monitor-exit v0
+
+    throw p1
 .end method

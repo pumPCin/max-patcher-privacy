@@ -3,156 +3,300 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ls76;
+# static fields
+.field public static final E:J
 
-.field public final b:Ljava/lang/String;
+.field public static final F:[Ljava/lang/String;
+
+.field public static final G:J
+
+
+# instance fields
+.field public final A:Ll34;
+
+.field public B:Z
+
+.field public volatile C:Z
+
+.field public D:I
+
+.field public final a:Lwkc;
+
+.field public final b:La39;
+
+.field public final c:[B
+
+.field public final d:Landroid/os/HandlerThread;
+
+.field public final e:Landroid/os/Handler;
+
+.field public f:Lhca;
+
+.field public g:Lac4;
+
+.field public final h:J
+
+.field public i:J
+
+.field public j:Ljava/lang/Integer;
+
+.field public k:Ljava/lang/Integer;
+
+.field public final l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final p:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final q:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final r:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final s:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final t:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final u:Lrgf;
+
+.field public final v:Lrgf;
+
+.field public final w:Lrgf;
+
+.field public final x:Lrgf;
+
+.field public final y:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final z:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public constructor <init>(Ls76;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v1, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0xa
+
+    div-long/2addr v1, v3
+
+    sput-wide v1, Lxbh;->E:J
+
+    const-string v1, "OMX.SEC."
+
+    const-string v2, "c2.android"
+
+    const-string v3, "OMX.google."
+
+    filled-new-array {v3, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Lxbh;->F:[Ljava/lang/String;
+
+    const-wide/16 v1, 0x3
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v0
+
+    sput-wide v0, Lxbh;->G:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwkc;Ljgf;La39;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxbh;->a:Ls76;
+    const/16 v0, 0x2000
 
-    iput-object p2, p0, Lxbh;->b:Ljava/lang/String;
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lxbh;->c:[B
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "DecoderWrapperControl"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lxbh;->d:Landroid/os/HandlerThread;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lxbh;->f:Lhca;
+
+    const-wide/16 v1, -0x1
+
+    iput-wide v1, p0, Lxbh;->h:J
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Lxbh;->i:J
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->n:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->p:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->q:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->r:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->s:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->t:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Lrgf;
+
+    invoke-direct {v1}, Lrgf;-><init>()V
+
+    iput-object v1, p0, Lxbh;->u:Lrgf;
+
+    new-instance v1, Lrgf;
+
+    invoke-direct {v1}, Lrgf;-><init>()V
+
+    iput-object v1, p0, Lxbh;->v:Lrgf;
+
+    new-instance v1, Lrgf;
+
+    invoke-direct {v1}, Lrgf;-><init>()V
+
+    iput-object v1, p0, Lxbh;->w:Lrgf;
+
+    new-instance v1, Lrgf;
+
+    invoke-direct {v1}, Lrgf;-><init>()V
+
+    iput-object v1, p0, Lxbh;->x:Lrgf;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->y:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v1, p0, Lxbh;->z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-boolean v2, p0, Lxbh;->B:Z
+
+    iput-object p1, p0, Lxbh;->a:Lwkc;
+
+    iput-object p3, p0, Lxbh;->b:La39;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object p3
+
+    invoke-direct {p1, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lxbh;->e:Landroid/os/Handler;
+
+    new-instance p1, Ll34;
+
+    invoke-direct {p1, p2}, Ll34;-><init>(Ljgf;)V
+
+    iput-object p1, p0, Lxbh;->A:Ll34;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 4
 
+    iget-boolean v0, p0, Lxbh;->C:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v0, p0, Lxbh;->C:Z
 
-    return v0
+    iget-object v0, p0, Lxbh;->d:Landroid/os/HandlerThread;
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object v1, p0, Lxbh;->e:Landroid/os/Handler;
 
-    if-eqz p1, :cond_5
+    new-instance v2, Lu7h;
 
-    const-class v2, Lxbh;
+    const/4 v3, 0x3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v2, v3, p0}, Lu7h;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v3
+    const/4 v3, 0x0
 
-    if-eq v2, v3, :cond_1
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    goto :goto_1
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    :cond_1
-    check-cast p1, Lxbh;
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    iget-object v2, p1, Lxbh;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lxbh;->a:Ls76;
-
-    iget-object v3, p0, Lxbh;->a:Ls76;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3, p1}, Ls76;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p1, p0, Lxbh;->b:Ljava/lang/String;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lxbh;->a:Ls76;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ls76;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lxbh;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "YtFile{format="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxbh;->a:Ls76;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", url=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxbh;->b:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

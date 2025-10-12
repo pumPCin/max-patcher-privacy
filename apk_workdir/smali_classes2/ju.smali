@@ -1,221 +1,217 @@
-.class public final synthetic Lju;
-.super Ljava/lang/Object;
+.class public final Lju;
+.super Lxh0;
 .source "SourceFile"
-
-# interfaces
-.implements Lwe3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:J
 
-.field public final synthetic b:Lth2;
+.field public final Y:J
 
-.field public final synthetic c:J
+.field public final Z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lth2;JI)V
+.method public constructor <init>(JIJJI)V
     .locals 0
 
-    iput p4, p0, Lju;->a:I
+    invoke-direct {p0, p1, p2, p3}, Lxh0;-><init>(JI)V
 
-    iput-object p1, p0, Lju;->b:Lth2;
+    iput-wide p4, p0, Lju;->X:J
 
-    iput-wide p2, p0, Lju;->c:J
+    iput-wide p6, p0, Lju;->Y:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p8, p0, Lju;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lne3;)V
-    .locals 8
+.method public final f()[B
+    .locals 3
 
-    iget v0, p0, Lju;->a:I
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsMove;-><init>()V
 
-    iget-object v0, p0, Lju;->b:Lth2;
+    iget v1, p0, Lxh0;->o:I
 
-    iget-object v1, v0, Lth2;->b:Lbw6;
+    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
 
-    iget-object v0, v1, Lbw6;->e:Lmc5;
+    move-result v1
 
-    iget-wide v3, p0, Lju;->c:J
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->assetType:I
 
-    invoke-static {v3, v4}, Lmc5;->a(J)Ljava/lang/String;
+    iget-wide v1, p0, Lju;->X:J
 
-    move-result-object v2
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->id:J
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Lnm;->a:J
 
-    const-string v6, "load: "
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->requestId:J
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v1, p0, Lju;->Y:J
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->prevId:J
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v1, p0, Lju;->Z:I
 
-    move-result-object v2
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->position:I
 
-    invoke-virtual {v0, v2}, Lmc5;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Ls59;->toByteArray(Ls59;)[B
 
-    invoke-virtual {v1}, Lbw6;->q()V
+    move-result-object v0
 
-    invoke-virtual {v1}, Lbw6;->d()Lfv6;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final getType()Lv8b;
+    .locals 1
 
-    invoke-interface {v2}, Lfv6;->j()Ljava/util/List;
+    sget-object v0, Lv8b;->T0:Lv8b;
 
-    move-result-object v2
+    return-object v0
+.end method
 
-    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+.method public final i()Lv7f;
+    .locals 9
 
-    move-result v2
+    new-instance v0, Lzt;
 
-    if-nez v2, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v2, v1, Lbw6;->b:Lj94;
+    const/4 v2, 0x4
 
-    const/4 v6, 0x1
+    invoke-direct {v0, v1, v2}, Lzt;-><init>(Lcza;I)V
 
-    const/4 v7, 0x0
+    iget v1, p0, Lxh0;->o:I
 
-    const/4 v5, 0x1
+    if-eqz v1, :cond_4
 
-    invoke-virtual/range {v1 .. v7}, Lbw6;->j(Lj94;JZZZ)V
+    iget-wide v2, p0, Lju;->X:J
 
-    iget-object v2, v1, Lbw6;->c:Lj94;
+    const-wide/16 v4, 0x0
 
-    invoke-virtual/range {v1 .. v6}, Lbw6;->k(Lj94;JZZ)V
+    cmp-long v6, v2, v4
+
+    if-eqz v6, :cond_3
+
+    iget-wide v6, p0, Lju;->Y:J
+
+    cmp-long v4, v6, v4
+
+    iget v5, p0, Lju;->Z:I
+
+    if-gtz v4, :cond_1
+
+    if-ltz v5, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, v3, v4}, Lbw6;->l(J)V
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    :goto_0
-    invoke-virtual {v1}, Lbw6;->e()Ljava/util/ArrayList;
+    const-string v1, "prevId or position must be set"
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lo7;->s(Lmc5;Ljava/util/List;)V
-
-    invoke-virtual {p1}, Lne3;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Lne3;->b()V
+    throw v0
 
     :cond_1
-    return-void
+    :goto_0
+    const-string v8, "type"
 
-    :pswitch_0
-    iget-object v0, p0, Lju;->b:Lth2;
-
-    iget-object v1, v0, Lth2;->b:Lbw6;
-
-    iget-object v0, v1, Lbw6;->e:Lmc5;
-
-    iget-wide v2, p0, Lju;->c:J
-
-    invoke-static {v2, v3}, Lmc5;->a(J)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "loadPrev: "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Lmc5;->b(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lbw6;->q()V
-
-    invoke-virtual {v1}, Lbw6;->d()Lfv6;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Lfv6;->j()Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v4
-
-    if-nez v4, :cond_3
-
-    invoke-virtual {v1, v2, v3}, Lbw6;->f(J)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lpih;->z(Ljava/util/List;)Liv6;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v4}, Liv6;->l()J
-
-    move-result-wide v2
-
-    :cond_2
-    move-wide v3, v2
-
-    iget-object v2, v1, Lbw6;->b:Lj94;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v5, 0x1
-
-    invoke-virtual/range {v1 .. v7}, Lbw6;->j(Lj94;JZZZ)V
-
-    iget-object v2, v1, Lbw6;->c:Lj94;
-
-    invoke-virtual/range {v1 .. v6}, Lbw6;->k(Lj94;JZZ)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v1, v2, v3}, Lbw6;->l(J)V
-
-    :goto_1
-    invoke-virtual {v1}, Lbw6;->e()Ljava/util/ArrayList;
+    invoke-static {v1}, Lsw1;->d(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lo7;->s(Lmc5;Ljava/util/List;)V
+    invoke-virtual {v0, v8, v1}, Lv7f;->q(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lne3;->h()Z
+    const-string v1, "id"
 
-    move-result v0
+    invoke-virtual {v0, v2, v3, v1}, Lv7f;->j(JLjava/lang/String;)V
 
-    if-nez v0, :cond_4
+    if-lez v4, :cond_2
 
-    invoke-virtual {p1}, Lne3;->b()V
+    const-string v1, "prevId"
+
+    invoke-virtual {v0, v6, v7, v1}, Lv7f;->j(JLjava/lang/String;)V
+
+    return-object v0
+
+    :cond_2
+    const-string v1, "position"
+
+    invoke-virtual {v0, v5, v1}, Lv7f;->f(ILjava/lang/String;)V
+
+    return-object v0
+
+    :cond_3
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "id must not be null or empty"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :cond_4
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final t(Ly7f;)V
+    .locals 4
+
+    check-cast p1, Lku;
+
+    iget-boolean v0, p1, Lku;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Lku;->o:J
+
+    invoke-virtual {p0, v2, v3}, Lxh0;->u(J)V
+
+    iget-object p1, p0, Lnm;->c:Lom;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Lom;->b()Liv0;
+
+    move-result-object p1
+
+    new-instance v0, Llu;
+
+    iget-wide v1, p0, Lnm;->a:J
+
+    invoke-direct {v0, v1, v2}, Lti0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Liv0;->c(Ljava/lang/Object;)V
+
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    new-instance p1, Li7f;
+
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to move asset"
+
+    invoke-direct {p1, v0, v2, v1}, Li7f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lxh0;->g(Li7f;)V
+
+    return-void
 .end method

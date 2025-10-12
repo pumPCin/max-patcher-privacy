@@ -1,68 +1,178 @@
 .class public final Lp32;
-.super Lcxc;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lle6;
 
 
 # instance fields
-.field public final a:Lzce;
+.field public final synthetic X:I
 
-.field public final b:Lag6;
+.field public synthetic Y:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public constructor <init>(Lzce;Lxe6;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lp32;->X:I
 
-    iput-object p1, p0, Lp32;->a:Lzce;
-
-    check-cast p2, Lag6;
-
-    iput-object p2, p0, Lp32;->b:Lag6;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-static {p1}, Ly6b;->n(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
+    iget v0, p0, Lp32;->X:I
 
-    move-result-object p1
+    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
 
-    if-eqz p1, :cond_1
+    check-cast p2, Llwa;
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    move-result p1
+    packed-switch v0, :pswitch_data_0
 
-    const/4 p2, -0x1
+    new-instance p2, Lp32;
 
-    if-ne p1, p2, :cond_0
+    const/4 v0, 0x3
 
-    goto :goto_0
+    const/4 v1, 0x2
 
-    :cond_0
-    iget-object p2, p0, Lp32;->a:Lzce;
+    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object p2, p2, Lpw7;->o:Lru;
+    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget-object p2, p2, Lru;->f:Ljava/util/List;
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-static {p1, p2}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
+    return-object p1
 
-    check-cast p1, Lww7;
+    :pswitch_0
+    new-instance p2, Lp32;
 
-    iget-object p2, p0, Lp32;->b:Lag6;
+    const/4 v0, 0x3
 
-    invoke-interface {p2, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    :cond_1
-    :goto_0
-    return-void
+    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lp32;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lp32;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lp32;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lp32;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llwa;->getText()Lobf;
+
+    move-result-object v0
+
+    iget v0, v0, Lobf;->e:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llwa;->getText()Lobf;
+
+    move-result-object v0
+
+    iget v0, v0, Lobf;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lp32;->Y:Landroidx/appcompat/widget/AppCompatTextView;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llwa;->getText()Lobf;
+
+    move-result-object v0
+
+    iget v0, v0, Lobf;->i:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

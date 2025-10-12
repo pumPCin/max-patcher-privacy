@@ -1,24 +1,27 @@
-.class public final Ltxc;
+.class public abstract Ltxc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# direct methods
+.method public static a(Ljava/lang/Object;)I
+    .locals 0
 
-# instance fields
-.field public a:F
+    check-cast p0, Landroid/app/RemoteInput;
 
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result p0
 
-    iget v0, p0, Ltxc;->a:F
+    return p0
+.end method
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
+.method public static b(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
+    .locals 0
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Landroid/app/RemoteInput$Builder;->setEditChoicesBeforeSending(I)Landroid/app/RemoteInput$Builder;
 
-    return-object v0
+    move-result-object p0
+
+    return-object p0
 .end method

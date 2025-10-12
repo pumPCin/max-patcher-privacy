@@ -1,25 +1,51 @@
-.class public abstract Lg64;
-.super Ljava/lang/Object;
+.class public final Lg64;
+.super Lq85;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic e:I
+
+
 # direct methods
-.method public static a(Landroid/security/identity/IdentityCredential;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Landroid/security/identity/IdentityCredential;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Landroid/security/identity/IdentityCredential;
+.method public synthetic constructor <init>(Lp85;I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getIdentityCredential()Landroid/security/identity/IdentityCredential;
+    iput p2, p0, Lg64;->e:I
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Lq85;-><init>(Lp85;)V
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public r()V
+    .locals 2
+
+    iget v0, p0, Lg64;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lq85;->b:Lp85;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lp85;->B0:Landroid/view/View$OnLongClickListener;
+
+    iget-object v0, v0, Lp85;->t0:Lcom/google/android/material/internal/CheckableImageButton;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    invoke-static {v0, v1}, Labh;->L(Lcom/google/android/material/internal/CheckableImageButton;Landroid/view/View$OnLongClickListener;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

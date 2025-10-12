@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lul3;
-.implements Lcz3;
+.implements Lll3;
+.implements Lmy3;
 
 
 # annotations
@@ -17,10 +17,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lone/me/chats/picker/AbstractPickerScreen<",
-        "Lo86;",
+        "Ls76;",
         ">;",
-        "Lul3;",
-        "Lcz3;"
+        "Lll3;",
+        "Lmy3;"
     }
 .end annotation
 
@@ -31,9 +31,9 @@
     d2 = {
         "Lone/me/chats/forward/ForwardPickerScreen;",
         "Lone/me/chats/picker/AbstractPickerScreen;",
-        "Lo86;",
-        "Lul3;",
-        "Lcz3;",
+        "Ls76;",
+        "Lll3;",
+        "Lmy3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -59,48 +59,48 @@
 
 
 # static fields
-.field public static final synthetic N0:[Ltm7;
+.field public static final synthetic I0:[Lpl7;
 
-.field public static final O0:Led7;
+.field public static final J0:Lyb7;
 
 
 # instance fields
-.field public final A0:Lu9h;
+.field public final A0:Ltm0;
 
-.field public final B0:Lpr;
+.field public final B0:Lvoc;
 
-.field public final C0:Lpr;
+.field public final C0:Lyn7;
 
-.field public D0:Lve6;
+.field public D0:Lk52;
 
-.field public final E0:Landroid/transition/AutoTransition;
+.field public E0:Ln6d;
 
-.field public final F0:Lan0;
+.field public final F0:Ld86;
 
-.field public final G0:Lmqc;
+.field public G0:Lzl8;
 
-.field public final H0:Lbp7;
+.field public H0:Lojf;
 
-.field public I0:Lf52;
+.field public final t0:La4d;
 
-.field public J0:Li8d;
+.field public final u0:Lyb7;
 
-.field public final K0:Lz86;
+.field public final v0:Lx4f;
 
-.field public L0:Lfn8;
+.field public final w0:Lds;
 
-.field public M0:Lxkf;
+.field public final x0:Lds;
 
-.field public final y0:Lfub;
+.field public y0:Ltd6;
 
-.field public final z0:Led7;
+.field public final z0:Landroid/transition/AutoTransition;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 11
 
-    new-instance v0, Lut9;
+    new-instance v0, Lds9;
 
     const-class v1, Lone/me/chats/forward/ForwardPickerScreen;
 
@@ -108,27 +108,27 @@
 
     const-string v3, "getMessagesIds()[J"
 
-    invoke-direct {v0, v1, v2, v3}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Lxxc;->a:Lyxc;
+    sget-object v2, Lewc;->a:Lfwc;
 
     const-string v3, "attachId"
 
     const-string v4, "getAttachId()J"
 
-    invoke-static {v2, v1, v3, v4}, Lnd5;->g(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lut9;
+    invoke-static {v2, v1, v3, v4}, Lc85;->g(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lds9;
 
     move-result-object v2
 
-    new-instance v3, Lut9;
+    new-instance v3, Lds9;
 
     const-string v4, "isForwardAttach"
 
     const-string v5, "isForwardAttach()Z"
 
-    invoke-direct {v3, v1, v4, v5}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v1, v4, v5}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v4, Lt5c;
+    new-instance v4, Lf4c;
 
     const-string v5, "showExternalSharing"
 
@@ -136,35 +136,35 @@
 
     const/4 v7, 0x0
 
-    invoke-direct {v4, v1, v5, v6, v7}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v1, v5, v6, v7}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lut9;
+    new-instance v5, Lds9;
 
     const-string v6, "isInMultiSelect"
 
     const-string v8, "isInMultiSelect()Z"
 
-    invoke-direct {v5, v1, v6, v8}, Lut9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, v1, v6, v8}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v6, Lt5c;
+    new-instance v6, Lf4c;
 
     const-string v8, "inputView"
 
     const-string v9, "getInputView()Lone/me/sdk/uikit/common/chat/MessageInputView;"
 
-    invoke-direct {v6, v1, v8, v9, v7}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v8, v9, v7}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lt5c;
+    new-instance v8, Lf4c;
 
     const-string v9, "quoteView"
 
     const-string v10, "getQuoteView()Lone/me/sdk/uikit/common/chat/QuoteView;"
 
-    invoke-direct {v8, v1, v9, v10, v7}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v7}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x7
 
-    new-array v1, v1, [Ltm7;
+    new-array v1, v1, [Lpl7;
 
     aput-object v0, v1, v7
 
@@ -192,17 +192,17 @@
 
     aput-object v8, v1, v3
 
-    sput-object v1, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sput-object v1, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
-    new-instance v1, Led7;
+    new-instance v1, Lyb7;
 
-    new-instance v3, Ljr0;
+    new-instance v3, Lcr0;
 
-    invoke-direct {v3, v2, v0, v7}, Ljr0;-><init>(IIZ)V
+    invoke-direct {v3, v2, v0, v7}, Lcr0;-><init>(IIZ)V
 
-    invoke-direct {v1, v2, v3}, Led7;-><init>(ILjr0;)V
+    invoke-direct {v1, v2, v3}, Lyb7;-><init>(ILcr0;)V
 
-    sput-object v1, Lone/me/chats/forward/ForwardPickerScreen;->O0:Led7;
+    sput-object v1, Lone/me/chats/forward/ForwardPickerScreen;->J0:Lyb7;
 
     return-void
 .end method
@@ -210,206 +210,241 @@
 .method public constructor <init>(Landroid/os/Bundle;)V
     .locals 4
 
+    .line 10
     invoke-direct {p0, p1}, Lone/me/chats/picker/AbstractPickerScreen;-><init>(Landroid/os/Bundle;)V
 
-    new-instance p1, Lfub;
+    .line 11
+    new-instance p1, La4d;
 
-    new-instance v0, Lph5;
+    new-instance v0, Lxi5;
 
-    const/16 v1, 0xb
+    const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Lph5;-><init>(I)V
+    invoke-direct {v0, v1}, Lxi5;-><init>(I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x6
 
-    invoke-direct {p1, v0, v1, v2}, Lfub;-><init>(Lve6;Lve6;I)V
+    invoke-direct {p1, v0, v1, v2}, La4d;-><init>(Ltd6;Ltd6;I)V
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->y0:Lfub;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->t0:La4d;
 
-    sget-object p1, Led7;->c:Led7;
+    .line 12
+    sget-object p1, Lyb7;->c:Lyb7;
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->z0:Led7;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->u0:Lyb7;
 
-    new-instance p1, Lu9h;
+    .line 13
+    new-instance p1, Lx4f;
 
-    sget-object v0, Lb86;->a:Lb86;
+    .line 14
+    sget-object v0, Lf76;->a:Lf76;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lr8f;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    .line 15
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    const-class v2, Le7f;
+
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v1
+
+    .line 16
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    const-class v3, Lm13;
+    const-class v3, Lg13;
 
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v2
 
     const/4 v3, 0x4
 
-    invoke-direct {p1, v1, v2, v3}, Lu9h;-><init>(Lbp7;Lbp7;I)V
+    .line 17
+    invoke-direct {p1, v1, v2, v3}, Lx4f;-><init>(Lyn7;Lyn7;I)V
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lu9h;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->v0:Lx4f;
 
+    .line 18
     sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    new-instance v1, Lpr;
+    .line 19
+    new-instance v1, Lds;
 
     const-class v2, Ljava/lang/Boolean;
 
     const-string v3, "is_forward_attach"
 
-    invoke-direct {v1, v2, p1, v3}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v2, p1, v3}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lpr;
+    .line 20
+    iput-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->w0:Lds;
 
-    new-instance v1, Lpr;
+    .line 21
+    new-instance v1, Lds;
 
     const-string v3, "is_in_multiselect"
 
-    invoke-direct {v1, v2, p1, v3}, Lpr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v2, p1, v3}, Lds;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->C0:Lpr;
+    .line 22
+    iput-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->x0:Lds;
 
-    new-instance p1, Lph5;
+    .line 23
+    new-instance p1, Lxi5;
 
-    const/16 v1, 0xc
+    const/16 v1, 0xb
 
-    invoke-direct {p1, v1}, Lph5;-><init>(I)V
+    invoke-direct {p1, v1}, Lxi5;-><init>(I)V
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->D0:Lve6;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->y0:Ltd6;
 
+    .line 24
     new-instance p1, Landroid/transition/AutoTransition;
 
     invoke-direct {p1}, Landroid/transition/AutoTransition;-><init>()V
 
-    sget v1, Llka;->c:I
+    .line 25
+    sget v1, Lbja;->c:I
 
     invoke-virtual {p1, v1}, Landroid/transition/TransitionSet;->addTarget(I)Landroid/transition/TransitionSet;
 
-    sget v2, Loka;->c0:I
+    .line 26
+    sget v2, Leja;->c0:I
 
     invoke-virtual {p1, v2}, Landroid/transition/TransitionSet;->addTarget(I)Landroid/transition/TransitionSet;
 
-    sget v2, Llka;->a:I
+    .line 27
+    sget v2, Lbja;->a:I
 
     invoke-virtual {p1, v2}, Landroid/transition/TransitionSet;->addTarget(I)Landroid/transition/TransitionSet;
 
     const/4 v2, 0x0
 
+    .line 28
     invoke-virtual {p1, v2}, Landroid/transition/TransitionSet;->setOrdering(I)Landroid/transition/TransitionSet;
 
     const-wide/16 v2, 0x64
 
+    .line 29
     invoke-virtual {p1, v2, v3}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
 
-    new-instance v2, Lc6;
+    .line 30
+    new-instance v2, Lj6;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v3, p0}, Lc6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, p0}, Lj6;-><init>(ILjava/lang/Object;)V
 
+    .line 31
     invoke-virtual {p1, v2}, Landroid/transition/Transition;->addListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Landroid/transition/AutoTransition;
+    .line 32
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->z0:Landroid/transition/AutoTransition;
 
-    new-instance p1, Lv86;
+    .line 33
+    new-instance p1, Lz76;
 
     const/4 v2, 0x3
 
-    invoke-direct {p1, p0, v2}, Lv86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {p1, p0, v2}, Lz76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lve6;)Lan0;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->F0:Lan0;
-
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Ltd6;)Ltm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lmqc;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Ltm0;
 
-    new-instance p1, Lph5;
+    .line 34
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
 
-    const/16 v1, 0xd
+    move-result-object p1
 
-    invoke-direct {p1, v1}, Lph5;-><init>(I)V
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lvoc;
 
-    new-instance v1, Lqk3;
+    .line 35
+    new-instance p1, Lxi5;
+
+    const/16 v1, 0xc
+
+    invoke-direct {p1, v1}, Lxi5;-><init>(I)V
+
+    .line 36
+    new-instance v1, Lgk3;
 
     const/16 v2, 0xf
 
-    invoke-direct {v1, v2, p1}, Lqk3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Lgk3;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lan8;
+    const-class p1, Lul8;
 
-    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
+    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lbp7;
+    .line 37
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->C0:Lyn7;
 
-    new-instance p1, Lz86;
+    .line 38
+    new-instance p1, Ld86;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p0, v1}, Lz86;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {p1, p0, v1}, Ld86;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->K0:Lz86;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->F0:Ld86;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    .line 39
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object p1
 
-    const-class v0, Lktd;
+    const-class v0, Lsrd;
 
-    invoke-virtual {p1, v0}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {p1, v0}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    new-instance p1, Lv86;
+    .line 40
+    new-instance p1, Lz76;
 
     const/4 v0, 0x4
 
-    invoke-direct {p1, p0, v0}, Lv86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {p1, p0, v0}, Lz76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    new-instance v0, Ltr0;
+    .line 41
+    new-instance v0, Lnr0;
 
-    invoke-direct {v0, p0, p1}, Ltr0;-><init>(Lb04;Lve6;)V
+    invoke-direct {v0, p0, p1}, Lnr0;-><init>(Ljz3;Ltd6;)V
 
-    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
+    .line 42
+    invoke-virtual {p0}, Ljz3;->getRouter()Ln6d;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lb04;->getRouter()Li8d;
+    .line 43
+    invoke-virtual {p0}, Ljz3;->getRouter()Ln6d;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Li8d;->a(Lf04;)V
+    invoke-virtual {p1, v0}, Ln6d;->a(Lnz3;)V
 
     return-void
 
+    .line 44
     :cond_0
-    new-instance p1, Lf9;
+    new-instance p1, Ln9;
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, p0, v1, v0}, Lf9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, p0, v1, v0}, Ln9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lb04;->addLifecycleListener(Lzz3;)V
+    invoke-virtual {p0, p1}, Ljz3;->addLifecycleListener(Lhz3;)V
 
     return-void
 .end method
@@ -417,52 +452,61 @@
 .method public constructor <init>([JLjava/lang/Long;ZZ)V
     .locals 2
 
-    new-instance v0, Ln4b;
+    .line 1
+    new-instance v0, Ld3b;
 
     const-string v1, "messages_to_forward"
 
-    invoke-direct {v0, v1, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance p1, Ln4b;
+    .line 2
+    new-instance p1, Ld3b;
 
     const-string v1, "attach_to_forward"
 
-    invoke-direct {p1, v1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 3
     invoke-static {p3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
 
-    new-instance p3, Ln4b;
+    .line 4
+    new-instance p3, Ld3b;
 
     const-string v1, "is_forward_attach"
 
-    invoke-direct {p3, v1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
+    .line 5
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p2
 
-    new-instance p4, Ln4b;
+    .line 6
+    new-instance p4, Ld3b;
 
     const-string v1, "show_external_sharing"
 
-    invoke-direct {p4, v1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p4, v1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v0, p1, p3, p4}, [Ln4b;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+    .line 7
+    filled-new-array {v0, p1, p3, p4}, [Ld3b;
 
     move-result-object p1
 
+    .line 8
+    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 9
     invoke-direct {p0, p1}, Lone/me/chats/forward/ForwardPickerScreen;-><init>(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>([JLjava/lang/Long;ZZILof4;)V
+.method public synthetic constructor <init>([JLjava/lang/Long;ZZILaf4;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -487,13 +531,14 @@
 
     move p4, v0
 
+    .line 45
     :cond_2
     invoke-direct {p0, p1, p2, p3, p4}, Lone/me/chats/forward/ForwardPickerScreen;-><init>([JLjava/lang/Long;ZZ)V
 
     return-void
 .end method
 
-.method public static final N0(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Ljef;Z)V
+.method public static final N0(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lxcf;Z)V
     .locals 10
 
     new-instance v0, Landroid/graphics/Point;
@@ -502,7 +547,7 @@
 
     int-to-float v1, v1
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -514,7 +559,7 @@
 
     mul-float/2addr v2, v1
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Li8e;->I(F)I
 
     move-result v2
 
@@ -526,7 +571,7 @@
 
     move-result v3
 
-    invoke-virtual {p0}, Lone/me/chats/forward/ForwardPickerScreen;->P0()Leac;
+    invoke-virtual {p0}, Lone/me/chats/forward/ForwardPickerScreen;->P0()Ll8c;
 
     move-result-object v4
 
@@ -536,7 +581,7 @@
 
     sub-int/2addr v3, v4
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -546,30 +591,30 @@
 
     iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v1, v4, v3}, Lnd5;->q(FFI)I
+    invoke-static {v1, v4, v3}, Lc85;->q(FFI)I
 
     move-result v1
 
     invoke-direct {v0, v2, v1}, Landroid/graphics/Point;-><init>(II)V
 
-    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->M0:Lxkf;
+    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lojf;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lxkf;->dismiss()V
+    invoke-virtual {v1}, Lojf;->dismiss()V
 
     :cond_0
-    new-instance v2, Lxkf;
+    new-instance v2, Lojf;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    new-instance v5, Lv86;
+    new-instance v5, Lz76;
 
     const/4 v1, 0x1
 
-    invoke-direct {v5, p0, v1}, Lv86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {v5, p0, v1}, Lz76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
     const/16 v9, 0x38
 
@@ -581,9 +626,9 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v2 .. v9}, Lxkf;-><init>(Landroid/content/Context;Landroid/view/View;Lve6;Lz11;III)V
+    invoke-direct/range {v2 .. v9}, Lojf;-><init>(Landroid/content/Context;Landroid/view/View;Ltd6;Ll;III)V
 
-    invoke-virtual {v2, p2}, Lxkf;->c(Loef;)V
+    invoke-virtual {v2, p2}, Lojf;->c(Lcdf;)V
 
     if-eqz p3, :cond_1
 
@@ -597,17 +642,17 @@
     :goto_0
     const p3, 0x800053
 
-    invoke-virtual {v2, v0, p3, p1, p2}, Lxkf;->d(Landroid/graphics/Point;IJ)V
+    invoke-virtual {v2, v0, p3, p1, p2}, Lojf;->d(Landroid/graphics/Point;IJ)V
 
-    new-instance p1, La21;
+    new-instance p1, Lt11;
 
     const/4 p2, 0x2
 
-    invoke-direct {p1, p2, p0}, La21;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lt11;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v2, p1}, Landroid/widget/PopupWindow;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
-    iput-object v2, p0, Lone/me/chats/forward/ForwardPickerScreen;->M0:Lxkf;
+    iput-object v2, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lojf;
 
     return-void
 .end method
@@ -617,19 +662,19 @@
 .method public final B0()Ljava/lang/Iterable;
     .locals 5
 
-    new-instance v0, Leac;
+    new-instance v0, Ll8c;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Leac;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Ll8c;-><init>(Landroid/content/Context;)V
 
-    sget v1, Llka;->c:I
+    sget v1, Lbja;->c:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    new-instance v1, Lgd0;
+    new-instance v1, Lxc0;
 
     const/4 v2, 0x3
 
@@ -637,9 +682,9 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v3}, Lgd0;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v1, v2, v4, v3}, Lxc0;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v1, v0}, Lk74;->K(Lnf6;Landroid/view/View;)V
+    invoke-static {v1, v0}, Luce;->T(Lle6;Landroid/view/View;)V
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -647,7 +692,7 @@
 
     int-to-float v2, v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -659,7 +704,7 @@
 
     mul-float/2addr v2, v3
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Li8e;->I(F)I
 
     move-result v2
 
@@ -669,33 +714,33 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lveb;->c:Lugb;
+    iget-object v1, v1, Lodb;->c:Lmfb;
 
-    check-cast v1, Lo86;
+    check-cast v1, Ls76;
 
-    iget-object v1, v1, Lo86;->n:Lsqc;
+    iget-object v1, v1, Ls76;->n:Lbpc;
 
-    new-instance v2, Lw86;
+    new-instance v2, La86;
 
-    invoke-direct {v2, v0, p0, v4}, Lw86;-><init>(Leac;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v2, v0, p0, v4}, La86;-><init>(Ll8c;Lone/me/chats/forward/ForwardPickerScreen;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v3, Ljx5;
+    new-instance v3, Lnw5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v1, v2, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v3, v1, v2, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v3, v1}, Luce;->N(Liu5;Ln24;)Loke;
 
-    invoke-virtual {p0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Lh69;
+    invoke-virtual {p0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Lu49;
 
     move-result-object v1
 
@@ -709,57 +754,57 @@
 
     aput-object v1, v2, v4
 
-    invoke-static {v2}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v2}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final C0()Lvfb;
+.method public final C0()Loeb;
     .locals 5
 
-    new-instance v0, Lr26;
+    new-instance v0, Lh8h;
 
-    new-instance v1, Ld71;
+    new-instance v1, Lu61;
 
-    sget-object v2, Lb86;->a:Lb86;
+    sget-object v2, Lf76;->a:Lf76;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lm13;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v3
 
-    invoke-direct {v1, v3}, Ld71;-><init>(Lbp7;)V
+    const-class v4, Lg13;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v3
-
-    const-class v4, Lhx3;
-
-    invoke-virtual {v3, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v3
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
+    invoke-direct {v1, v3}, Lu61;-><init>(Lyn7;)V
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lrw3;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    const-class v4, Lr63;
+    const-class v4, Lm63;
 
-    invoke-virtual {v2, v4}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v2, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v2
 
-    iget-object v4, p0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lu9h;
+    iget-object v4, p0, Lone/me/chats/forward/ForwardPickerScreen;->v0:Lx4f;
 
-    invoke-direct {v0, v4, v1, v3, v2}, Lr26;-><init>(Lu9h;Ld71;Lbp7;Lbp7;)V
+    invoke-direct {v0, v4, v1, v3, v2}, Lh8h;-><init>(Lx4f;Lu61;Lyn7;Lyn7;)V
 
     return-object v0
 .end method
@@ -773,37 +818,37 @@
 
     move-result v2
 
-    new-instance v3, Lu86;
+    new-instance v3, Ly76;
 
     const/4 v1, 0x0
 
-    invoke-direct {v3, p0, v1}, Lu86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {v3, p0, v1}, Ly76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    sget-object v4, Ltd2;->b:Ltd2;
+    sget-object v4, Lyd2;->b:Lyd2;
 
     const/4 v5, 0x0
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLxe6;Ltd2;Lof4;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLvd6;Lyd2;Laf4;)V
 
     return-object v0
 .end method
 
-.method public final E0(Landroid/content/Context;)Ltya;
+.method public final E0(Landroid/content/Context;)Ljxa;
     .locals 6
 
-    new-instance v0, Ltya;
+    new-instance v0, Ljxa;
 
     const/4 v1, 0x6
 
-    invoke-direct {v0, p1, v1}, Ltya;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Ljxa;-><init>(Landroid/content/Context;I)V
 
-    sget v1, Llka;->d:I
+    sget v1, Lbja;->d:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    sget v1, Lqka;->q:I
+    sget v1, Lgja;->q:I
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -811,17 +856,17 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setTransitionName(Ljava/lang/String;)V
 
-    sget p1, Lqka;->h0:I
+    sget p1, Lgja;->h0:I
 
-    invoke-virtual {v0, p1}, Ltya;->setTitle(I)V
+    invoke-virtual {v0, p1}, Ljxa;->setTitle(I)V
 
-    new-instance p1, Ln4b;
+    new-instance p1, Ld3b;
 
     const/4 v1, 0x4
 
     int-to-float v1, v1
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -833,7 +878,7 @@
 
     mul-float/2addr v2, v1
 
-    invoke-static {v2}, Lv63;->r0(F)I
+    invoke-static {v2}, Li8e;->I(F)I
 
     move-result v2
 
@@ -841,7 +886,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -853,7 +898,7 @@
 
     mul-float/2addr v1, v3
 
-    invoke-static {v1}, Lv63;->r0(F)I
+    invoke-static {v1}, Li8e;->I(F)I
 
     move-result v1
 
@@ -861,55 +906,55 @@
 
     move-result-object v1
 
-    invoke-direct {p1, v2, v1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v2, v1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p1}, Ltya;->setActionsHorizontalPadding(Ln4b;)V
+    invoke-virtual {v0, p1}, Ljxa;->setActionsHorizontalPadding(Ld3b;)V
 
-    sget-object p1, Llya;->a:Llya;
+    sget-object p1, Lbxa;->a:Lbxa;
 
-    invoke-virtual {v0, p1}, Ltya;->setForm(Llya;)V
+    invoke-virtual {v0, p1}, Ljxa;->setForm(Lbxa;)V
 
-    new-instance p1, Lbya;
+    new-instance p1, Lrwa;
 
-    new-instance v1, Lu86;
+    new-instance v1, Ly76;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lu86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {v1, p0, v2}, Ly76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    invoke-direct {p1, v1}, Lbya;-><init>(Lxe6;)V
+    invoke-direct {p1, v1}, Lrwa;-><init>(Lvd6;)V
 
-    invoke-virtual {v0, p1}, Ltya;->setLeftActions(Lhya;)V
+    invoke-virtual {v0, p1}, Ljxa;->setLeftActions(Lxwa;)V
 
-    new-instance p1, Lgya;
+    new-instance p1, Lwwa;
 
-    new-instance v1, Loya;
+    new-instance v1, Lexa;
 
-    new-instance v2, Lx86;
+    new-instance v2, Lb86;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, v3}, Lx86;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v2, p0, v3}, Lb86;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-direct {v1, v2}, Loya;-><init>(Laua;)V
+    invoke-direct {v1, v2}, Lexa;-><init>(Lssa;)V
 
-    new-instance v2, Lmya;
+    new-instance v2, Lcxa;
 
-    sget v3, Lg9d;->t0:I
+    sget v3, Ll7d;->t0:I
 
-    new-instance v4, Lu86;
+    new-instance v4, Ly76;
 
     const/4 v5, 0x2
 
-    invoke-direct {v4, p0, v5}, Lu86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {v4, p0, v5}, Ly76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    invoke-direct {v2, v3, v4}, Lmya;-><init>(ILxe6;)V
+    invoke-direct {v2, v3, v4}, Lcxa;-><init>(ILvd6;)V
 
     const/4 v3, 0x0
 
-    invoke-direct {p1, v1, v2, v3}, Lgya;-><init>(Lpya;Lpya;Lmya;)V
+    invoke-direct {p1, v1, v2, v3}, Lwwa;-><init>(Lfxa;Lfxa;Lcxa;)V
 
-    invoke-virtual {v0, p1}, Ltya;->setRightActions(Ljya;)V
+    invoke-virtual {v0, p1}, Ljxa;->setRightActions(Lzwa;)V
 
     return-object v0
 .end method
@@ -917,45 +962,45 @@
 .method public final F(ILandroid/os/Bundle;)V
     .locals 1
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object p2
 
-    iget-object p2, p2, Lveb;->c:Lugb;
+    iget-object p2, p2, Lodb;->c:Lmfb;
 
-    check-cast p2, Lo86;
+    check-cast p2, Ls76;
 
-    iget-object p2, p2, Lo86;->p:Le8e;
+    iget-object p2, p2, Ls76;->p:Lt6e;
 
-    sget v0, Llka;->f:I
+    sget v0, Lbja;->f:I
 
     if-ne p1, v0, :cond_0
 
-    new-instance p1, Lr86;
+    new-instance p1, Lv76;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2, p1}, Le8e;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p2, p1}, Lt6e;->h(Ljava/lang/Object;)Z
 
     return-void
 
     :cond_0
-    sget v0, Llka;->e:I
+    sget v0, Lbja;->e:I
 
     if-ne p1, v0, :cond_1
 
-    sget-object p1, Lq86;->a:Lq86;
+    sget-object p1, Lu76;->a:Lu76;
 
-    invoke-virtual {p2, p1}, Le8e;->h(Ljava/lang/Object;)Z
+    invoke-virtual {p2, p1}, Lt6e;->h(Ljava/lang/Object;)Z
 
     :cond_1
     return-void
 .end method
 
-.method public final F0()Lugb;
+.method public final F0()Lmfb;
     .locals 16
 
-    invoke-virtual/range {p0 .. p0}, Lb04;->getArgs()Landroid/os/Bundle;
+    invoke-virtual/range {p0 .. p0}, Ljz3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -978,7 +1023,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual/range {p0 .. p0}, Lb04;->getArgs()Landroid/os/Bundle;
+    invoke-virtual/range {p0 .. p0}, Ljz3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -993,7 +1038,7 @@
     move-object v7, v0
 
     :goto_0
-    invoke-virtual/range {p0 .. p0}, Lb04;->getArgs()Landroid/os/Bundle;
+    invoke-virtual/range {p0 .. p0}, Ljz3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1005,85 +1050,85 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lhs;->q0([J)Ljava/util/Set;
+    invoke-static {v0}, Lvs;->W([J)Ljava/util/Set;
 
     move-result-object v2
 
     :cond_1
     if-nez v2, :cond_2
 
-    sget-object v2, Ll75;->a:Ll75;
+    sget-object v2, Ly65;->a:Ly65;
 
     :cond_2
     move-object v4, v2
 
-    sget-object v0, Lb86;->a:Lb86;
+    sget-object v0, Lf76;->a:Lf76;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lj96;
+    const-class v2, Ln86;
 
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v5, v1
 
-    check-cast v5, Lj96;
+    check-cast v5, Ln86;
 
     invoke-virtual/range {p0 .. p0}, Lone/me/chats/forward/ForwardPickerScreen;->Q0()Z
 
     move-result v8
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lr8f;
+    const-class v2, Le7f;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v10
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lzu0;
+    const-class v2, Ltu0;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v11
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lx76;
+    const-class v2, La76;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v12
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lg86;
+    const-class v2, Lk76;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v13
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
     const-class v2, Landroid/content/Context;
 
-    invoke-virtual {v1, v2}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1091,38 +1136,38 @@
 
     check-cast v9, Landroid/content/Context;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    const-class v2, Lava;
+    const-class v2, Lrta;
 
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v14
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v0
 
-    const-class v1, Lr63;
+    const-class v1, Lm63;
 
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object v15
 
-    new-instance v3, Lo86;
+    new-instance v3, Ls76;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Lu9h;
+    iget-object v6, v0, Lone/me/chats/forward/ForwardPickerScreen;->v0:Lx4f;
 
-    invoke-direct/range {v3 .. v15}, Lo86;-><init>(Ljava/util/Set;Lj96;Lu9h;Ljava/lang/Long;ZLandroid/content/Context;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
+    invoke-direct/range {v3 .. v15}, Ls76;-><init>(Ljava/util/Set;Ln86;Lx4f;Ljava/lang/Long;ZLandroid/content/Context;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
 
     return-object v3
 .end method
 
-.method public final G0()Lfla;
+.method public final G0()Lvja;
     .locals 1
 
     const/4 v0, 0x0
@@ -1130,7 +1175,7 @@
     return-object v0
 .end method
 
-.method public final H0()Lfoe;
+.method public final H0()Lane;
     .locals 1
 
     const/4 v0, 0x0
@@ -1141,47 +1186,47 @@
 .method public final M0(Landroid/os/Bundle;)Ljava/util/Set;
     .locals 0
 
-    sget-object p1, Ll75;->a:Ll75;
+    sget-object p1, Ly65;->a:Ly65;
 
     return-object p1
 .end method
 
-.method public final O0()Lh69;
+.method public final O0()Lu49;
     .locals 2
 
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
     const/4 v1, 0x5
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->F0:Lan0;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->A0:Ltm0;
 
-    invoke-virtual {v0}, Lan0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ltm0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lh69;
+    check-cast v0, Lu49;
 
     return-object v0
 .end method
 
-.method public final P0()Leac;
+.method public final P0()Ll8c;
     .locals 2
 
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
     const/4 v1, 0x6
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lmqc;
+    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lvoc;
 
-    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Leac;
+    check-cast v0, Ll8c;
 
     return-object v0
 .end method
@@ -1189,15 +1234,15 @@
 .method public final Q0()Z
     .locals 2
 
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->B0:Lpr;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->w0:Lds;
 
-    invoke-virtual {v0, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1213,15 +1258,15 @@
 .method public final R0()Z
     .locals 2
 
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->C0:Lpr;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->x0:Lds;
 
-    invoke-virtual {v0, p0}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1237,7 +1282,7 @@
 .method public final S0(Z)V
     .locals 2
 
-    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->N0:[Ltm7;
+    sget-object v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:[Lpl7;
 
     const/4 v1, 0x4
 
@@ -1247,9 +1292,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->C0:Lpr;
+    iget-object v1, p0, Lone/me/chats/forward/ForwardPickerScreen;->x0:Lds;
 
-    invoke-virtual {v1, p0, v0}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v1, p0, v0}, Lds;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->J0()Lone/me/sdk/arch/Widget;
 
@@ -1275,18 +1320,18 @@
     return-void
 .end method
 
-.method public final getInsetsConfig()Led7;
+.method public final getInsetsConfig()Lyb7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->z0:Led7;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->u0:Lyb7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lmfd;
+.method public final getScreenDelegate()Lsdd;
     .locals 1
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->y0:Lfub;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->t0:La4d;
 
     return-object v0
 .end method
@@ -1294,42 +1339,42 @@
 .method public final handleBack()Z
     .locals 13
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->J0:Li8d;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Ln6d;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Li8d;->n()Z
+    invoke-virtual {v0}, Ln6d;->n()Z
 
     move-result v0
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lveb;->c:Lugb;
+    iget-object v0, v0, Lodb;->c:Lmfb;
 
-    check-cast v0, Lo86;
+    check-cast v0, Ls76;
 
-    iget-object v0, v0, Lo86;->r:Lrob;
+    iget-object v0, v0, Ls76;->r:Lax0;
 
-    invoke-virtual {v0, v1}, Lrob;->z(I)V
+    invoke-virtual {v0, v1}, Lax0;->M(I)V
 
     return v1
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v0
 
-    iget-object v0, v0, Lveb;->Z:Lsqc;
+    iget-object v0, v0, Lodb;->Z:Lbpc;
 
-    iget-object v0, v0, Lsqc;->a:Lfoe;
+    iget-object v0, v0, Lbpc;->a:Lane;
 
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lane;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1341,67 +1386,67 @@
 
     if-nez v0, :cond_5
 
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->D0:[Ltm7;
+    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
 
-    sget v0, Li9d;->q0:I
+    sget v0, Ln7d;->p0:I
 
     const/4 v2, 0x6
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v3, v3, v2}, Lqe0;->c(ILandroid/os/Bundle;Lhfd;I)Lsl3;
+    invoke-static {v0, v3, v3, v2}, Lsw1;->e(ILandroid/os/Bundle;Lmdd;I)Lil3;
 
     move-result-object v0
 
-    sget v2, Lh9d;->r0:I
+    sget v2, Lm7d;->t0:I
 
-    sget v4, Li9d;->p0:I
+    sget v4, Ln7d;->o0:I
 
-    new-instance v5, Ljef;
+    new-instance v5, Lxcf;
 
-    invoke-direct {v5, v4}, Ljef;-><init>(I)V
+    invoke-direct {v5, v4}, Lxcf;-><init>(I)V
 
-    invoke-virtual {v0, v2, v5}, Lsl3;->b(ILoef;)V
+    invoke-virtual {v0, v2, v5}, Lil3;->b(ILcdf;)V
 
-    sget v2, Lh9d;->q0:I
+    sget v2, Lm7d;->s0:I
 
-    sget v4, Li9d;->o0:I
+    sget v4, Ln7d;->n0:I
 
-    new-instance v5, Ljef;
+    new-instance v5, Lxcf;
 
-    invoke-direct {v5, v4}, Ljef;-><init>(I)V
+    invoke-direct {v5, v4}, Lxcf;-><init>(I)V
 
-    invoke-virtual {v0, v2, v5}, Lsl3;->c(ILoef;)V
+    invoke-virtual {v0, v2, v5}, Lil3;->c(ILcdf;)V
 
-    invoke-virtual {v0}, Lsl3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+    invoke-virtual {v0}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
     move-result-object v7
 
-    invoke-virtual {v7, p0}, Lb04;->setTargetController(Lb04;)V
+    invoke-virtual {v7, p0}, Ljz3;->setTargetController(Ljz3;)V
 
     invoke-virtual {v7, p0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
 
     move-object v0, p0
 
     :goto_0
-    invoke-virtual {v0}, Lb04;->getParentController()Lb04;
+    invoke-virtual {v0}, Ljz3;->getParentController()Ljz3;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v0}, Lb04;->getParentController()Lb04;
+    invoke-virtual {v0}, Ljz3;->getParentController()Ljz3;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    instance-of v2, v0, Lo8d;
+    instance-of v2, v0, Lt6d;
 
     if-eqz v2, :cond_2
 
-    check-cast v0, Lo8d;
+    check-cast v0, Lt6d;
 
     goto :goto_1
 
@@ -1411,7 +1456,7 @@
     :goto_1
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lo8d;->f0()Li8d;
+    invoke-interface {v0}, Lt6d;->f0()Ln6d;
 
     move-result-object v3
 
@@ -1420,7 +1465,7 @@
 
     if-eqz v3, :cond_4
 
-    new-instance v6, Ll8d;
+    new-instance v6, Lq6d;
 
     const/4 v11, 0x0
 
@@ -1432,21 +1477,21 @@
 
     const/4 v10, 0x0
 
-    invoke-direct/range {v6 .. v12}, Ll8d;-><init>(Lb04;Ljava/lang/String;Lg04;Lg04;ZI)V
+    invoke-direct/range {v6 .. v12}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
 
     const/4 v0, 0x0
 
     const-string v2, "BottomSheetWidget"
 
-    invoke-static {v0, v6, v1, v2}, Lqe0;->n(ZLl8d;ZLjava/lang/String;)V
+    invoke-static {v0, v6, v1, v2}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
 
-    invoke-virtual {v3, v6}, Li8d;->H(Ll8d;)V
+    invoke-virtual {v3, v6}, Ln6d;->H(Lq6d;)V
 
     :cond_4
     return v1
 
     :cond_5
-    invoke-super {p0}, Lb04;->handleBack()Z
+    invoke-super {p0}, Ljz3;->handleBack()Z
 
     move-result v0
 
@@ -1456,17 +1501,17 @@
 .method public final i(ILandroid/os/Bundle;)V
     .locals 0
 
-    sget p2, Lh9d;->r0:I
+    sget p2, Lm7d;->t0:I
 
     if-ne p1, p2, :cond_0
 
-    sget-object p1, Li86;->c:Li86;
+    sget-object p1, Lm76;->c:Lm76;
 
-    invoke-virtual {p1}, Lv2;->K0()Ldd4;
+    invoke-virtual {p1}, Ld3;->o0()Loc4;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ldd4;->d()Z
+    invoke-virtual {p1}, Loc4;->d()Z
 
     :cond_0
     return-void
@@ -1475,31 +1520,31 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lb04;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Ljz3;->onDestroyView(Landroid/view/View;)V
 
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->I0:Lf52;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->D0:Lk52;
 
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->J0:Li8d;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Ln6d;
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->L0:Lfn8;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lzl8;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lfn8;->a()V
+    invoke-virtual {v0}, Lzl8;->a()V
 
     :cond_0
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->L0:Lfn8;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lzl8;
 
-    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->M0:Lxkf;
+    iget-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lojf;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lxkf;->dismiss()V
+    invoke-virtual {v0}, Lojf;->dismiss()V
 
     :cond_1
-    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->M0:Lxkf;
+    iput-object p1, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lojf;
 
     return-void
 .end method
@@ -1521,13 +1566,13 @@
 
     move-result-object v3
 
-    sget-object v4, Lone/me/chats/forward/ForwardPickerScreen;->O0:Led7;
+    sget-object v4, Lone/me/chats/forward/ForwardPickerScreen;->J0:Lyb7;
 
     const/4 v5, 0x0
 
-    invoke-static {v3, v4, v5}, Lio7;->a(Landroid/view/View;Led7;Lxe6;)V
+    invoke-static {v3, v4, v5}, Lpr0;->c(Landroid/view/View;Lyb7;Lvd6;)V
 
-    new-instance v3, Lf52;
+    new-instance v3, Lk52;
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1535,7 +1580,7 @@
 
     invoke-direct {v3, v4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget v4, Llka;->b:I
+    sget v4, Lbja;->b:I
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setId(I)V
 
@@ -1553,13 +1598,13 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v4, Lon7;->a:I
+    sget v4, Llm7;->a:I
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-static {v4}, Lon7;->a(Landroid/content/Context;)I
+    invoke-static {v4}, Llm7;->a(Landroid/content/Context;)I
 
     move-result v4
 
@@ -1567,9 +1612,9 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setTranslationY(F)V
 
-    new-instance v4, Led7;
+    new-instance v4, Lyb7;
 
-    new-instance v6, Ljr0;
+    new-instance v6, Lcr0;
 
     const/4 v7, 0x5
 
@@ -1577,129 +1622,129 @@
 
     const/4 v9, 0x0
 
-    invoke-direct {v6, v7, v8, v9}, Ljr0;-><init>(IIZ)V
+    invoke-direct {v6, v7, v8, v9}, Lcr0;-><init>(IIZ)V
 
-    invoke-direct {v4, v9, v6, v8}, Led7;-><init>(ILjr0;I)V
+    invoke-direct {v4, v9, v6, v8}, Lyb7;-><init>(ILcr0;I)V
 
-    invoke-static {v3, v4, v5}, Lio7;->a(Landroid/view/View;Led7;Lxe6;)V
+    invoke-static {v3, v4, v5}, Lpr0;->c(Landroid/view/View;Lyb7;Lvd6;)V
 
-    iput-object v3, v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:Lf52;
+    iput-object v3, v0, Lone/me/chats/forward/ForwardPickerScreen;->D0:Lk52;
 
-    invoke-virtual {v0, v3}, Lb04;->getChildRouter(Landroid/view/ViewGroup;)Li8d;
+    invoke-virtual {v0, v3}, Ljz3;->getChildRouter(Landroid/view/ViewGroup;)Ln6d;
 
     move-result-object v4
 
-    iput-object v4, v0, Lone/me/chats/forward/ForwardPickerScreen;->J0:Li8d;
+    iput-object v4, v0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Ln6d;
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v2
 
-    iget-object v2, v2, Lveb;->Z:Lsqc;
+    iget-object v2, v2, Lodb;->Z:Lbpc;
 
-    new-instance v3, Lf96;
+    new-instance v3, Lj86;
 
-    invoke-direct {v3, v0, v1, v5}, Lf96;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v3, v0, v1, v5}, Lj86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Ljx5;
+    new-instance v1, Lnw5;
 
-    invoke-direct {v1, v2, v3, v8}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, v2, v3, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v1, v2}, Luce;->N(Liu5;Ln24;)Loke;
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lveb;->c:Lugb;
+    iget-object v1, v1, Lodb;->c:Lmfb;
 
-    check-cast v1, Lo86;
+    check-cast v1, Ls76;
 
-    iget-object v1, v1, Lo86;->t:Lsqc;
+    iget-object v1, v1, Ls76;->t:Lbpc;
 
-    new-instance v2, Lir3;
+    new-instance v2, Ltq3;
 
     const/4 v3, 0x6
 
-    invoke-direct {v2, v1, v3, v0}, Lir3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v1, v3, v0}, Ltq3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcs7;->L()Les7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v1
 
-    sget-object v3, Ler7;->o:Ler7;
-
-    invoke-static {v2, v1, v3}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-interface {v1}, Luq7;->x()Lwq7;
 
     move-result-object v1
 
-    new-instance v2, Lc96;
+    sget-object v3, Lwp7;->o:Lwp7;
 
-    invoke-direct {v2, v5, v0}, Lc96;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
-
-    new-instance v4, Ljx5;
-
-    invoke-direct {v4, v1, v2, v8}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-static {v2, v1, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    new-instance v2, Lg86;
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-direct {v2, v5, v0}, Lg86;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+
+    new-instance v4, Lnw5;
+
+    invoke-direct {v4, v1, v2, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v1
 
-    iget-object v1, v1, Lveb;->c:Lugb;
+    invoke-static {v4, v1}, Luce;->N(Liu5;Ln24;)Loke;
 
-    check-cast v1, Lo86;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
-    iget-object v1, v1, Lo86;->q:Lrqc;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    iget-object v1, v1, Lodb;->c:Lmfb;
+
+    check-cast v1, Ls76;
+
+    iget-object v1, v1, Ls76;->q:Lapc;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcs7;->L()Les7;
+    invoke-interface {v2}, Luq7;->x()Lwq7;
 
     move-result-object v2
 
-    invoke-static {v1, v2, v3}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {v1, v2, v3}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object v1
 
-    new-instance v2, Ld96;
+    new-instance v2, Lh86;
 
-    invoke-direct {v2, v5, v0}, Ld96;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
+    invoke-direct {v2, v5, v0}, Lh86;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/forward/ForwardPickerScreen;)V
 
-    new-instance v3, Ljx5;
+    new-instance v3, Lnw5;
 
-    invoke-direct {v3, v1, v2, v8}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v3, v1, v2, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v3, v1}, Luce;->N(Liu5;Ln24;)Loke;
 
     invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->I0()Landroid/view/ViewGroup;
 
     move-result-object v13
 
-    iget-object v11, v0, Lone/me/chats/forward/ForwardPickerScreen;->J0:Li8d;
+    iget-object v11, v0, Lone/me/chats/forward/ForwardPickerScreen;->E0:Ln6d;
 
-    iget-object v12, v0, Lone/me/chats/forward/ForwardPickerScreen;->I0:Lf52;
+    iget-object v12, v0, Lone/me/chats/forward/ForwardPickerScreen;->D0:Lk52;
 
     if-eqz v11, :cond_4
 
@@ -1708,29 +1753,29 @@
     goto/16 :goto_3
 
     :cond_0
-    new-instance v10, Lfn8;
+    new-instance v10, Lzl8;
 
-    new-instance v14, Lv86;
+    new-instance v14, Lz76;
 
     const/4 v1, 0x2
 
-    invoke-direct {v14, v0, v1}, Lv86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
+    invoke-direct {v14, v0, v1}, Lz76;-><init>(Lone/me/chats/forward/ForwardPickerScreen;I)V
 
-    sget-object v2, Lb86;->a:Lb86;
+    sget-object v2, Lf76;->a:Lf76;
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, La9b;
-
-    invoke-virtual {v2, v3}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v2
 
-    check-cast v2, La9b;
+    const-class v3, Ls7b;
 
-    iget-boolean v2, v2, La9b;->b:Z
+    invoke-virtual {v2, v3}, Lo5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ls7b;
+
+    iget-boolean v2, v2, Ls7b;->b:Z
 
     if-eqz v2, :cond_1
 
@@ -1748,35 +1793,35 @@
     move v15, v9
 
     :goto_0
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v16
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v2
 
-    iget-object v2, v2, Lveb;->c:Lugb;
+    iget-object v2, v2, Lodb;->c:Lmfb;
 
-    check-cast v2, Lo86;
+    check-cast v2, Ls76;
 
-    iget-object v2, v2, Lo86;->r:Lrob;
+    iget-object v2, v2, Ls76;->r:Lax0;
 
-    iget-object v2, v2, Lrob;->c:Ljava/lang/Object;
+    iget-object v2, v2, Lax0;->b:Ljava/lang/Object;
 
-    check-cast v2, Lsqc;
+    check-cast v2, Lbpc;
 
-    iget-object v2, v2, Lsqc;->a:Lfoe;
+    iget-object v2, v2, Lbpc;->a:Lane;
 
-    invoke-interface {v2}, Lfoe;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lane;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Li99;
+    check-cast v2, Lt79;
 
     if-eqz v2, :cond_2
 
-    iget v2, v2, Li99;->a:I
+    iget v2, v2, Lt79;->a:I
 
     goto :goto_1
 
@@ -1794,73 +1839,73 @@
     move/from16 v17, v9
 
     :goto_2
-    new-instance v1, Lu55;
+    new-instance v1, Lu13;
 
-    const/16 v2, 0xb
+    const/16 v2, 0xf
 
-    invoke-direct {v1, v0, v2, v13}, Lu55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, v0, v2, v13}, Lu13;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     move-object/from16 v18, v1
 
-    invoke-direct/range {v10 .. v18}, Lfn8;-><init>(Li8d;Lf52;Landroid/view/ViewGroup;Lve6;ZLor7;ZLve6;)V
+    invoke-direct/range {v10 .. v18}, Lzl8;-><init>(Ln6d;Lk52;Landroid/view/ViewGroup;Ltd6;ZLgq7;ZLtd6;)V
 
-    iput-object v10, v0, Lone/me/chats/forward/ForwardPickerScreen;->L0:Lfn8;
+    iput-object v10, v0, Lone/me/chats/forward/ForwardPickerScreen;->G0:Lzl8;
 
-    new-instance v1, Lzm8;
+    new-instance v1, Ltl8;
 
-    iget-object v2, v0, Lone/me/chats/forward/ForwardPickerScreen;->H0:Lbp7;
+    iget-object v2, v0, Lone/me/chats/forward/ForwardPickerScreen;->C0:Lyn7;
 
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lan8;
+    check-cast v2, Lul8;
 
-    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Lh69;
+    invoke-virtual {v0}, Lone/me/chats/forward/ForwardPickerScreen;->O0()Lu49;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Lzm8;-><init>(Lan8;Lh69;)V
+    invoke-direct {v1, v2, v3}, Ltl8;-><init>(Lul8;Lu49;)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lzm8;->a(Lor7;)V
+    invoke-virtual {v1, v2}, Ltl8;->a(Lgq7;)V
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lveb;
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lveb;->c:Lugb;
+    iget-object v1, v1, Lodb;->c:Lmfb;
 
-    check-cast v1, Lo86;
+    check-cast v1, Ls76;
 
-    iget-object v1, v1, Lo86;->r:Lrob;
+    iget-object v1, v1, Ls76;->r:Lax0;
 
-    iget-object v1, v1, Lrob;->c:Ljava/lang/Object;
+    iget-object v1, v1, Lax0;->b:Ljava/lang/Object;
 
-    check-cast v1, Lsqc;
+    check-cast v1, Lbpc;
 
-    new-instance v2, Lg13;
+    new-instance v2, La13;
 
     const/16 v3, 0x9
 
-    invoke-direct {v2, v1, v3}, Lg13;-><init>(Lev5;I)V
+    invoke-direct {v2, v1, v3}, La13;-><init>(Liu5;I)V
 
-    new-instance v1, Ly86;
+    new-instance v1, Lc86;
 
-    invoke-direct {v1, v0, v13, v5}, Ly86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v1, v0, v13, v5}, Lc86;-><init>(Lone/me/chats/forward/ForwardPickerScreen;Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v3, Ljx5;
+    new-instance v3, Lnw5;
 
-    invoke-direct {v3, v2, v1, v8}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v3, v2, v1, v8}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v3, v1}, Luce;->N(Liu5;Ln24;)Loke;
 
     :cond_4
     :goto_3

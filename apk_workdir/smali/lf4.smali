@@ -1,176 +1,138 @@
 .class public final Llf4;
-.super Lt73;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr84;
 
-# virtual methods
-.method public final bridge synthetic clone()Ljava/lang/Object;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Lynf;
+
+.field public final c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lie4;)V
     .locals 1
-
-    invoke-virtual {p0}, Llf4;->m()Lt73;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final finalize()V
-    .locals 5
-
-    :try_start_0
-    monitor-enter p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iget-boolean v0, p0, Lt73;->a:Z
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_0
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :try_start_3
-    iget-object v0, p0, Lt73;->b:Ln8e;
-
-    invoke-virtual {v0}, Ln8e;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "DefaultCloseableReference"
-
-    const-string v2, "Finalized without closing: %x %x (type = %s)"
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lt73;->b:Ln8e;
-
-    invoke-static {v4}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
-    goto :goto_0
+    iput v0, p0, Llf4;->a:I
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 1
+    new-instance v0, Lih4;
 
-    move-result-object v0
+    invoke-direct {v0}, Lih4;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    .line 2
+    iput-object p2, v0, Lih4;->b:Ljava/lang/String;
 
-    move-result-object v0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :goto_0
-    filled-new-array {v3, v4, v0}, [Ljava/lang/Object;
+    .line 4
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-static {v1, v2, v0}, Lni5;->m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iput-object p1, p0, Llf4;->c:Ljava/lang/Object;
 
-    iget-object v0, p0, Lt73;->c:Ls73;
+    .line 5
+    iput-object p3, p0, Llf4;->b:Lynf;
 
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lt73;->b:Ln8e;
-
-    iget-object v2, p0, Lt73;->o:Ljava/lang/Throwable;
-
-    invoke-interface {v0, v1, v2}, Ls73;->h(Ln8e;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
-    :cond_2
-    :goto_1
-    invoke-virtual {p0}, Lt73;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+    .line 6
+    iput-object v0, p0, Llf4;->d:Ljava/lang/Object;
 
     return-void
-
-    :goto_2
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :try_start_5
-    throw v0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    :goto_3
-    invoke-super {p0}, Ljava/lang/Object;->finalize()V
-
-    throw v0
 .end method
 
-.method public final m()Lt73;
+.method public constructor <init>(Lsca;Lie4;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Llf4;->a:I
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Llf4;->c:Ljava/lang/Object;
+
+    .line 10
+    const-string p1, "ExoPlayer"
+
+    iput-object p1, p0, Llf4;->d:Ljava/lang/Object;
+
+    .line 11
+    iput-object p2, p0, Llf4;->b:Lynf;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lt84;
     .locals 4
 
-    invoke-virtual {p0}, Lt73;->q0()Z
+    iget v0, p0, Llf4;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Lbv0;->r(Z)V
+    new-instance v0, Lo7f;
 
-    new-instance v0, Llf4;
+    iget-object v1, p0, Llf4;->c:Ljava/lang/Object;
 
-    iget-object v1, p0, Lt73;->o:Ljava/lang/Throwable;
+    check-cast v1, Lwy0;
+
+    iget-object v2, p0, Llf4;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object v3, p0, Llf4;->b:Lynf;
+
+    invoke-direct {v0, v1, v2, v3}, Lo7f;-><init>(Lwy0;Ljava/lang/String;Lynf;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Ljf4;
+
+    iget-object v1, p0, Llf4;->c:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/Context;
+
+    iget-object v2, p0, Llf4;->d:Ljava/lang/Object;
+
+    check-cast v2, Lih4;
+
+    invoke-virtual {v2}, Lih4;->a()Lt84;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Ljf4;-><init>(Landroid/content/Context;Lt84;)V
+
+    iget-object v1, p0, Llf4;->b:Lynf;
 
     if-eqz v1, :cond_0
 
-    new-instance v1, Ljava/lang/Throwable;
-
-    invoke-direct {v1}, Ljava/lang/Throwable;-><init>()V
-
-    goto :goto_0
+    invoke-virtual {v0, v1}, Ljf4;->Q(Lynf;)V
 
     :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-object v2, p0, Lt73;->b:Ln8e;
-
-    iget-object v3, p0, Lt73;->c:Ls73;
-
-    invoke-direct {v0, v2, v3, v1}, Lt73;-><init>(Ln8e;Ls73;Ljava/lang/Throwable;)V
-
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

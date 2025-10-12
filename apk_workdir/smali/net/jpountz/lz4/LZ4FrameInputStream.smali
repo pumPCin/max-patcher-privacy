@@ -18,7 +18,7 @@
 # instance fields
 .field private buffer:Ljava/nio/ByteBuffer;
 
-.field private final checksum:Libh;
+.field private final checksum:Lu9h;
 
 .field private compressedBuffer:[B
 
@@ -52,20 +52,21 @@
         }
     .end annotation
 
+    .line 1
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    invoke-static {}, Ljbh;->c()Ljbh;
+    invoke-static {}, Lv9h;->c()Lv9h;
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Libh;)V
+.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lu9h;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -75,12 +76,13 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lnet/jpountz/lz4/LZ4FrameInputStream;-><init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Libh;Z)V
+    .line 3
+    invoke-direct {p0, p1, p2, p3, v0}, Lnet/jpountz/lz4/LZ4FrameInputStream;-><init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lu9h;Z)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Libh;Z)V
+.method public constructor <init>(Ljava/io/InputStream;Lnet/jpountz/lz4/LZ4SafeDecompressor;Lu9h;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -88,14 +90,17 @@
         }
     .end annotation
 
+    .line 4
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
     const/16 p1, 0xf
 
+    .line 5
     new-array p1, p1, [B
 
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->headerArray:[B
 
+    .line 6
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -110,26 +115,33 @@
 
     const/4 p1, 0x0
 
+    .line 7
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
+    .line 8
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->rawBuffer:[B
 
     const/4 v0, -0x1
 
+    .line 9
     iput v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->maxBlockSize:I
 
     const-wide/16 v0, -0x1
 
+    .line 10
     iput-wide v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->expectedContentSize:J
 
     const-wide/16 v0, 0x0
 
+    .line 11
     iput-wide v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->totalContentSize:J
 
+    .line 12
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     const/16 p1, 0x8
 
+    .line 13
     invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -140,10 +152,13 @@
 
     iput-object p1, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->readNumberBuff:Ljava/nio/ByteBuffer;
 
+    .line 14
     iput-object p2, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->decompressor:Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
+    .line 15
     iput-boolean p4, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->readSingleFrame:Z
 
+    .line 16
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameInputStream;->nextFrameInfo()Z
 
     return-void
@@ -157,13 +172,14 @@
         }
     .end annotation
 
+    .line 2
     invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lnet/jpountz/lz4/LZ4Factory;->safeDecompressor()Lnet/jpountz/lz4/LZ4SafeDecompressor;
 
-    invoke-static {}, Ljbh;->c()Ljbh;
+    invoke-static {}, Lv9h;->c()Lv9h;
 
     const/4 p1, 0x0
 
@@ -502,7 +518,7 @@
 
     const-string v3, " exceeded max: "
 
-    invoke-static {v2, v7, v1, v3}, Lfl7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v7, v1, v3}, Lbk7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -891,6 +907,7 @@
         }
     .end annotation
 
+    .line 1
     :goto_0
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -900,6 +917,7 @@
 
     if-nez v0, :cond_2
 
+    .line 2
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     invoke-virtual {v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->isFinished()Z
@@ -908,6 +926,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 3
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->readSingleFrame:Z
 
     const/4 v1, -0x1
@@ -916,6 +935,7 @@
 
     return v1
 
+    .line 4
     :cond_0
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameInputStream;->nextFrameInfo()Z
 
@@ -925,11 +945,13 @@
 
     return v1
 
+    .line 5
     :cond_1
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameInputStream;->readBlock()V
 
     goto :goto_0
 
+    .line 6
     :cond_2
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -956,10 +978,12 @@
 
     add-int v0, p2, p3
 
+    .line 7
     array-length v1, p1
 
     if-gt v0, v1, :cond_3
 
+    .line 8
     :goto_0
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -969,6 +993,7 @@
 
     if-nez v0, :cond_2
 
+    .line 9
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->frameInfo:Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;
 
     invoke-virtual {v0}, Lnet/jpountz/lz4/LZ4FrameOutputStream$FrameInfo;->isFinished()Z
@@ -977,6 +1002,7 @@
 
     if-eqz v0, :cond_1
 
+    .line 10
     iget-boolean v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->readSingleFrame:Z
 
     const/4 v1, -0x1
@@ -985,6 +1011,7 @@
 
     return v1
 
+    .line 11
     :cond_0
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameInputStream;->nextFrameInfo()Z
 
@@ -994,11 +1021,13 @@
 
     return v1
 
+    .line 12
     :cond_1
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4FrameInputStream;->readBlock()V
 
     goto :goto_0
 
+    .line 13
     :cond_2
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
@@ -1010,12 +1039,14 @@
 
     move-result p3
 
+    .line 14
     iget-object v0, p0, Lnet/jpountz/lz4/LZ4FrameInputStream;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     return p3
 
+    .line 15
     :cond_3
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 

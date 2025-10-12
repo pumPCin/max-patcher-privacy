@@ -1,157 +1,85 @@
 .class public final Lga;
-.super Lm3f;
+.super Lqce;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lbp7;
-
-.field public final synthetic Z:Lha;
+.field public final E0:Lung;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lha;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lung;)V
+    .locals 1
 
-    iput-object p1, p0, Lga;->Y:Lbp7;
+    new-instance v0, Lqia;
 
-    iput-object p2, p0, Lga;->Z:Lha;
+    invoke-direct {v0, p1}, Lqia;-><init>(Landroid/content/Context;)V
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Luvc;-><init>(Landroid/view/View;)V
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lga;->E0:Lung;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final bridge synthetic A(Lov7;)V
     .locals 0
 
-    check-cast p1, Lfa;
+    check-cast p1, Lq2g;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Lga;->G(Lq2g;)V
 
-    invoke-virtual {p0, p1, p2}, Lga;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lga;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lga;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final G(Lq2g;)V
+    .locals 4
 
-    new-instance v0, Lga;
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
 
-    iget-object v1, p0, Lga;->Y:Lbp7;
+    check-cast v0, Lqia;
 
-    iget-object v2, p0, Lga;->Z:Lha;
+    sget-object v1, Lrw4;->t0:Lss6;
 
-    invoke-direct {v0, v1, v2, p2}, Lga;-><init>(Lbp7;Lha;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v1, v0}, Lss6;->x(Landroid/view/View;)Lzma;
 
-    iput-object p1, v0, Lga;->X:Ljava/lang/Object;
+    move-result-object v1
 
-    return-object v0
-.end method
+    iget-object v1, v1, Lzma;->c:Llwa;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    invoke-virtual {v0, v1}, Lqia;->setCustomTheme(Llwa;)V
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget-object v1, Lnia;->b:Lnia;
 
-    iget-object p1, p0, Lga;->X:Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lqia;->setCallButtonMode(Lnia;)V
 
-    check-cast p1, Lfa;
+    iget-object v1, p1, Lq2g;->a:Lbdf;
 
-    iget-object v0, p0, Lga;->Y:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lpt1;
-
-    iget-wide v1, p1, Lfa;->c:J
-
-    iget-object p1, p1, Lfa;->a:Ljava/util/Map;
-
-    invoke-virtual {v0, v1, v2}, Lpt1;->g(J)V
-
-    iget-object v0, p0, Lga;->Z:Lha;
-
-    iget-object v1, v0, Lha;->o:Lmoe;
-
-    :cond_0
-    invoke-virtual {v1}, Lmoe;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    move-object v3, v2
+    invoke-virtual {v1, v2}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    check-cast v3, Lea;
+    move-result-object v1
 
-    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+    invoke-virtual {v0, v1}, Lqia;->setTitle(Ljava/lang/CharSequence;)V
 
-    move-result v4
+    const/4 v1, 0x0
 
-    if-eqz v4, :cond_1
+    invoke-virtual {v0, v1}, Lqia;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    sget v4, Laka;->m2:I
+    iget-object v1, p1, Lq2g;->b:Lyb0;
 
-    new-instance v5, Ljef;
+    iget-wide v2, v1, Lyb0;->a:J
 
-    invoke-direct {v5, v4}, Ljef;-><init>(I)V
+    iget-object v1, v1, Lyb0;->b:Ljava/lang/CharSequence;
 
-    goto :goto_0
+    iget-object p1, p1, Lq2g;->c:Ljava/lang/String;
 
-    :cond_1
-    sget v4, Lzja;->a:I
+    invoke-virtual {v0, v2, v3, v1, p1}, Lqia;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    invoke-interface {p1}, Ljava/util/Map;->size()I
-
-    move-result v5
-
-    new-instance v6, Lfef;
-
-    invoke-direct {v6, v4, v5}, Lfef;-><init>(II)V
-
-    move-object v5, v6
-
-    :goto_0
-    iget-object v4, v0, Lha;->b:Lsed;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lsed;->e(Ljava/util/Map;)Ljava/util/ArrayList;
-
-    move-result-object v4
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lea;
-
-    invoke-direct {v3, v5, v4}, Lea;-><init>(Loef;Ljava/util/List;)V
-
-    invoke-virtual {v1, v2, v3}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

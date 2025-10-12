@@ -1,17 +1,50 @@
 .class public final Lt89;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public a:Ld79;
+.field public X:I
 
-.field public b:Ljava/lang/String;
+.field public Y:Lku5;
 
-.field public c:J
+.field public final synthetic Z:Lr89;
 
-.field public d:I
+.field public synthetic o:Ljava/lang/Object;
 
-.field public e:Lb9g;
 
-.field public f:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lr89;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lt89;->Z:Lr89;
+
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lt89;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lt89;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lt89;->X:I
+
+    iget-object p1, p0, Lt89;->Z:Lr89;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lr89;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

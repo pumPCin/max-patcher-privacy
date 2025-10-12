@@ -1,114 +1,84 @@
-.class public final Lvb9;
+.class public abstract Lvb9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcc9;
 
-
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:Lhdd;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvxf;
 
-    iput-wide p1, p0, Lvb9;->a:J
+    const-string v1, "messages-list-scope"
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lvxf;-><init>(Ljava/lang/String;)V
 
+    sget-object v1, Lx2d;->c:Lhdd;
 
-# virtual methods
-.method public final a()Z
-    .locals 1
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    iget-object v2, v0, Lvxf;->c:Ljava/util/ArrayList;
 
-    return v0
-.end method
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    new-instance v1, Lqo7;
 
-    const/4 v0, 0x1
+    const/16 v2, 0x1d
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v1, v2}, Lqo7;-><init>(I)V
 
-    return v0
+    const-class v2, Ltb9;
 
-    :cond_0
-    instance-of v1, p1, Lvb9;
+    invoke-virtual {v0, v2, v1}, Lvxf;->e(Ljava/lang/Class;Lbc7;)V
 
-    if-nez v1, :cond_1
+    new-instance v1, Lpo7;
 
-    goto :goto_0
+    const/16 v2, 0xc
 
-    :cond_1
-    check-cast p1, Lvb9;
+    invoke-direct {v1, v2}, Lpo7;-><init>(I)V
 
-    iget-wide v1, p0, Lvb9;->a:J
+    const-class v2, Lub9;
 
-    iget-wide v3, p1, Lvb9;->a:J
+    invoke-virtual {v0, v2, v1}, Lvxf;->e(Ljava/lang/Class;Lbc7;)V
 
-    cmp-long p1, v1, v3
+    new-instance v1, Lpo7;
 
-    if-eqz p1, :cond_2
+    const/16 v2, 0xd
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-direct {v1, v2}, Lpo7;-><init>(I)V
 
-    return p1
+    const-class v2, Lfk6;
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {v0, v2, v1}, Lvxf;->e(Ljava/lang/Class;Lbc7;)V
 
-.method public final hashCode()I
-    .locals 2
+    new-instance v1, Lpo7;
 
-    iget-wide v0, p0, Lvb9;->a:J
+    const/16 v2, 0xe
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-direct {v1, v2}, Lpo7;-><init>(I)V
 
-    move-result v0
+    const-class v2, Lyh9;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, v2, v1}, Lvxf;->e(Ljava/lang/Class;Lbc7;)V
 
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final j()J
-    .locals 2
-
-    iget-wide v0, p0, Lvb9;->a:J
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "OnUnsupportedAttachButtonCLick(messageId="
-
-    const-string v1, ", isSkippableForMultiSelect=true)"
-
-    iget-wide v2, p0, Lvb9;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lvxf;->a()Lhdd;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lvb9;->a:Lhdd;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Trying to access DI graph before initialization!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

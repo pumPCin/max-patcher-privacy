@@ -1,128 +1,67 @@
 .class public final Lxee;
-.super Ljava/lang/Object;
+.super Lxff;
 .source "SourceFile"
-
-# interfaces
-.implements Lqz7;
 
 
 # instance fields
-.field public final a:Lr94;
-
-.field public final b:Lspe;
-
-.field public c:[B
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Lk94;Lr94;)V
+.method public synthetic constructor <init>()V
     .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lxee;->d:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lhz7;->c:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    iput-object p2, p0, Lxee;->a:Lr94;
-
-    new-instance p2, Lspe;
-
-    invoke-direct {p2, p1}, Lspe;-><init>(Lk94;)V
-
-    iput-object p2, p0, Lxee;->b:Lspe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()V
-    .locals 0
+.method public final b(Landroid/view/View;Landroid/view/ViewGroup;)F
+    .locals 1
 
-    return-void
-.end method
+    iget v0, p0, Lxee;->d:I
 
-.method public final load()V
-    .locals 4
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
-    iget-object v2, p0, Lxee;->b:Lspe;
+    move-result p1
 
-    iput-wide v0, v2, Lspe;->b:J
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
-    :try_start_0
-    iget-object v0, p0, Lxee;->a:Lr94;
+    move-result p2
 
-    invoke-virtual {v2, v0}, Lspe;->G(Lr94;)J
+    int-to-float p2, p2
 
-    const/4 v0, 0x0
+    add-float/2addr p1, p2
 
-    :goto_0
-    const/4 v1, -0x1
+    return p1
 
-    if-eq v0, v1, :cond_2
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
-    iget-wide v0, v2, Lspe;->b:J
+    move-result p1
 
-    long-to-int v0, v0
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
-    iget-object v1, p0, Lxee;->c:[B
+    move-result p2
 
-    if-nez v1, :cond_0
+    int-to-float p2, p2
 
-    const/16 v1, 0x400
+    sub-float/2addr p1, p2
 
-    new-array v1, v1, [B
+    return p1
 
-    iput-object v1, p0, Lxee;->c:[B
+    nop
 
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_0
-    array-length v3, v1
-
-    if-ne v0, v3, :cond_1
-
-    array-length v3, v1
-
-    mul-int/lit8 v3, v3, 0x2
-
-    invoke-static {v1, v3}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object v1
-
-    iput-object v1, p0, Lxee;->c:[B
-
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Lxee;->c:[B
-
-    array-length v3, v1
-
-    sub-int/2addr v3, v0
-
-    invoke-virtual {v2, v1, v0, v3}, Lspe;->read([BII)I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {v2}, Lj40;->f(Lk94;)V
-
-    return-void
-
-    :goto_2
-    invoke-static {v2}, Lj40;->f(Lk94;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

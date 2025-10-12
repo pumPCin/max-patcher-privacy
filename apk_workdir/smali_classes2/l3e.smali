@@ -1,327 +1,134 @@
-.class public final Ll3e;
-.super Lvwc;
+.class public final synthetic Ll3e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Ltc4;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
-
-.field public final b:Landroid/graphics/Paint;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Ll3e;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Ll3e;->a:Landroid/graphics/Rect;
-
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, p1}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lbx4;->h()Luxa;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Luxa;->i()Ljye;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ljye;->b:Loye;
-
-    iget p1, p1, Loye;->b:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object v0, p0, Ll3e;->b:Landroid/graphics/Paint;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Ljxc;)V
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    iget-object p3, p3, Landroidx/recyclerview/widget/RecyclerView;->E0:Lpwc;
+    iget v0, p0, Ll3e;->a:I
 
-    const-wide/16 v0, -0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p3, :cond_1
+    new-instance v0, Lone/me/webview/FaqWebViewWidget;
 
-    iget-boolean p3, p3, Lpwc;->b:Z
+    invoke-direct {v0}, Lone/me/webview/FaqWebViewWidget;-><init>()V
 
-    if-nez p3, :cond_0
+    return-object v0
 
-    goto :goto_0
+    :pswitch_0
+    new-instance v0, Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    :cond_0
-    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lnxc;
+    invoke-direct {v0}, Lone/me/webapp/settings/WebAppsSettingScreen;-><init>()V
 
-    move-result-object p2
+    return-object v0
 
-    if-eqz p2, :cond_1
+    :pswitch_1
+    new-instance v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    iget-wide p2, p2, Lnxc;->X:J
+    invoke-direct {v0}, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;-><init>()V
 
-    goto :goto_1
+    return-object v0
 
-    :cond_1
-    :goto_0
-    move-wide p2, v0
+    :pswitch_2
+    new-instance v1, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    :goto_1
-    cmp-long p4, p2, v0
+    const/4 v5, 0x2
 
-    if-nez p4, :cond_2
+    const/4 v6, 0x0
 
-    goto :goto_2
+    sget-object v2, Lvre;->c:Lvre;
 
-    :cond_2
-    sget-wide v0, Liua;->i:J
+    const-wide/16 v3, 0x0
 
-    cmp-long p4, p2, v0
+    invoke-direct/range {v1 .. v6}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lvre;JILaf4;)V
 
-    const/high16 v0, 0x3f000000    # 0.5f
+    return-object v1
 
-    if-nez p4, :cond_3
+    :pswitch_3
+    new-instance v2, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    iget p2, p1, Landroid/graphics/Rect;->bottom:I
+    const/4 v6, 0x2
 
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
+    const/4 v7, 0x0
 
-    move-result-object p3
+    sget-object v3, Lvre;->b:Lvre;
 
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const-wide/16 v4, 0x0
 
-    move-result-object p3
+    invoke-direct/range {v2 .. v7}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lvre;JILaf4;)V
 
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
+    return-object v2
 
-    invoke-static {v0, p3, p2}, Lnd5;->c(FFI)I
+    :pswitch_4
+    new-instance v0, Lone/me/stickerssettings/StickersSettingsScreen;
 
-    move-result p2
+    invoke-direct {v0}, Lone/me/stickerssettings/StickersSettingsScreen;-><init>()V
 
-    iput p2, p1, Landroid/graphics/Rect;->bottom:I
+    return-object v0
 
-    return-void
-
-    :cond_3
-    sget-wide v1, Liua;->n:J
-
-    cmp-long p2, p2, v1
-
-    if-nez p2, :cond_4
-
-    iget p2, p1, Landroid/graphics/Rect;->top:I
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v0, p3, p2}, Lnd5;->c(FFI)I
-
-    move-result p2
-
-    iput p2, p1, Landroid/graphics/Rect;->top:I
-
-    :cond_4
-    :goto_2
-    return-void
-.end method
-
-.method public final h(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 11
-
-    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
+    :pswitch_5
+    new-instance v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
     const/4 v1, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_5
+    sget-object v2, Lile;->c:Lile;
 
-    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLile;)V
 
-    move-result-object v2
+    return-object v0
 
-    if-nez v2, :cond_0
+    :pswitch_6
+    new-instance v0, Lone/me/startconversation/chat/PickChatMembers;
 
-    goto/16 :goto_2
+    invoke-direct {v0}, Lone/me/startconversation/chat/PickChatMembers;-><init>()V
 
-    :cond_0
-    iget-object v3, p2, Landroidx/recyclerview/widget/RecyclerView;->E0:Lpwc;
+    return-object v0
 
-    const-wide/16 v4, -0x1
+    :pswitch_7
+    new-instance v0, Lone/me/startconversation/StartConversationScreen;
 
-    if-eqz v3, :cond_2
+    invoke-direct {v0}, Lone/me/startconversation/StartConversationScreen;-><init>()V
 
-    iget-boolean v3, v3, Lpwc;->b:Z
+    return-object v0
 
-    if-nez v3, :cond_1
+    :pswitch_8
+    new-instance v0, Lone/me/settings/storage/ui/SettingsStorageScreen;
 
-    goto :goto_1
+    invoke-direct {v0}, Lone/me/settings/storage/ui/SettingsStorageScreen;-><init>()V
 
-    :cond_1
-    invoke-static {v2}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Lnxc;
+    return-object v0
 
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    iget-wide v4, v3, Lnxc;->X:J
-
-    :cond_2
-    :goto_1
-    sget-wide v6, Liua;->i:J
-
-    cmp-long v3, v4, v6
-
-    iget-object v6, p0, Ll3e;->b:Landroid/graphics/Paint;
-
-    const/high16 v7, 0x3f000000    # 0.5f
-
-    iget-object v8, p0, Ll3e;->a:Landroid/graphics/Rect;
-
-    if-nez v3, :cond_3
-
-    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getBottom()I
-
-    move-result p2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v7, v0, p2}, Lnd5;->c(FFI)I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getRight()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-
-    return-void
-
-    :cond_3
-    sget-wide v9, Liua;->n:J
-
-    cmp-long v3, v4, v9
-
-    if-nez v3, :cond_4
-
-    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v7, v0, p2}, Lnd5;->c(FFI)I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v2}, Landroid/view/View;->getRight()I
-
-    move-result p2
-
-    iput p2, v8, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {p1, v8, v6}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-
-    return-void
-
-    :cond_4
-    :goto_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto/16 :goto_0
-
-    :cond_5
-    return-void
-.end method
-
-.method public final onThemeChanged(Luxa;)V
-    .locals 1
-
-    invoke-interface {p1}, Luxa;->i()Ljye;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ljye;->b:Loye;
-
-    iget p1, p1, Loye;->b:I
-
-    iget-object v0, p0, Ll3e;->b:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

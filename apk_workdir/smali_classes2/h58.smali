@@ -1,132 +1,116 @@
-.class public final synthetic Lh58;
-.super Ljava/lang/Object;
+.class public final Lh58;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:I
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:I
-
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic Y:Lm58;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+.method public constructor <init>(Lm58;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lh58;->Y:Lm58;
 
-    iput-object p1, p0, Lh58;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lh58;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lh58;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lh58;->o:Ljava/lang/String;
-
-    iput p5, p0, Lh58;->X:I
-
-    iput p6, p0, Lh58;->Y:I
-
-    iput p7, p0, Lh58;->Z:I
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p1, Lcd4;
+    check-cast p1, Ln24;
 
-    const-string v0, ":twofa/auth/password/check"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object v0, p1, Lcd4;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lh58;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string v0, "track_id"
+    move-result-object p1
 
-    iget-object v1, p0, Lh58;->a:Ljava/lang/String;
+    check-cast p1, Lh58;
 
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object v0, p1, Lcd4;->b:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Lh58;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lh58;->b:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+    return-object p1
+.end method
 
-    move-result-object v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance p1, Lh58;
 
-    const-string v3, "hint="
+    iget-object v0, p0, Lh58;->Y:Lm58;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0, p2}, Lh58;-><init>(Lm58;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result-object v1
+    iget v0, p0, Lh58;->X:I
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    const-string v0, "email"
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lh58;->c:Ljava/lang/String;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-string v0, "phone"
+    goto :goto_0
 
-    iget-object v1, p0, Lh58;->o:Ljava/lang/String;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const-string v0, "p_mn_l"
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lh58;->X:I
+    throw p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-object v1
+    new-instance p1, Lu48;
 
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v0, 0x2
 
-    const-string v0, "p_mx_l"
+    iget-object v2, p0, Lh58;->Y:Lm58;
 
-    iget v1, p0, Lh58;->Y:I
+    invoke-direct {p1, v2, v0}, Lu48;-><init>(Lm58;I)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput v1, p0, Lh58;->X:I
 
-    move-result-object v1
+    invoke-static {p1, p0}, Lu64;->B(Ltd6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object p1
 
-    const-string v0, "h_mx_l"
+    sget-object v0, Lo24;->a:Lo24;
 
-    iget v1, p0, Lh58;->Z:I
+    if-ne p1, v0, :cond_2
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-object v0
 
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

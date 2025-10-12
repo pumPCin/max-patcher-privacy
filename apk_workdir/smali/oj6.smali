@@ -4,12 +4,16 @@
 
 
 # instance fields
-.field public a:Z
+.field public final a:Lyn7;
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method public constructor <init>(Lyn7;)V
+    .locals 0
 
-.field public d:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:I
+    iput-object p1, p0, Loj6;->a:Lyn7;
+
+    return-void
+.end method

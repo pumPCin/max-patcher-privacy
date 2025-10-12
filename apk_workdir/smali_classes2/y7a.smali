@@ -1,146 +1,104 @@
 .class public final Ly7a;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lq48;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lc4d;
 
-.field public final synthetic Y:Lz7a;
+.field public final b:Lvh;
+
+.field public final c:Lra9;
+
+.field public final o:Lra9;
 
 
 # direct methods
-.method public constructor <init>(Lz7a;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p1, p0, Ly7a;->Y:Lz7a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ly7a;->a:Lc4d;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance v0, Lvh;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ly7a;->b:Lvh;
+
+    new-instance v0, Lra9;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p1, v1}, Lra9;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ly7a;->c:Lra9;
+
+    new-instance v0, Lra9;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p1, v1}, Lra9;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ly7a;->o:Lra9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f()V
+    .locals 2
 
-    check-cast p1, Le34;
+    new-instance v0, Lx7a;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Ly7a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, p0, v1}, Lx7a;-><init>(Ly7a;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p1
+    invoke-static {v0}, Lov9;->f0(Lje6;)Ljava/lang/Object;
 
-    check-cast p1, Ly7a;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Ly7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ly7a;
-
-    iget-object v0, p0, Ly7a;->Y:Lz7a;
-
-    invoke-direct {p1, v0, p2}, Ly7a;-><init>(Lz7a;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final p(JJLk7a;)Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Ly7a;->X:I
+    const/4 v0, 0x2
 
-    const/4 v1, 0x1
+    const-string v1, "SELECT * FROM notifications_tracker_messages WHERE chat_id=? AND message_id=?"
 
-    if-eqz v0, :cond_1
+    invoke-static {v0, v1}, Lt4d;->c(ILjava/lang/String;)Lt4d;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x1
 
-    goto :goto_1
+    invoke-virtual {v1, v2, p1, p2}, Lt4d;->k(IJ)V
 
-    :catchall_0
-    move-exception p1
+    invoke-virtual {v1, v0, p3, p4}, Lt4d;->k(IJ)V
 
-    goto :goto_0
+    new-instance p1, Landroid/os/CancellationSignal;
 
-    :catch_0
-    move-exception p1
+    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
 
-    goto :goto_2
+    new-instance p2, Lxh;
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/16 p3, 0x16
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-direct {p2, p0, p3, v1}, Lxh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p3, p0, Ly7a;->a:Lc4d;
 
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ly7a;->Y:Lz7a;
-
-    :try_start_1
-    iput v1, p0, Ly7a;->X:I
-
-    iget-object v0, p1, Lz7a;->a:Lx5d;
-
-    new-instance v1, Lwg4;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v1, v2, p1}, Lwg4;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0, v1, p0}, Lihf;->h(Lx5d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p3, p1, p2, p5}, Lcea;->i(Lc4d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :goto_0
-    const-string v0, "NotificationsDao"
-
-    const-string v1, "fail to clear on logout"
-
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    sget-object p1, Loyf;->a:Loyf;
 
     return-object p1
-
-    :goto_2
-    throw p1
 .end method

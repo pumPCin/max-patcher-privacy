@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Ltd6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final synthetic b:Lu49;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+.method public synthetic constructor <init>(Lu49;I)V
     .locals 0
 
     iput p2, p0, Lh49;->a:I
 
-    iput-object p1, p0, Lh49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    iput-object p1, p0, Lh49;->b:Lu49;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,51 +27,147 @@
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lh49;->a:I
 
-    sget-object v1, Loyf;->a:Loyf;
-
-    iget-object v2, p0, Lh49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    iget-object v1, p0, Lh49;->b:Lu49;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lyy3;
+    sget-object v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->G0:[Lpl7;
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    iget-object v0, v1, Lu49;->c:Lr49;
 
-    iget p1, p1, Lyy3;->a:I
+    sget v1, Luec;->text_change_is_programmatic_tag:I
 
-    invoke-virtual {v2, p1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    return-object v1
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    check-cast p1, Lyy3;
+    sget v0, Ll7d;->l0:I
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget p1, p1, Lyy3;->a:I
+    move-result-object v1
 
-    invoke-virtual {v2, p1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0(I)V
+    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    return-object v1
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_1
-    check-cast p1, Landroid/view/View;
+    invoke-static {v1}, Lu49;->b(Lu49;)Landroid/graphics/drawable/LayerDrawable;
 
-    sget-object p1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    move-result-object v0
 
-    const/4 p1, 0x1
+    return-object v0
 
-    invoke-virtual {v2, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+    :pswitch_2
+    sget v0, Ll7d;->Q0:I
 
-    return-object v1
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    sget v0, Ll7d;->a0:I
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    sget v0, Ll7d;->c0:I
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_5
+    sget v0, Ll7d;->U0:I
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    invoke-static {v1}, Lu49;->c(Lu49;)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

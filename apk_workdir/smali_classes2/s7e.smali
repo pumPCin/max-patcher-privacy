@@ -1,51 +1,56 @@
-.class public abstract synthetic Ls7e;
+.class public final synthetic Ls7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lw7e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lw7e;I)V
+    .locals 0
 
-    invoke-static {}, Lk10;->values()[Lk10;
+    iput p2, p0, Ls7e;->a:I
 
-    move-result-object v0
+    iput-object p1, p0, Ls7e;->b:Lw7e;
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x3
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x6
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Ls7e;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    iget p1, p0, Ls7e;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Ls7e;->b:Lw7e;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Ls7e;->b:Lw7e;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,303 +1,223 @@
 .class public final Lxeh;
-.super Lhoc;
+.super Le4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxeh;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final synthetic f:I
+.field public final X:Z
+
+.field public final a:I
+
+.field public final b:Landroid/os/IBinder;
+
+.field public final c:Lnm3;
+
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lgng;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lgng;-><init>(I)V
+
+    sput-object v0, Lxeh;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILandroid/os/IBinder;Lnm3;ZZ)V
     .locals 0
 
-    iput p1, p0, Lxeh;->f:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x3
+    iput p1, p0, Lxeh;->a:I
 
-    invoke-direct {p0, p1}, Lhoc;-><init>(I)V
+    iput-object p2, p0, Lxeh;->b:Landroid/os/IBinder;
+
+    iput-object p3, p0, Lxeh;->c:Lnm3;
+
+    iput-boolean p4, p0, Lxeh;->o:Z
+
+    iput-boolean p5, p0, Lxeh;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/content/Context;Landroid/os/Looper;Lp30;Ljava/lang/Object;Ljo6;Lko6;)Lsk;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget v0, p0, Lxeh;->f:I
+    if-nez p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_3
 
-    :pswitch_0
-    invoke-super/range {p0 .. p6}, Lhoc;->b(Landroid/content/Context;Landroid/os/Looper;Lp30;Ljava/lang/Object;Ljo6;Lko6;)Lsk;
+    :cond_0
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_1
 
-    return-object p1
+    goto :goto_2
 
-    :pswitch_1
-    move-object v1, p1
+    :cond_1
+    instance-of v1, p1, Lxeh;
 
-    move-object v2, p2
+    if-nez v1, :cond_2
 
-    move-object v3, p3
+    goto :goto_3
 
-    move-object v5, p5
+    :cond_2
+    check-cast p1, Lxeh;
 
-    move-object v6, p6
+    iget-object v1, p0, Lxeh;->c:Lnm3;
 
-    move-object v4, p4
+    iget-object v2, p1, Lxeh;->c:Lnm3;
 
-    check-cast v4, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
+    invoke-virtual {v1, v2}, Lnm3;->equals(Ljava/lang/Object;)Z
 
-    new-instance v0, Lckh;
+    move-result v1
 
-    check-cast v5, Lefh;
+    if-eqz v1, :cond_7
 
-    check-cast v6, Lefh;
+    const-string v1, "com.google.android.gms.common.internal.IAccountAccessor"
 
-    invoke-direct/range {v0 .. v6}, Lckh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;Lefh;Lefh;)V
+    const/4 v2, 0x0
 
-    return-object v0
+    iget-object v3, p0, Lxeh;->b:Landroid/os/IBinder;
 
-    :pswitch_2
-    move-object v1, p1
+    if-nez v3, :cond_3
 
-    move-object v2, p2
+    move-object v4, v2
 
-    move-object v3, p3
+    goto :goto_0
 
-    move-object v5, p5
+    :cond_3
+    sget v4, Lp5;->d:I
 
-    move-object v6, p6
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    move-object v4, p4
+    move-result-object v4
 
-    check-cast v4, Lw60;
+    instance-of v5, v4, Lk07;
 
-    new-instance v0, Lvlh;
+    if-eqz v5, :cond_4
 
-    check-cast v5, Lefh;
+    check-cast v4, Lk07;
 
-    check-cast v6, Lefh;
+    goto :goto_0
 
-    invoke-direct/range {v0 .. v6}, Lvlh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Lw60;Lefh;Lefh;)V
+    :cond_4
+    new-instance v4, Lblh;
 
-    return-object v0
+    invoke-direct {v4, v3, v1, v0}, Lidh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    :pswitch_3
-    move-object v1, p1
+    :goto_0
+    iget-object p1, p1, Lxeh;->b:Landroid/os/IBinder;
 
-    move-object v2, p2
+    if-nez p1, :cond_5
 
-    move-object v3, p3
+    goto :goto_1
 
-    move-object v5, p5
+    :cond_5
+    sget v2, Lp5;->d:I
 
-    move-object v6, p6
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    new-instance v0, Ljkh;
+    move-result-object v2
 
-    const/16 v3, 0x7e
+    instance-of v3, v2, Lk07;
 
-    const/4 v7, 0x0
+    if-eqz v3, :cond_6
 
-    move-object v4, p3
+    check-cast v2, Lk07;
 
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILp30;Ljo6;Lko6;I)V
+    goto :goto_1
 
-    return-object v0
+    :cond_6
+    new-instance v2, Lblh;
 
-    :pswitch_4
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v2, p1, v1, v0}, Lidh;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :pswitch_5
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    check-cast p4, Lube;
-
-    new-instance v0, Ltbe;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, v3, Lp30;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    new-instance v4, Landroid/os/Bundle;
-
-    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
-
-    const-string p2, "com.google.android.gms.signin.internal.clientRequestedAccount"
-
-    const/4 p3, 0x0
-
-    invoke-virtual {v4, p2, p3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    if-eqz p1, :cond_0
-
-    const-string p2, "com.google.android.gms.common.internal.ClientSettings.sessionId"
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    :goto_1
+    invoke-static {v4, v2}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-virtual {v4, p2, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+    if-eqz p1, :cond_7
 
-    :cond_0
-    const-string p1, "com.google.android.gms.signin.internal.offlineAccessRequested"
+    :goto_2
+    return v0
 
-    const/4 p2, 0x0
+    :cond_7
+    :goto_3
+    const/4 p1, 0x0
 
-    invoke-virtual {v4, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    const-string p1, "com.google.android.gms.signin.internal.idTokenRequested"
-
-    invoke-virtual {v4, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    const-string p1, "com.google.android.gms.signin.internal.serverClientId"
-
-    invoke-virtual {v4, p1, p3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "com.google.android.gms.signin.internal.usePromptModeForAuthCode"
-
-    const/4 p4, 0x1
-
-    invoke-virtual {v4, p1, p4}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    const-string p1, "com.google.android.gms.signin.internal.forceCodeForRefreshToken"
-
-    invoke-virtual {v4, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    const-string p1, "com.google.android.gms.signin.internal.hostedDomain"
-
-    invoke-virtual {v4, p1, p3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "com.google.android.gms.signin.internal.logSessionId"
-
-    invoke-virtual {v4, p1, p3}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "com.google.android.gms.signin.internal.waitForAccessTokenRefresh"
-
-    invoke-virtual {v4, p1, p2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
-
-    invoke-direct/range {v0 .. v6}, Ltbe;-><init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Landroid/os/Bundle;Ljo6;Lko6;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_0
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    return p1
 .end method
 
-.method public c(Landroid/content/Context;Landroid/os/Looper;Lp30;Ljava/lang/Object;Lefh;Lefh;)Lsk;
-    .locals 8
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    iget v0, p0, Lxeh;->f:I
+    const/16 v0, 0x4f45
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-static {p1, v0}, Lnjg;->S(Landroid/os/Parcel;I)I
 
-    invoke-super/range {p0 .. p6}, Lhoc;->c(Landroid/content/Context;Landroid/os/Looper;Lp30;Ljava/lang/Object;Lefh;Lefh;)Lsk;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    return-object p1
+    const/4 v2, 0x4
 
-    :sswitch_0
-    move-object v1, p1
+    invoke-static {p1, v1, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
 
-    move-object v2, p2
+    iget v1, p0, Lxeh;->a:I
 
-    move-object v3, p3
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-object v5, p5
+    const/4 v1, 0x2
 
-    move-object v6, p6
+    iget-object v3, p0, Lxeh;->b:Landroid/os/IBinder;
 
-    check-cast p4, Lqk;
+    invoke-static {p1, v1, v3}, Lnjg;->N(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    new-instance v0, Lxih;
+    const/4 v1, 0x3
 
-    const/16 v3, 0x12c
+    iget-object v3, p0, Lxeh;->c:Lnm3;
 
-    const/4 v7, 0x0
+    invoke-static {p1, v1, v3, p2}, Lnjg;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    move-object v4, p3
+    invoke-static {p1, v2, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
 
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILp30;Ljo6;Lko6;I)V
+    iget-boolean p2, p0, Lxeh;->o:Z
 
-    return-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :sswitch_1
-    move-object v1, p1
+    const/4 p2, 0x5
 
-    move-object v2, p2
+    invoke-static {p1, p2, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
 
-    move-object v3, p3
+    iget-boolean p2, p0, Lxeh;->X:Z
 
-    move-object v5, p5
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-object v6, p6
+    invoke-static {p1, v0}, Lnjg;->T(Landroid/os/Parcel;I)V
 
-    check-cast p4, Lqk;
-
-    new-instance v0, Ldjh;
-
-    move-object v4, v5
-
-    move-object v5, v6
-
-    invoke-direct/range {v0 .. v5}, Ldjh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Lefh;Lefh;)V
-
-    return-object v0
-
-    :sswitch_2
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    move-object v4, p4
-
-    check-cast v4, Lscf;
-
-    new-instance v0, Ljgh;
-
-    invoke-direct/range {v0 .. v6}, Ljgh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lp30;Lscf;Lefh;Lefh;)V
-
-    return-object v0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x2 -> :sswitch_2
-        0x4 -> :sswitch_1
-        0x7 -> :sswitch_0
-    .end sparse-switch
+    return-void
 .end method

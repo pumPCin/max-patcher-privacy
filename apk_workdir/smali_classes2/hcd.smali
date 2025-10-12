@@ -1,94 +1,100 @@
 .class public final Lhcd;
-.super Ljava/lang/Object;
+.super Ljn7;
 .source "SourceFile"
 
 # interfaces
-.implements Lfoe;
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:Lfoe;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lm13;)V
-    .locals 4
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lhcd;->a:I
 
-    check-cast p1, Lm23;
+    iput-object p2, p0, Lhcd;->b:Ljava/lang/Object;
 
-    iget-object p1, p1, Lm23;->b:Lw13;
+    const/4 p1, 0x0
 
-    iget-object v0, p1, Lw13;->Z:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    const-wide/16 v1, 0x0
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    new-instance v2, Lan2;
-
-    const/4 v3, 0x6
-
-    invoke-direct {v2, v3, p1}, Lan2;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lci;
-
-    const/4 v3, 0x5
-
-    invoke-direct {p1, v3, v2}, Lci;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfoe;
-
-    iput-object p1, p0, Lhcd;->a:Lfoe;
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/util/List;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lhcd;->a:Lfoe;
+    iget v0, p0, Lhcd;->a:I
 
-    invoke-interface {v0}, La8e;->b()Ljava/util/List;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lhcd;->b:Ljava/lang/Object;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lhcd;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhkg;
+
+    instance-of v1, v0, Lvr6;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lvr6;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lvr6;->f()Lhr9;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v0, Lf44;->b:Lf44;
+
+    :goto_1
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lhcd;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lhkg;
+
+    invoke-interface {v0}, Lhkg;->k()Lgkg;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 1
+    nop
 
-    iget-object v0, p0, Lhcd;->a:Lfoe;
-
-    invoke-interface {v0, p1, p2}, Lev5;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lhcd;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm82;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

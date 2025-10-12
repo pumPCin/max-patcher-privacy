@@ -42,7 +42,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->g0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->f0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lru/ok/android/externcalls/sdk/ConversationImpl$ListenerImpl;
 
     move-result-object v0
 
@@ -54,15 +54,15 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->W(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lfz0;
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->V(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lzy0;
 
     move-result-object v0
 
-    iget-object v0, v0, Lfz0;->k0:Ldq1;
+    iget-object v0, v0, Lzy0;->m0:Lfq1;
 
-    sget-object v1, Lwlf;->c:Lwlf;
+    sget-object v1, Lnkf;->c:Lnkf;
 
-    invoke-virtual {v0, v1}, Ldq1;->G(Lwlf;)Z
+    invoke-virtual {v0, v1}, Lfq1;->E(Lnkf;)Z
 
     move-result v0
 
@@ -70,7 +70,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->x0(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->w0(Lru/ok/android/externcalls/sdk/ConversationImpl;)V
 
     :cond_0
     return-void
@@ -78,22 +78,22 @@
 
 
 # virtual methods
-.method public onSample(IIILu3b;)V
+.method public onSample(IIILk2b;)V
     .locals 0
 
-    invoke-super {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->onSample(IIILu3b;)V
+    invoke-super {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->onSample(IIILk2b;)V
 
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationImpl$1;->this$0:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->j0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->i0(Lru/ok/android/externcalls/sdk/ConversationImpl;)Landroid/os/Handler;
 
     move-result-object p1
 
-    new-instance p2, Lru/ok/android/externcalls/sdk/g;
+    new-instance p2, Lru/ok/android/externcalls/sdk/m;
 
     const/4 p3, 0x5
 
-    invoke-direct {p2, p3, p0}, Lru/ok/android/externcalls/sdk/g;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, p3, p0}, Lru/ok/android/externcalls/sdk/m;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

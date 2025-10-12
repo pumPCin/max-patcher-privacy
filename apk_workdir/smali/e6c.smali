@@ -4,116 +4,88 @@
 
 
 # static fields
-.field public static final enum X:Le6c;
+.field public static final enum a:Le6c;
 
-.field public static final enum Y:Le6c;
-
-.field public static final enum Z:Le6c;
-
-.field public static final enum b:Le6c;
-
-.field public static final enum c:Le6c;
-
-.field public static final enum o:Le6c;
-
-.field public static final synthetic w0:[Le6c;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final synthetic b:[Le6c;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 13
 
     new-instance v0, Le6c;
 
-    const/4 v1, 0x0
+    const-string v1, "DEFAULT"
 
-    const-string v2, "http/1.0"
+    const/4 v6, 0x0
 
-    const-string v3, "HTTP_1_0"
+    invoke-direct {v0, v1, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v3, v1, v2}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Le6c;->b:Le6c;
+    sput-object v0, Le6c;->a:Le6c;
 
     new-instance v1, Le6c;
 
-    const/4 v2, 0x1
+    const-string v2, "UNMETERED_ONLY"
 
-    const-string v3, "http/1.1"
+    const/4 v7, 0x1
 
-    const-string v4, "HTTP_1_1"
-
-    invoke-direct {v1, v4, v2, v3}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Le6c;->c:Le6c;
+    invoke-direct {v1, v2, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     new-instance v2, Le6c;
 
-    const/4 v3, 0x2
+    const-string v3, "UNMETERED_OR_DAILY"
 
-    const-string v4, "spdy/3.1"
+    const/4 v8, 0x2
 
-    const-string v5, "SPDY_3"
-
-    invoke-direct {v2, v5, v3, v4}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Le6c;->o:Le6c;
+    invoke-direct {v2, v3, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     new-instance v3, Le6c;
 
-    const/4 v4, 0x3
+    const-string v4, "FAST_IF_RADIO_AWAKE"
 
-    const-string v5, "h2"
+    const/4 v9, 0x3
 
-    const-string v6, "HTTP_2"
-
-    invoke-direct {v3, v6, v4, v5}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Le6c;->X:Le6c;
+    invoke-direct {v3, v4, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     new-instance v4, Le6c;
 
-    const/4 v5, 0x4
+    const-string v5, "NEVER"
 
-    const-string v6, "h2_prior_knowledge"
+    const/4 v10, 0x4
 
-    const-string v7, "H2_PRIOR_KNOWLEDGE"
-
-    invoke-direct {v4, v7, v5, v6}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Le6c;->Y:Le6c;
+    invoke-direct {v4, v5, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     new-instance v5, Le6c;
 
-    const/4 v6, 0x5
+    const-string v11, "UNRECOGNIZED"
 
-    const-string v7, "quic"
+    const/4 v12, 0x5
 
-    const-string v8, "QUIC"
-
-    invoke-direct {v5, v8, v6, v7}, Le6c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Le6c;->Z:Le6c;
+    invoke-direct {v5, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     filled-new-array/range {v0 .. v5}, [Le6c;
 
-    move-result-object v0
+    move-result-object v11
 
-    sput-object v0, Le6c;->w0:[Le6c;
+    sput-object v11, Le6c;->b:[Le6c;
 
-    return-void
-.end method
+    new-instance v11, Landroid/util/SparseArray;
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    invoke-direct {v11}, Landroid/util/SparseArray;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v11, v6, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    iput-object p3, p0, Le6c;->a:Ljava/lang/String;
+    invoke-virtual {v11, v7, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v8, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v9, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v10, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v11, v0, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -135,23 +107,13 @@
 .method public static values()[Le6c;
     .locals 1
 
-    sget-object v0, Le6c;->w0:[Le6c;
+    sget-object v0, Le6c;->b:[Le6c;
 
     invoke-virtual {v0}, [Le6c;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Le6c;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Le6c;->a:Ljava/lang/String;
 
     return-object v0
 .end method

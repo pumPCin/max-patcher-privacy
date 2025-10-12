@@ -1,46 +1,84 @@
-.class public final synthetic Lwz4;
+.class public final Lwz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/AutoCompleteTextView$OnDismissListener;
+.implements Lsmf;
 
 
 # instance fields
-.field public final synthetic a:Lxz4;
+.field public final a:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxz4;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwz4;->a:Lxz4;
+    const/16 v0, 0x1000
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lwz4;->a:[B
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 4
+.method public final a(Ln84;IZ)I
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lwz4;->a:[B
 
-    iget-object v1, p0, Lwz4;->a:Lxz4;
+    array-length v1, v0
 
-    iput-boolean v0, v1, Lxz4;->m:Z
+    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result p2
 
-    move-result-wide v2
+    const/4 v1, 0x0
 
-    iput-wide v2, v1, Lxz4;->o:J
+    invoke-interface {p1, v0, v1, p2}, Ln84;->read([BII)I
 
-    const/4 v0, 0x0
+    move-result p1
 
-    invoke-virtual {v1, v0}, Lxz4;->t(Z)V
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_1
+
+    if-eqz p3, :cond_0
+
+    return p2
+
+    :cond_0
+    new-instance p1, Ljava/io/EOFException;
+
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    return p1
+.end method
+
+.method public final b(JIIILqmf;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final c(ILt3g;)V
+    .locals 0
+
+    invoke-virtual {p2, p1}, Lt3g;->F(I)V
+
+    return-void
+.end method
+
+.method public final d(Lu66;)V
+    .locals 0
 
     return-void
 .end method

@@ -1,134 +1,235 @@
 .class public final Libf;
-.super Ljava/lang/Object;
+.super Le3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lgq9;
 
-.field public final synthetic b:Lubf;
+.field public Y:Lqb6;
 
-.field public final synthetic c:Lmz3;
+.field public final Z:Lyl6;
 
-.field public final synthetic o:Lbolts/Task;
+.field public o:Linf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lubf;Lmz3;Lbolts/Task;I)V
+.method public constructor <init>(Lyl6;Lbw1;)V
     .locals 0
 
-    iput p4, p0, Libf;->a:I
+    invoke-direct {p0, p2}, Le3;-><init>(Lbw1;)V
 
-    iput-object p1, p0, Libf;->b:Lubf;
-
-    iput-object p2, p0, Libf;->c:Lmz3;
-
-    iput-object p3, p0, Libf;->o:Lbolts/Task;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Libf;->Z:Lyl6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final declared-synchronized e()V
+    .locals 1
 
-    iget v0, p0, Libf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Libf;->b:Lubf;
+    monitor-enter p0
 
     :try_start_0
-    iget-object v1, p0, Libf;->c:Lmz3;
+    iget-object v0, p0, Libf;->o:Linf;
 
-    iget-object v2, p0, Libf;->o:Lbolts/Task;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {v1, v2}, Lmz3;->a(Lbolts/Task;)Ljava/lang/Object;
+    invoke-virtual {v0}, Linf;->p()V
 
-    move-result-object v1
-
-    check-cast v1, Lbolts/Task;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lubf;->c(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Ljbf;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3, p0}, Ljbf;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lbolts/Task;->continueWith(Lmz3;)Lbolts/Task;
+    invoke-super {p0}, Le3;->e()V
     :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_1
+    monitor-exit p0
 
-    :goto_0
-    invoke-virtual {v0, v1}, Lubf;->b(Ljava/lang/Exception;)V
-
-    goto :goto_1
-
-    :catch_1
-    invoke-virtual {v0}, Lubf;->a()V
-
-    :goto_1
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Libf;->b:Lubf;
+    :catchall_0
+    move-exception v0
 
     :try_start_1
-    iget-object v1, p0, Libf;->c:Lmz3;
-
-    iget-object v2, p0, Libf;->o:Lbolts/Task;
-
-    invoke-interface {v1, v2}, Lmz3;->a(Lbolts/Task;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lubf;->c(Ljava/lang/Object;)V
+    monitor-exit p0
     :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_2
+    throw v0
+.end method
 
-    :catch_2
+.method public final g()I
+    .locals 2
+
+    iget-object v0, p0, Libf;->o:Linf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Linf;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return v1
+
+    :catchall_0
     move-exception v1
 
-    invoke-virtual {v0, v1}, Lubf;->b(Ljava/lang/Exception;)V
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_2
+    throw v1
+.end method
 
-    :catch_3
-    invoke-virtual {v0}, Lubf;->a()V
+.method public final j()V
+    .locals 4
 
-    :goto_2
+    iget-object v0, p0, Libf;->o:Linf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lbw1;
+
+    iget-object v1, p0, Libf;->o:Linf;
+
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Lpl4;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3, v1}, Lpl4;-><init>(ILjava/lang/Object;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lbw1;->f(Ly8g;Z)V
+
     return-void
+.end method
 
-    nop
+.method public final m(Lfm6;)V
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lbw1;
+
+    new-instance v1, Lw42;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p0, v2, p1}, Lw42;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lbw1;->f(Ly8g;Z)V
+
+    return-void
+.end method
+
+.method public final n(IJ)V
+    .locals 7
+
+    iget-object v3, p0, Libf;->Y:Lqb6;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Libf;->X:Lgq9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    move-object v6, v0
+
+    check-cast v6, Lbw1;
+
+    new-instance v0, Lhbf;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move-wide v4, p2
+
+    invoke-direct/range {v0 .. v5}, Lhbf;-><init>(Libf;ILqb6;J)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {v6, v0, p1}, Lbw1;->f(Ly8g;Z)V
+
+    return-void
+.end method
+
+.method public final r()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final u(Lqb6;Z)V
+    .locals 0
+
+    iput-object p1, p0, Libf;->Y:Lqb6;
+
+    return-void
+.end method
+
+.method public final v(Lgq9;)V
+    .locals 0
+
+    iput-object p1, p0, Libf;->X:Lgq9;
+
+    return-void
+.end method
+
+.method public final w(Llj4;)V
+    .locals 3
+
+    new-instance v0, Linf;
+
+    iget-object v1, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v1, Lbw1;
+
+    iget-object v2, p0, Libf;->Z:Lyl6;
+
+    invoke-direct {v0, v2, p1, v1}, Linf;-><init>(Lyl6;Lem6;Lbw1;)V
+
+    iput-object v0, p0, Libf;->o:Linf;
+
+    return-void
+.end method
+
+.method public final x()V
+    .locals 3
+
+    iget-object v0, p0, Le3;->a:Ljava/lang/Object;
+
+    check-cast v0, Lbw1;
+
+    new-instance v1, Lpl4;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p0}, Lpl4;-><init>(ILjava/lang/Object;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lbw1;->f(Ly8g;Z)V
+
+    return-void
 .end method

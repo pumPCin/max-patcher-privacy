@@ -1,126 +1,131 @@
 .class public final Lwj3;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:I
-
-.field public static final d:I
-
-
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final b:Ljava/lang/String;
 
-.field public b:Landroid/content/res/Configuration;
+.field public final c:Lcob;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Lcob;)V
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v0, 0x6
 
-    const/16 v1, 0x1f
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-    if-lt v0, v1, :cond_0
+    iput-object p1, p0, Lwj3;->b:Ljava/lang/String;
 
-    const v2, 0x10003d84
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v2, 0x3d84
-
-    :goto_0
-    sput v2, Lwj3;->c:I
-
-    if-lt v0, v1, :cond_1
-
-    const/high16 v0, 0x50000000
-
-    goto :goto_1
-
-    :cond_1
-    const/high16 v0, 0x40000000    # 2.0f
-
-    :goto_1
-    sput v0, Lwj3;->d:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lwj3;->a:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance v0, Landroid/content/res/Configuration;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
-
-    iput-object v0, p0, Lwj3;->b:Landroid/content/res/Configuration;
-
-    new-instance v0, Lef2;
-
-    invoke-direct {v0, p0, p1}, Lef2;-><init>(Lwj3;Landroid/content/Context;)V
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
+    iput-object p2, p0, Lwj3;->c:Lcob;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILvj3;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lwj3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    return v0
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lwj3;
 
-    move-result-object v1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, p1
+    return v2
 
     :cond_1
-    :goto_0
-    check-cast v1, Ljava/util/Set;
+    check-cast p1, Lwj3;
 
-    invoke-interface {v1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lwj3;->b:Ljava/lang/String;
 
-    return-void
+    iget-object v3, p1, Lwj3;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lwj3;->c:Lcob;
+
+    iget-object p1, p1, Lwj3;->c:Lcob;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lwj3;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lwj3;->c:Lcob;
+
+    invoke-virtual {v1}, Lcob;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NameInputScreen(token="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lwj3;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", presetAvatars="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lwj3;->c:Lcob;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

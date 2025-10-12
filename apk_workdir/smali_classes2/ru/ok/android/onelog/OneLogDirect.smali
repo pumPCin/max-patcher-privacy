@@ -13,19 +13,19 @@
         "",
         "<init>",
         "()V",
-        "Lal;",
+        "Ljl;",
         "getApiClient",
-        "()Lal;",
+        "()Ljl;",
         "Lru/ok/android/onelog/OneLogItem;",
         "item",
-        "Loyf;",
+        "Laxf;",
         "send",
         "(Lru/ok/android/onelog/OneLogItem;)V",
         "Lkotlin/Function2;",
         "Ljava/lang/Exception;",
         "Lkotlin/Exception;",
         "errorCallback",
-        "(Lru/ok/android/onelog/OneLogItem;Llf6;)V",
+        "(Lru/ok/android/onelog/OneLogItem;Lje6;)V",
         "flush",
         "one-video-stats_release"
     }
@@ -64,10 +64,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lru/ok/android/onelog/OneLogItem;Lal;Llf6;)V
+.method public static synthetic a(Lru/ok/android/onelog/OneLogItem;Ljl;Lje6;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lru/ok/android/onelog/OneLogDirect;->send$lambda$2(Lru/ok/android/onelog/OneLogItem;Lal;Llf6;)V
+    invoke-static {p0, p1, p2}, Lru/ok/android/onelog/OneLogDirect;->send$lambda$2(Lru/ok/android/onelog/OneLogItem;Ljl;Lje6;)V
 
     return-void
 .end method
@@ -80,10 +80,10 @@
     return-void
 .end method
 
-.method public static synthetic c(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Loyf;
+.method public static synthetic c(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Laxf;
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/onelog/OneLogDirect;->send$lambda$1(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Loyf;
+    invoke-static {p0, p1}, Lru/ok/android/onelog/OneLogDirect;->send$lambda$1(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Laxf;
 
     move-result-object p0
 
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method private final getApiClient()Lal;
+.method private final getApiClient()Ljl;
     .locals 1
 
     :try_start_0
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Lal;
+    invoke-virtual {v0}, Lru/ok/android/onelog/OneLogImpl;->getApiClient()Ljl;
 
     move-result-object v0
     :try_end_0
@@ -134,7 +134,7 @@
     return-object v0
 .end method
 
-.method private static final send$lambda$1(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Loyf;
+.method private static final send$lambda$1(Lru/ok/android/onelog/OneLogItem;Ljava/lang/Exception;)Laxf;
     .locals 0
 
     if-eqz p1, :cond_0
@@ -144,12 +144,12 @@
     :cond_0
     invoke-virtual {p0}, Lru/ok/android/onelog/OneLogItem;->operation()Ljava/lang/String;
 
-    sget-object p0, Loyf;->a:Loyf;
+    sget-object p0, Laxf;->a:Laxf;
 
     return-object p0
 .end method
 
-.method private static final send$lambda$2(Lru/ok/android/onelog/OneLogItem;Lal;Llf6;)V
+.method private static final send$lambda$2(Lru/ok/android/onelog/OneLogItem;Ljl;Lje6;)V
     .locals 4
 
     :try_start_0
@@ -177,7 +177,7 @@
 
     invoke-direct {v3, v0, v1, p0, v2}, Lru/ok/android/onelog/OneLogDirect$a;-><init>(Ljava/lang/String;Ljava/lang/String;Lru/ok/android/onelog/OneLogItem;Ljava/lang/String;)V
 
-    invoke-interface {p1, v3}, Lal;->a(Lfl;)Ljava/lang/Object;
+    invoke-interface {p1, v3}, Ljl;->a(Lvl;)Ljava/lang/Object;
 
     invoke-virtual {p0}, Lru/ok/android/onelog/OneLogItem;->collector()Ljava/lang/String;
 
@@ -192,7 +192,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    invoke-interface {p2, p0, p1}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0, p1}, Lje6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -202,16 +202,16 @@
 .method public final flush()V
     .locals 3
 
-    sget-object v0, Lxfa;->a:Lxfa;
+    sget-object v0, Lbea;->a:Lbea;
 
-    sget-object v1, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v1, Lbea;->c:Ljava/util/concurrent/Executor;
 
     if-nez v1, :cond_1
 
     monitor-enter v0
 
     :try_start_0
-    sget-object v1, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v1, Lbea;->c:Ljava/util/concurrent/Executor;
 
     if-nez v1, :cond_0
 
@@ -219,7 +219,7 @@
 
     move-result-object v1
 
-    sput-object v1, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sput-object v1, Lbea;->c:Ljava/util/concurrent/Executor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -243,13 +243,13 @@
 
     :cond_1
     :goto_2
-    sget-object v0, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v0, Lbea;->c:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lac;
+    new-instance v1, Lhc;
 
-    const/16 v2, 0xa
+    const/16 v2, 0x9
 
-    invoke-direct {v1, v2}, Lac;-><init>(I)V
+    invoke-direct {v1, v2}, Lhc;-><init>(I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -260,24 +260,24 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lli0;
+    new-instance v0, Ldi0;
 
     const/16 v1, 0x15
 
-    invoke-direct {v0, v1}, Lli0;-><init>(I)V
+    invoke-direct {v0, v1}, Ldi0;-><init>(I)V
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/onelog/OneLogDirect;->send(Lru/ok/android/onelog/OneLogItem;Llf6;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/onelog/OneLogDirect;->send(Lru/ok/android/onelog/OneLogItem;Lje6;)V
 
     return-void
 .end method
 
-.method public final send(Lru/ok/android/onelog/OneLogItem;Llf6;)V
+.method public final send(Lru/ok/android/onelog/OneLogItem;Lje6;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/onelog/OneLogItem;",
-            "Llf6;",
+            "Lje6;",
             ")V"
         }
     .end annotation
@@ -288,7 +288,7 @@
     invoke-static {p1}, Lru/ok/android/onelog/ItemDumper;->dump(Lru/ok/android/onelog/OneLogItem;)Ljava/lang/String;
 
     .line 3
-    invoke-direct {p0}, Lru/ok/android/onelog/OneLogDirect;->getApiClient()Lal;
+    invoke-direct {p0}, Lru/ok/android/onelog/OneLogDirect;->getApiClient()Ljl;
 
     move-result-object v0
 
@@ -298,10 +298,10 @@
 
     .line 4
     :cond_0
-    sget-object v1, Lxfa;->a:Lxfa;
+    sget-object v1, Lbea;->a:Lbea;
 
     .line 5
-    sget-object v2, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v2, Lbea;->c:Ljava/util/concurrent/Executor;
 
     if-nez v2, :cond_2
 
@@ -310,7 +310,7 @@
 
     .line 7
     :try_start_0
-    sget-object v2, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v2, Lbea;->c:Ljava/util/concurrent/Executor;
 
     if-nez v2, :cond_1
 
@@ -319,7 +319,7 @@
 
     move-result-object v2
 
-    sput-object v2, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sput-object v2, Lbea;->c:Ljava/util/concurrent/Executor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -345,14 +345,14 @@
     .line 10
     :cond_2
     :goto_2
-    sget-object v1, Lxfa;->b:Ljava/util/concurrent/ExecutorService;
+    sget-object v1, Lbea;->c:Ljava/util/concurrent/Executor;
 
     .line 11
-    new-instance v2, Lb05;
+    new-instance v2, Lyda;
 
-    const/16 v3, 0x1d
+    const/4 v3, 0x0
 
-    invoke-direct {v2, p1, v0, p2, v3}, Lb05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v2, p1, v0, p2, v3}, Lyda;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

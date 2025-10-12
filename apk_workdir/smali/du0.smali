@@ -1,178 +1,58 @@
 .class public final Ldu0;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lfu0;
 
-.field public final b:I
+.field public Y:I
 
-.field public final c:Ljava/nio/ByteBuffer;
-
-.field public d:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/nio/ByteBuffer;Ld90;II)V
-    .locals 2
+.method public constructor <init>(Lfu0;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldu0;->X:Lfu0;
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->limit()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    iget v1, p2, Ld90;->a:I
-
-    if-ne v0, v1, :cond_0
-
-    iput p3, p0, Ldu0;->a:I
-
-    iput p4, p0, Ldu0;->b:I
-
-    iput-object p1, p0, Ldu0;->c:Ljava/nio/ByteBuffer;
-
-    iget-wide p1, p2, Ld90;->b:J
-
-    iput-wide p1, p0, Ldu0;->d:J
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p3, "Byte buffer size is not match with packet info: "
-
-    const-string p4, " != "
-
-    invoke-static {v0, p3, p4}, Lfl7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p3
-
-    iget p2, p2, Ld90;->a:I
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/nio/ByteBuffer;)Ld90;
-    .locals 10
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Ldu0;->d:J
+    iput-object p1, p0, Ldu0;->o:Ljava/lang/Object;
 
-    iget-object v2, p0, Ldu0;->c:Ljava/nio/ByteBuffer;
+    iget p1, p0, Ldu0;->Y:I
 
-    invoke-virtual {v2}, Ljava/nio/Buffer;->position()I
+    const/high16 v0, -0x80000000
 
-    move-result v3
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+    iput p1, p0, Ldu0;->Y:I
 
-    move-result v4
+    iget-object p1, p0, Ldu0;->X:Lfu0;
 
-    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v5
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v6
-
-    if-le v5, v6, :cond_0
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v5
-
-    int-to-long v6, v5
-
-    iget v8, p0, Ldu0;->a:I
-
-    invoke-static {v8, v6, v7}, Lhv0;->Q(IJ)J
-
-    move-result-wide v6
-
-    iget v8, p0, Ldu0;->b:I
-
-    invoke-static {v8, v6, v7}, Lhv0;->w(IJ)J
-
-    move-result-wide v6
-
-    iget-wide v8, p0, Ldu0;->d:J
-
-    add-long/2addr v8, v6
-
-    iput-wide v8, p0, Ldu0;->d:J
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    move-result-object v7
-
-    add-int v8, v3, v5
-
-    invoke-virtual {v7, v8}, Ljava/nio/Buffer;->limit(I)Ljava/nio/Buffer;
-
-    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {p1, p0}, Lfu0;->B(Lfu0;Lwy3;)Ljava/lang/Object;
 
     move-result-object p1
 
-    add-int v6, v4, v5
+    sget-object v0, Lo24;->a:Lo24;
 
-    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v5
-
-    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    add-int v6, v4, v5
-
-    invoke-virtual {p1, v6}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Ljava/nio/Buffer;->position(I)Ljava/nio/Buffer;
-
-    :goto_0
-    add-int/2addr v3, v5
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    new-instance p1, Ld90;
-
-    invoke-direct {p1, v5, v0, v1}, Ld90;-><init>(IJ)V
+    if-ne p1, v0, :cond_0
 
     return-object p1
+
+    :cond_0
+    new-instance v0, Ls72;
+
+    invoke-direct {v0, p1}, Ls72;-><init>(Ljava/lang/Object;)V
+
+    return-object v0
 .end method

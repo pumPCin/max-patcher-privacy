@@ -1,405 +1,144 @@
 .class public final Lee0;
-.super Ljava/lang/Object;
+.super Ljn7;
 .source "SourceFile"
 
 # interfaces
-.implements Lfi5;
+.implements Ltd6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ly4b;
-
-.field public final c:Ltee;
+.field public final synthetic b:Lke1;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
-
-    iput p1, p0, Lee0;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ly4b;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Ly4b;-><init>(I)V
-
-    iput-object p1, p0, Lee0;->b:Ly4b;
-
-    new-instance p1, Ltee;
-
-    const/4 v0, -0x1
-
-    const-string v1, "image/avif"
-
-    invoke-direct {p1, v0, v0, v1}, Ltee;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lee0;->c:Ltee;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ly4b;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Ly4b;-><init>(I)V
-
-    iput-object p1, p0, Lee0;->b:Ly4b;
-
-    new-instance p1, Ltee;
-
-    const/4 v0, -0x1
-
-    const-string v1, "image/webp"
-
-    invoke-direct {p1, v0, v0, v1}, Ltee;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lee0;->c:Ltee;
-
-    return-void
-
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ly4b;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v0}, Ly4b;-><init>(I)V
-
-    iput-object p1, p0, Lee0;->b:Ly4b;
-
-    new-instance p1, Ltee;
-
-    const/4 v0, -0x1
-
-    const-string v1, "image/heif"
-
-    invoke-direct {p1, v0, v0, v1}, Ltee;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lee0;->c:Ltee;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private final a()V
+.method public synthetic constructor <init>(Lke1;I)V
     .locals 0
 
-    return-void
-.end method
+    iput p2, p0, Lee0;->a:I
 
-.method private final b()V
-    .locals 0
+    iput-object p1, p0, Lee0;->b:Lke1;
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
-.method private final c()V
-    .locals 0
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(JJ)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
     iget v0, p0, Lee0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lee0;->c:Ltee;
+    iget-object v0, p0, Lee0;->b:Lke1;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Ltee;->d(JJ)V
+    iget-object v0, v0, Lke1;->k:Lsz4;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lnkf;->a:Lnkf;
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lee0;->c:Ltee;
+    new-instance v0, Ljbe;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Ltee;->d(JJ)V
+    iget-object v1, p0, Lee0;->b:Lke1;
 
-    return-void
+    iget-object v2, v1, Lke1;->c:Lwkc;
+
+    iget-object v1, v1, Lke1;->d:Lxkc;
+
+    invoke-direct {v0, v2, v1}, Ljbe;-><init>(Lwkc;Lxkc;)V
+
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lee0;->c:Ltee;
+    new-instance v0, Lued;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Ltee;->d(JJ)V
+    iget-object v1, p0, Lee0;->b:Lke1;
 
-    return-void
+    iget-object v2, v1, Lke1;->m:Lip1;
+
+    iget-object v2, v2, Lip1;->k:Lq61;
+
+    iget-object v1, v1, Lke1;->e:Ljgf;
+
+    invoke-direct {v0, v2, v1}, Lued;-><init>(Lp61;Ljgf;)V
+
+    return-object v0
+
+    :pswitch_2
+    new-instance v0, Lcj1;
+
+    iget-object v1, p0, Lee0;->b:Lke1;
+
+    iget-object v2, v1, Lke1;->v:Lkbe;
+
+    iget-object v2, v2, Lkbe;->i:Lkkh;
+
+    iget-object v1, v1, Lke1;->f:Lvd1;
+
+    invoke-direct {v0, v2, v1}, Lcj1;-><init>(Lkkh;Lvd1;)V
+
+    return-object v0
+
+    :pswitch_3
+    iget-object v0, p0, Lee0;->b:Lke1;
+
+    iget-object v0, v0, Lke1;->h:Lhh1;
+
+    iget-object v0, v0, Lhh1;->a:Lch1;
+
+    iget-object v0, v0, Lch1;->c:Lvr9;
+
+    iget-boolean v0, v0, Lvr9;->e:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    iget-object v0, p0, Lee0;->b:Lke1;
+
+    iget-object v0, v0, Lke1;->b:Lch1;
+
+    iget-object v0, v0, Lch1;->a:Lyg1;
+
+    return-object v0
+
+    :pswitch_5
+    new-instance v0, Ld11;
+
+    iget-object v1, p0, Lee0;->b:Lke1;
+
+    iget-object v2, v1, Lke1;->v:Lkbe;
+
+    iget-object v2, v2, Lkbe;->j:Lqt;
+
+    iget-object v1, v1, Lke1;->f:Lvd1;
+
+    invoke-direct {v0, v2, v1}, Ld11;-><init>(Lqt;Lvd1;)V
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final i(Lhi5;)Z
-    .locals 8
-
-    iget v0, p0, Lee0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lee0;->b:Ly4b;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Ly4b;->D(I)V
-
-    iget-object v2, v0, Ly4b;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v3, v2, v1}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v0}, Ly4b;->w()J
-
-    move-result-wide v4
-
-    const-wide/32 v6, 0x52494646
-
-    cmp-long v2, v4, v6
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1, v1}, Lhi5;->p(I)V
-
-    invoke-virtual {v0, v1}, Ly4b;->D(I)V
-
-    iget-object v2, v0, Ly4b;->a:[B
-
-    invoke-interface {p1, v3, v2, v1}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v0}, Ly4b;->w()J
-
-    move-result-wide v0
-
-    const-wide/32 v4, 0x57454250
-
-    cmp-long p1, v0, v4
-
-    if-nez p1, :cond_1
-
-    const/4 v3, 0x1
-
-    :cond_1
-    :goto_0
-    return v3
-
-    :pswitch_0
-    const/4 v0, 0x4
-
-    invoke-interface {p1, v0}, Lhi5;->p(I)V
-
-    iget-object v1, p0, Lee0;->b:Ly4b;
-
-    invoke-virtual {v1, v0}, Ly4b;->D(I)V
-
-    iget-object v2, v1, Ly4b;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v3, v2, v0}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v1}, Ly4b;->w()J
-
-    move-result-wide v4
-
-    const v2, 0x66747970
-
-    int-to-long v6, v2
-
-    cmp-long v2, v4, v6
-
-    if-nez v2, :cond_2
-
-    invoke-virtual {v1, v0}, Ly4b;->D(I)V
-
-    iget-object v2, v1, Ly4b;->a:[B
-
-    invoke-interface {p1, v3, v2, v0}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v1}, Ly4b;->w()J
-
-    move-result-wide v0
-
-    const p1, 0x68656963
-
-    int-to-long v4, p1
-
-    cmp-long p1, v0, v4
-
-    if-nez p1, :cond_2
-
-    const/4 v3, 0x1
-
-    :cond_2
-    return v3
-
-    :pswitch_1
-    const/4 v0, 0x4
-
-    invoke-interface {p1, v0}, Lhi5;->p(I)V
-
-    iget-object v1, p0, Lee0;->b:Ly4b;
-
-    invoke-virtual {v1, v0}, Ly4b;->D(I)V
-
-    iget-object v2, v1, Ly4b;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v3, v2, v0}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v1}, Ly4b;->w()J
-
-    move-result-wide v4
-
-    const v2, 0x66747970
-
-    int-to-long v6, v2
-
-    cmp-long v2, v4, v6
-
-    if-nez v2, :cond_3
-
-    invoke-virtual {v1, v0}, Ly4b;->D(I)V
-
-    iget-object v2, v1, Ly4b;->a:[B
-
-    invoke-interface {p1, v3, v2, v0}, Lhi5;->d(I[BI)V
-
-    invoke-virtual {v1}, Ly4b;->w()J
-
-    move-result-wide v0
-
-    const p1, 0x61766966
-
-    int-to-long v4, p1
-
-    cmp-long p1, v0, v4
-
-    if-nez p1, :cond_3
-
-    const/4 v3, 0x1
-
-    :cond_3
-    return v3
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Lji5;)V
-    .locals 1
-
-    iget v0, p0, Lee0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1}, Ltee;->n(Lji5;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1}, Ltee;->n(Lji5;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1}, Ltee;->n(Lji5;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Lhi5;Lc7;)I
-    .locals 1
-
-    iget v0, p0, Lee0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1, p2}, Ltee;->o(Lhi5;Lc7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1, p2}, Ltee;->o(Lhi5;Lc7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    iget-object v0, p0, Lee0;->c:Ltee;
-
-    invoke-virtual {v0, p1, p2}, Ltee;->o(Lhi5;Lc7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 1
-
-    iget v0, p0, Lee0;->a:I
-
-    return-void
 .end method

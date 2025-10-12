@@ -25,19 +25,23 @@
 .method public static a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
     .locals 3
 
+    .line 1
     sget-object v0, Lcom/my/tracker/obfuscated/p0;->b:Lcom/my/tracker/obfuscated/p0;
 
     if-nez v0, :cond_1
 
+    .line 2
     const-class v1, Lcom/my/tracker/obfuscated/p0;
 
     monitor-enter v1
 
+    .line 3
     :try_start_0
     sget-object v0, Lcom/my/tracker/obfuscated/p0;->b:Lcom/my/tracker/obfuscated/p0;
 
     if-nez v0, :cond_0
 
+    .line 4
     const-string v0, "mytracker_prefs"
 
     const/4 v2, 0x0
@@ -46,10 +50,12 @@
 
     move-result-object p0
 
+    .line 5
     new-instance v0, Lcom/my/tracker/obfuscated/p0;
 
     invoke-direct {v0, p0}, Lcom/my/tracker/obfuscated/p0;-><init>(Landroid/content/SharedPreferences;)V
 
+    .line 6
     sput-object v0, Lcom/my/tracker/obfuscated/p0;->b:Lcom/my/tracker/obfuscated/p0;
 
     goto :goto_0
@@ -59,6 +65,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_0
     :goto_0
     monitor-exit v1
@@ -81,6 +88,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
+    .line 8
     const-string v0, "appVersion"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -95,6 +103,7 @@
 
     int-to-long v0, p1
 
+    .line 10
     const-string p1, "appSetIdScope"
 
     invoke-virtual {p0, p1, v0, v1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;J)V
@@ -105,6 +114,7 @@
 .method public a(J)V
     .locals 1
 
+    .line 9
     const-string v0, "installTimestamp"
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;J)V
@@ -115,6 +125,7 @@
 .method public a(Ljava/lang/String;J)V
     .locals 1
 
+    .line 12
     :try_start_0
     iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -122,10 +133,12 @@
 
     move-result-object v0
 
+    .line 13
     invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
+    .line 14
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -135,6 +148,7 @@
     :catchall_0
     move-exception p1
 
+    .line 15
     const-string p2, "PrefsCache error: "
 
     invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -145,6 +159,7 @@
 .method public a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
+    .line 16
     :try_start_0
     iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -152,10 +167,12 @@
 
     move-result-object v0
 
+    .line 17
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
+    .line 18
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -165,6 +182,7 @@
     :catchall_0
     move-exception p1
 
+    .line 19
     const-string p2, "PrefsCache error: "
 
     invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -175,6 +193,7 @@
 .method public a(Ljava/lang/String;Z)V
     .locals 1
 
+    .line 20
     :try_start_0
     iget-object v0, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -182,10 +201,12 @@
 
     move-result-object v0
 
+    .line 21
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object p1
 
+    .line 22
     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -195,6 +216,7 @@
     :catchall_0
     move-exception p1
 
+    .line 23
     const-string p2, "PrefsCache error: "
 
     invoke-static {p2, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -207,6 +229,7 @@
 
     const/4 v0, 0x0
 
+    .line 11
     :try_start_0
     iget-object v1, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -227,6 +250,7 @@
 
     const-wide/16 v0, 0x0
 
+    .line 3
     :try_start_0
     iget-object v2, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -243,6 +267,7 @@
 .method public b()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "appId"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -255,6 +280,7 @@
 .method public b(J)V
     .locals 1
 
+    .line 2
     const-string v0, "lastUpdateTimestamp"
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;J)V
@@ -265,6 +291,7 @@
 .method public c()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "appSetId"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -279,6 +306,7 @@
 
     const-string v0, ""
 
+    .line 3
     :try_start_0
     iget-object v1, p0, Lcom/my/tracker/obfuscated/p0;->a:Landroid/content/SharedPreferences;
 
@@ -297,6 +325,7 @@
 .method public c(J)V
     .locals 1
 
+    .line 2
     const-string v0, "lastStopTimeStampSec"
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;J)V
@@ -307,6 +336,7 @@
 .method public d()I
     .locals 2
 
+    .line 2
     const-string v0, "appSetIdScope"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->b(Ljava/lang/String;)J
@@ -321,6 +351,7 @@
 .method public d(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "appVersion"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -331,6 +362,7 @@
 .method public e()Ljava/lang/String;
     .locals 1
 
+    .line 2
     const-string v0, "appVersionName"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -343,6 +375,7 @@
 .method public e(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "appId"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -353,6 +386,7 @@
 .method public f()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "appsHash"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -365,6 +399,7 @@
 .method public f(Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     const-string v0, "appSetId"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -375,6 +410,7 @@
 .method public g()Ljava/lang/String;
     .locals 1
 
+    .line 2
     const-string v0, "attribution"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -387,6 +423,7 @@
 .method public g(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "appVersionName"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -397,6 +434,7 @@
 .method public h()Ljava/lang/String;
     .locals 1
 
+    .line 2
     const-string v0, "firebaseAppInstanceId"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -409,6 +447,7 @@
 .method public h(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "appsHash"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -419,6 +458,7 @@
 .method public i()J
     .locals 2
 
+    .line 2
     const-string v0, "installTimestamp"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->b(Ljava/lang/String;)J
@@ -431,6 +471,7 @@
 .method public i(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "attribution"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -441,6 +482,7 @@
 .method public j()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "instanceId"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -453,6 +495,7 @@
 .method public j(Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     const-string v0, "firebaseAppInstanceId"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -463,6 +506,7 @@
 .method public k()J
     .locals 2
 
+    .line 2
     const-string v0, "lastUpdateTimestamp"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->b(Ljava/lang/String;)J
@@ -475,6 +519,7 @@
 .method public k(Ljava/lang/String;)V
     .locals 1
 
+    .line 1
     const-string v0, "instanceId"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -485,6 +530,7 @@
 .method public l()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "referrer"
 
     invoke-virtual {p0, v0}, Lcom/my/tracker/obfuscated/p0;->c(Ljava/lang/String;)Ljava/lang/String;
@@ -497,6 +543,7 @@
 .method public l(Ljava/lang/String;)V
     .locals 1
 
+    .line 2
     const-string v0, "referrer"
 
     invoke-virtual {p0, v0, p1}, Lcom/my/tracker/obfuscated/p0;->a(Ljava/lang/String;Ljava/lang/String;)V

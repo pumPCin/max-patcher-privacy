@@ -1,21 +1,24 @@
 .class public final Lab1;
-.super Ldd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgb1;
 
-# instance fields
-.field public final b:Ljef;
+
+# static fields
+.field public static final a:Lab1;
 
 
 # direct methods
-.method public constructor <init>(Ljef;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x2
+    new-instance v0, Lab1;
 
-    invoke-direct {p0, v0}, Ldd0;-><init>(I)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lab1;->b:Ljef;
+    sput-object v0, Lab1;->a:Lab1;
 
     return-void
 .end method
@@ -25,76 +28,37 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lab1;
+    instance-of p1, p1, Lab1;
 
-    if-nez v0, :cond_1
+    if-nez p1, :cond_1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lab1;
-
-    iget-object v0, p0, Lab1;->b:Ljef;
-
-    iget-object p1, p1, Lab1;->b:Ljef;
-
-    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    :cond_1
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lab1;->b:Ljef;
-
-    iget v0, v0, Ljef;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
+    const v0, 0x3669a369
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowSnackbar(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lab1;->b:Ljef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "FinishedCall"
 
     return-object v0
 .end method

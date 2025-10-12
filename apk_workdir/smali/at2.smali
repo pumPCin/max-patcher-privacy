@@ -1,22 +1,22 @@
 .class public final Lat2;
-.super Lnz3;
+.super Lwy3;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lpb;
+.field public final synthetic Y:Lla2;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lla2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lat2;->Y:Lpb;
+    iput-object p1, p0, Lat2;->Y:Lla2;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,11 +36,11 @@
 
     iput p1, p0, Lat2;->X:I
 
-    iget-object p1, p0, Lat2;->Y:Lpb;
+    iget-object p1, p0, Lat2;->Y:Lla2;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lla2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

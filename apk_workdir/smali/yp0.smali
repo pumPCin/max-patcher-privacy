@@ -1,121 +1,202 @@
 .class public final Lyp0;
-.super Ljava/util/concurrent/CountDownLatch;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnee;
-.implements Lve3;
-.implements Lke8;
+.implements Lth5;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/Throwable;
+.field public final b:Lrde;
 
-.field public c:Lss4;
 
-.field public volatile o:Z
+# direct methods
+.method public constructor <init>(I)V
+    .locals 3
+
+    iput p1, p0, Lyp0;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lrde;
+
+    const/4 v0, 0x2
+
+    const-string v1, "image/bmp"
+
+    const/16 v2, 0x424d
+
+    invoke-direct {p1, v2, v0, v1}, Lrde;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lyp0;->b:Lrde;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lrde;
+
+    const/4 v0, 0x2
+
+    const-string v1, "image/png"
+
+    const v2, 0x8950
+
+    invoke-direct {p1, v2, v0, v1}, Lrde;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lyp0;->b:Lrde;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b()V
+    .locals 0
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 0
-
-    iput-object p1, p0, Lyp0;->a:Ljava/lang/Object;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public final c(Lss4;)V
+.method public final d(JJ)V
     .locals 1
 
-    iput-object p1, p0, Lyp0;->c:Lss4;
+    iget v0, p0, Lyp0;->a:I
 
-    iget-boolean v0, p0, Lyp0;->o:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lyp0;->b:Lrde;
 
-    invoke-interface {p1}, Lss4;->g()V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lrde;->d(JJ)V
 
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyp0;->b:Lrde;
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lrde;->d(JJ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d()Ljava/lang/Object;
-    .locals 4
+.method public final i(Lvh5;)Z
+    .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    iget v0, p0, Lyp0;->a:I
 
-    move-result-wide v0
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/16 v2, 0x0
+    iget-object v0, p0, Lyp0;->b:Lrde;
 
-    cmp-long v0, v0, v2
+    invoke-virtual {v0, p1}, Lrde;->i(Lvh5;)Z
 
-    if-eqz v0, :cond_1
+    move-result p1
 
-    :try_start_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    return p1
 
-    goto :goto_0
+    :pswitch_0
+    iget-object v0, p0, Lyp0;->b:Lrde;
 
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0, p1}, Lrde;->i(Lvh5;)Z
 
-    const/4 v1, 0x1
+    move-result p1
 
-    iput-boolean v1, p0, Lyp0;->o:Z
+    return p1
 
-    iget-object v1, p0, Lyp0;->c:Lss4;
+    nop
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lss4;->g()V
-
-    :cond_0
-    invoke-static {v0}, Lgc5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lyp0;->b:Ljava/lang/Throwable;
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lyp0;->a:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    invoke-static {v0}, Lgc5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 0
+.method public final n(Lxh5;)V
+    .locals 1
 
-    iput-object p1, p0, Lyp0;->b:Ljava/lang/Throwable;
+    iget v0, p0, Lyp0;->a:I
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyp0;->b:Lrde;
+
+    invoke-virtual {v0, p1}, Lrde;->n(Lxh5;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyp0;->b:Lrde;
+
+    invoke-virtual {v0, p1}, Lrde;->n(Lxh5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final o(Lvh5;Lk7;)I
+    .locals 1
+
+    iget v0, p0, Lyp0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lyp0;->b:Lrde;
+
+    invoke-virtual {v0, p1, p2}, Lrde;->o(Lvh5;Lk7;)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyp0;->b:Lrde;
+
+    invoke-virtual {v0, p1, p2}, Lrde;->o(Lvh5;Lk7;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final release()V
+    .locals 1
+
+    iget v0, p0, Lyp0;->a:I
 
     return-void
 .end method

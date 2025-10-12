@@ -1,25 +1,22 @@
-.class public abstract Lrwa;
+.class public final Lrwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxwa;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Lvd6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lvd6;)V
+    .locals 0
 
-    sget v0, Ldgc;->oneme_stickers_showcase_sets_list:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lrwa;->a:I
-
-    sget v0, Ldgc;->oneme_stickers_showcase_toolbar:I
-
-    sput v0, Lrwa;->b:I
+    iput-object p1, p0, Lrwa;->a:Lvd6;
 
     return-void
 .end method

@@ -3,259 +3,86 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Ltd6;
 
 
-# static fields
-.field public static final a:Lo3h;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Ldsd;
+.field public final synthetic b:Ly00;
+
+.field public final synthetic c:Lsrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ly00;Lsrd;I)V
+    .locals 0
 
-    new-instance v0, Lo3h;
+    iput p3, p0, Lo3h;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo3h;->b:Ly00;
 
-    sput-object v0, Lo3h;->a:Lo3h;
+    iput-object p2, p0, Lo3h;->c:Lsrd;
 
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.storage.WebAppStorageSaveKeyRequest"
-
-    const/4 v3, 0x4
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "queryId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "requestId"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "key"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "value"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lo3h;->descriptor:Ldsd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 11
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    sget-object v0, Lo3h;->descriptor:Ldsd;
+    iget v0, p0, Lo3h;->a:I
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    new-instance v1, Li3h;
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lo3h;->b:Ly00;
 
-    const/4 v2, 0x0
+    iget-wide v2, v0, Ly00;->a:J
 
-    const/4 v3, 0x0
+    iget-wide v4, v0, Ly00;->b:J
 
-    move v5, v2
+    iget-object v0, v0, Ly00;->c:Ljava/lang/Object;
 
-    move-object v6, v3
+    move-object v6, v0
 
-    move-object v7, v6
+    check-cast v6, Landroid/content/Context;
 
-    move-object v8, v7
+    iget-object v7, p0, Lo3h;->c:Lsrd;
 
-    move-object v9, v8
+    invoke-direct/range {v1 .. v7}, Li3h;-><init>(JJLandroid/content/Context;Lsrd;)V
 
-    move v3, v1
+    return-object v1
 
-    :goto_0
-    if-eqz v3, :cond_5
+    :pswitch_0
+    new-instance v2, Lg3h;
 
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
+    iget-object v0, p0, Lo3h;->b:Ly00;
 
-    move-result v4
+    iget-wide v3, v0, Ly00;->a:J
 
-    const/4 v10, -0x1
+    iget-wide v5, v0, Ly00;->b:J
 
-    if-eq v4, v10, :cond_4
+    iget-object v0, v0, Ly00;->c:Ljava/lang/Object;
 
-    if-eqz v4, :cond_3
+    move-object v7, v0
 
-    if-eq v4, v1, :cond_2
+    check-cast v7, Landroid/content/Context;
 
-    const/4 v10, 0x2
+    iget-object v8, p0, Lo3h;->c:Lsrd;
 
-    if-eq v4, v10, :cond_1
-
-    const/4 v10, 0x3
-
-    if-ne v4, v10, :cond_0
-
-    sget-object v4, Luxe;->a:Luxe;
-
-    invoke-virtual {p1, v0, v10, v9}, Lp8;->s(Ldsd;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v9, v4
-
-    check-cast v9, Ljava/lang/String;
-
-    or-int/lit8 v5, v5, 0x8
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v4}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v10}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v8
-
-    or-int/lit8 v5, v5, 0x4
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0, v1}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v7
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_3
-    sget-object v4, Luxe;->a:Luxe;
-
-    invoke-virtual {p1, v0, v2, v6}, Lp8;->s(Ldsd;ILjava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v6, v4
-
-    check-cast v6, Ljava/lang/String;
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance v4, Lq3h;
-
-    invoke-direct/range {v4 .. v9}, Lq3h;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v4
-.end method
-
-.method public final b(Le04;Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p2, Lq3h;
-
-    sget-object v0, Lo3h;->descriptor:Ldsd;
-
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
-
-    move-result-object p1
-
-    sget-object v1, Luxe;->a:Luxe;
-
-    iget-object v1, p2, Lq3h;->a:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2, v1}, Le04;->h(Ldsd;ILjava/lang/Object;)V
-
-    iget-object v1, p2, Lq3h;->b:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v0, v2, v1}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    iget-object v2, p2, Lq3h;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, v2}, Le04;->l(Ldsd;ILjava/lang/String;)V
-
-    const/4 v1, 0x3
-
-    iget-object p2, p2, Lq3h;->d:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1, p2}, Le04;->h(Ldsd;ILjava/lang/Object;)V
-
-    invoke-virtual {p1}, Le04;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lum7;
-    .locals 4
-
-    invoke-static {}, Lipe;->q()Lum7;
-
-    move-result-object v0
-
-    invoke-static {}, Lipe;->q()Lum7;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    new-array v2, v2, [Lum7;
-
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
-
-    sget-object v0, Luxe;->a:Luxe;
-
-    const/4 v3, 0x1
-
-    aput-object v0, v2, v3
-
-    const/4 v3, 0x2
-
-    aput-object v0, v2, v3
-
-    const/4 v0, 0x3
-
-    aput-object v1, v2, v0
+    invoke-direct/range {v2 .. v8}, Lg3h;-><init>(JJLandroid/content/Context;Lsrd;)V
 
     return-object v2
-.end method
 
-.method public final d()Ldsd;
-    .locals 1
+    nop
 
-    sget-object v0, Lo3h;->descriptor:Ldsd;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

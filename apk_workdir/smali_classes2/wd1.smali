@@ -1,235 +1,107 @@
-.class public final Lwd1;
+.class public abstract synthetic Lwd1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lh7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final b:Les5;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public final c:Lo5b;
-
-.field public final d:Lepg;
-
-.field public final e:Ljz9;
-
-.field public final f:Ltwd;
-
-.field public final g:Lqwd;
-
-.field public final h:Ljwd;
-
-.field public final i:Lvvc;
-
-.field public final j:Lqm5;
-
-.field public final k:Ld41;
-
-.field public final l:Luhg;
-
-.field public final m:Lxs;
-
-.field public final n:Li5b;
-
-.field public final o:Lys;
-
-.field public final p:Lrnc;
-
-.field public final q:Ln3g;
-
-.field public final r:Llf2;
-
-.field public final s:Lzde;
-
-.field public final t:Lwpe;
-
-.field public final u:Lb9d;
-
-.field public final v:Ldmf;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 23
+.method static constructor <clinit>()V
+    .locals 5
 
-    move-object/from16 v0, p0
+    invoke-static {}, Lin8;->values()[Lin8;
 
-    new-instance v1, Lh7;
+    move-result-object v0
 
-    invoke-direct {v1}, Lh7;-><init>()V
+    array-length v0, v0
 
-    new-instance v2, Les5;
+    new-array v0, v0, [I
 
-    invoke-direct {v2}, Les5;-><init>()V
+    const/4 v1, 0x1
 
-    new-instance v3, Lo5b;
+    const/4 v2, 0x2
 
-    invoke-direct {v3}, Lo5b;-><init>()V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    new-instance v4, Lepg;
+    :catch_0
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-direct {v4}, Lepg;-><init>()V
+    :catch_1
+    sput-object v0, Lwd1;->$EnumSwitchMapping$0:[I
 
-    new-instance v5, Ljz9;
+    const/4 v0, 0x3
 
-    invoke-direct {v5}, Ljz9;-><init>()V
+    invoke-static {v0}, Lsw1;->y(I)[I
 
-    new-instance v6, Ltwd;
+    move-result-object v3
 
-    invoke-direct {v6}, Ltwd;-><init>()V
+    array-length v3, v3
 
-    new-instance v7, Lqwd;
+    new-array v3, v3, [I
 
-    invoke-direct {v7}, Lqwd;-><init>()V
+    :try_start_2
+    aput v1, v3, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    new-instance v8, Ljwd;
+    :catch_2
+    const/4 v4, 0x0
 
-    invoke-direct {v8}, Ljwd;-><init>()V
+    :try_start_3
+    aput v2, v3, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    new-instance v9, Lvvc;
+    :catch_3
+    sput-object v3, Lwd1;->$EnumSwitchMapping$1:[I
 
-    invoke-direct {v9}, Lvvc;-><init>()V
+    invoke-static {}, Lhn8;->values()[Lhn8;
 
-    new-instance v10, Lqm5;
+    move-result-object v3
 
-    invoke-direct {v10}, Lqm5;-><init>()V
+    array-length v3, v3
 
-    new-instance v11, Ld41;
+    new-array v3, v3, [I
 
-    invoke-direct {v11}, Ld41;-><init>()V
+    :try_start_4
+    aput v1, v3, v4
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    new-instance v12, Luhg;
+    :catch_4
+    :try_start_5
+    aput v2, v3, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    invoke-direct {v12}, Luhg;-><init>()V
+    :catch_5
+    :try_start_6
+    aput v0, v3, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    new-instance v13, Lxs;
+    :catch_6
+    const/4 v1, 0x4
 
-    invoke-direct {v13}, Lxs;-><init>()V
+    :try_start_7
+    aput v1, v3, v0
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    new-instance v14, Li5b;
-
-    invoke-direct {v14}, Li5b;-><init>()V
-
-    new-instance v15, Lys;
-
-    invoke-direct {v15}, Lys;-><init>()V
-
-    move-object/from16 v16, v15
-
-    new-instance v15, Lrnc;
-
-    invoke-direct {v15}, Lrnc;-><init>()V
-
-    move-object/from16 v17, v15
-
-    new-instance v15, Ln3g;
-
-    invoke-direct {v15}, Ln3g;-><init>()V
-
-    move-object/from16 v18, v15
-
-    new-instance v15, Llf2;
-
-    invoke-direct {v15}, Llf2;-><init>()V
-
-    move-object/from16 v19, v15
-
-    new-instance v15, Lzde;
-
-    invoke-direct {v15}, Lzde;-><init>()V
-
-    move-object/from16 v20, v15
-
-    new-instance v15, Lwpe;
-
-    invoke-direct {v15}, Lwpe;-><init>()V
-
-    move-object/from16 v21, v15
-
-    new-instance v15, Lb9d;
-
-    invoke-direct {v15}, Lb9d;-><init>()V
-
-    move-object/from16 v22, v15
-
-    new-instance v15, Ldmf;
-
-    invoke-direct {v15}, Ldmf;-><init>()V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v0, Lwd1;->a:Lh7;
-
-    iput-object v2, v0, Lwd1;->b:Les5;
-
-    iput-object v3, v0, Lwd1;->c:Lo5b;
-
-    iput-object v4, v0, Lwd1;->d:Lepg;
-
-    iput-object v5, v0, Lwd1;->e:Ljz9;
-
-    iput-object v6, v0, Lwd1;->f:Ltwd;
-
-    iput-object v7, v0, Lwd1;->g:Lqwd;
-
-    iput-object v8, v0, Lwd1;->h:Ljwd;
-
-    iput-object v9, v0, Lwd1;->i:Lvvc;
-
-    iput-object v10, v0, Lwd1;->j:Lqm5;
-
-    iput-object v11, v0, Lwd1;->k:Ld41;
-
-    iput-object v12, v0, Lwd1;->l:Luhg;
-
-    iput-object v13, v0, Lwd1;->m:Lxs;
-
-    iput-object v14, v0, Lwd1;->n:Li5b;
-
-    move-object/from16 v1, v16
-
-    iput-object v1, v0, Lwd1;->o:Lys;
-
-    move-object/from16 v1, v17
-
-    iput-object v1, v0, Lwd1;->p:Lrnc;
-
-    move-object/from16 v1, v18
-
-    iput-object v1, v0, Lwd1;->q:Ln3g;
-
-    move-object/from16 v1, v19
-
-    iput-object v1, v0, Lwd1;->r:Llf2;
-
-    move-object/from16 v1, v20
-
-    iput-object v1, v0, Lwd1;->s:Lzde;
-
-    move-object/from16 v1, v21
-
-    iput-object v1, v0, Lwd1;->t:Lwpe;
-
-    move-object/from16 v1, v22
-
-    iput-object v1, v0, Lwd1;->u:Lb9d;
-
-    iput-object v15, v0, Lwd1;->v:Ldmf;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lkn1;)V
-    .locals 1
-
-    iget-object v0, p0, Lwd1;->f:Ltwd;
-
-    iget-object v0, v0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
+    :catch_7
+    sput-object v3, Lwd1;->$EnumSwitchMapping$2:[I
 
     return-void
 .end method

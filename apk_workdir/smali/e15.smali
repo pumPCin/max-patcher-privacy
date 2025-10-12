@@ -1,23 +1,14 @@
-.class public final Le15;
+.class public interface abstract Le15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract a()Ljava/util/Set;
+.end method
 
-.field public final b:I
+.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+.end method
 
-
-# direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Le15;->a:I
-
-    iput p2, p0, Le15;->b:I
-
-    return-void
+.method public abstract c(La15;)Ljava/util/Set;
 .end method

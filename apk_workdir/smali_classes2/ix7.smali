@@ -1,26 +1,53 @@
-.class public interface abstract Lix7;
-.super Ljava/lang/Object;
+.class public final Lix7;
+.super Lwy3;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ljava/lang/String;
+
+.field public Y:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public final synthetic r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+.field public s0:I
+
+
+# direct methods
+.method public constructor <init>(Lru/ok/tamtam/location/live/LiveLocationWorker;Lwy3;)V
+    .locals 0
+
+    iput-object p1, p0, Lix7;->r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b(Ljava/lang/Long;)V
-.end method
+    iput-object p1, p0, Lix7;->Z:Ljava/lang/Object;
 
-.method public abstract c()V
-.end method
+    iget p1, p0, Lix7;->s0:I
 
-.method public abstract d()Lev5;
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract e()V
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract release()V
-.end method
+    iput p1, p0, Lix7;->s0:I
 
-.method public abstract seekTo(J)V
+    iget-object p1, p0, Lix7;->r0:Lru/ok/tamtam/location/live/LiveLocationWorker;
+
+    invoke-virtual {p1, p0}, Lru/ok/tamtam/location/live/LiveLocationWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

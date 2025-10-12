@@ -1,35 +1,209 @@
-.class public abstract synthetic Lfk1;
-.super Ljava/lang/Object;
+.class public final Lfk1;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
+    .locals 0
 
-    invoke-static {}, La4g;->values()[La4g;
+    iput-object p2, p0, Lfk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfk1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfk1;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lfk1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lfk1;
+
+    iget-object v1, p0, Lfk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-direct {v0, p2, v1}, Lfk1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
+
+    iput-object p1, v0, Lfk1;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfk1;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lfk1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
+
+    if-ne p1, v0, :cond_0
+
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/CallScreen;)Lk33;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lk33;->b()Ljz3;
+
+    move-result-object p1
+
+    if-nez p1, :cond_3
+
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/CallScreen;)Lk33;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lk33;->a:Ln6d;
+
+    invoke-virtual {p1}, Lk33;->c()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v3, "call_vpn_panel_widget_tag"
+
+    invoke-static {p1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Ln6d;->R(Z)V
+
+    new-instance v5, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
+
+    iget-object p1, v2, Lone/me/calls/ui/ui/call/CallScreen;->s0:Ljava/lang/String;
+
+    invoke-direct {v5, p1, v1}, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;-><init>(Ljava/lang/String;Laf4;)V
+
+    new-instance p1, Lk5d;
+
+    const/4 v1, 0x7
+
+    invoke-direct {p1, v1, v2}, Lk5d;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, v5, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lk5d;
+
+    new-instance v4, Lq6d;
+
+    const/4 v9, 0x0
+
+    const/4 v10, -0x1
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v4 .. v10}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+
+    invoke-virtual {v4, v3}, Lq6d;->d(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Ln6d;->S(Lq6d;)V
+
+    goto :goto_1
+
+    :cond_0
+    if-nez p1, :cond_4
+
+    invoke-static {v2}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/CallScreen;)Lk33;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lk33;->b()Ljz3;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
+
+    goto :goto_0
+
+    :cond_1
+    move-object p1, v1
+
+    :goto_0
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Ljz3;->getRouter()Ln6d;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0, p1}, Ln6d;->B(Ljz3;)Z
 
-    new-array v0, v0, [I
+    iget-object v0, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lk5d;
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_2
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lk5d;->b:Ljava/lang/Object;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v0, Lone/me/calls/ui/ui/call/CallScreen;
 
-    :catch_0
-    sput-object v0, Lfk1;->$EnumSwitchMapping$0:[I
+    invoke-static {v0}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/CallScreen;)Lk33;
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v0}, Lk33;->a()V
+
+    :cond_2
+    iput-object v1, p1, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->a:Lk5d;
+
+    :cond_3
+    :goto_1
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :cond_4
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

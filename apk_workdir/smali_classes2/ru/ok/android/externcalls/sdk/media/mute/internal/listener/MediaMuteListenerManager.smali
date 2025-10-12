@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;",
         "listener",
-        "Loyf;",
+        "Laxf;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/media/mute/listener/MediaMuteManagerListener;)V",
         "removeListener",

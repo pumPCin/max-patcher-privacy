@@ -2,50 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lord;
-.implements Lvz4;
 
+# instance fields
+.field public final synthetic a:I
 
-# static fields
-.field public static final a:Lk75;
+.field public final synthetic b:Li0a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Li0a;I)V
+    .locals 0
 
-    new-instance v0, Lk75;
+    iput p2, p0, Lk75;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk75;->b:Li0a;
 
-    sput-object v0, Lk75;->a:Lk75;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final bridge synthetic a(I)Lord;
-    .locals 0
-
-    sget-object p1, Lk75;->a:Lk75;
-
-    return-object p1
-.end method
-
-.method public final bridge synthetic b(I)Lord;
-    .locals 0
-
-    sget-object p1, Lk75;->a:Lk75;
-
-    return-object p1
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 1
-
-    sget-object v0, La75;->a:La75;
-
-    return-object v0
 .end method

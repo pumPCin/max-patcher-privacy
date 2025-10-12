@@ -1,5 +1,5 @@
 .class public final Lyw5;
-.super Lnz3;
+.super Lwy3;
 .source "SourceFile"
 
 
@@ -8,7 +8,7 @@
 
 .field public Y:I
 
-.field public o:Ljava/lang/Object;
+.field public o:Ldwc;
 
 
 # virtual methods
@@ -27,9 +27,9 @@
 
     const/4 p1, 0x0
 
-    invoke-static {p1, p1, p1, p0}, Lbf0;->a(Lgv5;Ljava/lang/Object;Ljava/lang/Object;Lnz3;)V
+    invoke-static {p1, p0}, Luce;->W(Liu5;Lwy3;)Ljava/lang/Object;
 
-    sget-object p1, Lf34;->a:Lf34;
+    move-result-object p1
 
     return-object p1
 .end method

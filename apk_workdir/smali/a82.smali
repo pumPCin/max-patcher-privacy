@@ -2,56 +2,67 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Lim7;
-
 
 # instance fields
-.field public final a:C
+.field public a:I
 
-.field public final b:C
-
-.field public final c:I
+.field public b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(CC)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-char p1, p0, La82;->a:C
+    .line 5
+    iput p1, p0, La82;->a:I
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    invoke-static {p1, p2, v0}, Lva8;->n(III)I
+.method public constructor <init>(Ljava/lang/Long;I)V
+    .locals 0
 
-    move-result p1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    int-to-char p1, p1
+    .line 2
+    iput p2, p0, La82;->a:I
 
-    iput-char p1, p0, La82;->b:C
-
-    iput v0, p0, La82;->c:I
+    .line 3
+    iput-object p1, p0, La82;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 4
+.method public a()Ljava/lang/Long;
+    .locals 1
 
-    new-instance v0, Lb82;
+    iget-object v0, p0, La82;->b:Ljava/lang/Object;
 
-    iget-char v1, p0, La82;->b:C
-
-    iget v2, p0, La82;->c:I
-
-    iget-char v3, p0, La82;->a:C
-
-    invoke-direct {v0, v3, v1, v2}, Lb82;-><init>(CCI)V
+    check-cast v0, Ljava/lang/Long;
 
     return-object v0
+.end method
+
+.method public b(Lp6h;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract c(Lp6h;)V
+.end method
+
+.method public abstract d(Ld7h;Ljava/util/List;)Ld7h;
+.end method
+
+.method public e(Lp6h;Ldzb;)Ldzb;
+    .locals 0
+
+    return-object p2
 .end method

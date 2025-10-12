@@ -1,150 +1,97 @@
 .class public final Lpwf;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public X:J
-
-.field public Y:I
-
-.field public final synthetic Z:Lqwf;
+.field public final a:Lhne;
 
 
 # direct methods
-.method public constructor <init>(Lqwf;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 5
 
-    iput-object p1, p0, Lpwf;->Z:Lqwf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    invoke-static {}, Lum;->b()Ljg3;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-void
-.end method
+    check-cast v0, Lnja;
 
+    invoke-virtual {v0}, Lnja;->j()Lpnb;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result-object v0
 
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpwf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpwf;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lpwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lpwf;
-
-    iget-object v0, p0, Lpwf;->Z:Lqwf;
-
-    invoke-direct {p1, v0, p2}, Lpwf;-><init>(Lqwf;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
-
-    iget-object v0, p0, Lpwf;->Z:Lqwf;
-
-    iget-object v0, v0, Lqwf;->A0:Lmoe;
-
-    iget v1, p0, Lpwf;->Y:I
-
-    const-wide/16 v2, -0x1
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v4, :cond_0
-
-    iget-wide v5, p0, Lpwf;->X:J
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v5
-
-    :goto_0
-    cmp-long p1, v2, v5
-
-    if-gez p1, :cond_3
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v5, v6}, Ljava/lang/Long;-><init>(J)V
+    iget-object v0, v0, Lpnb;->c:Lz2g;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v2, v0, Lv3;->h:Lbo7;
 
-    iput-wide v5, p0, Lpwf;->X:J
+    const-string v3, "app.extra.text.size.sp"
 
-    iput v4, p0, Lpwf;->Y:I
+    invoke-virtual {v2, v3, v1}, Lbo7;->getFloat(Ljava/lang/String;F)F
 
-    const-wide/16 v7, 0x3e8
+    move-result v1
 
-    invoke-static {v7, v8, p0}, Lid7;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object p1
+    move-result-object v1
 
-    sget-object v1, Lf34;->a:Lf34;
+    invoke-static {v1}, Line;->a(Ljava/lang/Object;)Lhne;
 
-    if-ne p1, v1, :cond_2
+    move-result-object v1
 
-    return-object v1
+    iput-object v1, p0, Lpwf;->a:Lhne;
 
-    :cond_2
-    :goto_1
-    add-long/2addr v5, v2
+    iget-object v0, v0, Lhgd;->i:Lpl0;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
+    new-instance v1, Lexd;
 
-    return-object p1
+    invoke-direct {v1, p0}, Lexd;-><init>(Ljava/lang/Object;)V
+
+    sget-object v2, Lnjg;->X:Lq62;
+
+    sget-object v3, Lnjg;->c:Laf6;
+
+    new-instance v4, Lkn7;
+
+    invoke-direct {v4, v1, v2, v3}, Lkn7;-><init>(Lno3;Lno3;Ll6;)V
+
+    :try_start_0
+    new-instance v1, Lm9a;
+
+    invoke-direct {v1, v4}, Lxk0;-><init>(Lyba;)V
+
+    invoke-interface {v0, v1}, Loba;->a(Lyba;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    invoke-static {v0}, Lwee;->y(Ljava/lang/Throwable;)V
+
+    new-instance v1, Ljava/lang/NullPointerException;
+
+    const-string v2, "Actually not, but can\'t throw other exceptions due to RS"
+
+    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw v1
+
+    :catch_0
+    move-exception v0
+
+    throw v0
 .end method

@@ -1,122 +1,287 @@
 .class public final Lm42;
-.super Ljava/lang/Object;
+.super Lhy;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lm42;
+# interfaces
+.implements Lzxe;
 
 
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public X:J
 
-.field public final b:Lio7;
+.field public final synthetic Y:I
+
+.field public Z:Ljava/lang/Object;
+
+.field public c:J
+
+.field public o:Lzxe;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    new-instance v0, Ljava/util/ArrayList;
+    .line 1
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    iput v0, p0, Lm42;->Y:I
 
-    new-instance v1, Lm42;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Le93;->M0(Ljava/lang/Iterable;)Ljava/util/Set;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lm42;-><init>(Ljava/util/Set;Lio7;)V
-
-    sput-object v1, Lm42;->c:Lm42;
+    invoke-direct {p0, v0}, Lhy;-><init>(I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Set;Lio7;)V
+.method public synthetic constructor <init>(Lbye;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput p2, p0, Lm42;->Y:I
 
-    iput-object p1, p0, Lm42;->a:Ljava/util/Set;
+    const/4 p2, 0x1
 
-    iput-object p2, p0, Lm42;->b:Lio7;
+    invoke-direct {p0, p2}, Lhy;-><init>(I)V
+
+    iput-object p1, p0, Lm42;->Z:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final d(J)I
+    .locals 3
 
-    instance-of v0, p1, Lm42;
+    iget-object v0, p0, Lm42;->o:Lzxe;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Lm42;
+    iget-wide v1, p0, Lm42;->X:J
 
-    iget-object v0, p1, Lm42;->a:Ljava/util/Set;
+    sub-long/2addr p1, v1
 
-    iget-object v1, p0, Lm42;->a:Ljava/util/Set;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p1, p1, Lm42;->b:Lio7;
-
-    iget-object v0, p0, Lm42;->b:Lio7;
-
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v0, p1, p2}, Lzxe;->d(J)I
 
     move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final hashCode()I
+.method public final g(I)J
+    .locals 4
+
+    iget-object v0, p0, Lm42;->o:Lzxe;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v0, p1}, Lzxe;->g(I)J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lm42;->X:J
+
+    add-long/2addr v0, v2
+
+    return-wide v0
+.end method
+
+.method public final m(J)Ljava/util/List;
     .locals 3
 
-    iget-object v0, p0, Lm42;->a:Ljava/util/Set;
+    iget-object v0, p0, Lm42;->o:Lzxe;
 
-    const/16 v1, 0x29
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v2, 0x5ed
+    iget-wide v1, p0, Lm42;->X:J
 
-    invoke-static {v0, v2, v1}, Lnd5;->f(Ljava/util/Set;II)I
+    sub-long/2addr p1, v1
+
+    invoke-interface {v0, p1, p2}, Lzxe;->m(J)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final r()I
+    .locals 1
+
+    iget-object v0, p0, Lm42;->o:Lzxe;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v0}, Lzxe;->r()I
 
     move-result v0
 
-    iget-object v1, p0, Lm42;->b:Lio7;
+    return v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public final u()V
+    .locals 5
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    iget v0, p0, Lm42;->Y:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lm42;->Z:Ljava/lang/Object;
+
+    check-cast v0, Loce;
+
+    iget-object v1, v0, Loce;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    iput v2, p0, Lhy;->b:I
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lm42;->o:Lzxe;
+
+    iget-object v2, v0, Loce;->f:[Lm42;
+
+    iget v3, v0, Loce;->h:I
+
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, v0, Loce;->h:I
+
+    aput-object p0, v2, v3
+
+    iget-object v2, v0, Loce;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v2}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    iget v2, v0, Loce;->h:I
+
+    if-lez v2, :cond_0
+
+    iget-object v0, v0, Loce;->b:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
+
+    :cond_0
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lm42;->Z:Ljava/lang/Object;
+
+    check-cast v0, Lhr0;
+
+    iget-object v0, v0, Lhr0;->e:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
 
     move-result v1
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-ge v1, v2, :cond_1
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v3
+
+    :goto_0
+    invoke-static {v1}, Lnjg;->m(Z)V
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    xor-int/2addr v1, v4
+
+    invoke-static {v1}, Lnjg;->e(Z)V
+
+    iput v3, p0, Lhy;->b:I
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lm42;->o:Lzxe;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lm42;->Z:Ljava/lang/Object;
+
+    check-cast v0, Lw22;
+
+    iget-object v0, v0, Lw22;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo42;
+
+    const/4 v1, 0x0
+
+    iput v1, p0, Lhy;->b:I
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lm42;->o:Lzxe;
+
+    iget-object v0, v0, Lo42;->b:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final v(JLzxe;J)V
+    .locals 2
+
+    iput-wide p1, p0, Lm42;->c:J
+
+    iput-object p3, p0, Lm42;->o:Lzxe;
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p3, p4, v0
+
+    if-nez p3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    move-wide p1, p4
 
     :goto_0
-    add-int/2addr v0, v1
+    iput-wide p1, p0, Lm42;->X:J
 
-    return v0
+    return-void
 .end method

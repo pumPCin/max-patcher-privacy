@@ -1,40 +1,31 @@
 .class public final Lnm4;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
-# interfaces
-.implements Lolg;
 
+# instance fields
+.field public X:I
 
-# static fields
-.field public static final a:Lnm4;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lnm4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnm4;->a:Lnm4;
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final c(Ll53;Lys9;)Ljlg;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {p1}, Lj53;->a()Ljava/lang/Class;
+    iput-object p1, p0, Lnm4;->o:Ljava/lang/Object;
 
-    move-result-object p1
+    iget p1, p0, Lnm4;->X:I
 
-    invoke-static {p1}, Lo7;->f(Ljava/lang/Class;)Ljlg;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lnm4;->X:I
+
+    invoke-static {p0}, Lbv0;->e(Lwy3;)V
+
+    sget-object p1, Lo24;->a:Lo24;
 
     return-object p1
 .end method

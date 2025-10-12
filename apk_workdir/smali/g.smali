@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Ltc4;
 
 
 # instance fields
@@ -81,7 +81,7 @@
     :pswitch_6
     new-instance v0, Lone/me/mediapicker/MediaPickerScreen;
 
-    new-instance v1, Lqh6;
+    new-instance v1, Log6;
 
     const/4 v7, 0x0
 
@@ -95,11 +95,11 @@
 
     const/4 v5, 0x0
 
-    sget-object v6, Lb75;->a:Lb75;
+    sget-object v6, Lo65;->a:Lo65;
 
-    invoke-direct/range {v1 .. v8}, Lqh6;-><init>(ZZZZLjava/util/List;ZZ)V
+    invoke-direct/range {v1 .. v8}, Log6;-><init>(ZZZZLjava/util/List;ZZ)V
 
-    invoke-direct {v0, v1}, Lone/me/mediapicker/MediaPickerScreen;-><init>(Lqh6;)V
+    invoke-direct {v0, v1}, Lone/me/mediapicker/MediaPickerScreen;-><init>(Log6;)V
 
     return-object v0
 
@@ -190,14 +190,14 @@
     :pswitch_13
     new-instance v0, Lone/me/contactlist/ContactListWidget;
 
-    sget-object v1, Lbu3;->a:Lbu3;
+    sget-object v1, Lmt3;->a:Lmt3;
 
-    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Lbu3;)V
+    invoke-direct {v0, v1}, Lone/me/contactlist/ContactListWidget;-><init>(Lmt3;)V
 
     return-object v0
 
     :pswitch_14
-    new-instance v0, Lnw3;
+    new-instance v0, Lxv3;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 

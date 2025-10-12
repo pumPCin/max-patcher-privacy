@@ -1,14 +1,24 @@
-.class public interface abstract Lqo;
+.class public abstract Lqo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract A(I)V
-.end method
+# direct methods
+.method public static a(Landroid/widget/ThemedSpinnerAdapter;Landroid/content/res/Resources$Theme;)V
+    .locals 1
 
-.method public abstract I(I)V
-.end method
+    invoke-interface {p0}, Landroid/widget/ThemedSpinnerAdapter;->getDropDownViewTheme()Landroid/content/res/Resources$Theme;
 
-.method public abstract J(IF)V
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p0, p1}, Landroid/widget/ThemedSpinnerAdapter;->setDropDownViewTheme(Landroid/content/res/Resources$Theme;)V
+
+    :cond_0
+    return-void
 .end method

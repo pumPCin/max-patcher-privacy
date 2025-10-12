@@ -3,40 +3,41 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lec6;
+# static fields
+.field public static final c:Ljl2;
 
-.field public final b:Z
+
+# instance fields
+.field public final a:I
+
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Lec6;I)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    and-int/lit8 v0, p2, 0x1
+    new-instance v0, Ljl2;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    :cond_0
-    and-int/lit8 p2, p2, 0x2
+    invoke-direct {v0, v2, v1}, Ljl2;-><init>(IF)V
 
-    if-eqz p2, :cond_1
+    sput-object v0, Ljl2;->c:Ljl2;
 
-    const/4 p2, 0x0
+    return-void
+.end method
 
-    goto :goto_0
+.method public constructor <init>(IF)V
+    .locals 0
 
-    :cond_1
-    const/4 p2, 0x1
-
-    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljl2;->a:Lec6;
+    iput p1, p0, Ljl2;->a:I
 
-    iput-boolean p2, p0, Ljl2;->b:Z
+    iput p2, p0, Ljl2;->b:F
 
     return-void
 .end method
@@ -44,42 +45,40 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ljl2;
+    instance-of v0, p1, Ljl2;
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Ljl2;
 
-    iget-object v1, p0, Ljl2;->a:Lec6;
+    iget v0, p0, Ljl2;->a:I
 
-    iget-object v2, p1, Ljl2;->a:Lec6;
+    iget v1, p1, Ljl2;->a:I
 
-    invoke-static {v1, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget-boolean v1, p0, Ljl2;->b:Z
+    iget v0, p0, Ljl2;->b:F
 
-    iget-boolean p1, p1, Ljl2;->b:Z
+    iget p1, p1, Ljl2;->b:F
 
-    if-eq v1, p1, :cond_3
+    invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
 
     :goto_0
     const/4 p1, 0x0
@@ -87,13 +86,16 @@
     return p1
 
     :cond_3
-    return v0
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Ljl2;->a:Lec6;
+    iget v0, p0, Ljl2;->a:I
 
     if-nez v0, :cond_0
 
@@ -102,24 +104,16 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lec6;->hashCode()I
+    invoke-static {v0}, Lsw1;->u(I)I
 
     move-result v0
 
     :goto_0
-    const/16 v1, 0x1f
+    mul-int/lit8 v0, v0, 0x1f
 
-    mul-int/2addr v0, v1
+    iget v1, p0, Ljl2;->b:F
 
-    iget-boolean v2, p0, Ljl2;->b:Z
-
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
 
     move-result v1
 
@@ -133,23 +127,27 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FrameState(frame="
+    const-string v1, "OrientState(screenOrientation="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ljl2;->a:Lec6;
+    iget v1, p0, Ljl2;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ln29;->o(I)Ljava/lang/String;
 
-    const-string v1, ", loading="
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Ljl2;->b:Z
+    const-string v1, ", angle="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", featureEnabled=true)"
+    iget v1, p0, Ljl2;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

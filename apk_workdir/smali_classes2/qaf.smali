@@ -2,99 +2,182 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loaf;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic b:Lz12;
+.field public final a:Ld8h;
 
 
 # direct methods
-.method public constructor <init>(Lz12;)V
-    .locals 1
+.method public constructor <init>(Ld8h;)V
+    .locals 12
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqaf;->b:Lz12;
+    iput-object p1, p0, Lqaf;->a:Ld8h;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    invoke-static {v0}, Lw83;->F0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    iput-object p1, p0, Lqaf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v11
+
+    new-instance v1, Lio3;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const-wide/16 v7, -0x1
+
+    const-wide/16 v9, -0x1
+
+    invoke-direct/range {v1 .. v11}, Lio3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    new-instance v0, Lx7b;
+
+    const-wide/16 v2, 0x6
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-class v5, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+
+    invoke-direct {v0, v5, v2, v3, v4}, Lx7b;-><init>(Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)V
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lio3;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lx7b;
+
+    const-string v1, "TASK_MONITOR_PERIODIC_TASK"
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Lx7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Ly7b;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " try to add TASK_MONITOR_PERIODIC_TASK request"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "qaf"
+
+    invoke-static {v3, v2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x18
+
+    invoke-static {p1, v1, v2, v0, v3}, Ld8h;->e(Ld8h;Ljava/lang/String;ILy7b;I)Lrh3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ll9f;)V
-    .locals 4
+.method public final a()V
+    .locals 5
 
-    iget-object v0, p0, Lqaf;->b:Lz12;
+    new-instance v0, Lxxa;
 
-    invoke-virtual {v0}, Lz12;->r()Z
+    const-class v1, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
 
-    move-result v1
+    invoke-direct {v0, v1}, Lxxa;-><init>(Ljava/lang/Class;)V
 
-    if-eqz v1, :cond_0
+    const-wide/16 v1, 0x2710
 
-    const/4 v1, 0x0
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v2, 0x1
+    sget-object v4, Lmf0;->a:Lmf0;
 
-    iget-object v3, p0, Lqaf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v0, v4, v1, v2, v3}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lmf0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    move-result-object v0
 
-    move-result v1
+    check-cast v0, Lxxa;
 
-    if-eqz v1, :cond_0
+    const-string v1, "TASK_MONITOR_ONE_TIME_TASK"
 
-    invoke-virtual {v0, p1}, Lz12;->resumeWith(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v0
 
-.method public final e(Lv8f;)V
-    .locals 4
+    check-cast v0, Lxxa;
 
-    iget-object v0, p0, Lqaf;->b:Lz12;
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
-    invoke-virtual {v0}, Lz12;->r()Z
+    move-result-object v0
 
-    move-result v1
+    check-cast v0, Lyxa;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
-    const/4 v1, 0x0
+    move-result-object v2
 
-    const/4 v2, 0x1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lqaf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const-string v4, "work "
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v1
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_0
+    const-string v2, " try to add TASK_MONITOR_ONE_TIME_TASK request"
 
-    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lv8f;)V
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance p1, Lv3d;
+    move-result-object v2
 
-    invoke-direct {p1, v1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    const-string v3, "qaf"
 
-    invoke-virtual {v0, p1}, Lz12;->resumeWith(Ljava/lang/Object;)V
+    invoke-static {v3, v2}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
+    iget-object v2, p0, Lqaf;->a:Ld8h;
+
+    sget-object v3, Lnd5;->b:Lnd5;
+
+    invoke-virtual {v2, v1, v3, v0}, Ld8h;->b(Ljava/lang/String;Lnd5;Lyxa;)Lcr7;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcr7;->A()Lrh3;
+
     return-void
 .end method

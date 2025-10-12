@@ -1,60 +1,43 @@
 .class public final Ljkh;
-.super Lcom/google/android/gms/common/internal/a;
+.super Lodh;
+.source "SourceFile"
 
 
-# virtual methods
-.method public final g()I
+# instance fields
+.field public final d:Lxs4;
+
+.field public final e:Lfaf;
+
+.field public final synthetic f:Lokh;
+
+.field public final synthetic g:Lokh;
+
+
+# direct methods
+.method public constructor <init>(Lokh;Lfaf;Ljava/lang/String;)V
     .locals 1
 
-    const v0, 0xbdfcb8
+    iput-object p1, p0, Ljkh;->g:Lokh;
 
-    return v0
-.end method
+    new-instance p3, Lxs4;
 
-.method public final synthetic l(Landroid/os/IBinder;)Landroid/os/IInterface;
-    .locals 2
+    const-string v0, "OnRequestInstallCallback"
 
-    if-nez p1, :cond_0
+    invoke-direct {p3, v0}, Lxs4;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Ljkh;->f:Lokh;
 
-    return-object p1
+    const/4 p1, 0x2
 
-    :cond_0
-    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+    invoke-direct {p0, p1}, Lodh;-><init>(I)V
 
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    const-string p1, "com.google.android.play.core.appupdate.protocol.IAppUpdateServiceCallback"
 
-    move-result-object v0
+    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    instance-of v1, v0, Lbkh;
+    iput-object p3, p0, Ljkh;->d:Lxs4;
 
-    if-eqz v1, :cond_1
+    iput-object p2, p0, Ljkh;->e:Lfaf;
 
-    check-cast v0, Lbkh;
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Lbkh;
-
-    invoke-direct {v0, p1}, Lbkh;-><init>(Landroid/os/IBinder;)V
-
-    return-object v0
-.end method
-
-.method public final p()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
-
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "com.google.android.gms.auth.api.phone.service.SmsRetrieverApiService.START"
-
-    return-object v0
+    return-void
 .end method

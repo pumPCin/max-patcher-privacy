@@ -1,96 +1,52 @@
-.class public final Lttb;
-.super Laub;
+.class public final synthetic Lttb;
+.super Lv8;
 .source "SourceFile"
 
+# interfaces
+.implements Lle6;
 
-# instance fields
-.field public final b:Llef;
+
+# static fields
+.field public static final r0:Lttb;
 
 
 # direct methods
-.method public constructor <init>(Llef;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Laub;-><init>()V
+    new-instance v0, Lttb;
 
-    iput-object p1, p0, Lttb;->b:Llef;
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Ld3b;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lv8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lttb;->r0:Lttb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lr82;
 
-    goto :goto_1
+    check-cast p2, Lro3;
 
-    :cond_0
-    instance-of v0, p1, Lttb;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    sget-object p3, Lcub;->E0:[Lpl7;
 
-    goto :goto_0
+    new-instance p3, Ld3b;
 
-    :cond_1
-    check-cast p1, Lttb;
+    invoke-direct {p3, p1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lttb;->b:Llef;
-
-    iget-object p1, p1, Lttb;->b:Llef;
-
-    invoke-virtual {v0, p1}, Llef;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lttb;->b:Llef;
-
-    invoke-virtual {v0}, Llef;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ExternalShareLink(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lttb;->b:Llef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p3
 .end method

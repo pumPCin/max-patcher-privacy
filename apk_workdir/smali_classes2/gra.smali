@@ -1,95 +1,68 @@
 .class public final Lgra;
-.super Lv2;
+.super Ljo;
 .source "SourceFile"
 
-
-# instance fields
-.field public final synthetic c:I
-
-.field public final synthetic o:Lhra;
-
-
-# direct methods
-.method public constructor <init>(Lhra;I)V
-    .locals 0
-
-    iput p2, p0, Lgra;->c:I
-
-    iput-object p1, p0, Lgra;->o:Lhra;
-
-    const/16 p1, 0x9
-
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Lfra;->a:Lfra;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p2, Lera;->a:Lera;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+# interfaces
+.implements Lfef;
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final b(ZLlwa;)V
+    .locals 0
 
-    iget v0, p0, Lgra;->c:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p2}, Llwa;->getIcon()Lg17;
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    iget p1, p1, Lg17;->k:I
 
-    if-nez v0, :cond_0
-
-    check-cast p2, Lera;
-
-    check-cast p1, Lera;
-
-    iget-object p1, p0, Lgra;->o:Lhra;
-
-    invoke-virtual {p1}, Lhra;->b()V
+    goto :goto_0
 
     :cond_0
-    return-void
+    invoke-interface {p2}, Llwa;->i()Laxe;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
+
+    iget-object p1, p1, Laxe;->b:Lfxe;
+
+    iget p1, p1, Lfxe;->b:I
+
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Llwa;)V
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    invoke-virtual {p0, v0, p1}, Lgra;->b(ZLlwa;)V
 
-    check-cast p2, Lfra;
-
-    check-cast p1, Lfra;
-
-    iget-object p1, p0, Lgra;->o:Lhra;
-
-    invoke-virtual {p1}, Lhra;->c()V
-
-    :cond_1
     return-void
+.end method
 
-    nop
+.method public setChecked(Z)V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p0}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lgra;->b(ZLlwa;)V
+
+    return-void
 .end method

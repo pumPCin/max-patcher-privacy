@@ -1,68 +1,97 @@
-.class public final synthetic Ltdf;
-.super Ljava/lang/Object;
+.class public final enum Ltdf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final synthetic X:[Ltdf;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Ltdf;
 
-.field public final synthetic b:Ludf;
+.field public static final enum b:Ltdf;
+
+.field public static final enum c:Ltdf;
+
+.field public static final enum o:Ltdf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ludf;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Ltdf;->a:I
+    new-instance v0, Ltdf;
 
-    iput-object p1, p0, Ltdf;->b:Ludf;
+    const-string v1, "PHOTO"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ltdf;->a:Ltdf;
+
+    new-instance v1, Ltdf;
+
+    const-string v2, "GIF"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ltdf;->b:Ltdf;
+
+    new-instance v2, Ltdf;
+
+    const-string v3, "VIDEO"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ltdf;->c:Ltdf;
+
+    new-instance v3, Ltdf;
+
+    const-string v4, "AUDIO"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ltdf;->o:Ltdf;
+
+    filled-new-array {v0, v1, v2, v3}, [Ltdf;
+
+    move-result-object v0
+
+    sput-object v0, Ltdf;->X:[Ltdf;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
+.method public static valueOf(Ljava/lang/String;)Ltdf;
     .locals 1
 
-    iget v0, p0, Ltdf;->a:I
+    const-class v0, Ltdf;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Ltdf;->b:Ludf;
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    check-cast p0, Ltdf;
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    check-cast v0, Landroid/view/View;
+.method public static values()[Ltdf;
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/view/View;->performClick()Z
+    sget-object v0, Ltdf;->X:[Ltdf;
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ltdf;->b:Ludf;
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, [Ltdf;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    check-cast v0, [Ltdf;
 
-    invoke-virtual {v0}, Landroid/view/View;->performClick()Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

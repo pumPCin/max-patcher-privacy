@@ -1,23 +1,61 @@
-.class public abstract Lzkg;
-.super Ljava/lang/Object;
+.class public final Lzkg;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzkg;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:Landroid/os/Parcelable;
+
+
 # direct methods
-.method public static a(Landroid/view/ViewGroup;I)I
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildDrawingOrder(I)I
+    new-instance v0, Le0;
 
-    move-result p0
+    const/16 v1, 0xa
 
-    return p0
+    invoke-direct {v0, v1}, Le0;-><init>(I)V
+
+    sput-object v0, Lzkg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
 .end method
 
-.method public static b(Landroid/view/ViewGroup;Z)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+
+    iget v0, p0, Lzkg;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lzkg;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Lzkg;->c:Landroid/os/Parcelable;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
 .end method

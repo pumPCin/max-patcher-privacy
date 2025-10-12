@@ -1,150 +1,74 @@
 .class public final Lsq7;
-.super Lfwe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrff;
+.implements Lmq7;
 
 
 # instance fields
-.field public final o:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final synthetic a:Ldn;
+
+.field public final synthetic b:Ltq7;
+
+.field public final synthetic c:Lwq7;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 3
+.method public constructor <init>(Ldn;Ltq7;Lwq7;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lfwe;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsq7;->o:Landroidx/appcompat/widget/AppCompatTextView;
+    iput-object p1, p0, Lsq7;->a:Ldn;
 
-    new-instance v0, Lywc;
+    iput-object p2, p0, Lsq7;->b:Ltq7;
 
-    const/16 v1, 0x1c
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    invoke-direct {v0, v2, v1}, Lywc;-><init>(II)V
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41a40000    # 20.5f
-
-    mul-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 v0, 0x10
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setGravity(I)V
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v0
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lv63;->r0(F)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2, v0, v2}, Landroid/widget/TextView;->setPadding(IIII)V
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v0, p1}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lsq7;->onThemeChanged(Luxa;)V
+    iput-object p3, p0, Lsq7;->c:Lwq7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Luxa;)V
-    .locals 2
+.method public final d(Luq7;Lvp7;)V
+    .locals 1
 
-    sget-object v0, Lrxf;->q:Lpef;
-
-    iget-object v1, p0, Lsq7;->o:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-static {v0, v1}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
-
-    move-result-object v0
-
-    iget v0, v0, Lbdf;->i:I
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-interface {p1}, Luxa;->b()Lue0;
+    invoke-virtual {p2}, Lvp7;->a()Lwp7;
 
     move-result-object p1
 
-    iget p1, p1, Lue0;->l:I
+    sget-object p2, Lwp7;->a:Lwp7;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
+    move-result p1
+
+    if-gtz p1, :cond_1
+
+    const-string p1, "handle ON_DESTROY state"
+
+    const/4 p2, 0x0
+
+    const-string v0, "LifecycleOnOffsetChangedListener"
+
+    invoke-static {v0, p1, p2}, Lyt3;->r(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+
+    iget-object p1, p0, Lsq7;->a:Ldn;
+
+    iget-object p1, p1, Ldn;->u0:Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_0
+
+    iget-object p2, p0, Lsq7;->b:Ltq7;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-object p1, p0, Lsq7;->c:Lwq7;
+
+    invoke-virtual {p1, p0}, Lwq7;->f(Lqq7;)V
+
+    :cond_1
     return-void
 .end method

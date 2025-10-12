@@ -1,87 +1,171 @@
-.class public final synthetic Lltb;
+.class public final Lltb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lntb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lcdf;
 
-.field public final synthetic b:Ln4h;
+.field public final b:Lcdf;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln4h;I)V
+.method public constructor <init>(Lcdf;Lzcf;Ljava/util/List;)V
     .locals 0
 
-    iput p2, p0, Lltb;->a:I
-
-    iput-object p1, p0, Lltb;->b:Ln4h;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lltb;->a:Lcdf;
+
+    iput-object p2, p0, Lltb;->b:Lcdf;
+
+    iput-object p3, p0, Lltb;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lltb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljava/lang/String;
+    return v0
 
-    iget-object v0, p0, Lltb;->b:Ln4h;
+    :cond_0
+    instance-of v1, p1, Lltb;
 
-    iget-object v0, v0, Ln4h;->Y:Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->E0()Lu52;
+    return v2
 
-    move-result-object v0
+    :cond_1
+    check-cast p1, Lltb;
 
-    iget-object v0, v0, Lu52;->b:Li52;
+    iget-object v1, p0, Lltb;->a:Lcdf;
 
-    invoke-virtual {v0, p1}, Li52;->k(Ljava/lang/String;)V
+    iget-object v3, p1, Lltb;->a:Lcdf;
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result v1
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
+    if-nez v1, :cond_2
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lltb;->b:Lcdf;
+
+    iget-object v3, p1, Lltb;->b:Lcdf;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lltb;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lltb;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lltb;->b:Ln4h;
+    if-nez p1, :cond_4
 
-    iget-object v0, v0, Ln4h;->Y:Ljava/lang/Object;
+    return v2
 
-    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    :cond_4
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->E0()Lu52;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object v0
+    iget-object v0, p0, Lltb;->a:Lcdf;
 
-    iget-object v0, v0, Lu52;->b:Li52;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {v0, p1}, Li52;->l(I)V
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lltb;->b:Lcdf;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    nop
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lltb;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lltb;->a:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lltb;->b:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lltb;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lsw1;->i(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

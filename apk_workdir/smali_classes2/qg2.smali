@@ -7,28 +7,28 @@
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic a:Le39;
 
-.field public final synthetic b:J
+.field public final synthetic b:Lz00;
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final synthetic c:Lq10;
 
-.field public final synthetic d:Lku4;
+.field public final synthetic d:Lzt4;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;Lku4;)V
+.method public synthetic constructor <init>(Le39;Lz00;Lq10;Lzt4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lqg2;->a:J
+    iput-object p1, p0, Lqg2;->a:Le39;
 
-    iput-wide p3, p0, Lqg2;->b:J
+    iput-object p2, p0, Lqg2;->b:Lz00;
 
-    iput-object p5, p0, Lqg2;->c:Ljava/lang/String;
+    iput-object p3, p0, Lqg2;->c:Lq10;
 
-    iput-object p6, p0, Lqg2;->d:Lku4;
+    iput-object p4, p0, Lqg2;->d:Lzt4;
 
     return-void
 .end method
@@ -38,21 +38,27 @@
 .method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    check-cast p1, Lmg2;
+    check-cast p1, Lrg2;
 
-    new-instance v0, Lmg2;
+    new-instance v0, Lrg2;
+
+    iget-object p1, p0, Lqg2;->a:Le39;
+
+    iget-wide v1, p1, Lqi0;->a:J
+
+    iget-object p1, p0, Lqg2;->b:Lz00;
+
+    iget-wide v3, p1, Lz00;->a:J
+
+    iget-object p1, p0, Lqg2;->c:Lq10;
+
+    iget-object v5, p1, Lq10;->r:Ljava/lang/String;
 
     const/4 v7, 0x0
 
-    iget-wide v1, p0, Lqg2;->a:J
+    iget-object v6, p0, Lqg2;->d:Lzt4;
 
-    iget-wide v3, p0, Lqg2;->b:J
-
-    iget-object v5, p0, Lqg2;->c:Ljava/lang/String;
-
-    iget-object v6, p0, Lqg2;->d:Lku4;
-
-    invoke-direct/range {v0 .. v7}, Lmg2;-><init>(JJLjava/lang/String;Lku4;Z)V
+    invoke-direct/range {v0 .. v7}, Lrg2;-><init>(JJLjava/lang/String;Lzt4;Z)V
 
     return-object v0
 .end method

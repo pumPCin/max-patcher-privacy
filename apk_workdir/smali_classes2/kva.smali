@@ -1,99 +1,133 @@
-.class public final Lkva;
-.super Lmva;
+.class public final synthetic Lkva;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loda;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkva;",
-            ">;"
-        }
-    .end annotation
-.end field
 
-.field public static final b:Lkva;
+# instance fields
+.field public final synthetic a:Lone/me/geo/view/OneMeSupportMapFragment;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Liu9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lru/ok/messages/location/TamOneMeSupportMapFragment;Ljava/lang/String;Liu9;)V
+    .locals 0
 
-    new-instance v0, Lkva;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v1, 0xdac
+    iput-object p1, p0, Lkva;->a:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    invoke-direct {v0, v1, v2}, Lmva;-><init>(J)V
+    iput-object p2, p0, Lkva;->b:Ljava/lang/String;
 
-    sput-object v0, Lkva;->b:Lkva;
-
-    new-instance v0, Ltc8;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
-
-    sput-object v0, Lkva;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p3, p0, Lkva;->c:Liu9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final W(Lsn6;)V
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lkva;->a:Lone/me/geo/view/OneMeSupportMapFragment;
 
-    return v0
-.end method
+    iput-object p1, v0, Lone/me/geo/view/OneMeSupportMapFragment;->m1:Lsn6;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    invoke-virtual {p1}, Lsn6;->h()V
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Lsn6;->i()V
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Lsn6;->p()V
 
-    return v0
+    iget-object v1, p0, Lkva;->b:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lkva;
+    new-instance v1, Lagf;
 
-    if-nez p1, :cond_1
+    invoke-direct {v1}, Lagf;-><init>()V
 
-    const/4 p1, 0x0
+    const v2, 0x7f7fffff    # Float.MAX_VALUE
 
-    return p1
+    iput v2, v1, Lagf;->c:F
+
+    sget-object v2, Lyi5;->a:Lyi5;
+
+    invoke-virtual {v1, v2}, Lagf;->b(Lbgf;)V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v1, Lagf;->b:Z
+
+    invoke-virtual {p1, v1}, Lsn6;->b(Lagf;)Lzff;
+
+    sget-object v1, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/a;->t0()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lss6;->u(Landroid/content/Context;)Lrw4;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lrw4;->l()Llwa;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lone/me/geo/view/OneMeSupportMapFragment;->B0(Llwa;)V
 
     :cond_1
-    return v0
-.end method
+    :goto_0
+    :try_start_0
+    iget-object v0, p1, Lsn6;->a:Lqih;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {v0}, Lidh;->Z()Landroid/os/Parcel;
 
-    const v0, -0x16da368a
+    move-result-object v1
 
-    return v0
-.end method
+    const/4 v2, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-string v0, "Standard"
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object v0
-.end method
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    invoke-virtual {v1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 p2, 0x1
+    const/16 v2, 0x27
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v0, v1, v2}, Lidh;->a0(Landroid/os/Parcel;I)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v0, p0, Lkva;->c:Liu9;
+
+    invoke-virtual {v0, p1}, Liu9;->W(Lsn6;)V
 
     return-void
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

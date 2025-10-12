@@ -1,239 +1,183 @@
-.class public final Lt67;
-.super Ljava/io/OutputStream;
+.class public final enum Lt67;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Lt67;
+
+.field public static final enum Y:Lt67;
+
+.field public static final enum Z:Lt67;
+
+.field public static final enum b:Lt67;
+
+.field public static final enum c:Lt67;
+
+.field public static final enum o:Lt67;
+
+.field public static final enum r0:Lt67;
+
+.field public static final enum s0:Lt67;
+
+.field public static final synthetic t0:[Lt67;
+
+.field public static final synthetic u0:Laa5;
+
+
 # instance fields
-.field public a:[B
-
-.field public b:I
+.field public final a:Ljava/lang/String;
 
 
-# virtual methods
-.method public final c(I)V
-    .locals 4
+# direct methods
+.method static constructor <clinit>()V
+    .locals 11
 
-    iget-object v0, p0, Lt67;->a:[B
+    new-instance v0, Lt67;
 
-    array-length v1, v0
+    const/4 v1, 0x0
 
-    sub-int v1, p1, v1
+    const-string v2, "messageSent"
 
-    if-lez v1, :cond_4
+    const-string v3, "SEND_5_MESSAGES"
 
-    array-length v1, v0
+    invoke-direct {v0, v3, v1, v2}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    shl-int/lit8 v1, v1, 0x1
+    sput-object v0, Lt67;->b:Lt67;
 
-    sub-int v2, v1, p1
+    new-instance v1, Lt67;
 
-    if-gez v2, :cond_0
+    const/4 v2, 0x1
 
-    move v1, p1
+    const-string v3, "folderCreated"
 
-    :cond_0
-    const v2, 0x7ffffff7
+    const-string v4, "CREATE_FOLDER"
 
-    sub-int v3, v1, v2
+    invoke-direct {v1, v4, v2, v3}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    if-lez v3, :cond_3
+    sput-object v1, Lt67;->c:Lt67;
 
-    if-ltz p1, :cond_2
+    new-instance v2, Lt67;
 
-    if-le p1, v2, :cond_1
+    const/4 v3, 0x2
 
-    const p1, 0x7fffffff
+    const-string v4, "voiceMessageSent"
 
-    move v1, p1
+    const-string v5, "SEND_AUDIO_MESSAGE"
 
-    goto :goto_0
+    invoke-direct {v2, v5, v3, v4}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    :cond_1
-    move v1, v2
+    sput-object v2, Lt67;->o:Lt67;
 
-    goto :goto_0
+    new-instance v3, Lt67;
 
-    :cond_2
-    new-instance p1, Ljava/lang/OutOfMemoryError;
+    const/4 v4, 0x3
 
-    invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
+    const-string v5, "reactionSet"
 
-    throw p1
+    const-string v6, "ADD_2_REACTIONS"
 
-    :cond_3
-    :goto_0
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-direct {v3, v6, v4, v5}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result-object p1
+    sput-object v3, Lt67;->X:Lt67;
 
-    iput-object p1, p0, Lt67;->a:[B
+    new-instance v4, Lt67;
 
-    :cond_4
+    const/4 v5, 0x4
+
+    const-string v6, "stickerSent"
+
+    const-string v7, "SEND_3_STICKERS"
+
+    invoke-direct {v4, v7, v5, v6}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lt67;->Y:Lt67;
+
+    new-instance v5, Lt67;
+
+    const/4 v6, 0x5
+
+    const-string v7, "groupChatCreated"
+
+    const-string v8, "CREATE_2_GROUP_CHATS"
+
+    invoke-direct {v5, v8, v6, v7}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lt67;->Z:Lt67;
+
+    new-instance v6, Lt67;
+
+    const/4 v7, 0x6
+
+    const-string v8, "pinMade"
+
+    const-string v9, "MADE_2_PIN"
+
+    invoke-direct {v6, v9, v7, v8}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lt67;->r0:Lt67;
+
+    new-instance v7, Lt67;
+
+    const/4 v8, 0x7
+
+    const-string v9, "callMade"
+
+    const-string v10, "PARTICIPATED_IN_CALL"
+
+    invoke-direct {v7, v10, v8, v9}, Lt67;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lt67;->s0:Lt67;
+
+    filled-new-array/range {v0 .. v7}, [Lt67;
+
+    move-result-object v0
+
+    sput-object v0, Lt67;->t0:[Lt67;
+
+    new-instance v1, Laa5;
+
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lt67;->u0:Laa5;
+
     return-void
 .end method
 
-.method public final d(I)V
-    .locals 4
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    iget v0, p0, Lt67;->b:I
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    add-int/lit8 v0, v0, 0x4
-
-    invoke-virtual {p0, v0}, Lt67;->c(I)V
-
-    iget-object v0, p0, Lt67;->a:[B
-
-    iget v1, p0, Lt67;->b:I
-
-    ushr-int/lit8 v2, p1, 0x18
-
-    int-to-byte v2, v2
-
-    aput-byte v2, v0, v1
-
-    add-int/lit8 v2, v1, 0x1
-
-    ushr-int/lit8 v3, p1, 0x10
-
-    int-to-byte v3, v3
-
-    aput-byte v3, v0, v2
-
-    add-int/lit8 v2, v1, 0x2
-
-    ushr-int/lit8 v3, p1, 0x8
-
-    int-to-byte v3, v3
-
-    aput-byte v3, v0, v2
-
-    add-int/lit8 v2, v1, 0x3
-
-    int-to-byte p1, p1
-
-    aput-byte p1, v0, v2
-
-    add-int/lit8 v1, v1, 0x4
-
-    iput v1, p0, Lt67;->b:I
+    iput-object p3, p0, Lt67;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final declared-synchronized write(I)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lt67;
+    .locals 1
 
-    monitor-enter p0
+    const-class v0, Lt67;
 
-    .line 1
-    :try_start_0
-    iget v0, p0, Lt67;->b:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    add-int/lit8 v0, v0, 0x1
+    move-result-object p0
 
-    invoke-virtual {p0, v0}, Lt67;->c(I)V
+    check-cast p0, Lt67;
 
-    .line 2
-    iget-object v0, p0, Lt67;->a:[B
-
-    iget v1, p0, Lt67;->b:I
-
-    int-to-byte p1, p1
-
-    aput-byte p1, v0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    .line 3
-    iput v1, p0, Lt67;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 4
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object p0
 .end method
 
-.method public final declared-synchronized write([BII)V
-    .locals 2
+.method public static values()[Lt67;
+    .locals 1
 
-    monitor-enter p0
+    sget-object v0, Lt67;->t0:[Lt67;
 
-    if-ltz p2, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    .line 5
-    :try_start_0
-    array-length v0, p1
+    move-result-object v0
 
-    if-gt p2, v0, :cond_0
+    check-cast v0, [Lt67;
 
-    if-ltz p3, :cond_0
-
-    add-int v0, p2, p3
-
-    array-length v1, p1
-
-    sub-int/2addr v0, v1
-
-    if-gtz v0, :cond_0
-
-    .line 6
-    iget v0, p0, Lt67;->b:I
-
-    add-int/2addr v0, p3
-
-    invoke-virtual {p0, v0}, Lt67;->c(I)V
-
-    .line 7
-    iget-object v0, p0, Lt67;->a:[B
-
-    iget v1, p0, Lt67;->b:I
-
-    invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    .line 8
-    iget p1, p0, Lt67;->b:I
-
-    add-int/2addr p1, p3
-
-    iput p1, p0, Lt67;->b:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 9
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    .line 10
-    :cond_0
-    :try_start_1
-    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p1}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p1
-
-    :goto_0
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

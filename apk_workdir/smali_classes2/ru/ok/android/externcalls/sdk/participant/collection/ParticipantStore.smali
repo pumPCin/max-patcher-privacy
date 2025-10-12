@@ -33,51 +33,51 @@
         "()Z",
         "isEmpty",
         "me",
-        "Loyf;",
+        "Laxf;",
         "updateMe",
         "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
         "participant",
         "addToActiveSessionRoom",
-        "Lnwd;",
+        "Lvud;",
         "sessionRoomId",
         "add",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V",
-        "Lxg1;",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvud;)V",
+        "Lyg1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "internalId",
         "containsByInternal",
-        "(Lxg1;)Z",
+        "(Lyg1;)Z",
         "externalId",
         "getByExternalWithAnyDevice",
         "getByInternal",
-        "(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
+        "(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "removeByExternal",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V",
         "removeByInternal",
-        "(Lxg1;)V",
+        "(Lyg1;)V",
         "",
         "internalIdsSet",
         "(Ljava/util/Collection;)V",
         "getParticipants",
-        "(Lnwd;)Ljava/util/Collection;",
+        "(Lvud;)Ljava/util/Collection;",
         "",
         "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
         "Lru/ok/android/externcalls/sdk/participant/collection/LocalId;",
         "getRoomToParticipantsMap",
         "()Ljava/util/Map;",
         "getParticipantRoomId",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lnwd;",
-        "Lhwd;",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lvud;",
+        "Lpud;",
         "room",
         "setActiveSessionRoom",
-        "(Lnwd;Lhwd;)V",
+        "(Lvud;Lpud;)V",
         "setProposedSessionRoom",
         "maybeUpdateRoom",
-        "(Lhwd;)V",
+        "(Lpud;)V",
         "oldRoomId",
         "newRoomId",
         "onActiveRoomChanged",
-        "(Lnwd;Lnwd;)V",
+        "(Lvud;Lvud;)V",
         "localId",
         "getByLocal",
         "(Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;)Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -87,7 +87,7 @@
         "Ljava/util/LinkedHashMap;",
         "Lkotlin/collections/LinkedHashMap;",
         "getSessionRoomParticipantsMap",
-        "(Lnwd;)Ljava/util/LinkedHashMap;",
+        "(Lvud;)Ljava/util/LinkedHashMap;",
         "Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;",
         "Ljava/util/HashMap;",
         "Lkotlin/collections/HashMap;",
@@ -96,18 +96,18 @@
         "localIdToSessionRoomMap",
         "<set-?>",
         "activeRoom",
-        "Lhwd;",
+        "Lpud;",
         "getActiveRoom",
-        "()Lhwd;",
+        "()Lpud;",
         "proposedRoom",
         "getProposedRoom",
         "value",
         "activeRoomId",
-        "Lnwd;",
+        "Lvud;",
         "getActiveRoomId",
-        "()Lnwd;",
+        "()Lvud;",
         "setActiveRoomId",
-        "(Lnwd;)V",
+        "(Lvud;)V",
         "proposedRoomId",
         "getProposedRoomId",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -132,9 +132,9 @@
 
 
 # instance fields
-.field private activeRoom:Lhwd;
+.field private activeRoom:Lpud;
 
-.field private activeRoomId:Lnwd;
+.field private activeRoomId:Lvud;
 
 .field private final localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
@@ -143,7 +143,7 @@
         value = {
             "Ljava/util/HashMap<",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
-            "Lnwd;",
+            "Lvud;",
             ">;"
         }
     .end annotation
@@ -151,15 +151,15 @@
 
 .field private final me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-.field private proposedRoom:Lhwd;
+.field private proposedRoom:Lpud;
 
-.field private proposedRoomId:Lnwd;
+.field private proposedRoomId:Lvud;
 
 .field private final roomToIdToParticipantMap:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lnwd;",
+            "Lvud;",
             "Ljava/util/LinkedHashMap<",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
             "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -189,9 +189,9 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->localIdToSessionRoomMap:Ljava/util/HashMap;
 
-    sget-object p2, Llwd;->a:Llwd;
+    sget-object p2, Ltud;->a:Ltud;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->me:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -209,7 +209,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lnwd;
+    check-cast v0, Lvud;
 
     const/4 v1, 0x0
 
@@ -240,12 +240,12 @@
     return-object v1
 .end method
 
-.method private final getSessionRoomParticipantsMap(Lnwd;)Ljava/util/LinkedHashMap;
+.method private final getSessionRoomParticipantsMap(Lvud;)Ljava/util/LinkedHashMap;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnwd;",
+            "Lvud;",
             ")",
             "Ljava/util/LinkedHashMap<",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
@@ -274,10 +274,10 @@
     return-object v1
 .end method
 
-.method private final onActiveRoomChanged(Lnwd;Lnwd;)V
+.method private final onActiveRoomChanged(Lvud;Lvud;)V
     .locals 1
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -302,7 +302,7 @@
 
     invoke-direct {p0, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->removeByLocalId(Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;)V
 
-    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V
+    invoke-virtual {p0, p1, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvud;)V
 
     return-void
 .end method
@@ -327,7 +327,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lnwd;
+    check-cast v0, Lvud;
 
     if-nez v0, :cond_1
 
@@ -358,12 +358,12 @@
     return-void
 .end method
 
-.method private final setActiveRoomId(Lnwd;)V
+.method private final setActiveRoomId(Lvud;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -372,18 +372,18 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->onActiveRoomChanged(Lnwd;Lnwd;)V
+    invoke-direct {p0, v0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->onActiveRoomChanged(Lvud;Lvud;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V
+.method public final add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvud;)V
     .locals 2
 
     .line 3
@@ -392,7 +392,7 @@
     invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->addMappings(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
 
     .line 4
-    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getSessionRoomParticipantsMap(Lnwd;)Ljava/util/LinkedHashMap;
+    invoke-direct {p0, p2}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getSessionRoomParticipantsMap(Lvud;)Ljava/util/LinkedHashMap;
 
     move-result-object v0
 
@@ -465,9 +465,9 @@
 .method public final addToActiveSessionRoom(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvud;)V
 
     return-void
 .end method
@@ -484,10 +484,10 @@
     throw v0
 .end method
 
-.method public final containsByInternal(Lxg1;)Z
+.method public final containsByInternal(Lyg1;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object p1
 
@@ -503,18 +503,18 @@
     return p1
 .end method
 
-.method public final getActiveRoom()Lhwd;
+.method public final getActiveRoom()Lpud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lhwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lpud;
 
     return-object v0
 .end method
 
-.method public final getActiveRoomId()Lnwd;
+.method public final getActiveRoomId()Lvud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
     return-object v0
 .end method
@@ -542,12 +542,12 @@
     return-object p1
 .end method
 
-.method public getByInternal(Lxg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+.method public getByInternal(Lyg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->getLocalId(Lxg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->getLocalId(Lyg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
 
     move-result-object p1
 
@@ -596,7 +596,7 @@
     return-object p1
 .end method
 
-.method public final getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lnwd;
+.method public final getParticipantRoomId(Lru/ok/android/externcalls/sdk/ConversationParticipant;)Lvud;
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->localIdToSessionRoomMap:Ljava/util/HashMap;
@@ -609,7 +609,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lnwd;
+    check-cast p1, Lvud;
 
     return-object p1
 .end method
@@ -626,21 +626,21 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lnwd;)Ljava/util/Collection;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getParticipants(Lvud;)Ljava/util/Collection;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final getParticipants(Lnwd;)Ljava/util/Collection;
+.method public final getParticipants(Lvud;)Ljava/util/Collection;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnwd;",
+            "Lvud;",
             ")",
             "Ljava/util/Collection<",
             "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -649,7 +649,7 @@
     .end annotation
 
     .line 2
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getSessionRoomParticipantsMap(Lnwd;)Ljava/util/LinkedHashMap;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getSessionRoomParticipantsMap(Lvud;)Ljava/util/LinkedHashMap;
 
     move-result-object p1
 
@@ -660,18 +660,18 @@
     return-object p1
 .end method
 
-.method public final getProposedRoom()Lhwd;
+.method public final getProposedRoom()Lpud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lhwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lpud;
 
     return-object v0
 .end method
 
-.method public final getProposedRoomId()Lnwd;
+.method public final getProposedRoomId()Lvud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lvud;
 
     return-object v0
 .end method
@@ -682,7 +682,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lnwd;",
+            "Lvud;",
             "Ljava/util/Map<",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
             "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -764,31 +764,31 @@
     return-object v0
 .end method
 
-.method public final maybeUpdateRoom(Lhwd;)V
+.method public final maybeUpdateRoom(Lpud;)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    iget-object v1, p1, Lhwd;->a:Lmwd;
+    iget-object v1, p1, Lpud;->a:Luud;
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lhwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lpud;
 
     :cond_0
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lvud;
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lhwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lpud;
 
     :cond_1
     return-void
@@ -852,7 +852,7 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lxg1;",
+            "Lyg1;",
             ">;)V"
         }
     .end annotation
@@ -873,10 +873,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lxg1;
+    check-cast v0, Lyg1;
 
     .line 4
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->removeByInternal(Lxg1;)V
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->removeByInternal(Lyg1;)V
 
     goto :goto_0
 
@@ -884,13 +884,13 @@
     return-void
 .end method
 
-.method public final removeByInternal(Lxg1;)V
+.method public final removeByInternal(Lyg1;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->localIdMappings:Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;
 
-    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->getLocalId(Lxg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->getLocalId(Lyg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
 
     move-result-object p1
 
@@ -947,22 +947,22 @@
     throw p1
 .end method
 
-.method public final setActiveSessionRoom(Lnwd;Lhwd;)V
+.method public final setActiveSessionRoom(Lvud;Lpud;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveRoomId(Lnwd;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->setActiveRoomId(Lvud;)V
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lhwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoom:Lpud;
 
     return-void
 .end method
 
-.method public final setProposedSessionRoom(Lnwd;Lhwd;)V
+.method public final setProposedSessionRoom(Lvud;Lpud;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lnwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoomId:Lvud;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lhwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->proposedRoom:Lpud;
 
     return-void
 .end method
@@ -981,7 +981,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lz84;->B(Ljava/util/Collection;)[Ljava/lang/Object;
+    invoke-static {p0}, Lk84;->G(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object v0
 
@@ -999,7 +999,7 @@
     .end annotation
 
     .line 2
-    invoke-static {p0, p1}, Lz84;->C(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-static {p0, p1}, Lk84;->H(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1009,9 +1009,9 @@
 .method public final updateMe(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->activeRoomId:Lvud;
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lnwd;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->add(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lvud;)V
 
     return-void
 .end method

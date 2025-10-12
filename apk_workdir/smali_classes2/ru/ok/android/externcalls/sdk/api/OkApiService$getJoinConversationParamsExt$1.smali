@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmf6;
+.implements Lke6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getJoinConversationParamsExt(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lude;
+    value = Lru/ok/android/externcalls/sdk/api/OkApiService;->getJoinConversationParamsExt(Ljava/lang/String;Ljava/lang/String;JLru/ok/android/externcalls/sdk/conversation/StartCallApiParams;)Lrce;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lmf6;"
+        "Lke6;"
     }
 .end annotation
 

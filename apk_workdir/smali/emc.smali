@@ -1,321 +1,376 @@
-.class public abstract Lemc;
+.class public final Lemc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Lsh5;
 
-# static fields
-.field public static ColorStateListItem:[I = null
 
-.field public static ColorStateListItem_alpha:I = 0x3
+# instance fields
+.field public final a:Lu66;
 
-.field public static ColorStateListItem_android_alpha:I = 0x1
+.field public final b:Lt3g;
 
-.field public static ColorStateListItem_android_color:I = 0x0
+.field public c:Lsmf;
 
-.field public static ColorStateListItem_android_lStar:I = 0x2
+.field public d:I
 
-.field public static ColorStateListItem_lStar:I = 0x4
+.field public e:I
 
-.field public static CoordinatorLayout:[I = null
+.field public f:J
 
-.field public static CoordinatorLayout_Layout:[I = null
+.field public g:I
 
-.field public static CoordinatorLayout_Layout_android_layout_gravity:I = 0x0
-
-.field public static CoordinatorLayout_Layout_layout_anchor:I = 0x1
-
-.field public static CoordinatorLayout_Layout_layout_anchorGravity:I = 0x2
-
-.field public static CoordinatorLayout_Layout_layout_behavior:I = 0x3
-
-.field public static CoordinatorLayout_Layout_layout_dodgeInsetEdges:I = 0x4
-
-.field public static CoordinatorLayout_Layout_layout_insetEdge:I = 0x5
-
-.field public static CoordinatorLayout_Layout_layout_keyline:I = 0x6
-
-.field public static CoordinatorLayout_keylines:I = 0x0
-
-.field public static CoordinatorLayout_statusBarBackground:I = 0x1
-
-.field public static FontFamily:[I = null
-
-.field public static FontFamilyFont:[I = null
-
-.field public static FontFamilyFont_android_font:I = 0x0
-
-.field public static FontFamilyFont_android_fontStyle:I = 0x2
-
-.field public static FontFamilyFont_android_fontVariationSettings:I = 0x4
-
-.field public static FontFamilyFont_android_fontWeight:I = 0x1
-
-.field public static FontFamilyFont_android_ttcIndex:I = 0x3
-
-.field public static FontFamilyFont_font:I = 0x5
-
-.field public static FontFamilyFont_fontStyle:I = 0x6
-
-.field public static FontFamilyFont_fontVariationSettings:I = 0x7
-
-.field public static FontFamilyFont_fontWeight:I = 0x8
-
-.field public static FontFamilyFont_ttcIndex:I = 0x9
-
-.field public static FontFamily_fontProviderAuthority:I = 0x0
-
-.field public static FontFamily_fontProviderCerts:I = 0x1
-
-.field public static FontFamily_fontProviderFetchStrategy:I = 0x2
-
-.field public static FontFamily_fontProviderFetchTimeout:I = 0x3
-
-.field public static FontFamily_fontProviderPackage:I = 0x4
-
-.field public static FontFamily_fontProviderQuery:I = 0x5
-
-.field public static FontFamily_fontProviderSystemFontFamily:I = 0x6
-
-.field public static GradientColor:[I = null
-
-.field public static GradientColorItem:[I = null
-
-.field public static GradientColorItem_android_color:I = 0x0
-
-.field public static GradientColorItem_android_offset:I = 0x1
-
-.field public static GradientColor_android_centerColor:I = 0x7
-
-.field public static GradientColor_android_centerX:I = 0x3
-
-.field public static GradientColor_android_centerY:I = 0x4
-
-.field public static GradientColor_android_endColor:I = 0x1
-
-.field public static GradientColor_android_endX:I = 0xa
-
-.field public static GradientColor_android_endY:I = 0xb
-
-.field public static GradientColor_android_gradientRadius:I = 0x5
-
-.field public static GradientColor_android_startColor:I = 0x0
-
-.field public static GradientColor_android_startX:I = 0x8
-
-.field public static GradientColor_android_startY:I = 0x9
-
-.field public static GradientColor_android_tileMode:I = 0x6
-
-.field public static GradientColor_android_type:I = 0x2
-
-.field public static GridLayout:[I = null
-
-.field public static GridLayout_Layout:[I = null
-
-.field public static GridLayout_Layout_android_layout_height:I = 0x1
-
-.field public static GridLayout_Layout_android_layout_margin:I = 0x2
-
-.field public static GridLayout_Layout_android_layout_marginBottom:I = 0x6
-
-.field public static GridLayout_Layout_android_layout_marginLeft:I = 0x3
-
-.field public static GridLayout_Layout_android_layout_marginRight:I = 0x5
-
-.field public static GridLayout_Layout_android_layout_marginTop:I = 0x4
-
-.field public static GridLayout_Layout_android_layout_width:I = 0x0
-
-.field public static GridLayout_Layout_layout_column:I = 0x7
-
-.field public static GridLayout_Layout_layout_columnSpan:I = 0x8
-
-.field public static GridLayout_Layout_layout_columnWeight:I = 0x9
-
-.field public static GridLayout_Layout_layout_gravity:I = 0xa
-
-.field public static GridLayout_Layout_layout_row:I = 0xb
-
-.field public static GridLayout_Layout_layout_rowSpan:I = 0xc
-
-.field public static GridLayout_Layout_layout_rowWeight:I = 0xd
-
-.field public static GridLayout_alignmentMode:I = 0x0
-
-.field public static GridLayout_columnCount:I = 0x1
-
-.field public static GridLayout_columnOrderPreserved:I = 0x2
-
-.field public static GridLayout_orientation:I = 0x3
-
-.field public static GridLayout_rowCount:I = 0x4
-
-.field public static GridLayout_rowOrderPreserved:I = 0x5
-
-.field public static GridLayout_useDefaultMargins:I = 0x6
+.field public h:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lu66;)V
+    .locals 1
 
-    const v0, 0x7f04003c
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v1, 0x7f040589
+    iput-object p1, p0, Lemc;->a:Lu66;
 
-    const v2, 0x10101a5
+    new-instance p1, Lt3g;
 
-    const v3, 0x101031f
+    const/16 v0, 0x9
 
-    const v4, 0x1010647
+    invoke-direct {p1, v0}, Lt3g;-><init>(I)V
 
-    filled-new-array {v2, v3, v4, v0, v1}, [I
+    iput-object p1, p0, Lemc;->b:Lt3g;
 
-    move-result-object v0
+    const/4 p1, 0x0
 
-    sput-object v0, Lemc;->ColorStateListItem:[I
-
-    const v0, 0x7f040588
-
-    const v1, 0x7f0407e8
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Lemc;->CoordinatorLayout:[I
-
-    const/4 v0, 0x7
-
-    new-array v1, v0, [I
-
-    fill-array-data v1, :array_0
-
-    sput-object v1, Lemc;->CoordinatorLayout_Layout:[I
-
-    new-array v1, v0, [I
-
-    fill-array-data v1, :array_1
-
-    sput-object v1, Lemc;->FontFamily:[I
-
-    const/16 v1, 0xa
-
-    new-array v1, v1, [I
-
-    fill-array-data v1, :array_2
-
-    sput-object v1, Lemc;->FontFamilyFont:[I
-
-    const/16 v1, 0xc
-
-    new-array v1, v1, [I
-
-    fill-array-data v1, :array_3
-
-    sput-object v1, Lemc;->GradientColor:[I
-
-    const v1, 0x1010514
-
-    filled-new-array {v2, v1}, [I
-
-    move-result-object v1
-
-    sput-object v1, Lemc;->GradientColorItem:[I
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_4
-
-    sput-object v0, Lemc;->GridLayout:[I
-
-    const/16 v0, 0xe
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_5
-
-    sput-object v0, Lemc;->GridLayout_Layout:[I
+    iput p1, p0, Lemc;->d:I
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        0x10100b3
-        0x7f040599
-        0x7f04059a
-        0x7f04059b
-        0x7f0405cf
-        0x7f0405dd
-        0x7f0405de
-    .end array-data
 
-    :array_1
-    .array-data 4
-        0x7f0403e2
-        0x7f0403e3
-        0x7f0403e4
-        0x7f0403e5
-        0x7f0403e6
-        0x7f0403e7
-        0x7f0403e8
-    .end array-data
+# virtual methods
+.method public final d(JJ)V
+    .locals 0
 
-    :array_2
-    .array-data 4
-        0x1010532
-        0x1010533
-        0x101053f
-        0x101056f
-        0x1010570
-        0x7f0403e0
-        0x7f0403e9
-        0x7f0403ea
-        0x7f0403eb
-        0x7f0408c0
-    .end array-data
+    const/4 p1, 0x0
 
-    :array_3
-    .array-data 4
-        0x101019d
-        0x101019e
-        0x10101a1
-        0x10101a2
-        0x10101a3
-        0x10101a4
-        0x1010201
-        0x101020b
-        0x1010510
-        0x1010511
-        0x1010512
-        0x1010513
-    .end array-data
+    iput p1, p0, Lemc;->d:I
 
-    :array_4
-    .array-data 4
-        0x7f040037
-        0x7f0402ee
-        0x7f0402ef
-        0x7f0406bd
-        0x7f040732
-        0x7f040733
-        0x7f0408ce
-    .end array-data
+    return-void
+.end method
 
-    :array_5
-    .array-data 4
-        0x10100f4
-        0x10100f5
-        0x10100f6
-        0x10100f7
-        0x10100f8
-        0x10100f9
-        0x10100fa
-        0x7f04059e
-        0x7f04059f
-        0x7f0405a0
-        0x7f0405dc
-        0x7f0405e6
-        0x7f0405e7
-        0x7f0405e8
-    .end array-data
+.method public final g(Lwh5;)V
+    .locals 3
+
+    new-instance v0, Lkt5;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {v0, v1, v2}, Lkt5;-><init>(J)V
+
+    invoke-interface {p1, v0}, Lwh5;->L(Lmld;)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x3
+
+    invoke-interface {p1, v0, v1}, Lwh5;->A(II)Lsmf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lemc;->c:Lsmf;
+
+    iget-object v1, p0, Lemc;->a:Lu66;
+
+    invoke-interface {v0, v1}, Lsmf;->d(Lu66;)V
+
+    invoke-interface {p1}, Lwh5;->v()V
+
+    return-void
+.end method
+
+.method public final h(Luh5;)Z
+    .locals 4
+
+    iget-object v0, p0, Lemc;->b:Lt3g;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lt3g;->B(I)V
+
+    iget-object v2, v0, Lt3g;->a:[B
+
+    check-cast p1, Lsg4;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3, v1, v3}, Lsg4;->n([BIIZ)Z
+
+    invoke-virtual {v0}, Lt3g;->f()I
+
+    move-result p1
+
+    const v0, 0x52434301
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v3
+.end method
+
+.method public final i(Luh5;Lk7;)I
+    .locals 11
+
+    iget-object p2, p0, Lemc;->c:Lsmf;
+
+    invoke-static {p2}, Lnjg;->n(Ljava/lang/Object;)V
+
+    :goto_0
+    iget p2, p0, Lemc;->d:I
+
+    const/4 v0, -0x1
+
+    iget-object v1, p0, Lemc;->b:Lt3g;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz p2, :cond_8
+
+    const/4 v4, 0x2
+
+    if-eq p2, v3, :cond_3
+
+    if-ne p2, v4, :cond_2
+
+    :goto_1
+    iget p2, p0, Lemc;->g:I
+
+    if-lez p2, :cond_0
+
+    const/4 p2, 0x3
+
+    invoke-virtual {v1, p2}, Lt3g;->B(I)V
+
+    iget-object v0, v1, Lt3g;->a:[B
+
+    move-object v4, p1
+
+    check-cast v4, Lsg4;
+
+    invoke-virtual {v4, v0, v2, p2, v2}, Lsg4;->f([BIIZ)Z
+
+    iget-object v0, p0, Lemc;->c:Lsmf;
+
+    invoke-interface {v0, p2, v1}, Lsmf;->c(ILt3g;)V
+
+    iget v0, p0, Lemc;->h:I
+
+    add-int/2addr v0, p2
+
+    iput v0, p0, Lemc;->h:I
+
+    iget p2, p0, Lemc;->g:I
+
+    sub-int/2addr p2, v3
+
+    iput p2, p0, Lemc;->g:I
+
+    goto :goto_1
+
+    :cond_0
+    iget v8, p0, Lemc;->h:I
+
+    if-lez v8, :cond_1
+
+    iget-object v4, p0, Lemc;->c:Lsmf;
+
+    iget-wide v5, p0, Lemc;->f:J
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v7, 0x1
+
+    invoke-interface/range {v4 .. v10}, Lsmf;->b(JIIILqmf;)V
+
+    :cond_1
+    iput v3, p0, Lemc;->d:I
+
+    return v2
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    iget p2, p0, Lemc;->e:I
+
+    if-nez p2, :cond_5
+
+    const/4 p2, 0x5
+
+    invoke-virtual {v1, p2}, Lt3g;->B(I)V
+
+    iget-object v5, v1, Lt3g;->a:[B
+
+    move-object v6, p1
+
+    check-cast v6, Lsg4;
+
+    invoke-virtual {v6, v5, v2, p2, v3}, Lsg4;->f([BIIZ)Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v1}, Lt3g;->t()J
+
+    move-result-wide v5
+
+    const-wide/16 v7, 0x3e8
+
+    mul-long/2addr v5, v7
+
+    const-wide/16 v7, 0x2d
+
+    div-long/2addr v5, v7
+
+    iput-wide v5, p0, Lemc;->f:J
+
+    goto :goto_3
+
+    :cond_5
+    if-ne p2, v3, :cond_7
+
+    const/16 p2, 0x9
+
+    invoke-virtual {v1, p2}, Lt3g;->B(I)V
+
+    iget-object v5, v1, Lt3g;->a:[B
+
+    move-object v6, p1
+
+    check-cast v6, Lsg4;
+
+    invoke-virtual {v6, v5, v2, p2, v3}, Lsg4;->f([BIIZ)Z
+
+    move-result p2
+
+    if-nez p2, :cond_6
+
+    :goto_2
+    iput v2, p0, Lemc;->d:I
+
+    return v0
+
+    :cond_6
+    invoke-virtual {v1}, Lt3g;->m()J
+
+    move-result-wide v5
+
+    iput-wide v5, p0, Lemc;->f:J
+
+    :goto_3
+    invoke-virtual {v1}, Lt3g;->s()I
+
+    move-result p2
+
+    iput p2, p0, Lemc;->g:I
+
+    iput v2, p0, Lemc;->h:I
+
+    iput v4, p0, Lemc;->d:I
+
+    goto/16 :goto_0
+
+    :cond_7
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x27
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v0, "Unsupported version number: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-static {p2, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_8
+    const/16 p2, 0x8
+
+    invoke-virtual {v1, p2}, Lt3g;->B(I)V
+
+    iget-object v4, v1, Lt3g;->a:[B
+
+    move-object v5, p1
+
+    check-cast v5, Lsg4;
+
+    invoke-virtual {v5, v4, v2, p2, v3}, Lsg4;->f([BIIZ)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_a
+
+    invoke-virtual {v1}, Lt3g;->f()I
+
+    move-result p2
+
+    const v0, 0x52434301
+
+    if-ne p2, v0, :cond_9
+
+    invoke-virtual {v1}, Lt3g;->s()I
+
+    move-result p2
+
+    iput p2, p0, Lemc;->e:I
+
+    iput v3, p0, Lemc;->d:I
+
+    goto/16 :goto_0
+
+    :cond_9
+    new-instance p1, Ljava/io/IOException;
+
+    const-string p2, "Input not RawCC"
+
+    invoke-direct {p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_a
+    return v0
+.end method
+
+.method public final release()V
+    .locals 0
+
+    return-void
 .end method

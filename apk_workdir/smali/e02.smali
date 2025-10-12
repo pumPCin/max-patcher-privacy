@@ -1,68 +1,90 @@
-.class public interface abstract Le02;
+.class public final synthetic Le02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxx1;
-.implements Lp3g;
+.implements Lzz1;
+
+
+# instance fields
+.field public final synthetic b:Lf02;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lf02;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Le02;->b:Lf02;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lc02;
-    .locals 1
+.method public final a(Ljava/util/List;)Ljava/util/List;
+    .locals 3
 
-    invoke-interface {p0}, Le02;->n()Lc02;
+    iget-object v0, p0, Le02;->b:Lf02;
+
+    invoke-interface {v0}, Lf02;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-.method public c(Lcz1;)V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-.method public abstract e()Lsaa;
-.end method
+    move-result v1
 
-.method public abstract f()Ljz1;
-.end method
+    if-eqz v1, :cond_1
 
-.method public g()Laz1;
-    .locals 1
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sget-object v0, Ldz1;->a:Lcz1;
+    move-result-object v1
 
-    return-object v0
-.end method
+    check-cast v1, Lf02;
 
-.method public i(Z)V
-    .locals 0
+    instance-of v2, v1, Lf02;
 
-    return-void
-.end method
+    invoke-static {v2}, Lnjg;->g(Z)V
 
-.method public abstract j(Ljava/util/ArrayList;)V
-.end method
+    move-object v2, v1
 
-.method public abstract k(Ljava/util/ArrayList;)V
-.end method
+    check-cast v2, Lf02;
 
-.method public l()Z
-    .locals 1
+    invoke-interface {v2}, Lf02;->d()Ljava/lang/String;
 
-    const/4 v0, 0x1
+    move-result-object v2
 
-    return v0
-.end method
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method public m(Z)V
-    .locals 0
+    move-result v2
 
-    return-void
-.end method
+    if-eqz v2, :cond_0
 
-.method public abstract n()Lc02;
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Unable to find camera with id "
+
+    const-string v2, " from list of available cameras."
+
+    invoke-static {v1, v0, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

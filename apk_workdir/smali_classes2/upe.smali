@@ -1,16 +1,13 @@
-.class public final enum Lupe;
-.super Ljava/lang/Enum;
+.class public final synthetic Lupe;
+.super Lv8;
 .source "SourceFile"
+
+# interfaces
+.implements Lle6;
 
 
 # static fields
-.field public static final enum a:Lupe;
-
-.field public static final enum b:Lupe;
-
-.field public static final enum c:Lupe;
-
-.field public static final synthetic o:[Lupe;
+.field public static final r0:Lupe;
 
 
 # direct methods
@@ -19,67 +16,37 @@
 
     new-instance v0, Lupe;
 
-    const-string v1, "DEFAULT"
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x4
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x3
 
-    sput-object v0, Lupe;->a:Lupe;
+    const-class v4, Ld3b;
 
-    new-instance v1, Lupe;
+    invoke-direct {v0, v3, v4, v1, v2}, Lv8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    const-string v2, "WITH_CALL_PIP"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lupe;->b:Lupe;
-
-    new-instance v2, Lupe;
-
-    const-string v3, "WITH_VIDEO_PIP"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lupe;->c:Lupe;
-
-    filled-new-array {v0, v1, v2}, [Lupe;
-
-    move-result-object v0
-
-    sput-object v0, Lupe;->o:[Lupe;
+    sput-object v0, Lupe;->r0:Lupe;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lupe;
-    .locals 1
 
-    const-class v0, Lupe;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ldqe;
 
-    move-result-object p0
+    check-cast p2, Ljava/lang/Boolean;
 
-    check-cast p0, Lupe;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return-object p0
-.end method
+    sget-object p3, Lzpe;->G0:[Lpl7;
 
-.method public static values()[Lupe;
-    .locals 1
+    new-instance p3, Ld3b;
 
-    sget-object v0, Lupe;->o:[Lupe;
+    invoke-direct {p3, p1, p2}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lupe;
-
-    return-object v0
+    return-object p3
 .end method

@@ -2,84 +2,112 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz1a;
+
+# static fields
+.field public static final synthetic d:[Lpl7;
+
+.field public static final e:Ljava/lang/String;
 
 
 # instance fields
-.field public final b:I
+.field public final a:Lys4;
+
+.field public final b:Lys4;
+
+.field public final c:Lys4;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method static constructor <clinit>()V
+    .locals 7
+
+    new-instance v0, Lf4c;
+
+    const-class v1, Lu1a;
+
+    const-string v2, "prefs"
+
+    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sget-object v2, Lewc;->a:Lfwc;
+
+    const-string v3, "discardServerDraftUseCase"
+
+    const-string v5, "getDiscardServerDraftUseCase()Lru/ok/tamtam/draft/DiscardServerDraftUseCase;"
+
+    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
+
+    move-result-object v2
+
+    new-instance v3, Lf4c;
+
+    const-string v5, "downloadDraftUseCase"
+
+    const-string v6, "getDownloadDraftUseCase()Lru/ok/tamtam/draft/DownloadDraftUseCase;"
+
+    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    const/4 v5, 0x3
+
+    new-array v5, v5, [Lpl7;
+
+    aput-object v0, v5, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v5, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v5, v0
+
+    sput-object v5, Lu1a;->d:[Lpl7;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lu1a;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lys4;Lys4;Lys4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lu1a;->b:I
+    iput-object p1, p0, Lu1a;->a:Lys4;
+
+    iput-object p2, p0, Lu1a;->b:Lys4;
+
+    iput-object p3, p0, Lu1a;->c:Lys4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()Lnnb;
+    .locals 2
 
-    const/4 v0, 0x1
+    sget-object v0, Lu1a;->d:[Lpl7;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    aget-object v0, v0, v1
 
-    :cond_0
-    instance-of v1, p1, Lu1a;
+    iget-object v0, p0, Lu1a;->a:Lys4;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lu1a;
-
-    iget v1, p0, Lu1a;->b:I
-
-    iget p1, p1, Lu1a;->b:I
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lu1a;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Auto(brightnessThreshold="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lu1a;->b:I
-
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lnnb;
 
     return-object v0
 .end method

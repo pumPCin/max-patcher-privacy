@@ -1,11 +1,23 @@
-.class public interface abstract Lez0;
+.class public final Lez0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract onIceRestart()V
-.end method
+# instance fields
+.field public final a:Ljava/util/Collection;
 
-.method public abstract onSelectedCandidatePairChanged(Lorg/webrtc/CandidatePairChangeEvent;)V
+.field public final b:Ljava/util/Collection;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lez0;->a:Ljava/util/Collection;
+
+    iput-object p2, p0, Lez0;->b:Ljava/util/Collection;
+
+    return-void
 .end method

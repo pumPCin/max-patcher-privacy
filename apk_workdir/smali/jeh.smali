@@ -2,30 +2,87 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpeh;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lru/ok/android/externcalls/analytics/events/EventItemValue;
-
-.field public final c:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
-
-.field public final d:Ljava/lang/Long;
+.field public final synthetic b:Lem4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;Ljava/lang/Long;)V
+.method public synthetic constructor <init>(Lem4;I)V
     .locals 0
+
+    iput p2, p0, Ljeh;->a:I
+
+    iput-object p1, p0, Ljeh;->b:Lem4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljeh;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Ljeh;->b:Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
-    iput-object p3, p0, Ljeh;->c:Lru/ok/android/externcalls/analytics/events/EventItemsMap;
+# virtual methods
+.method public final a()I
+    .locals 1
 
-    iput-object p4, p0, Ljeh;->d:Ljava/lang/Long;
+    iget v0, p0, Ljeh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x5
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x4
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget v0, p0, Ljeh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljeh;->b:Lem4;
+
+    iget-object v0, v0, Lem4;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljq7;
+
+    invoke-interface {v0}, Ljq7;->g()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ljeh;->b:Lem4;
+
+    iget-object v0, v0, Lem4;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljq7;
+
+    invoke-interface {v0}, Ljq7;->k()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

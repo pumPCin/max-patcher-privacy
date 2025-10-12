@@ -2,22 +2,44 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Ljava/util/List;
+# interfaces
+.implements Ln3g;
 
 
-# direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+# virtual methods
+.method public final a(ILjava/lang/String;)Lxcf;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-    iput-object p1, p0, Ll65;->a:Ljava/util/List;
+    move-result p2
 
-    iput-object p2, p0, Ll65;->b:Ljava/util/List;
+    if-nez p2, :cond_0
 
-    return-void
+    const-class p2, Ll65;
+
+    invoke-static {p2}, Lewc;->a(Ljava/lang/Class;)Lg53;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lug5;->k(ILg53;)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    new-instance p2, Lxcf;
+
+    invoke-direct {p2, p1}, Lxcf;-><init>(I)V
+
+    return-object p2
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

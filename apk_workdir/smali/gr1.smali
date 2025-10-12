@@ -1,98 +1,118 @@
-.class public final Lgr1;
-.super Lv2;
+.class public final synthetic Lgr1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Lhr1;
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lkr1;
 
 
 # direct methods
-.method public constructor <init>(Lhr1;I)V
+.method public synthetic constructor <init>(Landroid/content/Context;Lkr1;I)V
     .locals 0
 
-    iput p2, p0, Lgr1;->c:I
+    iput p3, p0, Lgr1;->a:I
 
-    iput-object p1, p0, Lgr1;->o:Lhr1;
+    iput-object p1, p0, Lgr1;->b:Landroid/content/Context;
 
-    const/16 p1, 0x9
+    iput-object p2, p0, Lgr1;->c:Lkr1;
 
-    packed-switch p2, :pswitch_data_0
-
-    sget-object p2, Lfr1;->b:Lfr1;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :pswitch_0
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iget v0, p0, Lgr1;->c:I
+    iget v0, p0, Lgr1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p2, Luxa;
+    new-instance v0, Lsr1;
 
-    check-cast p1, Luxa;
+    iget-object v1, p0, Lgr1;->b:Landroid/content/Context;
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Lsr1;-><init>(Landroid/content/Context;)V
 
-    move-result p1
+    new-instance v1, Lrn3;
 
-    if-nez p1, :cond_1
+    const/4 v2, -0x1
 
-    iget-object p1, p0, Lgr1;->o:Lhr1;
+    invoke-direct {v1, v2, v2}, Lrn3;-><init>(II)V
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p2, Lbx4;->y0:Lsed;
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p1}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-static {v0, v1}, Lnjg;->J(Landroid/view/ViewGroup;Z)V
 
-    move-result-object p2
+    new-instance v1, Lm6d;
 
-    :cond_0
-    invoke-virtual {p1, p2}, Lhr1;->onThemeChanged(Luxa;)V
+    const/16 v2, 0x13
 
-    :cond_1
-    return-void
+    iget-object v3, p0, Lgr1;->c:Lkr1;
+
+    invoke-direct {v1, v2, v3}, Lm6d;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lsr1;->setListener(Lqr1;)V
+
+    new-instance v1, Ler1;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v3, v2}, Ler1;-><init>(Lkr1;I)V
+
+    invoke-virtual {v0, v1}, Lsr1;->setVideoLayoutUpdatesControllerProvider(Ltd6;)V
+
+    return-object v0
 
     :pswitch_0
-    check-cast p2, Lfr1;
+    iget-object v0, p0, Lgr1;->b:Landroid/content/Context;
 
-    check-cast p1, Lfr1;
+    iget-object v1, p0, Lgr1;->c:Lkr1;
 
-    if-eq p1, p2, :cond_2
+    invoke-static {v0, v1}, Lkr1;->z(Landroid/content/Context;Lkr1;)Landroid/view/View;
 
-    iget-object p1, p0, Lgr1;->o:Lhr1;
+    move-result-object v0
 
-    invoke-static {p1}, Lhr1;->C(Lhr1;)V
+    return-object v0
 
-    :cond_2
-    return-void
+    :pswitch_1
+    iget-object v0, p0, Lgr1;->b:Landroid/content/Context;
 
-    nop
+    iget-object v1, p0, Lgr1;->c:Lkr1;
+
+    invoke-static {v0, v1}, Lkr1;->y(Landroid/content/Context;Lkr1;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lgr1;->b:Landroid/content/Context;
+
+    iget-object v1, p0, Lgr1;->c:Lkr1;
+
+    invoke-static {v0, v1}, Lkr1;->x(Landroid/content/Context;Lkr1;)Lflc;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

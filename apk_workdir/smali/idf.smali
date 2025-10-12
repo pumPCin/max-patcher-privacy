@@ -1,117 +1,77 @@
-.class public final Lidf;
+.class public abstract Lidf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/regex/Pattern;
-
-.field public static final e:Lp77;
-
-.field public static final f:Lp77;
-
-.field public static final g:Lp77;
-
-.field public static final h:Lp77;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public static a(Landroid/widget/TextView;)I
+    .locals 0
 
-    const-string v0, "\\s+"
+    invoke-virtual {p0}, Landroid/widget/TextView;->getBreakStrategy()I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    move-result p0
 
-    move-result-object v0
+    return p0
+.end method
 
-    sput-object v0, Lidf;->d:Ljava/util/regex/Pattern;
+.method public static b(Landroid/widget/TextView;)Landroid/content/res/ColorStateList;
+    .locals 0
 
-    const-string v0, "auto"
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintList()Landroid/content/res/ColorStateList;
 
-    const-string v1, "none"
+    move-result-object p0
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public static c(Landroid/widget/TextView;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
 
-    const/4 v1, 0x2
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintMode()Landroid/graphics/PorterDuff$Mode;
 
-    invoke-static {v1, v0}, Lp77;->i(I[Ljava/lang/Object;)Lp77;
+    move-result-object p0
 
-    move-result-object v0
+    return-object p0
+.end method
 
-    sput-object v0, Lidf;->e:Lp77;
+.method public static d(Landroid/widget/TextView;)I
+    .locals 0
 
-    const-string v0, "dot"
+    invoke-virtual {p0}, Landroid/widget/TextView;->getHyphenationFrequency()I
 
-    const-string v2, "sesame"
+    move-result p0
 
-    const-string v3, "circle"
+    return p0
+.end method
 
-    filled-new-array {v0, v2, v3}, [Ljava/lang/Object;
+.method public static e(Landroid/widget/TextView;I)V
+    .locals 0
 
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v0}, Lp77;->i(I[Ljava/lang/Object;)Lp77;
-
-    move-result-object v0
-
-    sput-object v0, Lidf;->f:Lp77;
-
-    const-string v0, "filled"
-
-    const-string v3, "open"
-
-    filled-new-array {v0, v3}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lp77;->i(I[Ljava/lang/Object;)Lp77;
-
-    move-result-object v0
-
-    sput-object v0, Lidf;->g:Lp77;
-
-    const-string v0, "before"
-
-    const-string v1, "outside"
-
-    const-string v3, "after"
-
-    filled-new-array {v3, v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lp77;->i(I[Ljava/lang/Object;)Lp77;
-
-    move-result-object v0
-
-    sput-object v0, Lidf;->h:Lp77;
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setBreakStrategy(I)V
 
     return-void
 .end method
 
-.method public constructor <init>(III)V
+.method public static f(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
 
-    iput p1, p0, Lidf;->a:I
+    return-void
+.end method
 
-    iput p2, p0, Lidf;->b:I
+.method public static g(Landroid/widget/TextView;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
 
-    iput p3, p0, Lidf;->c:I
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    return-void
+.end method
+
+.method public static h(Landroid/widget/TextView;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
 
     return-void
 .end method

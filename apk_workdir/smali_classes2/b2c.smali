@@ -1,79 +1,90 @@
 .class public final Lb2c;
-.super Lnz3;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public B0:I
+.field public b:I
 
-.field public synthetic C0:Ljava/lang/Object;
+.field public c:Z
 
-.field public final synthetic D0:Lf2c;
-
-.field public E0:I
-
-.field public X:Lap3;
-
-.field public Y:Lm82;
-
-.field public Z:Lcvb;
-
-.field public o:Lf2c;
-
-.field public w0:Levb;
-
-.field public x0:Ljava/lang/Object;
-
-.field public y0:Ljava/util/List;
-
-.field public z0:Ljava/io/Serializable;
+.field public o:Leu7;
 
 
 # direct methods
-.method public constructor <init>(Lf2c;Lnz3;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lb2c;->D0:Lf2c;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lb2c;->a:Ljava/lang/String;
+
+    iput p2, p0, Lb2c;->b:I
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lb2c;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 7
 
-    iput-object p1, p0, Lb2c;->C0:Ljava/lang/Object;
+    iget-object p1, p0, Lb2c;->o:Leu7;
 
-    iget p1, p0, Lb2c;->E0:I
+    if-eqz p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    iget-object p1, p1, Leu7;->a:Lgu7;
 
-    or-int/2addr p1, v0
+    iget-object v0, p1, Lgu7;->o:Lk7;
 
-    iput p1, p0, Lb2c;->E0:I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/4 v4, 0x0
+    move-result-wide v1
 
-    const/4 v5, 0x0
+    iget-wide v3, v0, Lk7;->a:J
 
-    iget-object v0, p0, Lb2c;->D0:Lf2c;
+    sub-long v3, v1, v3
+
+    const-wide/16 v5, 0x12c
+
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_0
+
+    iput-wide v1, v0, Lk7;->a:J
+
+    iget-object p1, p1, Lgu7;->a:Ldu7;
+
+    if-eqz p1, :cond_0
+
+    sget-object v0, Lhu7;->X:Lhu7;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lb2c;->a:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    invoke-interface {p1, v2, v0, v1}, Ldu7;->b(Ljava/lang/String;Lhu7;Landroid/text/style/ClickableSpan;)V
 
-    move-object v6, p0
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual/range {v0 .. v6}, Lf2c;->f(Lap3;Lm82;Lcvb;Levb;Ljava/lang/Long;Lnz3;)Ljava/io/Serializable;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
 
-    move-result-object p1
+    iget v0, p0, Lb2c;->b:I
 
-    return-object p1
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-boolean v0, p0, Lb2c;->c:Z
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
+    return-void
 .end method

@@ -1,125 +1,113 @@
 .class public final Loo4;
-.super Lkea;
+.super Lrc4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lpo4;
+# static fields
+.field public static final b:Loo4;
 
-.field public final c:Laad;
+.field public static final c:Lmc4;
 
-.field public final d:Lof;
+.field public static final d:Lmc4;
+
+.field public static final e:Lmc4;
+
+.field public static final f:Lmc4;
+
+.field public static final g:Lmc4;
+
+.field public static final h:Lmc4;
+
+.field public static final i:Lmc4;
 
 
 # direct methods
-.method public constructor <init>(Lm3b;Lak3;Lckf;Ljava/util/List;)V
+.method static constructor <clinit>()V
     .locals 6
 
-    invoke-direct {p0, p1}, Lkea;-><init>(Lm3b;)V
+    new-instance v0, Loo4;
 
-    new-instance v2, Loy3;
+    invoke-direct {v0}, Lrc4;-><init>()V
 
-    invoke-direct {v2, p2}, Loy3;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Loo4;->b:Loo4;
 
-    new-instance v1, Lr26;
+    const/4 v1, 0x0
 
-    new-instance p2, Lk2a;
+    new-array v2, v1, [Ljava/lang/String;
 
-    const/16 v0, 0x12
+    const-string v3, ":settings/dev"
 
-    invoke-direct {p2, v0}, Lk2a;-><init>(I)V
+    const/4 v4, 0x0
 
-    invoke-direct {v1, p2}, Lr26;-><init>(Lk2a;)V
+    const/4 v5, 0x2
 
-    iget-object p2, p1, Lm3b;->o:Ljava/lang/Object;
+    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
-    check-cast p2, Lpl;
+    move-result-object v2
 
-    iput-object p2, v1, Lr26;->o:Ljava/lang/Object;
+    sput-object v2, Loo4;->c:Lmc4;
 
-    new-instance p2, Lgt4;
+    const-string v2, ":settings/dev/logsviewer"
 
-    new-instance v0, Lrxd;
+    new-array v3, v1, [Ljava/lang/String;
 
-    const/16 v3, 0x9
+    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
-    invoke-direct {v0, v3, v2}, Lrxd;-><init>(ILjava/lang/Object;)V
+    move-result-object v2
 
-    invoke-direct {p2, v0}, Lgt4;-><init>(Lrxd;)V
+    sput-object v2, Loo4;->d:Lmc4;
 
-    iget-object v0, v1, Lr26;->a:Ljava/lang/Object;
+    new-array v2, v1, [Ljava/lang/String;
 
-    check-cast v0, Loy3;
+    const-string v3, ":settings/dev/showroom"
 
-    iput-object p2, v0, Loy3;->b:Ljava/lang/Object;
+    const/16 v5, 0xa
 
-    new-instance v0, Lpo4;
+    invoke-static {v0, v3, v2, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
-    iget-object p1, p1, Lm3b;->c:Ljava/lang/Object;
+    move-result-object v2
 
-    move-object v4, p1
+    sput-object v2, Loo4;->e:Lmc4;
 
-    check-cast v4, Lh8d;
+    const-string v2, ":settings/dev/threadsviewer"
 
-    move-object v3, p3
+    new-array v3, v1, [Ljava/lang/String;
 
-    move-object v5, p4
+    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
-    invoke-direct/range {v0 .. v5}, Lpo4;-><init>(Lr26;Loy3;Lckf;Lh8d;Ljava/util/List;)V
+    move-result-object v2
 
-    new-instance p1, Lof;
+    sput-object v2, Loo4;->f:Lmc4;
 
-    invoke-direct {p1, v2, v0, v1}, Lof;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v2, ":settings/magic-room"
 
-    iput-object p1, p0, Loo4;->d:Lof;
+    new-array v3, v1, [Ljava/lang/String;
 
-    iput-object v0, p0, Loo4;->b:Lpo4;
+    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
-    new-instance p1, Laad;
+    move-result-object v2
 
-    invoke-direct {p1, v0}, Laad;-><init>(Lal;)V
+    sput-object v2, Loo4;->g:Lmc4;
 
-    iput-object p1, p0, Loo4;->c:Laad;
+    const-string v2, ":settings/server-host"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+
+    move-result-object v2
+
+    sput-object v2, Loo4;->h:Lmc4;
+
+    const-string v2, ":settings/server-port"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
+
+    move-result-object v0
+
+    sput-object v0, Loo4;->i:Lmc4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b()Lal;
-    .locals 1
-
-    iget-object v0, p0, Loo4;->b:Lpo4;
-
-    return-object v0
-.end method
-
-.method public final e()Llea;
-    .locals 1
-
-    iget-object v0, p0, Loo4;->d:Lof;
-
-    return-object v0
-.end method
-
-.method public final f()Laad;
-    .locals 1
-
-    iget-object v0, p0, Loo4;->c:Laad;
-
-    return-object v0
-.end method
-
-.method public final g()Lm3b;
-    .locals 2
-
-    new-instance v0, Lm3b;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lm3b;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Lkea;->a(Lm3b;)V
-
-    return-object v0
 .end method

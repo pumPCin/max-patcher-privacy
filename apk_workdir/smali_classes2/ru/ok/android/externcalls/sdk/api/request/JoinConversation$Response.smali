@@ -55,10 +55,10 @@
 # static fields
 .field public static final Companion:Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;
 
-.field private static final PARSER:Lpl7;
+.field private static final PARSER:Llk7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 .end field
@@ -80,17 +80,17 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;-><init>(Lof4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;-><init>(Laf4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->Companion:Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response$Companion;
 
-    new-instance v0, Los5;
+    new-instance v0, Lws6;
 
-    const/16 v1, 0x14
+    const/4 v1, 0x7
 
-    invoke-direct {v0, v1}, Los5;-><init>(I)V
+    invoke-direct {v0, v1}, Lws6;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lpl7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Llk7;
 
     return-void
 .end method
@@ -109,10 +109,10 @@
     return-void
 .end method
 
-.method private static final PARSER$lambda$0(Lvl7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+.method private static final PARSER$lambda$0(Lrk7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
     .locals 6
 
-    invoke-interface {p0}, Lvl7;->s()V
+    invoke-interface {p0}, Lrk7;->s()V
 
     const/4 v0, 0x0
 
@@ -123,13 +123,13 @@
     move v1, v0
 
     :goto_0
-    invoke-interface {p0}, Lvl7;->hasNext()Z
+    invoke-interface {p0}, Lrk7;->hasNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    invoke-interface {p0}, Lvl7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lrk7;->name()Ljava/lang/String;
 
     move-result-object v3
 
@@ -163,7 +163,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lrk7;->B()Ljava/lang/String;
 
     move-result-object v2
 
@@ -181,7 +181,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-interface {p0}, Lvl7;->E()I
+    invoke-interface {p0}, Lrk7;->z()I
 
     move-result v1
 
@@ -196,7 +196,7 @@
 
     if-eqz v3, :cond_5
 
-    invoke-interface {p0}, Lvl7;->e0()Z
+    invoke-interface {p0}, Lrk7;->U()Z
 
     move-result v0
 
@@ -204,12 +204,12 @@
 
     :cond_5
     :goto_1
-    invoke-interface {p0}, Lvl7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lrk7;->B()Ljava/lang/String;
 
     goto :goto_0
 
     :cond_6
-    invoke-interface {p0}, Lvl7;->q()V
+    invoke-interface {p0}, Lrk7;->q()V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
 
@@ -218,20 +218,20 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lvl7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+.method public static synthetic a(Lrk7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER$lambda$0(Lvl7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER$lambda$0(Lrk7;)Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getPARSER$cp()Lpl7;
+.method public static final synthetic access$getPARSER$cp()Llk7;
     .locals 1
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Lpl7;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/request/JoinConversation$Response;->PARSER:Llk7;
 
     return-object v0
 .end method

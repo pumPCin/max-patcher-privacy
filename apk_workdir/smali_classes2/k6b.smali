@@ -1,188 +1,185 @@
 .class public final Lk6b;
-.super Ljava/lang/Object;
+.super Loq0;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ActionMode$Callback;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic f:I
 
-.field public final b:Lmb7;
+.field public final synthetic g:Lorg/webrtc/SessionDescription;
 
-.field public final c:I
-
-.field public final d:I
+.field public final synthetic h:Lo6b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lmb7;II)V
+.method public synthetic constructor <init>(Lo6b;Lorg/webrtc/SessionDescription;I)V
     .locals 0
 
+    iput p3, p0, Lk6b;->f:I
+
+    iput-object p1, p0, Lk6b;->h:Lo6b;
+
+    iput-object p2, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk6b;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lk6b;->b:Lmb7;
-
-    iput p3, p0, Lk6b;->c:I
-
-    iput p4, p0, Lk6b;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
-    .locals 5
+.method public final onSetFailure(Ljava/lang/String;)V
+    .locals 6
 
-    if-eqz p2, :cond_0
+    iget v0, p0, Lk6b;->f:I
 
-    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    iget-object v0, p0, Lk6b;->h:Lo6b;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v1, v0, Lo6b;->z:Lxg1;
 
-    move-result-object p1
+    iget-object v1, v1, Lxg1;->C:Lvg1;
+
+    iget-boolean v1, v1, Lvg1;->z:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+
+    iget-object v3, v0, Lo6b;->J:Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getLocalDescription()Lorg/webrtc/SessionDescription;
+
+    move-result-object v3
+
+    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
+
+    invoke-static {v4, v2}, Lkw9;->a(Lorg/webrtc/SessionDescription$Type;Z)Lkw9;
+
+    move-result-object v4
+
+    new-instance v5, Llw9;
+
+    invoke-direct {v5, v4, p1, v3, v1}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
+
+    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
+
+    new-instance p1, Lc6b;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v0, v5, v1}, Lc6b;-><init>(Lo6b;Llw9;I)V
+
+    const-string v1, "onSetFailure"
+
+    invoke-virtual {v0, v1, p1}, Lo6b;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
+
+    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
 
     :goto_0
-    const/4 p2, 0x0
+    return-void
 
-    if-nez p1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lk6b;->h:Lo6b;
 
-    goto :goto_2
+    iget-object v1, v0, Lo6b;->z:Lxg1;
 
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object v1, v1, Lxg1;->C:Lvg1;
 
-    move-result p1
+    iget-boolean v1, v1, Lvg1;->z:Z
 
-    const v0, 0x1020022
+    const/4 v2, 0x1
 
-    if-ne p1, v0, :cond_5
+    if-eqz v1, :cond_1
 
-    iget-object p1, p0, Lk6b;->a:Landroid/content/Context;
+    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
 
-    invoke-static {p1}, Lx63;->c(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object v3, v0, Lo6b;->J:Lorg/webrtc/PeerConnection;
 
-    move-result-object p1
+    invoke-virtual {v3}, Lorg/webrtc/PeerConnection;->getRemoteDescription()Lorg/webrtc/SessionDescription;
 
-    if-nez p1, :cond_2
+    move-result-object v3
 
-    goto :goto_2
+    iget-object v4, v1, Lorg/webrtc/SessionDescription;->type:Lorg/webrtc/SessionDescription$Type;
 
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v4, v2}, Lkw9;->a(Lorg/webrtc/SessionDescription$Type;Z)Lkw9;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v4
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    new-instance v5, Llw9;
 
-    move-result v1
+    invoke-direct {v5, v4, p1, v1, v3}, Llw9;-><init>(Lkw9;Ljava/lang/String;Lorg/webrtc/SessionDescription;Lorg/webrtc/SessionDescription;)V
 
-    move v2, p2
+    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
 
-    :goto_1
-    if-ge v2, v1, :cond_4
+    new-instance p1, Lc6b;
 
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
+    const/4 v1, 0x1
 
-    move-result v3
+    invoke-direct {p1, v0, v5, v1}, Lc6b;-><init>(Lo6b;Llw9;I)V
 
-    invoke-static {v3}, Ljava/lang/Character;->isDigit(C)Z
+    const-string v1, "onSetFailure"
 
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0, v1, p1}, Lo6b;->j(Ljava/lang/String;Ljava/lang/Runnable;)V
 
     goto :goto_1
 
-    :cond_4
-    iget p1, p0, Lk6b;->d:I
+    :cond_1
+    iget-object v1, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
 
-    invoke-static {p1, v0}, Lyxe;->I0(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1, v2, p1}, Lo6b;->p(Lorg/webrtc/SessionDescription;ZLjava/lang/String;)V
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget v0, p0, Lk6b;->c:I
-
-    iget-object v1, p0, Lk6b;->b:Lmb7;
-
-    check-cast v1, Lql3;
-
-    invoke-virtual {v1, v0, p1}, Lql3;->H0(ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-lez p1, :cond_5
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_5
-    :goto_2
-    return p2
-.end method
-
-.method public final onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-    .locals 0
-
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final onDestroyActionMode(Landroid/view/ActionMode;)V
-    .locals 0
-
+    :goto_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
-    .locals 2
+.method public final onSetSuccess()V
+    .locals 3
 
-    const p1, 0x1020022
+    iget v0, p0, Lk6b;->f:I
 
-    invoke-interface {p2, p1}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    iget-object v2, p0, Lk6b;->h:Lo6b;
 
-    return v1
+    invoke-virtual {v2, v0, v1}, Lo6b;->o(Lorg/webrtc/SessionDescription;Z)V
 
-    :cond_0
-    invoke-interface {p2}, Landroid/view/Menu;->clear()V
+    return-void
 
-    invoke-interface {v0}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
+    :pswitch_0
+    iget-object v0, p0, Lk6b;->g:Lorg/webrtc/SessionDescription;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    invoke-interface {p2, v1, p1, v1, v0}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    iget-object v2, p0, Lk6b;->h:Lo6b;
 
-    const/4 p1, 0x1
+    invoke-virtual {v2, v0, v1}, Lo6b;->o(Lorg/webrtc/SessionDescription;Z)V
 
-    return p1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

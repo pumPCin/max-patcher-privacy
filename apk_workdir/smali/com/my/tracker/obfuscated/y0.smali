@@ -13,6 +13,7 @@
 .method public static a(Lcom/my/tracker/MyTrackerConfig$Logger;)V
     .locals 0
 
+    .line 3
     sput-object p0, Lcom/my/tracker/obfuscated/y0;->b:Lcom/my/tracker/MyTrackerConfig$Logger;
 
     return-void
@@ -21,6 +22,7 @@
 .method public static a(Ljava/lang/String;)V
     .locals 4
 
+    .line 4
     sget-object v0, Lcom/my/tracker/obfuscated/y0;->b:Lcom/my/tracker/MyTrackerConfig$Logger;
 
     if-eqz v0, :cond_1
@@ -31,6 +33,7 @@
 
     goto :goto_0
 
+    .line 5
     :cond_0
     const-string v1, ""
 
@@ -41,6 +44,7 @@
 
     invoke-interface {v0, v3, v1, v2}, Lcom/my/tracker/MyTrackerConfig$Logger;->log(ILjava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 6
     :cond_1
     sget-boolean v0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
@@ -50,6 +54,7 @@
 
     goto :goto_1
 
+    .line 7
     :cond_2
     const-string p0, "null"
 
@@ -65,6 +70,7 @@
 .method public static a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 8
     sget-object v0, Lcom/my/tracker/obfuscated/y0;->b:Lcom/my/tracker/MyTrackerConfig$Logger;
 
     if-eqz v0, :cond_1
@@ -75,6 +81,7 @@
 
     goto :goto_0
 
+    .line 9
     :cond_0
     const-string v1, ""
 
@@ -83,6 +90,7 @@
 
     invoke-interface {v0, v2, v1, p1}, Lcom/my/tracker/MyTrackerConfig$Logger;->log(ILjava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 10
     :cond_1
     sget-boolean v0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
@@ -92,6 +100,7 @@
 
     goto :goto_1
 
+    .line 11
     :cond_2
     const-string p0, "null"
 
@@ -107,6 +116,7 @@
 .method public static a(Z)V
     .locals 0
 
+    .line 2
     sput-boolean p0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
     return-void
@@ -115,6 +125,7 @@
 .method public static a()Z
     .locals 1
 
+    .line 1
     sget-boolean v0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
     return v0
@@ -123,6 +134,7 @@
 .method public static b(Ljava/lang/String;)V
     .locals 4
 
+    .line 1
     sget-object v0, Lcom/my/tracker/obfuscated/y0;->b:Lcom/my/tracker/MyTrackerConfig$Logger;
 
     if-eqz v0, :cond_1
@@ -133,6 +145,7 @@
 
     goto :goto_0
 
+    .line 2
     :cond_0
     const-string v1, ""
 
@@ -143,6 +156,7 @@
 
     invoke-interface {v0, v3, v1, v2}, Lcom/my/tracker/MyTrackerConfig$Logger;->log(ILjava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 3
     :cond_1
     sget-boolean v0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
@@ -152,6 +166,7 @@
 
     goto :goto_1
 
+    .line 4
     :cond_2
     const-string p0, "null"
 
@@ -167,6 +182,7 @@
 .method public static b(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
+    .line 5
     sget-object v0, Lcom/my/tracker/obfuscated/y0;->b:Lcom/my/tracker/MyTrackerConfig$Logger;
 
     if-eqz v0, :cond_1
@@ -177,6 +193,7 @@
 
     goto :goto_0
 
+    .line 6
     :cond_0
     const-string v1, ""
 
@@ -185,6 +202,7 @@
 
     invoke-interface {v0, v2, v1, p1}, Lcom/my/tracker/MyTrackerConfig$Logger;->log(ILjava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 7
     :cond_1
     sget-boolean v0, Lcom/my/tracker/obfuscated/y0;->a:Z
 
@@ -194,6 +212,7 @@
 
     goto :goto_1
 
+    .line 8
     :cond_2
     const-string p0, "null"
 

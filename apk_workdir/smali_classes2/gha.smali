@@ -1,70 +1,69 @@
-.class public final Lgha;
-.super Ljava/lang/Object;
+.class public final enum Lgha;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final enum a:Lgha;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llha;
+.field public static final synthetic b:[Lgha;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llha;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lgha;->a:I
+    new-instance v0, Lgha;
 
-    iput-object p1, p0, Lgha;->b:Llha;
+    const-string v1, "IDLE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lgha;->a:Lgha;
+
+    new-instance v1, Lgha;
+
+    const-string v2, "LOADING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1}, [Lgha;
+
+    move-result-object v0
+
+    sput-object v0, Lgha;->b:[Lgha;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lgha;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    const-class v0, Lgha;
 
-    iget v0, p0, Lgha;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lgha;->b:Llha;
+    check-cast p0, Lgha;
 
-    iget-object v1, v0, Llha;->H0:Lve6;
+    return-object p0
+.end method
 
-    if-eqz v1, :cond_0
+.method public static values()[Lgha;
+    .locals 1
 
-    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
+    sget-object v0, Lgha;->b:[Lgha;
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lgha;->b:Llha;
+    check-cast v0, [Lgha;
 
-    iget-object v1, v0, Llha;->H0:Lve6;
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v1}, Lve6;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

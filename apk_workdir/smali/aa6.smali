@@ -1,24 +1,24 @@
-.class public final Laa6;
+.class public final synthetic Laa6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqo3;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lca6;
+.field public final synthetic b:Landroidx/fragment/app/c;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lca6;I)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/c;I)V
     .locals 0
 
     iput p2, p0, Laa6;->a:I
 
-    iput-object p1, p0, Laa6;->b:Lca6;
+    iput-object p1, p0, Laa6;->b:Landroidx/fragment/app/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,93 +27,92 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 12
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Laa6;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Laa6;->b:Lca6;
+    check-cast p1, Lpfb;
 
-    invoke-virtual {v0}, Lca6;->a()V
+    iget-object v0, p0, Laa6;->b:Landroidx/fragment/app/c;
 
-    iget-object v1, v0, Lca6;->o:Landroid/view/View;
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->M()Z
 
-    invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
+    move-result v1
 
-    move-result v2
+    if-eqz v1, :cond_0
 
-    if-eqz v2, :cond_2
+    iget-boolean p1, p1, Lpfb;->a:Z
 
-    invoke-virtual {v1}, Landroid/view/View;->isLongClickable()Z
+    const/4 p1, 0x0
 
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->s(Z)V
 
     :cond_0
-    invoke-virtual {v0}, Lca6;->c()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    invoke-interface {v2, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v4
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v8, 0x3
-
-    const/4 v9, 0x0
-
-    move-wide v6, v4
-
-    invoke-static/range {v4 .. v11}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
-
-    iput-boolean v3, v0, Lca6;->Z:Z
-
-    :cond_2
-    :goto_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Laa6;->b:Lca6;
+    check-cast p1, Lbq9;
 
-    iget-object v0, v0, Lca6;->o:Landroid/view/View;
+    iget-object v0, p0, Laa6;->b:Landroidx/fragment/app/c;
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->M()Z
 
-    move-result-object v0
+    move-result v1
 
-    if-eqz v0, :cond_3
+    if-eqz v1, :cond_1
 
-    const/4 v1, 0x1
+    iget-boolean p1, p1, Lbq9;->a:Z
 
-    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->n(Z)V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Integer;
+
+    iget-object v0, p0, Laa6;->b:Landroidx/fragment/app/c;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->M()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    const/16 v1, 0x50
+
+    if-ne p1, v1, :cond_2
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/c;->m(Z)V
+
+    :cond_2
+    return-void
+
+    :pswitch_2
+    check-cast p1, Landroid/content/res/Configuration;
+
+    iget-object v0, p0, Laa6;->b:Landroidx/fragment/app/c;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->M()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/c;->i(ZLandroid/content/res/Configuration;)V
 
     :cond_3
     return-void
@@ -122,6 +121,8 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

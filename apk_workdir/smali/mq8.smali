@@ -1,136 +1,198 @@
-.class public final Lmq8;
-.super Landroid/os/AsyncTask;
+.class public abstract Lmq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Lup8;
 
-.field public final b:Landroid/content/Context;
+.field public Y:Z
 
-.field public final synthetic c:Lnq8;
+.field public Z:Lnq8;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lw9h;
+
+.field public final c:Lwx;
+
+.field public o:Lt55;
+
+.field public r0:Z
 
 
 # direct methods
-.method public constructor <init>(Lnq8;ILandroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lw9h;)V
+    .locals 2
 
-    iput-object p1, p0, Lmq8;->c:Lnq8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    new-instance v0, Lwx;
 
-    iput p2, p0, Lmq8;->a:I
+    const/16 v1, 0x9
 
-    iput-object p3, p0, Lmq8;->b:Landroid/content/Context;
+    invoke-direct {v0, v1, p0}, Lwx;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Lmq8;->c:Lwx;
+
+    if-eqz p1, :cond_1
+
+    iput-object p1, p0, Lmq8;->a:Landroid/content/Context;
+
+    if-nez p2, :cond_0
+
+    new-instance p2, Lw9h;
+
+    new-instance v0, Landroid/content/ComponentName;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/16 p1, 0x14
+
+    invoke-direct {p2, p1, v0}, Lw9h;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lmq8;->b:Lw9h;
 
     return-void
+
+    :cond_0
+    iput-object p2, p0, Lmq8;->b:Lw9h;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "context must not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method public c(Ljava/lang/String;)Lkq8;
     .locals 1
 
-    check-cast p1, [Ljava/lang/Void;
+    if-eqz p1, :cond_0
 
-    sget-object p1, Lnq8;->J0:Landroid/util/SparseArray;
-
-    iget v0, p0, Lmq8;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/drawable/Drawable$ConstantState;
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lmq8;->b:Landroid/content/Context;
-
-    invoke-static {p1, v0}, Lqxd;->k(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
     const/4 p1, 0x0
 
     return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "initialMemberRouteId cannot be null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final onCancelled(Ljava/lang/Object;)V
-    .locals 2
+.method public abstract d(Ljava/lang/String;)Llq8;
+.end method
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+.method public e(Ljava/lang/String;Ljava/lang/String;)Llq8;
+    .locals 0
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
-    sget-object v0, Lnq8;->J0:Landroid/util/SparseArray;
+    if-eqz p2, :cond_0
 
-    iget v1, p0, Lmq8;->a:I
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
+    invoke-virtual {p0, p1}, Lmq8;->d(Ljava/lang/String;)Llq8;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    return-object p1
 
     :cond_0
-    iget-object p1, p0, Lmq8;->c:Lnq8;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
+    const-string p2, "routeGroupId cannot be null"
 
-    iput-object v0, p1, Lnq8;->y0:Lmq8;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "routeId cannot be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public abstract f(Lup8;)V
+.end method
+
+.method public final g(Lnq8;)V
+    .locals 1
+
+    invoke-static {}, Lwq8;->b()V
+
+    iget-object v0, p0, Lmq8;->Z:Lnq8;
+
+    if-eq v0, p1, :cond_0
+
+    iput-object p1, p0, Lmq8;->Z:Lnq8;
+
+    iget-boolean p1, p0, Lmq8;->r0:Z
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lmq8;->r0:Z
+
+    iget-object v0, p0, Lmq8;->c:Lwx;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_0
     return-void
 .end method
 
-.method public final onPostExecute(Ljava/lang/Object;)V
-    .locals 5
+.method public final h(Lup8;)V
+    .locals 1
 
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    invoke-static {}, Lwq8;->b()V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lmq8;->X:Lup8;
 
-    iget v1, p0, Lmq8;->a:I
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lmq8;->c:Lnq8;
+    move-result v0
 
-    if-eqz p1, :cond_0
-
-    sget-object v3, Lnq8;->J0:Landroid/util/SparseArray;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v1, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    iput-object v0, v2, Lnq8;->y0:Lmq8;
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    sget-object v3, Lnq8;->J0:Landroid/util/SparseArray;
+    iput-object p1, p0, Lmq8;->X:Lup8;
 
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    iget-boolean p1, p0, Lmq8;->Y:Z
 
-    move-result-object v1
+    if-nez p1, :cond_1
 
-    check-cast v1, Landroid/graphics/drawable/Drawable$ConstantState;
+    const/4 p1, 0x1
 
-    if-eqz v1, :cond_1
+    iput-boolean p1, p0, Lmq8;->Y:Z
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable$ConstantState;->newDrawable()Landroid/graphics/drawable/Drawable;
+    iget-object p1, p0, Lmq8;->c:Lwx;
 
-    move-result-object p1
+    const/4 v0, 0x2
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_1
-    iput-object v0, v2, Lnq8;->y0:Lmq8;
-
     :goto_0
-    invoke-virtual {v2, p1}, Lnq8;->setRemoteIndicatorDrawableInternal(Landroid/graphics/drawable/Drawable;)V
-
     return-void
 .end method

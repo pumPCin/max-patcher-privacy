@@ -1,22 +1,30 @@
-.class public final synthetic Lzq;
+.class public final Lzq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lxf6;
+.implements Lov7;
 
 
 # instance fields
-.field public final synthetic a:Lhr;
+.field public final a:Lxq;
+
+.field public final b:Ljava/lang/Boolean;
+
+.field public final c:Lxcf;
 
 
 # direct methods
-.method public constructor <init>(Lhr;)V
+.method public constructor <init>(Lxq;Ljava/lang/Boolean;Lxcf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzq;->a:Lhr;
+    iput-object p1, p0, Lzq;->a:Lxq;
+
+    iput-object p2, p0, Lzq;->b:Ljava/lang/Boolean;
+
+    iput-object p3, p0, Lzq;->c:Lxcf;
 
     return-void
 .end method
@@ -24,27 +32,96 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
     instance-of v0, p1, Lzq;
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
-    if-eqz p1, :cond_0
+    goto :goto_0
 
-    invoke-virtual {p0}, Lzq;->getFunctionDelegate()Lqf6;
+    :cond_1
+    check-cast p1, Lzq;
 
-    move-result-object v0
+    iget-object v0, p0, Lzq;->a:Lxq;
 
-    check-cast p1, Lxf6;
+    iget-object v1, p1, Lzq;->a:Lxq;
 
-    invoke-interface {p1}, Lxf6;->getFunctionDelegate()Lqf6;
+    if-eq v0, v1, :cond_2
 
-    move-result-object p1
+    goto :goto_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :cond_2
+    iget-object v0, p0, Lzq;->b:Ljava/lang/Boolean;
+
+    iget-object v1, p1, Lzq;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lzq;->c:Lxcf;
+
+    iget-object p1, p1, Lzq;->c:Lxcf;
+
+    invoke-virtual {v0, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
 
     move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-object v0, p0, Lzq;->a:Lxq;
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final h(Lov7;)Z
+    .locals 4
+
+    invoke-virtual {p0}, Lzq;->getItemId()J
+
+    move-result-wide v0
+
+    invoke-interface {p1}, Lov7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
 
     return p1
 
@@ -54,38 +131,127 @@
     return p1
 .end method
 
-.method public final getFunctionDelegate()Lqf6;
-    .locals 7
-
-    new-instance v0, Lag6;
-
-    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v3, Lhr;
-
-    iget-object v4, p0, Lzq;->a:Lhr;
-
-    const-string v5, "selectTheme"
-
-    invoke-direct/range {v0 .. v6}, Lzf6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    invoke-virtual {p0}, Lzq;->getFunctionDelegate()Lqf6;
-
-    move-result-object v0
+    iget-object v0, p0, Lzq;->a:Lxq;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lzq;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lzq;->c:Lxcf;
+
+    iget v0, v0, Lxcf;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
     return v0
+.end method
+
+.method public final k(Lov7;)Ljava/lang/Object;
+    .locals 2
+
+    instance-of v0, p1, Lzq;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lzq;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v1
+
+    :goto_0
+    if-nez p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p1, p1, Lzq;->b:Ljava/lang/Boolean;
+
+    iget-object v0, p0, Lzq;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lyq;
+
+    invoke-direct {v0, p1}, Lyq;-><init>(Ljava/lang/Boolean;)V
+
+    return-object v0
+
+    :cond_2
+    :goto_1
+    return-object v1
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AppearanceModeItem(mode="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzq;->a:Lxq;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isSelected="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzq;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzq;->c:Lxcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

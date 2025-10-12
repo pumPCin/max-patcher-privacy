@@ -1,120 +1,147 @@
 .class public final Lcib;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Leib;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ldib;
+.field public final b:J
 
-.field public final synthetic Z:Loid;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ldib;Loid;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Lcib;->Y:Ldib;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcib;->Z:Loid;
+    iput-object p3, p0, Lcib;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput-wide p1, p0, Lcib;->b:J
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p4, p0, Lcib;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Le34;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lcib;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcib;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lcib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lcib;
-
-    iget-object v0, p0, Lcib;->Y:Ldib;
-
-    iget-object v1, p0, Lcib;->Z:Loid;
-
-    invoke-direct {p1, v0, v1, p2}, Lcib;-><init>(Ldib;Loid;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lcib;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lcib;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lcib;
 
-    iget-object p1, p0, Lcib;->Y:Ldib;
+    iget-object v1, p0, Lcib;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Ldib;->a:Le8e;
+    iget-object v3, p1, Lcib;->a:Ljava/lang/String;
 
-    iput v1, p0, Lcib;->X:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcib;->Z:Loid;
+    move-result v1
 
-    invoke-virtual {p1, v0, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-nez v1, :cond_2
 
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-wide v3, p0, Lcib;->b:J
 
-    return-object p1
+    iget-wide v5, p1, Lcib;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lcib;->c:I
+
+    iget p1, p1, Lcib;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lcib;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lcib;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    iget v1, p0, Lcib;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "NeuroAvatar(url="
+
+    const-string v1, ", photoId="
+
+    iget-wide v2, p0, Lcib;->b:J
+
+    iget-object v4, p0, Lcib;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Ljjd;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", categoryId="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lcib;->c:I
+
+    invoke-static {v0, v1, v3, v2}, Ljl3;->e(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

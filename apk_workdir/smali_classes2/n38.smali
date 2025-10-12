@@ -1,96 +1,131 @@
-.class public final synthetic Ln38;
-.super Ljava/lang/Object;
+.class public final Ln38;
+.super Lo38;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final d:Lcdf;
 
-.field public final synthetic b:Lbp7;
+.field public final e:Lcdf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbp7;I)V
-    .locals 0
+.method public constructor <init>(Lcdf;Lcdf;)V
+    .locals 1
 
-    iput p2, p0, Ln38;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ln38;->b:Lbp7;
+    invoke-direct {p0, p1, v0}, Lo38;-><init>(Lcdf;Ljava/lang/Throwable;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln38;->d:Lcdf;
+
+    iput-object p2, p0, Ln38;->e:Lcdf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Ln38;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Ljava/lang/Long;
+    return v0
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    :cond_0
+    instance-of v1, p1, Ln38;
 
-    move-result-wide v0
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Ln38;->b:Lbp7;
+    if-nez v1, :cond_1
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    return v2
 
-    move-result-object p1
+    :cond_1
+    check-cast p1, Ln38;
 
-    check-cast p1, Lkq3;
+    iget-object v1, p0, Ln38;->d:Lcdf;
 
-    invoke-virtual {p1, v0, v1}, Lkq3;->m(J)Z
+    iget-object v3, p1, Ln38;->d:Lcdf;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ln38;->e:Lcdf;
+
+    iget-object p1, p1, Ln38;->e:Lcdf;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez p1, :cond_3
 
-    move-result-object p1
+    return v2
 
-    return-object p1
+    :cond_3
+    return v0
+.end method
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+.method public final hashCode()I
+    .locals 2
 
-    const-string v0, "LogController"
+    iget-object v0, p0, Ln38;->d:Lcdf;
 
-    const-string v1, "Failed to store event"
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result v0
 
-    iget-object v0, p0, Ln38;->b:Lbp7;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Ln38;->e:Lcdf;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SmsCountExceeded(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ln38;->d:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ln38;->e:Lcdf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lec5;
-
-    new-instance v1, Lru/ok/tamtam/ExceptionHandler$HandledException;
-
-    const-string v2, "Error in log buffer"
-
-    const-string v3, "ONEME-18649"
-
-    invoke-direct {v1, v2, v3, p1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {v0, v1}, Lec5;->b(Lec5;Ljava/lang/Throwable;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

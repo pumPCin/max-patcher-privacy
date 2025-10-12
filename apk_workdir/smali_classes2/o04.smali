@@ -1,98 +1,60 @@
-.class public final Lo04;
+.class public final synthetic Lo04;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf04;
+.implements Loo3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lsr0;
-
-.field public final c:Lsr0;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lsr0;Lsr0;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/StartCallParams;I)V
     .locals 0
 
+    iput p2, p0, Lo04;->a:I
+
+    iput-object p1, p0, Lo04;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo04;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lo04;->b:Lsr0;
-
-    iput-object p3, p0, Lo04;->c:Lsr0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lb04;Lb04;Z)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    if-eqz p1, :cond_0
+    iget v0, p0, Lo04;->a:I
 
-    invoke-virtual {p1}, Lb04;->getInstanceId()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lo04;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
 
-    goto :goto_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    :cond_0
-    const/4 p1, 0x0
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->c(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Ljava/lang/Throwable;)V
 
-    :goto_0
-    iget-object p2, p0, Lo04;->a:Ljava/lang/String;
-
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    if-eqz p3, :cond_1
-
-    iget-object p1, p0, Lo04;->b:Lsr0;
-
-    invoke-virtual {p1}, Lsr0;->invoke()Ljava/lang/Object;
-
-    :cond_1
     return-void
-.end method
 
-.method public final b(Lb04;Lb04;Z)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lo04;->b:Lru/ok/android/externcalls/sdk/factory/StartCallParams;
 
-    if-eqz p2, :cond_0
+    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-virtual {p2}, Lb04;->getInstanceId()Ljava/lang/String;
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->i(Lru/ok/android/externcalls/sdk/factory/StartCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
 
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iget-object p2, p0, Lo04;->a:Ljava/lang/String;
-
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    if-nez p3, :cond_1
-
-    iget-object p1, p0, Lo04;->c:Lsr0;
-
-    invoke-virtual {p1}, Lsr0;->invoke()Ljava/lang/Object;
-
-    :cond_1
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

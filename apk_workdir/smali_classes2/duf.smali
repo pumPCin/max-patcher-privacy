@@ -1,166 +1,67 @@
-.class public final Lduf;
+.class public interface abstract Lduf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lve6;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILve6;)V
-    .locals 0
-
-    iput p1, p0, Lduf;->a:I
-
-    iput-object p2, p0, Lduf;->b:Lve6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lyzd;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public a()Lcdf;
+    .locals 1
 
-    iget v0, p0, Lduf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lctd;
-
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lgeg;
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_0
-    new-instance v0, Lctd;
+.method public b()Lnzd;
+    .locals 1
 
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lyh1;
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_1
-    new-instance v0, Lctd;
+.method public c()Lcdf;
+    .locals 1
 
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Ljyg;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_2
-    new-instance v0, Lctd;
+.method public d()Lvzd;
+    .locals 1
 
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lgeg;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_3
-    new-instance v0, Lctd;
+.method public e()Lio7;
+    .locals 1
 
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lgeg;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    const/4 v0, 0x0
 
     return-object v0
+.end method
 
-    :pswitch_4
-    new-instance v0, Lctd;
+.method public abstract f()I
+.end method
 
-    iget-object v1, p0, Lduf;->b:Lve6;
+.method public g()Z
+    .locals 1
 
-    check-cast v1, Lg5f;
+    const/4 v0, 0x1
 
-    const/16 v2, 0x18
+    return v0
+.end method
 
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+.method public getType()Lxzd;
+    .locals 1
 
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lctd;
-
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lyh1;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
+    sget-object v0, Lxzd;->b:Lxzd;
 
     return-object v0
-
-    :pswitch_6
-    new-instance v0, Lctd;
-
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lhvf;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lctd;
-
-    iget-object v1, p0, Lduf;->b:Lve6;
-
-    check-cast v1, Lg5f;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2, v1}, Lctd;-><init>(ILve6;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

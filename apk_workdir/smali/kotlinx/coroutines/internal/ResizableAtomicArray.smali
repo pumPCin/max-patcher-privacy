@@ -31,7 +31,7 @@
         "get",
         "(I)Ljava/lang/Object;",
         "value",
-        "Loyf;",
+        "Laxf;",
         "setSynchronized",
         "(ILjava/lang/Object;)V",
         "Ljava/util/concurrent/atomic/AtomicReferenceArray;",

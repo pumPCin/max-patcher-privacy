@@ -1,108 +1,48 @@
 .class public final Lvf0;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Lim7;
+.super Lwy3;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayDeque;
+.field public X:I
 
-.field public b:Lh8d;
+.field public final synthetic Y:Lwf0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lwf0;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvf0;->Y:Lwf0;
 
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lvf0;->a:Ljava/util/ArrayDeque;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ll8d;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lvf0;->a:Ljava/util/ArrayDeque;
+    iput-object p1, p0, Lvf0;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
+    iget p1, p0, Lvf0;->X:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Ll8d;
+    or-int/2addr p1, v0
 
-    return-object v0
-.end method
+    iput p1, p0, Lvf0;->X:I
 
-.method public final b()Ll8d;
-    .locals 2
-
-    iget-object v0, p0, Lvf0;->a:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll8d;
-
-    iget-object v1, p0, Lvf0;->b:Lh8d;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lh8d;->d()V
-
-    :cond_0
-    iget-object v1, v0, Ll8d;->a:Lb04;
-
-    invoke-virtual {v1}, Lb04;->destroy()V
-
-    return-object v0
-.end method
-
-.method public final c()Ljava/util/Iterator;
-    .locals 1
-
-    iget-object v0, p0, Lvf0;->a:Ljava/util/ArrayDeque;
-
-    invoke-static {v0}, Le93;->A0(Ljava/util/Collection;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+    iget-object p1, p0, Lvf0;->Y:Lwf0;
 
     const/4 v0, 0x0
 
-    new-array v0, v0, [Ll8d;
+    invoke-virtual {p1, v0, p0}, Lwf0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lvf0;->a:Ljava/util/ArrayDeque;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
+    return-object p1
 .end method

@@ -1,98 +1,41 @@
-.class public final Leh7;
+.class public interface abstract Leh7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static volatile c:Leh7;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Leh7;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lf30;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lf30;-><init>(I)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    iput-object v0, p0, Leh7;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Looper;)V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Leh7;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Len9;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, p1, v1}, Len9;-><init>(Landroid/os/Looper;I)V
-
-    iput-object v0, p0, Leh7;->b:Ljava/lang/Object;
-
-    return-void
-.end method
+.implements Ld24;
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
+.method public abstract attachChild(Li33;)Lf33;
+.end method
 
-    iget v0, p0, Leh7;->a:I
+.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract getCancellationException()Ljava/util/concurrent/CancellationException;
+.end method
 
-    iget-object v0, p0, Leh7;->b:Ljava/lang/Object;
+.method public abstract getChildren()Lxpd;
+.end method
 
-    check-cast v0, Len9;
+.method public abstract invokeOnCompletion(Lvd6;)Lis4;
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+.method public abstract invokeOnCompletion(ZZLvd6;)Lis4;
+.end method
 
-    return-void
+.method public abstract isActive()Z
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Leh7;->b:Ljava/lang/Object;
+.method public abstract isCancelled()Z
+.end method
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+.method public abstract isCompleted()Z
+.end method
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+.method public abstract join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract start()Z
 .end method

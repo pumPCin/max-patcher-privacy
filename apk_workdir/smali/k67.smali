@@ -1,95 +1,75 @@
 .class public final Lk67;
-.super Lrm4;
+.super Lq57;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic o:I
-
-.field public final p:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(La3f;Landroid/util/Size;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lk67;->o:I
-
-    iput-object p1, p0, Lk67;->p:Ljava/lang/Object;
-
-    const/16 p1, 0x22
-
-    invoke-direct {p0, p2, p1}, Lrm4;-><init>(Landroid/util/Size;I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/Surface;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lk67;->o:I
-
-    sget-object v0, Lrm4;->k:Landroid/util/Size;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lrm4;-><init>(Landroid/util/Size;I)V
-
-    iput-object p1, p0, Lk67;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/view/Surface;Landroid/util/Size;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lk67;->o:I
-
-    invoke-direct {p0, p2, p3}, Lrm4;-><init>(Landroid/util/Size;I)V
-
-    iput-object p1, p0, Lk67;->p:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final f()Ljx7;
-    .locals 1
+.method public final bridge synthetic c(Ljava/lang/Object;)Lq57;
+    .locals 0
 
-    iget v0, p0, Lk67;->o:I
+    invoke-virtual {p0, p1}, Lk67;->h(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lk67;->p:Ljava/lang/Object;
+.method public final h(Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast v0, La3f;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v0, La3f;->g:Lws1;
+    invoke-virtual {p0, p1}, Lq57;->a(Ljava/lang/Object;)V
 
-    return-object v0
+    return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lk67;->p:Ljava/lang/Object;
+.method public final i()Ll67;
+    .locals 3
 
-    check-cast v0, Landroid/view/Surface;
+    iget v0, p0, Lq57;->b:I
 
-    invoke-static {v0}, Lpch;->A(Ljava/lang/Object;)Li67;
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v2, p0, Lq57;->c:[Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Ll67;->i(I[Ljava/lang/Object;)Ll67;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v2
+
+    iput v2, p0, Lq57;->b:I
+
+    iput-boolean v1, p0, Lq57;->a:Z
+
     return-object v0
 
-    nop
+    :cond_0
+    iget-object v0, p0, Lq57;->c:[Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget v1, Ll67;->c:I
+
+    new-instance v1, Lree;
+
+    invoke-direct {v1, v0}, Lree;-><init>(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_1
+    sget v0, Ll67;->c:I
+
+    sget-object v0, Lkxc;->t0:Lkxc;
+
+    return-object v0
 .end method

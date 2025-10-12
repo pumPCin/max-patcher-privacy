@@ -4,444 +4,569 @@
 
 
 # instance fields
-.field public final a:Lg5b;
+.field public a:C
 
-.field public final b:Ljava/util/Map;
-
-.field public final c:Ljava/util/Map;
-
-.field public final d:Lch1;
-
-.field public final e:Lch1;
-
-.field public final f:Ljava/util/Map;
-
-.field public final g:Ljava/util/Map;
-
-.field public final h:Z
+.field public final b:[F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg5b;)V
-    .locals 9
-
-    sget-object v2, Lc75;->a:Lc75;
-
-    const/4 v8, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v3, v2
-
-    move-object v6, v2
-
-    move-object v7, v2
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v8}, Lq5b;-><init>(Lg5b;Ljava/util/Map;Ljava/util/Map;Lch1;Lch1;Ljava/util/Map;Ljava/util/Map;Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lg5b;Ljava/util/Map;Ljava/util/Map;Lch1;Lch1;Ljava/util/Map;Ljava/util/Map;Z)V
+.method public constructor <init>(C[F)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq5b;->a:Lg5b;
+    .line 2
+    iput-char p1, p0, Lq5b;->a:C
 
-    iput-object p2, p0, Lq5b;->b:Ljava/util/Map;
-
-    iput-object p3, p0, Lq5b;->c:Ljava/util/Map;
-
-    iput-object p4, p0, Lq5b;->d:Lch1;
-
-    iput-object p5, p0, Lq5b;->e:Lch1;
-
-    iput-object p6, p0, Lq5b;->f:Ljava/util/Map;
-
-    iput-object p7, p0, Lq5b;->g:Ljava/util/Map;
-
-    iput-boolean p8, p0, Lq5b;->h:Z
+    .line 3
+    iput-object p2, p0, Lq5b;->b:[F
 
     return-void
 .end method
 
+.method public constructor <init>(Lq5b;)V
+    .locals 1
 
-# virtual methods
-.method public final a()Lch1;
-    .locals 4
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lq5b;->f:Ljava/util/Map;
+    .line 5
+    iget-char v0, p1, Lq5b;->a:C
 
-    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+    iput-char v0, p0, Lq5b;->a:C
 
-    move-result-object v1
+    .line 6
+    iget-object p1, p1, Lq5b;->b:[F
 
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    array-length v0, p1
 
-    move-result-object v1
+    invoke-static {v0, p1}, Lfn7;->h(I[F)[F
+
+    move-result-object p1
+
+    iput-object p1, p0, Lq5b;->b:[F
+
+    return-void
+.end method
+
+.method public static a(Landroid/graphics/Path;FFFFFFFZZ)V
+    .locals 54
+
+    move/from16 v1, p1
+
+    move/from16 v3, p3
+
+    move/from16 v0, p5
+
+    move/from16 v2, p6
+
+    move/from16 v7, p7
+
+    float-to-double v4, v7
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v8
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v10
+
+    float-to-double v12, v1
+
+    mul-double v14, v12, v8
+
+    move/from16 v6, p2
+
+    move-wide/from16 v16, v4
+
+    float-to-double v4, v6
+
+    mul-double v18, v4, v10
+
+    add-double v18, v18, v14
+
+    float-to-double v14, v0
+
+    div-double v18, v18, v14
+
+    neg-float v0, v1
+
+    float-to-double v0, v0
+
+    mul-double/2addr v0, v10
+
+    mul-double v20, v4, v8
+
+    add-double v20, v20, v0
+
+    float-to-double v0, v2
+
+    div-double v20, v20, v0
+
+    move-wide/from16 v22, v0
+
+    float-to-double v0, v3
+
+    mul-double/2addr v0, v8
+
+    move-wide/from16 v24, v0
+
+    move/from16 v0, p4
+
+    float-to-double v1, v0
+
+    mul-double v26, v1, v10
+
+    add-double v26, v26, v24
+
+    div-double v26, v26, v14
+
+    neg-float v0, v3
+
+    move-wide/from16 v24, v1
+
+    float-to-double v0, v0
+
+    mul-double/2addr v0, v10
+
+    mul-double v24, v24, v8
+
+    add-double v24, v24, v0
+
+    div-double v24, v24, v22
+
+    sub-double v0, v18, v26
+
+    sub-double v28, v20, v24
+
+    add-double v30, v18, v26
+
+    const-wide/high16 v32, 0x4000000000000000L    # 2.0
+
+    div-double v30, v30, v32
+
+    add-double v34, v20, v24
+
+    div-double v34, v34, v32
+
+    mul-double v36, v0, v0
+
+    mul-double v38, v28, v28
+
+    move-wide/from16 v40, v0
+
+    add-double v0, v38, v36
+
+    const-wide/16 v36, 0x0
+
+    cmpl-double v2, v0, v36
+
+    move/from16 v38, v2
+
+    const-string v2, "PathParser"
+
+    if-nez v38, :cond_0
+
+    const-string v0, " Points are coincident"
+
+    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 
     :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const-wide/high16 v38, 0x3ff0000000000000L    # 1.0
 
-    move-result v2
+    div-double v42, v38, v0
 
-    if-eqz v2, :cond_1
+    const-wide/high16 v44, 0x3fd0000000000000L    # 0.25
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sub-double v42, v42, v44
 
-    move-result-object v2
+    cmpg-double v44, v42, v36
 
-    move-object v3, v2
+    if-gez v44, :cond_1
 
-    check-cast v3, Lg5b;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    iget-object v3, v3, Lg5b;->a:Leh1;
+    const-string v5, "Points are too far apart "
 
-    invoke-interface {v3}, Leh1;->m()Z
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v3
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    const-wide v4, 0x3ffffff583a53b8eL    # 1.99999
+
+    div-double/2addr v0, v4
+
+    double-to-float v0, v0
+
+    mul-float v5, p5, v0
+
+    mul-float v0, v0, p6
+
+    move/from16 v1, p1
+
+    move/from16 v4, p4
+
+    move/from16 v8, p8
+
+    move/from16 v9, p9
+
+    move v2, v6
+
+    move v6, v0
+
+    move-object/from16 v0, p0
+
+    invoke-static/range {v0 .. v9}, Lq5b;->a(Landroid/graphics/Path;FFFFFFFZZ)V
+
+    return-void
+
+    :cond_1
+    move/from16 v0, p9
+
+    invoke-static/range {v42 .. v43}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v1
+
+    mul-double v6, v1, v40
+
+    mul-double v1, v1, v28
+
+    move/from16 v3, p8
+
+    if-ne v3, v0, :cond_2
+
+    sub-double v30, v30, v1
+
+    add-double v34, v34, v6
 
     goto :goto_0
 
-    :cond_1
-    const/4 v2, 0x0
+    :cond_2
+    add-double v30, v30, v1
+
+    sub-double v34, v34, v6
 
     :goto_0
-    check-cast v2, Lg5b;
+    sub-double v1, v20, v34
 
-    if-eqz v2, :cond_2
+    sub-double v6, v18, v30
 
-    iget-object v1, v2, Lg5b;->a:Leh1;
+    invoke-static {v1, v2, v6, v7}, Ljava/lang/Math;->atan2(DD)D
 
-    invoke-interface {v1}, Leh1;->getId()Lch1;
+    move-result-wide v1
 
-    move-result-object v1
+    sub-double v6, v24, v34
 
-    if-eqz v1, :cond_2
+    move-wide/from16 p1, v1
 
-    return-object v1
+    sub-double v1, v26, v30
 
-    :cond_2
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    invoke-static {v6, v7, v1, v2}, Ljava/lang/Math;->atan2(DD)D
 
-    move-result-object v0
+    move-result-wide v1
 
-    invoke-static {v0}, Le93;->m0(Ljava/lang/Iterable;)Ljava/lang/Object;
+    sub-double v1, v1, p1
 
-    move-result-object v0
+    cmpl-double v3, v1, v36
 
-    check-cast v0, Lch1;
+    if-ltz v3, :cond_3
 
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq5b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lq5b;
-
-    iget-object v1, p0, Lq5b;->a:Lg5b;
-
-    iget-object v3, p1, Lq5b;->a:Lg5b;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lq5b;->b:Ljava/util/Map;
-
-    iget-object v3, p1, Lq5b;->b:Ljava/util/Map;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lq5b;->c:Ljava/util/Map;
-
-    iget-object v3, p1, Lq5b;->c:Ljava/util/Map;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lq5b;->d:Lch1;
-
-    iget-object v3, p1, Lq5b;->d:Lch1;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lq5b;->e:Lch1;
-
-    iget-object v3, p1, Lq5b;->e:Lch1;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lq5b;->f:Ljava/util/Map;
-
-    iget-object v3, p1, Lq5b;->f:Ljava/util/Map;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object v1, p0, Lq5b;->g:Ljava/util/Map;
-
-    iget-object v3, p1, Lq5b;->g:Ljava/util/Map;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-boolean v1, p0, Lq5b;->h:Z
-
-    iget-boolean p1, p1, Lq5b;->h:Z
-
-    if-eq v1, p1, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lq5b;->a:Lg5b;
-
-    invoke-virtual {v0}, Lg5b;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lq5b;->b:Ljava/util/Map;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lq5b;->c:Ljava/util/Map;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lq5b;->d:Lch1;
-
-    if-nez v2, :cond_0
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Lch1;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lq5b;->e:Lch1;
-
-    if-nez v2, :cond_1
+    const/4 v7, 0x1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v2}, Lch1;->hashCode()I
-
-    move-result v1
+    :cond_3
+    const/4 v7, 0x0
 
     :goto_1
-    add-int/2addr v0, v1
+    if-eq v0, v7, :cond_5
 
-    mul-int/lit8 v0, v0, 0x1f
+    const-wide v18, 0x401921fb54442d18L    # 6.283185307179586
 
-    iget-object v1, p0, Lq5b;->f:Ljava/util/Map;
+    if-lez v3, :cond_4
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sub-double v1, v1, v18
 
-    move-result v1
+    goto :goto_2
 
-    add-int/2addr v1, v0
+    :cond_4
+    add-double v1, v1, v18
 
-    mul-int/lit8 v1, v1, 0x1f
+    :cond_5
+    :goto_2
+    mul-double v30, v30, v14
 
-    iget-object v0, p0, Lq5b;->g:Ljava/util/Map;
+    mul-double v34, v34, v22
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    mul-double v18, v30, v8
 
-    move-result v0
+    mul-double v20, v34, v10
 
-    add-int/2addr v0, v1
+    sub-double v18, v18, v20
 
-    mul-int/lit8 v0, v0, 0x1f
+    mul-double v30, v30, v10
 
-    iget-boolean v1, p0, Lq5b;->h:Z
+    mul-double v34, v34, v8
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    add-double v34, v34, v30
 
-    move-result v1
+    const-wide/high16 v7, 0x4010000000000000L    # 4.0
 
-    add-int/2addr v1, v0
+    mul-double v9, v1, v7
 
-    return v1
-.end method
+    const-wide v20, 0x400921fb54442d18L    # Math.PI
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    div-double v9, v9, v20
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v9, v10}, Ljava/lang/Math;->abs(D)D
 
-    const-string v1, "ParticipantsState(me="
+    move-result-wide v9
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v9, v10}, Ljava/lang/Math;->ceil(D)D
 
-    iget-object v1, p0, Lq5b;->a:Lg5b;
+    move-result-wide v9
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    double-to-int v0, v9
 
-    const-string v1, ", usersInCall="
+    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->cos(D)D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v9
 
-    iget-object v1, p0, Lq5b;->b:Ljava/util/Map;
+    invoke-static/range {v16 .. v17}, Ljava/lang/Math;->sin(D)D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v16
 
-    const-string v1, ", participants="
+    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->cos(D)D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-wide v20
 
-    iget-object v1, p0, Lq5b;->c:Ljava/util/Map;
+    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->sin(D)D
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v24
 
-    const-string v1, ", primarySpeaker="
+    move-wide/from16 p8, v7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    neg-double v6, v14
 
-    iget-object v1, p0, Lq5b;->d:Lch1;
+    mul-double v26, v6, v9
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    mul-double v28, v26, v24
 
-    const-string v1, ", opponentSpeaker="
+    mul-double v30, v22, v16
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double v36, v30, v20
 
-    iget-object v1, p0, Lq5b;->e:Lch1;
+    sub-double v28, v28, v36
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    mul-double v6, v6, v16
 
-    const-string v1, ", screenShareSpeakers="
+    mul-double v24, v24, v6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double v22, v22, v9
 
-    iget-object v1, p0, Lq5b;->f:Ljava/util/Map;
+    mul-double v20, v20, v22
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    add-double v20, v20, v24
 
-    const-string v1, ", raisedHands="
+    move-wide/from16 p4, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-double v1, v0
 
-    iget-object v1, p0, Lq5b;->g:Ljava/util/Map;
+    div-double v1, p4, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-wide/from16 v24, v20
 
-    const-string v1, ", hasAnyEnabledCamera="
+    move-wide/from16 v20, v12
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide v11, v4
 
-    iget-boolean v1, p0, Lq5b;->h:Z
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-wide/from16 v3, p1
 
-    const-string v1, ")"
+    :goto_3
+    if-ge v5, v0, :cond_6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-double v36, v3, v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static/range {v36 .. v37}, Ljava/lang/Math;->sin(D)D
 
-    move-result-object v0
+    move-result-wide v40
 
-    return-object v0
+    invoke-static/range {v36 .. v37}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v42
+
+    mul-double v44, v14, v9
+
+    mul-double v44, v44, v42
+
+    add-double v44, v44, v18
+
+    mul-double v46, v30, v40
+
+    move v8, v0
+
+    move-wide/from16 v48, v1
+
+    sub-double v0, v44, v46
+
+    mul-double v44, v14, v16
+
+    mul-double v44, v44, v42
+
+    add-double v44, v44, v34
+
+    mul-double v46, v22, v40
+
+    move-wide/from16 p1, v3
+
+    add-double v2, v46, v44
+
+    mul-double v44, v26, v40
+
+    mul-double v46, v30, v42
+
+    sub-double v44, v44, v46
+
+    mul-double v40, v40, v6
+
+    mul-double v42, v42, v22
+
+    add-double v40, v42, v40
+
+    sub-double v42, v36, p1
+
+    div-double v46, v42, v32
+
+    invoke-static/range {v46 .. v47}, Ljava/lang/Math;->tan(D)D
+
+    move-result-wide v46
+
+    invoke-static/range {v42 .. v43}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v42
+
+    const-wide/high16 v50, 0x4008000000000000L    # 3.0
+
+    mul-double v52, v46, v50
+
+    mul-double v52, v52, v46
+
+    add-double v52, v52, p8
+
+    invoke-static/range {v52 .. v53}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v46
+
+    sub-double v46, v46, v38
+
+    mul-double v46, v46, v42
+
+    div-double v46, v46, v50
+
+    mul-double v28, v28, v46
+
+    move v13, v5
+
+    add-double v4, v28, v20
+
+    mul-double v24, v24, v46
+
+    add-double v11, v24, v11
+
+    mul-double v20, v46, v44
+
+    move-wide/from16 v24, v6
+
+    sub-double v6, v0, v20
+
+    mul-double v46, v46, v40
+
+    move-wide/from16 v20, v9
+
+    move v10, v8
+
+    sub-double v8, v2, v46
+
+    move/from16 v28, v10
+
+    const/4 v10, 0x0
+
+    move/from16 v29, v13
+
+    move-object/from16 v13, p0
+
+    invoke-virtual {v13, v10, v10}, Landroid/graphics/Path;->rLineTo(FF)V
+
+    double-to-float v4, v4
+
+    double-to-float v5, v11
+
+    double-to-float v6, v6
+
+    double-to-float v7, v8
+
+    double-to-float v8, v0
+
+    double-to-float v9, v2
+
+    move/from16 p2, v4
+
+    move/from16 p3, v5
+
+    move/from16 p4, v6
+
+    move/from16 p5, v7
+
+    move/from16 p6, v8
+
+    move/from16 p7, v9
+
+    move-object/from16 p1, v13
+
+    invoke-virtual/range {p1 .. p7}, Landroid/graphics/Path;->cubicTo(FFFFFF)V
+
+    add-int/lit8 v5, v29, 0x1
+
+    move-wide v11, v2
+
+    move-wide/from16 v9, v20
+
+    move-wide/from16 v6, v24
+
+    move-wide/from16 v3, v36
+
+    move-wide/from16 v24, v40
+
+    move-wide/from16 v20, v0
+
+    move/from16 v0, v28
+
+    move-wide/from16 v28, v44
+
+    move-wide/from16 v1, v48
+
+    goto/16 :goto_3
+
+    :cond_6
+    return-void
 .end method

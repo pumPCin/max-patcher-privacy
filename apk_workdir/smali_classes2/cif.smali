@@ -1,133 +1,57 @@
 .class public final Lcif;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public volatile a:J
+.field public X:Lgca;
 
-.field public final b:Ly35;
+.field public Y:J
 
-.field public volatile c:Z
+.field public Z:I
+
+.field public o:Lhif;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lhif;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lhif;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcif;->s0:Lhif;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcif;->c:Z
-
-    new-instance v0, Ly35;
-
-    invoke-direct {v0}, Ly35;-><init>()V
-
-    iput-object v0, p0, Lcif;->b:Ly35;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a()V
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    monitor-enter p0
+    iput-object p1, p0, Lcif;->r0:Ljava/lang/Object;
 
-    :try_start_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
+    iget p1, p0, Lcif;->t0:I
 
-    move-result-wide v0
+    const/high16 v0, -0x80000000
 
-    iget-wide v2, p0, Lcif;->a:J
+    or-int/2addr p1, v0
 
-    const-wide/16 v4, 0x0
+    iput p1, p0, Lcif;->t0:I
 
-    cmp-long v2, v2, v4
+    iget-object p1, p0, Lcif;->s0:Lhif;
 
-    if-nez v2, :cond_0
+    const/4 v0, 0x0
 
-    iput-wide v0, p0, Lcif;->a:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v0, p0}, Lhif;->l(Lgca;Lwy3;)Ljava/lang/Object;
 
-    monitor-exit p0
+    move-result-object p1
 
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :try_start_1
-    iget-wide v2, p0, Lcif;->a:J
-
-    sub-long v2, v0, v2
-
-    iget-boolean v4, p0, Lcif;->c:Z
-
-    if-nez v4, :cond_1
-
-    iget-object v4, p0, Lcif;->b:Ly35;
-
-    long-to-double v2, v2
-
-    iput-wide v2, v4, Ly35;->b:D
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lcif;->c:Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v4, p0, Lcif;->b:Ly35;
-
-    long-to-double v2, v2
-
-    invoke-virtual {v4, v2, v3}, Ly35;->a(D)V
-
-    :goto_0
-    iput-wide v0, p0, Lcif;->a:J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
-.end method
-
-.method public final b()D
-    .locals 4
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    long-to-double v0, v0
-
-    iget-object v2, p0, Lcif;->b:Ly35;
-
-    iget-wide v2, v2, Ly35;->b:D
-
-    div-double/2addr v0, v2
-
-    return-wide v0
+    return-object p1
 .end method

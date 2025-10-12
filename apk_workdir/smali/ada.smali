@@ -1,17 +1,97 @@
-.class public interface abstract Lada;
+.class public abstract Lada;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Z
+
+.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+.field public c:Lye6;
+
+
+# direct methods
+.method public constructor <init>(Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lada;->a:Z
+
+    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object p1, p0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()V
+.method public a()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract b(Ljava/lang/Object;)V
+.method public abstract b()V
 .end method
 
-.method public abstract c(Lyca;)V
+.method public c(Lfe0;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract d(Ljava/lang/Throwable;)V
+.method public d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    iget-object v0, p0, Lada;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, La22;
+
+    invoke-interface {v1}, La22;->cancel()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lada;->a:Z
+
+    iget-object p1, p0, Lada;->c:Lye6;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ltd6;->invoke()Ljava/lang/Object;
+
+    :cond_0
+    return-void
 .end method

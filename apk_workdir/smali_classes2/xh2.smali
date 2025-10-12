@@ -2,112 +2,101 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsu6;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final X:Lsf3;
 
-.field public final b:Z
+.field public final Y:Ltb5;
 
-.field public final c:Z
+.field public Z:Lkk2;
 
-.field public final d:I
+.field public final a:Ljava/lang/String;
 
-.field public final e:I
+.field public final b:Lwu6;
 
-.field public final f:I
+.field public final c:Lpcd;
+
+.field public final o:Lpcd;
+
+.field public final r0:Lbv;
+
+.field public final s0:Lbv;
+
+.field public final t0:Lbv;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;ZZIII)V
-    .locals 0
+.method public constructor <init>(Lwu6;Lw22;Lpcd;Ltb5;Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxh2;->a:Ljava/util/List;
+    new-instance v0, Lsf3;
 
-    iput-boolean p2, p0, Lxh2;->b:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p3, p0, Lxh2;->c:Z
+    iput-object v0, p0, Lxh2;->X:Lsf3;
 
-    iput p4, p0, Lxh2;->e:I
+    new-instance v0, Lbv;
 
-    iput p5, p0, Lxh2;->f:I
+    invoke-direct {v0}, Lbv;-><init>()V
 
-    iput p6, p0, Lxh2;->d:I
+    iput-object v0, p0, Lxh2;->r0:Lbv;
+
+    new-instance v0, Lbv;
+
+    invoke-direct {v0}, Lbv;-><init>()V
+
+    iput-object v0, p0, Lxh2;->s0:Lbv;
+
+    new-instance v0, Lbv;
+
+    invoke-direct {v0}, Lbv;-><init>()V
+
+    iput-object v0, p0, Lxh2;->t0:Lbv;
+
+    iput-object p1, p0, Lxh2;->b:Lwu6;
+
+    iput-object p0, p1, Lwu6;->i:Lsu6;
+
+    iget-object p1, p2, Lw22;->b:Ljava/lang/Object;
+
+    check-cast p1, Lz7f;
+
+    check-cast p1, La8f;
+
+    invoke-virtual {p1}, La8f;->a()Lpcd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxh2;->c:Lpcd;
+
+    iput-object p3, p0, Lxh2;->o:Lpcd;
+
+    iput-object p4, p0, Lxh2;->Y:Ltb5;
+
+    iput-object p5, p0, Lxh2;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final l()V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lj3;
 
-    const-string v1, "ChatMediaResult{messages="
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lxh2;->a:Ljava/util/List;
+    iget-object v1, p0, Lxh2;->o:Lpcd;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v1, v0}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forward="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lxh2;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isNetworkLoading="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lxh2;->c:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", responseCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxh2;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", forwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxh2;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", backwardCount="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxh2;->f:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lqw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

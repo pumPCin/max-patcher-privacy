@@ -1,47 +1,22 @@
 .class public final Le58;
-.super Lnz3;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public A0:Lwxc;
+.field public X:I
 
-.field public B0:Lwxc;
+.field public final synthetic Y:Lz48;
 
-.field public C0:I
-
-.field public D0:I
-
-.field public synthetic E0:Ljava/lang/Object;
-
-.field public final synthetic F0:Lg58;
-
-.field public G0:I
-
-.field public X:Ljava/util/Iterator;
-
-.field public Y:Lm82;
-
-.field public Z:Llc2;
-
-.field public o:Lg58;
-
-.field public w0:Lw29;
-
-.field public x0:Lw29;
-
-.field public y0:Ljava/util/Iterator;
-
-.field public z0:Lx29;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lg58;Lnz3;)V
+.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Le58;->F0:Lg58;
+    iput-object p1, p0, Le58;->Y:Lz48;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -51,21 +26,21 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Le58;->E0:Ljava/lang/Object;
+    iput-object p1, p0, Le58;->o:Ljava/lang/Object;
 
-    iget p1, p0, Le58;->G0:I
+    iget p1, p0, Le58;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Le58;->G0:I
+    iput p1, p0, Le58;->X:I
 
-    iget-object p1, p0, Le58;->F0:Lg58;
+    iget-object p1, p0, Le58;->Y:Lz48;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lg58;->g(Ljava/util/Map;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

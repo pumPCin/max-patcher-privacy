@@ -1,48 +1,14 @@
-.class public final Lvod;
-.super Lnz3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lfa2;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lfa2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lvod;->Y:Lfa2;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Lvod;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a()V
+.end method
 
-    iput-object p1, p0, Lvod;->o:Ljava/lang/Object;
+.method public abstract b()Z
+.end method
 
-    iget p1, p0, Lvod;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvod;->X:I
-
-    iget-object p1, p0, Lvod;->Y:Lfa2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lfa2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+.method public abstract c(Ljava/lang/String;Ljava/util/List;Ltd6;Lvd6;)V
 .end method

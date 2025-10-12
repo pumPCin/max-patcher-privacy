@@ -1,67 +1,68 @@
 .class public final Lpsb;
-.super Lnz3;
+.super Ly7f;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lrn7;
-
-.field public Y:Z
-
-.field public Z:J
-
-.field public o:Ljava/lang/Object;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Ltsb;
-
-.field public y0:I
+.field public c:Liqb;
 
 
 # direct methods
-.method public constructor <init>(Ltsb;Lnz3;)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    iput-object p1, p0, Lpsb;->x0:Ltsb;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lpsb;->w0:Ljava/lang/Object;
+    const-string v0, "profile"
 
-    iget p1, p0, Lpsb;->y0:I
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/high16 v0, -0x80000000
+    move-result p2
 
-    or-int/2addr p1, v0
+    if-eqz p2, :cond_0
 
-    iput p1, p0, Lpsb;->y0:I
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lpsb;->x0:Ltsb;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v6, p0
-
-    invoke-virtual/range {v0 .. v6}, Ltsb;->d(Ldsb;Lasb;Ljava/lang/String;ZLrn7;Lnz3;)Ljava/lang/Object;
+    invoke-static {p1}, Ljgh;->q(Lc79;)Liqb;
 
     move-result-object p1
 
-    return-object p1
+    iput-object p1, p0, Lpsb;->c:Liqb;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lc79;->y()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lpsb;->c:Liqb;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{profile="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

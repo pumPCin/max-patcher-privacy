@@ -1,51 +1,91 @@
 .class public final Lubd;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lybd;
+.field public final a:Ljava/util/List;
 
-.field public Y:I
+.field public final b:Ljava/util/List;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/util/List;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
 
 
 # direct methods
-.method public constructor <init>(Lybd;Lnz3;)V
+.method static constructor <clinit>()V
     .locals 0
 
-    iput-object p1, p0, Lubd;->X:Lybd;
+    return-void
+.end method
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;III)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lubd;->a:Ljava/util/List;
+
+    iput-object p2, p0, Lubd;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lubd;->c:Ljava/util/List;
+
+    iput p4, p0, Lubd;->d:I
+
+    iput p5, p0, Lubd;->e:I
+
+    iput p6, p0, Lubd;->f:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iput-object p1, p0, Lubd;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lubd;->b:Ljava/util/List;
 
-    iget p1, p0, Lubd;->Y:I
+    iget v1, p0, Lubd;->e:I
 
-    const/high16 v0, -0x80000000
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    move-result-object v0
 
-    iput p1, p0, Lubd;->Y:I
+    iget-object v1, p0, Lubd;->c:Ljava/util/List;
 
-    const/4 p1, 0x0
+    iget v2, p0, Lubd;->f:I
 
-    const/4 v0, 0x0
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v1, p0, Lubd;->X:Lybd;
+    move-result-object v1
 
-    invoke-virtual {v1, p1, v0, p0}, Lybd;->b(Ljava/lang/String;ZLnz3;)Ljava/lang/Object;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v3, "ScheduledSendPickerData(currentHour="
 
-    return-object p1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", currentMinute="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

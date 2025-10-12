@@ -3,6 +3,8 @@
 
 
 # static fields
-.field public static google_map_night_style:I = 0x7f12002e
+.field public static oneme_too_many_requests_bottomsheet_positive_button:I = 0x7f130a7f
 
-.field public static google_universal_map_style:I = 0x7f12002f
+.field public static oneme_too_many_requests_bottomsheet_subtitle:I = 0x7f130a80
+
+.field public static oneme_too_many_requests_bottomsheet_title:I = 0x7f130a81

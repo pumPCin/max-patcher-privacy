@@ -1,100 +1,457 @@
 .class public final Lqtb;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Z
 
-.field public final synthetic Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+.field public final b:Lptb;
+
+.field public final c:Lptb;
+
+.field public final d:Lptb;
+
+.field public final e:Lptb;
+
+.field public final f:Lptb;
+
+.field public final g:Lptb;
+
+.field public final h:Lptb;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+.method public constructor <init>(ZLptb;Lptb;Lptb;Lptb;Lptb;Lptb;Lptb;)V
     .locals 0
 
-    iput-object p2, p0, Lqtb;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-boolean p1, p0, Lqtb;->a:Z
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lqtb;->b:Lptb;
+
+    iput-object p3, p0, Lqtb;->c:Lptb;
+
+    iput-object p4, p0, Lqtb;->d:Lptb;
+
+    iput-object p5, p0, Lqtb;->e:Lptb;
+
+    iput-object p6, p0, Lqtb;->f:Lptb;
+
+    iput-object p7, p0, Lqtb;->g:Lptb;
+
+    iput-object p8, p0, Lqtb;->h:Lptb;
 
     return-void
 .end method
 
+.method public static a(Lqtb;ZLptb;Lptb;Lptb;Lptb;Lptb;Lptb;Lptb;I)Lqtb;
+    .locals 9
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move/from16 v0, p9
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    and-int/lit8 v1, v0, 0x20
 
-    invoke-virtual {p0, p1, p2}, Lqtb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
+    iget-boolean p1, p0, Lqtb;->a:Z
 
-    check-cast p1, Lqtb;
+    :cond_0
+    move v1, p1
 
-    sget-object p2, Loyf;->a:Loyf;
+    and-int/lit8 p1, v0, 0x40
 
-    invoke-virtual {p1, p2}, Lqtb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    return-object p2
-.end method
+    iget-object p2, p0, Lqtb;->b:Lptb;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :cond_1
+    move-object v2, p2
 
+    and-int/lit16 p1, v0, 0x80
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Lqtb;->c:Lptb;
+
+    :cond_2
+    move-object v3, p3
+
+    and-int/lit16 p1, v0, 0x100
+
+    if-eqz p1, :cond_3
+
+    iget-object p4, p0, Lqtb;->d:Lptb;
+
+    :cond_3
+    move-object v4, p4
+
+    and-int/lit16 p1, v0, 0x200
+
+    if-eqz p1, :cond_4
+
+    iget-object p5, p0, Lqtb;->e:Lptb;
+
+    :cond_4
+    move-object v5, p5
+
+    and-int/lit16 p1, v0, 0x400
+
+    if-eqz p1, :cond_5
+
+    iget-object p6, p0, Lqtb;->f:Lptb;
+
+    :cond_5
+    move-object v6, p6
+
+    and-int/lit16 p1, v0, 0x800
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p0, Lqtb;->g:Lptb;
+
+    move-object v7, p1
+
+    goto :goto_0
+
+    :cond_6
+    move-object/from16 v7, p7
+
+    :goto_0
+    and-int/lit16 p1, v0, 0x1000
+
+    if-eqz p1, :cond_7
+
+    iget-object p0, p0, Lqtb;->h:Lptb;
+
+    move-object v8, p0
+
+    goto :goto_1
+
+    :cond_7
+    move-object/from16 v8, p8
+
+    :goto_1
     new-instance v0, Lqtb;
 
-    iget-object v1, p0, Lqtb;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
-
-    invoke-direct {v0, p2, v1}, Lqtb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
-
-    iput-object p1, v0, Lqtb;->X:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v8}, Lqtb;-><init>(ZLptb;Lptb;Lptb;Lptb;Lptb;Lptb;Lptb;)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object p1, p0, Lqtb;->X:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lhy9;
-
-    instance-of p1, p1, Lj73;
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->z0:[Ltm7;
-
-    iget-object p1, p0, Lqtb;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
-
-    invoke-virtual {p1}, Lb04;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
+    goto :goto_1
 
     :cond_0
-    invoke-static {p1}, Lps;->t(Lb04;)V
+    instance-of v0, p1, Lqtb;
 
-    invoke-virtual {p1}, Lb04;->getRouter()Li8d;
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lqtb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-boolean v0, p0, Lqtb;->a:Z
+
+    iget-boolean v1, p1, Lqtb;->a:Z
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lqtb;->b:Lptb;
+
+    iget-object v1, p1, Lqtb;->b:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lqtb;->c:Lptb;
+
+    iget-object v1, p1, Lqtb;->c:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lqtb;->d:Lptb;
+
+    iget-object v1, p1, Lqtb;->d:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lqtb;->e:Lptb;
+
+    iget-object v1, p1, Lqtb;->e:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lqtb;->f:Lptb;
+
+    iget-object v1, p1, Lqtb;->f:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lqtb;->g:Lptb;
+
+    iget-object v1, p1, Lqtb;->g:Lptb;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-object v0, p0, Lqtb;->h:Lptb;
+
+    iget-object p1, p1, Lqtb;->h:Lptb;
+
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_9
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_9
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    invoke-static {v1, v2, v0}, Ljl3;->d(IIZ)I
+
+    move-result v1
+
+    invoke-static {v1, v2, v0}, Ljl3;->d(IIZ)I
+
+    move-result v1
+
+    invoke-static {v1, v2, v0}, Ljl3;->d(IIZ)I
+
+    move-result v1
+
+    invoke-static {v1, v2, v0}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lqtb;->a:Z
+
+    invoke-static {v0, v2, v1}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Lqtb;->b:Lptb;
+
+    invoke-virtual {v1}, Lptb;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget-object v0, p0, Lqtb;->c:Lptb;
+
+    invoke-virtual {v0}, Lptb;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/2addr v0, v2
+
+    iget-object v1, p0, Lqtb;->d:Lptb;
+
+    invoke-virtual {v1}, Lptb;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget-object v0, p0, Lqtb;->e:Lptb;
+
+    invoke-virtual {v0}, Lptb;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/2addr v0, v2
+
+    iget-object v1, p0, Lqtb;->f:Lptb;
+
+    invoke-virtual {v1}, Lptb;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget-object v0, p0, Lqtb;->g:Lptb;
+
+    invoke-virtual {v0}, Lptb;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/2addr v0, v2
+
+    iget-object v1, p0, Lqtb;->h:Lptb;
+
+    invoke-virtual {v1}, Lptb;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ProfileEditAdminPermissionsModel(isSuperAdmin=false, editSendDeleteMessagesEnabled=false, pinMessagesEnabled=false, changeChatInfoEnabled=false, changeMembersEnabled=false, editLinkEnabled="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lqtb;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sendMessagePermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->b:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", editMessagePermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->c:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", deleteMessagePermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->d:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pinMessagePermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->e:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", changeChatInfoPermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->f:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", controlMembersPermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->g:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", controlAdminsPermState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqtb;->h:Lptb;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Li8d;->B(Lb04;)Z
-
-    :cond_1
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

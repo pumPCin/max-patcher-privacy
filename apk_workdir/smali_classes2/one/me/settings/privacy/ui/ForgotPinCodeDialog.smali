@@ -32,7 +32,7 @@
 
 
 # static fields
-.field public static final synthetic E0:I
+.field public static final synthetic z0:I
 
 
 # direct methods
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILof4;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILaf4;)V
 
     return-void
 .end method
@@ -57,9 +57,9 @@
 
     move-result-object p1
 
-    new-instance p2, Ld52;
+    new-instance p2, Li52;
 
-    invoke-direct {p2, p0, p1}, Ld52;-><init>(Lone/me/settings/privacy/ui/ForgotPinCodeDialog;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Li52;-><init>(Lone/me/settings/privacy/ui/ForgotPinCodeDialog;Landroid/content/Context;)V
 
     return-object p2
 .end method

@@ -1,19 +1,25 @@
 .class public final Lf0c;
-.super Ll0c;
+.super Luc0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final b:J
+
+.field public final c:Ltm2;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(JLtm2;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xf
 
-    iput-wide p1, p0, Lf0c;->a:J
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+
+    iput-wide p1, p0, Lf0c;->b:J
+
+    iput-object p3, p0, Lf0c;->c:Ltm2;
 
     return-void
 .end method
@@ -41,60 +47,77 @@
     :cond_1
     check-cast p1, Lf0c;
 
-    iget-wide v3, p0, Lf0c;->a:J
+    iget-wide v3, p0, Lf0c;->b:J
 
-    iget-wide v5, p1, Lf0c;->a:J
+    iget-wide v5, p1, Lf0c;->b:J
 
-    cmp-long p1, v3, v5
+    cmp-long v1, v3, v5
 
-    if-eqz p1, :cond_2
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Lf0c;->c:Ltm2;
+
+    iget-object p1, p1, Lf0c;->c:Ltm2;
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x1000
-
-    int-to-long v0, v0
-
-    return-wide v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Lf0c;->a:J
+    iget-wide v0, p0, Lf0c;->b:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    return v0
-.end method
+    mul-int/lit8 v0, v0, 0x1f
 
-.method public final m()I
-    .locals 1
+    iget-object v1, p0, Lf0c;->c:Ltm2;
 
-    const/16 v0, 0x1000
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    return v0
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "DebugProfileInfo(id="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatMembers(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lf0c;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf0c;->c:Ltm2;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lf0c;->a:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

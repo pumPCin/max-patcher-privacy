@@ -1,206 +1,104 @@
 .class public final Loyb;
-.super Ljava/lang/Object;
+.super Lqyb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lov0;
-
-.field public final b:Le8e;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Loyb;->a:Lov0;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Loyb;->b:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Loyb;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    iput p1, p0, Loyb;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Laj0;)V
-    .locals 4
-    .annotation runtime Lxye;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    .line 1
-    new-instance v0, Ljyb;
+    const/4 v0, 0x1
 
-    iget-wide v1, p1, Lbj0;->a:J
+    if-ne p0, p1, :cond_0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return v0
 
-    move-result-object v1
-
-    iget-object p1, p1, Laj0;->b:Lv8f;
-
-    .line 2
-    iget-object v2, p1, Lv8f;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lv8f;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    .line 3
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_0
-
-    .line 4
     :cond_0
-    new-instance p1, Lnef;
+    instance-of v1, p1, Loyb;
 
-    invoke-direct {p1, v2}, Lnef;-><init>(Ljava/lang/CharSequence;)V
+    const/4 v2, 0x0
 
-    goto :goto_2
+    if-nez v1, :cond_1
 
-    .line 5
+    return v2
+
     :cond_1
-    :goto_0
-    invoke-static {p1}, Lgh5;->v(Ljava/lang/String;)Z
+    check-cast p1, Loyb;
 
-    move-result v2
+    iget v1, p0, Loyb;->a:I
 
-    const-string v3, "io.exception"
+    iget p1, p1, Loyb;->a:I
 
-    if-eqz v2, :cond_2
+    if-ne v1, p1, :cond_2
 
-    invoke-static {p1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return v0
 
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 6
-    sget p1, Lt9d;->K:I
-
-    .line 7
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    :goto_1
-    move-object p1, v2
-
-    goto :goto_2
-
-    .line 8
     :cond_2
-    invoke-static {p1}, Lgh5;->v(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-static {p1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    .line 9
-    sget p1, Lt9d;->N:I
-
-    .line 10
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    goto :goto_1
-
-    .line 11
-    :cond_3
-    sget p1, Lt9d;->J:I
-
-    .line 12
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    goto :goto_1
-
-    .line 13
-    :goto_2
-    invoke-direct {v0, v1, p1}, Ljyb;-><init>(Ljava/lang/Long;Loef;)V
-
-    .line 14
-    new-instance p1, Lnyb;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v0, v1}, Lnyb;-><init>(Loyb;Lmyb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v2, p0, Loyb;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, p1, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    return v2
 .end method
 
-.method public final onEvent(Lpv2;)V
+.method public final getItemId()J
+    .locals 2
+
+    const/16 v0, 0x400
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Loyb;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Loyb;->a:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 3
-    .annotation runtime Lxye;
-    .end annotation
 
-    .line 15
-    new-instance v0, Lkyb;
+    iget v0, p0, Loyb;->a:I
 
-    iget-wide v1, p1, Lbj0;->a:J
+    invoke-static {v0}, Ldt;->M(I)Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object p1
+    const-string v1, "Loading(itemViewType="
 
-    invoke-direct {v0, p1}, Lkyb;-><init>(Ljava/lang/Long;)V
+    const-string v2, ")"
 
-    .line 16
-    new-instance p1, Lnyb;
+    invoke-static {v1, v0, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {p1, p0, v0, v1}, Lnyb;-><init>(Loyb;Lmyb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v2, p0, Loyb;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, p1, v0}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    return-object v0
 .end method

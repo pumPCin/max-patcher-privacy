@@ -1,182 +1,177 @@
-.class public final synthetic Lbce;
-.super Ljava/lang/Object;
+.class public final Lbce;
+.super Landroid/widget/PopupWindow;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/ArrayList;
 
-.field public final synthetic b:Ldce;
-
-.field public final synthetic c:Lcce;
-
-.field public final synthetic o:Lorg/json/JSONObject;
+.field public final b:Lam7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldce;Lcce;Lorg/json/JSONObject;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;ZLjava/util/ArrayList;Lam7;)V
+    .locals 11
 
-    iput p4, p0, Lbce;->a:I
+    invoke-direct {p0}, Landroid/widget/PopupWindow;-><init>()V
 
-    iput-object p1, p0, Lbce;->b:Ldce;
+    iput-object p3, p0, Lbce;->a:Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lbce;->c:Lcce;
+    iput-object p4, p0, Lbce;->b:Lam7;
 
-    iput-object p3, p0, Lbce;->o:Lorg/json/JSONObject;
+    const/4 p4, -0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p4}, Landroid/widget/PopupWindow;->setHeight(I)V
 
-    return-void
-.end method
+    const/16 v0, 0xfa
 
+    int-to-float v0, v0
 
-# virtual methods
-.method public final run()V
-    .locals 7
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    iget v0, p0, Lbce;->a:I
+    move-result-object v1
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v0, p0, Lbce;->c:Lcce;
+    move-result-object v1
 
-    const-string v1, "OKSignaling"
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    iget-object v2, p0, Lbce;->b:Ldce;
+    mul-float/2addr v0, v1
 
-    iget-object v3, v2, Ldce;->b:Lpmc;
+    invoke-static {v0}, Li8e;->I(F)I
 
-    const-string v4, "<!> ignoring "
+    move-result v0
 
-    :try_start_0
-    instance-of v5, v0, Ly15;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setWidth(I)V
 
-    iget-object v6, p0, Lbce;->o:Lorg/json/JSONObject;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    if-eqz v5, :cond_0
+    move-result-object v0
 
-    :try_start_1
-    check-cast v0, Ly15;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v0, v6}, Ly15;->onResponse(Lorg/json/JSONObject;)V
+    move-result-object v0
 
-    goto :goto_1
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_0
-    iget-boolean v2, v2, Ldce;->q:Z
+    const/high16 v1, 0x41400000    # 12.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setElevation(F)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setOutsideTouchable(Z)V
+
+    invoke-virtual {p0, v0}, Landroid/widget/PopupWindow;->setFocusable(Z)V
+
+    new-instance v1, Lkmb;
+
+    invoke-direct {v1, p1, p2}, Lkmb;-><init>(Landroid/content/Context;Z)V
+
+    invoke-virtual {p3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v2
+
+    const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v0, v6}, Lcce;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
+    :cond_0
+    move v9, v3
 
     goto :goto_0
 
     :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_1
-
-    :goto_0
-    const-string v2, "signaling.response"
-
-    invoke-interface {v3, v1, v2, v0}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lbce;->c:Lcce;
-
-    const-string v1, "OKSignaling"
-
-    iget-object v2, p0, Lbce;->b:Ldce;
-
-    iget-object v3, v2, Ldce;->b:Lpmc;
-
-    const-string v4, "<!> ignoring "
-
-    :try_start_2
-    instance-of v5, v0, Ly15;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    iget-object v6, p0, Lbce;->o:Lorg/json/JSONObject;
-
-    if-eqz v5, :cond_2
-
-    :try_start_3
-    check-cast v0, Ly15;
-
-    invoke-virtual {v0, v6}, Ly15;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_3
+    move-result-object p3
 
     :cond_2
-    iget-boolean v2, v2, Ldce;->q:Z
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz v2, :cond_3
+    move-result v2
 
-    invoke-interface {v0, v6}, Lcce;->onResponse(Lorg/json/JSONObject;)V
+    if-eqz v2, :cond_0
 
-    goto :goto_3
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :catch_1
-    move-exception v0
+    move-result-object v2
+
+    check-cast v2, Lace;
+
+    iget-object v2, v2, Lace;->d:Ljava/lang/Integer;
+
+    if-eqz v2, :cond_2
+
+    move v9, v0
+
+    :goto_0
+    iget-object p3, p0, Lbce;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p3
+
+    :goto_1
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lace;
+
+    new-instance v4, Ljmb;
+
+    invoke-direct {v4, p1, p2}, Ljmb;-><init>(Landroid/content/Context;Z)V
+
+    iget-object v6, v2, Lace;->b:Lcdf;
+
+    iget-object v10, v2, Lace;->d:Ljava/lang/Integer;
+
+    iget-object v7, v2, Lace;->c:Ljava/lang/Integer;
+
+    if-eqz v10, :cond_3
+
+    move v8, v0
 
     goto :goto_2
 
     :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto :goto_3
+    move v8, v3
 
     :goto_2
-    const-string v2, "signaling.response"
+    move-object v5, v4
 
-    invoke-interface {v3, v1, v2, v0}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual/range {v4 .. v9}, Ljmb;->c(Ljmb;Lcdf;Ljava/lang/Integer;ZZ)V
 
-    :goto_3
+    iget-object v5, v2, Lace;->e:Ljava/lang/Integer;
+
+    invoke-virtual {v4, v10, v5}, Ljmb;->b(Ljava/lang/Integer;Ljava/lang/Integer;)V
+
+    new-instance v5, Ltnd;
+
+    const/16 v6, 0xa
+
+    invoke-direct {v5, p0, v6, v2}, Ltnd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v4, v5}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v1, v4, v2, p4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p0, v1}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
+
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

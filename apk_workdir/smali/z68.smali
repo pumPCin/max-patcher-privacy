@@ -1,136 +1,100 @@
-.class public final Lz68;
-.super Ljava/lang/Object;
+.class public abstract Lz68;
+.super Lh24;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
-.implements Lim7;
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public c:Z
-
-.field public o:J
-
-
-# direct methods
-.method public constructor <init>(JJJ)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p5, p0, Lz68;->a:J
-
-    iput-wide p3, p0, Lz68;->b:J
-
-    const-wide/16 v0, 0x0
-
-    cmp-long p5, p5, v0
-
-    const/4 p6, 0x0
-
-    const/4 v0, 0x1
-
-    if-lez p5, :cond_0
-
-    cmp-long p5, p1, p3
-
-    if-gtz p5, :cond_1
-
-    :goto_0
-    move p6, v0
-
-    goto :goto_1
-
-    :cond_0
-    cmp-long p5, p1, p3
-
-    if-ltz p5, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    iput-boolean p6, p0, Lz68;->c:Z
-
-    if-eqz p6, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move-wide p1, p3
-
-    :goto_2
-    iput-wide p1, p0, Lz68;->o:J
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lz68;->c:Z
-
-    return v0
+.method public abstract getImmediate()Lz68;
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 4
+.method public limitedParallelism(ILjava/lang/String;)Lh24;
+    .locals 0
 
-    iget-wide v0, p0, Lz68;->o:J
+    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
 
-    iget-wide v2, p0, Lz68;->b:J
+    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Lh24;Ljava/lang/String;)Lh24;
 
-    cmp-long v2, v0, v2
+    move-result-object p1
 
-    if-nez v2, :cond_1
+    return-object p1
+.end method
 
-    iget-boolean v2, p0, Lz68;->c:Z
+.method public toString()Ljava/lang/String;
+    .locals 2
 
-    if-eqz v2, :cond_0
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Lz68;->c:Z
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget-wide v2, p0, Lz68;->a:J
-
-    add-long/2addr v2, v0
-
-    iput-wide v2, p0, Lz68;->o:J
-
-    :goto_0
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Lz68;->toStringInternalImpl()Ljava/lang/String;
 
     move-result-object v0
 
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
     return-object v0
 .end method
 
-.method public final remove()V
+.method public final toStringInternalImpl()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    sget-object v0, Lwr4;->a:Lgj4;
 
-    const-string v1, "Operation is not supported for read-only collection"
+    sget-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lz68;
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-ne p0, v0, :cond_0
 
-    throw v0
+    const-string v0, "Dispatchers.Main"
+
+    return-object v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :try_start_0
+    invoke-virtual {v0}, Lz68;->getImmediate()Lz68;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-object v0, v1
+
+    :goto_0
+    if-ne p0, v0, :cond_1
+
+    const-string v0, "Dispatchers.Main.immediate"
+
+    return-object v0
+
+    :cond_1
+    return-object v1
 .end method

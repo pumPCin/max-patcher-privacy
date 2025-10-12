@@ -1,185 +1,215 @@
-.class public abstract Lei4;
+.class public final Lei4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lx47;
+# instance fields
+.field public final a:Lwc4;
 
-.field public static final b:Lx47;
+.field public final b:J
 
-.field public static final c:Lx47;
+.field public final c:J
 
-.field public static final d:Lx47;
+.field public final d:J
 
-.field public static final e:Lx47;
+.field public final e:J
 
-.field public static final f:Lx47;
+.field public final f:I
 
-.field public static final g:Lx47;
+.field public final g:J
 
-.field public static final h:Lx47;
+.field public h:I
 
-.field public static final i:Lx47;
-
-.field public static final j:Lx47;
-
-.field public static final k:Lx47;
-
-.field public static final l:Lx47;
-
-.field public static final m:Lx47;
-
-.field public static final n:Lx47;
+.field public i:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public constructor <init>(Lwc4;IIII)V
+    .locals 5
 
-    new-instance v0, Lx47;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "JPEG"
+    const-string v0, "bufferForPlaybackMs"
 
-    const-string v2, "jpeg"
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v2}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v2, "0"
 
-    sput-object v0, Lei4;->a:Lx47;
+    invoke-static {v0, p4, v1, v2}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    new-instance v1, Lx47;
+    const-string v3, "bufferForPlaybackAfterRebufferMs"
 
-    const-string v2, "PNG"
+    invoke-static {v3, p5, v1, v2}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    const-string v3, "png"
+    const-string v4, "minBufferMs"
 
-    invoke-direct {v1, v2, v3}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, p2, p4, v0}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v1, Lei4;->b:Lx47;
+    invoke-static {v4, p2, p5, v3}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    new-instance v2, Lx47;
+    const-string v0, "maxBufferMs"
 
-    const-string v3, "GIF"
+    invoke-static {v0, p3, p2, v4}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    const-string v4, "gif"
+    const-string v0, "backBufferDurationMs"
 
-    invoke-direct {v2, v3, v4}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v1, v2}, Lei4;->a(Ljava/lang/String;IILjava/lang/String;)V
 
-    sput-object v2, Lei4;->c:Lx47;
+    iput-object p1, p0, Lei4;->a:Lwc4;
 
-    new-instance v3, Lx47;
+    int-to-long p1, p2
 
-    const-string v4, "BMP"
+    invoke-static {p1, p2}, Le3g;->B(J)J
 
-    const-string v5, "bmp"
+    move-result-wide p1
 
-    invoke-direct {v3, v4, v5}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iput-wide p1, p0, Lei4;->b:J
 
-    sput-object v3, Lei4;->d:Lx47;
+    int-to-long p1, p3
 
-    new-instance v4, Lx47;
+    invoke-static {p1, p2}, Le3g;->B(J)J
 
-    const-string v5, "ICO"
+    move-result-wide p1
 
-    const-string v6, "ico"
+    iput-wide p1, p0, Lei4;->c:J
 
-    invoke-direct {v4, v5, v6}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    int-to-long p1, p4
 
-    sput-object v4, Lei4;->e:Lx47;
+    invoke-static {p1, p2}, Le3g;->B(J)J
 
-    new-instance v5, Lx47;
+    move-result-wide p1
 
-    const-string v6, "WEBP_SIMPLE"
+    iput-wide p1, p0, Lei4;->d:J
 
-    const-string v7, "webp"
+    int-to-long p1, p5
 
-    invoke-direct {v5, v6, v7}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le3g;->B(J)J
 
-    sput-object v5, Lei4;->f:Lx47;
+    move-result-wide p1
 
-    new-instance v6, Lx47;
+    iput-wide p1, p0, Lei4;->e:J
 
-    const-string v8, "WEBP_LOSSLESS"
+    const/4 p1, -0x1
 
-    invoke-direct {v6, v8, v7}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    iput p1, p0, Lei4;->f:I
 
-    sput-object v6, Lei4;->g:Lx47;
+    const/high16 p1, 0xc80000
 
-    move-object v8, v7
+    iput p1, p0, Lei4;->h:I
 
-    new-instance v7, Lx47;
+    int-to-long p1, v1
 
-    const-string v9, "WEBP_EXTENDED"
+    invoke-static {p1, p2}, Le3g;->B(J)J
 
-    invoke-direct {v7, v9, v8}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-wide p1
 
-    sput-object v7, Lei4;->h:Lx47;
+    iput-wide p1, p0, Lei4;->g:J
 
-    move-object v9, v8
+    return-void
+.end method
 
-    new-instance v8, Lx47;
+.method public static a(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 1
 
-    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+    if-lt p1, p2, :cond_0
 
-    invoke-direct {v8, v10, v9}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 p1, 0x1
 
-    sput-object v8, Lei4;->i:Lx47;
+    goto :goto_0
 
-    move-object v10, v9
+    :cond_0
+    const/4 p1, 0x0
 
-    new-instance v9, Lx47;
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    const-string v11, "WEBP_ANIMATED"
+    move-result p2
 
-    invoke-direct {v9, v11, v10}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    add-int/lit8 p2, p2, 0x15
 
-    sput-object v9, Lei4;->j:Lx47;
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
 
-    new-instance v10, Lx47;
+    move-result v0
 
-    const-string v11, "HEIF"
+    add-int/2addr v0, p2
 
-    const-string v12, "heif"
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10, v11, v12}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    sput-object v10, Lei4;->k:Lx47;
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v11, Lx47;
+    const-string p0, " cannot be less than "
 
-    const-string v12, "DNG"
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v13, "dng"
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v11, v12, v13}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sput-object v11, Lei4;->l:Lx47;
+    move-result-object p0
 
-    new-instance v11, Lx47;
+    invoke-static {p0, p1}, Lnjg;->d(Ljava/lang/String;Z)V
 
-    const-string v12, "BINARY_XML"
+    return-void
+.end method
 
-    const-string v13, "xml"
 
-    invoke-direct {v11, v12, v13}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+# virtual methods
+.method public final b(Z)V
+    .locals 2
 
-    sput-object v11, Lei4;->m:Lx47;
+    iget v0, p0, Lei4;->f:I
 
-    new-instance v12, Lx47;
+    const/4 v1, -0x1
 
-    const-string v13, "AVIF"
+    if-ne v0, v1, :cond_0
 
-    const-string v14, "avif"
+    const/high16 v0, 0xc80000
 
-    invoke-direct {v12, v13, v14}, Lx47;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    iput v0, p0, Lei4;->h:I
 
-    sput-object v12, Lei4;->n:Lx47;
+    const/4 v0, 0x0
 
-    filled-new-array/range {v0 .. v12}, [Lx47;
+    iput-boolean v0, p0, Lei4;->i:Z
 
-    move-result-object v0
+    if-eqz p1, :cond_2
 
-    invoke-static {v0}, Lf93;->P([Ljava/lang/Object;)Ljava/util/List;
+    iget-object p1, p0, Lei4;->a:Lwc4;
 
+    monitor-enter p1
+
+    :try_start_0
+    iget-boolean v1, p1, Lwc4;->a:Z
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lwc4;->a(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_2
     return-void
 .end method

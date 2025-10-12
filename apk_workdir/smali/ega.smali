@@ -1,67 +1,19 @@
-.class public abstract Lega;
+.class public final Lega;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
+# instance fields
+.field public final synthetic a:Lo5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo5;)V
+    .locals 0
 
-    sget v0, Lsdc;->appearance_settings_chat_preview:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lega;->a:I
-
-    sget v0, Lsdc;->appearance_settings_current_theme_title:I
-
-    sput v0, Lega;->b:I
-
-    sget v0, Lsdc;->appearance_settings_font_size_reset:I
-
-    sput v0, Lega;->c:I
-
-    sget v0, Lsdc;->appearance_settings_font_size_title:I
-
-    sput v0, Lega;->d:I
-
-    sget v0, Lsdc;->appearance_settings_font_size_view:I
-
-    sput v0, Lega;->e:I
-
-    sget v0, Lsdc;->appearance_settings_recycler:I
-
-    sput v0, Lega;->f:I
-
-    sget v0, Lsdc;->appearance_settings_screen_mode:I
-
-    sput v0, Lega;->g:I
-
-    sget v0, Lsdc;->appearance_settings_screen_toolbar:I
-
-    sput v0, Lega;->h:I
-
-    sget v0, Lsdc;->appearance_settings_segmented_buttons_group:I
-
-    sput v0, Lega;->i:I
+    iput-object p1, p0, Lega;->a:Lo5;
 
     return-void
 .end method

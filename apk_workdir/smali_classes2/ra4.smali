@@ -1,189 +1,245 @@
 .class public final Lra4;
-.super Lvaf;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lvd6;
 
-# static fields
-.field public static final e0:Lra4;
+
+# instance fields
+.field public final synthetic X:I
+
+.field public Y:I
+
+.field public final synthetic Z:Ljava/lang/Object;
+
+.field public final synthetic r0:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 41
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+    .locals 0
+
+    iput p4, p0, Lra4;->X:I
+
+    iput-object p1, p0, Lra4;->Z:Ljava/lang/Object;
+
+    iput-object p2, p0, Lra4;->r0:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lra4;->X:I
+
+    check-cast p1, Lkotlin/coroutines/Continuation;
+
+    packed-switch v0, :pswitch_data_0
 
     new-instance v0, Lra4;
 
-    new-instance v1, Laa3;
+    iget-object v1, p0, Lra4;->Z:Ljava/lang/Object;
 
-    const-wide v2, 0xff697cffL
+    check-cast v1, Lku5;
 
-    long-to-int v2, v2
+    iget-object v2, p0, Lra4;->r0:Ljava/lang/Object;
 
-    const-wide v3, 0xffffffffL
+    check-cast v2, Ldwc;
 
-    long-to-int v3, v3
+    const/4 v3, 0x1
 
-    const-wide v4, 0xff000000L
+    invoke-direct {v0, v1, v2, p1, v3}, Lra4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    long-to-int v5, v4
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-wide v6, 0xff333344L
+    invoke-virtual {v0, p1}, Lra4;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    long-to-int v8, v6
+    move-result-object p1
 
-    const-wide v6, 0xff5b5b69L
+    return-object p1
 
-    long-to-int v13, v6
+    :pswitch_0
+    new-instance v0, Lra4;
 
-    const-wide v6, 0xfff5f5f5L
+    iget-object v1, p0, Lra4;->Z:Ljava/lang/Object;
 
-    long-to-int v15, v6
+    check-cast v1, Lta4;
 
-    const-wide v6, 0xffff3f3fL
+    iget-object v2, p0, Lra4;->r0:Ljava/lang/Object;
 
-    long-to-int v4, v6
-
-    const-wide v6, 0xfffbc03dL
-
-    long-to-int v6, v6
-
-    const-wide v9, 0xffecececL
-
-    long-to-int v7, v9
-
-    const-wide v9, 0xfff2f2f2L
-
-    long-to-int v9, v9
-
-    const-wide v10, 0xffe2e6ffL
-
-    long-to-int v10, v10
-
-    const-wide v11, 0xffd3d9fbL
-
-    long-to-int v11, v11
-
-    move-object/from16 v40, v0
-
-    move-object v12, v1
-
-    const-wide v0, 0xffe8e8e8L
-
-    long-to-int v0, v0
-
-    move/from16 v28, v0
-
-    const-wide v0, 0xffbdbfcdL
-
-    long-to-int v0, v0
-
-    move/from16 v29, v0
-
-    const-wide v0, 0xff84848eL
-
-    long-to-int v0, v0
-
-    move/from16 v30, v0
-
-    const-wide v0, 0xff10bc07L
-
-    long-to-int v0, v0
-
-    move/from16 v32, v0
-
-    const-wide v0, 0xff9da4afL
-
-    long-to-int v0, v0
-
-    move/from16 v33, v0
-
-    const-wide v0, 0xff5b5b68L
-
-    long-to-int v0, v0
-
-    move/from16 v37, v0
-
-    const-wide v0, 0xff474757L
-
-    long-to-int v0, v0
-
-    const/16 v39, 0x3e0
-
-    move/from16 v16, v4
-
-    move v4, v3
-
-    move/from16 v17, v6
-
-    move v6, v2
-
-    move/from16 v18, v7
-
-    move v7, v3
-
-    move/from16 v20, v9
-
-    move v9, v3
-
-    move/from16 v21, v10
-
-    move v10, v8
-
-    move/from16 v22, v11
-
-    move v11, v3
-
-    move-object v1, v12
-
-    move v12, v3
-
-    move v14, v13
-
-    move/from16 v19, v3
-
-    move/from16 v23, v8
-
-    move/from16 v24, v2
-
-    move/from16 v25, v15
-
-    move/from16 v26, v18
-
-    move/from16 v27, v13
-
-    move/from16 v31, v3
-
-    move/from16 v34, v3
-
-    move/from16 v35, v3
-
-    move/from16 v36, v8
-
-    move/from16 v38, v0
-
-    invoke-direct/range {v1 .. v39}, Laa3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
-
-    sget-object v7, Lh2a;->Y:Lvs0;
-
-    sget-object v8, Lh2a;->X:Lvs0;
-
-    const/4 v4, 0x1
-
-    const-string v5, "DAY"
-
-    move-object v6, v1
-
-    const-string v1, "TamTam Light"
-
-    const-string v2, "TamTam Team"
+    check-cast v2, Lrr9;
 
     const/4 v3, 0x0
 
-    move-object/from16 v0, v40
+    invoke-direct {v0, v1, v2, p1, v3}, Lra4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-direct/range {v0 .. v8}, Lvaf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Laa3;Lvs0;Lvs0;)V
+    sget-object p1, Laxf;->a:Laxf;
 
-    sput-object v0, Lra4;->e0:Lra4;
+    invoke-virtual {v0, p1}, Lra4;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lra4;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lra4;->r0:Ljava/lang/Object;
+
+    check-cast v0, Ldwc;
+
+    iget v1, p0, Lra4;->Y:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lra4;->Z:Ljava/lang/Object;
+
+    check-cast p1, Lku5;
+
+    sget-object v1, La8a;->a:Lkotlinx/coroutines/internal/Symbol;
+
+    iget-object v4, v0, Ldwc;->a:Ljava/lang/Object;
+
+    if-ne v4, v1, :cond_2
+
+    move-object v4, v2
+
+    :cond_2
+    iput v3, p0, Lra4;->Y:I
+
+    invoke-interface {p1, v4, p0}, Lku5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lo24;->a:Lo24;
+
+    if-ne p1, v1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    iput-object v2, v0, Ldwc;->a:Ljava/lang/Object;
+
+    sget-object v1, Laxf;->a:Laxf;
+
+    :goto_1
+    return-object v1
+
+    :pswitch_0
+    iget v0, p0, Lra4;->Y:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_5
+
+    if-ne v0, v1, :cond_4
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lra4;->Z:Ljava/lang/Object;
+
+    check-cast p1, Lta4;
+
+    iget-object v0, p1, Lta4;->g:Lka4;
+
+    iget-object v2, p0, Lra4;->r0:Ljava/lang/Object;
+
+    check-cast v2, Lrr9;
+
+    new-instance v3, Lka4;
+
+    iget-boolean v4, v0, Lka4;->a:Z
+
+    iget-boolean v5, v0, Lka4;->b:Z
+
+    iget-object v6, v0, Lka4;->e:Lrr9;
+
+    invoke-virtual {v6, v2}, Lrr9;->b(Lrr9;)V
+
+    iget-boolean v7, v0, Lka4;->c:Z
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v3 .. v8}, Lka4;-><init>(ZZLrr9;ZLsl5;)V
+
+    iput v1, p0, Lra4;->Y:I
+
+    invoke-static {p1, v3, p0}, Lta4;->a(Lta4;Lka4;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    :goto_2
+    sget-object v0, Laxf;->a:Laxf;
+
+    :goto_3
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

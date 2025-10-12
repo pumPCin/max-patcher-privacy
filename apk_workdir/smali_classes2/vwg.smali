@@ -1,55 +1,19 @@
 .class public final Lvwg;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Luvg;
-
-.field public Y:Lowg;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lywg;
-
-.field public final synthetic w0:Lywg;
-
-.field public x0:I
-
-
-# direct methods
-.method public constructor <init>(Lywg;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lvwg;->w0:Lywg;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final serializer()Lql7;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lql7;"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lvwg;->Z:Ljava/lang/Object;
+    sget-object v0, Luwg;->a:Luwg;
 
-    iget p1, p0, Lvwg;->x0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvwg;->x0:I
-
-    iget-object p1, p0, Lvwg;->w0:Lywg;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lywg;->i(Ljava/lang/String;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

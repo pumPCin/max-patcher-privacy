@@ -1,67 +1,51 @@
-.class public abstract synthetic Lwbg;
-.super Ljava/lang/Object;
+.class public final Lwbg;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public X:Lps9;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lgcg;
+
+.field public o:Lgcg;
+
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lgcg;Lwy3;)V
+    .locals 0
 
-    const/4 v0, 0x5
+    iput-object p1, p0, Lwbg;->Z:Lgcg;
 
-    invoke-static {v0}, Lqw1;->y(I)[I
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x3
-
-    :try_start_2
-    aput v2, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x0
-
-    const/4 v3, 0x4
-
-    :try_start_3
-    aput v3, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v0, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v1, Lwbg;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lwbg;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Lwbg;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwbg;->r0:I
+
+    iget-object p1, p0, Lwbg;->Z:Lgcg;
+
+    invoke-static {p1, p0}, Lgcg;->a(Lgcg;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

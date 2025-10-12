@@ -1,94 +1,125 @@
 .class public final Lzoe;
-.super Ljava/lang/Object;
+.super Laz;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lape;
+.field public final c:Lh4f;
+
+.field public final d:Lh4f;
+
+.field public final e:Llp5;
+
+.field public f:Lkx;
+
+.field public final g:Lyoe;
 
 
 # direct methods
-.method public constructor <init>(Lape;)V
+.method public constructor <init>(Lq10;Lh4f;Lh4f;Llp5;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Laz;-><init>(Lq10;)V
 
-    iput-object p1, p0, Lzoe;->a:Lape;
+    new-instance p1, Lyoe;
+
+    invoke-direct {p1, p0}, Lyoe;-><init>(Lzoe;)V
+
+    iput-object p1, p0, Lzoe;->g:Lyoe;
+
+    iput-object p2, p0, Lzoe;->c:Lh4f;
+
+    iput-object p3, p0, Lzoe;->d:Lh4f;
+
+    iput-object p4, p0, Lzoe;->e:Llp5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final b()Ls8a;
+    .locals 4
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzoe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzoe;
-
-    iget-object v1, p0, Lzoe;->a:Lape;
-
-    iget-object p1, p1, Lzoe;->a:Lape;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lzoe;->a:Lape;
-
-    invoke-virtual {v0}, Lape;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StatesIconColors(disabled="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzoe;->a:Lape;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-super {p0}, Laz;->b()Ls8a;
 
     move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lzoe;->f:Lkx;
+
+    if-eqz v0, :cond_1
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Lkx;
+
+    invoke-direct {v0}, Lkx;-><init>()V
+
+    iput-object v0, p0, Lzoe;->f:Lkx;
+
+    iget-object v0, p0, Laz;->a:Lq10;
+
+    iget-object v0, v0, Lq10;->f:Ll10;
+
+    iget v1, v0, Ll10;->j:I
+
+    iget-object v2, v0, Ll10;->h:Ljava/lang/String;
+
+    const/4 v3, 0x4
+
+    if-ne v1, v3, :cond_2
+
+    iget-object v0, v0, Ll10;->l:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1, v1}, Lvv9;->a(Ljava/lang/String;IZ)Ltv9;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lzoe;->g:Lyoe;
+
+    invoke-virtual {v0, v1}, Ltv9;->e(Luv9;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {v2}, Ld40;->A(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v2, v0, Ll10;->b:Ljava/lang/String;
+
+    :goto_0
+    iget-object v0, p0, Lzoe;->d:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf47;
+
+    new-instance v1, Ld7;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v1, v3, p0}, Ld7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v2, v1}, Lf47;->a(Ljava/lang/String;Le47;)V
+
+    :goto_1
+    iget-object v0, p0, Lzoe;->f:Lkx;
 
     return-object v0
 .end method

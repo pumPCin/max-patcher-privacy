@@ -2,5 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqf6;
+
+# virtual methods
+.method public abstract b()Lrx5;
+.end method

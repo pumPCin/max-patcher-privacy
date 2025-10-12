@@ -1,180 +1,80 @@
-.class public final Lxs8;
+.class public final synthetic Lxs8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxs8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Ljt8;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public c:Lz17;
-
-.field public o:Ls6g;
+.field public final synthetic b:Lll8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lll8;I)V
+    .locals 0
 
-    new-instance v0, Ltc8;
+    iput p2, p0, Lxs8;->a:I
 
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
-
-    sput-object v0, Lxs8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Lz17;)V
-    .locals 1
+    iput-object p1, p0, Lxs8;->b:Lll8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lxs8;->a:Ljava/lang/Object;
-
-    iput-object p1, p0, Lxs8;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lxs8;->c:Lz17;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lxs8;->o:Ls6g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lz17;
-    .locals 2
+.method public final i(Lzr8;Lfr8;I)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lxs8;->a:Ljava/lang/Object;
+    iget p3, p0, Lxs8;->a:I
 
-    monitor-enter v0
+    packed-switch p3, :pswitch_data_0
 
-    :try_start_0
-    iget-object v1, p0, Lxs8;->c:Lz17;
+    iget-object p3, p0, Lxs8;->b:Lll8;
 
-    monitor-exit v0
+    invoke-static {p3}, La67;->m(Ljava/lang/Object;)Lexc;
 
-    return-object v1
+    move-result-object p3
 
-    :catchall_0
-    move-exception v1
+    invoke-virtual {p1, p2, p3}, Lzr8;->j(Lfr8;Ljava/util/List;)Lbw7;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object p1
 
-    throw v1
-.end method
+    return-object p1
 
-.method public final describeContents()I
-    .locals 1
+    :pswitch_0
+    iget-object p3, p0, Lxs8;->b:Lll8;
 
-    const/4 v0, 0x0
+    invoke-static {p3}, La67;->m(Ljava/lang/Object;)Lexc;
 
-    return v0
-.end method
+    move-result-object p3
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-virtual {p1, p2, p3}, Lzr8;->j(Lfr8;Ljava/util/List;)Lbw7;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    if-ne p0, p1, :cond_0
+    return-object p1
 
-    return v0
+    :pswitch_1
+    iget-object p3, p0, Lxs8;->b:Lll8;
 
-    :cond_0
-    instance-of v1, p1, Lxs8;
+    invoke-static {p3}, La67;->m(Ljava/lang/Object;)Lexc;
 
-    const/4 v2, 0x0
+    move-result-object p3
 
-    if-nez v1, :cond_1
+    invoke-virtual {p1, p2, p3}, Lzr8;->j(Lfr8;Ljava/util/List;)Lbw7;
 
-    return v2
+    move-result-object p1
 
-    :cond_1
-    check-cast p1, Lxs8;
+    return-object p1
 
-    iget-object v1, p0, Lxs8;->b:Ljava/lang/Object;
-
-    if-nez v1, :cond_3
-
-    iget-object p1, p1, Lxs8;->b:Ljava/lang/Object;
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-
-    :cond_3
-    iget-object p1, p1, Lxs8;->b:Ljava/lang/Object;
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lxs8;->b:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 1
-
-    iget-object v0, p0, Lxs8;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -4,91 +4,94 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public final v0:Ljava/lang/String;
+
+.field public final w0:La67;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 19
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    sget-object v0, La67;->b:Lgz5;
 
-    iput-object p1, p0, Ltv6;->a:Ljava/lang/CharSequence;
+    .line 2
+    sget-object v18, Lexc;->X:Lexc;
+
+    const/4 v3, 0x0
+
+    .line 3
+    const-string v4, ""
+
+    const-wide/16 v5, 0x0
+
+    const/4 v7, -0x1
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/16 v17, 0x0
+
+    move-object/from16 v1, p0
+
+    move-wide/from16 v13, p1
+
+    move-wide/from16 v15, p3
+
+    move-object/from16 v2, p5
+
+    move-object/from16 v11, p6
+
+    move-object/from16 v12, p7
+
+    invoke-direct/range {v1 .. v18}, Ltv6;-><init>(Ljava/lang/String;Ltv6;Ljava/lang/String;JIJLey4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;Ltv6;Ljava/lang/String;JIJLey4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    .locals 16
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    move-object/from16 v0, p0
 
-    const/4 v0, 0x1
+    move-object/from16 v1, p1
 
-    if-ne p0, p1, :cond_0
+    move-object/from16 v2, p2
 
-    return v0
+    move-wide/from16 v3, p4
 
-    :cond_0
-    instance-of v1, p1, Ltv6;
+    move/from16 v5, p6
 
-    const/4 v2, 0x0
+    move-wide/from16 v6, p7
 
-    if-nez v1, :cond_1
+    move-object/from16 v8, p9
 
-    return v2
+    move-object/from16 v9, p10
 
-    :cond_1
-    check-cast p1, Ltv6;
+    move-object/from16 v10, p11
 
-    iget-object v1, p0, Ltv6;->a:Ljava/lang/CharSequence;
+    move-wide/from16 v11, p12
 
-    iget-object p1, p1, Ltv6;->a:Ljava/lang/CharSequence;
+    move-wide/from16 v13, p14
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move/from16 v15, p16
 
-    move-result p1
+    .line 4
+    invoke-direct/range {v0 .. v15}, Lvv6;-><init>(Ljava/lang/String;Ltv6;JIJLey4;Ljava/lang/String;Ljava/lang/String;JJZ)V
 
-    if-nez p1, :cond_2
+    move-object/from16 v1, p3
 
-    return v2
+    .line 5
+    iput-object v1, v0, Ltv6;->v0:Ljava/lang/String;
 
-    :cond_2
-    return v0
-.end method
+    .line 6
+    invoke-static/range {p17 .. p17}, La67;->j(Ljava/util/Collection;)La67;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Ltv6;->a:Ljava/lang/CharSequence;
+    iput-object v1, v0, Ltv6;->w0:La67;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Name(name="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ltv6;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

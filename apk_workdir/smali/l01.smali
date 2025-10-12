@@ -1,234 +1,88 @@
-.class public final Ll01;
+.class public final synthetic Ll01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:Lp01;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lp01;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Ll01;->a:I
 
-    iput-object p1, p0, Ll01;->a:Lp01;
+    iput-object p1, p0, Ll01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFeatureEnabledChanged(Lh71;Z)V
-    .locals 9
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lh71;Z)V
+    iget v0, p0, Ll01;->a:I
 
-    sget-object v0, Lh71;->b:Lh71;
+    iget-object v1, p0, Ll01;->b:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    if-eq p1, v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_2
+    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lpl7;
 
-    :cond_0
-    sget-object p1, Lox9;->j:Lqpa;
+    new-instance v0, Lm01;
 
-    if-nez p1, :cond_1
+    invoke-direct {v0, v1}, Lm01;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
 
-    goto :goto_0
+    return-object v0
 
-    :cond_1
-    sget-object v0, Ly38;->o:Ly38;
+    :pswitch_0
+    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lpl7;
 
-    invoke-virtual {p1, v0}, Lqpa;->b(Ly38;)Z
+    new-instance v4, Lm6d;
 
-    move-result v1
+    const/16 v0, 0xa
 
-    if-eqz v1, :cond_2
+    invoke-direct {v4, v0, v1}, Lm6d;-><init>(ILjava/lang/Object;)V
 
-    const-string v1, "Record in call was changed for me to "
+    new-instance v2, Lild;
 
-    invoke-static {v1, p2}, Lq89;->j(Ljava/lang/String;Z)Ljava/lang/String;
+    sget-object v0, Lrw4;->t0:Lss6;
 
-    move-result-object v1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    const/4 v2, 0x0
+    move-result-object v3
 
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Ll01;->a:Lp01;
-
-    iget-object p1, p1, Lp01;->J0:Lmoe;
-
-    :goto_1
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lss6;->w(Landroid/content/Context;)Lzma;
 
     move-result-object v0
 
-    move-object v1, v0
+    iget-object v3, v0, Lzma;->c:Llwa;
 
-    check-cast v1, Lr9;
+    new-instance v5, Lk;
 
-    const/4 v7, 0x0
+    const/16 v0, 0x10
 
-    const/16 v8, 0x6f
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move v6, p2
-
-    invoke-static/range {v1 .. v8}, Lr9;->a(Lr9;ZZZZZZI)Lr9;
-
-    move-result-object p2
-
-    invoke-virtual {p1, v0, p2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    :goto_2
-    return-void
-
-    :cond_3
-    move p2, v6
-
-    goto :goto_1
-.end method
-
-.method public final onFeatureRolesChanged(Lh71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-    .locals 12
-
-    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lh71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
-
-    sget-object v0, Lh71;->b:Lh71;
-
-    if-eq p1, v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    sget-object p1, Lox9;->j:Lqpa;
-
-    if-nez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Ly38;->o:Ly38;
-
-    invoke-virtual {p1, v0}, Lqpa;->b(Ly38;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Record in call was changed for role="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "CallAdminSettingsController"
-
-    invoke-virtual {p1, v0, v3, v1, v2}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    instance-of v9, p2, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForAll;
-
-    iget-object p1, p0, Ll01;->a:Lp01;
-
-    iget-object p1, p1, Lp01;->J0:Lmoe;
-
-    :cond_3
-    invoke-virtual {p1}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    move-object v4, p2
-
-    check-cast v4, Lr9;
-
-    const/4 v10, 0x0
-
-    const/16 v11, 0x6f
-
-    const/4 v5, 0x0
+    invoke-direct {v5, v0, v1}, Lk;-><init>(ILjava/lang/Object;)V
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    const/16 v7, 0x14
 
-    const/4 v8, 0x0
+    invoke-direct/range {v2 .. v7}, Lild;-><init>(Llwa;Lgld;Lk;Lryc;I)V
 
-    invoke-static/range {v4 .. v11}, Lr9;->a(Lr9;ZZZZZZI)Lr9;
+    return-object v2
 
-    move-result-object v0
-
-    invoke-virtual {p1, p2, v0}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    iget-object p1, p0, Ll01;->a:Lp01;
-
-    invoke-virtual {p1}, Lp01;->d()Ln14;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ln14;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->isMeCreatorOrAdmin()Z
-
-    move-result p1
-
-    goto :goto_1
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_1
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Ll01;->a:Lp01;
-
-    iget-object p1, p1, Lp01;->H0:Le8e;
-
-    new-instance p2, Lta;
-
-    invoke-direct {p2, v9}, Lta;-><init>(Z)V
-
-    invoke-virtual {p1, p2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    :cond_5
-    :goto_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

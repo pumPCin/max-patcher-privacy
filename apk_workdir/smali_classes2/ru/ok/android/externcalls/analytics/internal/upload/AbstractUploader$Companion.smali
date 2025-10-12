@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lof4;)V
+.method public synthetic constructor <init>(Laf4;)V
     .locals 0
 
     .line 1
@@ -84,11 +84,11 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lxkg;->w()Ljava/lang/String;
+    invoke-static {}, Li8e;->z()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {}, Lxkg;->v()I
+    invoke-static {}, Li8e;->y()I
 
     move-result v1
 
@@ -133,13 +133,13 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lve6;
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Ltd6;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 

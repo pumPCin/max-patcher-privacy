@@ -1,287 +1,130 @@
 .class public final Lvt5;
-.super Ljava/lang/Object;
+.super Lfvc;
 .source "SourceFile"
 
 # interfaces
-.implements Lwm0;
+.implements Lst5;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lvt5;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Leu5;
+.field public X:F
 
-.field public final b:I
+.field public Y:F
 
-.field public final c:Lc7;
+.field public Z:I
+
+.field public r0:F
+
+.field public s0:I
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:Z
 
 
 # direct methods
-.method public constructor <init>(Leu5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz94;
 
-    iput-object p1, p0, Lvt5;->a:Leu5;
+    const/16 v1, 0xb
 
-    iput p2, p0, Lvt5;->b:I
+    invoke-direct {v0, v1}, Lz94;-><init>(I)V
 
-    new-instance p1, Lc7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvt5;->c:Lc7;
+    sput-object v0, Lvt5;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lgi5;)J
-    .locals 14
+.method public final describeContents()I
+    .locals 1
 
-    :goto_0
-    invoke-interface {p1}, Lgi5;->o()J
+    const/4 v0, 0x0
 
-    move-result-wide v0
-
-    invoke-interface {p1}, Lgi5;->getLength()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x6
-
-    sub-long/2addr v2, v4
-
-    cmp-long v0, v0, v2
-
-    iget-object v1, p0, Lvt5;->c:Lc7;
-
-    iget-object v2, p0, Lvt5;->a:Leu5;
-
-    if-gez v0, :cond_3
-
-    invoke-interface {p1}, Lgi5;->o()J
-
-    move-result-wide v6
-
-    const/4 v0, 0x2
-
-    new-array v3, v0, [B
-
-    const/4 v8, 0x0
-
-    invoke-interface {p1, v8, v3, v0}, Lgi5;->d(I[BI)V
-
-    aget-byte v9, v3, v8
-
-    and-int/lit16 v9, v9, 0xff
-
-    shl-int/lit8 v9, v9, 0x8
-
-    const/4 v10, 0x1
-
-    aget-byte v11, v3, v10
-
-    and-int/lit16 v11, v11, 0xff
-
-    or-int/2addr v9, v11
-
-    iget v11, p0, Lvt5;->b:I
-
-    if-eq v9, v11, :cond_0
-
-    invoke-interface {p1}, Lgi5;->x()V
-
-    invoke-interface {p1}, Lgi5;->getPosition()J
-
-    move-result-wide v11
-
-    sub-long/2addr v6, v11
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Lgi5;->p(I)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance v9, Lg5g;
-
-    const/16 v12, 0x10
-
-    invoke-direct {v9, v12}, Lg5g;-><init>(I)V
-
-    iget-object v12, v9, Lg5g;->a:[B
-
-    invoke-static {v3, v8, v12, v8, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v3, v9, Lg5g;->a:[B
-
-    :goto_1
-    const/16 v12, 0xe
-
-    if-ge v8, v12, :cond_2
-
-    add-int v12, v0, v8
-
-    rsub-int/lit8 v13, v8, 0xe
-
-    invoke-interface {p1, v12, v3, v13}, Lgi5;->s(I[BI)I
-
-    move-result v12
-
-    const/4 v13, -0x1
-
-    if-ne v12, v13, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/2addr v8, v12
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    invoke-virtual {v9, v8}, Lg5g;->D(I)V
-
-    invoke-interface {p1}, Lgi5;->x()V
-
-    invoke-interface {p1}, Lgi5;->getPosition()J
-
-    move-result-wide v12
-
-    sub-long/2addr v6, v12
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Lgi5;->p(I)V
-
-    invoke-static {v9, v2, v11, v1}, Lxkg;->g(Lg5g;Leu5;ILc7;)Z
-
-    move-result v8
-
-    :goto_3
-    if-nez v8, :cond_3
-
-    invoke-interface {p1, v10}, Lgi5;->p(I)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {p1}, Lgi5;->o()J
-
-    move-result-wide v6
-
-    invoke-interface {p1}, Lgi5;->getLength()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v4
-
-    cmp-long v0, v6, v8
-
-    if-ltz v0, :cond_4
-
-    invoke-interface {p1}, Lgi5;->getLength()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Lgi5;->o()J
-
-    move-result-wide v3
-
-    sub-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    invoke-interface {p1, v0}, Lgi5;->p(I)V
-
-    iget-wide v0, v2, Leu5;->k:J
-
-    return-wide v0
-
-    :cond_4
-    iget-wide v0, v1, Lc7;->a:J
-
-    return-wide v0
+    return v0
 .end method
 
-.method public final j(Lgi5;J)Lvm0;
-    .locals 19
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-interface/range {p1 .. p1}, Lgi5;->getPosition()J
+    iget p2, p0, Lvt5;->X:F
 
-    move-result-wide v4
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-virtual/range {p0 .. p1}, Lvt5;->a(Lgi5;)J
+    iget p2, p0, Lvt5;->Y:F
 
-    move-result-wide v2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    invoke-interface/range {p1 .. p1}, Lgi5;->o()J
+    iget p2, p0, Lvt5;->Z:I
 
-    move-result-wide v10
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-object/from16 v12, p0
+    iget p2, p0, Lvt5;->r0:F
 
-    iget-object v0, v12, Lvt5;->a:Leu5;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget v0, v0, Leu5;->d:I
+    iget p2, p0, Lvt5;->s0:I
 
-    const/4 v1, 0x6
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    iget p2, p0, Lvt5;->t0:I
 
-    move-result v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-object/from16 v1, p1
+    iget p2, p0, Lvt5;->u0:I
 
-    invoke-interface {v1, v0}, Lgi5;->p(I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual/range {p0 .. p1}, Lvt5;->a(Lgi5;)J
+    iget p2, p0, Lvt5;->v0:I
 
-    move-result-wide v15
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-interface {v1}, Lgi5;->o()J
+    iget-boolean p2, p0, Lvt5;->w0:Z
 
-    move-result-wide v17
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    cmp-long v0, v2, p2
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    if-gtz v0, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    cmp-long v0, v15, p2
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
 
-    if-lez v0, :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    new-instance v6, Lvm0;
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
 
-    const/4 v7, 0x0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    invoke-direct/range {v6 .. v11}, Lvm0;-><init>(IJJ)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-object v6
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    :cond_0
-    cmp-long v0, v15, p2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-gtz v0, :cond_1
+    iget p2, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    new-instance v13, Lvm0;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    const/4 v14, -0x2
-
-    invoke-direct/range {v13 .. v18}, Lvm0;-><init>(IJJ)V
-
-    return-object v13
-
-    :cond_1
-    new-instance v0, Lvm0;
-
-    const/4 v1, -0x1
-
-    invoke-direct/range {v0 .. v5}, Lvm0;-><init>(IJJ)V
-
-    return-object v0
+    return-void
 .end method

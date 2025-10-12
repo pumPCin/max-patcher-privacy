@@ -4,14 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lcde;Lfde;)V
+.method public abstract a()Z
 .end method
 
-.method public abstract b(Luw0;Ljava/lang/String;JJ)V
-.end method
-
-.method public abstract c(Lcde;Lfde;Lfde;)V
-.end method
-
-.method public abstract d(Lcde;Lsx0;)V
+.method public abstract b()Ljava/lang/String;
 .end method

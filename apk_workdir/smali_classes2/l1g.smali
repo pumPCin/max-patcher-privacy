@@ -1,51 +1,69 @@
 .class public final Ll1g;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public final a:Lc4d;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Lvh;
 
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public final c:Lu3d;
 
-.field public o:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public final d:Lu3d;
 
-.field public w0:I
+.field public final e:Lu3d;
+
+.field public final f:Lu3d;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lnz3;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
-    iput-object p1, p0, Ll1g;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ll1g;->a:Lc4d;
+
+    new-instance v0, Lvh;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ll1g;->b:Lvh;
+
+    new-instance v0, Lu3d;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ll1g;->c:Lu3d;
+
+    new-instance v0, Lu3d;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ll1g;->d:Lu3d;
+
+    new-instance v0, Lu3d;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ll1g;->e:Lu3d;
+
+    new-instance v0, Lu3d;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lu3d;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Ll1g;->f:Lu3d;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ll1g;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Ll1g;->w0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ll1g;->w0:I
-
-    iget-object p1, p0, Ll1g;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

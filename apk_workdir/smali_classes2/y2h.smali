@@ -1,19 +1,38 @@
 .class public final Ly2h;
-.super Ljava/lang/Object;
+.super Lqce;
 .source "SourceFile"
 
 
+# instance fields
+.field public E0:Lv2h;
+
+
 # virtual methods
-.method public final serializer()Lum7;
+.method public final A(Lov7;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
 
-    sget-object v0, Lx2h;->a:Lx2h;
+    instance-of v0, p1, Lu2h;
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    move-object v0, p1
+
+    check-cast v0, Lv2h;
+
+    iput-object v0, p0, Ly2h;->E0:Lv2h;
+
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+
+    check-cast v0, Lh0e;
+
+    check-cast p1, Lu2h;
+
+    iget-object p1, p1, Lu2h;->a:Li0e;
+
+    invoke-virtual {v0, p1}, Lh0e;->setModelItem(Lyzd;)V
+
+    return-void
 .end method

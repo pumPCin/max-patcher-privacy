@@ -1,203 +1,129 @@
-.class public final enum Lhqg;
-.super Ljava/lang/Enum;
+.class public final Lhqg;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lhqg;
-
-.field public static final enum Y:Lhqg;
-
-.field public static final enum Z:Lhqg;
-
-.field public static final enum c:Lhqg;
-
-.field public static final enum o:Lhqg;
-
-.field public static final synthetic w0:[Lhqg;
-
-.field public static final synthetic x0:Lla5;
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public final b:I
+.field public final synthetic Y:Lvqg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
-
-    new-instance v0, Lhqg;
-
-    const-string v1, "MONEY_BUTTON"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    const-string v4, "money_button"
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    new-instance v1, Lhqg;
-
-    const-string v2, "START_BUTTON"
-
-    const/4 v4, 0x2
-
-    const-string v5, "start_button"
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    new-instance v2, Lhqg;
-
-    const-string v3, "URL"
-
-    const/4 v5, 0x3
-
-    const-string v6, "url"
-
-    invoke-direct {v2, v3, v4, v5, v6}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v2, Lhqg;->c:Lhqg;
-
-    new-instance v3, Lhqg;
-
-    const-string v4, "FOLDER"
-
-    const/4 v6, 0x4
-
-    const-string v7, "folder"
-
-    invoke-direct {v3, v4, v5, v6, v7}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v3, Lhqg;->o:Lhqg;
-
-    new-instance v4, Lhqg;
-
-    const-string v5, "INLINE_BUTTON"
-
-    const/4 v7, 0x5
-
-    const-string v8, "inline_button"
-
-    invoke-direct {v4, v5, v6, v7, v8}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v4, Lhqg;->X:Lhqg;
-
-    new-instance v5, Lhqg;
-
-    const-string v6, "SETTINGS"
-
-    const/4 v8, 0x6
-
-    const-string v9, "settings"
-
-    invoke-direct {v5, v6, v7, v8, v9}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    new-instance v6, Lhqg;
-
-    const-string v7, "SETTINGS_PRIVACY"
-
-    const/16 v9, 0x9
-
-    const-string v10, "settings_privacy"
-
-    invoke-direct {v6, v7, v8, v9, v10}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    new-instance v7, Lhqg;
-
-    const-string v8, "support_from_privacy"
-
-    const/16 v10, 0x3e8
-
-    const-string v11, "SUPPORT_FROM_PRIVACY"
-
-    const/4 v12, 0x7
-
-    invoke-direct {v7, v11, v12, v10, v8}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    new-instance v8, Lhqg;
-
-    const-string v10, "from_notification"
-
-    const/16 v11, 0x3e9
-
-    const-string v12, "FROM_NOTIFICATION"
-
-    const/16 v13, 0x8
-
-    invoke-direct {v8, v12, v13, v11, v10}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v8, Lhqg;->Y:Lhqg;
-
-    move v10, v9
-
-    new-instance v9, Lhqg;
-
-    const-string v11, "from_search"
-
-    const/16 v12, 0x3eb
-
-    const-string v13, "FROM_SEARCH"
-
-    invoke-direct {v9, v13, v10, v12, v11}, Lhqg;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v9, Lhqg;->Z:Lhqg;
-
-    filled-new-array/range {v0 .. v9}, [Lhqg;
-
-    move-result-object v0
-
-    sput-object v0, Lhqg;->w0:[Lhqg;
-
-    new-instance v1, Lla5;
-
-    invoke-direct {v1, v0}, Lla5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lhqg;->x0:Lla5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+.method public constructor <init>(Lvqg;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lhqg;->Y:Lvqg;
 
-    iput-object p4, p0, Lhqg;->a:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput p3, p0, Lhqg;->b:I
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhqg;
-    .locals 1
 
-    const-class v0, Lhqg;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ln24;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lhqg;
+    invoke-virtual {p0, p1, p2}, Lhqg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lhqg;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lhqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lhqg;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lhqg;->w0:[Lhqg;
+    new-instance p1, Lhqg;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lhqg;->Y:Lvqg;
+
+    invoke-direct {p1, v0, p2}, Lhqg;-><init>(Lvqg;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lhqg;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhqg;->Y:Lvqg;
+
+    iget-object v0, p1, Lvqg;->h:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lhqg;
+    move-object v3, v0
+
+    check-cast v3, Lspg;
+
+    iget-wide v5, p1, Lvqg;->a:J
+
+    iget-wide v7, p1, Lvqg;->b:J
+
+    iput v1, p0, Lhqg;->X:I
+
+    iget-object p1, v3, Lspg;->a:Lc4d;
+
+    new-instance v2, Li79;
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v2 .. v8}, Li79;-><init>(Lspg;Ljava/lang/String;JJ)V
+
+    invoke-static {p1, v2, p0}, Lcea;->j(Lc4d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

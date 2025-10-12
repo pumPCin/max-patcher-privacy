@@ -1,55 +1,105 @@
-.class public final Le2c;
-.super Lnz3;
+.class public abstract Le2c;
+.super Lqce;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lap3;
+# virtual methods
+.method public final G()V
+    .locals 5
 
-.field public Y:Lm82;
+    const/16 v0, 0xc
 
-.field public synthetic Z:Ljava/lang/Object;
+    int-to-float v0, v0
 
-.field public o:Lf2c;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-.field public final synthetic w0:Lf2c;
+    move-result-object v1
 
-.field public x0:I
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
+    move-result-object v1
 
-# direct methods
-.method public constructor <init>(Lf2c;Lnz3;)V
-    .locals 0
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    iput-object p1, p0, Le2c;->w0:Lf2c;
+    mul-float/2addr v1, v0
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1}, Li8e;->I(F)I
+
+    move-result v1
+
+    const/16 v2, 0xe
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Li8e;->I(F)I
+
+    move-result v3
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v4
+
+    invoke-static {v0}, Li8e;->I(F)I
+
+    move-result v0
+
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Li8e;->I(F)I
+
+    move-result v2
+
+    iget-object v4, p0, Luvc;->a:Landroid/view/View;
+
+    invoke-virtual {v4, v1, v3, v0, v2}, Landroid/view/View;->setPaddingRelative(IIII)V
 
     return-void
 .end method
 
+.method public H(Lvm6;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iput-object p1, p0, Le2c;->Z:Ljava/lang/Object;
+.method public I(Landroid/view/View$OnClickListener;)V
+    .locals 0
 
-    iget p1, p0, Le2c;->x0:I
+    return-void
+.end method
 
-    const/high16 v0, -0x80000000
+.method public J(Landroid/view/View$OnLongClickListener;)V
+    .locals 0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Le2c;->x0:I
-
-    iget-object p1, p0, Le2c;->w0:Lf2c;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0, v0, p0}, Lf2c;->j(Ljava/lang/Long;Lap3;Lm82;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

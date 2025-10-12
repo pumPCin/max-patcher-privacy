@@ -1,11 +1,25 @@
-.class public interface abstract Llmd;
-.super Ljava/lang/Object;
+.class public final Llmd;
+.super Lmmd;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Ltif;Lji5;Lzrf;)V
-.end method
+# instance fields
+.field public final d:J
 
-.method public abstract e(Ly4b;)V
+.field public final e:J
+
+
+# direct methods
+.method public constructor <init>(Lllc;JJJJ)V
+    .locals 0
+
+    invoke-direct/range {p0 .. p5}, Lmmd;-><init>(Ljava/lang/Object;JJ)V
+
+    move-object p1, p0
+
+    iput-wide p6, p1, Llmd;->d:J
+
+    iput-wide p8, p1, Llmd;->e:J
+
+    return-void
 .end method

@@ -3,46 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic a:I
 
-.field public final synthetic b:Lawb;
-
-.field public final synthetic c:Lzvb;
+.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLawb;Lzvb;)V
+.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
     .locals 0
 
+    iput p2, p0, Lwvb;->a:I
+
+    iput-object p1, p0, Lwvb;->b:Lone/me/profileedit/ProfileEditScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lwvb;->a:J
-
-    iput-object p3, p0, Lwvb;->b:Lawb;
-
-    iput-object p4, p0, Lwvb;->c:Lzvb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    new-instance v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    iget p1, p0, Lwvb;->a:I
 
-    iget-wide v1, p0, Lwvb;->a:J
+    iget-object v0, p0, Lwvb;->b:Lone/me/profileedit/ProfileEditScreen;
 
-    iget-object v3, p0, Lwvb;->b:Lawb;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v4, p0, Lwvb;->c:Lzvb;
+    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lpl7;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(JLawb;Lzvb;)V
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->C0()Ltwb;
 
-    return-object v0
+    move-result-object p1
+
+    invoke-virtual {p1}, Ltwb;->x()V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Lpl7;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->C0()Ltwb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ltwb;->b:Lh25;
+
+    invoke-virtual {p1}, Lh25;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Lh25;->k()V
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

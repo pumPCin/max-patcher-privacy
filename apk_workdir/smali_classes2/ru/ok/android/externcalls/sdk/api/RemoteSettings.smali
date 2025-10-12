@@ -19,9 +19,9 @@
         "",
         "",
         "key",
-        "Lude;",
+        "Lrce;",
         "get",
-        "(Ljava/lang/String;)Lude;",
+        "(Ljava/lang/String;)Lrce;",
         "Companion",
         "calls-sdk_release"
     }
@@ -58,13 +58,13 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/String;)Lude;
+.method public abstract get(Ljava/lang/String;)Lrce;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lude;"
+            "Lrce;"
         }
     .end annotation
 .end method

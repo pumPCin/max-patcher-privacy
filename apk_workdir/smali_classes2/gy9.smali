@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract o()Lhfd;
+.method public abstract a(Lyx9;)V
 .end method

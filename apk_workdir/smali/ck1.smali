@@ -1,22 +1,48 @@
 .class public final Lck1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ltn1;
+.super Lwy3;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
+.field public X:I
+
+.field public final synthetic Y:Lwf0;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+.method public constructor <init>(Lwf0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lck1;->Y:Lwf0;
 
-    iput-object p1, p0, Lck1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lck1;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lck1;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lck1;->X:I
+
+    iget-object p1, p0, Lck1;->Y:Lwf0;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lwf0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

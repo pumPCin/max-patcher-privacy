@@ -1,125 +1,162 @@
-.class public final Lj10;
-.super Ljava/lang/Object;
+.class public final enum Lj10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final p:Lj10;
+.field public static final enum X:Lj10;
 
+.field public static final synthetic Y:[Lj10;
 
-# instance fields
-.field public final a:J
+.field public static final enum a:Lj10;
 
-.field public final b:Ljava/lang/String;
+.field public static final enum b:Lj10;
 
-.field public final c:I
+.field public static final enum c:Lj10;
 
-.field public final d:I
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/util/List;
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:J
-
-.field public final j:I
-
-.field public final k:J
-
-.field public final l:Ljava/lang/String;
-
-.field public final m:Z
-
-.field public final n:I
-
-.field public final o:Ljava/lang/String;
+.field public static final enum o:Lj10;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 7
 
-    new-instance v0, Li10;
+    new-instance v0, Lj10;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "NOT_LOADED"
 
-    invoke-virtual {v0}, Li10;->a()Lj10;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lj10;->a:Lj10;
+
+    new-instance v1, Lj10;
+
+    const-string v2, "CANCELLED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lj10;->b:Lj10;
+
+    new-instance v2, Lj10;
+
+    const-string v3, "LOADED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lj10;->c:Lj10;
+
+    new-instance v3, Lj10;
+
+    const-string v4, "ERROR"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lj10;->o:Lj10;
+
+    new-instance v4, Lj10;
+
+    const-string v5, "LOADING"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lj10;->X:Lj10;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lj10;
 
     move-result-object v0
 
-    sput-object v0, Lj10;->p:Lj10;
+    sput-object v0, Lj10;->Y:[Lj10;
 
     return-void
 .end method
 
-.method public constructor <init>(Li10;)V
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lj10;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lj10;
 
-    iget-wide v0, p1, Li10;->a:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-wide v0, p0, Lj10;->a:J
+    move-result-object p0
 
-    iget-object v0, p1, Li10;->d:Ljava/lang/String;
+    check-cast p0, Lj10;
 
-    iput-object v0, p0, Lj10;->b:Ljava/lang/String;
+    return-object p0
+.end method
 
-    iget v0, p1, Li10;->b:I
+.method public static values()[Lj10;
+    .locals 1
 
-    iput v0, p0, Lj10;->c:I
+    sget-object v0, Lj10;->Y:[Lj10;
 
-    iget v0, p1, Li10;->c:I
+    invoke-virtual {v0}, [Lj10;->clone()Ljava/lang/Object;
 
-    iput v0, p0, Lj10;->d:I
+    move-result-object v0
 
-    iget-object v0, p1, Li10;->f:Ljava/lang/String;
+    check-cast v0, [Lj10;
 
-    iput-object v0, p0, Lj10;->e:Ljava/lang/String;
+    return-object v0
+.end method
 
-    iget-object v0, p1, Li10;->g:Ljava/lang/String;
 
-    iput-object v0, p0, Lj10;->f:Ljava/lang/String;
+# virtual methods
+.method public final a()Z
+    .locals 1
 
-    iget-object v0, p1, Li10;->i:Ljava/util/List;
+    sget-object v0, Lj10;->b:Lj10;
 
-    iput-object v0, p0, Lj10;->g:Ljava/util/List;
+    if-ne p0, v0, :cond_0
 
-    iget-object v0, p1, Li10;->h:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iput-object v0, p0, Lj10;->h:Ljava/lang/String;
+    return v0
 
-    iget-wide v0, p1, Li10;->e:J
+    :cond_0
+    const/4 v0, 0x0
 
-    iput-wide v0, p0, Lj10;->i:J
+    return v0
+.end method
 
-    iget v0, p1, Li10;->j:I
+.method public final b()Z
+    .locals 1
 
-    iput v0, p0, Lj10;->j:I
+    sget-object v0, Lj10;->o:Lj10;
 
-    iget-wide v0, p1, Li10;->k:J
+    if-ne p0, v0, :cond_0
 
-    iput-wide v0, p0, Lj10;->k:J
+    const/4 v0, 0x1
 
-    iget-object v0, p1, Li10;->l:Ljava/lang/String;
+    return v0
 
-    iput-object v0, p0, Lj10;->l:Ljava/lang/String;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v0, p1, Li10;->m:Z
+    return v0
+.end method
 
-    iput-boolean v0, p0, Lj10;->m:Z
+.method public final c()Z
+    .locals 1
 
-    iget v0, p1, Li10;->n:I
+    sget-object v0, Lj10;->c:Lj10;
 
-    iput v0, p0, Lj10;->n:I
+    if-ne p0, v0, :cond_0
 
-    iget-object p1, p1, Li10;->o:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lj10;->o:Ljava/lang/String;
+    return v0
 
-    return-void
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

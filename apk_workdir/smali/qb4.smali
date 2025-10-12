@@ -1,110 +1,126 @@
-.class public abstract Lqb4;
+.class public final Lqb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzpb;
 
-# static fields
-.field public static final a:Z
 
-.field public static final b:Lyh3;
+# instance fields
+.field public final a:Lui6;
 
-.field public static final synthetic c:Lpb4;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lq37;
+
+.field public final d:Lcvd;
+
+.field public final e:Lcw4;
+
+.field public final f:Z
+
+.field public final g:Lzpb;
+
+.field public final h:I
+
+.field public final i:Lood;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lui6;Ljava/util/concurrent/Executor;Lq37;Lcvd;Lcw4;ZLzpb;ILood;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Exception;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+    iput-object p1, p0, Lqb4;->a:Lui6;
 
-    const-class v1, Lpch;
+    iput-object p2, p0, Lqb4;->b:Ljava/util/concurrent/Executor;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    iput-object p3, p0, Lqb4;->c:Lq37;
 
-    move-result-object v1
+    iput-object p4, p0, Lqb4;->d:Lcvd;
 
-    invoke-static {v0, v1}, Lkjd;->a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
+    iput-object p5, p0, Lqb4;->e:Lcw4;
 
-    new-instance v0, Ljava/text/SimpleDateFormat;
+    iput-boolean p6, p0, Lqb4;->f:Z
 
-    const-string v1, "yyyy/MM/dd HH:mm:ss"
+    iput-object p7, p0, Lqb4;->g:Lzpb;
 
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+    iput p8, p0, Lqb4;->h:I
 
-    new-instance v0, Lyh3;
+    iput-object p9, p0, Lqb4;->i:Lood;
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Lyh3;-><init>(Z)V
 
-    const/4 v0, 0x1
+# virtual methods
+.method public final a(Lii0;Laqb;)V
+    .locals 9
 
-    sput-boolean v0, Lqb4;->a:Z
+    invoke-static {}, Lzc6;->p()Lyc6;
 
-    const/4 v2, 0x0
+    move-object v0, p2
 
-    :try_start_0
-    const-string v3, "kotlinx.coroutines.debug.internal.ByteBuddyDynamicAttach"
+    check-cast v0, Loj0;
 
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    iget-object v0, v0, Loj0;->a:Lx47;
 
-    move-result-object v3
+    iget-object v1, v0, Lx47;->b:Landroid/net/Uri;
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getConstructors()[Ljava/lang/reflect/Constructor;
+    invoke-static {v1}, Lt1g;->d(Landroid/net/Uri;)Z
 
-    move-result-object v3
+    move-result v1
 
-    aget-object v1, v3, v1
+    if-nez v1, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lx47;->b:Landroid/net/Uri;
 
-    move-result-object v1
+    invoke-static {v0}, Ly47;->c(Landroid/net/Uri;)Z
 
-    invoke-static {v0, v1}, Lhxf;->e(ILjava/lang/Object;)V
+    move-result v0
 
-    check-cast v1, Lxe6;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v0, :cond_0
+
+    new-instance v0, Lmb4;
+
+    iget v1, p0, Lqb4;->h:I
+
+    invoke-direct {v0, p0, p1, p2, v1}, Lpb4;-><init>(Lqb4;Lii0;Laqb;I)V
+
+    move-object v3, p0
+
+    move-object v5, p2
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_0
+    new-instance v6, Li3c;
 
-    new-instance v3, Lv3d;
+    iget-object v0, p0, Lqb4;->a:Lui6;
 
-    invoke-direct {v3, v1}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v6, v0}, Li3c;-><init>(Lui6;)V
 
-    move-object v1, v3
+    new-instance v2, Lnb4;
+
+    iget-object v7, p0, Lqb4;->d:Lcvd;
+
+    iget v8, p0, Lqb4;->h:I
+
+    move-object v3, p0
+
+    move-object v4, p1
+
+    move-object v5, p2
+
+    invoke-direct/range {v2 .. v8}, Lnb4;-><init>(Lqb4;Lii0;Laqb;Li3c;Lcvd;I)V
+
+    move-object v0, v2
 
     :goto_0
-    nop
+    iget-object p1, v3, Lqb4;->g:Lzpb;
 
-    instance-of v3, v1, Lv3d;
-
-    if-eqz v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move-object v2, v1
-
-    :goto_1
-    check-cast v2, Lxe6;
-
-    new-instance v1, Lyh3;
-
-    invoke-direct {v1, v0}, Lyh3;-><init>(Z)V
-
-    sput-object v1, Lqb4;->b:Lyh3;
-
-    new-instance v0, Lpb4;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqb4;->c:Lpb4;
+    invoke-interface {p1, v0, v5}, Lzpb;->a(Lii0;Laqb;)V
 
     return-void
 .end method

@@ -1,86 +1,222 @@
-.class public final synthetic Lhib;
-.super Ljava/lang/Object;
+.class public final Lhib;
+.super Landroid/view/Surface;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+# static fields
+.field public static X:Z
+
+.field public static o:I
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/PointF;
+.field public final a:Z
 
-.field public final synthetic b:F
+.field public final b:Luz4;
 
-.field public final synthetic c:F
-
-.field public final synthetic o:Liib;
+.field public c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/PointF;FFLiib;)V
+.method public constructor <init>(Luz4;Landroid/graphics/SurfaceTexture;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    iput-object p1, p0, Lhib;->a:Landroid/graphics/PointF;
+    iput-object p1, p0, Lhib;->b:Luz4;
 
-    iput p2, p0, Lhib;->b:F
-
-    iput p3, p0, Lhib;->c:F
-
-    iput-object p4, p0, Lhib;->o:Liib;
+    iput-boolean p3, p0, Lhib;->a:Z
 
     return-void
 .end method
 
+.method public static declared-synchronized a(Landroid/content/Context;)Z
+    .locals 7
+
+    const-class v0, Lhib;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-boolean v1, Lhib;->X:Z
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-nez v1, :cond_6
+
+    sget v1, Lg3g;->a:I
+
+    const/16 v4, 0x18
+
+    if-ge v1, v4, :cond_1
+
+    :cond_0
+    :goto_0
+    move p0, v2
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v4, 0x1a
+
+    if-ge v1, v4, :cond_2
+
+    const-string v5, "samsung"
+
+    sget-object v6, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v5, "XT1650"
+
+    sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    if-ge v1, v4, :cond_3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const-string v1, "android.hardware.vr.high_performance"
+
+    invoke-virtual {p0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const-string p0, "EGL_EXT_protected_content"
+
+    invoke-static {p0}, Labh;->D(Ljava/lang/String;)Z
+
+    move-result p0
+
+    :goto_1
+    if-eqz p0, :cond_5
+
+    const-string p0, "EGL_KHR_surfaceless_context"
+
+    invoke-static {p0}, Labh;->D(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    move p0, v3
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p0, 0x2
+
+    goto :goto_2
+
+    :cond_5
+    move p0, v2
+
+    :goto_2
+    sput p0, Lhib;->o:I
+
+    sput-boolean v3, Lhib;->X:Z
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_4
+
+    :cond_6
+    :goto_3
+    sget p0, Lhib;->o:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz p0, :cond_7
+
+    move v2, v3
+
+    :cond_7
+    monitor-exit v0
+
+    return v2
+
+    :goto_4
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final release()V
     .locals 3
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-super {p0}, Landroid/view/Surface;->release()V
 
-    move-result-object p1
+    iget-object v0, p0, Lhib;->b:Luz4;
 
-    check-cast p1, Ljava/lang/Float;
+    monitor-enter v0
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    :try_start_0
+    iget-boolean v1, p0, Lhib;->c:Z
 
-    move-result p1
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lhib;->a:Landroid/graphics/PointF;
+    iget-object v1, p0, Lhib;->b:Luz4;
 
-    iget v1, v0, Landroid/graphics/PointF;->x:F
+    iget-object v2, v1, Luz4;->b:Landroid/os/Handler;
 
-    iget v2, p0, Lhib;->b:F
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v1, p1, v1}, Lvpb;->f(FFFF)F
+    iget-object v1, v1, Luz4;->b:Landroid/os/Handler;
 
-    move-result v1
+    const/4 v2, 0x2
 
-    iget v0, v0, Landroid/graphics/PointF;->y:F
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    iget v2, p0, Lhib;->c:F
+    const/4 v1, 0x1
 
-    invoke-static {v2, v0, p1, v0}, Lvpb;->f(FFFF)F
+    iput-boolean v1, p0, Lhib;->c:Z
 
-    move-result p1
+    goto :goto_0
 
-    iget-object v0, p0, Lhib;->o:Liib;
+    :catchall_0
+    move-exception v1
 
-    iget-object v2, v0, Liib;->b:Lzlh;
+    goto :goto_1
 
-    invoke-virtual {v2, v1, p1}, Lzlh;->u(FF)V
-
-    iget-object v0, v0, Liib;->c:Lsa1;
-
-    check-cast v0, Lta1;
-
-    iget-object v0, v0, Lta1;->b:Landroid/graphics/PointF;
-
-    iput v1, v0, Landroid/graphics/PointF;->x:F
-
-    iput p1, v0, Landroid/graphics/PointF;->y:F
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

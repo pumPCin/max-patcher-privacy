@@ -1,58 +1,373 @@
-.class public final synthetic Lpqd;
-.super Lag6;
+.class public final Lpqd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/concurrent/Executor;
 
 
-# static fields
-.field public static final a:Lpqd;
+# instance fields
+.field public final X:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Ljava/util/ArrayDeque;
+
+.field public o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/util/concurrent/Executor;I)V
+    .locals 0
 
-    new-instance v0, Lpqd;
+    iput p2, p0, Lpqd;->a:I
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+    packed-switch p2, :pswitch_data_0
 
-    const/4 v5, 0x1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
+    .line 2
+    iput-object p1, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
 
-    const-class v2, Lsqd;
+    .line 3
+    new-instance p1, Ljava/util/ArrayDeque;
 
-    const-string v3, "createSegment"
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
 
-    invoke-direct/range {v0 .. v5}, Lag6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-object p1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
 
-    sput-object v0, Lpqd;->a:Lpqd;
+    .line 4
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpqd;->X:Ljava/lang/Object;
+
+    return-void
+
+    .line 5
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
+
+    .line 6
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    .line 7
+    new-instance p1, Ljava/lang/Object;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpqd;->X:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ltq4;)V
+    .locals 1
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lpqd;->a:I
+
+    .line 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lpqd;->X:Ljava/lang/Object;
+
+    .line 10
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    .line 11
+    iput-object p1, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Lpqd;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    packed-switch v0, :pswitch_data_0
 
-    move-result-wide v0
+    iget-object v0, p0, Lpqd;->X:Ljava/lang/Object;
 
-    check-cast p2, Ltqd;
+    monitor-enter v0
 
-    sget p1, Lsqd;->a:I
+    :try_start_0
+    iget-object v1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
 
-    new-instance p1, Ltqd;
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-direct {p1, v0, v1, p2, v2}, Ltqd;-><init>(JLtqd;I)V
+    check-cast v1, Ljava/lang/Runnable;
 
-    return-object p1
+    iput-object v1, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-eqz v1, :cond_0
+
+    iget-object v2, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
+
+    check-cast v2, Ltq4;
+
+    invoke-virtual {v2, v1}, Ltq4;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    :pswitch_0
+    iget-object v0, p0, Lpqd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Ljava/lang/Runnable;
+
+    iput-object v2, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v1
+
+    goto :goto_3
+
+    :cond_1
+    :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_3
+    monitor-exit v0
+
+    throw v1
+
+    :pswitch_1
+    iget-object v0, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Runnable;
+
+    iput-object v0, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lpqd;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 4
+
+    iget v0, p0, Lpqd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpqd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    new-instance v2, Lpd;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p0, v3, p1}, Lpd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Lpqd;->a()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lpqd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_1
+    iget-object v1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    new-instance v2, Lwud;
+
+    const/16 v3, 0x16
+
+    invoke-direct {v2, p1, v3, p0}, Lwud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Lpqd;->a()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_3
+
+    :cond_1
+    :goto_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_3
+    monitor-exit v0
+
+    throw p1
+
+    :pswitch_1
+    iget-object v0, p0, Lpqd;->X:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_2
+    iget-object v1, p0, Lpqd;->c:Ljava/util/ArrayDeque;
+
+    new-instance v2, Lrf6;
+
+    const/16 v3, 0x19
+
+    invoke-direct {v2, p0, v3, p1}, Lrf6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lpqd;->o:Ljava/lang/Runnable;
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {p0}, Lpqd;->a()V
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception p1
+
+    goto :goto_5
+
+    :cond_2
+    :goto_4
+    monitor-exit v0
+
+    return-void
+
+    :goto_5
+    monitor-exit v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

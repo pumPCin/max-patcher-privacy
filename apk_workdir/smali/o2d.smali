@@ -1,160 +1,39 @@
-.class public final Lo2d;
+.class public interface abstract Lo2d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:F
-
-.field public final d:F
+# static fields
+.field public static final a:Ly02;
 
 
 # direct methods
-.method public constructor <init>(FIII)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    and-int/lit8 p4, p4, 0x4
+    new-instance v0, Ly02;
 
-    if-eqz p4, :cond_0
+    const/4 v1, 0x0
 
-    const/high16 p1, 0x45000000    # 2048.0f
+    const-wide/16 v2, 0x1770
 
-    :cond_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v2, v3, v1}, Ly02;-><init>(JI)V
 
-    iput p2, p0, Lo2d;->a:I
+    sput-object v0, Lo2d;->a:Ly02;
 
-    iput p3, p0, Lo2d;->b:I
+    new-instance v0, Ly02;
 
-    iput p1, p0, Lo2d;->c:F
+    const/4 v1, 0x1
 
-    const p1, 0x3f2aaaab
-
-    iput p1, p0, Lo2d;->d:F
-
-    const-string p1, "Check failed."
-
-    if-lez p2, :cond_2
-
-    if-lez p3, :cond_1
-
-    return-void
-
-    :cond_1
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_2
-    new-instance p2, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-.end method
-
-.method public constructor <init>(IFI)V
-    .locals 1
-
-    const/16 v0, 0x8
-
-    invoke-direct {p0, p2, p1, p3, v0}, Lo2d;-><init>(FIII)V
+    invoke-direct {v0, v2, v3, v1}, Ly02;-><init>(JI)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lo2d;
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lo2d;
-
-    iget v1, p1, Lo2d;->a:I
-
-    iget v2, p0, Lo2d;->a:I
-
-    if-ne v2, v1, :cond_1
-
-    iget v1, p0, Lo2d;->b:I
-
-    iget p1, p1, Lo2d;->b:I
-
-    if-ne v1, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract a()J
 .end method
 
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lo2d;->a:I
-
-    add-int/lit8 v0, v0, 0x1f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lo2d;->b:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lo2d;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget v1, p0, Lo2d;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const-string v2, "%dx%d"
-
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract b(Lw02;)Ln2d;
 .end method

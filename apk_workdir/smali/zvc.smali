@@ -1,45 +1,24 @@
-.class public final synthetic Lzvc;
+.class public final Lzvc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La85;
-.implements Lz2f;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic a:Liwc;
-
-
-# direct methods
-.method public synthetic constructor <init>(Liwc;)V
-    .locals 0
-
-    iput-object p1, p0, Lzvc;->a:Liwc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public a:Z
 
 
 # virtual methods
-.method public a(Landroid/view/Surface;)V
+.method public final toString()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lzvc;->a:Liwc;
+    iget-boolean v0, p0, Lzvc;->a:Z
 
-    invoke-virtual {v0, p1}, Liwc;->C(Landroid/view/Surface;)V
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public d(Lqb0;)V
-    .locals 1
-
-    iget-object v0, p0, Lzvc;->a:Liwc;
-
-    iput-object p1, v0, Liwc;->s:Lqb0;
-
-    return-void
+    return-object v0
 .end method

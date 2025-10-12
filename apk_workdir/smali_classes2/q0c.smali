@@ -1,97 +1,79 @@
 .class public final Lq0c;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Ls0c;
 
 
 # instance fields
-.field public final a:Loef;
+.field public X:Lro3;
+
+.field public Y:Lr82;
+
+.field public Z:Lqtb;
+
+.field public o:Lu0c;
+
+.field public r0:Lstb;
+
+.field public s0:Ljava/lang/Object;
+
+.field public t0:Ljava/util/List;
+
+.field public u0:Ljava/io/Serializable;
+
+.field public v0:Ljava/lang/Object;
+
+.field public w0:I
+
+.field public synthetic x0:Ljava/lang/Object;
+
+.field public final synthetic y0:Lu0c;
+
+.field public z0:I
 
 
 # direct methods
-.method public constructor <init>(Loef;)V
+.method public constructor <init>(Lu0c;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lq0c;->y0:Lu0c;
 
-    iput-object p1, p0, Lq0c;->a:Loef;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lq0c;->x0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lq0c;->z0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lq0c;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lq0c;->z0:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    iget-object v0, p0, Lq0c;->y0:Lu0c;
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/4 v3, 0x0
 
-    return v2
+    move-object v6, p0
 
-    :cond_1
-    check-cast p1, Lq0c;
+    invoke-virtual/range {v0 .. v6}, Lu0c;->f(Lro3;Lr82;Lqtb;Lstb;Ljava/lang/Long;Lwy3;)Ljava/io/Serializable;
 
-    iget-object v1, p0, Lq0c;->a:Loef;
+    move-result-object p1
 
-    iget-object p1, p1, Lq0c;->a:Loef;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lq0c;->a:Loef;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowRestoreMembersSnackbar(caption="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lq0c;->a:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

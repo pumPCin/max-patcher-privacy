@@ -1,26 +1,38 @@
 .class public final Lxm5;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
 .field public X:I
 
-.field public final synthetic Y:Lg0;
+.field public final synthetic Y:Lzm5;
+
+.field public final synthetic Z:J
+
+.field public final synthetic r0:J
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public constructor <init>(Lg0;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lzm5;JJJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lxm5;->Y:Lg0;
+    iput-object p1, p0, Lxm5;->Y:Lzm5;
+
+    iput-wide p2, p0, Lxm5;->Z:J
+
+    iput-wide p4, p0, Lxm5;->r0:J
+
+    iput-wide p6, p0, Lxm5;->s0:J
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p8}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +42,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +52,7 @@
 
     check-cast p1, Lxm5;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lxm5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,19 +62,27 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 9
 
-    new-instance p1, Lxm5;
+    new-instance v0, Lxm5;
 
-    iget-object v0, p0, Lxm5;->Y:Lg0;
+    iget-wide v4, p0, Lxm5;->r0:J
 
-    invoke-direct {p1, v0, p2}, Lxm5;-><init>(Lg0;Lkotlin/coroutines/Continuation;)V
+    iget-wide v6, p0, Lxm5;->s0:J
 
-    return-object p1
+    iget-object v1, p0, Lxm5;->Y:Lzm5;
+
+    iget-wide v2, p0, Lxm5;->Z:J
+
+    move-object v8, p2
+
+    invoke-direct/range {v0 .. v8}, Lxm5;-><init>(Lzm5;JJJLkotlin/coroutines/Continuation;)V
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 9
 
     iget v0, p0, Lxm5;->X:I
 
@@ -72,7 +92,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     return-object p1
 
@@ -86,47 +106,37 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iput v1, p0, Lxm5;->X:I
+    iget-object p1, p0, Lxm5;->Y:Lzm5;
 
-    new-instance p1, Lz12;
+    iget-object p1, p1, Lzm5;->b:Lyn7;
 
-    invoke-static {p0}, La1b;->v(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object v0
-
-    invoke-direct {p1, v1, v0}, Lz12;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {p1}, Lz12;->o()V
-
-    new-instance v0, Lvm5;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lxm5;->Y:Lg0;
-
-    invoke-direct {v0, v2, v1}, Lvm5;-><init>(Lg0;I)V
-
-    invoke-virtual {p1, v0}, Lz12;->e(Lxe6;)V
-
-    new-instance v0, Lwm5;
-
-    invoke-direct {v0, v1, p1}, Lwm5;-><init>(ILjava/lang/Object;)V
-
-    new-instance v1, Lmr;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v3}, Lmr;-><init>(I)V
-
-    invoke-virtual {v2, v0, v1}, Lg0;->m(Ls94;Ljava/util/concurrent/Executor;)V
-
-    invoke-virtual {p1}, Lz12;->n()Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    check-cast p1, Lcl;
+
+    new-instance v2, Lje2;
+
+    iget-wide v5, p0, Lxm5;->r0:J
+
+    iget-wide v7, p0, Lxm5;->s0:J
+
+    iget-wide v3, p0, Lxm5;->Z:J
+
+    invoke-direct/range {v2 .. v8}, Lje2;-><init>(JJJ)V
+
+    iput v1, p0, Lxm5;->X:I
+
+    check-cast p1, Lgea;
+
+    invoke-virtual {p1, v2, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
 
     if-ne p1, v0, :cond_2
 

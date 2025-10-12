@@ -1,196 +1,121 @@
-.class public final Lxzd;
-.super Lm3f;
+.class public final enum Lxzd;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final enum X:Lxzd;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum Y:Lxzd;
 
-.field public final synthetic Y:Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
+.field public static final synthetic Z:[Lxzd;
+
+.field public static final enum a:Lxzd;
+
+.field public static final enum b:Lxzd;
+
+.field public static final enum c:Lxzd;
+
+.field public static final enum o:Lxzd;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/ringtone/ui/SettingRingtoneScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
-    iput-object p2, p0, Lxzd;->Y:Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
+    new-instance v0, Lxzd;
 
-    const/4 p2, 0x2
+    const-string v1, "ACTION"
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lxzd;->a:Lxzd;
+
+    new-instance v1, Lxzd;
+
+    const-string v2, "SIMPLE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lxzd;->b:Lxzd;
+
+    new-instance v2, Lxzd;
+
+    const-string v3, "NEGATIVE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lxzd;->c:Lxzd;
+
+    new-instance v3, Lxzd;
+
+    const-string v4, "DISABLE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lxzd;->o:Lxzd;
+
+    new-instance v4, Lxzd;
+
+    const-string v5, "SIMPLE_TEXT_ONLY"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lxzd;->X:Lxzd;
+
+    new-instance v5, Lxzd;
+
+    const-string v6, "PROMO"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lxzd;->Y:Lxzd;
+
+    filled-new-array/range {v0 .. v5}, [Lxzd;
+
+    move-result-object v0
+
+    sput-object v0, Lxzd;->Z:[Lxzd;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lxzd;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lxzd;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p0, p1, p2}, Lxzd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p0
 
-    move-result-object p1
+    check-cast p0, Lxzd;
 
-    check-cast p1, Lxzd;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lxzd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static values()[Lxzd;
+    .locals 1
 
-    new-instance v0, Lxzd;
+    sget-object v0, Lxzd;->Z:[Lxzd;
 
-    iget-object v1, p0, Lxzd;->Y:Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, v1}, Lxzd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/ringtone/ui/SettingRingtoneScreen;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lxzd;->X:Ljava/lang/Object;
+    check-cast v0, [Lxzd;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxzd;->X:Ljava/lang/Object;
-
-    check-cast p1, Lhy9;
-
-    instance-of v0, p1, Ln4e;
-
-    iget-object v1, p0, Lxzd;->Y:Lone/me/settings/ringtone/ui/SettingRingtoneScreen;
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:[Ltm7;
-
-    :try_start_0
-    sget-object p1, Lvd7;->a:Ljava/lang/String;
-
-    new-instance p1, Landroid/content/Intent;
-
-    const-string v0, "android.intent.action.GET_CONTENT"
-
-    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "android.intent.category.OPENABLE"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v0, "audio/*"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    const/16 v0, 0x3e6
-
-    invoke-virtual {v1, p1, v0}, Lb04;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    new-instance p1, Lava;
-
-    invoke-direct {p1, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lt9d;->O1:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lava;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lava;->i()Lzua;
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lo4e;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lo4e;
-
-    iget-object p1, p1, Lo4e;->b:Ljava/lang/String;
-
-    sget-object v0, Lone/me/settings/ringtone/ui/SettingRingtoneScreen;->Y:[Ltm7;
-
-    :try_start_1
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v2, Lpua;->f:I
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Lvd7;->d(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-result-object p1
-
-    const/16 v0, 0x3e7
-
-    invoke-virtual {v1, p1, v0}, Lb04;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_1
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_0
-
-    :catch_1
-    new-instance p1, Lava;
-
-    invoke-direct {p1, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lt9d;->O1:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lava;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lava;->i()Lzua;
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lzc4;
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lp4e;->c:Lp4e;
-
-    check-cast p1, Lzc4;
-
-    invoke-virtual {v0, p1}, Lv2;->N0(Lzc4;)V
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

@@ -1,90 +1,267 @@
 .class public final Lsa9;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Lsa9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput p1, p0, Lsa9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p6, p0, Lsa9;->o:Ljava/lang/Object;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p2, p0, Lsa9;->b:J
+
+    iput-wide p4, p0, Lsa9;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lsa9;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lsa9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lsa9;->o:Ljava/lang/Object;
 
-    check-cast p1, Lsa9;
+    check-cast v0, Lspg;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v1, v0, Lspg;->e:Lu3d;
 
-    invoke-virtual {p1, p2}, Lsa9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lspg;->a:Lc4d;
 
-    return-object p2
-.end method
+    invoke-virtual {v1}, Le3;->a()Llc6;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v2
 
-    new-instance v0, Lsa9;
+    const/4 v3, 0x1
 
-    iget-object v1, p0, Lsa9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    int-to-long v4, v3
 
-    invoke-direct {v0, p2, v1}, Lsa9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
 
-    iput-object p1, v0, Lsa9;->X:Ljava/lang/Object;
+    const/4 v3, 0x2
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    const/4 v3, 0x3
+
+    iget-wide v4, p0, Lsa9;->b:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    const/4 v3, 0x4
+
+    iget-wide v4, p0, Lsa9;->c:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    :try_start_0
+    invoke-virtual {v0}, Lc4d;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v2}, Llc6;->n()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lc4d;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v0}, Lc4d;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    return-object v3
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v3
+
+    :try_start_3
+    invoke-virtual {v0}, Lc4d;->k()V
+
+    throw v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_0
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    throw v0
+
+    :pswitch_0
+    iget-object v0, p0, Lsa9;->o:Ljava/lang/Object;
+
+    check-cast v0, Lva9;
+
+    iget-object v1, v0, Lva9;->u:Lra9;
+
+    iget-object v0, v0, Lva9;->a:Lc4d;
+
+    invoke-virtual {v1}, Le3;->a()Llc6;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lsa9;->b:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    const/4 v3, 0x2
+
+    iget-wide v4, p0, Lsa9;->c:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    :try_start_4
+    invoke-virtual {v0}, Lc4d;->c()V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    :try_start_5
+    invoke-virtual {v2}, Llc6;->n()I
+
+    invoke-virtual {v0}, Lc4d;->q()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    :try_start_6
+    invoke-virtual {v0}, Lc4d;->k()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    sget-object v0, Laxf;->a:Laxf;
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    :catchall_2
+    move-exception v0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    goto :goto_1
 
-    iget-object p1, p0, Lsa9;->X:Ljava/lang/Object;
+    :catchall_3
+    move-exception v3
 
-    check-cast p1, Loyf;
+    :try_start_7
+    invoke-virtual {v0}, Lc4d;->k()V
 
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:[Ltm7;
+    throw v3
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    iget-object p1, p0, Lsa9;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    :goto_1
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
 
-    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0()Lh69;
+    throw v0
 
-    move-result-object v0
+    :pswitch_1
+    iget-object v0, p0, Lsa9;->o:Ljava/lang/Object;
 
-    new-instance v1, Lt01;
+    check-cast v0, Lva9;
 
-    const/4 v2, 0x7
+    iget-object v1, v0, Lva9;->t:Lra9;
 
-    invoke-direct {v1, v2, p1}, Lt01;-><init>(ILjava/lang/Object;)V
+    iget-object v0, v0, Lva9;->a:Lc4d;
 
-    invoke-static {v0, v1}, Lj40;->k(Landroid/view/ViewGroup;Lxe6;)V
+    invoke-virtual {v1}, Le3;->a()Llc6;
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-object v2
 
-    return-object p1
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lsa9;->b:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    const/4 v3, 0x2
+
+    iget-wide v4, p0, Lsa9;->c:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    :try_start_8
+    invoke-virtual {v0}, Lc4d;->c()V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    :try_start_9
+    invoke-virtual {v2}, Llc6;->n()I
+
+    invoke-virtual {v0}, Lc4d;->q()V
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_5
+
+    :try_start_a
+    invoke-virtual {v0}, Lc4d;->k()V
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_4
+
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    return-object v0
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_2
+
+    :catchall_5
+    move-exception v3
+
+    :try_start_b
+    invoke-virtual {v0}, Lc4d;->k()V
+
+    throw v3
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_4
+
+    :goto_2
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

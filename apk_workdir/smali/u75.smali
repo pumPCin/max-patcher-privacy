@@ -1,215 +1,218 @@
-.class public final Lu75;
+.class public final synthetic Lu75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lt75;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:Lws1;
+.field public final synthetic a:I
 
-.field public final Y:Lts1;
-
-.field public final Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final a:Landroid/media/MediaCodec;
-
-.field public final b:Landroid/media/MediaCodec$BufferInfo;
-
-.field public final c:I
-
-.field public final o:Ljava/nio/ByteBuffer;
+.field public final synthetic b:Lg85;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
-    .locals 2
+.method public synthetic constructor <init>(Lg85;I)V
+    .locals 0
+
+    iput p2, p0, Lu75;->a:I
+
+    iput-object p1, p0, Lu75;->b:Lg85;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object v0, p0, Lu75;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lu75;->a:Landroid/media/MediaCodec;
-
-    iput p2, p0, Lu75;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaCodec;->getOutputBuffer(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lu75;->o:Ljava/nio/ByteBuffer;
-
-    iput-object p3, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    new-instance p2, Lqt0;
-
-    const/4 p3, 0x2
-
-    invoke-direct {p2, p1, p3}, Lqt0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-
-    invoke-static {p2}, Lvr0;->k(Lus1;)Lws1;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lu75;->X:Lws1;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lts1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lu75;->Y:Lts1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F()Landroid/media/MediaCodec$BufferInfo;
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    iget-object v0, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
+    iget v0, p0, Lu75;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final J()Z
-    .locals 2
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v1, p0, Lu75;->b:Lg85;
 
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->flags:I
+    iput-boolean v0, v1, Lg85;->A:Z
 
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
+    iget-boolean v0, v1, Lg85;->z:Z
 
     if-eqz v0, :cond_0
 
-    return v1
+    iget-object v0, v1, Lg85;->e:Landroid/media/MediaCodec;
+
+    invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
+
+    invoke-virtual {v1}, Lg85;->h()V
 
     :cond_0
-    const/4 v0, 0x0
+    return-void
 
-    return v0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lu75;->b:Lg85;
 
-.method public final b0()J
-    .locals 2
+    iget v1, v0, Lg85;->D:I
 
-    iget-object v0, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget-wide v0, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
-
-    return-wide v0
-.end method
-
-.method public final close()V
-    .locals 4
-
-    iget-object v0, p0, Lu75;->Y:Lts1;
-
-    iget-object v1, p0, Lu75;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+    invoke-static {v1}, Lsw1;->u(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    packed-switch v1, :pswitch_data_1
 
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    iget v0, v0, Lg85;->D:I
+
+    invoke-static {v0}, Lc85;->r(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "Unknown state: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :pswitch_1
+    const/4 v1, 0x7
+
+    invoke-virtual {v0, v1}, Lg85;->i(I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    invoke-virtual {v0}, Lg85;->f()V
+
+    :goto_0
+    :pswitch_3
     return-void
 
-    :cond_0
-    :try_start_0
-    iget-object v1, p0, Lu75;->a:Landroid/media/MediaCodec;
+    :pswitch_4
+    iget-object v0, p0, Lu75;->b:Lg85;
 
-    iget v2, p0, Lu75;->c:I
+    iget v1, v0, Lg85;->D:I
 
-    const/4 v3, 0x0
+    invoke-static {v1}, Lsw1;->u(I)I
 
-    invoke-virtual {v1, v2, v3}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Lts1;->b(Ljava/lang/Object;)Z
+    if-eq v1, v2, :cond_2
 
-    return-void
+    const/4 v0, 0x6
 
-    :catch_0
-    move-exception v1
+    if-eq v1, v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lts1;->d(Ljava/lang/Throwable;)Z
+    const/16 v0, 0x8
 
-    return-void
-.end method
+    if-eq v1, v0, :cond_1
 
-.method public final r()Ljava/nio/ByteBuffer;
-    .locals 3
+    goto :goto_1
 
-    iget-object v0, p0, Lu75;->Z:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    iget-object v2, p0, Lu75;->o:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    iget v1, v0, Landroid/media/MediaCodec$BufferInfo;->offset:I
-
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    add-int/2addr v1, v0
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    return-object v2
-
-    :cond_0
+    :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "encoded data is closed."
+    const-string v1, "Encoder is released"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
-.end method
 
-.method public final size()J
-    .locals 2
+    :cond_2
+    invoke-virtual {v0}, Lg85;->g()V
 
-    iget-object v0, p0, Lu75;->b:Landroid/media/MediaCodec$BufferInfo;
+    :goto_1
+    return-void
 
-    iget v0, v0, Landroid/media/MediaCodec$BufferInfo;->size:I
+    :pswitch_5
+    iget-object v0, p0, Lu75;->b:Lg85;
 
-    int-to-long v0, v0
+    iget-boolean v1, v0, Lg85;->v:Z
 
-    return-wide v0
+    if-eqz v1, :cond_3
+
+    iget-object v1, v0, Lg85;->a:Ljava/lang/String;
+
+    const-string v2, "The data didn\'t reach the expected timestamp before timeout, stop the codec."
+
+    invoke-static {v1, v2}, Lnc6;->H(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lg85;->w:Ljava/lang/Long;
+
+    invoke-virtual {v0}, Lg85;->j()V
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lg85;->v:Z
+
+    :cond_3
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lu75;->b:Lg85;
+
+    iget-object v1, v0, Lg85;->h:Llqd;
+
+    new-instance v2, Lu75;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v3}, Lu75;-><init>(Lg85;I)V
+
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lu75;->b:Lg85;
+
+    invoke-virtual {v0}, Lg85;->a()Lbw7;
+
+    move-result-object v1
+
+    new-instance v2, Lw9h;
+
+    const/16 v3, 0xc
+
+    invoke-direct {v2, v3, v0}, Lw9h;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, v0, Lg85;->h:Llqd;
+
+    invoke-static {v1, v2, v0}, Lq5h;->a(Lbw7;Ljf6;Ljava/util/concurrent/Executor;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_3
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

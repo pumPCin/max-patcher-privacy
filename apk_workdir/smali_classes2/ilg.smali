@@ -1,88 +1,93 @@
-.class public abstract Lilg;
-.super Ljava/lang/Object;
+.class public final Lilg;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic X:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {}, Lpih;->a()Lp1f;
-
-    move-result-object v0
-
-    sget-object v1, Ljs4;->a:Luj4;
-
-    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Le88;
-
-    invoke-virtual {v1}, Le88;->getImmediate()Le88;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lw24;->plus(Lw24;)Lw24;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    return-void
-.end method
-
-.method public static n(Lilg;Lw24;Llf6;I)Lqle;
-    .locals 1
-
-    and-int/lit8 v0, p3, 0x1
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lv65;->a:Lv65;
-
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_1
-
-    sget-object p3, Lh34;->a:Lh34;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p3, Lh34;->b:Lh34;
-
-    :goto_0
-    iget-object p0, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p0, p1, p3, p2}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static o(Ljb5;Ljava/lang/Object;)V
+.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iget-object p0, p0, Ljb5;->b:Le8e;
+    iput-object p1, p0, Lilg;->X:Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1}, Le8e;->h(Ljava/lang/Object;)Z
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public p()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lku5;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lilg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lilg;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lilg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lilg;
+
+    iget-object v0, p0, Lilg;->X:Landroid/widget/TextView;
+
+    invoke-direct {p1, v0, p2}, Lilg;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lilg;->X:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v1, Lrw4;->t0:Lss6;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lss6;->u(Landroid/content/Context;)Lrw4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lrw4;->l()Llwa;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lpu0;->e(Ljava/lang/CharSequence;Llwa;)V
+
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

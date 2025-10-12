@@ -1,241 +1,245 @@
-.class public abstract Lym;
-.super Ljava/lang/Object;
+.class public final Lym;
+.super Lr4;
 .source "SourceFile"
 
 
-# static fields
-.field public static X:Ljava/lang/Boolean;
+# instance fields
+.field public final synthetic d:Ldn;
 
-.field public static Y:Z
+.field public final synthetic e:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static final Z:Lgs;
-
-.field public static final a:Lgsd;
-
-.field public static final b:I
-
-.field public static c:Lf28;
-
-.field public static o:Lf28;
-
-.field public static final w0:Ljava/lang/Object;
-
-.field public static final x0:Ljava/lang/Object;
+.field public final synthetic f:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Ldn;Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
+    .locals 0
 
-    new-instance v0, Lgsd;
+    iput-object p1, p0, Lym;->f:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
 
-    new-instance v1, Lgr4;
+    iput-object p2, p0, Lym;->d:Ldn;
 
-    const/4 v2, 0x4
+    iput-object p3, p0, Lym;->e:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-direct {v1, v2}, Lgr4;-><init>(I)V
-
-    invoke-direct {v0, v1}, Lgsd;-><init>(Lgr4;)V
-
-    sput-object v0, Lym;->a:Lgsd;
-
-    const/16 v0, -0x64
-
-    sput v0, Lym;->b:I
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lym;->c:Lf28;
-
-    sput-object v0, Lym;->o:Lf28;
-
-    sput-object v0, Lym;->X:Ljava/lang/Boolean;
-
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lym;->Y:Z
-
-    new-instance v1, Lgs;
-
-    invoke-direct {v1, v0}, Lgs;-><init>(I)V
-
-    sput-object v1, Lym;->Z:Lgs;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lym;->w0:Ljava/lang/Object;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lym;->x0:Ljava/lang/Object;
+    invoke-direct {p0}, Lr4;-><init>()V
 
     return-void
-.end method
-
-.method public static c(Landroid/content/Context;)Z
-    .locals 4
-
-    sget-object v0, Lym;->X:Ljava/lang/Boolean;
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    sget v0, Lip;->a:I
-
-    invoke-static {}, Lhp;->a()I
-
-    move-result v0
-
-    or-int/lit16 v0, v0, 0x80
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v1
-
-    new-instance v2, Landroid/content/ComponentName;
-
-    const-class v3, Lip;
-
-    invoke-direct {v2, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getServiceInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;
-
-    move-result-object p0
-
-    iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
-
-    if-eqz p0, :cond_0
-
-    const-string v0, "autoStoreLocales"
-
-    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    sput-object p0, Lym;->X:Ljava/lang/Boolean;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const-string p0, "AppCompatDelegate"
-
-    const-string v0, "Checking for metadata for AppLocalesMetadataHolderService : Service not found"
-
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    sput-object p0, Lym;->X:Ljava/lang/Boolean;
-
-    :cond_0
-    :goto_0
-    sget-object p0, Lym;->X:Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static g(Lkn;)V
-    .locals 3
-
-    sget-object v0, Lym;->w0:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lym;->Z:Lgs;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lzr;
-
-    invoke-direct {v2, v1}, Lzr;-><init>(Lgs;)V
-
-    :cond_0
-    :goto_0
-    invoke-virtual {v2}, Lzr;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v2}, Lzr;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lym;
-
-    if-eq v1, p0, :cond_1
-
-    if-nez v1, :cond_0
-
-    :cond_1
-    invoke-virtual {v2}, Lzr;->remove()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_2
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public abstract a()V
+.method public final d(Landroid/view/View;Le5;)V
+    .locals 5
+
+    iget-object v0, p0, Lr4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    iget-object v1, p2, Le5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const-class p1, Landroid/widget/ScrollView;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Le5;->h(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p0, Lym;->d:Ldn;
+
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v0, p0, Lym;->e:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v1, p0, Lym;->f:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    invoke-static {v1, v0}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->A(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_5
+
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    check-cast v4, Lbn;
+
+    iget v4, v4, Lbn;->a:I
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Ldn;->getTotalScrollRange()I
+
+    move-result v3
+
+    neg-int v3, v3
+
+    const/4 v4, 0x1
+
+    if-eq v2, v3, :cond_2
+
+    sget-object v2, Ly4;->f:Ly4;
+
+    invoke-virtual {p2, v2}, Le5;->b(Ly4;)V
+
+    invoke-virtual {p2, v4}, Le5;->j(Z)V
+
+    :cond_2
+    invoke-virtual {v1}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->canScrollVertically(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p1}, Ldn;->getDownNestedPreScrollRange()I
+
+    move-result p1
+
+    neg-int p1, p1
+
+    if-eqz p1, :cond_5
+
+    sget-object p1, Ly4;->g:Ly4;
+
+    invoke-virtual {p2, p1}, Le5;->b(Ly4;)V
+
+    invoke-virtual {p2, v4}, Le5;->j(Z)V
+
+    return-void
+
+    :cond_3
+    sget-object p1, Ly4;->g:Ly4;
+
+    invoke-virtual {p2, p1}, Le5;->b(Ly4;)V
+
+    invoke-virtual {p2, v4}, Le5;->j(Z)V
+
+    return-void
+
+    :cond_4
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_5
+    :goto_1
+    return-void
 .end method
 
-.method public abstract b()V
-.end method
+.method public final g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 12
 
-.method public abstract d()V
-.end method
+    const/16 v0, 0x1000
 
-.method public abstract f()V
-.end method
+    iget-object v1, p0, Lym;->d:Ldn;
 
-.method public abstract h(I)Z
-.end method
+    const/4 v2, 0x1
 
-.method public abstract i(I)V
-.end method
+    const/4 v3, 0x0
 
-.method public abstract j(Landroid/view/View;)V
-.end method
+    if-ne p2, v0, :cond_0
 
-.method public abstract k(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-.end method
+    invoke-virtual {v1, v3}, Ldn;->setExpanded(Z)V
 
-.method public abstract l(Ljava/lang/CharSequence;)V
+    return v2
+
+    :cond_0
+    const/16 v0, 0x2000
+
+    if-ne p2, v0, :cond_3
+
+    iget-object v4, p0, Lym;->f:Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;
+
+    invoke-virtual {v4}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->D()I
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object v5, p0, Lym;->e:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    invoke-static {v4, v5}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->A(Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;Landroidx/coordinatorlayout/widget/CoordinatorLayout;)Landroid/view/View;
+
+    move-result-object v7
+
+    const/4 p1, -0x1
+
+    invoke-virtual {v7, p1}, Landroid/view/View;->canScrollVertically(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v1}, Ldn;->getDownNestedPreScrollRange()I
+
+    move-result p1
+
+    neg-int v9, p1
+
+    if-eqz v9, :cond_2
+
+    filled-new-array {v3, v3}, [I
+
+    move-result-object v10
+
+    const/4 v11, 0x1
+
+    iget-object v6, p0, Lym;->d:Ldn;
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v4 .. v11}, Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior;->E(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Ldn;Landroid/view/View;II[II)V
+
+    return v2
+
+    :cond_1
+    invoke-virtual {v1, v2}, Ldn;->setExpanded(Z)V
+
+    return v2
+
+    :cond_2
+    return v3
+
+    :cond_3
+    invoke-super {p0, p1, p2, p3}, Lr4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
 .end method

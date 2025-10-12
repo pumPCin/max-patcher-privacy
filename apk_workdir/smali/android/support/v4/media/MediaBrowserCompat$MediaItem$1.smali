@@ -40,6 +40,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
     .locals 1
 
+    .line 2
     new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     invoke-direct {v0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/os/Parcel;)V
@@ -50,6 +51,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$1;->createFromParcel(Landroid/os/Parcel;)Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object p1
@@ -60,6 +62,7 @@
 .method public newArray(I)[Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
     .locals 0
 
+    .line 2
     new-array p1, p1, [Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     return-object p1
@@ -68,6 +71,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
+    .line 1
     invoke-virtual {p0, p1}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem$1;->newArray(I)[Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
 
     move-result-object p1

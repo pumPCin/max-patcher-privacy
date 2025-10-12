@@ -4,20 +4,24 @@
 
 
 # instance fields
-.field public final a:Lpa0;
+.field public final a:J
 
-.field public final b:Lpa0;
+.field public final b:J
+
+.field public final c:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Lpa0;Lpa0;)V
+.method public constructor <init>(JJLjava/io/File;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lq90;->a:Lpa0;
+    iput-wide p1, p0, Lq90;->a:J
 
-    iput-object p2, p0, Lq90;->b:Lpa0;
+    iput-wide p3, p0, Lq90;->b:J
+
+    iput-object p5, p0, Lq90;->c:Ljava/io/File;
 
     return-void
 .end method
@@ -27,55 +31,66 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    const/4 v0, 0x1
-
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lq90;
+    instance-of v0, p1, Lq90;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Lq90;
 
-    iget-object v1, p0, Lq90;->a:Lpa0;
+    iget-wide v0, p0, Lq90;->a:J
 
-    iget-object v3, p1, Lq90;->a:Lpa0;
+    iget-wide v2, p1, Lq90;->a:J
 
-    invoke-virtual {v1, v3}, Lpa0;->equals(Ljava/lang/Object;)Z
+    cmp-long v0, v0, v2
 
-    move-result v1
+    if-nez v0, :cond_1
 
-    if-eqz v1, :cond_1
+    iget-wide v0, p0, Lq90;->b:J
 
-    iget-object v1, p0, Lq90;->b:Lpa0;
+    iget-wide v2, p1, Lq90;->b:J
 
-    iget-object p1, p1, Lq90;->b:Lpa0;
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v1, p1}, Lpa0;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lq90;->c:Ljava/io/File;
+
+    iget-object p1, p1, Lq90;->c:Ljava/io/File;
+
+    invoke-virtual {v0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    return v0
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
-    return v2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 5
 
-    iget-object v0, p0, Lq90;->a:Lpa0;
+    iget-wide v0, p0, Lq90;->a:J
 
-    invoke-virtual {v0}, Lpa0;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -83,9 +98,23 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lq90;->b:Lpa0;
+    iget-wide v3, p0, Lq90;->b:J
 
-    invoke-virtual {v1}, Lpa0;->hashCode()I
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    xor-int/2addr v0, v1
+
+    const v1, -0x2aff6277
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lq90;->c:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->hashCode()I
 
     move-result v1
 
@@ -95,23 +124,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "DualOutConfig{primaryOutConfig="
+    const-string v1, "FileOutputOptionsInternal{fileSizeLimit="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lq90;->a:Lpa0;
+    iget-wide v1, p0, Lq90;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", secondaryOutConfig="
+    const-string v1, ", durationLimitMillis="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lq90;->b:Lpa0;
+    iget-wide v1, p0, Lq90;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", location=null, file="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lq90;->c:Ljava/io/File;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

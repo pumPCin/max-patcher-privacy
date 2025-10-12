@@ -4,14 +4,8 @@
 
 
 # virtual methods
-.method public c()V
-    .locals 0
-
-    return-void
+.method public abstract A(I)V
 .end method
 
-.method public h(Lin6;J)V
-    .locals 0
-
-    return-void
+.method public abstract onConnected()V
 .end method

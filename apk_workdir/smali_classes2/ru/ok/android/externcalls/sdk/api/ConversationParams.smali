@@ -6,10 +6,10 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "ConversationParams"
 
-.field public static final PARSER:Lpl7;
+.field public static final PARSER:Llk7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 .end field
@@ -53,13 +53,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lt14;
+    new-instance v0, Lix1;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x1a
 
-    invoke-direct {v0, v1}, Lt14;-><init>(I)V
+    invoke-direct {v0, v1}, Lix1;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lpl7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Llk7;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method public static synthetic a(Lrk7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lrk7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
     move-result-object p0
 
@@ -456,7 +456,7 @@
     return-object v4
 .end method
 
-.method private static parseCallParams(Lvl7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method private static parseCallParams(Lrk7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -466,7 +466,7 @@
     .end annotation
 
     .line 36
-    invoke-static {p0}, Lkjd;->B(Lvl7;)Lorg/json/JSONObject;
+    invoke-static {p0}, Lug5;->r(Lrk7;)Lorg/json/JSONObject;
 
     move-result-object p0
 
@@ -816,7 +816,7 @@
 
     const-string v2, "\'}"
 
-    invoke-static {v0, v1, v2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

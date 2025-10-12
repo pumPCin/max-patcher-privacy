@@ -1,53 +1,78 @@
-.class public final Ldjf;
-.super Lnz3;
+.class public final synthetic Ldjf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public X:Ljava/nio/ByteBuffer;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lsjf;
-
-.field public o:Lsjf;
-
-.field public w0:I
+.field public final synthetic b:Lxwa;
 
 
 # direct methods
-.method public constructor <init>(Lsjf;Lnz3;)V
+.method public synthetic constructor <init>(Lxwa;I)V
     .locals 0
 
-    iput-object p1, p0, Ldjf;->Z:Lsjf;
+    iput p2, p0, Ldjf;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldjf;->b:Lxwa;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iput-object p1, p0, Ldjf;->Y:Ljava/lang/Object;
+    iget v0, p0, Ldjf;->a:I
 
-    iget p1, p0, Ldjf;->w0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ldjf;->b:Lxwa;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lvwa;
 
-    iput p1, p0, Ldjf;->w0:I
+    iget-object v0, v0, Lvwa;->a:Lcxa;
 
-    iget-object p1, p0, Ldjf;->Z:Lsjf;
+    iget-object v0, v0, Lcxa;->b:Lvd6;
 
-    const/4 v0, 0x0
+    invoke-interface {v0, p1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lsjf;->b(Ljava/nio/ByteBuffer;Lnz3;)Ljava/lang/Object;
+    return-void
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Ldjf;->b:Lxwa;
 
-    return-object p1
+    check-cast v0, Lswa;
+
+    iget-object v0, v0, Lswa;->a:Lvd6;
+
+    invoke-interface {v0, p1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldjf;->b:Lxwa;
+
+    check-cast v0, Lrwa;
+
+    iget-object v0, v0, Lrwa;->a:Lvd6;
+
+    invoke-interface {v0, p1}, Lvd6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

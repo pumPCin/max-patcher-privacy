@@ -1,250 +1,188 @@
-.class public final Ltz0;
-.super Lzce;
+.class public final synthetic Ltz0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public final X:Lzde;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj01;
 
 
 # direct methods
-.method public constructor <init>(Lzde;Ljava/util/concurrent/ExecutorService;)V
+.method public synthetic constructor <init>(Lj01;I)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
+    iput p2, p0, Ltz0;->a:I
 
-    iput-object p1, p0, Ltz0;->X:Lzde;
+    iput-object p1, p0, Ltz0;->b:Lj01;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H(Ltde;I)V
-    .locals 5
+.method public final invoke()Ljava/lang/Object;
+    .locals 6
 
-    instance-of v0, p1, Lsz0;
+    iget v0, p0, Ltz0;->a:I
 
-    if-eqz v0, :cond_2
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lsz0;
+    iget-object v0, p0, Ltz0;->b:Lj01;
 
-    iget-object v0, p1, Lnxc;->a:Landroid/view/View;
-
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lww7;
-
-    instance-of v1, p2, Lv01;
+    sget-object v1, Lyt3;->n:Lhoa;
 
     if-nez v1, :cond_0
 
-    return-void
+    goto :goto_0
 
     :cond_0
-    move-object v1, v0
+    sget-object v2, Lr28;->o:Lr28;
 
-    check-cast v1, Ls1e;
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
 
-    sget-object v2, Lo1e;->b:Lo1e;
+    move-result v3
 
-    invoke-virtual {v1, v2}, Ls1e;->setThemeDepended(Lo1e;)V
+    if-eqz v3, :cond_1
 
-    invoke-virtual {p1, p2}, Lsz0;->x(Lww7;)V
-
-    move-object v2, p2
-
-    check-cast v2, Lv01;
-
-    iget-boolean v2, v2, Lv01;->x0:Z
-
-    iget-object v3, p0, Ltz0;->X:Lzde;
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
-
-    new-instance v2, Lrz0;
-
-    check-cast p2, Lv01;
+    const-string v3, "Disable microphone for all once was success"
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, p1, v3, p2, v4}, Lrz0;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    const-string v5, "CallAdminSettingsController"
 
-    invoke-static {v0, v2}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
+    invoke-virtual {v1, v2, v5, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
     :goto_0
-    new-instance p1, Lfk;
+    iget-object v0, v0, Lj01;->C0:Lt6e;
 
-    const/4 p2, 0x2
+    new-instance v1, Lza;
 
-    invoke-direct {p1, p2, v3}, Lfk;-><init>(ILjava/lang/Object;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {v1, p1}, Ls1e;->setOnSwitchCheckedListener(Llf6;)V
+    invoke-direct {v1, v2}, Lza;-><init>(Z)V
 
-    return-void
+    invoke-virtual {v0, v1}, Lt6e;->h(Ljava/lang/Object;)Z
 
-    :cond_2
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
+    :goto_1
+    sget-object v0, Laxf;->a:Laxf;
 
-    move-result-object p2
+    return-object v0
 
-    check-cast p2, Lww7;
+    :pswitch_0
+    iget-object v0, p0, Ltz0;->b:Lj01;
 
-    invoke-virtual {p1, p2}, Ltde;->x(Lww7;)V
+    sget-object v1, Lyt3;->n:Lhoa;
 
-    return-void
-.end method
+    if-nez v1, :cond_2
 
-.method public final bridge synthetic r(Lnxc;I)V
-    .locals 0
-
-    check-cast p1, Ltde;
-
-    invoke-virtual {p0, p1, p2}, Ltz0;->H(Ltde;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
-    .locals 2
-
-    sget v0, Lxja;->g:I
-
-    if-ne p2, v0, :cond_0
-
-    new-instance p2, Lsz0;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Ls1e;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Ls1e;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p2, v0}, Lnxc;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :cond_0
-    sget v0, Lxja;->f:I
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    if-ne p2, v0, :cond_1
-
-    new-instance p2, Lqz0;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget-object p1, Lrxf;->w:Lpef;
-
-    invoke-static {p1, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    invoke-virtual {v1, v0}, Lsed;->o(Landroid/view/View;)Lloa;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lloa;->c:Luxa;
-
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
-
-    move-result-object p1
-
-    iget p1, p1, Lbdf;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/4 p1, 0x1
-
-    invoke-direct {p2, v0, p1}, Lqz0;-><init>(Landroid/view/View;I)V
-
-    return-object p2
-
-    :cond_1
-    sget v0, Lxja;->e:I
-
-    if-ne p2, v0, :cond_2
-
-    new-instance p2, Lqz0;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Landroid/widget/TextView;
-
-    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
-
-    sget-object p1, Lrxf;->p:Lpef;
-
-    invoke-static {p1, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    invoke-virtual {v1, v0}, Lsed;->o(Landroid/view/View;)Lloa;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lloa;->c:Luxa;
-
-    invoke-interface {p1}, Luxa;->getText()Lbdf;
-
-    move-result-object p1
-
-    iget p1, p1, Lbdf;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const/4 p1, 0x0
-
-    invoke-direct {p2, v0, p1}, Lqz0;-><init>(Landroid/view/View;I)V
-
-    return-object p2
+    goto :goto_2
 
     :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v2, Lr28;->o:Lr28;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
 
-    const-string v1, "unknown item viewType "
+    move-result v3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v3, :cond_3
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v3, "Disable cameras for all once was success"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v4, 0x0
 
-    move-result-object p2
+    const-string v5, "CallAdminSettingsController"
 
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2, v5, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object p2
+    :cond_3
+    :goto_2
+    iget-object v0, v0, Lj01;->C0:Lt6e;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v1, Lxa;
 
-    throw p1
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lxa;-><init>(Z)V
+
+    invoke-virtual {v0, v1}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :pswitch_1
+    iget-object v0, p0, Ltz0;->b:Lj01;
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    sget-object v2, Lr28;->o:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    const-string v3, "Low hands for all success."
+
+    const/4 v4, 0x0
+
+    const-string v5, "CallAdminSettingsController"
+
+    invoke-virtual {v1, v2, v5, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_5
+    :goto_3
+    iget-object v0, v0, Lj01;->C0:Lt6e;
+
+    new-instance v1, Lab;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lab;-><init>(Z)V
+
+    invoke-virtual {v0, v1}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :pswitch_2
+    iget-object v0, p0, Ltz0;->b:Lj01;
+
+    new-instance v1, Lf01;
+
+    invoke-direct {v1, v0}, Lf01;-><init>(Lj01;)V
+
+    return-object v1
+
+    :pswitch_3
+    iget-object v0, p0, Ltz0;->b:Lj01;
+
+    new-instance v1, Lxz0;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, v2}, Lxz0;-><init>(Lgp1;I)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

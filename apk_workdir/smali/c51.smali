@@ -1,185 +1,177 @@
 .class public final Lc51;
-.super Lgd4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld51;
 
-# static fields
-.field public static final b:Lc51;
 
-.field public static final c:Lbd4;
+# instance fields
+.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-.field public static final d:Lbd4;
+.field public final b:I
 
-.field public static final e:Lbd4;
+.field public final c:I
 
-.field public static final f:Lbd4;
+.field public final d:I
 
-.field public static final g:Lbd4;
+.field public final e:Lxcf;
 
-.field public static final h:Lbd4;
-
-.field public static final i:Lbd4;
-
-.field public static final j:Lbd4;
-
-.field public static final k:Lbd4;
-
-.field public static final l:Lbd4;
-
-.field public static final m:Lbd4;
+.field public final f:Lxcf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    .locals 1
 
-    new-instance v0, Lc51;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lgd4;-><init>()V
+    iput-object p1, p0, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    sput-object v0, Lc51;->b:Lc51;
+    sget p1, Leia;->H:I
 
-    const-string v1, "opponent_id"
+    iput p1, p0, Lc51;->b:I
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    sget p1, Ldia;->M:I
 
-    move-result-object v1
+    iput p1, p0, Lc51;->c:I
 
-    const-string v2, ":call-user"
+    sget p1, Ldia;->L:I
 
-    const/4 v3, 0x0
+    iput p1, p0, Lc51;->d:I
 
-    const/16 v4, 0xe
+    sget p1, Lhia;->y2:I
 
-    invoke-static {v0, v2, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    new-instance v0, Lxcf;
 
-    move-result-object v1
+    invoke-direct {v0, p1}, Lxcf;-><init>(I)V
 
-    sput-object v1, Lc51;->c:Lbd4;
+    iput-object v0, p0, Lc51;->e:Lxcf;
 
-    const-string v1, "link"
+    iput-object v0, p0, Lc51;->f:Lxcf;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v2
 
-    const-string v5, ":call-join-link"
+# virtual methods
+.method public final a()I
+    .locals 1
 
-    invoke-static {v0, v5, v2, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    iget v0, p0, Lc51;->c:I
 
-    move-result-object v2
+    return v0
+.end method
 
-    sput-object v2, Lc51;->d:Lbd4;
+.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    .locals 1
 
-    const-string v2, "chat_id"
+    iget-object v0, p0, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    const-string v6, ":call-chat"
+    const/4 v0, 0x1
 
-    invoke-static {v0, v6, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v5
+    return v0
 
-    sput-object v5, Lc51;->e:Lbd4;
-
-    const-string v5, "call_name"
-
-    filled-new-array {v2, v5}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, ":call-incoming"
-
-    invoke-static {v0, v5, v2, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
-
-    move-result-object v2
-
-    sput-object v2, Lc51;->f:Lbd4;
+    :cond_0
+    instance-of v1, p1, Lc51;
 
     const/4 v2, 0x0
 
-    new-array v5, v2, [Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    const-string v6, ":call-active"
+    return v2
 
-    invoke-static {v0, v6, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    :cond_1
+    check-cast p1, Lc51;
 
-    move-result-object v5
+    iget-object v1, p0, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    sput-object v5, Lc51;->g:Lbd4;
+    iget-object p1, p1, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    const-string v5, ":call-join-preview"
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result p1
 
-    move-result-object v1
+    if-nez p1, :cond_2
 
-    invoke-static {v0, v5, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    return v2
 
-    move-result-object v1
+    :cond_2
+    return v0
+.end method
 
-    sput-object v1, Lc51;->h:Lbd4;
+.method public final getContentDescription()Lcdf;
+    .locals 1
 
-    const-string v1, ":call-opponents-list"
+    iget-object v0, p0, Lc51;->f:Lxcf;
 
-    new-array v5, v2, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {v0, v1, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+.method public final getIcon()I
+    .locals 1
 
-    move-result-object v1
+    iget v0, p0, Lc51;->d:I
 
-    sput-object v1, Lc51;->i:Lbd4;
+    return v0
+.end method
 
-    const-string v1, ":call-admin-settings"
+.method public final getId()I
+    .locals 1
 
-    new-array v5, v2, [Ljava/lang/String;
+    iget v0, p0, Lc51;->b:I
 
-    invoke-static {v0, v1, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final getTitle()Lcdf;
+    .locals 1
 
-    sput-object v1, Lc51;->j:Lbd4;
+    iget-object v0, p0, Lc51;->e:Lxcf;
 
-    const-string v1, ":call-pip"
+    return-object v0
+.end method
 
-    new-array v5, v2, [Ljava/lang/String;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-static {v0, v1, v5, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    iget-object v0, p0, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
 
-    sput-object v1, Lc51;->k:Lbd4;
+    move-result v0
 
-    const-string v1, ":call-admin-waiting-room"
+    return v0
+.end method
 
-    new-array v2, v2, [Ljava/lang/String;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {v0, v1, v2, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, "WiredHeadset(device="
 
-    sput-object v1, Lc51;->l:Lbd4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "is_group"
+    iget-object v1, p0, Lc51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    const-string v2, "is_video"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v5, "call_id"
+    const-string v1, ")"
 
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    const-string v2, ":call-rate"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lgd4;->a(Lgd4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lbd4;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lc51;->m:Lbd4;
-
-    return-void
+    return-object v0
 .end method

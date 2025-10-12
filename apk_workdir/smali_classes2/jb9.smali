@@ -1,48 +1,96 @@
-.class public final Ljb9;
-.super Lnz3;
+.class public final synthetic Ljb9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:I
 
-.field public final synthetic Y:Lgb9;
+.field public final synthetic Y:Ljava/lang/CharSequence;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Z:Z
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lqb9;
+
+.field public final synthetic c:Lr82;
+
+.field public final synthetic o:Lp19;
 
 
 # direct methods
-.method public constructor <init>(Lgb9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lqb9;Lr82;Lp19;ILjava/lang/CharSequence;ZI)V
     .locals 0
 
-    iput-object p1, p0, Ljb9;->Y:Lgb9;
+    iput p7, p0, Ljb9;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljb9;->b:Lqb9;
+
+    iput-object p2, p0, Ljb9;->c:Lr82;
+
+    iput-object p3, p0, Ljb9;->o:Lp19;
+
+    iput p4, p0, Ljb9;->X:I
+
+    iput-object p5, p0, Ljb9;->Y:Ljava/lang/CharSequence;
+
+    iput-boolean p6, p0, Ljb9;->Z:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    iput-object p1, p0, Ljb9;->o:Ljava/lang/Object;
+    iget v0, p0, Ljb9;->a:I
 
-    iget p1, p0, Ljb9;->X:I
+    iget-object v5, p0, Ljb9;->Y:Ljava/lang/CharSequence;
 
-    const/high16 v0, -0x80000000
+    iget-boolean v6, p0, Ljb9;->Z:Z
 
-    or-int/2addr p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput p1, p0, Ljb9;->X:I
+    iget-object v1, p0, Ljb9;->b:Lqb9;
 
-    iget-object p1, p0, Ljb9;->Y:Lgb9;
+    iget-object v2, p0, Ljb9;->c:Lr82;
 
-    const/4 v0, 0x0
+    iget-object v3, p0, Ljb9;->o:Lp19;
 
-    invoke-virtual {p1, v0, p0}, Lgb9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v4, p0, Ljb9;->X:I
 
-    move-result-object p1
+    invoke-virtual/range {v1 .. v6}, Lqb9;->b(Lr82;Lp19;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v1, p0, Ljb9;->b:Lqb9;
+
+    iget-object v2, p0, Ljb9;->c:Lr82;
+
+    iget-object v3, p0, Ljb9;->o:Lp19;
+
+    iget v4, p0, Ljb9;->X:I
+
+    invoke-virtual/range {v1 .. v6}, Lqb9;->b(Lr82;Lp19;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

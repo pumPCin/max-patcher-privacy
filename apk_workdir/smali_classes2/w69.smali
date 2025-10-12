@@ -1,67 +1,106 @@
-.class public abstract synthetic Lw69;
+.class public final synthetic Lw69;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltd6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/text/Layout;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Landroid/text/Layout;)V
+    .locals 1
 
-    invoke-static {}, Lv69;->values()[Lv69;
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lw69;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lw69;->b:Landroid/text/Layout;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ly69;Landroid/text/Layout;)V
+    .locals 0
+
+    .line 1
+    const/4 p1, 0x1
+
+    iput p1, p0, Lw69;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lw69;->b:Landroid/text/Layout;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lw69;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lw69;->b:Landroid/text/Layout;
+
+    invoke-virtual {v0}, Landroid/text/Layout;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    array-length v0, v0
+    instance-of v1, v0, Landroid/text/Spanned;
 
-    new-array v0, v0, [I
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x1
+    check-cast v0, Landroid/text/Spanned;
 
-    const/4 v2, 0x0
+    goto :goto_0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_0
+    const/4 v0, 0x0
 
-    :catch_0
-    const/4 v2, 0x2
+    :goto_0
+    const/4 v1, 0x0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    if-eqz v0, :cond_1
 
-    :catch_1
-    const/4 v1, 0x3
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result v2
 
-    :catch_2
-    const/4 v2, 0x4
+    const-class v3, Lk8c;
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-interface {v0, v1, v2, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
-    :catch_3
-    const/4 v1, 0x5
+    move-result-object v0
 
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    if-nez v0, :cond_2
 
-    :catch_4
-    sput-object v0, Lw69;->$EnumSwitchMapping$0:[I
+    :cond_1
+    new-array v0, v1, [Lk8c;
 
-    return-void
+    :cond_2
+    check-cast v0, [Lk8c;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lw69;->b:Landroid/text/Layout;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,21 +1,16 @@
-.class public final Ll51;
-.super Lbp;
+.class public interface abstract Ll51;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw51;
 
-# static fields
-.field public static final a:Ll51;
 
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public getPriority()I
     .locals 1
 
-    new-instance v0, Ll51;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lbp;-><init>()V
-
-    sput-object v0, Ll51;->a:Ll51;
-
-    return-void
+    return v0
 .end method

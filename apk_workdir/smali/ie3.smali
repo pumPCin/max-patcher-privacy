@@ -1,53 +1,35 @@
 .class public final Lie3;
-.super Lnz3;
+.super Lce3;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lke3;
-
-.field public o:Lke3;
-
-.field public w0:I
+# static fields
+.field public static final a:Lie3;
 
 
 # direct methods
-.method public constructor <init>(Lke3;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lie3;->Z:Lke3;
+    new-instance v0, Lie3;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lie3;->a:Lie3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final i(Lme3;)V
     .locals 1
 
-    iput-object p1, p0, Lie3;->Y:Ljava/lang/Object;
+    sget-object v0, Lj65;->a:Lj65;
 
-    iget p1, p0, Lie3;->w0:I
+    invoke-interface {p1, v0}, Lme3;->c(Lfs4;)V
 
-    const/high16 v0, -0x80000000
+    invoke-interface {p1}, Lme3;->b()V
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lie3;->w0:I
-
-    iget-object p1, p0, Lie3;->Z:Lke3;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lke3;->r(Lke3;ILnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

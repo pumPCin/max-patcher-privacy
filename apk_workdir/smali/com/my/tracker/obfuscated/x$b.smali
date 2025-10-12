@@ -69,26 +69,31 @@
 .method public static a(Landroid/content/Context;Lcom/my/tracker/obfuscated/x$c;)V
     .locals 3
 
+    .line 1
     invoke-static {}, Lcom/my/tracker/obfuscated/h;->a()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
+    .line 2
     const-string p0, "FirebaseHelper: background executor is not found"
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/y0;->b(Ljava/lang/String;)V
 
+    .line 3
     invoke-interface {p1}, Lcom/my/tracker/obfuscated/x$c;->a()V
 
     return-void
 
+    .line 4
     :cond_0
     :try_start_0
     const-string v1, "FirebaseHelper: retrieving firebase app instance id"
 
     invoke-static {v1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 5
     invoke-static {p0}, Lcom/google/firebase/analytics/FirebaseAnalytics;->getInstance(Landroid/content/Context;)Lcom/google/firebase/analytics/FirebaseAnalytics;
 
     move-result-object p0
@@ -97,13 +102,14 @@
 
     move-result-object p0
 
-    new-instance v1, Lu8h;
+    .line 6
+    new-instance v1, Lmcf;
 
-    const/4 v2, 0x5
+    const/16 v2, 0x1d
 
-    invoke-direct {v1, v2, p1}, Lu8h;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Lmcf;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Lifa;)Lvmh;
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Lkda;)Lflh;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -112,10 +118,12 @@
     :catchall_0
     move-exception p0
 
+    .line 7
     const-string v0, "FirebaseHelper: retrieving firebase app instance id error"
 
     invoke-static {v0, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 8
     invoke-interface {p1}, Lcom/my/tracker/obfuscated/x$c;->a()V
 
     return-void
@@ -124,6 +132,7 @@
 .method private static synthetic a(Lcom/my/tracker/obfuscated/x$c;Lcom/google/android/gms/tasks/Task;)V
     .locals 1
 
+    .line 9
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->g()Z
 
     move-result v0
@@ -138,6 +147,7 @@
 
     goto :goto_0
 
+    .line 10
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
 
@@ -149,6 +159,7 @@
 
     return-void
 
+    .line 11
     :cond_1
     :goto_0
     invoke-interface {p0}, Lcom/my/tracker/obfuscated/x$c;->a()V

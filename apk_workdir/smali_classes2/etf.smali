@@ -1,110 +1,100 @@
-.class public final Letf;
-.super Lm3f;
+.class public final synthetic Letf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ltc4;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:I
 
-.field public final synthetic Y:Ljtf;
+.field public final synthetic Y:I
+
+.field public final synthetic Z:I
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljtf;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
     .locals 0
 
-    iput-object p1, p0, Letf;->Y:Ljtf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Letf;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Letf;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Letf;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Letf;->o:Ljava/lang/String;
+
+    iput p5, p0, Letf;->X:I
+
+    iput p6, p0, Letf;->Y:I
+
+    iput p7, p0, Letf;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 9
 
-    check-cast p1, Le34;
+    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v1, Lhd7;
 
-    invoke-virtual {p0, p1, p2}, Letf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v2, Lgd7;
 
-    move-result-object p1
+    const-wide/16 v5, 0x0
 
-    check-cast p1, Letf;
+    const/16 v4, 0xe
 
-    sget-object p2, Loyf;->a:Loyf;
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, p2}, Letf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v7, p0, Letf;->c:Ljava/lang/String;
 
-    move-result-object p1
+    const/4 v8, 0x0
 
-    return-object p1
-.end method
+    invoke-direct/range {v2 .. v8}, Lgd7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    new-instance v6, Lyrf;
 
-    new-instance p1, Letf;
+    iget v3, p0, Letf;->X:I
 
-    iget-object v0, p0, Letf;->Y:Ljtf;
+    iget v4, p0, Letf;->Y:I
 
-    invoke-direct {p1, v0, p2}, Letf;-><init>(Ljtf;Lkotlin/coroutines/Continuation;)V
+    iget v5, p0, Letf;->Z:I
 
-    return-object p1
-.end method
+    invoke-direct {v6, v3, v4, v5}, Lyrf;-><init>(III)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const/4 v7, 0x1
 
-    iget v0, p0, Letf;->X:I
+    move-object v4, v2
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    iget-object v3, p0, Letf;->b:Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    iget-object v5, p0, Letf;->o:Ljava/lang/String;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-direct/range {v1 .. v7}, Lhd7;-><init>(Ljava/lang/String;Ljava/lang/String;Lgd7;Ljava/lang/String;Lyrf;I)V
 
-    goto :goto_0
+    const-string v2, "AUTH"
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v3, p0, Letf;->a:Ljava/lang/String;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iput v1, p0, Letf;->X:I
-
-    iget-object p1, p0, Letf;->Y:Ljtf;
-
-    invoke-static {p1, p0}, Ljtf;->r(Ljtf;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lhd7;)V
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

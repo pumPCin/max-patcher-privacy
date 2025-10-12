@@ -1,270 +1,727 @@
 .class public final Lgl3;
-.super Lm3f;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lfef;
+.implements Lga7;
+
+
+# static fields
+.field public static final synthetic b2:[Lpl7;
 
 
 # instance fields
-.field public X:I
+.field public U1:Z
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public V1:Lcl3;
 
-.field public final synthetic Z:Ljava/lang/String;
+.field public final W1:Lel3;
 
-.field public final synthetic w0:Lhl3;
+.field public X1:Ltd6;
+
+.field public final Y1:Lel3;
+
+.field public Z1:Lvd6;
+
+.field public final a2:Lnge;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lhl3;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 5
+
+    new-instance v0, Lds9;
+
+    const-string v1, "state"
+
+    const-string v2, "getState()Lone/me/sdk/codeinput/ConfirmSmsInputView$State;"
+
+    const-class v3, Lgl3;
+
+    invoke-direct {v0, v3, v1, v2}, Lds9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lewc;->a:Lfwc;
+
+    const-string v2, "countCells"
+
+    const-string v4, "getCountCells()I"
+
+    invoke-static {v1, v3, v2, v4}, Lc85;->g(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lds9;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lpl7;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sput-object v2, Lgl3;->b2:[Lpl7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 3
+
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    const/4 p2, 0x1
+
+    iput-boolean p2, p0, Lgl3;->U1:Z
+
+    sget-object v0, Ldl3;->b:Ldl3;
+
+    new-instance v0, Lel3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lel3;-><init>(Lgl3;I)V
+
+    iput-object v0, p0, Lgl3;->W1:Lel3;
+
+    new-instance v0, Ln32;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, p1, v2}, Ln32;-><init>(Landroid/content/Context;I)V
+
+    iput-object v0, p0, Lgl3;->X1:Ltd6;
+
+    new-instance p1, Lel3;
+
+    invoke-direct {p1, p0, p2}, Lel3;-><init>(Lgl3;I)V
+
+    iput-object p1, p0, Lgl3;->Y1:Lel3;
+
+    new-instance p1, Lnge;
+
+    invoke-static {p0}, Lujg;->b(Landroid/view/View;)Liq7;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lnge;-><init>(Liq7;)V
+
+    iput-object p1, p0, Lgl3;->a2:Lnge;
+
+    new-instance p1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-direct {p1, v1, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    new-instance p1, Lb61;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p1, p2}, Lb61;-><init>(I)V
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ldvc;)V
+
+    return-void
+.end method
+
+.method public static final synthetic F0(Lgl3;Z)V
     .locals 0
 
-    iput-object p1, p0, Lgl3;->Z:Ljava/lang/String;
+    invoke-direct {p0, p1}, Lgl3;->setInputsEnabled(Z)V
 
-    iput-object p2, p0, Lgl3;->w0:Lhl3;
+    return-void
+.end method
 
-    const/4 p1, 0x2
+.method public static G0(Lgl3;)Ljava/util/ArrayList;
+    .locals 4
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    invoke-virtual {p0, v2}, Lgl3;->H0(I)Lma7;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method private final getFirstEmptyInputController()Lma7;
+    .locals 3
+
+    invoke-static {p0}, Lgl3;->G0(Lgl3;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lma7;
+
+    check-cast v2, Lbge;
+
+    invoke-virtual {v2}, Lbge;->A()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Lma7;
+
+    return-object v1
+.end method
+
+.method private final setInputsEnabled(Z)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_2
+
+    invoke-virtual {p0, v1}, Lgl3;->H0(I)Lma7;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    check-cast v2, Lbge;
+
+    iget-object v3, v2, Lbge;->G0:Lbl3;
+
+    iget-object v2, v2, Lbge;->H0:Lcge;
+
+    if-nez p1, :cond_0
+
+    iget-object v2, v2, Lcge;->Y:Lgk3;
+
+    invoke-virtual {v2}, Lgk3;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v3}, Lx2d;->z(Landroid/view/View;)V
+
+    :cond_0
+    invoke-virtual {v3, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {v3, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {v3, p1}, Landroid/view/View;->setFocusableInTouchMode(Z)V
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final H0(I)Lma7;
+    .locals 1
 
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lgl3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->M(I)Luvc;
 
     move-result-object p1
 
-    check-cast p1, Lgl3;
+    instance-of v0, p1, Lma7;
 
-    sget-object p2, Loyf;->a:Loyf;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Lgl3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p1, Lma7;
 
-    move-result-object p1
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
 
     return-object p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public final I0(ILjava/lang/String;)V
+    .locals 4
 
-    new-instance v0, Lgl3;
+    if-ltz p1, :cond_1
 
-    iget-object v1, p0, Lgl3;->Z:Ljava/lang/String;
+    invoke-virtual {p0}, Lgl3;->getCountCells()I
 
-    iget-object v2, p0, Lgl3;->w0:Lhl3;
+    move-result v0
 
-    invoke-direct {v0, v1, v2, p2}, Lgl3;-><init>(Ljava/lang/String;Lhl3;Lkotlin/coroutines/Continuation;)V
+    if-gt p1, v0, :cond_1
 
-    iput-object p1, v0, Lgl3;->Y:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    invoke-virtual {p0}, Lgl3;->getCountCells()I
+
+    move-result v1
+
+    if-gt v0, v1, :cond_1
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    move v1, p1
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    sub-int v2, v1, p1
+
+    invoke-virtual {p0, v1}, Lgl3;->H0(I)Lma7;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    invoke-static {v2, p2}, Lpwe;->x0(ILjava/lang/CharSequence;)Ljava/lang/Character;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    check-cast v3, Lbge;
+
+    invoke-virtual {v3, v2}, Lbge;->B(Ljava/lang/String;)V
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final J0()Z
+    .locals 1
+
+    invoke-direct {p0}, Lgl3;->getFirstEmptyInputController()Lma7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lbge;
+
+    iget-object v0, v0, Lbge;->G0:Lbl3;
+
+    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final K0()V
+    .locals 1
+
+    invoke-direct {p0}, Lgl3;->getFirstEmptyInputController()Lma7;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lbge;
+
+    iget-object v0, v0, Lbge;->G0:Lbl3;
+
+    invoke-static {v0}, Lx2d;->J(Landroid/view/View;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getCountCells()I
+    .locals 2
+
+    sget-object v0, Lgl3;->b2:[Lpl7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lgl3;->Y1:Lel3;
+
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getDisableInputsForError()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lgl3;->U1:Z
+
+    return v0
+.end method
+
+.method public final getListener()Lcl3;
+    .locals 1
+
+    iget-object v0, p0, Lgl3;->V1:Lcl3;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final getOnAnimationEnded()Lvd6;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lvd6;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lgl3;->w0:Lhl3;
+    iget-object v0, p0, Lgl3;->Z1:Lvd6;
 
-    iget-object v1, v0, Lhl3;->Z:Lmoe;
+    return-object v0
+.end method
 
-    iget v2, p0, Lgl3;->X:I
+.method public final getState()Ldl3;
+    .locals 2
 
-    const/4 v3, 0x0
+    sget-object v0, Lgl3;->b2:[Lpl7;
 
-    const/4 v4, 0x5
+    const/4 v1, 0x0
 
-    const/4 v5, 0x4
+    aget-object v0, v0, v1
 
-    const/4 v6, 0x3
+    iget-object v0, p0, Lgl3;->W1:Lel3;
 
-    const/4 v7, 0x1
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
 
-    const/4 v8, 0x2
+    check-cast v0, Ldl3;
 
-    sget-object v9, Loyf;->a:Loyf;
+    return-object v0
+.end method
 
-    sget-object v10, Lf34;->a:Lf34;
+.method public final onDetachedFromWindow()V
+    .locals 6
 
-    if-eqz v2, :cond_5
+    iget-object v0, p0, Lgl3;->a2:Lnge;
 
-    if-eq v2, v7, :cond_4
+    invoke-virtual {v0}, Lnge;->b()V
 
-    if-eq v2, v8, :cond_3
+    iget-object v1, v0, Lnge;->d:Lk5d;
 
-    if-eq v2, v6, :cond_2
+    sget-object v2, Lnge;->e:[Lpl7;
 
-    if-eq v2, v5, :cond_1
+    const/4 v3, 0x1
 
-    if-ne v2, v4, :cond_0
+    aget-object v4, v2, v3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0, v4}, Lk5d;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
-    return-object v9
+    move-result-object v4
+
+    check-cast v4, Leh7;
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v4, v5}, Leh7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    aget-object v2, v2, v3
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v1, v0, v2, v5}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->onDetachedFromWindow()V
 
-    throw p1
+    return-void
+.end method
 
-    :cond_1
-    iget-object v1, p0, Lgl3;->Y:Ljava/lang/Object;
+.method public final onThemeChanged(Llwa;)V
+    .locals 5
 
-    check-cast v1, Le34;
+    sget-object v0, Lrw4;->t0:Lss6;
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lss6;->v(Landroid/view/View;)Llwa;
 
-    goto :goto_2
+    move-result-object v0
 
-    :cond_2
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lgl3;->getState()Ldl3;
 
-    return-object v9
+    move-result-object v1
 
-    :cond_3
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v1, v1, Ldl3;->a:I
+
+    invoke-interface {v0, v1}, Llwa;->e(I)I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_3
+
+    invoke-virtual {p0, v2}, Lgl3;->H0(I)Lma7;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    check-cast v3, Lbge;
+
+    iget-object v3, v3, Lbge;->G0:Lbl3;
+
+    if-eqz v3, :cond_0
+
+    move-object v4, v3
 
     goto :goto_1
 
-    :cond_4
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :cond_0
+    const/4 v4, 0x0
+
+    :goto_1
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4, p1}, Lbl3;->onThemeChanged(Llwa;)V
+
+    :cond_1
+    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_5
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :cond_3
+    return-void
+.end method
 
-    iget-object p1, p0, Lgl3;->Y:Ljava/lang/Object;
+.method public final requestFocus(ILandroid/graphics/Rect;)Z
+    .locals 0
 
-    check-cast p1, Le34;
-
-    sget-object v2, Lx85;->a:Ls5f;
-
-    iget-object v2, p0, Lgl3;->Z:Ljava/lang/String;
-
-    invoke-static {v2}, Lx85;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p1}, Lipe;->r(Le34;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    iget-object v11, v0, Lhl3;->b:Ljava/lang/String;
-
-    invoke-static {v2, v11}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_9
-
-    iput v7, p0, Lgl3;->X:I
-
-    sget-object p1, Lel3;->c:Lel3;
-
-    invoke-virtual {v1, v3, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    if-ne v9, v10, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    :goto_0
-    sget p1, Ln05;->o:I
-
-    sget-object p1, Ls05;->o:Ls05;
-
-    invoke-static {v8, p1}, Lyhh;->O(ILs05;)J
-
-    move-result-wide v4
-
-    iput v8, p0, Lgl3;->X:I
-
-    invoke-static {v4, v5, p0}, Lid7;->m(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v10, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    :goto_1
-    iput v6, p0, Lgl3;->X:I
-
-    sget-object p1, Lel3;->a:Lel3;
-
-    invoke-virtual {v1, v3, p1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    if-ne v9, v10, :cond_c
-
-    goto :goto_3
-
-    :cond_9
-    iput-object p1, p0, Lgl3;->Y:Ljava/lang/Object;
-
-    iput v5, p0, Lgl3;->X:I
-
-    sget-object v2, Lel3;->b:Lel3;
-
-    invoke-virtual {v1, v3, v2}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    if-ne v9, v10, :cond_a
-
-    goto :goto_3
-
-    :cond_a
-    move-object v1, p1
-
-    :goto_2
-    invoke-static {v1}, Lipe;->r(Le34;)Z
+    invoke-virtual {p0}, Lgl3;->J0()Z
 
     move-result p1
 
-    if-nez p1, :cond_b
+    return p1
+.end method
 
-    goto :goto_4
+.method public final setCountCells(I)V
+    .locals 2
 
-    :cond_b
-    iput-object v3, p0, Lgl3;->Y:Ljava/lang/Object;
+    sget-object v0, Lgl3;->b2:[Lpl7;
 
-    iput v4, p0, Lgl3;->X:I
+    const/4 v1, 0x1
 
-    sget-object p1, Lhl3;->A0:[Ltm7;
+    aget-object v0, v0, v1
 
-    new-instance p1, Lfl3;
-
-    invoke-direct {p1, v0, v3}, Lfl3;-><init>(Lhl3;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p1, p0}, Lipe;->h(Llf6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    if-ne p1, v10, :cond_c
+    iget-object v1, p0, Lgl3;->Y1:Lel3;
 
-    :goto_3
-    return-object v10
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
 
-    :cond_c
-    :goto_4
-    return-object v9
+    return-void
+.end method
+
+.method public final setDisableInputsForError(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lgl3;->U1:Z
+
+    return-void
+.end method
+
+.method public final setKeyboardOpen(Ltd6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ltd6;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lgl3;->X1:Ltd6;
+
+    return-void
+.end method
+
+.method public final setListener(Lcl3;)V
+    .locals 0
+
+    iput-object p1, p0, Lgl3;->V1:Lcl3;
+
+    return-void
+.end method
+
+.method public final setOnAnimationEnded(Lvd6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lvd6;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lgl3;->Z1:Lvd6;
+
+    return-void
+.end method
+
+.method public final setSecure(Z)V
+    .locals 4
+
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lcge;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lcge;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Lcge;->Z:Ljk;
+
+    sget-object v2, Lcge;->r0:[Lpl7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v0, v2, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final setState(Ldl3;)V
+    .locals 2
+
+    sget-object v0, Lgl3;->b2:[Lpl7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lgl3;->W1:Lel3;
+
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    return-void
 .end method

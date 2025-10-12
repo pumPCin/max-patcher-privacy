@@ -1,19 +1,49 @@
 .class public final Llid;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:La5;
+.field public final synthetic X:Lmid;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(La5;)V
+.method public constructor <init>(Lmid;Lwy3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llid;->X:Lmid;
 
-    iput-object p1, p0, Llid;->a:La5;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Llid;->o:Ljava/lang/Object;
+
+    iget p1, p0, Llid;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Llid;->Y:I
+
+    iget-object p1, p0, Llid;->X:Lmid;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lmid;->b(Lmid;Ljava/lang/Throwable;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,138 +1,98 @@
 .class public final Lnxb;
-.super Lm3f;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lnf6;
 
 
 # instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-.field public synthetic Z:Luxa;
+.field public final b:Lzcf;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Lzcf;)V
+    .locals 1
 
-    iput p3, p0, Lnxb;->X:I
+    const/16 v0, 0xe
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+
+    iput-object p1, p0, Lnxb;->b:Lzcf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lnxb;->X:I
-
-    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    check-cast p2, Luxa;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lnxb;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lnxb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lnxb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    iput-object p2, v0, Lnxb;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lnxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lnxb;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lnxb;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lnxb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    iput-object p2, v0, Lnxb;->Z:Luxa;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    invoke-virtual {v0, p1}, Lnxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lnxb;->X:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :cond_0
+    instance-of v0, p1, Lnxb;
 
-    iget-object p1, p0, Lnxb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lnxb;->Z:Luxa;
+    goto :goto_0
 
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    :cond_1
+    check-cast p1, Lnxb;
+
+    iget-object v0, p0, Lnxb;->b:Lzcf;
+
+    iget-object p1, p1, Lnxb;->b:Lzcf;
+
+    invoke-virtual {v0, p1}, Lzcf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lnxb;->b:Lzcf;
+
+    invoke-virtual {v0}, Lzcf;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShareLink(link="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnxb;->b:Lzcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnxb;->Y:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
-
-    iget-object v0, p0, Lnxb;->Z:Luxa;
-
-    invoke-interface {v0}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

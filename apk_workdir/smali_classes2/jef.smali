@@ -1,51 +1,31 @@
 .class public final Ljef;
-.super Loef;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Lief;
-
-
 # instance fields
-.field public final b:I
+.field public final a:[I
+
+.field public final b:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lief;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljef;->CREATOR:Lief;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>([IF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ljef;->b:I
+    iput-object p1, p0, Ljef;->a:[I
+
+    iput p2, p0, Ljef;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -65,52 +45,89 @@
     :cond_1
     check-cast p1, Ljef;
 
-    iget v1, p0, Ljef;->b:I
+    iget-object v1, p0, Ljef;->a:[I
 
-    iget p1, p1, Ljef;->b:I
+    iget-object v3, p1, Ljef;->a:[I
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
+    iget v1, p0, Ljef;->b:F
+
+    iget p1, p1, Ljef;->b:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget v0, p0, Ljef;->b:I
+    iget-object v0, p0, Ljef;->a:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ljef;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "Resource(resId="
+    iget-object v0, p0, Ljef;->a:[I
 
-    const-string v1, ")"
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
-    iget v2, p0, Ljef;->b:I
+    move-result-object v0
 
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Gradient(colors="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Ljef;->b:F
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Ljef;->b:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
 .end method

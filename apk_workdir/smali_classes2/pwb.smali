@@ -1,63 +1,129 @@
 .class public final Lpwb;
-.super Ldd0;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final b:Lpwb;
+
+# instance fields
+.field public final synthetic X:Landroid/content/Intent;
+
+.field public final synthetic Y:Ltwb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Intent;Ltwb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lpwb;
+    iput-object p1, p0, Lpwb;->X:Landroid/content/Intent;
 
-    const/16 v1, 0xd
+    iput-object p2, p0, Lpwb;->Y:Ltwb;
 
-    invoke-direct {v0, v1}, Ldd0;-><init>(I)V
+    const/4 p1, 0x2
 
-    sput-object v0, Lpwb;->b:Lpwb;
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ln24;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lpwb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lpwb;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lpwb;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lpwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lpwb;
+
+    iget-object v0, p0, Lpwb;->X:Landroid/content/Intent;
+
+    iget-object v1, p0, Lpwb;->Y:Ltwb;
+
+    invoke-direct {p1, v0, v1, p2}, Lpwb;-><init>(Landroid/content/Intent;Ltwb;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpwb;->X:Landroid/content/Intent;
+
+    if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    return p1
+    goto :goto_0
+
+    :cond_0
+    const-class v0, Landroid/graphics/RectF;
+
+    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
+
+    invoke-static {p1, v1, v0}, Ltf2;->s(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Parcelable;
+
+    :goto_0
+    check-cast p1, Landroid/graphics/RectF;
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    if-nez p1, :cond_1
+
+    return-object v0
 
     :cond_1
-    return v0
-.end method
+    sget-object v1, Ltwb;->A0:[Lpl7;
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v1, p0, Lpwb;->Y:Ltwb;
 
-    const v0, 0x1044d8c1
+    invoke-virtual {v1}, Ltwb;->s()Lyq5;
 
-    return v0
-.end method
+    move-result-object v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object v3, v1, Ltwb;->z0:Ljava/util/concurrent/atomic/AtomicReference;
 
-    const-string v0, "CameraPermission"
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lyq5;->p(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, p1}, Ltwb;->t(Ljava/lang/String;Landroid/graphics/RectF;)V
 
     return-object v0
 .end method

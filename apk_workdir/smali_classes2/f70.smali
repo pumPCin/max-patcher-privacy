@@ -1,211 +1,134 @@
 .class public final Lf70;
-.super Ll9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Lf70;
+
+
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final Y:Lurb;
+.field public b:I
 
-.field public final c:Ljava/lang/String;
+.field public c:I
 
-.field public final o:Lm58;
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lm58;Ljava/lang/String;Lurb;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lf70;
+
+    const v1, 0x7fffffff
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v3, v1, v1, v2}, Lf70;-><init>(IIII)V
+
+    sput-object v0, Lf70;->e:Lf70;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    iput v0, p0, Lf70;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lf70;->b:I
+
+    iput v0, p0, Lf70;->c:I
+
+    iput v0, p0, Lf70;->d:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    .line 2
+    iput p1, p0, Lf70;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf70;->c:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Lf70;->o:Lm58;
+.method public synthetic constructor <init>(IIII)V
+    .locals 0
 
-    iput-object p3, p0, Lf70;->X:Ljava/lang/String;
+    .line 3
+    iput p4, p0, Lf70;->a:I
 
-    iput-object p4, p0, Lf70;->Y:Lurb;
+    iput p1, p0, Lf70;->b:I
+
+    iput p2, p0, Lf70;->c:I
+
+    iput p3, p0, Lf70;->d:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public toString()Ljava/lang/String;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Lf70;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lf70;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lf70;
-
-    iget-object v1, p0, Lf70;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lf70;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lf70;->o:Lm58;
-
-    iget-object v3, p1, Lf70;->o:Lm58;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lf70;->X:Ljava/lang/String;
-
-    iget-object v3, p1, Lf70;->X:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lf70;->Y:Lurb;
-
-    iget-object p1, p1, Lf70;->Y:Lurb;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lf70;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lf70;->o:Lm58;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lf70;->X:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lf70;->Y:Lurb;
-
-    invoke-virtual {v0}, Lurb;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Lf70;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Lk98;->u(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lf70;->X:Ljava/lang/String;
-
-    invoke-static {v1}, Lk98;->u(Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "{token=\'"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", tokenType="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lf70;->o:Lm58;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", userToken=\'"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", profile="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lf70;->Y:Lurb;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget v0, p0, Lf70;->b:I
+
+    iget v1, p0, Lf70;->c:I
+
+    iget v2, p0, Lf70;->d:I
+
+    const-string v3, ",pml="
+
+    const-string v4, ",hml="
+
+    const-string v5, "Config(pminl="
+
+    invoke-static {v5, v0, v3, v1, v4}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    invoke-static {v0, v2, v1}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

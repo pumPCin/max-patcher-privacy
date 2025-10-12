@@ -26,11 +26,11 @@
 # instance fields
 .field public final a:Ljava/lang/Class;
 
-.field public final b:Lcfd;
+.field public final b:Lhdd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Class;Lcfd;)V
+.method public constructor <init>(Ljava/lang/Class;Lhdd;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -39,7 +39,7 @@
 
     iput-object p1, p0, Lscout/exception/MissingObjectFactoryException;->a:Ljava/lang/Class;
 
-    iput-object p2, p0, Lscout/exception/MissingObjectFactoryException;->b:Lcfd;
+    iput-object p2, p0, Lscout/exception/MissingObjectFactoryException;->b:Lhdd;
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lscout/exception/MissingObjectFactoryException;->b:Lcfd;
+    iget-object v1, p0, Lscout/exception/MissingObjectFactoryException;->b:Lhdd;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -101,7 +101,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v2, v1, v3}, Lcfd;->a(Ljava/lang/StringBuilder;Lcfd;I)V
+    invoke-static {v2, v1, v3}, Lhdd;->a(Ljava/lang/StringBuilder;Lhdd;I)V
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -1,82 +1,148 @@
-.class public final Lgv2;
-.super Lm3f;
+.class public abstract Lgv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public final synthetic X:Lhv2;
-
-.field public final synthetic Y:Lm82;
 
 
 # direct methods
-.method public constructor <init>(Lhv2;Lm82;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a([B)Lhv2;
+    .locals 23
 
-    iput-object p1, p0, Lgv2;->X:Lhv2;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
 
-    iput-object p2, p0, Lgv2;->Y:Lm82;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatUpdate;-><init>()V
 
-    const/4 p1, 0x2
+    move-object/from16 v1, p0
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    :try_start_0
+    invoke-static {v0, v1}, Ls59;->mergeFrom(Ls59;[B)Ls59;
 
-    return-void
-.end method
+    move-result-object v0
 
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-    check-cast p1, Le34;
+    const/4 v2, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lgv2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v3, Lh10;
 
-    move-result-object p1
+    iget v4, v1, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
 
-    check-cast p1, Lgv2;
+    iget v5, v1, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget v6, v1, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
 
-    invoke-virtual {p1, p2}, Lgv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v7, v1, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
 
-    return-object p2
-.end method
+    const/4 v8, 0x2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-direct/range {v3 .. v8}, Lh10;-><init>(FFFFI)V
 
-    new-instance p1, Lgv2;
+    move-object/from16 v18, v3
 
-    iget-object v0, p0, Lgv2;->X:Lhv2;
+    goto :goto_0
 
-    iget-object v1, p0, Lgv2;->Y:Lm82;
+    :cond_0
+    move-object/from16 v18, v2
 
-    invoke-direct {p1, v0, v1, p2}, Lgv2;-><init>(Lhv2;Lm82;Lkotlin/coroutines/Continuation;)V
+    :goto_0
+    new-instance v4, Lhv2;
 
-    return-object p1
-.end method
+    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->requestId:J
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatId:J
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-wide v9, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatServerId:J
 
-    iget-object p1, p0, Lgv2;->Y:Lm82;
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->descriptionIsNull:Z
 
-    iget-wide v0, p1, Lm82;->a:J
+    if-eqz v1, :cond_1
 
-    iget-object p1, p0, Lgv2;->X:Lhv2;
+    move-object v14, v2
 
-    invoke-static {p1, v0, v1}, Lhv2;->q(Lhv2;J)V
+    goto :goto_1
 
-    sget-object p1, Loyf;->a:Loyf;
+    :cond_1
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->description:Ljava/lang/String;
 
-    return-object p1
+    move-object v14, v1
+
+    :goto_1
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->themeIsNull:Z
+
+    if-eqz v1, :cond_2
+
+    move-object/from16 v16, v2
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->theme:Ljava/lang/String;
+
+    move-object/from16 v16, v1
+
+    :goto_2
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoTokenIsNull:Z
+
+    if-eqz v1, :cond_3
+
+    move-object/from16 v17, v2
+
+    goto :goto_3
+
+    :cond_3
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoToken:Ljava/lang/String;
+
+    move-object/from16 v17, v1
+
+    :goto_3
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageIdIsNull:Z
+
+    if-eqz v1, :cond_4
+
+    :goto_4
+    move-object/from16 v19, v2
+
+    goto :goto_5
+
+    :cond_4
+    iget-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageId:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :goto_5
+    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->notifyPin:Z
+
+    const-wide/16 v21, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v15, 0x0
+
+    move/from16 v20, v0
+
+    invoke-direct/range {v4 .. v22}, Lhv2;-><init>(JJJILjava/lang/String;ZLjava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lh10;Ljava/lang/Long;ZJ)V
+
+    return-object v4
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

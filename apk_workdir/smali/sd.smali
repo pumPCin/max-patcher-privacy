@@ -1,296 +1,194 @@
-.class public Lsd;
-.super Ljava/lang/Object;
+.class public final Lsd;
+.super Ljava/util/logging/Handler;
 .source "SourceFile"
-
-# interfaces
-.implements Lcie;
 
 
 # static fields
-.field public static final f:Llee;
-
-
-# instance fields
-.field public final a:Ljava/lang/reflect/Method;
-
-.field public final b:Ljava/lang/reflect/Method;
-
-.field public final c:Ljava/lang/reflect/Method;
-
-.field public final d:Ljava/lang/reflect/Method;
-
-.field public final e:Ljava/lang/Class;
+.field public static final a:Lsd;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Llee;
+    new-instance v0, Lsd;
 
-    const/4 v1, 0x7
+    invoke-direct {v0}, Ljava/util/logging/Handler;-><init>()V
 
-    invoke-direct {v0, v1}, Llee;-><init>(I)V
-
-    sput-object v0, Lsd;->f:Llee;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsd;->e:Ljava/lang/Class;
-
-    sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setUseSessionTickets"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsd;->a:Ljava/lang/reflect/Method;
-
-    const-class v0, Ljava/lang/String;
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setHostname"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsd;->b:Ljava/lang/reflect/Method;
-
-    const-string v0, "getAlpnSelectedProtocol"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lsd;->c:Ljava/lang/reflect/Method;
-
-    const-class v0, [B
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v1, "setAlpnProtocols"
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsd;->d:Ljava/lang/reflect/Method;
+    sput-object v0, Lsd;->a:Lsd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljavax/net/ssl/SSLSocket;)Z
-    .locals 1
+.method public final close()V
+    .locals 0
 
-    iget-object v0, p0, Lsd;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 1
+.method public final flush()V
+    .locals 0
 
-    sget-boolean v0, Lnd;->e:Z
-
-    sget-boolean v0, Lnd;->e:Z
-
-    return v0
+    return-void
 .end method
 
-.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
-    .locals 3
+.method public final publish(Ljava/util/logging/LogRecord;)V
+    .locals 7
 
-    iget-object v0, p0, Lsd;->e:Ljava/lang/Class;
+    sget-object v0, Lrd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lsd;->c:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [B
-
-    if-eqz p1, :cond_1
-
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, p1, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v2
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_2
-
-    :goto_0
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :goto_1
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLoggerName()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "ssl == null"
-
-    invoke-static {v0, v2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    :goto_3
-    return-object v1
-
-    :cond_2
-    throw p1
-.end method
-
-.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
-    .locals 2
-
-    iget-object v0, p0, Lsd;->e:Ljava/lang/Class;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :try_start_0
-    iget-object v0, p0, Lsd;->a:Ljava/lang/reflect/Method;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    filled-new-array {v1}, [Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
 
-    if-eqz p2, :cond_0
+    move-result v1
 
-    iget-object v0, p0, Lsd;->b:Ljava/lang/reflect/Method;
+    sget-object v2, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
-    filled-new-array {p2}, [Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
 
-    move-result-object p2
+    move-result v3
 
-    invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v4, 0x4
+
+    if-le v1, v3, :cond_0
+
+    const/4 v1, 0x5
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
+    :cond_0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getLevel()Ljava/util/logging/Level;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v2}, Ljava/util/logging/Level;->intValue()I
+
+    move-result v2
+
+    if-ne v1, v2, :cond_1
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x3
+
+    :goto_0
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/util/logging/LogRecord;->getThrown()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    sget-object v3, Lrd;->b:Ljava/util/Map;
+
+    invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    if-eqz v3, :cond_2
 
     goto :goto_1
 
-    :catch_1
-    move-exception p1
+    :cond_2
+    const/16 v3, 0x17
+
+    invoke-static {v3, v0}, Lpwe;->X0(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-static {v3, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    if-eqz p1, :cond_3
+
+    const-string v0, "\n"
+
+    invoke-static {v2, v0}, Lbk7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    :goto_2
+    if-ge v0, p1, :cond_6
+
+    const/16 v5, 0xa
+
+    invoke-static {v2, v5, v0, v4}, Lpwe;->A0(Ljava/lang/CharSequence;CII)I
+
+    move-result v5
+
+    const/4 v6, -0x1
+
+    if-eq v5, v6, :cond_4
+
+    goto :goto_3
+
+    :cond_4
+    move v5, p1
+
+    :goto_3
+    add-int/lit16 v6, v0, 0xfa0
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    invoke-virtual {v2, v0, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
+
+    if-lt v6, v5, :cond_5
+
+    add-int/lit8 v0, v6, 0x1
 
     goto :goto_2
 
-    :cond_0
-    :goto_0
-    iget-object p2, p0, Lsd;->d:Ljava/lang/reflect/Method;
+    :cond_5
+    move v0, v6
 
-    sget-object v0, Lujb;->a:Lujb;
+    goto :goto_3
 
-    invoke-static {p3}, Ll62;->c(Ljava/util/List;)[B
-
-    move-result-object p3
-
-    filled-new-array {p3}, [Ljava/lang/Object;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :goto_1
-    new-instance p2, Ljava/lang/AssertionError;
-
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p2
-
-    :goto_2
-    new-instance p2, Ljava/lang/AssertionError;
-
-    invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p2
-
-    :cond_1
+    :cond_6
     return-void
 .end method

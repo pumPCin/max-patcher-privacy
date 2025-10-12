@@ -13,23 +13,23 @@
         "",
         "<init>",
         "()V",
-        "Lxg1;",
+        "Lyg1;",
         "Lru/ok/android/externcalls/sdk/id/InternalId;",
         "id",
         "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
         "getLocalId",
-        "(Lxg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
+        "(Lyg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
         "getAnyLocalId",
         "",
         "getAllLocalIds",
-        "(Lxg1;)Ljava/util/Set;",
+        "(Lyg1;)Ljava/util/Set;",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ljava/util/Set;",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "participant",
-        "Loyf;",
+        "Laxf;",
         "addMappings",
         "(Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
         "removedMappings",
@@ -98,7 +98,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
-            "Lxg1;",
+            "Lyg1;",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
             ">;"
         }
@@ -148,13 +148,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lch1;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v1, Lbh1;->a:Lxg1;
+    iget-object v1, v1, Lch1;->a:Lyg1;
 
     if-eqz v1, :cond_1
 
@@ -162,7 +162,7 @@
 
     invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v1, v1, Lxg1;->a:J
+    iget-wide v1, v1, Lyg1;->a:J
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->internalIdToLocalIdsMap:Landroid/util/LongSparseArray;
 
@@ -265,18 +265,18 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Ll75;->a:Ll75;
+    sget-object p1, Ly65;->a:Ly65;
 
     :cond_0
     return-object p1
 .end method
 
-.method public final getAllLocalIds(Lxg1;)Ljava/util/Set;
+.method public final getAllLocalIds(Lyg1;)Ljava/util/Set;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lxg1;",
+            "Lyg1;",
             ")",
             "Ljava/util/Set<",
             "Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;",
@@ -287,7 +287,7 @@
     .line 1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->internalIdToLocalIdsMap:Landroid/util/LongSparseArray;
 
-    iget-wide v1, p1, Lxg1;->a:J
+    iget-wide v1, p1, Lyg1;->a:J
 
     invoke-virtual {v0, v1, v2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
@@ -297,7 +297,7 @@
 
     if-nez p1, :cond_0
 
-    sget-object p1, Ll75;->a:Ll75;
+    sget-object p1, Ly65;->a:Ly65;
 
     :cond_0
     return-object p1
@@ -319,7 +319,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Le93;->m0(Ljava/lang/Iterable;)Ljava/lang/Object;
+    invoke-static {p1}, Lw83;->f0(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -333,13 +333,13 @@
     return-object p1
 .end method
 
-.method public final getAnyLocalId(Lxg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
+.method public final getAnyLocalId(Lyg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
     .locals 3
 
     .line 1
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->internalIdToLocalIdsMap:Landroid/util/LongSparseArray;
 
-    iget-wide v1, p1, Lxg1;->a:J
+    iget-wide v1, p1, Lyg1;->a:J
 
     invoke-virtual {v0, v1, v2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
 
@@ -349,7 +349,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Le93;->m0(Ljava/lang/Iterable;)Ljava/lang/Object;
+    invoke-static {p1}, Lw83;->f0(Ljava/lang/Iterable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -378,7 +378,7 @@
     return-object p1
 .end method
 
-.method public final getLocalId(Lxg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
+.method public final getLocalId(Lyg1;)Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;
     .locals 1
 
     .line 1
@@ -400,13 +400,13 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lbh1;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getCallParticipant()Lch1;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v1, Lbh1;->a:Lxg1;
+    iget-object v1, v1, Lch1;->a:Lyg1;
 
     if-eqz v1, :cond_0
 
@@ -414,7 +414,7 @@
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v1, v1, Lxg1;->a:J
+    iget-wide v1, v1, Lyg1;->a:J
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/id/local/LocalIdMappings;->internalIdToLocalIdsMap:Landroid/util/LongSparseArray;
 

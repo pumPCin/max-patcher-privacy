@@ -1,67 +1,182 @@
-.class public final Lyof;
-.super Ljava/lang/Object;
+.class public abstract Lyof;
+.super Loz3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
+.field public X:Z
 
-.field public final b:J
+.field public Y:Lmz3;
 
-.field public final c:I
-
-.field public volatile o:Z
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Ljava/lang/Long;I)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lyof;->a:Ljava/lang/Runnable;
-
-    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lyof;->b:J
-
-    iput p3, p0, Lyof;->c:I
+    invoke-direct {p0}, Loz3;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final a()V
+    .locals 1
 
-    check-cast p1, Lyof;
+    const/4 v0, 0x1
 
-    iget-wide v0, p0, Lyof;->b:J
+    iput-boolean v0, p0, Lyof;->X:Z
 
-    iget-wide v2, p1, Lyof;->b:J
+    return-void
+.end method
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
+.method public final d()Z
+    .locals 1
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    iget v0, p0, Lyof;->c:I
+.method public f(Loz3;Ljz3;)V
+    .locals 0
 
-    iget p1, p1, Lyof;->c:I
+    const/4 p1, 0x1
 
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+    iput-boolean p1, p0, Lyof;->o:Z
 
-    move-result p1
+    return-void
+.end method
 
-    return p1
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLmz3;)V
+    .locals 10
+
+    iput-object p5, p0, Lyof;->Y:Lmz3;
+
+    iget-boolean v1, p0, Lyof;->o:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p5}, Lmz3;->n()V
+
+    return-void
 
     :cond_0
-    return v0
+    iget-boolean v1, p0, Lyof;->X:Z
+
+    if-eqz v1, :cond_1
+
+    const/4 v4, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move v5, p4
+
+    invoke-virtual/range {v0 .. v5}, Lyof;->k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lwof;Z)V
+
+    invoke-virtual {p5}, Lmz3;->n()V
+
+    return-void
+
+    :cond_1
+    new-instance v7, Lvif;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v7, v1, p5}, Lvif;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual/range {p0 .. p4}, Lyof;->l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Z)Lepf;
+
+    move-result-object v3
+
+    new-instance v1, Lxof;
+
+    invoke-direct {v1, p0, p1, v7}, Lxof;-><init>(Lyof;Landroid/view/ViewGroup;Lvif;)V
+
+    invoke-virtual {v3, v1}, Lwof;->a(Lvof;)V
+
+    new-instance v6, Lc40;
+
+    const/4 v8, 0x7
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v0, v6
+
+    move v6, p4
+
+    invoke-direct/range {v0 .. v8}, Lc40;-><init>(Lyof;Landroid/view/ViewGroup;Ljava/lang/Object;Landroid/view/View;Ljava/lang/Object;ZLjava/lang/Object;I)V
+
+    move v9, v6
+
+    move-object v6, v0
+
+    move-object v0, v1
+
+    move-object v1, v2
+
+    move-object v2, v4
+
+    move-object v4, v3
+
+    move-object v3, v5
+
+    move v5, v9
+
+    invoke-virtual/range {v0 .. v6}, Lyof;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lwof;ZLc40;)V
+
+    return-void
+.end method
+
+.method public k(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lwof;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p4
+
+    if-ne p4, p1, :cond_0
+
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_0
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
+
+    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public abstract l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Z)Lepf;
+.end method
+
+.method public m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Lwof;ZLc40;)V
+    .locals 0
+
+    invoke-virtual {p6}, Lc40;->f()V
+
+    return-void
 .end method

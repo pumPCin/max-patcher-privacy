@@ -39,6 +39,7 @@
 .method public a()V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
     invoke-virtual {v0}, Lcom/my/tracker/obfuscated/l$a;->reset()V
@@ -49,6 +50,7 @@
 .method public a(Ljava/io/OutputStream;)V
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/my/tracker/obfuscated/l;->c:Lcom/my/tracker/obfuscated/l$a;
 
     invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->writeTo(Ljava/io/OutputStream;)V

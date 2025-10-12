@@ -1,58 +1,24 @@
-.class public final synthetic Lbwc;
+.class public final Lbwc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Throwable;
-
-.field public final synthetic a:Liwc;
-
-.field public final synthetic b:Lbb0;
-
-.field public final synthetic c:J
-
-.field public final synthetic o:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Liwc;Lbb0;JILjava/lang/Throwable;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lbwc;->a:Liwc;
-
-    iput-object p2, p0, Lbwc;->b:Lbb0;
-
-    iput-wide p3, p0, Lbwc;->c:J
-
-    iput p5, p0, Lbwc;->o:I
-
-    iput-object p6, p0, Lbwc;->X:Ljava/lang/Throwable;
-
-    return-void
-.end method
+.field public a:I
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget v4, p0, Lbwc;->o:I
+    iget v0, p0, Lbwc;->a:I
 
-    iget-object v5, p0, Lbwc;->X:Ljava/lang/Throwable;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iget-object v0, p0, Lbwc;->a:Liwc;
+    move-result-object v0
 
-    iget-object v1, p0, Lbwc;->b:Lbb0;
-
-    iget-wide v2, p0, Lbwc;->c:J
-
-    invoke-virtual/range {v0 .. v5}, Liwc;->I(Lbb0;JILjava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

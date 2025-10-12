@@ -1,81 +1,34 @@
-.class public final Liw6;
-.super Llk0;
+.class public abstract Liw6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr5;
 
 
 # instance fields
-.field public g:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/util/List;
+
+.field public final c:Z
 
 
-# virtual methods
-.method public final b()I
-    .locals 1
-
-    iget v0, p0, Liw6;->g:I
-
-    return v0
-.end method
-
-.method public final k()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final r(JJJLjava/util/List;[Loi8;)V
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Z)V
     .locals 0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-wide p1
+    iput-object p1, p0, Liw6;->a:Ljava/lang/String;
 
-    iget p3, p0, Liw6;->g:I
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    invoke-virtual {p0, p3, p1, p2}, Llk0;->q(IJ)Z
+    move-result-object p1
 
-    move-result p3
+    iput-object p1, p0, Liw6;->b:Ljava/util/List;
 
-    if-nez p3, :cond_0
-
-    return-void
-
-    :cond_0
-    iget p3, p0, Llk0;->b:I
-
-    add-int/lit8 p3, p3, -0x1
-
-    :goto_0
-    if-ltz p3, :cond_2
-
-    invoke-virtual {p0, p3, p1, p2}, Llk0;->q(IJ)Z
-
-    move-result p4
-
-    if-nez p4, :cond_1
-
-    iput p3, p0, Liw6;->g:I
+    iput-boolean p3, p0, Liw6;->c:Z
 
     return-void
-
-    :cond_1
-    add-int/lit8 p3, p3, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
 .end method

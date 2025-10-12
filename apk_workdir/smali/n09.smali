@@ -1,51 +1,64 @@
 .class public final Ln09;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/MenuItem$OnActionExpandListener;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final a:Landroid/view/MenuItem$OnActionExpandListener;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ldah;
-
-.field public o:Ldah;
-
-.field public w0:I
+.field public final synthetic b:Lo09;
 
 
 # direct methods
-.method public constructor <init>(Ldah;Lnz3;)V
+.method public constructor <init>(Lo09;Landroid/view/MenuItem$OnActionExpandListener;)V
     .locals 0
 
-    iput-object p1, p0, Ln09;->Z:Ldah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ln09;->b:Lo09;
+
+    iput-object p2, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
     .locals 1
 
-    iput-object p1, p0, Ln09;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Ln09;->b:Lo09;
 
-    iget p1, p0, Ln09;->w0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ln09;->w0:I
-
-    iget-object p1, p0, Ln09;->Z:Ldah;
-
-    invoke-static {p1, p0}, Ldah;->e(Ldah;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lv7f;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
 
     move-result-object p1
 
-    return-object p1
+    iget-object v0, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
+
+    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    iget-object v0, p0, Ln09;->b:Lo09;
+
+    invoke-virtual {v0, p1}, Lv7f;->J(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ln09;->a:Landroid/view/MenuItem$OnActionExpandListener;
+
+    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
 .end method

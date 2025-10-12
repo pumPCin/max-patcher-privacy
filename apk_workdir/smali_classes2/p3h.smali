@@ -1,19 +1,21 @@
 .class public final Lp3h;
-.super Ljava/lang/Object;
+.super Lrp;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lum7;
+# static fields
+.field public static final a:Lp3h;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lum7;"
-        }
-    .end annotation
 
-    sget-object v0, Lo3h;->a:Lo3h;
+    new-instance v0, Lp3h;
 
-    return-object v0
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Lp3h;->a:Lp3h;
+
+    return-void
 .end method

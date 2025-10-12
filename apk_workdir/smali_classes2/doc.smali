@@ -1,23 +1,27 @@
 .class public final Ldoc;
-.super Lgoc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
 .field public final b:J
 
+.field public final c:Ljava/util/List;
+
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(JLjava/lang/String;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ldoc;->a:J
+    iput-object p3, p0, Ldoc;->a:Ljava/lang/String;
 
-    iput-wide p3, p0, Ldoc;->b:J
+    iput-wide p1, p0, Ldoc;->b:J
+
+    iput-object p4, p0, Ldoc;->c:Ljava/util/List;
 
     return-void
 .end method
@@ -45,13 +49,15 @@
     :cond_1
     check-cast p1, Ldoc;
 
-    iget-wide v3, p0, Ldoc;->a:J
+    iget-object v1, p0, Ldoc;->a:Ljava/lang/String;
 
-    iget-wide v5, p1, Ldoc;->a:J
+    iget-object v3, p1, Ldoc;->a:Ljava/lang/String;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
@@ -60,30 +66,51 @@
 
     iget-wide v5, p1, Ldoc;->b:J
 
-    cmp-long p1, v3, v5
+    cmp-long v1, v3, v5
 
-    if-eqz p1, :cond_3
+    if-eqz v1, :cond_3
 
     return v2
 
     :cond_3
+    iget-object v1, p0, Ldoc;->c:Ljava/util/List;
+
+    iget-object p1, p1, Ldoc;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 4
 
-    iget-wide v0, p0, Ldoc;->a:J
+    iget-object v0, p0, Ldoc;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-wide v1, p0, Ldoc;->b:J
+    mul-int/2addr v0, v1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    iget-wide v2, p0, Ldoc;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    iget-object v1, p0, Ldoc;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
@@ -93,23 +120,33 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "NeedDownload(messageId="
+    const-string v0, "ReactionsSectionEntity(id="
 
-    const-string v1, ", totalBytes="
-
-    iget-wide v2, p0, Ldoc;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
+    const-string v1, ", updateTime="
 
     iget-wide v2, p0, Ldoc;->b:J
 
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    iget-object v4, p0, Ldoc;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Ljjd;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", reactions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldoc;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,152 +1,198 @@
 .class public final Lkd8;
-.super Ljava/lang/Object;
+.super Lhm4;
 .source "SourceFile"
+
+# interfaces
+.implements Ldd8;
+.implements Llde;
 
 
 # instance fields
-.field public A:I
+.field public final synthetic c:I
 
-.field public B:I
+.field public o:Lfs4;
 
-.field public C:I
 
-.field public D:F
+# direct methods
+.method public synthetic constructor <init>(Lyba;I)V
+    .locals 0
 
-.field public E:F
+    iput p2, p0, Lkd8;->c:I
 
-.field public F:F
+    invoke-direct {p0, p1}, Lhm4;-><init>(Lyba;)V
 
-.field public G:F
-
-.field public H:F
-
-.field public I:F
-
-.field public J:F
-
-.field public K:F
-
-.field public L:F
-
-.field public M:F
-
-.field public N:[B
-
-.field public O:I
-
-.field public P:I
-
-.field public Q:I
-
-.field public R:J
-
-.field public S:J
-
-.field public T:Lqrf;
-
-.field public U:Z
-
-.field public V:Z
-
-.field public W:Ljava/lang/String;
-
-.field public X:Lbof;
-
-.field public Y:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public i:[B
-
-.field public j:Lznf;
-
-.field public k:[B
-
-.field public l:Lry4;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:F
-
-.field public t:F
-
-.field public u:F
-
-.field public v:[B
-
-.field public w:I
-
-.field public x:Z
-
-.field public y:I
-
-.field public z:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)[B
-    .locals 2
+.method public b()V
+    .locals 1
 
-    iget-object v0, p0, Lkd8;->k:[B
-
-    if-nez v0, :cond_1
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    const-string v1, "Missing CodecPrivate for codec "
+    and-int/lit8 v0, v0, 0x36
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object p1
+    :cond_0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lhm4;->a:Lyba;
+
+    invoke-interface {v0}, Lyba;->b()V
+
+    return-void
+.end method
+
+.method public final c(Lfs4;)V
+    .locals 1
+
+    iget v0, p0, Lkd8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lkd8;->o:Lfs4;
+
+    invoke-static {v0, p1}, Ljs4;->h(Lfs4;Lfs4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lkd8;->o:Lfs4;
+
+    iget-object p1, p0, Lhm4;->a:Lyba;
+
+    invoke-interface {p1, p0}, Lyba;->c(Lfs4;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lkd8;->o:Lfs4;
+
+    invoke-static {v0, p1}, Ljs4;->h(Lfs4;Lfs4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Lkd8;->o:Lfs4;
+
+    iget-object p1, p0, Lhm4;->a:Lyba;
+
+    invoke-interface {p1, p0}, Lyba;->c(Lfs4;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()V
+    .locals 1
+
+    iget v0, p0, Lkd8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lhm4;->f()V
+
+    iget-object v0, p0, Lkd8;->o:Lfs4;
+
+    invoke-interface {v0}, Lfs4;->f()V
+
+    return-void
+
+    :pswitch_0
+    invoke-super {p0}, Lhm4;->f()V
+
+    iget-object v0, p0, Lkd8;->o:Lfs4;
+
+    invoke-interface {v0}, Lfs4;->f()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lkd8;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/String;
+    const/4 v0, 0x2
 
-    invoke-direct {p1, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lhm4;->a:Lyba;
+
+    invoke-interface {v0, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
 
     :goto_0
-    const/4 v0, 0x0
+    return-void
 
-    invoke-static {v0, p1}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
-    move-result-object p1
+    move-result v0
 
-    throw p1
+    and-int/lit8 v0, v0, 0x36
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
+
+    goto :goto_1
 
     :cond_1
-    return-object v0
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    iget-object v0, p0, Lhm4;->a:Lyba;
+
+    invoke-interface {v0, p1}, Lyba;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

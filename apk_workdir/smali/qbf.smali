@@ -1,40 +1,31 @@
-.class public abstract Lqbf;
-.super Ljava/lang/Object;
+.class public final Lqbf;
+.super Ld3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public submissionTime:J
-
-.field public taskContext:Lvbf;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(JLvbf;)V
-    .locals 0
+.method public constructor <init>(Lpbf;Z)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-wide p1, p0, Lqbf;->submissionTime:J
+    invoke-direct {p0, v0, p1}, Ld3;-><init>(ILjava/lang/Object;)V
 
-    iput-object p3, p0, Lqbf;->taskContext:Lvbf;
+    iput-boolean p2, p0, Lqbf;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getMode$kotlinx_coroutines_core()I
+.method public final i0()Z
     .locals 1
 
-    iget-object v0, p0, Lqbf;->taskContext:Lvbf;
-
-    check-cast v0, Lst5;
-
-    iget v0, v0, Lst5;->b:I
+    iget-boolean v0, p0, Lqbf;->c:Z
 
     return v0
 .end method

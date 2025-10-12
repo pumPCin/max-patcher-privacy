@@ -3,155 +3,56 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lev5;
-.implements Lc22;
+.implements Lmq7;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final a:Lm3f;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lqad;
+
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Llf6;)V
+.method public constructor <init>(Ljava/lang/String;Lqad;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lm3f;
+    iput-object p1, p0, Lrad;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lrad;->a:Lm3f;
+    iput-object p2, p0, Lrad;->b:Lqad;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
+.method public final close()V
+    .locals 0
 
-    instance-of v0, p2, Lo0;
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public final d(Luq7;Lvp7;)V
+    .locals 1
 
-    move-object v0, p2
+    sget-object v0, Lvp7;->ON_DESTROY:Lvp7;
 
-    check-cast v0, Lo0;
+    if-ne p2, v0, :cond_0
 
-    iget v1, v0, Lo0;->Z:I
+    const/4 p2, 0x0
 
-    const/high16 v2, -0x80000000
+    iput-boolean p2, p0, Lrad;->c:Z
 
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lo0;->Z:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lo0;
-
-    invoke-direct {v0, p0, p2}, Lo0;-><init>(Lrad;Lkotlin/coroutines/Continuation;)V
-
-    :goto_0
-    iget-object p2, v0, Lo0;->X:Ljava/lang/Object;
-
-    iget v1, v0, Lo0;->Z:I
-
-    sget-object v2, Loyf;->a:Loyf;
-
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v3, :cond_1
-
-    iget-object p1, v0, Lo0;->o:Lnad;
-
-    :try_start_0
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_4
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-static {p2}, Lps;->L(Ljava/lang/Object;)V
-
-    new-instance p2, Lnad;
-
-    iget-object v1, v0, Lnz3;->b:Lw24;
-
-    invoke-direct {p2, p1, v1}, Lnad;-><init>(Lgv5;Lw24;)V
-
-    :try_start_1
-    iput-object p2, v0, Lo0;->o:Lnad;
-
-    iput v3, v0, Lo0;->Z:I
-
-    iget-object p1, p0, Lrad;->a:Lm3f;
-
-    invoke-interface {p1, p2, v0}, Llf6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Luq7;->x()Lwq7;
 
     move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    sget-object v0, Lf34;->a:Lf34;
+    invoke-virtual {p1, p0}, Lwq7;->f(Lqq7;)V
 
-    if-ne p1, v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    move-object p1, v2
-
-    :goto_1
-    if-ne p1, v0, :cond_4
-
-    return-object v0
-
-    :cond_4
-    move-object p1, p2
-
-    :goto_2
-    invoke-virtual {p1}, Lnz3;->o()V
-
-    return-object v2
-
-    :goto_3
-    move-object v4, p2
-
-    move-object p2, p1
-
-    move-object p1, v4
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
-
-    :goto_4
-    invoke-virtual {p1}, Lnz3;->o()V
-
-    throw p2
+    :cond_0
+    return-void
 .end method

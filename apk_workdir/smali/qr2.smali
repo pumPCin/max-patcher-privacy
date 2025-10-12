@@ -3,20 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzr2;
+.implements Lur2;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ljava/lang/CharSequence;
+
+.field public final b:Ljava/lang/Long;
+
+.field public final c:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lqr2;->a:Z
+    iput-object p1, p0, Lqr2;->a:Ljava/lang/CharSequence;
+
+    iput-object p2, p0, Lqr2;->b:Ljava/lang/Long;
+
+    iput-object p3, p0, Lqr2;->c:Ljava/lang/Long;
 
     return-void
 .end method

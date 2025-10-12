@@ -1,121 +1,206 @@
 .class public final Lvvd;
-.super Ljava/lang/Object;
+.super Ljava/util/AbstractSet;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Luvd;
+.field public final synthetic a:Ljava/util/Set;
+
+.field public final synthetic b:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lcsd;Lsy1;)V
-    .locals 2
+.method public constructor <init>(Ljava/util/Set;Ljava/util/Set;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvvd;->a:Ljava/util/Set;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput-object p2, p0, Lvvd;->b:Ljava/util/Set;
 
-    const/16 v1, 0x1c
-
-    if-ge v0, v1, :cond_0
-
-    new-instance v0, Ltvd;
-
-    invoke-direct {v0, p1, p2, p3}, Ltvd;-><init>(Ljava/util/ArrayList;Lcsd;Lsy1;)V
-
-    iput-object v0, p0, Lvvd;->a:Luvd;
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance v0, Lsvd;
-
-    invoke-direct {v0, p1, p2, p3}, Lsvd;-><init>(Ljava/util/ArrayList;Lcsd;Lsy1;)V
-
-    iput-object v0, p0, Lvvd;->a:Luvd;
-
-    return-void
-.end method
-
-.method public static a(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lr2b;
-
-    iget-object v1, v1, Lr2b;->a:Lt2b;
-
-    invoke-virtual {v1}, Lt2b;->a()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/params/OutputConfiguration;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final clear()V
     .locals 1
 
-    instance-of v0, p1, Lvvd;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    const/4 p1, 0x0
+    throw v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lvvd;->a:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvvd;->b:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    check-cast p1, Lvvd;
-
-    iget-object p1, p1, Lvvd;->a:Luvd;
-
-    iget-object v0, p0, Lvvd;->a:Luvd;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
+    const/4 p1, 0x0
 
     return p1
 .end method
 
-.method public final hashCode()I
+.method public final containsAll(Ljava/util/Collection;)Z
     .locals 1
 
-    iget-object v0, p0, Lvvd;->a:Luvd;
+    iget-object v0, p0, Lvvd;->a:Ljava/util/Set;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lvvd;->b:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final isEmpty()Z
+    .locals 2
+
+    iget-object v0, p0, Lvvd;->b:Ljava/util/Set;
+
+    iget-object v1, p0, Lvvd;->a:Ljava/util/Set;
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->disjoint(Ljava/util/Collection;Ljava/util/Collection;)Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
+
+    new-instance v0, Lqg7;
+
+    invoke-direct {v0, p0}, Lqg7;-><init>(Lvvd;)V
+
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 4
+
+    iget-object v0, p0, Lvvd;->a:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lvvd;->b:Ljava/util/Set;
+
+    invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v1
 .end method

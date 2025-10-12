@@ -1,176 +1,191 @@
-.class public final Lw8f;
-.super Lv8f;
+.class public final synthetic Lw8f;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lke6;
 
 
 # instance fields
-.field public final Y:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final Z:Ljava/lang/String;
+.field public final synthetic b:Lu8f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lu8f;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lv8f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    iput p2, p0, Lw8f;->a:I
 
-    iput-object p4, p0, Lw8f;->Y:Ljava/lang/String;
+    iput-object p1, p0, Lw8f;->b:Lu8f;
 
-    iput-object p5, p0, Lw8f;->Z:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Lw8f;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x1
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lw8f;
+    iget-object v0, p0, Lw8f;->b:Lu8f;
 
-    const/4 v2, 0x0
+    check-cast p1, Ljava/lang/Throwable;
 
-    if-nez v1, :cond_1
+    instance-of v2, p1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
 
-    return v2
+    if-nez v2, :cond_0
 
-    :cond_1
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, Ls8a;->f(Ljava/lang/Throwable;)Lse3;
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    check-cast p1, Lw8f;
-
-    iget-object v1, p1, Lw8f;->Y:Ljava/lang/String;
-
-    iget-object v3, p0, Lw8f;->Y:Ljava/lang/String;
-
-    invoke-static {v3, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lw8f;->Z:Ljava/lang/String;
-
-    iget-object p1, p1, Lw8f;->Z:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lw8f;->Y:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    move v2, v1
+    instance-of v2, p1, Lone/me/sdk/transfer/exceptions/HttpUrlExpiredException;
 
-    :goto_0
-    add-int/2addr v0, v2
+    const/4 v3, 0x0
 
-    iget-object v2, p0, Lw8f;->Z:Ljava/lang/String;
+    const-string v4, "x8f"
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const-string v0, "retryWhenTamHttpError: skipped retry on TamHttpUrlExpiredException"
 
-    move-result v1
+    invoke-static {v4, v0, v3}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Ls8a;->f(Ljava/lang/Throwable;)Lse3;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :cond_1
-    add-int/2addr v0, v1
+    move-object v2, p1
 
-    return v0
-.end method
+    check-cast v2, Lone/me/sdk/transfer/exceptions/HttpErrorException;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    iget-object v5, v2, Lone/me/sdk/transfer/exceptions/HttpErrorException;->a:Lmz6;
 
-    const-class v0, Lw8f;
+    invoke-static {v5}, Lggh;->y(Lmz6;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    move-result v5
 
-    move-result-object v0
+    if-eqz v5, :cond_2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v1, "retryWhenTamHttpError: critical upload error="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "{error=\'"
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lv8f;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', message=\'"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lv8f;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\', title=\'"
-
-    const-string v2, "\', description=\'"
-
-    iget-object v3, p0, Lw8f;->Y:Ljava/lang/String;
-
-    iget-object v4, p0, Lw8f;->Z:Ljava/lang/String;
-
-    invoke-static {v1, v0, v3, v2, v4}, Lnd5;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "\', localizedMessage=\'"
-
-    const-string v2, "\'}"
-
-    iget-object v3, p0, Lv8f;->o:Ljava/lang/String;
-
-    invoke-static {v1, v0, v3, v2}, Lhqd;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-static {v4, v0, v3}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {p1}, Ls8a;->f(Ljava/lang/Throwable;)Lse3;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p1, v0, Lu8f;->a:Lyn7;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfvd;
+
+    check-cast p1, Lhvd;
+
+    iget p1, p1, Lhvd;->h:I
+
+    invoke-static {p1}, Lu8f;->a(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    const-string p1, "retryWhenTamHttpError: no connection, await for connection available"
+
+    invoke-static {v4, p1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lu8f;->b()Lpba;
+
+    move-result-object p1
+
+    new-instance v0, Lvqe;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lvqe;-><init>(I)V
+
+    sget-object v1, Lnjg;->o:Lwgd;
+
+    sget-object v2, Lnjg;->c:Laf6;
+
+    new-instance v3, Lp9a;
+
+    invoke-direct {v3, p1, v0, v1, v2}, Lp9a;-><init>(Ls8a;Lno3;Lno3;Ll6;)V
+
+    move-object p1, v3
+
+    goto :goto_0
+
+    :cond_3
+    const-string p1, "retryWhenTamHttpError: http error"
+
+    invoke-static {v4, p1, v2}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    int-to-long v0, v1
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {}, Lcdd;->a()Lpcd;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, p1, v2}, Ls8a;->r(JLjava/util/concurrent/TimeUnit;Lpcd;)Lwba;
+
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lw8f;->b:Lu8f;
+
+    check-cast p1, Ls8a;
+
+    new-instance v2, Lw8f;
+
+    invoke-direct {v2, v0, v1}, Lw8f;-><init>(Lu8f;I)V
+
+    const v0, 0x7fffffff
+
+    invoke-virtual {p1, v2, v0}, Ls8a;->h(Lke6;I)Ls8a;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

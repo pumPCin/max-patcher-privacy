@@ -1,97 +1,76 @@
-.class public final enum Lyp5;
-.super Ljava/lang/Enum;
+.class public final synthetic Lyp5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final synthetic X:[Lyp5;
 
-.field public static final enum a:Lyp5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final enum b:Lyp5;
-
-.field public static final enum c:Lyp5;
-
-.field public static final enum o:Lyp5;
+.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
+    .locals 0
 
-    new-instance v0, Lyp5;
+    iput p2, p0, Lyp5;->a:I
 
-    const-string v1, "PresentArrow"
+    iput-object p1, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lyp5;->a:Lyp5;
-
-    new-instance v1, Lyp5;
-
-    const-string v2, "ArrowToProgress"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lyp5;->b:Lyp5;
-
-    new-instance v2, Lyp5;
-
-    const-string v3, "ProgressToArrow"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lyp5;->c:Lyp5;
-
-    new-instance v3, Lyp5;
-
-    const-string v4, "ProgressSpinning"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lyp5;->o:Lyp5;
-
-    filled-new-array {v0, v1, v2, v3}, [Lyp5;
-
-    move-result-object v0
-
-    sput-object v0, Lyp5;->X:[Lyp5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lyp5;
+
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    const-class v0, Lyp5;
+    iget v0, p0, Lyp5;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    check-cast p0, Lyp5;
+    move-result-object p1
 
-    return-object p0
-.end method
+    check-cast p1, Ljava/lang/Integer;
 
-.method public static values()[Lyp5;
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    sget-object v0, Lyp5;->X:[Lyp5;
+    move-result p1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
 
-    check-cast v0, [Lyp5;
+    return-void
 
-    return-object v0
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lyp5;->b:Lone/me/sdk/richvector/VectorPath;
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

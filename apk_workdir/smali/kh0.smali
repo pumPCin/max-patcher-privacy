@@ -1,30 +1,24 @@
 .class public final Lkh0;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Z
-
-.field public final synthetic Y:Lnh0;
-
-.field public final synthetic Z:Lbp7;
+.field public final synthetic X:Lnh0;
 
 
 # direct methods
-.method public constructor <init>(Lnh0;Lbp7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lnh0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lkh0;->Y:Lnh0;
-
-    iput-object p2, p0, Lkh0;->Z:Lbp7;
+    iput-object p1, p0, Lkh0;->X:Lnh0;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,9 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -46,81 +38,119 @@
 
     check-cast p1, Lkh0;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lkh0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lkh0;
+    new-instance p1, Lkh0;
 
-    iget-object v1, p0, Lkh0;->Y:Lnh0;
+    iget-object v0, p0, Lkh0;->X:Lnh0;
 
-    iget-object v2, p0, Lkh0;->Z:Lbp7;
+    invoke-direct {p1, v0, p2}, Lkh0;-><init>(Lnh0;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, v2, p2}, Lkh0;-><init>(Lnh0;Lbp7;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, v0, Lkh0;->X:Z
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 7
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-boolean p1, p0, Lkh0;->X:Z
+    iget-object p1, p0, Lkh0;->X:Lnh0;
 
-    sget-object v0, Lnh0;->y0:[Ltm7;
+    iget-object p1, p1, Lnh0;->c:Lyn7;
 
-    iget-object v0, p0, Lkh0;->Y:Lnh0;
-
-    iget-object v1, v0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v2, v0, Lnh0;->b:Lr8f;
-
-    check-cast v2, Lwla;
-
-    invoke-virtual {v2}, Lwla;->b()Ly24;
-
-    move-result-object v2
-
-    new-instance v3, Ljh0;
-
-    iget-object v4, p0, Lkh0;->Z:Lbp7;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, v0, v4, p1, v5}, Ljh0;-><init>(Lnh0;Lbp7;ZLkotlin/coroutines/Continuation;)V
-
-    sget-object p1, Lh34;->b:Lh34;
-
-    invoke-static {v1, v2, p1, v3}, Lq9e;->p(Le34;Lw24;Lh34;Llf6;)Lqle;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v1, v0, Lnh0;->x0:Lg65;
+    check-cast p1, Lvi4;
 
-    sget-object v2, Lnh0;->y0:[Ltm7;
+    iget-object p1, p1, Lvi4;->a:Lyn7;
 
-    const/4 v3, 0x0
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    aget-object v2, v2, v3
+    move-result-object p1
 
-    invoke-virtual {v1, v0, v2, p1}, Lg65;->h0(Ljava/lang/Object;Ltm7;Ljava/lang/Object;)V
+    check-cast p1, Ls4d;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1}, Ls4d;->c()Luab;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    const-string v1, "SELECT COUNT(*) FROM phones"
+
+    invoke-static {v0, v1}, Lt4d;->c(ILjava/lang/String;)Lt4d;
+
+    move-result-object v1
+
+    iget-object p1, p1, Luab;->a:Lc4d;
+
+    invoke-virtual {p1}, Lc4d;->b()V
+
+    invoke-virtual {p1, v1}, Lc4d;->n(Lx0f;)Landroid/database/Cursor;
+
+    move-result-object p1
+
+    :try_start_0
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v2
+
+    const-wide/16 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    move-wide v5, v3
+
+    :goto_0
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v1}, Lt4d;->o()V
+
+    cmp-long p1, v5, v3
+
+    if-nez p1, :cond_1
+
+    const/4 v0, 0x1
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
+
+    :goto_1
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v1}, Lt4d;->o()V
+
+    throw v0
 .end method

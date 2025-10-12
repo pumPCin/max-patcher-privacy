@@ -223,12 +223,14 @@
 .method public sendCustomAction(Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;Landroid/os/Bundle;)V
     .locals 1
 
+    .line 1
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsFwk:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
@@ -243,8 +245,10 @@
 .method public sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
+    .line 3
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 4
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsFwk:Landroid/media/session/MediaController$TransportControls;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/session/MediaController$TransportControls;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -306,6 +310,7 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;)V
     .locals 1
 
+    .line 1
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->mControlsFwk:Landroid/media/session/MediaController$TransportControls;
 
     if-eqz p1, :cond_0
@@ -330,18 +335,22 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     .locals 2
 
+    .line 2
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
+    .line 3
     const-string v1, "android.support.v4.media.session.action.ARGUMENT_RATING"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
+    .line 4
     const-string p1, "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
 
     invoke-virtual {v0, p1, p2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 5
     const-string p1, "android.support.v4.media.session.action.SET_RATING"
 
     invoke-virtual {p0, p1, v0}, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsApi21;->sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
@@ -354,7 +363,7 @@
 
     const-string v0, "android.support.v4.media.session.action.ARGUMENT_REPEAT_MODE"
 
-    invoke-static {p1, v0}, Lfl7;->d(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p1, v0}, Lbk7;->d(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -370,7 +379,7 @@
 
     const-string v0, "android.support.v4.media.session.action.ARGUMENT_SHUFFLE_MODE"
 
-    invoke-static {p1, v0}, Lfl7;->d(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p1, v0}, Lbk7;->d(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 

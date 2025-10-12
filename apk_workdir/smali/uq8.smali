@@ -1,89 +1,116 @@
 .class public final Luq8;
-.super Landroid/view/animation/Animation;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lmq8;
 
-.field public final synthetic b:I
+.field public final b:Ljava/util/ArrayList;
 
-.field public final synthetic c:I
+.field public final c:Lw9h;
 
-.field public final synthetic o:Landroid/view/View;
+.field public d:Lnq8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;III)V
-    .locals 0
+.method public constructor <init>(Lmq8;)V
+    .locals 1
 
-    iput p4, p0, Luq8;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Luq8;->b:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput p3, p0, Luq8;->c:I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Luq8;->o:Landroid/view/View;
+    iput-object v0, p0, Luq8;->b:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
+    iput-object p1, p0, Luq8;->a:Lmq8;
+
+    iget-object p1, p1, Lmq8;->b:Lw9h;
+
+    iput-object p1, p0, Luq8;->c:Lw9h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
-    .locals 3
+.method public final a(Ljava/lang/String;)Lvq8;
+    .locals 4
 
-    iget p2, p0, Luq8;->a:I
+    iget-object v0, p0, Luq8;->b:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Luq8;->o:Landroid/view/View;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    iget v1, p0, Luq8;->c:I
+    move-result v1
 
-    iget v2, p0, Luq8;->b:I
+    const/4 v2, 0x0
 
-    packed-switch p2, :pswitch_data_0
+    :goto_0
+    if-ge v2, v1, :cond_1
 
-    sub-int/2addr v2, v1
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    int-to-float p2, v2
+    move-result-object v3
 
-    mul-float/2addr p2, p1
+    check-cast v3, Lvq8;
 
-    float-to-int p1, p2
+    iget-object v3, v3, Lvq8;->b:Ljava/lang/String;
 
-    add-int/2addr v1, p1
+    invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sget-boolean p1, Lor8;->i1:Z
+    move-result v3
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    check-cast p1, Lvq8;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    return-object p1
 
-    return-void
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
 
-    :pswitch_0
-    sub-int p2, v2, v1
+    goto :goto_0
 
-    int-to-float p2, p2
+    :cond_1
+    const/4 p1, 0x0
 
-    mul-float/2addr p2, p1
+    return-object p1
+.end method
 
-    float-to-int p1, p2
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sub-int/2addr v2, p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->n(Landroid/view/View;I)V
+    const-string v1, "MediaRouter.RouteProviderInfo{ packageName="
 
-    return-void
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Luq8;->c:Lw9h;
+
+    iget-object v1, v1, Lw9h;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/ComponentName;
+
+    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " }"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

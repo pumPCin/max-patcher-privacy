@@ -1,266 +1,94 @@
 .class public final Lp46;
-.super Lzce;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final X:Lc;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:Lr46;
-
-.field public final Z:Lzde;
+.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lc;Lr46;Lzde;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p2, p0, Lp46;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    iput-object p2, p0, Lp46;->X:Lc;
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Lp46;->Y:Lr46;
-
-    iput-object p4, p0, Lp46;->Z:Lzde;
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Ltde;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le4g;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lp46;->J(Le4g;I)V
-
-    return-void
-.end method
-
-.method public final J(Le4g;I)V
-    .locals 5
-
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lww7;
-
-    check-cast p2, Lc4g;
-
-    iget-object v0, p1, Lnxc;->a:Landroid/view/View;
-
-    move-object v1, v0
-
-    check-cast v1, Ld4g;
-
-    iget-object v2, p2, Lc4g;->b:Lb4g;
-
-    invoke-virtual {v1, v2}, Ld4g;->setType(Lb4g;)V
-
-    iget-object v2, p2, Lc4g;->c:Loef;
-
-    invoke-virtual {v2, p1}, Loef;->a(Ltde;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, ""
-
-    :cond_0
-    invoke-virtual {v1, v2}, Ld4g;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lp46;->Z:Lzde;
-
-    iput-object v1, p1, Le4g;->J0:Lzde;
-
-    iget-object v1, p2, Lc4g;->b:Lb4g;
-
-    sget-object v2, Lb4g;->a:Lb4g;
-
-    if-ne v1, v2, :cond_1
-
-    move-object v2, v0
-
-    check-cast v2, Ld4g;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Lf36;
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lp46;->X:Lc;
-
-    invoke-direct {v2, v4, p2, v3}, Lf36;-><init>(Lag6;Lc4g;I)V
-
-    invoke-static {v0, v2}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    :goto_0
-    sget-object v2, Lb4g;->b:Lb4g;
-
-    if-ne v1, v2, :cond_2
-
-    check-cast v0, Ld4g;
-
-    new-instance v1, Lfk;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v1, v2, p1}, Lfk;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ld4g;->setOnDragIconTouchListener(Llf6;)V
-
-    new-instance v1, Ltt1;
-
-    const/16 v2, 0xd
-
-    iget-object v3, p0, Lp46;->Y:Lr46;
-
-    invoke-direct {v1, v3, p2, p1, v2}, Ltt1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v1}, Ld4g;->setActionMenuIconClickListener(Lxe6;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final l(I)I
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lpw7;->C(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lp46;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lww7;
+    check-cast p1, Lp46;
 
-    check-cast p1, Lc4g;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object p1, p1, Lc4g;->b:Lb4g;
+    invoke-virtual {p1, p2}, Lp46;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_0
-
-    sget p1, Lhoa;->l:I
-
-    return p1
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    sget p1, Lhoa;->i:I
-
-    return p1
-
-    :cond_2
-    sget p1, Lhoa;->p:I
-
-    return p1
-
-    :cond_3
-    sget p1, Lhoa;->h:I
-
-    return p1
+    return-object p2
 .end method
 
-.method public final bridge synthetic r(Lnxc;I)V
-    .locals 0
-
-    check-cast p1, Le4g;
-
-    invoke-virtual {p0, p1, p2}, Lp46;->J(Le4g;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    sget v0, Lhoa;->h:I
+    new-instance v0, Lp46;
 
-    if-ne p2, v0, :cond_0
+    iget-object v1, p0, Lp46;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    sget-object p2, Lb4g;->a:Lb4g;
+    invoke-direct {v0, p2, v1}, Lp46;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
 
-    goto :goto_0
+    iput-object p1, v0, Lp46;->X:Ljava/lang/Object;
 
-    :cond_0
-    sget v0, Lhoa;->p:I
+    return-object v0
+.end method
 
-    if-ne p2, v0, :cond_1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object p2, Lb4g;->b:Lb4g;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lp46;->X:Ljava/lang/Object;
 
-    :cond_1
-    sget v0, Lhoa;->i:I
+    check-cast p1, Ljava/util/Set;
 
-    if-ne p2, v0, :cond_2
+    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
 
-    sget-object p2, Lb4g;->c:Lb4g;
+    iget-object p1, p0, Lp46;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
 
-    goto :goto_0
+    iget-object v0, p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Lvoc;
 
-    :cond_2
-    sget v0, Lhoa;->l:I
+    sget-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->r0:[Lpl7;
 
-    if-ne p2, v0, :cond_3
+    const/4 v2, 0x1
 
-    sget-object p2, Lb4g;->o:Lb4g;
+    aget-object v1, v1, v2
 
-    :goto_0
-    new-instance v0, Le4g;
-
-    new-instance v1, Ld4g;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-interface {v0, p1, v1}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {v1, p2, p1}, Ld4g;-><init>(Lb4g;Landroid/content/Context;)V
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {v0, v1}, Lnxc;-><init>(Landroid/view/View;)V
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    return-object v0
+    sget-object p1, Laxf;->a:Laxf;
 
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Unknown viewtype in "
-
-    invoke-static {p2, v0}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p1
 .end method

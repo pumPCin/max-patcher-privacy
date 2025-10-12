@@ -1,94 +1,86 @@
 .class public final Lpu6;
-.super Ljava/lang/Object;
+.super Lqu6;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static volatile c:Lpu6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lpu6;->a:I
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lou6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lou6;-><init>(I)V
-
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lpu6;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkw8;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lpu6;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpu6;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lpu6;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lpu6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lpu6;
+
+    iget-object v1, p0, Lpu6;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lpu6;->a:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lpu6;->a:I
+    iget-object v0, p0, Lpu6;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget-object v0, p0, Lpu6;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast v0, Lkw8;
+    return v0
+.end method
 
-    iget-object v0, v0, Lkw8;->a:Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast v0, Landroid/os/Handler;
+    const-string v0, "Time(time="
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const-string v1, ")"
 
-    return-void
+    iget-object v2, p0, Lpu6;->a:Ljava/lang/String;
 
-    :pswitch_0
-    iget-object v0, p0, Lpu6;->b:Ljava/lang/Object;
+    invoke-static {v0, v2, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    move-result-object v0
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

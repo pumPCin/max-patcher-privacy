@@ -1,3 +1,6 @@
 .class public final Lzkh;
-.super Lweh;
+.super Lidh;
 .source "SourceFile"
+
+# interfaces
+.implements Lilh;

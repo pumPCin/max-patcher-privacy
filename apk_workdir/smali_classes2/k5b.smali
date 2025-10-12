@@ -1,134 +1,43 @@
-.class public final Lk5b;
+.class public abstract Lk5b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public b:J
-
-.field public final synthetic c:Ll5b;
+# static fields
+.field public static final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ll5b;Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loea;
 
-    iput-object p1, p0, Lk5b;->c:Ll5b;
+    const/16 v1, 0x19
 
-    const-wide/16 v0, -0x1
+    invoke-direct {v0, v1}, Loea;-><init>(I)V
 
-    iput-wide v0, p0, Lk5b;->b:J
+    const/4 v1, 0x3
 
-    iput-object p2, p0, Lk5b;->a:Ljava/lang/String;
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    sput-object v0, Lk5b;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static final a()Landroid/graphics/Paint;
+    .locals 1
 
-# virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 6
+    sget-object v0, Lk5b;->a:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-wide/16 v0, -0x1
+    check-cast v0, Landroid/graphics/Paint;
 
-    if-nez p1, :cond_0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lk5b;->b:J
-
-    cmp-long v2, v2, v4
-
-    if-eqz v2, :cond_3
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Lk5b;->b:J
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long v0, v2, v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    :cond_1
-    iget-object v0, p0, Lk5b;->c:Ll5b;
-
-    iget-object v1, v0, Ll5b;->k:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v2, v0, Ll5b;->l:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object v3, p0, Lk5b;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lmr1;
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v4, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    iget-object v0, v0, Llo3;->e:Ljava/lang/Object;
-
-    check-cast v0, Lrxd;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    long-to-int p1, v4
-
-    iget-object v0, v0, Lrxd;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmr1;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v1, v3, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

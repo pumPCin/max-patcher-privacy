@@ -1,49 +1,138 @@
-.class public final Li1b;
-.super Lv4b;
+.class public Li1b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final e:Ljava/lang/Throwable;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Li1b;->e:Ljava/lang/Throwable;
+    iput-object p1, p0, Li1b;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public a()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
 
-    const-string v1, "FAILURE ("
+    instance-of v1, v0, Lh1b;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1}, Lnjg;->g(Z)V
 
-    iget-object v1, p0, Li1b;->e:Ljava/lang/Throwable;
+    check-cast v0, Lh1b;
 
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    iget-object v0, v0, Lh1b;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    const-string v1, ")"
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Lh1b;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, v0, Lh1b;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final c()Landroid/view/Surface;
+    .locals 1
+
+    invoke-virtual {p0}, Li1b;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public d(J)V
+    .locals 1
+
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
+
+    check-cast v0, Lh1b;
+
+    iput-wide p1, v0, Lh1b;->c:J
+
+    return-void
+.end method
+
+.method public e(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Li1b;
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    check-cast p1, Li1b;
+
+    iget-object p1, p1, Li1b;->a:Ljava/lang/Object;
+
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
+
+    check-cast v0, Lh1b;
+
+    iput-object p1, v0, Lh1b;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li1b;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

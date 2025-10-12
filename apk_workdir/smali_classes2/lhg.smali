@@ -1,68 +1,34 @@
-.class public interface abstract Llhg;
+.class public final synthetic Llhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lorg/webrtc/VideoSink;
 
-# virtual methods
-.method public abstract C(Lkhg;)V
-.end method
 
-.method public abstract M0()J
-.end method
+# instance fields
+.field public final synthetic a:Lorg/webrtc/VideoSource;
 
-.method public O(Ll9g;)V
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/webrtc/VideoSource;)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llhg;->a:Lorg/webrtc/VideoSource;
 
     return-void
 .end method
 
-.method public abstract Q(Z)V
-.end method
 
-.method public abstract W(Lkhg;)V
-.end method
+# virtual methods
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 1
 
-.method public abstract Z(Landroid/view/Surface;)V
-.end method
+    iget-object v0, p0, Llhg;->a:Lorg/webrtc/VideoSource;
 
-.method public abstract a()F
-.end method
+    invoke-static {v0, p1}, Lorg/webrtc/VideoSource;->b(Lorg/webrtc/VideoSource;Lorg/webrtc/VideoFrame;)V
 
-.method public abstract b()Z
-.end method
-
-.method public abstract c()J
-.end method
-
-.method public abstract clear()V
-.end method
-
-.method public abstract d(F)V
-.end method
-
-.method public abstract getDuration()J
-.end method
-
-.method public abstract isIdle()Z
-.end method
-
-.method public abstract pause()V
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract seekTo(J)V
-.end method
-
-.method public abstract stop()V
-.end method
-
-.method public abstract t0(Lq8g;I)V
-.end method
-
-.method public abstract x0()Z
+    return-void
 .end method

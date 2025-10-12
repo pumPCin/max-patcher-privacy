@@ -1,101 +1,147 @@
 .class public final Lkq;
-.super Ljava/lang/Object;
+.super Lp34;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Boolean;
+# static fields
+.field public static final a:Lkq;
+
+.field public static b:Lyn7;
+
+.field public static final c:Lh4f;
+
+.field public static final d:Lh4f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Boolean;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkq;
 
-    iput-object p1, p0, Lkq;->a:Ljava/lang/Boolean;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lkq;->a:Lkq;
+
+    new-instance v0, Ll;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Ll;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Lkq;->c:Lh4f;
+
+    new-instance v0, Ll;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ll;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Lkq;->d:Lh4f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    sget-object v0, Lkq;->d:Lh4f;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x0
 
-    return v0
+    if-eqz p1, :cond_1
 
-    :cond_0
-    instance-of v1, p1, Lkq;
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    const/4 v2, 0x0
+    move-result v2
 
-    if-nez v1, :cond_1
+    if-nez v2, :cond_0
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lkq;
-
-    iget-object v1, p0, Lkq;->a:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lkq;->a:Ljava/lang/Boolean;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkq;->a:Ljava/lang/Boolean;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Selection(isSelected="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkq;->a:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lklf;
+
+    if-eqz v0, :cond_3
+
+    invoke-static {v1, p2, p1}, Lklf;->b(Lf4e;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    :goto_0
+    instance-of p1, p2, Ljava/lang/Error;
+
+    if-nez p1, :cond_2
+
+    sget-object p1, Lkq;->b:Lyn7;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhlb;
+
+    if-eqz p1, :cond_3
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->tracer-non-fatal-crashed-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Lohd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    const/4 v2, 0x1
+
+    if-ne p1, v2, :cond_3
+
+    :cond_2
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lklf;
+
+    if-eqz p1, :cond_3
+
+    invoke-static {v1, p2, v1}, Lklf;->b(Lf4e;Ljava/lang/Throwable;Ljava/lang/String;)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    sget-object v0, Lkq;->c:Lh4f;
+
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lflf;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1, p2}, Lflf;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
 .end method

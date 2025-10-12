@@ -1,206 +1,224 @@
 .class public final Lnba;
-.super Ljava/lang/Object;
+.super Lrce;
 .source "SourceFile"
-
-# interfaces
-.implements Lxda;
-.implements Lss4;
 
 
 # instance fields
-.field public X:Lss4;
+.field public final synthetic a:I
 
-.field public Y:Z
-
-.field public final a:Lxda;
-
-.field public final b:Lwo3;
-
-.field public final c:Lwo3;
-
-.field public final o:Le6;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lxda;Lwo3;Lwo3;Le6;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lnba;->a:I
+
+    iput-object p2, p0, Lnba;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnba;->a:Lxda;
-
-    iput-object p2, p0, Lnba;->b:Lwo3;
-
-    iput-object p3, p0, Lnba;->c:Lwo3;
-
-    iput-object p4, p0, Lnba;->o:Le6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
+.method public final l(Llde;)V
+    .locals 4
 
-    iget-boolean v0, p0, Lnba;->Y:Z
+    iget v0, p0, Lnba;->a:I
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lnba;->b:Ljava/lang/Object;
 
-    return-void
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lnba;->o:Le6;
+    sget-object v0, Lj65;->a:Lj65;
 
-    invoke-interface {v0}, Le6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p1, v0}, Llde;->c(Lfs4;)V
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lnba;->Y:Z
-
-    iget-object v0, p0, Lnba;->a:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
+    invoke-interface {p1, v1}, Llde;->a(Ljava/lang/Object;)V
 
     return-void
 
-    :catchall_0
-    move-exception v0
+    :pswitch_0
+    sget-object v0, Lnjg;->b:Lbeh;
 
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+    new-instance v2, Lv6;
 
-    invoke-virtual {p0, v0}, Lnba;->onError(Ljava/lang/Throwable;)V
+    const/4 v3, 0x1
 
-    return-void
-.end method
+    invoke-direct {v2, v3, v0}, Lv6;-><init>(ILjava/lang/Object;)V
 
-.method public final c(Lss4;)V
-    .locals 1
+    invoke-interface {p1, v2}, Llde;->c(Lfs4;)V
 
-    iget-object v0, p0, Lnba;->X:Lss4;
-
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    invoke-virtual {v2}, Lv6;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iput-object p1, p0, Lnba;->X:Lss4;
-
-    iget-object p1, p0, Lnba;->a:Lxda;
-
-    invoke-interface {p1, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lnba;->Y:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lnba;->b:Lwo3;
+    check-cast v1, Ljava/util/concurrent/Callable;
 
-    invoke-interface {v0, p1}, Lwo3;->accept(Ljava/lang/Object;)V
+    invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The callable returned a null value"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lnba;->a:Lxda;
+    invoke-virtual {v2}, Lv6;->g()Z
 
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
+    move-result v1
 
-    return-void
+    if-nez v1, :cond_2
 
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lnba;->X:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lnba;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
-    iget-object v0, p0, Lnba;->X:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Lnba;->X:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lnba;->Y:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lnba;->Y:Z
-
-    :try_start_0
-    iget-object v0, p0, Lnba;->c:Lwo3;
-
-    invoke-interface {v0, p1}, Lwo3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p1, v0}, Llde;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
 
-    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+    invoke-virtual {v2}, Lv6;->g()Z
 
-    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+    move-result v1
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+    invoke-interface {p1, v0}, Llde;->onError(Ljava/lang/Throwable;)V
 
-    move-object p1, v1
+    goto :goto_0
 
+    :cond_1
+    invoke-static {v0}, Lwee;->y(Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_0
-    iget-object v0, p0, Lnba;->a:Lxda;
+    return-void
 
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
+    :pswitch_1
+    :try_start_1
+    check-cast v1, Lcf6;
+
+    iget-object v0, v1, Lcf6;->a:Ljava/lang/Object;
+
+    const-string v1, "Supplier returned a null Throwable."
+
+    if-eqz v0, :cond_3
+
+    sget-object v1, Lvb5;->a:Lub5;
+
+    check-cast v0, Ljava/lang/Throwable;
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {v1}, Lvb5;->b(Ljava/lang/String;)Ljava/lang/NullPointerException;
+
+    move-result-object v0
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :goto_1
+    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    :goto_2
+    invoke-static {v0, p1}, Lj65;->c(Ljava/lang/Throwable;Llde;)V
 
     return-void
+
+    :pswitch_2
+    :try_start_2
+    check-cast v1, Lj0f;
+
+    invoke-interface {v1}, Lj0f;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The singleSupplier returned a null SingleSource"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Ldee;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    check-cast v0, Lrce;
+
+    invoke-virtual {v0, p1}, Lrce;->k(Llde;)V
+
+    goto :goto_3
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    invoke-static {v0, p1}, Lj65;->c(Ljava/lang/Throwable;Llde;)V
+
+    :goto_3
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lvce;
+
+    invoke-direct {v0, p1}, Lvce;-><init>(Llde;)V
+
+    invoke-interface {p1, v0}, Llde;->c(Lfs4;)V
+
+    :try_start_3
+    check-cast v1, Lnde;
+
+    invoke-interface {v1, v0}, Lnde;->f(Lvce;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    goto :goto_4
+
+    :catchall_3
+    move-exception p1
+
+    invoke-static {p1}, Loq0;->t(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, p1}, Lvce;->onError(Ljava/lang/Throwable;)V
+
+    :goto_4
+    return-void
+
+    :pswitch_4
+    check-cast v1, Ll9a;
+
+    new-instance v0, Lu8a;
+
+    invoke-direct {v0, p1}, Lu8a;-><init>(Llde;)V
+
+    invoke-virtual {v1, v0}, Ls8a;->a(Lyba;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,233 +1,121 @@
-.class public final enum Ly29;
-.super Ljava/lang/Enum;
+.class public final Ly29;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final enum A0:Ly29;
 
-.field public static final enum B0:Ly29;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final enum C0:Ly29;
-
-.field public static final enum D0:Ly29;
-
-.field public static final synthetic E0:[Ly29;
-
-.field public static final enum X:Ly29;
-
-.field public static final enum Y:Ly29;
-
-.field public static final enum Z:Ly29;
-
-.field public static final enum a:Ly29;
-
-.field public static final enum b:Ly29;
-
-.field public static final enum c:Ly29;
-
-.field public static final enum o:Ly29;
-
-.field public static final enum w0:Ly29;
-
-.field public static final enum x0:Ly29;
-
-.field public static final enum y0:Ly29;
-
-.field public static final enum z0:Ly29;
+.field public final synthetic Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 17
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+    .locals 0
 
-    new-instance v0, Ly29;
+    iput-object p2, p0, Ly29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
 
-    const-string v1, "FORWARD"
+    const/4 p2, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ly29;->a:Ly29;
-
-    new-instance v1, Ly29;
-
-    const-string v2, "COPY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ly29;->b:Ly29;
-
-    new-instance v2, Ly29;
-
-    const-string v3, "REPORT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ly29;->c:Ly29;
-
-    new-instance v3, Ly29;
-
-    const-string v4, "MARK_AS_UNREAD"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ly29;->o:Ly29;
-
-    new-instance v4, Ly29;
-
-    const-string v5, "REPLY"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ly29;->X:Ly29;
-
-    new-instance v5, Ly29;
-
-    const-string v6, "DELETE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Ly29;->Y:Ly29;
-
-    new-instance v6, Ly29;
-
-    const-string v7, "DELETE_FOR_ALL"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Ly29;->Z:Ly29;
-
-    new-instance v7, Ly29;
-
-    const-string v8, "PIN"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Ly29;->w0:Ly29;
-
-    new-instance v8, Ly29;
-
-    const-string v9, "UNPIN"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Ly29;->x0:Ly29;
-
-    new-instance v9, Ly29;
-
-    const-string v10, "SELECT"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Ly29;->y0:Ly29;
-
-    new-instance v10, Ly29;
-
-    const-string v11, "EDIT"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Ly29;->z0:Ly29;
-
-    new-instance v11, Ly29;
-
-    const-string v12, "SAVE_TO_GALLERY"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Ly29;->A0:Ly29;
-
-    new-instance v12, Ly29;
-
-    const-string v13, "COPY_PHOTO"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Ly29;->B0:Ly29;
-
-    new-instance v13, Ly29;
-
-    const-string v14, "SHARE_EXTERNAL"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v13, v14, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v13, Ly29;->C0:Ly29;
-
-    new-instance v14, Ly29;
-
-    const-string v15, "SHARE_POST"
-
-    move-object/from16 v16, v0
-
-    const/16 v0, 0xe
-
-    invoke-direct {v14, v15, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v14, Ly29;->D0:Ly29;
-
-    move-object/from16 v0, v16
-
-    filled-new-array/range {v0 .. v14}, [Ly29;
-
-    move-result-object v0
-
-    sput-object v0, Ly29;->E0:[Ly29;
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ly29;
-    .locals 1
 
-    const-class v0, Ly29;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Ly29;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Ly29;
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Ly29;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Ly29;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public static values()[Ly29;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    sget-object v0, Ly29;->E0:[Ly29;
+    new-instance v0, Ly29;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p0, Ly29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+
+    invoke-direct {v0, p2, v1}, Ly29;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;)V
+
+    iput-object p1, v0, Ly29;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly29;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    new-instance v0, Liy3;
+
+    sget-object v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lpl7;
+
+    iget-object v1, p0, Ly29;->Y:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+
+    invoke-virtual {v1}, Ljz3;->getArgs()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    const-string v3, "actions"
+
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Lug5;->d(Landroid/os/Bundle;)Ljava/util/List;
+
+    move-result-object v2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-nez v2, :cond_1
+
+    sget-object v2, Lo65;->a:Lo65;
+
+    :cond_1
+    invoke-direct {v0, v2}, Liy3;-><init>(Ljava/util/List;)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, [Ly29;
+    invoke-static {v0, p1}, Lw83;->r0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
-    return-object v0
+    move-result-object p1
+
+    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->X0:Le36;
+
+    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

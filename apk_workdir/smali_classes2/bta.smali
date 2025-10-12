@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lifc;->oneme_emoji_view_type_emoji:I
+    sget v0, Lufc;->oneme_settings_privacy_twofa_delete_user_days_left_notif:I
 
     sput v0, Lbta;->a:I
 

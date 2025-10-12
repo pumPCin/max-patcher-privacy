@@ -1,231 +1,156 @@
 .class public final Lkfd;
-.super Landroid/media/projection/MediaProjection$Callback;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public final a:Lorg/webrtc/ScreenCapturerAndroid;
+.field public final synthetic X:Lcfd;
 
-.field public final b:Lpmc;
+.field public final synthetic a:Landroid/view/View;
 
-.field public volatile c:Z
+.field public final synthetic b:Lmfd;
 
-.field public volatile d:Z
+.field public final synthetic c:Lgfd;
 
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public final h:Ljava/util/concurrent/Executor;
+.field public final synthetic o:Lmfd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Ljava/util/concurrent/Executor;Lpmc;)V
+.method public constructor <init>(Lcfd;Lmfd;Lgfd;Lmfd;Lcfd;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/media/projection/MediaProjection$Callback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lkfd;->b:Lpmc;
+    iput-object p1, p0, Lkfd;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lkfd;->h:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lkfd;->b:Lmfd;
 
-    new-instance p2, Lorg/webrtc/ScreenCapturerAndroid;
+    iput-object p3, p0, Lkfd;->c:Lgfd;
 
-    invoke-direct {p2, p1, p0}, Lorg/webrtc/ScreenCapturerAndroid;-><init>(Landroid/content/Intent;Landroid/media/projection/MediaProjection$Callback;)V
+    iput-object p4, p0, Lkfd;->o:Lmfd;
 
-    iput-object p2, p0, Lkfd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    iput-object p5, p0, Lkfd;->X:Lcfd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lkfd;->b:Lpmc;
+    check-cast p1, Landroid/animation/ValueAnimator;
 
-    const-string v1, "x"
+    const/4 v0, 0x1
 
-    const-string v2, "@30"
+    int-to-float v1, v0
 
-    const-string v3, "changeFormat, "
+    iget-object v2, p0, Lkfd;->a:Landroid/view/View;
 
-    invoke-static {v3, p1, v1, p2, v2}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
 
-    move-result-object v1
+    move-result v3
 
-    const-string v2, "ScreenCapturerAdapter"
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v4
 
-    iget v0, p0, Lkfd;->g:I
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/16 v1, 0x1e
+    move-result-object v4
 
-    if-ne v0, p1, :cond_1
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    iget v0, p0, Lkfd;->f:I
+    const/high16 v5, 0x40800000    # 4.0f
 
-    if-ne v0, p2, :cond_1
+    mul-float/2addr v4, v5
 
-    iget v0, p0, Lkfd;->e:I
+    div-float/2addr v3, v4
 
-    if-eq v0, v1, :cond_0
+    sub-float/2addr v1, v3
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
 
-    :cond_1
     :goto_0
-    iput v1, p0, Lkfd;->e:I
+    invoke-virtual {v2}, Landroid/view/View;->getTranslationY()F
 
-    iput p2, p0, Lkfd;->f:I
+    move-result v2
 
-    iput p1, p0, Lkfd;->g:I
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    iget-boolean v0, p0, Lkfd;->d:Z
+    move-result-object v3
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iget-object v0, p0, Lkfd;->b:Lpmc;
+    move-result-object v3
 
-    const-string v3, "Screen capture is already started, just change capture format"
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-interface {v0, v2, v3}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    mul-float/2addr v3, v5
 
-    :try_start_0
-    iget-object v0, p0, Lkfd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    const/4 v4, 0x2
 
-    invoke-virtual {v0, p1, p2, v1}, Lorg/webrtc/ScreenCapturerAndroid;->changeCaptureFormat(III)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    new-array v4, v4, [F
 
-    goto :goto_1
+    const/4 v5, 0x0
 
-    :catch_0
-    move-exception p1
+    aput v2, v4, v5
 
-    iget-object p2, p0, Lkfd;->b:Lpmc;
+    aput v3, v4, v0
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
-    const-string v1, "Cant change screen capture format"
+    move-result-object v0
 
-    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-wide/16 v2, 0xc8
 
-    const-string p1, "screen.capture.change.format"
+    long-to-float v2, v2
 
-    invoke-interface {p2, v2, p1, v0}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    mul-float/2addr v2, v1
 
-    :cond_2
-    :goto_1
-    return-void
-.end method
+    float-to-long v1, v2
 
-.method public final b()V
-    .locals 3
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    const-string v0, "ScreenCapturerAdapter"
+    sget-object v1, Lmfd;->w0:Landroid/view/animation/AccelerateDecelerateInterpolator;
 
-    const-string v1, "release"
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    iget-object v2, p0, Lkfd;->b:Lpmc;
+    new-instance v2, Lifd;
 
-    invoke-interface {v2, v0, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v6, p0, Lkfd;->o:Lmfd;
 
-    invoke-virtual {p0}, Lkfd;->c()V
+    iget-object v7, p0, Lkfd;->X:Lcfd;
 
-    iget-object v0, p0, Lkfd;->a:Lorg/webrtc/ScreenCapturerAndroid;
+    iget-object v3, p0, Lkfd;->a:Landroid/view/View;
 
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->dispose()V
+    iget-object v4, p0, Lkfd;->b:Lmfd;
 
-    return-void
-.end method
+    iget-object v5, p0, Lkfd;->c:Lgfd;
 
-.method public final c()V
-    .locals 5
+    invoke-direct/range {v2 .. v7}, Lifd;-><init>(Landroid/view/View;Lmfd;Lgfd;Lmfd;Lcfd;)V
 
-    iget-object v0, p0, Lkfd;->b:Lpmc;
+    invoke-virtual {v0, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    const-string v1, "stop"
+    new-instance v1, Ljfd;
 
-    const-string v2, "ScreenCapturerAdapter"
+    invoke-direct {v1, v3, p1}, Ljfd;-><init>(Landroid/view/View;F)V
 
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    iget-boolean v0, p0, Lkfd;->d:Z
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lkfd;->b:Lpmc;
-
-    const-string v1, "Screen capturer is not yet started"
-
-    invoke-interface {v0, v2, v1}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lkfd;->d:Z
-
-    :try_start_0
-    iget-object v0, p0, Lkfd;->a:Lorg/webrtc/ScreenCapturerAndroid;
-
-    invoke-virtual {v0}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    iget-object v1, p0, Lkfd;->b:Lpmc;
-
-    new-instance v3, Ljava/lang/RuntimeException;
-
-    const-string v4, "Stop screen capture failed"
-
-    invoke-direct {v3, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const-string v0, "screen.capture.stop"
-
-    invoke-interface {v1, v2, v0, v3}, Lpmc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final onStop()V
-    .locals 3
-
-    iget-object v0, p0, Lkfd;->b:Lpmc;
-
-    const-string v1, "ScreenCapturerAdapter"
-
-    const-string v2, "onStop, screen capture session stopped"
-
-    invoke-interface {v0, v1, v2}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lkfd;->c:Z
-
-    iget-object v0, p0, Lkfd;->h:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lsga;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v1, v2, p0}, Lsga;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
+    return-object v0
 .end method

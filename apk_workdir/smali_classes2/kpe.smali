@@ -4,5 +4,11 @@
 
 
 # virtual methods
-.method public abstract a(Lrmc;)V
+.method public abstract a(Lqpe;)V
+.end method
+
+.method public abstract b(Le68;)V
+.end method
+
+.method public abstract setParent(Landroid/view/ViewGroup;)V
 .end method

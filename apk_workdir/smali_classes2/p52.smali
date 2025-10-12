@@ -1,90 +1,61 @@
 .class public final Lp52;
-.super Lm3f;
+.super Ls52;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lu52;
+# static fields
+.field public static final a:Lp52;
 
 
 # direct methods
-.method public constructor <init>(Lu52;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lp52;->Y:Lu52;
+    new-instance v0, Lp52;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lp52;->a:Lp52;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lh52;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lp52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lp52;
 
-    check-cast p1, Lp52;
+    if-nez p1, :cond_1
 
-    sget-object p2, Loyf;->a:Loyf;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Lp52;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    return-object p2
+    :cond_1
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lp52;
+    const v0, -0x29e8873b
 
-    iget-object v1, p0, Lp52;->Y:Lu52;
+    return v0
+.end method
 
-    invoke-direct {v0, v1, p2}, Lp52;-><init>(Lu52;Lkotlin/coroutines/Continuation;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, v0, Lp52;->X:Ljava/lang/Object;
+    const-string v0, "NoInternetConnection"
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lp52;->X:Ljava/lang/Object;
-
-    check-cast p1, Lh52;
-
-    iget-object v0, p0, Lp52;->Y:Lu52;
-
-    iget-object v1, v0, Lu52;->X:Lmoe;
-
-    iget-object v2, p1, Lh52;->a:Lv52;
-
-    invoke-virtual {v1, v2}, Lmoe;->setValue(Ljava/lang/Object;)V
-
-    iget-object v0, v0, Lu52;->c:Lmoe;
-
-    iget-object p1, p1, Lh52;->b:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Lmoe;->setValue(Ljava/lang/Object;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

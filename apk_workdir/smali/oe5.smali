@@ -1,102 +1,71 @@
-.class public final Loe5;
+.class public final synthetic Loe5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ln0d;
+.implements Ljw7;
+.implements Lmo3;
 
 
 # instance fields
-.field public final a:Lm33;
+.field public final synthetic a:Z
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Lfah;
-
-.field public final e:I
-
-.field public final f:Lgt;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(ZZLfah;ILgt;)V
+.method public synthetic constructor <init>(IZ)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Loe5;->b:Z
+    iput p1, p0, Loe5;->b:I
 
-    iput-boolean p2, p0, Loe5;->c:Z
+    iput-boolean p2, p0, Loe5;->a:Z
 
-    iput-object p3, p0, Loe5;->d:Lfah;
+    return-void
+.end method
 
-    iput p4, p0, Loe5;->e:I
+.method public synthetic constructor <init>(ZI)V
+    .locals 0
 
-    iput-object p5, p0, Loe5;->f:Lgt;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lm33;
+    iput-boolean p1, p0, Loe5;->a:Z
 
-    const/16 p2, 0x10
-
-    invoke-direct {p1, p2}, Lm33;-><init>(I)V
-
-    iput-object p1, p0, Loe5;->a:Lm33;
+    iput p2, p0, Loe5;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/os/Handler;Lcf5;Lcf5;Lcf5;Lcf5;)[Lck0;
-    .locals 1
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance p1, Ljava/util/ArrayList;
+    iget v0, p0, Loe5;->b:I
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    check-cast p1, Lykb;
 
-    iget-boolean p2, p0, Loe5;->b:Z
+    iget-boolean v1, p0, Loe5;->a:Z
 
-    iget-object p3, p0, Loe5;->f:Lgt;
+    invoke-virtual {p1, v0, v1}, Lykb;->g0(IZ)V
 
-    iget-object p4, p0, Loe5;->a:Lm33;
+    return-void
+.end method
 
-    iget-object p5, p0, Loe5;->d:Lfah;
+.method public invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    if-nez p2, :cond_0
+    iget-boolean v0, p0, Loe5;->a:Z
 
-    new-instance p2, Lae5;
+    check-cast p1, Lljb;
 
-    invoke-direct {p2, p5, p4, p3}, Lae5;-><init>(Lfah;Lm33;Lgt;)V
+    iget v1, p0, Loe5;->b:I
 
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-interface {p1, v1, v0}, Lljb;->l(IZ)V
 
-    :cond_0
-    iget-boolean p2, p0, Loe5;->c:Z
-
-    if-nez p2, :cond_1
-
-    new-instance p2, Lce5;
-
-    iget v0, p0, Loe5;->e:I
-
-    invoke-direct {p2, p5, v0, p4, p3}, Lce5;-><init>(Lfah;ILm33;Lgt;)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p2
-
-    new-array p2, p2, [Lck0;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lck0;
-
-    return-object p1
+    return-void
 .end method

@@ -1,98 +1,111 @@
 .class public final Lkl6;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Lyn7;
 
-.field public final synthetic Y:Ljava/lang/Long;
+.field public final b:Lyn7;
+
+.field public final c:Lyn7;
+
+.field public final d:Lyn7;
+
+.field public final e:Lyn7;
+
+.field public final f:Lyn7;
+
+.field public final g:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;Lyn7;)V
     .locals 0
 
-    iput-object p1, p0, Lkl6;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lkl6;->Y:Ljava/lang/Long;
+    iput-object p1, p0, Lkl6;->a:Lyn7;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lkl6;->b:Lyn7;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lkl6;->c:Lyn7;
+
+    iput-object p4, p0, Lkl6;->d:Lyn7;
+
+    iput-object p5, p0, Lkl6;->e:Lyn7;
+
+    iput-object p6, p0, Lkl6;->f:Lyn7;
+
+    iput-object p7, p0, Lkl6;->g:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkl6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkl6;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lkl6;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Ll6c;ZLc2f;)Ljava/lang/Object;
     .locals 2
 
-    new-instance p1, Lkl6;
+    sget-object v0, Lone/me/sdk/uikit/qr/QrCodeGenerator;->f:Ld3b;
 
-    iget-object v0, p0, Lkl6;->X:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lkl6;->Y:Ljava/lang/Long;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1, v0, p2, v1}, Lkl6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
+    iget-object v0, v0, Ld3b;->a:Ljava/lang/Object;
+
+    check-cast v0, Ll6c;
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    invoke-static {v0, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    if-nez p2, :cond_2
+
+    sget-object p1, Lone/me/sdk/uikit/qr/QrCodeGenerator;->f:Ld3b;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Ld3b;->b:Ljava/lang/Object;
+
+    check-cast p1, Lf6c;
 
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    :cond_1
+    return-object v1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    :cond_2
+    iget-object p2, p0, Lkl6;->f:Lyn7;
 
-    iget-object p1, p0, Lkl6;->X:Ljava/lang/Object;
+    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lw29;
+    move-result-object p2
 
-    iget-object p1, p1, Lw29;->a:Lq49;
+    check-cast p2, Le7f;
 
-    iget-wide v1, p1, Lq49;->w0:J
+    check-cast p2, Lmka;
 
-    iget-wide v3, p1, Lyi0;->a:J
+    invoke-virtual {p2}, Lmka;->b()Lh24;
 
-    iget-object p1, p0, Lkl6;->Y:Ljava/lang/Long;
+    move-result-object p2
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    new-instance v0, Ljl6;
 
-    move-result-wide v5
+    invoke-direct {v0, p1, p0, v1}, Ljl6;-><init>(Ll6c;Lkl6;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v0, Leud;
+    invoke-static {p2, v0, p3}, Lov9;->o0(Lf24;Lje6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct/range {v0 .. v6}, Leud;-><init>(JJJ)V
-
-    new-instance p1, Lfud;
-
-    invoke-direct {p1, v0}, Lfud;-><init>(Leud;)V
+    move-result-object p1
 
     return-object p1
 .end method

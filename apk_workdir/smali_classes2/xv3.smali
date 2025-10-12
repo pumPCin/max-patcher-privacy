@@ -1,60 +1,63 @@
-.class public final Lxv3;
-.super Ll9f;
+.class public final synthetic Lxv3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public c:Lds3;
+# interfaces
+.implements Lx7;
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 1
+.method public final a(Ln6d;)V
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Landroid/content/Intent;
 
-    const-string v0, "contact"
+    const-string v1, "android.intent.action.INSERT"
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    move-result p2
+    const-string v1, "vnd.android.cursor.dir/raw_contact"
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {p1}, Ls89;->B()V
+    const-string v1, "finishActivityOnSaveCompleted"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    :try_start_0
+    invoke-virtual {p1}, Ln6d;->d()Landroid/app/Activity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/16 v1, 0x66
+
+    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 
     :cond_0
-    invoke-static {p1}, Lds3;->g(Ls89;)Lds3;
+    const-string p1, "Required value was null."
 
-    move-result-object p1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iput-object p1, p0, Lxv3;->c:Lds3;
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const-string p1, "createContact: failed, no activity found"
+
+    const/4 v0, 0x0
+
+    const-string v1, "ContactsDeepLinkFactory"
+
+    invoke-static {v1, p1, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lxv3;->c:Lds3;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{contact="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

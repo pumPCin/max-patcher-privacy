@@ -1,42 +1,129 @@
-.class public final synthetic Lh2e;
-.super Ln8;
+.class public final Lh2e;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
-# static fields
-.field public static final w0:Lh2e;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lv2e;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lv2e;)V
+    .locals 0
 
-    new-instance v0, Lh2e;
+    iput-object p1, p0, Lh2e;->Y:Ljava/lang/Object;
 
-    const-class v1, Lsyd;
+    iput-object p3, p0, Lh2e;->Z:Lv2e;
 
-    const-string v2, "<init>(Lru/ok/tamtam/android/SelfId;Lkotlin/Lazy;Lkotlin/Lazy;Lone/me/settings/usecase/GetCurrentUserProfileDataUseCase;Lone/me/sdk/uikit/qr/GetQrCodeUseCase;Lone/me/settings/ProfileEvents;Lkotlin/Lazy;Lkotlin/Lazy;Landroid/app/Application;Lkotlin/Lazy;Lkotlin/Lazy;Lru/ok/tamtam/android/profile/ProfileRepository;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;Lkotlin/Lazy;)V"
+    const/4 p1, 0x2
 
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v3, v1, v2, v3}, Ln8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lh2e;->w0:Lh2e;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lsyd;
+    check-cast p1, Ln24;
 
-    invoke-direct {v0}, Lsyd;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lh2e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lh2e;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lh2e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lh2e;
+
+    iget-object v0, p0, Lh2e;->Y:Ljava/lang/Object;
+
+    iget-object v1, p0, Lh2e;->Z:Lv2e;
+
+    invoke-direct {p1, v0, p2, v1}, Lh2e;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lv2e;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lh2e;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lh2e;->Y:Ljava/lang/Object;
+
+    check-cast p1, Ln24;
+
+    sget-object p1, Lv2e;->R0:[Lpl7;
+
+    iget-object p1, p0, Lh2e;->Z:Lv2e;
+
+    invoke-virtual {p1}, Lv2e;->t()Lcl;
+
+    move-result-object p1
+
+    new-instance v0, Lun9;
+
+    invoke-direct {v0}, Lun9;-><init>()V
+
+    iput v1, p0, Lh2e;->X:I
+
+    check-cast p1, Lgea;
+
+    invoke-virtual {p1, v0, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

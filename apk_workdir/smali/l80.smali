@@ -1,68 +1,126 @@
 .class public final Ll80;
-.super Ljava/lang/Object;
+.super Lr86;
 .source "SourceFile"
 
 # interfaces
-.implements Lmaa;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Ll80;
+# instance fields
+.field public X:I
 
-.field public static final b:Lfn5;
+.field public Y:Z
 
+.field public Z:F
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ll80;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll80;->a:Ll80;
-
-    new-instance v0, Lpx;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lpx;-><init>(I)V
-
-    const-class v1, Lb6c;
-
-    invoke-static {v1, v0}, Lqw1;->o(Ljava/lang/Class;Lpx;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lfn5;
-
-    invoke-static {v0}, Lqw1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "storageMetrics"
-
-    invoke-direct {v1, v2, v0}, Lfn5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Ll80;->b:Lfn5;
-
-    return-void
-.end method
+.field public r0:Z
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    check-cast p1, Lzn6;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    check-cast p2, Lnaa;
+    move-result v0
 
-    sget-object v0, Ll80;->b:Lfn5;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    iget-object p1, p1, Lzn6;->a:Luwe;
+    move-result-object v1
 
-    invoke-interface {p2, v0, p1}, Lnaa;->a(Lfn5;Ljava/lang/Object;)Lnaa;
+    iget v2, v1, Landroid/graphics/Rect;->right:I
+
+    iget v3, v1, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v2, v3
+
+    iget v4, v1, Landroid/graphics/Rect;->bottom:I
+
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v4, v1
+
+    iget v5, p0, Ll80;->Z:F
+
+    iget-boolean v6, p0, Ll80;->Y:Z
+
+    if-nez v6, :cond_0
+
+    const/high16 v6, 0x43b40000    # 360.0f
+
+    sub-float v5, v6, v5
+
+    :cond_0
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v2, v3
+
+    int-to-float v2, v2
+
+    div-int/lit8 v4, v4, 0x2
+
+    add-int/2addr v4, v1
+
+    int-to-float v1, v4
+
+    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    invoke-super {p0, p1}, Lr86;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    iget-boolean p1, p0, Ll80;->r0:Z
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ll80;->r0:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x14
+
+    add-long/2addr v0, v2
+
+    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final run()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ll80;->r0:Z
+
+    iget v0, p0, Ll80;->Z:F
+
+    iget v1, p0, Ll80;->X:I
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x41a00000    # 20.0f
+
+    div-float/2addr v2, v1
+
+    const/high16 v1, 0x43b40000    # 360.0f
+
+    mul-float/2addr v2, v1
+
+    float-to-int v1, v2
+
+    int-to-float v1, v1
+
+    add-float/2addr v0, v1
+
+    iput v0, p0, Ll80;->Z:F
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

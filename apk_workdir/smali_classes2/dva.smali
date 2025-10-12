@@ -1,19 +1,25 @@
-.class public final Ldva;
+.class public abstract Ldva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Li40;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Li40;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lhec;->oneme_stickers_search_stickers_list:I
 
-    iput-object p1, p0, Ldva;->a:Li40;
+    sput v0, Ldva;->a:I
+
+    sget v0, Lhec;->oneme_stickers_search_toolbar:I
+
+    sput v0, Ldva;->b:I
 
     return-void
 .end method

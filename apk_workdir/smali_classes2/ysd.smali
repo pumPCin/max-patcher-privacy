@@ -1,612 +1,365 @@
-.class public final Lysd;
-.super Ljava/lang/Object;
+.class public Lysd;
+.super Latd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final t0:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+.field public final u0:Ljava/util/List;
 
-.field public final c:Ljava/util/List;
+.field public v0:Ljava/util/List;
 
-.field public final d:Ljava/util/List;
-
-.field public final e:Ljava/lang/Long;
-
-.field public final f:Ljava/lang/Long;
-
-.field public final g:J
+.field public final w0:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;J)V
-    .locals 0
+.method public constructor <init>(Lxsd;)V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Latd;-><init>(Lzsd;)V
 
-    .line 2
-    iput-wide p1, p0, Lysd;->a:J
+    iget-object v0, p1, Lxsd;->h:Ljava/lang/String;
 
-    .line 3
-    iput-object p3, p0, Lysd;->b:Ljava/lang/String;
+    iput-object v0, p0, Lysd;->t0:Ljava/lang/String;
 
-    .line 4
-    iput-object p4, p0, Lysd;->c:Ljava/util/List;
+    iget-object v0, p1, Lxsd;->i:Ljava/util/List;
 
-    .line 5
-    iput-object p5, p0, Lysd;->d:Ljava/util/List;
+    iput-object v0, p0, Lysd;->u0:Ljava/util/List;
 
-    .line 6
-    iput-object p6, p0, Lysd;->e:Ljava/lang/Long;
+    iget-object v0, p1, Lxsd;->g:Ljava/util/List;
 
-    .line 7
-    iput-object p7, p0, Lysd;->f:Ljava/lang/Long;
+    iput-object v0, p0, Lysd;->v0:Ljava/util/List;
 
-    .line 8
-    iput-wide p8, p0, Lysd;->g:J
+    iget-boolean p1, p1, Lxsd;->j:Z
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;I)V
-    .locals 12
-
-    and-int/lit8 v0, p5, 0x2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    move-object v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v5, p1
-
-    :goto_0
-    and-int/lit8 p1, p5, 0x8
-
-    .line 9
-    sget-object v6, Lb75;->a:Lb75;
-
-    if-eqz p1, :cond_1
-
-    move-object v7, v6
-
-    goto :goto_1
-
-    :cond_1
-    move-object v7, p2
-
-    :goto_1
-    and-int/lit8 p1, p5, 0x10
-
-    if-eqz p1, :cond_2
-
-    move-object v8, v1
-
-    goto :goto_2
-
-    :cond_2
-    move-object v8, p3
-
-    :goto_2
-    and-int/lit8 p1, p5, 0x20
-
-    if-eqz p1, :cond_3
-
-    move-object v9, v1
-
-    goto :goto_3
-
-    :cond_3
-    move-object/from16 v9, p4
-
-    :goto_3
-    const-wide/16 v10, 0x0
-
-    const-wide/16 v3, 0x0
-
-    move-object v2, p0
-
-    invoke-direct/range {v2 .. v11}, Lysd;-><init>(JLjava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/Long;Ljava/lang/Long;J)V
+    iput-boolean p1, p0, Lysd;->w0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Map;
-    .locals 13
+.method public x()Ld39;
+    .locals 6
 
-    iget-object v0, p0, Lysd;->b:Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lk98;->s(Ljava/lang/CharSequence;)Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result v1
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lysd;->v0:Ljava/util/List;
 
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "text"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v4, v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v4, v2
-
-    :goto_1
-    iget-object v0, p0, Lysd;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move-object v0, v2
-
-    :goto_2
-    if-eqz v0, :cond_3
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "attaches"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v5, v1
-
-    goto :goto_3
-
-    :cond_3
-    move-object v5, v2
-
-    :goto_3
-    iget-object v0, p0, Lysd;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    move-object v0, v2
-
-    :goto_4
-    if-eqz v0, :cond_5
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "elements"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v6, v1
-
-    goto :goto_5
-
-    :cond_5
-    move-object v6, v2
-
-    :goto_5
-    iget-object v0, p0, Lysd;->e:Ljava/lang/Long;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "replyTo"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v7, v1
-
-    goto :goto_6
-
-    :cond_6
-    move-object v7, v2
-
-    :goto_6
-    iget-object v0, p0, Lysd;->f:Ljava/lang/Long;
-
-    if-eqz v0, :cond_7
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "editOn"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move-object v8, v1
-
-    goto :goto_7
-
-    :cond_7
-    move-object v8, v2
-
-    :goto_7
-    iget-wide v0, p0, Lysd;->g:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    const-wide/16 v9, 0x0
-
-    cmp-long v0, v0, v9
-
-    if-eqz v0, :cond_8
-
-    goto :goto_8
-
-    :cond_8
-    move-object v3, v2
-
-    :goto_8
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    new-instance v1, Ln4b;
-
-    const-string v3, "saveTime"
-
-    invoke-direct {v1, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_9
-
-    :cond_9
-    move-object v1, v2
-
-    :goto_9
-    iget-wide v11, p0, Lysd;->a:J
-
-    invoke-static {v11, v12}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    cmp-long v3, v11, v9
-
-    if-eqz v3, :cond_a
-
-    goto :goto_a
-
-    :cond_a
-    move-object v0, v2
-
-    :goto_a
-    if-eqz v0, :cond_b
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    new-instance v2, Ln4b;
-
-    const-string v3, "cid"
-
-    invoke-direct {v2, v3, v0}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_b
-    move-object v9, v1
-
-    move-object v10, v2
-
-    filled-new-array/range {v4 .. v10}, [Ln4b;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhs;->f0([Ljava/lang/Object;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lwa8;->Z(Ljava/util/ArrayList;)Ljava/util/Map;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lysd;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lysd;
-
-    iget-wide v3, p0, Lysd;->a:J
-
-    iget-wide v5, p1, Lysd;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lysd;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lysd;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lysd;->c:Ljava/util/List;
-
-    iget-object v3, p1, Lysd;->c:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lysd;->d:Ljava/util/List;
-
-    iget-object v3, p1, Lysd;->d:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lysd;->e:Ljava/lang/Long;
-
-    iget-object v3, p1, Lysd;->e:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lysd;->f:Ljava/lang/Long;
-
-    iget-object v3, p1, Lysd;->f:Ljava/lang/Long;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-wide v3, p0, Lysd;->g:J
-
-    iget-wide v5, p1, Lysd;->g:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lysd;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lysd;->b:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lysd;->c:Ljava/util/List;
-
-    invoke-static {v3, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v3, p0, Lysd;->d:Ljava/util/List;
-
-    invoke-static {v3, v0, v1}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v3, p0, Lysd;->e:Ljava/lang/Long;
-
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-object v3, p0, Lysd;->f:Ljava/lang/Long;
-
-    if-nez v3, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
-    :goto_2
-    add-int/2addr v0, v2
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    mul-int/2addr v0, v1
+    iget-object v2, p0, Lysd;->v0:Ljava/util/List;
 
-    iget-wide v1, p0, Lysd;->g:J
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    move-result-object v2
 
-    move-result v1
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    add-int/2addr v1, v0
+    move-result v3
 
-    return v1
-.end method
+    const/4 v4, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    if-eqz v3, :cond_4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v1, "ServerDraft(text=***, attaches="
+    move-result-object v3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v3, Lx2;
 
-    iget-object v1, p0, Lysd;->c:Ljava/util/List;
+    instance-of v5, v3, La00;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v5, :cond_1
 
-    const-string v1, ", elements="
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v3, La00;
 
-    iget-object v1, p0, Lysd;->d:Ljava/util/List;
+    iget-object v3, v3, La00;->c:Lq10;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v1, ", replyTo="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-object v5, p0, Lasd;->a:Lbsd;
 
-    iget-object v1, p0, Lysd;->e:Ljava/lang/Long;
+    if-eqz v5, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-object v4, v5
 
-    const-string v1, ", editOn="
+    :cond_2
+    iget-object v4, v4, Lbsd;->A:Lyn7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v4}, Lyn7;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lysd;->f:Ljava/lang/Long;
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v4, Lppb;
 
-    const-string v1, ", saveTime="
+    iget-boolean v5, p0, Lysd;->w0:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3, v5}, Lppb;->b(Lx2;Z)Le3b;
 
-    const-string v1, ")"
+    move-result-object v3
 
-    iget-wide v2, p0, Lysd;->g:J
+    if-nez v3, :cond_3
 
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    goto :goto_0
+
+    :cond_3
+    iget-object v4, v3, Le3b;->a:Ljava/lang/Object;
+
+    check-cast v4, Lx2;
+
+    iget-object v3, v3, Le3b;->b:Ljava/lang/Object;
+
+    check-cast v3, Lq10;
+
+    if-eqz v4, :cond_0
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v2, p0, Lysd;->t0:Ljava/lang/String;
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    :cond_5
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    return-object v4
+
+    :cond_6
+    iput-object v1, p0, Lysd;->v0:Ljava/util/List;
+
+    new-instance v1, Lr10;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, v1, Lr10;->a:Ljava/util/List;
+
+    invoke-virtual {v1}, Lr10;->c()Lljh;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Ld39;
+
+    invoke-direct {v1}, Ld39;-><init>()V
+
+    iput-object v0, v1, Ld39;->n:Lljh;
+
+    invoke-static {v2}, Ld40;->A(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    iput-object v2, v1, Ld39;->g:Ljava/lang/String;
+
+    :cond_7
+    iget-object v0, p0, Lysd;->u0:Ljava/util/List;
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    iput-object v0, v1, Ld39;->D:Ljava/util/List;
+
+    :cond_9
+    :goto_1
+    return-object v1
+.end method
+
+.method public y(Lr82;J)J
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    invoke-super/range {p0 .. p3}, Latd;->y(Lr82;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v0}, Lasd;->n()Lc39;
+
+    move-result-object v4
+
+    move-wide/from16 v7, p2
+
+    invoke-virtual {v4, v7, v8}, Lc39;->n(J)Le39;
+
+    move-result-object v4
+
+    if-nez v4, :cond_0
+
+    const-wide/16 v1, 0x0
+
+    return-wide v1
+
+    :cond_0
+    iget-object v5, v0, Lysd;->v0:Ljava/util/List;
+
+    invoke-interface {v5}, Ljava/util/Collection;->size()I
+
+    move-result v15
+
+    const/4 v5, 0x0
+
+    :goto_0
+    if-ge v5, v15, :cond_4
+
+    iget-object v6, v0, Lysd;->v0:Ljava/util/List;
+
+    invoke-interface {v6, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lx2;
+
+    iget-object v9, v4, Le39;->x0:Lljh;
+
+    invoke-virtual {v9, v5}, Lljh;->j(I)Lq10;
+
+    move-result-object v9
+
+    iget-object v9, v9, Lq10;->r:Ljava/lang/String;
+
+    instance-of v10, v6, Lhh5;
+
+    if-eqz v10, :cond_1
+
+    invoke-virtual {v0}, Lasd;->t()La9h;
+
+    move-result-object v10
+
+    move v11, v5
+
+    new-instance v5, Ljh5;
+
+    invoke-virtual {v0}, Lasd;->o()Lnnb;
+
+    move-result-object v12
+
+    check-cast v12, Lpnb;
+
+    iget-object v12, v12, Lpnb;->a:Lt08;
+
+    invoke-virtual {v12}, Lfhd;->k()J
+
+    move-result-wide v12
+
+    check-cast v6, Lhh5;
+
+    iget-object v8, v6, Lgce;->b:Ljava/lang/String;
+
+    move-wide/from16 v16, v12
+
+    iget-wide v12, v1, Lr82;->a:J
+
+    iget-object v14, v6, Lhh5;->Y:Ljava/lang/String;
+
+    move-wide/from16 v6, v16
+
+    move-wide/from16 v17, v2
+
+    move-object v2, v10
+
+    move/from16 v16, v11
+
+    move-wide/from16 v10, p2
+
+    invoke-direct/range {v5 .. v14}, Ljh5;-><init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
+
+    invoke-virtual {v2, v5}, La9h;->c(Lasd;)J
+
+    goto :goto_2
+
+    :cond_1
+    move-wide/from16 v17, v2
+
+    move/from16 v16, v5
+
+    instance-of v2, v6, La00;
+
+    if-nez v2, :cond_3
+
+    move-object v11, v9
+
+    iget-wide v9, v1, Lr82;->a:J
+
+    iget-object v2, v0, Lasd;->a:Lbsd;
+
+    if-eqz v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v2, 0x0
+
+    :goto_1
+    iget-object v2, v2, Lbsd;->b:Lyn7;
+
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v5, v2
+
+    check-cast v5, Lin5;
+
+    move-wide/from16 v7, p2
+
+    invoke-virtual/range {v5 .. v11}, Lin5;->c(Lx2;JJLjava/lang/String;)V
+
+    :cond_3
+    :goto_2
+    add-int/lit8 v5, v16, 0x1
+
+    move-wide/from16 v7, p2
+
+    move-wide/from16 v2, v17
+
+    goto :goto_0
+
+    :cond_4
+    move-wide/from16 v17, v2
+
+    return-wide v17
 .end method

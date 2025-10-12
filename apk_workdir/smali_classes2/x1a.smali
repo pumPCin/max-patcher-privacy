@@ -1,332 +1,167 @@
 .class public final Lx1a;
-.super Ljava/lang/Object;
+.super Ly7f;
 .source "SourceFile"
-
-# interfaces
-.implements Lz1a;
 
 
 # instance fields
-.field public final b:J
+.field public X:Lg18;
 
-.field public final c:J
+.field public c:J
+
+.field public o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lx1a;->b:J
-
-    iput-wide p3, p0, Lx1a;->c:J
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/Date;)Ljava/util/Date;
-    .locals 8
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 2
 
-    new-instance v0, Ljava/util/Date;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Ljava/util/Date;->getYear()I
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/util/Date;->getMonth()I
+    const/4 v1, -0x1
 
-    move-result v2
+    sparse-switch v0, :sswitch_data_0
 
-    invoke-virtual {p1}, Ljava/util/Date;->getDate()I
+    goto :goto_0
 
-    move-result v3
+    :sswitch_0
+    const-string v0, "location"
 
-    sget p1, Ln05;->o:I
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sget-object p1, Ls05;->Y:Ls05;
+    move-result p2
 
-    iget-wide v4, p0, Lx1a;->c:J
-
-    invoke-static {v4, v5, p1}, Ln05;->i(JLs05;)J
-
-    move-result-wide v6
-
-    long-to-int p1, v6
-
-    sget-object v6, Ls05;->X:Ls05;
-
-    invoke-static {v4, v5, v6}, Ln05;->i(JLs05;)J
-
-    move-result-wide v4
-
-    const/16 v6, 0x3c
-
-    int-to-long v6, v6
-
-    rem-long/2addr v4, v6
-
-    long-to-int v5, v4
-
-    move v4, p1
-
-    invoke-direct/range {v0 .. v5}, Ljava/util/Date;-><init>(IIIII)V
-
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 8
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lx1a;->c(Ljava/util/Date;)Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0}, Lx1a;->a(Ljava/util/Date;)Ljava/util/Date;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result v3
-
-    const-wide/16 v4, 0x1
-
-    if-ltz v3, :cond_0
-
-    invoke-interface {v0, v2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
-
-    move-result v3
-
-    if-gtz v3, :cond_0
+    if-nez p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, v2}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+    const/4 v1, 0x2
 
-    move-result v3
+    goto :goto_0
 
-    if-lez v3, :cond_1
+    :sswitch_1
+    const-string v0, "deviceId"
 
-    invoke-virtual {v1}, Ljava/util/Date;->getTime()J
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-wide v6
+    move-result p2
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    if-nez p2, :cond_1
 
-    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v3
-
-    sub-long/2addr v6, v3
-
-    invoke-virtual {v1, v6, v7}, Ljava/util/Date;->setTime(J)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "userId"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x0
+
     :goto_0
-    invoke-virtual {v2, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+    packed-switch v1, :pswitch_data_0
 
-    move-result v3
+    invoke-virtual {p1}, Lc79;->y()V
 
-    if-gez v3, :cond_2
+    return-void
 
-    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+    :pswitch_0
+    invoke-static {p1}, Lg18;->a(Lc79;)Lg18;
 
-    move-result-wide v6
+    move-result-object p1
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    iput-object p1, p0, Lx1a;->X:Lg18;
 
-    invoke-virtual {v3, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    return-void
 
-    move-result-wide v3
+    :pswitch_1
+    invoke-static {p1}, Lg8;->K(Lc79;)Ljava/lang/String;
 
-    add-long/2addr v3, v6
+    move-result-object p1
 
-    invoke-virtual {v2, v3, v4}, Ljava/util/Date;->setTime(J)V
+    iput-object p1, p0, Lx1a;->o:Ljava/lang/String;
 
-    :cond_2
-    :goto_1
-    invoke-virtual {v0, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+    return-void
 
-    move-result v1
+    :pswitch_2
+    const-wide/16 v0, 0x0
 
-    if-ltz v1, :cond_3
+    invoke-static {p1, v0, v1}, Lg8;->H(Lc79;J)J
 
-    invoke-virtual {v0, v2}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
+    move-result-wide p1
 
-    move-result v0
+    iput-wide p1, p0, Lx1a;->c:J
 
-    if-gez v0, :cond_3
+    return-void
 
-    const/4 v0, 0x1
+    :sswitch_data_0
+    .sparse-switch
+        -0x31d4d1ba -> :sswitch_2
+        0x421cea11 -> :sswitch_1
+        0x714f9fb5 -> :sswitch_0
+    .end sparse-switch
 
-    return v0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final c(Ljava/util/Date;)Ljava/util/Date;
-    .locals 8
-
-    new-instance v0, Ljava/util/Date;
-
-    invoke-virtual {p1}, Ljava/util/Date;->getYear()I
-
-    move-result v1
-
-    invoke-virtual {p1}, Ljava/util/Date;->getMonth()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Ljava/util/Date;->getDate()I
-
-    move-result v3
-
-    sget p1, Ln05;->o:I
-
-    sget-object p1, Ls05;->Y:Ls05;
-
-    iget-wide v4, p0, Lx1a;->b:J
-
-    invoke-static {v4, v5, p1}, Ln05;->i(JLs05;)J
-
-    move-result-wide v6
-
-    long-to-int p1, v6
-
-    sget-object v6, Ls05;->X:Ls05;
-
-    invoke-static {v4, v5, v6}, Ln05;->i(JLs05;)J
-
-    move-result-wide v4
-
-    const/16 v6, 0x3c
-
-    int-to-long v6, v6
-
-    rem-long/2addr v4, v6
-
-    long-to-int v5, v4
-
-    move v4, p1
-
-    invoke-direct/range {v0 .. v5}, Ljava/util/Date;-><init>(IIIII)V
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx1a;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lx1a;
-
-    iget-wide v3, p0, Lx1a;->b:J
-
-    iget-wide v5, p1, Lx1a;->b:J
-
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lx1a;->c:J
-
-    iget-wide v5, p1, Lx1a;->c:J
-
-    invoke-static {v3, v4, v5, v6}, Ln05;->d(JJ)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    sget v0, Ln05;->o:I
-
-    iget-wide v0, p0, Lx1a;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lx1a;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
-    iget-wide v0, p0, Lx1a;->b:J
+    iget-wide v0, p0, Lx1a;->c:J
 
-    invoke-static {v0, v1}, Ln05;->j(J)Ljava/lang/String;
+    iget-object v2, p0, Lx1a;->o:Ljava/lang/String;
+
+    iget-object v3, p0, Lx1a;->X:Lg18;
+
+    const-string v4, "Response{userId="
+
+    const-string v5, ", deviceId=\'"
+
+    invoke-static {v4, v0, v1, v5, v2}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lx1a;->c:J
+    const-string v1, "\', location="
 
-    invoke-static {v1, v2}, Ln05;->j(J)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, ", endTime="
+    const-string v1, "}"
 
-    const-string v3, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v4, "Schedule(startTime="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

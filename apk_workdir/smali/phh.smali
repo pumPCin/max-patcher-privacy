@@ -1,9 +1,9 @@
 .class public abstract Lphh;
-.super Lcfh;
+.super Lodh;
 .source "SourceFile"
 
 # interfaces
-.implements Lqhh;
+.implements Lhih;
 
 
 # static fields

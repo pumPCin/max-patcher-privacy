@@ -1,44 +1,26 @@
 .class public final Lgtb;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lhtb;
-
-.field public final synthetic w0:Ldsb;
-
-.field public final synthetic x0:Lasb;
-
-.field public final synthetic y0:Ljava/lang/String;
-
-.field public final synthetic z0:I
+.field public final synthetic Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
 
 # direct methods
-.method public constructor <init>(Lhtb;Ldsb;Lasb;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lgtb;->Z:Lhtb;
+    iput-object p2, p0, Lgtb;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    iput-object p2, p0, Lgtb;->w0:Ldsb;
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Lgtb;->x0:Lasb;
-
-    iput-object p4, p0, Lgtb;->y0:Ljava/lang/String;
-
-    iput p5, p0, Lgtb;->z0:I
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -48,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lgtb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -58,245 +38,108 @@
 
     check-cast p1, Lgtb;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lgtb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    .locals 2
 
     new-instance v0, Lgtb;
 
-    iget-object v4, p0, Lgtb;->y0:Ljava/lang/String;
+    iget-object v1, p0, Lgtb;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    iget v5, p0, Lgtb;->z0:I
+    invoke-direct {v0, p2, v1}, Lgtb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
 
-    iget-object v1, p0, Lgtb;->Z:Lhtb;
-
-    iget-object v2, p0, Lgtb;->w0:Ldsb;
-
-    iget-object v3, p0, Lgtb;->x0:Lasb;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lgtb;-><init>(Lhtb;Ldsb;Lasb;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lgtb;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lgtb;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+    .locals 6
 
-    move-object/from16 v6, p0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    sget-object v7, Loyf;->a:Loyf;
+    iget-object p1, p0, Lgtb;->X:Ljava/lang/Object;
 
-    sget-object v8, Lf34;->a:Lf34;
+    check-cast p1, Lmtf;
 
-    iget v0, v6, Lgtb;->X:I
+    iget-object v0, p0, Lgtb;->Y:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    const/4 v9, 0x0
+    iget-object v1, v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:Lvoc;
 
-    const/4 v10, 0x1
+    sget-object v2, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Lpl7;
 
-    if-eqz v0, :cond_1
+    instance-of v2, p1, Lktf;
 
-    if-ne v0, v10, :cond_0
+    const/4 v3, 0x1
 
-    :try_start_0
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v2, :cond_0
 
-    goto :goto_1
+    new-instance v2, Lrta;
 
-    :catchall_0
-    move-exception v0
+    invoke-direct {v2, v0}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    goto :goto_2
+    new-instance v4, Lfua;
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    check-cast p1, Lktf;
 
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget v5, p1, Lktf;->b:I
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v5}, Lfua;-><init>(I)V
 
-    throw v0
+    invoke-virtual {v2, v4}, Lrta;->e(Ljua;)V
 
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object p1, p1, Lktf;->a:Lcdf;
 
-    iget-object v0, v6, Lgtb;->Y:Ljava/lang/Object;
+    invoke-virtual {v2, p1}, Lrta;->g(Lcdf;)V
 
-    check-cast v0, Le34;
+    invoke-virtual {v2}, Lrta;->i()Lqta;
 
-    iget-object v0, v6, Lgtb;->Z:Lhtb;
+    sget-object p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Lpl7;
 
-    iget-object v0, v0, Lhtb;->Z:Ljb5;
+    aget-object p1, p1, v3
 
-    sget-object v1, Letb;->a:Letb;
+    invoke-interface {v1, v0, p1}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    move-result-object p1
 
-    iget-object v13, v6, Lgtb;->Z:Lhtb;
+    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iget-object v1, v6, Lgtb;->w0:Ldsb;
+    const/4 v0, 0x0
 
-    iget-object v2, v6, Lgtb;->x0:Lasb;
-
-    iget-object v3, v6, Lgtb;->y0:Ljava/lang/String;
-
-    iget v0, v6, Lgtb;->z0:I
-
-    :try_start_1
-    iget-object v4, v13, Lhtb;->b:Llsb;
-
-    iget v5, v13, Lhtb;->Y:I
-
-    if-ne v5, v0, :cond_2
-
-    move-object v0, v4
-
-    move v4, v10
+    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
     goto :goto_0
 
-    :cond_2
-    move-object v0, v4
+    :cond_0
+    instance-of v2, p1, Lltf;
 
-    move v4, v9
+    if-eqz v2, :cond_1
 
+    sget-object v2, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->Y:[Lpl7;
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, v0, v2}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    check-cast p1, Lltf;
+
+    iget-boolean p1, p1, Lltf;->a:Z
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    :cond_1
     :goto_0
-    new-instance v5, Lrn7;
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-class v14, Lhtb;
-
-    const-string v15, "mapAndNotifyEvent"
-
-    const-string v16, "mapAndNotifyEvent(Lone/me/profile/screens/avatars/ProfileAvatars$Event;)V"
-
-    const/16 v17, 0x0
-
-    const/16 v18, 0x12
-
-    const/4 v12, 0x1
-
-    move-object v11, v5
-
-    invoke-direct/range {v11 .. v18}, Lrn7;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    iput v10, v6, Lgtb;->X:I
-
-    invoke-interface/range {v0 .. v6}, Llsb;->d(Ldsb;Lasb;Ljava/lang/String;ZLrn7;Lnz3;)Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-ne v0, v8, :cond_3
-
-    return-object v8
-
-    :cond_3
-    :goto_1
-    move-object v1, v7
-
-    goto :goto_3
-
-    :goto_2
-    new-instance v1, Lv3d;
-
-    invoke-direct {v1, v0}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_3
-    instance-of v0, v1, Lv3d;
-
-    if-nez v0, :cond_4
-
-    iget-object v0, v6, Lgtb;->w0:Ldsb;
-
-    iget-object v0, v0, Ldsb;->b:Loef;
-
-    if-eqz v0, :cond_5
-
-    iget-object v1, v6, Lgtb;->Z:Lhtb;
-
-    iget-object v1, v1, Lhtb;->Z:Ljb5;
-
-    new-instance v2, Lbtb;
-
-    invoke-direct {v2, v0, v9}, Lbtb;-><init>(Loef;Z)V
-
-    invoke-static {v1, v2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    goto :goto_4
-
-    :cond_4
-    invoke-static {v1}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Ljava/util/concurrent/CancellationException;
-
-    if-nez v1, :cond_5
-
-    iget-object v1, v6, Lgtb;->Z:Lhtb;
-
-    iget-object v1, v1, Lhtb;->c:Ljava/lang/String;
-
-    iget-object v2, v6, Lgtb;->w0:Ldsb;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "action "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ": failed"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object v0, v6, Lgtb;->w0:Ldsb;
-
-    iget-object v0, v0, Ldsb;->c:Loef;
-
-    if-eqz v0, :cond_5
-
-    iget-object v1, v6, Lgtb;->Z:Lhtb;
-
-    iget-object v1, v1, Lhtb;->Z:Ljb5;
-
-    new-instance v2, Lbtb;
-
-    invoke-direct {v2, v0, v10}, Lbtb;-><init>(Loef;Z)V
-
-    invoke-static {v1, v2}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    :cond_5
-    :goto_4
-    iget-object v0, v6, Lgtb;->Z:Lhtb;
-
-    iget-object v0, v0, Lhtb;->Z:Ljb5;
-
-    sget-object v1, Latb;->a:Latb;
-
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    return-object v7
+    return-object p1
 .end method

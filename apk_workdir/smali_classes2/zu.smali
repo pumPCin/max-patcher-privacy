@@ -1,142 +1,92 @@
-.class public final Lzu;
+.class public final synthetic Lzu;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lxh2;
 
 
 # direct methods
-.method public constructor <init>(JI)V
+.method public synthetic constructor <init>(Lxh2;I)V
     .locals 0
 
+    iput p2, p0, Lzu;->a:I
+
+    iput-object p1, p0, Lzu;->b:Lxh2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lzu;->a:J
-
-    iput p3, p0, Lzu;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lzu;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lzu;
+    iget-object v0, p0, Lzu;->b:Lxh2;
 
-    if-nez v0, :cond_1
+    iget-object v1, v0, Lxh2;->r0:Lbv;
 
-    goto :goto_0
+    monitor-enter v1
 
-    :cond_1
-    check-cast p1, Lzu;
+    monitor-exit v1
 
-    iget-wide v0, p0, Lzu;->a:J
+    iget-object v1, v0, Lxh2;->t0:Lbv;
 
-    iget-wide v2, p1, Lzu;->a:J
+    monitor-enter v1
 
-    cmp-long v0, v0, v2
+    monitor-exit v1
 
-    if-eqz v0, :cond_2
+    iget-object v1, v0, Lxh2;->s0:Lbv;
 
-    goto :goto_0
+    monitor-enter v1
 
-    :cond_2
-    iget v0, p0, Lzu;->b:I
+    monitor-exit v1
 
-    iget p1, p1, Lzu;->b:I
+    iget-object v1, v0, Lxh2;->o:Lpcd;
 
-    if-eq v0, p1, :cond_3
+    new-instance v2, Lhc;
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-direct {v2, v0}, Lhc;-><init>(Lxh2;)V
 
-    return p1
+    invoke-virtual {v1, v2}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
 
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
+    return-void
 
-    return p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lzu;->b:Lxh2;
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v1, v0, Lxh2;->s0:Lbv;
 
-    iget-wide v0, p0, Lzu;->a:J
+    monitor-enter v1
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    monitor-exit v1
 
-    move-result v0
+    iget-object v1, v0, Lxh2;->o:Lpcd;
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-instance v2, Lhc;
 
-    iget v1, p0, Lzu;->b:I
+    invoke-direct {v2, v0}, Lhc;-><init>(Lxh2;)V
 
-    invoke-static {v1}, Lqw1;->u(I)I
+    invoke-virtual {v1, v2}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
 
-    move-result v1
+    return-void
 
-    add-int/2addr v1, v0
+    nop
 
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "RemoteKey(time="
-
-    const-string v1, ", dir="
-
-    iget-wide v2, p0, Lzu;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lzu;->b:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "BACKWARD"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "FORWARD"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

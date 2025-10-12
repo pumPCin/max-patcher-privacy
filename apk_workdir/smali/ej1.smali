@@ -3,41 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic a:I
 
-.field public final synthetic b:Lgj1;
+.field public final synthetic b:Lhj1;
 
 
 # direct methods
-.method public synthetic constructor <init>(ZLgj1;)V
+.method public synthetic constructor <init>(Lhj1;I)V
     .locals 0
 
+    iput p2, p0, Lej1;->a:I
+
+    iput-object p1, p0, Lej1;->b:Lhj1;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lej1;->a:Z
-
-    iput-object p2, p0, Lej1;->b:Lgj1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-boolean p1, p0, Lej1;->a:Z
+    iget v0, p0, Lej1;->a:I
 
-    if-nez p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p0, Lej1;->b:Lgj1;
+    iget-object v0, p0, Lej1;->b:Lhj1;
 
-    invoke-virtual {p1}, Lgj1;->e()V
+    iget-object v0, v0, Lhj1;->e:Lyn7;
 
-    :cond_0
-    return-void
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lzl5;
+
+    check-cast v0, Lbm5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lmhd;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lej1;->b:Lhj1;
+
+    iget-object v0, v0, Lhj1;->b:Lsrd;
+
+    check-cast v0, Lohd;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lohd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lej1;->b:Lhj1;
+
+    iget-object v0, v0, Lhj1;->a:Landroid/content/Context;
+
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lej1;->b:Lhj1;
+
+    iget-object v0, v0, Lhj1;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

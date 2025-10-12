@@ -1,76 +1,220 @@
 .class public final Lue1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lle6;
 
 
 # instance fields
-.field public final synthetic X:Lxe1;
+.field public final synthetic X:I
+
+.field public synthetic Y:Landroid/widget/LinearLayout;
 
 
 # direct methods
-.method public constructor <init>(Lxe1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput-object p1, p0, Lue1;->X:Lxe1;
+    iput p3, p0, Lue1;->X:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lhgd;
+    iget v0, p0, Lue1;->X:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    invoke-virtual {p0, p1, p2}, Lue1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p2, Llwa;
 
-    move-result-object p1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lue1;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Loyf;->a:Loyf;
+    new-instance p2, Lue1;
 
-    invoke-virtual {p1, p2}, Lue1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x3
 
-    return-object p2
-.end method
+    const/4 v1, 0x3
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-direct {p2, v0, p3, v1}, Lue1;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    new-instance p1, Lue1;
+    iput-object p1, p2, Lue1;->Y:Landroid/widget/LinearLayout;
 
-    iget-object v0, p0, Lue1;->X:Lxe1;
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-direct {p1, v0, p2}, Lue1;-><init>(Lxe1;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p2, p1}, Lue1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
+
+    :pswitch_0
+    new-instance p2, Lue1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    invoke-direct {p2, v0, p3, v1}, Lue1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lue1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p2, Lue1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lue1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lue1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_2
+    new-instance p2, Lue1;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lue1;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    invoke-virtual {p2, p1}, Lue1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget v0, p0, Lue1;->X:I
 
-    iget-object p1, p0, Lue1;->X:Lxe1;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lxe1;->z0:Ljb5;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    sget-object v0, Llk1;->D:Llk1;
+    iget-object p1, p0, Lue1;->Y:Landroid/widget/LinearLayout;
 
-    invoke-static {p1, v0}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    sget-object v0, Lrw4;->t0:Lss6;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0(Landroid/view/View;Llwa;)V
+
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
+
+    :pswitch_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llwa;->b()Lme0;
+
+    move-result-object v0
+
+    iget v0, v0, Lme0;->k:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->v(Landroid/view/View;)Llwa;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llwa;->b()Lme0;
+
+    move-result-object v0
+
+    iget v0, v0, Lme0;->n:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_2
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lue1;->Y:Landroid/widget/LinearLayout;
+
+    sget-object v0, Lrw4;->t0:Lss6;
+
+    invoke-virtual {v0, p1}, Lss6;->x(Landroid/view/View;)Lzma;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lzma;->c:Llwa;
+
+    invoke-interface {v0}, Llwa;->b()Lme0;
+
+    move-result-object v0
+
+    iget v0, v0, Lme0;->h:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

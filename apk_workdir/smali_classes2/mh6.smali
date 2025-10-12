@@ -1,34 +1,58 @@
-.class public abstract Lmh6;
-.super Lnh6;
+.class public final synthetic Lmh6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldod;
+
+
+# instance fields
+.field public final synthetic a:Lki6;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lki6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmh6;->a:Lki6;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract f()Lch6;
-.end method
+.method public final S(Liod;)V
+    .locals 4
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget-object v0, p0, Lmh6;->a:Lki6;
 
-    invoke-virtual {p0}, Lmh6;->f()Lch6;
+    invoke-virtual {v0}, Lki6;->t()Le7f;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    check-cast v1, Lmka;
 
-    const-string v2, "Virtual(name="
+    invoke-virtual {v1}, Lmka;->f()Lh24;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lki6;->o:Lbk;
 
-    const-string v0, ")"
+    invoke-virtual {v1, v2}, Lm0;->plus(Lf24;)Lf24;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v2, Lci6;
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    return-object v0
+    invoke-direct {v2, v0, p1, v3}, Lci6;-><init>(Lki6;Liod;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v1, v2, p1}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    return-void
 .end method

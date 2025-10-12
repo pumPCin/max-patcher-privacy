@@ -3,20 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lotc;
+.implements Lltc;
 
 
 # instance fields
-.field public final a:Lp2;
+.field public final a:J
+
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lp2;)V
+.method public constructor <init>(J[B)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljtc;->a:Lp2;
+    iput-wide p1, p0, Ljtc;->a:J
+
+    iput-object p3, p0, Ljtc;->b:[B
 
     return-void
 .end method
@@ -24,7 +28,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -44,46 +48,73 @@
     :cond_1
     check-cast p1, Ljtc;
 
-    iget-object v1, p0, Ljtc;->a:Lp2;
+    iget-wide v3, p0, Ljtc;->a:J
 
-    iget-object p1, p1, Ljtc;->a:Lp2;
+    iget-wide v5, p1, Ljtc;->a:J
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eqz v1, :cond_2
 
     return v2
 
     :cond_2
+    iget-object v1, p0, Ljtc;->b:[B
+
+    iget-object p1, p1, Ljtc;->b:[B
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Ljtc;->a:Lp2;
+    iget-wide v0, p0, Ljtc;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ljtc;->b:[B
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ljtc;->b:[B
 
-    const-string v1, "OnMediaMessageSend(media="
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Ljtc;->a:Lp2;
+    const-string v1, "AudioMsg(duration="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", wave="
+
+    iget-wide v3, p0, Ljtc;->a:J
+
+    invoke-static {v1, v3, v4, v2, v0}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     const-string v1, ")"
 

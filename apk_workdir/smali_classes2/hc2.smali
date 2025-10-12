@@ -1,155 +1,111 @@
 .class public final Lhc2;
-.super Lvpb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Lhc2;
+
+.field public static final g:Lhc2;
+
+
 # instance fields
-.field public final a:[J
+.field public final a:Lnc2;
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>([J)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v0, Lhc2;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lhc2;-><init>(Lnc2;IJJLjava/util/List;)V
+
+    sput-object v0, Lhc2;->f:Lhc2;
+
+    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v1, Lhc2;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lhc2;-><init>(Lnc2;IJJLjava/util/List;)V
+
+    sput-object v1, Lhc2;->g:Lhc2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnc2;IJJLjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhc2;->a:[J
+    iput-object p1, p0, Lhc2;->a:Lnc2;
+
+    iput p2, p0, Lhc2;->b:I
+
+    iput-wide p3, p0, Lhc2;->c:J
+
+    iput-wide p5, p0, Lhc2;->d:J
+
+    iput-object p7, p0, Lhc2;->e:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Lgc2;
+    .locals 3
 
-    instance-of v0, p1, Lhc2;
+    new-instance v0, Lgc2;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Lhc2;
+    iget-object v1, p0, Lhc2;->a:Lnc2;
 
-    iget-object v0, p0, Lhc2;->a:[J
+    iput-object v1, v0, Lgc2;->o:Ljava/lang/Object;
 
-    iget-object p1, p1, Lhc2;->a:[J
+    iget v1, p0, Lhc2;->b:I
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput v1, v0, Lgc2;->a:I
 
-    move-result p1
+    iget-wide v1, p0, Lhc2;->c:J
 
-    if-eqz p1, :cond_0
+    iput-wide v1, v0, Lgc2;->b:J
 
-    const/4 p1, 0x1
+    iget-wide v1, p0, Lhc2;->d:J
 
-    return p1
+    iput-wide v1, v0, Lgc2;->c:J
 
-    :cond_0
-    const/4 p1, 0x0
+    iget-object v1, p0, Lhc2;->e:Ljava/util/List;
 
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lhc2;->a:[J
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 6
-
-    const/4 v0, 0x1
-
-    new-array v1, v0, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lhc2;->a:[J
-
-    aput-object v3, v1, v2
-
-    const-string v3, "a"
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    new-array v3, v2, [Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_0
-    const-string v4, ";"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v3
-
-    :goto_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-class v5, Lhc2;
-
-    invoke-virtual {v5}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "["
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :goto_1
-    array-length v5, v3
-
-    if-ge v2, v5, :cond_2
-
-    aget-object v5, v3, v2
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, "="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    aget-object v5, v1, v2
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    array-length v5, v3
-
-    sub-int/2addr v5, v0
-
-    if-eq v2, v5, :cond_1
-
-    const-string v5, ", "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const-string v0, "]"
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object v1, v0, Lgc2;->X:Ljava/lang/Object;
 
     return-object v0
 .end method

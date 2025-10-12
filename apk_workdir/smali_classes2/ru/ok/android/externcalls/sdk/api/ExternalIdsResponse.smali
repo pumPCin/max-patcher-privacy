@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final INSTANCE:Lpl7;
+.field public static final INSTANCE:Llk7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 .end field
@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lxg1;",
+            "Lyg1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }
@@ -36,7 +36,7 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse$1;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Lpl7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ExternalIdsResponse;->INSTANCE:Llk7;
 
     return-void
 .end method
@@ -47,7 +47,7 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lxg1;",
+            "Lyg1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;)V"
         }
@@ -68,7 +68,7 @@
         value = {
             "()",
             "Ljava/util/Map<",
-            "Lxg1;",
+            "Lyg1;",
             "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
             ">;"
         }

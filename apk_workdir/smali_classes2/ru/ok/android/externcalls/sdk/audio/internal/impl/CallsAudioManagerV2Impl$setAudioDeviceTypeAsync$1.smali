@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl$setAudioDeviceTypeAsync$1;
-.super Lmo7;
+.super Ljn7;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ltd6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Lve6;Lxe6;)V
+    value = Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;->setAudioDeviceTypeAsync(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;Ltd6;Lvd6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lmo7;",
-        "Lve6;"
+        "Ljn7;",
+        "Ltd6;"
     }
 .end annotation
 
@@ -28,7 +28,7 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Loyf;",
+        "Laxf;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -58,7 +58,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl$setAudioDeviceTypeAsync$1;->invoke()V
 
-    sget-object v0, Loyf;->a:Loyf;
+    sget-object v0, Laxf;->a:Laxf;
 
     return-object v0
 .end method

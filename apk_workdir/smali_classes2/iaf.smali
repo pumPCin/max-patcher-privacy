@@ -3,140 +3,117 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:I
-
-
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Lv8b;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;)V
+.method public constructor <init>(Lv8b;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Liaf;->a:Lbp7;
+    iput-object p1, p0, Liaf;->a:Lv8b;
+
+    iput p2, p0, Liaf;->b:I
 
     return-void
 .end method
 
-.method public static a(I)Z
-    .locals 1
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static c(Ljava/lang/Throwable;)Z
-    .locals 1
-
-    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lv8f;
-
-    iget-object p0, p0, Lv8f;->b:Ljava/lang/String;
-
-    invoke-static {p0}, Lgh5;->v(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static d(Ljava/lang/Throwable;)Z
-    .locals 1
-
-    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lv8f;
-
-    iget-object p0, p0, Lv8f;->b:Ljava/lang/String;
-
-    const-string v0, "io.exception"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
 
 # virtual methods
-.method public final b()Loda;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Liaf;->a:Lbp7;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, Lwwd;
-
-    check-cast v0, Lywd;
-
-    iget-object v0, v0, Lywd;->e:Lwl0;
-
-    new-instance v1, Lhaf;
+    :cond_0
+    instance-of v1, p1, Liaf;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lhaf;-><init>(I)V
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lraa;->g(Llob;)Luaa;
+    return v2
 
-    move-result-object v0
+    :cond_1
+    check-cast p1, Liaf;
 
-    const-wide/16 v1, 0x1
+    iget-object v1, p0, Liaf;->a:Lv8b;
 
-    invoke-virtual {v0, v1, v2}, Lraa;->r(J)Loda;
+    iget-object v3, p1, Liaf;->a:Lv8b;
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Liaf;->b:I
+
+    iget p1, p1, Liaf;->b:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Liaf;->a:Lv8b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Liaf;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "TaskCountByType(type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Liaf;->a:Lv8b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", count="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Liaf;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

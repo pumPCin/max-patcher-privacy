@@ -1,200 +1,156 @@
 .class public final Lh4c;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Landroid/animation/TypeEvaluator;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lp4c;
+.field public a:[Lq5b;
 
 
 # direct methods
-.method public constructor <init>(Lp4c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lh4c;->Y:Lp4c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object v0, p0, Lh4c;->a:[Lq5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    check-cast p1, Le34;
+    check-cast p2, [Lq5b;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p3, [Lq5b;
 
-    invoke-virtual {p0, p1, p2}, Lh4c;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p2, p3}, Lfn7;->e([Lq5b;[Lq5b;)Z
 
-    move-result-object p1
+    move-result v0
 
-    check-cast p1, Lh4c;
+    if-eqz v0, :cond_6
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v0, p0, Lh4c;->a:[Lq5b;
 
-    invoke-virtual {p1, p2}, Lh4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p2}, Lfn7;->e([Lq5b;[Lq5b;)Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
-.end method
+    if-nez v0, :cond_1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    if-eqz p2, :cond_0
 
-    new-instance p1, Lh4c;
+    invoke-static {p2}, Lfn7;->k([Lq5b;)[Lq5b;
 
-    iget-object v0, p0, Lh4c;->Y:Lp4c;
-
-    invoke-direct {p1, v0, p2}, Lh4c;-><init>(Lp4c;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget-object v0, p0, Lh4c;->Y:Lp4c;
-
-    iget-wide v1, v0, Lp4c;->b:J
-
-    iget v3, p0, Lh4c;->X:I
-
-    const/4 v4, 0x1
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v0, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :goto_0
+    iput-object v0, p0, Lh4c;->a:[Lq5b;
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Lh4c;->a:[Lq5b;
 
-    iget-object p1, v0, Lp4c;->Y:Lbp7;
+    const-string v1, "Required value was null."
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz v0, :cond_5
 
-    move-result-object p1
+    if-eqz p2, :cond_4
 
-    check-cast p1, Lmm6;
+    array-length v1, p2
 
-    new-instance v3, Lx7c;
+    const/4 v2, 0x0
 
-    iget-object v5, v0, Lp4c;->X0:Lbp7;
+    :goto_1
+    if-ge v2, v1, :cond_3
 
-    invoke-interface {v5}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eqz p3, :cond_2
 
-    move-result-object v5
+    aget-object v3, v0, v2
 
-    check-cast v5, Landroid/content/Context;
+    aget-object v4, p2, v2
 
-    sget-object v6, Lbx4;->y0:Lsed;
+    aget-object v5, p3, v2
 
-    invoke-virtual {v6, v5}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v5
+    iget-char v6, v4, Lq5b;->a:C
 
-    invoke-virtual {v5}, Lbx4;->h()Luxa;
+    iput-char v6, v3, Lq5b;->a:C
 
-    move-result-object v5
+    const/4 v6, 0x0
 
-    invoke-interface {v5}, Luxa;->getName()Ljava/lang/String;
+    :goto_2
+    iget-object v7, v4, Lq5b;->b:[F
 
-    move-result-object v5
+    array-length v8, v7
 
-    invoke-direct {v3, v1, v2, v5}, Lz7c;-><init>(JLjava/lang/String;)V
+    if-ge v6, v8, :cond_2
 
-    iput v4, p0, Lh4c;->X:I
+    iget-object v8, v3, Lq5b;->b:[F
 
-    invoke-virtual {p1, v3, v4, p0}, Lmm6;->a(Lz7c;ZLm3f;)Ljava/lang/Object;
+    aget v7, v7, v6
 
-    move-result-object p1
+    const/high16 v9, 0x3f800000    # 1.0f
 
-    sget-object v3, Lf34;->a:Lf34;
+    sub-float/2addr v9, p1
 
-    if-ne p1, v3, :cond_2
+    mul-float/2addr v9, v7
 
-    return-object v3
+    iget-object v7, v5, Lq5b;->b:[F
+
+    aget v7, v7, v6
+
+    mul-float/2addr v7, p1
+
+    add-float/2addr v7, v9
+
+    aput v7, v8, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
 
     :cond_2
-    :goto_0
-    check-cast p1, Lt7c;
-
-    sget-object v3, Loyf;->a:Loyf;
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p1, Lt7c;->b:Landroid/graphics/Bitmap;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result p1
-
-    iget-object v5, v0, Lp4c;->c:Llub;
-
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    if-eq v5, v4, :cond_4
-
-    const/4 v4, 0x2
-
-    if-ne v5, v4, :cond_3
-
-    const-string v4, "contact"
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
     :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return-object v0
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
-    :cond_4
-    const-string v4, "chat"
-
-    :goto_1
-    iget-object v0, v0, Lp4c;->H0:Ljb5;
-
-    sget-object v5, Ll1c;->c:Ll1c;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1, v2, v4, p1}, Ll1c;->i1(JLjava/lang/String;I)Lzc4;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
     :cond_5
-    return-object v3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Can\'t interpolate between two incompatible pathData"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

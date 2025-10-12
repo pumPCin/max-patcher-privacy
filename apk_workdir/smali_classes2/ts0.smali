@@ -109,13 +109,13 @@
 
     iget v2, p0, Lts0;->b:I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
 
     move-result v0
 
     iget v2, p0, Lts0;->c:I
 
-    invoke-static {v2, v0, v1}, Lhqd;->e(III)I
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
 
     move-result v0
 
@@ -137,13 +137,13 @@
 
     const-string v1, ", outsideMy="
 
-    const-string v2, "BubbleBackgroundReactionColors(insideMy="
+    const-string v2, "BubbleTextReactionColors(insideMy="
 
     iget v3, p0, Lts0;->a:I
 
     iget v4, p0, Lts0;->b:I
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     iget v4, p0, Lts0;->d:I
 
-    invoke-static {v0, v3, v1, v4, v2}, Lqe0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v1, v4, v2}, Lnd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

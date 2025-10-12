@@ -1,103 +1,118 @@
-.class public final Lbmg;
-.super Lrwc;
+.class public Lbmg;
+.super Lnjg;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static u0:Z = true
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static v0:Z = true
 
+.field public static w0:Z = true
 
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lbmg;->a:I
-
-    iput-object p2, p0, Lbmg;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public static x0:Z = true
 
 
 # virtual methods
-.method public final a()V
+.method public D(Landroid/view/View;I)V
     .locals 2
 
-    iget v0, p0, Lbmg;->a:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v1, 0x1c
 
-    iget-object v0, p0, Lbmg;->b:Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    check-cast v0, Lu9h;
-
-    invoke-virtual {v0}, Lu9h;->p()V
+    invoke-super {p0, p1, p2}, Lnjg;->D(Landroid/view/View;I)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lbmg;->b:Ljava/lang/Object;
+    :cond_0
+    sget-boolean v0, Lbmg;->x0:Z
 
-    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->w0:Z
-
-    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->D0:Lihd;
-
-    iput-boolean v1, v0, Lihd;->l:Z
+    :try_start_0
+    invoke-static {p1, p2}, Lamg;->a(Landroid/view/View;I)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    nop
+    :catch_0
+    const/4 p1, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    sput-boolean p1, Lbmg;->x0:Z
 
-.method public final b(II)V
-    .locals 0
-
-    invoke-virtual {p0}, Lbmg;->a()V
-
+    :cond_1
     return-void
 .end method
 
-.method public final c(IILjava/lang/Object;)V
-    .locals 0
+.method public V(Landroid/view/View;IIII)V
+    .locals 1
 
-    invoke-virtual {p0}, Lbmg;->a()V
+    sget-boolean v0, Lbmg;->w0:Z
 
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2, p3, p4, p5}, Lzlg;->a(Landroid/view/View;IIII)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, Lbmg;->w0:Z
+
+    :cond_0
     return-void
 .end method
 
-.method public final d(II)V
-    .locals 0
+.method public W(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lbmg;->a()V
+    sget-boolean v0, Lbmg;->u0:Z
 
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2}, Lylg;->b(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    const/4 p1, 0x0
+
+    sput-boolean p1, Lbmg;->u0:Z
+
+    :cond_0
     return-void
 .end method
 
-.method public final e(II)V
-    .locals 0
+.method public X(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 1
 
-    invoke-virtual {p0}, Lbmg;->a()V
+    sget-boolean v0, Lbmg;->v0:Z
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-static {p1, p2}, Lylg;->c(Landroid/view/View;Landroid/graphics/Matrix;)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodError; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public final f(II)V
-    .locals 0
+    :catch_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p0}, Lbmg;->a()V
+    sput-boolean p1, Lbmg;->v0:Z
 
+    :cond_0
     return-void
 .end method

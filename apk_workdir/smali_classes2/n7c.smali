@@ -1,49 +1,64 @@
 .class public final Ln7c;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lp7c;
 
-# instance fields
-.field public final synthetic X:Lp7c;
 
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Ln7c;
 
 
 # direct methods
-.method public constructor <init>(Lp7c;Lnz3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ln7c;->X:Lp7c;
+    new-instance v0, Ln7c;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ln7c;->a:Ln7c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Ln7c;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ln7c;->Y:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Ln7c;
 
-    iput p1, p0, Ln7c;->Y:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Ln7c;->X:Lp7c;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-static {p1, v0, v0, p0}, Lp7c;->p(Lp7c;Lem5;Lql5;Lnz3;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, 0x7e743d90
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "RequestAudioPermission"
+
+    return-object v0
 .end method

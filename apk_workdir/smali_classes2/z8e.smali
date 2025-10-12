@@ -1,250 +1,186 @@
 .class public final Lz8e;
-.super Landroid/widget/TextView;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb9e;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final a:D
 
-.field public final b:Lv8e;
+.field public final b:D
 
-.field public c:Z
+.field public final c:Ljava/lang/Float;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 7
+.method public constructor <init>(DDLjava/lang/Float;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-wide p1, p0, Lz8e;->a:D
 
-    new-instance p1, Landroid/graphics/Paint;
+    iput-wide p3, p0, Lz8e;->b:D
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object p1, p0, Lz8e;->a:Landroid/graphics/Paint;
-
-    new-instance v1, Lv8e;
-
-    invoke-direct {v1}, Lv8e;-><init>()V
-
-    iput-object v1, p0, Lz8e;->b:Lv8e;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, p0, Lz8e;->c:Z
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2}, Landroid/view/View;->setWillNotDraw(Z)V
-
-    invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    new-instance v3, Lkbh;
-
-    const/16 v4, 0x1c
-
-    invoke-direct {v3, v4}, Lkbh;-><init>(I)V
-
-    iget-object v4, v3, Lkbh;->b:Ljava/lang/Object;
-
-    check-cast v4, Ls8e;
-
-    iput-boolean v2, v4, Ls8e;->j:Z
-
-    sget-object v5, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v5, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Luxa;->getText()Lbdf;
-
-    move-result-object v6
-
-    iget v6, v6, Lbdf;->h:I
-
-    invoke-virtual {v3, v6}, Lkbh;->y(I)V
-
-    invoke-virtual {v5, p0}, Lsed;->l(Landroid/view/View;)Luxa;
-
-    move-result-object v5
-
-    invoke-interface {v5}, Luxa;->getText()Lbdf;
-
-    const/4 v5, -0x1
-
-    iput v5, v4, Ls8e;->d:I
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-virtual {v3, v4}, Lkbh;->w(F)V
-
-    const/16 v4, 0x168
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Lv63;->r0(F)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Lkbh;->A(I)V
-
-    invoke-virtual {v3}, Lkbh;->q()Ls8e;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lv8e;->b(Ls8e;)V
-
-    iget-boolean v1, v3, Ls8e;->i:Z
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, v2, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    iput-object p5, p0, Lz8e;->c:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    iget-object v0, p0, Lz8e;->b:Lv8e;
+    const/4 v0, 0x1
 
-    if-eqz p1, :cond_1
+    if-ne p0, p1, :cond_0
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lz8e;->c:Z
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Lv8e;->c()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lz8e;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Lv8e;->d()V
+    check-cast p1, Lz8e;
 
+    iget-wide v1, p0, Lz8e;->a:D
+
+    iget-wide v3, p1, Lz8e;->a:D
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v1, p0, Lz8e;->b:D
+
+    iget-wide v3, p1, Lz8e;->b:D
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Double;->compare(DD)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, p0, Lz8e;->c:Ljava/lang/Float;
+
+    iget-object p1, p1, Lz8e;->c:Ljava/lang/Float;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lz8e;->c:Z
+    return p1
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
+    :cond_4
+    return v0
 .end method
 
-.method public final dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
+    iget-wide v0, p0, Lz8e;->a:D
 
-    iget-boolean v0, p0, Lz8e;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lz8e;->b:Lv8e;
-
-    invoke-virtual {v0, p1}, Lv8e;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/widget/TextView;->onAttachedToWindow()V
-
-    iget-object v0, p0, Lz8e;->b:Lv8e;
-
-    invoke-virtual {v0}, Lv8e;->a()V
-
-    return-void
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
-
-    iget-object v0, p0, Lz8e;->b:Lv8e;
-
-    invoke-virtual {v0}, Lv8e;->d()V
-
-    return-void
-.end method
-
-.method public final onLayout(ZIIII)V
-    .locals 0
-
-    invoke-super/range {p0 .. p5}, Landroid/widget/TextView;->onLayout(ZIIII)V
-
-    move-object p1, p0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p3
-
-    iget-object p4, p1, Lz8e;->b:Lv8e;
-
-    const/4 p5, 0x0
-
-    invoke-virtual {p4, p5, p5, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    return-void
-.end method
-
-.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/widget/TextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lz8e;->b:Lv8e;
+    iget-wide v1, p0, Lz8e;->b:D
 
-    if-ne p1, v0, :cond_0
+    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lz8e;->c:Ljava/lang/Float;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return p1
+    move-result v0
 
-    :cond_1
     :goto_0
-    const/4 p1, 0x1
+    add-int/2addr v1, v0
 
-    return p1
+    mul-int/lit8 v1, v1, 0x1f
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MoveCamera(lat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lz8e;->a:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lz8e;->b:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", zoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lz8e;->c:Ljava/lang/Float;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", animate=true)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

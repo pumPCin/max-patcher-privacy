@@ -1,47 +1,27 @@
 .class public final Lu7a;
-.super Lnz3;
+.super Lv7a;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;Lnz3;)V
-    .locals 0
+.method public constructor <init>(JJZJ)V
+    .locals 7
 
-    iput-object p1, p0, Lu7a;->X:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
+    move-object v0, p0
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    move-wide v1, p1
+
+    move-wide v3, p3
+
+    move-wide v5, p6
+
+    invoke-direct/range {v0 .. v6}, Lv7a;-><init>(JJJ)V
+
+    iput-boolean p5, v0, Lu7a;->d:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lu7a;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lu7a;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lu7a;->Y:I
-
-    iget-object p1, p0, Lu7a;->X:Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/android/notifications/messages/tracker/NotificationTrackerCleanupScheduler$NotificationTrackerCleanupWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

@@ -1,102 +1,85 @@
 .class public final Lxpf;
-.super Ljee;
+.super Lwpf;
 .source "SourceFile"
-
-# interfaces
-.implements Lzpf;
 
 
 # instance fields
-.field public final n:Ljava/util/List;
-
-.field public o:Lnag;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(JLlx0;Lp93;Lxt6;Loag;Lrig;Landroid/content/Context;Ljava/util/List;Z)V
-    .locals 11
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget-object v6, Lfr4;->a:Lfr4;
+    iput p1, p0, Lxpf;->o:I
 
-    move-object v0, p0
-
-    move-wide v9, p1
-
-    move-object v5, p3
-
-    move-object v3, p4
-
-    move-object/from16 v7, p5
-
-    move-object/from16 v2, p6
-
-    move-object/from16 v4, p7
-
-    move-object/from16 v1, p8
-
-    move/from16 v8, p10
-
-    invoke-direct/range {v0 .. v10}, Ljee;-><init>(Landroid/content/Context;Loag;Lp93;Lcbg;Llx0;Ljava/util/concurrent/Executor;Lxt6;ZJ)V
-
-    move-object/from16 p1, p9
-
-    iput-object p1, p0, Lxpf;->n:Ljava/util/List;
+    invoke-direct {p0}, Lwpf;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
-
-    iget v0, p0, Ljee;->m:I
-
-    invoke-virtual {p0, v0}, Ljee;->a(I)Lqag;
-
-    move-result-object v0
-
-    const-wide/16 v1, -0x3
-
-    check-cast v0, Ljm4;
-
-    invoke-virtual {v0, v1, v2}, Ljm4;->e(J)V
-
-    return-void
-.end method
-
-.method public final d(I)Laq6;
+.method public final next()Ljava/lang/Object;
     .locals 4
 
-    iget-object v0, p0, Lxpf;->o:Lnag;
+    iget v0, p0, Lxpf;->o:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x1
+    iget v0, p0, Lwpf;->c:I
 
-    goto :goto_0
+    add-int/lit8 v1, v0, 0x2
 
-    :cond_0
-    const/4 v0, 0x0
+    iput v1, p0, Lwpf;->c:I
 
-    :goto_0
-    invoke-static {v0}, Lpih;->o(Z)V
+    iget-object v1, p0, Lwpf;->a:[Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Ljee;->e(I)V
+    add-int/lit8 v0, v0, 0x1
 
-    new-instance v0, Lnag;
-
-    invoke-virtual {p0, p1}, Ljee;->a(I)Lqag;
-
-    move-result-object p1
-
-    iget-object v1, p0, Lxpf;->n:Ljava/util/List;
-
-    iget-wide v2, p0, Ljee;->h:J
-
-    invoke-direct {v0, p1, v1, v2, v3}, Lnag;-><init>(Lqag;Ljava/util/List;J)V
-
-    iput-object v0, p0, Lxpf;->o:Lnag;
+    aget-object v0, v1, v0
 
     return-object v0
+
+    :pswitch_0
+    iget v0, p0, Lwpf;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lwpf;->c:I
+
+    iget-object v1, p0, Lwpf;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :pswitch_1
+    iget v0, p0, Lwpf;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lwpf;->c:I
+
+    new-instance v1, Lq88;
+
+    iget-object v2, p0, Lwpf;->a:[Ljava/lang/Object;
+
+    aget-object v3, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    aget-object v0, v2, v0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v3, v2, v0}, Lq88;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

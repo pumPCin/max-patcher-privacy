@@ -3,40 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lno3;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Z
-
-.field public final synthetic a:Lub2;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic o:I
+.field public final synthetic b:Lfc2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lub2;JJILjava/util/concurrent/atomic/AtomicBoolean;Z)V
+.method public synthetic constructor <init>(Lfc2;I)V
     .locals 0
 
+    iput p2, p0, Lqb2;->a:I
+
+    iput-object p1, p0, Lqb2;->b:Lfc2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqb2;->a:Lub2;
-
-    iput-wide p2, p0, Lqb2;->b:J
-
-    iput-wide p4, p0, Lqb2;->c:J
-
-    iput p6, p0, Lqb2;->o:I
-
-    iput-object p7, p0, Lqb2;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    iput-boolean p8, p0, Lqb2;->Y:Z
 
     return-void
 .end method
@@ -44,97 +28,63 @@
 
 # virtual methods
 .method public final accept(Ljava/lang/Object;)V
-    .locals 10
+    .locals 2
 
-    check-cast p1, Lzb2;
+    iget v0, p0, Lqb2;->a:I
 
-    iget-object v0, p0, Lqb2;->a:Lub2;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lqb2;->b:Lfc2;
 
-    invoke-virtual {p1}, Lzb2;->c()Ljava/util/Map;
+    check-cast p1, Lec2;
+
+    invoke-virtual {p1, v0}, Lec2;->a(Lfc2;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lec2;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Lec2;->b()Ljava/util/List;
 
     move-result-object v1
 
-    iget-wide v2, p0, Lqb2;->b:J
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v1, p0, Lqb2;->b:Lfc2;
 
-    move-result-object v4
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p1, Lec2;->A:Ljava/util/ArrayList;
 
-    move-result-object v4
+    if-eqz v1, :cond_0
 
-    check-cast v4, Ljava/lang/Long;
-
-    if-nez v4, :cond_0
-
-    return-void
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
     :cond_0
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+    iget-object v1, p1, Lec2;->A:Ljava/util/ArrayList;
 
-    move-result-wide v4
+    if-nez v1, :cond_1
 
-    iget-wide v6, p0, Lqb2;->c:J
+    new-instance v1, Ljava/util/ArrayList;
 
-    cmp-long v4, v4, v6
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v5, 0x0
-
-    const/4 v8, 0x1
-
-    if-eqz v4, :cond_1
-
-    move v4, v8
-
-    goto :goto_0
+    iput-object v1, p1, Lec2;->A:Ljava/util/ArrayList;
 
     :cond_1
-    move v4, v5
+    iget-object p1, p1, Lec2;->A:Ljava/util/ArrayList;
 
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v9
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    invoke-interface {v1, v9, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    iget v1, p0, Lqb2;->o:I
-
-    if-ltz v1, :cond_3
-
-    iput v1, p1, Lzb2;->m:I
-
-    :cond_3
-    iget-boolean p1, p0, Lqb2;->Y:Z
-
-    if-eqz p1, :cond_4
-
-    if-eqz v4, :cond_4
-
-    invoke-virtual {v0}, Lub2;->K()J
-
-    move-result-wide v0
-
-    cmp-long p1, v2, v0
-
-    if-nez p1, :cond_4
-
-    move v5, v8
-
-    :cond_4
-    iget-object p1, p0, Lqb2;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

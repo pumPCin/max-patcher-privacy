@@ -1,209 +1,131 @@
 .class public final Lf3e;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
 
-# interfaces
-.implements Lyc4;
 
+# instance fields
+.field public final b:Lxcf;
 
-# static fields
-.field public static final a:Lf3e;
-
-.field public static final b:Lg3e;
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(ILxcf;)V
     .locals 1
 
-    new-instance v0, Lf3e;
+    const/16 v0, 0x13
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-    sput-object v0, Lf3e;->a:Lf3e;
+    iput-object p2, p0, Lf3e;->b:Lxcf;
 
-    sget-object v0, Lg3e;->b:Lg3e;
-
-    sput-object v0, Lf3e;->b:Lg3e;
+    iput p1, p0, Lf3e;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lgd4;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lf3e;->b:Lg3e;
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/String;Lbd4;Landroid/os/Bundle;)Ljd4;
-    .locals 11
-
-    sget-object v0, Lf3e;->b:Lg3e;
-
-    iget-object v0, v0, Lgd4;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Lg3e;->b:Lg3e;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lg3e;->c:Lbd4;
-
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Le3e;->b:Le3e;
-
-    :goto_0
-    move-object v9, v0
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :cond_1
-    sget-object v0, Lg3e;->d:Lbd4;
+    :cond_0
+    instance-of v0, p1, Lf3e;
 
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lf3e;
+
+    iget-object v0, p0, Lf3e;->b:Lxcf;
+
+    iget-object v1, p1, Lf3e;->b:Lxcf;
+
+    invoke-virtual {v0, v1}, Lxcf;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    sget-object v0, Le3e;->c:Le3e;
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lg3e;->e:Lbd4;
+    iget v0, p0, Lf3e;->c:I
 
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+    iget p1, p1, Lf3e;->c:I
 
-    move-result v0
+    if-eq v0, p1, :cond_3
 
-    if-eqz v0, :cond_3
+    :goto_0
+    const/4 p1, 0x0
 
-    sget-object v0, Le3e;->o:Le3e;
-
-    goto :goto_0
+    return p1
 
     :cond_3
-    sget-object v0, Lg3e;->f:Lbd4;
+    :goto_1
+    const/4 p1, 0x1
 
-    invoke-virtual {p2, v0}, Lbd4;->equals(Ljava/lang/Object;)Z
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lf3e;->b:Lxcf;
+
+    iget v0, v0, Lxcf;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    mul-int/lit8 v0, v0, 0x1f
 
-    const-string v0, "mode"
+    iget v1, p0, Lf3e;->c:I
 
-    invoke-static {v0, p3}, Lz84;->x(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "setup"
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    add-int/2addr v1, v0
 
-    sget-object v0, Le3e;->X:Le3e;
+    return v1
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    :cond_4
-    const-string v1, "confirm"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v1, "ShowSnackbar(message="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_5
+    iget-object v1, p0, Lf3e;->b:Lxcf;
 
-    const-string v0, "hash"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p3}, Lz84;->x(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lf3e;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lu41;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Lu41;-><init>(Ljava/lang/String;I)V
-
-    move-object v9, v1
-
-    :goto_1
-    new-instance v3, Ljd4;
-
-    const/16 v10, 0x18
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v4, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-direct/range {v3 .. v10}, Ljd4;-><init>(Ljava/lang/String;Lbd4;Landroid/os/Bundle;ILhd4;Lid4;I)V
-
-    return-object v3
-
-    :cond_5
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "illegal mode"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_6
-    move-object v5, p2
-
-    const-class p1, Lf3e;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v5}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v5}, Lfl7;->g(Ljava/lang/String;Lbd4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-object v0
 .end method

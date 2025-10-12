@@ -1,119 +1,112 @@
 .class public final Lmgf;
-.super Ljava/lang/Object;
+.super Lpie;
 .source "SourceFile"
 
-# interfaces
-.implements Llrb;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lmgf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final b:Llrb;
-
-.field public final c:Ljava/lang/Object;
+.field public final b:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 0
+    .locals 2
+
+    new-instance v0, Lpzd;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
+
+    sput-object v0, Lmgf;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Llrb;Ljava/lang/Object;I)V
+.method public constructor <init>(JJ)V
     .locals 0
-
-    iput p3, p0, Lmgf;->a:I
-
-    iput-object p1, p0, Lmgf;->b:Llrb;
-
-    iput-object p2, p0, Lmgf;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-wide p1, p0, Lmgf;->a:J
+
+    iput-wide p3, p0, Lmgf;->b:J
+
     return-void
+.end method
+
+.method public static a(JLt3g;)J
+    .locals 6
+
+    invoke-virtual {p2}, Lt3g;->s()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    const-wide/16 v2, 0x80
+
+    and-long/2addr v2, v0
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    const-wide/16 v2, 0x1
+
+    and-long/2addr v0, v2
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    invoke-virtual {p2}, Lt3g;->t()J
+
+    move-result-wide v2
+
+    or-long/2addr v0, v2
+
+    add-long/2addr v0, p0
+
+    const-wide p0, 0x1ffffffffL
+
+    and-long/2addr p0, v0
+
+    return-wide p0
+
+    :cond_0
+    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
+
+    return-wide p0
 .end method
 
 
 # virtual methods
-.method public final a(Lqi0;Lmrb;)V
-    .locals 4
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    iget v0, p0, Lmgf;->a:I
+    iget-wide v0, p0, Lmgf;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    new-instance v0, Lgs0;
+    iget-wide v0, p0, Lmgf;->b:J
 
-    invoke-direct {v0, p0, p1, p2}, Lgs0;-><init>(Lmgf;Lqi0;Lmrb;)V
-
-    iget-object p1, p0, Lmgf;->b:Llrb;
-
-    check-cast p1, Ln2d;
-
-    invoke-virtual {p1, v0, p2}, Ln2d;->a(Lqi0;Lmrb;)V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmgf;->c:Ljava/lang/Object;
-
-    check-cast v0, Lw7b;
-
-    invoke-static {}, Lud6;->s()Ltd6;
-
-    move-object v1, p2
-
-    check-cast v1, Lvj0;
-
-    iget-object v2, v1, Lvj0;->c:Lprb;
-
-    iget-object v3, v1, Lvj0;->A0:Lq57;
-
-    iget-object v3, v3, Lq57;->v:Lomh;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lr08;
-
-    invoke-direct {v3, p1, v2, p2, p0}, Lr08;-><init>(Lqi0;Lprb;Lmrb;Lmgf;)V
-
-    new-instance p1, Li17;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, v3, p2, p0}, Li17;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p1}, Lvj0;->a(Lwj0;)V
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object p1, v0, Lw7b;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/Executor;
-
-    invoke-interface {p1, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

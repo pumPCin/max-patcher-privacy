@@ -1,64 +1,100 @@
 .class public final Lrd9;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lwd9;
+.implements Lje6;
 
 
-# static fields
-.field public static final a:Lrd9;
+# instance fields
+.field public final synthetic X:Lwe9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lrd9;
+    iput-object p1, p0, Lrd9;->X:Lwe9;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lrd9;->a:Lrd9;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ln24;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lrd9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of p1, p1, Lrd9;
+    move-result-object p1
 
-    if-nez p1, :cond_1
+    check-cast p1, Lrd9;
 
-    const/4 p1, 0x0
+    sget-object p2, Laxf;->a:Laxf;
 
-    return p1
+    invoke-virtual {p1, p2}, Lrd9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_1
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    const v0, -0x5bccf09e
+    new-instance p1, Lrd9;
 
-    return v0
+    iget-object v0, p0, Lrd9;->X:Lwe9;
+
+    invoke-direct {p1, v0, p2}, Lrd9;-><init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const-string v0, "CloseMultiSelect"
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-object v0
+    sget-object p1, Lwe9;->O1:[Lpl7;
+
+    iget-object p1, p0, Lrd9;->X:Lwe9;
+
+    iget-object v0, p1, Lwe9;->J0:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lrta;
+
+    new-instance v1, Lfua;
+
+    sget v2, Ll7d;->O1:I
+
+    invoke-direct {v1, v2}, Lfua;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lrta;->e(Ljua;)V
+
+    sget v1, Lgpa;->y0:I
+
+    new-instance v2, Lxcf;
+
+    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lrta;->g(Lcdf;)V
+
+    invoke-virtual {p1, v0}, Lwe9;->M(Lrta;)V
+
+    invoke-virtual {v0}, Lrta;->i()Lqta;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

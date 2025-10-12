@@ -3,156 +3,108 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lch5;
+.implements Ljc4;
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:Lvg5;
+
+.field public static final b:Lwg5;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvg5;
 
-    iput p1, p0, Lvg5;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lvg5;->a:Lvg5;
+
+    sget-object v0, Lwg5;->b:Lwg5;
+
+    sput-object v0, Lvg5;->b:Lwg5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lrc4;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Lvg5;->b:Lwg5;
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lvg5;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvg5;
-
-    iget v0, p0, Lvg5;->a:I
-
-    iget p1, p1, Lvg5;->a:I
-
-    if-eq v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final b(Ljava/lang/String;Lmc4;Landroid/os/Bundle;)Luc4;
+    .locals 9
 
-    iget v0, p0, Lvg5;->a:I
+    sget-object v0, Lvg5;->b:Lwg5;
 
-    invoke-static {v0}, Lqw1;->u(I)I
+    iget-object v0, v0, Lrc4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 p1, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-object p1
 
-    const-string v1, "Failed(reason="
+    :cond_0
+    sget-object v0, Lwg5;->b:Lwg5;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v1, p0, Lvg5;->a:I
+    sget-object v0, Lwg5;->c:Lmc4;
 
-    packed-switch v1, :pswitch_data_0
+    invoke-virtual {p2, v0}, Lmc4;->equals(Ljava/lang/Object;)Z
 
-    const-string v1, "null"
+    move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_1
 
-    :pswitch_0
-    const-string v1, "CALL_WAIT_ADMIN"
+    new-instance v7, Lpn1;
 
-    goto :goto_0
+    const/4 v0, 0x3
 
-    :pswitch_1
-    const-string v1, "TARGET_USER_NOT_IN_CHAT"
+    invoke-direct {v7, p3, v0}, Lpn1;-><init>(Landroid/os/Bundle;I)V
 
-    goto :goto_0
+    new-instance v1, Luc4;
 
-    :pswitch_2
-    const-string v1, "REMOVE_FROM_WAITING_ROOM"
+    const/16 v8, 0x18
 
-    goto :goto_0
+    const/4 v5, 0x0
 
-    :pswitch_3
-    const-string v1, "REMOVE_FROM_CALL"
+    const/4 v6, 0x0
 
-    goto :goto_0
+    move-object v2, p1
 
-    :pswitch_4
-    const-string v1, "CONNECTION_ERROR"
+    move-object v3, p2
 
-    goto :goto_0
+    move-object v4, p3
 
-    :pswitch_5
-    const-string v1, "FAILED"
+    invoke-direct/range {v1 .. v8}, Luc4;-><init>(Ljava/lang/String;Lmc4;Landroid/os/Bundle;ILsc4;Ltc4;I)V
 
-    goto :goto_0
+    return-object v1
 
-    :pswitch_6
-    const-string v1, "PRIVACY"
+    :cond_1
+    move-object v3, p2
 
-    goto :goto_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_7
-    const-string v1, "BUSY"
+    const-string p2, "unknown screen "
 
-    goto :goto_0
+    invoke-static {p2, v3}, Lsw1;->g(Ljava/lang/String;Lmc4;)Ljava/lang/String;
 
-    :pswitch_8
-    const-string v1, "UNAVAILABLE"
+    move-result-object p2
 
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

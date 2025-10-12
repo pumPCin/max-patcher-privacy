@@ -1,18 +1,23 @@
-.class public interface abstract La77;
+.class public final La77;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Leaa;
-.implements Lt77;
+
+# static fields
+.field public static final a:La77;
+
+.field public static b:Lz67;
 
 
-# virtual methods
-.method public abstract d()I
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract i()J
-.end method
+    new-instance v0, La77;
 
-.method public abstract j()Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, La77;->a:La77;
+
+    return-void
 .end method

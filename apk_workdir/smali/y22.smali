@@ -1,61 +1,69 @@
 .class public final Ly22;
-.super Ljava/lang/Object;
+.super Ley1;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lq22;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 13
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Ly22;->a:I
+
+    iput-object p2, p0, Ly22;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashSet;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    invoke-static {}, Lst9;->b()Lst9;
+# virtual methods
+.method public b(ILly1;)V
+    .locals 8
+
+    iget v0, p0, Ly22;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ly22;->b:Ljava/lang/Object;
+
+    check-cast v0, Llmg;
+
+    iget-object v0, v0, Llmg;->a:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Ljava/util/ArrayList;
+    check-cast v1, Lb2g;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    iget-object v1, v1, Lb2g;->n:Lztd;
 
-    invoke-static {}, Lau9;->a()Lau9;
+    iget-object v2, v1, Lztd;->g:Lt22;
 
-    move-result-object v3
+    iget-object v2, v2, Lt22;->e:Ljava/util/List;
 
-    new-instance v4, Lq22;
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v1}, Ls1b;->a(Lci3;)Ls1b;
-
-    move-result-object v6
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    sget-object v0, Lw7f;->b:Lw7f;
-
-    new-instance v0, Landroid/util/ArrayMap;
-
-    invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
-
-    iget-object v1, v3, Lw7f;->a:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
-
-    move-result-object v2
-
-    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
@@ -70,32 +78,110 @@
 
     move-result-object v3
 
-    check-cast v3, Ljava/lang/String;
+    check-cast v3, Ley1;
 
-    invoke-virtual {v1, v3}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v4, Lmt2;
 
-    move-result-object v7
+    iget-object v5, v1, Lztd;->g:Lt22;
 
-    invoke-virtual {v0, v3, v7}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v5, v5, Lt22;->g:Lk6f;
+
+    const-wide/16 v6, -0x1
+
+    invoke-direct {v4, p2, v5, v6, v7}, Lmt2;-><init>(Lly1;Lk6f;J)V
+
+    invoke-virtual {v3, p1, v4}, Ley1;->b(ILly1;)V
 
     goto :goto_0
 
-    :cond_0
-    new-instance v11, Lw7f;
+    :cond_1
+    return-void
 
-    invoke-direct {v11, v0}, Lw7f;-><init>(Landroid/util/ArrayMap;)V
+    :pswitch_1
+    iget-object p1, p0, Ly22;->b:Ljava/lang/Object;
 
-    const/4 v7, -0x1
+    check-cast p1, Lti9;
 
-    const/4 v8, 0x0
+    iget-object v0, p1, Lti9;->a:Ljava/lang/Object;
 
-    const/4 v12, 0x0
+    monitor-enter v0
 
-    move v10, v8
+    :try_start_0
+    iget-boolean v1, p1, Lti9;->X:Z
 
-    invoke-direct/range {v4 .. v12}, Lq22;-><init>(Ljava/util/ArrayList;Ls1b;IZLjava/util/ArrayList;ZLw7f;Liy1;)V
+    if-eqz v1, :cond_2
 
-    iput-object v4, p0, Ly22;->a:Lq22;
+    monitor-exit v0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v1, p1, Lti9;->s0:Landroid/util/LongSparseArray;
+
+    invoke-interface {p2}, Lly1;->getTimestamp()J
+
+    move-result-wide v2
+
+    new-instance v4, Lmy1;
+
+    invoke-direct {v4, p2}, Lmy1;-><init>(Lly1;)V
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
+
+    invoke-virtual {p1}, Lti9;->h()V
+
+    monitor-exit v0
+
+    :goto_1
+    return-void
+
+    :goto_2
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d(I)V
+    .locals 2
+
+    iget p1, p0, Ly22;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    invoke-static {}, Lpr0;->C()Lgr6;
+
+    move-result-object p1
+
+    new-instance v0, Low1;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1, p0}, Low1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lgr6;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

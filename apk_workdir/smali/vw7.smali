@@ -1,320 +1,130 @@
 .class public final Lvw7;
-.super Ljava/lang/Object;
+.super Lww7;
 .source "SourceFile"
 
 # interfaces
-.implements Ljx7;
+.implements Lmq7;
 
 
 # instance fields
-.field public final X:Lws1;
+.field public final X:Luq7;
 
-.field public Y:Lts1;
-
-.field public a:Ljava/util/ArrayList;
-
-.field public b:Ljava/util/ArrayList;
-
-.field public final c:Z
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final synthetic Y:Lxw7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;ZLgr4;)V
-    .locals 3
+.method public constructor <init>(Lxw7;Luq7;Lzba;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvw7;->Y:Lxw7;
 
-    iput-object p1, p0, Lvw7;->a:Ljava/util/ArrayList;
+    invoke-direct {p0, p1, p3}, Lww7;-><init>(Lxw7;Lzba;)V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p2, p0, Lvw7;->X:Luq7;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lvw7;->b:Ljava/util/ArrayList;
-
-    iput-boolean p2, p0, Lvw7;->c:Z
-
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    invoke-direct {p2, p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object p2, p0, Lvw7;->o:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance p1, Lr4;
-
-    invoke-direct {p1, p0}, Lr4;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {p1}, Lvr0;->k(Lus1;)Lws1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lvw7;->X:Lws1;
-
-    new-instance p1, Lyn7;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Lyn7;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lvb4;->j()Lgr4;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Lvw7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object p1, p0, Lvw7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lvw7;->Y:Lts1;
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    iget-object p3, p0, Lvw7;->b:Ljava/util/ArrayList;
-
-    invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {p1, p2}, Lts1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    move p2, p1
-
-    :goto_0
-    iget-object v0, p0, Lvw7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p2, v0, :cond_1
-
-    iget-object v0, p0, Lvw7;->b:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p2, p0, Lvw7;->a:Ljava/util/ArrayList;
-
-    :goto_1
-    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_2
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljx7;
-
-    new-instance v1, Llo;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p0, p1, v0, v2}, Llo;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-interface {v0, v1, p3}, Ljx7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_1
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
-    .locals 2
+.method public final b()V
+    .locals 1
 
-    iget-object v0, p0, Lvw7;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lvw7;->X:Luq7;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljx7;
-
-    invoke-interface {v1, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lvw7;->X:Lws1;
-
-    invoke-virtual {v0, p1}, Lws1;->cancel(Z)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-    .locals 1
-
-    iget-object v0, p0, Lvw7;->X:Lws1;
-
-    iget-object v0, v0, Lws1;->b:Lvs1;
-
-    invoke-virtual {v0, p1, p2}, Lp3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v0, p0}, Lwq7;->f(Lqq7;)V
 
     return-void
 .end method
 
-.method public final get()Ljava/lang/Object;
-    .locals 3
+.method public final c(Luq7;)Z
+    .locals 1
 
-    iget-object v0, p0, Lvw7;->a:Ljava/util/ArrayList;
+    iget-object v0, p0, Lvw7;->X:Luq7;
 
-    if-eqz v0, :cond_2
+    if-ne v0, p1, :cond_0
 
-    invoke-virtual {p0}, Lvw7;->isDone()Z
+    const/4 p1, 0x1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
+    return p1
 
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 p1, 0x0
 
-    move-result v1
+    return p1
+.end method
 
-    if-eqz v1, :cond_2
+.method public final d(Luq7;Lvp7;)V
+    .locals 2
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p1, p0, Lvw7;->X:Luq7;
 
-    move-result-object v1
+    invoke-interface {p1}, Luq7;->x()Lwq7;
 
-    check-cast v1, Ljx7;
+    move-result-object p2
 
-    :cond_1
+    iget-object p2, p2, Lwq7;->d:Lwp7;
+
+    sget-object v0, Lwp7;->a:Lwp7;
+
+    if-ne p2, v0, :cond_0
+
+    iget-object p1, p0, Lvw7;->Y:Lxw7;
+
+    iget-object p2, p0, Lww7;->a:Lzba;
+
+    invoke-virtual {p1, p2}, Lxw7;->j(Lzba;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
     :goto_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->isDone()Z
+    if-eq v0, p2, :cond_1
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    iget-boolean v2, p0, Lvw7;->c:Z
-
-    if-eqz v2, :cond_1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    throw v0
-
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Lvw7;->X:Lws1;
-
-    iget-object v0, v0, Lws1;->b:Lvs1;
-
-    invoke-virtual {v0}, Lp3;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lvw7;->X:Lws1;
-
-    iget-object v0, v0, Lws1;->b:Lvs1;
-
-    invoke-virtual {v0, p1, p2, p3}, Lp3;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/List;
-
-    return-object p1
-.end method
-
-.method public final isCancelled()Z
-    .locals 1
-
-    iget-object v0, p0, Lvw7;->X:Lws1;
-
-    invoke-virtual {v0}, Lws1;->isCancelled()Z
+    invoke-virtual {p0}, Lvw7;->e()Z
 
     move-result v0
 
-    return v0
+    invoke-virtual {p0, v0}, Lww7;->a(Z)V
+
+    invoke-interface {p1}, Luq7;->x()Lwq7;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lwq7;->d:Lwp7;
+
+    move-object v1, v0
+
+    move-object v0, p2
+
+    move-object p2, v1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method
 
-.method public final isDone()Z
-    .locals 1
+.method public final e()Z
+    .locals 2
 
-    iget-object v0, p0, Lvw7;->X:Lws1;
+    iget-object v0, p0, Lvw7;->X:Luq7;
 
-    iget-object v0, v0, Lws1;->b:Lvs1;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
-    invoke-virtual {v0}, Lp3;->isDone()Z
+    move-result-object v0
+
+    iget-object v0, v0, Lwq7;->d:Lwp7;
+
+    sget-object v1, Lwp7;->o:Lwp7;
+
+    invoke-virtual {v0, v1}, Lwp7;->a(Lwp7;)Z
 
     move-result v0
 

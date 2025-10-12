@@ -3,4 +3,8 @@
 
 
 # static fields
-.field public static small_time_offset:I = 0x7f05000c
+.field public static dragger_24:I = 0x7f080360
+
+.field public static draw_sticker_24_gradient:I = 0x7f080361
+
+.field public static recent_24:I = 0x7f080928

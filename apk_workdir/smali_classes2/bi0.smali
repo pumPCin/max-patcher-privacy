@@ -1,439 +1,128 @@
-.class public abstract Lbi0;
-.super Lio7;
+.class public final synthetic Lbi0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final m:[I
 
-.field public static final n:[B
+# instance fields
+.field public final synthetic a:I
 
-.field public static final o:[B
+.field public final synthetic b:Ltd6;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
+.method public synthetic constructor <init>(ILtd6;)V
+    .locals 0
+
+    iput p1, p0, Lbi0;->a:I
+
+    iput-object p2, p0, Lbi0;->b:Ltd6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    const/16 v0, 0x100
+    iget v0, p0, Lbi0;->a:I
 
-    new-array v0, v0, [I
+    packed-switch v0, :pswitch_data_0
 
-    fill-array-data v0, :array_0
+    iget-object v0, p0, Lbi0;->b:Ltd6;
 
-    sput-object v0, Lbi0;->m:[I
-
-    const/16 v0, 0x40
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lbi0;->n:[B
-
-    const/16 v0, 0x40
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_2
-
-    sput-object v0, Lbi0;->o:[B
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
     return-void
 
-    :array_0
-    .array-data 4
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        0x3e
-        -0x1
-        -0x1
-        0x34
-        0x35
-        0x36
-        0x37
-        0x38
-        0x39
-        0x3a
-        0x3b
-        0x3c
-        0x3d
-        -0x1
-        -0x1
-        -0x1
-        -0x2
-        -0x1
-        -0x1
-        -0x1
-        0x0
-        0x1
-        0x2
-        0x3
-        0x4
-        0x5
-        0x6
-        0x7
-        0x8
-        0x9
-        0xa
-        0xb
-        0xc
-        0xd
-        0xe
-        0xf
-        0x10
-        0x11
-        0x12
-        0x13
-        0x14
-        0x15
-        0x16
-        0x17
-        0x18
-        0x19
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        0x3f
-        -0x1
-        0x1a
-        0x1b
-        0x1c
-        0x1d
-        0x1e
-        0x1f
-        0x20
-        0x21
-        0x22
-        0x23
-        0x24
-        0x25
-        0x26
-        0x27
-        0x28
-        0x29
-        0x2a
-        0x2b
-        0x2c
-        0x2d
-        0x2e
-        0x2f
-        0x30
-        0x31
-        0x32
-        0x33
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-        -0x1
-    .end array-data
+    :pswitch_0
+    iget-object v0, p0, Lbi0;->b:Ltd6;
 
-    :array_1
-    .array-data 1
-        0x41t
-        0x42t
-        0x43t
-        0x44t
-        0x45t
-        0x46t
-        0x47t
-        0x48t
-        0x49t
-        0x4at
-        0x4bt
-        0x4ct
-        0x4dt
-        0x4et
-        0x4ft
-        0x50t
-        0x51t
-        0x52t
-        0x53t
-        0x54t
-        0x55t
-        0x56t
-        0x57t
-        0x58t
-        0x59t
-        0x5at
-        0x61t
-        0x62t
-        0x63t
-        0x64t
-        0x65t
-        0x66t
-        0x67t
-        0x68t
-        0x69t
-        0x6at
-        0x6bt
-        0x6ct
-        0x6dt
-        0x6et
-        0x6ft
-        0x70t
-        0x71t
-        0x72t
-        0x73t
-        0x74t
-        0x75t
-        0x76t
-        0x77t
-        0x78t
-        0x79t
-        0x7at
-        0x30t
-        0x31t
-        0x32t
-        0x33t
-        0x34t
-        0x35t
-        0x36t
-        0x37t
-        0x38t
-        0x39t
-        0x2bt
-        0x2ft
-    .end array-data
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->g(Ltd6;)V
 
-    :array_2
-    .array-data 1
-        0x41t
-        0x42t
-        0x43t
-        0x44t
-        0x45t
-        0x46t
-        0x47t
-        0x48t
-        0x49t
-        0x4at
-        0x4bt
-        0x4ct
-        0x4dt
-        0x4et
-        0x4ft
-        0x50t
-        0x51t
-        0x52t
-        0x53t
-        0x54t
-        0x55t
-        0x56t
-        0x57t
-        0x58t
-        0x59t
-        0x5at
-        0x61t
-        0x62t
-        0x63t
-        0x64t
-        0x65t
-        0x66t
-        0x67t
-        0x68t
-        0x69t
-        0x6at
-        0x6bt
-        0x6ct
-        0x6dt
-        0x6et
-        0x6ft
-        0x70t
-        0x71t
-        0x72t
-        0x73t
-        0x74t
-        0x75t
-        0x76t
-        0x77t
-        0x78t
-        0x79t
-        0x7at
-        0x30t
-        0x31t
-        0x32t
-        0x33t
-        0x34t
-        0x35t
-        0x36t
-        0x37t
-        0x38t
-        0x39t
-        0x2dt
-        0x5ft
-    .end array-data
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->i(Ltd6;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->d(Ltd6;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->e(Ltd6;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/sessionroom/internal/participant/SessionRoomParticipantsDataProviderImpl;->d(Ltd6;)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Lbi0;->b:Ltd6;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->a(Ltd6;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

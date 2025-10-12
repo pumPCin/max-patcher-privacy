@@ -1,386 +1,229 @@
 .class public final Lzid;
-.super Lbp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll8f;
+.implements Ljava/io/Serializable;
+.implements Ljava/lang/Comparable;
 
 
-# static fields
-.field public static final a:Lzid;
+# instance fields
+.field public final X:Lro3;
+
+.field public final Y:Lq19;
+
+.field public final Z:J
+
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/List;
+
+.field public final o:Lr82;
+
+.field public final r0:Lt5c;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(ILjava/lang/String;Ljava/util/List;Lr82;Lro3;Lq19;JLt5c;)V
+    .locals 0
 
-    new-instance v0, Lzid;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    iput p1, p0, Lzid;->a:I
 
-    sput-object v0, Lzid;->a:Lzid;
+    iput-object p2, p0, Lzid;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lzid;->c:Ljava/util/List;
+
+    iput-object p4, p0, Lzid;->o:Lr82;
+
+    iput-object p5, p0, Lzid;->X:Lro3;
+
+    iput-object p6, p0, Lzid;->Y:Lq19;
+
+    iput-wide p7, p0, Lzid;->Z:J
+
+    iput-object p9, p0, Lzid;->r0:Lt5c;
 
     return-void
 .end method
 
+.method public static a(Lr82;Ljava/util/List;)Lzid;
+    .locals 10
+
+    new-instance v0, Lzid;
+
+    const-wide/16 v7, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move-object v4, p0
+
+    move-object v3, p1
+
+    invoke-direct/range {v0 .. v9}, Lzid;-><init>(ILjava/lang/String;Ljava/util/List;Lr82;Lro3;Lq19;JLt5c;)V
+
+    return-object v0
+.end method
+
+.method public static b(Lq19;JLjava/lang/String;Ljava/util/List;)Lzid;
+    .locals 10
+
+    new-instance v0, Lzid;
+
+    const/4 v5, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v1, 0x3
+
+    const/4 v4, 0x0
+
+    move-object v6, p0
+
+    move-wide v7, p1
+
+    move-object v2, p3
+
+    move-object v3, p4
+
+    invoke-direct/range {v0 .. v9}, Lzid;-><init>(ILjava/lang/String;Ljava/util/List;Lr82;Lro3;Lq19;JLt5c;)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final b()Lqc;
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 5
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    check-cast p1, Lzid;
 
-    move-result-object v0
+    if-nez p1, :cond_0
 
-    const-class v1, Lqc;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_0
+    iget-object p1, p1, Lzid;->o:Lr82;
 
-    move-result-object v0
+    iget-object v0, p0, Lzid;->o:Lr82;
 
-    check-cast v0, Lqc;
+    if-eqz v0, :cond_1
 
-    return-object v0
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lr82;->m()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0}, Lr82;->m()J
+
+    move-result-wide v3
+
+    invoke-static {v1, v2, v3, v4}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    if-nez p1, :cond_2
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final c()Ltk;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, "SearchResult{type="
 
-    const-class v1, Ltk;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget v1, p0, Lzid;->a:I
 
-    move-result-object v0
+    invoke-static {v1}, Lsab;->o(I)Ljava/lang/String;
 
-    check-cast v0, Ltk;
+    move-result-object v1
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final d()Lxga;
-    .locals 2
+    const-string v1, ", feedback=\'"
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object v1, p0, Lzid;->b:Ljava/lang/String;
 
-    const-class v1, Lxga;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string v1, "\', highlights="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lxga;
+    iget-object v1, p0, Lzid;->c:Ljava/util/List;
 
-    return-object v0
-.end method
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-.method public final e()Lov0;
-    .locals 2
+    move-result v1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", chat="
 
-    const-class v1, Lov0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v1, p0, Lzid;->o:Lr82;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lov0;
+    const-string v1, ", contact="
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final f()Lub2;
-    .locals 2
+    iget-object v1, p0, Lzid;->X:Lro3;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", message="
 
-    const-class v1, Lub2;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v1, p0, Lzid;->Y:Lq19;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lub2;
+    const-string v1, ", chatId="
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final g()Lkq3;
-    .locals 2
+    iget-wide v1, p0, Lzid;->Z:J
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lsab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
-
-    const-class v1, Lkq3;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkq3;
-
-    return-object v0
-.end method
-
-.method public final h()Llp4;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Llp4;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llp4;
-
-    return-object v0
-.end method
-
-.method public final i()Lec5;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lec5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lec5;
-
-    return-object v0
-.end method
-
-.method public final j()Lcq5;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lcq5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcq5;
-
-    return-object v0
-.end method
-
-.method public final k()Lcp5;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lcp5;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcp5;
-
-    return-object v0
-.end method
-
-.method public final l()Lo9f;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lo9f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo9f;
-
-    return-object v0
-.end method
-
-.method public final m()La18;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, La18;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, La18;
-
-    return-object v0
-.end method
-
-.method public final n()Lo49;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lo49;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo49;
-
-    return-object v0
-.end method
-
-.method public final o()Liqa;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Liqa;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Liqa;
-
-    return-object v0
-.end method
-
-.method public final p()Ljna;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Ljna;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljna;
-
-    return-object v0
-.end method
-
-.method public final q()Lxob;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lxob;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxob;
-
-    return-object v0
-.end method
-
-.method public final r()Llld;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Llld;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llld;
-
-    return-object v0
-.end method
-
-.method public final s()Lr8f;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lr8f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr8f;
-
-    return-object v0
-.end method
-
-.method public final t()Lm9f;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lm9f;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm9f;
-
-    return-object v0
-.end method
-
-.method public final u()Lnah;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v1, Lnah;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnah;
 
     return-object v0
 .end method

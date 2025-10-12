@@ -1,80 +1,90 @@
-.class public final synthetic Lz13;
-.super Ljava/lang/Object;
+.class public final Lz13;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:Lm23;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:J
+.field public final synthetic X:Lh23;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm23;JJ)V
+.method public constructor <init>(Lh23;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz13;->X:Lh23;
 
-    iput-object p1, p0, Lz13;->a:Lm23;
+    const/4 p1, 0x2
 
-    iput-wide p2, p0, Lz13;->b:J
-
-    iput-wide p4, p0, Lz13;->c:J
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lz13;->a:Lm23;
+    check-cast p1, Ln24;
 
-    invoke-virtual {v0}, Lm23;->M()Lub2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lz13;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    iget-wide v1, p0, Lz13;->b:J
+    check-cast p1, Lz13;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object p2, Laxf;->a:Laxf;
 
-    move-result-object v3
+    invoke-virtual {p1, p2}, Lz13;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v4, p0, Lz13;->c:J
+    move-result-object p1
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object p1
+.end method
 
-    move-result-object v6
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    filled-new-array {v3, v6}, [Ljava/lang/Object;
+    new-instance p1, Lz13;
 
-    move-result-object v3
+    iget-object v0, p0, Lz13;->X:Lh23;
 
-    const-string v6, "ub2"
+    invoke-direct {p1, v0, p2}, Lz13;-><init>(Lh23;Lkotlin/coroutines/Continuation;)V
 
-    const-string v7, "changeLastNotifMessageId, chatId = %d, lastNotifMessageId = %d"
+    return-object p1
+.end method
 
-    invoke-static {v6, v7, v3}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance v3, Lj00;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const/16 v6, 0x8
+    iget-object p1, p0, Lz13;->X:Lh23;
 
-    invoke-direct {v3, v4, v5, v6}, Lj00;-><init>(JI)V
+    invoke-virtual {p1}, Lh23;->M()Lzb2;
 
-    const/4 v4, 0x0
+    move-result-object p1
 
-    invoke-virtual {v0, v1, v2, v4, v3}, Lub2;->h(JZLwo3;)Lm82;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Loyf;->a:Loyf;
+    new-instance v0, Ljb2;
 
-    return-object v0
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Ljb2;-><init>(Lzb2;I)V
+
+    const-string v1, "create-saved-messages"
+
+    invoke-virtual {p1, v1, v0}, Lzb2;->a0(Ljava/lang/String;Ll0f;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lr82;
+
+    return-object p1
 .end method

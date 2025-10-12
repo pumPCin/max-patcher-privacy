@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lj0f;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p4, p0, Lvk5;->a:I
+    iput p1, p0, Lvk5;->a:I
 
-    iput-object p1, p0, Lvk5;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lvk5;->b:J
+    iput-object p2, p0, Lvk5;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,87 +27,99 @@
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public final get()Ljava/lang/Object;
+    .locals 4
 
     iget v0, p0, Lvk5;->a:I
 
+    iget-object v1, p0, Lvk5;->b:Ljava/lang/Object;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lvk5;->c:Ljava/lang/Object;
+    check-cast v1, Ld8h;
 
-    check-cast v0, Lil5;
+    iget-object v0, v1, Ld8h;->d:Lpl0;
 
-    iget-object v0, v0, Lil5;->b:Ljt4;
-
-    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loqe;
-
-    iget-wide v1, p0, Lvk5;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Lpl0;->x()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "getWorkManager: enable = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Loqe;->d(Ljava/util/List;)Lmee;
+    const-string v2, "d8h"
+
+    invoke-static {v2, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lpl0;->x()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Ls8a;->k(Ljava/lang/Object;)Lnaa;
 
     move-result-object v0
 
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "waiting for enable ..."
+
+    invoke-static {v2, v1}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lvk5;->c:Ljava/lang/Object;
+    check-cast v1, Lwk5;
 
-    check-cast v0, Lal5;
+    iget-object v0, v1, Lwk5;->a:Lys4;
 
-    iget-object v0, v0, Lal5;->a:Ltk;
-
-    check-cast v0, Lbga;
-
-    new-instance v1, Lkt;
-
-    invoke-virtual {v0}, Lbga;->x()Lxob;
-
-    move-result-object v2
-
-    check-cast v2, Lzob;
-
-    iget-object v2, v2, Lzob;->a:Lt63;
-
-    invoke-virtual {v2}, Lxid;->l()J
-
-    move-result-wide v3
-
-    const/4 v2, 0x5
-
-    iget-wide v5, p0, Lvk5;->b:J
-
-    invoke-direct/range {v1 .. v6}, Lkt;-><init>(IJJ)V
-
-    invoke-virtual {v0}, Lbga;->y()Lraf;
+    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/16 v2, 0xc
+    check-cast v0, Lsj5;
 
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3, v2}, Lraf;->d(Lraf;Lxl;ZI)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Lsj5;->a()Lbde;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Luc5;
+
+    const/16 v2, 0xf
+
+    invoke-direct {v1, v2}, Luc5;-><init>(I)V
+
+    new-instance v2, Lsc8;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v1, v3}, Lsc8;-><init>(Ljava/lang/Object;Lke6;I)V
+
+    return-object v2
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

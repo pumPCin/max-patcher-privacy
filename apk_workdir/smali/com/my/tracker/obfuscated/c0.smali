@@ -26,6 +26,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 4
     :try_start_0
     new-instance v0, Lcom/my/tracker/obfuscated/m0;
 
@@ -38,10 +39,12 @@
     :catchall_0
     move-exception p1
 
+    .line 5
     const-string v0, "HttpRequest error: error while creating OkHttpPostRequest"
 
     invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
+    .line 6
     :cond_0
     new-instance p1, Lcom/my/tracker/obfuscated/b0;
 
@@ -53,6 +56,7 @@
 .method public static a(Landroid/content/Context;)Z
     .locals 1
 
+    .line 1
     const-string v0, "connectivity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -67,6 +71,7 @@
 
     return v0
 
+    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -76,6 +81,7 @@
 
     return v0
 
+    .line 3
     :cond_1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->isConnected()Z
 

@@ -1,182 +1,337 @@
 .class public final Lpeb;
-.super Lzce;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Loeb;
+.field public final a:Lyd2;
 
-.field public final Y:I
+.field public final b:Lyn7;
+
+.field public final c:Lyn7;
+
+.field public final d:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Loeb;Ljava/util/concurrent/ExecutorService;I)V
+.method public constructor <init>(Lyn7;Lyn7;Lyn7;Lyd2;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lzce;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpeb;->X:Loeb;
+    iput-object p4, p0, Lpeb;->a:Lyd2;
 
-    iput p3, p0, Lpeb;->Y:I
+    iput-object p1, p0, Lpeb;->b:Lyn7;
+
+    iput-object p2, p0, Lpeb;->c:Lyn7;
+
+    iput-object p3, p0, Lpeb;->d:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Ltde;I)V
-    .locals 0
+.method public final a(Lro3;)Lkdb;
+    .locals 20
 
-    check-cast p1, Lseb;
+    move-object/from16 v0, p0
 
-    invoke-virtual {p0, p1, p2}, Lpeb;->J(Lseb;I)V
+    move-object/from16 v1, p1
 
-    return-void
-.end method
+    iget-object v2, v0, Lpeb;->d:Lyn7;
 
-.method public final J(Lseb;I)V
-    .locals 9
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p2}, Lpw7;->C(I)Ljava/lang/Object;
+    move-result-object v2
 
-    move-result-object p2
+    check-cast v2, Lunb;
 
-    check-cast p2, Lww7;
+    invoke-virtual {v1}, Lro3;->n()J
 
-    check-cast p2, Lreb;
+    move-result-wide v3
 
-    new-instance v0, Leoa;
+    iget-object v5, v1, Lro3;->a:Lhq3;
 
-    const/4 v6, 0x0
+    invoke-virtual {v2, v3, v4}, Lunb;->p(J)Lrnb;
 
-    const/4 v7, 0x1
+    move-result-object v2
 
-    const/4 v1, 0x2
+    iget v2, v2, Lrnb;->a:I
 
-    iget-object v2, p0, Lpeb;->X:Loeb;
+    const/16 v3, 0xa
 
-    const-class v3, Loeb;
+    const/4 v4, 0x0
 
-    const-string v4, "onItemClick"
+    const/4 v6, 0x1
 
-    const-string v5, "onItemClick(Lone/me/chats/picker/PickerEntity;Z)V"
+    if-eq v2, v3, :cond_0
 
-    invoke-direct/range {v0 .. v7}, Leoa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    const/16 v3, 0x14
 
-    new-instance v1, Leoa;
+    if-eq v2, v3, :cond_0
 
-    const/4 v7, 0x0
+    const/16 v3, 0x28
+
+    if-eq v2, v3, :cond_0
+
+    move v15, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v15, v6
+
+    :goto_0
+    sget-object v2, Ljk0;->c:Ljk0;
+
+    invoke-virtual {v1, v2}, Lro3;->p(Ljk0;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lpeb;->b:Lyn7;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lzl5;
+
+    invoke-virtual {v1, v7}, Lro3;->v(Lzl5;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    sget v7, Lz7d;->D:I
+
+    new-instance v8, Lxcf;
+
+    invoke-direct {v8, v7}, Lxcf;-><init>(I)V
+
+    :goto_1
+    move-object v13, v8
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {v1}, Lro3;->t()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v1}, Lro3;->w()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    sget v7, Lz7d;->G2:I
+
+    new-instance v8, Lxcf;
+
+    invoke-direct {v8, v7}, Lxcf;-><init>(I)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1}, Lro3;->t()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_3
+
+    sget v7, Lz7d;->m:I
+
+    new-instance v8, Lxcf;
+
+    invoke-direct {v8, v7}, Lxcf;-><init>(I)V
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v7, v0, Lpeb;->c:Lyn7;
+
+    invoke-interface {v7}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lwnb;
+
+    invoke-virtual {v7, v1}, Lwnb;->b(Lro3;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    invoke-interface {v7}, Ljava/lang/CharSequence;->length()I
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    sget v7, Lgja;->D:I
+
+    new-instance v8, Lxcf;
+
+    invoke-direct {v8, v7}, Lxcf;-><init>(I)V
+
+    goto :goto_1
+
+    :cond_4
+    new-instance v8, Lbdf;
+
+    invoke-direct {v8, v7}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :goto_2
+    iget-object v7, v0, Lpeb;->a:Lyd2;
+
+    invoke-virtual {v7}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v7
 
     const/4 v8, 0x2
 
-    const/4 v2, 0x2
+    if-eq v7, v6, :cond_7
 
-    iget-object v3, p0, Lpeb;->X:Loeb;
+    if-eq v7, v8, :cond_5
 
-    const-class v4, Loeb;
+    const/4 v9, 0x3
 
-    const-string v5, "onItemLongClick"
+    if-eq v7, v9, :cond_5
 
-    const-string v6, "onItemLongClick(Lone/me/chats/picker/PickerEntity;Z)Z"
+    :goto_3
+    move/from16 v19, v6
 
-    invoke-direct/range {v1 .. v8}, Leoa;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    goto :goto_4
 
-    invoke-virtual {p1, p2}, Lseb;->F(Lreb;)V
+    :cond_5
+    iget-object v5, v5, Lhq3;->b:Lgq3;
 
-    iget-object p1, p1, Lnxc;->a:Landroid/view/View;
+    iget-object v5, v5, Lgq3;->n:Ljava/util/List;
 
-    new-instance v2, La45;
+    sget-object v7, Lcq3;->X:Lcq3;
 
-    const/16 v3, 0x1a
+    invoke-interface {v5, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v0, v3, p2}, La45;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result v5
 
-    invoke-static {p1, v2}, Lbv0;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    if-nez v5, :cond_6
 
-    check-cast p1, Lsp3;
+    goto :goto_3
 
-    new-instance v0, Ll42;
+    :cond_6
+    move/from16 v19, v4
 
-    const/4 v2, 0x6
+    goto :goto_4
 
-    invoke-direct {v0, v1, v2, p2}, Ll42;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    :cond_7
+    iget-object v5, v5, Lhq3;->b:Lgq3;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    iget-object v5, v5, Lgq3;->n:Ljava/util/List;
 
-    return-void
-.end method
+    sget-object v7, Lcq3;->Y:Lcq3;
 
-.method public final l(I)I
-    .locals 0
+    invoke-interface {v5, v7}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
-    sget p1, Lteb;->a:I
+    move-result v5
 
-    return p1
-.end method
+    if-nez v5, :cond_6
 
-.method public final bridge synthetic r(Lnxc;I)V
-    .locals 0
+    goto :goto_3
 
-    check-cast p1, Lseb;
+    :goto_4
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lpeb;->J(Lseb;I)V
+    move-result-object v3
 
-    return-void
-.end method
+    check-cast v3, Lzl5;
 
-.method public final t(Landroid/view/ViewGroup;I)Lnxc;
-    .locals 4
-
-    new-instance p2, Lseb;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lsp3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lsp3;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p2, v0}, Lnxc;-><init>(Landroid/view/View;)V
-
-    iget p1, p0, Lpeb;->Y:I
-
-    if-lez p1, :cond_0
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v1
-
-    invoke-static {p1}, Lv63;->r0(F)I
-
-    move-result p1
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual {v1, v3}, Lro3;->v(Lzl5;)Z
 
     move-result v3
 
-    invoke-virtual {v0, p1, v1, v2, v3}, Landroid/view/View;->setPaddingRelative(IIII)V
+    if-eqz v3, :cond_8
 
-    :cond_0
-    return-object p2
+    const/4 v8, 0x5
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v1}, Lro3;->t()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    const/4 v8, 0x4
+
+    :cond_9
+    :goto_5
+    invoke-virtual {v1}, Lro3;->n()J
+
+    move-result-wide v3
+
+    invoke-virtual {v1}, Lro3;->n()J
+
+    move-result-wide v10
+
+    invoke-virtual {v1}, Lro3;->d()Ljava/lang/String;
+
+    move-result-object v12
+
+    if-eqz v12, :cond_b
+
+    if-eqz v2, :cond_a
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    :goto_6
+    move-object v14, v2
+
+    goto :goto_7
+
+    :cond_a
+    const/4 v2, 0x0
+
+    goto :goto_6
+
+    :goto_7
+    invoke-virtual {v1}, Lro3;->u()Z
+
+    move-result v16
+
+    new-instance v2, Lcfb;
+
+    invoke-virtual/range {p1 .. p1}, Lro3;->n()J
+
+    move-result-wide v0
+
+    invoke-direct {v2, v6, v8, v0, v1}, Lcfb;-><init>(IIJ)V
+
+    invoke-virtual/range {p1 .. p1}, Lro3;->m()Ljava/lang/CharSequence;
+
+    move-result-object v18
+
+    new-instance v7, Lkdb;
+
+    move-object/from16 v17, v2
+
+    move-wide v8, v3
+
+    invoke-direct/range {v7 .. v19}, Lkdb;-><init>(JJLjava/lang/CharSequence;Lcdf;Landroid/net/Uri;ZZLcfb;Ljava/lang/CharSequence;Z)V
+
+    return-object v7
+
+    :cond_b
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Required value was null."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

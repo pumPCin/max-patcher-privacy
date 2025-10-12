@@ -1,57 +1,82 @@
 .class public final Lqm6;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lov7;
 
 
 # instance fields
-.field public X:Lqk0;
+.field public final X:Z
 
-.field public Y:J
+.field public final Y:Landroid/net/Uri;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final Z:Lor3;
 
-.field public o:Lsm6;
+.field public final a:J
 
-.field public final synthetic w0:Lsm6;
+.field public final b:Ljava/lang/String;
 
-.field public x0:I
+.field public final c:Lymb;
+
+.field public final o:Lymb;
+
+.field public final r0:Ljava/util/List;
+
+.field public final s0:Z
+
+.field public final t0:I
+
+.field public final u0:J
 
 
 # direct methods
-.method public constructor <init>(Lsm6;Lnz3;)V
+.method public constructor <init>(JLjava/lang/String;Lymb;Lymb;ZLandroid/net/Uri;Lor3;Ljava/util/List;Z)V
     .locals 0
 
-    iput-object p1, p0, Lqm6;->w0:Lsm6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lqm6;->a:J
+
+    iput-object p3, p0, Lqm6;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lqm6;->c:Lymb;
+
+    iput-object p5, p0, Lqm6;->o:Lymb;
+
+    iput-boolean p6, p0, Lqm6;->X:Z
+
+    iput-object p7, p0, Lqm6;->Y:Landroid/net/Uri;
+
+    iput-object p8, p0, Lqm6;->Z:Lor3;
+
+    iput-object p9, p0, Lqm6;->r0:Ljava/util/List;
+
+    iput-boolean p10, p0, Lqm6;->s0:Z
+
+    sget p3, Loja;->p:I
+
+    iput p3, p0, Lqm6;->t0:I
+
+    iput-wide p1, p0, Lqm6;->u0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    iput-object p1, p0, Lqm6;->Z:Ljava/lang/Object;
+    iget-wide v0, p0, Lqm6;->u0:J
 
-    iget p1, p0, Lqm6;->x0:I
+    return-wide v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final m()I
+    .locals 1
 
-    or-int/2addr p1, v0
+    iget v0, p0, Lqm6;->t0:I
 
-    iput p1, p0, Lqm6;->x0:I
-
-    const-wide/16 v0, 0x0
-
-    const/4 p1, 0x0
-
-    iget-object v2, p0, Lqm6;->w0:Lsm6;
-
-    invoke-virtual {v2, v0, v1, p1, p0}, Lsm6;->a(JLqk0;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

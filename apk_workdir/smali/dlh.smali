@@ -1,6 +1,10 @@
-.class public final Ldlh;
-.super Lweh;
+.class public abstract Ldlh;
+.super Lodh;
 .source "SourceFile"
 
 # interfaces
-.implements Lnlh;
+.implements Lilh;
+
+
+# static fields
+.field public static final synthetic d:I

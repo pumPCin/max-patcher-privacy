@@ -1,113 +1,65 @@
 .class public final Lytf;
-.super Lm3f;
+.super Lyjg;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:Lya5;
 
-.field public final synthetic Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+.field public final Y:Lya5;
+
+.field public volatile Z:Loke;
+
+.field public final b:Lutf;
+
+.field public final c:Lyn7;
+
+.field public final o:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lytf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lytf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lytf;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lytf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lytf;
-
-    iget-object v1, p0, Lytf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    invoke-direct {v0, p2, v1}, Lytf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
-
-    iput-object p1, v0, Lytf;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lutf;)V
     .locals 3
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    sget-object v0, Lxrf;->a:Lxrf;
 
-    iget-object p1, p0, Lytf;->X:Ljava/lang/Object;
-
-    check-cast p1, Lxwf;
-
-    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
-
-    iget-object v0, p0, Lytf;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    invoke-virtual {v0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->D0()Lbxf;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lbxf;->f(Lxwf;)V
+    const-class v2, Lm63;
 
-    invoke-interface {p1}, Lxwf;->b()Z
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    move-result p1
+    invoke-virtual {v0}, Lxrf;->a()Lyn7;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    iget-object p1, v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->x0:Lmqc;
+    invoke-virtual {v0}, Lxrf;->b()Lyn7;
 
-    sget-object v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->B0:[Ltm7;
+    move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-direct {p0}, Lyjg;-><init>()V
 
-    aget-object v1, v1, v2
+    iput-object p1, p0, Lytf;->b:Lutf;
 
-    invoke-interface {p1, v0, v1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    iput-object v1, p0, Lytf;->c:Lyn7;
 
-    move-result-object p1
+    iput-object v0, p0, Lytf;->o:Lyn7;
 
-    check-cast p1, Landroid/widget/ScrollView;
+    new-instance p1, Lya5;
 
-    new-instance v1, Lace;
+    const/4 v0, 0x0
 
-    const/16 v2, 0x15
+    invoke-direct {p1, v0}, Lya5;-><init>(I)V
 
-    invoke-direct {v1, v2, v0}, Lace;-><init>(ILjava/lang/Object;)V
+    iput-object p1, p0, Lytf;->X:Lya5;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    new-instance p1, Lya5;
 
-    :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-direct {p1, v0}, Lya5;-><init>(I)V
 
-    return-object p1
+    iput-object p1, p0, Lytf;->Y:Lya5;
+
+    return-void
 .end method

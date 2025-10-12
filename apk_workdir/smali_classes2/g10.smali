@@ -1,105 +1,85 @@
-.class public final Lg10;
-.super Ljava/lang/Object;
+.class public final enum Lg10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final enum a:Lg10;
 
-.field public b:Ljava/lang/String;
+.field public static final enum b:Lg10;
 
-.field public c:Ljava/lang/String;
+.field public static final enum c:Lg10;
 
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Lc10;
-
-.field public g:Lo10;
-
-.field public h:Z
-
-.field public i:Z
+.field public static final synthetic o:[Lg10;
 
 
 # direct methods
-.method public constructor <init>(Lg10;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg10;
 
-    iget-wide v0, p1, Lg10;->a:J
+    const-string v1, "DEFAULT"
 
-    iput-wide v0, p0, Lg10;->a:J
+    const/4 v2, 0x0
 
-    iget-object v0, p1, Lg10;->b:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lg10;->b:Ljava/lang/String;
+    sput-object v0, Lg10;->a:Lg10;
 
-    iget-object v0, p1, Lg10;->c:Ljava/lang/String;
+    new-instance v1, Lg10;
 
-    iput-object v0, p0, Lg10;->c:Ljava/lang/String;
+    const-string v2, "PROCESSING"
 
-    iget-object v0, p1, Lg10;->d:Ljava/lang/String;
+    const/4 v3, 0x1
 
-    iput-object v0, p0, Lg10;->d:Ljava/lang/String;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p1, Lg10;->e:Ljava/lang/String;
+    sput-object v1, Lg10;->b:Lg10;
 
-    iput-object v0, p0, Lg10;->e:Ljava/lang/String;
+    new-instance v2, Lg10;
 
-    iget-object v0, p1, Lg10;->f:Lc10;
+    const-string v3, "PROCESSED"
 
-    iput-object v0, p0, Lg10;->f:Lc10;
+    const/4 v4, 0x2
 
-    iget-object v0, p1, Lg10;->g:Lo10;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lg10;->g:Lo10;
+    sput-object v2, Lg10;->c:Lg10;
 
-    iget-boolean v0, p1, Lg10;->h:Z
+    filled-new-array {v0, v1, v2}, [Lg10;
 
-    iput-boolean v0, p0, Lg10;->h:Z
+    move-result-object v0
 
-    iget-boolean p1, p1, Lg10;->i:Z
-
-    iput-boolean p1, p0, Lg10;->i:Z
+    sput-object v0, Lg10;->o:[Lg10;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()Z
+.method public static valueOf(Ljava/lang/String;)Lg10;
     .locals 1
 
-    iget-object v0, p0, Lg10;->f:Lc10;
+    const-class v0, Lg10;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lg10;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-object p0
 .end method
 
-.method public b()Z
+.method public static values()[Lg10;
     .locals 1
 
-    iget-object v0, p0, Lg10;->g:Lo10;
+    sget-object v0, Lg10;->o:[Lg10;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, [Lg10;->clone()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    return v0
+    check-cast v0, [Lg10;
 
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    return-object v0
 .end method

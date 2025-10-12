@@ -1,71 +1,85 @@
-.class public final synthetic Lijd;
+.class public final Lijd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lljd;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Law3;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Law3;I)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput p2, p0, Lijd;->a:I
-
-    iput-object p1, p0, Lijd;->b:Law3;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lijd;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lijd;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lijd;
+
+    iget-boolean v1, p0, Lijd;->a:Z
+
+    iget-boolean p1, p1, Lijd;->a:Z
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    iget v0, p0, Lijd;->a:I
+    iget-boolean v0, p0, Lijd;->a:Z
 
-    check-cast p1, Lgkd;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    check-cast p2, Landroid/view/View;
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
+.end method
 
-    iget-object v0, p0, Lijd;->b:Law3;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
+    const-string v0, "Show(openWithAnimation="
 
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
+    const-string v1, ")"
 
-    invoke-virtual {v0, p1, p2}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lgkd;Landroid/view/View;)V
+    iget-boolean v2, p0, Lijd;->a:Z
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lijd;->b:Law3;
-
-    iget-object v0, v0, Law3;->Y:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/chats/search/ChatsListSearchScreen;
-
-    invoke-virtual {v0, p1, p2}, Lone/me/chats/search/ChatsListSearchScreen;->E0(Lgkd;Landroid/view/View;)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

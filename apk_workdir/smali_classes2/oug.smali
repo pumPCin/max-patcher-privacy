@@ -1,23 +1,25 @@
 .class public final Loug;
-.super Lik7;
+.super Lpug;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+# static fields
+.field public static final c:Loug;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Lik7;-><init>()V
+    new-instance v0, Loug;
 
-    iput-object p1, p0, Loug;->c:Ljava/lang/String;
+    const-string v1, "not_supported"
 
-    iput-object p2, p0, Loug;->d:Ljava/lang/String;
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lpug;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Loug;->c:Loug;
 
     return-void
 .end method
@@ -25,7 +27,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -34,84 +36,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Loug;
+    instance-of p1, p1, Loug;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Loug;
-
-    iget-object v1, p0, Loug;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Loug;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Loug;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Loug;->d:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Loug;->c:Ljava/lang/String;
+    const v0, 0x59d65997
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Loug;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    const-string v0, ", fileName="
-
-    const-string v1, ")"
-
-    const-string v2, "DownloadFile(url="
-
-    iget-object v3, p0, Loug;->c:Ljava/lang/String;
-
-    iget-object v4, p0, Loug;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "NotSupported"
 
     return-object v0
 .end method

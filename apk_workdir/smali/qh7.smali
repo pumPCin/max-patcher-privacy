@@ -3,68 +3,106 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Lbw7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lcwd;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method public constructor <init>(Lfh7;)V
+    .locals 2
 
-    iput p1, p0, Lqh7;->a:I
+    new-instance v0, Lcwd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lqh7;->a:Lcwd;
+
+    new-instance v0, Li0;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p0}, Li0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lgi7;->invokeOnCompletion(Lvd6;)Lis4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInterpolation(F)F
-    .locals 2
+.method public final cancel(Z)Z
+    .locals 1
 
-    iget v0, p0, Lqh7;->a:I
+    iget-object v0, p0, Lqh7;->a:Lcwd;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1}, Lv1;->cancel(Z)Z
 
-    :pswitch_0
-    const/high16 v0, 0x3f800000    # 1.0f
+    move-result p1
 
-    sub-float/2addr p1, v0
+    return p1
+.end method
 
-    mul-float v1, p1, p1
+.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    mul-float/2addr v1, p1
+    iget-object v0, p0, Lqh7;->a:Lcwd;
 
-    mul-float/2addr v1, p1
+    invoke-virtual {v0, p1, p2}, Lv1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    mul-float/2addr v1, p1
+    return-void
+.end method
 
-    add-float/2addr v1, v0
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    return v1
+    .line 1
+    iget-object v0, p0, Lqh7;->a:Lcwd;
 
-    :pswitch_1
-    mul-float v0, p1, p1
+    invoke-virtual {v0}, Lv1;->get()Ljava/lang/Object;
 
-    mul-float/2addr v0, p1
+    move-result-object v0
 
-    mul-float/2addr v0, p1
+    return-object v0
+.end method
 
-    mul-float/2addr v0, p1
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lqh7;->a:Lcwd;
+
+    invoke-virtual {v0, p1, p2, p3}, Lv1;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lqh7;->a:Lcwd;
+
+    iget-object v0, v0, Lv1;->a:Ljava/lang/Object;
+
+    instance-of v0, v0, Lz0;
 
     return v0
+.end method
 
-    nop
+.method public final isDone()Z
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lqh7;->a:Lcwd;
+
+    invoke-virtual {v0}, Lv1;->isDone()Z
+
+    move-result v0
+
+    return v0
 .end method

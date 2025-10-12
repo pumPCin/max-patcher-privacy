@@ -1,67 +1,44 @@
-.class public abstract Leye;
-.super Ldye;
+.class public final Leye;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:[B
 
 
 # direct methods
-.method public static P(Ljava/lang/String;)Ljava/lang/Double;
-    .locals 3
+.method public constructor <init>(J[B)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    sget-object v1, Lsfd;->a:Layc;
+    iput-wide p1, p0, Leye;->a:J
 
-    invoke-virtual {v1, p0}, Layc;->a(Ljava/lang/CharSequence;)Z
+    iput-object p3, p0, Leye;->b:[B
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    :cond_0
-    return-object v0
+    return-void
 .end method
 
-.method public static Q(Ljava/lang/String;)Ljava/lang/Float;
-    .locals 2
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    :try_start_0
-    sget-object v1, Lsfd;->a:Layc;
+    check-cast p1, Leye;
 
-    invoke-virtual {v1, p0}, Layc;->a(Ljava/lang/CharSequence;)Z
+    iget-wide v0, p0, Leye;->a:J
 
-    move-result v1
+    iget-wide v2, p1, Leye;->a:J
 
-    if-eqz v1, :cond_0
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
 
-    invoke-static {p0}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+    move-result p1
 
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    :cond_0
-    return-object v0
+    return p1
 .end method

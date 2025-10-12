@@ -1,48 +1,47 @@
-.class public final Lil4;
+.class public final synthetic Lil4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/media/Spatializer$OnSpatializerStateChangedListener;
+.implements Lcnb;
 
 
 # instance fields
-.field public final synthetic a:Ltl4;
+.field public final synthetic a:J
 
 
 # direct methods
-.method public constructor <init>(Ltl4;)V
+.method public synthetic constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lil4;->a:Ltl4;
+    iput-wide p1, p0, Lil4;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSpatializerAvailableChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 4
 
-    sget-object p1, Ltl4;->i:Lv1b;
+    check-cast p1, Ljl4;
 
-    iget-object p1, p0, Lil4;->a:Ltl4;
+    iget-wide v0, p1, Ljl4;->c:J
 
-    invoke-virtual {p1}, Ltl4;->e()V
+    iget-wide v2, p0, Lil4;->a:J
 
-    return-void
-.end method
+    cmp-long p1, v0, v2
 
-.method public final onSpatializerEnabledChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
+    if-gtz p1, :cond_0
 
-    sget-object p1, Ltl4;->i:Lv1b;
+    const/4 p1, 0x1
 
-    iget-object p1, p0, Lil4;->a:Ltl4;
+    return p1
 
-    invoke-virtual {p1}, Ltl4;->e()V
+    :cond_0
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 .end method

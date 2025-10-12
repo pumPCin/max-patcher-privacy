@@ -1,118 +1,65 @@
 .class public final Lm01;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lnz3;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lp01;
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lp01;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lm01;->Y:Lp01;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Ljz3;Ljz3;Z)V
     .locals 0
 
-    check-cast p1, Le34;
+    return-void
+.end method
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.method public final b(Ljz3;Ljz3;Z)V
+    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Lm01;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lpl7;
+
+    iget-object p1, p0, Lm01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->B0()Lv01;
 
     move-result-object p1
 
-    check-cast p1, Lm01;
+    invoke-virtual {p1}, Lv01;->r()Loz0;
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result-object p2
 
-    invoke-virtual {p1, p2}, Lm01;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    check-cast p2, Lj01;
 
-    return-object p1
-.end method
+    iget-object p2, p2, Lj01;->F0:Lhne;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p2}, Lhne;->getValue()Ljava/lang/Object;
 
-    new-instance p1, Lm01;
+    move-result-object p2
 
-    iget-object v0, p0, Lm01;->Y:Lp01;
+    check-cast p2, Lz9;
 
-    invoke-direct {p1, v0, p2}, Lm01;-><init>(Lp01;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lm01;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lv01;->s(Lz9;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lm01;->Y:Lp01;
-
-    iget-object v0, p1, Lp01;->w0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgs;
-
-    iput v1, p0, Lm01;->X:I
-
-    invoke-static {p1, v0, p0}, Lp01;->a(Lp01;Lgs;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-void
 .end method

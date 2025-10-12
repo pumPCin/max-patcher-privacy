@@ -1,59 +1,51 @@
 .class public final Ltv2;
-.super Lbp;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ltv2;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Luv2;
+
+.field public Z:I
+
+.field public o:Luv2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Luv2;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Ltv2;
+    iput-object p1, p0, Ltv2;->Y:Luv2;
 
-    invoke-direct {v0}, Lbp;-><init>()V
-
-    sput-object v0, Ltv2;->a:Ltv2;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ls88;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    iput-object p1, p0, Ltv2;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Ltv2;->Z:I
 
-    const-class v1, Ls88;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Ltv2;->Z:I
 
-    check-cast v0, Ls88;
+    iget-object p1, p0, Ltv2;->Y:Luv2;
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public final c()Ljna;
-    .locals 2
+    invoke-virtual {p1, v0, p0}, Luv2;->a(Ljava/util/Set;Lwy3;)Ljava/io/Serializable;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    move-result-object p1
 
-    move-result-object v0
-
-    const-class v1, Ljna;
-
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljna;
-
-    return-object v0
+    return-object p1
 .end method

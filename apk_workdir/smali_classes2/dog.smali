@@ -2,336 +2,283 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liq;
-
-
-# static fields
-.field public static final synthetic n:I
-
 
 # instance fields
-.field public final a:Lbp7;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lbp7;
+.field public final b:J
 
-.field public final c:Lbp7;
+.field public final c:J
 
-.field public final d:Ly24;
+.field public final d:Ljava/lang/Thread;
 
-.field public final e:Lbp7;
-
-.field public f:I
-
-.field public g:J
-
-.field public volatile h:I
-
-.field public final i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-.field public final j:Lvfd;
-
-.field public volatile k:Z
-
-.field public volatile l:Z
-
-.field public final m:Lcog;
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lvfd;Lbp7;Lbp7;Lbp7;Ly24;Lbp7;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Ldog;->a:Ljava/lang/String;
 
-    iput v0, p0, Ldog;->f:I
+    iput-wide p2, p0, Ldog;->b:J
 
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-wide p4, p0, Ldog;->c:J
 
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p6, p0, Ldog;->d:Ljava/lang/Thread;
 
-    iput-object v1, p0, Ldog;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    iput-boolean v0, p0, Ldog;->k:Z
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ldog;->l:Z
-
-    new-instance v0, Lcog;
-
-    invoke-direct {v0, p0}, Lcog;-><init>(Ldog;)V
-
-    iput-object v0, p0, Ldog;->m:Lcog;
-
-    iput-object p2, p0, Ldog;->j:Lvfd;
-
-    iput-object p3, p0, Ldog;->a:Lbp7;
-
-    iput-object p4, p0, Ldog;->b:Lbp7;
-
-    iput-object p6, p0, Ldog;->d:Ly24;
-
-    iput-object p5, p0, Ldog;->c:Lbp7;
-
-    iput-object p7, p0, Ldog;->e:Lbp7;
-
-    new-instance p2, Lxg0;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p3, p0}, Lxg0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+    iput-object p7, p0, Ldog;->e:Ljava/util/List;
 
     return-void
+.end method
+
+.method public static a(Ldog;JLjava/lang/Thread;I)Ldog;
+    .locals 8
+
+    iget-object v1, p0, Ldog;->a:Ljava/lang/String;
+
+    iget-wide v2, p0, Ldog;->b:J
+
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_0
+
+    iget-wide p1, p0, Ldog;->c:J
+
+    :cond_0
+    move-wide v4, p1
+
+    iget-object v7, p0, Ldog;->e:Ljava/util/List;
+
+    new-instance v0, Ldog;
+
+    move-object v6, p3
+
+    invoke-direct/range {v0 .. v7}, Ldog;-><init>(Ljava/lang/String;JJLjava/lang/Thread;Ljava/util/List;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final b(J)J
+    .locals 4
+
+    iget-wide v0, p0, Ldog;->b:J
+
+    iget-wide v2, p0, Ldog;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lyz4;->d(JJ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    move-wide v2, p1
+
+    :cond_0
+    invoke-static {p1, p2, v2, v3}, Lyz4;->g(JJ)J
+
+    move-result-wide p1
+
+    return-wide p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Ldog;->g:J
-
-    sub-long/2addr v0, v2
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "app enter background, time="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lvr0;->z(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ", interactiveTime="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "dog"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iget-object v2, p0, Ldog;->b:Lbp7;
-
-    invoke-interface {v2}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqc;
-
-    const-string v3, "INTERACTIVE_SESSION"
-
-    invoke-virtual {v2, v0, v1, v3}, Lqc;->h(JLjava/lang/String;)V
-
-    iget-object v0, p0, Ldog;->d:Ly24;
-
-    sget-object v1, Lv65;->a:Lv65;
-
-    new-instance v2, Lbog;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3}, Lbog;-><init>(Ldog;I)V
-
-    invoke-virtual {v0, v1, v2}, Ly24;->dispatch(Lw24;Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Ldog;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgq;
-
-    invoke-interface {v1}, Lgq;->a()V
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
-
-.method public final b()V
-    .locals 5
-
-    sget-object v0, Lox9;->j:Lqpa;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Ly38;->o:Ly38;
-
-    invoke-virtual {v0, v1}, Lqpa;->b(Ly38;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "app enter foreground, time = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lvr0;->z(Ljava/lang/Long;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    const-string v4, "dog"
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Ldog;->g:J
-
-    iget-object v0, p0, Ldog;->d:Ly24;
-
-    sget-object v1, Lv65;->a:Lv65;
-
-    new-instance v2, Lbog;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, p0, v3}, Lbog;-><init>(Ldog;I)V
-
-    invoke-virtual {v0, v1, v2}, Ly24;->dispatch(Lw24;Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Ldog;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lgq;
-
-    invoke-interface {v1}, Lgq;->b()V
-
-    goto :goto_1
-
-    :cond_2
-    return-void
-.end method
-
-.method public final c(Lgq;)V
-    .locals 1
-
-    iget-object v0, p0, Ldog;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-boolean v0, p0, Ldog;->k:Z
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, p0, Ldog;->l:Z
-
-    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Ldog;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldog;
+
+    iget-object v1, p0, Ldog;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Ldog;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ldog;->b:J
+
+    iget-wide v5, p1, Ldog;->b:J
+
+    invoke-static {v3, v4, v5, v6}, Lyz4;->d(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Ldog;->c:J
+
+    iget-wide v5, p1, Ldog;->c:J
+
+    invoke-static {v3, v4, v5, v6}, Lyz4;->d(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ldog;->d:Ljava/lang/Thread;
+
+    iget-object v3, p1, Ldog;->d:Ljava/lang/Thread;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ldog;->e:Ljava/util/List;
+
+    iget-object p1, p1, Ldog;->e:Ljava/util/List;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
     return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Ldog;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    sget v2, Lyz4;->o:I
+
+    iget-wide v2, p0, Ldog;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Ldog;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lajf;->m(IIJ)I
+
+    move-result v0
+
+    iget-object v2, p0, Ldog;->d:Ljava/lang/Thread;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Ldog;->e:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-wide v0, p0, Ldog;->b:J
+
+    invoke-static {v0, v1}, Lyz4;->j(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Ldog;->c:J
+
+    invoke-static {v1, v2}, Lyz4;->j(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ", submitTime="
+
+    const-string v3, ", startTime="
+
+    const-string v4, "WatchdogTask(submitThread="
+
+    iget-object v5, p0, Ldog;->a:Ljava/lang/String;
+
+    invoke-static {v4, v5, v2, v0, v3}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", runningThread="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ldog;->d:Ljava/lang/Thread;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", stacktrace="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ldog;->e:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lsw1;->i(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

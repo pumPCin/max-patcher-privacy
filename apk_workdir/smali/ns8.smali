@@ -3,122 +3,126 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Ljava/util/HashMap;
-
-
 # instance fields
-.field public final a:Lft8;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lns8;->b:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Lns8;->c:Ljava/util/HashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
-    .locals 11
-
-    const-string v0, ""
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v2, Lns8;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lns8;->a:Ljava/lang/String;
 
-    monitor-enter v2
+    iput p2, p0, Lns8;->b:I
 
-    :try_start_0
-    sget-object v3, Lns8;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v0, Lft8;
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    invoke-direct/range {v0 .. v10}, Lft8;-><init>(Lns8;Lone/me/android/media/service/OneMeMediaSessionService;Lif5;Le77;Le77;Le77;Lmle;Landroid/os/Bundle;Landroid/os/Bundle;Lgx0;)V
-
-    iput-object v0, p0, Lns8;->a:Lft8;
+    iput p3, p0, Lns8;->c:I
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Session ID must be unique. ID="
-
-    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :goto_0
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()Lxkb;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget-object v0, p0, Lns8;->a:Lft8;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lft8;->t:Lgmb;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Lgmb;->a:Lif5;
+    return v0
 
-    return-object v0
+    :cond_0
+    instance-of v1, p1, Lns8;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lns8;
+
+    iget v1, p0, Lns8;->c:I
+
+    iget-object v3, p0, Lns8;->a:Ljava/lang/String;
+
+    iget v4, p0, Lns8;->b:I
+
+    if-ltz v4, :cond_4
+
+    iget v5, p1, Lns8;->b:I
+
+    if-gez v5, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v5, p1, Lns8;->a:Ljava/lang/String;
+
+    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget v3, p1, Lns8;->b:I
+
+    if-ne v4, v3, :cond_3
+
+    iget p1, p1, Lns8;->c:I
+
+    if-ne v1, p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v2
+
+    :cond_4
+    :goto_0
+    iget-object v4, p1, Lns8;->a:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    iget p1, p1, Lns8;->c:I
+
+    if-ne v1, p1, :cond_5
+
+    return v0
+
+    :cond_5
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lns8;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lns8;->a:Ljava/lang/String;
+
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

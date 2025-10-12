@@ -1,65 +1,84 @@
 .class public final Ldc3;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lsk7;
-
-.field public Y:Lnxg;
-
-.field public Z:Ljava/lang/String;
-
-.field public o:Lec3;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Lec3;
-
-.field public y0:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lec3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Ldc3;->x0:Lec3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Ldc3;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Ldc3;->w0:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Ldc3;->y0:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Ldc3;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Ldc3;->y0:I
+    goto :goto_0
 
-    const/4 v3, 0x0
+    :cond_1
+    check-cast p1, Ldc3;
 
-    const/4 v4, 0x0
+    iget v0, p0, Ldc3;->a:I
 
-    iget-object v0, p0, Ldc3;->x0:Lec3;
+    iget p1, p1, Ldc3;->a:I
 
-    const/4 v1, 0x0
+    if-eq v0, p1, :cond_2
 
-    const/4 v2, 0x0
+    :goto_0
+    const/4 p1, 0x0
 
-    move-object v5, p0
+    return p1
 
-    invoke-virtual/range {v0 .. v5}, Lec3;->a(Ln62;Lsk7;Lnxg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Ldc3;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CommonStatesBackgroundActiveActionColors(themed="
+
+    const-string v1, ")"
+
+    iget v2, p0, Ldc3;->a:I
+
+    invoke-static {v2, v0, v1}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

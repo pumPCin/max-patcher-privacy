@@ -1,27 +1,58 @@
-.class public final Luw6;
-.super Lax6;
+.class public final synthetic Luw6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final A0:Z
+.field public final synthetic a:I
 
-.field public final B0:Z
+.field public final synthetic b:Lax6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lyw6;JIJLry4;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
+.method public synthetic constructor <init>(Lax6;I)V
     .locals 0
 
-    invoke-direct/range {p0 .. p15}, Lax6;-><init>(Ljava/lang/String;Lyw6;JIJLry4;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    iput p2, p0, Luw6;->a:I
 
-    move/from16 p1, p16
+    iput-object p1, p0, Luw6;->b:Lax6;
 
-    iput-boolean p1, p0, Luw6;->A0:Z
-
-    move/from16 p1, p17
-
-    iput-boolean p1, p0, Luw6;->B0:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Luw6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x1
+
+    iget-object v1, p0, Luw6;->b:Lax6;
+
+    iput-boolean v0, v1, Lax6;->M0:Z
+
+    invoke-virtual {v1}, Lax6;->D()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Luw6;->b:Lax6;
+
+    invoke-virtual {v0}, Lax6;->D()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

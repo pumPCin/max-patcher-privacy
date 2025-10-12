@@ -2,10 +2,13 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcs7;
-
 
 # virtual methods
-.method public abstract x()Lum;
+.method public abstract b()Z
+.end method
+
+.method public abstract c(Ljava/lang/String;)V
+.end method
+
+.method public varargs abstract e([Lo8h;)V
 .end method

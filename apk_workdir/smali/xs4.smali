@@ -3,174 +3,278 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxda;
-.implements Lss4;
+.implements Lrt8;
 
 
 # instance fields
-.field public final a:Lxda;
-
-.field public final b:Lwo3;
-
-.field public final c:Le6;
-
-.field public o:Lss4;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lxda;Lwo3;Le6;)V
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 5
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v0
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    const-string v2, "]  PID: ["
+
+    const-string v3, "] "
+
+    .line 3
+    const-string v4, "UID: ["
+
+    invoke-static {v4, v0, v2, v1, v3}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxs4;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Z)V
     .locals 0
+
+    .line 1
+    iput-object p1, p0, Lxs4;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxs4;->a:Lxda;
-
-    iput-object p2, p0, Lxs4;->b:Lwo3;
-
-    iput-object p3, p0, Lxs4;->c:Le6;
-
     return-void
+.end method
+
+.method public static b(Lo3b;)Lxs4;
+    .locals 6
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lo3b;->H(I)V
+
+    invoke-virtual {p0}, Lo3b;->u()I
+
+    move-result v0
+
+    shr-int/lit8 v1, v0, 0x1
+
+    and-int/lit8 v0, v0, 0x1
+
+    const/4 v2, 0x5
+
+    shl-int/2addr v0, v2
+
+    invoke-virtual {p0}, Lo3b;->u()I
+
+    move-result p0
+
+    shr-int/lit8 p0, p0, 0x3
+
+    and-int/lit8 p0, p0, 0x1f
+
+    or-int/2addr p0, v0
+
+    const/4 v0, 0x4
+
+    const/16 v3, 0xa
+
+    if-eq v1, v0, :cond_3
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v0, 0x7
+
+    if-eq v1, v0, :cond_3
+
+    const/16 v0, 0x8
+
+    if-ne v1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x9
+
+    if-ne v1, v0, :cond_1
+
+    const-string v0, "dvav"
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v1, v3, :cond_2
+
+    const-string v0, "dav1"
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_3
+    :goto_0
+    const-string v0, "dvhe"
+
+    :goto_1
+    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "."
+
+    const-string v4, ".0"
+
+    if-ge v1, v3, :cond_4
+
+    move-object v5, v4
+
+    goto :goto_2
+
+    :cond_4
+    move-object v5, v2
+
+    :goto_2
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    if-ge p0, v3, :cond_5
+
+    move-object v2, v4
+
+    :cond_5
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Lxs4;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lxs4;-><init>(Ljava/lang/String;Z)V
+
+    return-object v0
+.end method
+
+.method public static varargs d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    .locals 3
+
+    array-length v0, p2
+
+    if-lez v0, :cond_0
+
+    :try_start_0
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v0, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/util/IllegalFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Unable to format "
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "PlayCore"
+
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const-string v0, ", "
+
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " ["
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "]"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    const-string p2, " : "
+
+    invoke-static {p0, p2, p1}, Lc85;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public a(Landroid/media/MediaPlayer;Landroid/content/Context;)V
+    .locals 0
+
+    iget-object p2, p0, Lxs4;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/media/MediaPlayer;->setDataSource(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public varargs c(Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lxs4;->o:Lss4;
+    const/4 v0, 0x4
 
-    sget-object v1, Lws4;->a:Lws4;
+    const-string v1, "PlayCore"
 
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lxs4;->o:Lss4;
-
-    iget-object v0, p0, Lxs4;->a:Lxda;
-
-    invoke-interface {v0}, Lxda;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Lss4;)V
-    .locals 2
-
-    iget-object v0, p0, Lxs4;->a:Lxda;
-
-    :try_start_0
-    iget-object v1, p0, Lxs4;->b:Lwo3;
-
-    invoke-interface {v1, p1}, Lwo3;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v1, p0, Lxs4;->o:Lss4;
-
-    invoke-static {v1, p1}, Lws4;->f(Lss4;Lss4;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iput-object p1, p0, Lxs4;->o:Lss4;
-
-    invoke-interface {v0, p0}, Lxda;->c(Lss4;)V
-
-    :cond_0
-    return-void
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {v1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    sget-object p1, Lws4;->a:Lws4;
-
-    iput-object p1, p0, Lxs4;->o:Lss4;
-
-    invoke-static {v1, v0}, Lw65;->b(Ljava/lang/Throwable;Lxda;)V
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lxs4;->a:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    iget-object v0, p0, Lxs4;->o:Lss4;
-
-    sget-object v1, Lws4;->a:Lws4;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lxs4;->o:Lss4;
-
-    :try_start_0
-    iget-object v1, p0, Lxs4;->c:Le6;
-
-    invoke-interface {v1}, Le6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    invoke-static {v1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-static {v1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-interface {v0}, Lss4;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Lxs4;->o:Lss4;
-
-    invoke-interface {v0}, Lss4;->h()Z
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
+    iget-object v0, p0, Lxs4;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lxs4;->o:Lss4;
+    invoke-static {v0, p1, p2}, Lxs4;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    sget-object v1, Lws4;->a:Lws4;
+    move-result-object p1
 
-    if-eq v0, v1, :cond_0
-
-    iput-object v1, p0, Lxs4;->o:Lss4;
-
-    iget-object v0, p0, Lxs4;->a:Lxda;
-
-    invoke-interface {v0, p1}, Lxda;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    invoke-static {v1, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
-
     return-void
 .end method

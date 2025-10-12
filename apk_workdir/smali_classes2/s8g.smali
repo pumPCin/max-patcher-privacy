@@ -2,64 +2,183 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lck8;
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
+
+# instance fields
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:F
+
+.field public final h:Lxb6;
+
+.field public final i:Lh4f;
+
+.field public final j:Lh4f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIFLxb6;)V
+    .locals 0
 
-    new-instance v0, Landroid/util/LruCache;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x3e8
+    iput-object p1, p0, Ls8g;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
+    iput-object p2, p0, Ls8g;->b:Ljava/lang/String;
 
-    sput-object v0, Ls8g;->a:Landroid/util/LruCache;
+    iput-object p3, p0, Ls8g;->c:Ljava/lang/String;
+
+    iput p4, p0, Ls8g;->d:I
+
+    iput p5, p0, Ls8g;->e:I
+
+    iput p6, p0, Ls8g;->f:I
+
+    iput p7, p0, Ls8g;->g:F
+
+    iput-object p8, p0, Ls8g;->h:Lxb6;
+
+    new-instance p1, Lr8g;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lr8g;-><init>(Ls8g;I)V
+
+    new-instance p2, Lh4f;
+
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+
+    iput-object p2, p0, Ls8g;->i:Lh4f;
+
+    new-instance p1, Lr8g;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lr8g;-><init>(Ls8g;I)V
+
+    new-instance p2, Lh4f;
+
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
+
+    iput-object p2, p0, Ls8g;->j:Lh4f;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lq8g;
-    .locals 7
 
-    sget-object v0, Ls8g;->a:Landroid/util/LruCache;
+# virtual methods
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Ls8g;->b:Ljava/lang/String;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    check-cast v1, Lr8g;
+.method public final b()Lxb6;
+    .locals 1
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Ls8g;->i:Lh4f;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
 
-    return-object v2
+    move-result-object v0
 
-    :cond_0
-    iget-wide v3, v1, Lr8g;->b:J
+    check-cast v0, Lxb6;
 
-    const-wide/32 v5, 0x36ee80
+    return-object v0
+.end method
 
-    add-long/2addr v3, v5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 p1, 0x0
 
-    move-result-wide v5
+    return p1
+.end method
 
-    cmp-long v3, v3, v5
+.method public final hashCode()I
+    .locals 1
 
-    if-lez v3, :cond_1
+    const/4 v0, 0x0
 
-    iget-object p0, v1, Lr8g;->a:Lq8g;
+    return v0
+.end method
 
-    return-object p0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    :cond_1
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, ", sampleMimeType: "
 
-    return-object v2
+    const-string v1, ", codecs: "
+
+    const-string v2, "VideoFormat(id: "
+
+    iget-object v3, p0, Ls8g;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Ls8g;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ls8g;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitrate: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ls8g;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", width: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", height: "
+
+    const-string v2, ", frameRate: "
+
+    iget v3, p0, Ls8g;->e:I
+
+    iget v4, p0, Ls8g;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget v1, p0, Ls8g;->g:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", serverChooseFrameSize: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ls8g;->h:Lxb6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,64 +1,25 @@
-.class public final Lsd9;
+.class public abstract synthetic Lsd9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwd9;
-
 
 # static fields
-.field public static final a:Lsd9;
+.field public static final synthetic a:Laa5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lsd9;
+    invoke-static {}, Lmd3;->values()[Lmd3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lsd9;->a:Lsd9;
+    new-instance v1, Laa5;
+
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lsd9;->a:Laa5;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lsd9;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x2d4a0842
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OnKeyboardSwap"
-
-    return-object v0
 .end method

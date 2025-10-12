@@ -1,142 +1,258 @@
 .class public final Ldkg;
-.super Ljava/lang/Object;
+.super Lfkg;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-.implements Landroid/view/View$OnAttachStateChangeListener;
+
+# static fields
+.field public static c:Ldkg;
+
+.field public static final d:Lq62;
 
 
 # instance fields
-.field public final a:Ljava/util/WeakHashMap;
+.field public final b:Landroid/app/Application;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lq62;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lq62;-><init>(I)V
+
+    sput-object v0, Ldkg;->d:Lq62;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/Application;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    iput-object v0, p0, Ldkg;->a:Ljava/util/WeakHashMap;
+    iput-object p1, p0, Ldkg;->b:Landroid/app/Application;
 
     return-void
+.end method
+
+.method public static d(Ljava/lang/Class;Landroid/app/Application;)Lzjg;
+    .locals 3
+
+    const-string v0, "Cannot create an instance of "
+
+    const-class v1, Landroidx/lifecycle/AndroidViewModel;
+
+    invoke-virtual {v1, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :try_start_0
+    const-class v1, Landroid/app/Application;
+
+    filled-new-array {v1}, [Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v1
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lzjg;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_3
+    move-exception p1
+
+    goto :goto_3
+
+    :goto_0
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_1
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_2
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :goto_3
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_0
+    invoke-static {p0}, Lrkc;->B(Ljava/lang/Class;)Lzjg;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 5
+.method public final a(Ljava/lang/Class;)Lzjg;
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p0, Ldkg;->b:Landroid/app/Application;
 
-    const/16 v1, 0x1c
+    if-eqz v0, :cond_0
 
-    if-ge v0, v1, :cond_3
-
-    iget-object v0, p0, Ldkg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/View;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Boolean;
-
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v2}, Landroid/view/View;->getWindowVisibility()I
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    const/4 v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_1
-    if-eq v3, v4, :cond_0
-
-    if-eqz v4, :cond_2
-
-    const/16 v3, 0x10
-
-    goto :goto_2
-
-    :cond_2
-    const/16 v3, 0x20
-
-    :goto_2
-    invoke-static {v2, v3}, Lskg;->h(Landroid/view/View;I)V
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Ljava/util/Map$Entry;->setValue(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_3
-    return-void
-.end method
-
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    invoke-static {p1, v0}, Ldkg;->d(Ljava/lang/Class;Landroid/app/Application;)Lzjg;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    return-object p1
 
-    return-void
+    :cond_0
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "AndroidViewModelFactory constructed with empty constructor works only with create(modelClass: Class<T>, extras: CreationExtras)."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
+.method public final b(Ljava/lang/Class;Lhr9;)Lzjg;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Ldkg;->b:Landroid/app/Application;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p1}, Ldkg;->a(Ljava/lang/Class;)Lzjg;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    sget-object v0, Ldkg;->d:Lq62;
+
+    iget-object p2, p2, Lh44;->a:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {p2, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/app/Application;
+
+    if-eqz p2, :cond_1
+
+    invoke-static {p1, p2}, Ldkg;->d(Ljava/lang/Class;Landroid/app/Application;)Lzjg;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1
+    const-class p2, Landroidx/lifecycle/AndroidViewModel;
+
+    invoke-virtual {p2, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    invoke-static {p1}, Lrkc;->B(Ljava/lang/Class;)Lzjg;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "CreationExtras must have an application by `APPLICATION_KEY`"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

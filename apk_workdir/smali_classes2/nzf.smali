@@ -1,59 +1,74 @@
-.class public final Lnzf;
-.super Lnz3;
+.class public final synthetic Lnzf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ll6;
 
 
 # instance fields
-.field public X:Ljava/util/Set;
+.field public final synthetic a:I
 
-.field public Y:Lgu9;
-
-.field public Z:J
-
-.field public o:Luzf;
-
-.field public synthetic w0:Ljava/lang/Object;
-
-.field public final synthetic x0:Luzf;
-
-.field public y0:I
+.field public final synthetic b:Ltzf;
 
 
 # direct methods
-.method public constructor <init>(Luzf;Lnz3;)V
+.method public synthetic constructor <init>(Ltzf;I)V
     .locals 0
 
-    iput-object p1, p0, Lnzf;->x0:Luzf;
+    iput p2, p0, Lnzf;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnzf;->b:Ltzf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final run()V
+    .locals 4
 
-    iput-object p1, p0, Lnzf;->w0:Ljava/lang/Object;
+    iget v0, p0, Lnzf;->a:I
 
-    iget p1, p0, Lnzf;->y0:I
+    const-string v1, "szf"
 
-    const/high16 v0, -0x80000000
+    iget-object v2, p0, Lnzf;->b:Ltzf;
 
-    or-int/2addr p1, v0
+    packed-switch v0, :pswitch_data_0
 
-    iput p1, p0, Lnzf;->y0:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-wide/16 v0, 0x0
+    const-string v3, "removeUploadFromRepository: finished for data="
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lnzf;->x0:Luzf;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v1, p1, p0}, Luzf;->a(Luzf;JLjava/util/Set;Lnz3;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
+    invoke-static {v1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
+
+    filled-new-array {v2}, [Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

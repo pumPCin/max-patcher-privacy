@@ -6,14 +6,20 @@
 # static fields
 .field public static final a:I
 
+.field public static final b:I
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lncc;->icon_wrapper_20:I
+    sget v0, Lljc;->Typography_Footnote:I
 
     sput v0, Lrra;->a:I
+
+    sget v0, Lljc;->Typography_Title3:I
+
+    sput v0, Lrra;->b:I
 
     return-void
 .end method

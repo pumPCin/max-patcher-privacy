@@ -1,100 +1,106 @@
-.class public final synthetic Lsuf;
+.class public final Lsuf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lid4;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:I
-
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Ljava/lang/String;
+.field public final synthetic b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;I)V
     .locals 0
 
+    iput p2, p0, Lsuf;->a:I
+
+    iput-object p1, p0, Lsuf;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lsuf;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lsuf;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lsuf;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lsuf;->o:Ljava/lang/String;
-
-    iput p5, p0, Lsuf;->X:I
-
-    iput p6, p0, Lsuf;->Y:I
-
-    iput p7, p0, Lsuf;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    new-instance v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    iget p1, p0, Lsuf;->a:I
 
-    new-instance v1, Lne7;
+    iget-object v0, p0, Lsuf;->b:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
 
-    new-instance v2, Lme7;
+    packed-switch p1, :pswitch_data_0
 
-    const-wide/16 v5, 0x0
+    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lpl7;
 
-    const/16 v4, 0xe
+    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->B0()Ldvf;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    iget-object v7, p0, Lsuf;->c:Ljava/lang/String;
+    iget-object v0, p1, Ldvf;->r0:Lyn7;
 
-    const/4 v8, 0x0
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    invoke-direct/range {v2 .. v8}, Lme7;-><init>(IIJLjava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    new-instance v6, Lltf;
+    check-cast v0, Le7f;
 
-    iget v3, p0, Lsuf;->X:I
+    check-cast v0, Lmka;
 
-    iget v4, p0, Lsuf;->Y:I
+    invoke-virtual {v0}, Lmka;->b()Lh24;
 
-    iget v5, p0, Lsuf;->Z:I
+    move-result-object v0
 
-    invoke-direct {v6, v3, v4, v5}, Lltf;-><init>(III)V
-
-    const/4 v7, 0x1
-
-    move-object v4, v2
+    new-instance v1, Lavf;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lsuf;->b:Ljava/lang/String;
+    invoke-direct {v1, p1, v2}, Lavf;-><init>(Ldvf;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v5, p0, Lsuf;->o:Ljava/lang/String;
+    iget-object v2, p1, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-direct/range {v1 .. v7}, Lne7;-><init>(Ljava/lang/String;Ljava/lang/String;Lme7;Ljava/lang/String;Lltf;I)V
+    sget-object v3, Lq24;->b:Lq24;
 
-    const-string v2, "AUTH"
+    invoke-static {v2, v0, v3, v1}, Lov9;->S(Ln24;Lf24;Lq24;Lje6;)Loke;
 
-    iget-object v3, p0, Lsuf;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-direct {v0, v2, v3, v1}, Lone/me/settings/twofa/password/TwoFACheckPassScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lne7;)V
+    iget-object v1, p1, Ldvf;->A0:Lk5d;
 
-    return-object v0
+    sget-object v2, Ldvf;->D0:[Lpl7;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2, v0}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Lpl7;
+
+    invoke-virtual {v0}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->B0()Ldvf;
+
+    move-result-object p1
+
+    iget-object p1, p1, Ldvf;->x0:Lya5;
+
+    invoke-static {}, Lte0;->r()Ljtf;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

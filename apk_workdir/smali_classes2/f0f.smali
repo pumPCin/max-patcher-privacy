@@ -1,141 +1,235 @@
-.class public final enum Lf0f;
-.super Ljava/lang/Enum;
+.class public final Lf0f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lf0f;",
-        ">;"
-    }
-.end annotation
-
-
 # static fields
-.field public static final Companion:Le0f;
+.field public static final g:Lf0f;
 
-.field public static final enum X:Lf0f;
 
-.field public static final enum Y:Lf0f;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static final synthetic Z:[Lf0f;
+.field public final b:I
 
-.field public static final a:Ljava/lang/Object;
+.field public final c:I
 
-.field public static final enum b:Lf0f;
+.field public final d:Ljava/lang/Object;
 
-.field public static final enum c:Lf0f;
+.field public final e:I
 
-.field public static final enum o:Lf0f;
+.field public final f:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 4
 
     new-instance v0, Lf0f;
 
-    const-string v1, "UPDATED"
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    sget-object v2, Lo65;->a:Lo65;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lf0f;->b:Lf0f;
+    invoke-direct {v0, v3, v1, v1, v2}, Lf0f;-><init>(Ljava/lang/String;IILjava/util/List;)V
 
-    new-instance v1, Lf0f;
-
-    const-string v2, "REMOVED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lf0f;->c:Lf0f;
-
-    new-instance v2, Lf0f;
-
-    const-string v3, "CLEARED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lf0f;->o:Lf0f;
-
-    new-instance v3, Lf0f;
-
-    const-string v5, "OPENED"
-
-    const/4 v6, 0x3
-
-    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lf0f;->X:Lf0f;
-
-    new-instance v5, Lf0f;
-
-    const-string v6, "AUTHORIZED"
-
-    const/4 v7, 0x4
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lf0f;->Y:Lf0f;
-
-    filled-new-array {v0, v1, v2, v3, v5}, [Lf0f;
-
-    move-result-object v0
-
-    sput-object v0, Lf0f;->Z:[Lf0f;
-
-    new-instance v0, Le0f;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lf0f;->Companion:Le0f;
-
-    new-instance v0, Luse;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Luse;-><init>(I)V
-
-    invoke-static {v4, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    sput-object v0, Lf0f;->a:Ljava/lang/Object;
+    sput-object v0, Lf0f;->g:Lf0f;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lf0f;
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IILjava/util/List;)V
+    .locals 0
 
-    const-class v0, Lf0f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lf0f;->a:Ljava/lang/String;
 
-    move-result-object p0
+    iput p2, p0, Lf0f;->b:I
 
-    check-cast p0, Lf0f;
+    iput p3, p0, Lf0f;->c:I
 
-    return-object p0
+    iput-object p4, p0, Lf0f;->d:Ljava/lang/Object;
+
+    invoke-interface {p4}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    iput p1, p0, Lf0f;->e:I
+
+    invoke-interface {p4}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-ge p1, p3, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lf0f;->f:Z
+
+    return-void
 .end method
 
-.method public static values()[Lf0f;
-    .locals 1
 
-    sget-object v0, Lf0f;->Z:[Lf0f;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lf0f;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lf0f;
+
+    iget-object v0, p0, Lf0f;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lf0f;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lf0f;->b:I
+
+    iget v1, p1, Lf0f;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lf0f;->c:I
+
+    iget v1, p1, Lf0f;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lf0f;->d:Ljava/lang/Object;
+
+    iget-object p1, p1, Lf0f;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lf0f;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lf0f;->b:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Lf0f;->c:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lf0f;->d:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", cursorPosition="
+
+    const-string v1, ", totalCount="
+
+    iget v2, p0, Lf0f;->b:I
+
+    const-string v3, "SuggestsResult(query="
+
+    iget-object v4, p0, Lf0f;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lsab;->l(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lf0f;
+    iget v1, p0, Lf0f;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", result="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf0f;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

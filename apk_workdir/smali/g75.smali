@@ -1,42 +1,23 @@
-.class public final Lg75;
+.class public interface abstract Lg75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnbd;
+.implements Ljava/lang/AutoCloseable;
 
 
 # virtual methods
-.method public final b()V
-    .locals 0
-
-    return-void
+.method public abstract A()Landroid/media/MediaCodec$BufferInfo;
 .end method
 
-.method public final e()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
+.method public abstract C()Z
 .end method
 
-.method public final h(J)I
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract S()J
 .end method
 
-.method public final j(Lgx0;Ljc4;I)I
-    .locals 0
+.method public abstract r()Ljava/nio/ByteBuffer;
+.end method
 
-    const/4 p1, 0x4
-
-    iput p1, p2, Lsx;->b:I
-
-    const/4 p1, -0x4
-
-    return p1
+.method public abstract size()J
 .end method

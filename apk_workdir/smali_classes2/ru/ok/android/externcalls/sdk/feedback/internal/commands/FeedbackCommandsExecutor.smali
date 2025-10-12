@@ -15,12 +15,12 @@
         "key",
         "Lkotlin/Function1;",
         "",
-        "Loyf;",
+        "Laxf;",
         "onError",
         "Lkotlin/Function0;",
         "onSuccess",
         "sendFeedback",
-        "(Ljava/lang/String;Lxe6;Lve6;)V",
+        "(Ljava/lang/String;Lvd6;Ltd6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method public abstract sendFeedback(Ljava/lang/String;Lxe6;Lve6;)V
+.method public abstract sendFeedback(Ljava/lang/String;Lvd6;Ltd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lxe6;",
-            "Lve6;",
+            "Lvd6;",
+            "Ltd6;",
             ")V"
         }
     .end annotation

@@ -1,61 +1,68 @@
 .class public final Lrs3;
-.super Lbj0;
+.super Lqce;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:I
-
-.field public final c:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(IJLjava/util/List;)V
+# virtual methods
+.method public final bridge synthetic A(Lov7;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Lbj0;-><init>(J)V
+    check-cast p1, Lfs3;
 
-    iput p1, p0, Lrs3;->b:I
-
-    iput-object p4, p0, Lrs3;->c:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lrs3;->G(Lfs3;)V
 
     return-void
 .end method
 
+.method public final G(Lfs3;)V
+    .locals 5
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
 
-    const-string v0, "BLOCKED"
+    check-cast v0, Lqia;
 
-    const-string v1, ", from="
+    iget-wide v1, p1, Lfs3;->a:J
 
-    const-string v2, "ContactListEvent{status="
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-static {v2, v0, v1}, Lqw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v3
 
-    move-result-object v0
+    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
 
-    iget v1, p0, Lrs3;->b:I
+    iget-object v3, p1, Lfs3;->b:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Lqia;->setTitle(Ljava/lang/CharSequence;)V
 
-    const-string v1, ", count=40, contactIds="
+    iget-object v3, p1, Lfs3;->X:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Lqia;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Lrs3;->c:Ljava/lang/Object;
+    iget-boolean v3, p1, Lfs3;->s0:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Lqia;->setVerified(Z)V
 
-    const/16 v1, 0x7d
+    invoke-virtual {v0}, Lqia;->e()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lqia;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result-object v0
+    iget-object v4, p1, Lfs3;->t0:Ljava/lang/CharSequence;
 
-    return-object v0
+    iget-object p1, p1, Lfs3;->Z:Landroid/net/Uri;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    :cond_0
+    invoke-virtual {v0, v1, v2, v4, v3}, Lqia;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lqia;->setSelectionEnabled(Z)V
+
+    return-void
 .end method

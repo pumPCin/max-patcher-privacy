@@ -3,183 +3,204 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsg0;
+.implements Lni9;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpge;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayDeque;
+.field public final a:F
 
-.field public final b:Lfsc;
-
-.field public final c:Lz5f;
-
-.field public d:D
-
-.field public e:D
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lfsc;
+    new-instance v0, Lpzd;
 
-    const/16 v1, 0x18
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1}, Lfsc;-><init>(I)V
+    invoke-direct {v0, v1}, Lpzd;-><init>(I)V
 
+    sput-object v0, Lpge;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(IF)V
+    .locals 0
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Ljava/util/ArrayDeque;
+    .line 2
+    iput p2, p0, Lpge;->a:F
 
-    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+    .line 3
+    iput p1, p0, Lpge;->b:I
 
-    iput-object v1, p0, Lpge;->a:Ljava/util/ArrayDeque;
+    return-void
+.end method
 
-    iput-object v0, p0, Lpge;->b:Lfsc;
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
-    sget-object v0, Lz5f;->a:Lz5f;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lpge;->c:Lz5f;
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v0
+
+    iput v0, p0, Lpge;->a:F
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Lpge;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJ)V
-    .locals 7
+.method public final describeContents()I
+    .locals 1
 
-    :goto_0
-    iget-object v0, p0, Lpge;->b:Lfsc;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
+.end method
 
-    iget-object v0, p0, Lpge;->a:Ljava/util/ArrayDeque;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+    const/4 v0, 0x1
 
-    move-result v1
+    if-ne p0, p1, :cond_0
 
-    int-to-long v1, v1
+    return v0
 
-    const-wide/16 v3, 0xa
+    :cond_0
+    const/4 v1, 0x0
 
-    cmp-long v1, v1, v3
+    if-eqz p1, :cond_2
 
-    if-ltz v1, :cond_0
+    const-class v2, Lpge;
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    move-result-object v3
 
-    check-cast v0, Loge;
-
-    iget-wide v1, p0, Lpge;->d:D
-
-    iget-wide v3, v0, Loge;->a:J
-
-    long-to-double v3, v3
-
-    iget-wide v5, v0, Loge;->b:D
-
-    mul-double/2addr v3, v5
-
-    sub-double/2addr v1, v3
-
-    iput-wide v1, p0, Lpge;->d:D
-
-    iget-wide v0, p0, Lpge;->e:D
-
-    sub-double/2addr v0, v5
-
-    iput-wide v0, p0, Lpge;->e:D
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    long-to-double v1, p1
+    :cond_1
+    check-cast p1, Lpge;
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+    iget v2, p0, Lpge;->a:F
 
-    move-result-wide v1
+    iget v3, p1, Lpge;->a:F
 
-    const-wide/32 v3, 0x7a1200
+    cmpl-float v2, v2, v3
 
-    mul-long/2addr p1, v3
+    if-nez v2, :cond_2
 
-    div-long/2addr p1, p3
+    iget v2, p0, Lpge;->b:I
 
-    new-instance p3, Loge;
+    iget p1, p1, Lpge;->b:I
 
-    iget-object p4, p0, Lpge;->c:Lz5f;
+    if-ne v2, p1, :cond_2
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return v0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    invoke-direct {p3, p1, p2, v1, v2}, Loge;-><init>(JD)V
-
-    invoke-virtual {v0, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    iget-wide p3, p0, Lpge;->d:D
-
-    long-to-double p1, p1
-
-    mul-double/2addr p1, v1
-
-    add-double/2addr p1, p3
-
-    iput-wide p1, p0, Lpge;->d:D
-
-    iget-wide p1, p0, Lpge;->e:D
-
-    add-double/2addr p1, v1
-
-    iput-wide p1, p0, Lpge;->e:D
-
-    return-void
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final b()J
-    .locals 4
+.method public final hashCode()I
+    .locals 2
 
-    iget-object v0, p0, Lpge;->a:Ljava/util/ArrayDeque;
+    iget v0, p0, Lpge;->a:F
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Float;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    add-int/lit16 v0, v0, 0x20f
 
-    const-wide/high16 v0, -0x8000000000000000L
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-wide v0
+    iget v1, p0, Lpge;->b:I
 
-    :cond_0
-    iget-wide v0, p0, Lpge;->d:D
+    add-int/2addr v0, v1
 
-    iget-wide v2, p0, Lpge;->e:D
-
-    div-double/2addr v0, v2
-
-    double-to-long v0, v0
-
-    return-wide v0
+    return v0
 .end method
 
-.method public final reset()V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lpge;->a:Ljava/util/ArrayDeque;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
+    const/16 v1, 0x49
 
-    const-wide/16 v0, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iput-wide v0, p0, Lpge;->d:D
+    const-string v1, "smta: captureFrameRate="
 
-    iput-wide v0, p0, Lpge;->e:D
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpge;->a:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", svcTemporalLayerCount="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lpge;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lpge;->a:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget p2, p0, Lpge;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

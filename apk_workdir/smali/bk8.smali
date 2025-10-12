@@ -1,271 +1,336 @@
 .class public final Lbk8;
-.super Landroid/media/session/MediaController$Callback;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbk8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final X:Landroid/graphics/Bitmap;
+
+.field public final Y:Landroid/net/Uri;
+
+.field public final Z:Landroid/os/Bundle;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final o:Ljava/lang/CharSequence;
+
+.field public final r0:Landroid/net/Uri;
+
+.field public s0:Landroid/media/MediaDescription;
 
 
 # direct methods
-.method public constructor <init>(Lzk8;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Landroid/media/session/MediaController$Callback;-><init>()V
+    new-instance v0, Lqg8;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
 
-    iput-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
+    sput-object v0, Lbk8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/Bitmap;Landroid/net/Uri;Landroid/os/Bundle;Landroid/net/Uri;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbk8;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lbk8;->b:Ljava/lang/CharSequence;
+
+    iput-object p3, p0, Lbk8;->c:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lbk8;->o:Ljava/lang/CharSequence;
+
+    iput-object p5, p0, Lbk8;->X:Landroid/graphics/Bitmap;
+
+    iput-object p6, p0, Lbk8;->Y:Landroid/net/Uri;
+
+    iput-object p7, p0, Lbk8;->Z:Landroid/os/Bundle;
+
+    iput-object p8, p0, Lbk8;->r0:Landroid/net/Uri;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/Object;)Lbk8;
+    .locals 13
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_6
+
+    check-cast p0, Landroid/media/MediaDescription;
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getTitle()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getSubtitle()Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getDescription()Ljava/lang/CharSequence;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getIconUri()Landroid/net/Uri;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    :goto_0
+    move-object v1, v0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v1}, Lsr8;->n(Landroid/os/Bundle;)V
+
+    :try_start_0
+    invoke-virtual {v1}, Landroid/os/BaseBundle;->isEmpty()Z
+    :try_end_0
+    .catch Landroid/os/BadParcelableException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    const-string v1, "MediaSessionCompat"
+
+    const-string v8, "Could not unparcel the data."
+
+    invoke-static {v1, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :goto_1
+    if-eqz v1, :cond_1
+
+    new-instance v8, Landroid/os/Bundle;
+
+    invoke-direct {v8, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    move-object v1, v8
+
+    :cond_1
+    if-eqz v1, :cond_4
+
+    const-string v8, "android.support.v4.media.description.MEDIA_URI"
+
+    invoke-virtual {v1, v8}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v9
+
+    check-cast v9, Landroid/net/Uri;
+
+    if-eqz v9, :cond_3
+
+    const-string v10, "android.support.v4.media.description.NULL_BUNDLE_FLAG"
+
+    invoke-virtual {v1, v10}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_2
+
+    invoke-virtual {v1}, Landroid/os/BaseBundle;->size()I
+
+    move-result v11
+
+    const/4 v12, 0x2
+
+    if-ne v11, v12, :cond_2
+
+    move-object v8, v0
+
+    :goto_2
+    move-object v0, v9
+
+    goto :goto_3
+
+    :cond_2
+    invoke-virtual {v1, v8}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v10}, Landroid/os/Bundle;->remove(Ljava/lang/String;)V
+
+    :cond_3
+    move-object v8, v1
+
+    goto :goto_2
+
+    :cond_4
+    move-object v8, v1
+
+    :goto_3
+    if-eqz v0, :cond_5
+
+    :goto_4
+    move-object v9, v0
+
+    goto :goto_5
+
+    :cond_5
+    invoke-virtual {p0}, Landroid/media/MediaDescription;->getMediaUri()Landroid/net/Uri;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :goto_5
+    new-instance v1, Lbk8;
+
+    invoke-direct/range {v1 .. v9}, Lbk8;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/Bitmap;Landroid/net/Uri;Landroid/os/Bundle;Landroid/net/Uri;)V
+
+    iput-object p0, v1, Lbk8;->s0:Landroid/media/MediaDescription;
+
+    return-object v1
+
+    :cond_6
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onAudioInfoChanged(Landroid/media/session/MediaController$PlaybackInfo;)V
-    .locals 7
-
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzk8;
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    new-instance v1, Lgk8;
-
-    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getPlaybackType()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getAudioAttributes()Landroid/media/AudioAttributes;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    new-instance v3, Lk20;
-
-    new-instance v5, Lj20;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v4, v6}, Lj20;-><init>(Landroid/media/AudioAttributes;I)V
-
-    invoke-direct {v3, v5}, Lk20;-><init>(Lj20;)V
-
-    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getVolumeControl()I
-
-    move-result v4
-
-    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getMaxVolume()I
-
-    move-result v5
-
-    invoke-virtual {p1}, Landroid/media/session/MediaController$PlaybackInfo;->getCurrentVolume()I
-
-    move-result v6
-
-    invoke-direct/range {v1 .. v6}, Lgk8;-><init>(ILk20;III)V
-
-    invoke-virtual {v0, v1}, Lzk8;->a(Lgk8;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onExtrasChanged(Landroid/os/Bundle;)V
-    .locals 1
-
-    invoke-static {p1}, Lys8;->g(Landroid/os/Bundle;)V
-
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzk8;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lzk8;->c(Landroid/os/Bundle;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onMetadataChanged(Landroid/media/MediaMetadata;)V
-    .locals 3
-
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzk8;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Lfo8;->c:Lds;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v1, v2}, Landroid/media/MediaMetadata;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    sget-object v2, Lfo8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {v2, v1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lfo8;
-
-    invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
-
-    iput-object p1, v2, Lfo8;->b:Landroid/media/MediaMetadata;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v2}, Lzk8;->d(Lfo8;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onPlaybackStateChanged(Landroid/media/session/PlaybackState;)V
+.method public final b()Landroid/media/MediaDescription;
     .locals 2
 
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzk8;
-
-    if-eqz v0, :cond_1
-
-    iget-object v1, v0, Lzk8;->c:Ldk8;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Ljkb;->a(Landroid/media/session/PlaybackState;)Ljkb;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lzk8;->e(Ljkb;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final onQueueChanged(Ljava/util/List;)V
-    .locals 1
-
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzk8;
+    iget-object v0, p0, Lbk8;->s0:Landroid/media/MediaDescription;
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lvs8;->a(Ljava/util/List;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lzk8;->f(Ljava/util/List;)V
+    return-object v0
 
     :cond_0
-    return-void
-.end method
+    new-instance v0, Landroid/media/MediaDescription$Builder;
 
-.method public final onQueueTitleChanged(Ljava/lang/CharSequence;)V
-    .locals 1
+    invoke-direct {v0}, Landroid/media/MediaDescription$Builder;-><init>()V
 
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
+    iget-object v1, p0, Lbk8;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setMediaId(Ljava/lang/String;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->o:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->X:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->Y:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setIconUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->Z:Landroid/os/Bundle;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setExtras(Landroid/os/Bundle;)Landroid/media/MediaDescription$Builder;
+
+    iget-object v1, p0, Lbk8;->r0:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Landroid/media/MediaDescription$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/media/MediaDescription$Builder;
+
+    invoke-virtual {v0}, Landroid/media/MediaDescription$Builder;->build()Landroid/media/MediaDescription;
 
     move-result-object v0
 
-    check-cast v0, Lzk8;
+    iput-object v0, p0, Lbk8;->s0:Landroid/media/MediaDescription;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Lzk8;->g(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final onSessionDestroyed()V
+.method public final describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lbk8;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lbk8;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbk8;->o:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lzk8;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lzk8;->e:Lbl8;
-
-    iget-object v0, v0, Lbl8;->b:Lak8;
-
-    invoke-virtual {v0}, Lak8;->q()V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final onSessionEvent(Ljava/lang/String;Landroid/os/Bundle;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    invoke-static {p2}, Lys8;->g(Landroid/os/Bundle;)V
-
-    iget-object v0, p0, Lbk8;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lbk8;->b()Landroid/media/MediaDescription;
 
     move-result-object v0
 
-    check-cast v0, Lzk8;
+    invoke-virtual {v0, p1, p2}, Landroid/media/MediaDescription;->writeToParcel(Landroid/os/Parcel;I)V
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1, p2}, Lzk8;->h(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    :cond_0
     return-void
 .end method

@@ -1,236 +1,213 @@
-.class public final Lfv3;
-.super Lm3f;
+.class public abstract Lfv3;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
-
-
-# instance fields
-.field public X:I
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lhv3;
-
-.field public final synthetic w0:J
 
 
 # direct methods
-.method public constructor <init>(Lhv3;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a([B)Lgv3;
+    .locals 12
 
-    iput-object p1, p0, Lfv3;->Z:Lhv3;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
 
-    iput-wide p2, p0, Lfv3;->w0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lap3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfv3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfv3;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lfv3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lfv3;
-
-    iget-object v1, p0, Lfv3;->Z:Lhv3;
-
-    iget-wide v2, p0, Lfv3;->w0:J
-
-    invoke-direct {v0, v1, v2, v3, p2}, Lfv3;-><init>(Lhv3;JLkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfv3;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
-
-    iget-object v0, p0, Lfv3;->Z:Lhv3;
-
-    iget-object v1, v0, Lhv3;->h:Lbp7;
-
-    const-string v2, "try to request info for #"
-
-    iget v3, p0, Lfv3;->X:I
-
-    const-class v4, Lhv3;
-
-    const/4 v5, 0x1
-
-    iget-wide v6, p0, Lfv3;->w0:J
-
-    if-eqz v3, :cond_1
-
-    if-ne v3, v5, :cond_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ContactUpdate;-><init>()V
 
     :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {v0, p0}, Ls59;->mergeFrom(Ls59;[B)Ls59;
+
+    move-result-object p0
+
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
+    new-instance v0, Lgv3;
 
-    :catchall_0
-    move-exception v0
+    iget-wide v2, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->requestId:J
 
-    move-object p1, v0
+    iget-wide v4, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->contactId:J
+
+    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->action:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v6
+
+    const/4 v7, 0x4
+
+    const/4 v8, 0x3
+
+    const/4 v9, 0x2
+
+    const/4 v10, 0x1
+
+    const/4 v11, -0x1
+
+    sparse-switch v6, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v6, "UNBLOCK"
+
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move v11, v7
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    goto :goto_0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :sswitch_1
+    const-string v6, "BLOCK"
 
-    throw p1
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move v11, v8
 
-    iget-object p1, p0, Lfv3;->Y:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast p1, Lap3;
+    :sswitch_2
+    const-string v6, "ADD"
 
-    invoke-static {p1}, Lhd6;->v(Lap3;)Z
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v6
 
-    if-eqz p1, :cond_2
+    if-nez v6, :cond_2
 
-    :try_start_1
-    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_2
+    move v11, v9
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :sswitch_3
+    const-string v6, "UPDATE"
 
-    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v6
 
-    move-result-object v2
+    if-nez v6, :cond_3
 
-    invoke-static {p1, v2}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_0
 
-    iget-object p1, v0, Lhv3;->s:Lbp7;
+    :cond_3
+    move v11, v10
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p1
+    :sswitch_4
+    const-string v6, "REMOVE"
 
-    move-object v8, p1
+    invoke-virtual {v1, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    check-cast v8, Lwm9;
+    move-result v6
 
-    iget-wide v9, p0, Lfv3;->w0:J
+    if-nez v6, :cond_4
 
-    sget p1, Ln05;->o:I
+    goto :goto_0
 
-    sget-object p1, Ls05;->o:Ls05;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p1}, Lyhh;->O(ILs05;)J
-
-    move-result-wide v11
-
-    iput v5, p0, Lfv3;->X:I
-
-    move-object v13, p0
-
-    invoke-virtual/range {v8 .. v13}, Lwm9;->V(JJLm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    :cond_4
+    const/4 v11, 0x0
 
     :goto_0
-    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    packed-switch v11, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "No such value "
+
+    const-string v2, " for ContactUpdateAction"
+
+    invoke-static {v0, v1, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-string v3, "fail to fetch noncontact #"
+    throw p0
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    move v1, v9
 
-    invoke-virtual {v2, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    goto :goto_2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_1
+    move v1, v10
 
-    move-result-object v2
+    goto :goto_2
 
-    invoke-static {v0, v2, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_1
+    :pswitch_2
+    move v1, v7
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    goto :goto_2
 
-    move-result-object p1
+    :pswitch_3
+    const/4 v7, 0x5
 
-    check-cast p1, Lhx3;
+    goto :goto_1
 
-    invoke-virtual {p1, v6, v7}, Lhx3;->a(J)Lap3;
+    :pswitch_4
+    move v1, v8
 
-    move-result-object p1
+    :goto_2
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldName:Ljava/lang/String;
 
-    new-instance v0, Lg01;
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->oldLastName:Ljava/lang/String;
 
-    const/16 v1, 0xc
+    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->newName:Ljava/lang/String;
 
-    invoke-direct {v0, v1, p1}, Lg01;-><init>(ILjava/lang/Object;)V
+    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ContactUpdate;->lastName:Ljava/lang/String;
+
+    invoke-direct/range {v0 .. v9}, Lgv3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
-    :cond_2
-    :goto_1
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    :catch_0
+    move-exception v0
 
-    move-result-object p1
+    move-object p0, v0
 
-    check-cast p1, Lhx3;
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-    invoke-virtual {p1, v6, v7}, Lhx3;->c(J)Lsqc;
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object p1
+    throw v0
 
-    return-object p1
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7022137c -> :sswitch_4
+        -0x6a6cd337 -> :sswitch_3
+        0xfc81 -> :sswitch_2
+        0x3c5cc6d -> :sswitch_1
+        0x19517974 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

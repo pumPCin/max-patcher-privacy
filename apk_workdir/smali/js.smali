@@ -1,150 +1,45 @@
 .class public final Ljs;
-.super Ljava/lang/Object;
+.super Lh2;
 .source "SourceFile"
-
-# interfaces
-.implements Lord;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
+.field public final transient Y:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p1, p0, Ljs;->a:I
+    const/16 v0, 0xc
 
-    iput-object p2, p0, Ljs;->b:Ljava/lang/Object;
+    invoke-static {v0}, Lsc3;->a(I)Lsc3;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-direct {p0, v0}, Lh2;-><init>(Ljava/util/Map;)V
 
-.method public constructor <init>(Llf6;)V
-    .locals 1
+    const-string v0, "expectedValuesPerKey"
 
-    const/4 v0, 0x5
+    const/4 v1, 0x3
 
-    iput v0, p0, Ljs;->a:I
+    invoke-static {v1, v0}, Lx2d;->e(ILjava/lang/String;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Lq3d;
-
-    iput-object p1, p0, Ljs;->b:Ljava/lang/Object;
+    iput v1, p0, Ljs;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
+.method public final d()Ljava/util/Collection;
+    .locals 2
 
-    iget v0, p0, Ljs;->a:I
+    new-instance v0, Ljava/util/ArrayList;
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p0, Ljs;->Y:I
 
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/ViewGroup;
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Iterator;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
     return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Lq3d;
-
-    invoke-static {v0}, Lv4b;->u(Llf6;)Lrrd;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/Menu;
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_3
-    new-instance v0, Lys7;
-
-    invoke-direct {v0, p0}, Lys7;-><init>(Ljs;)V
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, [F
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_6
-    iget-object v0, p0, Ljs;->b:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    new-instance v1, Lu1;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lu1;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

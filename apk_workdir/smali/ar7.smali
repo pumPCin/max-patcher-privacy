@@ -1,8 +1,6 @@
-.class public interface abstract Lar7;
+.class public interface abstract annotation Lar7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract c(Landroid/content/Context;)Ljava/lang/String;
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

@@ -1,53 +1,135 @@
 .class public final Lb4;
-.super Landroid/text/style/ClickableSpan;
+.super Ltf2;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Lp4;
-
-.field public final c:I
-
-
-# direct methods
-.method public constructor <init>(ILp4;I)V
+# virtual methods
+.method public final G(Lc4;Lc4;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
-
-    iput p1, p0, Lb4;->a:I
-
-    iput-object p2, p0, Lb4;->b:Lp4;
-
-    iput p3, p0, Lb4;->c:I
+    iput-object p2, p1, Lc4;->b:Lc4;
 
     return-void
 .end method
 
+.method public final H(Lc4;Ljava/lang/Thread;)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    new-instance p1, Landroid/os/Bundle;
-
-    invoke-direct {p1}, Landroid/os/Bundle;-><init>()V
-
-    const-string v0, "ACCESSIBILITY_CLICKABLE_SPAN_ID"
-
-    iget v1, p0, Lb4;->a:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    iget v0, p0, Lb4;->c:I
-
-    iget-object v1, p0, Lb4;->b:Lp4;
-
-    iget-object v1, v1, Lp4;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {v1, v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->performAction(ILandroid/os/Bundle;)Z
+    iput-object p2, p1, Lc4;->a:Ljava/lang/Thread;
 
     return-void
+.end method
+
+.method public final i(Ld4;Lz3;Lz3;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Ld4;->b:Lz3;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Ld4;->b:Lz3;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final j(Ld4;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Ld4;->a:Ljava/lang/Object;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Ld4;->a:Ljava/lang/Object;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
+.end method
+
+.method public final k(Ld4;Lc4;Lc4;)Z
+    .locals 1
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p1, Ld4;->c:Lc4;
+
+    if-ne v0, p2, :cond_0
+
+    iput-object p3, p1, Ld4;->c:Lc4;
+
+    const/4 p2, 0x1
+
+    monitor-exit p1
+
+    return p2
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p2, 0x0
+
+    monitor-exit p1
+
+    return p2
+
+    :goto_0
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p2
 .end method

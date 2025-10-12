@@ -1,85 +1,64 @@
 .class public final Lje8;
-.super Lo2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lle8;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final c:Lked;
+# static fields
+.field public static final a:Lje8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrd8;Lked;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lje8;->b:I
+    new-instance v0, Lje8;
 
-    invoke-direct {p0, p1}, Lo2;-><init>(Lrd8;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lje8;->c:Lked;
+    sput-object v0, Lje8;->a:Lje8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lke8;)V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lje8;->b:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lqs1;
+    return v0
 
-    invoke-direct {v0, p1}, Lqs1;-><init>(Lke8;)V
+    :cond_0
+    instance-of p1, p1, Lje8;
 
-    invoke-interface {p1, v0}, Lke8;->c(Lss4;)V
+    if-nez p1, :cond_1
 
-    iget-object p1, v0, Lqs1;->b:Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    check-cast p1, Lb22;
+    return p1
 
-    new-instance v1, Ltg6;
+    :cond_1
+    return v0
+.end method
 
-    iget-object v2, p0, Lo2;->a:Lrd8;
+.method public final hashCode()I
+    .locals 1
 
-    const/16 v3, 0xc
+    const v0, 0x142af9ca
 
-    invoke-direct {v1, v0, v3, v2}, Ltg6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    return v0
+.end method
 
-    iget-object v0, p0, Lje8;->c:Lked;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Lked;->b(Ljava/lang/Runnable;)Lss4;
+    const-string v0, "ShowMediaModeSnack"
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1, v0}, Lws4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lss4;)Z
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Lie8;
-
-    iget-object v1, p0, Lje8;->c:Lked;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Lie8;-><init>(Ljava/lang/Object;Lked;I)V
-
-    iget-object p1, p0, Lo2;->a:Lrd8;
-
-    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

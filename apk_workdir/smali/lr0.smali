@@ -1,1023 +1,701 @@
-.class public final Llr0;
-.super Lps;
+.class public Llr0;
+.super Lco;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic i:I
+.field public final A0:Ljr0;
 
-.field public final synthetic j:Ljava/lang/Object;
+.field public Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+.field public Z:Landroid/widget/FrameLayout;
+
+.field public r0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+.field public s0:Landroid/widget/FrameLayout;
+
+.field public t0:Z
+
+.field public u0:Z
+
+.field public v0:Z
+
+.field public w0:Z
+
+.field public x0:Lkr0;
+
+.field public final y0:Z
+
+.field public z0:Lljh;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 3
 
-    iput p1, p0, Llr0;->i:I
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Llr0;->j:Ljava/lang/Object;
+    if-nez p2, :cond_1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance p2, Landroid/util/TypedValue;
+
+    invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    sget v2, Lb9c;->bottomSheetDialogTheme:I
+
+    invoke-virtual {v1, v2, p2, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget p2, p2, Landroid/util/TypedValue;->resourceId:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p2, Lkjc;->Theme_Design_Light_BottomSheetDialog:I
+
+    :cond_1
+    :goto_0
+    invoke-direct {p0, p1, p2}, Lco;-><init>(Landroid/content/Context;I)V
+
+    iput-boolean v0, p0, Llr0;->u0:Z
+
+    iput-boolean v0, p0, Llr0;->v0:Z
+
+    new-instance p1, Ljr0;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, p0}, Ljr0;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Llr0;->A0:Ljr0;
+
+    invoke-virtual {p0}, Lco;->c()Lon;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Lon;->h(I)Z
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p1
+
+    sget p2, Lb9c;->enableEdgeToEdge:I
+
+    filled-new-array {p2}, [I
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Llr0;->y0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public B(I)V
-    .locals 2
+.method public final cancel()V
+    .locals 3
 
-    iget v0, p0, Llr0;->i:I
+    invoke-virtual {p0}, Llr0;->g()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget-boolean v1, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->g:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->y(I)V
-
-    :cond_0
-    return-void
-
-    :pswitch_1
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    iget-boolean v1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->K:Z
+    iget-boolean v1, p0, Llr0;->t0:Z
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L(I)V
+    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
 
-    :cond_1
-    return-void
+    const/4 v2, 0x5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-ne v1, v2, :cond_0
 
-.method public final C(Landroid/view/View;II)V
-    .locals 4
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lc5f;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    neg-int p3, p3
-
-    if-le p2, p3, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    if-lt p2, p3, :cond_1
+    goto :goto_0
 
     :cond_0
-    const/4 p2, 0x1
+    invoke-virtual {v0, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->K(I)V
 
-    iput-boolean p2, p1, Lc5f;->b:Z
-
-    invoke-virtual {p1}, Lc5f;->getCallback()Lb5f;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lb5f;->f()V
-
-    :cond_1
     return-void
 
-    :pswitch_0
-    iget-object p3, p0, Llr0;->j:Ljava/lang/Object;
+    :cond_1
+    :goto_0
+    invoke-super {p0}, Landroid/app/Dialog;->cancel()V
 
-    check-cast p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    return-void
+.end method
 
-    iget-object v0, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->q:Ljava/lang/ref/WeakReference;
+.method public final f()V
+    .locals 5
 
-    if-eqz v0, :cond_2
+    iget-object v0, p0, Llr0;->Z:Landroid/widget/FrameLayout;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-nez v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    sget v1, Ljfc;->design_bottom_sheet_dialog:I
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_2
-    const/4 v0, 0x0
+    invoke-static {v0, v1, v2}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    :goto_0
-    if-eqz v0, :cond_3
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast v0, Landroid/widget/FrameLayout;
 
-    move-result-object v1
+    iput-object v0, p0, Llr0;->Z:Landroid/widget/FrameLayout;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    sget v1, Lubc;->coordinator:I
 
-    if-eqz v1, :cond_3
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object v2, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    move-result v3
+    iput-object v0, p0, Llr0;->r0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
+    iget-object v0, p0, Llr0;->Z:Landroid/widget/FrameLayout;
 
-    move-result p1
+    sget v1, Lubc;->design_bottom_sheet:I
 
-    invoke-virtual {v2, v1, v3, p1}, Ltp;->D0(Landroid/view/ViewGroup$MarginLayoutParams;II)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object v0
 
-    :cond_3
-    iget-object p1, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->v:Ljava/util/LinkedHashSet;
+    check-cast v0, Landroid/widget/FrameLayout;
 
-    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
+    iput-object v0, p0, Llr0;->s0:Landroid/widget/FrameLayout;
 
-    move-result v0
+    invoke-static {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->C(Landroid/view/View;)Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    if-nez v0, :cond_5
+    move-result-object v0
 
-    iget-object p3, p3, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
+    iput-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    invoke-virtual {p3, p2}, Ltp;->h(I)F
+    iget-object v0, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->W:Ljava/util/ArrayList;
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Llr0;->A0:Ljr0;
 
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {p1}, Lnd5;->i(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_5
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    invoke-virtual {p1, p3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->A(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final D(Landroid/view/View;FF)V
-    .locals 5
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p2, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p2, Lc5f;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    div-int/lit8 p3, p3, 0x2
-
-    div-int/lit8 v0, p3, 0x2
-
-    sub-int v1, p3, v0
-
-    add-int/2addr p3, v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result v0
-
-    if-le v0, v1, :cond_0
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getRight()I
-
-    move-result v0
-
-    if-ge v0, p3, :cond_1
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    neg-int p3, p3
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/View;->getPaddingStart()I
-
-    move-result p3
-
-    :goto_0
-    iget-object v0, p2, Lc5f;->a:Lwkg;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {v0, p1, p3, v1}, Lwkg;->q(Landroid/view/View;II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p2}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    :cond_2
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget-object v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {v1, p2}, Ltp;->X(F)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {v1, p1, p2}, Ltp;->r0(Landroid/view/View;F)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {v1, p2, p3}, Ltp;->Z(FF)Z
-
-    move-result p2
-
-    if-nez p2, :cond_7
-
-    iget-object p2, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {p2, p1}, Ltp;->Y(Landroid/view/View;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_6
-
-    goto :goto_2
-
-    :cond_4
-    const/4 v1, 0x0
-
-    cmpl-float v1, p2, v1
-
-    if-eqz v1, :cond_5
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p2
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
-
-    move-result p3
-
-    cmpl-float p2, p2, p3
-
-    if-lez p2, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p2
-
-    iget-object p3, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {p3}, Ltp;->M()I
-
-    move-result p3
-
-    sub-int p3, p2, p3
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    iget-object v1, v0, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
-
-    invoke-virtual {v1}, Ltp;->N()I
-
-    move-result v1
-
-    sub-int/2addr p2, v1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    if-ge p3, p2, :cond_7
-
-    :cond_6
-    :goto_1
-    const/4 p2, 0x3
-
-    goto :goto_3
-
-    :cond_7
-    :goto_2
-    const/4 p2, 0x5
-
-    :goto_3
-    const/4 p3, 0x1
-
-    invoke-virtual {v0, p2, p1, p3}, Lcom/google/android/material/sidesheet/SideSheetBehavior;->A(ILandroid/view/View;Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    const/4 v1, 0x0
-
-    cmpg-float v2, p3, v1
-
-    const/4 v3, 0x6
-
-    const/4 v4, 0x3
-
-    if-gez v2, :cond_a
-
-    iget-boolean p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b:Z
-
-    if-eqz p2, :cond_9
-
-    :cond_8
-    :goto_4
-    move v3, v4
-
-    goto/16 :goto_6
-
-    :cond_9
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E:I
-
-    if-le p2, p3, :cond_8
-
-    goto/16 :goto_6
-
-    :cond_a
-    iget-boolean v2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I:Z
-
-    if-eqz v2, :cond_f
-
-    invoke-virtual {v0, p1, p3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->M(Landroid/view/View;F)Z
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_f
+    if-nez v2, :cond_0
 
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result p2
+    :cond_0
+    iget-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+    iget-boolean v1, p0, Llr0;->u0:Z
 
-    move-result v1
+    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I(Z)V
 
-    cmpg-float p2, p2, v1
+    new-instance v0, Lljh;
 
-    if-gez p2, :cond_b
+    iget-object v1, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->d:I
+    iget-object v2, p0, Llr0;->s0:Landroid/widget/FrameLayout;
 
-    int-to-float p2, p2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    cmpl-float p2, p3, p2
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-gtz p2, :cond_c
+    const/16 v4, 0x22
 
-    :cond_b
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+    if-lt v3, v4, :cond_1
 
-    move-result p2
+    new-instance v3, Ldb8;
 
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->T:I
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E()I
-
-    move-result v1
-
-    add-int/2addr v1, p3
-
-    div-int/lit8 v1, v1, 0x2
-
-    if-le p2, v1, :cond_d
-
-    :cond_c
-    const/4 v3, 0x5
-
-    goto/16 :goto_6
-
-    :cond_d
-    iget-boolean p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b:Z
-
-    if-eqz p2, :cond_e
-
-    goto :goto_4
-
-    :cond_e
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E()I
-
-    move-result p3
-
-    sub-int/2addr p2, p3
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p3
-
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E:I
-
-    sub-int/2addr p3, v1
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    if-ge p2, p3, :cond_17
-
-    goto :goto_4
-
-    :cond_f
-    cmpl-float v1, p3, v1
-
-    const/4 v2, 0x4
-
-    if-eqz v1, :cond_13
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
-
-    move-result p2
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
-
-    move-result p3
-
-    cmpl-float p2, p2, p3
-
-    if-lez p2, :cond_10
-
-    goto :goto_5
-
-    :cond_10
-    iget-boolean p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b:Z
-
-    if-eqz p2, :cond_12
-
-    :cond_11
-    move v3, v2
-
-    goto :goto_6
-
-    :cond_12
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E:I
-
-    sub-int p3, p2, p3
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->G:I
-
-    sub-int/2addr p2, v1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    if-ge p3, p2, :cond_11
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_6
-
-    :cond_13
-    :goto_5
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p2
-
-    iget-boolean p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b:Z
-
-    if-eqz p3, :cond_14
-
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->D:I
-
-    sub-int p3, p2, p3
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->G:I
-
-    sub-int/2addr p2, v1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    if-ge p3, p2, :cond_11
-
-    goto/16 :goto_4
-
-    :cond_14
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E:I
-
-    if-ge p2, p3, :cond_16
-
-    iget p3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->G:I
-
-    sub-int p3, p2, p3
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    if-ge p2, p3, :cond_15
-
-    goto/16 :goto_4
-
-    :cond_15
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_6
-
-    :cond_16
-    sub-int p3, p2, p3
-
-    invoke-static {p3}, Ljava/lang/Math;->abs(I)I
-
-    move-result p3
-
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->G:I
-
-    sub-int/2addr p2, v1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    if-ge p3, p2, :cond_11
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_17
-    :goto_6
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p2, 0x1
-
-    invoke-virtual {v0, v3, p1, p2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->N(ILandroid/view/View;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final O(Landroid/view/View;I)Z
-    .locals 4
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p2, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p2, Lc5f;
-
-    invoke-virtual {p2}, Lc5f;->getCallback()Lb5f;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lb5f;->g()Landroid/view/View;
-
-    move-result-object v0
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
+    :cond_1
+    const/16 v4, 0x21
+
+    if-lt v3, v4, :cond_2
+
+    new-instance v3, Lbb8;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x0
 
     :goto_0
-    if-ne p1, v0, :cond_1
+    iput-object v3, v0, Lljh;->a:Ljava/lang/Object;
 
-    iget-boolean p1, p2, Lc5f;->b:Z
+    iput-object v1, v0, Lljh;->b:Ljava/lang/Object;
 
-    if-nez p1, :cond_1
+    iput-object v2, v0, Lljh;->c:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iput-object v0, p0, Llr0;->z0:Lljh;
 
-    goto :goto_1
+    :cond_3
+    return-void
+.end method
 
-    :cond_1
-    const/4 p1, 0x0
+.method public final g()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    .locals 1
 
-    :goto_1
-    return p1
+    iget-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    :pswitch_0
-    iget-object p2, p0, Llr0;->j:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast p2, Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    invoke-virtual {p0}, Llr0;->f()V
 
-    iget v0, p2, Lcom/google/android/material/sidesheet/SideSheetBehavior;->h:I
+    :cond_0
+    iget-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    return-object v0
+.end method
+
+.method public final h(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout;
+    .locals 4
+
+    invoke-virtual {p0}, Llr0;->f()V
+
+    iget-object v0, p0, Llr0;->Z:Landroid/widget/FrameLayout;
+
+    sget v1, Lubc;->coordinator:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    if-eqz p2, :cond_0
 
-    if-ne v0, v2, :cond_2
+    if-nez p1, :cond_0
 
-    goto :goto_2
+    invoke-virtual {p0}, Landroid/app/Dialog;->getLayoutInflater()Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    :cond_0
+    iget-boolean p2, p0, Llr0;->y0:Z
+
+    if-eqz p2, :cond_1
+
+    iget-object p2, p0, Llr0;->s0:Landroid/widget/FrameLayout;
+
+    new-instance v2, Lhjb;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3, p0}, Lhjb;-><init>(ILjava/lang/Object;)V
+
+    sget-object v3, Lijg;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {p2, v2}, Lwig;->u(Landroid/view/View;Lyca;)V
+
+    :cond_1
+    iget-object p2, p0, Llr0;->s0:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    if-nez p3, :cond_2
+
+    iget-object p2, p0, Llr0;->s0:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    goto :goto_0
 
     :cond_2
-    iget-object p2, p2, Lcom/google/android/material/sidesheet/SideSheetBehavior;->p:Ljava/lang/ref/WeakReference;
+    iget-object p2, p0, Llr0;->s0:Landroid/widget/FrameLayout;
 
-    if-eqz p2, :cond_3
+    invoke-virtual {p2, p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    :goto_0
+    sget p1, Lubc;->touch_outside:I
 
-    move-result-object p2
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-ne p2, p1, :cond_3
+    move-result-object p1
 
-    move v1, v2
+    new-instance p2, Ln6;
 
-    :cond_3
-    :goto_2
-    return v1
+    const/4 p3, 0x2
 
-    :pswitch_1
-    iget-object v0, p0, Llr0;->j:Ljava/lang/Object;
+    invoke-direct {p2, p3, p0}, Ln6;-><init>(ILjava/lang/Object;)V
 
-    check-cast v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
+    iget-object p1, p0, Llr0;->s0:Landroid/widget/FrameLayout;
 
-    const/4 v2, 0x1
+    new-instance p2, Lir0;
 
-    if-ne v1, v2, :cond_4
+    invoke-direct {p2, v1, p0}, Lir0;-><init>(ILjava/lang/Object;)V
 
-    goto :goto_4
+    invoke-static {p1, p2}, Lijg;->n(Landroid/view/View;Lr4;)V
 
-    :cond_4
-    iget-boolean v3, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->b0:Z
+    iget-object p1, p0, Llr0;->s0:Landroid/widget/FrameLayout;
 
-    if-eqz v3, :cond_5
+    new-instance p2, Lefg;
 
-    goto :goto_4
+    invoke-direct {p2, p3}, Lefg;-><init>(I)V
 
-    :cond_5
-    const/4 v3, 0x3
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    if-ne v1, v3, :cond_7
+    iget-object p1, p0, Llr0;->Z:Landroid/widget/FrameLayout;
 
-    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->Z:I
-
-    if-ne v1, p2, :cond_7
-
-    iget-object p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->V:Ljava/lang/ref/WeakReference;
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    goto :goto_3
-
-    :cond_6
-    const/4 p2, 0x0
-
-    :goto_3
-    if-eqz p2, :cond_7
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    iget-object p2, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->U:Ljava/lang/ref/WeakReference;
-
-    if-eqz p2, :cond_8
-
-    invoke-virtual {p2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-ne p2, p1, :cond_8
-
-    goto :goto_5
-
-    :cond_8
-    :goto_4
-    const/4 v2, 0x0
-
-    :goto_5
-    return v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final b(Landroid/view/View;I)I
-    .locals 1
+.method public final onAttachedToWindow()V
+    .locals 6
 
-    iget v0, p0, Llr0;->i:I
+    invoke-super {p0}, Landroid/app/Dialog;->onAttachedToWindow()V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
-    const p1, -0x7fffffff
+    move-result-object v0
 
-    const v0, 0x7fffffff
+    const/4 v1, 0x0
 
-    invoke-static {p2, p1, v0}, Lkjd;->h(III)I
+    if-eqz v0, :cond_3
 
-    move-result p1
+    iget-boolean v2, p0, Llr0;->y0:Z
 
-    return p1
+    const/4 v3, 0x1
 
-    :pswitch_0
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
+    if-eqz v2, :cond_0
 
-    check-cast p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;
+    invoke-virtual {v0}, Landroid/view/Window;->getNavigationBarColor()I
 
-    iget-object v0, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
+    move-result v2
 
-    invoke-virtual {v0}, Ltp;->P()I
+    invoke-static {v2}, Landroid/graphics/Color;->alpha(I)I
 
-    move-result v0
+    move-result v2
 
-    iget-object p1, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->a:Ltp;
+    const/16 v4, 0xff
 
-    invoke-virtual {p1}, Ltp;->O()I
+    if-ge v2, v4, :cond_0
 
-    move-result p1
-
-    invoke-static {p2, v0, p1}, Lbv0;->t(III)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c(Landroid/view/View;I)I
-    .locals 1
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2}, Lps;->c(Landroid/view/View;I)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    iget-object v0, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    invoke-virtual {v0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->E()I
-
-    move-result v0
-
-    invoke-virtual {p0, p1}, Llr0;->s(Landroid/view/View;)I
-
-    move-result p1
-
-    invoke-static {p2, v0, p1}, Lbv0;->t(III)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public r(Landroid/view/View;)I
-    .locals 1
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lps;->r(Landroid/view/View;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;
-
-    iget v0, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->l:I
-
-    iget p1, p1, Lcom/google/android/material/sidesheet/SideSheetBehavior;->o:I
-
-    add-int/2addr v0, p1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public s(Landroid/view/View;)I
-    .locals 1
-
-    iget v0, p0, Llr0;->i:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lps;->s(Landroid/view/View;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object p1, p0, Llr0;->j:Ljava/lang/Object;
-
-    check-cast p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
-
-    sget v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->f0:I
-
-    iget-boolean v0, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I:Z
-
-    if-eqz v0, :cond_0
-
-    iget p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->T:I
+    move v2, v3
 
     goto :goto_0
 
     :cond_0
-    iget p1, p1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->G:I
+    move v2, v1
 
     :goto_0
-    return p1
+    iget-object v4, p0, Llr0;->Z:Landroid/widget/FrameLayout;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v4, :cond_1
+
+    xor-int/lit8 v5, v2, 0x1
+
+    invoke-virtual {v4, v5}, Landroid/view/View;->setFitsSystemWindows(Z)V
+
+    :cond_1
+    iget-object v4, p0, Llr0;->r0:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    if-eqz v4, :cond_2
+
+    xor-int/lit8 v5, v2, 0x1
+
+    invoke-virtual {v4, v5}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setFitsSystemWindows(Z)V
+
+    :cond_2
+    xor-int/2addr v2, v3
+
+    invoke-static {v0, v2}, Lte0;->A(Landroid/view/Window;Z)V
+
+    iget-object v2, p0, Llr0;->x0:Lkr0;
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v2, v0}, Lkr0;->e(Landroid/view/Window;)V
+
+    :cond_3
+    iget-object v0, p0, Llr0;->z0:Lljh;
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget-object v2, v0, Lljh;->c:Ljava/lang/Object;
+
+    check-cast v2, Landroid/view/View;
+
+    iget-object v3, v0, Lljh;->a:Ljava/lang/Object;
+
+    check-cast v3, Lbb8;
+
+    iget-boolean v4, p0, Llr0;->u0:Z
+
+    if-eqz v4, :cond_5
+
+    if-eqz v3, :cond_6
+
+    iget-object v0, v0, Lljh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lab8;
+
+    invoke-virtual {v3, v0, v2, v1}, Lbb8;->b(Lab8;Landroid/view/View;Z)V
+
+    return-void
+
+    :cond_5
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v3, v2}, Lbb8;->c(Landroid/view/View;)V
+
+    :cond_6
+    :goto_1
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lco;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
+
+    const/high16 v0, -0x80000000
+
+    invoke-virtual {p1, v0}, Landroid/view/Window;->addFlags(I)V
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p1, v0, v0}, Landroid/view/Window;->setLayout(II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 2
+
+    iget-object v0, p0, Llr0;->x0:Lkr0;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lkr0;->e(Landroid/view/Window;)V
+
+    :cond_0
+    iget-object v0, p0, Llr0;->z0:Lljh;
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Lljh;->a:Ljava/lang/Object;
+
+    check-cast v1, Lbb8;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Lljh;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Lbb8;->c(Landroid/view/View;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onStart()V
+    .locals 3
+
+    invoke-super {p0}, Lmf3;->onStart()V
+
+    iget-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    if-eqz v0, :cond_0
+
+    iget v1, v0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
+
+    const/4 v2, 0x5
+
+    if-ne v1, v2, :cond_0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->K(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final setCancelable(Z)V
+    .locals 3
+
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setCancelable(Z)V
+
+    iget-boolean v0, p0, Llr0;->u0:Z
+
+    if-eq v0, p1, :cond_3
+
+    iput-boolean p1, p0, Llr0;->u0:Z
+
+    iget-object v0, p0, Llr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->I(Z)V
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Llr0;->z0:Lljh;
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Lljh;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    iget-object v1, p1, Lljh;->a:Ljava/lang/Object;
+
+    check-cast v1, Lbb8;
+
+    iget-boolean v2, p0, Llr0;->u0:Z
+
+    if-eqz v2, :cond_2
+
+    if-eqz v1, :cond_3
+
+    iget-object p1, p1, Lljh;->b:Ljava/lang/Object;
+
+    check-cast p1, Lab8;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, p1, v0, v2}, Lbb8;->b(Lab8;Landroid/view/View;Z)V
+
+    return-void
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1, v0}, Lbb8;->c(Landroid/view/View;)V
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public final setCanceledOnTouchOutside(Z)V
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_0
+
+    iget-boolean v1, p0, Llr0;->u0:Z
+
+    if-nez v1, :cond_0
+
+    iput-boolean v0, p0, Llr0;->u0:Z
+
+    :cond_0
+    iput-boolean p1, p0, Llr0;->v0:Z
+
+    iput-boolean v0, p0, Llr0;->w0:Z
+
+    return-void
+.end method
+
+.method public final setContentView(I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-virtual {p0, v0, p1, v0}, Llr0;->h(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Lco;->setContentView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final setContentView(Landroid/view/View;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-virtual {p0, p1, v0, v1}, Llr0;->h(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Lco;->setContentView(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-virtual {p0, p1, v0, p2}, Llr0;->h(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Lco;->setContentView(Landroid/view/View;)V
+
+    return-void
 .end method

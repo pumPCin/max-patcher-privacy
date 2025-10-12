@@ -322,6 +322,7 @@
 .method public sendCustomAction(Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 1
     invoke-virtual {p1}, Landroid/support/v4/media/session/PlaybackStateCompat$CustomAction;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -334,8 +335,10 @@
 .method public sendCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
+    .line 2
     invoke-static {p1, p2}, Landroid/support/v4/media/session/MediaControllerCompat;->validateCustomAction(Ljava/lang/String;Landroid/os/Bundle;)V
 
+    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -348,6 +351,7 @@
     :catch_0
     move-exception p1
 
+    .line 4
     const-string p2, "MediaControllerCompat"
 
     const-string v0, "Dead object in sendCustomAction."
@@ -423,6 +427,7 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;)V
     .locals 2
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -435,6 +440,7 @@
     :catch_0
     move-exception p1
 
+    .line 2
     const-string v0, "MediaControllerCompat"
 
     const-string v1, "Dead object in setRating."
@@ -447,6 +453,7 @@
 .method public setRating(Landroid/support/v4/media/RatingCompat;Landroid/os/Bundle;)V
     .locals 1
 
+    .line 3
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$TransportControlsBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -459,6 +466,7 @@
     :catch_0
     move-exception p1
 
+    .line 4
     const-string p2, "MediaControllerCompat"
 
     const-string v0, "Dead object in setRating."

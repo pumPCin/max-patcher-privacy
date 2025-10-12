@@ -3,58 +3,68 @@
 
 
 # static fields
-.field public static oneme_settings_twofa_action:I = 0x7f0a0855
+.field public static auth_call_code_hint:I = 0x7f110000
 
-.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a0856
+.field public static auth_call_description:I = 0x7f110001
 
-.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a0857
+.field public static call_dialog_participants:I = 0x7f110002
 
-.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a0858
+.field public static call_dialog_participants_when_join:I = 0x7f110003
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a0859
+.field public static call_history_dlg_delete:I = 0x7f110004
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a085a
+.field public static delete_favorite_sticker_question:I = 0x7f11000d
 
-.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a085b
+.field public static delete_recent_sticker_question:I = 0x7f11000e
 
-.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a085c
+.field public static field_length_exceeded_error:I = 0x7f110011
 
-.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a085d
+.field public static folder_filtered_title_bot_plural:I = 0x7f110012
 
-.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a085e
+.field public static folder_filtered_title_channel_plural:I = 0x7f110013
 
-.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a085f
+.field public static folder_filtered_title_chat_plural:I = 0x7f110014
 
-.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a0860
+.field public static folder_filtered_title_contact_plural:I = 0x7f110015
 
-.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a0861
+.field public static folder_filtered_title_not_contact_plural:I = 0x7f110016
 
-.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a0862
+.field public static inactive_ttl:I = 0x7f110018
 
-.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a0863
+.field public static max_attach_count_error:I = 0x7f11001a
 
-.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a0864
+.field public static max_favorite_sticker_sets_count_reached:I = 0x7f11001b
 
-.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a0865
+.field public static max_favorite_stickers_count_reached:I = 0x7f11001c
 
-.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a0866
+.field public static max_message_length_error:I = 0x7f11001d
 
-.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a0867
+.field public static menu_copy_success:I = 0x7f11001e
 
-.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a0868
+.field public static message_compose_forward_or_share__forwarded_messages:I = 0x7f11001f
 
-.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a0869
+.field public static mutual_friends:I = 0x7f110021
 
-.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a086a
+.field public static n_contacts:I = 0x7f110022
 
-.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a086b
+.field public static phone_weight:I = 0x7f11002f
 
-.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a086c
+.field public static pin_lock_wrong_code_with_attempts:I = 0x7f110034
 
-.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a086d
+.field public static question_delete_messages:I = 0x7f11003c
 
-.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a086e
+.field public static results_more:I = 0x7f11003d
 
-.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a086f
+.field public static selected_messages:I = 0x7f11003e
 
-.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a0870
+.field public static sticker_removed_from_favorites:I = 0x7f11003f
+
+.field public static sticker_removed_from_recents:I = 0x7f110040
+
+.field public static sticker_set_description:I = 0x7f110041
+
+.field public static sticker_set_description_with_author:I = 0x7f110042
+
+.field public static to_chats:I = 0x7f110043
+
+.field public static you_sent_messages:I = 0x7f110073

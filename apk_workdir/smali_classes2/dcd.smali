@@ -1,46 +1,26 @@
 .class public final Ldcd;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lecd;
-
-.field public final synthetic Z:J
-
-.field public final synthetic w0:J
-
-.field public final synthetic x0:Ljava/lang/String;
-
-.field public final synthetic y0:J
-
-.field public final synthetic z0:Z
+.field public final synthetic Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public constructor <init>(Lecd;JJLjava/lang/String;JZLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ldcd;->Y:Lecd;
-
-    iput-wide p2, p0, Ldcd;->Z:J
-
-    iput-wide p4, p0, Ldcd;->w0:J
-
-    iput-object p6, p0, Ldcd;->x0:Ljava/lang/String;
-
-    iput-wide p7, p0, Ldcd;->y0:J
-
-    iput-boolean p9, p0, Ldcd;->z0:Z
+    iput-object p1, p0, Ldcd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p10}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -50,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lubd;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -60,282 +40,185 @@
 
     check-cast p1, Ldcd;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Ldcd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 11
+    .locals 2
 
     new-instance v0, Ldcd;
 
-    iget-wide v7, p0, Ldcd;->y0:J
+    iget-object v1, p0, Ldcd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iget-boolean v9, p0, Ldcd;->z0:Z
+    invoke-direct {v0, v1, p2}, Ldcd;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Ldcd;->Y:Lecd;
-
-    iget-wide v2, p0, Ldcd;->Z:J
-
-    iget-wide v4, p0, Ldcd;->w0:J
-
-    iget-object v6, p0, Ldcd;->x0:Ljava/lang/String;
-
-    move-object v10, p2
-
-    invoke-direct/range {v0 .. v10}, Ldcd;-><init>(Lecd;JJLjava/lang/String;JZLkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Ldcd;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
+    .locals 9
 
-    move-object/from16 v0, p0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    sget-object v1, Ly38;->o:Ly38;
+    iget-object p1, p0, Ldcd;->X:Ljava/lang/Object;
 
-    sget-object v2, Loyf;->a:Loyf;
+    check-cast p1, Lubd;
 
-    sget-object v3, Lf34;->a:Lf34;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget v4, v0, Ldcd;->X:I
+    const-string v1, "new data "
 
-    const/4 v5, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v4, :cond_1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-ne v4, v5, :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    move-result-object v0
 
-    return-object v2
+    const-string v1, "ScheduledSendPickerDialogFragment"
 
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    invoke-static {v1, v0}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v0, p0, Ldcd;->Y:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->I0()Lccd;
 
-    throw v1
+    move-result-object v1
 
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Lccd;->b()Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    iget-object v4, v0, Ldcd;->Y:Lecd;
+    move-result-object v1
 
-    iget-object v4, v4, Lecd;->a:Ljava/lang/String;
+    iget-object v2, p1, Lubd;->a:Ljava/util/List;
 
-    iget-wide v6, v0, Ldcd;->w0:J
+    iget v3, p1, Lubd;->d:I
 
-    iget-object v8, v0, Ldcd;->x0:Ljava/lang/String;
+    const/4 v4, 0x1
 
-    iget-wide v9, v0, Ldcd;->y0:J
+    iput-boolean v4, v1, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->M0:Z
 
-    sget-object v11, Lox9;->j:Lqpa;
+    iget-object v5, v1, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->F0:Landroidx/recyclerview/widget/RecyclerView;
 
-    const/4 v12, 0x0
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
 
-    if-nez v11, :cond_2
+    move-result-object v5
+
+    instance-of v6, v5, Lea4;
+
+    const/4 v7, 0x0
+
+    if-eqz v6, :cond_0
+
+    check-cast v5, Lea4;
 
     goto :goto_0
 
+    :cond_0
+    move-object v5, v7
+
+    :goto_0
+    if-eqz v5, :cond_1
+
+    new-instance v6, Lu94;
+
+    const/4 v8, 0x0
+
+    invoke-direct {v6, v1, v3, v8}, Lu94;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;II)V
+
+    invoke-virtual {v5, v2, v6}, Lhv7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    :cond_1
+    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->I0()Lccd;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lccd;->b()Lru/ok/tamtam/messages/scheduled/DateTimePicker;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lubd;->b:Ljava/util/List;
+
+    iget v3, p1, Lubd;->e:I
+
+    iput-boolean v4, v1, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->N0:Z
+
+    iget-object v5, v1, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->G0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v5}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
+
+    move-result-object v5
+
+    instance-of v6, v5, Lggf;
+
+    if-eqz v6, :cond_2
+
+    check-cast v5, Lggf;
+
+    goto :goto_1
+
     :cond_2
-    invoke-virtual {v11, v1}, Lqpa;->b(Ly38;)Z
+    move-object v5, v7
 
-    move-result v13
+    :goto_1
+    if-eqz v5, :cond_3
 
-    if-eqz v13, :cond_3
+    new-instance v6, Lu94;
 
-    const-string v13, "Save new position:"
+    const/4 v8, 0x2
 
-    const-string v14, " for video:"
+    invoke-direct {v6, v1, v3, v8}, Lu94;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;II)V
 
-    invoke-static {v13, v6, v7, v14, v8}, Lvpb;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, " in msg:"
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v11, v1, v4, v6, v12}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v5, v2, v6}, Lhv7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
 
     :cond_3
-    :goto_0
-    iget-wide v6, v0, Ldcd;->Z:J
+    invoke-virtual {v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->I0()Lccd;
 
-    const-wide/16 v8, 0x0
+    move-result-object v0
 
-    cmp-long v4, v6, v8
+    invoke-virtual {v0}, Lccd;->b()Lru/ok/tamtam/messages/scheduled/DateTimePicker;
 
-    if-nez v4, :cond_4
+    move-result-object v0
 
-    goto/16 :goto_2
+    iget-object v1, p1, Lubd;->c:Ljava/util/List;
+
+    iget p1, p1, Lubd;->f:I
+
+    iput-boolean v4, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->O0:Z
+
+    iget-object v2, v0, Lru/ok/tamtam/messages/scheduled/DateTimePicker;->H0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lggf;
+
+    if-eqz v3, :cond_4
+
+    move-object v7, v2
+
+    check-cast v7, Lggf;
 
     :cond_4
-    iget-wide v10, v0, Ldcd;->w0:J
+    if-eqz v7, :cond_5
 
-    cmp-long v4, v10, v6
+    new-instance v2, Lu94;
 
-    if-ltz v4, :cond_6
+    const/4 v3, 0x1
 
-    iget-object v4, v0, Ldcd;->Y:Lecd;
+    invoke-direct {v2, v0, p1, v3}, Lu94;-><init>(Lru/ok/tamtam/messages/scheduled/DateTimePicker;II)V
 
-    iget-object v4, v4, Lecd;->a:Ljava/lang/String;
-
-    sget-object v13, Lox9;->j:Lqpa;
-
-    if-nez v13, :cond_5
-
-    goto :goto_1
+    invoke-virtual {v7, v1, v2}, Lhv7;->F(Ljava/util/List;Ljava/lang/Runnable;)V
 
     :cond_5
-    invoke-virtual {v13, v1}, Lqpa;->b(Ly38;)Z
+    sget-object p1, Laxf;->a:Laxf;
 
-    move-result v14
-
-    if-eqz v14, :cond_7
-
-    const-string v14, "Can\'t save this startTime:"
-
-    const-string v15, " because it\'s more or equals with duration:"
-
-    invoke-static {v10, v11, v14, v15}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    const-string v11, ". Reset initPos."
-
-    invoke-static {v10, v6, v7, v11}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v13, v1, v4, v6, v12}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_6
-    move-wide v8, v10
-
-    :cond_7
-    :goto_1
-    iget-object v1, v0, Ldcd;->Y:Lecd;
-
-    iget-object v1, v1, Lecd;->c:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls8g;
-
-    iget-object v4, v0, Ldcd;->x0:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v4}, Ls8g;->a(Ljava/lang/String;)Lq8g;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_8
-
-    iget-object v4, v0, Ldcd;->Y:Lecd;
-
-    iget-object v4, v4, Lecd;->a:Ljava/lang/String;
-
-    const-string v6, "Save new position. VideoContent in cache exist"
-
-    invoke-static {v4, v6}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, v0, Ldcd;->Y:Lecd;
-
-    iget-object v4, v4, Lecd;->c:Lbp7;
-
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ls8g;
-
-    iget-object v6, v0, Ldcd;->x0:Ljava/lang/String;
-
-    invoke-interface {v1, v8, v9}, Lq8g;->b(J)Lq8g;
-
-    move-result-object v1
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v4, Ls8g;->a:Landroid/util/LruCache;
-
-    new-instance v7, Lr8g;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v10
-
-    invoke-direct {v7, v1, v10, v11}, Lr8g;-><init>(Lq8g;J)V
-
-    invoke-virtual {v4, v6, v7}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_8
-    iget-object v1, v0, Ldcd;->Y:Lecd;
-
-    iget-object v1, v1, Lecd;->b:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsi9;
-
-    iget-wide v6, v0, Ldcd;->y0:J
-
-    iget-object v4, v0, Ldcd;->x0:Ljava/lang/String;
-
-    iget-wide v10, v0, Ldcd;->Z:J
-
-    iget-boolean v12, v0, Ldcd;->z0:Z
-
-    new-instance v14, Lccd;
-
-    move-wide v15, v8
-
-    move-wide/from16 v17, v10
-
-    move/from16 v19, v12
-
-    invoke-direct/range {v14 .. v19}, Lccd;-><init>(JJZ)V
-
-    iput v5, v0, Ldcd;->X:I
-
-    iget-object v1, v1, Lsi9;->a:Ll6d;
-
-    new-instance v5, Lbv8;
-
-    const/4 v8, 0x6
-
-    invoke-direct {v5, v4, v8, v14}, Lbv8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v6, v7, v5}, Ll6d;->o(JLwo3;)V
-
-    if-ne v2, v3, :cond_9
-
-    return-object v3
-
-    :cond_9
-    :goto_2
-    return-object v2
+    return-object p1
 .end method

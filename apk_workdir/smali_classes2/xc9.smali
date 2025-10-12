@@ -1,96 +1,135 @@
-.class public final synthetic Lxc9;
-.super Ljava/lang/Object;
+.class public final Lxc9;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Ljava/lang/CharSequence;
+.field public final synthetic Y:Lwe9;
 
-.field public final synthetic Z:Z
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Led9;
-
-.field public final synthetic c:Lm82;
-
-.field public final synthetic o:Lw29;
+.field public final synthetic Z:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Led9;Lm82;Lw29;ILjava/lang/CharSequence;ZI)V
+.method public constructor <init>(Lwe9;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p7, p0, Lxc9;->a:I
+    iput-object p1, p0, Lxc9;->Y:Lwe9;
 
-    iput-object p1, p0, Lxc9;->b:Led9;
+    iput-wide p2, p0, Lxc9;->Z:J
 
-    iput-object p2, p0, Lxc9;->c:Lm82;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lxc9;->o:Lw29;
-
-    iput p4, p0, Lxc9;->X:I
-
-    iput-object p5, p0, Lxc9;->Y:Ljava/lang/CharSequence;
-
-    iput-boolean p6, p0, Lxc9;->Z:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lxc9;->a:I
+    check-cast p1, Lr14;
 
-    iget-object v5, p0, Lxc9;->Y:Ljava/lang/CharSequence;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-boolean v6, p0, Lxc9;->Z:Z
+    invoke-virtual {p0, p1, p2}, Lxc9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    iget-object v1, p0, Lxc9;->b:Led9;
+    check-cast p1, Lxc9;
 
-    iget-object v2, p0, Lxc9;->c:Lm82;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object v3, p0, Lxc9;->o:Lw29;
+    invoke-virtual {p1, p2}, Lxc9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v4, p0, Lxc9;->X:I
+    return-object p2
+.end method
 
-    invoke-virtual/range {v1 .. v6}, Led9;->b(Lm82;Lw29;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    move-result-object v0
+    new-instance v0, Lxc9;
 
-    return-object v0
+    iget-object v1, p0, Lxc9;->Y:Lwe9;
 
-    :pswitch_0
-    iget-object v1, p0, Lxc9;->b:Led9;
+    iget-wide v2, p0, Lxc9;->Z:J
 
-    iget-object v2, p0, Lxc9;->c:Lm82;
+    invoke-direct {v0, v1, v2, v3, p2}, Lxc9;-><init>(Lwe9;JLkotlin/coroutines/Continuation;)V
 
-    iget-object v3, p0, Lxc9;->o:Lw29;
-
-    iget v4, p0, Lxc9;->X:I
-
-    invoke-virtual/range {v1 .. v6}, Led9;->b(Lm82;Lw29;ILjava/lang/CharSequence;Z)Landroid/text/Layout;
-
-    move-result-object v0
+    iput-object p1, v0, Lxc9;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    nop
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxc9;->X:Ljava/lang/Object;
+
+    check-cast p1, Lr14;
+
+    instance-of v0, p1, Lq14;
+
+    const/4 v1, 0x6
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lu9e;
+
+    check-cast p1, Lq14;
+
+    iget-object p1, p1, Lq14;->a:Lcdf;
+
+    invoke-direct {v0, p1, v3, v2, v1}, Lu9e;-><init>(Lcdf;ILxcf;I)V
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lp14;
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lu9e;
+
+    check-cast p1, Lp14;
+
+    iget-object p1, p1, Lp14;->a:Lcdf;
+
+    invoke-direct {v0, p1, v3, v2, v1}, Lu9e;-><init>(Lcdf;ILxcf;I)V
+
+    :goto_0
+    iget-object p1, p0, Lxc9;->Y:Lwe9;
+
+    iget-object v1, p1, Lwe9;->C1:Lya5;
+
+    invoke-static {v1, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    iget-object p1, p1, Lwe9;->F1:Lrr9;
+
+    iget-wide v0, p0, Lxc9;->Z:J
+
+    invoke-virtual {p1, v0, v1}, Lrr9;->l(J)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

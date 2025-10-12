@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/location/LocationResult;
-.super Lq3;
+.super Le4;
 .source "SourceFile"
 
 # interfaces
@@ -32,11 +32,11 @@
 
     sput-object v0, Lcom/google/android/gms/location/LocationResult;->b:Ljava/util/List;
 
-    new-instance v0, Lk3g;
+    new-instance v0, Lgng;
 
-    const/16 v1, 0x1d
+    const/16 v1, 0x17
 
-    invoke-direct {v0, v1}, Lk3g;-><init>(I)V
+    invoke-direct {v0, v1}, Lgng;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/location/LocationResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -199,7 +199,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Ll74;->w(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -241,7 +241,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lhhh;->a:Ljava/text/DecimalFormat;
+    sget-object v1, Lrfh;->a:Ljava/text/DecimalFormat;
 
     iget-object v1, p0, Lcom/google/android/gms/location/LocationResult;->a:Ljava/util/List;
 
@@ -278,7 +278,7 @@
 
     check-cast v2, Landroid/location/Location;
 
-    sget-object v4, Lhhh;->b:Ljava/text/DecimalFormat;
+    sget-object v4, Lrfh;->b:Ljava/text/DecimalFormat;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->ensureCapacity(I)V
 
@@ -316,7 +316,7 @@
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
-    sget-object v7, Lhhh;->a:Ljava/text/DecimalFormat;
+    sget-object v7, Lrfh;->a:Ljava/text/DecimalFormat;
 
     invoke-virtual {v2}, Landroid/location/Location;->getLatitude()D
 
@@ -389,7 +389,7 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->f(Landroid/location/Location;)Z
+    invoke-static {v2}, Le18;->f(Landroid/location/Location;)Z
 
     move-result v7
 
@@ -397,7 +397,7 @@
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->c(Landroid/location/Location;)F
+    invoke-static {v2}, Le18;->c(Landroid/location/Location;)F
 
     move-result v7
 
@@ -435,7 +435,7 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->e(Landroid/location/Location;)Z
+    invoke-static {v2}, Le18;->e(Landroid/location/Location;)Z
 
     move-result v7
 
@@ -443,7 +443,7 @@
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->b(Landroid/location/Location;)F
+    invoke-static {v2}, Le18;->b(Landroid/location/Location;)F
 
     move-result v7
 
@@ -483,7 +483,7 @@
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->d(Landroid/location/Location;)Z
+    invoke-static {v2}, Le18;->d(Landroid/location/Location;)Z
 
     move-result v7
 
@@ -491,7 +491,7 @@
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Lk28;->a(Landroid/location/Location;)F
+    invoke-static {v2}, Le18;->a(Landroid/location/Location;)F
 
     move-result v7
 
@@ -590,7 +590,7 @@
 
     if-ltz v2, :cond_d
 
-    sget-object v2, Lojh;->a:Ljava/text/SimpleDateFormat;
+    sget-object v2, Lzhh;->a:Ljava/text/SimpleDateFormat;
 
     new-instance v4, Ljava/util/Date;
 
@@ -603,7 +603,7 @@
     goto :goto_2
 
     :cond_d
-    sget-object v2, Lojh;->a:Ljava/text/SimpleDateFormat;
+    sget-object v2, Lzhh;->a:Ljava/text/SimpleDateFormat;
 
     invoke-static {v8, v9}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
@@ -651,7 +651,7 @@
 
     const/16 p2, 0x4f45
 
-    invoke-static {p1, p2}, Lz84;->K(Landroid/os/Parcel;I)I
+    invoke-static {p1, p2}, Lnjg;->S(Landroid/os/Parcel;I)I
 
     move-result p2
 
@@ -659,9 +659,9 @@
 
     iget-object v1, p0, Lcom/google/android/gms/location/LocationResult;->a:Ljava/util/List;
 
-    invoke-static {p1, v1, v0}, Lz84;->J(Landroid/os/Parcel;Ljava/util/List;I)V
+    invoke-static {p1, v1, v0}, Lnjg;->R(Landroid/os/Parcel;Ljava/util/List;I)V
 
-    invoke-static {p1, p2}, Lz84;->L(Landroid/os/Parcel;I)V
+    invoke-static {p1, p2}, Lnjg;->T(Landroid/os/Parcel;I)V
 
     return-void
 .end method

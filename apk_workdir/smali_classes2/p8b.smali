@@ -1,22 +1,23 @@
 .class public final Lp8b;
-.super Lnz3;
+.super Lwy3;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic X:Lq8b;
 
-.field public final synthetic Y:Lwe9;
+.field public Y:I
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwe9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lq8b;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lp8b;->Y:Lwe9;
+    iput-object p1, p0, Lp8b;->X:Lq8b;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,21 +29,21 @@
 
     iput-object p1, p0, Lp8b;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lp8b;->X:I
+    iget p1, p0, Lp8b;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lp8b;->X:I
+    iput p1, p0, Lp8b;->Y:I
 
-    iget-object p1, p0, Lp8b;->Y:Lwe9;
+    iget-object p1, p0, Lp8b;->X:Lq8b;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lwe9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lq8b;->k(Lq8b;Lku5;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p1
+    sget-object p1, Lo24;->a:Lo24;
 
     return-object p1
 .end method

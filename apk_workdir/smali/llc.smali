@@ -1,62 +1,297 @@
-.class public abstract Lllc;
+.class public final Lllc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static RecyclerView:[I = null
+# instance fields
+.field public final a:J
 
-.field public static RecyclerView_android_clipToPadding:I = 0x1
+.field public final b:J
 
-.field public static RecyclerView_android_descendantFocusability:I = 0x2
+.field public final c:Ljava/lang/String;
 
-.field public static RecyclerView_android_orientation:I = 0x0
-
-.field public static RecyclerView_fastScrollEnabled:I = 0x3
-
-.field public static RecyclerView_fastScrollHorizontalThumbDrawable:I = 0x4
-
-.field public static RecyclerView_fastScrollHorizontalTrackDrawable:I = 0x5
-
-.field public static RecyclerView_fastScrollVerticalThumbDrawable:I = 0x6
-
-.field public static RecyclerView_fastScrollVerticalTrackDrawable:I = 0x7
-
-.field public static RecyclerView_layoutManager:I = 0x8
-
-.field public static RecyclerView_reverseLayout:I = 0x9
-
-.field public static RecyclerView_spanCount:I = 0xa
-
-.field public static RecyclerView_stackFromEnd:I = 0xb
+.field public d:I
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JLjava/lang/String;J)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    if-nez p3, :cond_0
 
-    fill-array-data v0, :array_0
+    const-string p3, ""
 
-    sput-object v0, Lllc;->RecyclerView:[I
+    :cond_0
+    iput-object p3, p0, Lllc;->c:Ljava/lang/String;
+
+    iput-wide p1, p0, Lllc;->a:J
+
+    iput-wide p4, p0, Lllc;->b:J
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        0x10100c4
-        0x10100eb
-        0x10100f1
-        0x7f0403b0
-        0x7f0403b1
-        0x7f0403b2
-        0x7f0403b3
-        0x7f0403b4
-        0x7f040597
-        0x7f04071e
-        0x7f040791
-        0x7f0407d6
-    .end array-data
+
+# virtual methods
+.method public final a(Lllc;Ljava/lang/String;)Lllc;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p2
+
+    iget-object v3, v0, Lllc;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ltf2;->J(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    if-eqz v1, :cond_0
+
+    iget-wide v4, v1, Lllc;->b:J
+
+    iget-object v6, v1, Lllc;->c:Ljava/lang/String;
+
+    invoke-static {v2, v6}, Ltf2;->J(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v7, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    const/4 v2, 0x0
+
+    goto :goto_4
+
+    :cond_1
+    iget-wide v8, v0, Lllc;->b:J
+
+    const-wide/16 v10, -0x1
+
+    cmp-long v2, v8, v10
+
+    move-wide v12, v4
+
+    if-eqz v2, :cond_3
+
+    iget-wide v5, v0, Lllc;->a:J
+
+    add-long v14, v5, v8
+
+    const/4 v2, 0x0
+
+    iget-wide v3, v1, Lllc;->a:J
+
+    cmp-long v3, v14, v3
+
+    if-nez v3, :cond_4
+
+    new-instance v4, Lllc;
+
+    cmp-long v1, v12, v10
+
+    if-nez v1, :cond_2
+
+    :goto_0
+    move-wide v8, v10
+
+    goto :goto_1
+
+    :cond_2
+    add-long v10, v8, v12
+
+    goto :goto_0
+
+    :goto_1
+    invoke-direct/range {v4 .. v9}, Lllc;-><init>(JLjava/lang/String;J)V
+
+    return-object v4
+
+    :cond_3
+    const/4 v2, 0x0
+
+    :cond_4
+    cmp-long v3, v12, v10
+
+    if-eqz v3, :cond_6
+
+    iget-wide v5, v1, Lllc;->a:J
+
+    add-long v3, v5, v12
+
+    iget-wide v14, v0, Lllc;->a:J
+
+    cmp-long v1, v3, v14
+
+    if-nez v1, :cond_6
+
+    new-instance v4, Lllc;
+
+    cmp-long v1, v8, v10
+
+    if-nez v1, :cond_5
+
+    :goto_2
+    move-wide v8, v10
+
+    goto :goto_3
+
+    :cond_5
+    add-long v10, v12, v8
+
+    goto :goto_2
+
+    :goto_3
+    invoke-direct/range {v4 .. v9}, Lllc;-><init>(JLjava/lang/String;J)V
+
+    return-object v4
+
+    :cond_6
+    :goto_4
+    return-object v2
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lllc;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lllc;
+
+    iget-wide v2, p0, Lllc;->a:J
+
+    iget-wide v4, p1, Lllc;->a:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-wide v2, p0, Lllc;->b:J
+
+    iget-wide v4, p1, Lllc;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_2
+
+    iget-object v2, p0, Lllc;->c:Ljava/lang/String;
+
+    iget-object p1, p1, Lllc;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lllc;->d:I
+
+    if-nez v0, :cond_0
+
+    iget-wide v0, p0, Lllc;->a:J
+
+    long-to-int v0, v0
+
+    const/16 v1, 0x20f
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-wide v2, p0, Lllc;->b:J
+
+    long-to-int v0, v2
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lllc;->c:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lllc;->d:I
+
+    :cond_0
+    iget v0, p0, Lllc;->d:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RangedUri(referenceUri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lllc;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", start="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lllc;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", length="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lllc;->b:J
+
+    const-string v3, ")"
+
+    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

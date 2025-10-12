@@ -1,82 +1,254 @@
 .class public final Ljcb;
-.super Ljava/lang/Object;
+.super Lyjg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lncb;
+.field public final X:Lyn7;
 
-.field public final b:Lf35;
+.field public final Y:Lyn7;
 
-.field public final c:Lru/ok/messages/photoeditor/ActPhotoEditor;
+.field public final Z:Lhne;
 
-.field public final d:Lmmc;
+.field public final b:Lyn7;
 
-.field public e:Lmcb;
+.field public final c:Lyn7;
+
+.field public final o:Lyn7;
+
+.field public final r0:Lbpc;
+
+.field public final s0:Lya5;
+
+.field public final t0:Lya5;
+
+.field public final u0:Lt6e;
 
 
 # direct methods
-.method public constructor <init>(Lncb;Lf35;Lru/ok/messages/photoeditor/ActPhotoEditor;Lmmc;Ld35;ZZZ)V
-    .locals 8
+.method public constructor <init>()V
+    .locals 14
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Li18;->a:Li18;
 
-    iput-object p1, p0, Ljcb;->a:Lncb;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
-    iput-object p2, p0, Ljcb;->b:Lf35;
+    move-result-object v1
 
-    iput-object p0, p2, Lf35;->b:Ljcb;
+    const-class v2, Lzk6;
 
-    iput-object p3, p0, Ljcb;->c:Lru/ok/messages/photoeditor/ActPhotoEditor;
+    invoke-virtual {v1, v2}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    iget-object p3, p1, Lncb;->a:Ljava/util/HashSet;
+    move-result-object v1
 
-    invoke-virtual {p3, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
-    iput-object p4, p0, Ljcb;->d:Lmmc;
+    move-result-object v2
 
-    new-instance v0, Lmcb;
+    const-class v3, Ll7f;
+
+    invoke-virtual {v2, v3}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v3
+
+    const-class v4, Lr8b;
+
+    invoke-virtual {v3, v4}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v4
+
+    const-class v5, Lhw9;
+
+    invoke-virtual {v4, v5}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v5
+
+    const-class v6, Le7f;
+
+    invoke-virtual {v5, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v5
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v0
+
+    const-class v6, Lrta;
+
+    invoke-virtual {v0, v6}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lyjg;-><init>()V
+
+    iput-object v1, p0, Ljcb;->b:Lyn7;
+
+    iput-object v2, p0, Ljcb;->c:Lyn7;
+
+    iput-object v3, p0, Ljcb;->o:Lyn7;
+
+    iput-object v5, p0, Ljcb;->X:Lyn7;
+
+    iput-object v0, p0, Ljcb;->Y:Lyn7;
+
+    new-instance v6, Lbcb;
+
+    sget v0, Lqhc;->oneme_location_map_send_geolocation:I
+
+    new-instance v11, Lxcf;
+
+    invoke-direct {v11, v0}, Lxcf;-><init>(I)V
+
+    const/4 v13, 0x1
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v12, 0x0
+
+    invoke-direct/range {v6 .. v13}, Lbcb;-><init>(Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;Lcdf;Ljava/lang/String;Z)V
+
+    invoke-static {v6}, Line;->a(Ljava/lang/Object;)Lhne;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljcb;->Z:Lhne;
+
+    new-instance v1, Lbpc;
+
+    invoke-direct {v1, v0}, Lbpc;-><init>(Lis9;)V
+
+    iput-object v1, p0, Ljcb;->r0:Lbpc;
+
+    new-instance v0, Lya5;
 
     const/4 v1, 0x0
 
+    invoke-direct {v0, v1}, Lya5;-><init>(I)V
+
+    iput-object v0, p0, Ljcb;->s0:Lya5;
+
+    new-instance v0, Lya5;
+
+    invoke-direct {v0, v1}, Lya5;-><init>(I)V
+
+    iput-object v0, p0, Ljcb;->t0:Lya5;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v2, v1}, Lu6e;->a(III)Lt6e;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ljcb;->u0:Lt6e;
+
+    invoke-virtual {v4}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lhw9;
+
+    sget-object v2, Lmdd;->R0:Lmdd;
+
+    sget-object v3, Ll3b;->g:Ll3b;
+
+    invoke-virtual {v1, v2, v3}, Lhw9;->f(Lmdd;Ll3b;)V
+
+    const-wide/16 v1, 0x12c
+
+    invoke-static {v0, v1, v2}, Luce;->x(Liu5;J)Liu5;
+
+    move-result-object v0
+
+    new-instance v1, Lccb;
+
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v1, p0, v2}, Lccb;-><init>(Ljcb;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v6, 0x0
+    invoke-static {v0, v1}, Luce;->P(Liu5;Lje6;)Lk72;
 
-    move v4, p6
+    move-result-object v0
 
-    move v5, p7
+    new-instance v1, Ldcb;
 
-    move/from16 v7, p8
+    invoke-direct {v1, p0, v2}, Ldcb;-><init>(Ljcb;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct/range {v0 .. v7}, Lmcb;-><init>(ZZZZZZZ)V
+    new-instance v2, Lnw5;
 
-    iput-object v0, p0, Ljcb;->e:Lmcb;
+    const/4 v3, 0x1
 
-    invoke-virtual {p1, v0}, Lncb;->a(Lmcb;)V
+    invoke-direct {v2, v0, v1, v3}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p4, p2, p5, p1}, Lmmc;->b(Lf35;Ld35;Z)V
+    invoke-static {v2, v0}, Luce;->N(Liu5;Ln24;)Loke;
 
-    if-eqz p6, :cond_0
+    return-void
+.end method
 
-    if-eqz p7, :cond_0
 
-    iget-object p3, p2, Lf35;->a:Lj35;
+# virtual methods
+.method public final r(ZZ)V
+    .locals 2
 
-    invoke-virtual {p3, p1}, Lj35;->setDrawStickerEnabled(Z)V
+    iget-object v0, p0, Ljcb;->o:Lyn7;
 
-    invoke-virtual {p2}, Lf35;->a()Ld35;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    const/4 p3, 0x0
+    check-cast v0, Lr8b;
 
-    invoke-virtual {p4, p2, p1, p3}, Lmmc;->b(Lf35;Ld35;Z)V
+    sget-object v1, Lr8b;->k:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lr8b;->c([Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lecb;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p2, p1, v1}, Lecb;-><init>(Ljcb;ZZLkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object p2, p0, Lyjg;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p2, v1, v1, v0, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    return-void
 
     :cond_0
+    iget-object p1, p0, Ljcb;->t0:Lya5;
+
+    sget-object p2, Lubb;->a:Lubb;
+
+    invoke-static {p1, p2}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
     return-void
 .end method

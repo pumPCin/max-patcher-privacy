@@ -1,27 +1,82 @@
-.class public final Lsf5;
+.class public interface abstract Lsf5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llif;
+# virtual methods
+.method public abstract a()Lmmf;
+.end method
 
-.field public final b:I
+.method public abstract b()I
+.end method
 
-.field public final c:J
+.method public abstract c(Z)V
+.end method
 
+.method public abstract d(I)Lw66;
+.end method
 
-# direct methods
-.method public constructor <init>(Llif;IJ)V
+.method public abstract e()V
+.end method
+
+.method public abstract f(I)I
+.end method
+
+.method public abstract g(JLjava/util/List;)I
+.end method
+
+.method public abstract h()V
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract j()Lw66;
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l(F)V
+.end method
+
+.method public abstract length()I
+.end method
+
+.method public abstract m()Ljava/lang/Object;
+.end method
+
+.method public n()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lsf5;->a:Llif;
-
-    iput p2, p0, Lsf5;->b:I
-
-    iput-wide p3, p0, Lsf5;->c:J
+.method public o()V
+    .locals 0
 
     return-void
+.end method
+
+.method public abstract p(I)I
+.end method
+
+.method public abstract q(IJ)Z
+.end method
+
+.method public abstract r(JJJLjava/util/List;[Lih8;)V
+.end method
+
+.method public abstract s(Lw66;)I
+.end method
+
+.method public t(JLj43;Ljava/util/List;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract u(IJ)Z
 .end method

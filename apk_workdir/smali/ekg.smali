@@ -1,33 +1,41 @@
-.class public abstract Lekg;
+.class public interface abstract Lekg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 0
+# virtual methods
+.method public a(Ljava/lang/Class;)Lzjg;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object p0
+    const-string v0, "`Factory.create(String, CreationExtras)` is not implemented. You may need to override the method and provide a custom implementation. Note that using `Factory.create(String)` is not supported and considered an error."
 
-    return-object p0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static b(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+.method public b(Ljava/lang/Class;Lhr9;)Lzjg;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    invoke-interface {p0, p1}, Lekg;->a(Ljava/lang/Class;)Lzjg;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    return-object p1
 .end method
 
-.method public static c(Landroid/view/View;)V
+.method public c(Lg53;Lhr9;)Lzjg;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->requestApplyInsets()V
+    invoke-interface {p1}, Le53;->a()Ljava/lang/Class;
 
-    return-void
+    move-result-object p1
+
+    invoke-interface {p0, p1, p2}, Lekg;->b(Ljava/lang/Class;Lhr9;)Lzjg;
+
+    move-result-object p1
+
+    return-object p1
 .end method

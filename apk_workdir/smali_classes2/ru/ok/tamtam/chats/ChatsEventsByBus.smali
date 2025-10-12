@@ -1,5 +1,5 @@
 .class final Lru/ok/tamtam/chats/ChatsEventsByBus;
-.super Lni0;
+.super Lfi0;
 .source "SourceFile"
 
 
@@ -10,15 +10,15 @@
     }
     d2 = {
         "Lru/ok/tamtam/chats/ChatsEventsByBus;",
-        "Lni0;",
-        "Ln0g;",
+        "Lfi0;",
+        "Lzyf;",
         "updateMessageEvent",
-        "Loyf;",
+        "Laxf;",
         "onEvent",
-        "(Ln0g;)V",
-        "La33;",
+        "(Lzyf;)V",
+        "Lv23;",
         "chatsUpdateEvent",
-        "(La33;)V",
+        "(Lv23;)V",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,58 +32,58 @@
 
 
 # virtual methods
-.method public final onEvent(La33;)V
+.method public final onEvent(Lv23;)V
     .locals 3
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .annotation runtime Lxye;
+    .annotation runtime Lpxe;
     .end annotation
 
     .line 9
-    new-instance v0, Lbw2;
+    new-instance v0, Lvv2;
 
     .line 10
-    iget-object v1, p1, La33;->b:Ljava/util/Collection;
+    iget-object v1, p1, Lv23;->b:Ljava/util/Collection;
 
     .line 11
-    new-instance v2, Lgs;
+    new-instance v2, Lus;
 
-    invoke-direct {v2, v1}, Lgs;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v2, v1}, Lus;-><init>(Ljava/util/Collection;)V
 
     .line 12
-    iget-boolean v1, p1, La33;->c:Z
+    iget-boolean v1, p1, Lv23;->c:Z
 
     .line 13
-    iget-object p1, p1, La33;->w0:Ljava/util/Set;
+    iget-object p1, p1, Lv23;->r0:Ljava/util/Set;
 
     .line 14
-    invoke-direct {v0, v2, v1, p1}, Lbw2;-><init>(Ljava/util/Set;ZLjava/util/Set;)V
+    invoke-direct {v0, v2, v1, p1}, Lvv2;-><init>(Ljava/util/Set;ZLjava/util/Set;)V
 
     .line 15
-    invoke-virtual {p0, v0}, Lni0;->a(Ldw2;)V
+    invoke-virtual {p0, v0}, Lfi0;->a(Lxv2;)V
 
     return-void
 .end method
 
-.method public final onEvent(Ln0g;)V
+.method public final onEvent(Lzyf;)V
     .locals 3
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .annotation runtime Lxye;
+    .annotation runtime Lpxe;
     .end annotation
 
     .line 1
-    iget-boolean v0, p1, Ln0g;->X:Z
+    iget-boolean v0, p1, Lzyf;->X:Z
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lbw2;
+    new-instance v0, Lvv2;
 
     .line 3
-    iget-wide v1, p1, Ln0g;->b:J
+    iget-wide v1, p1, Lzyf;->b:J
 
     .line 4
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -98,13 +98,13 @@
     const/4 v1, 0x0
 
     .line 6
-    sget-object v2, Ll75;->a:Ll75;
+    sget-object v2, Ly65;->a:Ly65;
 
     .line 7
-    invoke-direct {v0, p1, v1, v2}, Lbw2;-><init>(Ljava/util/Set;ZLjava/util/Set;)V
+    invoke-direct {v0, p1, v1, v2}, Lvv2;-><init>(Ljava/util/Set;ZLjava/util/Set;)V
 
     .line 8
-    invoke-virtual {p0, v0}, Lni0;->a(Ldw2;)V
+    invoke-virtual {p0, v0}, Lfi0;->a(Lxv2;)V
 
     :cond_0
     return-void

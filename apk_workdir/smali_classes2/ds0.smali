@@ -1,76 +1,99 @@
-.class public abstract Lds0;
-.super Ljava/lang/Object;
+.class public final Lds0;
+.super Luvc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final E0:Lru/ok/messages/settings/view/BrightnessSeekBar;
+
+.field public F0:Lfwd;
+
+.field public G0:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Luvc;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lds0;->a:Ljava/lang/String;
+    sget v0, Lpec;->row_setting_brightness__seek_bar:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lru/ok/messages/settings/view/BrightnessSeekBar;
+
+    iput-object v0, p0, Lds0;->E0:Lru/ok/messages/settings/view/BrightnessSeekBar;
+
+    const/16 v1, 0x64
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setMax(I)V
+
+    new-instance v1, Lcs0;
+
+    invoke-direct {v1, p0, p2}, Lcs0;-><init>(Lds0;Lru/ok/messages/settings/FrgBaseSettings;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    sget-object v1, Lh9f;->a0:Lh4f;
+
+    invoke-static {p2}, Luce;->e0(Landroid/content/Context;)Lh9f;
+
+    move-result-object p2
+
+    invoke-virtual {v0}, Landroid/widget/ProgressBar;->getProgressDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    iget v2, p2, Lh9f;->k:I
+
+    invoke-static {v1, v2}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {v0}, Landroid/widget/AbsSeekBar;->getThumb()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget v1, p2, Lh9f;->k:I
+
+    invoke-static {v0, v1}, Lbv0;->M(Landroid/graphics/drawable/Drawable;I)V
+
+    sget v0, Lpec;->row_setting__separator:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iget v1, p2, Lh9f;->H:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v0, Lpec;->row_setting_brightness__iv_brigthness_low:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iget p2, p2, Lh9f;->F:I
+
+    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    sget v0, Lpec;->row_setting_brightness__iv_brigthness_high:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setColorFilter(I)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-eq p1, p0, :cond_1
-
-    instance-of v0, p1, Lds0;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lds0;
-
-    iget-object p1, p1, Lds0;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lds0;->a:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lds0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lds0;->a:Ljava/lang/String;
-
-    return-object v0
 .end method

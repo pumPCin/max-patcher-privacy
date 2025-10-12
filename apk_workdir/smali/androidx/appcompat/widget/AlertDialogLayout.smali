@@ -1,5 +1,5 @@
 .class public Landroidx/appcompat/widget/AlertDialogLayout;
-.super Lqs7;
+.super Lir7;
 .source "SourceFile"
 
 
@@ -9,7 +9,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, v0}, Lqs7;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, v0}, Lir7;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
@@ -17,7 +17,7 @@
 .method public static c(Landroid/view/View;)I
     .locals 3
 
-    sget-object v0, Lskg;->a:Ljava/util/WeakHashMap;
+    sget-object v0, Lijg;->a:Ljava/util/WeakHashMap;
 
     invoke-virtual {p0}, Landroid/view/View;->getMinimumHeight()I
 
@@ -91,7 +91,7 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lqs7;->getGravity()I
+    invoke-virtual {p0}, Lir7;->getGravity()I
 
     move-result v2
 
@@ -142,7 +142,7 @@
     add-int p3, p5, v3
 
     :goto_0
-    invoke-virtual {p0}, Lqs7;->getDividerDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lir7;->getDividerDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p5
 
@@ -188,7 +188,7 @@
 
     move-result-object v6
 
-    check-cast v6, Lps7;
+    check-cast v6, Lhr7;
 
     iget v7, v6, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
@@ -247,7 +247,7 @@
     goto :goto_2
 
     :goto_3
-    invoke-virtual {p0, v0}, Lqs7;->hasDividerBeforeChildAt(I)Z
+    invoke-virtual {p0, v0}, Lir7;->hasDividerBeforeChildAt(I)Z
 
     move-result v8
 
@@ -326,7 +326,7 @@
 
     move-result v8
 
-    sget v10, Ltdc;->topPanel:I
+    sget v10, Lzbc;->topPanel:I
 
     if-ne v8, v10, :cond_1
 
@@ -335,7 +335,7 @@
     goto :goto_1
 
     :cond_1
-    sget v10, Ltdc;->buttonPanel:I
+    sget v10, Lzbc;->buttonPanel:I
 
     if-ne v8, v10, :cond_2
 
@@ -344,11 +344,11 @@
     goto :goto_1
 
     :cond_2
-    sget v10, Ltdc;->contentPanel:I
+    sget v10, Lzbc;->contentPanel:I
 
     if-eq v8, v10, :cond_3
 
-    sget v10, Ltdc;->customPanel:I
+    sget v10, Lzbc;->customPanel:I
 
     if-ne v8, v10, :cond_4
 
@@ -356,7 +356,7 @@
     if-eqz v5, :cond_5
 
     :cond_4
-    invoke-super/range {p0 .. p2}, Lqs7;->onMeasure(II)V
+    invoke-super/range {p0 .. p2}, Lir7;->onMeasure(II)V
 
     return-void
 
@@ -644,7 +644,7 @@
 
     move-object v9, v3
 
-    check-cast v9, Lps7;
+    check-cast v9, Lhr7;
 
     iget v3, v9, Landroid/widget/LinearLayout$LayoutParams;->width:I
 

@@ -1,8 +1,17 @@
-.class public interface abstract Lnda;
+.class public interface abstract annotation Lnda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
 
 # virtual methods
-.method public abstract a(Lxda;)V
+.method public abstract value()Lvp7;
 .end method

@@ -3,6 +3,6 @@
 
 
 # static fields
-.field public static oneme_stickers_showcase_sets_list:I = 0x7f0a08b1
+.field public static oneme_in_app_review_rating_bar_accessibility:I = 0x7f110027
 
-.field public static oneme_stickers_showcase_toolbar:I = 0x7f0a08b2
+.field public static oneme_in_app_review_rating_star_accessibility:I = 0x7f110028

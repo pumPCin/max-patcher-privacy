@@ -1,63 +1,148 @@
-.class public abstract Lbvd;
+.class public final Lbvd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lln1;
+
+
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
 
 # direct methods
-.method public static a([B)Lcvd;
-    .locals 7
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    move-result-object p0
+    iput-object v0, p0, Lbvd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    new-instance v0, Lcvd;
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
+# virtual methods
+.method public final onCurrentParticipantActiveRoomChanged(Lhn1;)V
+    .locals 2
 
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
+    iget-object v0, p0, Lbvd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    sget-object v6, Lhn4;->o:Lw88;
+    move-result-object v0
 
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v1
 
-    move-result-object p0
+    if-eqz v1, :cond_0
 
-    invoke-static {v6, p0}, Lw88;->n(Lw88;Ljava/lang/Integer;)Lhn4;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v1
 
-    invoke-direct/range {v0 .. v6}, Lcvd;-><init>(JJILhn4;)V
+    check-cast v1, Lln1;
 
-    iget-object p0, v0, Lcvd;->Y:Ljava/lang/String;
+    invoke-interface {v1, p1}, Lln1;->onCurrentParticipantActiveRoomChanged(Lhn1;)V
 
-    const-string v1, "parseFrom"
+    goto :goto_0
 
-    invoke-static {p0, v1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    return-void
+.end method
 
-    return-object v0
+.method public final onCurrentParticipantInvitedToRoom(Lin1;)V
+    .locals 2
 
-    :catch_0
-    move-exception v0
+    iget-object v0, p0, Lbvd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    move-object p0, v0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lln1;
+
+    invoke-interface {v1, p1}, Lln1;->onCurrentParticipantInvitedToRoom(Lin1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRoomRemoved(Ljn1;)V
+    .locals 2
+
+    iget-object v0, p0, Lbvd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lln1;
+
+    invoke-interface {v1, p1}, Lln1;->onRoomRemoved(Ljn1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRoomUpdated(Lkn1;)V
+    .locals 2
+
+    iget-object v0, p0, Lbvd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lln1;
+
+    invoke-interface {v1, p1}, Lln1;->onRoomUpdated(Lkn1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

@@ -1,257 +1,319 @@
-.class public abstract synthetic Li4;
+.class public final Li4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lth5;
+
+
+# instance fields
+.field public final a:Lk4;
+
+.field public final b:Lo3b;
+
+.field public c:Z
+
 
 # direct methods
-.method public static bridge synthetic A(Lxf;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroid/animation/ValueAnimator;->registerDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic a()F
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-static {}, Landroid/animation/ValueAnimator;->getDurationScale()F
+    new-instance v0, Lfx0;
 
-    move-result v0
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lk4;
+
+    const-string v1, "audio/ac3"
+
+    invoke-direct {v0, v1}, Lk4;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Li4;->a:Lk4;
+
+    new-instance v0, Lo3b;
+
+    const/16 v1, 0xae2
+
+    invoke-direct {v0, v1}, Lo3b;-><init>(I)V
+
+    iput-object v0, p0, Li4;->b:Lo3b;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(JJ)V
+    .locals 0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Li4;->c:Z
+
+    iget-object p1, p0, Li4;->a:Lk4;
+
+    invoke-virtual {p1}, Lk4;->a()V
+
+    return-void
+.end method
+
+.method public final i(Lvh5;)Z
+    .locals 13
+
+    new-instance v0, Lo3b;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lo3b;-><init>(I)V
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    iget-object v4, v0, Lo3b;->a:[B
+
+    invoke-interface {p1, v2, v4, v1}, Lvh5;->i(I[BI)V
+
+    invoke-virtual {v0, v2}, Lo3b;->G(I)V
+
+    invoke-virtual {v0}, Lo3b;->x()I
+
+    move-result v4
+
+    const v5, 0x494433
+
+    const/4 v6, 0x3
+
+    if-eq v4, v5, :cond_6
+
+    invoke-interface {p1}, Lvh5;->x()V
+
+    invoke-interface {p1, v3}, Lvh5;->p(I)V
+
+    move v4, v2
+
+    move v5, v3
+
+    :goto_1
+    iget-object v7, v0, Lo3b;->a:[B
+
+    const/4 v8, 0x6
+
+    invoke-interface {p1, v2, v7, v8}, Lvh5;->i(I[BI)V
+
+    invoke-virtual {v0, v2}, Lo3b;->G(I)V
+
+    invoke-virtual {v0}, Lo3b;->A()I
+
+    move-result v7
+
+    const/16 v9, 0xb77
+
+    if-eq v7, v9, :cond_1
+
+    invoke-interface {p1}, Lvh5;->x()V
+
+    add-int/lit8 v5, v5, 0x1
+
+    sub-int v4, v5, v3
+
+    const/16 v7, 0x2000
+
+    if-lt v4, v7, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    invoke-interface {p1, v5}, Lvh5;->p(I)V
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v7, 0x1
+
+    add-int/2addr v4, v7
+
+    const/4 v9, 0x4
+
+    if-lt v4, v9, :cond_2
+
+    return v7
+
+    :cond_2
+    iget-object v10, v0, Lo3b;->a:[B
+
+    array-length v11, v10
+
+    const/4 v12, -0x1
+
+    if-ge v11, v8, :cond_3
+
+    move v9, v12
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v11, 0x5
+
+    aget-byte v11, v10, v11
+
+    and-int/lit16 v11, v11, 0xf8
+
+    shr-int/2addr v11, v6
+
+    if-le v11, v1, :cond_4
+
+    const/4 v8, 0x2
+
+    aget-byte v9, v10, v8
+
+    and-int/lit8 v9, v9, 0x7
+
+    shl-int/lit8 v9, v9, 0x8
+
+    aget-byte v10, v10, v6
+
+    and-int/lit16 v10, v10, 0xff
+
+    or-int/2addr v9, v10
+
+    add-int/2addr v9, v7
+
+    mul-int/2addr v9, v8
+
+    goto :goto_2
+
+    :cond_4
+    aget-byte v7, v10, v9
+
+    and-int/lit16 v9, v7, 0xc0
+
+    shr-int/lit8 v8, v9, 0x6
+
+    and-int/lit8 v7, v7, 0x3f
+
+    invoke-static {v8, v7}, Lte0;->f(II)I
+
+    move-result v9
+
+    :goto_2
+    if-ne v9, v12, :cond_5
+
+    :goto_3
+    return v2
+
+    :cond_5
+    add-int/lit8 v9, v9, -0x6
+
+    invoke-interface {p1, v9}, Lvh5;->p(I)V
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {v0, v6}, Lo3b;->H(I)V
+
+    invoke-virtual {v0}, Lo3b;->t()I
+
+    move-result v4
+
+    add-int/lit8 v5, v4, 0xa
+
+    add-int/2addr v3, v5
+
+    invoke-interface {p1, v4}, Lvh5;->p(I)V
+
+    goto/16 :goto_0
+.end method
+
+.method public final n(Lxh5;)V
+    .locals 5
+
+    new-instance v0, Lnqf;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lnqf;-><init>(IIIB)V
+
+    iget-object v1, p0, Li4;->a:Lk4;
+
+    invoke-virtual {v1, p1, v0}, Lk4;->k(Lxh5;Lnqf;)V
+
+    invoke-interface {p1}, Lxh5;->v()V
+
+    new-instance v0, Lsd0;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {v0, v1, v2}, Lsd0;-><init>(J)V
+
+    invoke-interface {p1, v0}, Lxh5;->O(Lnld;)V
+
+    return-void
+.end method
+
+.method public final o(Lvh5;Lk7;)I
+    .locals 5
+
+    iget-object p2, p0, Li4;->b:Lo3b;
+
+    iget-object v0, p2, Lo3b;->a:[B
+
+    const/16 v1, 0xae2
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v2, v1}, Lo84;->read([BII)I
+
+    move-result p1
+
+    const/4 v0, -0x1
+
+    if-ne p1, v0, :cond_0
 
     return v0
+
+    :cond_0
+    invoke-virtual {p2, v2}, Lo3b;->G(I)V
+
+    invoke-virtual {p2, p1}, Lo3b;->F(I)V
+
+    iget-boolean p1, p0, Li4;->c:Z
+
+    iget-object v0, p0, Li4;->a:Lk4;
+
+    if-nez p1, :cond_1
+
+    const-wide/16 v3, 0x0
+
+    iput-wide v3, v0, Lk4;->o:J
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Li4;->c:Z
+
+    :cond_1
+    invoke-virtual {v0, p2}, Lk4;->f(Lo3b;)V
+
+    return v2
 .end method
 
-.method public static bridge synthetic b(III)I
+.method public final release()V
     .locals 0
-
-    invoke-static {p0, p1, p2}, Landroid/hardware/DataSpace;->pack(III)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-    .locals 0
-
-    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g()Landroid/graphics/Bitmap$Config;
-    .locals 1
-
-    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_1010102:Landroid/graphics/Bitmap$Config;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic h()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_DYNAMIC_RANGE_PROFILES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic i(Ljava/lang/Object;)Landroid/hardware/camera2/params/DynamicRangeProfiles;
-    .locals 0
-
-    check-cast p0, Landroid/hardware/camera2/params/DynamicRangeProfiles;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/media/metrics/MediaMetricsManager;)Landroid/media/metrics/EditingSession;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/MediaMetricsManager;->createEditingSession()Landroid/media/metrics/EditingSession;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic k()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-    .locals 1
-
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_TEXT_SUGGESTIONS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic l(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
-    .locals 0
-
-    check-cast p0, Landroid/window/OnBackInvokedCallback;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic m(Lvf3;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic n(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/View;->findOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
-    .locals 0
-
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic q(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
-
-    invoke-static {p0, v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic r(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getAudioDevicesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic s(Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/util/Set;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic t(Landroid/media/metrics/EditingSession;)V
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/media/metrics/EditingSession;->close()V
 
     return-void
-.end method
-
-.method public static bridge synthetic u(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
-    .locals 0
-
-    invoke-interface {p0, p1, p2}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic v(Landroid/window/OnBackInvokedDispatcher;Ldn;)V
-    .locals 1
-
-    const v0, 0xf4240
-
-    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic w(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic x(Lxf;)Z
-    .locals 0
-
-    invoke-static {p0}, Landroid/animation/ValueAnimator;->unregisterDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic y()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_AVAILABLE_STREAM_USE_CASES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic z(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getDirectProfilesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
 .end method

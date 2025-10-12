@@ -1,64 +1,51 @@
 .class public final Lh22;
-.super Lff3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Lf22;
 
 
 # instance fields
-.field private volatile synthetic _resumed$volatile:I
+.field public final a:Liu5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Liu5;)V
+    .locals 0
 
-    const-class v0, Lh22;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "_resumed$volatile"
-
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lh22;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p1, p0, Lh22;->a:Liu5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lz12;Ljava/lang/Throwable;Z)V
+
+# virtual methods
+.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
 
-    if-nez p2, :cond_0
+    new-instance v0, Lvm1;
 
-    new-instance p2, Ljava/util/concurrent/CancellationException;
+    const/16 v1, 0xa
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1, v1}, Lvm1;-><init>(Lku5;I)V
 
-    const-string v1, "Continuation "
+    iget-object p1, p0, Lh22;->a:Liu5;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " was cancelled normally"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1, v0, p2}, Liu5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    invoke-direct {p0, p2, p3}, Lff3;-><init>(Ljava/lang/Throwable;Z)V
+    sget-object p1, Laxf;->a:Laxf;
 
-    const/4 p1, 0x0
-
-    iput p1, p0, Lh22;->_resumed$volatile:I
-
-    return-void
+    return-object p1
 .end method

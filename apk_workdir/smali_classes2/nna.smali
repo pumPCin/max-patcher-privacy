@@ -1,51 +1,19 @@
-.class public final Lnna;
-.super Lnz3;
+.class public abstract Lnna;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lgu9;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lzna;
-
-.field public o:Lzna;
-
-.field public w0:I
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lzna;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lnna;->Z:Lzna;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lnna;->Y:Ljava/lang/Object;
+    sget v0, Ligc;->invite_friends:I
 
-    iget p1, p0, Lnna;->w0:I
+    sput v0, Lnna;->a:I
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnna;->w0:I
-
-    iget-object p1, p0, Lnna;->Z:Lzna;
-
-    invoke-static {p1, p0}, Lzna;->a(Lzna;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

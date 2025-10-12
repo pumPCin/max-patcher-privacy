@@ -1,77 +1,75 @@
-.class public final Lwih;
+.class public abstract Lwih;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzjh;
-.implements Landroid/os/IInterface;
 
-
-# instance fields
-.field public final c:Landroid/os/IBinder;
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/HashSet;
 
-    iput-object p1, p0, Lwih;->c:Landroid/os/IBinder;
+    const-string v1, "review"
 
-    return-void
-.end method
+    const-string v2, "app_update"
 
+    filled-new-array {v2, v1}, [Ljava/lang/String;
 
-# virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Lwih;->c:Landroid/os/IBinder;
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final k(Landroid/os/Parcel;I)Landroid/os/Parcel;
-    .locals 3
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    new-instance v0, Ljava/util/HashSet;
+
+    const-string v1, "unity"
+
+    const-string v2, "native"
+
+    filled-new-array {v2, v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lwih;->a:Ljava/util/HashMap;
+
+    invoke-static {}, Landroid/os/Process;->myUid()I
+
+    move-result v0
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    const-string v2, "]  PID: ["
+
+    const-string v3, "] "
+
+    const-string v4, "UID: ["
+
+    invoke-static {v4, v0, v2, v1, v3}, Lxw1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    :try_start_0
-    iget-object v1, p0, Lwih;->c:Landroid/os/IBinder;
+    const-string v1, "PlayCoreVersion"
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    return-object v0
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p2
-
-    :try_start_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    throw p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
-
-    throw p2
+    return-void
 .end method

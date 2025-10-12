@@ -2,122 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Loi;
+
 
 # instance fields
-.field public final a:Lx5d;
-
-.field public final b:Lph;
-
-.field public final c:Lqh;
+.field public final synthetic a:Luh;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Luh;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lth;->a:Lx5d;
-
-    new-instance v0, Lph;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lph;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lth;->b:Lph;
-
-    new-instance v0, Lqh;
-
-    invoke-direct {v0, p1, v1}, Lqh;-><init>(Lx5d;I)V
-
-    iput-object v0, p0, Lth;->c:Lqh;
+    iput-object p1, p0, Lth;->a:Luh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;Lnz3;)Ljava/lang/Object;
-    .locals 4
+.method public final a([Ljava/lang/Double;)V
+    .locals 7
 
-    const-string v0, "SELECT * FROM animoji WHERE id IN ("
+    iget-object v0, p0, Lth;->a:Luh;
 
-    invoke-static {v0}, Lqw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v0, Luh;->a:Lzy0;
 
-    move-result-object v0
+    iget-object v1, v1, Lzy0;->i0:Lhh1;
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    iget-object v1, v1, Lhh1;->a:Lch1;
 
-    move-result v1
+    iget-object v1, v1, Lch1;->a:Lyg1;
 
-    invoke-static {v0, v1}, Loch;->h(Ljava/lang/StringBuilder;I)V
+    if-eqz v1, :cond_1
 
-    const-string v2, ")"
+    array-length v2, p1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v3, v2, [F
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo6d;->c(ILjava/lang/String;)Lo6d;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
+    const/4 v4, 0x0
 
     :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v4, v2, :cond_0
 
-    move-result v2
+    aget-object v5, p1, v4
 
-    if-eqz v2, :cond_1
+    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-wide v5
 
-    move-result-object v2
+    double-to-float v5, v5
 
-    check-cast v2, Ljava/lang/Long;
+    aput v5, v3, v4
 
-    if-nez v2, :cond_0
-
-    invoke-virtual {v0, v1}, Lo6d;->Z(I)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0, v1, v2, v3}, Lo6d;->k(IJ)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
+    :cond_0
+    iget-object p1, v0, Luh;->h:Lzi;
+
+    iget-object v0, p1, Lzi;->g:Landroid/os/Handler;
+
+    new-instance v2, Lxi;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p1, v1, v3, v4}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     :cond_1
-    new-instance p1, Landroid/os/CancellationSignal;
+    return-void
+.end method
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+.method public final b()V
+    .locals 0
 
-    new-instance v1, Lsh;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v0, v2}, Lsh;-><init>(Lth;Lo6d;I)V
-
-    iget-object v0, p0, Lth;->a:Lx5d;
-
-    invoke-static {v0, p1, v1, p2}, Lihf;->g(Lx5d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,273 +1,127 @@
-.class public final Lcf3;
-.super Lude;
+.class public final synthetic Lcf3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvad;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public final synthetic b:Landroidx/fragment/app/b;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Landroidx/fragment/app/b;I)V
     .locals 0
 
     iput p2, p0, Lcf3;->a:I
 
-    iput-object p1, p0, Lcf3;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lcf3;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lcf3;->b:Landroidx/fragment/app/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lude;Lle3;)V
-    .locals 1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcf3;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcf3;->c:Ljava/lang/Object;
-
-    iput-object p2, p0, Lcf3;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Lnee;)V
+.method public final a()Landroid/os/Bundle;
     .locals 5
 
     iget v0, p0, Lcf3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
-
-    check-cast v0, [Lffe;
-
-    array-length v1, v0
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    if-ne v1, v2, :cond_0
-
-    aget-object v0, v0, v3
-
-    new-instance v1, Lw7b;
-
-    new-instance v2, Lkk2;
-
-    const/16 v3, 0x13
-
-    invoke-direct {v2, v3, p0}, Lkk2;-><init>(ILjava/lang/Object;)V
-
-    const/16 v3, 0x8
-
-    invoke-direct {v1, p1, v3, v2}, Lw7b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    check-cast v0, Lude;
-
-    invoke-virtual {v0, v1}, Lude;->k(Lnee;)V
-
-    goto :goto_1
-
     :cond_0
-    new-instance v2, Lrfe;
+    iget-object v0, p0, Lcf3;->b:Landroidx/fragment/app/b;
 
-    iget-object v4, p0, Lcf3;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Landroidx/fragment/app/b;->D()Lla6;
 
-    check-cast v4, Lkk2;
+    move-result-object v1
 
-    invoke-direct {v2, p1, v1, v4}, Lrfe;-><init>(Lnee;ILkk2;)V
+    invoke-static {v1}, Landroidx/fragment/app/b;->E(Landroidx/fragment/app/c;)Z
 
-    invoke-interface {p1, v2}, Lnee;->c(Lss4;)V
+    move-result v1
 
-    :goto_0
-    if-ge v3, v1, :cond_3
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2}, Lrfe;->h()Z
+    iget-object v0, v0, Landroidx/fragment/app/b;->E0:Lwq7;
 
-    move-result p1
+    sget-object v1, Lvp7;->ON_STOP:Lvp7;
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v0, v1}, Lwq7;->d(Lvp7;)V
 
-    goto :goto_1
+    new-instance v0, Landroid/os/Bundle;
 
-    :cond_1
-    aget-object p1, v0, v3
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    if-nez p1, :cond_2
-
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "One of the sources is null"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1, v3}, Lrfe;->a(Ljava/lang/Throwable;I)V
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v4, v2, Lrfe;->c:[Lsfe;
-
-    aget-object v4, v4, v3
-
-    check-cast p1, Lude;
-
-    invoke-virtual {p1, v4}, Lude;->k(Lnee;)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
+    new-instance v0, Landroid/os/Bundle;
 
-    check-cast v0, Lmee;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    new-instance v1, Ln0c;
+    iget-object v1, p0, Lcf3;->b:Landroidx/fragment/app/b;
 
-    const/4 v2, 0x5
+    iget-object v1, v1, Lkf3;->r0:Lif3;
 
-    const/4 v3, 0x0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v1, p0, p1, v3, v2}, Ln0c;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lude;->k(Lnee;)V
+    iget-object v3, v1, Lif3;->b:Ljava/util/LinkedHashMap;
 
-    return-void
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    :pswitch_1
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
+    move-result-object v4
 
-    check-cast v0, Laee;
+    invoke-direct {v2, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    new-instance v1, Lqs1;
+    const-string v4, "KEY_COMPONENT_ACTIVITY_REGISTERED_RCS"
 
-    iget-object v2, p0, Lcf3;->c:Ljava/lang/Object;
+    invoke-virtual {v0, v4, v2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    check-cast v2, Lj5;
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-direct {v1, p1, v2}, Lqs1;-><init>(Lnee;Lj5;)V
+    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->keySet()Ljava/util/Set;
 
-    invoke-virtual {v0, v1}, Lude;->k(Lnee;)V
+    move-result-object v3
 
-    return-void
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    :pswitch_2
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
+    const-string v3, "KEY_COMPONENT_ACTIVITY_REGISTERED_KEYS"
 
-    check-cast v0, Lmee;
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    new-instance v1, Lxe3;
+    new-instance v2, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcf3;->c:Ljava/lang/Object;
+    iget-object v3, v1, Lif3;->d:Ljava/util/ArrayList;
 
-    check-cast v2, Lx88;
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    const/4 v3, 0x7
+    const-string v3, "KEY_COMPONENT_ACTIVITY_LAUNCHED_KEYS"
 
-    invoke-direct {v1, p1, v3, v2}, Lxe3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    invoke-virtual {v0, v1}, Lude;->k(Lnee;)V
+    new-instance v2, Landroid/os/Bundle;
 
-    return-void
+    iget-object v1, v1, Lif3;->g:Landroid/os/Bundle;
 
-    :pswitch_3
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
+    invoke-direct {v2, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    check-cast v0, Lle3;
+    const-string v1, "KEY_COMPONENT_ACTIVITY_PENDING_RESULT"
 
-    new-instance v1, Lqe8;
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    iget-object v2, p0, Lcf3;->c:Ljava/lang/Object;
+    return-object v0
 
-    check-cast v2, Lude;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, p1, v2, v3}, Lqe8;-><init>(Lnee;Lude;I)V
-
-    invoke-virtual {v0, v1}, Lle3;->h(Lve3;)V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lrd8;
-
-    new-instance v1, Lxe3;
-
-    iget-object v2, p0, Lcf3;->c:Ljava/lang/Object;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v1, p1, v3, v2}, Lxe3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lrd8;->a(Lke8;)V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lrd8;
-
-    new-instance v1, Lqe8;
-
-    iget-object v2, p0, Lcf3;->c:Ljava/lang/Object;
-
-    check-cast v2, Lude;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, p1, v2, v3}, Lqe8;-><init>(Lnee;Lude;I)V
-
-    invoke-virtual {v0, v1}, Lrd8;->a(Lke8;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object v0, p0, Lcf3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lle3;
-
-    new-instance v1, Lrob;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, p0, v2, p1}, Lrob;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lle3;->h(Lve3;)V
-
-    return-void
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

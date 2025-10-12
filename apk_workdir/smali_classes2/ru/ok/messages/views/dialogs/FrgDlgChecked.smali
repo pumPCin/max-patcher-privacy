@@ -25,18 +25,18 @@
 
 
 # virtual methods
-.method public final Y0(Lu5;)V
+.method public final H0(Lb6;)V
     .locals 6
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->F1:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->y1:Z
 
-    iget-object p1, p0, Landroidx/fragment/app/a;->M0:Landroidx/fragment/app/a;
+    iget-object p1, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
 
     if-nez p1, :cond_0
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->C()Landroidx/fragment/app/b;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Landroidx/fragment/app/a;->M0:Landroidx/fragment/app/a;
+    iget-object v4, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
 
     if-eqz v4, :cond_1
 
@@ -80,13 +80,13 @@
 
     const-string v5, ", but "
 
-    invoke-static {v0, v3, v4, v1, v5}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v4, v1, v5}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, " is null"
 
-    invoke-static {v0, v2, v1}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lbk7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -95,13 +95,11 @@
     throw p1
 
     :cond_3
-    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/FrgDlgChecked;->a1()Ljava/lang/Class;
-
-    move-result-object v3
-
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object p1
+
+    const-class v3, Lfd6;
 
     invoke-virtual {v3, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -113,32 +111,28 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    iget-object v4, p0, Landroidx/fragment/app/a;->M0:Landroidx/fragment/app/a;
+    iget-object v5, p0, Landroidx/fragment/app/a;->G0:Landroidx/fragment/app/a;
 
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_4
 
     move-object v1, v2
 
     :cond_4
-    invoke-virtual {p0}, Lru/ok/messages/views/dialogs/FrgDlgChecked;->a1()Ljava/lang/Class;
+    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, " must be attach to "
+    const-string v3, " must be attach to "
 
     const-string v5, " that implements "
 
-    invoke-static {v0, v3, v4, v1, v5}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v4, v3, v1, v5}, Lnd0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -154,7 +148,4 @@
 
     :cond_5
     return-void
-.end method
-
-.method public abstract a1()Ljava/lang/Class;
 .end method

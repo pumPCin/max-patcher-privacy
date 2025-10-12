@@ -1,161 +1,182 @@
 .class public final Lsy8;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lty8;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lxm2;
-
-.field public final c:Ljava/util/Collection;
+.field public final synthetic Y:Lone/me/members/list/MembersListWidget;
 
 
 # direct methods
-.method public constructor <init>(JLxm2;Ljava/util/Collection;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lsy8;->Y:Lone/me/members/list/MembersListWidget;
 
-    iput-wide p1, p0, Lsy8;->a:J
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Lsy8;->b:Lxm2;
-
-    iput-object p4, p0, Lsy8;->c:Ljava/util/Collection;
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lux8;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lsy8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lsy8;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lsy8;
 
-    iget-wide v3, p0, Lsy8;->a:J
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-wide v5, p1, Lsy8;->a:J
+    invoke-virtual {p1, p2}, Lsy8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lsy8;->b:Lxm2;
-
-    iget-object v3, p1, Lsy8;->b:Lxm2;
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lsy8;->c:Ljava/util/Collection;
-
-    iget-object p1, p1, Lsy8;->c:Ljava/util/Collection;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-wide v0, p0, Lsy8;->a:J
+    new-instance v0, Lsy8;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget-object v1, p0, Lsy8;->Y:Lone/me/members/list/MembersListWidget;
 
-    move-result v0
+    invoke-direct {v0, p2, v1}, Lsy8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object p1, v0, Lsy8;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lsy8;->b:Lxm2;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lsy8;->c:Ljava/util/Collection;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    const-string v1, "Remove(chatId="
+    iget-object p1, p0, Lsy8;->X:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lux8;
 
-    iget-wide v1, p0, Lsy8;->a:J
+    instance-of v0, p1, Lsx8;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v1, ", chatMemberType="
+    iget-object v2, p0, Lsy8;->Y:Lone/me/members/list/MembersListWidget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lsy8;->b:Lxm2;
+    sget-object v0, Lone/me/members/list/MembersListWidget;->C0:[Lpl7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", ids="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lsy8;->c:Ljava/util/Collection;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lone/me/members/list/MembersListWidget;->E0()Lmy8;
 
     move-result-object v0
 
-    return-object v0
+    check-cast p1, Lsx8;
+
+    iget-object p1, p1, Lsx8;->a:Ljava/util/List;
+
+    iget-object v2, v0, Lmy8;->u0:Loke;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ll0;->isActive()Z
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, v0, Lmy8;->Z:Lyn7;
+
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Le7f;
+
+    check-cast v2, Lmka;
+
+    invoke-virtual {v2}, Lmka;->a()Lh24;
+
+    move-result-object v2
+
+    new-instance v3, Ljy8;
+
+    invoke-direct {v3, v0, p1, v1}, Ljy8;-><init>(Lmy8;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {v0, v2, v3, p1}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lmy8;->u0:Loke;
+
+    goto :goto_0
+
+    :cond_1
+    instance-of p1, p1, Ltx8;
+
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lpl7;
+
+    invoke-virtual {v2}, Lone/me/members/list/MembersListWidget;->E0()Lmy8;
+
+    move-result-object p1
+
+    iget-object v0, p1, Lmy8;->Y:Lox8;
+
+    new-instance v2, Lgx8;
+
+    iget-wide v3, p1, Lmy8;->b:J
+
+    iget-object v5, p1, Lmy8;->c:Ltm2;
+
+    iget-object v6, p1, Lmy8;->t0:Ljava/util/Set;
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lgx8;-><init>(JLtm2;Ljava/util/Collection;)V
+
+    iget-object v3, v0, Lox8;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v4, Lnx8;
+
+    invoke-direct {v4, v0, v2, v1}, Lnx8;-><init>(Lox8;Ljx8;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v3, v1, v1, v4, v0}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    sget-object v0, Ly65;->a:Ly65;
+
+    iput-object v0, p1, Lmy8;->t0:Ljava/util/Set;
+
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

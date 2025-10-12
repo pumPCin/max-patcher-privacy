@@ -1,242 +1,203 @@
-.class public final synthetic Lxog;
-.super Ljava/lang/Object;
+.class public final enum Lxog;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field public static final enum X:Lxog;
+
+.field public static final enum Y:Lxog;
+
+.field public static final enum Z:Lxog;
+
+.field public static final enum c:Lxog;
+
+.field public static final enum o:Lxog;
+
+.field public static final synthetic r0:[Lxog;
+
+.field public static final synthetic s0:Laa5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lzog;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzog;Ljava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 14
 
-    iput p3, p0, Lxog;->a:I
+    new-instance v0, Lxog;
 
-    iput-object p1, p0, Lxog;->b:Lzog;
+    const-string v1, "MONEY_BUTTON"
 
-    iput-object p2, p0, Lxog;->c:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
+
+    const-string v4, "money_button"
+
+    invoke-direct {v0, v1, v2, v3, v4}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v1, Lxog;
+
+    const-string v2, "START_BUTTON"
+
+    const/4 v4, 0x2
+
+    const-string v5, "start_button"
+
+    invoke-direct {v1, v2, v3, v4, v5}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v2, Lxog;
+
+    const-string v3, "URL"
+
+    const/4 v5, 0x3
+
+    const-string v6, "url"
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v2, Lxog;->c:Lxog;
+
+    new-instance v3, Lxog;
+
+    const-string v4, "FOLDER"
+
+    const/4 v6, 0x4
+
+    const-string v7, "folder"
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v3, Lxog;->o:Lxog;
+
+    new-instance v4, Lxog;
+
+    const-string v5, "INLINE_BUTTON"
+
+    const/4 v7, 0x5
+
+    const-string v8, "inline_button"
+
+    invoke-direct {v4, v5, v6, v7, v8}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v4, Lxog;->X:Lxog;
+
+    new-instance v5, Lxog;
+
+    const-string v6, "SETTINGS"
+
+    const/4 v8, 0x6
+
+    const-string v9, "settings"
+
+    invoke-direct {v5, v6, v7, v8, v9}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v6, Lxog;
+
+    const-string v7, "SETTINGS_PRIVACY"
+
+    const/16 v9, 0x9
+
+    const-string v10, "settings_privacy"
+
+    invoke-direct {v6, v7, v8, v9, v10}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v7, Lxog;
+
+    const-string v8, "support_from_privacy"
+
+    const/16 v10, 0x3e8
+
+    const-string v11, "SUPPORT_FROM_PRIVACY"
+
+    const/4 v12, 0x7
+
+    invoke-direct {v7, v11, v12, v10, v8}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    new-instance v8, Lxog;
+
+    const-string v10, "from_notification"
+
+    const/16 v11, 0x3e9
+
+    const-string v12, "FROM_NOTIFICATION"
+
+    const/16 v13, 0x8
+
+    invoke-direct {v8, v12, v13, v11, v10}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v8, Lxog;->Y:Lxog;
+
+    move v10, v9
+
+    new-instance v9, Lxog;
+
+    const-string v11, "from_search"
+
+    const/16 v12, 0x3eb
+
+    const-string v13, "FROM_SEARCH"
+
+    invoke-direct {v9, v13, v10, v12, v11}, Lxog;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+
+    sput-object v9, Lxog;->Z:Lxog;
+
+    filled-new-array/range {v0 .. v9}, [Lxog;
+
+    move-result-object v0
+
+    sput-object v0, Lxog;->r0:[Lxog;
+
+    new-instance v1, Laa5;
+
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lxog;->s0:Laa5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 6
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Lxog;->a:I
+    iput-object p4, p0, Lxog;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lxog;->b:Lzog;
-
-    iget-object v1, p0, Lxog;->c:Ljava/lang/String;
-
-    iget-object v2, v0, Lzog;->h:Ljava/lang/String;
-
-    const-string v3, "token"
-
-    invoke-static {v2, v3, v1}, Lzog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "retry"
-
-    const-string v3, "tgt"
-
-    invoke-static {v1, v3, v2}, Lzog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-boolean v2, v0, Lzog;->k:Z
-
-    if-eqz v2, :cond_1
-
-    iget-wide v2, v0, Lzog;->l:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-gtz v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v4, "recoverTs"
-
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v4, v2}, Lzog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_0
-    iget-object v2, v0, Lzog;->q:La4d;
-
-    const-string v3, "transport.restart"
-
-    invoke-virtual {v2, v3}, La4d;->l(Ljava/lang/String;)V
-
-    iget-object v2, v0, Lzog;->b:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    :try_start_0
-    iput-object v1, v0, Lzog;->h:Ljava/lang/String;
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    iget-object v1, v0, Lzog;->e:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    const/4 v2, 0x0
-
-    :try_start_1
-    iput-boolean v2, v0, Lzog;->f:Z
-
-    const-string v2, "restart"
-
-    invoke-virtual {v0, v2}, Lzog;->a(Ljava/lang/String;)V
-
-    monitor-exit v1
+    iput p3, p0, Lxog;->b:I
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public static valueOf(Ljava/lang/String;)Lxog;
+    .locals 1
 
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-class v0, Lxog;
 
-    throw v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :catchall_1
-    move-exception v0
+    move-result-object p0
 
-    :try_start_2
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    check-cast p0, Lxog;
 
-    throw v0
+    return-object p0
+.end method
 
-    :pswitch_0
-    const-string v0, " -> "
+.method public static values()[Lxog;
+    .locals 1
 
-    iget-object v1, p0, Lxog;->b:Lzog;
+    sget-object v0, Lxog;->r0:[Lxog;
 
-    iget-object v2, p0, Lxog;->c:Ljava/lang/String;
-
-    iget-object v3, v1, Lzog;->b:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_3
-    iget-object v4, v1, Lzog;->c:Lirc;
-
-    if-nez v4, :cond_2
-
-    iget-object v0, v1, Lzog;->q:La4d;
-
-    const-string v1, "Socket is absent, waiting?"
-
-    invoke-virtual {v0, v1}, La4d;->l(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v4, v2}, Lirc;->g(Ljava/lang/String;)Z
-
-    iget-object v1, v1, Lzog;->q:La4d;
-
-    iget-object v4, v1, La4d;->c:Ljava/lang/Object;
-
-    check-cast v4, Lqmc;
-
-    invoke-interface {v4}, Lqmc;->shouldHideSensitiveInformation()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-static {v2}, Lvr0;->h(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, v1, La4d;->b:Ljava/lang/Object;
+    check-cast v0, [Lxog;
 
-    check-cast v1, Lpmc;
-
-    const-string v2, "OKWSSignaling"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, " -> "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v1, v2, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v1, v1, La4d;->b:Ljava/lang/Object;
-
-    check-cast v1, Lpmc;
-
-    const-string v4, "OKWSSignaling"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v1, v4, v0}, Lpmc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_1
-    monitor-exit v3
-
-    return-void
-
-    :goto_2
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

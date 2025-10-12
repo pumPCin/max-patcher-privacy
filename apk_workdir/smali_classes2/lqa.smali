@@ -4,88 +4,82 @@
 
 
 # static fields
-.field public static final a:I
+.field public static final a:J
 
-.field public static final b:I
+.field public static final b:J
 
-.field public static final c:I
+.field public static final c:J
 
-.field public static final d:I
+.field public static final d:J
 
-.field public static final e:I
+.field public static final e:J
 
-.field public static final f:I
+.field public static final f:J
 
-.field public static final g:I
+.field public static final g:J
 
-.field public static final h:I
+.field public static final h:J
 
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public static final i:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    sget v0, Lmcc;->contact_icon_corner:I
+    sget v0, Lhdc;->profile_edit_admin_move_rights:I
 
-    sput v0, Llqa;->a:I
+    int-to-long v0, v0
 
-    sget v0, Lmcc;->geo_icon_corner:I
+    sput-wide v0, Llqa;->a:J
 
-    sput v0, Llqa;->b:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_change_chat_info:I
 
-    sget v0, Lmcc;->ic_call_incoming_audio_24:I
+    int-to-long v0, v0
 
-    sput v0, Llqa;->c:I
+    sput-wide v0, Llqa;->b:J
 
-    sget v0, Lmcc;->ic_call_incoming_audio_missed_24:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_control_admin:I
 
-    sput v0, Llqa;->d:I
+    int-to-long v0, v0
 
-    sget v0, Lmcc;->ic_call_incoming_video_missed_24:I
+    sput-wide v0, Llqa;->c:J
 
-    sput v0, Llqa;->e:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_delete_messages:I
 
-    sget v0, Lmcc;->ic_call_incomnig_video_24:I
+    int-to-long v0, v0
 
-    sput v0, Llqa;->f:I
+    sput-wide v0, Llqa;->d:J
 
-    sget v0, Lmcc;->ic_call_outgoing_audio_24:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_edit_chat_link:I
 
-    sput v0, Llqa;->g:I
+    int-to-long v0, v0
 
-    sget v0, Lmcc;->ic_call_outgoing_video_24:I
+    sput-wide v0, Llqa;->e:J
 
-    sput v0, Llqa;->h:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_edit_chat_members:I
 
-    sget v0, Lmcc;->ic_chat_16:I
+    int-to-long v0, v0
 
-    sput v0, Llqa;->i:I
+    sput-wide v0, Llqa;->f:J
 
-    sget v0, Lmcc;->ic_contact_16:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_edit_messages:I
 
-    sput v0, Llqa;->j:I
+    int-to-long v0, v0
 
-    sget v0, Lmcc;->ic_geolocation_filled_28:I
+    sput-wide v0, Llqa;->g:J
 
-    sput v0, Llqa;->k:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_pin_messages:I
 
-    sget v0, Lmcc;->link_icon_corner:I
+    int-to-long v0, v0
 
-    sput v0, Llqa;->l:I
+    sput-wide v0, Llqa;->h:J
 
-    sget v0, Lmcc;->miniapp_icon_corner:I
+    sget v0, Lhdc;->profile_edit_admin_permissions_send_messages:I
 
-    sput v0, Llqa;->m:I
+    int-to-long v0, v0
+
+    sput-wide v0, Llqa;->i:J
 
     return-void
 .end method

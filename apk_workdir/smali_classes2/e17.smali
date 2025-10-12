@@ -1,196 +1,192 @@
 .class public final Le17;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lss4;
+
+# static fields
+.field public static final h:Ljava/util/regex/Pattern;
+
+.field public static final i:Ljava/util/regex/Pattern;
+
+.field public static final j:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:Lzkc;
 
-.field public final Y:Lied;
+.field public final b:Lwkc;
 
-.field public final Z:Lxda;
+.field public final c:Ljava/util/HashMap;
 
-.field public final a:Lbp7;
+.field public d:J
 
-.field public final b:I
+.field public e:J
 
-.field public final c:Ljava/lang/String;
+.field public f:Z
 
-.field public final o:Ljava/lang/String;
-
-.field public final w0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public x0:J
+.field public g:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lxda;Lbp7;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lied;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const-string v0, ".*typ (host|prflx|srflx|relay+).*"
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    move-result-object v0
 
-    iput-object v0, p0, Le17;->w0:Ljava/util/concurrent/atomic/AtomicBoolean;
+    sput-object v0, Le17;->h:Ljava/util/regex/Pattern;
 
-    iput-object p2, p0, Le17;->a:Lbp7;
+    const-string v0, ".*transport=(tcp|udp).*"
 
-    iput p3, p0, Le17;->b:I
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p4, p0, Le17;->c:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p5, p0, Le17;->o:Ljava/lang/String;
+    sput-object v0, Le17;->i:Ljava/util/regex/Pattern;
 
-    iput-object p6, p0, Le17;->X:Ljava/lang/String;
+    const-string v0, ".*(?:tcp|udp) \\d+ (\\S+).*"
 
-    iput-object p7, p0, Le17;->Y:Lied;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p1, p0, Le17;->Z:Lxda;
+    move-result-object v0
 
+    sput-object v0, Le17;->j:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwkc;Lzkc;)V
+    .locals 5
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Le17;->f:Z
+
+    iput-object p2, p0, Le17;->a:Lzkc;
+
+    iput-object p1, p0, Le17;->b:Lwkc;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Le17;->c:Ljava/util/HashMap;
+
+    invoke-static {}, Lgch;->values()[Lgch;
+
+    move-result-object p1
+
+    array-length p2, p1
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, p2, :cond_0
+
+    aget-object v2, p1, v1
+
+    iget-object v3, p0, Le17;->c:Ljava/util/HashMap;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
 .method public final a(Z)V
-    .locals 3
+    .locals 6
 
-    iget-object v0, p0, Le17;->w0:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-wide v0, p0, Le17;->e:J
 
-    const/4 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
+    cmp-long v0, v0, v2
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Le17;->Y:Lied;
-
-    invoke-interface {v0}, Lss4;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    :cond_0
-    if-eqz p1, :cond_3
-
-    const-string p1, "f17"
-
-    const-string v0, "cancelUpload"
-
-    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lgr5;
-
-    if-eqz p1, :cond_3
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-boolean v0, p1, Lgr5;->b:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p1, Lgr5;->a:Lxqc;
-
-    iget-boolean v0, v0, Lxqc;->A0:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p1, Lgr5;->a:Lxqc;
-
-    invoke-virtual {v0}, Lxqc;->d()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    iput-boolean v2, p1, Lgr5;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_2
-    monitor-exit p1
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b(Ljava/lang/String;Lp07;)V
-    .locals 2
-
-    iget-object v0, p0, Le17;->w0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
+    iget-boolean v0, p0, Le17;->f:Z
 
     if-eqz v0, :cond_0
 
-    return-void
+    goto :goto_2
 
     :cond_0
-    new-instance v0, Lb05;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, p0, p1, p2, v1}, Lb05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    iget-object p1, p0, Le17;->Y:Lied;
-
-    invoke-virtual {p1, v0}, Lied;->b(Ljava/lang/Runnable;)Lss4;
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Le17;->a(Z)V
+    iput-boolean v0, p0, Le17;->f:Z
 
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v1, p0, Le17;->g:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "direct"
+
+    iput-object v1, p0, Le17;->g:Ljava/lang/String;
+
+    :goto_0
+    const-string v2, ":"
+
+    invoke-static {v1, v2}, Lbk7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    if-eqz p1, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Le17;->e:J
+
+    sub-long/2addr v2, v4
+
+    goto :goto_1
+
+    :cond_2
+    const-wide/16 v2, -0x1
+
+    :goto_1
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "param"
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object p1, Lzkc;->COLLECTOR_VIDEO:Ljava/lang/String;
+
+    const-string v1, "callCandidatesApply"
+
+    iget-object v2, p0, Le17;->a:Lzkc;
+
+    invoke-virtual {v2, p1, v1, v0}, Lzkc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+
+    :cond_3
+    :goto_2
     return-void
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Le17;->w0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
 .end method

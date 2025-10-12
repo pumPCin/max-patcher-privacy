@@ -3,250 +3,232 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo50;
+.implements Lj73;
+
+
+# static fields
+.field public static final c:Ljava/util/HashSet;
 
 
 # instance fields
-.field public b:Ll50;
+.field public final a:Ljava/util/HashMap;
 
-.field public c:Ll50;
-
-.field public d:Ll50;
-
-.field public e:Ll50;
-
-.field public f:Ljava/nio/ByteBuffer;
-
-.field public g:Ljava/nio/ByteBuffer;
-
-.field public h:Z
+.field public b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 12
+
+    new-instance v0, Ljava/util/HashSet;
+
+    const-string v10, "modified_url"
+
+    const-string v11, "image_color_space"
+
+    const-string v1, "encoded_size"
+
+    const-string v2, "encoded_width"
+
+    const-string v3, "encoded_height"
+
+    const-string v4, "uri_source"
+
+    const-string v5, "image_format"
+
+    const-string v6, "bitmap_config"
+
+    const-string v7, "is_rounded"
+
+    const-string v8, "non_fatal_decode_error"
+
+    const-string v9, "original_url"
+
+    filled-new-array/range {v1 .. v11}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v0, Lhi0;->c:Ljava/util/HashSet;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lo50;->a:Ljava/nio/ByteBuffer;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object v0, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
-
-    sget-object v0, Ll50;->e:Ll50;
-
-    iput-object v0, p0, Lhi0;->d:Ll50;
-
-    iput-object v0, p0, Lhi0;->e:Ll50;
-
-    iput-object v0, p0, Lhi0;->b:Ll50;
-
-    iput-object v0, p0, Lhi0;->c:Ll50;
+    iput-object v0, p0, Lhi0;->a:Ljava/util/HashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/nio/ByteBuffer;
-    .locals 2
+.method public final getExtra(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
+    const/4 v0, 0x0
 
-    sget-object v1, Lo50;->a:Ljava/nio/ByteBuffer;
+    .line 1
+    invoke-virtual {p0, p1, v0}, Lhi0;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v1, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lhi0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    return-object p2
+
+    :cond_0
+    return-object p1
+.end method
+
+.method public final getExtras()Ljava/util/Map;
+    .locals 1
+
+    iget-object v0, p0, Lhi0;->a:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
-.method public final c()V
-    .locals 1
+.method public final getImageInfo()Lw37;
+    .locals 7
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lhi0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
-    iput-boolean v0, p0, Lhi0;->h:Z
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lhi0;->i()V
+    new-instance v1, Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
-    return-void
-.end method
+    invoke-interface {p0}, Lj73;->getWidth()I
 
-.method public d()Z
-    .locals 2
+    move-result v2
 
-    iget-boolean v0, p0, Lhi0;->h:Z
+    invoke-interface {p0}, Lj73;->getHeight()I
 
-    if-eqz v0, :cond_0
+    move-result v3
 
-    iget-object v0, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
+    invoke-interface {p0}, Lj73;->getSizeInBytes()I
 
-    sget-object v1, Lo50;->a:Ljava/nio/ByteBuffer;
+    move-result v4
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p0}, Lhi0;->getQualityInfo()Lt6c;
 
-    const/4 v0, 0x1
+    move-result-object v5
 
-    return v0
+    iget-object v6, p0, Lhi0;->a:Ljava/util/HashMap;
+
+    invoke-direct/range {v1 .. v6}, Lcom/facebook/imagepipeline/image/ImageInfoImpl;-><init>(IIILt6c;Ljava/util/Map;)V
+
+    iput-object v1, p0, Lhi0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
 
     :cond_0
+    iget-object v0, p0, Lhi0;->b:Lcom/facebook/imagepipeline/image/ImageInfoImpl;
+
+    return-object v0
+.end method
+
+.method public getQualityInfo()Lt6c;
+    .locals 1
+
+    sget-object v0, Lj67;->d:Lj67;
+
+    return-object v0
+.end method
+
+.method public isStateful()Z
+    .locals 1
+
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final e(Ll50;)Ll50;
-    .locals 0
-
-    iput-object p1, p0, Lhi0;->d:Ll50;
-
-    invoke-virtual {p0, p1}, Lhi0;->g(Ll50;)Ll50;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhi0;->e:Ll50;
-
-    invoke-virtual {p0}, Lhi0;->isActive()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lhi0;->e:Ll50;
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Ll50;->e:Ll50;
-
-    return-object p1
-.end method
-
-.method public final flush()V
+.method public final putExtra(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
-    sget-object v0, Lo50;->a:Ljava/nio/ByteBuffer;
+    sget-object v0, Lhi0;->c:Ljava/util/HashSet;
 
-    iput-object v0, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lhi0;->h:Z
-
-    iget-object v0, p0, Lhi0;->d:Ll50;
-
-    iput-object v0, p0, Lhi0;->b:Ll50;
-
-    iget-object v0, p0, Lhi0;->e:Ll50;
-
-    iput-object v0, p0, Lhi0;->c:Ll50;
-
-    invoke-virtual {p0}, Lhi0;->h()V
-
-    return-void
-.end method
-
-.method public abstract g(Ll50;)Ll50;
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public isActive()Z
-    .locals 2
-
-    iget-object v0, p0, Lhi0;->e:Ll50;
-
-    sget-object v1, Ll50;->e:Ll50;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public j()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final k(I)Ljava/nio/ByteBuffer;
-    .locals 1
-
-    iget-object v0, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-ge v0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    iget-object v0, p0, Lhi0;->a:Ljava/util/HashMap;
 
-    move-result-object p1
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    :cond_0
+    return-void
+.end method
+
+.method public final putExtras(Ljava/util/Map;)V
+    .locals 4
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    sget-object v0, Lhi0;->c:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v1
 
-    iput-object p1, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    iget-object p1, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
+    :cond_1
+    iget-object v3, p0, Lhi0;->a:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    iget-object p1, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
+    goto :goto_0
 
-    iput-object p1, p0, Lhi0;->g:Ljava/nio/ByteBuffer;
-
-    return-object p1
-.end method
-
-.method public final reset()V
-    .locals 1
-
-    invoke-virtual {p0}, Lhi0;->flush()V
-
-    sget-object v0, Lo50;->a:Ljava/nio/ByteBuffer;
-
-    iput-object v0, p0, Lhi0;->f:Ljava/nio/ByteBuffer;
-
-    sget-object v0, Ll50;->e:Ll50;
-
-    iput-object v0, p0, Lhi0;->d:Ll50;
-
-    iput-object v0, p0, Lhi0;->e:Ll50;
-
-    iput-object v0, p0, Lhi0;->b:Ll50;
-
-    iput-object v0, p0, Lhi0;->c:Ll50;
-
-    invoke-virtual {p0}, Lhi0;->j()V
-
+    :cond_2
+    :goto_1
     return-void
 .end method

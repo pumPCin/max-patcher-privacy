@@ -1,163 +1,204 @@
-.class public abstract synthetic Ltfd;
-.super Ljava/lang/Object;
+.class public final Ltfd;
+.super Ld3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Landroidx/recyclerview/widget/RecyclerView;
+
+
 # direct methods
-.method public static bridge synthetic a(Landroid/graphics/Typeface;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Typeface;->getWeight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/media/AudioManager;I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getStreamMinVolume(I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic c(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic d(Landroid/content/pm/PackageInfo;)J
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/content/pm/PackageInfo;->getLongVersionCode()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static bridge synthetic e(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic f(Landroid/view/WindowInsets;)Landroid/view/DisplayCutout;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->getDisplayCutout()Landroid/view/DisplayCutout;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic g(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/WindowInsets;->consumeDisplayCutout()Landroid/view/WindowInsets;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic h()Ljava/lang/Class;
+.method public constructor <init>(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 1
 
-    const-class v0, Landroid/os/strictmode/DiskReadViolation;
+    const/16 v0, 0xa
 
-    return-object v0
-.end method
+    invoke-direct {p0, v0, p1}, Ld3;-><init>(ILjava/lang/Object;)V
 
-.method public static bridge synthetic i(Landroid/view/DisplayCutout;)Ljava/util/List;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic j(Landroid/app/job/JobInfo$Builder;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/app/job/JobInfo$Builder;->setImportantWhileForeground(Z)Landroid/app/job/JobInfo$Builder;
+    iput-object p2, p0, Ltfd;->c:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void
 .end method
 
-.method public static bridge synthetic k(Landroid/app/job/JobInfo$Builder;Landroid/net/NetworkRequest;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/job/JobInfo$Builder;->setRequiredNetwork(Landroid/net/NetworkRequest;)Landroid/app/job/JobInfo$Builder;
+# virtual methods
+.method public final k0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 6
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
-.method public static bridge synthetic l(Landroid/text/StaticLayout$Builder;)V
-    .locals 1
+    move-result v0
 
-    const/4 v0, 0x0
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
-    invoke-virtual {p0, v0}, Landroid/text/StaticLayout$Builder;->setUseLineSpacingFromFallbacks(Z)Landroid/text/StaticLayout$Builder;
+    move-result v1
 
-    return-void
-.end method
+    if-le v0, v1, :cond_0
 
-.method public static bridge synthetic m(Landroid/widget/TextView;)V
-    .locals 1
+    const-string p1, "ContextMenu.ScrollHelper"
 
-    const/4 v0, 0x0
+    const-string p2, "Can\'t fit view into desired rect!"
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setFallbackLineSpacing(Z)V
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
-.end method
 
-.method public static bridge synthetic n(Landroid/widget/TextView;I)V
-    .locals 0
+    :cond_0
+    iget v0, p1, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setLineHeight(I)V
+    iget v1, p2, Landroid/graphics/Rect;->top:I
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ltfd;->c:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-ge v0, v1, :cond_3
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
+
+    move-result p2
+
+    add-int v1, p2, v0
+
+    if-lez p2, :cond_1
+
+    invoke-virtual {v3, v2, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
+
+    :cond_1
+    if-gez v1, :cond_2
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+
+    move-result p2
+
+    invoke-virtual {v3, p2}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    :cond_2
+    neg-int p2, v0
+
+    invoke-virtual {p1, v2, p2}, Landroid/graphics/Rect;->offset(II)V
 
     return-void
-.end method
 
-.method public static bridge synthetic o(Ljava/lang/CharSequence;)Z
-    .locals 0
+    :cond_3
+    iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
-    instance-of p0, p0, Landroid/text/PrecomputedText;
+    iget p2, p2, Landroid/graphics/Rect;->bottom:I
 
-    return p0
-.end method
+    if-le p1, p2, :cond_b
 
-.method public static bridge synthetic p()Ljava/lang/Class;
-    .locals 1
+    sub-int/2addr p1, p2
 
-    const-class v0, Landroid/os/strictmode/UntaggedSocketViolation;
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollOffset()I
 
-    return-object v0
-.end method
+    move-result p2
 
-.method public static bridge synthetic q()Ljava/lang/Class;
-    .locals 1
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollRange()I
 
-    const-class v0, Landroid/os/strictmode/CustomViolation;
+    move-result v0
 
-    return-object v0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->computeVerticalScrollExtent()I
+
+    move-result v1
+
+    add-int/2addr v1, p2
+
+    sub-int/2addr v0, v1
+
+    if-gez v0, :cond_4
+
+    move v0, v2
+
+    :cond_4
+    if-lez v0, :cond_5
+
+    invoke-virtual {v3, v2, p1}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
+
+    :cond_5
+    sub-int/2addr v0, p1
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object p2
+
+    instance-of v1, p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    if-eqz v1, :cond_6
+
+    check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    goto :goto_0
+
+    :cond_6
+    const/4 p2, 0x0
+
+    :goto_0
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lxuc;
+
+    move-result-object v1
+
+    const/4 v4, 0x1
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Lxuc;->j()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_7
+    move v1, v4
+
+    :goto_1
+    sub-int/2addr v1, v4
+
+    if-eqz p2, :cond_8
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    move v5, v4
+
+    goto :goto_2
+
+    :cond_8
+    move v5, v2
+
+    :goto_2
+    if-eqz p2, :cond_9
+
+    invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->W0()I
+
+    move-result p2
+
+    if-ne p2, v1, :cond_9
+
+    move v2, v4
+
+    :cond_9
+    if-eqz v5, :cond_a
+
+    if-eqz v2, :cond_a
+
+    neg-int p1, p1
+
+    invoke-virtual {v3, p1}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
+
+    return-void
+
+    :cond_a
+    if-gez v0, :cond_b
+
+    invoke-virtual {v3, v0}, Landroidx/recyclerview/widget/RecyclerView;->c0(I)V
+
+    :cond_b
+    return-void
 .end method

@@ -10,6 +10,7 @@
 .method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 2
 
+    .line 2
     new-instance v0, Landroidx/appcompat/widget/Toolbar$a;
 
     const/4 v1, 0x0
@@ -22,6 +23,7 @@
 .method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
+    .line 1
     new-instance v0, Landroidx/appcompat/widget/Toolbar$a;
 
     invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/Toolbar$a;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V

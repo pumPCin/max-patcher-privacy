@@ -3,4 +3,4 @@
 
 
 # static fields
-.field public static invite_friends:I = 0x7f120030
+.field public static ya_key:I = 0x7f130e83

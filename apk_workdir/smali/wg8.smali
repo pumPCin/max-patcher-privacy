@@ -1,48 +1,31 @@
-.class public final Lwg8;
-.super Lnz3;
+.class public Lwg8;
+.super Lem4;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final synthetic e:Lus8;
 
-.field public final synthetic Y:Lpb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic f:Lus8;
 
 
 # direct methods
-.method public constructor <init>(Lpb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lus8;)V
     .locals 0
 
-    iput-object p1, p0, Lwg8;->Y:Lpb;
+    iput-object p1, p0, Lwg8;->f:Lus8;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwg8;->e:Lus8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lem4;->d:Ljava/lang/Object;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lem4;->a:Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lwg8;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lwg8;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwg8;->X:I
-
-    iget-object p1, p0, Lwg8;->Y:Lpb;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

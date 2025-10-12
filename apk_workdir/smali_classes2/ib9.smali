@@ -1,48 +1,66 @@
-.class public final Lib9;
-.super Lnz3;
+.class public final synthetic Lib9;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lmj3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lgb9;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lgb9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lib9;->Y:Lgb9;
+    iput p1, p0, Lib9;->a:I
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lib9;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iput-object p1, p0, Lib9;->o:Ljava/lang/Object;
+    iget v0, p0, Lib9;->a:I
 
-    iget p1, p0, Lib9;->X:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lib9;->b:Ljava/lang/Object;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lyga;
 
-    iput p1, p0, Lib9;->X:I
+    iget-object v0, v0, Lyga;->d:Lq0d;
 
-    iget-object p1, p0, Lib9;->Y:Lgb9;
+    invoke-virtual {v0}, Lq0d;->reset()V
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Lgb9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lib9;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Lqb9;
 
-    return-object p1
+    invoke-virtual {v0}, Lqb9;->e()Lm68;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lm68;->i(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

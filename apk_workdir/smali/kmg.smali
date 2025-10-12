@@ -1,67 +1,160 @@
-.class public abstract Lkmg;
+.class public final Lkmg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lh02;
+
+
+# instance fields
+.field public final a:Lh02;
+
+.field public final b:Ls1d;
+
+.field public final c:Lmmg;
+
+.field public final o:Llmg;
+
 
 # direct methods
-.method public static a(Landroid/view/ViewParent;Landroid/view/View;FFZ)Z
-    .locals 0
+.method public constructor <init>(Lh02;Llmg;Ll8d;)V
+    .locals 1
 
-    invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedFling(Landroid/view/View;FFZ)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lkmg;->a:Lh02;
 
-    return p0
-.end method
+    iput-object p2, p0, Lkmg;->o:Llmg;
 
-.method public static b(Landroid/view/ViewParent;Landroid/view/View;FF)Z
-    .locals 0
+    new-instance p2, Ls1d;
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedPreFling(Landroid/view/View;FF)Z
+    invoke-interface {p1}, Lh02;->f()Lmz1;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
-.end method
+    invoke-direct {p2, v0, p3}, Ls1d;-><init>(Lmz1;Ll8d;)V
 
-.method public static c(Landroid/view/ViewParent;Landroid/view/View;II[I)V
-    .locals 0
+    iput-object p2, p0, Lkmg;->b:Ls1d;
 
-    invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedPreScroll(Landroid/view/View;II[I)V
+    new-instance p2, Lmmg;
 
-    return-void
-.end method
+    invoke-interface {p1}, Lh02;->n()Lf02;
 
-.method public static d(Landroid/view/ViewParent;Landroid/view/View;IIII)V
-    .locals 0
+    move-result-object p1
 
-    invoke-interface/range {p0 .. p5}, Landroid/view/ViewParent;->onNestedScroll(Landroid/view/View;IIII)V
+    invoke-direct {p2, p1}, Lmmg;-><init>(Lf02;)V
+
+    iput-object p2, p0, Lkmg;->c:Lmmg;
 
     return-void
 .end method
 
-.method public static e(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V
-    .locals 0
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
+# virtual methods
+.method public final b(Lb2g;)V
+    .locals 1
+
+    invoke-static {}, Lg8;->g()V
+
+    iget-object v0, p0, Lkmg;->o:Llmg;
+
+    invoke-virtual {v0, p1}, Llmg;->b(Lb2g;)V
 
     return-void
 .end method
 
-.method public static f(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)Z
-    .locals 0
+.method public final d(Lb2g;)V
+    .locals 1
 
-    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
+    invoke-static {}, Lg8;->g()V
 
-    move-result p0
+    iget-object v0, p0, Lkmg;->o:Llmg;
 
-    return p0
+    invoke-virtual {v0, p1}, Llmg;->d(Lb2g;)V
+
+    return-void
 .end method
 
-.method public static g(Landroid/view/ViewParent;Landroid/view/View;)V
-    .locals 0
+.method public final e()Lt8a;
+    .locals 1
 
-    invoke-interface {p0, p1}, Landroid/view/ViewParent;->onStopNestedScroll(Landroid/view/View;)V
+    iget-object v0, p0, Lkmg;->a:Lh02;
+
+    invoke-interface {v0}, Lh02;->e()Lt8a;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final f()Lmz1;
+    .locals 1
+
+    iget-object v0, p0, Lkmg;->b:Ls1d;
+
+    return-object v0
+.end method
+
+.method public final h(Lb2g;)V
+    .locals 1
+
+    invoke-static {}, Lg8;->g()V
+
+    iget-object v0, p0, Lkmg;->o:Llmg;
+
+    invoke-virtual {v0, p1}, Llmg;->h(Lb2g;)V
+
+    return-void
+.end method
+
+.method public final j(Ljava/util/ArrayList;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation not supported by VirtualCamera."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final k(Ljava/util/ArrayList;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation not supported by VirtualCamera."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final l()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final n()Lf02;
+    .locals 1
+
+    iget-object v0, p0, Lkmg;->c:Lmmg;
+
+    return-object v0
+.end method
+
+.method public final o(Lb2g;)V
+    .locals 1
+
+    invoke-static {}, Lg8;->g()V
+
+    iget-object v0, p0, Lkmg;->o:Llmg;
+
+    invoke-virtual {v0, p1}, Llmg;->o(Lb2g;)V
 
     return-void
 .end method

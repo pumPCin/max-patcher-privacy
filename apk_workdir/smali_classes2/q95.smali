@@ -1,49 +1,85 @@
 .class public final Lq95;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Landroid/animation/AnimatorSet;
-
-.field public final c:Z
+.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lq95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    iput-object p1, p0, Lq95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    const/4 p2, 0x2
 
-    invoke-virtual {p2}, Landroid/animation/AnimatorSet;->clone()Landroid/animation/AnimatorSet;
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lq95;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lq95;->b:Landroid/animation/AnimatorSet;
+    check-cast p1, Lq95;
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
+    sget-object p2, Laxf;->a:Laxf;
 
-    move-result-wide p1
+    invoke-virtual {p1, p2}, Lq95;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v0, -0x1
+    return-object p2
+.end method
 
-    cmp-long p1, p1, v0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-nez p1, :cond_0
+    new-instance v0, Lq95;
 
-    const/4 p1, 0x1
+    iget-object v1, p0, Lq95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    goto :goto_0
+    invoke-direct {v0, p2, v1}, Lq95;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
+
+    iput-object p1, v0, Lq95;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lq95;->X:Ljava/lang/Object;
+
+    check-cast p1, Laxf;
+
+    iget-object p1, p0, Lq95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+
+    invoke-virtual {p1}, Ljz3;->getOnBackPressedDispatcher()Lida;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lida;->d()V
 
     :cond_0
-    const/4 p1, 0x0
+    sget-object p1, Laxf;->a:Laxf;
 
-    :goto_0
-    iput-boolean p1, p0, Lq95;->c:Z
-
-    return-void
+    return-object p1
 .end method

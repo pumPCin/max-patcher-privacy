@@ -1,21 +1,48 @@
 .class public final Lme8;
-.super Lo2;
-.source "SourceFile"
+.super Lwy3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lz48;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lz48;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lme8;->Y:Lz48;
+
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final g(Lke8;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lle8;
+    iput-object p1, p0, Lme8;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lme8;->X:I
 
-    invoke-direct {v0, v1, p1}, Lle8;-><init>(ILjava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Lo2;->a:Lrd8;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0}, Lrd8;->a(Lke8;)V
+    iput p1, p0, Lme8;->X:I
 
-    return-void
+    iget-object p1, p0, Lme8;->Y:Lz48;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lz48;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

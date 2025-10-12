@@ -17,16 +17,16 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;",
         "",
-        "Lnwd;",
+        "Lvud;",
         "roomId",
         "",
         "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
         "participants",
         "<init>",
-        "(Lnwd;Ljava/util/Collection;)V",
-        "Lnwd;",
+        "(Lvud;Ljava/util/Collection;)V",
+        "Lvud;",
         "getRoomId",
-        "()Lnwd;",
+        "()Lvud;",
         "Ljava/util/Collection;",
         "getParticipants",
         "()Ljava/util/Collection;",
@@ -54,16 +54,16 @@
     .end annotation
 .end field
 
-.field private final roomId:Lnwd;
+.field private final roomId:Lvud;
 
 
 # direct methods
-.method public constructor <init>(Lnwd;Ljava/util/Collection;)V
+.method public constructor <init>(Lvud;Ljava/util/Collection;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnwd;",
+            "Lvud;",
             "Ljava/util/Collection<",
             "Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;",
             ">;)V"
@@ -72,7 +72,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;->roomId:Lnwd;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;->roomId:Lvud;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;->participants:Ljava/util/Collection;
 
@@ -97,10 +97,10 @@
     return-object v0
 .end method
 
-.method public final getRoomId()Lnwd;
+.method public final getRoomId()Lvud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;->roomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants;->roomId:Lvud;
 
     return-object v0
 .end method

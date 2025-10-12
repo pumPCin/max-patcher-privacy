@@ -1,55 +1,80 @@
 .class public final Luo2;
-.super Lnz3;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public X:Lmo2;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Ljava/util/Iterator;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lwo2;
-
-.field public final synthetic w0:Lwo2;
-
-.field public x0:I
+.field public final synthetic Y:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lwo2;Lnz3;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Luo2;->w0:Lwo2;
+    iput-object p2, p0, Luo2;->Y:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Luo2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Luo2;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Luo2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Luo2;
+
+    iget-object v1, p0, Luo2;->Y:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+
+    invoke-direct {v0, p2, v1}, Luo2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;)V
+
+    iput-object p1, v0, Luo2;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Luo2;->Z:Ljava/lang/Object;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget p1, p0, Luo2;->x0:I
+    iget-object p1, p0, Luo2;->X:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    check-cast p1, Ljava/util/List;
 
-    or-int/2addr p1, v0
+    iget-object v0, p0, Luo2;->Y:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
 
-    iput p1, p0, Luo2;->x0:I
+    iget-object v0, v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->c:La0e;
 
-    iget-object p1, p0, Luo2;->w0:Lwo2;
+    invoke-virtual {v0, p1}, Lhv7;->E(Ljava/util/List;)V
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lwo2;->g(Lmo2;Lnz3;)Ljava/lang/Object;
-
-    move-result-object p1
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

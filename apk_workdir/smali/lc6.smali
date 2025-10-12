@@ -1,43 +1,48 @@
 .class public final Llc6;
-.super Ljava/lang/Object;
+.super Lkc6;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Ljava/util/concurrent/ConcurrentHashMap;
+# interfaces
+.implements Lw0f;
 
 
 # instance fields
-.field public final a:Lwjb;
-
-.field public final b:I
-
-.field public final c:I
+.field public final b:Landroid/database/sqlite/SQLiteStatement;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/database/sqlite/SQLiteStatement;)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-direct {p0, p1}, Lkc6;-><init>(Landroid/database/sqlite/SQLiteProgram;)V
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    sput-object v0, Llc6;->d:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p1, p0, Llc6;->b:Landroid/database/sqlite/SQLiteStatement;
 
     return-void
 .end method
 
-.method public constructor <init>(Lwjb;II)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final m()J
+    .locals 2
 
-    iput-object p1, p0, Llc6;->a:Lwjb;
+    iget-object v0, p0, Llc6;->b:Landroid/database/sqlite/SQLiteStatement;
 
-    iput p2, p0, Llc6;->b:I
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
 
-    iput p3, p0, Llc6;->c:I
+    move-result-wide v0
 
-    return-void
+    return-wide v0
+.end method
+
+.method public final n()I
+    .locals 1
+
+    iget-object v0, p0, Llc6;->b:Landroid/database/sqlite/SQLiteStatement;
+
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
+
+    move-result v0
+
+    return v0
 .end method

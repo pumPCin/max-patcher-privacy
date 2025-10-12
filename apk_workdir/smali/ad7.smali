@@ -1,173 +1,374 @@
-.class public final Lad7;
+.class public abstract Lad7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
+# static fields
+.field public static final a:Ljava/nio/charset/Charset;
 
-# instance fields
-.field public final a:Landroid/app/Dialog;
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "UTF-8"
 
-    iput-object p1, p0, Lad7;->a:Landroid/app/Dialog;
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    iget v0, p2, Landroid/graphics/Rect;->left:I
+    move-result-object v0
 
-    iput v0, p0, Lad7;->b:I
+    sput-object v0, Lad7;->a:Ljava/nio/charset/Charset;
 
-    iget p2, p2, Landroid/graphics/Rect;->top:I
+    const-string v0, "ISO-8859-1"
 
-    iput p2, p0, Lad7;->c:I
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
-    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+    new-instance v0, Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
-
-    move-result p1
-
-    iput p1, p0, Lad7;->o:I
+    sput-object v0, Lad7;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/Map;III)I
+    .locals 4
 
-# virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 5
+    invoke-static {p1}, Ly73;->m(I)I
 
-    const v0, 0x1020002
+    move-result p1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget v1, p0, Lad7;->b:I
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v2, :cond_0
+
+    if-eqz v1, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-static {v3, p2, v2}, Ly73;->d(IILjava/lang/Object;)I
 
     move-result v2
 
-    add-int/2addr v2, v1
+    const/4 v3, 0x2
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+    invoke-static {v3, p3, v1}, Ly73;->d(IILjava/lang/Object;)I
 
     move-result v1
 
     add-int/2addr v1, v2
 
-    iget v3, p0, Lad7;->c:I
+    add-int v2, p1, v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
-
-    move-result v4
-
-    add-int/2addr v4, v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v4
-
-    new-instance v3, Landroid/graphics/RectF;
-
-    int-to-float v2, v2
-
-    int-to-float v4, v4
-
-    int-to-float v1, v1
-
-    int-to-float v0, v0
-
-    invoke-direct {v3, v2, v4, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    invoke-static {v1}, Ly73;->j(I)I
 
     move-result v1
 
-    invoke-virtual {v3, v0, v1}, Landroid/graphics/RectF;->contains(FF)Z
+    add-int/2addr v1, v2
 
-    move-result v0
+    add-int/2addr v0, v1
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    return v1
+    goto :goto_0
 
     :cond_0
-    invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string p1, "keys and values in maps cannot be null"
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public static final b(Lx73;Ljava/util/Map;Lr88;IILs59;II)Ljava/util/Map;
+    .locals 2
+
+    invoke-interface {p2, p1}, Lr88;->b(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lx73;->p()I
 
     move-result p2
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, p2}, Lx73;->e(I)I
 
-    if-ne p2, v2, :cond_1
+    move-result p2
 
-    const/4 p2, 0x4
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p2}, Landroid/view/MotionEvent;->setAction(I)V
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Lx73;->s()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    if-ne v1, p6, :cond_2
 
-    const/16 v3, 0x1c
+    invoke-virtual {p0, p3}, Lx73;->k(I)Ljava/io/Serializable;
 
-    if-ge p2, v3, :cond_2
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
-
-    iget p2, p0, Lad7;->o:I
-
-    neg-int v1, p2
-
-    sub-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    neg-int p2, p2
-
-    sub-int/2addr p2, v2
-
-    int-to-float p2, p2
-
-    invoke-virtual {v0, v1, p2}, Landroid/view/MotionEvent;->setLocation(FF)V
+    goto :goto_0
 
     :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
+    if-ne v1, p7, :cond_4
 
-    iget-object p1, p0, Lad7;->a:Landroid/app/Dialog;
+    const/16 v1, 0xb
 
-    invoke-virtual {p1, v0}, Landroid/app/Dialog;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    if-ne p4, v1, :cond_3
 
-    move-result p1
+    move-object v1, p5
 
-    return p1
+    check-cast v1, Ls59;
+
+    invoke-virtual {p0, v1}, Lx73;->j(Ls59;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0, p4}, Lx73;->k(I)Ljava/io/Serializable;
+
+    move-result-object p5
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0, v1}, Lx73;->u(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :goto_1
+    const/4 p6, 0x0
+
+    invoke-virtual {p0, p6}, Lx73;->a(I)V
+
+    invoke-virtual {p0, p2}, Lx73;->d(I)V
+
+    if-nez v0, :cond_5
+
+    invoke-static {p3}, Lad7;->c(I)Ljava/io/Serializable;
+
+    move-result-object v0
+
+    :cond_5
+    if-nez p5, :cond_6
+
+    invoke-static {p4}, Lad7;->c(I)Ljava/io/Serializable;
+
+    move-result-object p5
+
+    :cond_6
+    invoke-interface {p1, v0, p5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public static c(I)Ljava/io/Serializable;
+    .locals 3
+
+    packed-switch p0, :pswitch_data_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Type: "
+
+    const-string v2, " is not a primitive type."
+
+    invoke-static {p0, v1, v2}, Lxw1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_1
+    sget-object p0, Lggh;->s:[B
+
+    return-object p0
+
+    :pswitch_2
+    const-string p0, ""
+
+    return-object p0
+
+    :pswitch_3
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p0
+
+    :pswitch_4
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_5
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_6
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_7
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+    .end packed-switch
+.end method
+
+.method public static d(Ly73;Ljava/util/Map;III)V
+    .locals 6
+
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v1, :cond_0
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, p3, v1}, Ly73;->d(IILjava/lang/Object;)I
+
+    move-result v3
+
+    const/4 v4, 0x2
+
+    invoke-static {v4, p4, v0}, Ly73;->d(IILjava/lang/Object;)I
+
+    move-result v5
+
+    add-int/2addr v5, v3
+
+    invoke-virtual {p0, p2, v4}, Ly73;->F(II)V
+
+    invoke-virtual {p0, v5}, Ly73;->C(I)V
+
+    invoke-virtual {p0, v2, p3, v1}, Ly73;->u(IILjava/lang/Object;)V
+
+    invoke-virtual {p0, v4, p4, v0}, Ly73;->u(IILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "keys and values in maps cannot be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    return-void
 .end method

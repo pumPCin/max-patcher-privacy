@@ -1,52 +1,70 @@
 .class public final Lfdg;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lix7;
+.implements Lje6;
+
+
+# instance fields
+.field public synthetic X:Z
 
 
 # virtual methods
-.method public final a()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lfdg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lfdg;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lfdg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(Ljava/lang/Long;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Lfdg;
 
-.method public final c()V
-    .locals 0
+    const/4 v1, 0x2
 
-    return-void
-.end method
+    invoke-direct {v0, v1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.method public final d()Lev5;
-    .locals 1
+    check-cast p1, Ljava/lang/Boolean;
 
-    sget-object v0, Lz65;->a:Lz65;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iput-boolean p1, v0, Lfdg;->X:Z
 
     return-object v0
 .end method
 
-.method public final e()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
-.end method
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-.method public final release()V
-    .locals 0
+    iget-boolean p1, p0, Lfdg;->X:Z
 
-    return-void
-.end method
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public final seekTo(J)V
-    .locals 0
+    move-result-object p1
 
-    return-void
+    return-object p1
 .end method

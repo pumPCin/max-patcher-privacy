@@ -1,49 +1,41 @@
-.class public abstract Llwa;
+.class public interface abstract Llwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract a()Lcu2;
+.end method
 
-.field public static final b:I
+.method public abstract b()Lme0;
+.end method
 
-.field public static final c:I
+.method public abstract c()Ltne;
+.end method
 
-.field public static final d:I
+.method public abstract d()Lho6;
+.end method
 
-.field public static final e:I
+.method public abstract e(I)I
+.end method
 
-.field public static final f:I
+.method public abstract f()Lo4;
+.end method
 
+.method public abstract g()Lm5g;
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract getIcon()Lg17;
+.end method
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_favorite_title:I
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    sput v0, Llwa;->a:I
+.method public abstract getText()Lobf;
+.end method
 
-    sget v0, Lmkc;->oneme_stickers_preview_action_forward_title:I
+.method public abstract h()Lk93;
+.end method
 
-    sput v0, Llwa;->b:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_action_in_favorite_title:I
-
-    sput v0, Llwa;->c:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_action_send_title:I
-
-    sput v0, Llwa;->d:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_snackbar_favorite_added:I
-
-    sput v0, Llwa;->e:I
-
-    sget v0, Lmkc;->oneme_stickers_preview_snackbar_favorite_removed:I
-
-    sput v0, Llwa;->f:I
-
-    return-void
+.method public abstract i()Laxe;
 .end method

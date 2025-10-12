@@ -1,45 +1,37 @@
-.class public final Lgeh;
+.class public abstract Lgeh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+# static fields
+.field public static final a:Ljdh;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Ljdh;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-direct {v0, v1}, Ljdh;-><init>(I)V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    sput-object v0, Lgeh;->a:Ljdh;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
 
-    iput-object v0, p0, Lgeh;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 v1, 0x1
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string v2, "profile"
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
-    iput-object v0, p0, Lgeh;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Lcom/google/android/gms/common/api/Scope;
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string v2, "email"
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    new-instance v0, Landroid/util/Size;
-
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/common/api/Scope;-><init>(ILjava/lang/String;)V
 
     return-void
 .end method

@@ -1,47 +1,161 @@
-.class public final Ljh3;
+.class public abstract Ljh3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lzb8;
+# static fields
+.field public static final a:Lcc5;
 
-.field public final b:Ljava/lang/Object;
+.field public static final b:Ljava/lang/Object;
 
-.field public final c:Ljava/util/ArrayList;
+.field public static final c:Lh4f;
 
-.field public d:I
+.field public static final d:Lh4f;
 
-.field public e:I
+.field public static final e:Lcc5;
 
-.field public f:Z
+.field public static final f:Lh4f;
+
+.field public static final g:Lh4f;
+
+.field public static final h:Lh4f;
+
+.field public static final i:Lh4f;
 
 
 # direct methods
-.method public constructor <init>(Llj0;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lcc5;
 
-    new-instance v0, Lzb8;
+    const/4 v6, 0x1
 
-    const/4 v1, 0x0
+    const/16 v7, 0x40
 
-    invoke-direct {v0, p1, v1}, Lzb8;-><init>(Llj0;Z)V
+    const-string v1, "common"
 
-    iput-object v0, p0, Ljh3;->a:Lzb8;
+    const/4 v2, 0x1
 
-    new-instance p1, Ljava/util/ArrayList;
+    const-wide/16 v3, 0x1388
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    const/4 v5, 0x1
 
-    iput-object p1, p0, Ljh3;->c:Ljava/util/ArrayList;
+    invoke-direct/range {v0 .. v7}, Lcc5;-><init>(Ljava/lang/String;IJZZI)V
 
-    new-instance p1, Ljava/lang/Object;
+    sput-object v0, Ljh3;->a:Lcc5;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ltp2;
 
-    iput-object p1, p0, Ljh3;->b:Ljava/lang/Object;
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Ltp2;-><init>(I)V
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Lwee;->u(ILtd6;)Lyn7;
+
+    move-result-object v0
+
+    sput-object v0, Ljh3;->b:Ljava/lang/Object;
+
+    new-instance v0, Ltp2;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Ltp2;-><init>(I)V
+
+    new-instance v2, Lh4f;
+
+    invoke-direct {v2, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v2, Ljh3;->c:Lh4f;
+
+    new-instance v0, Ltp2;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Ltp2;-><init>(I)V
+
+    new-instance v2, Lh4f;
+
+    invoke-direct {v2, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v2, Ljh3;->d:Lh4f;
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
+    move-result v0
+
+    mul-int/2addr v0, v1
+
+    add-int/lit8 v3, v0, -0x1
+
+    new-instance v1, Lcc5;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x60
+
+    const-string v2, "computation"
+
+    const-wide/16 v4, 0x1388
+
+    invoke-direct/range {v1 .. v8}, Lcc5;-><init>(Ljava/lang/String;IJZZI)V
+
+    sput-object v1, Ljh3;->e:Lcc5;
+
+    new-instance v0, Ltp2;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Ltp2;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Ljh3;->f:Lh4f;
+
+    new-instance v0, Ltp2;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Ltp2;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Ljh3;->g:Lh4f;
+
+    new-instance v0, Ltp2;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Ltp2;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Ljh3;->h:Lh4f;
+
+    new-instance v0, Ltp2;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Ltp2;-><init>(I)V
+
+    new-instance v1, Lh4f;
+
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
+
+    sput-object v1, Ljh3;->i:Lh4f;
 
     return-void
 .end method

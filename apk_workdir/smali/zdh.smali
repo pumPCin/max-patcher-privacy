@@ -1,43 +1,27 @@
-.class public final synthetic Lzdh;
-.super Lt5c;
+.class public final Lzdh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final a:Lreh;
+
+.field public final b:I
+
+.field public final c:Ldn6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lreh;ILdn6;)V
+    .locals 0
 
-    new-instance v0, Lzdh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "getJitterBufferMs()J"
+    iput-object p1, p0, Lzdh;->a:Lreh;
 
-    const/4 v2, 0x0
+    iput p2, p0, Lzdh;->b:I
 
-    const-class v3, Lcle;
-
-    const-string v4, "jitterBufferMs"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iput-object p3, p0, Lzdh;->c:Ldn6;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Lcle;
-
-    iget-wide v0, p1, Lale;->k:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
 .end method

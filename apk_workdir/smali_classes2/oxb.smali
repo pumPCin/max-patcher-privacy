@@ -1,30 +1,26 @@
 .class public final Loxb;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/profileedit/ProfileEditScreen;
-
-.field public final synthetic Z:Landroid/view/View;
+.field public final synthetic Y:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
     .locals 0
 
-    iput-object p1, p0, Loxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+    iput-object p2, p0, Loxb;->Y:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    iput-object p2, p0, Loxb;->Z:Landroid/view/View;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Luvb;
+    check-cast p1, Llxb;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +40,7 @@
 
     check-cast p1, Loxb;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Loxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,15 +48,13 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
     new-instance v0, Loxb;
 
-    iget-object v1, p0, Loxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+    iget-object v1, p0, Loxb;->Y:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    iget-object v2, p0, Loxb;->Z:Landroid/view/View;
-
-    invoke-direct {v0, v1, v2, p2}, Loxb;-><init>(Lone/me/profileedit/ProfileEditScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Loxb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
 
     iput-object p1, v0, Loxb;->X:Ljava/lang/Object;
 
@@ -68,210 +62,245 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    .locals 19
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    move-object/from16 v0, p0
 
-    iget-object p1, p0, Loxb;->X:Ljava/lang/Object;
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    check-cast p1, Luvb;
+    iget-object v1, v0, Loxb;->X:Ljava/lang/Object;
 
-    iget-object v0, p0, Loxb;->Y:Lone/me/profileedit/ProfileEditScreen;
+    check-cast v1, Llxb;
 
-    iget-object v1, v0, Lone/me/profileedit/ProfileEditScreen;->B0:Lan0;
+    instance-of v2, v1, Lkxb;
 
-    iget-object v2, v0, Lone/me/profileedit/ProfileEditScreen;->y0:Lmqc;
+    sget-object v3, Laxf;->a:Laxf;
 
-    sget-object v3, Lone/me/profileedit/ProfileEditScreen;->C0:[Ltm7;
+    iget-object v4, v0, Loxb;->Y:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-    const/4 v4, 0x4
+    if-eqz v2, :cond_1
 
-    aget-object v5, v3, v4
+    check-cast v1, Lkxb;
 
-    invoke-interface {v2, v0, v5}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    iget-object v2, v1, Lkxb;->a:Lxcf;
+
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    check-cast v5, Llha;
-
-    iget-object v6, p1, Luvb;->a:Ljava/lang/String;
-
-    iget-boolean v7, p1, Luvb;->e:Z
-
-    iget-wide v8, p1, Luvb;->b:J
-
-    new-instance v10, Ljava/lang/Long;
-
-    invoke-direct {v10, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v8, p1, Luvb;->d:Ljava/lang/CharSequence;
-
-    if-nez v8, :cond_0
-
-    const-string v8, ""
-
-    :cond_0
-    invoke-static {v5, v6, v10, v8}, Llha;->n(Llha;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    aget-object v4, v3, v4
-
-    invoke-interface {v2, v0, v4}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    check-cast v2, Llha;
+    if-nez v2, :cond_0
 
-    iget-boolean v4, p1, Luvb;->f:Z
+    goto/16 :goto_2
 
-    invoke-virtual {v2, v4}, Llha;->setAddBadgeVisibility(Z)V
+    :cond_0
+    new-instance v5, Lrta;
 
-    iget p1, p1, Luvb;->g:I
+    invoke-direct {v5, v4}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    invoke-static {p1}, Lqw1;->u(I)I
+    new-instance v4, Lfua;
 
-    move-result p1
+    iget v1, v1, Lkxb;->b:I
 
-    const/4 v2, 0x1
+    invoke-direct {v4, v1}, Lfua;-><init>(I)V
 
-    if-eqz p1, :cond_3
+    invoke-virtual {v5, v4}, Lrta;->e(Ljua;)V
 
-    if-ne p1, v2, :cond_2
+    invoke-virtual {v5, v2}, Lrta;->h(Ljava/lang/CharSequence;)V
 
-    if-eqz v7, :cond_1
+    invoke-virtual {v5}, Lrta;->i()Lqta;
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Ltya;
-
-    move-result-object p1
-
-    new-instance v1, Ldya;
-
-    new-instance v2, Ljxb;
-
-    const/4 v3, 0x4
-
-    invoke-direct {v2, v0, v3}, Ljxb;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
-
-    invoke-direct {v1, v2}, Ldya;-><init>(Lxe6;)V
-
-    invoke-virtual {p1, v1}, Ltya;->setRightActions(Ljya;)V
-
-    goto :goto_1
+    return-object v3
 
     :cond_1
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Ltya;
+    instance-of v2, v1, Lhxb;
 
-    move-result-object p1
+    if-eqz v2, :cond_2
 
-    sget-object v0, Leya;->a:Leya;
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Ltya;->setRightActions(Ljya;)V
+    move-result-object v2
 
-    goto :goto_1
+    check-cast v1, Lhxb;
+
+    iget-object v1, v1, Lhxb;->a:Ljava/lang/String;
+
+    invoke-static {v2, v1}, Lq63;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-object v3
 
     :cond_2
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    instance-of v2, v1, Ljxb;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const/4 v5, 0x1
 
-    throw p1
+    const/4 v6, 0x0
+
+    if-eqz v2, :cond_3
+
+    invoke-static {v5}, Lnc6;->b(I)Ley3;
+
+    move-result-object v2
+
+    check-cast v1, Ljxb;
+
+    iget-object v1, v1, Ljxb;->a:Ljava/util/List;
+
+    invoke-interface {v2, v1}, Ley3;->p(Ljava/util/Collection;)Ley3;
+
+    move-result-object v1
+
+    iget-object v2, v4, Lone/me/profile/screens/invite/ProfileInviteScreen;->X:Lvoc;
+
+    sget-object v5, Lone/me/profile/screens/invite/ProfileInviteScreen;->Y:[Lpl7;
+
+    aget-object v5, v5, v6
+
+    invoke-interface {v2, v4, v5}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/ImageView;
+
+    invoke-interface {v1, v2}, Ley3;->x(Landroid/view/View;)Ley3;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ley3;->build()Lfy3;
+
+    move-result-object v1
+
+    invoke-interface {v1, v4}, Lfy3;->v(Lone/me/sdk/arch/Widget;)V
+
+    return-object v3
 
     :cond_3
-    invoke-virtual {v1}, Lan0;->a()Z
+    instance-of v2, v1, Lixb;
 
-    move-result p1
+    if-eqz v2, :cond_8
 
-    if-nez p1, :cond_4
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
 
-    iget-object p1, p0, Loxb;->Z:Landroid/view/View;
+    check-cast v1, Lixb;
 
-    check-cast p1, Landroid/view/ViewGroup;
+    iget-object v2, v1, Lixb;->a:Lxcf;
 
-    invoke-virtual {v1}, Lan0;->getValue()Ljava/lang/Object;
+    const/4 v7, 0x6
 
-    move-result-object v4
+    const/4 v8, 0x0
 
-    check-cast v4, Landroid/view/View;
+    invoke-static {v2, v8, v8, v7}, Ld40;->b(Lcdf;Landroid/os/Bundle;Lmdd;I)Lil3;
 
-    invoke-virtual {p1, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    move-result-object v11
 
-    :cond_4
-    invoke-virtual {v1}, Lan0;->getValue()Ljava/lang/Object;
+    iget-object v2, v1, Lixb;->b:Lxcf;
 
-    move-result-object p1
+    invoke-virtual {v11, v2}, Lil3;->f(Lcdf;)V
 
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, v1, Lixb;->c:Ljava/util/List;
 
-    const/4 v1, 0x0
+    new-instance v9, Lym2;
 
-    if-eqz v7, :cond_5
+    const/16 v15, 0x8
 
-    move v4, v1
+    const/16 v16, 0xb
+
+    const/4 v10, 0x1
+
+    const-class v12, Lil3;
+
+    const-string v13, "addButton"
+
+    const-string v14, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
+
+    invoke-direct/range {v9 .. v16}, Lym2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lwm2;
+
+    const/16 v7, 0x9
+
+    invoke-direct {v2, v9, v7}, Lwm2;-><init>(Lv8;I)V
+
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
+
+    invoke-virtual {v11}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v4}, Ljz3;->setTargetController(Ljz3;)V
+
+    invoke-virtual {v13, v4}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+
+    move-object v1, v4
+
+    :goto_0
+    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
+
+    move-result-object v1
 
     goto :goto_0
 
+    :cond_4
+    instance-of v2, v1, Lt6d;
+
+    if-eqz v2, :cond_5
+
+    check-cast v1, Lt6d;
+
+    goto :goto_1
+
     :cond_5
-    const/16 v4, 0x8
-
-    :goto_0
-    invoke-virtual {p1, v4}, Landroid/view/View;->setVisibility(I)V
-
-    if-eqz v7, :cond_6
-
-    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p1
-
-    const/16 v1, 0xc
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lxq4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v4
-
-    invoke-static {v1}, Lv63;->r0(F)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    add-int/2addr v1, p1
-
-    :cond_6
-    iget-object p1, v0, Lone/me/profileedit/ProfileEditScreen;->Z:Lmqc;
-
-    aget-object v2, v3, v2
-
-    invoke-interface {p1, v0, v2}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {p1, v0, v2, v3, v1}, Landroid/view/View;->setPadding(IIII)V
+    move-object v1, v8
 
     :goto_1
-    sget-object p1, Loyf;->a:Loyf;
+    if-eqz v1, :cond_6
 
-    return-object p1
+    invoke-interface {v1}, Lt6d;->f0()Ln6d;
+
+    move-result-object v8
+
+    :cond_6
+    invoke-virtual {v13, v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v8, :cond_7
+
+    new-instance v12, Lq6d;
+
+    const/16 v17, 0x0
+
+    const/16 v18, -0x1
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x0
+
+    invoke-direct/range {v12 .. v18}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+
+    const-string v1, "BottomSheetWidget"
+
+    invoke-static {v6, v12, v5, v1}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
+
+    invoke-virtual {v8, v12}, Ln6d;->H(Lq6d;)V
+
+    :cond_7
+    :goto_2
+    return-object v3
+
+    :cond_8
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v1
 .end method

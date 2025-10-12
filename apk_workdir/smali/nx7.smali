@@ -1,29 +1,35 @@
-.class public abstract Lnx7;
+.class public final Lnx7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljkb;
+
+.field public final b:J
+
+.field public final c:F
+
+.field public final d:Z
+
+.field public final e:J
+
+
 # direct methods
-.method public static a()Lkx7;
-    .locals 2
+.method public constructor <init>(Ljkb;Lbhf;Lot8;JJFZJ)V
+    .locals 0
 
-    new-instance v0, Lkx7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v1, Lu84;->c:Lu84;
+    iput-object p1, p0, Lnx7;->a:Ljkb;
 
-    invoke-direct {v0, v1}, Lkx7;-><init>(Lu84;)V
+    iput-wide p6, p0, Lnx7;->b:J
 
-    return-object v0
-.end method
+    iput p8, p0, Lnx7;->c:F
 
-.method public static b()Lmx7;
-    .locals 2
+    iput-boolean p9, p0, Lnx7;->d:Z
 
-    new-instance v0, Lmx7;
+    iput-wide p10, p0, Lnx7;->e:J
 
-    sget-object v1, Lu84;->c:Lu84;
-
-    invoke-direct {v0, v1}, Lmx7;-><init>(Lu84;)V
-
-    return-object v0
+    return-void
 .end method

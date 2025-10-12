@@ -1,97 +1,124 @@
 .class public final Lgzg;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lpzg;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Landroid/webkit/WebChromeClient$FileChooserParams;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/webapp/settings/WebAppSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Landroid/webkit/WebChromeClient$FileChooserParams;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lgzg;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    iput-object p1, p0, Lgzg;->a:Landroid/webkit/WebChromeClient$FileChooserParams;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Lgzg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lgzg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lgzg;
 
-    iget-object v1, p0, Lgzg;->a:Landroid/webkit/WebChromeClient$FileChooserParams;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object p1, p1, Lgzg;->a:Landroid/webkit/WebChromeClient$FileChooserParams;
+    invoke-virtual {p1, p2}, Lgzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lgzg;->a:Landroid/webkit/WebChromeClient$FileChooserParams;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Lgzg;
 
-    const-string v1, "ShowFileChooser(params="
+    iget-object v1, p0, Lgzg;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Lgzg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/settings/WebAppSettingsScreen;)V
 
-    iget-object v1, p0, Lgzg;->a:Landroid/webkit/WebChromeClient$FileChooserParams;
+    iput-object p1, v0, Lgzg;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    const-string v1, ")"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Lgzg;->X:Ljava/lang/Object;
+
+    check-cast p1, Ldw9;
+
+    sget-object v0, Lone/me/webapp/settings/WebAppSettingsScreen;->r0:[Lpl7;
+
+    instance-of v0, p1, Lc73;
+
+    iget-object v1, p0, Lgzg;->Y:Lone/me/webapp/settings/WebAppSettingsScreen;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ln6d;->C()Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lkc4;
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lewg;->c:Lewg;
+
+    check-cast p1, Lkc4;
+
+    invoke-virtual {v0, p1}, Ld3;->r0(Lkc4;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v0, p1, Ljzg;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v1}, Ljz3;->getRouter()Ln6d;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Ln6d;->C()Z
+
+    sget-object v0, Lewg;->c:Lewg;
+
+    check-cast p1, Ljzg;
+
+    iget-object p1, p1, Ljzg;->b:Lkc4;
+
+    invoke-virtual {v0, p1}, Ld3;->r0(Lkc4;)V
+
+    :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

@@ -1,9 +1,9 @@
 .class public final Loi1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p1, Loi1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Loi1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,135 +60,47 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 4
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Loi1;->X:Ljava/lang/Object;
 
-    check-cast p1, Lri1;
+    check-cast p1, Ljava/lang/Boolean;
 
-    sget-object v0, Lpi1;->a:Lpi1;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result p1
 
-    move-result v0
+    iget-object v0, p0, Loi1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    iget-object v1, p0, Loi1;->Y:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->I0:Lvoc;
 
-    if-eqz v0, :cond_1
+    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->J0:[Lpl7;
 
-    invoke-static {v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->Q0(Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)Lqnc;
+    const/4 v3, 0x7
 
-    move-result-object p1
+    aget-object v2, v2, v3
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_3
-
-    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    instance-of v4, v3, Lknc;
-
-    if-eqz v4, :cond_0
-
-    check-cast v3, Lknc;
-
-    invoke-virtual {v3, v1}, Lknc;->setChecked(Z)V
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lqi1;
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, Lqi1;
-
-    iget-boolean p1, p1, Lqi1;->a:Z
-
-    if-eqz p1, :cond_2
-
-    sget p1, Lt9d;->t3:I
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-interface {v1, v0, v2}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lo7;->o(Landroid/content/Context;I)Ljava/lang/String;
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move-result-object p1
+    if-eqz p1, :cond_0
 
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p1
+    :cond_0
+    const/16 p1, 0x8
 
-    new-instance v0, Lava;
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {v0, v1}, Lava;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget v2, Laka;->J0:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v2}, Ljef;-><init>(I)V
-
-    invoke-virtual {v0, v3}, Lava;->g(Loef;)V
-
-    sget v2, Laka;->I0:I
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    new-instance v3, Llef;
-
-    invoke-static {p1}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-direct {v3, v2, p1}, Llef;-><init>(ILjava/util/List;)V
-
-    invoke-virtual {v0, v3}, Lava;->a(Loef;)V
-
-    new-instance p1, Lova;
-
-    sget v2, Lwja;->d:I
-
-    invoke-direct {p1, v2}, Lova;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Lava;->e(Ltva;)V
-
-    invoke-virtual {v0}, Lava;->i()Lzua;
-
-    :cond_2
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
-
-    :cond_3
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

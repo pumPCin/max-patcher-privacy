@@ -34,7 +34,7 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Loyf;",
+        "Laxf;",
         "sendStat",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
         "Lru/ok/android/onelog/OneLogItem;",
@@ -63,16 +63,40 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     :try_start_0
-    invoke-static {}, Lru/ok/android/ext/OneLogger;->ensureInitialized()V
+    sget-object v0, Lcea;->a:Lol;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-class v1, Lcea;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, " is not initialized, please call init() method on this class\nYou can find this class in \"ru.ok.android:onelogger:0.2.7\""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
     :try_end_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
     :catch_0
+    :goto_0
     return-void
 .end method
 

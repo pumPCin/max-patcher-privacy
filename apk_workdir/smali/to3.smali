@@ -1,51 +1,33 @@
-.class public final Lto3;
+.class public abstract Lto3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lys8;
+.field public static final a:Lkl3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    const-string v0, "ConstraintsCmdHandler"
+    new-instance v0, Lkl3;
 
-    invoke-static {v0}, Lbf0;->C(Ljava/lang/String;)Ljava/lang/String;
+    sget v1, Loja;->k:I
 
-    move-result-object v0
+    sget v2, Lz7d;->p:I
 
-    sput-object v0, Lto3;->c:Ljava/lang/String;
+    new-instance v3, Lxcf;
 
-    return-void
-.end method
+    invoke-direct {v3, v2}, Lxcf;-><init>(I)V
 
-.method public constructor <init>(Landroid/content/Context;ILw5f;)V
-    .locals 0
+    const/4 v2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v4, 0x38
 
-    iput p2, p0, Lto3;->a:I
+    invoke-direct {v0, v1, v3, v2, v4}, Lkl3;-><init>(ILcdf;II)V
 
-    iget-object p1, p3, Lw5f;->X:Lm9h;
-
-    iget-object p1, p1, Lm9h;->j:Lyqd;
-
-    new-instance p2, Lys8;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p1, p3}, Lys8;-><init>(Lyqd;Ly8h;)V
-
-    iput-object p2, p0, Lto3;->b:Lys8;
+    sput-object v0, Lto3;->a:Lkl3;
 
     return-void
 .end method

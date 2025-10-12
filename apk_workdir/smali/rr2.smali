@@ -1,63 +1,30 @@
 .class public final Lrr2;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lur2;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/List;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Landroid/os/Bundle;
 
-.field public final synthetic Z:Lmed;
-
-.field public o:Z
-
-.field public w0:I
+.field public final c:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lmed;Lnz3;)V
+.method public constructor <init>(Lkv7;Landroid/os/Bundle;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lrr2;->Z:Lmed;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrr2;->a:Ljava/util/List;
+
+    iput-object p2, p0, Lrr2;->b:Landroid/os/Bundle;
+
+    iput-object p3, p0, Lrr2;->c:Landroid/view/View;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iput-object p1, p0, Lrr2;->Y:Ljava/lang/Object;
-
-    iget p1, p0, Lrr2;->w0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrr2;->w0:I
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    iget-object v0, p0, Lrr2;->Z:Lmed;
-
-    const-wide/16 v1, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    move-object v7, p0
-
-    invoke-virtual/range {v0 .. v7}, Lmed;->a(JILzu0;Lh86;ZLnz3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

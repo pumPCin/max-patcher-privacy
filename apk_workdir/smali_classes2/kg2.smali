@@ -1,100 +1,189 @@
 .class public final Lkg2;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lnnb;
 
-.field public final synthetic Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+.field public final b:Lfm3;
+
+.field public final c:Lb49;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+.method public constructor <init>(Lnnb;Lfm3;Lb49;)V
     .locals 0
 
-    iput-object p2, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lkg2;->a:Lnnb;
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lkg2;->b:Lfm3;
+
+    iput-object p3, p0, Lkg2;->c:Lb49;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Z)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkg2;->a:Lnnb;
 
-    invoke-virtual {p0, p1, p2}, Lkg2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Lpnb;
 
-    move-result-object p1
+    iget-object v0, v0, Lpnb;->c:Lz2g;
 
-    check-cast p1, Lkg2;
+    iget-object v0, v0, Lv3;->h:Lbo7;
 
-    sget-object p2, Loyf;->a:Loyf;
+    const-string v1, "app.media.load.gif"
 
-    invoke-virtual {p1, p2}, Lkg2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    return-object p2
-.end method
+    invoke-virtual {v0, v1, v2}, Lbo7;->getInt(Ljava/lang/String;I)I
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result v0
 
-    new-instance v0, Lkg2;
+    if-eqz p1, :cond_0
 
-    iget-object v1, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Lkg2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
-
-    iput-object p1, v0, Lkg2;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkg2;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    invoke-virtual {p0, v0}, Lkg2;->b(I)Z
 
     move-result p1
 
-    iget-object v0, p0, Lkg2;->Y:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    return p1
 
-    iget-object v0, v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->F0:Ljava/lang/Object;
+    :cond_0
+    const/4 p1, -0x1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    if-eq v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v2
+.end method
+
+.method public final b(I)Z
+    .locals 3
+
+    iget-object v0, p0, Lkg2;->b:Lfm3;
+
+    invoke-interface {v0}, Lfm3;->g()Z
+
+    move-result v1
+
+    invoke-interface {v0}, Lfm3;->b()Lvm3;
 
     move-result-object v0
 
-    check-cast v0, Lh00;
+    const/4 v2, -0x1
 
-    const/16 v1, 0x64
+    if-eq p1, v2, :cond_2
 
-    int-to-float v1, v1
+    sget-object v2, Lvm3;->b:Lvm3;
 
-    mul-float/2addr p1, v1
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lv63;->r0(F)I
+    if-ne v0, v2, :cond_2
+
+    goto :goto_0
+
+    :cond_0
+    if-eq v0, v2, :cond_1
+
+    iget-object p1, p0, Lkg2;->a:Lnnb;
+
+    check-cast p1, Lpnb;
+
+    iget-object p1, p1, Lpnb;->c:Lz2g;
+
+    invoke-virtual {p1}, Lhgd;->j()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
+    if-nez p1, :cond_1
 
-    sget-object p1, Loyf;->a:Loyf;
+    if-nez v1, :cond_2
 
-    return-object p1
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final c()Z
+    .locals 3
+
+    iget-object v0, p0, Lkg2;->a:Lnnb;
+
+    check-cast v0, Lpnb;
+
+    iget-object v0, v0, Lpnb;->c:Lz2g;
+
+    const/4 v1, 0x0
+
+    iget-object v0, v0, Lv3;->h:Lbo7;
+
+    const-string v2, "app.media.load.photo"
+
+    invoke-virtual {v0, v2, v1}, Lbo7;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lkg2;->b(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d(Z)Z
+    .locals 3
+
+    iget-object v0, p0, Lkg2;->a:Lnnb;
+
+    check-cast v0, Lpnb;
+
+    iget-object v0, v0, Lpnb;->c:Lz2g;
+
+    iget-object v0, v0, Lv3;->h:Lbo7;
+
+    const-string v1, "app.media.load.stickers"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lbo7;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0, v0}, Lkg2;->b(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    if-eq v0, p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    return v2
 .end method

@@ -3,40 +3,44 @@
 
 
 # static fields
-.field public static file_fill_24:I = 0x7f0803e3
+.field public static oneme_chatmedia_viewer_bulk_saving_all:I = 0x7f0a0632
 
-.field public static geolocation_fill_24:I = 0x7f0804eb
+.field public static oneme_chatmedia_viewer_bulk_saving_only_this:I = 0x7f0a0633
 
-.field public static ic_arrow_down_24:I = 0x7f080526
+.field public static oneme_chatmedia_viewer_content_level_item_view_type:I = 0x7f0a0634
 
-.field public static ic_arrow_up_24:I = 0x7f08052f
+.field public static oneme_chatmedia_viewer_content_level_stub_view:I = 0x7f0a0635
 
-.field public static ic_camera_add_36:I = 0x7f080571
+.field public static oneme_chatmedia_viewer_info_panel_author_view:I = 0x7f0a0636
 
-.field public static ic_clear_24:I = 0x7f080594
+.field public static oneme_chatmedia_viewer_info_panel_date_view:I = 0x7f0a0637
 
-.field public static ic_contact_28:I = 0x7f0805aa
+.field public static oneme_chatmedia_viewer_info_panel_forward_message_view:I = 0x7f0a0638
 
-.field public static ic_cross_12:I = 0x7f0805b4
+.field public static oneme_chatmedia_viewer_info_panel_view:I = 0x7f0a0639
 
-.field public static ic_document_28:I = 0x7f0805c8
+.field public static oneme_chatmedia_viewer_pager:I = 0x7f0a063a
 
-.field public static ic_file_mode_24:I = 0x7f0805e6
+.field public static oneme_chatmedia_viewer_photo_gif_view:I = 0x7f0a063b
 
-.field public static ic_gallery_28:I = 0x7f0805fb
+.field public static oneme_chatmedia_viewer_photo_item_view_type:I = 0x7f0a063c
 
-.field public static ic_location_28:I = 0x7f08065b
+.field public static oneme_chatmedia_viewer_photo_view:I = 0x7f0a063d
 
-.field public static ic_media_mode_24:I = 0x7f080670
+.field public static oneme_chatmedia_viewer_toolbar:I = 0x7f0a063e
 
-.field public static ic_snack_file_24:I = 0x7f0807a4
+.field public static oneme_chatmedia_viewer_toolbar_action_forward_attach:I = 0x7f0a063f
 
-.field public static ic_snack_media_24:I = 0x7f0807a5
+.field public static oneme_chatmedia_viewer_toolbar_action_goto_message:I = 0x7f0a0640
 
-.field public static ic_videocam_20:I = 0x7f0807eb
+.field public static oneme_chatmedia_viewer_toolbar_action_save_gallery:I = 0x7f0a0641
 
-.field public static media_fill_24:I = 0x7f080897
+.field public static oneme_chatmedia_viewer_toolbar_action_share:I = 0x7f0a0642
 
-.field public static profile_fill_24:I = 0x7f080926
+.field public static oneme_chatmedia_viewer_video_item_view_type:I = 0x7f0a0643
 
-.field public static wallet_fill_24:I = 0x7f08098e
+.field public static oneme_chatmedia_viewer_video_preview_view:I = 0x7f0a0644
+
+.field public static oneme_chatmedia_viewer_video_view:I = 0x7f0a0645
+
+.field public static oneme_chatmedia_viewer_video_zoom_view:I = 0x7f0a0646

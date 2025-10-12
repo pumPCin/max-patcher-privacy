@@ -1,111 +1,63 @@
-.class public final synthetic Lx13;
-.super Ljava/lang/Object;
+.class public final Lx13;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/util/List;
 
-.field public final synthetic b:Lm23;
+.field public Y:J
 
-.field public final synthetic c:J
+.field public Z:Z
+
+.field public o:Lh23;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lh23;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm23;JI)V
+.method public constructor <init>(Lh23;Lwy3;)V
     .locals 0
 
-    iput p4, p0, Lx13;->a:I
+    iput-object p1, p0, Lx13;->s0:Lh23;
 
-    iput-object p1, p0, Lx13;->b:Lm23;
-
-    iput-wide p2, p0, Lx13;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lx13;->a:I
+    iput-object p1, p0, Lx13;->r0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lx13;->t0:I
 
-    iget-wide v0, p0, Lx13;->c:J
+    const/high16 v0, -0x80000000
 
-    iget-object v2, p0, Lx13;->b:Lm23;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v2}, Lm23;->M()Lub2;
+    iput p1, p0, Lx13;->t0:I
 
-    move-result-object v2
+    const/4 v4, 0x0
 
-    invoke-virtual {v2, v0, v1}, Lub2;->z(J)Lm82;
+    const/4 v5, 0x0
 
-    move-result-object v0
+    iget-object v0, p0, Lx13;->s0:Lh23;
 
-    return-object v0
+    const-wide/16 v1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lx13;->b:Lm23;
+    move-object v3, p0
 
-    invoke-virtual {v0}, Lm23;->M()Lub2;
+    invoke-virtual/range {v0 .. v5}, Lh23;->H(JLwy3;Ljava/util/List;Z)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-wide v1, p0, Lx13;->c:J
-
-    invoke-virtual {v0, v1, v2}, Lub2;->F(J)Lm82;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Lm82;->B()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v3}, Lm82;->Q()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    sget-object v2, Loc2;->a:Loc2;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, v1, v3, v3}, Lub2;->b(Loc2;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lm82;
-
-    move-result-object v3
-
-    :cond_1
-    :goto_0
-    return-object v3
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,64 +1,55 @@
 .class public final Lqhf;
-.super Lnxc;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lzaf;
 
 
 # instance fields
-.field public final J0:Landroidx/appcompat/widget/AppCompatTextView;
+.field public X:Ljava/nio/ByteBuffer;
+
+.field public Y:Lhif;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lhif;
+
+.field public final synthetic r0:Lhif;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
-    .locals 1
+.method public constructor <init>(Lhif;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lnxc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Lqhf;->r0:Lhif;
 
-    move-object v0, p1
-
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    iput-object v0, p0, Lqhf;->J0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Ltk4;->e0:Ltk4;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget-object v0, Lvaf;->a0:Ls5f;
-
-    invoke-static {p1}, Lnf2;->J(Landroid/content/Context;)Lvaf;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {p0, p1}, Lqhf;->y(Lvaf;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final y(Lvaf;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lqhf;->J0:Landroidx/appcompat/widget/AppCompatTextView;
+    iput-object p1, p0, Lqhf;->Z:Ljava/lang/Object;
 
-    iget p1, p1, Lvaf;->F:I
+    iget p1, p0, Lqhf;->s0:I
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqhf;->s0:I
+
+    iget-object p1, p0, Lqhf;->r0:Lhif;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lhif;->a(Ljava/nio/ByteBuffer;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

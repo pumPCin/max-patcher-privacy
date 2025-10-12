@@ -1,272 +1,48 @@
 .class public abstract Ly9c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Lwf6;
 
+# static fields
+.field public static compat_button_inset_horizontal_material:I = 0x7f07007d
 
-# direct methods
-.method public static a(Landroid/content/Context;Landroid/os/Bundle;)Lu9c;
-    .locals 4
+.field public static compat_button_inset_vertical_material:I = 0x7f07007e
 
-    const-string v0, "androidx.camera.core.quirks.DEFAULT_QUIRK_ENABLED"
+.field public static compat_button_padding_horizontal_material:I = 0x7f07007f
 
-    const/4 v1, 0x1
+.field public static compat_button_padding_vertical_material:I = 0x7f070080
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
+.field public static compat_control_corner_material:I = 0x7f070081
 
-    move-result v0
+.field public static compat_notification_large_icon_max_height:I = 0x7f070082
 
-    const-string v1, "androidx.camera.core.quirks.FORCE_ENABLED"
+.field public static compat_notification_large_icon_max_width:I = 0x7f070083
 
-    invoke-static {p0, v1, p1}, Ly9c;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
+.field public static notification_action_icon_size:I = 0x7f0703b1
 
-    move-result-object v1
+.field public static notification_action_text_size:I = 0x7f0703b2
 
-    const-string v2, "androidx.camera.core.quirks.FORCE_DISABLED"
+.field public static notification_big_circle_margin:I = 0x7f0703b3
 
-    invoke-static {p0, v2, p1}, Ly9c;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
+.field public static notification_content_margin_start:I = 0x7f0703b4
 
-    move-result-object p0
+.field public static notification_large_icon_height:I = 0x7f0703b5
 
-    const-string p1, "Loaded quirk settings from metadata:"
+.field public static notification_large_icon_width:I = 0x7f0703b6
 
-    const-string v2, "QuirkSettingsLoader"
+.field public static notification_main_column_padding_top:I = 0x7f0703b7
 
-    invoke-static {v2, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
+.field public static notification_media_narrow_margin:I = 0x7f0703b8
 
-    new-instance p1, Ljava/lang/StringBuilder;
+.field public static notification_right_icon_size:I = 0x7f0703b9
 
-    const-string v3, "  KEY_DEFAULT_QUIRK_ENABLED = "
+.field public static notification_right_side_padding_top:I = 0x7f0703ba
 
-    invoke-direct {p1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static notification_small_icon_background_padding:I = 0x7f0703bb
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+.field public static notification_small_icon_size_as_large:I = 0x7f0703bc
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static notification_subtext_size:I = 0x7f0703bd
 
-    move-result-object p1
+.field public static notification_top_pad:I = 0x7f0703be
 
-    invoke-static {v2, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v3, "  KEY_QUIRK_FORCE_ENABLED = "
-
-    invoke-direct {p1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v3, "  KEY_QUIRK_FORCE_DISABLED = "
-
-    invoke-direct {p1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Ls4d;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v1}, Ly9c;->c([Ljava/lang/String;)Ljava/util/HashSet;
-
-    move-result-object p1
-
-    new-instance v1, Ljava/util/HashSet;
-
-    invoke-direct {v1, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {p0}, Ly9c;->c([Ljava/lang/String;)Ljava/util/HashSet;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance p0, Lu9c;
-
-    invoke-direct {p0, v0, v1, p1}, Lu9c;-><init>(ZLjava/util/HashSet;Ljava/util/HashSet;)V
-
-    return-object p0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    new-array p0, v1, [Ljava/lang/String;
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    invoke-virtual {p2, p1, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
-
-    move-result p2
-
-    const-string v2, "QuirkSettingsLoader"
-
-    if-ne p2, v0, :cond_1
-
-    const-string p0, "Resource ID not found for key: "
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v2, p0}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-array p0, v1, [Ljava/lang/String;
-
-    return-object p0
-
-    :cond_1
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Quirk class names resource not found: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1, p0}, Ls4d;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-array p0, v1, [Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static c([Ljava/lang/String;)Ljava/util/HashSet;
-    .locals 8
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_2
-
-    aget-object v3, p0, v2
-
-    const-string v4, "QuirkSettingsLoader"
-
-    :try_start_0
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v5
-
-    const-class v6, Lt9c;
-
-    invoke-virtual {v6, v5}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v6, " does not implement the Quirk interface."
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Ls4d;->N(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v5
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "Class not found: "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v4, v3, v5}, Ls4d;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    const/4 v5, 0x0
-
-    :goto_2
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-.end method
+.field public static notification_top_pad_large_text:I = 0x7f0703bf

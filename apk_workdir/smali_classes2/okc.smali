@@ -1,74 +1,82 @@
-.class public abstract Lokc;
+.class public final synthetic Lokc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a4a
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a4b
+.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
 
-.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a4c
 
-.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a4d
+# direct methods
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;I)V
+    .locals 0
 
-.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a4e
+    iput p2, p0, Lokc;->a:I
 
-.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a4f
+    iput-object p1, p0, Lokc;->b:Lone/me/rlottie/RLottieDrawable;
 
-.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a50
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a51
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a52
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a53
+# virtual methods
+.method public final run()V
+    .locals 3
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a54
+    iget v0, p0, Lokc;->a:I
 
-.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a55
+    iget-object v1, p0, Lokc;->b:Lone/me/rlottie/RLottieDrawable;
 
-.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a56
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a57
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a58
+    new-instance v0, Ljava/util/ArrayList;
 
-.field public static oneme_stickers_settings_recent_title:I = 0x7f130a59
+    iget-object v2, v1, Lone/me/rlottie/RLottieDrawable;->D1:Ljava/util/Set;
 
-.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a5a
+    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-.field public static oneme_stickers_settings_sets_title:I = 0x7f130a5b
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a5c
+    move-result-object v0
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a5d
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a5e
+    move-result v2
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a5f
+    if-eqz v2, :cond_0
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a60
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a61
+    move-result-object v2
 
-.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a62
+    check-cast v2, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
 
-.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a63
+    invoke-interface {v2, v1}, Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;->onLoaded(Lone/me/rlottie/RLottieDrawable;)V
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a64
+    goto :goto_0
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a65
+    :cond_0
+    return-void
 
-.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a66
+    :pswitch_0
+    invoke-virtual {v1}, Lone/me/rlottie/RLottieDrawable;->invalidateInternal()V
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a67
+    return-void
 
-.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a68
+    nop
 
-.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a69
-
-.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a6a
-
-.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130a6c
-
-.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130a6d
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

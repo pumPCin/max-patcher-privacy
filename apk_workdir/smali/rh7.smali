@@ -1,136 +1,111 @@
-.class public final Lrh7;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.class public abstract Lrh7;
+.super Lkotlinx/coroutines/internal/LockFreeLinkedListNode;
 .source "SourceFile"
+
+# interfaces
+.implements Lis4;
+.implements Ln87;
 
 
 # instance fields
-.field public a:Z
-
-.field public final synthetic b:Lth7;
-
-
-# direct methods
-.method public constructor <init>(Lth7;)V
-    .locals 0
-
-    iput-object p1, p0, Lrh7;->b:Lth7;
-
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lrh7;->a:Z
-
-    return-void
-.end method
+.field public a:Lgi7;
 
 
 # virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final b()Lm0a;
+    .locals 1
 
-    const/4 p1, 0x1
+    const/4 v0, 0x0
 
-    return p1
+    return-object v0
 .end method
 
-.method public final onLongPress(Landroid/view/MotionEvent;)V
-    .locals 5
+.method public abstract c()Z
+.end method
 
-    iget-boolean v0, p0, Lrh7;->a:Z
+.method public abstract d(Ljava/lang/Throwable;)V
+.end method
 
-    if-nez v0, :cond_0
+.method public final dispose()V
+    .locals 1
+
+    iget-object v0, p0, Lrh7;->a:Lgi7;
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lrh7;->b:Lth7;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Lth7;->n(Landroid/view/MotionEvent;)Landroid/view/View;
+    :goto_0
+    invoke-virtual {v0, p0}, Lgi7;->removeNode$kotlinx_coroutines_core(Lrh7;)V
+
+    return-void
+.end method
+
+.method public final isActive()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
-
-    iget-object v2, v0, Lth7;->G0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Lnxc;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lth7;->B0:Lsh7;
+    const/16 v1, 0x40
 
-    iget-object v2, v0, Lth7;->G0:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget v3, v1, Lsh7;->c:I
+    invoke-static {p0}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget v1, v1, Lsh7;->b:I
+    move-result-object v1
 
-    or-int v4, v1, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    shl-int/lit8 v1, v1, 0x8
+    const-string v1, "[job@"
 
-    or-int/2addr v1, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    shl-int/lit8 v3, v3, 0x10
+    iget-object v1, p0, Lrh7;->a:Lgi7;
 
-    or-int/2addr v1, v3
+    if-eqz v1, :cond_0
 
-    sget-object v3, Lskg;->a:Ljava/util/WeakHashMap;
+    goto :goto_0
 
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutDirection()I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Lsh7;->b(II)I
-
-    move-result v1
-
-    const/high16 v2, 0xff0000
-
-    and-int/2addr v1, v2
-
-    if-eqz v1, :cond_1
-
+    :cond_0
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v1
-
-    iget v2, v0, Lth7;->A0:I
-
-    if-ne v1, v2, :cond_1
-
-    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v1
-
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v2
-
-    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result p1
-
-    iput v2, v0, Lth7;->o:F
-
-    iput p1, v0, Lth7;->X:F
-
-    const/4 p1, 0x0
-
-    iput p1, v0, Lth7;->x0:F
-
-    iput p1, v0, Lth7;->w0:F
-
-    iget-object p1, v0, Lth7;->B0:Lsh7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_1
     :goto_0
-    return-void
+    invoke-static {v1}, Lzvd;->v(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x5d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

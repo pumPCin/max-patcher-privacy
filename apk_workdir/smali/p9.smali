@@ -1,404 +1,136 @@
 .class public final Lp9;
-.super Ljava/lang/Object;
+.super Lwm4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lg17;
-
-.field public final b:Ljava/util/List;
-
-.field public final c:Ljava/util/List;
-
-.field public final d:Lxm9;
-
-.field public final e:Ljavax/net/SocketFactory;
-
-.field public final f:Ljavax/net/ssl/SSLSocketFactory;
-
-.field public final g:Ljavax/net/ssl/HostnameVerifier;
-
-.field public final h:Lm42;
-
-.field public final i:Lj2a;
-
-.field public final j:Ljava/net/ProxySelector;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILxm9;Ljavax/net/SocketFactory;Ljavax/net/ssl/SSLSocketFactory;Ljavax/net/ssl/HostnameVerifier;Lm42;Lj2a;Ljava/util/List;Ljava/util/List;Ljava/net/ProxySelector;)V
+.method public synthetic constructor <init>(Lii0;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lp9;->c:I
 
-    iput-object p3, p0, Lp9;->d:Lxm9;
-
-    iput-object p4, p0, Lp9;->e:Ljavax/net/SocketFactory;
-
-    iput-object p5, p0, Lp9;->f:Ljavax/net/ssl/SSLSocketFactory;
-
-    iput-object p6, p0, Lp9;->g:Ljavax/net/ssl/HostnameVerifier;
-
-    iput-object p7, p0, Lp9;->h:Lm42;
-
-    iput-object p8, p0, Lp9;->i:Lj2a;
-
-    iput-object p11, p0, Lp9;->j:Ljava/net/ProxySelector;
-
-    new-instance p3, Lch3;
-
-    invoke-direct {p3}, Lch3;-><init>()V
-
-    if-eqz p5, :cond_0
-
-    const-string p4, "https"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p4, "http"
-
-    :goto_0
-    const-string p5, "http"
-
-    invoke-virtual {p4, p5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result p6
-
-    if-eqz p6, :cond_1
-
-    iput-object p5, p3, Lch3;->e:Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_1
-    const-string p5, "https"
-
-    invoke-virtual {p4, p5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result p6
-
-    if-eqz p6, :cond_2
-
-    iput-object p5, p3, Lch3;->e:Ljava/lang/Object;
-
-    :goto_1
-    invoke-virtual {p3, p1}, Lch3;->h(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p2}, Lch3;->k(I)V
-
-    invoke-virtual {p3}, Lch3;->b()Lg17;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lp9;->a:Lg17;
-
-    invoke-static {p9}, Ls4g;->w(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lp9;->b:Ljava/util/List;
-
-    invoke-static {p10}, Ls4g;->w(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lp9;->c:Ljava/util/List;
+    invoke-direct {p0, p1}, Lwm4;-><init>(Lii0;)V
 
     return-void
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "unexpected scheme: "
-
-    invoke-virtual {p2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Lp9;)Z
+.method public final h(ILjava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lp9;->d:Lxm9;
+    iget v0, p0, Lp9;->c:I
 
-    iget-object v1, p1, Lp9;->d:Lxm9;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1}, Lii0;->a(I)Z
 
-    move-result v0
+    move-result p2
 
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_0
 
-    iget-object v0, p0, Lp9;->i:Lj2a;
+    iget-object p2, p0, Lwm4;->b:Lii0;
 
-    iget-object v1, p1, Lp9;->i:Lj2a;
+    const/4 v0, 0x0
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->b:Ljava/util/List;
-
-    iget-object v1, p1, Lp9;->b:Ljava/util/List;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->c:Ljava/util/List;
-
-    iget-object v1, p1, Lp9;->c:Ljava/util/List;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->j:Ljava/net/ProxySelector;
-
-    iget-object v1, p1, Lp9;->j:Ljava/net/ProxySelector;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->f:Ljavax/net/ssl/SSLSocketFactory;
-
-    iget-object v1, p1, Lp9;->f:Ljavax/net/ssl/SSLSocketFactory;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->g:Ljavax/net/ssl/HostnameVerifier;
-
-    iget-object v1, p1, Lp9;->g:Ljavax/net/ssl/HostnameVerifier;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->h:Lm42;
-
-    iget-object v1, p1, Lp9;->h:Lm42;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lp9;->a:Lg17;
-
-    iget v0, v0, Lg17;->f:I
-
-    iget-object p1, p1, Lp9;->a:Lg17;
-
-    iget p1, p1, Lg17;->f:I
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    invoke-virtual {p2, p1, v0}, Lii0;->g(ILjava/lang/Object;)V
 
     :cond_0
-    const/4 p1, 0x0
+    return-void
 
-    return p1
-.end method
+    :pswitch_0
+    check-cast p2, Lj75;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const/4 v0, 0x0
 
-    instance-of v0, p1, Lp9;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lp9;
-
-    iget-object v0, p1, Lp9;->a:Lg17;
-
-    iget-object v1, p0, Lp9;->a:Lg17;
-
-    invoke-static {v1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, p1}, Lp9;->a(Lp9;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lp9;->a:Lg17;
-
-    iget-object v0, v0, Lg17;->i:Ljava/lang/String;
-
-    const/16 v1, 0x20f
-
-    const/16 v2, 0x1f
-
-    invoke-static {v1, v2, v0}, Lvl3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lp9;->d:Lxm9;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    :try_start_0
+    invoke-static {p2}, Lj75;->e0(Lj75;)Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_1
 
-    mul-int/2addr v1, v2
+    if-eqz p2, :cond_1
 
-    iget-object v0, p0, Lp9;->i:Lj2a;
+    iget-object p2, p2, Lj75;->a:Lm73;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v2
-
-    iget-object v1, p0, Lp9;->b:Ljava/util/List;
-
-    invoke-static {v1, v0, v2}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lp9;->c:Ljava/util/List;
-
-    invoke-static {v1, v0, v2}, Lhqd;->f(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lp9;->j:Ljava/net/ProxySelector;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit16 v1, v1, 0x3c1
-
-    iget-object v0, p0, Lp9;->f:Ljavax/net/ssl/SSLSocketFactory;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v2
-
-    iget-object v1, p0, Lp9;->g:Ljavax/net/ssl/HostnameVerifier;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/2addr v1, v2
-
-    iget-object v0, p0, Lp9;->h:Lm42;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Address{"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lp9;->a:Lg17;
-
-    iget-object v2, v1, Lg17;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x3a
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    iget v1, v1, Lg17;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "proxySelector="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lp9;->j:Ljava/net/ProxySelector;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p2}, Lm73;->o(Lm73;)Lm73;
 
     move-result-object v0
 
-    return-object v0
+    :cond_1
+    iget-object p2, p0, Lwm4;->b:Lii0;
+
+    invoke-virtual {p2, p1, v0}, Lii0;->g(ILjava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v0}, Lm73;->N(Lm73;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {v0}, Lm73;->N(Lm73;)V
+
+    throw p1
+
+    :pswitch_1
+    check-cast p2, Lm73;
+
+    invoke-static {p1}, Lii0;->b(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lwm4;->b:Lii0;
+
+    invoke-virtual {v0, p1, p2}, Lii0;->g(ILjava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_2
+    check-cast p2, Lj75;
+
+    iget-object v0, p0, Lwm4;->b:Lii0;
+
+    if-nez p2, :cond_3
+
+    const/4 p2, 0x0
+
+    invoke-virtual {v0, p1, p2}, Lii0;->g(ILjava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p2}, Lj75;->O(Lj75;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    invoke-virtual {p2}, Lj75;->N()V
+
+    :cond_4
+    invoke-virtual {v0, p1, p2}, Lii0;->g(ILjava/lang/Object;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

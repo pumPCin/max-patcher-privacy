@@ -1,163 +1,84 @@
 .class public final Lvaa;
-.super Lude;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lig6;
+.implements Ljava/lang/Runnable;
+.implements Lno3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxaa;
 
-.field public final b:Lraa;
+.field public b:J
 
-.field public final c:Ljava/lang/Object;
+.field public c:Z
+
+.field public o:Z
 
 
 # direct methods
-.method public constructor <init>(Lraa;)V
-    .locals 1
+.method public constructor <init>(Lxaa;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput v0, p0, Lvaa;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvaa;->b:Lraa;
-
-    new-instance p1, Lbg6;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvaa;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lraa;Llob;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lvaa;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvaa;->b:Lraa;
-
-    iput-object p2, p0, Lvaa;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lvaa;->a:Lxaa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Lraa;
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    iget v0, p0, Lvaa;->a:I
+    check-cast p1, Lfs4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
 
-    new-instance v0, Lpca;
+    iget-object p1, p0, Lvaa;->a:Lxaa;
 
-    iget-object v1, p0, Lvaa;->c:Ljava/lang/Object;
-
-    check-cast v1, Lbg6;
-
-    const/4 v2, 0x3
-
-    iget-object v3, p0, Lvaa;->b:Lraa;
-
-    invoke-direct {v0, v3, v1, v2}, Lpca;-><init>(Lnda;Ljava/lang/Object;I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Luaa;
-
-    iget-object v1, p0, Lvaa;->c:Ljava/lang/Object;
-
-    check-cast v1, Llob;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lvaa;->b:Lraa;
-
-    invoke-direct {v0, v3, v1, v2}, Luaa;-><init>(Lraa;Llob;I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l(Lnee;)V
-    .locals 4
-
-    iget v0, p0, Lvaa;->a:I
-
-    iget-object v1, p0, Lvaa;->b:Lraa;
-
-    iget-object v2, p0, Lvaa;->c:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
+    monitor-enter p1
 
     :try_start_0
-    check-cast v2, Lbg6;
+    iget-boolean v0, p0, Lvaa;->o:Z
 
-    invoke-virtual {v2}, Lbg6;->get()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget-object v0, p0, Lvaa;->a:Lxaa;
 
-    sget-object v2, Lgc5;->a:Lfc5;
+    iget-object v0, v0, Lxaa;->a:Lvl3;
 
-    check-cast v0, Ljava/util/Collection;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance v2, Lxe3;
-
-    const/4 v3, 0x6
-
-    invoke-direct {v2, p1, v3, v0}, Lxe3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lraa;->a(Lxda;)V
+    invoke-virtual {v0}, Lvl3;->v()V
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
+    goto :goto_1
 
-    invoke-static {v0, p1}, Lw65;->c(Ljava/lang/Throwable;Lnee;)V
-
+    :cond_0
     :goto_0
-    return-void
-
-    :pswitch_0
-    new-instance v0, Ltaa;
-
-    check-cast v2, Llob;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, p1, v2, v3}, Ltaa;-><init>(Ljava/lang/Object;Llob;I)V
-
-    invoke-virtual {v1, v0}, Lraa;->a(Lxda;)V
+    monitor-exit p1
 
     return-void
 
-    nop
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw v0
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lvaa;->a:Lxaa;
+
+    invoke-virtual {v0, p0}, Lxaa;->v(Lvaa;)V
+
+    return-void
 .end method

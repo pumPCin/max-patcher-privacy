@@ -1,252 +1,118 @@
-.class public final Lgh3;
-.super Lc0;
+.class public final synthetic Lgh3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final h:I
+.field public final synthetic a:I
 
-.field public final i:I
-
-.field public final j:[I
-
-.field public final k:[I
-
-.field public final l:[Lmif;
-
-.field public final m:[Ljava/lang/Object;
-
-.field public final n:Ljava/util/HashMap;
+.field public final synthetic b:Ljava/io/Serializable;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lqbe;)V
-    .locals 5
+.method public synthetic constructor <init>(ILjava/io/Serializable;)V
+    .locals 0
 
-    invoke-direct {p0, p2}, Lc0;-><init>(Lqbe;)V
+    iput p1, p0, Lgh3;->a:I
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    iput-object p2, p0, Lgh3;->b:Ljava/io/Serializable;
 
-    move-result p2
-
-    new-array v0, p2, [I
-
-    iput-object v0, p0, Lgh3;->j:[I
-
-    new-array v0, p2, [I
-
-    iput-object v0, p0, Lgh3;->k:[I
-
-    new-array v0, p2, [Lmif;
-
-    iput-object v0, p0, Lgh3;->l:[Lmif;
-
-    new-array p2, p2, [Ljava/lang/Object;
-
-    iput-object p2, p0, Lgh3;->m:[Ljava/lang/Object;
-
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lgh3;->n:Ljava/util/HashMap;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    move v0, p2
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljh3;
-
-    iget-object v3, p0, Lgh3;->l:[Lmif;
-
-    iget-object v4, v2, Ljh3;->a:Lzb8;
-
-    iget-object v4, v4, Lzb8;->o:Lvb8;
-
-    aput-object v4, v3, v1
-
-    iget-object v3, p0, Lgh3;->k:[I
-
-    aput p2, v3, v1
-
-    iget-object v3, p0, Lgh3;->j:[I
-
-    aput v0, v3, v1
-
-    iget-object v3, v4, Lia6;->e:Lmif;
-
-    invoke-virtual {v3}, Lmif;->o()I
-
-    move-result v3
-
-    add-int/2addr p2, v3
-
-    iget-object v3, p0, Lgh3;->l:[Lmif;
-
-    aget-object v3, v3, v1
-
-    invoke-virtual {v3}, Lmif;->h()I
-
-    move-result v3
-
-    add-int/2addr v0, v3
-
-    iget-object v3, p0, Lgh3;->m:[Ljava/lang/Object;
-
-    iget-object v2, v2, Ljh3;->b:Ljava/lang/Object;
-
-    aput-object v2, v3, v1
-
-    iget-object v3, p0, Lgh3;->n:Ljava/util/HashMap;
-
-    add-int/lit8 v4, v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move v1, v4
-
-    goto :goto_0
-
-    :cond_0
-    iput p2, p0, Lgh3;->h:I
-
-    iput v0, p0, Lgh3;->i:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h()I
-    .locals 1
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 4
 
-    iget v0, p0, Lgh3;->i:I
+    iget v0, p0, Lgh3;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final o()I
-    .locals 1
+    iget-object v0, p0, Lgh3;->b:Ljava/io/Serializable;
 
-    iget v0, p0, Lgh3;->h:I
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return v0
-.end method
+    new-instance v1, Ljava/lang/Thread;
 
-.method public final q(Ljava/lang/Object;)I
-    .locals 1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lgh3;->n:Ljava/util/HashMap;
+    const-string v3, "tracer-io-"
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    check-cast p1, Ljava/lang/Integer;
+    move-result v0
 
-    if-nez p1, :cond_0
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const/4 p1, -0x1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return p1
+    move-result-object v0
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    move-result p1
+    return-object v1
 
-    return p1
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lgh3;->b:Ljava/io/Serializable;
 
-.method public final r(I)I
-    .locals 2
+    check-cast v0, Ljava/lang/String;
 
-    add-int/lit8 p1, p1, 0x1
+    new-instance v1, Ljava/lang/Thread;
 
-    const/4 v0, 0x0
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lgh3;->j:[I
+    return-object v1
 
-    invoke-static {v1, p1, v0, v0}, Lt4g;->d([IIZZ)I
+    :pswitch_1
+    iget-object v0, p0, Lgh3;->b:Ljava/io/Serializable;
 
-    move-result p1
+    check-cast v0, Ljava/lang/String;
 
-    return p1
-.end method
+    new-instance v1, Ljava/lang/Thread;
 
-.method public final s(I)I
-    .locals 2
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    add-int/lit8 p1, p1, 0x1
+    return-object v1
 
-    const/4 v0, 0x0
+    :pswitch_2
+    iget-object v0, p0, Lgh3;->b:Ljava/io/Serializable;
 
-    iget-object v1, p0, Lgh3;->k:[I
+    check-cast v0, Ljava/lang/String;
 
-    invoke-static {v1, p1, v0, v0}, Lt4g;->d([IIZZ)I
+    new-instance v1, Ljava/lang/Thread;
 
-    move-result p1
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    return p1
-.end method
+    return-object v1
 
-.method public final t(I)Ljava/lang/Object;
-    .locals 1
+    :pswitch_3
+    iget-object v0, p0, Lgh3;->b:Ljava/io/Serializable;
 
-    iget-object v0, p0, Lgh3;->m:[Ljava/lang/Object;
+    check-cast v0, Ljava/lang/String;
 
-    aget-object p1, v0, p1
+    new-instance v1, Ljava/lang/Thread;
 
-    return-object p1
-.end method
+    invoke-direct {v1, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-.method public final u(I)I
-    .locals 1
+    const/16 p1, 0xa
 
-    iget-object v0, p0, Lgh3;->j:[I
+    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
 
-    aget p1, v0, p1
+    return-object v1
 
-    return p1
-.end method
-
-.method public final v(I)I
-    .locals 1
-
-    iget-object v0, p0, Lgh3;->k:[I
-
-    aget p1, v0, p1
-
-    return p1
-.end method
-
-.method public final y(I)Lmif;
-    .locals 1
-
-    iget-object v0, p0, Lgh3;->l:[Lmif;
-
-    aget-object p1, v0, p1
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

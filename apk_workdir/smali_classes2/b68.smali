@@ -1,119 +1,211 @@
-.class public final synthetic Lb68;
-.super Ljava/lang/Object;
+.class public final Lb68;
+.super Lone/me/rlottie/RLottieImageView;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;
+.implements Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
+.implements Lc68;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public w0:Ljava/lang/String;
 
-.field public final synthetic b:Lt68;
+.field public x0:Z
+
+.field public y0:La68;
+
+.field public z0:Lz58;
 
 
-# direct methods
-.method public synthetic constructor <init>(Lt68;I)V
-    .locals 0
+# virtual methods
+.method public final c()V
+    .locals 1
 
-    iput p2, p0, Lb68;->a:I
+    invoke-static {p0}, Lone/me/rlottie/RLottieImageViewUtils;->release(Lone/me/rlottie/RLottieImageView;)V
 
-    iput-object p1, p0, Lb68;->b:Lt68;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v0, p0, Lb68;->w0:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public final f(IILjava/lang/String;)Z
+    .locals 3
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+    const/4 v0, 0x1
 
-    iget v0, p0, Lb68;->a:I
+    if-eqz p3, :cond_2
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
 
-    iget-object v0, p0, Lb68;->b:Lt68;
+    move-result v1
 
-    iget-object v1, v0, Lt68;->X:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    iget-object v0, v0, Lt68;->Y:Lmoe;
-
-    invoke-static {v1}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_0
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lb68;->b:Lt68;
-
-    iget-object v1, v0, Lt68;->Z:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    iget-object v0, v0, Lt68;->w0:Lmoe;
-
-    invoke-static {v1}, Le93;->I0(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :pswitch_1
-    iget-object v0, p0, Lb68;->b:Lt68;
+    :cond_0
+    iget-object v1, p0, Lb68;->w0:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lt68;->q()Lg01;
+    if-eqz v1, :cond_1
+
+    invoke-static {v1, p3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    iput-boolean v0, p0, Lb68;->x0:Z
+
+    iput-object p3, p0, Lb68;->w0:Ljava/lang/String;
+
+    new-instance v1, Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    invoke-direct {v1}, Lone/me/rlottie/RLottieFactory$Config$Builder;-><init>()V
+
+    invoke-virtual {v1, v0}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setAutoStart(Z)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setAutoRepeat(Z)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object v1
+
+    new-instance v2, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    invoke-direct {v2}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;-><init>()V
+
+    invoke-virtual {v2, p3}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->setUrl(Ljava/lang/String;)Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p1, p2}, Lone/me/rlottie/RLottieFactory$Way$Builder;->setSize(II)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    invoke-virtual {p1, v0}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->setNetworkFetchEnabled(Z)Lone/me/rlottie/RLottieFactory$Way$Url$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieFactory$Way$Url$Builder;->build()Lone/me/rlottie/RLottieFactory$Way$Url;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lone/me/rlottie/RLottieFactory$Config$Builder;->setWay(Lone/me/rlottie/RLottieFactory$Way;)Lone/me/rlottie/RLottieFactory$Config$Builder;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lone/me/rlottie/RLottieFactory$Config$Builder;->build()Lone/me/rlottie/RLottieFactory$Config;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lone/me/rlottie/RLottieFactory;->create(Lone/me/rlottie/RLottieFactory$Config;)Lone/me/rlottie/RLottieDrawable;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->addDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    invoke-virtual {p1, p0}, Lone/me/rlottie/RLottieDrawable;->addOnNextFrameRenderedListener(Lone/me/rlottie/RLottieDrawable$OnNextFrameRenderedListener;)V
+
+    invoke-static {p0, p1}, Lone/me/rlottie/RLottieImageViewUtils;->setLottieDrawable(Lone/me/rlottie/RLottieImageView;Lone/me/rlottie/RLottieDrawable;)Z
+
+    return v0
+
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Lb68;->c()V
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Lb68;->z0:Lz58;
+
+    if-eqz v0, :cond_0
+
+    const-class v0, Lg68;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Li68;
+    const-string v1, "lottie set animation failed: "
 
-    const/4 v2, 0x0
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 v3, 0x2
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v1, v3, v2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public final onLoaded(Lone/me/rlottie/RLottieDrawable;)V
+    .locals 2
 
-    invoke-static {v0, v1}, Ltp;->E(Lev5;Llf6;)Lg13;
+    const-class v0, Lb68;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lk68;
+    const-string v1, "onLoaded %s"
 
-    const/4 v2, 0x0
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    invoke-direct {v1, v0, v2}, Lk68;-><init>(Lg13;I)V
+    move-result-object p1
 
-    return-object v1
+    invoke-static {v0, v1, p1}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    nop
+    return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final onNextFrameRendered(Lone/me/rlottie/RLottieDrawable;I)V
+    .locals 0
+
+    iget-boolean p1, p0, Lb68;->x0:Z
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lb68;->y0:La68;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, La68;->e()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lb68;->x0:Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public final setFailureListener(Lz58;)V
+    .locals 0
+
+    iput-object p1, p0, Lb68;->z0:Lz58;
+
+    return-void
+.end method
+
+.method public final setOnFirstFrameListener(La68;)V
+    .locals 0
+
+    iput-object p1, p0, Lb68;->y0:La68;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lb68;->x0:Z
+
+    return-void
 .end method

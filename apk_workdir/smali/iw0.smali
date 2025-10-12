@@ -1,81 +1,205 @@
-.class public final Liw0;
+.class public abstract Liw0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:[I
-
-.field public final e:[Ljava/lang/String;
-
-.field public final f:I
-
-.field public final g:I
-
-
 # direct methods
-.method public constructor <init>(II[I[Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgw0;
 
-    iput p1, p0, Liw0;->a:I
-
-    const/4 p1, 0x0
-
-    iput p1, p0, Liw0;->b:I
-
-    iput p2, p0, Liw0;->c:I
-
-    iput-object p3, p0, Liw0;->d:[I
-
-    iput-object p4, p0, Liw0;->e:[Ljava/lang/String;
-
-    iput p5, p0, Liw0;->f:I
-
-    iput p6, p0, Liw0;->g:I
+    invoke-direct {v0}, Ljava/io/OutputStream;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljw0;)V
-    .locals 1
+.method public static a(Ljava/util/ArrayDeque;I)[B
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    iget v0, p1, Ljw0;->g:I
+    move-result v0
 
-    iput v0, p0, Liw0;->a:I
+    const/4 v1, 0x0
 
-    iget v0, p1, Ljw0;->k:I
+    if-eqz v0, :cond_0
 
-    iput v0, p0, Liw0;->b:I
+    new-array p0, v1, [B
 
-    iget v0, p1, Ljw0;->j:I
+    return-object p0
 
-    iput v0, p0, Liw0;->c:I
+    :cond_0
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
 
-    iget-object v0, p1, Ljw0;->f:[I
+    move-result-object v0
 
-    iput-object v0, p0, Liw0;->d:[I
+    check-cast v0, [B
 
-    iget-object v0, p1, Ljw0;->l:[Ljava/lang/String;
+    array-length v2, v0
 
-    iput-object v0, p0, Liw0;->e:[Ljava/lang/String;
+    if-ne v2, p1, :cond_1
 
-    iget v0, p1, Ljw0;->m:I
+    return-object v0
 
-    iput v0, p0, Liw0;->f:I
+    :cond_1
+    array-length v2, v0
 
-    iget p1, p1, Ljw0;->n:I
+    sub-int v2, p1, v2
 
-    iput p1, p0, Liw0;->g:I
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    return-void
+    move-result-object v0
+
+    :goto_0
+    if-lez v2, :cond_2
+
+    invoke-virtual {p0}, Ljava/util/ArrayDeque;->remove()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, [B
+
+    array-length v4, v3
+
+    invoke-static {v2, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    sub-int v5, p1, v2
+
+    invoke-static {v3, v1, v0, v5, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    sub-int/2addr v2, v4
+
+    goto :goto_0
+
+    :cond_2
+    return-object v0
+.end method
+
+.method public static b(Ljava/io/InputStream;)[B
+    .locals 10
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayDeque;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->highestOneBit(I)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    mul-int/2addr v2, v3
+
+    const/16 v4, 0x80
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    const/16 v4, 0x2000
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    move v4, v1
+
+    :goto_0
+    const/4 v5, -0x1
+
+    const v6, 0x7ffffff7
+
+    if-ge v4, v6, :cond_3
+
+    sub-int/2addr v6, v4
+
+    invoke-static {v2, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v6
+
+    new-array v7, v6, [B
+
+    invoke-virtual {v0, v7}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    move v8, v1
+
+    :goto_1
+    if-ge v8, v6, :cond_1
+
+    sub-int v9, v6, v8
+
+    invoke-virtual {p0, v7, v8, v9}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v9
+
+    if-ne v9, v5, :cond_0
+
+    invoke-static {v0, v4}, Liw0;->a(Ljava/util/ArrayDeque;I)[B
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    add-int/2addr v8, v9
+
+    add-int/2addr v4, v9
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v5, 0x1000
+
+    if-ge v2, v5, :cond_2
+
+    const/4 v5, 0x4
+
+    goto :goto_2
+
+    :cond_2
+    move v5, v3
+
+    :goto_2
+    int-to-long v6, v2
+
+    int-to-long v8, v5
+
+    mul-long/2addr v6, v8
+
+    invoke-static {v6, v7}, Lzvd;->U(J)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0}, Ljava/io/InputStream;->read()I
+
+    move-result p0
+
+    if-ne p0, v5, :cond_4
+
+    invoke-static {v0, v6}, Liw0;->a(Ljava/util/ArrayDeque;I)[B
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/OutOfMemoryError;
+
+    const-string v0, "input is too large to fit in a byte array"
+
+    invoke-direct {p0, v0}, Ljava/lang/OutOfMemoryError;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

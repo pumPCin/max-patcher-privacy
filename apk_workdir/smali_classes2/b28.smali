@@ -1,43 +1,70 @@
 .class public final Lb28;
-.super Lvk0;
+.super Ly7f;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Landroid/content/Context;
+.field public c:Lq19;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lb28;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lb28;->b:Landroid/content/Context;
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lude;
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "message"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
+    invoke-virtual {p1}, Lc79;->y()V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lyt3;->y(Lc79;)Lq19;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb28;->c:Lq19;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    new-instance v0, Lp5;
+    iget-object v0, p0, Lb28;->c:Lq19;
 
-    const/16 v1, 0x9
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, p0}, Lp5;-><init>(ILjava/lang/Object;)V
+    const-string v2, "{message="
 
-    new-instance v1, Lmda;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x4
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2, v0}, Lmda;-><init>(ILjava/lang/Object;)V
+    const-string v0, "}"
 
-    return-object v1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

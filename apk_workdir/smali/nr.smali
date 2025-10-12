@@ -1,155 +1,91 @@
-.class public final Lnr;
-.super Lvb4;
+.class public final synthetic Lnr;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile X:Lnr;
-
-.field public static final Y:Lmr;
+# interfaces
+.implements Lve6;
 
 
 # instance fields
-.field public final o:Lsk4;
+.field public final synthetic a:Lvr;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lmr;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmr;-><init>(I)V
-
-    sput-object v0, Lnr;->Y:Lmr;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lvr;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lsk4;
-
-    invoke-direct {v0}, Lsk4;-><init>()V
-
-    iput-object v0, p0, Lnr;->o:Lsk4;
+    iput-object p1, p0, Lnr;->a:Lvr;
 
     return-void
-.end method
-
-.method public static p0()Lnr;
-    .locals 2
-
-    sget-object v0, Lnr;->X:Lnr;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lnr;->X:Lnr;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lnr;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lnr;->X:Lnr;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lnr;
-
-    invoke-direct {v1}, Lnr;-><init>()V
-
-    sput-object v1, Lnr;->X:Lnr;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lnr;->X:Lnr;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final q0(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lnr;->o:Lsk4;
+    instance-of v0, p1, Lnr;
 
-    iget-object v1, v0, Lsk4;->Y:Landroid/os/Handler;
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_1
+    if-eqz p1, :cond_0
 
-    iget-object v1, v0, Lsk4;->o:Ljava/lang/Object;
+    invoke-virtual {p0}, Lnr;->getFunctionDelegate()Loe6;
 
-    monitor-enter v1
+    move-result-object v0
 
-    :try_start_0
-    iget-object v2, v0, Lsk4;->Y:Landroid/os/Handler;
+    check-cast p1, Lve6;
 
-    if-nez v2, :cond_0
+    invoke-interface {p1}, Lve6;->getFunctionDelegate()Loe6;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    move-result-object p1
 
-    move-result-object v2
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v2}, Lsk4;->p0(Landroid/os/Looper;)Landroid/os/Handler;
+    move-result p1
 
-    move-result-object v2
-
-    iput-object v2, v0, Lsk4;->Y:Landroid/os/Handler;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    :goto_0
-    monitor-exit v1
+    const/4 p1, 0x0
 
-    goto :goto_2
+    return p1
+.end method
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final getFunctionDelegate()Loe6;
+    .locals 7
 
-    throw p1
+    new-instance v0, Lye6;
 
-    :cond_1
-    :goto_2
-    iget-object v0, v0, Lsk4;->Y:Landroid/os/Handler;
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 v2, 0x0
 
-    return-void
+    const/4 v1, 0x1
+
+    const-class v3, Lvr;
+
+    iget-object v4, p0, Lnr;->a:Lvr;
+
+    const-string v5, "selectTheme"
+
+    invoke-direct/range {v0 .. v6}, Lxe6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Lnr;->getFunctionDelegate()Loe6;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

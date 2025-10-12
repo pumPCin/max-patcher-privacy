@@ -1,21 +1,23 @@
 .class public final Lw1e;
-.super Lbp;
+.super Ld3;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lw1e;
+.field public static final c:Lw1e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lw1e;
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    const/16 v1, 0x8
 
-    sput-object v0, Lw1e;->a:Lw1e;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
+
+    sput-object v0, Lw1e;->c:Lw1e;
 
     return-void
 .end method

@@ -1,58 +1,66 @@
-.class public final synthetic Lm35;
+.class public final Lm35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:F
+.field public final a:D
 
-.field public final synthetic a:Lorg/webrtc/EglRenderer;
-
-.field public final synthetic b:F
-
-.field public final synthetic c:F
-
-.field public final synthetic o:F
+.field public volatile b:D
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;FFFF)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm35;->a:Lorg/webrtc/EglRenderer;
+    const-wide v0, 0x3fd3333333333333L    # 0.3
 
-    iput p2, p0, Lm35;->b:F
+    .line 5
+    iput-wide v0, p0, Lm35;->a:D
 
-    iput p3, p0, Lm35;->c:F
+    return-void
+.end method
 
-    iput p4, p0, Lm35;->o:F
+.method public constructor <init>(D)V
+    .locals 2
 
-    iput p5, p0, Lm35;->X:F
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+
+    .line 2
+    iput-wide v0, p0, Lm35;->a:D
+
+    .line 3
+    iput-wide p1, p0, Lm35;->b:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a(D)V
+    .locals 6
 
-    iget v0, p0, Lm35;->o:F
+    iget-wide v0, p0, Lm35;->b:D
 
-    iget v1, p0, Lm35;->X:F
+    iget-wide v2, p0, Lm35;->a:D
 
-    iget-object v2, p0, Lm35;->a:Lorg/webrtc/EglRenderer;
+    mul-double/2addr p1, v2
 
-    iget v3, p0, Lm35;->b:F
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    iget v4, p0, Lm35;->c:F
+    sub-double/2addr v4, v2
 
-    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->a(Lorg/webrtc/EglRenderer;FFFF)V
+    mul-double/2addr v4, v0
+
+    add-double/2addr v4, p1
+
+    iput-wide v4, p0, Lm35;->b:D
 
     return-void
 .end method

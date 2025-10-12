@@ -1,57 +1,116 @@
-.class public final Lju9;
+.class public final synthetic Lju9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Ljava/nio/ByteBuffer;
-
-.field public final c:Landroid/media/MediaCodec$BufferInfo;
+.field public final synthetic b:Llu9;
 
 
 # direct methods
-.method public constructor <init>(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
-    .locals 6
+.method public synthetic constructor <init>(Llu9;I)V
+    .locals 0
+
+    iput p2, p0, Lju9;->a:I
+
+    iput-object p1, p0, Lju9;->b:Llu9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lju9;->a:I
+    return-void
+.end method
 
-    invoke-virtual {p2}, Ljava/nio/Buffer;->capacity()I
 
-    move-result p1
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    iget p1, p0, Lju9;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lju9;->b:Llu9;
+
+    iget-object p1, p1, Le3;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    iput-object p1, p0, Lju9;->b:Ljava/nio/ByteBuffer;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    move-result v0
 
-    invoke-virtual {p2}, Ljava/nio/Buffer;->limit()I
+    if-eqz v0, :cond_0
 
-    move-result p2
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+    move-result-object v0
 
-    new-instance v0, Landroid/media/MediaCodec$BufferInfo;
+    check-cast v0, Liu9;
 
-    invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
+    new-instance v1, Lej0;
 
-    iput-object v0, p0, Lju9;->c:Landroid/media/MediaCodec$BufferInfo;
+    const/4 v2, 0x2
 
-    iget v1, p3, Landroid/media/MediaCodec$BufferInfo;->offset:I
+    invoke-direct {v1, v2}, Lej0;-><init>(I)V
 
-    iget v2, p3, Landroid/media/MediaCodec$BufferInfo;->size:I
+    invoke-virtual {v0, v1}, Le3;->k(Lqo3;)V
 
-    iget-wide v3, p3, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
+    goto :goto_0
 
-    iget v5, p3, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    invoke-virtual/range {v0 .. v5}, Landroid/media/MediaCodec$BufferInfo;->set(IIJI)V
-
+    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lju9;->b:Llu9;
+
+    iget-object p1, p1, Le3;->a:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liu9;
+
+    new-instance v1, Lej0;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2}, Lej0;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Le3;->k(Lqo3;)V
+
+    goto :goto_1
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

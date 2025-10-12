@@ -1,99 +1,80 @@
-.class public final Ltn;
-.super Landroid/widget/RatingBar;
+.class public final synthetic Ltn;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/window/OnBackInvokedCallback;
 
 
 # instance fields
-.field public final a:Lbb8;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lxac;->ratingBarStyle:I
+    iput p1, p0, Ltn;->a:I
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p2, p0, Ltn;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lggf;->a(Landroid/view/View;Landroid/content/Context;)V
-
-    new-instance p1, Lbb8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lbb8;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Ltn;->a:Lbb8;
-
-    invoke-virtual {p1, p2, v0}, Lbb8;->C(Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized onMeasure(II)V
+.method public final onBackInvoked()V
     .locals 1
 
-    monitor-enter p0
+    iget v0, p0, Ltn;->a:I
 
-    :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Ltn;->a:Lbb8;
+    iget-object v0, p0, Ltn;->b:Ljava/lang/Object;
 
-    iget-object p2, p2, Lbb8;->c:Ljava/lang/Object;
+    check-cast v0, Ljava/lang/Runnable;
 
-    check-cast p2, Landroid/graphics/Bitmap;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
-
-    move-result v0
-
-    mul-int/2addr p2, v0
-
-    const/4 v0, 0x0
-
-    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :pswitch_0
+    iget-object v0, p0, Ltn;->b:Ljava/lang/Object;
 
-    throw p1
+    check-cast v0, Ltd6;
+
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ltn;->b:Ljava/lang/Object;
+
+    check-cast v0, Lab8;
+
+    invoke-interface {v0}, Lab8;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Ltn;->b:Ljava/lang/Object;
+
+    check-cast v0, Lao;
+
+    invoke-virtual {v0}, Lao;->D()Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

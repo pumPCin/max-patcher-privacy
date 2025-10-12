@@ -1,46 +1,122 @@
-.class public final synthetic Ln35;
+.class public final Ln35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/EglThread$RenderUpdate;
-
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/EglRenderer;
+.field public final a:D
 
-.field public final synthetic b:Lorg/webrtc/VideoFrame;
+.field public final b:D
 
-.field public final synthetic c:J
+.field public final c:D
+
+.field public d:D
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
+.method public constructor <init>(DDD)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ln35;->a:Lorg/webrtc/EglRenderer;
+    .line 2
+    iput-wide p1, p0, Ln35;->a:D
 
-    iput-object p2, p0, Ln35;->b:Lorg/webrtc/VideoFrame;
+    .line 3
+    iput-wide p3, p0, Ln35;->b:D
 
-    iput-wide p3, p0, Ln35;->c:J
+    .line 4
+    iput-wide p5, p0, Ln35;->c:D
+
+    .line 5
+    iput-wide p5, p0, Ln35;->d:D
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(DDI)V
+    .locals 8
+
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_0
+
+    move-wide v4, p1
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v4, p3
+
+    :goto_0
+    and-int/lit8 p3, p5, 0x4
+
+    if-eqz p3, :cond_1
+
+    const-wide/high16 p3, 0x7ff8000000000000L    # Double.NaN
+
+    :goto_1
+    move-object v1, p0
+
+    move-wide v2, p1
+
+    move-wide v6, p3
+
+    goto :goto_2
+
+    :cond_1
+    const-wide/16 p3, 0x0
+
+    goto :goto_1
+
+    .line 6
+    :goto_2
+    invoke-direct/range {v1 .. v7}, Ln35;-><init>(DDD)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final update(Z)V
-    .locals 4
+.method public final a(D)V
+    .locals 6
 
-    iget-object v0, p0, Ln35;->b:Lorg/webrtc/VideoFrame;
+    iget-wide v0, p0, Ln35;->d:D
 
-    iget-wide v1, p0, Ln35;->c:J
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
-    iget-object v3, p0, Ln35;->a:Lorg/webrtc/EglRenderer;
+    move-result v2
 
-    invoke-static {v3, v0, v1, v2, p1}, Lorg/webrtc/EglRenderer;->b(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    cmpl-double v2, p1, v0
+
+    if-lez v2, :cond_1
+
+    iget-wide v2, p0, Ln35;->a:D
+
+    goto :goto_0
+
+    :cond_1
+    iget-wide v2, p0, Ln35;->b:D
+
+    :goto_0
+    mul-double/2addr p1, v2
+
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+
+    sub-double/2addr v4, v2
+
+    mul-double/2addr v4, v0
+
+    add-double/2addr p1, v4
+
+    :goto_1
+    iput-wide p1, p0, Ln35;->d:D
 
     return-void
 .end method

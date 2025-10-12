@@ -4,38 +4,44 @@
 
 
 # instance fields
-.field public final a:Ln5c;
+.field public final a:Lf35;
 
-.field public final b:Ln5c;
+.field public final b:Lhhf;
 
-.field public final c:I
+.field public final c:Lh42;
 
-.field public final d:Z
+.field public d:Z
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:J
 
 
 # direct methods
-.method public constructor <init>(Ln5c;Ln5c;I)V
-    .locals 0
+.method public constructor <init>(Lf35;Lhhf;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo5c;->a:Ln5c;
+    iput-object p1, p0, Lo5c;->a:Lf35;
 
-    iput-object p2, p0, Lo5c;->b:Ln5c;
+    iput-object p2, p0, Lo5c;->b:Lhhf;
 
-    iput p3, p0, Lo5c;->c:I
+    new-instance p1, Lh42;
 
-    if-ne p1, p2, :cond_0
+    const/16 p2, 0x40
 
-    const/4 p1, 0x1
+    new-array v0, p2, [B
 
-    goto :goto_0
+    const/4 v1, 0x2
 
-    :cond_0
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    :goto_0
-    iput-boolean p1, p0, Lo5c;->d:Z
+    invoke-direct {p1, v0, p2, v1, v2}, Lh42;-><init>([BIIB)V
+
+    iput-object p1, p0, Lo5c;->c:Lh42;
 
     return-void
 .end method

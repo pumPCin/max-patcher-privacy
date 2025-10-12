@@ -2,214 +2,133 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnld;
+
 
 # instance fields
-.field public final a:Lld4;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:I
-
-.field public final g:J
-
-.field public h:I
-
-.field public i:Z
+.field public final synthetic a:Lti4;
 
 
 # direct methods
-.method public constructor <init>(Lld4;IIII)V
-    .locals 5
+.method public constructor <init>(Lti4;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "bufferForPlaybackMs"
-
-    const/4 v1, 0x0
-
-    const-string v2, "0"
-
-    invoke-static {v0, p4, v1, v2}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v3, "bufferForPlaybackAfterRebufferMs"
-
-    invoke-static {v3, p5, v1, v2}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v4, "minBufferMs"
-
-    invoke-static {v4, p2, p4, v0}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    invoke-static {v4, p2, p5, v3}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v0, "maxBufferMs"
-
-    invoke-static {v0, p3, p2, v4}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    const-string v0, "backBufferDurationMs"
-
-    invoke-static {v0, v1, v1, v2}, Lsi4;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    iput-object p1, p0, Lsi4;->a:Lld4;
-
-    int-to-long p1, p2
-
-    invoke-static {p1, p2}, Lr4g;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lsi4;->b:J
-
-    int-to-long p1, p3
-
-    invoke-static {p1, p2}, Lr4g;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lsi4;->c:J
-
-    int-to-long p1, p4
-
-    invoke-static {p1, p2}, Lr4g;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lsi4;->d:J
-
-    int-to-long p1, p5
-
-    invoke-static {p1, p2}, Lr4g;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lsi4;->e:J
-
-    const/4 p1, -0x1
-
-    iput p1, p0, Lsi4;->f:I
-
-    const/high16 p1, 0xc80000
-
-    iput p1, p0, Lsi4;->h:I
-
-    int-to-long p1, v1
-
-    invoke-static {p1, p2}, Lr4g;->B(J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lsi4;->g:J
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 1
-
-    if-lt p1, p2, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p2
-
-    add-int/lit8 p2, p2, 0x15
-
-    invoke-virtual {p3}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/2addr v0, p2
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " cannot be less than "
-
-    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lyhh;->d(Ljava/lang/String;Z)V
+    iput-object p1, p0, Lsi4;->a:Lti4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Z)V
-    .locals 2
+.method public final c()Z
+    .locals 1
 
-    iget v0, p0, Lsi4;->f:I
+    const/4 v0, 0x1
 
-    const/4 v1, -0x1
+    return v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public final e(J)Llld;
+    .locals 13
 
-    const/high16 v0, 0xc80000
+    iget-object v0, p0, Lsi4;->a:Lti4;
 
-    :cond_0
-    iput v0, p0, Lsi4;->h:I
+    iget-object v1, v0, Lti4;->w0:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v1, Luve;
 
-    iput-boolean v0, p0, Lsi4;->i:Z
+    iget v1, v1, Luve;->f:I
 
-    if-eqz p1, :cond_2
+    int-to-long v1, v1
 
-    iget-object p1, p0, Lsi4;->a:Lld4;
+    mul-long/2addr v1, p1
 
-    monitor-enter p1
+    const-wide/32 v3, 0xf4240
 
-    :try_start_0
-    iget-boolean v1, p1, Lld4;->a:Z
+    div-long/2addr v1, v3
 
-    if-eqz v1, :cond_1
+    iget-wide v3, v0, Lti4;->b:J
 
-    invoke-virtual {p1, v0}, Lld4;->a(I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v1, v2}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    goto :goto_0
+    move-result-object v1
 
-    :catchall_0
-    move-exception v0
+    iget-wide v5, v0, Lti4;->c:J
 
-    goto :goto_1
+    sub-long v7, v5, v3
 
-    :cond_1
-    :goto_0
-    monitor-exit p1
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    return-void
+    move-result-object v2
 
-    :goto_1
-    :try_start_1
-    monitor-exit p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
-    throw v0
+    move-result-object v1
 
-    :cond_2
-    return-void
+    iget-wide v7, v0, Lti4;->X:J
+
+    invoke-static {v7, v8}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/math/BigInteger;->longValue()J
+
+    move-result-wide v1
+
+    add-long/2addr v1, v3
+
+    const-wide/16 v3, 0x7530
+
+    sub-long v7, v1, v3
+
+    iget-wide v9, v0, Lti4;->b:J
+
+    const-wide/16 v0, 0x1
+
+    sub-long v11, v5, v0
+
+    invoke-static/range {v7 .. v12}, Lg3g;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance v2, Llld;
+
+    new-instance v3, Lrld;
+
+    invoke-direct {v3, p1, p2, v0, v1}, Lrld;-><init>(JJ)V
+
+    invoke-direct {v2, v3, v3}, Llld;-><init>(Lrld;Lrld;)V
+
+    return-object v2
+.end method
+
+.method public final f()J
+    .locals 6
+
+    iget-object v0, p0, Lsi4;->a:Lti4;
+
+    iget-object v1, v0, Lti4;->w0:Ljava/lang/Object;
+
+    check-cast v1, Luve;
+
+    iget-wide v2, v0, Lti4;->X:J
+
+    const-wide/32 v4, 0xf4240
+
+    mul-long/2addr v2, v4
+
+    iget v0, v1, Luve;->f:I
+
+    int-to-long v0, v0
+
+    div-long/2addr v2, v0
+
+    return-wide v2
 .end method

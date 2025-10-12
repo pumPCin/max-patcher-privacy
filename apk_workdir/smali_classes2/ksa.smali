@@ -1,61 +1,85 @@
-.class public final Lksa;
-.super Llsa;
+.class public abstract Lksa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lksa;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lksa;
+    sget v0, Lwdc;->oneme_stickers_sticker_first_frame:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lksa;->a:I
 
-    sput-object v0, Lksa;->a:Lksa;
+    sget v0, Lwdc;->oneme_stickers_sticker_lottie:I
+
+    sput v0, Lksa;->b:I
+
+    sget v0, Lwdc;->oneme_stickers_sticker_set_header_button:I
+
+    sput v0, Lksa;->c:I
+
+    sget v0, Lwdc;->oneme_stickers_sticker_set_header_subtitle:I
+
+    sput v0, Lksa;->d:I
+
+    sget v0, Lwdc;->oneme_stickers_sticker_set_header_title:I
+
+    sput v0, Lksa;->e:I
+
+    sget v0, Lwdc;->oneme_stickers_sticker_set_list:I
+
+    sput v0, Lksa;->f:I
+
+    sget v0, Lwdc;->oneme_stickers_sticker_webm:I
+
+    sput v0, Lksa;->g:I
+
+    sget v0, Lwdc;->oneme_stickers_view_type_sticker:I
+
+    sput v0, Lksa;->h:I
+
+    sget v0, Lwdc;->oneme_stickers_view_type_sticker_lottie:I
+
+    sput v0, Lksa;->i:I
+
+    sget v0, Lwdc;->oneme_stickers_view_type_sticker_webm:I
+
+    sput v0, Lksa;->j:I
+
+    sget v0, Lwdc;->oneme_stickers_view_type_stickers_set:I
+
+    sput v0, Lksa;->k:I
+
+    sget v0, Lwdc;->oneme_stickers_view_type_stickers_set_showcase:I
+
+    sput v0, Lksa;->l:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lksa;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x7e6ebce
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Stub"
-
-    return-object v0
 .end method

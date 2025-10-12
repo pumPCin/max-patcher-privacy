@@ -1,131 +1,146 @@
 .class public final Lzs4;
-.super Lwi7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljavax/inject/Provider;
+
+
+# static fields
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public volatile a:Lci5;
 
-.field public final c:Ljava/lang/Object;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lzs4;->b:I
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzs4;->c:Ljava/lang/Object;
+    sput-object v0, Lzs4;->c:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static a(Lci5;)Ljavax/inject/Provider;
+    .locals 2
+
+    instance-of v0, p0, Lzs4;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance v0, Lzs4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Lzs4;->c:Ljava/lang/Object;
+
+    iput-object v1, v0, Lzs4;->b:Ljava/lang/Object;
+
+    iput-object p0, v0, Lzs4;->a:Lci5;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p0, Lzs4;->b:I
+    iget-object v0, p0, Lzs4;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Lzs4;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    if-ne v0, v1, :cond_3
 
-    return v0
+    monitor-enter p0
 
-    :pswitch_0
-    const/4 v0, 0x0
+    :try_start_0
+    iget-object v0, p0, Lzs4;->b:Ljava/lang/Object;
 
-    return v0
+    if-ne v0, v1, :cond_2
 
-    :pswitch_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lzs4;->a:Lci5;
 
-    return v0
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    iget-object v2, p0, Lzs4;->b:Ljava/lang/Object;
 
-.method public final d(Ljava/lang/Throwable;)V
-    .locals 2
+    if-eq v2, v1, :cond_1
 
-    iget v0, p0, Lzs4;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lzs4;->c:Ljava/lang/Object;
-
-    check-cast p1, Ldj7;
-
-    iget-object v0, p0, Lwi7;->a:Llj7;
-
-    if-eqz v0, :cond_0
+    if-ne v2, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    invoke-virtual {v0}, Llj7;->getState$kotlinx_coroutines_core()Ljava/lang/Object;
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Scoped provider was invoked recursively returning different results: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " & "
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    instance-of v1, v0, Lff3;
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_1
+    throw v1
 
-    check-cast v0, Lff3;
+    :cond_1
+    :goto_0
+    iput-object v0, p0, Lzs4;->b:Ljava/lang/Object;
 
-    iget-object v0, v0, Lff3;->a:Ljava/lang/Throwable;
+    const/4 v1, 0x0
 
-    new-instance v1, Lv3d;
-
-    invoke-direct {v1, v0}, Lv3d;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p1, v1}, Lz12;->resumeWith(Ljava/lang/Object;)V
+    iput-object v1, p0, Lzs4;->a:Lci5;
 
     goto :goto_1
 
-    :cond_1
-    invoke-static {v0}, Lmj7;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_2
 
-    invoke-virtual {p1, v0}, Lz12;->resumeWith(Ljava/lang/Object;)V
-
+    :cond_2
     :goto_1
-    return-void
+    monitor-exit p0
 
-    :pswitch_0
-    iget-object v0, p0, Lzs4;->c:Ljava/lang/Object;
+    return-object v0
 
-    check-cast v0, Lxe6;
+    :goto_2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    throw v0
 
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lzs4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lvs4;
-
-    invoke-interface {p1}, Lvs4;->dispose()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    return-object v0
 .end method

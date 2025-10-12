@@ -4,13 +4,25 @@
 
 
 # instance fields
-.field public final a:Ll50;
+.field public final a:Lc50;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ll50;)V
+.method public constructor <init>(Lc50;)V
     .locals 1
 
+    .line 1
+    const-string v0, "Unhandled input format:"
+
+    invoke-direct {p0, v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Lc50;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Lc50;)V
+    .locals 1
+
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -29,17 +41,8 @@
 
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;->a:Ll50;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ll50;)V
-    .locals 1
-
-    const-string v0, "Unhandled input format:"
-
-    invoke-direct {p0, v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Ll50;)V
+    .line 3
+    iput-object p2, p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;->a:Lc50;
 
     return-void
 .end method

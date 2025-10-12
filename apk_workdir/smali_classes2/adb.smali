@@ -1,147 +1,184 @@
-.class public final Ladb;
+.class public final synthetic Ladb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lugb;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lbp7;
+.field public final synthetic a:I
 
-.field public final b:Lbp7;
-
-.field public final c:Lbp7;
-
-.field public final d:Lmoe;
-
-.field public final e:Lsqc;
+.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+    .locals 0
 
-    sget-object v0, Ljme;->a:Ljme;
+    iput p2, p0, Ladb;->a:I
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v1
-
-    const-class v2, Lhx3;
-
-    invoke-virtual {v1, v2}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v2
-
-    const-class v3, Lr8f;
-
-    invoke-virtual {v2, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object v0
-
-    const-class v3, Lz9b;
-
-    invoke-virtual {v0, v3}, La5;->d(Ljava/lang/Class;)Ls5f;
-
-    move-result-object v0
+    iput-object p1, p0, Ladb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, p0, Ladb;->a:Lbp7;
-
-    iput-object v2, p0, Ladb;->b:Lbp7;
-
-    iput-object v0, p0, Ladb;->c:Lbp7;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {v0}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ladb;->d:Lmoe;
-
-    new-instance v1, Lsqc;
-
-    invoke-direct {v1, v0}, Lsqc;-><init>(Lzt9;)V
-
-    iput-object v1, p0, Ladb;->e:Lsqc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    return-void
-.end method
+    iget p1, p0, Ladb;->a:I
 
-.method public final b(Ljgb;)V
-    .locals 0
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    iget-object v1, p0, Ladb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-.method public final d(J)V
-    .locals 0
+    packed-switch p1, :pswitch_data_0
 
-    return-void
-.end method
+    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lpl7;
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 4
+    invoke-virtual {v1}, Lone/me/startconversation/channel/PickSubscribersScreen;->N0()Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iget-object v0, p0, Ladb;->c:Lbp7;
+    move-result-object p1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
 
-    check-cast v0, Lz9b;
+    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
 
-    sget-object v1, Lz9b;->f:[Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lz9b;->c([Ljava/lang/String;)Z
+    iget-object p1, p1, Lodb;->c:Lmfb;
 
-    move-result v0
+    check-cast p1, Lqcb;
 
-    if-nez v0, :cond_0
+    iget-object v2, v1, Lone/me/startconversation/channel/PickSubscribersScreen;->t0:Lds;
 
-    iget-object v0, p0, Ladb;->b:Lbp7;
+    sget-object v3, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lpl7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    aget-object v3, v3, v4
 
-    check-cast v0, Lr8f;
+    invoke-virtual {v2, v1}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    check-cast v0, Lwla;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lwla;->b()Ly24;
+    check-cast v1, [J
 
-    move-result-object v0
+    iget-object v2, p1, Lqcb;->d:Lyn7;
 
-    new-instance v1, Lzcb;
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    move-result-object v2
 
-    invoke-direct {v1, p0, v2}, Lzcb;-><init>(Ladb;Lkotlin/coroutines/Continuation;)V
+    check-cast v2, Lg13;
 
-    const/4 v3, 0x2
+    iget-wide v5, p1, Lqcb;->a:J
 
-    invoke-static {p1, v0, v2, v1, v3}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    check-cast v2, Lh23;
+
+    invoke-virtual {v2, v5, v6}, Lh23;->N(J)Lbpc;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lbpc;->a:Lane;
+
+    invoke-interface {v2}, Lane;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lr82;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
 
     :cond_0
+    iget-object v3, p1, Lqcb;->f:Lyn7;
+
+    invoke-interface {v3}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lfm3;
+
+    invoke-interface {v3}, Lfm3;->f()Z
+
+    iget-object v3, p1, Lqcb;->k:Ln24;
+
+    if-eqz v3, :cond_1
+
+    iget-object v5, p1, Lqcb;->c:Lyn7;
+
+    invoke-interface {v5}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Le7f;
+
+    check-cast v5, Lmka;
+
+    invoke-virtual {v5}, Lmka;->b()Lh24;
+
+    move-result-object v5
+
+    new-instance v6, Lncb;
+
+    invoke-direct {v6, p1, v2, v1, v0}, Lncb;-><init>(Lqcb;Lr82;[JLkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x2
+
+    invoke-static {v3, v5, v0, v6, v1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    move-result-object v0
+
+    :cond_1
+    iget-object v1, p1, Lqcb;->j:Lk5d;
+
+    sget-object v2, Lqcb;->l:[Lpl7;
+
+    aget-object v2, v2, v4
+
+    invoke-virtual {v1, p1, v2, v0}, Lk5d;->P(Ljava/lang/Object;Lpl7;Ljava/lang/Object;)V
+
+    :goto_0
     return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->L0()Lodb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lodb;->c:Lmfb;
+
+    check-cast p1, Lqcb;
+
+    iget-object v1, p1, Lqcb;->k:Ln24;
+
+    if-eqz v1, :cond_2
+
+    new-instance v2, Lpcb;
+
+    invoke-direct {v2, p1, v0}, Lpcb;-><init>(Lqcb;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v1, v0, v0, v2, p1}, Lov9;->T(Ln24;Lf24;Lq24;Lje6;I)Loke;
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

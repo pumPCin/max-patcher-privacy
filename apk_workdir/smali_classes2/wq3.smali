@@ -1,71 +1,51 @@
 .class public final Lwq3;
-.super Lyi0;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lvq3;
+.field public X:Ly15;
 
-.field public c:Lbpb;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lbr3;
+
+.field public o:Lbr3;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(JLvq3;)V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lbpb;->c:Lbpb;
-
-    invoke-direct {p0, p1, p2, p3, v0}, Lwq3;-><init>(JLvq3;Lbpb;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JLvq3;Lbpb;)V
+.method public constructor <init>(Lbr3;Lwy3;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0, p1, p2}, Lyi0;-><init>(J)V
+    iput-object p1, p0, Lwq3;->Z:Lbr3;
 
-    .line 3
-    iput-object p3, p0, Lwq3;->b:Lvq3;
-
-    .line 4
-    iput-object p4, p0, Lwq3;->c:Lbpb;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lwq3;->Y:Ljava/lang/Object;
 
-    const-string v1, "ContactDb{data="
+    iget p1, p0, Lwq3;->r0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lwq3;->b:Lvq3;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput p1, p0, Lwq3;->r0:I
 
-    const-string v1, ", presence="
+    iget-object p1, p0, Lwq3;->Z:Lbr3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Lbr3;->l(Lwy3;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lwq3;->c:Lbpb;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

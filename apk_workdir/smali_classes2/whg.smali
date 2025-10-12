@@ -1,69 +1,63 @@
 .class public final Lwhg;
-.super Lxhg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lwhg;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Ld8c;
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lk3g;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lk3g;-><init>(I)V
-
-    sput-object v0, Lwhg;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ld8c;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwhg;->a:Ld8c;
+    iput-object p3, p0, Lwhg;->a:Ljava/lang/String;
+
+    iput-wide p1, p0, Lwhg;->b:J
+
+    iput-object p4, p0, Lwhg;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lwhg;->c:Ljava/lang/String;
 
-    return v0
-.end method
+    invoke-static {v0}, Ld40;->A(Ljava/lang/CharSequence;)Z
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    move-result v0
 
-    iget-object p2, p0, Lwhg;->a:Ld8c;
+    xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    const-string v1, "VideoUploadInfo{url=\'"
 
-    move-result-object p2
+    const-string v2, "\', videoId="
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-wide v3, p0, Lwhg;->b:J
 
-    return-void
+    iget-object v5, p0, Lwhg;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3, v4, v5, v2}, Ljjd;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", token=\'"
+
+    const-string v3, "\'}"
+
+    invoke-static {v1, v2, v0, v3}, Lbk7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

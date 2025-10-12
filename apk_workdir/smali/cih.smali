@@ -1,102 +1,145 @@
-.class public abstract Lcih;
-.super Ljava/lang/Object;
+.class public final Lcih;
+.super Ldih;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Ldih;
+
+.field public final transient c:I
+
+.field public final transient o:I
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ldih;II)V
+    .locals 0
 
-    const-class v0, Lcih;
+    iput-object p1, p0, Lcih;->X:Ldih;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    iput p2, p0, Lcih;->c:I
+
+    iput p3, p0, Lcih;->o:I
 
     return-void
 .end method
 
-.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+# virtual methods
+.method public final a()[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+    iget-object v0, p0, Lcih;->X:Ldih;
+
+    invoke-virtual {v0}, Laih;->a()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()I
+    .locals 2
+
+    iget-object v0, p0, Lcih;->X:Ldih;
+
+    invoke-virtual {v0}, Laih;->b()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    iget v1, p0, Lcih;->c:I
 
-    const/4 p0, 0x0
+    add-int/2addr v0, v1
 
-    return-object p0
-
-    :cond_0
-    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static b(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+.method public final c()I
     .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcih;->X:Ldih;
 
-    if-nez p1, :cond_0
+    invoke-virtual {v0}, Laih;->b()I
 
-    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v0
 
-    return-void
+    iget v1, p0, Lcih;->c:I
 
-    :cond_0
-    const/4 v1, 0x1
+    add-int/2addr v0, v1
 
-    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
+    iget v1, p0, Lcih;->o:I
 
-    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    add-int/2addr v0, v1
 
-    return-void
+    return v0
 .end method
 
-.method public static c(Landroid/os/Parcel;)V
-    .locals 3
+.method public final d()Z
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
+    const/4 v0, 0x1
 
-    move-result p0
+    return v0
+.end method
 
-    if-gtz p0, :cond_0
+.method public final f(II)Ldih;
+    .locals 1
 
-    return-void
+    iget v0, p0, Lcih;->o:I
 
-    :cond_0
-    new-instance v0, Landroid/os/BadParcelableException;
+    invoke-static {p1, p2, v0}, Lq98;->F(III)V
 
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    iget v0, p0, Lcih;->c:I
 
-    move-result-object v1
+    add-int/2addr p1, v0
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    add-int/2addr p2, v0
 
-    move-result v1
+    iget-object v0, p0, Lcih;->X:Ldih;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1, p2}, Ldih;->f(II)Ldih;
 
-    add-int/lit8 v1, v1, 0x2d
+    move-result-object p1
 
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    return-object p1
+.end method
 
-    const-string v1, "Parcel data not fully consumed, unread size: "
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v0, p0, Lcih;->o:I
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {p1, v0}, Lq98;->E(II)V
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, p0, Lcih;->c:I
 
-    move-result-object p0
+    add-int/2addr p1, v0
 
-    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lcih;->X:Ldih;
 
-    throw v0
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lcih;->o:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lcih;->f(II)Ldih;
+
+    move-result-object p1
+
+    return-object p1
 .end method

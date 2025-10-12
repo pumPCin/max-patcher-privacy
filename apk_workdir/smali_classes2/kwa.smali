@@ -1,85 +1,58 @@
-.class public abstract Lkwa;
+.class public final Lkwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhdf;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final c:I
+.field public final b:Lpnb;
 
-.field public static final d:I
+.field public final c:Ljava/lang/String;
 
-.field public static final e:I
+.field public final d:Lyn7;
 
-.field public static final f:I
+.field public final e:Lyn7;
 
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public final f:Lh4f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyn7;Landroid/content/Context;Lpnb;Lyn7;)V
+    .locals 0
 
-    sget v0, Lagc;->oneme_stickers_preview_action_favorite:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lkwa;->a:I
+    iput-object p2, p0, Lkwa;->a:Landroid/content/Context;
 
-    sget v0, Lagc;->oneme_stickers_preview_action_forward:I
+    iput-object p3, p0, Lkwa;->b:Lpnb;
 
-    sput v0, Lkwa;->b:I
+    const-class p2, Lkwa;
 
-    sget v0, Lagc;->oneme_stickers_preview_action_send:I
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    sput v0, Lkwa;->c:I
+    move-result-object p2
 
-    sget v0, Lagc;->oneme_stickers_preview_content_container:I
+    iput-object p2, p0, Lkwa;->c:Ljava/lang/String;
 
-    sput v0, Lkwa;->d:I
+    iput-object p4, p0, Lkwa;->d:Lyn7;
 
-    sget v0, Lagc;->oneme_stickers_preview_lottie_cell:I
+    iput-object p1, p0, Lkwa;->e:Lyn7;
 
-    sput v0, Lkwa;->e:I
+    new-instance p1, Loea;
 
-    sget v0, Lagc;->oneme_stickers_preview_static_cell:I
+    const/16 p2, 0x11
 
-    sput v0, Lkwa;->f:I
+    invoke-direct {p1, p2}, Loea;-><init>(I)V
 
-    sget v0, Lagc;->oneme_stickers_preview_sticker_container:I
+    new-instance p2, Lh4f;
 
-    sput v0, Lkwa;->g:I
+    invoke-direct {p2, p1}, Lh4f;-><init>(Ltd6;)V
 
-    sget v0, Lagc;->oneme_stickers_preview_stickers_set_container:I
-
-    sput v0, Lkwa;->h:I
-
-    sget v0, Lagc;->oneme_stickers_preview_stickers_set_content:I
-
-    sput v0, Lkwa;->i:I
-
-    sget v0, Lagc;->oneme_stickers_preview_stickers_set_header:I
-
-    sput v0, Lkwa;->j:I
-
-    sget v0, Lagc;->oneme_stickers_preview_toolbar:I
-
-    sput v0, Lkwa;->k:I
-
-    sget v0, Lagc;->oneme_stickers_preview_webm_cell:I
-
-    sput v0, Lkwa;->l:I
+    iput-object p2, p0, Lkwa;->f:Lh4f;
 
     return-void
 .end method

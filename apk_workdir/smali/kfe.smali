@@ -1,61 +1,60 @@
 .class public final Lkfe;
-.super Lym4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lnee;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public c:Lss4;
+.field public final a:J
+
+.field public final b:D
+
+
+# direct methods
+.method public constructor <init>(JD)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lkfe;->a:J
+
+    iput-wide p3, p0, Lkfe;->b:D
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final c(Lss4;)V
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iget-object v0, p0, Lkfe;->c:Lss4;
+    check-cast p1, Lkfe;
 
-    invoke-static {v0, p1}, Lws4;->f(Lss4;Lss4;)Z
+    iget-wide v0, p1, Lkfe;->a:J
 
-    move-result v0
+    sget p1, Lg3g;->a:I
 
-    if-eqz v0, :cond_0
+    iget-wide v2, p0, Lkfe;->a:J
 
-    iput-object p1, p0, Lkfe;->c:Lss4;
+    cmp-long p1, v2, v0
 
-    iget-object p1, p0, Lym4;->a:Lcze;
+    if-gez p1, :cond_0
 
-    invoke-interface {p1, p0}, Lcze;->d(Leze;)V
+    const/4 p1, -0x1
+
+    return p1
 
     :cond_0
-    return-void
-.end method
+    if-nez p1, :cond_1
 
-.method public final cancel()V
-    .locals 1
+    const/4 p1, 0x0
 
-    const/4 v0, 0x4
+    return p1
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    :cond_1
+    const/4 p1, 0x1
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lym4;->b:Ljava/lang/Object;
-
-    iget-object v0, p0, Lkfe;->c:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lym4;->a:Lcze;
-
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return p1
 .end method

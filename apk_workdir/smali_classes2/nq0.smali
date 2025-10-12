@@ -1,64 +1,53 @@
 .class public final Lnq0;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lnv0;
 
-.field public final b:I
+.field public final b:Lh10;
 
-.field public c:Ljv7;
+.field public final c:I
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:[F
+
+.field public i:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lnv0;Lh10;IZZZZ[F)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnq0;->a:Ljava/lang/String;
+    iput-object p1, p0, Lnq0;->a:Lnv0;
 
-    iput p2, p0, Lnq0;->b:I
+    iput-object p2, p0, Lnq0;->b:Lh10;
 
-    return-void
-.end method
+    iput p3, p0, Lnq0;->c:I
 
+    iput-boolean p4, p0, Lnq0;->d:Z
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+    iput-boolean p5, p0, Lnq0;->e:Z
 
-    iget-object v0, p0, Lnq0;->c:Ljv7;
+    iput-boolean p6, p0, Lnq0;->f:Z
 
-    if-eqz v0, :cond_0
+    iput-boolean p7, p0, Lnq0;->g:Z
 
-    iget-object v1, v0, Ljv7;->a:Lov7;
+    iput-object p8, p0, Lnq0;->h:[F
 
-    iget-object v0, v0, Ljv7;->b:Ljava/lang/Object;
+    const-string p1, ""
 
-    sget-object v2, Lpv7;->c:Lpv7;
-
-    check-cast v0, Landroid/text/style/ClickableSpan;
-
-    iget-object v3, p0, Lnq0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p1, v3, v2, v0}, Lov7;->b(Landroid/view/View;Ljava/lang/String;Lpv7;Landroid/text/style/ClickableSpan;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lnq0;->b:I
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    iput-object p1, p0, Lnq0;->i:Ljava/lang/String;
 
     return-void
 .end method

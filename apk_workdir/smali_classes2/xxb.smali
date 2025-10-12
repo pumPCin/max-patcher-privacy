@@ -1,9 +1,9 @@
 .class public final Lxxb;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -11,20 +11,16 @@
 
 .field public final synthetic Y:Lfyb;
 
-.field public final synthetic Z:Landroid/net/Uri;
-
 
 # direct methods
-.method public constructor <init>(Lfyb;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfyb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
     iput-object p1, p0, Lxxb;->Y:Lfyb;
 
-    iput-object p2, p0, Lxxb;->Z:Landroid/net/Uri;
-
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +40,7 @@
 
     check-cast p1, Lxxb;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lxxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,15 +48,13 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
     new-instance v0, Lxxb;
 
     iget-object v1, p0, Lxxb;->Y:Lfyb;
 
-    iget-object v2, p0, Lxxb;->Z:Landroid/net/Uri;
-
-    invoke-direct {v0, v1, v2, p2}, Lxxb;-><init>(Lfyb;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Lxxb;-><init>(Lfyb;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lxxb;->X:Ljava/lang/Object;
 
@@ -68,98 +62,48 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 13
 
-    sget-object v0, Loyf;->a:Loyf;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lxxb;->X:Ljava/lang/Object;
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
-    iget-object v1, p0, Lxxb;->Y:Lfyb;
+    sget-object v0, Lfyb;->G0:[Lpl7;
 
-    iget-object v2, v1, Lfyb;->B0:Ljb5;
+    iget-object v0, p0, Lxxb;->Y:Lfyb;
 
-    iget-object v3, v1, Lfyb;->c:Lbp7;
+    invoke-virtual {v0}, Lfyb;->s()Lr82;
 
-    iget-object v4, v1, Lfyb;->w0:Lbp7;
+    move-result-object v1
 
-    sget-object v5, Lfyb;->F0:[Ltm7;
+    sget-object v2, Laxf;->a:Laxf;
 
-    invoke-virtual {v1}, Lfyb;->r()Lpr5;
-
-    move-result-object v5
-
-    iget-object v6, v1, Lfyb;->E0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Lpr5;->r(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v5
-
-    :try_start_0
-    invoke-virtual {v5}, Ljava/io/File;->exists()Z
-
-    move-result v6
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v6, :cond_0
-
-    iget-object v6, p0, Lxxb;->Z:Landroid/net/Uri;
-
-    if-eqz v6, :cond_0
-
-    :try_start_1
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Landroid/app/Application;
-
-    invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v6}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, La1b;->t(Ljava/io/File;Ljava/io/InputStream;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v6
-
-    goto :goto_1
-
     :cond_0
+    iget-object v3, v1, Lr82;->b:Luc2;
+
+    invoke-virtual {v1}, Lr82;->Z()Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
     :goto_0
-    move-object v7, v0
+    return-object v2
 
-    goto :goto_2
+    :cond_1
+    iget-wide v4, v3, Luc2;->a:J
 
-    :goto_1
-    new-instance v7, Lv3d;
+    const-wide/16 v6, 0x0
 
-    invoke-direct {v7, v6}, Lv3d;-><init>(Ljava/lang/Throwable;)V
+    cmp-long v4, v4, v6
 
-    :goto_2
-    invoke-static {v7}, Lx3d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_1
+    if-nez v4, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -169,120 +113,62 @@
 
     move-result-object p1
 
-    const-string v7, "failed to copy picked image, e:"
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
 
-    invoke-static {p1, v7, v6}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1}, Lyt3;->N(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lfyb;->v()V
+    iget-object p1, v0, Lfyb;->v0:Lyn7;
 
-    :cond_1
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lktd;
-
-    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {p1, v6, v6}, Lhd6;->L(Lktd;Ljava/lang/String;Ljava/lang/String;)Z
-
-    invoke-interface {v3}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lktd;
+    check-cast p1, Lp34;
 
-    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v3
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ProfileInvite"
 
-    invoke-static {p1, v3}, Lhd6;->I(Lktd;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, v1, Lfyb;->o:Lbp7;
+    const-string v1, "ONEME-18920"
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v1, v0}, Lp34;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object p1
-
-    check-cast p1, Llm5;
-
-    check-cast p1, Lnm5;
-
-    invoke-virtual {p1}, Lnm5;->n()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    new-instance p1, Lswb;
-
-    invoke-static {v5}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {p1, v1, v3}, Lswb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v2, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    goto :goto_3
+    return-object v2
 
     :cond_2
-    new-instance p1, Landroid/content/Intent;
+    iget-object p1, v0, Lfyb;->Y:Lyn7;
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    check-cast v1, Landroid/app/Application;
+    check-cast p1, Lcl;
 
-    const-class v3, Lru/ok/messages/views/ActAvatarCrop;
+    iget-wide v5, v1, Lr82;->a:J
 
-    invoke-direct {p1, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    iget-wide v7, v3, Luc2;->a:J
 
-    const-string v1, "ru.ok.tamtam.extra.URI"
+    move-object v4, p1
 
-    invoke-static {v5}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    check-cast v4, Lgea;
 
-    move-result-object v3
+    const/4 v9, 0x0
 
-    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    const/4 v10, 0x0
 
-    const-string v1, "ru.ok.tamtam.extra.FILE_PATH"
+    const/4 v11, 0x1
 
-    invoke-virtual {v5}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    const/4 v12, 0x0
 
-    move-result-object v3
+    invoke-virtual/range {v4 .. v12}, Lgea;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
 
-    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    move-result-wide v3
 
-    const-string v1, "ru.ok.tamtam.extra.SHOW_RECAPTURE"
+    iget-object p1, v0, Lfyb;->y0:Ljava/util/concurrent/atomic/AtomicLong;
 
-    const/4 v3, 0x1
+    invoke-virtual {p1, v3, v4}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string v1, "ru.ok.tamtam.extra.FOR_CHAT_BACKGROUND"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    new-instance v1, Ltwb;
-
-    invoke-direct {v1, p1}, Ltwb;-><init>(Landroid/content/Intent;)V
-
-    invoke-static {v2, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    :goto_3
-    return-object v0
+    return-object v2
 .end method

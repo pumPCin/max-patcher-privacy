@@ -59,6 +59,7 @@
 .method public static a(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
+    .line 1
     const-string v0, "CREATE TABLE IF NOT EXISTS table_partial_proto_packet(id INTEGER PRIMARY KEY AUTOINCREMENT, data BLOB NOT NULL, ts INTEGER(8))"
 
     invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
@@ -71,6 +72,7 @@
 .method public a()Lcom/my/tracker/obfuscated/b;
     .locals 4
 
+    .line 8
     new-instance v0, Lcom/my/tracker/obfuscated/n0$a;
 
     iget-object v1, p0, Lcom/my/tracker/obfuscated/n0;->a:Landroid/database/sqlite/SQLiteDatabase;
@@ -91,12 +93,14 @@
 .method public a(J)V
     .locals 2
 
+    .line 9
     iget-object v0, p0, Lcom/my/tracker/obfuscated/n0;->d:Landroid/database/sqlite/SQLiteStatement;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
+    .line 10
     iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->d:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
@@ -107,29 +111,34 @@
 .method public a([B)V
     .locals 4
 
+    .line 2
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
+    .line 3
     iget-object v2, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3, p1}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
+    .line 4
     iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
     const/4 v2, 0x2
 
     invoke-virtual {p1, v2, v0, v1}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
+    .line 5
     iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 6
     iget-object p1, p0, Lcom/my/tracker/obfuscated/n0;->c:Landroid/database/sqlite/SQLiteStatement;
 
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
@@ -143,6 +152,7 @@
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteProgram;->clearBindings()V
 
+    .line 7
     throw p1
 .end method
 

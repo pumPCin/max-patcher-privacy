@@ -3,212 +3,111 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Z
 
-.field public final synthetic b:Lp01;
-
-.field public final synthetic c:Lch1;
+.field public final synthetic b:Lj01;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp01;Lch1;I)V
+.method public synthetic constructor <init>(ZLj01;)V
     .locals 0
 
-    iput p3, p0, Lvz0;->a:I
-
-    iput-object p1, p0, Lvz0;->b:Lp01;
-
-    iput-object p2, p0, Lvz0;->c:Lch1;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lvz0;->a:Z
+
+    iput-object p2, p0, Lvz0;->b:Lj01;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget v0, p0, Lvz0;->a:I
+    check-cast p1, Lus;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lvz0;->b:Lp01;
+    new-instance v0, Lns;
 
-    iget-object v1, p0, Lvz0;->c:Lch1;
+    invoke-direct {v0, p1}, Lns;-><init>(Lus;)V
 
-    sget-object v2, Lox9;->j:Lqpa;
+    :cond_0
+    :goto_0
+    invoke-virtual {v0}, Lns;->hasNext()Z
 
-    if-nez v2, :cond_0
+    move-result v1
+
+    iget-boolean v2, p0, Lvz0;->a:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v0}, Lns;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Number;
+
+    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Le4b;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lvz0;->b:Lj01;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v3}, Lj01;->d()Lv04;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lv04;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-interface {v2, v1, v3}, Lru/ok/android/externcalls/sdk/Conversation;->promoteParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;Z)V
 
     goto :goto_0
 
-    :cond_0
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable camera for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " was success"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_1
-    :goto_0
-    iget-object v0, v0, Lp01;->H0:Le8e;
+    invoke-virtual {v3}, Lj01;->d()Lv04;
 
-    new-instance v2, Lva;
+    move-result-object v2
 
-    const/4 v3, 0x1
+    invoke-virtual {v2}, Lv04;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    invoke-direct {v2, v1, v3}, Lva;-><init>(Lch1;Z)V
+    move-result-object v2
 
-    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
+    if-eqz v2, :cond_0
 
-    :goto_1
-    sget-object v0, Loyf;->a:Loyf;
+    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/Conversation;->removeParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
 
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lvz0;->b:Lp01;
-
-    iget-object v1, p0, Lvz0;->c:Lch1;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_2
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_2
-    sget-object v3, Ly38;->o:Ly38;
+    if-eqz v2, :cond_3
 
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable microphone for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " was success"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return-object p1
 
     :cond_3
-    :goto_2
-    iget-object v0, v0, Lp01;->H0:Le8e;
+    new-instance p1, Lus;
 
-    new-instance v2, Lwa;
+    const/4 v0, 0x0
 
-    const/4 v3, 0x1
+    invoke-direct {p1, v0}, Lus;-><init>(I)V
 
-    invoke-direct {v2, v1, v3}, Lwa;-><init>(Lch1;Z)V
-
-    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :pswitch_1
-    iget-object v0, p0, Lvz0;->b:Lp01;
-
-    iget-object v1, p0, Lvz0;->c:Lch1;
-
-    sget-object v2, Lox9;->j:Lqpa;
-
-    if-nez v2, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    sget-object v3, Ly38;->o:Ly38;
-
-    invoke-virtual {v2, v3}, Lqpa;->b(Ly38;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_5
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "Disable screen sharing for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v5, " was success"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const-string v6, "CallAdminSettingsController"
-
-    invoke-virtual {v2, v3, v6, v4, v5}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
-    :goto_3
-    iget-object v0, v0, Lp01;->H0:Le8e;
-
-    new-instance v2, Lza;
-
-    invoke-direct {v2, v1}, Lza;-><init>(Lch1;)V
-
-    invoke-virtual {v0, v2}, Le8e;->h(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

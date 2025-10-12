@@ -1,148 +1,128 @@
 .class public final Ltwd;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lkn1;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic X:Landroid/graphics/RectF;
+
+.field public final synthetic Y:Lbxd;
+
+.field public final synthetic Z:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Landroid/graphics/RectF;Lbxd;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltwd;->X:Landroid/graphics/RectF;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput-object p2, p0, Ltwd;->Y:Lbxd;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    iput-object p3, p0, Ltwd;->Z:Ljava/lang/String;
 
-    iput-object v0, p0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCurrentParticipantActiveRoomChanged(Lgn1;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    check-cast p1, Ln24;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Ltwd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    check-cast p1, Ltwd;
 
-    if-eqz v1, :cond_0
+    sget-object p2, Laxf;->a:Laxf;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Ltwd;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
-
-    check-cast v1, Lkn1;
-
-    invoke-interface {v1, p1}, Lkn1;->onCurrentParticipantActiveRoomChanged(Lgn1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p2
 .end method
 
-.method public final onCurrentParticipantInvitedToRoom(Lhn1;)V
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object v0, p0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance p1, Ltwd;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Ltwd;->Y:Lbxd;
 
-    move-result-object v0
+    iget-object v1, p0, Ltwd;->Z:Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v2, p0, Ltwd;->X:Landroid/graphics/RectF;
 
-    move-result v1
+    invoke-direct {p1, v2, v0, v1, p2}, Ltwd;-><init>(Landroid/graphics/RectF;Lbxd;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkn1;
-
-    invoke-interface {v1, p1}, Lkn1;->onCurrentParticipantInvitedToRoom(Lhn1;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final onRoomRemoved(Lin1;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Ltwd;->X:Landroid/graphics/RectF;
 
-    move-result-object v0
+    invoke-static {p1}, Ldt;->i(Landroid/graphics/RectF;)Lh10;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object p1
 
-    move-result v1
+    iget-object v0, p0, Ltwd;->Y:Lbxd;
 
-    if-eqz v1, :cond_0
+    iget-object v1, v0, Lbxd;->G0:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v2, v0, Lbxd;->t0:Lyn7;
 
-    move-result-object v1
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    check-cast v1, Lkn1;
+    move-result-object v2
 
-    invoke-interface {v1, p1}, Lkn1;->onRoomRemoved(Lin1;)V
+    check-cast v2, Lcl;
 
-    goto :goto_0
+    iget-object v3, p0, Ltwd;->Z:Ljava/lang/String;
 
-    :cond_0
-    return-void
-.end method
+    check-cast v2, Lgea;
 
-.method public final onRoomUpdated(Ljn1;)V
-    .locals 2
+    invoke-virtual {v2, v3, p1}, Lgea;->E(Ljava/lang/String;Lh10;)J
 
-    iget-object v0, p0, Ltwd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    move-result-wide v2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    move-result-object v0
+    iget-object p1, v0, Lbxd;->z0:Lya5;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    new-instance v0, Lo1e;
 
-    move-result v1
+    sget v1, Leta;->q:I
 
-    if-eqz v1, :cond_0
+    new-instance v2, Lxcf;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-direct {v2, v1}, Lxcf;-><init>(I)V
 
-    move-result-object v1
+    sget v1, Ll7d;->m:I
 
-    check-cast v1, Lkn1;
+    new-instance v3, Ljava/lang/Integer;
 
-    invoke-interface {v1, p1}, Lkn1;->onRoomUpdated(Ljn1;)V
+    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
 
-    goto :goto_0
+    invoke-direct {v0, v2, v3}, Lo1e;-><init>(Lcdf;Ljava/lang/Integer;)V
 
-    :cond_0
-    return-void
+    invoke-static {p1, v0}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

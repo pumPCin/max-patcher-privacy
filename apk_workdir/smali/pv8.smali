@@ -1,27 +1,25 @@
 .class public final Lpv8;
-.super Ljava/lang/Object;
+.super Lyjg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Llj0;
-
-.field public final b:Ljv8;
-
-.field public final c:Lnv8;
+.field public final b:Lya5;
 
 
 # direct methods
-.method public constructor <init>(Llj0;Ljv8;Lnv8;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lyjg;-><init>()V
 
-    iput-object p1, p0, Lpv8;->a:Llj0;
+    new-instance v0, Lya5;
 
-    iput-object p2, p0, Lpv8;->b:Ljv8;
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Lpv8;->c:Lnv8;
+    invoke-direct {v0, v1}, Lya5;-><init>(I)V
+
+    iput-object v0, p0, Lpv8;->b:Lya5;
 
     return-void
 .end method

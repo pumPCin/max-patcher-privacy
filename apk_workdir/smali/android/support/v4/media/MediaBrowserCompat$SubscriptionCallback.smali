@@ -72,6 +72,7 @@
         }
     .end annotation
 
+    .line 1
     return-void
 .end method
 
@@ -89,18 +90,21 @@
         }
     .end annotation
 
+    .line 2
     return-void
 .end method
 
 .method public onError(Ljava/lang/String;)V
     .locals 0
 
+    .line 1
     return-void
 .end method
 
 .method public onError(Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 0
 
+    .line 2
     return-void
 .end method
 

@@ -1,127 +1,38 @@
-.class public final Lo3g;
+.class public interface abstract Lo3g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Z
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lo3g;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Lo3g;->b:Z
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lo3g;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lo3g;
-
-    iget-object v0, p0, Lo3g;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lo3g;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lo3g;->b:Z
-
-    iget-boolean p1, p1, Lo3g;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+.method public abstract a()Ljava/lang/String;
 .end method
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lo3g;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lo3g;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+.method public abstract c()Li57;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract e()I
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract equals(Ljava/lang/Object;)Z
+.end method
 
-    const-string v1, "UrlState(url="
+.method public abstract f()Lw57;
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public abstract g()Lh67;
+.end method
 
-    iget-object v1, p0, Lo3g;->a:Ljava/lang/String;
+.method public abstract l()Ls57;
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract m()Ln67;
+.end method
 
-    const-string v1, ", isRestored="
+.method public abstract n()Lu57;
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract o()Lm57;
+.end method
 
-    iget-boolean v1, p0, Lo3g;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract q()Lo57;
 .end method

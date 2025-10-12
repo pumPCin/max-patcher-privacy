@@ -1,53 +1,105 @@
-.class public final Lgu4;
-.super Lnz3;
+.class public final synthetic Lgu4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lno3;
 
 
 # instance fields
-.field public X:Lo10;
+.field public final synthetic X:Ljava/io/File;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic a:Lj10;
 
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final synthetic b:I
 
-.field public o:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+.field public final synthetic c:J
 
-.field public w0:I
+.field public final synthetic o:J
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lnz3;)V
+.method public synthetic constructor <init>(Lj10;IJJLjava/io/File;)V
     .locals 0
 
-    iput-object p1, p0, Lgu4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgu4;->a:Lj10;
+
+    iput p2, p0, Lgu4;->b:I
+
+    iput-wide p3, p0, Lgu4;->c:J
+
+    iput-wide p5, p0, Lgu4;->o:J
+
+    iput-object p7, p0, Lgu4;->X:Ljava/io/File;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iput-object p1, p0, Lgu4;->Y:Ljava/lang/Object;
+    check-cast p1, Lr00;
 
-    iget p1, p0, Lgu4;->w0:I
+    iget-object v0, p0, Lgu4;->a:Lj10;
 
-    const/high16 v0, -0x80000000
+    iput-object v0, p1, Lr00;->i:Lj10;
 
-    or-int/2addr p1, v0
+    iget v0, p0, Lgu4;->b:I
 
-    iput p1, p0, Lgu4;->w0:I
+    int-to-float v1, v0
 
-    iget-object p1, p0, Lgu4;->Z:Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;
+    iput v1, p1, Lr00;->k:F
 
-    const/4 v0, 0x0
+    iget-wide v1, p0, Lgu4;->c:J
 
-    invoke-static {p1, v0, v0, p0}, Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;->c(Lru/ok/tamtam/upload/workers/DownloadAttachesWorker;Lo10;Lq49;Lnz3;)Ljava/lang/Object;
+    iput-wide v1, p1, Lr00;->p:J
 
-    move-result-object p1
+    iget-wide v1, p0, Lgu4;->o:J
 
-    return-object p1
+    iput-wide v1, p1, Lr00;->o:J
+
+    iget-object v1, p0, Lgu4;->X:Ljava/io/File;
+
+    if-eqz v1, :cond_1
+
+    const/16 v2, 0x64
+
+    if-lt v0, v2, :cond_1
+
+    iget-object v0, p1, Lr00;->r:Lz00;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p1, Lr00;->d:Lp10;
+
+    if-eqz v0, :cond_1
+
+    :goto_0
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v2
+
+    iput-wide v2, p1, Lr00;->u:J
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lr00;->m:Ljava/lang/String;
+
+    :cond_1
+    return-void
 .end method

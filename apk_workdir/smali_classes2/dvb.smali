@@ -1,21 +1,23 @@
 .class public final Ldvb;
-.super Lhy9;
+.super Luc0;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:J
+# static fields
+.field public static final b:Ldvb;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Loyf;->a:Loyf;
+    new-instance v0, Ldvb;
 
-    invoke-direct {p0, v0}, Lhy9;-><init>(Ljava/lang/Object;)V
+    const/16 v1, 0xd
 
-    iput-wide p1, p0, Ldvb;->b:J
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Ldvb;->b:Ldvb;
 
     return-void
 .end method
@@ -23,7 +25,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -32,55 +34,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Ldvb;
+    instance-of p1, p1, Ldvb;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Ldvb;
-
-    iget-wide v3, p0, Ldvb;->b:J
-
-    iget-wide v5, p1, Ldvb;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Ldvb;->b:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
+    const v0, 0x1044d8c1
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 1
 
-    const-string v0, "BackToChat(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ldvb;->b:J
-
-    invoke-static {v2, v3, v0, v1}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "CameraPermission"
 
     return-object v0
 .end method

@@ -1,102 +1,98 @@
 .class public final La40;
-.super Lm3f;
+.super Lb40;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lbp7;
-
-.field public final synthetic Y:Lc40;
+.field public final a:Lxcf;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lc40;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxcf;)V
     .locals 0
 
-    iput-object p1, p0, La40;->X:Lbp7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, La40;->Y:Lc40;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, La40;->a:Lxcf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lgv5;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, La40;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, La40;
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     check-cast p1, La40;
 
-    sget-object p2, Loyf;->a:Loyf;
+    iget-object v0, p0, La40;->a:Lxcf;
 
-    invoke-virtual {p1, p2}, La40;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, La40;->a:Lxcf;
 
-    return-object p2
+    invoke-virtual {v0, p1}, Lxcf;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, La40;->a:Lxcf;
+
+    iget v0, v0, Lxcf;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance p1, La40;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, La40;->X:Lbp7;
+    const-string v1, "ShowTooltipEvent(textSource="
 
-    iget-object v1, p0, La40;->Y:Lc40;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p1, v0, v1, p2}, La40;-><init>(Lbp7;Lc40;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, La40;->a:Lxcf;
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    const-string v1, ")"
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, La40;->X:Lbp7;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lfs9;
-
-    iget-object v1, p0, La40;->Y:Lc40;
-
-    iget-object v2, v1, Lc40;->d:Lzlh;
-
-    check-cast v0, Lws9;
-
-    invoke-virtual {v0, v2}, Lws9;->d(Lds9;)V
-
-    iget-object v0, v1, Lc40;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lz30;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v1, v3}, Lz30;-><init>(Lbp7;Lc40;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, v3, v3, v2, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

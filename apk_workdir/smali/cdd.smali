@@ -1,267 +1,163 @@
-.class public final Lcdd;
-.super Lq3d;
+.class public abstract Lcdd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
 
+# static fields
+.field public static final a:Laee;
 
-# instance fields
-.field public final synthetic A0:Lwt9;
+.field public static final b:Lqg3;
 
-.field public X:I
+.field public static final c:Ldg7;
 
-.field public Y:I
-
-.field public Z:I
-
-.field public c:[Ljava/lang/Object;
-
-.field public o:[J
-
-.field public w0:I
-
-.field public x0:J
-
-.field public y0:I
-
-.field public synthetic z0:Ljava/lang/Object;
+.field public static final d:Ltnf;
 
 
 # direct methods
-.method public constructor <init>(Lwt9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lcdd;->A0:Lwt9;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lq3d;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lrrd;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcdd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcdd;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lcdd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lcdd;
+    const-string v0, "Scheduler Supplier result can\'t be null"
 
-    iget-object v1, p0, Lcdd;->A0:Lwt9;
+    :try_start_0
+    sget-object v1, Lbdd;->a:Laee;
 
-    invoke-direct {v0, v1, p2}, Lcdd;-><init>(Lwt9;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
 
-    iput-object p1, v0, Lcdd;->z0:Ljava/lang/Object;
+    sput-object v1, Lcdd;->a:Laee;
 
-    return-object v0
+    :try_start_1
+    sget-object v1, Lycd;->a:Lqg3;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    sput-object v1, Lcdd;->b:Lqg3;
+
+    :try_start_2
+    sget-object v1, Lzcd;->a:Ldg7;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    sput-object v1, Lcdd;->c:Ldg7;
+
+    sget-object v1, Ltnf;->c:Ltnf;
+
+    sput-object v1, Lcdd;->d:Ltnf;
+
+    :try_start_3
+    sget-object v1, Ladd;->a:Lrz9;
+
+    invoke-static {v1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
+
+    :catchall_3
+    move-exception v0
+
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object v0
+
+    throw v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 19
+.method public static a()Lpcd;
+    .locals 2
 
-    move-object/from16 v0, p0
+    sget-object v0, Lcdd;->b:Lqg3;
 
-    iget v1, v0, Lcdd;->y0:I
+    sget-object v1, Lwee;->g:Lk0a;
 
-    const/4 v2, 0x0
+    if-nez v1, :cond_0
 
-    const/16 v3, 0x8
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v4, :cond_0
-
-    iget v1, v0, Lcdd;->w0:I
-
-    iget v5, v0, Lcdd;->Z:I
-
-    iget-wide v6, v0, Lcdd;->x0:J
-
-    iget v8, v0, Lcdd;->Y:I
-
-    iget v9, v0, Lcdd;->X:I
-
-    iget-object v10, v0, Lcdd;->o:[J
-
-    iget-object v11, v0, Lcdd;->c:[Ljava/lang/Object;
-
-    iget-object v12, v0, Lcdd;->z0:Ljava/lang/Object;
-
-    check-cast v12, Lrrd;
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_2
+    return-object v0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    :try_start_0
+    invoke-virtual {v1, v0}, Lk0a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lpcd;
 
-    throw v1
+    return-object v0
 
-    :cond_1
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    :catchall_0
+    move-exception v0
 
-    iget-object v1, v0, Lcdd;->z0:Ljava/lang/Object;
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    check-cast v1, Lrrd;
+    move-result-object v0
 
-    iget-object v5, v0, Lcdd;->A0:Lwt9;
+    throw v0
+.end method
 
-    iget-object v6, v5, Lwt9;->b:[Ljava/lang/Object;
+.method public static b()Lpcd;
+    .locals 2
 
-    iget-object v5, v5, Lwt9;->a:[J
+    sget-object v0, Lcdd;->c:Ldg7;
 
-    array-length v7, v5
+    sget-object v1, Lwee;->i:Li7a;
 
-    add-int/lit8 v7, v7, -0x2
+    if-nez v1, :cond_0
 
-    if-ltz v7, :cond_5
+    return-object v0
 
-    move v8, v2
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1, v0}, Li7a;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    aget-wide v9, v5, v8
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    not-long v11, v9
+    check-cast v0, Lpcd;
 
-    const/4 v13, 0x7
+    return-object v0
 
-    shl-long/2addr v11, v13
+    :catchall_0
+    move-exception v0
 
-    and-long/2addr v11, v9
+    invoke-static {v0}, Lvb5;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    const-wide v13, -0x7f7f7f7f7f7f7f80L    # -2.937446524422997E-306
+    move-result-object v0
 
-    and-long/2addr v11, v13
-
-    cmp-long v11, v11, v13
-
-    if-eqz v11, :cond_4
-
-    sub-int v11, v8, v7
-
-    not-int v11, v11
-
-    ushr-int/lit8 v11, v11, 0x1f
-
-    rsub-int/lit8 v11, v11, 0x8
-
-    move-object v12, v1
-
-    move v1, v2
-
-    move-wide/from16 v17, v9
-
-    move-object v10, v5
-
-    move v9, v7
-
-    move v5, v11
-
-    move-object v11, v6
-
-    move-wide/from16 v6, v17
-
-    :goto_1
-    if-ge v1, v5, :cond_3
-
-    const-wide/16 v13, 0xff
-
-    and-long/2addr v13, v6
-
-    const-wide/16 v15, 0x80
-
-    cmp-long v13, v13, v15
-
-    if-gez v13, :cond_2
-
-    shl-int/lit8 v2, v8, 0x3
-
-    add-int/2addr v2, v1
-
-    aget-object v2, v11, v2
-
-    iput-object v12, v0, Lcdd;->z0:Ljava/lang/Object;
-
-    iput-object v11, v0, Lcdd;->c:[Ljava/lang/Object;
-
-    iput-object v10, v0, Lcdd;->o:[J
-
-    iput v9, v0, Lcdd;->X:I
-
-    iput v8, v0, Lcdd;->Y:I
-
-    iput-wide v6, v0, Lcdd;->x0:J
-
-    iput v5, v0, Lcdd;->Z:I
-
-    iput v1, v0, Lcdd;->w0:I
-
-    iput v4, v0, Lcdd;->y0:I
-
-    invoke-virtual {v12, v2, v0}, Lrrd;->b(Ljava/lang/Object;Lq3d;)V
-
-    sget-object v1, Lf34;->a:Lf34;
-
-    return-object v1
-
-    :cond_2
-    :goto_2
-    shr-long/2addr v6, v3
-
-    add-int/2addr v1, v4
-
-    goto :goto_1
-
-    :cond_3
-    if-ne v5, v3, :cond_5
-
-    move v7, v9
-
-    move-object v5, v10
-
-    move-object v6, v11
-
-    move-object v1, v12
-
-    :cond_4
-    if-eq v8, v7, :cond_5
-
-    add-int/lit8 v8, v8, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    sget-object v1, Loyf;->a:Loyf;
-
-    return-object v1
+    throw v0
 .end method

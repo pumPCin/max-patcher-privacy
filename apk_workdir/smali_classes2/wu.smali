@@ -1,119 +1,114 @@
-.class public final Lwu;
-.super Lyu;
+.class public final synthetic Lwu;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Z
+.field public final synthetic b:Lxh2;
+
+.field public final synthetic c:Lp19;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public synthetic constructor <init>(Lxh2;Lp19;I)V
     .locals 0
 
+    iput p3, p0, Lwu;->a:I
+
+    iput-object p1, p0, Lwu;->b:Lxh2;
+
+    iput-object p2, p0, Lwu;->c:Lp19;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lwu;->a:J
-
-    iput-boolean p3, p0, Lwu;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final run()V
     .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lwu;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lwu;->b:Lxh2;
+
+    iget-object v1, p0, Lwu;->c:Lp19;
+
+    :try_start_0
+    iget-object v2, v0, Lxh2;->b:Lwu6;
+
+    invoke-virtual {v2, v1}, Lwu6;->r(Leu6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    iget-object v2, v0, Lxh2;->a:Ljava/lang/String;
+
+    const-string v3, "updateHistoryItemSync: exception"
+
+    invoke-static {v2, v3, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object v0, v0, Lxh2;->Y:Ltb5;
+
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
+
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+
+    invoke-interface {v0, v2}, Ltb5;->a(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lwu;->b:Lxh2;
+
+    iget-object v1, p0, Lwu;->c:Lp19;
+
+    :try_start_1
+    iget-object v2, v0, Lxh2;->b:Lwu6;
+
+    invoke-virtual {v2, v1}, Lwu6;->b(Leu6;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lwu;
+    :catchall_1
+    move-exception v1
 
-    if-nez v0, :cond_1
+    iget-object v2, v0, Lxh2;->a:Ljava/lang/String;
 
-    goto :goto_0
+    const-string v3, "addHistoryItem: exception"
 
-    :cond_1
-    check-cast p1, Lwu;
+    invoke-static {v2, v3, v1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-wide v0, p0, Lwu;->a:J
+    iget-object v0, v0, Lxh2;->Y:Ltb5;
 
-    iget-wide v2, p1, Lwu;->a:J
+    new-instance v2, Lru/ok/tamtam/util/HandledException;
 
-    cmp-long v0, v0, v2
+    invoke-direct {v2, v1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    if-eqz v0, :cond_2
+    invoke-interface {v0, v2}, Ltb5;->a(Ljava/lang/Throwable;)V
 
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lwu;->b:Z
-
-    iget-boolean p1, p1, Lwu;->b:Z
-
-    if-eq v0, p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
     :goto_1
-    const/4 p1, 0x1
+    return-void
 
-    return p1
-.end method
+    nop
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lwu;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lwu;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "LoadingNext(time="
-
-    const-string v1, ", isRemoteCaused="
-
-    iget-wide v2, p0, Lwu;->a:J
-
-    iget-boolean v4, p0, Lwu;->b:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lqe0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

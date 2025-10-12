@@ -30,11 +30,21 @@
 
 .field public static fontProviderQuery:I = 0x7f0403e7
 
+.field public static fontProviderSystemFontFamily:I = 0x7f0403e8
+
 .field public static fontStyle:I = 0x7f0403e9
 
 .field public static fontVariationSettings:I = 0x7f0403ea
 
 .field public static fontWeight:I = 0x7f0403eb
+
+.field public static lStar:I = 0x7f040589
+
+.field public static nestedScrollViewStyle:I = 0x7f0406ae
+
+.field public static queryPatterns:I = 0x7f04070a
+
+.field public static shortcutMatchRequired:I = 0x7f04075c
 
 .field public static ttcIndex:I = 0x7f0408c0
 

@@ -1,199 +1,133 @@
 .class public final Lq16;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lww7;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Loef;
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Ljava/lang/Object;
 
-.field public final c:I
-
-.field public final o:I
+.field public final synthetic Z:Lr16;
 
 
 # direct methods
-.method public constructor <init>(ILoef;Z)V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lr16;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lq16;->Y:Ljava/lang/Object;
 
-    .line 2
-    iput-object p2, p0, Lq16;->a:Loef;
+    iput-object p3, p0, Lq16;->Z:Lr16;
 
-    .line 3
-    iput-boolean p3, p0, Lq16;->b:Z
+    const/4 p1, 0x2
 
-    .line 4
-    iput p1, p0, Lq16;->c:I
-
-    const/4 p1, 0x1
-
-    .line 5
-    iput p1, p0, Lq16;->o:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lnef;Z)V
-    .locals 1
-
-    const/16 v0, 0x14
-
-    .line 6
-    invoke-direct {p0, v0, p1, p2}, Lq16;-><init>(ILoef;Z)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ln24;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lq16;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lq16;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Lq16;
 
-    iget-object v1, p0, Lq16;->a:Loef;
+    sget-object p2, Laxf;->a:Laxf;
 
-    iget-object v3, p1, Lq16;->a:Loef;
+    invoke-virtual {p1, p2}, Lq16;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lq16;->b:Z
-
-    iget-boolean v3, p1, Lq16;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lq16;->c:I
-
-    iget p1, p1, Lq16;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-object p1
 .end method
 
-.method public final getItemId()J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    const-wide v0, 0x7fffffffffffffffL
+    new-instance p1, Lq16;
 
-    return-wide v0
+    iget-object v0, p0, Lq16;->Y:Ljava/lang/Object;
+
+    iget-object v1, p0, Lq16;->Z:Lr16;
+
+    invoke-direct {p1, v0, p2, v1}, Lq16;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lr16;)V
+
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object v0, p0, Lq16;->a:Loef;
+    iget v0, p0, Lq16;->X:I
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x1
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_1
 
-    goto :goto_0
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    return-object p1
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result v0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :goto_0
-    const/16 v1, 0x1f
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    mul-int/2addr v0, v1
+    throw p1
 
-    iget-boolean v2, p0, Lq16;->b:Z
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
+    iget-object p1, p0, Lq16;->Y:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Ljava/lang/Number;
 
-    iget v1, p0, Lq16;->c:I
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-wide v2
 
-    move-result v1
+    sget-object p1, Lr16;->G0:[Lpl7;
 
-    add-int/2addr v1, v0
+    iget-object p1, p0, Lq16;->Z:Lr16;
 
-    return v1
-.end method
+    iget-object p1, p1, Lr16;->u0:Lyn7;
 
-.method public final m()I
-    .locals 1
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lq16;->o:I
+    move-result-object p1
 
-    return v0
-.end method
+    check-cast p1, Lg13;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iput v1, p0, Lq16;->X:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Lh23;
 
-    const-string v1, "FolderEditNameInputItem(defaultValue="
+    invoke-virtual {p1, v2, v3, p0}, Lh23;->L(JLwy3;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iget-object v1, p0, Lq16;->a:Loef;
+    sget-object v0, Lo24;->a:Lo24;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lq16;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", nameLengthLimit="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget v2, p0, Lq16;->c:I
-
-    invoke-static {v0, v2, v1}, Lfl7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
 .end method

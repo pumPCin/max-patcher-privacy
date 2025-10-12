@@ -1,49 +1,58 @@
 .class public final Ly1g;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhq1;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-.field public Z:I
-
-.field public o:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lnz3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Ly1g;->Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Ly1g;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onUrlSharingInfoUpdated(Lgq1;)V
+    .locals 2
 
-    iput-object p1, p0, Ly1g;->X:Ljava/lang/Object;
+    iget-object v0, p0, Ly1g;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget p1, p0, Ly1g;->Z:I
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    iput p1, p0, Ly1g;->Z:I
+    move-result v1
 
-    iget-object p1, p0, Ly1g;->Y:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    check-cast v1, Lhq1;
+
+    invoke-interface {v1, p1}, Lhq1;->onUrlSharingInfoUpdated(Lgq1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

@@ -15,10 +15,11 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ls6g;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Lf5g;Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-><init>(Landroid/content/Context;Ljava/lang/String;Ls6g;Landroid/os/Bundle;)V
+    .line 1
+    invoke-direct {p0, p1, p2, p3, p4}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-><init>(Landroid/content/Context;Ljava/lang/String;Lf5g;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -26,6 +27,7 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;-><init>(Ljava/lang/Object;)V
 
     return-void

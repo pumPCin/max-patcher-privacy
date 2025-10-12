@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final a:Lbj8;
+.field public final a:Lvh8;
 
 .field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/IllegalStateException;Lbj8;)V
+.method public constructor <init>(Ljava/lang/IllegalStateException;Lvh8;)V
     .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -28,7 +28,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v2, p2, Lbj8;->a:Ljava/lang/String;
+    iget-object v2, p2, Lvh8;->a:Ljava/lang/String;
 
     :goto_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -39,7 +39,7 @@
 
     invoke-direct {p0, v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:Lbj8;
+    iput-object p2, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:Lvh8;
 
     instance-of p2, p1, Landroid/media/MediaCodec$CodecException;
 
@@ -54,7 +54,7 @@
     move-result-object v1
 
     :cond_1
-    sget v0, Lt4g;->a:I
+    sget v0, Lg3g;->a:I
 
     const/16 v2, 0x17
 
@@ -76,7 +76,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v1}, Lt4g;->B(Ljava/lang/String;)I
+    invoke-static {v1}, Lg3g;->B(Ljava/lang/String;)I
 
     move-result p1
 

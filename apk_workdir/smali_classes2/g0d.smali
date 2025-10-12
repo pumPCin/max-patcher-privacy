@@ -1,23 +1,63 @@
 .class public final Lg0d;
-.super Ljava/lang/Object;
+.super Ldw9;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lqza;
-
-.field public final b:Landroid/util/Size;
+# static fields
+.field public static final b:Lg0d;
 
 
 # direct methods
-.method public constructor <init>(Lqza;Landroid/util/Size;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg0d;
 
-    iput-object p1, p0, Lg0d;->a:Lqza;
+    sget-object v1, Laxf;->a:Laxf;
 
-    iput-object p2, p0, Lg0d;->b:Landroid/util/Size;
+    invoke-direct {v0, v1}, Ldw9;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lg0d;->b:Lg0d;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lg0d;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x35532629    # -5663979.5f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "RequestStoragePermissions"
+
+    return-object v0
 .end method

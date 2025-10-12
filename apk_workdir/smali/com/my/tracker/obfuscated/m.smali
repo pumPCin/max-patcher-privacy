@@ -26,6 +26,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
+    .line 1
     const-string v0, "application/octet-stream"
 
     return-object v0
@@ -34,6 +35,7 @@
 .method public a(Ljava/io/OutputStream;)V
     .locals 1
 
+    .line 2
     iget-object v0, p0, Lcom/my/tracker/obfuscated/m;->a:Lcom/my/tracker/obfuscated/l;
 
     invoke-virtual {v0, p1}, Lcom/my/tracker/obfuscated/l;->a(Ljava/io/OutputStream;)V

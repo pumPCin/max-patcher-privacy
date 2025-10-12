@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt9c;
+.implements La8c;
 
 
 # virtual methods
-.method public c()Z
+.method public d()Z
     .locals 1
 
     const/4 v0, 0x1

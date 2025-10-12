@@ -1,3 +1,19 @@
-.class public final Lsxa;
-.super Lw29;
+.class public abstract Lsxa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# static fields
+.field public static final a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Llgc;->webview_share:I
+
+    sput v0, Lsxa;->a:I
+
+    return-void
+.end method

@@ -23,18 +23,18 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "id",
-        "Lnwd;",
+        "Lvud;",
         "actualRoomId",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "participant",
         "<init>",
-        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
+        "(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "getId",
         "()Lru/ok/android/externcalls/sdk/id/ParticipantId;",
-        "Lnwd;",
+        "Lvud;",
         "getActualRoomId",
-        "()Lnwd;",
+        "()Lvud;",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "getParticipant",
         "()Lru/ok/android/externcalls/sdk/ConversationParticipant;",
@@ -51,7 +51,7 @@
 
 
 # instance fields
-.field private final actualRoomId:Lnwd;
+.field private final actualRoomId:Lvud;
 
 .field private final id:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
@@ -59,14 +59,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnwd;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Lvud;Lru/ok/android/externcalls/sdk/ConversationParticipant;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->id:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->actualRoomId:Lnwd;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->actualRoomId:Lvud;
 
     iput-object p3, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->participant:Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
@@ -75,10 +75,10 @@
 
 
 # virtual methods
-.method public final getActualRoomId()Lnwd;
+.method public final getActualRoomId()Lvud;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->actualRoomId:Lnwd;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/sessionroom/participant/SessionRoomParticipants$Participant;->actualRoomId:Lvud;
 
     return-object v0
 .end method

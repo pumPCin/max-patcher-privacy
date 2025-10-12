@@ -1,107 +1,154 @@
 .class public final Lr95;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lr95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iput-object p2, p0, Lr95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Lr95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
+    invoke-virtual {p0, p1, p2}, Lr95;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-static {v0}, Lf93;->O(Ljava/util/List;)I
+    check-cast p1, Lr95;
 
-    move-result v0
+    sget-object p2, Laxf;->a:Laxf;
 
-    if-ltz v0, :cond_1
+    invoke-virtual {p1, p2}, Lr95;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lae;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2, p1}, Lae;->a(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    if-eq v1, v0, :cond_1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return-object p2
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 3
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object p1, p0, Lr95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    new-instance v0, Lr95;
 
-    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
+    iget-object v1, p0, Lr95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lr95;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;)V
 
-    invoke-static {v0}, Lf93;->O(Ljava/util/List;)I
+    iput-object p1, v0, Lr95;->X:Ljava/lang/Object;
 
-    move-result v0
+    return-object v0
+.end method
 
-    if-ltz v0, :cond_1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lr95;->X:Ljava/lang/Object;
+
+    check-cast p1, Laxf;
+
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
+
+    new-instance v1, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;
+
+    invoke-direct {v1}, Lone/me/settings/privacy/ui/ForgotPinCodeDialog;-><init>()V
+
+    iget-object p1, p0, Lr95;->Y:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
+
+    invoke-virtual {v1, p1}, Ljz3;->setTargetController(Ljz3;)V
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+
+    move-object v0, p1
 
     :goto_0
-    invoke-static {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Ljz3;->getParentController()Ljz3;
 
     move-result-object v2
-
-    invoke-static {v1, v2}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lae;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, p1}, Lae;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Ljz3;->getParentController()Ljz3;
 
-    :cond_0
-    if-eq v1, v0, :cond_1
-
-    add-int/lit8 v1, v1, 0x1
+    move-result-object v0
 
     goto :goto_0
 
+    :cond_0
+    instance-of v2, v0, Lt6d;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Lt6d;
+
+    goto :goto_1
+
     :cond_1
-    return-void
+    move-object v0, v3
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Lt6d;->f0()Ln6d;
+
+    move-result-object v3
+
+    :cond_2
+    move-object v7, v3
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v7, :cond_3
+
+    new-instance v0, Lq6d;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+
+    const/4 p1, 0x0
+
+    const/4 v1, 0x1
+
+    const-string v2, "forgot-pin"
+
+    invoke-static {p1, v0, v1, v2}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
+
+    invoke-virtual {v7, v0}, Ln6d;->H(Lq6d;)V
+
+    :cond_3
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

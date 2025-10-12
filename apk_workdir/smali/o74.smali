@@ -2,41 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
 
 # instance fields
-.field public X:Ljavax/inject/Provider;
+.field public final a:[I
 
-.field public Y:Ljavax/inject/Provider;
+.field public final b:I
 
-.field public Z:Ljavax/inject/Provider;
+.field public final c:I
 
-.field public a:Ljavax/inject/Provider;
+.field public final d:I
 
-.field public b:Lzde;
+.field public final e:I
 
-.field public c:Ljavax/inject/Provider;
+.field public final f:I
 
-.field public o:Lzde;
+.field public final g:I
+
+.field public final h:La67;
 
 
-# virtual methods
-.method public final close()V
-    .locals 1
+# direct methods
+.method public constructor <init>(II[IIIIILa67;)V
+    .locals 0
 
-    iget-object v0, p0, Lo74;->Y:Ljavax/inject/Provider;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iput p1, p0, Lo74;->b:I
 
-    move-result-object v0
+    iput-object p3, p0, Lo74;->a:[I
 
-    check-cast v0, Lyb5;
+    iput p2, p0, Lo74;->c:I
 
-    check-cast v0, Lmad;
+    iput p4, p0, Lo74;->e:I
 
-    invoke-virtual {v0}, Lmad;->close()V
+    iput p5, p0, Lo74;->f:I
+
+    iput p6, p0, Lo74;->g:I
+
+    iput p7, p0, Lo74;->d:I
+
+    iput-object p8, p0, Lo74;->h:La67;
 
     return-void
 .end method

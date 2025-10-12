@@ -3,22 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ltc4;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
+.method public synthetic constructor <init>(JLandroid/os/Parcelable;I)V
     .locals 0
 
-    iput p2, p0, Lusb;->a:I
+    .line 1
+    iput p4, p0, Lusb;->a:I
 
-    iput-object p1, p0, Lusb;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+    iput-wide p1, p0, Lusb;->b:J
+
+    iput-object p3, p0, Lusb;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Enum;JI)V
+    .locals 0
+
+    .line 2
+    iput p4, p0, Lusb;->a:I
+
+    iput-object p1, p0, Lusb;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lusb;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,75 +47,171 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 13
 
     iget v0, p0, Lusb;->a:I
 
-    iget-object v1, p0, Lusb;->b:Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    iget-object v0, p0, Lusb;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireResources()Landroid/content/res/Resources;
+    check-cast v0, Landroid/os/Bundle;
+
+    new-instance v1, Lone/me/stickerspreview/StickerPreviewScreen;
+
+    const-string v2, "chat_id"
+
+    invoke-static {v2, v0}, Lte0;->p(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-wide/16 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v5, v3
+
+    :goto_0
+    const-string v2, "forward_id"
+
+    invoke-static {v2, v0}, Lte0;->p(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
     move-result-object v0
 
-    sget v1, Ltkc;->tt_of:I
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-object v0
+    move-result-wide v3
 
-    return-object v0
+    :cond_1
+    iget-wide v7, p0, Lusb;->b:J
+
+    move-wide v9, v5
+
+    move-wide v11, v7
+
+    move-wide v6, v3
+
+    move-wide v4, v9
+
+    move-wide v2, v11
+
+    invoke-direct/range {v1 .. v7}, Lone/me/stickerspreview/StickerPreviewScreen;-><init>(JJJ)V
+
+    return-object v1
 
     :pswitch_0
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    iget-object v0, p0, Lusb;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->requireActivity()Lqm;
+    check-cast v0, Loub;
 
-    move-result-object v0
+    new-instance v1, Lone/me/profileedit/ProfileEditScreen;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+    iget-wide v2, p0, Lusb;->b:J
 
-    move-result-object v1
+    invoke-direct {v1, v2, v3, v0}, Lone/me/profileedit/ProfileEditScreen;-><init>(JLoub;)V
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    new-instance v2, Lt8h;
-
-    invoke-direct {v2, v1, v0}, Lt8h;-><init>(Landroid/view/Window;Landroid/view/View;)V
-
-    return-object v2
+    return-object v1
 
     :pswitch_1
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    iget-object v0, p0, Lusb;->c:Ljava/lang/Object;
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    check-cast v0, Ltm2;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    sget-object v1, Ltm2;->c:Ltm2;
 
-    move-result-object v1
+    iget-wide v2, p0, Lusb;->b:J
 
-    invoke-virtual {v0, v1}, Lsed;->m(Landroid/content/Context;)Lloa;
+    if-ne v0, v1, :cond_2
 
-    move-result-object v0
+    new-instance v0, Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    iget-object v0, v0, Lloa;->c:Luxa;
+    invoke-direct {v0, v2, v3}, Lone/me/profile/screens/members/ChatAdminsScreen;-><init>(J)V
 
+    goto :goto_1
+
+    :cond_2
+    new-instance v1, Lone/me/profile/screens/members/ChatMembersScreen;
+
+    invoke-direct {v1, v2, v3, v0}, Lone/me/profile/screens/members/ChatMembersScreen;-><init>(JLtm2;)V
+
+    move-object v0, v1
+
+    :goto_1
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lusb;->c:Ljava/lang/Object;
+
+    check-cast v0, Lzsb;
+
+    sget-object v1, Lxsb;->$EnumSwitchMapping$0:[I
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    const/4 v2, 0x1
+
+    iget-wide v3, p0, Lusb;->b:J
+
+    if-eq v1, v2, :cond_5
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_4
+
+    const/4 v0, 0x3
+
+    if-ne v1, v0, :cond_3
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    goto :goto_3
+
+    :cond_3
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_4
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+
+    invoke-direct {v1, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLzsb;)V
+
+    :goto_2
+    move-object v0, v1
+
+    goto :goto_3
+
+    :cond_5
+    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
+
+    invoke-direct {v1, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLzsb;)V
+
+    goto :goto_2
+
+    :goto_3
     return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -1,51 +1,21 @@
 .class public final Lrjb;
-.super Ljava/lang/Object;
+.super Lrp;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/util/Size;
-
-.field public b:Landroid/util/Size;
-
-.field public final c:[F
-
-.field public final d:[F
-
-.field public final e:Lyn6;
-
-.field public f:Lkde;
+# static fields
+.field public static final a:Lrjb;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrjb;
 
-    const/16 v0, 0x10
+    invoke-direct {v0}, Lrp;-><init>()V
 
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Lrjb;->c:[F
-
-    new-array v0, v0, [F
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
-
-    iput-object v0, p0, Lrjb;->d:[F
-
-    new-instance v0, Lyn6;
-
-    sget-object v1, Lyn6;->o:[F
-
-    sget-object v2, Lyn6;->X:[F
-
-    invoke-direct {v0, v1, v2}, Lyn6;-><init>([F[F)V
-
-    iput-object v0, p0, Lrjb;->e:Lyn6;
+    sput-object v0, Lrjb;->a:Lrjb;
 
     return-void
 .end method

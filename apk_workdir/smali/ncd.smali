@@ -1,175 +1,119 @@
-.class public final Lncd;
+.class public abstract Lncd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpcd;
-
-
-# instance fields
-.field public final a:Lum;
-
-.field public b:Z
-
-.field public c:Landroid/os/Bundle;
-
-.field public final d:Ls5f;
+.implements Lfs4;
 
 
 # direct methods
-.method public constructor <init>(Lum;Lrlg;)V
-    .locals 1
+.method public static a(Ljava/util/concurrent/TimeUnit;)J
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-boolean v0, Lpcd;->a:Z
 
-    iput-object p1, p0, Lncd;->a:Lum;
+    if-nez v0, :cond_0
 
-    new-instance p1, Lxd;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const/4 v0, 0x7
+    move-result-wide v0
 
-    invoke-direct {p1, v0, p2}, Lxd;-><init>(ILjava/lang/Object;)V
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance p2, Ls5f;
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+    move-result-wide v0
 
-    iput-object p2, p0, Lncd;->d:Ls5f;
+    return-wide v0
 
-    return-void
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/os/Bundle;
-    .locals 5
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    iget-object v1, p0, Lncd;->c:Landroid/os/Bundle;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_0
-    iget-object v1, p0, Lncd;->d:Ls5f;
-
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/lifecycle/SavedStateHandlesVM;
-
-    iget-object v1, v1, Landroidx/lifecycle/SavedStateHandlesVM;->b:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lkcd;
-
-    iget-object v2, v2, Lkcd;->e:Lpcd;
-
-    invoke-interface {v2}, Lpcd;->a()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    invoke-static {v2, v4}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lncd;->b:Z
-
-    return-object v0
-.end method
-
-.method public final b()V
+.method public b(Ljava/lang/Runnable;)Lfs4;
     .locals 3
 
-    iget-boolean v0, p0, Lncd;->b:Z
+    const-wide/16 v0, 0x0
 
-    if-nez v0, :cond_2
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v0, p0, Lncd;->a:Lum;
+    invoke-virtual {p0, p1, v0, v1, v2}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
 
-    const-string v1, "androidx.lifecycle.internal.SavedStateHandlesProvider"
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lum;->c(Ljava/lang/String;)Landroid/os/Bundle;
+    return-object p1
+.end method
+
+.method public abstract c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
+.end method
+
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lfs4;
+    .locals 15
+
+    move-wide/from16 v0, p2
+
+    move-object/from16 v2, p6
+
+    new-instance v3, Le22;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v4}, Le22;-><init>(I)V
+
+    new-instance v12, Le22;
+
+    invoke-direct {v12, v3}, Le22;-><init>(Le22;)V
+
+    move-wide/from16 v4, p4
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v13
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v4}, Lncd;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v10
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v4
+
+    add-long v7, v4, v10
+
+    new-instance v5, Lmcd;
+
+    move-object v6, p0
+
+    move-object/from16 v9, p1
+
+    invoke-direct/range {v5 .. v14}, Lmcd;-><init>(Lncd;JLjava/lang/Runnable;JLe22;J)V
+
+    invoke-virtual {p0, v5, v0, v1, v2}, Lncd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lfs4;
 
     move-result-object v0
 
-    new-instance v1, Landroid/os/Bundle;
+    sget-object v1, Lj65;->a:Lj65;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    if-ne v0, v1, :cond_0
 
-    iget-object v2, p0, Lncd;->c:Landroid/os/Bundle;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+    return-object v0
 
     :cond_0
-    if-eqz v0, :cond_1
+    invoke-static {v3, v0}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
 
-    invoke-virtual {v1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_1
-    iput-object v1, p0, Lncd;->c:Landroid/os/Bundle;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lncd;->b:Z
-
-    iget-object v0, p0, Lncd;->d:Ls5f;
-
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/lifecycle/SavedStateHandlesVM;
-
-    :cond_2
-    return-void
+    return-object v12
 .end method

@@ -662,6 +662,7 @@
 
     const/4 v1, 0x0
 
+    .line 1
     invoke-virtual {p0, p1, v0, v1, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->postToHandler(ILjava/lang/Object;ILandroid/os/Bundle;)V
 
     return-void
@@ -672,6 +673,7 @@
 
     const/4 v0, 0x0
 
+    .line 2
     invoke-virtual {p0, p1, v0, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->postToHandler(ILjava/lang/Object;ILandroid/os/Bundle;)V
 
     return-void
@@ -684,6 +686,7 @@
 
     const/4 v1, 0x0
 
+    .line 3
     invoke-virtual {p0, p1, p2, v0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->postToHandler(ILjava/lang/Object;ILandroid/os/Bundle;)V
 
     return-void
@@ -692,6 +695,7 @@
 .method public postToHandler(ILjava/lang/Object;ILandroid/os/Bundle;)V
     .locals 7
 
+    .line 5
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->mMediaSessionImplRef:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -714,6 +718,7 @@
 
     move-object v6, p4
 
+    .line 6
     invoke-virtual/range {v1 .. v6}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->postToHandler(IIILjava/lang/Object;Landroid/os/Bundle;)V
 
     :cond_0
@@ -725,6 +730,7 @@
 
     const/4 v0, 0x0
 
+    .line 4
     invoke-virtual {p0, p1, p2, v0, p3}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase$MediaSessionStub;->postToHandler(ILjava/lang/Object;ILandroid/os/Bundle;)V
 
     return-void
@@ -835,13 +841,13 @@
 
     move-result v2
 
-    new-instance v3, Lvt8;
+    new-instance v3, Lps8;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v3, v4, v1, v2}, Lvt8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v3, v4, v1, v2}, Lps8;-><init>(Ljava/lang/String;II)V
 
     iget-object v4, v0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mControllerCallbacks:Landroid/os/RemoteCallbackList;
 

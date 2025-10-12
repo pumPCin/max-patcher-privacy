@@ -3,6 +3,6 @@
 
 
 # static fields
-.field public static text_change_is_programmatic_tag:I = 0x7f0a0c1c
+.field public static rootca_ssl_rsa2022:I = 0x7f120033
 
-.field public static view_custom_attach_lifecycle_owner:I = 0x7f0a0cb9
+.field public static ru_ok_tracer_keep:I = 0x7f120034

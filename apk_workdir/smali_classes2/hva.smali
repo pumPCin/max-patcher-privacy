@@ -1,125 +1,223 @@
-.class public final Lhva;
+.class public abstract Lhva;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhva;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final A:I
 
+.field public static final B:I
 
-# instance fields
-.field public final a:I
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ltc8;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Ltc8;-><init>(I)V
-
-    sput-object v0, Lhva;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lhva;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lvic;->oneme_stickers_settings_empty_favorite_title:I
 
-    return v0
-.end method
+    sput v0, Lhva;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v0, Lvic;->oneme_stickers_settings_empty_recent_subtitle:I
 
-    instance-of v0, p1, Lhva;
+    sput v0, Lhva;->b:I
 
-    if-nez v0, :cond_0
+    sget v0, Lvic;->oneme_stickers_settings_empty_recent_title:I
 
-    goto :goto_0
+    sput v0, Lhva;->c:I
 
-    :cond_0
-    check-cast p1, Lhva;
+    sget v0, Lvic;->oneme_stickers_settings_favorite_title:I
 
-    iget p1, p1, Lhva;->a:I
+    sput v0, Lhva;->d:I
 
-    iget v0, p0, Lhva;->a:I
+    sget v0, Lvic;->oneme_stickers_settings_favorite_toolbar_title:I
 
-    if-eq v0, p1, :cond_1
+    sput v0, Lhva;->e:I
 
-    :goto_0
-    const/4 p1, 0x0
+    sget v0, Lvic;->oneme_stickers_settings_menu_copy_link_title:I
 
-    return p1
+    sput v0, Lhva;->f:I
 
-    :cond_1
-    const/4 p1, 0x1
+    sget v0, Lvic;->oneme_stickers_settings_menu_copy_set_link_snackbar_title:I
 
-    return p1
-.end method
+    sput v0, Lhva;->g:I
 
-.method public final hashCode()I
-    .locals 1
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_confirm_action:I
 
-    iget v0, p0, Lhva;->a:I
+    sput v0, Lhva;->h:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_confirm_cancel:I
 
-    move-result v0
+    sput v0, Lhva;->i:I
 
-    return v0
-.end method
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_confirm_subtitle:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    sput v0, Lhva;->j:I
 
-    const-string v0, "ContainerGravity(value="
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_confirm_title:I
 
-    const-string v1, ")"
+    sput v0, Lhva;->k:I
 
-    iget v2, p0, Lhva;->a:I
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_snackbar_title:I
 
-    invoke-static {v2, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sput v0, Lhva;->l:I
 
-    move-result-object v0
+    sget v0, Lvic;->oneme_stickers_settings_menu_delete_set_title:I
 
-    return-object v0
-.end method
+    sput v0, Lhva;->m:I
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    sget v0, Lvic;->oneme_stickers_settings_menu_forward_title:I
 
-    iget p2, p0, Lhva;->a:I
+    sput v0, Lhva;->n:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sget v0, Lvic;->oneme_stickers_settings_menu_share_title:I
+
+    sput v0, Lhva;->o:I
+
+    sget v0, Lvic;->oneme_stickers_settings_recent_title:I
+
+    sput v0, Lhva;->p:I
+
+    sget v0, Lvic;->oneme_stickers_settings_recent_toolbar_title:I
+
+    sput v0, Lhva;->q:I
+
+    sget v0, Lvic;->oneme_stickers_settings_sets_title:I
+
+    sput v0, Lhva;->r:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_confirm_delete_sticker_title:I
+
+    sput v0, Lhva;->s:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_confirm_delete_stickers_title:I
+
+    sput v0, Lhva;->t:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_confirm_delete_subtitle:I
+
+    sput v0, Lhva;->u:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I
+
+    sput v0, Lhva;->v:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_favorite_confirm_clear_title:I
+
+    sput v0, Lhva;->w:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I
+
+    sput v0, Lhva;->x:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_favorite_snackbar_from:I
+
+    sput v0, Lhva;->y:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_menu_change_title:I
+
+    sput v0, Lhva;->z:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I
+
+    sput v0, Lhva;->A:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_recent_confirm_clear_title:I
+
+    sput v0, Lhva;->B:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_recent_delete_all_snackbar:I
+
+    sput v0, Lhva;->C:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_recent_menu_clear_title:I
+
+    sput v0, Lhva;->D:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_recent_snackbar_from:I
+
+    sput v0, Lhva;->E:I
+
+    sget v0, Lvic;->oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I
+
+    sput v0, Lhva;->F:I
+
+    sget v0, Lvic;->oneme_stickers_settings_toolbar_title:I
+
+    sput v0, Lhva;->G:I
+
+    sget v0, Lvic;->oneme_strickers_settings_stickers_multiselect_empty_title:I
+
+    sput v0, Lhva;->H:I
+
+    sget v0, Lvic;->oneme_strickers_settings_stickers_multiselect_title:I
+
+    sput v0, Lhva;->I:I
 
     return-void
 .end method

@@ -1,24 +1,24 @@
-.class public final synthetic Laq2;
+.class public final Laq2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Liu5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lyr2;
+.field public final synthetic b:Lnw5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyr2;I)V
+.method public synthetic constructor <init>(Lnw5;I)V
     .locals 0
 
     iput p2, p0, Laq2;->a:I
 
-    iput-object p1, p0, Laq2;->b:Lyr2;
+    iput-object p1, p0, Laq2;->b:Lnw5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,86 +27,86 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Laq2;->a:I
 
-    const/4 v1, 0x0
-
-    sget-object v2, Loyf;->a:Loyf;
-
-    iget-object v3, p0, Laq2;->b:Lyr2;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+    new-instance v0, Lvm1;
 
-    sget-object v0, Lor2;->c:Lor2;
+    const/16 v1, 0x12
 
-    iget-wide v4, v3, Lyr2;->b:J
+    invoke-direct {v0, p1, v1}, Lvm1;-><init>(Lku5;I)V
 
-    iget-boolean v3, v3, Lyr2;->d:Z
+    iget-object p1, p0, Laq2;->b:Lnw5;
 
-    invoke-virtual {v0}, Lv2;->K0()Ldd4;
+    invoke-virtual {p1, v0, p2}, Lnw5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    sget-object p2, Lo24;->a:Lo24;
 
-    const-string v7, ":call-chat?chat_id="
+    if-ne p1, p2, :cond_0
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-string v4, "&video_enabled="
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-object v2
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+    new-instance v0, Lvm1;
 
-    sget-object v0, Lor2;->c:Lor2;
+    const/16 v1, 0x10
 
-    iget-object v3, v3, Lyr2;->c:Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Lvm1;-><init>(Lku5;I)V
 
-    invoke-virtual {v0}, Lv2;->K0()Ldd4;
+    iget-object p1, p0, Laq2;->b:Lnw5;
 
-    move-result-object v0
+    invoke-virtual {p1, v0, p2}, Lnw5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v4, ":call-join-link?link="
+    move-result-object p1
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    sget-object p2, Lo24;->a:Lo24;
 
-    move-result-object v3
+    if-ne p1, p2, :cond_1
 
-    invoke-virtual {v0, v3, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    goto :goto_1
 
-    return-object v2
+    :cond_1
+    sget-object p1, Laxf;->a:Laxf;
+
+    :goto_1
+    return-object p1
 
     :pswitch_1
-    sget-object v0, Lone/me/chatscreen/ChatScreen;->o1:[Ltm7;
+    new-instance v0, Lvm1;
 
-    sget-object v0, Lor2;->c:Lor2;
+    const/16 v1, 0xf
 
-    iget-wide v4, v3, Lyr2;->a:J
+    invoke-direct {v0, p1, v1}, Lvm1;-><init>(Lku5;I)V
 
-    iget-boolean v1, v3, Lyr2;->d:Z
+    iget-object p1, p0, Laq2;->b:Lnw5;
 
-    invoke-virtual {v0, v4, v5, v1}, Lor2;->c1(JZ)V
+    invoke-virtual {p1, v0, p2}, Lnw5;->d(Lku5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v2
+    move-result-object p1
+
+    sget-object p2, Lo24;->a:Lo24;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Laxf;->a:Laxf;
+
+    :goto_2
+    return-object p1
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -2,114 +2,85 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Le15;
 
-# instance fields
-.field public final a:I
 
-.field public final b:I
+# static fields
+.field public static final a:Lt55;
 
-.field public final c:Landroid/util/SparseArray;
-
-.field public final d:Landroid/util/SparseArray;
-
-.field public final e:Landroid/util/SparseArray;
-
-.field public final f:Landroid/util/SparseArray;
-
-.field public final g:Landroid/util/SparseArray;
-
-.field public h:Ljava/lang/Object;
-
-.field public i:Ljava/lang/Object;
+.field public static final b:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(III)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    packed-switch p3, :pswitch_data_0
+    new-instance v0, Lt55;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lg15;
 
-    iput p1, p0, Lg15;->a:I
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lg15;->b:I
+    const/16 v2, 0xe
 
-    new-instance p1, Landroid/util/SparseArray;
+    invoke-direct {v0, v2, v1}, Lt55;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    sput-object v0, Lg15;->a:Lt55;
 
-    iput-object p1, p0, Lg15;->c:Landroid/util/SparseArray;
+    sget-object v0, La15;->d:La15;
 
-    new-instance p1, Landroid/util/SparseArray;
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    move-result-object v0
 
-    iput-object p1, p0, Lg15;->d:Landroid/util/SparseArray;
-
-    new-instance p1, Landroid/util/SparseArray;
-
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object p1, p0, Lg15;->e:Landroid/util/SparseArray;
-
-    new-instance p1, Landroid/util/SparseArray;
-
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object p1, p0, Lg15;->f:Landroid/util/SparseArray;
-
-    new-instance p1, Landroid/util/SparseArray;
-
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object p1, p0, Lg15;->g:Landroid/util/SparseArray;
+    sput-object v0, Lg15;->b:Ljava/util/Set;
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lg15;->a:I
+# virtual methods
+.method public final a()Ljava/util/Set;
+    .locals 1
 
-    iput p2, p0, Lg15;->b:I
+    sget-object v0, Lg15;->b:Ljava/util/Set;
 
-    new-instance p1, Landroid/util/SparseArray;
+    return-object v0
+.end method
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+.method public final b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    .locals 1
 
-    iput-object p1, p0, Lg15;->c:Landroid/util/SparseArray;
+    const/4 v0, 0x0
 
-    new-instance p1, Landroid/util/SparseArray;
+    return-object v0
+.end method
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+.method public final c(La15;)Ljava/util/Set;
+    .locals 3
 
-    iput-object p1, p0, Lg15;->d:Landroid/util/SparseArray;
+    sget-object v0, La15;->d:La15;
 
-    new-instance p1, Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, La15;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    move-result v0
 
-    iput-object p1, p0, Lg15;->e:Landroid/util/SparseArray;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance p1, Landroid/util/SparseArray;
+    const-string v2, "DynamicRange is not supported: "
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lg15;->f:Landroid/util/SparseArray;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    new-instance p1, Landroid/util/SparseArray;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+    move-result-object p1
 
-    iput-object p1, p0, Lg15;->g:Landroid/util/SparseArray;
+    invoke-static {p1, v0}, Lnjg;->f(Ljava/lang/String;Z)V
 
-    return-void
+    sget-object p1, Lg15;->b:Ljava/util/Set;
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,9 +1,9 @@
 .class public final Lev1;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +40,7 @@
 
     check-cast p1, Lev1;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lev1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,43 +62,19 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 7
 
     iget v0, p0, Lev1;->X:I
 
     const/4 v1, 0x1
 
-    const-string v2, "CallsNotification"
-
-    const/4 v3, 0x0
-
     if-eqz v0, :cond_1
 
     if-ne v0, v1, :cond_0
 
-    :try_start_0
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     return-object p1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_3
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -110,133 +86,46 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    :try_start_1
-    const-string p1, "handle loading notification image"
+    move p1, v1
 
-    invoke-static {v2, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {}, Lnc6;->p()Lk47;
+
+    move-result-object v1
+
+    iput p1, p0, Lev1;->X:I
 
     iget-object p1, p0, Lev1;->Y:Ljava/lang/String;
 
-    if-eqz p1, :cond_4
-
-    :try_start_2
-    invoke-static {p1}, Lyxe;->q0(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "start loading call push avatar"
-
-    invoke-static {v2, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ldv1;
-
-    invoke-direct {v0, p1, v3}, Ldv1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Lev1;->X:I
-
-    const-wide/16 v4, 0x1f4
-
-    invoke-static {v4, v5, v0, p0}, Lxkg;->M(JLlf6;Lnz3;)Ljava/lang/Object;
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
-    :try_end_2
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    sget-object v0, Lf34;->a:Lf34;
+    invoke-static {p1}, Ly47;->d(Landroid/net/Uri;)Ly47;
 
-    if-ne p1, v0, :cond_3
+    move-result-object p1
+
+    invoke-virtual {p1}, Ly47;->a()Lx47;
+
+    move-result-object v2
+
+    const/16 v6, 0x18
+
+    const-wide v3, 0x7fffffffffffffffL
+
+    move-object v5, p0
+
+    invoke-static/range {v1 .. v6}, Lzvd;->p(Lk47;Lx47;JLwy3;I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :cond_3
+    :cond_2
     return-object p1
-
-    :cond_4
-    :goto_0
-    :try_start_3
-    const-string p1, "avatar for call push is empty"
-
-    invoke-static {v2, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-
-    return-object v3
-
-    :goto_1
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "Failed to load call notification avatar due to: "
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v3
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to InterruptedException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :goto_3
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to CancellationException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
 .end method

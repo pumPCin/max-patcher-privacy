@@ -1,55 +1,51 @@
 .class public final Lp2g;
-.super Lnz3;
+.super Lqce;
 .source "SourceFile"
+
+# interfaces
+.implements Log7;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
-
-.field public Y:Lgu9;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lr2g;
-
-.field public final synthetic w0:Lr2g;
-
-.field public x0:I
+.field public E0:Lwka;
 
 
-# direct methods
-.method public constructor <init>(Lr2g;Lnz3;)V
-    .locals 0
+# virtual methods
+.method public final A(Lov7;)V
+    .locals 2
 
-    iput-object p1, p0, Lp2g;->w0:Lr2g;
+    check-cast p1, Ln2g;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+
+    check-cast v0, Lo2g;
+
+    iget-object v1, p1, Ln2g;->b:Lm2g;
+
+    invoke-virtual {v0, v1}, Lo2g;->setType(Lm2g;)V
+
+    iget-object p1, p1, Ln2g;->c:Lcdf;
+
+    invoke-virtual {p1, p0}, Lcdf;->a(Lqce;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, ""
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lo2g;->setTitle(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final F()V
     .locals 1
-
-    iput-object p1, p0, Lp2g;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lp2g;->x0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lp2g;->x0:I
-
-    iget-object p1, p0, Lp2g;->w0:Lr2g;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lr2g;->g(Lg17;Lnz3;)Ljava/lang/Object;
+    iput-object v0, p0, Lp2g;->E0:Lwka;
 
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,72 +1,45 @@
-.class public final Lafa;
-.super Lmo7;
+.class public final synthetic Lafa;
+.super Lf4c;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lgfa;
+# static fields
+.field public static final a:Lafa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgfa;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lafa;->a:I
+    new-instance v0, Lafa;
 
-    iput-object p1, p0, Lafa;->b:Lgfa;
+    const-string v1, "getDependencyDuration()J"
 
-    const/4 p1, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    const-class v3, Lnd8;
+
+    const-string v4, "dependencyDuration"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lafa;->a:Lafa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lafa;->a:I
+    check-cast p1, Lnd8;
 
-    packed-switch v0, :pswitch_data_0
+    iget-wide v0, p1, Lnd8;->b:J
 
-    iget-object v0, p0, Lafa;->b:Lgfa;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0}, Lgfa;->d()V
+    move-result-object p1
 
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lafa;->b:Lgfa;
-
-    invoke-virtual {v0}, Lgfa;->c()V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lafa;->b:Lgfa;
-
-    invoke-virtual {v0}, Lgfa;->d()V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

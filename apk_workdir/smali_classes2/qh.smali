@@ -1,213 +1,236 @@
 .class public final Lqh;
-.super Lw2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx5d;I)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lqh;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lw2;-><init>(Lx5d;)V
+    iput-wide p1, p0, Lqh;->a:J
+
+    iput-object p3, p0, Lqh;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lqh;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lqh;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lqh;->e:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()Ljava/lang/String;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lqh;->o:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    const-string v0, "UPDATE messages SET update_time = ? WHERE id = ?"
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqh;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqh;
+
+    iget-wide v3, p0, Lqh;->a:J
+
+    iget-wide v5, p1, Lqh;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqh;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lqh;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lqh;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lqh;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lqh;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lqh;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lqh;->e:Ljava/lang/String;
+
+    iget-object p1, p1, Lqh;->e:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lqh;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lqh;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lqh;->c:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lqh;->d:Ljava/lang/String;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lqh;->e:Ljava/lang/String;
+
+    if-nez v1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Animoji(id="
+
+    const-string v1, ", emoji="
+
+    iget-wide v2, p0, Lqh;->a:J
+
+    iget-object v4, p0, Lqh;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", lottieUrl="
+
+    const-string v2, ", effectLottieUrl="
+
+    iget-object v3, p0, Lqh;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lqh;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2, v4}, Lc85;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, ", iconUrl="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Lqh;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Ljjd;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    const-string v0, "UPDATE messages SET localized_error = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_1
-    const-string v0, "UPDATE messages SET error = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_2
-    const-string v0, "DELETE FROM message_uploads"
-
-    return-object v0
-
-    :pswitch_3
-    const-string v0, "DELETE FROM message_uploads WHERE message_id=? AND chat_id=? AND attach_id=?"
-
-    return-object v0
-
-    :pswitch_4
-    const-string v0, "DELETE FROM fcm_notifications_history"
-
-    return-object v0
-
-    :pswitch_5
-    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE received_time<=?"
-
-    return-object v0
-
-    :pswitch_6
-    const-string v0, "DELETE FROM fcm_notifications_analytics WHERE analytics_status=? AND chat_id=? AND time<=?"
-
-    return-object v0
-
-    :pswitch_7
-    const-string v0, "DELETE FROM fcm_notifications_analytics"
-
-    return-object v0
-
-    :pswitch_8
-    const-string v0, "DELETE FROM favorite_stickers"
-
-    return-object v0
-
-    :pswitch_9
-    const-string v0, "DELETE FROM favorite_sticker_sets"
-
-    return-object v0
-
-    :pswitch_a
-    const-string v0, "DELETE FROM draft_uploads"
-
-    return-object v0
-
-    :pswitch_b
-    const-string v0, "DELETE FROM draft_uploads WHERE chat_id=? AND attach_id=?"
-
-    return-object v0
-
-    :pswitch_c
-    const-string v0, "DELETE FROM default_emoji"
-
-    return-object v0
-
-    :pswitch_d
-    const-string v0, "DELETE FROM contact_title"
-
-    return-object v0
-
-    :pswitch_e
-    const-string v0, "DELETE FROM contact_title WHERE docid=?"
-
-    return-object v0
-
-    :pswitch_f
-    const-string v0, "INSERT OR REPLACE INTO contact_title (docid, link, allNormalizedTitles, allOriginalTitles, allNormalizedTitlesWithoutEmoji, allOriginalTitlesWithoutEmoji) VALUES(?, ?, ?, ?, ?, ?)"
-
-    return-object v0
-
-    :pswitch_10
-    const-string v0, "DELETE FROM contacts"
-
-    return-object v0
-
-    :pswitch_11
-    const-string v0, "UPDATE contacts SET presence = ?, presence_type = ? WHERE server_id = ?"
-
-    return-object v0
-
-    :pswitch_12
-    const-string v0, "UPDATE contacts SET server_id = ?, data = ? WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_13
-    const-string v0, "DELETE FROM complain_reasons"
-
-    return-object v0
-
-    :pswitch_14
-    const-string v0, "DELETE FROM chat_title"
-
-    return-object v0
-
-    :pswitch_15
-    const-string v0, "DELETE FROM chat_title WHERE docid=?"
-
-    return-object v0
-
-    :pswitch_16
-    const-string v0, "INSERT OR REPLACE INTO chat_title (docid, normalizedTitle, originalTitle, normalizedTitleWithoutEmoji, originalTitleWithoutEmoji, sortTime) VALUES(?, ?, ?, ?, ?, ?)"
-
-    return-object v0
-
-    :pswitch_17
-    const-string v0, "DELETE FROM chats"
-
-    return-object v0
-
-    :pswitch_18
-    const-string v0, "DELETE FROM chats WHERE id = ?"
-
-    return-object v0
-
-    :pswitch_19
-    const-string v0, "DELETE FROM call_links"
-
-    return-object v0
-
-    :pswitch_1a
-    const-string v0, "DELETE FROM call_links WHERE conversation_id=?"
-
-    return-object v0
-
-    :pswitch_1b
-    const-string v0, "DELETE FROM animoji_set"
-
-    return-object v0
-
-    :pswitch_1c
-    const-string v0, "DELETE FROM animoji"
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -62,10 +62,12 @@
 .method private a(Lcom/my/tracker/obfuscated/b1;)V
     .locals 3
 
+    .line 13
     iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
     monitor-enter v0
 
+    .line 14
     :try_start_0
     iget-object v1, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
@@ -86,6 +88,7 @@
 
     check-cast v2, Lcom/my/tracker/obfuscated/n;
 
+    .line 15
     invoke-interface {v2, p1}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
     goto :goto_0
@@ -95,6 +98,7 @@
 
     goto :goto_1
 
+    .line 16
     :cond_0
     monitor-exit v0
 
@@ -111,6 +115,7 @@
 .method private static a(Ljava/lang/String;)[Ljava/lang/String;
     .locals 1
 
+    .line 1
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -121,6 +126,7 @@
 
     return-object p0
 
+    .line 2
     :cond_0
     filled-new-array {p0}, [Ljava/lang/String;
 
@@ -134,12 +140,14 @@
 
     if-eqz p0, :cond_1
 
+    .line 3
     array-length v0, p0
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
+    .line 4
     :cond_0
     invoke-virtual {p0}, [Ljava/lang/String;->clone()Ljava/lang/Object;
 
@@ -182,6 +190,7 @@
 .method public a()Lcom/my/tracker/MyTrackerParams$a;
     .locals 3
 
+    .line 17
     new-instance v0, Lcom/my/tracker/MyTrackerParams$a;
 
     iget-object v1, p0, Lcom/my/tracker/MyTrackerParams;->e:Ljava/lang/String;
@@ -196,10 +205,12 @@
 .method public a(Lcom/my/tracker/obfuscated/n;Lcom/my/tracker/obfuscated/n;)V
     .locals 3
 
+    .line 5
     iget-object v0, p0, Lcom/my/tracker/MyTrackerParams;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
+    .line 6
     :try_start_0
     iget-object v1, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
@@ -207,19 +218,23 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 7
     :try_start_1
     iget-object v2, p0, Lcom/my/tracker/MyTrackerParams;->c:Lcom/my/tracker/obfuscated/b1;
 
     invoke-interface {p1, v2}, Lcom/my/tracker/obfuscated/n;->a(Ljava/lang/Object;)V
 
+    .line 8
     iget-object p1, p0, Lcom/my/tracker/MyTrackerParams;->a:Ljava/util/List;
 
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    .line 9
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    .line 10
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -235,6 +250,7 @@
     :catchall_1
     move-exception p1
 
+    .line 11
     :try_start_3
     monitor-exit v1
     :try_end_3
@@ -243,6 +259,7 @@
     :try_start_4
     throw p1
 
+    .line 12
     :goto_0
     monitor-exit v0
     :try_end_4

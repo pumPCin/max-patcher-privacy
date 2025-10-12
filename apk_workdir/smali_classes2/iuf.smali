@@ -1,24 +1,26 @@
 .class public final Liuf;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:Lruf;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lruf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Liuf;->X:Lruf;
+    iput-object p2, p0, Liuf;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Liuf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,7 +38,7 @@
 
     check-cast p1, Liuf;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Liuf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,424 +46,192 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Liuf;
+    new-instance v0, Liuf;
 
-    iget-object v0, p0, Liuf;->X:Lruf;
+    iget-object v1, p0, Liuf;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    invoke-direct {p1, v0, p2}, Liuf;-><init>(Lruf;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Liuf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/configuration/TwoFASettingsScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Liuf;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
-
-    invoke-static/range {p1 .. p1}, Lps;->L(Ljava/lang/Object;)V
+    .locals 17
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Liuf;->X:Lruf;
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v2, v1, Lruf;->b:Lwtf;
+    iget-object v1, v0, Liuf;->X:Ljava/lang/Object;
 
-    iget-object v3, v1, Lruf;->Y:Lne7;
+    check-cast v1, Lbsf;
 
-    iget-object v4, v1, Lruf;->B0:Lmoe;
+    sget v2, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;->Y:I
 
-    iget-object v5, v1, Lruf;->c:Lvtf;
+    instance-of v2, v1, Lzrf;
 
-    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
+    iget-object v3, v0, Liuf;->Y:Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
 
-    move-result v5
+    if-eqz v2, :cond_0
 
-    const v6, 0x7fffffff
+    new-instance v2, Lrta;
 
-    const/4 v7, 0x0
+    invoke-direct {v2, v3}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast v1, Lzrf;
+
+    iget-object v3, v1, Lzrf;->a:Lcdf;
+
+    invoke-virtual {v2, v3}, Lrta;->g(Lcdf;)V
+
+    new-instance v3, Lfua;
+
+    iget v1, v1, Lzrf;->b:I
+
+    invoke-direct {v3, v1}, Lfua;-><init>(I)V
+
+    invoke-virtual {v2, v3}, Lrta;->e(Ljua;)V
+
+    invoke-virtual {v2}, Lrta;->i()Lqta;
+
+    goto/16 :goto_2
+
+    :cond_0
+    instance-of v2, v1, Lasf;
+
+    if-eqz v2, :cond_5
+
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lpl7;
+
+    check-cast v1, Lasf;
+
+    iget-object v2, v1, Lasf;->a:Lxcf;
+
+    sget-object v4, Lmdd;->P1:Lmdd;
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    invoke-static {v2, v6, v4, v5}, Ld40;->b(Lcdf;Landroid/os/Bundle;Lmdd;I)Lil3;
+
+    move-result-object v9
+
+    iget-object v2, v1, Lasf;->b:Lxcf;
+
+    invoke-virtual {v9, v2}, Lil3;->f(Lcdf;)V
+
+    iget-object v1, v1, Lasf;->c:Ljava/util/List;
+
+    new-instance v7, Lym2;
+
+    const/16 v13, 0x8
+
+    const/16 v14, 0x11
 
     const/4 v8, 0x1
 
-    const/4 v9, 0x0
+    const-class v10, Lil3;
 
-    if-eqz v5, :cond_b
+    const-string v11, "addButton"
 
-    if-eq v5, v8, :cond_9
+    const-string v12, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
 
-    const/4 v6, 0x2
+    invoke-direct/range {v7 .. v14}, Lym2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    if-eq v5, v6, :cond_5
+    new-instance v2, Lwm2;
 
-    const/4 v2, 0x3
+    const/16 v4, 0xe
 
-    if-ne v5, v2, :cond_4
+    invoke-direct {v2, v7, v4}, Lwm2;-><init>(Lv8;I)V
 
-    if-eqz v3, :cond_0
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
 
-    iget-object v3, v3, Lne7;->c:Lme7;
+    invoke-virtual {v9}, Lil3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-    goto :goto_0
+    move-result-object v11
 
-    :cond_0
-    move-object v3, v9
+    invoke-virtual {v11, v3}, Ljz3;->setTargetController(Ljz3;)V
+
+    invoke-virtual {v11, v3}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+
+    move-object v1, v3
 
     :goto_0
-    const-string v5, "Required value was null."
-
-    if-eqz v3, :cond_3
-
-    new-instance v6, Lwwf;
-
-    sget v7, Lq9d;->a:I
-
-    sget v7, Likc;->oneme_settings_twofa_creation_email_verify_title:I
-
-    new-instance v8, Ljef;
-
-    invoke-direct {v8, v7}, Ljef;-><init>(I)V
-
-    sget v7, Likc;->oneme_settings_twofa_creation_email_verify_subtitle:I
-
-    iget-object v10, v3, Lme7;->a:Ljava/lang/String;
-
-    if-eqz v10, :cond_2
-
-    filled-new-array {v10}, [Ljava/lang/Object;
-
-    move-result-object v5
-
-    new-instance v10, Llef;
-
-    invoke-static {v5}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v5
-
-    invoke-direct {v10, v7, v5}, Llef;-><init>(ILjava/util/List;)V
-
-    iget v5, v3, Lme7;->c:I
-
-    invoke-direct {v6, v8, v10, v5}, Lwwf;-><init>(Ljef;Llef;I)V
-
-    invoke-virtual {v4, v9, v6}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iget-object v4, v1, Lruf;->D0:Lmoe;
-
-    iget-wide v5, v3, Lme7;->o:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v9, v3}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iget-object v3, v1, Lruf;->H0:Lqle;
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3, v9}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    iput-object v9, v1, Lruf;->H0:Lqle;
-
-    new-instance v3, Lquf;
-
-    invoke-direct {v3, v1, v9}, Lquf;-><init>(Lruf;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v9, v3, v2}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
+    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
 
     move-result-object v2
 
-    iput-object v2, v1, Lruf;->H0:Lqle;
+    if-eqz v2, :cond_1
 
-    goto/16 :goto_5
+    invoke-virtual {v1}, Ljz3;->getParentController()Ljz3;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v2, v1, Lt6d;
+
+    if-eqz v2, :cond_2
+
+    check-cast v1, Lt6d;
+
+    goto :goto_1
 
     :cond_2
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    move-object v1, v6
 
-    invoke-direct {v1, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    if-eqz v1, :cond_3
 
-    throw v1
+    invoke-interface {v1}, Lt6d;->f0()Ln6d;
+
+    move-result-object v6
 
     :cond_3
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    invoke-virtual {v11, v3}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->P0(Lone/me/sdk/arch/Widget;)V
 
-    invoke-direct {v1, v5}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    if-eqz v6, :cond_4
 
-    throw v1
+    new-instance v10, Lq6d;
+
+    const/4 v15, 0x0
+
+    const/16 v16, -0x1
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v10 .. v16}, Lq6d;-><init>(Ljz3;Ljava/lang/String;Loz3;Loz3;ZI)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const-string v3, "BottomSheetWidget"
+
+    invoke-static {v1, v10, v2, v3}, Lsw1;->t(ZLq6d;ZLjava/lang/String;)V
+
+    invoke-virtual {v6, v10}, Ln6d;->H(Lq6d;)V
 
     :cond_4
+    :goto_2
+    sget-object v1, Laxf;->a:Laxf;
+
+    return-object v1
+
+    :cond_5
     new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
     invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw v1
-
-    :cond_5
-    sget-object v5, Lwtf;->c:Lwtf;
-
-    if-ne v2, v5, :cond_6
-
-    iget-object v1, v1, Lruf;->Z:Ljava/lang/String;
-
-    const-string v2, "Can\'t open email step for restore"
-
-    invoke-static {v1, v2, v9}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto/16 :goto_5
-
-    :cond_6
-    if-eqz v3, :cond_7
-
-    iget-object v1, v3, Lne7;->c:Lme7;
-
-    if-eqz v1, :cond_7
-
-    iget-object v1, v1, Lme7;->b:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_7
-    move-object v1, v9
-
-    :goto_1
-    sget-object v3, Lwtf;->b:Lwtf;
-
-    if-ne v2, v3, :cond_8
-
-    if-eqz v1, :cond_8
-
-    sget v2, Likc;->oneme_settings_twofa_creation_new_email_title:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v2}, Ljef;-><init>(I)V
-
-    sget v2, Likc;->oneme_settings_twofa_creation_new_email_description:I
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v1, v8}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v1
-
-    new-instance v5, Llef;
-
-    invoke-static {v1}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v5, v2, v1}, Llef;-><init>(ILjava/util/List;)V
-
-    move-object v12, v5
-
-    goto :goto_2
-
-    :cond_8
-    sget v1, Likc;->oneme_settings_twofa_creation_email_title:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v1}, Ljef;-><init>(I)V
-
-    move-object v12, v9
-
-    :goto_2
-    new-instance v1, Lrwf;
-
-    sget v2, Lq9d;->a:I
-
-    sget v2, Likc;->oneme_settings_twofa_creation_email_empty_confirmation_description:I
-
-    new-instance v5, Ljef;
-
-    invoke-direct {v5, v2}, Ljef;-><init>(I)V
-
-    new-instance v10, Lvwf;
-
-    sget v2, Likc;->oneme_settings_twofa_creation_email_hint:I
-
-    new-instance v11, Ljef;
-
-    invoke-direct {v11, v2}, Ljef;-><init>(I)V
-
-    const/4 v14, 0x0
-
-    const/16 v15, 0x7c
-
-    const/4 v13, 0x0
-
-    invoke-direct/range {v10 .. v15}, Lvwf;-><init>(Ljef;Loef;III)V
-
-    invoke-direct {v1, v3, v5, v10}, Lrwf;-><init>(Ljef;Ljef;Lvwf;)V
-
-    invoke-virtual {v4, v9, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto/16 :goto_5
-
-    :cond_9
-    invoke-virtual {v1}, Lruf;->s()Lltf;
-
-    move-result-object v2
-
-    iget v2, v2, Lltf;->c:I
-
-    if-eq v2, v6, :cond_a
-
-    if-lez v2, :cond_a
-
-    invoke-virtual {v1}, Lruf;->s()Lltf;
-
-    move-result-object v1
-
-    iget v7, v1, Lltf;->c:I
-
-    :cond_a
-    move v14, v7
-
-    new-instance v1, Ltwf;
-
-    sget v2, Lq9d;->a:I
-
-    sget v2, Likc;->oneme_settings_twofa_creation_hint_title:I
-
-    new-instance v3, Ljef;
-
-    invoke-direct {v3, v2}, Ljef;-><init>(I)V
-
-    sget v2, Likc;->oneme_settings_twofa_creation_hint_subtitle:I
-
-    new-instance v5, Ljef;
-
-    invoke-direct {v5, v2}, Ljef;-><init>(I)V
-
-    new-instance v10, Lvwf;
-
-    sget v2, Likc;->oneme_settings_twofa_creation_hint_input_hint:I
-
-    new-instance v11, Ljef;
-
-    invoke-direct {v11, v2}, Ljef;-><init>(I)V
-
-    const/4 v13, 0x0
-
-    const/16 v15, 0x5e
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v10 .. v15}, Lvwf;-><init>(Ljef;Loef;III)V
-
-    invoke-direct {v1, v3, v5, v10}, Ltwf;-><init>(Ljef;Ljef;Lvwf;)V
-
-    invoke-virtual {v4, v9, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {v1}, Lruf;->s()Lltf;
-
-    move-result-object v3
-
-    iget v3, v3, Lltf;->a:I
-
-    if-ge v3, v8, :cond_c
-
-    move v13, v8
-
-    goto :goto_3
-
-    :cond_c
-    move v13, v3
-
-    :goto_3
-    invoke-virtual {v1}, Lruf;->s()Lltf;
-
-    move-result-object v3
-
-    iget v3, v3, Lltf;->b:I
-
-    if-eq v3, v6, :cond_d
-
-    if-lez v3, :cond_d
-
-    invoke-virtual {v1}, Lruf;->s()Lltf;
-
-    move-result-object v1
-
-    iget v7, v1, Lltf;->b:I
-
-    :cond_d
-    move v14, v7
-
-    sget v1, Lphc;->oneme_settings_twofa_creation_password_symbols_count:I
-
-    new-instance v12, Lfef;
-
-    invoke-direct {v12, v1, v13}, Lfef;-><init>(II)V
-
-    sget-object v1, Lwtf;->a:Lwtf;
-
-    if-ne v2, v1, :cond_e
-
-    sget v1, Likc;->oneme_settings_twofa_creation_password_title:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    goto :goto_4
-
-    :cond_e
-    sget v1, Likc;->oneme_settings_twofa_creation_new_password_title:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    :goto_4
-    new-instance v1, Luwf;
-
-    sget v3, Lq9d;->a:I
-
-    new-instance v10, Lvwf;
-
-    sget v3, Likc;->oneme_settings_twofa_creation_password_first_hint:I
-
-    new-instance v11, Ljef;
-
-    invoke-direct {v11, v3}, Ljef;-><init>(I)V
-
-    const/16 v15, 0xc
-
-    invoke-direct/range {v10 .. v15}, Lvwf;-><init>(Ljef;Loef;III)V
-
-    new-instance v3, Lvwf;
-
-    sget v5, Likc;->oneme_settings_twofa_creation_password_second_hint:I
-
-    new-instance v15, Ljef;
-
-    invoke-direct {v15, v5}, Ljef;-><init>(I)V
-
-    const/16 v17, 0x0
-
-    const/16 v19, 0x16
-
-    const/16 v16, 0x0
-
-    move/from16 v18, v14
-
-    move-object v14, v3
-
-    invoke-direct/range {v14 .. v19}, Lvwf;-><init>(Ljef;Loef;III)V
-
-    invoke-direct {v1, v2, v10, v14}, Luwf;-><init>(Ljef;Lvwf;Lvwf;)V
-
-    invoke-virtual {v4, v9, v1}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_5
-    sget-object v1, Loyf;->a:Loyf;
-
-    return-object v1
 .end method

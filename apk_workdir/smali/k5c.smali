@@ -1,104 +1,123 @@
-.class public final Lk5c;
+.class public final synthetic Lk5c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltu8;
+.implements Luda;
+.implements Ll0f;
 
 
 # instance fields
-.field public final a:Lh94;
+.field public final synthetic a:I
 
-.field public final b:Lfu8;
+.field public final synthetic b:Landroid/content/Context;
 
-.field public final c:Lkw8;
-
-.field public final d:Llu3;
-
-.field public final e:I
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Lh94;)V
-    .locals 1
+.method public synthetic constructor <init>(ILandroid/content/Context;Z)V
+    .locals 0
 
-    new-instance v0, Ljh4;
+    iput p1, p0, Lk5c;->a:I
 
-    invoke-direct {v0}, Ljh4;-><init>()V
+    iput-object p2, p0, Lk5c;->b:Landroid/content/Context;
 
-    invoke-direct {p0, p1, v0}, Lk5c;-><init>(Lh94;Ljh4;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lh94;Ljh4;)V
-    .locals 3
-
-    new-instance v0, Lfu8;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1, p2}, Lfu8;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lkw8;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p2, v1}, Lkw8;-><init>(I)V
-
-    new-instance v1, Llu3;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v1, v2}, Llu3;-><init>(I)V
+    iput-boolean p3, p0, Lk5c;->c:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk5c;->a:Lh94;
-
-    iput-object v0, p0, Lk5c;->b:Lfu8;
-
-    iput-object p2, p0, Lk5c;->c:Lkw8;
-
-    iput-object v1, p0, Lk5c;->d:Llu3;
-
-    const/high16 p1, 0x100000
-
-    iput p1, p0, Lk5c;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrm8;)Llj0;
-    .locals 9
+.method public a(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p1, Lrm8;->b:Lhm8;
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lk5c;->b:Landroid/content/Context;
 
-    new-instance v1, Lm5c;
+    invoke-static {p1}, Lvu0;->t(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    iget-object v0, p0, Lk5c;->c:Lkw8;
+    move-result-object p1
 
-    invoke-virtual {v0, p1}, Lkw8;->q(Lrm8;)Lfz4;
+    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v5
+    move-result-object p1
 
-    iget v7, p0, Lk5c;->e:I
+    const-string v0, "proxy_retention"
 
-    const/4 v8, 0x0
+    iget-boolean v1, p0, Lk5c;->c:Z
 
-    iget-object v3, p0, Lk5c;->a:Lh94;
+    invoke-interface {p1, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    iget-object v4, p0, Lk5c;->b:Lfu8;
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    iget-object v6, p0, Lk5c;->d:Llu3;
+    return-void
+.end method
 
-    move-object v2, p1
+.method public get()Ljava/lang/Object;
+    .locals 3
 
-    invoke-direct/range {v1 .. v8}, Lm5c;-><init>(Lrm8;Lh94;Lfu8;Lfz4;Llu3;ILt76;)V
+    iget v0, p0, Lk5c;->a:I
 
-    return-object v1
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lk5c;->b:Landroid/content/Context;
+
+    iget-boolean v1, p0, Lk5c;->c:Z
+
+    invoke-static {v0, v1}, Lwdf;->r(Landroid/content/Context;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Lk5c;->c:Z
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lk5c;->b:Landroid/content/Context;
+
+    invoke-static {v2, v1, v0}, Lwdf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-boolean v0, p0, Lk5c;->c:Z
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lk5c;->b:Landroid/content/Context;
+
+    invoke-static {v2, v1, v0}, Lwdf;->o(Landroid/content/Context;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-boolean v0, p0, Lk5c;->c:Z
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lk5c;->b:Landroid/content/Context;
+
+    invoke-static {v2, v0, v1}, Lwdf;->g(Landroid/content/Context;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

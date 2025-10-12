@@ -1,60 +1,154 @@
 .class public final Luo4;
-.super Ltxb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvo4;
 
 
 # instance fields
-.field public J0:Llk4;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Lbpc;
 
 
-# virtual methods
-.method public final D()V
-    .locals 2
+# direct methods
+.method public constructor <init>()V
+    .locals 12
 
-    iget-object v0, p0, Luo4;->J0:Llk4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    sget-object v0, Llo4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iget-object v1, v0, Llk4;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    check-cast v1, Lto4;
+    move-result-wide v2
 
-    iget-object v0, v0, Llk4;->c:Ljava/lang/Object;
+    iput-wide v2, p0, Luo4;->a:J
 
-    check-cast v0, Lpg1;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    iget-object v1, v1, Lto4;->x0:Landroid/widget/EditText;
+    move-result-wide v9
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+    iput-wide v9, p0, Luo4;->b:J
 
-    :cond_0
-    const/4 v0, 0x0
+    new-instance v1, Lfb4;
 
-    iput-object v0, p0, Luo4;->J0:Llk4;
+    sget v0, Lhhc;->oneme_settings_old_dev_menu:I
+
+    new-instance v4, Lxcf;
+
+    invoke-direct {v4, v0}, Lxcf;-><init>(I)V
+
+    sget v5, Ll7d;->S:I
+
+    sget-object v7, Ldb4;->r0:Ldb4;
+
+    const/16 v8, 0x8
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lfb4;-><init>(JLcdf;ILcdf;Lhq;I)V
+
+    new-instance v4, Lfb4;
+
+    sget v0, Lhhc;->oneme_settings_old_logs_menu:I
+
+    move-wide v5, v9
+
+    move-object v10, v7
+
+    new-instance v7, Lxcf;
+
+    invoke-direct {v7, v0}, Lxcf;-><init>(I)V
+
+    sget v8, Ll7d;->e:I
+
+    const/4 v9, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-direct/range {v4 .. v11}, Lfb4;-><init>(JLcdf;ILcdf;Lhq;I)V
+
+    filled-new-array {v1, v4}, [Lfb4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lx83;->I([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Line;->a(Ljava/lang/Object;)Lhne;
+
+    move-result-object v0
+
+    new-instance v1, Lbpc;
+
+    invoke-direct {v1, v0}, Lbpc;-><init>(Lis9;)V
+
+    iput-object v1, p0, Luo4;->c:Lbpc;
 
     return-void
 .end method
 
-.method public final x(Lww7;)V
-    .locals 2
 
-    check-cast p1, Lro4;
+# virtual methods
+.method public final c()Lane;
+    .locals 1
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    iget-object v0, p0, Luo4;->c:Lbpc;
 
-    check-cast v0, Lto4;
+    return-object v0
+.end method
 
-    iget v1, p1, Lro4;->c:I
+.method public final d(Lfb4;)V
+    .locals 5
 
-    invoke-virtual {v0, v1}, Lto4;->setMaxCount(I)V
+    iget-wide v0, p1, Lfb4;->a:J
 
-    iget-object v1, p1, Lro4;->a:Ljava/lang/String;
+    iget-wide v2, p0, Luo4;->b:J
 
-    invoke-virtual {v0, v1}, Lto4;->setText(Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Llo4;->a(JJ)Z
 
-    iget-object p1, p1, Lro4;->b:Ljef;
+    move-result p1
 
-    invoke-virtual {v0, p1}, Lto4;->setHint(Loef;)V
+    const/4 v2, 0x0
 
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lpo4;->c:Lpo4;
+
+    invoke-virtual {p1}, Ld3;->o0()Loc4;
+
+    move-result-object p1
+
+    const-string v0, ":settings/dev/logsviewer"
+
+    invoke-virtual {p1, v0, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    :cond_0
+    iget-wide v3, p0, Luo4;->a:J
+
+    invoke-static {v0, v1, v3, v4}, Llo4;->a(JJ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lpo4;->c:Lpo4;
+
+    invoke-virtual {p1}, Ld3;->o0()Loc4;
+
+    move-result-object p1
+
+    const-string v0, ":settings/dev/showroom"
+
+    invoke-virtual {p1, v0, v2}, Loc4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :cond_1
     return-void
 .end method

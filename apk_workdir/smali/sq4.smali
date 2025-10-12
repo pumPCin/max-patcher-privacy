@@ -1,53 +1,82 @@
-.class public final Lsq4;
-.super Ljava/lang/Object;
+.class public final enum Lsq4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
-# instance fields
-.field public final a:Landroid/content/Context;
 
-.field public final b:Lr4;
+# static fields
+.field public static final enum a:Lsq4;
 
-.field public c:Landroid/view/VelocityTracker;
-
-.field public d:F
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public final h:[I
+.field public static final synthetic b:[Lsq4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr4;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsq4;
 
-    const/4 v0, -0x1
+    const-string v1, "INSTANCE"
 
-    iput v0, p0, Lsq4;->e:I
+    const/4 v2, 0x0
 
-    iput v0, p0, Lsq4;->f:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput v0, p0, Lsq4;->g:I
+    sput-object v0, Lsq4;->a:Lsq4;
 
-    const v0, 0x7fffffff
-
-    const/4 v1, 0x0
-
-    filled-new-array {v0, v1}, [I
+    filled-new-array {v0}, [Lsq4;
 
     move-result-object v0
 
-    iput-object v0, p0, Lsq4;->h:[I
-
-    iput-object p1, p0, Lsq4;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lsq4;->b:Lr4;
+    sput-object v0, Lsq4;->b:[Lsq4;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lsq4;
+    .locals 1
+
+    const-class v0, Lsq4;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lsq4;
+
+    return-object p0
+.end method
+
+.method public static values()[Lsq4;
+    .locals 1
+
+    sget-object v0, Lsq4;->b:[Lsq4;
+
+    invoke-virtual {v0}, [Lsq4;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lsq4;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "MoreExecutors.directExecutor()"
+
+    return-object v0
 .end method

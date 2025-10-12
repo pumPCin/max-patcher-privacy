@@ -1,322 +1,262 @@
 .class public final Lac8;
-.super Lx1;
+.super Lza8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final g:F
 
-.field public final b:Ljava/lang/Object;
+.field public final h:F
+
+.field public final i:F
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    iput p1, p0, Lac8;->a:I
+    invoke-direct {p0, p1}, Lza8;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lac8;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
+
+    sget v0, Lcac;->m3_back_progress_side_container_max_scale_x_distance_shrink:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iput v0, p0, Lac8;->g:F
+
+    sget v0, Lcac;->m3_back_progress_side_container_max_scale_x_distance_grow:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v0
+
+    iput v0, p0, Lac8;->h:F
+
+    sget v0, Lcac;->m3_back_progress_side_container_max_scale_y_distance:I
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result p1
+
+    iput p1, p0, Lac8;->i:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge contains(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(FZI)V
+    .locals 10
 
-    iget v0, p0, Lac8;->a:I
+    iget-object v0, p0, Lza8;->a:Landroid/animation/TimeInterpolator;
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lb0;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
     move-result p1
 
-    return p1
+    sget-object v0, Lijg;->a:Ljava/util/WeakHashMap;
 
-    :pswitch_0
-    instance-of v0, p1, Ljava/lang/String;
+    iget-object v0, p0, Lza8;->b:Landroid/view/View;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutDirection()I
 
-    const/4 p1, 0x0
+    move-result v1
+
+    invoke-static {p3, v1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
+
+    move-result p3
+
+    const/4 v1, 0x3
+
+    and-int/2addr p3, v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne p3, v1, :cond_0
+
+    move p3, v3
 
     goto :goto_0
 
     :cond_0
-    check-cast p1, Ljava/lang/String;
-
-    invoke-super {p0, p1}, Lb0;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
+    move p3, v2
 
     :goto_0
-    return p1
+    if-ne p2, p3, :cond_1
 
-    nop
+    goto :goto_1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_1
+    move v3, v2
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+    :goto_1
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
-    iget v0, p0, Lac8;->a:I
+    move-result p2
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
-    iget-object v0, p0, Lac8;->b:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v0, Ljava/util/List;
+    int-to-float v4, p2
 
-    invoke-static {p1, p0}, Le93;->d0(ILjava/util/List;)I
+    const/4 v5, 0x0
 
-    move-result p1
+    cmpg-float v6, v4, v5
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-lez v6, :cond_8
 
-    move-result-object p1
+    int-to-float v1, v1
 
-    return-object p1
+    cmpg-float v6, v1, v5
 
-    :pswitch_0
-    iget-object v0, p0, Lac8;->b:Ljava/lang/Object;
+    if-gtz v6, :cond_2
 
-    check-cast v0, Ls9h;
+    goto/16 :goto_7
 
-    iget-object v0, v0, Ls9h;->b:Ljava/lang/Object;
+    :cond_2
+    iget v6, p0, Lac8;->g:F
 
-    check-cast v0, Ljava/util/regex/Matcher;
+    div-float/2addr v6, v4
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    iget v7, p0, Lac8;->h:F
 
-    move-result-object p1
+    div-float/2addr v7, v4
 
-    if-nez p1, :cond_0
+    iget v8, p0, Lac8;->i:F
 
-    const-string p1, ""
+    div-float/2addr v8, v1
 
-    :cond_0
-    return-object p1
+    if-eqz p3, :cond_3
 
-    nop
+    move v4, v5
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_3
+    invoke-virtual {v0, v4}, Landroid/view/View;->setPivotX(F)V
 
-.method public final getSize()I
-    .locals 1
+    if-eqz v3, :cond_4
 
-    iget v0, p0, Lac8;->a:I
+    goto :goto_2
 
-    packed-switch v0, :pswitch_data_0
+    :cond_4
+    neg-float v7, v6
 
-    iget-object v0, p0, Lac8;->b:Ljava/lang/Object;
+    :goto_2
+    invoke-static {v5, v7, p1}, Lmg;->a(FFF)F
 
-    check-cast v0, Ljava/util/List;
+    move-result v1
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    move-result v0
+    add-float v6, v1, v4
 
-    return v0
+    invoke-virtual {v0, v6}, Landroid/view/View;->setScaleX(F)V
 
-    :pswitch_0
-    iget-object v0, p0, Lac8;->b:Ljava/lang/Object;
-
-    check-cast v0, Ls9h;
-
-    iget-object v0, v0, Ls9h;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/regex/Matcher;
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->groupCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public bridge indexOf(Ljava/lang/Object;)I
-    .locals 1
-
-    iget v0, p0, Lac8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lx1;->indexOf(Ljava/lang/Object;)I
+    invoke-static {v5, v8, p1}, Lmg;->a(FFF)F
 
     move-result p1
 
-    return p1
+    sub-float p1, v4, p1
 
-    :pswitch_0
-    instance-of v0, p1, Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
 
-    if-nez v0, :cond_0
+    instance-of v7, v0, Landroid/view/ViewGroup;
 
-    const/4 p1, -0x1
+    if-eqz v7, :cond_8
 
-    goto :goto_0
+    check-cast v0, Landroid/view/ViewGroup;
 
-    :cond_0
-    check-cast p1, Ljava/lang/String;
+    :goto_3
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    invoke-super {p0, p1}, Lx1;->indexOf(Ljava/lang/Object;)I
+    move-result v7
 
-    move-result p1
+    if-ge v2, v7, :cond_8
 
-    :goto_0
-    return p1
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    nop
+    move-result-object v7
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-eqz p3, :cond_5
 
-.method public iterator()Ljava/util/Iterator;
-    .locals 2
+    invoke-virtual {v7}, Landroid/view/View;->getRight()I
 
-    iget v0, p0, Lac8;->a:I
+    move-result v8
 
-    packed-switch v0, :pswitch_data_0
+    sub-int v8, p2, v8
 
-    invoke-super {p0}, Lx1;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v7}, Landroid/view/View;->getWidth()I
 
-    move-result-object v0
+    move-result v9
 
-    return-object v0
+    add-int/2addr v9, v8
 
-    :pswitch_0
-    new-instance v0, Ln4d;
+    int-to-float v8, v9
 
-    const/4 v1, 0x0
+    goto :goto_4
 
-    invoke-direct {v0, p0, v1}, Ln4d;-><init>(Lac8;I)V
+    :cond_5
+    invoke-virtual {v7}, Landroid/view/View;->getLeft()I
 
-    return-object v0
+    move-result v8
 
-    nop
+    neg-int v8, v8
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
+    int-to-float v8, v8
 
-.method public bridge lastIndexOf(Ljava/lang/Object;)I
-    .locals 1
+    :goto_4
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotX(F)V
 
-    iget v0, p0, Lac8;->a:I
+    invoke-virtual {v7}, Landroid/view/View;->getTop()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v8
 
-    invoke-super {p0, p1}, Lx1;->lastIndexOf(Ljava/lang/Object;)I
+    neg-int v8, v8
 
-    move-result p1
+    int-to-float v8, v8
 
-    return p1
+    invoke-virtual {v7, v8}, Landroid/view/View;->setPivotY(F)V
 
-    :pswitch_0
-    instance-of v0, p1, Ljava/lang/String;
+    if-eqz v3, :cond_6
 
-    if-nez v0, :cond_0
+    sub-float v8, v4, v1
 
-    const/4 p1, -0x1
+    goto :goto_5
 
-    goto :goto_0
+    :cond_6
+    move v8, v4
 
-    :cond_0
-    check-cast p1, Ljava/lang/String;
+    :goto_5
+    cmpl-float v9, p1, v5
 
-    invoke-super {p0, p1}, Lx1;->lastIndexOf(Ljava/lang/Object;)I
+    if-eqz v9, :cond_7
 
-    move-result p1
+    div-float v9, v6, p1
 
-    :goto_0
-    return p1
+    mul-float/2addr v9, v8
 
-    nop
+    goto :goto_6
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :cond_7
+    move v9, v4
 
-.method public listIterator()Ljava/util/ListIterator;
-    .locals 2
+    :goto_6
+    invoke-virtual {v7, v8}, Landroid/view/View;->setScaleX(F)V
 
-    iget v0, p0, Lac8;->a:I
+    invoke-virtual {v7, v9}, Landroid/view/View;->setScaleY(F)V
 
-    packed-switch v0, :pswitch_data_0
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-super {p0}, Lx1;->listIterator()Ljava/util/ListIterator;
+    goto :goto_3
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ln4d;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Ln4d;-><init>(Lac8;I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public listIterator(I)Ljava/util/ListIterator;
-    .locals 1
-
-    iget v0, p0, Lac8;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Lx1;->listIterator(I)Ljava/util/ListIterator;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Ln4d;
-
-    invoke-direct {v0, p0, p1}, Ln4d;-><init>(Lac8;I)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    :cond_8
+    :goto_7
+    return-void
 .end method

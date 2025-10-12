@@ -1,6 +1,3 @@
-.class public interface abstract Luf6;
-.super Ljava/lang/Object;
+.class public final Luf6;
+.super Lwf6;
 .source "SourceFile"
-
-# interfaces
-.implements Lqf6;

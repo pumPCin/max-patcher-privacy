@@ -12,20 +12,20 @@
     return-void
 .end method
 
-.method public static read(Lq6g;)Landroidx/media/AudioAttributesCompat;
+.method public static read(Ld5g;)Landroidx/media/AudioAttributesCompat;
     .locals 0
 
-    invoke-static {p0}, Landroidx/media/AudioAttributesCompatParcelizer;->read(Lq6g;)Landroidx/media/AudioAttributesCompat;
+    invoke-static {p0}, Landroidx/media/AudioAttributesCompatParcelizer;->read(Ld5g;)Landroidx/media/AudioAttributesCompat;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static write(Landroidx/media/AudioAttributesCompat;Lq6g;)V
+.method public static write(Landroidx/media/AudioAttributesCompat;Ld5g;)V
     .locals 0
 
-    invoke-static {p0, p1}, Landroidx/media/AudioAttributesCompatParcelizer;->write(Landroidx/media/AudioAttributesCompat;Lq6g;)V
+    invoke-static {p0, p1}, Landroidx/media/AudioAttributesCompatParcelizer;->write(Landroidx/media/AudioAttributesCompat;Ld5g;)V
 
     return-void
 .end method

@@ -1,102 +1,387 @@
 .class public final Le74;
-.super Ljava/lang/Object;
+.super Lrmd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
-
-# static fields
-.field public static final X:Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final o:Landroid/os/StrictMode$ThreadPolicy;
+.field public final k:Lhpd;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lll8;Luw0;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->defaultThreadFactory()Ljava/util/concurrent/ThreadFactory;
+    new-instance v0, Lm74;
 
-    move-result-object v0
+    invoke-direct {v0}, Lm74;-><init>()V
 
-    sput-object v0, Le74;->X:Ljava/util/concurrent/ThreadFactory;
+    invoke-direct {p0, p1, v0, p2, p3}, Lrmd;-><init>(Lll8;Lr3b;Luw0;Ljava/util/concurrent/Executor;)V
 
-    return-void
-.end method
+    new-instance p1, Lhpd;
 
-.method public constructor <init>(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)V
-    .locals 1
+    const/4 p2, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1, p2}, Lhpd;-><init>(I)V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object v0, p0, Le74;->a:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iput-object p1, p0, Le74;->b:Ljava/lang/String;
-
-    iput p2, p0, Le74;->c:I
-
-    iput-object p3, p0, Le74;->o:Landroid/os/StrictMode$ThreadPolicy;
+    iput-object p1, p0, Le74;->k:Lhpd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+.method public final e(Lww0;Lcr5;Z)Ljava/util/ArrayList;
+    .locals 26
 
-    new-instance v0, Luu1;
+    move-object/from16 v1, p0
 
-    const/16 v1, 0x17
+    move/from16 v2, p3
 
-    invoke-direct {v0, p0, v1, p1}, Luu1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-object/from16 v3, p2
 
-    sget-object p1, Le74;->X:Ljava/util/concurrent/ThreadFactory;
+    check-cast v3, Lh74;
 
-    invoke-interface {p1, v0}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    new-instance v4, Ljava/util/ArrayList;
 
-    move-result-object p1
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Le74;->a:Ljava/util/concurrent/atomic/AtomicLong;
+    :goto_0
+    iget-object v0, v3, Lh74;->m:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result-wide v0
+    move-result v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-ge v6, v0, :cond_a
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v3, p0, Le74;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, " Thread #"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v6}, Lh74;->b(I)Lw7b;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+    iget-wide v7, v0, Lw7b;->b:J
 
-    return-object p1
+    invoke-static {v7, v8}, Lg3g;->U(J)J
+
+    move-result-wide v7
+
+    invoke-virtual {v3, v6}, Lh74;->d(I)J
+
+    move-result-wide v9
+
+    iget-object v11, v0, Lw7b;->c:Ljava/util/List;
+
+    const/4 v12, 0x0
+
+    :goto_1
+    invoke-interface {v11}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v12, v0, :cond_9
+
+    invoke-interface {v11, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v13, v0
+
+    check-cast v13, Lu8;
+
+    const/4 v14, 0x0
+
+    :goto_2
+    iget-object v0, v13, Lu8;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v14, v0, :cond_8
+
+    iget-object v0, v13, Lu8;->c:Ljava/util/List;
+
+    invoke-interface {v0, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvzc;
+
+    :try_start_0
+    iget v15, v13, Lu8;->b:I
+
+    invoke-virtual {v0}, Lvzc;->c()Lb84;
+
+    move-result-object v16
+
+    if-eqz v16, :cond_0
+
+    move/from16 v17, v6
+
+    move-object/from16 v15, v16
+
+    move-object/from16 v16, v3
+
+    goto :goto_3
+
+    :cond_0
+    new-instance v5, Ld74;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+
+    move-object/from16 v16, v3
+
+    move-object/from16 v3, p1
+
+    :try_start_1
+    invoke-direct {v5, v3, v15, v0}, Ld74;-><init>(Lww0;ILvzc;)V
+
+    invoke-virtual {v1, v5, v2}, Lrmd;->c(Lf8d;Z)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lm43;
+
+    if-nez v5, :cond_1
+
+    const/4 v5, 0x0
+
+    move-object v15, v5
+
+    move/from16 v17, v6
+
+    goto :goto_3
+
+    :cond_1
+    new-instance v15, Lh33;
+
+    iget-wide v2, v0, Lvzc;->c:J
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+
+    move/from16 v17, v6
+
+    const/4 v6, 0x3
+
+    :try_start_2
+    invoke-direct {v15, v5, v2, v3, v6}, Lh33;-><init>(Ljava/lang/Object;JI)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_3
+    if-eqz v15, :cond_6
+
+    invoke-interface {v15, v9, v10}, Lb84;->C(J)J
+
+    move-result-wide v2
+
+    const-wide/16 v5, -0x1
+
+    cmp-long v5, v2, v5
+
+    if-eqz v5, :cond_5
+
+    iget-object v5, v1, Le74;->k:Lhpd;
+
+    iget-object v6, v0, Lvzc;->b:La67;
+
+    invoke-virtual {v5, v6}, Lhpd;->w(Ljava/util/List;)Llk0;
+
+    move-result-object v5
+
+    sget v6, Lg3g;->a:I
+
+    iget-object v5, v5, Llk0;->a:Ljava/lang/String;
+
+    iget-object v6, v0, Lvzc;->X:Lllc;
+
+    if-eqz v6, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v5, v6, v1}, Lxff;->g(Lvzc;Ljava/lang/String;Lllc;I)Lc94;
+
+    move-result-object v6
+
+    new-instance v1, Lpmd;
+
+    invoke-direct {v1, v7, v8, v6}, Lpmd;-><init>(JLc94;)V
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    invoke-virtual {v0}, Lvzc;->d()Lllc;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v6, 0x0
+
+    invoke-static {v0, v5, v1, v6}, Lxff;->g(Lvzc;Ljava/lang/String;Lllc;I)Lc94;
+
+    move-result-object v1
+
+    new-instance v6, Lpmd;
+
+    invoke-direct {v6, v7, v8, v1}, Lpmd;-><init>(JLc94;)V
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    invoke-interface {v15}, Lb84;->B()J
+
+    move-result-wide v18
+
+    add-long v2, v18, v2
+
+    const-wide/16 v20, 0x1
+
+    sub-long v2, v2, v20
+
+    move-wide/from16 v22, v2
+
+    move-wide/from16 v1, v18
+
+    :goto_4
+    cmp-long v3, v1, v22
+
+    if-gtz v3, :cond_4
+
+    invoke-interface {v15, v1, v2}, Lb84;->a(J)J
+
+    move-result-wide v18
+
+    move-wide/from16 v24, v7
+
+    add-long v6, v18, v24
+
+    invoke-interface {v15, v1, v2}, Lb84;->k(J)Lllc;
+
+    move-result-object v3
+
+    const/4 v8, 0x0
+
+    invoke-static {v0, v5, v3, v8}, Lxff;->g(Lvzc;Ljava/lang/String;Lllc;I)Lc94;
+
+    move-result-object v3
+
+    new-instance v8, Lpmd;
+
+    invoke-direct {v8, v6, v7, v3}, Lpmd;-><init>(JLc94;)V
+
+    invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-long v1, v1, v20
+
+    move-wide/from16 v7, v24
+
+    goto :goto_4
+
+    :cond_4
+    move-wide/from16 v24, v7
+
+    goto :goto_8
+
+    :cond_5
+    new-instance v0, Landroidx/media3/exoplayer/offline/DownloadException;
+
+    const-string v1, "Unbounded segment index"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_6
+    move-wide/from16 v24, v7
+
+    :try_start_3
+    new-instance v0, Landroidx/media3/exoplayer/offline/DownloadException;
+
+    const-string v1, "Missing segment index"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_3
+    move-exception v0
+
+    move-object/from16 v16, v3
+
+    :goto_5
+    move/from16 v17, v6
+
+    :goto_6
+    move-wide/from16 v24, v7
+
+    :goto_7
+    if-eqz p3, :cond_7
+
+    :goto_8
+    add-int/lit8 v14, v14, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    move-object/from16 v3, v16
+
+    move/from16 v6, v17
+
+    move-wide/from16 v7, v24
+
+    goto/16 :goto_2
+
+    :cond_7
+    throw v0
+
+    :cond_8
+    move-object/from16 v16, v3
+
+    move/from16 v17, v6
+
+    move-wide/from16 v24, v7
+
+    add-int/lit8 v12, v12, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    goto/16 :goto_1
+
+    :cond_9
+    move-object/from16 v16, v3
+
+    move/from16 v17, v6
+
+    add-int/lit8 v6, v17, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    goto/16 :goto_0
+
+    :cond_a
+    return-object v4
 .end method

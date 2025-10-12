@@ -3,177 +3,356 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lsda;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+.field public final synthetic a:La99;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;I)V
+.method public synthetic constructor <init>(La99;)V
     .locals 0
 
-    iput p2, p0, Li49;->a:I
-
-    iput-object p1, p0, Li49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Li49;->a:La99;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final a(Landroid/view/View;Lnx3;)Lnx3;
+    .locals 8
 
-    iget v0, p0, Li49;->a:I
+    iget-object p1, p2, Lnx3;->a:Lmx3;
 
-    iget-object v1, p0, Li49;->b:Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    invoke-virtual {v1}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->U0()Lb19;
+    invoke-interface {p1}, Lmx3;->b()Landroid/content/ClipData;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb19;->w()Z
+    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
 
-    move-result v0
+    move-result v1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    return-object v0
+    const/4 v4, 0x1
 
-    :pswitch_0
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    if-ne v1, v4, :cond_3
 
-    new-instance v2, Lb19;
+    invoke-virtual {v0, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
 
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->N0:Lpr;
+    move-result-object p1
 
-    sget-object v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
+    invoke-virtual {p1}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
 
-    const/4 v4, 0x6
+    move-result-object p1
 
-    aget-object v4, v3, v4
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0:Lpr;
-
-    const/4 v6, 0x7
-
-    aget-object v6, v3, v6
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->P0:Lpr;
-
-    const/16 v8, 0x8
-
-    aget-object v3, v3, v8
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    move-wide v3, v4
-
-    move-wide v5, v6
-
-    move-wide v7, v0
-
-    invoke-direct/range {v2 .. v8}, Lb19;-><init>(JJJ)V
-
-    return-object v2
-
-    :pswitch_1
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    iget-object v0, v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Lpr;
-
-    sget-object v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->f1:[Ltm7;
-
-    const/16 v3, 0x9
-
-    aget-object v4, v2, v3
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Boolean;
-
-    invoke-virtual {v4}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    aget-object v2, v2, v3
-
-    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, v1, v2}, Lpr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-virtual {v1}, Lb04;->getTargetController()Lb04;
-
-    move-result-object v0
-
-    instance-of v1, v0, Lcz3;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lcz3;
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v4, v2
 
     :goto_0
-    if-eqz v0, :cond_1
+    if-eqz v4, :cond_1
 
-    invoke-interface {v0}, Lcz3;->onDismiss()V
+    move-object p1, p2
+
+    goto :goto_1
 
     :cond_1
-    sget-object v0, Loyf;->a:Loyf;
+    move-object p1, v3
 
-    return-object v0
+    :goto_1
+    if-eqz v4, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-object p2, v3
+
+    :cond_2
+    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    goto/16 :goto_7
+
+    :cond_3
+    move v1, v2
+
+    move-object v4, v3
+
+    move-object v5, v4
+
+    :goto_2
+    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
+
+    move-result v6
+
+    if-ge v1, v6, :cond_7
+
+    invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_5
+
+    if-nez v4, :cond_4
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_4
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_3
+
+    :cond_5
+    if-nez v5, :cond_6
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    :cond_6
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_3
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_7
+    if-nez v4, :cond_8
+
+    invoke-static {v3, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :cond_8
+    if-nez v5, :cond_9
+
+    invoke-static {v0, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :cond_9
+    invoke-virtual {v0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
+
+    move-result-object v1
+
+    invoke-static {v1, v4}, Lnx3;->a(Landroid/content/ClipDescription;Ljava/util/ArrayList;)Landroid/content/ClipData;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
+
+    move-result-object v0
+
+    invoke-static {v0, v5}, Lnx3;->a(Landroid/content/ClipDescription;Ljava/util/ArrayList;)Landroid/content/ClipData;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object v0
+
+    :goto_4
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    if-nez v1, :cond_a
+
+    invoke-static {v3, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    goto/16 :goto_7
+
+    :cond_a
+    iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    if-nez v1, :cond_b
+
+    invoke-static {p2, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    goto/16 :goto_7
+
+    :cond_b
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1f
+
+    if-lt v1, v4, :cond_c
+
+    new-instance v5, Lxce;
+
+    invoke-direct {v5, p2}, Lxce;-><init>(Lnx3;)V
+
+    goto :goto_5
+
+    :cond_c
+    new-instance v5, Llx3;
+
+    invoke-direct {v5}, Llx3;-><init>()V
+
+    invoke-interface {p1}, Lmx3;->b()Landroid/content/ClipData;
+
+    move-result-object v6
+
+    iput-object v6, v5, Llx3;->b:Landroid/content/ClipData;
+
+    invoke-interface {p1}, Lmx3;->u()I
+
+    move-result v6
+
+    iput v6, v5, Llx3;->c:I
+
+    invoke-interface {p1}, Lmx3;->getFlags()I
+
+    move-result v6
+
+    iput v6, v5, Llx3;->o:I
+
+    invoke-interface {p1}, Lmx3;->m()Landroid/net/Uri;
+
+    move-result-object v6
+
+    iput-object v6, v5, Llx3;->X:Landroid/net/Uri;
+
+    invoke-interface {p1}, Lmx3;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v6
+
+    iput-object v6, v5, Llx3;->Y:Landroid/os/Bundle;
+
+    :goto_5
+    iget-object v6, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v6, Landroid/content/ClipData;
+
+    invoke-interface {v5, v6}, Lkx3;->e(Landroid/content/ClipData;)V
+
+    invoke-interface {v5}, Lkx3;->build()Lnx3;
+
+    move-result-object v5
+
+    if-lt v1, v4, :cond_d
+
+    new-instance p1, Lxce;
+
+    invoke-direct {p1, p2}, Lxce;-><init>(Lnx3;)V
+
+    goto :goto_6
+
+    :cond_d
+    new-instance p2, Llx3;
+
+    invoke-direct {p2}, Llx3;-><init>()V
+
+    invoke-interface {p1}, Lmx3;->b()Landroid/content/ClipData;
+
+    move-result-object v1
+
+    iput-object v1, p2, Llx3;->b:Landroid/content/ClipData;
+
+    invoke-interface {p1}, Lmx3;->u()I
+
+    move-result v1
+
+    iput v1, p2, Llx3;->c:I
+
+    invoke-interface {p1}, Lmx3;->getFlags()I
+
+    move-result v1
+
+    iput v1, p2, Llx3;->o:I
+
+    invoke-interface {p1}, Lmx3;->m()Landroid/net/Uri;
+
+    move-result-object v1
+
+    iput-object v1, p2, Llx3;->X:Landroid/net/Uri;
+
+    invoke-interface {p1}, Lmx3;->getExtras()Landroid/os/Bundle;
+
+    move-result-object p1
+
+    iput-object p1, p2, Llx3;->Y:Landroid/os/Bundle;
+
+    move-object p1, p2
+
+    :goto_6
+    iget-object p2, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p2, Landroid/content/ClipData;
+
+    invoke-interface {p1, p2}, Lkx3;->e(Landroid/content/ClipData;)V
+
+    invoke-interface {p1}, Lkx3;->build()Lnx3;
+
+    move-result-object p1
+
+    invoke-static {v5, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p1
+
+    :goto_7
+    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast p2, Lnx3;
+
+    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast p1, Lnx3;
+
+    if-eqz p2, :cond_e
+
+    iget-object p2, p2, Lnx3;->a:Lmx3;
+
+    invoke-interface {p2}, Lmx3;->b()Landroid/content/ClipData;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
+
+    move-result v0
+
+    if-lez v0, :cond_e
+
+    invoke-interface {p2}, Lmx3;->b()Landroid/content/ClipData;
+
+    move-result-object p2
+
+    invoke-virtual {p2, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+
+    move-result-object v3
+
+    :cond_e
+    if-eqz v3, :cond_f
+
+    iget-object p2, p0, Li49;->a:La99;
+
+    invoke-virtual {p2, v3}, La99;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_f
+    return-object p1
 .end method

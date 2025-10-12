@@ -4,83 +4,56 @@
 
 
 # instance fields
-.field public final a:Ljt4;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljt4;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljt4;
+.field public final c:Z
 
-.field public final d:Ljt4;
+.field public final d:Z
 
-.field public final e:Ljt4;
+.field public final e:Landroid/net/Uri;
+
+.field public final f:Z
+
+.field public final g:[J
+
+.field public final h:Z
+
+.field public final i:I
+
+.field public final j:Z
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Ljt4;Ljt4;Ljt4;Ljt4;Ljt4;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ZZLandroid/net/Uri;Z[JZIZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf3a;->a:Ljt4;
+    iput-object p1, p0, Lf3a;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lf3a;->b:Ljt4;
+    iput-object p2, p0, Lf3a;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lf3a;->c:Ljt4;
+    iput-boolean p3, p0, Lf3a;->c:Z
 
-    iput-object p4, p0, Lf3a;->d:Ljt4;
+    iput-boolean p4, p0, Lf3a;->d:Z
 
-    iput-object p5, p0, Lf3a;->e:Ljt4;
+    iput-object p5, p0, Lf3a;->e:Landroid/net/Uri;
 
-    return-void
-.end method
+    iput-boolean p6, p0, Lf3a;->f:Z
 
+    iput-object p7, p0, Lf3a;->g:[J
 
-# virtual methods
-.method public final a(Lg3a;)V
-    .locals 4
+    iput-boolean p8, p0, Lf3a;->h:Z
 
-    iget-wide v0, p1, Lg3a;->w0:J
+    iput p9, p0, Lf3a;->i:I
 
-    const-wide/16 v2, 0x0
+    iput-boolean p10, p0, Lf3a;->j:Z
 
-    cmp-long v2, v0, v2
+    iput-boolean p11, p0, Lf3a;->k:Z
 
-    if-eqz v2, :cond_0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "f3a"
-
-    const-string v2, "setFavoritesSync: %d"
-
-    invoke-static {v1, v2, v0}, Lox9;->j(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lf3a;->c:Ljt4;
-
-    invoke-virtual {v0}, Ljt4;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr63;
-
-    iget-wide v1, p1, Lg3a;->w0:J
-
-    check-cast v0, Lxid;
-
-    const-string p1, "user.favoritesLastSync"
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lh3;->i(Ljava/lang/String;Ljava/lang/Long;)V
-
-    :cond_0
     return-void
 .end method

@@ -1,99 +1,100 @@
-.class public final Le4b;
+.class public abstract Le4b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lg4b;
-
-
-# instance fields
-.field public final a:Ljava/util/LinkedHashMap;
-
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashMap;)V
-    .locals 0
+.method public static final a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Ldh1;
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
 
-    iput-object p1, p0, Le4b;->a:Ljava/util/LinkedHashMap;
+    const-string v0, ":"
 
-    return-void
-.end method
+    filled-new-array {v0}, [Ljava/lang/String;
 
+    move-result-object v0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    const/4 v1, 0x6
 
-    if-ne p0, p1, :cond_0
+    invoke-static {p0, v0, v1}, Lpwe;->Q0(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    instance-of v0, p1, Le4b;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Le4b;
-
-    iget-object v0, p0, Le4b;->a:Ljava/util/LinkedHashMap;
-
-    iget-object p1, p1, Le4b;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Le4b;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    const/4 v2, 0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-le v0, v2, :cond_0
 
-    const-string v1, "CallHistoryPageState(callsHistory="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Le4b;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lwwe;->e0(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :cond_0
+    new-instance v0, Ldh1;
+
+    invoke-static {p0}, Lw83;->e0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v2, v3, v1}, Ldh1;-><init>(JI)V
+
+    return-object v0
+.end method
+
+.method public static final b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    .locals 0
+
+    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->authorized(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Ldh1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    .locals 3
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    iget-wide v1, p0, Ldh1;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    iget p0, p0, Ldh1;->b:I
+
+    invoke-direct {v0, v1, v2, p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;-><init>(Ljava/lang/String;ZI)V
 
     return-object v0
 .end method

@@ -1,498 +1,247 @@
 .class public final Lmc8;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
+
+# interfaces
+.implements Ldd8;
+.implements Lwxe;
 
 
 # instance fields
-.field public final a:Lcom/google/android/material/button/MaterialButton;
+.field public final X:[Lid8;
 
-.field public b:Lu5e;
+.field public Y:I
 
-.field public c:I
+.field public Z:J
 
-.field public d:I
+.field public final a:Luxe;
 
-.field public e:I
+.field public final b:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public f:I
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public g:I
-
-.field public h:I
-
-.field public i:Landroid/graphics/PorterDuff$Mode;
-
-.field public j:Landroid/content/res/ColorStateList;
-
-.field public k:Landroid/content/res/ColorStateList;
-
-.field public l:Landroid/content/res/ColorStateList;
-
-.field public m:Lad8;
-
-.field public n:Z
-
-.field public o:Z
-
-.field public p:Z
-
-.field public q:Z
-
-.field public r:Z
-
-.field public s:Landroid/graphics/drawable/RippleDrawable;
-
-.field public t:I
+.field public final o:Le22;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/button/MaterialButton;Lu5e;)V
-    .locals 1
+.method public constructor <init>(Luxe;[Lid8;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lmc8;->a:Luxe;
 
-    iput-boolean v0, p0, Lmc8;->n:Z
+    iput-object p2, p0, Lmc8;->X:[Lid8;
 
-    iput-boolean v0, p0, Lmc8;->o:Z
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-boolean v0, p0, Lmc8;->p:Z
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lmc8;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-boolean v0, p0, Lmc8;->r:Z
+    new-instance p1, Le22;
 
-    iput-object p1, p0, Lmc8;->a:Lcom/google/android/material/button/MaterialButton;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lmc8;->b:Lu5e;
+    invoke-direct {p1, p2}, Le22;-><init>(I)V
+
+    iput-object p1, p0, Lmc8;->o:Le22;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object p2, Lb5a;->a:Lb5a;
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lmc8;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lf6e;
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
+    iget-object v0, p0, Lmc8;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
+    invoke-virtual {p0}, Lmc8;->d()V
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_1
-
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
-
-    move-result v0
-
-    const/4 v2, 0x2
-
-    if-le v0, v2, :cond_0
-
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Lf6e;
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Lf6e;
-
-    return-object v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b(Z)Lad8;
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
+    iget-object v0, p0, Lmc8;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lb5a;->a:Lb5a;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lmc8;->d()V
+
+    return-void
+.end method
+
+.method public final c(Lfs4;)V
+    .locals 1
+
+    iget-object v0, p0, Lmc8;->o:Le22;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, p1}, Ljs4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lfs4;)Z
+
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 1
+
+    iget-object v0, p0, Lmc8;->o:Le22;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Ljs4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+.end method
+
+.method public final d()V
+    .locals 10
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/InsetDrawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/DrawableWrapper;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/drawable/LayerDrawable;
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    check-cast p1, Lad8;
-
-    return-object p1
+    goto :goto_1
 
     :cond_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Lmc8;->o:Le22;
 
-    return-object p1
-.end method
-
-.method public final c(Lu5e;)V
-    .locals 2
-
-    iput-object p1, p0, Lmc8;->b:Lu5e;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, v0}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lad8;->setShapeAppearanceModel(Lu5e;)V
-
-    :cond_0
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0, v0}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lad8;->setShapeAppearanceModel(Lu5e;)V
-
-    :cond_1
-    invoke-virtual {p0}, Lmc8;->a()Lf6e;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lmc8;->a()Lf6e;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lf6e;->setShapeAppearanceModel(Lu5e;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final d(II)V
-    .locals 8
-
-    sget-object v0, Lskg;->a:Ljava/util/WeakHashMap;
-
-    iget-object v0, p0, Lmc8;->a:Lcom/google/android/material/button/MaterialButton;
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingStart()I
+    invoke-virtual {v0}, Le22;->g()Z
 
     move-result v1
 
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
+    const/4 v2, 0x0
 
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingEnd()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    iget v5, p0, Lmc8;->e:I
-
-    iget v6, p0, Lmc8;->f:I
-
-    iput p2, p0, Lmc8;->f:I
-
-    iput p1, p0, Lmc8;->e:I
-
-    iget-boolean v7, p0, Lmc8;->o:Z
-
-    if-nez v7, :cond_0
-
-    invoke-virtual {p0}, Lmc8;->e()V
-
-    :cond_0
-    add-int/2addr v2, p1
-
-    sub-int/2addr v2, v5
-
-    add-int/2addr v4, p2
-
-    sub-int/2addr v4, v6
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPaddingRelative(IIII)V
-
-    return-void
-.end method
-
-.method public final e()V
-    .locals 12
-
-    new-instance v0, Lad8;
-
-    iget-object v1, p0, Lmc8;->b:Lu5e;
-
-    invoke-direct {v0, v1}, Lad8;-><init>(Lu5e;)V
-
-    iget-object v1, p0, Lmc8;->a:Lcom/google/android/material/button/MaterialButton;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lad8;->i(Landroid/content/Context;)V
-
-    iget-object v2, p0, Lmc8;->j:Landroid/content/res/ColorStateList;
-
-    invoke-static {v0, v2}, Llx4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    iget-object v2, p0, Lmc8;->i:Landroid/graphics/PorterDuff$Mode;
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v0, v2}, Llx4;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_0
-    iget v2, p0, Lmc8;->h:I
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lmc8;->k:Landroid/content/res/ColorStateList;
-
-    iget-object v4, v0, Lad8;->a:Lzc8;
-
-    iput v2, v4, Lzc8;->j:F
-
-    invoke-virtual {v0}, Lad8;->invalidateSelf()V
-
-    invoke-virtual {v0, v3}, Lad8;->m(Landroid/content/res/ColorStateList;)V
-
-    new-instance v2, Lad8;
-
-    iget-object v3, p0, Lmc8;->b:Lu5e;
-
-    invoke-direct {v2, v3}, Lad8;-><init>(Lu5e;)V
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v3}, Lad8;->setTint(I)V
-
-    iget v4, p0, Lmc8;->h:I
-
-    int-to-float v4, v4
-
-    iget-boolean v5, p0, Lmc8;->n:Z
-
-    if-eqz v5, :cond_1
-
-    sget v5, Lvac;->colorSurface:I
-
-    invoke-static {v1, v5}, Lps;->n(Landroid/view/View;I)I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_1
-    move v5, v3
-
-    :goto_0
-    iget-object v6, v2, Lad8;->a:Lzc8;
-
-    iput v4, v6, Lzc8;->j:F
-
-    invoke-virtual {v2}, Lad8;->invalidateSelf()V
-
-    invoke-static {v5}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Lad8;->m(Landroid/content/res/ColorStateList;)V
-
-    new-instance v4, Lad8;
-
-    iget-object v5, p0, Lmc8;->b:Lu5e;
-
-    invoke-direct {v4, v5}, Lad8;-><init>(Lu5e;)V
-
-    iput-object v4, p0, Lmc8;->m:Lad8;
-
-    const/4 v5, -0x1
-
-    invoke-static {v4, v5}, Llx4;->g(Landroid/graphics/drawable/Drawable;I)V
-
-    new-instance v4, Landroid/graphics/drawable/RippleDrawable;
-
-    iget-object v5, p0, Lmc8;->l:Landroid/content/res/ColorStateList;
-
-    invoke-static {v5}, Lb5d;->b(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
-
-    move-result-object v5
-
-    new-instance v7, Landroid/graphics/drawable/LayerDrawable;
-
-    const/4 v6, 0x2
-
-    new-array v6, v6, [Landroid/graphics/drawable/Drawable;
-
-    aput-object v2, v6, v3
-
-    const/4 v2, 0x1
-
-    aput-object v0, v6, v2
-
-    invoke-direct {v7, v6}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    new-instance v6, Landroid/graphics/drawable/InsetDrawable;
-
-    iget v8, p0, Lmc8;->c:I
-
-    iget v9, p0, Lmc8;->e:I
-
-    iget v10, p0, Lmc8;->d:I
-
-    iget v11, p0, Lmc8;->f:I
-
-    invoke-direct/range {v6 .. v11}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
-
-    iget-object v0, p0, Lmc8;->m:Lad8;
-
-    invoke-direct {v4, v5, v6, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
-
-    iput-object v4, p0, Lmc8;->s:Landroid/graphics/drawable/RippleDrawable;
-
-    invoke-virtual {v1, v4}, Lcom/google/android/material/button/MaterialButton;->setInternalBackground(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p0, v3}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget v2, p0, Lmc8;->t:I
-
-    int-to-float v2, v2
-
-    invoke-virtual {v0, v2}, Lad8;->j(F)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getDrawableState()[I
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final f()V
-    .locals 6
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v2}, Lmc8;->b(Z)Lad8;
-
-    move-result-object v2
+    iget-object v3, p0, Lmc8;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     if-eqz v1, :cond_1
 
-    iget v3, p0, Lmc8;->h:I
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    int-to-float v3, v3
+    return-void
 
-    iget-object v4, p0, Lmc8;->k:Landroid/content/res/ColorStateList;
+    :cond_1
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    iget-object v5, v1, Lad8;->a:Lzc8;
+    move-result-object v1
 
-    iput v3, v5, Lzc8;->j:F
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lad8;->invalidateSelf()V
+    sget-object v4, Lb5a;->a:Lb5a;
 
-    invoke-virtual {v1, v4}, Lad8;->m(Landroid/content/res/ColorStateList;)V
+    iget-object v5, p0, Lmc8;->a:Luxe;
 
-    if-eqz v2, :cond_1
+    if-eq v1, v4, :cond_2
 
-    iget v1, p0, Lmc8;->h:I
+    iget-wide v6, p0, Lmc8;->Z:J
 
-    int-to-float v1, v1
+    iget-object v4, p0, Lmc8;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iget-boolean v3, p0, Lmc8;->n:Z
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    if-eqz v3, :cond_0
+    move-result-wide v8
 
-    iget-object v0, p0, Lmc8;->a:Lcom/google/android/material/button/MaterialButton;
+    cmp-long v4, v6, v8
 
-    sget v3, Lvac;->colorSurface:I
+    if-eqz v4, :cond_4
 
-    invoke-static {v0, v3}, Lps;->n(Landroid/view/View;I)I
+    const-wide/16 v8, 0x1
+
+    add-long/2addr v6, v8
+
+    iput-wide v6, p0, Lmc8;->Z:J
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    invoke-interface {v5, v1}, Luxe;->e(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {v0}, Le22;->g()Z
 
     move-result v0
 
+    if-nez v0, :cond_4
+
+    iget v0, p0, Lmc8;->Y:I
+
+    iget-object v1, p0, Lmc8;->X:[Lid8;
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_3
+
+    invoke-interface {v5}, Luxe;->b()V
+
+    return-void
+
+    :cond_3
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lmc8;->Y:I
+
+    aget-object v0, v1, v0
+
+    invoke-interface {v0, p0}, Lid8;->a(Ldd8;)V
+
+    :cond_4
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :goto_1
+    return-void
+.end method
+
+.method public final h(J)V
+    .locals 1
+
+    invoke-static {p1, p2}, Lyxe;->d(J)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmc8;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {v0, p1, p2}, Lu64;->b(Ljava/util/concurrent/atomic/AtomicLong;J)J
+
+    invoke-virtual {p0}, Lmc8;->d()V
+
     :cond_0
-    iget-object v3, v2, Lad8;->a:Lzc8;
+    return-void
+.end method
 
-    iput v1, v3, Lzc8;->j:F
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    invoke-virtual {v2}, Lad8;->invalidateSelf()V
+    iget-object v0, p0, Lmc8;->a:Luxe;
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    invoke-interface {v0, p1}, Luxe;->onError(Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lad8;->m(Landroid/content/res/ColorStateList;)V
-
-    :cond_1
     return-void
 .end method

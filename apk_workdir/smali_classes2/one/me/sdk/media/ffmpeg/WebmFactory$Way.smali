@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLof4;)V
+.method public synthetic constructor <init>(IIZLaf4;)V
     .locals 0
 
     .line 1

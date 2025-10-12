@@ -3,191 +3,290 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgv0;
-
-
-# static fields
-.field public static final o:Lfkb;
+.implements Landroid/os/Handler$Callback;
 
 
 # instance fields
-.field public final a:F
+.field public X:Z
 
-.field public final b:F
+.field public Y:Z
 
-.field public final c:I
+.field public final Z:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final b:Landroid/os/Handler;
+
+.field public final c:Ljava/util/TreeMap;
+
+.field public o:Z
+
+.field public final r0:Ljava/lang/Object;
+
+.field public final s0:Ljava/lang/Object;
+
+.field public t0:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lg74;Lkke;Lwc4;)V
+    .locals 1
 
-    new-instance v0, Lfkb;
+    const/4 v0, 0x0
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    iput v0, p0, Lfkb;->a:I
 
-    invoke-direct {v0, v1, v1}, Lfkb;-><init>(FF)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lfkb;->o:Lfkb;
+    .line 2
+    iput-object p1, p0, Lfkb;->t0:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lfkb;->r0:Ljava/lang/Object;
+
+    .line 4
+    iput-object p3, p0, Lfkb;->Z:Ljava/lang/Object;
+
+    .line 5
+    new-instance p1, Ljava/util/TreeMap;
+
+    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
+
+    iput-object p1, p0, Lfkb;->c:Ljava/util/TreeMap;
+
+    .line 6
+    invoke-static {p0}, Le3g;->l(Landroid/os/Handler$Callback;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfkb;->b:Landroid/os/Handler;
+
+    .line 7
+    new-instance p1, Lup;
+
+    const/4 p2, 0x1
+
+    .line 8
+    invoke-direct {p1, p2}, Lup;-><init>(I)V
+
+    .line 9
+    iput-object p1, p0, Lfkb;->s0:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(FF)V
-    .locals 4
+.method public constructor <init>(Lh74;Ld7;Lxc4;)V
+    .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lfkb;->a:I
+
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    .line 11
+    iput-object p1, p0, Lfkb;->t0:Ljava/lang/Object;
 
-    cmpl-float v1, p1, v0
+    .line 12
+    iput-object p2, p0, Lfkb;->r0:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    .line 13
+    iput-object p3, p0, Lfkb;->Z:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    .line 14
+    new-instance p1, Ljava/util/TreeMap;
 
-    if-lez v1, :cond_0
+    invoke-direct {p1}, Ljava/util/TreeMap;-><init>()V
 
-    move v1, v3
+    iput-object p1, p0, Lfkb;->c:Ljava/util/TreeMap;
 
-    goto :goto_0
+    .line 15
+    invoke-static {p0}, Lg3g;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
 
-    :cond_0
-    move v1, v2
+    move-result-object p1
 
-    :goto_0
-    invoke-static {v1}, Lyhh;->e(Z)V
+    iput-object p1, p0, Lfkb;->b:Landroid/os/Handler;
 
-    cmpl-float v0, p2, v0
+    .line 16
+    new-instance p1, Lvp;
 
-    if-lez v0, :cond_1
+    const/4 p2, 0x1
 
-    move v2, v3
+    .line 17
+    invoke-direct {p1, p2}, Lvp;-><init>(I)V
 
-    :cond_1
-    invoke-static {v2}, Lyhh;->e(Z)V
-
-    iput p1, p0, Lfkb;->a:F
-
-    iput p2, p0, Lfkb;->b:F
-
-    const/high16 p2, 0x447a0000    # 1000.0f
-
-    mul-float/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->round(F)I
-
-    move-result p1
-
-    iput p1, p0, Lfkb;->c:I
+    .line 18
+    iput-object p1, p0, Lfkb;->s0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final handleMessage(Landroid/os/Message;)Z
+    .locals 8
 
-    const/4 v0, 0x1
+    iget v0, p0, Lfkb;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-boolean v0, p0, Lfkb;->Y:Z
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    if-eq v0, v1, :cond_1
+
     const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Lfkb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lfkb;
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget v2, p0, Lfkb;->a:F
+    check-cast p1, Lckb;
 
-    iget v3, p1, Lfkb;->a:F
+    iget-wide v2, p1, Lckb;->a:J
 
-    cmpl-float v2, v2, v3
+    iget-wide v4, p1, Lckb;->b:J
 
-    if-nez v2, :cond_2
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget v2, p0, Lfkb;->b:F
+    move-result-object p1
 
-    iget p1, p1, Lfkb;->b:F
+    iget-object v0, p0, Lfkb;->c:Ljava/util/TreeMap;
 
-    cmpl-float p1, v2, p1
+    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Long;
 
     if-nez p1, :cond_2
 
-    return v0
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_2
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    cmp-long p1, v6, v2
+
+    if-lez p1, :cond_3
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3
     :goto_0
     return v1
-.end method
 
-.method public final hashCode()I
-    .locals 2
+    :pswitch_0
+    iget-boolean v0, p0, Lfkb;->Y:Z
 
-    iget v0, p0, Lfkb;->a:F
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    if-eqz v0, :cond_4
 
-    move-result v0
+    goto :goto_1
 
-    add-int/lit16 v0, v0, 0x20f
+    :cond_4
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eq v0, v1, :cond_5
 
-    iget v1, p0, Lfkb;->b:F
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+    goto :goto_1
 
-    move-result v1
+    :cond_5
+    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    add-int/2addr v1, v0
+    check-cast p1, Lbkb;
 
+    iget-wide v2, p1, Lbkb;->a:J
+
+    iget-wide v4, p1, Lbkb;->b:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lfkb;->c:Ljava/util/TreeMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Long;
+
+    if-nez p1, :cond_6
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :cond_6
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v6
+
+    cmp-long p1, v6, v2
+
+    if-lez p1, :cond_7
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_7
+    :goto_1
     return v1
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    nop
 
-    iget v0, p0, Lfkb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    iget v1, p0, Lfkb;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget v1, Lr4g;->a:I
-
-    sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    const-string v2, "PlaybackParameters(speed=%.2f, pitch=%.2f)"
-
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

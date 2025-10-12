@@ -1,106 +1,167 @@
-.class public final Lmw8;
-.super Ljava/lang/Object;
+.class public Lmw8;
+.super Lnr9;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/regex/Pattern;
-
-.field public static final e:Ljava/util/regex/Pattern;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:[Ljava/lang/String;
+.field public final l:Ld9d;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    const-string v0, "([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)"
+    invoke-direct {p0}, Lxw7;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    new-instance v0, Ld9d;
 
-    move-result-object v0
+    invoke-direct {v0}, Ld9d;-><init>()V
 
-    sput-object v0, Lmw8;->d:Ljava/util/regex/Pattern;
-
-    const-string v0, ";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lmw8;->e:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmw8;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lmw8;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lmw8;->c:[Ljava/lang/String;
+    iput-object v0, p0, Lmw8;->l:Ld9d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final g()V
+    .locals 3
 
-    instance-of v0, p1, Lmw8;
+    iget-object v0, p0, Lmw8;->l:Ld9d;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ld9d;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Lmw8;
+    move-result-object v0
 
-    iget-object p1, p1, Lmw8;->a:Ljava/lang/String;
+    :goto_0
+    move-object v1, v0
 
-    iget-object v0, p0, Lmw8;->a:Ljava/lang/String;
+    check-cast v1, Lz8d;
 
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Lz8d;->hasNext()Z
 
-    move-result p1
+    move-result v2
 
-    if-eqz p1, :cond_0
+    if-eqz v2, :cond_0
 
-    const/4 p1, 0x1
+    invoke-virtual {v1}, Lz8d;->next()Ljava/lang/Object;
 
-    return p1
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llw8;
+
+    invoke-virtual {v1}, Llw8;->b()V
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final h()V
+    .locals 3
 
-    iget-object v0, p0, Lmw8;->a:Ljava/lang/String;
+    iget-object v0, p0, Lmw8;->l:Ld9d;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ld9d;->iterator()Ljava/util/Iterator;
 
-    move-result v0
+    move-result-object v0
 
-    return v0
+    :goto_0
+    move-object v1, v0
+
+    check-cast v1, Lz8d;
+
+    invoke-virtual {v1}, Lz8d;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Lz8d;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Llw8;
+
+    iget-object v2, v1, Llw8;->a:Lxw7;
+
+    invoke-virtual {v2, v1}, Lxw7;->j(Lzba;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public l(Lxw7;Lzba;)V
+    .locals 2
 
-    iget-object v0, p0, Lmw8;->a:Ljava/lang/String;
+    if-eqz p1, :cond_4
 
-    return-object v0
+    new-instance v0, Llw8;
+
+    invoke-direct {v0, p1, p2}, Llw8;-><init>(Lxw7;Lzba;)V
+
+    iget-object v1, p0, Lmw8;->l:Ld9d;
+
+    invoke-virtual {v1, p1, v0}, Ld9d;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Llw8;
+
+    if-eqz p1, :cond_1
+
+    iget-object v1, p1, Llw8;->b:Lzba;
+
+    if-ne v1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "This source was already added with the different observer"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    if-eqz p1, :cond_2
+
+    return-void
+
+    :cond_2
+    iget p1, p0, Lxw7;->c:I
+
+    if-lez p1, :cond_3
+
+    invoke-virtual {v0}, Llw8;->b()V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "source cannot be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

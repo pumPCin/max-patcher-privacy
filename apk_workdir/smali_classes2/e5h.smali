@@ -1,158 +1,66 @@
-.class public final Le5h;
+.class public final synthetic Le5h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Lj0h;
+.field public final synthetic b:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ZLj0h;)V
+.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
     .locals 0
 
+    iput p2, p0, Le5h;->a:I
+
+    iput-object p1, p0, Le5h;->b:Lone/me/sdk/arch/Widget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Le5h;->a:Ljava/lang/String;
-
-    iput-boolean p2, p0, Le5h;->b:Z
-
-    iput-object p3, p0, Le5h;->c:Lj0h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Le5h;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Le5h;->b:Lone/me/sdk/arch/Widget;
 
-    :cond_0
-    instance-of v1, p1, Le5h;
+    check-cast p2, Lk53;
 
-    const/4 v2, 0x0
+    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->A0(Lone/me/sdk/arch/Widget;Ljava/lang/Object;Lk53;)Laxf;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    return-object p1
 
-    :cond_1
-    check-cast p1, Le5h;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    iget-object v1, p0, Le5h;->a:Ljava/lang/String;
+    check-cast p2, Lk53;
 
-    iget-object v3, p1, Le5h;->a:Ljava/lang/String;
+    iget-object v0, p0, Le5h;->b:Lone/me/sdk/arch/Widget;
 
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1, p2}, Lone/me/sdk/arch/Widget;->y0(Lone/me/sdk/arch/Widget;Landroid/view/View;Lk53;)Laxf;
 
-    move-result v1
+    move-result-object p1
 
-    if-nez v1, :cond_2
+    return-object p1
 
-    return v2
+    nop
 
-    :cond_2
-    iget-boolean v1, p0, Le5h;->b:Z
-
-    iget-boolean v3, p1, Le5h;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Le5h;->c:Lj0h;
-
-    iget-object p1, p1, Le5h;->c:Lj0h;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Le5h;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Le5h;->b:Z
-
-    invoke-static {v0, v1, v2}, Lvl3;->d(IIZ)I
-
-    move-result v0
-
-    iget-object v1, p0, Le5h;->c:Lj0h;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebViewContainerState(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Le5h;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isVerified="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Le5h;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", loadingState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Le5h;->c:Lj0h;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

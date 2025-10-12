@@ -1,18 +1,31 @@
-.class public abstract Lmih;
+.class public final Lmih;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/IInterface;
 
-# static fields
-.field public static final synthetic a:I
+
+# instance fields
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    const-class v0, Lmih;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    iput-object p1, p0, Lmih;->c:Landroid/os/IBinder;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    iget-object v0, p0, Lmih;->c:Landroid/os/IBinder;
+
+    return-object v0
 .end method

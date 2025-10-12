@@ -1,80 +1,109 @@
-.class public final Lxma;
+.class public abstract Lxma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:I
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public static final c:I
 
-.field public final synthetic c:La57;
+.field public static final d:I
 
-.field public final synthetic o:Landroid/graphics/drawable/Animatable;
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;La57;Landroid/graphics/drawable/Animatable;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p5, p0, Lxma;->a:I
+    sget v0, Lmhc;->oneme_fodlers_delete_folder_bottom_sheet_title:I
 
-    iput-object p1, p0, Lxma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sput v0, Lxma;->a:I
 
-    iput-object p3, p0, Lxma;->c:La57;
+    sget v0, Lmhc;->oneme_folder_list_recommended_folders_section_title:I
 
-    iput-object p4, p0, Lxma;->o:Landroid/graphics/drawable/Animatable;
+    sput v0, Lxma;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lmhc;->oneme_folder_list_toolbar_title:I
+
+    sput v0, Lxma;->c:I
+
+    sget v0, Lmhc;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
+
+    sput v0, Lxma;->d:I
+
+    sget v0, Lmhc;->oneme_folders_delete_folder_bottom_sheet_description:I
+
+    sput v0, Lxma;->e:I
+
+    sget v0, Lmhc;->oneme_folders_edit_add_chats_button:I
+
+    sput v0, Lxma;->f:I
+
+    sget v0, Lmhc;->oneme_folders_edit_create_button:I
+
+    sput v0, Lxma;->g:I
+
+    sget v0, Lmhc;->oneme_folders_edit_delete_button:I
+
+    sput v0, Lxma;->h:I
+
+    sget v0, Lmhc;->oneme_folders_edit_name_hint:I
+
+    sput v0, Lxma;->i:I
+
+    sget v0, Lmhc;->oneme_folders_edit_toolbar_title_creation:I
+
+    sput v0, Lxma;->j:I
+
+    sget v0, Lmhc;->oneme_folders_edit_toolbar_title_edit:I
+
+    sput v0, Lxma;->k:I
+
+    sget v0, Lmhc;->oneme_folders_list_create_folder:I
+
+    sput v0, Lxma;->l:I
+
+    sget v0, Lmhc;->oneme_folders_list_menu_action_change:I
+
+    sput v0, Lxma;->m:I
+
+    sget v0, Lmhc;->oneme_folders_list_menu_action_delete_folder:I
+
+    sput v0, Lxma;->n:I
+
+    sget v0, Lmhc;->oneme_folders_picker_empty_title:I
+
+    sput v0, Lxma;->o:I
+
+    sget v0, Lmhc;->oneme_folders_picker_toolbar_title:I
+
+    sput v0, Lxma;->p:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Lxma;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lxma;->c:La57;
-
-    iget-object v1, p0, Lxma;->o:Landroid/graphics/drawable/Animatable;
-
-    iget-object v2, p0, Lxma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->p(La57;Landroid/graphics/drawable/Animatable;)V
-
-    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxma;->c:La57;
-
-    iget-object v1, p0, Lxma;->o:Landroid/graphics/drawable/Animatable;
-
-    iget-object v2, p0, Lxma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->p(La57;Landroid/graphics/drawable/Animatable;)V
-
-    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

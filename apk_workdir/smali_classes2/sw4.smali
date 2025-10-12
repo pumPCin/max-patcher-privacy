@@ -1,480 +1,428 @@
 .class public final Lsw4;
-.super Lxl;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcab;
-.implements Loaf;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final X:Luma;
+.field public final synthetic a:I
 
-.field public final Y:Ljava/lang/String;
+.field public final synthetic b:J
 
-.field public final o:J
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJLuma;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JLjava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lxl;-><init>(J)V
+    .line 1
+    iput p5, p0, Lsw4;->a:I
 
-    iput-wide p3, p0, Lsw4;->o:J
+    iput-object p1, p0, Lsw4;->o:Ljava/lang/Object;
 
-    iput-object p5, p0, Lsw4;->X:Luma;
+    iput-wide p2, p0, Lsw4;->b:J
 
-    const-class p1, Lsw4;
+    iput-object p4, p0, Lsw4;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    return-void
+.end method
 
-    iput-object p1, p0, Lsw4;->Y:Ljava/lang/String;
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/util/Collection;JI)V
+    .locals 0
+
+    .line 2
+    iput p5, p0, Lsw4;->a:I
+
+    iput-object p1, p0, Lsw4;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, Lsw4;->c:Ljava/lang/Object;
+
+    iput-wide p3, p0, Lsw4;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 3
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
-    invoke-virtual {p0}, Lxl;->m()Lub2;
+    iget v0, p0, Lsw4;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v1, p0, Lsw4;->o:J
+    const-string v0, "DELETE FROM folder_and_chats WHERE folderId IN ("
 
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lsw4;->Y:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "onPreExecute: No chat. remove task"
-
-    invoke-static {v2, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v1
-
-    :cond_0
-    iget-object v0, p0, Lsw4;->X:Luma;
-
-    if-nez v0, :cond_1
-
-    const-string v0, "onPreExecute: could not deserialize draft, remove task"
-
-    invoke-static {v2, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v1
-
-    :cond_1
-    invoke-virtual {v0}, Luma;->a()Lfah;
+    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lw10;->a(Lfah;)Z
+    iget-object v1, p0, Lsw4;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v1, Ljava/util/Set;
 
-    if-nez v0, :cond_2
+    invoke-interface {v1}, Ljava/util/Collection;->size()I
 
-    const-string v0, "onPreExecute: Attaches not ready. skip task"
+    move-result v2
 
-    invoke-static {v2, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lr5b;->d(Ljava/lang/StringBuilder;I)V
 
-    const/4 v0, 0x2
+    const-string v3, ") AND chatId = "
 
-    return v0
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
-    const/4 v0, 0x1
+    const-string v3, "?"
 
-    return v0
-.end method
-
-.method public final d(Ll9f;)V
-    .locals 10
-
-    check-cast p1, Ltw4;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "onSuccess: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lsw4;->Y:Ljava/lang/String;
+    iget-object v3, p0, Lsw4;->o:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v3, Lv3d;
 
-    invoke-virtual {p0}, Lxl;->m()Lub2;
+    iget-object v3, v3, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
 
-    move-result-object v0
-
-    iget-wide v2, p0, Lsw4;->o:J
-
-    invoke-virtual {v0, v2, v3}, Lub2;->C(J)Lm82;
+    invoke-virtual {v3, v0}, Lc4d;->d(Ljava/lang/String;)Llc6;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    const-string p1, "onSuccess: No chat. return"
+    move-result-object v1
 
-    invoke-static {v1, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x1
 
-    return-void
-
-    :cond_0
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-object v4, v0, Lpc2;->b0:Luma;
-
-    iget-wide v5, v0, Lpc2;->c0:J
-
-    if-nez v4, :cond_1
-
-    iget-wide v7, p1, Ltw4;->c:J
-
-    cmp-long v0, v5, v7
-
-    if-lez v0, :cond_1
-
-    const-string p1, "onSuccess: draft was discarded"
-
-    invoke-static {v1, p1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-wide v7, p1, Ltw4;->c:J
-
-    cmp-long v0, v5, v7
-
-    if-lez v0, :cond_2
-
-    const-string p1, "local draft time more than response, ignore!"
-
-    invoke-static {v1, p1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_2
-    iget-object v0, p0, Lsw4;->X:Luma;
-
-    if-nez v0, :cond_3
-
-    const-string p1, "could not deserialize draft"
-
-    invoke-static {v1, p1}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lxl;->m()Lub2;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2, v3}, Lub2;->p(J)V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0}, Lxl;->m()Lub2;
-
-    move-result-object v4
-
-    iget-object v1, p0, Lxl;->c:Lyl;
-
-    if-eqz v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v1, 0x0
+    move v5, v4
 
     :goto_0
-    iget-object v1, v1, Lyl;->R:Lbp7;
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    move-result v6
 
-    move-result-object v1
+    if-eqz v6, :cond_1
 
-    check-cast v1, Luw4;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-wide v2, p1, Ltw4;->c:J
+    move-result-object v6
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast v6, Ljava/lang/String;
 
-    move-result-object v2
+    if-nez v6, :cond_0
 
-    invoke-interface {v1, v0, v2}, Luw4;->a(Luma;Ljava/lang/Long;)Luma;
-
-    move-result-object v9
-
-    iget-wide v7, p1, Ltw4;->c:J
-
-    iget-wide v5, p0, Lsw4;->o:J
-
-    invoke-virtual/range {v4 .. v9}, Lub2;->k(JJLuma;)V
-
-    return-void
-.end method
-
-.method public final e(Lv8f;)V
-    .locals 0
-
-    iget-object p1, p1, Lv8f;->b:Ljava/lang/String;
-
-    invoke-static {p1}, Lgh5;->v(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    invoke-virtual {p0}, Lsw4;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    const-string v0, "onMaxFailCount"
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lsw4;->Y:Ljava/lang/String;
-
-    invoke-static {v2, v0, v1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lxl;->s()Licf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Licf;->d(J)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$DraftSave;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$DraftSave;-><init>()V
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$DraftSave;->requestId:J
-
-    iget-wide v1, p0, Lsw4;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$DraftSave;->chatId:J
-
-    iget-object v1, p0, Lsw4;->X:Luma;
-
-    invoke-static {v1}, Lrw4;->b(Luma;)[B
-
-    move-result-object v1
-
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$DraftSave;->draft:[B
-
-    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lxl;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Ldab;
-    .locals 1
-
-    sget-object v0, Ldab;->a1:Ldab;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final i()Li9f;
-    .locals 11
-
-    invoke-virtual {p0}, Lxl;->m()Lub2;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lsw4;->o:J
-
-    invoke-virtual {v0, v1, v2}, Lub2;->C(J)Lm82;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsw4;->Y:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "createRequest: No chat. return null"
-
-    invoke-static {v1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_0
-    iget-object v3, p0, Lsw4;->X:Luma;
-
-    if-nez v3, :cond_1
-
-    const-string v0, "could not deserialize draft"
-
-    invoke-static {v1, v0}, Lox9;->P(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v2
-
-    :cond_1
-    invoke-virtual {v0}, Lm82;->L()Z
-
-    move-result v1
-
-    const-wide/16 v4, 0x0
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v0}, Lm82;->l()Lap3;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lap3;->n()J
-
-    move-result-wide v6
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_2
-    move-object v1, v2
-
-    :goto_0
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v6
+    invoke-interface {v0, v5}, Lw0f;->Q(I)V
 
     goto :goto_1
 
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    :cond_0
+    invoke-interface {v0, v5, v6}, Lw0f;->f(ILjava/lang/String;)V
 
-    const-string v1, "Required value was null."
+    :goto_1
+    add-int/lit8 v5, v5, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    goto :goto_0
+
+    :cond_1
+    add-int/2addr v2, v4
+
+    iget-wide v4, p0, Lsw4;->b:J
+
+    invoke-interface {v0, v2, v4, v5}, Lw0f;->k(IJ)V
+
+    invoke-virtual {v3}, Lc4d;->c()V
+
+    :try_start_0
+    invoke-virtual {v0}, Llc6;->n()I
+
+    invoke-virtual {v3}, Lc4d;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v3}, Lc4d;->k()V
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v3}, Lc4d;->k()V
 
     throw v0
 
-    :cond_4
-    move-wide v6, v4
+    :pswitch_0
+    iget-object v0, p0, Lsw4;->o:Ljava/lang/Object;
 
-    :goto_1
-    iget-object v1, p0, Lxl;->c:Lyl;
+    check-cast v0, Lv3d;
 
-    if-eqz v1, :cond_5
+    iget-object v1, v0, Lv3d;->f:Lra9;
+
+    iget-object v0, v0, Lv3d;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-virtual {v1}, Le3;->a()Llc6;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lsw4;->b:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    iget-object v3, p0, Lsw4;->c:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    const/4 v4, 0x2
+
+    if-nez v3, :cond_2
+
+    invoke-interface {v2, v4}, Lw0f;->Q(I)V
 
     goto :goto_2
 
-    :cond_5
-    move-object v1, v2
+    :cond_2
+    invoke-interface {v2, v4, v3}, Lw0f;->f(ILjava/lang/String;)V
 
     :goto_2
-    iget-object v1, v1, Lyl;->R:Lbp7;
+    :try_start_1
+    invoke-virtual {v0}, Lc4d;->c()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
+    :try_start_2
+    invoke-virtual {v2}, Llc6;->m()J
 
-    move-result-object v1
+    invoke-virtual {v0}, Lc4d;->q()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    check-cast v1, Luw4;
+    :try_start_3
+    invoke-virtual {v0}, Lc4d;->k()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    invoke-interface {v1, v3}, Luw4;->f(Luma;)Lysd;
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
 
-    move-result-object v1
+    sget-object v0, Laxf;->a:Laxf;
 
-    new-instance v3, Lvc2;
+    return-object v0
 
-    cmp-long v8, v6, v4
-
-    if-nez v8, :cond_6
-
-    iget-object v0, v0, Lm82;->b:Lpc2;
-
-    iget-wide v9, v0, Lpc2;->a:J
+    :catchall_1
+    move-exception v0
 
     goto :goto_3
 
-    :cond_6
-    move-wide v9, v4
+    :catchall_2
+    move-exception v3
+
+    :try_start_4
+    invoke-virtual {v0}, Lc4d;->k()V
+
+    throw v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     :goto_3
-    const/16 v0, 0x19
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
 
-    invoke-direct {v3, v2, v0}, Lvc2;-><init>(Ln0b;I)V
+    throw v0
 
-    if-eqz v8, :cond_7
+    :pswitch_1
+    const-string v0, "DELETE FROM messages WHERE chat_id = ? AND id in ("
 
-    const-string v0, "userId"
+    invoke-static {v0}, Lsw1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v6, v7, v0}, Li9f;->j(JLjava/lang/String;)V
+    move-result-object v0
 
-    :cond_7
-    cmp-long v0, v9, v4
+    iget-object v1, p0, Lsw4;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_8
+    check-cast v1, Ljava/util/List;
 
-    const-string v0, "chatId"
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    invoke-virtual {v3, v9, v10, v0}, Li9f;->j(JLjava/lang/String;)V
+    move-result v2
 
-    :cond_8
-    const-string v0, "draft"
+    invoke-static {v0, v2}, Lr5b;->d(Ljava/lang/StringBuilder;I)V
 
-    invoke-virtual {v1}, Lysd;->a()Ljava/util/Map;
+    const-string v2, ")"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lsw4;->o:Ljava/lang/Object;
+
+    check-cast v2, Lva9;
+
+    iget-object v2, v2, Lva9;->a:Lc4d;
+
+    invoke-virtual {v2, v0}, Lc4d;->d(Ljava/lang/String;)Llc6;
+
+    move-result-object v0
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lsw4;->b:J
+
+    invoke-interface {v0, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    invoke-virtual {v3, v0, v1}, Li9f;->o(Ljava/lang/String;Ljava/util/Map;)V
+    const/4 v3, 0x2
 
-    return-object v3
+    :goto_4
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Long;
+
+    if-nez v4, :cond_3
+
+    invoke-interface {v0, v3}, Lw0f;->Q(I)V
+
+    goto :goto_5
+
+    :cond_3
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-interface {v0, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    :goto_5
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_4
+
+    :cond_4
+    invoke-virtual {v2}, Lc4d;->c()V
+
+    :try_start_5
+    invoke-virtual {v0}, Llc6;->n()I
+
+    invoke-virtual {v2}, Lc4d;->q()V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_3
+
+    invoke-virtual {v2}, Lc4d;->k()V
+
+    sget-object v0, Laxf;->a:Laxf;
+
+    return-object v0
+
+    :catchall_3
+    move-exception v0
+
+    invoke-virtual {v2}, Lc4d;->k()V
+
+    throw v0
+
+    :pswitch_2
+    iget-object v0, p0, Lsw4;->o:Ljava/lang/Object;
+
+    check-cast v0, Luw4;
+
+    iget-object v1, v0, Luw4;->c:Lwh;
+
+    iget-object v0, v0, Luw4;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-virtual {v1}, Le3;->a()Llc6;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-wide v4, p0, Lsw4;->b:J
+
+    invoke-interface {v2, v3, v4, v5}, Lw0f;->k(IJ)V
+
+    iget-object v3, p0, Lsw4;->c:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    const/4 v4, 0x2
+
+    if-nez v3, :cond_5
+
+    invoke-interface {v2, v4}, Lw0f;->Q(I)V
+
+    goto :goto_6
+
+    :cond_5
+    invoke-interface {v2, v4, v3}, Lw0f;->f(ILjava/lang/String;)V
+
+    :goto_6
+    :try_start_6
+    invoke-virtual {v0}, Lc4d;->c()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_4
+
+    :try_start_7
+    invoke-virtual {v2}, Llc6;->n()I
+
+    invoke-virtual {v0}, Lc4d;->q()V
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_5
+
+    :try_start_8
+    invoke-virtual {v0}, Lc4d;->k()V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_4
+
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_7
+
+    :catchall_5
+    move-exception v3
+
+    :try_start_9
+    invoke-virtual {v0}, Lc4d;->k()V
+
+    throw v3
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_4
+
+    :goto_7
+    invoke-virtual {v1, v2}, Le3;->s(Llc6;)V
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

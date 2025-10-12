@@ -1,74 +1,48 @@
 .class public final Lgn5;
-.super Lcy;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public final X:J
+.field public X:I
 
-.field public final Y:Ljava/lang/String;
+.field public final synthetic Y:Ly03;
 
-.field public final Z:Lcy;
-
-.field public final o:J
-
-.field public final w0:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Lcy;ZLjava/lang/String;Z)V
-    .locals 1
+.method public constructor <init>(Ly03;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Li00;->z0:Li00;
+    iput-object p1, p0, Lgn5;->Y:Ly03;
 
-    invoke-direct {p0, v0, p7, p9}, Lcy;-><init>(Li00;ZZ)V
-
-    iput-wide p1, p0, Lgn5;->o:J
-
-    iput-wide p3, p0, Lgn5;->X:J
-
-    iput-object p5, p0, Lgn5;->Y:Ljava/lang/String;
-
-    iput-object p6, p0, Lgn5;->Z:Lcy;
-
-    iput-object p8, p0, Lgn5;->w0:Ljava/lang/String;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-super {p0}, Lcy;->a()Ljava/util/HashMap;
+    iput-object p1, p0, Lgn5;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lgn5;->X:I
 
-    iget-object v1, p0, Lgn5;->w0:Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1}, Lk98;->r(Ljava/lang/CharSequence;)Z
+    or-int/2addr p1, v0
 
-    move-result v2
+    iput p1, p0, Lgn5;->X:I
 
-    if-nez v2, :cond_0
+    iget-object p1, p0, Lgn5;->Y:Ly03;
 
-    const-string v2, "token"
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Ly03;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
 
-    :cond_0
-    iget-wide v1, p0, Lgn5;->o:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "fileId"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,102 +1,85 @@
 .class public final Lce8;
-.super Lrd8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls1f;
+.implements Lle8;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Callable;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lce8;->a:Ljava/util/concurrent/Callable;
+    iput-boolean p1, p0, Lce8;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lke8;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget-object v0, Loch;->b:Lqfh;
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lo6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, v0}, Lo6;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p1, v1}, Lke8;->c(Lss4;)V
-
-    invoke-virtual {v1}, Lo6;->h()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    :try_start_0
-    iget-object v0, p0, Lce8;->a:Ljava/util/concurrent/Callable;
-
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
-
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Lo6;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Lke8;->b()V
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    invoke-interface {p1, v0}, Lke8;->a(Ljava/lang/Object;)V
+    instance-of v0, p1, Lce8;
 
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v1}, Lo6;->h()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    invoke-interface {p1, v0}, Lke8;->onError(Ljava/lang/Throwable;)V
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    invoke-static {v0}, Lnu3;->r(Ljava/lang/Throwable;)V
+    check-cast p1, Lce8;
+
+    iget-boolean v0, p0, Lce8;->a:Z
+
+    iget-boolean p1, p1, Lce8;->a:Z
+
+    if-eq v0, p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_2
-    :goto_0
-    return-void
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lce8;->a:Ljava/util/concurrent/Callable;
+    iget-boolean v0, p0, Lce8;->a:Z
 
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Close(withClear="
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lce8;->a:Z
+
+    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,37 +1,56 @@
-.class public interface abstract Ld85;
+.class public final synthetic Ld85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final n:Lqd6;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lr75;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lr75;I)V
+    .locals 0
 
-    new-instance v0, Lqd6;
+    iput p2, p0, Ld85;->a:I
 
-    const/16 v1, 0xc
+    iput-object p1, p0, Ld85;->b:Lr75;
 
-    invoke-direct {v0, v1}, Lqd6;-><init>(I)V
-
-    sput-object v0, Ld85;->n:Lqd6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract k(Landroidx/camera/video/internal/encoder/EncodeException;)V
-.end method
+.method public final run()V
+    .locals 1
 
-.method public abstract o()V
-.end method
+    iget v0, p0, Ld85;->a:I
 
-.method public abstract p(Lrz3;)V
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract q(Lt75;)V
+    iget-object v0, p0, Ld85;->b:Lr75;
+
+    invoke-interface {v0}, Lr75;->j()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ld85;->b:Lr75;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

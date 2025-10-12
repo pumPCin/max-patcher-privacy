@@ -1,15 +1,23 @@
-.class public final Lxlg;
+.class public abstract Lxlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroidx/fragment/app/a;
+# direct methods
+.method public static a(Landroid/view/View;)F
+    .locals 0
 
-.field public b:I
+    invoke-static {p0}, Lfyc;->a(Landroid/view/View;)F
 
-.field public c:Z
+    move-result p0
 
-.field public d:F
+    return p0
+.end method
 
-.field public e:F
+.method public static b(Landroid/view/View;F)V
+    .locals 0
+
+    invoke-static {p0, p1}, Lfyc;->v(Landroid/view/View;F)V
+
+    return-void
+.end method

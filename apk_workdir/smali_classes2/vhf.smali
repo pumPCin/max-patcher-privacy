@@ -1,120 +1,53 @@
 .class public final Lvhf;
-.super Ljava/lang/Object;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Luhf;
 
 
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public X:Lgca;
 
-.field public b:Ljava/lang/Long;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lhif;
+
+.field public o:Lhif;
+
+.field public r0:I
+
+
+# direct methods
+.method public constructor <init>(Lhif;Lwy3;)V
+    .locals 0
+
+    iput-object p1, p0, Lvhf;->Z:Lhif;
+
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final getMsSinceBoot()J
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iput-object p1, p0, Lvhf;->Y:Ljava/lang/Object;
 
-    move-result-wide v0
+    iget p1, p0, Lvhf;->r0:I
 
-    return-wide v0
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final getServerTimeMs()Ljava/lang/Long;
-    .locals 6
+    or-int/2addr p1, v0
 
-    iget-object v0, p0, Lvhf;->b:Ljava/lang/Long;
+    iput p1, p0, Lvhf;->r0:I
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Lvhf;->Z:Lhif;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    sub-long/2addr v4, v2
-
-    iget-object v0, p0, Lvhf;->a:Ljava/lang/Long;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final localTimeMs()J
-    .locals 2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
-    .locals 2
-
-    invoke-virtual {p0}, Lvhf;->getServerTimeMs()Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    sub-long/2addr p1, v0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1, v0, p0}, Lhif;->d(Lgca;Lwy3;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final utcTimeMs()J
-    .locals 2
-
-    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

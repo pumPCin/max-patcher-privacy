@@ -1,81 +1,58 @@
-.class public final synthetic Lukf;
+.class public final Lukf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Ltkf;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lve6;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILve6;)V
-    .locals 0
-
-    iput p1, p0, Lukf;->a:I
-
-    iput-object p2, p0, Lukf;->b:Lve6;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lukf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final a(Lpkf;)V
+    .locals 2
 
-    iget v0, p0, Lukf;->a:I
+    iget-object v0, p0, Lukf;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lukf;->b:Lve6;
-
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
-
-    check-cast v0, Luxa;
-
-    invoke-interface {v0}, Luxa;->getIcon()Lk27;
-
-    move-result-object v0
-
-    iget v0, v0, Lk27;->f:I
 
     :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v0
+    move-result v1
 
-    return-object v0
+    if-eqz v1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lukf;->b:Lve6;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-interface {v0}, Lve6;->invoke()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Ltkf;
 
-    check-cast v0, Luxa;
-
-    invoke-interface {v0}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->e:I
+    invoke-interface {v1, p1}, Ltkf;->a(Lpkf;)V
 
     goto :goto_0
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    return-void
 .end method

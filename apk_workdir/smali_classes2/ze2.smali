@@ -1,138 +1,79 @@
-.class public final synthetic Lze2;
-.super Ljava/lang/Object;
+.class public final Lze2;
+.super Lti0;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final c:J
 
-.field public final synthetic c:Laf2;
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Laf2;I)V
+.method public constructor <init>(IJJLjava/lang/String;)V
     .locals 0
 
-    iput p3, p0, Lze2;->a:I
+    invoke-direct {p0, p2, p3}, Lti0;-><init>(J)V
 
-    iput-object p1, p0, Lze2;->b:Landroid/content/Context;
+    iput-object p6, p0, Lze2;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lze2;->c:Laf2;
+    iput-wide p4, p0, Lze2;->c:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lze2;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lze2;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, "ChatJoinEvent{link=\'"
 
-    iget-object v2, p0, Lze2;->c:Laf2;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lze2;->b:Landroid/content/Context;
+    iget-object v1, p0, Lze2;->b:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v0, Lnsa;
+    const-string v1, "\', chatId="
 
-    invoke-direct {v0, v3}, Lnsa;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v3, Lh9d;->h:I
+    iget-wide v1, p0, Lze2;->c:J
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    new-instance v3, Lge;
+    const-string v1, ", type="
 
-    const/4 v4, 0x7
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v4, v0, v0}, Lge;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
+    iget v1, p0, Lze2;->o:I
 
-    invoke-static {v0, v3}, Lgza;->a(Landroid/view/View;Ljava/lang/Runnable;)Lgza;
-
-    sget-object v3, Ljsa;->a:Ljsa;
-
-    invoke-virtual {v0, v3}, Lnsa;->setSize(Llsa;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v3, v4}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v3, Lwra;->J:I
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v4, -0x2
-
-    invoke-direct {v3, v1, v4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setTextAlignment(I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
-
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object v1, Lkv2;->a:Lpef;
-
-    sget-object v1, Lrxf;->l:Lpef;
-
-    invoke-static {v1, v0}, Lpef;->d(Lpef;Landroid/widget/TextView;)V
-
-    sget-object v1, Lbx4;->y0:Lsed;
-
-    invoke-virtual {v1, v0}, Lsed;->l(Landroid/view/View;)Luxa;
+    invoke-static {v1}, Lxw1;->w(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1}, Luxa;->getText()Lbdf;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-super {p0}, Lti0;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iget v1, v1, Lbdf;->e:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lbf0;->d(Landroid/view/View;Landroid/view/ViewGroup;)V
+    move-result-object v0
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

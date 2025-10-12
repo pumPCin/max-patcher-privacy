@@ -1,97 +1,98 @@
-.class public final synthetic Lxa2;
-.super Ljava/lang/Object;
+.class public final Lxa2;
+.super Lti0;
 .source "SourceFile"
-
-# interfaces
-.implements Lwo3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic b:I
 
-.field public final synthetic b:Lnc2;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnc2;)V
+.method public constructor <init>(J)V
     .locals 1
 
-    .line 2
     const/4 v0, 0x1
 
-    iput v0, p0, Lxa2;->a:I
+    iput v0, p0, Lxa2;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Lti0;-><init>()V
 
-    iput-object p1, p0, Lxa2;->b:Lnc2;
+    .line 2
+    iput-wide p1, p0, Lxa2;->c:J
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lub2;Lnc2;)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 1
 
-    .line 1
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    iput p1, p0, Lxa2;->a:I
+    iput v0, p0, Lxa2;->b:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 3
+    invoke-direct {p0, p1, p2}, Lti0;-><init>(J)V
 
-    iput-object p2, p0, Lxa2;->b:Lnc2;
+    .line 4
+    iput-wide p3, p0, Lxa2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Lxa2;->a:I
-
-    check-cast p1, Lzb2;
+    iget v0, p0, Lxa2;->b:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lxa2;->b:Lnc2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object v0, p1, Lzb2;->c:Lnc2;
+    const-string v1, "ReadMarkEvent{chatId="
 
-    sget-object v1, Lnc2;->o:Lnc2;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eq v0, v1, :cond_0
+    iget-wide v1, p0, Lxa2;->c:J
 
-    sget-object v1, Lnc2;->b:Lnc2;
+    const/16 v3, 0x7d
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v0, v1, v2, v3}, Lsab;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    move-result-object v0
 
-    iput-wide v0, p1, Lzb2;->w:J
-
-    :cond_1
-    return-void
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lxa2;->b:Lnc2;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-object v0, p1, Lzb2;->c:Lnc2;
+    const-string v1, "ChatComplainEvent{chatId="
 
-    invoke-static {p1}, Lub2;->q(Lzb2;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v0, 0x0
+    iget-wide v1, p0, Lxa2;->c:J
 
-    iput-wide v0, p1, Lzb2;->w:J
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    const-string v1, "} "
 
-    iput v0, p1, Lzb2;->m:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-super {p0}, Lti0;->toString()Ljava/lang/String;
 
-    nop
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

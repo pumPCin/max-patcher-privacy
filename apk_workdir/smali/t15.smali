@@ -1,14 +1,17 @@
-.class public interface abstract Lt15;
-.super Ljava/lang/Object;
+.class public Lt15;
+.super Ls15;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+.method public a(Landroid/view/Window;)V
+    .locals 0
 
-.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-.end method
+    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-.method public abstract c(Lp15;)Ljava/util/Set;
+    move-result-object p1
+
+    invoke-static {p1}, Lt4;->u(Landroid/view/WindowManager$LayoutParams;)V
+
+    return-void
 .end method

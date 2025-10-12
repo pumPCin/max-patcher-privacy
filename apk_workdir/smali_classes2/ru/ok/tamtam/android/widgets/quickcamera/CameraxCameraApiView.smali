@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzx1;
+.implements Ldy1;
 
 
 # annotations
@@ -14,26 +14,26 @@
     d2 = {
         "Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;",
         "Landroid/widget/FrameLayout;",
-        "Lzx1;",
+        "Ldy1;",
         "",
         "getStatusBarHeight",
         "()I",
         "Landroid/view/View;",
         "getRootView",
         "()Landroid/view/View;",
-        "Lz8c;",
+        "Lg7c;",
         "sizeSelector",
-        "Loyf;",
+        "Laxf;",
         "setPictureSize",
-        "(Lz8c;)V",
-        "Lthg;",
+        "(Lg7c;)V",
+        "Ljgg;",
         "videoQuality",
         "setVideoQuality",
-        "(Lthg;)V",
-        "Lh02;",
+        "(Ljgg;)V",
+        "Lk02;",
         "cameraListener",
         "setCameraListener",
-        "(Lh02;)V",
+        "(Lk02;)V",
         "",
         "flash",
         "setFlash",
@@ -55,21 +55,21 @@
 
 
 # static fields
-.field public static final synthetic y0:I
+.field public static final synthetic t0:I
 
 
 # instance fields
 .field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Lbqb;
+.field public final b:Lpob;
 
-.field public final c:Lhr7;
+.field public final c:Lzp7;
 
-.field public final o:Lg02;
+.field public final o:Lj02;
 
-.field public w0:Lh02;
+.field public r0:Lk02;
 
-.field public x0:Lkwc;
+.field public s0:Lsuc;
 
 
 # direct methods
@@ -100,34 +100,34 @@
     invoke-direct {p0, p1, p2, p3, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 3
-    invoke-static {p1}, Lo7;->l(Landroid/content/Context;)Ljava/util/concurrent/Executor;
+    invoke-static {p1}, Lw7;->j(Landroid/content/Context;)Ljava/util/concurrent/Executor;
 
     move-result-object p2
 
     iput-object p2, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->a:Ljava/util/concurrent/Executor;
 
     .line 4
-    new-instance p2, Lbqb;
+    new-instance p2, Lpob;
 
-    invoke-direct {p2, p1}, Lbqb;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lpob;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->b:Lbqb;
+    iput-object p2, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->b:Lpob;
 
     .line 5
-    new-instance p3, Lhr7;
+    new-instance p3, Lzp7;
 
     .line 6
-    invoke-direct {p3, p1}, Lnz1;-><init>(Landroid/content/Context;)V
+    invoke-direct {p3, p1}, Lqz1;-><init>(Landroid/content/Context;)V
 
     .line 7
-    iput-object p3, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lhr7;
+    iput-object p3, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lzp7;
 
     .line 8
-    new-instance v0, Lg02;
+    new-instance v0, Lj02;
 
-    invoke-direct {v0}, Lg02;-><init>()V
+    invoke-direct {v0}, Lj02;-><init>()V
 
-    iput-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->o:Lg02;
+    iput-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->o:Lj02;
 
     const/4 v1, 0x1
 
@@ -171,46 +171,46 @@
     invoke-virtual {p0, p2, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 14
-    invoke-virtual {p2}, Lbqb;->getPreviewStreamState()Lfy7;
+    invoke-virtual {p2}, Lpob;->getPreviewStreamState()Lxw7;
 
     move-result-object p1
 
     new-instance v2, Lk;
 
-    const/16 v3, 0x19
+    const/16 v3, 0x1b
 
     invoke-direct {v2, v3, p0}, Lk;-><init>(ILjava/lang/Object;)V
 
-    new-instance v3, Lj12;
+    new-instance v3, Lm12;
 
-    invoke-direct {v3, v2}, Lj12;-><init>(Lk;)V
+    invoke-direct {v3, v2}, Lm12;-><init>(Lk;)V
 
-    invoke-virtual {p1, v0, v3}, Lfy7;->e(Lcs7;Lyda;)V
+    invoke-virtual {p1, v0, v3}, Lxw7;->e(Luq7;Lzba;)V
 
     .line 15
-    sget-object p1, Lypb;->c:Lypb;
+    sget-object p1, Lmob;->c:Lmob;
 
-    invoke-virtual {p2, p1}, Lbqb;->setImplementationMode(Lypb;)V
+    invoke-virtual {p2, p1}, Lpob;->setImplementationMode(Lmob;)V
 
     .line 16
-    sget-object p1, Lw02;->c:Lw02;
+    sget-object p1, Lz02;->c:Lz02;
 
-    invoke-virtual {p3, p1}, Lnz1;->j(Lw02;)V
+    invoke-virtual {p3, p1}, Lqz1;->j(Lz02;)V
 
     .line 17
-    invoke-virtual {p3, v1}, Lnz1;->k(I)V
+    invoke-virtual {p3, v1}, Lqz1;->k(I)V
 
     .line 18
-    invoke-virtual {p2}, Lbqb;->getViewPort()Llmg;
+    invoke-virtual {p2}, Lpob;->getViewPort()Lblg;
 
     .line 19
-    invoke-static {}, Lkjd;->e()V
+    invoke-static {}, Lg8;->g()V
 
     .line 20
-    iput-boolean v1, p3, Lnz1;->t:Z
+    iput-boolean v1, p3, Lqz1;->t:Z
 
     .line 21
-    invoke-virtual {p2, p3}, Lbqb;->setController(Lnz1;)V
+    invoke-virtual {p2, p3}, Lpob;->setController(Lqz1;)V
 
     return-void
 .end method
@@ -263,13 +263,13 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lj4;->e(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
+    invoke-static {v0}, Lx4;->e(Landroid/view/WindowInsets;)Landroid/graphics/Insets;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Lqx4;->a(Landroid/graphics/Insets;)I
+    invoke-static {v0}, Lgx4;->a(Landroid/graphics/Insets;)I
 
     move-result v0
 
@@ -301,11 +301,11 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lhr7;
+    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lzp7;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lnz1;->k(I)V
+    invoke-virtual {v0, v1}, Lqz1;->k(I)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -322,9 +322,9 @@
 
     const-string v2, "failed to enable photo-mode"
 
-    invoke-static {v1, v2, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->w0:Lh02;
+    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->r0:Lk02;
 
     if-eqz v1, :cond_0
 
@@ -332,9 +332,9 @@
 
     invoke-direct {v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    check-cast v1, Lg65;
+    check-cast v1, Lood;
 
-    invoke-virtual {v1, v2}, Lg65;->g0(Lru/ok/tamtam/android/widgets/quickcamera/CameraExceptionImpl;)V
+    invoke-virtual {v1, v2}, Lood;->P(Lru/ok/tamtam/android/widgets/quickcamera/CameraExceptionImpl;)V
 
     :cond_0
     return-void
@@ -343,9 +343,9 @@
 .method public final b()V
     .locals 5
 
-    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->o:Lg02;
+    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->o:Lj02;
 
-    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lhr7;
+    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lzp7;
 
     const-class v2, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;
 
@@ -355,30 +355,30 @@
 
     const-string v4, "startPreviewCamera"
 
-    invoke-static {v3, v4}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lkjd;->e()V
+    invoke-static {}, Lg8;->g()V
 
-    iput-object v0, v1, Lhr7;->E:Lcs7;
+    iput-object v0, v1, Lzp7;->E:Luq7;
 
-    invoke-virtual {v1, v3}, Lnz1;->p(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v3}, Lqz1;->p(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v1, Lf02;
+    new-instance v1, Li02;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, v2}, Lf02;-><init>(Lg02;I)V
+    invoke-direct {v1, v0, v2}, Li02;-><init>(Lj02;I)V
 
-    invoke-virtual {v0, v1}, Lg02;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lj02;->a(Ljava/lang/Runnable;)V
 
     return-void
 
@@ -391,26 +391,26 @@
 
     const-string v4, "failed to bind camera controller, start preview aborted"
 
-    invoke-static {v2, v4, v0}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v4, v0}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lkjd;->e()V
+    invoke-static {}, Lg8;->g()V
 
-    iput-object v3, v1, Lhr7;->E:Lcs7;
+    iput-object v3, v1, Lzp7;->E:Luq7;
 
-    iput-object v3, v1, Lnz1;->m:Lgr7;
+    iput-object v3, v1, Lqz1;->m:Lyp7;
 
-    iget-object v1, v1, Lnz1;->n:Lvqb;
+    iget-object v1, v1, Lqz1;->n:Ljpb;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v1, Lvqb;->a:Luqb;
+    iget-object v1, v1, Ljpb;->a:Lipb;
 
-    invoke-virtual {v1}, Luqb;->f()V
+    invoke-virtual {v1}, Lipb;->f()V
 
     :cond_0
-    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->w0:Lh02;
+    iget-object v1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->r0:Lk02;
 
     if-eqz v1, :cond_1
 
@@ -418,9 +418,9 @@
 
     invoke-direct {v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    check-cast v1, Lg65;
+    check-cast v1, Lood;
 
-    invoke-virtual {v1, v2}, Lg65;->g0(Lru/ok/tamtam/android/widgets/quickcamera/CameraExceptionImpl;)V
+    invoke-virtual {v1, v2}, Lood;->P(Lru/ok/tamtam/android/widgets/quickcamera/CameraExceptionImpl;)V
 
     :cond_1
     return-void
@@ -432,10 +432,10 @@
     return-object p0
 .end method
 
-.method public setCameraListener(Lh02;)V
+.method public setCameraListener(Lk02;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->w0:Lh02;
+    iput-object p1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->r0:Lk02;
 
     return-void
 .end method
@@ -443,7 +443,7 @@
 .method public setFlash(Ljava/lang/String;)V
     .locals 2
 
-    invoke-static {p1}, Lyx1;->valueOf(Ljava/lang/String;)Lyx1;
+    invoke-static {p1}, Lcy1;->valueOf(Ljava/lang/String;)Lcy1;
 
     move-result-object p1
 
@@ -481,9 +481,9 @@
 
     :cond_2
     :goto_0
-    iget-object p1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lhr7;
+    iget-object p1, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lzp7;
 
-    invoke-virtual {p1, v0}, Lnz1;->l(I)V
+    invoke-virtual {p1, v0}, Lqz1;->l(I)V
 
     return-void
 .end method
@@ -491,27 +491,27 @@
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->b:Lbqb;
+    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->b:Lpob;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-.method public setPictureSize(Lz8c;)V
+.method public setPictureSize(Lg7c;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setVideoQuality(Lthg;)V
+.method public setVideoQuality(Ljgg;)V
     .locals 2
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result p1
 
-    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lhr7;
+    iget-object v0, p0, Lru/ok/tamtam/android/widgets/quickcamera/CameraxCameraApiView;->c:Lzp7;
 
     packed-switch p1, :pswitch_data_0
 
@@ -522,93 +522,93 @@
     throw p1
 
     :pswitch_0
-    sget-object p1, Lab0;->g:Lab0;
+    sget-object p1, Lra0;->g:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_1
-    sget-object p1, Lab0;->f:Lab0;
+    sget-object p1, Lra0;->f:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_2
-    sget-object p1, Lab0;->e:Lab0;
+    sget-object p1, Lra0;->e:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_3
-    sget-object p1, Lab0;->d:Lab0;
+    sget-object p1, Lra0;->d:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_4
-    sget-object p1, Lab0;->h:Lab0;
+    sget-object p1, Lra0;->h:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_5
-    sget-object p1, Lab0;->i:Lab0;
+    sget-object p1, Lra0;->i:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 
     :pswitch_6
-    sget-object p1, Lab0;->h:Lab0;
+    sget-object p1, Lra0;->h:Lra0;
 
-    sget-object v1, Ly90;->c:Ly90;
+    sget-object v1, Lp90;->c:Lp90;
 
-    invoke-static {p1, v1}, Lbb8;->u(Lab0;Ly90;)Lbb8;
+    invoke-static {p1, v1}, Lazb;->n(Lra0;Lp90;)Lazb;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lnz1;->m(Lbb8;)V
+    invoke-virtual {v0, p1}, Lqz1;->m(Lazb;)V
 
     return-void
 

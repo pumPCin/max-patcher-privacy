@@ -1,138 +1,430 @@
-.class public final Lym2;
-.super Ll9f;
+.class public final synthetic Lym2;
+.super Lv8;
 .source "SourceFile"
+
+# interfaces
+.implements Lvd6;
 
 
 # instance fields
-.field public c:Ljava/util/ArrayList;
-
-.field public o:J
+.field public final synthetic r0:I
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput p7, p0, Lym2;->r0:I
 
-    const-wide/16 v0, -0x1
+    move-object p7, p4
 
-    iput-wide v0, p0, Lym2;->o:J
+    move-object p4, p3
 
-    iget-object p1, p0, Lym2;->c:Ljava/util/ArrayList;
+    move p3, p6
 
-    if-nez p1, :cond_0
+    move-object p6, p7
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-object p7, p5
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    move-object p5, p2
 
-    iput-object p1, p0, Lym2;->c:Ljava/util/ArrayList;
+    move p2, p1
 
-    :cond_0
+    move-object p1, p0
+
+    invoke-direct/range {p1 .. p7}, Lv8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lym2;->r0:I
 
-    const-string v0, "marker"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Lkl3;
 
-    move-result v0
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    if-nez v0, :cond_2
+    check-cast v0, Lil3;
 
-    const-string v0, "members"
+    filled-new-array {p1}, [Lkl3;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p2
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
 
-    if-nez p2, :cond_0
+    sget-object p1, Laxf;->a:Laxf;
 
-    invoke-virtual {p1}, Ls89;->B()V
+    return-object p1
 
-    return-void
+    :pswitch_0
+    check-cast p1, Lkl3;
 
-    :cond_0
-    invoke-static {p1}, Lvb4;->Q(Ls89;)I
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    move-result p2
+    check-cast v0, Lil3;
 
-    new-instance v0, Ljava/util/ArrayList;
+    filled-new-array {p1}, [Lkl3;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    move-result-object p1
 
-    iput-object v0, p0, Lym2;->c:Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
 
-    const/4 v0, 0x0
+    sget-object p1, Laxf;->a:Laxf;
 
-    :goto_0
-    if-ge v0, p2, :cond_1
+    return-object p1
 
-    iget-object v1, p0, Lym2;->c:Ljava/util/ArrayList;
+    :pswitch_1
+    check-cast p1, Lkl3;
 
-    invoke-static {p1}, Lwm2;->a(Ls89;)Lwm2;
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    move-result-object v2
+    check-cast v0, Lil3;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    filled-new-array {p1}, [Lkl3;
 
-    add-int/lit8 v0, v0, 0x1
+    move-result-object p1
 
-    goto :goto_0
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
 
-    :cond_1
-    return-void
+    sget-object p1, Laxf;->a:Laxf;
 
-    :cond_2
-    invoke-virtual {p1}, Ls89;->A0()J
+    return-object p1
 
-    move-result-wide p1
+    :pswitch_2
+    check-cast p1, Lkl3;
 
-    iput-wide p1, p0, Lym2;->o:J
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lil3;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    filled-new-array {p1}, [Lkl3;
 
-    iget-object v0, p0, Lym2;->c:Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-static {v0}, Lkmc;->e(Ljava/util/Collection;)I
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
 
-    move-result v0
+    sget-object p1, Laxf;->a:Laxf;
 
-    iget-wide v1, p0, Lym2;->o:J
+    return-object p1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    :pswitch_3
+    check-cast p1, Lkl3;
 
-    const-string v4, "{members="
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lil3;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    filled-new-array {p1}, [Lkl3;
 
-    const-string v0, ", marker="
+    move-result-object p1
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
 
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    sget-object p1, Laxf;->a:Laxf;
 
-    const-string v0, "}"
+    return-object p1
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_4
+    check-cast p1, Lkl3;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lil3;
 
-    return-object v0
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_5
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_6
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_7
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_8
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_9
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_a
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_b
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_c
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_d
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_e
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_f
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_10
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_11
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_12
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_13
+    check-cast p1, Lkl3;
+
+    iget-object v0, p0, Lv8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lil3;
+
+    filled-new-array {p1}, [Lkl3;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lil3;->a([Lkl3;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

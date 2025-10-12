@@ -1,19 +1,19 @@
-.class public final Lbla;
+.class public abstract Lbla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lbp7;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lpcc;->oneme_complaint_action_cancel:I
 
-    iput-object p1, p0, Lbla;->a:Lbp7;
+    sput v0, Lbla;->a:I
 
     return-void
 .end method

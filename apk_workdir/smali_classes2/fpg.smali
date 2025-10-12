@@ -1,56 +1,189 @@
-.class public final synthetic Lfpg;
+.class public final Lfpg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lbee;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lxog;
+
+.field public final d:La82;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbee;I)V
+.method public constructor <init>(JLjava/lang/String;Lxog;La82;)V
     .locals 0
 
-    iput p2, p0, Lfpg;->a:I
-
-    iput-object p1, p0, Lfpg;->b:Lbee;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lfpg;->a:J
+
+    iput-object p3, p0, Lfpg;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lfpg;->c:Lxog;
+
+    iput-object p5, p0, Lfpg;->d:La82;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lfpg;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    iget-object v0, p0, Lfpg;->b:Lbee;
+    :cond_0
+    instance-of v0, p1, Lfpg;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->a(Lbee;)V
+    if-nez v0, :cond_1
 
-    return-void
+    goto :goto_0
 
-    :pswitch_0
-    iget-object v0, p0, Lfpg;->b:Lbee;
+    :cond_1
+    check-cast p1, Lfpg;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/waiting_room/WaitingRoomParticipants;->e(Lbee;)V
+    iget-wide v0, p0, Lfpg;->a:J
 
-    return-void
+    iget-wide v2, p1, Lfpg;->a:J
 
-    nop
+    cmp-long v0, v0, v2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lfpg;->b:Ljava/lang/String;
+
+    iget-object v1, p1, Lfpg;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lfpg;->c:Lxog;
+
+    iget-object v1, p1, Lfpg;->c:Lxog;
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lfpg;->d:La82;
+
+    iget-object p1, p1, Lfpg;->d:La82;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lfpg;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lfpg;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Ljl3;->c(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lfpg;->c:Lxog;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lfpg;->d:La82;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "WebAppAnalyticsParam(botId="
+
+    const-string v1, ", webAppName="
+
+    iget-wide v2, p0, Lfpg;->a:J
+
+    iget-object v4, p0, Lfpg;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lbk7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", entryPoint="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfpg;->c:Lxog;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sourceType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lfpg;->d:La82;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", label=null)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

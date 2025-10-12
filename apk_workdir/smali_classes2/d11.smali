@@ -1,324 +1,194 @@
-.class public final synthetic Ld11;
+.class public final Ld11;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;
-.implements Lwo3;
-.implements Lsx7;
-.implements Lrx7;
-.implements Lvo3;
+.implements Lfn1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lqt;
 
-.field public final synthetic b:Z
+.field public final b:Lvd1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvk8;Landroid/os/Bundle;ZZ)V
+.method public constructor <init>(Lqt;Lvd1;)V
     .locals 0
-
-    .line 1
-    const/4 p1, 0x7
-
-    iput p1, p0, Ld11;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p4, p0, Ld11;->b:Z
+    iput-object p1, p0, Ld11;->a:Lqt;
 
-    return-void
-.end method
+    iput-object p2, p0, Ld11;->b:Lvd1;
 
-.method public synthetic constructor <init>(ZI)V
-    .locals 0
+    iget-object p1, p2, Lvd1;->h:Lrud;
 
-    .line 2
-    iput p2, p0, Ld11;->a:I
+    iget-object p1, p1, Lrud;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput-boolean p1, p0, Ld11;->b:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
+.method public final a(Ljnb;)V
     .locals 3
 
-    iget v0, p0, Ld11;->a:I
+    iget-object v0, p1, Ljnb;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Luud;
 
-    :pswitch_0
-    check-cast p1, Lp00;
+    iget-object p1, p1, Ljnb;->a:Ljava/lang/Object;
 
-    invoke-static {p1}, Lv63;->a0(Lp00;)Z
+    check-cast p1, Ly01;
 
-    move-result v0
+    iget-object v1, p0, Ld11;->b:Lvd1;
 
-    iget-object v1, p1, Lp00;->d:Ln10;
+    if-nez p1, :cond_0
 
-    if-eqz v1, :cond_0
+    iget-object p1, v1, Lvd1;->m:Lmt;
+
+    new-instance v1, La11;
+
+    invoke-direct {v1, v0}, La11;-><init>(Lvud;)V
+
+    invoke-virtual {p1, v1}, Lmt;->onAsrRecordStopped(La11;)V
+
+    return-void
+
+    :cond_0
+    iget-object v1, v1, Lvd1;->m:Lmt;
+
+    new-instance v2, Lz01;
+
+    invoke-direct {v2, v0, p1}, Lz01;-><init>(Lvud;Ly01;)V
+
+    invoke-virtual {v1, v2}, Lmt;->onAsrRecordStarted(Lz01;)V
+
+    return-void
+.end method
+
+.method public final b(Lorg/json/JSONObject;)V
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    const-string v1, "asrInfo"
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lqt;->c(Lorg/json/JSONObject;)Ly01;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
+    invoke-static {p1}, Lwt3;->k(Lorg/json/JSONObject;)Lvud;
+
+    move-result-object p1
+
+    new-instance v2, Lot;
+
+    invoke-direct {v2, p1, v1}, Lot;-><init>(Lvud;Ly01;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v0, v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    iget-object v1, p0, Ld11;->a:Lqt;
+
+    iget-object v1, v1, Lqt;->a:Lwkc;
+
+    const-string v2, "AsrParser"
+
+    const-string v3, "Can\'t parse record start info"
+
+    invoke-interface {v1, v2, v3, p1}, Lwkc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
     if-nez v0, :cond_1
 
-    goto :goto_1
+    return-void
 
     :cond_1
+    iget-object p1, v0, Lot;->a:Lvud;
+
+    iget-object v0, v0, Lot;->b:Ly01;
+
+    iget-object v1, p0, Ld11;->b:Lvd1;
+
+    iget-object v1, v1, Lvd1;->m:Lmt;
+
+    new-instance v2, Lz01;
+
+    invoke-direct {v2, p1, v0}, Lz01;-><init>(Lvud;Ly01;)V
+
+    invoke-virtual {v1, v2}, Lmt;->onAsrRecordStarted(Lz01;)V
+
+    return-void
+.end method
+
+.method public final c(Lorg/json/JSONObject;)V
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Lpt;
+
+    invoke-static {p1}, Lwt3;->k(Lorg/json/JSONObject;)Lvud;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lpt;-><init>(Lvud;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    iget-object v0, p0, Ld11;->a:Lqt;
+
+    iget-object v0, v0, Lqt;->a:Lwkc;
+
+    const-string v1, "AsrParser"
+
+    const-string v2, "Can\'t parse record stop info"
+
+    invoke-interface {v0, v1, v2, p1}, Lwkc;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
     :goto_0
-    iget-boolean v1, p0, Ld11;->b:Z
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p1}, Lp00;->b()Lx00;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lx00;->d:Lo10;
-
-    iget-object v0, v0, Lo10;->d:Ln10;
-
-    invoke-virtual {v0}, Ln10;->a()Ll10;
-
-    move-result-object v0
-
-    iput-boolean v1, v0, Ll10;->n:Z
-
-    new-instance v1, Ln10;
-
-    invoke-direct {v1, v0}, Ln10;-><init>(Ll10;)V
-
-    invoke-virtual {p1}, Lp00;->b()Lx00;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lx00;->d:Lo10;
-
-    invoke-virtual {v0}, Lo10;->j()Lp00;
-
-    move-result-object v0
-
-    iput-object v1, v0, Lp00;->d:Ln10;
-
-    invoke-virtual {v0}, Lp00;->a()Lo10;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lp00;->b()Lx00;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lx00;->a()Lw00;
-
-    move-result-object v1
-
-    iput-object v0, v1, Lw00;->e:Ljava/lang/Object;
-
-    new-instance v0, Lx00;
-
-    invoke-direct {v0, v1}, Lx00;-><init>(Lw00;)V
-
-    iput-object v0, p1, Lp00;->r:Lx00;
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p1}, Lp00;->c()Ln10;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ln10;->a()Ll10;
-
-    move-result-object v0
-
-    iput-boolean v1, v0, Ll10;->n:Z
-
-    new-instance v1, Ln10;
-
-    invoke-direct {v1, v0}, Ln10;-><init>(Ll10;)V
-
-    iput-object v1, p1, Lp00;->d:Ln10;
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    check-cast p1, Lgmb;
-
-    invoke-virtual {p1, v0}, Lgmb;->m0(Z)V
+    if-nez v0, :cond_0
 
     return-void
 
-    :pswitch_2
-    iget-boolean v0, p0, Ld11;->b:Z
+    :cond_0
+    iget-object p1, v0, Lpt;->a:Lvud;
 
-    check-cast p1, Lgmb;
+    iget-object v0, p0, Ld11;->b:Lvd1;
 
-    invoke-virtual {p1, v0}, Lgmb;->g0(Z)V
+    iget-object v0, v0, Lvd1;->m:Lmt;
 
-    return-void
+    new-instance v1, La11;
 
-    :pswitch_3
-    check-cast p1, Lgmb;
+    invoke-direct {v1, p1}, La11;-><init>(Lvud;)V
 
-    invoke-virtual {p1}, Lgmb;->p0()V
-
-    iget-object p1, p1, Lgmb;->a:Lif5;
-
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    invoke-virtual {p1, v0}, Lif5;->E1(Z)V
+    invoke-virtual {v0, v1}, Lmt;->onAsrRecordStopped(La11;)V
 
     return-void
-
-    :pswitch_4
-    check-cast p1, Lyj8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1}, Lyj8;->c()V
-
-    :cond_3
-    return-void
-
-    :pswitch_5
-    check-cast p1, Lp00;
-
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    if-eqz v0, :cond_4
-
-    sget-object v0, Lh10;->o:Lh10;
-
-    iput-object v0, p1, Lp00;->i:Lh10;
-
-    goto :goto_2
-
-    :cond_4
-    sget-object v0, Lh10;->a:Lh10;
-
-    iput-object v0, p1, Lp00;->i:Lh10;
-
-    :goto_2
-    return-void
-
-    :pswitch_6
-    check-cast p1, Lnq3;
-
-    iget v0, p1, Lnq3;->m:I
-
-    iget-boolean v1, p0, Ld11;->b:Z
-
-    if-eqz v1, :cond_5
-
-    or-int/lit8 v0, v0, 0x1
-
-    goto :goto_3
-
-    :cond_5
-    and-int/lit8 v0, v0, -0x2
-
-    :goto_3
-    iput v0, p1, Lnq3;->m:I
-
-    return-void
-
-    :pswitch_7
-    check-cast p1, Lzb2;
-
-    iget-object v0, p1, Lzb2;->Z:Lzq0;
-
-    new-instance v1, Lzq0;
-
-    iget-boolean v0, v0, Lzq0;->a:Z
-
-    iget-boolean v2, p0, Ld11;->b:Z
-
-    invoke-direct {v1, v0, v2}, Lzq0;-><init>(ZZ)V
-
-    iput-object v1, p1, Lzb2;->Z:Lzq0;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_7
-        :pswitch_6
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Ld11;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    check-cast p1, Ltkb;
-
-    invoke-interface {p1, v0}, Ltkb;->m(Z)V
-
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    check-cast p1, Lukb;
-
-    invoke-interface {p1, v0}, Lukb;->m(Z)V
-
-    return-void
-
-    :pswitch_1
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    check-cast p1, Lukb;
-
-    invoke-interface {p1, v0}, Lukb;->T(Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public isIdle()Z
-    .locals 1
-
-    iget-boolean v0, p0, Ld11;->b:Z
-
-    invoke-static {v0}, Lru/ok/android/externcalls/analytics/CallAnalyticsSender;->a(Z)Z
-
-    move-result v0
-
-    return v0
 .end method

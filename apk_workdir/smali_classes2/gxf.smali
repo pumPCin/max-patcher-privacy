@@ -1,1267 +1,227 @@
-.class public abstract synthetic Lgxf;
-.super Ljava/lang/Object;
+.class public final Lgxf;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Leea;
+
+.field public final b:Leea;
+
+
 # direct methods
-.method public static synthetic A(I)Ljava/lang/String;
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 10
 
-    const/4 v0, 0x1
+    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    if-eq p0, v0, :cond_4
+    new-instance v0, Leea;
 
-    const/4 v0, 0x2
+    invoke-direct {v0, p1}, Leea;-><init>(Landroid/content/Context;)V
 
-    if-eq p0, v0, :cond_3
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    const/4 v0, 0x3
+    const/4 v2, -0x1
 
-    if-eq p0, v0, :cond_2
+    const/4 v3, -0x2
 
-    const/4 v0, 0x4
+    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    if-eq p0, v0, :cond_1
+    const/16 v4, 0xc
 
-    const/4 v0, 0x5
+    int-to-float v4, v4
 
-    if-eq p0, v0, :cond_0
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    const-string p0, "null"
+    move-result-object v5
 
-    return-object p0
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    :cond_0
-    const-string p0, "RELEASED"
+    move-result-object v5
 
-    return-object p0
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_1
-    const-string p0, "READY"
+    mul-float/2addr v5, v4
 
-    return-object p0
+    invoke-static {v5}, Li8e;->I(F)I
 
-    :cond_2
-    const-string p0, "PENDING_RELEASE"
+    move-result v5
 
-    return-object p0
+    const/16 v6, 0x8
 
-    :cond_3
-    const-string p0, "INITIALIZING"
+    int-to-float v6, v6
 
-    return-object p0
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    :cond_4
-    const-string p0, "NOT_INITIALIZED"
+    move-result-object v7
 
-    return-object p0
-.end method
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-.method public static synthetic B(Ljava/lang/String;)I
-    .locals 2
+    move-result-object v7
 
-    if-eqz p0, :cond_9
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
 
-    const-string v0, "UNKNOWN"
+    mul-float/2addr v7, v6
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v7}, Li8e;->I(F)I
 
-    move-result v0
+    move-result v7
 
-    if-eqz v0, :cond_0
+    const/16 v8, 0x10
 
-    const/4 p0, 0x1
+    int-to-float v8, v8
 
-    return p0
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    :cond_0
-    const-string v0, "VIDEO"
+    move-result-object v9
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result v0
+    move-result-object v9
 
-    if-eqz v0, :cond_1
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    const/4 p0, 0x2
+    mul-float/2addr v8, v9
 
-    return p0
+    invoke-static {v8}, Li8e;->I(F)I
 
-    :cond_1
-    const-string v0, "PHOTO"
+    move-result v8
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    move-result v0
+    move-result-object v9
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/4 p0, 0x3
+    move-result-object v9
 
-    return p0
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    :cond_2
-    const-string v0, "PROFILE_PHOTO"
+    mul-float/2addr v9, v6
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v9}, Li8e;->I(F)I
 
-    move-result v0
+    move-result v9
 
-    if-eqz v0, :cond_3
+    invoke-virtual {v1, v5, v7, v8, v9}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    const/4 p0, 0x4
+    const/high16 v5, 0x3f800000    # 1.0f
 
-    return p0
+    iput v5, v1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    :cond_3
-    const-string v0, "FILE"
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    sget-object v1, Ldea;->a:Ldea;
 
-    move-result v0
+    invoke-virtual {v0, v1}, Leea;->setAppearance(Ldea;)V
 
-    if-eqz v0, :cond_4
+    sget v1, Lgqa;->e:I
 
-    const/4 p0, 0x5
+    invoke-virtual {v0, v1}, Leea;->setText(I)V
 
-    return p0
+    iput-object v0, p0, Lgxf;->a:Leea;
 
-    :cond_4
-    const-string v0, "AUDIO"
+    new-instance v1, Leea;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v1, p1}, Leea;-><init>(Landroid/content/Context;)V
 
-    move-result v0
+    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
 
-    if-eqz v0, :cond_5
+    invoke-direct {p1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    const/4 p0, 0x6
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    return p0
+    move-result-object v2
 
-    :cond_5
-    const-string v0, "EXTERNAL_GIF"
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v2
 
-    move-result v0
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    if-eqz v0, :cond_6
+    mul-float/2addr v2, v6
 
-    const/4 p0, 0x7
+    invoke-static {v2}, Li8e;->I(F)I
 
-    return p0
+    move-result v2
 
-    :cond_6
-    const-string v0, "STICKER"
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v0
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    if-eqz v0, :cond_7
+    move-result-object v3
 
-    const/16 p0, 0x8
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    return p0
+    mul-float/2addr v4, v3
 
-    :cond_7
-    const-string v0, "VIDEO_MESSAGE"
+    invoke-static {v4}, Li8e;->I(F)I
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v3
 
-    move-result v0
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    if-eqz v0, :cond_8
+    move-result-object v4
 
-    const/16 p0, 0x9
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return p0
+    move-result-object v4
 
-    :cond_8
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
 
-    const-string v1, "No enum constant one.me.sdk.transfer.domain.UploadType."
+    mul-float/2addr v6, v4
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Li8e;->I(F)I
 
-    move-result-object p0
+    move-result v4
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/4 v6, 0x0
 
-    throw v0
+    invoke-virtual {p1, v6, v2, v3, v4}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
 
-    :cond_9
-    new-instance p0, Ljava/lang/NullPointerException;
+    iput v5, p1, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
-    const-string v0, "Name is null"
+    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    sget-object p1, Ldea;->b:Ldea;
 
-    throw p0
-.end method
+    invoke-virtual {v1, p1}, Leea;->setAppearance(Ldea;)V
 
-.method public static synthetic C(Ljava/lang/String;)I
-    .locals 2
+    sget p1, Lgqa;->f:I
 
-    if-eqz p0, :cond_3
+    invoke-virtual {v1, p1}, Leea;->setText(I)V
 
-    const-string v0, "ATTENDEE"
+    iput-object v1, p0, Lgxf;->b:Leea;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v6}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    move-result v0
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const-string v0, "HAND_UP"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    const-string v0, "FEEDBACK"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "No enum constant okcalls.Y0."
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    const-string v0, "Name is null"
-
-    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final a(I)Z
-    .locals 1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final b(I)Z
-    .locals 1
-
-    const/16 v0, 0x8
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static c(Ljava/lang/String;)I
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/16 v2, 0x9df
-
-    if-eq v1, v2, :cond_3
-
-    const v2, 0x1314f
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "OFF"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_2
-    :goto_0
-    return v0
-
-    :cond_3
-    const-string v1, "ON"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    return v0
-.end method
-
-.method public static d(Ljava/lang/String;)I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    const/4 v3, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "CONTACTS"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v3, v1
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "_NONE_"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    move v3, v2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "NOBODY"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v3, 0x0
-
-    :goto_0
-    packed-switch v3, :pswitch_data_0
-
-    return v2
-
-    :pswitch_0
-    const/4 p0, 0x3
-
-    return p0
-
-    :pswitch_1
-    return v1
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x766d8d1d -> :sswitch_2
-        -0x59735cd8 -> :sswitch_1
-        0xcd35053 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static e(Ljava/lang/String;)I
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    const/16 v2, 0x9df
-
-    if-eq v1, v2, :cond_3
-
-    const v2, 0x1314f
-
-    if-eq v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "OFF"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_2
-    :goto_0
-    return v0
-
-    :cond_3
-    const-string v1, "ON"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    return v0
-.end method
-
-.method public static synthetic f(I)I
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    if-ne p0, v1, :cond_0
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    return v1
-.end method
-
-.method public static synthetic g(I)Z
-    .locals 2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    return v1
-
-    :pswitch_1
-    return v0
-
-    :pswitch_2
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic h(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "clip-path"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "path"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "group"
-
-    return-object p0
-
-    :cond_3
-    const-string p0, "vector"
-
-    return-object p0
-.end method
-
-.method public static synthetic i(I)I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const/16 p0, 0x10
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const/16 p0, 0xc
-
-    return p0
-.end method
-
-.method public static synthetic j(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "OFF"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "ON"
-
-    return-object p0
-.end method
-
-.method public static synthetic k(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "CONTACTS"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "_NONE_"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "ALL"
-
-    return-object p0
-.end method
-
-.method public static synthetic l(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const-string p0, "OFF"
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    throw p0
-
-    :cond_1
-    const-string p0, "ON"
-
-    return-object p0
-.end method
-
-.method public static m(IIJ)I
-    .locals 0
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p2
-
-    add-int/2addr p2, p0
-
-    mul-int/2addr p2, p1
-
-    return p2
-.end method
-
-.method public static n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static o(Ljava/lang/String;Lv7f;Ljava/lang/String;Lv7f;)Ljava/lang/String;
-    .locals 1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, p0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static p(Ljava/util/HashMap;Ljava/lang/String;Lr7f;I)Ljava/util/HashSet;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p0, Ljava/util/HashSet;
-
-    invoke-direct {p0, p3}, Ljava/util/HashSet;-><init>(I)V
-
-    return-object p0
-.end method
-
-.method public static q(IIILjava/util/HashMap;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-static {p0, p1, p2}, Landroid/graphics/Color;->rgb(III)I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {p3, p4, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static r(JLjava/util/EnumMap;Lo15;)V
+
+# virtual methods
+.method public final setOnAddContactClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    new-instance v0, Luq4;
+    iget-object v0, p0, Lgxf;->a:Leea;
 
-    invoke-direct {v0, p0, p1}, Luq4;-><init>(J)V
-
-    invoke-virtual {p2, p3, v0}, Ljava/util/EnumMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
 .end method
 
-.method public static s(Lq76;Lcof;)V
+.method public final setOnBlockContactClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    new-instance v0, Lt76;
+    iget-object v0, p0, Lgxf;->b:Leea;
 
-    invoke-direct {v0, p0}, Lt76;-><init>(Lq76;)V
-
-    invoke-interface {p1, v0}, Lcof;->d(Lt76;)V
+    invoke-static {v0, p1}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
     return-void
-.end method
-
-.method public static synthetic t(Ljava/lang/AutoCloseable;)V
-    .locals 5
-
-    instance-of v0, p0, Ljava/lang/AutoCloseable;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/lang/AutoCloseable;->close()V
-
-    return-void
-
-    :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ExecutorService;
-
-    if-eqz v0, :cond_5
-
-    check-cast p0, Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
-
-    move-result-object v0
-
-    if-ne p0, v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    const/4 v1, 0x0
-
-    :cond_2
-    :goto_0
-    if-nez v0, :cond_3
-
-    :try_start_0
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v3, 0x1
-
-    invoke-interface {p0, v3, v4, v2}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    if-nez v1, :cond_2
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz v1, :cond_4
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
-
-    :cond_4
-    :goto_1
-    return-void
-
-    :cond_5
-    instance-of v0, p0, Landroid/content/res/TypedArray;
-
-    if-eqz v0, :cond_6
-
-    check-cast p0, Landroid/content/res/TypedArray;
-
-    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
-
-    return-void
-
-    :cond_6
-    instance-of v0, p0, Landroid/media/MediaMetadataRetriever;
-
-    if-eqz v0, :cond_7
-
-    check-cast p0, Landroid/media/MediaMetadataRetriever;
-
-    invoke-virtual {p0}, Landroid/media/MediaMetadataRetriever;->release()V
-
-    return-void
-
-    :cond_7
-    instance-of v0, p0, Landroid/media/MediaDrm;
-
-    if-eqz v0, :cond_8
-
-    check-cast p0, Landroid/media/MediaDrm;
-
-    invoke-virtual {p0}, Landroid/media/MediaDrm;->release()V
-
-    return-void
-
-    :cond_8
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
-.end method
-
-.method public static synthetic u(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const-string p0, "VIDEO_MESSAGE"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "STICKER"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "EXTERNAL_GIF"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "AUDIO"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "FILE"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "PROFILE_PHOTO"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "PHOTO"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "VIDEO"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic v(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const/4 p0, 0x0
-
-    throw p0
-
-    :pswitch_0
-    const-string p0, "EXTENSION"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "MAP"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "ARRAY"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "BINARY"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "STRING"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "FLOAT"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "INTEGER"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "BOOLEAN"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "NIL"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic w(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "INACTIVE"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "ACTIVE_NON_STREAMING"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "ACTIVE_STREAMING"
-
-    return-object p0
-.end method
-
-.method public static synthetic x(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "VIDEO_MESSAGE"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "STICKER"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "EXTERNAL_GIF"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "AUDIO"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "FILE"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "PROFILE_PHOTO"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "PHOTO"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "VIDEO"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static synthetic y(I)Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "CONTACTS"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "NONE"
-
-    return-object p0
-
-    :cond_2
-    const-string p0, "ALL"
-
-    return-object p0
-.end method
-
-.method public static synthetic z(I)Ljava/lang/String;
-    .locals 0
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "FRAME"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "LOCAL"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "OFFLINE"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "RTMP"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "DASH"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "HLS"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "MP4"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

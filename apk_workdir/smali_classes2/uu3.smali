@@ -1,93 +1,97 @@
-.class public final enum Luu3;
-.super Ljava/lang/Enum;
+.class public final Luu3;
+.super Lhwb;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Luu3;
+# virtual methods
+.method public final A(Lov7;)V
+    .locals 5
 
-.field public static final enum b:Luu3;
+    check-cast p1, Lsr3;
 
-.field public static final enum c:Luu3;
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
 
-.field public static final synthetic o:[Luu3;
+    check-cast v0, Lqia;
 
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+    iget-object v1, p1, Lsr3;->Z:Lstb;
 
-    new-instance v0, Luu3;
+    sget-object v2, Lstb;->c:Lstb;
 
-    const-string v1, "CUSTOM"
+    if-ne v1, v2, :cond_1
 
-    const/4 v2, 0x0
+    const/16 v1, 0x40
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    int-to-float v1, v1
 
-    sput-object v0, Luu3;->a:Luu3;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    new-instance v1, Luu3;
+    move-result-object v2
 
-    const-string v2, "DEVICE"
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/4 v3, 0x1
+    move-result-object v2
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance v2, Luu3;
+    mul-float/2addr v1, v2
 
-    const-string v3, "ONEME"
+    invoke-static {v1}, Li8e;->I(F)I
 
-    const/4 v4, 0x2
+    const/16 v1, 0x50
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    int-to-float v1, v1
 
-    sput-object v2, Luu3;->b:Luu3;
+    invoke-static {}, Lkq4;->d()Landroid/content/res/Resources;
 
-    new-instance v3, Luu3;
+    move-result-object v2
 
-    const-string v4, "UNKNOWN"
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/4 v5, 0x3
+    move-result-object v2
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    sput-object v3, Luu3;->c:Luu3;
+    mul-float/2addr v1, v2
 
-    filled-new-array {v0, v1, v2, v3}, [Luu3;
+    invoke-static {v1}, Li8e;->I(F)I
 
-    move-result-object v0
+    move-result v1
 
-    sput-object v0, Luu3;->o:[Luu3;
+    iget v2, v0, Lqia;->K0:I
+
+    if-eq v2, v1, :cond_0
+
+    iput v1, v0, Lqia;->K0:I
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
+
+    :cond_1
+    iget-wide v1, p1, Lsr3;->a:J
+
+    iget-object v3, p1, Lsr3;->Y:Ljava/lang/CharSequence;
+
+    iget-object v4, p1, Lsr3;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lqia;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    iget-object v1, p1, Lsr3;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lqia;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lsr3;->c:Lcdf;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lqia;->setSubtitle(Ljava/lang/CharSequence;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Luu3;
-    .locals 1
-
-    const-class v0, Luu3;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Luu3;
-
-    return-object p0
-.end method
-
-.method public static values()[Luu3;
-    .locals 1
-
-    sget-object v0, Luu3;->o:[Luu3;
-
-    invoke-virtual {v0}, [Luu3;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Luu3;
-
-    return-object v0
 .end method

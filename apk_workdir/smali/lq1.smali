@@ -1,75 +1,51 @@
-.class public final synthetic Llq1;
-.super Ljava/lang/Object;
+.class public final Llq1;
+.super Lwy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lxe6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Luq1;
+.field public final synthetic Y:Lmq1;
 
-.field public final synthetic c:Ljava/lang/CharSequence;
+.field public Z:I
+
+.field public o:Lmq1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Luq1;Ljava/lang/CharSequence;I)V
+.method public constructor <init>(Lmq1;Lwy3;)V
     .locals 0
 
-    iput p3, p0, Llq1;->a:I
+    iput-object p1, p0, Llq1;->Y:Lmq1;
 
-    iput-object p1, p0, Llq1;->b:Luq1;
-
-    iput-object p2, p0, Llq1;->c:Ljava/lang/CharSequence;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Llq1;->a:I
+    iput-object p1, p0, Llq1;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget p1, p0, Llq1;->Z:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/high16 v0, -0x80000000
 
-    iget-object p1, p0, Llq1;->b:Luq1;
+    or-int/2addr p1, v0
 
-    packed-switch v0, :pswitch_data_0
+    iput p1, p0, Llq1;->Z:I
 
-    iget-object v0, p0, Llq1;->c:Ljava/lang/CharSequence;
+    iget-object p1, p0, Llq1;->Y:Lmq1;
 
-    invoke-static {p1, v0}, Luq1;->x(Luq1;Ljava/lang/CharSequence;)V
+    const-wide/16 v0, 0x0
 
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-virtual {p1, v0, v1, p0}, Lmq1;->e(JLwy3;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Llq1;->c:Ljava/lang/CharSequence;
-
-    invoke-static {p1, v0}, Luq1;->I(Luq1;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Llq1;->c:Ljava/lang/CharSequence;
-
-    invoke-static {p1, v0}, Luq1;->C(Luq1;Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

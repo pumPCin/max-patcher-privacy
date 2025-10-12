@@ -1,10 +1,10 @@
 .class public final Ld23;
-.super Lnz3;
+.super Lwy3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lm23;
+.field public final synthetic X:Lh23;
 
 .field public Y:I
 
@@ -12,12 +12,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lm23;Lnz3;)V
+.method public constructor <init>(Lh23;Lwy3;)V
     .locals 0
 
-    iput-object p1, p0, Ld23;->X:Lm23;
+    iput-object p1, p0, Ld23;->X:Lh23;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -37,9 +37,11 @@
 
     iput p1, p0, Ld23;->Y:I
 
-    iget-object p1, p0, Ld23;->X:Lm23;
+    iget-object p1, p0, Ld23;->X:Lh23;
 
-    invoke-virtual {p1, p0}, Lm23;->J(Lnz3;)Ljava/lang/Comparable;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lh23;->P(Lrr9;Lwy3;)Ljava/lang/Object;
 
     move-result-object p1
 

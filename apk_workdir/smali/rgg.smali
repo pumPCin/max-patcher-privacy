@@ -1,62 +1,27 @@
 .class public final Lrgg;
-.super Ljava/lang/Object;
+.super Lwgg;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lha0;
 
-.field public final synthetic b:Lvbg;
+.field public final c:I
+
+.field public final d:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lvbg;I)V
+.method public constructor <init>(Lto5;Lta0;Lha0;ILjava/lang/Throwable;)V
     .locals 0
 
-    iput p2, p0, Lrgg;->a:I
+    invoke-direct {p0, p1, p2}, Lwgg;-><init>(Lto5;Lta0;)V
 
-    iput-object p1, p0, Lrgg;->b:Lvbg;
+    iput-object p3, p0, Lrgg;->b:Lha0;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lrgg;->c:I
+
+    iput-object p5, p0, Lrgg;->d:Ljava/lang/Throwable;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lrgg;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lrgg;->b:Lvbg;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lrgg;->b:Lvbg;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    sget-object v0, Loyf;->a:Loyf;
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

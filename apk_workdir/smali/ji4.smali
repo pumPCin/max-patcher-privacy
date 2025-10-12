@@ -1,161 +1,465 @@
 .class public final Lji4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvi0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic b:Lki4;
+.field public Y:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/view/ViewPropertyAnimator;
+.field public a:Z
 
-.field public final synthetic d:Landroid/view/View;
+.field public b:Ljava/lang/Object;
 
-.field public final synthetic e:Lmi4;
+.field public c:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmi4;Lki4;Landroid/view/ViewPropertyAnimator;Landroid/view/View;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    iput p5, p0, Lji4;->a:I
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lji4;->e:Lmi4;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lji4;->b:Lki4;
+    .line 16
+    iput-boolean v0, p0, Lji4;->a:Z
 
-    iput-object p3, p0, Lji4;->c:Landroid/view/ViewPropertyAnimator;
-
-    iput-object p4, p0, Lji4;->d:Landroid/view/View;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    .line 17
+    iput-object p1, p0, Lji4;->Y:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public constructor <init>(Lwkc;Ltd6;)V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lji4;->b:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lji4;->c:Ljava/lang/Object;
+
+    .line 4
+    new-instance p1, Lv5c;
+
+    invoke-direct {p1}, Lv5c;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lji4;->o:Ljava/lang/Object;
+
+    .line 6
+    sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 7
+    invoke-static {}, Lcdd;->a()Lpcd;
+
+    move-result-object v0
+
+    .line 8
+    const-string v1, "unit is null"
+
+    invoke-static {p2, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 9
+    const-string p2, "scheduler is null"
+
+    invoke-static {v0, p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 10
+    new-instance p2, Li9a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, p1, v0, v1}, Li9a;-><init>(Lv5c;Lpcd;I)V
+
+    .line 11
+    invoke-static {}, Lyd;->a()Lpcd;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ls8a;->l(Lpcd;)Lpaa;
+
+    move-result-object p1
+
+    .line 12
+    new-instance p2, Lxce;
+
+    const/16 v0, 0x12
+
+    invoke-direct {p2, v0, p0}, Lxce;-><init>(ILjava/lang/Object;)V
+
+    .line 13
+    invoke-virtual {p1, p2}, Ls8a;->n(Lno3;)Lkn7;
+
+    move-result-object p1
+
+    .line 14
+    iput-object p1, p0, Lji4;->X:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Lcz1;)Lnah;
+    .locals 3
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1e
+
+    if-lt v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {}, Lx4;->f()Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcz1;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+    :try_end_0
+    .catch Ljava/lang/AssertionError; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "ZoomControl"
+
+    const-string v2, "AssertionError, fail to get camera characteristic."
+
+    invoke-static {v1, v2, v0}, Lnc6;->I(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lwd;
+
+    invoke-direct {v0, p0}, Lwd;-><init>(Lcz1;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Lx4f;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lx4f;->b:Ljava/lang/Object;
+
+    iput-object v1, v0, Lx4f;->o:Ljava/lang/Object;
+
+    iput-object p0, v0, Lx4f;->a:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+.method public b(I)Li0f;
+    .locals 5
 
-    iget p1, p0, Lji4;->a:I
+    iget-object v0, p0, Lji4;->c:Ljava/lang/Object;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast v0, Ljava/util/HashMap;
 
-    iget-object p1, p0, Lji4;->c:Landroid/view/ViewPropertyAnimator;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v0, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    move-result-object v1
 
-    iget-object v0, p0, Lji4;->d:Landroid/view/View;
+    check-cast v1, Li0f;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    if-eqz v1, :cond_0
 
-    const/4 p1, 0x0
+    return-object v1
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
+    :cond_0
+    iget-object v1, p0, Lji4;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+    check-cast v1, Ls84;
 
-    iget-object p1, p0, Lji4;->b:Lki4;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p1, Lki4;->b:Lnxc;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lji4;->e:Lmi4;
+    const-class v3, Lmt8;
 
-    invoke-virtual {v1, v0}, Luwc;->c(Lnxc;)V
+    if-eqz p1, :cond_5
 
-    iget-object v0, v1, Lmi4;->r:Ljava/util/ArrayList;
+    const/4 v4, 0x1
 
-    iget-object p1, p1, Lki4;->b:Lnxc;
+    if-eq p1, v4, :cond_4
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    const/4 v4, 0x2
 
-    invoke-virtual {v1}, Lmi4;->j()V
+    if-eq p1, v4, :cond_3
 
-    return-void
+    const/4 v4, 0x3
 
-    :pswitch_0
-    iget-object p1, p0, Lji4;->c:Landroid/view/ViewPropertyAnimator;
+    if-eq p1, v4, :cond_2
 
-    const/4 v0, 0x0
+    const/4 v2, 0x4
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+    if-ne p1, v2, :cond_1
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    new-instance v2, Lhi4;
 
-    iget-object v0, p0, Lji4;->d:Landroid/view/View;
+    invoke-direct {v2, p0, v1, v4}, Lhi4;-><init>(Ljava/lang/Object;Ls84;I)V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
+    goto :goto_1
 
-    const/4 p1, 0x0
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationX(F)V
+    const-string v1, "Unrecognized contentType: "
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+    invoke-static {p1, v1}, Lbk7;->e(ILjava/lang/String;)Ljava/lang/String;
 
-    iget-object p1, p0, Lji4;->b:Lki4;
+    move-result-object p1
 
-    iget-object v0, p1, Lki4;->a:Lnxc;
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lji4;->e:Lmi4;
+    throw v0
 
-    invoke-virtual {v1, v0}, Luwc;->c(Lnxc;)V
+    :cond_2
+    const-string v1, "androidx.media3.exoplayer.rtsp.RtspMediaSource$Factory"
 
-    iget-object v0, v1, Lmi4;->r:Ljava/util/ArrayList;
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    iget-object p1, p1, Lki4;->a:Lnxc;
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
-    invoke-virtual {v1}, Lmi4;->j()V
+    move-result-object v1
 
-    return-void
+    new-instance v3, Lii4;
 
-    nop
+    invoke-direct {v3, v2, v1}, Lii4;-><init>(ILjava/lang/Object;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    move-object v2, v3
+
+    goto :goto_1
+
+    :cond_3
+    const-class v2, Landroidx/media3/exoplayer/hls/HlsMediaSource$Factory;
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    new-instance v3, Lhi4;
+
+    invoke-direct {v3, v2, v1, v4}, Lhi4;-><init>(Ljava/lang/Object;Ls84;I)V
+
+    goto :goto_0
+
+    :cond_4
+    const-string v2, "androidx.media3.exoplayer.smoothstreaming.SsMediaSource$Factory"
+
+    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v2
+
+    new-instance v3, Lhi4;
+
+    invoke-direct {v3, v2, v1, v4}, Lhi4;-><init>(Ljava/lang/Object;Ls84;I)V
+
+    goto :goto_0
+
+    :cond_5
+    const-class v4, Landroidx/media3/exoplayer/dash/DashMediaSource$Factory;
+
+    invoke-virtual {v4, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v3
+
+    new-instance v4, Lhi4;
+
+    invoke-direct {v4, v3, v1, v2}, Lhi4;-><init>(Ljava/lang/Object;Ls84;I)V
+
+    move-object v2, v4
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v2
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+.method public c(Lvs1;Lw90;)V
+    .locals 2
 
-    iget p1, p0, Lji4;->a:I
+    iget-boolean v0, p0, Lji4;->a:Z
 
-    packed-switch p1, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    iget-object p1, p0, Lji4;->b:Lki4;
+    iget-object p2, p0, Lji4;->o:Ljava/lang/Object;
 
-    iget-object p1, p1, Lki4;->b:Lnxc;
+    move-object v0, p2
 
-    iget-object p1, p0, Lji4;->e:Lmi4;
+    check-cast v0, Lsah;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p2, p0, Lji4;->o:Ljava/lang/Object;
+
+    check-cast p2, Lsah;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {p2, v1}, Lsah;->f(F)V
+
+    iget-object p2, p0, Lji4;->o:Ljava/lang/Object;
+
+    check-cast p2, Lsah;
+
+    invoke-static {p2}, Lw90;->e(Lrah;)Lw90;
+
+    move-result-object p2
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0, p2}, Lji4;->d(Lw90;)V
+
+    new-instance p2, Landroidx/camera/core/CameraControl$OperationCanceledException;
+
+    const-string v0, "Camera is not active."
+
+    invoke-direct {p2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Lvs1;->d(Ljava/lang/Throwable;)Z
 
     return-void
 
-    :pswitch_0
-    iget-object p1, p0, Lji4;->b:Lki4;
+    :catchall_0
+    move-exception p1
 
-    iget-object p1, p1, Lki4;->a:Lnxc;
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget-object p1, p0, Lji4;->e:Lmi4;
+    throw p1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_0
+    iget-object v0, p0, Lji4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lnah;
+
+    iget p2, p2, Lw90;->a:F
+
+    invoke-interface {v0, p2, p1}, Lnah;->n(FLvs1;)V
+
+    iget-object p1, p0, Lji4;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkw1;
+
+    invoke-virtual {p1}, Lkw1;->A()J
+
+    return-void
+.end method
+
+.method public d(Lw90;)V
+    .locals 3
+
+    iget-object v0, p0, Lji4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lnr9;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_0
+
+    invoke-virtual {v0, p1}, Lxw7;->k(Ljava/lang/Object;)V
 
     return-void
 
-    nop
+    :cond_0
+    invoke-virtual {v0, p1}, Lxw7;->i(Ljava/lang/Object;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public e(Lnm3;)V
+    .locals 2
+
+    iget-object v0, p0, Lji4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lin6;
+
+    iget-object v0, v0, Lin6;->t0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v1, p0, Lji4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lxl;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqdh;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lqdh;->n(Lnm3;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public j(Lnm3;)V
+    .locals 3
+
+    iget-object v0, p0, Lji4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lin6;
+
+    iget-object v0, v0, Lin6;->w0:Lol9;
+
+    new-instance v1, Lpff;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p0, v2, p1}, Lpff;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

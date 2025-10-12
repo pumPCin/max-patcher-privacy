@@ -1,32 +1,11 @@
-.class public final synthetic Ldn5;
+.class public interface abstract Ldn5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lone/me/sdk/media/ffmpeg/FfmpegLibraryLoader;
-
 
 # virtual methods
-.method public final load(Ljava/lang/String;)V
-    .locals 1
+.method public abstract a()Ljava/lang/String;
+.end method
 
-    :try_start_0
-    const-string p1, "ffmpg"
-
-    invoke-static {p1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {}, Lone/me/sdk/media/ffmpeg/WebmConfig;->getLogger()Lwx9;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lwx9;->q(Ljava/lang/Throwable;)V
-
-    return-void
+.method public abstract b()Lvm5;
 .end method

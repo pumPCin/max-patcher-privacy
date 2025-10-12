@@ -1,34 +1,28 @@
 .class public final Lv55;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:Landroid/graphics/Bitmap;
+.field public X:I
 
-.field public Y:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public final synthetic w0:I
-
-.field public final synthetic x0:Lw55;
+.field public final synthetic Z:Lb65;
 
 
 # direct methods
-.method public constructor <init>(ILw55;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lb65;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lv55;->w0:I
-
-    iput-object p2, p0, Lv55;->x0:Lw55;
+    iput-object p1, p0, Lv55;->Z:Lb65;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +32,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Lku5;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -48,7 +42,7 @@
 
     check-cast p1, Lv55;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lv55;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -58,199 +52,467 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 2
 
     new-instance v0, Lv55;
 
-    iget v1, p0, Lv55;->w0:I
+    iget-object v1, p0, Lv55;->Z:Lb65;
 
-    iget-object v2, p0, Lv55;->x0:Lw55;
+    invoke-direct {v0, v1, p2}, Lv55;-><init>(Lb65;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, v2, p2}, Lv55;-><init>(ILw55;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lv55;->Z:Ljava/lang/Object;
+    iput-object p1, v0, Lv55;->Y:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 21
 
-    sget-object v0, Ly38;->o:Ly38;
+    move-object/from16 v0, p0
 
-    sget-object v1, Lf34;->a:Lf34;
+    iget v1, v0, Lv55;->X:I
 
-    iget v2, p0, Lv55;->Y:I
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x2
 
     const/4 v4, 0x1
 
-    if-eqz v2, :cond_1
+    sget-object v5, Lo24;->a:Lo24;
 
-    if-ne v2, v4, :cond_0
+    if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lv55;->X:Landroid/graphics/Bitmap;
+    if-eq v1, v4, :cond_1
 
-    iget-object v2, p0, Lv55;->Z:Ljava/lang/Object;
+    if-ne v1, v3, :cond_0
 
-    check-cast v2, Le34;
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_1
+    goto/16 :goto_d
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    throw v1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v1, v0, Lv55;->Y:Ljava/lang/Object;
 
-    iget-object p1, p0, Lv55;->Z:Ljava/lang/Object;
+    check-cast v1, Lku5;
 
-    move-object v2, p1
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    check-cast v2, Le34;
+    move-object/from16 v4, p1
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget v5, p0, Lv55;->w0:I
-
-    sget-object v6, Lox9;->j:Lqpa;
-
-    if-nez v6, :cond_2
-
-    goto :goto_0
+    goto/16 :goto_b
 
     :cond_2
-    invoke-virtual {v6, v0}, Lqpa;->b(Ly38;)Z
+    invoke-static/range {p1 .. p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result v7
+    iget-object v1, v0, Lv55;->Y:Ljava/lang/Object;
 
-    if-eqz v7, :cond_3
+    check-cast v1, Lku5;
 
-    const-string v7, "start extracting sprite by index: "
+    iget-object v6, v0, Lv55;->Z:Lb65;
 
-    invoke-static {v5, v7}, Lfl7;->e(ILjava/lang/String;)Ljava/lang/String;
+    iget-object v6, v6, Lb65;->c:Lawd;
 
-    move-result-object v5
+    iput-object v1, v0, Lv55;->Y:Ljava/lang/Object;
 
-    invoke-virtual {v6, v0, p1, v5, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iput v4, v0, Lv55;->X:I
 
-    :cond_3
+    iget-object v6, v6, Lawd;->b:Ljava/lang/Object;
+
+    check-cast v6, Ld65;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Lshd;->l()Lkv7;
+
+    move-result-object v7
+
+    const/4 v8, 0x0
+
+    move v10, v8
+
     :goto_0
-    iget p1, p0, Lv55;->w0:I
+    const/16 v9, 0x9
 
-    iget-object v5, p0, Lv55;->x0:Lw55;
+    if-ge v10, v9, :cond_13
 
-    iget-object v5, v5, Lw55;->b:Landroid/content/Context;
+    sget-object v9, Lkv9;->b:[[Ljava/lang/Object;
 
-    invoke-static {v5, p1}, Lbv0;->F(Landroid/content/Context;I)Landroid/graphics/Bitmap;
+    aget-object v9, v9, v10
 
-    move-result-object p1
+    array-length v11, v9
 
-    iget-object v5, p0, Lv55;->x0:Lw55;
-
-    iget-object v6, v5, Lw55;->a:Lys8;
-
-    iget-object v6, v6, Lys8;->a:Ljava/lang/Object;
-
-    check-cast v6, [Landroid/graphics/Bitmap;
-
-    iget v7, p0, Lv55;->w0:I
-
-    aput-object p1, v6, v7
-
-    iget-object v5, v5, Lw55;->d:Le8e;
-
-    new-instance v6, Ljava/lang/Integer;
-
-    invoke-direct {v6, v7}, Ljava/lang/Integer;-><init>(I)V
-
-    iput-object v2, p0, Lv55;->Z:Ljava/lang/Object;
-
-    iput-object p1, p0, Lv55;->X:Landroid/graphics/Bitmap;
-
-    iput v4, p0, Lv55;->Y:I
-
-    invoke-virtual {v5, v6, p0}, Le8e;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-ne v5, v1, :cond_4
-
-    return-object v1
-
-    :cond_4
-    move-object v1, p1
+    move v12, v8
 
     :goto_1
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ge v12, v11, :cond_12
 
-    move-result-object p1
+    aget-object v13, v9, v12
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    instance-of v14, v13, Ljava/lang/String;
 
-    move-result-object p1
+    if-eqz v14, :cond_5
 
-    iget v2, p0, Lv55;->w0:I
+    move v14, v12
 
-    sget-object v5, Lox9;->j:Lqpa;
+    move-object v12, v13
 
-    if-nez v5, :cond_5
+    check-cast v12, Ljava/lang/CharSequence;
 
-    goto :goto_3
+    invoke-static {v12}, Ls35;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v15
+
+    if-nez v15, :cond_4
+
+    move-object v15, v9
+
+    new-instance v9, Lu45;
+
+    check-cast v13, Ljava/lang/String;
+
+    invoke-virtual {v6, v13}, Ld65;->c(Ljava/lang/String;)Leje;
+
+    move-result-object v13
+
+    move-object/from16 v17, v15
+
+    const-wide/16 v15, 0x0
+
+    move-object/from16 v18, v17
+
+    const/16 v17, 0x28
+
+    move/from16 v19, v14
+
+    move-object v14, v13
+
+    const/4 v13, 0x0
+
+    move/from16 v20, v11
+
+    move v11, v4
+
+    move/from16 v4, v20
+
+    invoke-direct/range {v9 .. v17}, Lu45;-><init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JI)V
+
+    invoke-virtual {v7, v9}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    move/from16 p1, v8
+
+    goto/16 :goto_9
+
+    :cond_4
+    move/from16 v18, v11
+
+    move v11, v4
+
+    move/from16 v4, v18
+
+    move-object/from16 v18, v9
+
+    move/from16 v19, v14
+
+    move/from16 p1, v8
+
+    goto/16 :goto_8
 
     :cond_5
-    invoke-virtual {v5, v0}, Lqpa;->b(Ly38;)Z
+    move/from16 v18, v11
 
-    move-result v6
+    move v11, v4
 
-    if-eqz v6, :cond_7
+    move/from16 v4, v18
 
-    if-eqz v1, :cond_6
+    move-object/from16 v18, v9
+
+    move/from16 v19, v12
+
+    instance-of v9, v13, [Ljava/lang/Object;
+
+    if-eqz v9, :cond_3
+
+    check-cast v13, [Ljava/lang/Object;
+
+    aget-object v9, v13, v8
+
+    instance-of v9, v9, [Ljava/lang/Object;
+
+    if-eqz v9, :cond_c
+
+    move-object v9, v13
+
+    check-cast v9, [[Ljava/lang/String;
+
+    aget-object v9, v9, v8
+
+    aget-object v12, v9, v8
+
+    invoke-static {v12}, Ls35;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_6
+
+    move-object v9, v2
+
+    move/from16 p1, v8
+
+    goto/16 :goto_7
+
+    :cond_6
+    check-cast v13, [[Ljava/lang/Object;
+
+    array-length v9, v13
+
+    move v14, v8
+
+    move v15, v14
+
+    :goto_2
+    move/from16 p1, v8
+
+    if-ge v14, v9, :cond_7
+
+    aget-object v8, v13, v14
+
+    array-length v8, v8
+
+    add-int/2addr v15, v8
+
+    add-int/lit8 v14, v14, 0x1
+
+    move/from16 v8, p1
 
     goto :goto_2
 
-    :cond_6
-    const/4 v4, 0x0
+    :cond_7
+    new-instance v8, Ljava/util/ArrayList;
 
-    :goto_2
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v8, v15}, Ljava/util/ArrayList;-><init>(I)V
 
-    const-string v6, "finish extracting sprite by index: "
+    array-length v9, v13
 
-    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move/from16 v14, p1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :goto_3
+    if-ge v14, v9, :cond_8
 
-    const-string v2, " , sprite exist: "
+    aget-object v15, v13, v14
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v15}, Lc93;->R(Ljava/util/AbstractCollection;[Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    add-int/lit8 v14, v14, 0x1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_3
+
+    :cond_8
+    new-instance v13, Ljava/util/ArrayList;
+
+    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :cond_9
+    :goto_4
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_a
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v9
+
+    move-object v14, v9
+
+    check-cast v14, Ljava/lang/String;
+
+    invoke-static {v14}, Ls35;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_9
+
+    invoke-virtual {v13, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4
+
+    :cond_a
+    invoke-virtual {v13}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_b
+
+    :goto_5
+    move-object v9, v2
+
+    goto :goto_7
+
+    :cond_b
+    new-instance v9, Lu45;
+
+    invoke-virtual {v6, v12}, Ld65;->c(Ljava/lang/String;)Leje;
+
+    move-result-object v14
+
+    const-wide/16 v15, 0x0
+
+    const/16 v17, 0x20
+
+    invoke-direct/range {v9 .. v17}, Lu45;-><init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JI)V
+
+    goto :goto_7
+
+    :cond_c
+    move/from16 p1, v8
+
+    move-object v8, v13
+
+    check-cast v8, [Ljava/lang/String;
+
+    aget-object v12, v8, p1
+
+    invoke-static {v12}, Ls35;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_d
+
+    goto :goto_5
+
+    :cond_d
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    array-length v9, v13
+
+    move/from16 v14, p1
+
+    :goto_6
+    if-ge v14, v9, :cond_f
+
+    aget-object v15, v13, v14
+
+    move-object/from16 v16, v15
+
+    check-cast v16, Ljava/lang/String;
+
+    invoke-static/range {v16 .. v16}, Ls35;->b(Ljava/lang/CharSequence;)Z
+
+    move-result v16
+
+    if-nez v16, :cond_e
+
+    invoke-virtual {v8, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_e
+    add-int/lit8 v14, v14, 0x1
+
+    goto :goto_6
+
+    :cond_f
+    invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v9
+
+    if-eqz v9, :cond_10
+
+    goto :goto_5
+
+    :cond_10
+    new-instance v9, Lu45;
+
+    invoke-virtual {v6, v12}, Ld65;->c(Ljava/lang/String;)Leje;
+
+    move-result-object v14
+
+    const-wide/16 v15, 0x0
+
+    const/16 v17, 0x20
+
+    move-object v13, v8
+
+    invoke-direct/range {v9 .. v17}, Lu45;-><init>(IILjava/lang/CharSequence;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;JI)V
+
+    :goto_7
+    if-nez v9, :cond_11
+
+    :goto_8
+    move v8, v11
+
+    goto :goto_a
+
+    :cond_11
+    invoke-virtual {v7, v9}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :goto_9
+    add-int/lit8 v8, v11, 0x1
+
+    :goto_a
+    add-int/lit8 v12, v19, 0x1
+
+    move v11, v4
+
+    move v4, v8
+
+    move-object/from16 v9, v18
+
+    move/from16 v8, p1
+
+    goto/16 :goto_1
+
+    :cond_12
+    move v11, v4
+
+    move/from16 p1, v8
+
+    add-int/lit8 v10, v10, 0x1
+
+    goto/16 :goto_0
+
+    :cond_13
+    invoke-static {v7}, Lshd;->e(Ljava/util/List;)Lkv7;
+
+    move-result-object v4
+
+    if-ne v4, v5, :cond_14
+
+    goto :goto_c
+
+    :cond_14
+    :goto_b
+    iput-object v2, v0, Lv55;->Y:Ljava/lang/Object;
+
+    iput v3, v0, Lv55;->X:I
+
+    invoke-interface {v1, v4, v0}, Lku5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v5, v0, p1, v1, v3}, Lqpa;->c(Ly38;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-ne v1, v5, :cond_15
 
-    :cond_7
-    :goto_3
-    sget-object p1, Loyf;->a:Loyf;
+    :goto_c
+    return-object v5
 
-    return-object p1
+    :cond_15
+    :goto_d
+    sget-object v1, Laxf;->a:Laxf;
+
+    return-object v1
 .end method

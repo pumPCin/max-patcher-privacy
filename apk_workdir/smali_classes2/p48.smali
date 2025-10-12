@@ -1,6 +1,9 @@
 .class public final Lp48;
-.super Lbp;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbvb;
 
 
 # static fields
@@ -13,7 +16,7 @@
 
     new-instance v0, Lp48;
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lp48;->a:Lp48;
 
@@ -22,18 +25,93 @@
 
 
 # virtual methods
-.method public final b()Lbp7;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lp48;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final getItemId()J
     .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    const/16 v0, 0x200
 
-    move-result-object v0
+    int-to-long v0, v0
 
-    const-class v1, Lk70;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+.method public final h(Lov7;)Z
+    .locals 4
 
-    move-result-object v0
+    const/16 v0, 0x200
+
+    int-to-long v0, v0
+
+    invoke-interface {p1}, Lov7;->getItemId()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x5adaf6c
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/16 v0, 0x200
+
+    return v0
+.end method
+
+.method public final q(Lov7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lp48;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "LogoutItem"
 
     return-object v0
 .end method

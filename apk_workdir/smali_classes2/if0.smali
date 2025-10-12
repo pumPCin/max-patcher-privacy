@@ -1,80 +1,94 @@
-.class public final synthetic Lif0;
-.super Ljava/lang/Object;
+.class public final Lif0;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-.field public final synthetic b:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public final synthetic Y:Ljava/util/HashSet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;I)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lif0;->a:I
+    iput-object p1, p0, Lif0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iput-object p1, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+    iput-object p2, p0, Lif0;->Y:Ljava/util/HashSet;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ln24;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lif0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lif0;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lif0;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lif0;->a:I
+    new-instance p1, Lif0;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lif0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    iget-object v0, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+    iget-object v1, p0, Lif0;->Y:Ljava/util/HashSet;
 
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
+    invoke-direct {p1, v0, v1, p2}, Lif0;-><init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljava/util/HashSet;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    check-cast v0, Lzid;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()La5;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lif0;->X:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    const-class v1, Lq9h;
+    invoke-virtual {p1}, Lru/ok/tamtam/workmanager/BacklogWorker;->e()Ld8h;
 
-    invoke-virtual {v0, v1}, La5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ld8h;->g()Landroidx/work/impl/model/WorkersQueueDao;
 
-    check-cast v0, Lq9h;
+    move-result-object p1
 
-    return-object v0
+    iget-object v0, p0, Lif0;->Y:Ljava/util/HashSet;
 
-    :pswitch_0
-    iget-object v0, p0, Lif0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Ll8f;
-
-    move-result-object v0
-
-    check-cast v0, Lzid;
-
-    invoke-virtual {v0}, Lzid;->s()Lr8f;
+    invoke-static {v0}, Lw83;->B0(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v0
 
-    return-object v0
+    const/4 v1, 0x0
 
-    nop
+    invoke-interface {p1, v1, v0}, Landroidx/work/impl/model/WorkersQueueDao;->updateState(ILjava/util/List;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

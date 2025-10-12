@@ -1,23 +1,40 @@
 .class public final Lh3e;
-.super Lv2;
+.super Lqce;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lh3e;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final A(Lov7;)V
     .locals 2
 
-    new-instance v0, Lh3e;
+    instance-of v0, p1, Lbld;
 
-    const/16 v1, 0x8
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+    return-void
 
-    sput-object v0, Lh3e;->c:Lh3e;
+    :cond_0
+    iget-object v0, p0, Luvc;->a:Landroid/view/View;
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    check-cast p1, Lbld;
+
+    iget-object v1, p1, Lbld;->a:Lxcf;
+
+    invoke-virtual {v1, p0}, Lcdf;->a(Lqce;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Lbld;->c:Lbdf;
+
+    invoke-virtual {p1, p0}, Lcdf;->a(Lqce;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setTextBadge(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

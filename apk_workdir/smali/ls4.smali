@@ -1,85 +1,70 @@
-.class public abstract Lls4;
+.class public final Lls4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Future;
+
+
+# instance fields
+.field public final a:Lfs4;
+
 
 # direct methods
-.method public static a(Landroid/graphics/Rect;Ljava/util/List;)Landroid/view/DisplayCutout;
+.method public constructor <init>(Lfs4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lls4;->a:Lfs4;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final cancel(Z)Z
+    .locals 0
+
+    iget-object p1, p0, Lls4;->a:Lfs4;
+
+    invoke-interface {p1}, Lfs4;->f()V
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final get()Ljava/lang/Object;
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/graphics/Rect;",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;)",
-            "Landroid/view/DisplayCutout;"
-        }
-    .end annotation
 
-    new-instance v0, Landroid/view/DisplayCutout;
-
-    invoke-direct {v0, p0, p1}, Landroid/view/DisplayCutout;-><init>(Landroid/graphics/Rect;Ljava/util/List;)V
+    .line 1
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public static b(Landroid/view/DisplayCutout;)Ljava/util/List;
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/view/DisplayCutout;",
-            ")",
-            "Ljava/util/List<",
-            "Landroid/graphics/Rect;",
-            ">;"
-        }
-    .end annotation
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getBoundingRects()Ljava/util/List;
+    .line 2
+    const/4 p1, 0x0
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public static c(Landroid/view/DisplayCutout;)I
-    .locals 0
+.method public final isCancelled()Z
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetBottom()I
+    const/4 v0, 0x0
 
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
-.method public static d(Landroid/view/DisplayCutout;)I
-    .locals 0
+.method public final isDone()Z
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetLeft()I
+    const/4 v0, 0x0
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static e(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetRight()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static f(Landroid/view/DisplayCutout;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/DisplayCutout;->getSafeInsetTop()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method

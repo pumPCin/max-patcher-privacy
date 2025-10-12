@@ -1,434 +1,323 @@
 .class public final Ld48;
-.super Ljava/lang/Object;
+.super Lj7b;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static final i:Ld48;
 
-.field public final b:Ljava/lang/Object;
+.field public static final j:Ljava/lang/String;
 
-.field public volatile c:I
+.field public static final k:Lyn7;
 
-.field public d:Lrr;
+.field public static volatile l:Z
 
-.field public e:I
+.field public static volatile m:Z
 
-.field public f:Ljava/io/File;
-
-.field public g:I
-
-.field public final h:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-.field public final i:J
+.field public static final n:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ld48;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {v0}, Lj7b;-><init>()V
 
-    move-result-object p1
+    sput-object v0, Ld48;->i:Ld48;
 
-    if-eqz p1, :cond_0
+    const-class v0, Ld48;
 
-    iput-object p1, p0, Ld48;->a:Landroid/content/Context;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    new-instance p1, Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ld48;->j:Ljava/lang/String;
 
-    iput-object p1, p0, Ld48;->b:Ljava/lang/Object;
+    sget-object v0, Lo7b;->a:Lo7b;
 
-    const/4 p1, 0x1
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lo5;
 
-    iput p1, p0, Ld48;->c:I
+    move-result-object v0
 
-    iput p1, p0, Ld48;->e:I
+    const-class v1, Lp7b;
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentLinkedQueue;
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+    move-result-object v0
 
-    iput-object p1, p0, Ld48;->h:Ljava/util/concurrent/ConcurrentLinkedQueue;
+    sput-object v0, Ld48;->k:Lyn7;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 v0, 0x1
 
-    move-result-wide v0
+    sput-boolean v0, Ld48;->l:Z
 
-    iput-wide v0, p0, Ld48;->i:J
+    sput-boolean v0, Ld48;->m:Z
+
+    const-string v0, "login"
+
+    sput-object v0, Ld48;->n:Ljava/lang/String;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Required value was null."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
+.method public static d(Lc48;)V
+    .locals 4
 
-# virtual methods
-.method public final a(I)V
-    .locals 10
+    invoke-static {}, Ld48;->e()Lp7b;
 
-    iget v0, p0, Ld48;->c:I
+    move-result-object v0
 
-    invoke-static {v0, p1}, Lqw1;->b(II)I
+    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
-    if-ltz v0, :cond_0
+    if-nez v0, :cond_0
 
-    return-void
+    const-string v0, ""
 
     :cond_0
-    iget-object v0, p0, Ld48;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    monitor-enter v0
+    move-result v1
 
-    :try_start_0
-    iget v1, p0, Ld48;->c:I
+    if-nez v1, :cond_3
 
-    invoke-static {v1, p1}, Lqw1;->b(II)I
+    sget-object p0, Ld48;->j:Ljava/lang/String;
 
-    move-result v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v0, Lyt3;->n:Lhoa;
 
-    if-ltz v2, :cond_1
-
-    monitor-exit v0
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    iget-object v2, p0, Ld48;->a:Landroid/content/Context;
-
-    invoke-static {}, Lgh5;->r()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    const/4 v5, 0x0
-
-    if-eqz v4, :cond_2
-
-    const-string v3, "tracer"
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_2
-    new-instance v4, Ljava/lang/StringBuilder;
+    :cond_1
+    sget-object v1, Lr28;->Y:Lr28;
 
-    const-string v6, "tracer-"
-
-    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v6, 0x3a
-
-    const/16 v7, 0x2d
-
-    invoke-static {v3, v6, v7, v5}, Lgye;->Z(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    :goto_0
-    new-instance v4, Ljava/io/File;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-direct {v4, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string v2, "logs"
-
-    invoke-static {v4, v2}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    const-string v3, "a.log"
-
-    invoke-static {v2, v3}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v3
-
-    const-string v4, "b.log"
-
-    invoke-static {v2, v4}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v4
-
-    const-string v6, "stash-a.log"
-
-    invoke-static {v2, v6}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v6
-
-    const-string v7, "stash-b.log"
-
-    invoke-static {v2, v7}, Lqr5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-static {v1}, Lqw1;->u(I)I
-
-    move-result v1
-
-    const/4 v7, 0x3
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x2
-
-    if-eqz v1, :cond_8
-
-    if-eq v1, v8, :cond_5
-
-    if-ne v1, v9, :cond_4
-
-    sget-object v1, Lc48;->$EnumSwitchMapping$1:[I
-
-    invoke-static {p1}, Lqw1;->u(I)I
+    invoke-virtual {v0, v1}, Lhoa;->b(Lr28;)Z
 
     move-result v2
 
-    aget v1, v1, v2
+    if-eqz v2, :cond_2
 
-    if-ne v1, v7, :cond_3
+    const-string v2, "Invoked \'failMetric\', but traceId is null or empty!"
 
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
-    iput-object v1, p0, Ld48;->d:Lrr;
+    invoke-virtual {v0, v1, p0, v2, v3}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto/16 :goto_3
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_4
-
-    :cond_3
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string v1, "Unreachable code"
-
-    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :cond_4
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string v1, "Unreachable code"
-
-    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :cond_5
-    invoke-static {p1}, Lqw1;->u(I)I
-
-    move-result v1
-
-    if-eq v1, v9, :cond_7
-
-    if-ne v1, v7, :cond_6
-
-    filled-new-array {v6, v2}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    goto/16 :goto_3
-
-    :cond_6
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string v1, "Unreachable code"
-
-    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :cond_7
-    filled-new-array {v6, v2}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->l([Ljava/io/File;)Lrr;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ld48;->d:Lrr;
-
-    filled-new-array {v6, v2}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    goto :goto_3
-
-    :cond_8
-    invoke-static {p1}, Lqw1;->u(I)I
-
-    move-result v1
-
-    if-eq v1, v8, :cond_b
-
-    if-eq v1, v9, :cond_a
-
-    if-ne v1, v7, :cond_9
-
-    filled-new-array {v6, v2}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    filled-new-array {v3, v4}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    goto :goto_3
-
-    :cond_9
-    new-instance p1, Ljava/lang/AssertionError;
-
-    const-string v1, "Unreachable code"
-
-    invoke-direct {p1, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw p1
-
-    :cond_a
-    filled-new-array {v3, v4}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->l([Ljava/io/File;)Lrr;
-
-    move-result-object v1
-
-    iput-object v1, p0, Ld48;->d:Lrr;
-
-    filled-new-array {v3, v4}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    goto :goto_3
-
-    :cond_b
-    filled-new-array {v6, v2}, [Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lpid;->k([Ljava/io/File;)V
-
-    new-instance v1, Ln4b;
-
-    invoke-direct {v1, v3, v6}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v3, Ln4b;
-
-    invoke-direct {v3, v4, v2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v3}, [Ln4b;
-
-    move-result-object v1
-
-    :goto_1
-    if-ge v5, v9, :cond_d
-
-    aget-object v2, v1, v5
-
-    iget-object v3, v2, Ln4b;->a:Ljava/lang/Object;
-
-    check-cast v3, Ljava/io/File;
-
-    iget-object v2, v2, Ln4b;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/io/File;
-
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
-
-    move-result v4
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez v4, :cond_c
-
-    goto :goto_2
-
-    :cond_c
-    :try_start_2
-    invoke-virtual {v3, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_3
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    invoke-static {v2}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
-
-    :goto_2
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :cond_d
-    :goto_3
-    iput p1, p0, Ld48;->c:I
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit v0
-
+    :cond_2
+    :goto_0
     return-void
 
-    :goto_4
-    monitor-exit v0
+    :cond_3
+    sget-object v1, Ld48;->i:Ld48;
 
-    throw p1
+    iget-object v1, v1, Lj7b;->g:Lt6e;
+
+    new-instance v2, Lb7b;
+
+    invoke-direct {v2, v0, p0}, Lb7b;-><init>(Ljava/lang/String;La7b;)V
+
+    invoke-virtual {v1, v2}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public static e()Lp7b;
+    .locals 1
+
+    sget-object v0, Ld48;->k:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lp7b;
+
+    return-object v0
+.end method
+
+.method public static f()V
+    .locals 9
+
+    invoke-static {}, Ld48;->e()Lp7b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    move-object v5, v0
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Ld48;->j:Ljava/lang/String;
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lr28;->Y:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "Invoked \'onLoginHandled\', but traceId is null or empty!"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    sget-object v0, Ld48;->i:Ld48;
+
+    iget-object v8, v0, Lj7b;->g:Lt6e;
+
+    iget-object v0, v0, Lj7b;->b:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lp7b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v3
+
+    new-instance v1, Lc7b;
+
+    const/4 v2, 0x4
+
+    const-string v6, "login_receive_to_handle"
+
+    const/4 v7, 0x1
+
+    invoke-direct/range {v1 .. v7}, Lc7b;-><init>(IJLjava/lang/String;Ljava/lang/String;Z)V
+
+    invoke-virtual {v8, v1}, Lt6e;->h(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public static g()V
+    .locals 5
+
+    invoke-static {}, Ld48;->e()Lp7b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lp7b;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    sget-object v0, Ld48;->j:Ljava/lang/String;
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Lr28;->Y:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    const-string v3, "Invoked \'onLoginReceived\', but traceId is null or empty!"
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :cond_3
+    sget-object v1, Ld48;->i:Ld48;
+
+    const-string v2, "login_send_to_receive"
+
+    const/4 v3, 0x3
+
+    invoke-static {v1, v2, v3, v0}, Lj7b;->a(Lj7b;Ljava/lang/String;ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static h(Z)V
+    .locals 5
+
+    sget-object v0, Ld48;->j:Ljava/lang/String;
+
+    sget-object v1, Lyt3;->n:Lhoa;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lr28;->o:Lr28;
+
+    invoke-virtual {v1, v2}, Lhoa;->b(Lr28;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "Setting isFirstLogin="
+
+    invoke-static {v3, p0}, Ln29;->h(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Lhoa;->c(Lr28;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sput-boolean p0, Ld48;->m:Z
+
+    return-void
 .end method

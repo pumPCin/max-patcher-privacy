@@ -1,55 +1,168 @@
-.class public Lm02;
-.super Ll02;
+.class public final Lm02;
+.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final p(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+# instance fields
+.field public final a:Llqd;
+
+.field public final b:Lqw1;
+
+.field public final c:Ljava/lang/Object;
+
+.field public d:Z
+
+
+# direct methods
+.method public constructor <init>(Llqd;Lqw1;)V
     .locals 1
 
-    :try_start_0
-    iget-object v0, p0, Llo4;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object v0, p0, Lm02;->c:Ljava/lang/Object;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :catch_0
-    move-exception p1
+    iput-boolean v0, p0, Lm02;->d:Z
 
-    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+    iput-object p1, p0, Lm02;->a:Llqd;
 
-    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+    iput-object p2, p0, Lm02;->b:Lqw1;
 
-    throw v0
+    return-void
 .end method
 
-.method public final w(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    .locals 1
+
+# virtual methods
+.method public final onCameraAccessPrioritiesChanged()V
+    .locals 4
+
+    iget-object v0, p0, Lm02;->c:Ljava/lang/Object;
+
+    monitor-enter v0
 
     :try_start_0
-    iget-object v0, p0, Llo4;->b:Ljava/lang/Object;
+    iget-boolean v1, p0, Lm02;->d:Z
 
-    check-cast v0, Landroid/hardware/camera2/CameraManager;
+    if-nez v1, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Landroid/hardware/camera2/CameraManager;->openCamera(Ljava/lang/String;Ljava/util/concurrent/Executor;Landroid/hardware/camera2/CameraDevice$StateCallback;)V
-    :try_end_0
-    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v1, p0, Lm02;->a:Llqd;
+
+    new-instance v2, Low1;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, v3, p0}, Low1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
     return-void
 
-    :catch_0
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+.end method
+
+.method public final onCameraAvailable(Ljava/lang/String;)V
+    .locals 4
+
+    iget-object v0, p0, Lm02;->c:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lm02;->d:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lm02;->a:Llqd;
+
+    new-instance v2, Ll02;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p0, p1, v3}, Ll02;-><init>(Lm02;Ljava/lang/String;I)V
+
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
     move-exception p1
 
-    new-instance p2, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
+    goto :goto_1
 
-    invoke-direct {p2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-    throw p2
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public final onCameraUnavailable(Ljava/lang/String;)V
+    .locals 4
+
+    iget-object v0, p0, Lm02;->c:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lm02;->d:Z
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lm02;->a:Llqd;
+
+    new-instance v2, Ll02;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p0, p1, v3}, Ll02;-><init>(Lm02;Ljava/lang/String;I)V
+
+    invoke-virtual {v1, v2}, Llqd;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

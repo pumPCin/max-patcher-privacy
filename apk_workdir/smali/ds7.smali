@@ -1,40 +1,37 @@
 .class public final Lds7;
-.super Ljava/lang/Object;
+.super Lrc4;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ler7;
-
-.field public b:Lur7;
+# static fields
+.field public static final b:Lds7;
 
 
-# virtual methods
-.method public final a(Lcs7;Ldr7;)V
-    .locals 3
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-virtual {p2}, Ldr7;->a()Ler7;
+    new-instance v0, Lds7;
 
-    move-result-object v0
+    invoke-direct {v0}, Lrc4;-><init>()V
 
-    iget-object v1, p0, Lds7;->a:Ler7;
+    sput-object v0, Lds7;->b:Lds7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    const/4 v1, 0x0
 
-    move-result v2
+    new-array v1, v1, [Ljava/lang/String;
 
-    if-gez v2, :cond_0
+    const-string v2, "link"
 
-    move-object v1, v0
+    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    :cond_0
-    iput-object v1, p0, Lds7;->a:Ler7;
+    move-result-object v2
 
-    iget-object v1, p0, Lds7;->b:Lur7;
+    const/16 v3, 0xc
 
-    invoke-interface {v1, p1, p2}, Lur7;->d(Lcs7;Ldr7;)V
+    const-string v4, ":link-intercept"
 
-    iput-object v0, p0, Lds7;->a:Ler7;
+    invoke-static {v0, v4, v1, v2, v3}, Lrc4;->a(Lrc4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lmc4;
 
     return-void
 .end method

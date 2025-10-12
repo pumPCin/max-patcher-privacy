@@ -1,213 +1,171 @@
-.class public final Lzeh;
+.class public abstract Lzeh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ljava/util/HashMap;
 
-.field public final synthetic b:Lpch;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public static final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Ln0c;Lcom/google/android/gms/common/api/internal/BasePendingResult;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 13
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/HashMap;
 
-    iput v0, p0, Lzeh;->a:I
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lzeh;->a:Ljava/util/HashMap;
 
-    iput-object p1, p0, Lzeh;->c:Ljava/lang/Object;
+    new-instance v1, Ljava/util/HashMap;
 
-    iput-object p2, p0, Lzeh;->b:Lpch;
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v1, Lzeh;->b:Ljava/util/HashMap;
+
+    const/4 v2, -0x2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "An unknown error occurred."
+
+    invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v3, -0x3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const-string v4, "The API is not available on this device."
+
+    invoke-virtual {v0, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v4, -0x4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const-string v5, "The request that was sent by the app is malformed."
+
+    invoke-virtual {v0, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v5, -0x5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const-string v6, "The install is unavailable to this user or device."
+
+    invoke-virtual {v0, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v6, -0x6
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const-string v7, "The download/install is not allowed, due to the current device state (e.g. low battery, low disk space, ...)."
+
+    invoke-virtual {v0, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v7, -0x7
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const-string v8, "The install/update has not been (fully) downloaded yet."
+
+    invoke-virtual {v0, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v8, -0x8
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const-string v9, "The install is already in progress and there is no UI flow to resume."
+
+    invoke-virtual {v0, v8, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v9, -0x9
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const-string v10, "The Play Store app is either not installed or not the official version."
+
+    invoke-virtual {v0, v9, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v10, -0xa
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const-string v11, "The app is not owned by any user on this device. An app is \"owned\" if it has been acquired from Play."
+
+    invoke-virtual {v0, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v11, -0x64
+
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    const-string v12, "An internal error happened in the Play Store."
+
+    invoke-virtual {v0, v11, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_UNKNOWN"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_API_NOT_AVAILABLE"
+
+    invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INVALID_REQUEST"
+
+    invoke-virtual {v1, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_UNAVAILABLE"
+
+    invoke-virtual {v1, v5, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_NOT_ALLOWED"
+
+    invoke-virtual {v1, v6, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_DOWNLOAD_NOT_PRESENT"
+
+    invoke-virtual {v1, v7, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INSTALL_IN_PROGRESS"
+
+    invoke-virtual {v1, v8, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "ERROR_INTERNAL_ERROR"
+
+    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "ERROR_PLAY_STORE_NOT_FOUND"
+
+    invoke-virtual {v1, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "ERROR_APP_NOT_OWNED"
+
+    invoke-virtual {v1, v10, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v1, v11, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
-.end method
-
-.method public constructor <init>(Lpch;Ltbf;Llee;)V
-    .locals 0
-
-    const/4 p3, 0x1
-
-    iput p3, p0, Lzeh;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzeh;->b:Lpch;
-
-    iput-object p2, p0, Lzeh;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lcom/google/android/gms/common/api/Status;)V
-    .locals 5
-
-    iget v0, p0, Lzeh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p1, Lcom/google/android/gms/common/api/Status;->a:I
-
-    if-gtz v0, :cond_2
-
-    iget-object p1, p0, Lzeh;->b:Lpch;
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    check-cast p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;
-
-    iget-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->h:Z
-
-    const/4 v2, 0x1
-
-    xor-int/2addr v1, v2
-
-    const-string v3, "Result has already been consumed."
-
-    invoke-static {v3, v1}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    :try_start_0
-    iget-object v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->c:Ljava/util/concurrent/CountDownLatch;
-
-    const-wide/16 v3, 0x0
-
-    invoke-virtual {v1, v3, v4, v0}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lcom/google/android/gms/common/api/Status;->w0:Lcom/google/android/gms/common/api/Status;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->U(Lcom/google/android/gms/common/api/Status;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    sget-object v0, Lcom/google/android/gms/common/api/Status;->Y:Lcom/google/android/gms/common/api/Status;
-
-    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->U(Lcom/google/android/gms/common/api/Status;)V
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->V()Z
-
-    move-result v0
-
-    const-string v1, "Result is not ready."
-
-    invoke-static {v1, v0}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    iget-object v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_1
-    iget-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->h:Z
-
-    xor-int/2addr v1, v2
-
-    const-string v3, "Result has already been consumed."
-
-    invoke-static {v3, v1}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    invoke-virtual {p1}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->V()Z
-
-    move-result v1
-
-    const-string v3, "Result is not ready."
-
-    invoke-static {v3, v1}, Lhv0;->p(Ljava/lang/String;Z)V
-
-    iget-object v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f:Lz3d;
-
-    const/4 v3, 0x0
-
-    iput-object v3, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->f:Lz3d;
-
-    iput-boolean v2, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->h:Z
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object p1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->e:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-nez p1, :cond_1
-
-    invoke-static {v1}, Lhv0;->n(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzeh;->c:Ljava/lang/Object;
-
-    check-cast p1, Ltbf;
-
-    invoke-virtual {p1, v3}, Ltbf;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
-
-    :cond_2
-    iget-object v0, p0, Lzeh;->c:Ljava/lang/Object;
-
-    check-cast v0, Ltbf;
-
-    invoke-static {p1}, Lkjd;->r(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltbf;->a(Ljava/lang/Exception;)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lzeh;->c:Ljava/lang/Object;
-
-    check-cast p1, Ln0c;
-
-    iget-object p1, p1, Ln0c;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Map;
-
-    iget-object v0, p0, Lzeh;->b:Lpch;
-
-    check-cast v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

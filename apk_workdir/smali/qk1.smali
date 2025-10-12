@@ -1,5 +1,5 @@
 .class public final Lqk1;
-.super Lgl1;
+.super Lhl1;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lqk1;
 
-    invoke-direct {v0}, Lgl1;-><init>()V
+    invoke-direct {v0}, Lhl1;-><init>()V
 
     sput-object v0, Lqk1;->D:Lqk1;
 
@@ -47,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x460cc81d
+    const v0, -0x377eee04
 
     return v0
 .end method
@@ -55,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "OpenAddUserChatConfirmation"
+    const-string v0, "InviteToP2PCall"
 
     return-object v0
 .end method

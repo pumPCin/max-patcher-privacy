@@ -15,12 +15,16 @@
 .method public constructor <init>(IIIJLjava/lang/String;)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
     iput-object p6, p0, Ld;->c:Ljava/lang/String;
 
+    .line 5
     iput p1, p0, Ld;->b:I
 
+    .line 6
     iput p2, p0, Ld;->a:I
 
     return-void
@@ -29,6 +33,7 @@
 .method public synthetic constructor <init>(IILjava/lang/String;)V
     .locals 0
 
+    .line 1
     iput p1, p0, Ld;->a:I
 
     iput p2, p0, Ld;->b:I
@@ -43,6 +48,7 @@
 .method public synthetic constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
+    .line 2
     iput-object p1, p0, Ld;->c:Ljava/lang/String;
 
     iput p2, p0, Ld;->a:I

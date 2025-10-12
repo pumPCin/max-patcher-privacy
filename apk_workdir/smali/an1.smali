@@ -1,230 +1,121 @@
-.class public final Lan1;
-.super Ljava/lang/Object;
+.class public final enum Lan1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic X:[Lan1;
+
+.field public static final synthetic Y:Laa5;
+
+.field public static final enum a:Lan1;
+
+.field public static final enum b:Lan1;
+
+.field public static final enum c:Lan1;
+
+.field public static final enum o:Lan1;
+
+
 # direct methods
-.method public static final a(I)Ljava/lang/String;
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 8
 
-    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->y0:Lan1;
+    new-instance v0, Lan1;
 
-    sget v0, Lqtd;->a:I
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    invoke-static {p0}, Lan1;->b(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    if-ne p0, v0, :cond_1
-
-    sget p0, Lqtd;->g:I
-
-    invoke-static {p0}, Lan1;->b(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    sget-object v1, Lone/me/calls/impl/service/CallServiceImpl;->A0:Ljava/util/Set;
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_2
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    sget v3, Lqtd;->g:I
-
-    if-eq v2, v3, :cond_2
-
-    and-int v3, p0, v2
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v2}, Lan1;->b(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v4, 0x0
-
-    const/16 v5, 0x3e
-
-    const-string v1, "|"
+    const-string v1, "CALL"
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static/range {v0 .. v5}, Le93;->s0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxe6;I)Ljava/lang/String;
+    sput-object v0, Lan1;->a:Lan1;
 
-    move-result-object p0
+    new-instance v1, Lan1;
 
-    return-object p0
-.end method
+    const-string v2, "STOP"
 
-.method public static b(I)Ljava/lang/String;
-    .locals 2
+    const/4 v3, 0x1
 
-    sget v0, Lqtd;->b:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, v0, :cond_0
+    sput-object v1, Lan1;->b:Lan1;
 
-    const-string p0, "mediaPlayback"
+    new-instance v2, Lan1;
 
-    return-object p0
+    const-string v3, "UPDATE_ACTIVE_NOTIFICATION"
 
-    :cond_0
-    sget v0, Lqtd;->g:I
+    const/4 v4, 0x2
 
-    if-ne p0, v0, :cond_1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string p0, "manifest"
+    new-instance v3, Lan1;
 
-    return-object p0
+    const-string v4, "RESTART_FOREGROUND"
 
-    :cond_1
-    sget v0, Lqtd;->d:I
+    const/4 v5, 0x3
 
-    if-ne p0, v0, :cond_2
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string p0, "mediaProjection"
+    sput-object v3, Lan1;->c:Lan1;
 
-    return-object p0
+    new-instance v4, Lan1;
 
-    :cond_2
-    sget v0, Lqtd;->f:I
+    const-string v5, "UPDATE_INCOMING_NOTIFICATION"
 
-    if-ne p0, v0, :cond_3
+    const/4 v6, 0x4
 
-    const-string p0, "microphone"
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-object p0
+    new-instance v5, Lan1;
 
-    :cond_3
-    sget v0, Lqtd;->e:I
+    const-string v6, "RESTART_FOREGROUND_SCREENSHARING"
 
-    if-ne p0, v0, :cond_4
+    const/4 v7, 0x5
 
-    const-string p0, "camera"
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-object p0
+    sput-object v5, Lan1;->o:Lan1;
 
-    :cond_4
-    if-nez p0, :cond_5
-
-    const-string p0, "none"
-
-    return-object p0
-
-    :cond_5
-    const-string v0, "unknown("
-
-    const-string v1, ")"
-
-    invoke-static {p0, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c()Landroid/os/Handler;
-    .locals 2
-
-    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->z0:Landroid/os/Handler;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    sput-object v0, Lone/me/calls/impl/service/CallServiceImpl;->z0:Landroid/os/Handler;
-
-    :cond_0
-    sget-object v0, Lone/me/calls/impl/service/CallServiceImpl;->z0:Landroid/os/Handler;
-
-    if-eqz v0, :cond_1
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Required value was null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static d(Landroid/content/Context;)V
-    .locals 4
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lone/me/calls/impl/service/CallServiceImpl;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "ACTION"
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    filled-new-array/range {v0 .. v5}, [Lan1;
 
     move-result-object v0
 
-    invoke-static {}, Lan1;->c()Landroid/os/Handler;
+    sput-object v0, Lan1;->X:[Lan1;
 
-    move-result-object v1
+    new-instance v1, Laa5;
 
-    new-instance v2, Lid;
+    invoke-direct {v1, v0}, Laa5;-><init>([Ljava/lang/Enum;)V
 
-    const/16 v3, 0x14
-
-    invoke-direct {v2, p0, v3, v0}, Lid;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sput-object v1, Lan1;->Y:Laa5;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lan1;
+    .locals 1
+
+    const-class v0, Lan1;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lan1;
+
+    return-object p0
+.end method
+
+.method public static values()[Lan1;
+    .locals 1
+
+    sget-object v0, Lan1;->X:[Lan1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lan1;
+
+    return-object v0
 .end method

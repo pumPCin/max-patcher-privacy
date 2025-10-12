@@ -1,75 +1,149 @@
 .class public final Lkh6;
-.super Lmh6;
+.super Llh6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lkh6;
+# instance fields
+.field public final E0:Lki6;
 
-.field public static final b:Ljava/util/List;
+.field public F0:Lone/me/sdk/gallery/view/NumericCheckButton;
 
-.field public static final c:Lch6;
+.field public final G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+.field public final H0:Lone/me/sdk/gallery/view/VideoInfoTextView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/view/View;Lki6;)V
+    .locals 5
 
-    new-instance v0, Lkh6;
+    invoke-direct {p0, p1}, Luvc;-><init>(Landroid/view/View;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkh6;->E0:Lki6;
 
-    sput-object v0, Lkh6;->a:Lkh6;
+    sget v0, Lwra;->e:I
 
-    sget-object v0, Leh6;->e:Leh6;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    sput-object v0, Lkh6;->b:Ljava/util/List;
+    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    new-instance v0, Lch6;
+    iput-object v0, p0, Lkh6;->G0:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    sget v1, Lita;->c:I
+    sget v1, Lwra;->c:I
 
-    invoke-direct {v0, v1}, Lch6;-><init>(I)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    sput-object v0, Lkh6;->c:Lch6;
+    move-result-object v1
 
+    check-cast v1, Landroid/view/ViewStub;
+
+    sget v2, Lwra;->f:I
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    iput-object v2, p0, Lkh6;->H0:Lone/me/sdk/gallery/view/VideoInfoTextView;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    sget v3, Lv7d;->X:I
+
+    invoke-static {v2, v3}, Lyx3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v3, Lfk4;->e0:Lfk4;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    sget-object v4, Lh9f;->a0:Lh4f;
+
+    invoke-static {v3}, Luce;->e0(Landroid/content/Context;)Lh9f;
+
+    move-result-object v3
+
+    :goto_0
+    iget v3, v3, Lh9f;->w:I
+
+    const v4, 0x3e99999a    # 0.3f
+
+    invoke-static {v3, v4}, Li8e;->N(IF)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setTint(I)V
+
+    invoke-virtual {v0}, Lwx4;->getHierarchy()Ltx4;
+
+    move-result-object v3
+
+    check-cast v3, Lwi6;
+
+    if-eqz v3, :cond_1
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v2, v4}, Lwi6;->i(Landroid/graphics/drawable/Drawable;I)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    sget-object p1, Lfk4;->e0:Lfk4;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v2, Lh9f;->a0:Lh4f;
+
+    invoke-static {p1}, Luce;->e0(Landroid/content/Context;)Lh9f;
+
+    move-result-object p1
+
+    :goto_1
+    iget p1, p1, Lh9f;->H:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object p1, p2, Lki6;->b:Log6;
+
+    iget-boolean p1, p1, Log6;->c:Z
+
+    if-eqz p1, :cond_3
+
+    new-instance p1, Ljh6;
+
+    invoke-direct {p1, p0}, Ljh6;-><init>(Lkh6;)V
+
+    invoke-virtual {v1, p1}, Landroid/view/ViewStub;->setOnInflateListener(Landroid/view/ViewStub$OnInflateListener;)V
+
+    invoke-virtual {v1}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
+
+    :cond_3
     return-void
-.end method
-
-
-# virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
-
-    return-object v0
-.end method
-
-.method public final c()Lq3;
-    .locals 1
-
-    sget-object v0, Lkh6;->c:Lch6;
-
-    return-object v0
-.end method
-
-.method public final d()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lkh6;->b:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final f()Lch6;
-    .locals 1
-
-    sget-object v0, Lkh6;->c:Lch6;
-
-    return-object v0
 .end method

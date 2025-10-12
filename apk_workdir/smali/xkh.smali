@@ -1,3 +1,6 @@
 .class public final Lxkh;
-.super Ljava/lang/Exception;
+.super Lidh;
 .source "SourceFile"
+
+# interfaces
+.implements Lelh;

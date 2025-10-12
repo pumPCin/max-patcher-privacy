@@ -3,37 +3,27 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyz5;
-.implements Ls8c;
+.implements Lbz5;
+.implements Lfs4;
 
 
 # instance fields
-.field public X:I
+.field public final a:Llde;
 
-.field public final Y:Ljava/util/Collection;
+.field public b:Lwxe;
 
-.field public final Z:Lmf6;
+.field public c:Z
 
-.field public final a:Lcze;
-
-.field public b:Leze;
-
-.field public c:Ls8c;
-
-.field public o:Z
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcze;Lwu9;Ljava/util/Collection;)V
+.method public constructor <init>(Llde;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwy5;->a:Lcze;
-
-    iput-object p2, p0, Lwy5;->Z:Lmf6;
-
-    iput-object p3, p0, Lwy5;->Y:Ljava/util/Collection;
+    iput-object p1, p0, Lwy5;->a:Llde;
 
     return-void
 .end method
@@ -41,291 +31,177 @@
 
 # virtual methods
 .method public final b()V
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Lwy5;->o:Z
+    iget-boolean v0, p0, Lwy5;->c:Z
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
+    return-void
+
+    :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lwy5;->o:Z
+    iput-boolean v0, p0, Lwy5;->c:Z
 
-    iget-object v0, p0, Lwy5;->Y:Ljava/util/Collection;
+    sget-object v0, Lyxe;->a:Lyxe;
 
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+    iput-object v0, p0, Lwy5;->b:Lwxe;
 
-    iget-object v0, p0, Lwy5;->a:Lcze;
+    iget-object v0, p0, Lwy5;->o:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lcze;->b()V
+    const/4 v1, 0x0
 
-    :cond_0
-    return-void
-.end method
+    iput-object v1, p0, Lwy5;->o:Ljava/lang/Object;
 
-.method public final cancel()V
-    .locals 1
+    if-nez v0, :cond_1
 
-    iget-object v0, p0, Lwy5;->b:Leze;
-
-    invoke-interface {v0}, Leze;->cancel()V
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    iget-object v0, p0, Lwy5;->Y:Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
-
-    iget-object v0, p0, Lwy5;->c:Ls8c;
-
-    invoke-interface {v0}, Lpde;->clear()V
-
-    return-void
-.end method
-
-.method public final d(Leze;)V
-    .locals 1
-
-    iget-object v0, p0, Lwy5;->b:Leze;
-
-    invoke-static {v0, p1}, Lgze;->f(Leze;Leze;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iput-object p1, p0, Lwy5;->b:Leze;
-
-    instance-of v0, p1, Ls8c;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ls8c;
-
-    iput-object p1, p0, Lwy5;->c:Ls8c;
-
-    :cond_0
-    iget-object p1, p0, Lwy5;->a:Lcze;
-
-    invoke-interface {p1, p0}, Lcze;->d(Leze;)V
+    move-object v0, v1
 
     :cond_1
-    return-void
-.end method
+    iget-object v1, p0, Lwy5;->a:Llde;
 
-.method public final f(Ljava/lang/Object;)V
-    .locals 3
+    if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lwy5;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget v0, p0, Lwy5;->X:I
-
-    iget-object v1, p0, Lwy5;->a:Lcze;
-
-    if-nez v0, :cond_2
-
-    :try_start_0
-    iget-object v0, p0, Lwy5;->Z:Lmf6;
-
-    invoke-interface {v0, p1}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v2, "The keySelector returned a null key"
-
-    invoke-static {v0, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lwy5;->Y:Ljava/util/Collection;
-
-    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1, p1}, Lcze;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    iget-object p1, p0, Lwy5;->b:Leze;
-
-    const-wide/16 v0, 0x1
-
-    invoke-interface {p1, v0, v1}, Leze;->i(J)V
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lwy5;->b:Leze;
-
-    invoke-interface {v0}, Leze;->cancel()V
-
-    invoke-virtual {p0, p1}, Lwy5;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v1, v0}, Llde;->a(Ljava/lang/Object;)V
 
     return-void
 
     :cond_2
-    const/4 p1, 0x0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    invoke-interface {v1, p1}, Lcze;->f(Ljava/lang/Object;)V
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 1
-
-    iget-object v0, p0, Lwy5;->b:Leze;
-
-    invoke-interface {v0, p1, p2}, Leze;->i(J)V
+    invoke-interface {v1, v0}, Llde;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public final isEmpty()Z
-    .locals 1
+.method public final d(Lwxe;)V
+    .locals 2
 
-    iget-object v0, p0, Lwy5;->c:Ls8c;
+    iget-object v0, p0, Lwy5;->b:Lwxe;
 
-    invoke-interface {v0}, Lpde;->isEmpty()Z
+    invoke-static {v0, p1}, Lyxe;->e(Lwxe;Lwxe;)Z
 
     move-result v0
 
-    return v0
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lwy5;->b:Lwxe;
+
+    iget-object v0, p0, Lwy5;->a:Llde;
+
+    invoke-interface {v0, p0}, Llde;->c(Lfs4;)V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    invoke-interface {p1, v0, v1}, Lwxe;->h(J)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public final l(I)I
-    .locals 2
+.method public final e(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Lwy5;->c:Ls8c;
+    iget-boolean v0, p0, Lwy5;->c:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lwy5;->o:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    and-int/lit8 v1, p1, 0x4
+    const/4 p1, 0x1
 
-    if-nez v1, :cond_1
+    iput-boolean p1, p0, Lwy5;->c:Z
 
-    invoke-interface {v0, p1}, Lr8c;->l(I)I
+    iget-object p1, p0, Lwy5;->b:Lwxe;
 
-    move-result p1
+    invoke-interface {p1}, Lwxe;->cancel()V
 
-    if-eqz p1, :cond_0
+    sget-object p1, Lyxe;->a:Lyxe;
 
-    iput p1, p0, Lwy5;->X:I
+    iput-object p1, p0, Lwy5;->b:Lwxe;
 
-    :cond_0
-    return p1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Sequence contains more than one element!"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lwy5;->a:Llde;
+
+    invoke-interface {v0, p1}, Llde;->onError(Ljava/lang/Throwable;)V
+
+    return-void
 
     :cond_1
-    const/4 p1, 0x0
+    iput-object p1, p0, Lwy5;->o:Ljava/lang/Object;
 
-    return p1
+    return-void
 .end method
 
-.method public final offer(Ljava/lang/Object;)Z
+.method public final f()V
     .locals 1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    iget-object v0, p0, Lwy5;->b:Lwxe;
 
-    const-string v0, "Should not be called!"
+    invoke-interface {v0}, Lwxe;->cancel()V
 
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lyxe;->a:Lyxe;
 
-    throw p1
+    iput-object v0, p0, Lwy5;->b:Lwxe;
+
+    return-void
+.end method
+
+.method public final g()Z
+    .locals 2
+
+    iget-object v0, p0, Lwy5;->b:Lwxe;
+
+    sget-object v1, Lyxe;->a:Lyxe;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public final onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-boolean v0, p0, Lwy5;->o:Z
+    iget-boolean v0, p0, Lwy5;->c:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lnu3;->r(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lwee;->y(Ljava/lang/Throwable;)V
 
     return-void
 
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lwy5;->o:Z
+    iput-boolean v0, p0, Lwy5;->c:Z
 
-    iget-object v0, p0, Lwy5;->Y:Ljava/util/Collection;
+    sget-object v0, Lyxe;->a:Lyxe;
 
-    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+    iput-object v0, p0, Lwy5;->b:Lwxe;
 
-    iget-object v0, p0, Lwy5;->a:Lcze;
+    iget-object v0, p0, Lwy5;->a:Llde;
 
-    invoke-interface {v0, p1}, Lcze;->onError(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Llde;->onError(Ljava/lang/Throwable;)V
 
     return-void
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 3
-
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lwy5;->c:Ls8c;
-
-    invoke-interface {v0}, Lpde;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lwy5;->Z:Lmf6;
-
-    invoke-interface {v1, v0}, Lmf6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "The keySelector returned a null key"
-
-    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    iget-object v2, p0, Lwy5;->Y:Ljava/util/Collection;
-
-    invoke-interface {v2, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, p0, Lwy5;->X:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lwy5;->b:Leze;
-
-    const-wide/16 v1, 0x1
-
-    invoke-interface {v0, v1, v2}, Leze;->i(J)V
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object v0
 .end method

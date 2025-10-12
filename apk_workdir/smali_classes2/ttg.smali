@@ -1,181 +1,148 @@
-.class public final synthetic Lttg;
-.super Ljava/lang/Object;
+.class public final Lttg;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Lje6;
 
 
-# static fields
-.field public static final a:Lttg;
+# instance fields
+.field public X:I
 
-.field private static final descriptor:Ldsd;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lutg;
+
+.field public final synthetic r0:Lxtg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lutg;Lxtg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lttg;
+    iput-object p1, p0, Lttg;->Z:Lutg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lttg;->r0:Lxtg;
 
-    sput-object v0, Lttg;->a:Lttg;
+    const/4 p1, 0x2
 
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryUnavailableResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "available"
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lttg;->descriptor:Ldsd;
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Lttg;->descriptor:Ldsd;
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lttg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    const/4 v1, 0x1
+    check-cast p1, Lttg;
 
-    const/4 v2, 0x0
+    sget-object p2, Laxf;->a:Laxf;
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, p2}, Lttg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move v4, v1
-
-    move v5, v2
-
-    move v6, v5
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_2
-
-    if-eqz v7, :cond_1
-
-    if-ne v7, v1, :cond_0
-
-    invoke-virtual {p1, v0, v1}, Lp8;->p(Ldsd;I)Z
-
-    move-result v6
-
-    or-int/lit8 v5, v5, 0x2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
-
-    new-instance p1, Lvtg;
-
-    invoke-direct {p1, v3, v5, v6}, Lvtg;-><init>(Ljava/lang/String;IZ)V
+    move-result-object p1
 
     return-object p1
 .end method
 
-.method public final b(Le04;Ljava/lang/Object;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 3
 
-    check-cast p2, Lvtg;
+    new-instance v0, Lttg;
 
-    sget-object v0, Lttg;->descriptor:Ldsd;
+    iget-object v1, p0, Lttg;->Z:Lutg;
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    iget-object v2, p0, Lttg;->r0:Lxtg;
 
-    move-result-object p1
+    invoke-direct {v0, v1, v2, p2}, Lttg;-><init>(Lutg;Lxtg;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p2, Lvtg;->a:Ljava/lang/String;
+    iput-object p1, v0, Lttg;->Y:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0, v2, v1}, Le04;->l(Ldsd;ILjava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lttg;->X:I
 
     const/4 v1, 0x1
 
-    iget-boolean p2, p2, Lvtg;->b:Z
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p1, v0, v1, p2}, Le04;->e(Ldsd;IZ)V
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Le04;->m()V
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public final c()[Lum7;
-    .locals 3
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v0, 0x2
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    new-array v0, v0, [Lum7;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Luxe;->a:Luxe;
+    throw p1
 
-    const/4 v2, 0x0
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    aput-object v1, v0, v2
+    iget-object p1, p0, Lttg;->Y:Ljava/lang/Object;
 
-    sget-object v1, Lkq0;->a:Lkq0;
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lttg;->Z:Lutg;
 
-    aput-object v1, v0, v2
+    invoke-static {v0, p1}, Lutg;->e(Lutg;Ljava/lang/Throwable;)Loj7;
+
+    move-result-object v4
+
+    iget-object p1, v0, Lutg;->c:Lyn7;
+
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v2, p1
+
+    check-cast v2, Lwb3;
+
+    iget-object v3, v0, Lutg;->e:Lfu0;
+
+    iget-object p1, p0, Lttg;->r0:Lxtg;
+
+    iget-object v6, p1, Lxtg;->a:Ljava/lang/String;
+
+    iput v1, p0, Lttg;->X:I
+
+    sget-object v5, Lktg;->a:Lktg;
+
+    move-object v7, p0
+
+    invoke-virtual/range {v2 .. v7}, Lwb3;->a(Ls62;Loj7;Ldwg;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
-.end method
 
-.method public final d()Ldsd;
-    .locals 1
+    :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
-    sget-object v0, Lttg;->descriptor:Ldsd;
-
-    return-object v0
+    return-object p1
 .end method

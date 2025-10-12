@@ -1,107 +1,131 @@
 .class public final Lxle;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Ltm7;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljt4;
-
-.field public final b:Ljt4;
-
-.field public final c:Ljt4;
-
-.field public final d:Ljt4;
+.field public final synthetic X:Lcme;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lcme;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lt5c;
+    iput-object p1, p0, Lxle;->X:Lcme;
 
-    const-class v1, Lxle;
+    const/4 p1, 0x2
 
-    const-string v2, "messageController"
-
-    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lxxc;->a:Lyxc;
-
-    const-string v3, "workerService"
-
-    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
-
-    move-result-object v2
-
-    new-instance v3, Lt5c;
-
-    const-string v5, "fileAttachUploader"
-
-    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lt5c;
-
-    const-string v6, "clientPrefs"
-
-    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Ltm7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lxle;->e:[Ltm7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lxle;->f:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljt4;Ljt4;Ljt4;Ljt4;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ln24;
 
-    iput-object p1, p0, Lxle;->a:Ljt4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lxle;->b:Ljt4;
+    invoke-virtual {p0, p1, p2}, Lxle;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-object p3, p0, Lxle;->c:Ljt4;
+    move-result-object p1
 
-    iput-object p4, p0, Lxle;->d:Ljt4;
+    check-cast p1, Lxle;
 
-    return-void
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lxle;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lxle;
+
+    iget-object v0, p0, Lxle;->X:Lcme;
+
+    invoke-direct {p1, v0, p2}, Lxle;-><init>(Lcme;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxle;->X:Lcme;
+
+    iget-object v0, p1, Lcme;->w0:Lhne;
+
+    invoke-static {}, Lshd;->l()Lkv7;
+
+    move-result-object v1
+
+    new-instance v2, Lr34;
+
+    sget v3, Lzua;->s:I
+
+    sget v4, Ll7d;->a2:I
+
+    sget v5, Lz7d;->x:I
+
+    new-instance v6, Lxcf;
+
+    invoke-direct {v6, v5}, Lxcf;-><init>(I)V
+
+    invoke-direct {v2, v3, v4, v6}, Lr34;-><init>(IILxcf;)V
+
+    invoke-virtual {v1, v2}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p1, Lcme;->c:Lsrd;
+
+    check-cast p1, Lohd;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lru/ok/tamtam/android/prefs/PmsKey;->channels-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v2, v3}, Lohd;->j(Ljava/lang/Enum;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Lr34;
+
+    sget v2, Lzua;->r:I
+
+    sget v3, Lpra;->j:I
+
+    sget v4, Lz7d;->R:I
+
+    new-instance v5, Lxcf;
+
+    invoke-direct {v5, v4}, Lxcf;-><init>(I)V
+
+    invoke-direct {p1, v2, v3, v5}, Lr34;-><init>(IILxcf;)V
+
+    invoke-virtual {v1, p1}, Lkv7;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    invoke-static {v1}, Lshd;->e(Ljava/util/List;)Lkv7;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lhne;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

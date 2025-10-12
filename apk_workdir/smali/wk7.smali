@@ -1,262 +1,542 @@
-.class public abstract Lwk7;
+.class public final Lwk7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:Lvk7;
+# interfaces
+.implements Lo8a;
+.implements Ls3g;
 
 
 # instance fields
-.field public final a:Lzk7;
+.field public final a:Z
 
-.field public final b:Li25;
+.field public final b:Landroid/util/JsonWriter;
 
-.field public final c:Leqd;
+.field public final c:Ljava/util/Map;
+
+.field public final d:Ljava/util/Map;
+
+.field public final e:Ln8a;
+
+.field public final f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lvk7;
-
-    new-instance v1, Lzk7;
-
-    const/4 v8, 0x1
-
-    const/4 v2, 0x3
-
-    const-string v3, "    "
-
-    const-string v4, "type"
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x1
-
-    invoke-direct/range {v1 .. v8}, Lzk7;-><init>(ILjava/lang/String;Ljava/lang/String;ZZZZ)V
-
-    sget-object v2, Ls4d;->c:Li25;
-
-    invoke-direct {v0, v1, v2}, Lwk7;-><init>(Lzk7;Li25;)V
-
-    sput-object v0, Lwk7;->d:Lvk7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzk7;Li25;)V
-    .locals 0
+.method public constructor <init>(Ljava/io/BufferedWriter;Ljava/util/HashMap;Ljava/util/HashMap;Lwj7;Z)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lwk7;->a:Lzk7;
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lwk7;->b:Li25;
+    iput-boolean v0, p0, Lwk7;->a:Z
 
-    new-instance p1, Leqd;
+    new-instance v0, Landroid/util/JsonWriter;
 
-    const/16 p2, 0xc
+    invoke-direct {v0, p1}, Landroid/util/JsonWriter;-><init>(Ljava/io/Writer;)V
 
-    invoke-direct {p1, p2}, Leqd;-><init>(I)V
+    iput-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
 
-    iput-object p1, p0, Lwk7;->c:Leqd;
+    iput-object p2, p0, Lwk7;->c:Ljava/util/Map;
+
+    iput-object p3, p0, Lwk7;->d:Ljava/util/Map;
+
+    iput-object p4, p0, Lwk7;->e:Ln8a;
+
+    iput-boolean p5, p0, Lwk7;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lum7;Ljava/lang/String;)Ljava/lang/Object;
-    .locals 4
+.method public final a(Ltm5;Ljava/lang/Object;)Lo8a;
+    .locals 0
 
-    new-instance v0, Lqof;
+    iget-object p1, p1, Ltm5;->a:Ljava/lang/String;
 
-    invoke-direct {v0, p2}, Lqof;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p2, p1}, Lwk7;->g(Ljava/lang/Object;Ljava/lang/String;)Lwk7;
 
-    new-instance v1, Lp8;
+    return-object p0
+.end method
 
-    sget-object v2, Labh;->c:Labh;
+.method public final b(Ljava/lang/String;)Ls3g;
+    .locals 1
 
-    invoke-interface {p1}, Lum7;->d()Ldsd;
+    invoke-virtual {p0}, Lwk7;->h()V
 
-    move-result-object v3
+    iget-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
 
-    invoke-direct {v1, p0, v2, v0, v3}, Lp8;-><init>(Lwk7;Labh;Lqof;Ldsd;)V
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
-    invoke-virtual {v1, p1}, Lp8;->u(Lum7;)Ljava/lang/Object;
+    return-object p0
+.end method
 
-    move-result-object p1
+.method public final c(Z)Ls3g;
+    .locals 1
 
-    invoke-virtual {v0}, Lqof;->n()B
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    iget-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
+
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->value(Z)Landroid/util/JsonWriter;
+
+    return-object p0
+.end method
+
+.method public final d(Ltm5;I)Lo8a;
+    .locals 1
+
+    iget-object p1, p1, Ltm5;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    iget-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
+
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    int-to-long p1, p2
+
+    invoke-virtual {v0, p1, p2}, Landroid/util/JsonWriter;->value(J)Landroid/util/JsonWriter;
+
+    return-object p0
+.end method
+
+.method public final e(Ltm5;J)Lo8a;
+    .locals 1
+
+    iget-object p1, p1, Ltm5;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    iget-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
+
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    invoke-virtual {v0, p2, p3}, Landroid/util/JsonWriter;->value(J)Landroid/util/JsonWriter;
+
+    return-object p0
+.end method
+
+.method public final f(Ljava/lang/Object;)Lwk7;
+    .locals 5
+
+    iget-object v0, p0, Lwk7;->b:Landroid/util/JsonWriter;
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->nullValue()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_0
+    instance-of v1, p1, Ljava/lang/Number;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->value(Ljava/lang/Number;)Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->isArray()Z
 
     move-result v1
 
-    const/16 v2, 0xa
+    if-eqz v1, :cond_9
 
-    if-ne v1, v2, :cond_0
+    instance-of v1, p1, [B
 
-    return-object p1
+    if-eqz v1, :cond_2
 
-    :cond_0
-    new-instance p1, Ljava/lang/StringBuilder;
+    check-cast p1, [B
 
-    const-string v1, "Expected EOF after parsing, but had "
+    invoke-virtual {p0}, Lwk7;->h()V
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x2
 
-    iget v1, v0, Lqof;->b:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    const-string p2, " instead"
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
 
-    const/4 v1, 0x6
+    return-object p0
 
-    invoke-static {v0, p1, p2, v1}, Lqof;->x(Lqof;Ljava/lang/String;II)V
+    :cond_2
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->beginArray()Landroid/util/JsonWriter;
 
-    const/4 p1, 0x0
-
-    throw p1
-.end method
-
-.method public final b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
-    .locals 6
-
-    new-instance v0, Lqi;
-
-    const/16 v1, 0x9
+    instance-of v1, p1, [I
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v1}, Lqi;-><init>(CI)V
+    if-eqz v1, :cond_3
 
-    sget-object v1, Lu72;->c:Lu72;
+    check-cast p1, [I
 
-    monitor-enter v1
+    array-length v1, p1
 
-    :try_start_0
-    iget-object v2, v1, Lv72;->b:Ljava/lang/Object;
+    :goto_0
+    if-ge v2, v1, :cond_8
 
-    check-cast v2, Lrr;
+    aget v3, p1, v2
 
-    invoke-virtual {v2}, Lrr;->isEmpty()Z
+    int-to-long v3, v3
 
-    move-result v3
+    invoke-virtual {v0, v3, v4}, Landroid/util/JsonWriter;->value(J)Landroid/util/JsonWriter;
 
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    move-object v2, v4
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v2}, Lrr;->removeLast()Ljava/lang/Object;
+    :cond_3
+    instance-of v1, p1, [J
 
-    move-result-object v2
+    if-eqz v1, :cond_4
 
-    :goto_0
-    check-cast v2, [C
+    check-cast p1, [J
 
-    if-eqz v2, :cond_1
+    array-length v1, p1
 
-    iget v3, v1, Lv72;->a:I
+    :goto_1
+    if-ge v2, v1, :cond_8
 
-    array-length v4, v2
+    aget-wide v3, p1, v2
 
-    sub-int/2addr v3, v4
+    invoke-virtual {p0}, Lwk7;->h()V
 
-    iput v3, v1, Lv72;->a:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v3, v4}, Landroid/util/JsonWriter;->value(J)Landroid/util/JsonWriter;
 
-    move-object v4, v2
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p1
+    :cond_4
+    instance-of v1, p1, [D
+
+    if-eqz v1, :cond_5
+
+    check-cast p1, [D
+
+    array-length v1, p1
+
+    :goto_2
+    if-ge v2, v1, :cond_8
+
+    aget-wide v3, p1, v2
+
+    invoke-virtual {v0, v3, v4}, Landroid/util/JsonWriter;->value(D)Landroid/util/JsonWriter;
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    :cond_1
-    :goto_1
-    monitor-exit v1
+    :cond_5
+    instance-of v1, p1, [Z
 
-    if-nez v4, :cond_2
+    if-eqz v1, :cond_6
 
-    const/16 v1, 0x80
+    check-cast p1, [Z
 
-    new-array v4, v1, [C
+    array-length v1, p1
 
-    :cond_2
-    iput-object v4, v0, Lqi;->c:Ljava/lang/Object;
+    :goto_3
+    if-ge v2, v1, :cond_8
 
-    :try_start_1
-    new-instance v1, Le04;
+    aget-boolean v3, p1, v2
 
-    sget-object v2, Labh;->c:Labh;
+    invoke-virtual {v0, v3}, Landroid/util/JsonWriter;->value(Z)Landroid/util/JsonWriter;
 
-    sget-object v3, Labh;->w0:Lla5;
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v3}, Lb0;->getSize()I
+    goto :goto_3
 
-    move-result v3
+    :cond_6
+    instance-of v1, p1, [Ljava/lang/Number;
 
-    new-array v3, v3, [Le04;
+    if-eqz v1, :cond_7
 
-    new-instance v4, Lke0;
+    check-cast p1, [Ljava/lang/Number;
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    array-length v1, p1
 
-    iput-object v0, v4, Lke0;->b:Ljava/lang/Object;
+    :goto_4
+    if-ge v2, v1, :cond_8
 
-    const/4 v5, 0x1
+    aget-object v3, p1, v2
 
-    iput-boolean v5, v4, Lke0;->a:Z
+    invoke-virtual {p0, v3}, Lwk7;->f(Ljava/lang/Object;)Lwk7;
 
-    invoke-direct {v1, v4, p0, v2, v3}, Le04;-><init>(Lke0;Lwk7;Labh;[Le04;)V
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-virtual {v1, p1, p2}, Le04;->j(Lum7;Ljava/lang/Object;)V
+    goto :goto_4
 
-    invoke-virtual {v0}, Lqi;->toString()Ljava/lang/String;
+    :cond_7
+    check-cast p1, [Ljava/lang/Object;
+
+    array-length v1, p1
+
+    :goto_5
+    if-ge v2, v1, :cond_8
+
+    aget-object v3, p1, v2
+
+    invoke-virtual {p0, v3}, Lwk7;->f(Ljava/lang/Object;)Lwk7;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->endArray()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_9
+    instance-of v1, p1, Ljava/util/Collection;
+
+    if-eqz v1, :cond_b
+
+    check-cast p1, Ljava/util/Collection;
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->beginArray()Landroid/util/JsonWriter;
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {v0}, Lqi;->s()V
+    :goto_6
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p1
+    move-result v1
 
-    :catchall_1
+    if-eqz v1, :cond_a
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lwk7;->f(Ljava/lang/Object;)Lwk7;
+
+    goto :goto_6
+
+    :cond_a
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->endArray()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_b
+    instance-of v1, p1, Ljava/util/Map;
+
+    if-eqz v1, :cond_d
+
+    check-cast p1, Ljava/util/Map;
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->beginObject()Landroid/util/JsonWriter;
+
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_7
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_c
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Map$Entry;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    :try_start_0
+    move-object v3, v2
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1, v3}, Lwk7;->g(Ljava/lang/Object;Ljava/lang/String;)Lwk7;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_7
+
+    :catch_0
     move-exception p1
 
-    invoke-virtual {v0}, Lqi;->s()V
+    new-instance v0, Lcom/google/firebase/encoders/EncodingException;
 
-    throw p1
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_2
-    monitor-exit v1
+    move-result-object v1
 
-    throw p1
+    filled-new-array {v2, v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "Only String keys are currently supported in maps, got %s of type %s instead."
+
+    invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :cond_c
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->endObject()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_d
+    iget-object v1, p0, Lwk7;->c:Ljava/util/Map;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ln8a;
+
+    if-eqz v1, :cond_e
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->beginObject()Landroid/util/JsonWriter;
+
+    invoke-interface {v1, p1, p0}, Lp75;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->endObject()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_e
+    iget-object v1, p0, Lwk7;->d:Ljava/util/Map;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lr3g;
+
+    if-eqz v1, :cond_f
+
+    invoke-interface {v1, p1, p0}, Lp75;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object p0
+
+    :cond_f
+    instance-of v1, p1, Ljava/lang/Enum;
+
+    if-eqz v1, :cond_10
+
+    check-cast p1, Ljava/lang/Enum;
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    invoke-virtual {v0, p1}, Landroid/util/JsonWriter;->value(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_10
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->beginObject()Landroid/util/JsonWriter;
+
+    iget-object v1, p0, Lwk7;->e:Ln8a;
+
+    invoke-interface {v1, p1, p0}, Lp75;->a(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Landroid/util/JsonWriter;->endObject()Landroid/util/JsonWriter;
+
+    return-object p0
+.end method
+
+.method public final g(Ljava/lang/Object;Ljava/lang/String;)Lwk7;
+    .locals 2
+
+    iget-boolean v0, p0, Lwk7;->f:Z
+
+    iget-object v1, p0, Lwk7;->b:Landroid/util/JsonWriter;
+
+    if-eqz v0, :cond_1
+
+    if-nez p1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    invoke-virtual {v1, p2}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    invoke-virtual {p0, p1}, Lwk7;->f(Ljava/lang/Object;)Lwk7;
+
+    return-object p0
+
+    :cond_1
+    invoke-virtual {p0}, Lwk7;->h()V
+
+    invoke-virtual {v1, p2}, Landroid/util/JsonWriter;->name(Ljava/lang/String;)Landroid/util/JsonWriter;
+
+    if-nez p1, :cond_2
+
+    invoke-virtual {v1}, Landroid/util/JsonWriter;->nullValue()Landroid/util/JsonWriter;
+
+    return-object p0
+
+    :cond_2
+    invoke-virtual {p0, p1}, Lwk7;->f(Ljava/lang/Object;)Lwk7;
+
+    return-object p0
+.end method
+
+.method public final h()V
+    .locals 2
+
+    iget-boolean v0, p0, Lwk7;->a:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Parent context used since this context was created. Cannot use this context anymore."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

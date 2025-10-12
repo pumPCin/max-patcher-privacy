@@ -1,851 +1,1208 @@
 .class public final Lld5;
-.super Ljava/lang/Object;
+.super Ljava/io/FilterOutputStream;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:[Lyd5;
-
-.field public static final d:[[Lyd5;
-
-.field public static final e:Ljava/util/HashSet;
+.field public static final Z:[B
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public X:I
 
-.field public final b:Ljava/nio/ByteOrder;
+.field public Y:I
+
+.field public final a:Lad5;
+
+.field public final b:[B
+
+.field public final c:Ljava/nio/ByteBuffer;
+
+.field public o:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 58
+    .locals 2
 
-    new-instance v0, Lyd5;
+    const-string v0, "Exif\u0000\u0000"
 
-    const/16 v1, 0x100
+    sget-object v1, Lwc5;->d:Ljava/nio/charset/Charset;
 
-    const-string v2, "ImageWidth"
-
-    const/4 v14, 0x3
-
-    const/4 v15, 0x4
-
-    invoke-direct {v0, v1, v2, v14, v15}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v2, "ImageLength"
-
-    const/16 v3, 0x101
-
-    invoke-direct {v1, v3, v2, v14, v15}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v3, "Make"
-
-    const/16 v4, 0x10f
-
-    const/4 v5, 0x2
-
-    invoke-direct {v2, v3, v4, v5}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v3, Lyd5;
-
-    const-string v4, "Model"
-
-    const/16 v6, 0x110
-
-    invoke-direct {v3, v4, v6, v5}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v6, "Orientation"
-
-    const/16 v7, 0x112
-
-    invoke-direct {v4, v6, v7, v14}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lyd5;
-
-    const-string v7, "XResolution"
-
-    const/16 v8, 0x11a
-
-    const/4 v9, 0x5
-
-    invoke-direct {v6, v7, v8, v9}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object v7, v6
-
-    new-instance v6, Lyd5;
-
-    const-string v8, "YResolution"
-
-    const/16 v10, 0x11b
-
-    invoke-direct {v6, v8, v10, v9}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object v8, v7
-
-    new-instance v7, Lyd5;
-
-    const-string v10, "ResolutionUnit"
-
-    const/16 v11, 0x128
-
-    invoke-direct {v7, v10, v11, v14}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object v10, v8
-
-    new-instance v8, Lyd5;
-
-    const-string v11, "Software"
-
-    const/16 v12, 0x131
-
-    invoke-direct {v8, v11, v12, v5}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move v11, v9
-
-    new-instance v9, Lyd5;
-
-    const-string v12, "DateTime"
-
-    const/16 v13, 0x132
-
-    invoke-direct {v9, v12, v13, v5}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move v12, v5
-
-    move-object v5, v10
-
-    new-instance v10, Lyd5;
-
-    const-string v13, "YCbCrPositioning"
-
-    const/16 v11, 0x213
-
-    invoke-direct {v10, v13, v11, v14}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v11, Lyd5;
-
-    const-string v13, "SubIFDPointer"
-
-    const/16 v14, 0x14a
-
-    invoke-direct {v11, v13, v14, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move/from16 v16, v12
-
-    new-instance v12, Lyd5;
-
-    const-string v14, "ExifIFDPointer"
-
-    move-object/from16 v17, v0
-
-    const v0, 0x8769
-
-    invoke-direct {v12, v14, v0, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v18, v13
-
-    new-instance v13, Lyd5;
-
-    move-object/from16 v19, v14
-
-    const-string v14, "GPSInfoIFDPointer"
-
-    const v0, 0x8825
-
-    invoke-direct {v13, v14, v0, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v0, v17
-
-    move-object/from16 v20, v18
-
-    const/4 v15, 0x5
-
-    filled-new-array/range {v0 .. v13}, [Lyd5;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object v0
 
-    new-instance v1, Lyd5;
-
-    const v2, 0x829a
-
-    const-string v3, "ExposureTime"
-
-    invoke-direct {v1, v3, v2, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const v4, 0x829d
-
-    const-string v5, "FNumber"
-
-    invoke-direct {v2, v5, v4, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v6, "ExposureProgram"
-
-    const v7, 0x8822
-
-    const/4 v8, 0x3
-
-    invoke-direct {v4, v6, v7, v8}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lyd5;
-
-    const-string v7, "PhotographicSensitivity"
-
-    const v9, 0x8827
-
-    invoke-direct {v6, v7, v9, v8}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v7, Lyd5;
-
-    const-string v9, "SensitivityType"
-
-    const v10, 0x8830
-
-    invoke-direct {v7, v9, v10, v8}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lyd5;
-
-    const-string v9, "ExifVersion"
-
-    const v10, 0x9000
-
-    const/4 v12, 0x2
-
-    invoke-direct {v8, v9, v10, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lyd5;
-
-    const-string v10, "DateTimeOriginal"
-
-    const v11, 0x9003
-
-    invoke-direct {v9, v10, v11, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v10, Lyd5;
-
-    const-string v11, "DateTimeDigitized"
-
-    const v13, 0x9004
-
-    invoke-direct {v10, v11, v13, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v11, Lyd5;
-
-    const-string v12, "ComponentsConfiguration"
-
-    const v13, 0x9101
-
-    const/4 v15, 0x7
-
-    invoke-direct {v11, v12, v13, v15}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v12, Lyd5;
-
-    const-string v13, "ShutterSpeedValue"
-
-    const v15, 0x9201
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0xa
-
-    invoke-direct {v12, v13, v15, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v13, Lyd5;
-
-    const-string v15, "ApertureValue"
-
-    const v1, 0x9202
-
-    move-object/from16 v22, v2
-
-    const/4 v2, 0x5
-
-    invoke-direct {v13, v15, v1, v2}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v2, "BrightnessValue"
-
-    const v15, 0x9203
-
-    move-object/from16 v23, v4
-
-    const/16 v4, 0xa
-
-    invoke-direct {v1, v2, v15, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v15, "ExposureBiasValue"
-
-    move-object/from16 v32, v1
-
-    const v1, 0x9204
-
-    invoke-direct {v2, v15, v1, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v4, "MaxApertureValue"
-
-    const v15, 0x9205
-
-    move-object/from16 v33, v2
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, v4, v15, v2}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v4, "MeteringMode"
-
-    const v15, 0x9207
-
-    move-object/from16 v34, v1
-
-    const/4 v1, 0x3
-
-    invoke-direct {v2, v4, v15, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v15, "LightSource"
-
-    move-object/from16 v35, v2
-
-    const v2, 0x9208
-
-    invoke-direct {v4, v15, v2, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v15, "Flash"
-
-    move-object/from16 v36, v4
-
-    const v4, 0x9209
-
-    invoke-direct {v2, v15, v4, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v4, "FocalLength"
-
-    const v15, 0x920a
-
-    move-object/from16 v37, v2
-
-    const/4 v2, 0x5
-
-    invoke-direct {v1, v4, v15, v2}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v4, "SubSecTime"
-
-    const v15, 0x9290
-
-    move-object/from16 v38, v1
-
-    const/4 v1, 0x2
-
-    invoke-direct {v2, v4, v15, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v15, "SubSecTimeOriginal"
-
-    move-object/from16 v39, v2
-
-    const v2, 0x9291
-
-    invoke-direct {v4, v15, v2, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v15, "SubSecTimeDigitized"
-
-    move-object/from16 v40, v4
-
-    const v4, 0x9292
-
-    invoke-direct {v2, v15, v4, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v4, "FlashpixVersion"
-
-    const v15, 0xa000
-
-    move-object/from16 v41, v2
-
-    const/4 v2, 0x7
-
-    invoke-direct {v1, v4, v15, v2}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v4, "ColorSpace"
-
-    const v15, 0xa001
-
-    move-object/from16 v42, v1
-
-    const/4 v1, 0x3
-
-    invoke-direct {v2, v4, v15, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v15, "PixelXDimension"
-
-    move-object/from16 v43, v2
-
-    const v2, 0xa002
-
-    move-object/from16 v24, v6
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v2, v15, v1, v6}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v15, "PixelYDimension"
-
-    move-object/from16 v44, v4
-
-    const v4, 0xa003
-
-    invoke-direct {v2, v4, v15, v1, v6}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v15, "InteroperabilityIFDPointer"
-
-    const v1, 0xa005
-
-    invoke-direct {v4, v15, v1, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lyd5;
-
-    const-string v1, "FocalPlaneResolutionUnit"
-
-    move-object/from16 v45, v2
-
-    const v2, 0xa210
-
-    move-object/from16 v46, v4
-
-    const/4 v4, 0x3
-
-    invoke-direct {v6, v1, v2, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v2, "SensingMethod"
-
-    move-object/from16 v47, v6
-
-    const v6, 0xa217
-
-    invoke-direct {v1, v2, v6, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v4, "FileSource"
-
-    const v6, 0xa300
-
-    move-object/from16 v48, v1
-
-    const/4 v1, 0x7
-
-    invoke-direct {v2, v4, v6, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v6, "SceneType"
-
-    move-object/from16 v49, v2
-
-    const v2, 0xa301
-
-    invoke-direct {v4, v6, v2, v1}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v2, "CustomRendered"
-
-    const v6, 0xa401
-
-    move-object/from16 v50, v4
-
-    const/4 v4, 0x3
-
-    invoke-direct {v1, v2, v6, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v6, "ExposureMode"
-
-    move-object/from16 v51, v1
-
-    const v1, 0xa402
-
-    invoke-direct {v2, v6, v1, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v6, "WhiteBalance"
-
-    move-object/from16 v52, v2
-
-    const v2, 0xa403
-
-    invoke-direct {v1, v6, v2, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v6, "SceneCaptureType"
-
-    move-object/from16 v53, v1
-
-    const v1, 0xa406
-
-    invoke-direct {v2, v6, v1, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v6, "Contrast"
-
-    move-object/from16 v54, v2
-
-    const v2, 0xa408
-
-    invoke-direct {v1, v6, v2, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v6, "Saturation"
-
-    move-object/from16 v55, v1
-
-    const v1, 0xa409
-
-    invoke-direct {v2, v6, v1, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v1, Lyd5;
-
-    const-string v6, "Sharpness"
-
-    move-object/from16 v56, v2
-
-    const v2, 0xa40a
-
-    invoke-direct {v1, v6, v2, v4}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v57, v1
-
-    move-object/from16 v25, v7
-
-    move-object/from16 v26, v8
-
-    move-object/from16 v27, v9
-
-    move-object/from16 v28, v10
-
-    move-object/from16 v29, v11
-
-    move-object/from16 v30, v12
-
-    move-object/from16 v31, v13
-
-    filled-new-array/range {v21 .. v57}, [Lyd5;
-
-    move-result-object v1
-
-    new-instance v2, Lyd5;
-
-    const-string v4, "GPSVersionID"
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x1
-
-    invoke-direct {v2, v4, v6, v7}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v6, "GPSLatitudeRef"
-
-    const/4 v12, 0x2
-
-    invoke-direct {v4, v6, v7, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lyd5;
-
-    const-string v8, "GPSLatitude"
-
-    const/16 v9, 0xa
-
-    const/4 v11, 0x5
-
-    invoke-direct {v6, v12, v8, v11, v9}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v8, Lyd5;
-
-    const-string v10, "GPSLongitudeRef"
-
-    const/4 v13, 0x3
-
-    invoke-direct {v8, v10, v13, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v10, Lyd5;
-
-    const-string v12, "GPSLongitude"
-
-    const/4 v13, 0x4
-
-    invoke-direct {v10, v13, v12, v11, v9}, Lyd5;-><init>(ILjava/lang/String;II)V
-
-    new-instance v9, Lyd5;
-
-    const-string v12, "GPSAltitudeRef"
-
-    invoke-direct {v9, v12, v11, v7}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v12, Lyd5;
-
-    const-string v13, "GPSAltitude"
-
-    const/4 v7, 0x6
-
-    invoke-direct {v12, v13, v7, v11}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v7, Lyd5;
-
-    const-string v13, "GPSTimeStamp"
-
-    move-object/from16 v21, v2
-
-    const/4 v2, 0x7
-
-    invoke-direct {v7, v13, v2, v11}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v11, "GPSSpeedRef"
-
-    move-object/from16 v22, v4
-
-    const/16 v4, 0xc
-
-    move-object/from16 v23, v6
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v11, v4, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v11, "GPSTrackRef"
-
-    move-object/from16 v29, v2
-
-    const/16 v2, 0xe
-
-    invoke-direct {v4, v11, v2, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v11, "GPSImgDirectionRef"
-
-    move-object/from16 v30, v4
-
-    const/16 v4, 0x10
-
-    invoke-direct {v2, v11, v4, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lyd5;
-
-    const-string v11, "GPSDestBearingRef"
-
-    move-object/from16 v31, v2
-
-    const/16 v2, 0x17
-
-    invoke-direct {v4, v11, v2, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Lyd5;
-
-    const-string v11, "GPSDestDistanceRef"
-
-    move-object/from16 v32, v4
-
-    const/16 v4, 0x19
-
-    invoke-direct {v2, v11, v4, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    move-object/from16 v33, v2
-
-    move-object/from16 v28, v7
-
-    move-object/from16 v24, v8
-
-    move-object/from16 v26, v9
-
-    move-object/from16 v25, v10
-
-    move-object/from16 v27, v12
-
-    filled-new-array/range {v21 .. v33}, [Lyd5;
-
-    move-result-object v2
-
-    new-instance v4, Lyd5;
-
-    move-object/from16 v7, v20
-
-    const/4 v6, 0x4
-
-    const/16 v8, 0x14a
-
-    invoke-direct {v4, v7, v8, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v7, Lyd5;
-
-    move-object/from16 v8, v19
-
-    const v9, 0x8769
-
-    invoke-direct {v7, v8, v9, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lyd5;
-
-    const v9, 0x8825
-
-    invoke-direct {v8, v14, v9, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lyd5;
-
-    const v10, 0xa005
-
-    invoke-direct {v9, v15, v10, v6}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v4, v7, v8, v9}, [Lyd5;
-
-    move-result-object v4
-
-    sput-object v4, Lld5;->c:[Lyd5;
-
-    new-instance v4, Lyd5;
-
-    const-string v6, "InteroperabilityIndex"
-
-    const/4 v7, 0x1
-
-    const/4 v12, 0x2
-
-    invoke-direct {v4, v6, v7, v12}, Lyd5;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array {v4}, [Lyd5;
-
-    move-result-object v4
-
-    filled-new-array {v0, v1, v2, v4}, [[Lyd5;
-
-    move-result-object v0
-
-    sput-object v0, Lld5;->d:[[Lyd5;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    filled-new-array {v5, v3, v13}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    sput-object v0, Lld5;->e:Ljava/util/HashSet;
+    sput-object v0, Lld5;->Z:[B
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/nio/ByteOrder;Ljava/util/ArrayList;)V
+.method public constructor <init>(Ljava/io/ByteArrayOutputStream;Lad5;)V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/io/BufferedOutputStream;
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
+    const/high16 v1, 0x10000
 
-    move-result v0
+    invoke-direct {v0, p1, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
-    const/4 v1, 0x4
+    invoke-direct {p0, v0}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    if-ne v0, v1, :cond_0
+    const/4 p1, 0x1
 
-    const/4 v0, 0x1
+    new-array p1, p1, [B
 
-    goto :goto_0
+    iput-object p1, p0, Lld5;->b:[B
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 p1, 0x4
 
-    :goto_0
-    const-string v1, "Malformed attributes list. Number of IFDs mismatch."
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    invoke-static {v1, v0}, Ll74;->m(Ljava/lang/String;Z)V
+    move-result-object p1
 
-    iput-object p1, p0, Lld5;->b:Ljava/nio/ByteOrder;
+    iput-object p1, p0, Lld5;->c:Ljava/nio/ByteBuffer;
 
-    iput-object p2, p0, Lld5;->a:Ljava/util/ArrayList;
+    const/4 p1, 0x0
+
+    iput p1, p0, Lld5;->o:I
+
+    iput-object p2, p0, Lld5;->a:Lad5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/util/Map;
-    .locals 3
+.method public final write(I)V
+    .locals 2
 
-    const-string v0, "Invalid IFD index: "
+    and-int/lit16 p1, p1, 0xff
 
-    const-string v1, ". Index should be between [0, EXIF_TAGS.length] "
+    int-to-byte p1, p1
 
-    invoke-static {p1, v0, v1}, Lqe0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    .line 117
+    iget-object v0, p0, Lld5;->b:[B
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x4
+    aput-byte p1, v0, v1
 
-    invoke-static {p1, v0, v1, v2}, Ll74;->j(ILjava/lang/String;II)V
+    .line 118
+    invoke-virtual {p0, v0}, Lld5;->write([B)V
 
-    iget-object v0, p0, Lld5;->a:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+.method public final write([B)V
+    .locals 2
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    check-cast p1, Ljava/util/Map;
+    .line 119
+    array-length v1, p1
 
-    return-object p1
+    invoke-virtual {p0, p1, v0, v1}, Lld5;->write([BII)V
+
+    return-void
+.end method
+
+.method public final write([BII)V
+    .locals 18
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move/from16 v3, p3
+
+    .line 1
+    :goto_0
+    iget v4, v0, Lld5;->X:I
+
+    const/4 v5, 0x2
+
+    if-gtz v4, :cond_0
+
+    iget v6, v0, Lld5;->Y:I
+
+    if-gtz v6, :cond_0
+
+    iget v6, v0, Lld5;->o:I
+
+    if-eq v6, v5, :cond_21
+
+    :cond_0
+    if-lez v3, :cond_21
+
+    if-lez v4, :cond_1
+
+    .line 2
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    .line 3
+    iget v6, v0, Lld5;->X:I
+
+    sub-int/2addr v6, v4
+
+    iput v6, v0, Lld5;->X:I
+
+    add-int/2addr v2, v4
+
+    .line 4
+    :cond_1
+    iget v4, v0, Lld5;->Y:I
+
+    if-lez v4, :cond_2
+
+    .line 5
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    .line 6
+    iget-object v6, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v6, v1, v2, v4}, Ljava/io/OutputStream;->write([BII)V
+
+    sub-int/2addr v3, v4
+
+    .line 7
+    iget v6, v0, Lld5;->Y:I
+
+    sub-int/2addr v6, v4
+
+    iput v6, v0, Lld5;->Y:I
+
+    add-int/2addr v2, v4
+
+    :cond_2
+    if-nez v3, :cond_3
+
+    goto/16 :goto_e
+
+    .line 8
+    :cond_3
+    iget v4, v0, Lld5;->o:I
+
+    const/16 v6, -0x1f
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x4
+
+    iget-object v10, v0, Lld5;->c:Ljava/nio/ByteBuffer;
+
+    if-eqz v4, :cond_9
+
+    if-eq v4, v7, :cond_4
+
+    goto :goto_0
+
+    .line 9
+    :cond_4
+    invoke-virtual {v10}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    rsub-int/lit8 v4, v4, 0x4
+
+    .line 10
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    .line 11
+    invoke-virtual {v10, v1, v2, v4}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    add-int/2addr v2, v4
+
+    sub-int/2addr v3, v4
+
+    .line 12
+    invoke-virtual {v10}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    if-ne v4, v5, :cond_5
+
+    .line 13
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    const/16 v7, -0x27
+
+    if-ne v4, v7, :cond_5
+
+    .line 14
+    iget-object v4, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7, v8, v5}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 15
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 16
+    :cond_5
+    invoke-virtual {v10}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    if-ge v4, v9, :cond_6
+
+    goto/16 :goto_e
+
+    .line 17
+    :cond_6
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 18
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    const v7, 0xffff
+
+    if-ne v4, v6, :cond_7
+
+    .line 19
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    and-int/2addr v4, v7
+
+    sub-int/2addr v4, v5
+
+    iput v4, v0, Lld5;->X:I
+
+    .line 20
+    iput v5, v0, Lld5;->o:I
+
+    goto :goto_1
+
+    :cond_7
+    const/16 v6, -0x40
+
+    if-lt v4, v6, :cond_8
+
+    const/16 v6, -0x31
+
+    if-gt v4, v6, :cond_8
+
+    const/16 v6, -0x3c
+
+    if-eq v4, v6, :cond_8
+
+    const/16 v6, -0x38
+
+    if-eq v4, v6, :cond_8
+
+    const/16 v6, -0x34
+
+    if-eq v4, v6, :cond_8
+
+    .line 21
+    iget-object v4, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6, v8, v9}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 22
+    iput v5, v0, Lld5;->o:I
+
+    goto :goto_1
+
+    .line 23
+    :cond_8
+    iget-object v4, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6, v8, v9}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 24
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    and-int/2addr v4, v7
+
+    sub-int/2addr v4, v5
+
+    iput v4, v0, Lld5;->Y:I
+
+    .line 25
+    :goto_1
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    goto/16 :goto_0
+
+    .line 26
+    :cond_9
+    invoke-virtual {v10}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    rsub-int/lit8 v4, v4, 0x2
+
+    .line 27
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    .line 28
+    invoke-virtual {v10, v1, v2, v4}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    add-int/2addr v2, v4
+
+    sub-int/2addr v3, v4
+
+    .line 29
+    invoke-virtual {v10}, Ljava/nio/Buffer;->position()I
+
+    move-result v4
+
+    if-ge v4, v5, :cond_a
+
+    goto/16 :goto_e
+
+    .line 30
+    :cond_a
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 31
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    const/16 v11, -0x28
+
+    if-ne v4, v11, :cond_20
+
+    .line 32
+    iget-object v4, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object v11
+
+    invoke-virtual {v4, v11, v8, v5}, Ljava/io/OutputStream;->write([BII)V
+
+    .line 33
+    iput v7, v0, Lld5;->o:I
+
+    .line 34
+    invoke-virtual {v10}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 35
+    new-instance v4, Ldw0;
+
+    iget-object v10, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    sget-object v11, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-direct {v4, v10}, Ldw0;-><init>(Ljava/io/OutputStream;)V
+
+    .line 36
+    invoke-virtual {v4, v6}, Ldw0;->i(S)V
+
+    .line 37
+    new-array v6, v9, [I
+
+    .line 38
+    new-array v10, v9, [I
+
+    .line 39
+    sget-object v11, Lad5;->c:[Lmd5;
+
+    move v12, v8
+
+    :goto_2
+    iget-object v13, v0, Lld5;->a:Lad5;
+
+    if-ge v12, v9, :cond_c
+
+    aget-object v14, v11, v12
+
+    move v15, v8
+
+    .line 40
+    :goto_3
+    sget-object v16, Lad5;->c:[Lmd5;
+
+    if-ge v15, v9, :cond_b
+
+    .line 41
+    invoke-virtual {v13, v15}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v9
+
+    iget-object v5, v14, Lmd5;->b:Ljava/lang/String;
+
+    invoke-interface {v9, v5}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v15, v15, 0x1
+
+    const/4 v5, 0x2
+
+    const/4 v9, 0x4
+
+    goto :goto_3
+
+    :cond_b
+    add-int/lit8 v12, v12, 0x1
+
+    const/4 v5, 0x2
+
+    const/4 v9, 0x4
+
+    goto :goto_2
+
+    .line 42
+    :cond_c
+    invoke-virtual {v13, v7}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    iget-object v9, v13, Lad5;->b:Ljava/nio/ByteOrder;
+
+    invoke-interface {v5}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v5
+
+    const-wide/16 v11, 0x0
+
+    if-nez v5, :cond_d
+
+    .line 43
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    sget-object v14, Lad5;->c:[Lmd5;
+
+    aget-object v14, v14, v7
+
+    iget-object v14, v14, Lmd5;->b:Ljava/lang/String;
+
+    .line 44
+    invoke-static {v11, v12, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v15
+
+    .line 45
+    invoke-interface {v5, v14, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_d
+    const/4 v5, 0x2
+
+    .line 46
+    invoke-virtual {v13, v5}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v14
+
+    if-nez v14, :cond_e
+
+    .line 47
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v14
+
+    sget-object v15, Lad5;->c:[Lmd5;
+
+    aget-object v15, v15, v5
+
+    iget-object v5, v15, Lmd5;->b:Ljava/lang/String;
+
+    .line 48
+    invoke-static {v11, v12, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v15
+
+    .line 49
+    invoke-interface {v14, v5, v15}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_e
+    const/4 v5, 0x3
+
+    .line 50
+    invoke-virtual {v13, v5}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v14
+
+    if-nez v14, :cond_f
+
+    .line 51
+    invoke-virtual {v13, v7}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v14
+
+    sget-object v15, Lad5;->c:[Lmd5;
+
+    aget-object v15, v15, v5
+
+    iget-object v15, v15, Lmd5;->b:Ljava/lang/String;
+
+    .line 52
+    invoke-static {v11, v12, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v5
+
+    .line 53
+    invoke-interface {v14, v15, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_f
+    move v5, v8
+
+    .line 54
+    :goto_4
+    sget-object v14, Lad5;->c:[Lmd5;
+
+    const/4 v14, 0x4
+
+    if-ge v5, v14, :cond_12
+
+    .line 55
+    invoke-virtual {v13, v5}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v14
+
+    move v15, v8
+
+    :goto_5
+    invoke-interface {v14}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v17
+
+    if-eqz v17, :cond_11
+
+    invoke-interface {v14}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v17
+
+    check-cast v17, Ljava/util/Map$Entry;
+
+    .line 56
+    invoke-interface/range {v17 .. v17}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v17
+
+    move-object/from16 v11, v17
+
+    check-cast v11, Lwc5;
+
+    .line 57
+    sget-object v12, Lwc5;->f:[I
+
+    .line 58
+    iget v8, v11, Lwc5;->a:I
+
+    .line 59
+    aget v8, v12, v8
+
+    iget v11, v11, Lwc5;->b:I
+
+    mul-int/2addr v8, v11
+
+    const/4 v11, 0x4
+
+    if-le v8, v11, :cond_10
+
+    add-int/2addr v15, v8
+
+    :cond_10
+    const/4 v8, 0x0
+
+    const-wide/16 v11, 0x0
+
+    goto :goto_5
+
+    .line 60
+    :cond_11
+    aget v8, v10, v5
+
+    add-int/2addr v8, v15
+
+    aput v8, v10, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    const/4 v8, 0x0
+
+    const-wide/16 v11, 0x0
+
+    goto :goto_4
+
+    :cond_12
+    const/16 v5, 0x8
+
+    const/4 v8, 0x0
+
+    .line 61
+    :goto_6
+    sget-object v11, Lad5;->c:[Lmd5;
+
+    const/4 v14, 0x4
+
+    if-ge v8, v14, :cond_14
+
+    .line 62
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v11
+
+    invoke-interface {v11}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v11
+
+    if-nez v11, :cond_13
+
+    .line 63
+    aput v5, v6, v8
+
+    .line 64
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v11
+
+    invoke-interface {v11}, Ljava/util/Map;->size()I
+
+    move-result v11
+
+    mul-int/lit8 v11, v11, 0xc
+
+    add-int/lit8 v11, v11, 0x6
+
+    aget v12, v10, v8
+
+    add-int/2addr v11, v12
+
+    add-int/2addr v11, v5
+
+    move v5, v11
+
+    :cond_13
+    add-int/lit8 v8, v8, 0x1
+
+    goto :goto_6
+
+    :cond_14
+    add-int/lit8 v5, v5, 0x8
+
+    .line 65
+    invoke-virtual {v13, v7}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v8
+
+    if-nez v8, :cond_15
+
+    const/4 v8, 0x0
+
+    .line 66
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v10
+
+    sget-object v8, Lad5;->c:[Lmd5;
+
+    aget-object v8, v8, v7
+
+    iget-object v8, v8, Lmd5;->b:Ljava/lang/String;
+
+    aget v11, v6, v7
+
+    int-to-long v11, v11
+
+    .line 67
+    invoke-static {v11, v12, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v11
+
+    .line 68
+    invoke-interface {v10, v8, v11}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_15
+    const/4 v8, 0x2
+
+    .line 69
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v10
+
+    invoke-interface {v10}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v10
+
+    if-nez v10, :cond_16
+
+    const/4 v10, 0x0
+
+    .line 70
+    invoke-virtual {v13, v10}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v11
+
+    sget-object v10, Lad5;->c:[Lmd5;
+
+    aget-object v10, v10, v8
+
+    iget-object v10, v10, Lmd5;->b:Ljava/lang/String;
+
+    aget v12, v6, v8
+
+    int-to-long v14, v12
+
+    .line 71
+    invoke-static {v14, v15, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v8
+
+    .line 72
+    invoke-interface {v11, v10, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_16
+    const/4 v8, 0x3
+
+    .line 73
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v10
+
+    invoke-interface {v10}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v10
+
+    if-nez v10, :cond_17
+
+    .line 74
+    invoke-virtual {v13, v7}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v7
+
+    sget-object v10, Lad5;->c:[Lmd5;
+
+    aget-object v10, v10, v8
+
+    iget-object v10, v10, Lmd5;->b:Ljava/lang/String;
+
+    aget v8, v6, v8
+
+    int-to-long v11, v8
+
+    .line 75
+    invoke-static {v11, v12, v9}, Lwc5;->a(JLjava/nio/ByteOrder;)Lwc5;
+
+    move-result-object v8
+
+    .line 76
+    invoke-interface {v7, v10, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_17
+    int-to-short v5, v5
+
+    .line 77
+    invoke-virtual {v4, v5}, Ldw0;->i(S)V
+
+    .line 78
+    sget-object v5, Lld5;->Z:[B
+
+    invoke-virtual {v4, v5}, Ldw0;->write([B)V
+
+    .line 79
+    sget-object v5, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    if-ne v9, v5, :cond_18
+
+    const/16 v5, 0x4d4d
+
+    goto :goto_7
+
+    :cond_18
+    const/16 v5, 0x4949
+
+    :goto_7
+    invoke-virtual {v4, v5}, Ldw0;->i(S)V
+
+    .line 80
+    iput-object v9, v4, Ldw0;->c:Ljava/nio/ByteOrder;
+
+    const/16 v5, 0x2a
+
+    int-to-short v5, v5
+
+    .line 81
+    invoke-virtual {v4, v5}, Ldw0;->i(S)V
+
+    const-wide/16 v7, 0x8
+
+    long-to-int v5, v7
+
+    .line 82
+    invoke-virtual {v4, v5}, Ldw0;->d(I)V
+
+    const/4 v8, 0x0
+
+    .line 83
+    :goto_8
+    sget-object v5, Lad5;->c:[Lmd5;
+
+    const/4 v14, 0x4
+
+    if-ge v8, v14, :cond_1f
+
+    .line 84
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v5
+
+    if-nez v5, :cond_1e
+
+    .line 85
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/util/Map;->size()I
+
+    move-result v5
+
+    int-to-short v5, v5
+
+    .line 86
+    invoke-virtual {v4, v5}, Ldw0;->i(S)V
+
+    .line 87
+    aget v5, v6, v8
+
+    const/4 v7, 0x2
+
+    add-int/2addr v5, v7
+
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v9
+
+    invoke-interface {v9}, Ljava/util/Map;->size()I
+
+    move-result v9
+
+    mul-int/lit8 v9, v9, 0xc
+
+    add-int/2addr v9, v5
+
+    const/4 v14, 0x4
+
+    add-int/2addr v9, v14
+
+    .line 88
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    .line 89
+    invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    .line 90
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :cond_19
+    :goto_9
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_1b
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Ljava/util/Map$Entry;
+
+    .line 91
+    sget-object v11, Lzc5;->f:Ljava/util/ArrayList;
+
+    invoke-interface {v11, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/util/HashMap;
+
+    invoke-interface {v10}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v12
+
+    invoke-virtual {v11, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lmd5;
+
+    .line 92
+    new-instance v12, Ljava/lang/StringBuilder;
+
+    const-string v14, "Tag not supported: "
+
+    invoke-direct {v12, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 93
+    invoke-interface {v10}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, Ljava/lang/String;
+
+    invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v14, ". Tag needs to be ported from ExifInterface to ExifData."
+
+    invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 94
+    invoke-static {v11, v12}, Lnjg;->k(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget v11, v11, Lmd5;->a:I
+
+    .line 95
+    invoke-interface {v10}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v10
+
+    check-cast v10, Lwc5;
+
+    .line 96
+    sget-object v12, Lwc5;->f:[I
+
+    .line 97
+    iget v14, v10, Lwc5;->a:I
+
+    iget v15, v10, Lwc5;->b:I
+
+    .line 98
+    aget v12, v12, v14
+
+    mul-int/2addr v12, v15
+
+    int-to-short v11, v11
+
+    .line 99
+    invoke-virtual {v4, v11}, Ldw0;->i(S)V
+
+    .line 100
+    iget v11, v10, Lwc5;->a:I
+
+    int-to-short v11, v11
+
+    .line 101
+    invoke-virtual {v4, v11}, Ldw0;->i(S)V
+
+    .line 102
+    invoke-virtual {v4, v15}, Ldw0;->d(I)V
+
+    const/4 v14, 0x4
+
+    if-le v12, v14, :cond_1a
+
+    int-to-long v10, v9
+
+    long-to-int v10, v10
+
+    .line 103
+    invoke-virtual {v4, v10}, Ldw0;->d(I)V
+
+    add-int/2addr v9, v12
+
+    goto :goto_9
+
+    .line 104
+    :cond_1a
+    iget-object v10, v10, Lwc5;->c:[B
+
+    invoke-virtual {v4, v10}, Ldw0;->write([B)V
+
+    if-ge v12, v14, :cond_19
+
+    :goto_a
+    if-ge v12, v14, :cond_19
+
+    .line 105
+    iget-object v10, v4, Ldw0;->b:Ljava/io/OutputStream;
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v10, v11}, Ljava/io/OutputStream;->write(I)V
+
+    add-int/lit8 v12, v12, 0x1
+
+    const/4 v14, 0x4
+
+    goto :goto_a
+
+    :cond_1b
+    const-wide/16 v9, 0x0
+
+    long-to-int v5, v9
+
+    .line 106
+    invoke-virtual {v4, v5}, Ldw0;->d(I)V
+
+    .line 107
+    invoke-virtual {v13, v8}, Lad5;->a(I)Ljava/util/Map;
+
+    move-result-object v5
+
+    .line 108
+    invoke-interface {v5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    .line 109
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_b
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v11
+
+    if-eqz v11, :cond_1d
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/util/Map$Entry;
+
+    .line 110
+    invoke-interface {v11}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lwc5;
+
+    .line 111
+    iget-object v11, v11, Lwc5;->c:[B
+
+    array-length v12, v11
+
+    const/4 v14, 0x4
+
+    if-le v12, v14, :cond_1c
+
+    .line 112
+    array-length v12, v11
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v4, v11, v15, v12}, Ldw0;->write([BII)V
+
+    goto :goto_b
+
+    :cond_1c
+    const/4 v15, 0x0
+
+    goto :goto_b
+
+    :cond_1d
+    :goto_c
+    const/4 v14, 0x4
+
+    const/4 v15, 0x0
+
+    goto :goto_d
+
+    :cond_1e
+    const/4 v7, 0x2
+
+    const-wide/16 v9, 0x0
+
+    goto :goto_c
+
+    :goto_d
+    add-int/lit8 v8, v8, 0x1
+
+    goto/16 :goto_8
+
+    .line 113
+    :cond_1f
+    sget-object v5, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    .line 114
+    iput-object v5, v4, Ldw0;->c:Ljava/nio/ByteOrder;
+
+    goto/16 :goto_0
+
+    .line 115
+    :cond_20
+    new-instance v1, Ljava/io/IOException;
+
+    const-string v2, "Not a valid jpeg image, cannot write exif"
+
+    invoke-direct {v1, v2}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_21
+    if-lez v3, :cond_22
+
+    .line 116
+    iget-object v4, v0, Ljava/io/FilterOutputStream;->out:Ljava/io/OutputStream;
+
+    invoke-virtual {v4, v1, v2, v3}, Ljava/io/OutputStream;->write([BII)V
+
+    :cond_22
+    :goto_e
+    return-void
 .end method

@@ -1,79 +1,167 @@
-.class public final synthetic Lre5;
+.class public final Lre5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsx7;
-.implements Lvo3;
+.implements Lt8g;
+.implements Ls02;
+.implements Lpkb;
 
 
 # instance fields
-.field public final synthetic a:Leo8;
+.field public a:Lt8g;
+
+.field public b:Ls02;
+
+.field public c:Lt8g;
+
+.field public o:Ls02;
 
 
-# direct methods
-.method public synthetic constructor <init>(Leo8;)V
-    .locals 0
+# virtual methods
+.method public final a(ILjava/lang/Object;)V
+    .locals 1
 
-    iput-object p1, p0, Lre5;->a:Leo8;
+    const/4 v0, 0x7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eq p1, v0, :cond_3
+
+    const/16 v0, 0x8
+
+    if-eq p1, v0, :cond_2
+
+    const/16 v0, 0x2710
+
+    if-eq p1, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    check-cast p2, Loie;
+
+    if-nez p2, :cond_1
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lre5;->c:Lt8g;
+
+    iput-object p1, p0, Lre5;->o:Ls02;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p2}, Loie;->getVideoFrameMetadataListener()Lt8g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lre5;->c:Lt8g;
+
+    invoke-virtual {p2}, Loie;->getCameraMotionListener()Ls02;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lre5;->o:Ls02;
+
+    return-void
+
+    :cond_2
+    check-cast p2, Ls02;
+
+    iput-object p2, p0, Lre5;->b:Ls02;
+
+    return-void
+
+    :cond_3
+    check-cast p2, Lt8g;
+
+    iput-object p2, p0, Lre5;->a:Lt8g;
 
     return-void
 .end method
 
+.method public final b(J[F)V
+    .locals 1
 
-# virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 3
-
-    check-cast p1, Lgmb;
-
-    invoke-virtual {p1}, Lgmb;->p0()V
-
-    iget-object p1, p1, Lgmb;->a:Lif5;
-
-    invoke-virtual {p1}, Lif5;->Q1()V
-
-    iget-object v0, p1, Lif5;->e1:Leo8;
-
-    iget-object v1, p0, Lre5;->a:Leo8;
-
-    invoke-virtual {v1, v0}, Leo8;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lre5;->o:Ls02;
 
     if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1, p2, p3}, Ls02;->b(J[F)V
+
+    :cond_0
+    iget-object v0, p0, Lre5;->b:Ls02;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1, p2, p3}, Ls02;->b(J[F)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Lre5;->o:Ls02;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ls02;->c()V
+
+    :cond_0
+    iget-object v0, p0, Lre5;->b:Ls02;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ls02;->c()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final d(JJLu66;Landroid/media/MediaFormat;)V
+    .locals 8
+
+    iget-object v0, p0, Lre5;->c:Lt8g;
+
+    if-eqz v0, :cond_0
+
+    move-wide v1, p1
+
+    move-wide v3, p3
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    invoke-interface/range {v0 .. v6}, Lt8g;->d(JJLu66;Landroid/media/MediaFormat;)V
+
+    move-object v7, v6
+
+    move-object v6, v5
+
+    move-wide v4, v3
+
+    move-wide v2, v1
 
     goto :goto_0
 
     :cond_0
-    iput-object v1, p1, Lif5;->e1:Leo8;
+    move-wide v2, p1
 
-    iget-object v0, p1, Lif5;->C0:Lxx7;
+    move-wide v4, p3
 
-    new-instance v1, Lue5;
+    move-object v6, p5
 
-    const/4 v2, 0x4
-
-    invoke-direct {v1, p1, v2}, Lue5;-><init>(Lif5;I)V
-
-    const/16 p1, 0xf
-
-    invoke-virtual {v0, p1, v1}, Lxx7;->f(ILsx7;)V
+    move-object v7, p6
 
     :goto_0
-    return-void
-.end method
+    iget-object v1, p0, Lre5;->a:Lt8g;
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+    if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lre5;->a:Leo8;
+    invoke-interface/range {v1 .. v7}, Lt8g;->d(JJLu66;Landroid/media/MediaFormat;)V
 
-    check-cast p1, Lukb;
-
-    invoke-interface {p1, v0}, Lukb;->h0(Leo8;)V
-
+    :cond_1
     return-void
 .end method

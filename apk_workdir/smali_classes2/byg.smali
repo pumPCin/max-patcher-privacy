@@ -1,152 +1,134 @@
-.class public final synthetic Lbyg;
+.class public final Lbyg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltj6;
+.implements Lfyg;
 
 
-# static fields
-.field public static final a:Lbyg;
+# instance fields
+.field public final a:Ltcf;
 
-.field private static final descriptor:Ldsd;
+.field public final b:Lvcf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ltcf;Lvcf;)V
+    .locals 0
 
-    new-instance v0, Lbyg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbyg;->a:Ltcf;
 
-    sput-object v0, Lbyg;->a:Lbyg;
-
-    new-instance v1, Lnmb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lnmb;-><init>(Ljava/lang/String;Ltj6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lnmb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lbyg;->descriptor:Ldsd;
+    iput-object p2, p0, Lbyg;->b:Lvcf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp8;)Ljava/lang/Object;
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    sget-object v0, Lbyg;->descriptor:Ldsd;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1, v0}, Lp8;->k(Ldsd;)Lp8;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_0
+    instance-of v0, p1, Lbyg;
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1, v0}, Lp8;->q(Ldsd;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Lp8;->w(Ldsd;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
     :cond_1
-    move v4, v2
+    check-cast p1, Lbyg;
+
+    iget-object v0, p0, Lbyg;->a:Ltcf;
+
+    iget-object v1, p1, Lbyg;->a:Ltcf;
+
+    invoke-virtual {v0, v1}, Ltcf;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1, v0}, Lp8;->z(Ldsd;)V
+    iget-object v0, p0, Lbyg;->b:Lvcf;
 
-    new-instance p1, Ldyg;
+    iget-object p1, p1, Lbyg;->b:Lvcf;
 
-    invoke-direct {p1, v5, v3}, Ldyg;-><init>(ILjava/lang/String;)V
+    invoke-virtual {v0, p1}, Lvcf;->equals(Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final b(Le04;Ljava/lang/Object;)V
+.method public final hashCode()I
     .locals 2
 
-    check-cast p2, Ldyg;
+    iget-object v0, p0, Lbyg;->a:Ltcf;
 
-    sget-object v0, Lbyg;->descriptor:Ldsd;
+    invoke-virtual {v0}, Ltcf;->hashCode()I
 
-    invoke-virtual {p1, v0}, Le04;->b(Ldsd;)Le04;
+    move-result v0
 
-    move-result-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p2, p2, Ldyg;->a:Ljava/lang/String;
+    iget-object v1, p0, Lbyg;->b:Lvcf;
 
-    const/4 v1, 0x0
+    invoke-virtual {v1}, Lvcf;->hashCode()I
 
-    invoke-virtual {p1, v0, v1, p2}, Le04;->l(Ldsd;ILjava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {p1}, Le04;->m()V
+    add-int/2addr v1, v0
 
-    return-void
+    return v1
 .end method
 
-.method public final c()[Lum7;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-array v0, v0, [Lum7;
+    const-string v1, "ShowSnackbarShared(sharedPlural="
 
-    sget-object v1, Luxe;->a:Luxe;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lbyg;->a:Ltcf;
 
-    aput-object v1, v0, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v1, ", toChatsPlural="
 
-.method public final d()Ldsd;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lbyg;->descriptor:Ldsd;
+    iget-object v1, p0, Lbyg;->b:Lvcf;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

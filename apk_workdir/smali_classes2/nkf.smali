@@ -1,76 +1,119 @@
-.class public final synthetic Lnkf;
-.super Ljava/lang/Object;
+.class public final enum Lnkf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final enum a:Lnkf;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lnkf;
 
-.field public final synthetic b:Ljya;
+.field public static final enum c:Lnkf;
+
+.field public static final synthetic o:[Lnkf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljya;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lnkf;->a:I
+    new-instance v0, Lnkf;
 
-    iput-object p1, p0, Lnkf;->b:Ljya;
+    const-string v1, "DUMMY"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lnkf;->a:Lnkf;
+
+    new-instance v1, Lnkf;
+
+    const-string v2, "DIRECT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lnkf;->b:Lnkf;
+
+    new-instance v2, Lnkf;
+
+    const-string v3, "SERVER"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lnkf;->c:Lnkf;
+
+    filled-new-array {v0, v1, v2}, [Lnkf;
+
+    move-result-object v0
+
+    sput-object v0, Lnkf;->o:[Lnkf;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public static final a(Ljava/lang/String;)Lnkf;
     .locals 1
 
-    iget v0, p0, Lnkf;->a:I
+    const-string v0, "DIRECT"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lnkf;->b:Ljya;
+    move-result v0
 
-    check-cast v0, Lcya;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcya;->a:Lxe6;
+    sget-object p0, Lnkf;->b:Lnkf;
 
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
 
-    return-void
+    :cond_0
+    const-string v0, "SERVER"
 
-    :pswitch_0
-    iget-object v0, p0, Lnkf;->b:Ljya;
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    check-cast v0, Ldya;
+    move-result p0
 
-    iget-object v0, v0, Ldya;->a:Lxe6;
+    if-eqz p0, :cond_1
 
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p0, Lnkf;->c:Lnkf;
 
-    return-void
+    return-object p0
 
-    :pswitch_1
-    iget-object v0, p0, Lnkf;->b:Ljya;
+    :cond_1
+    sget-object p0, Lnkf;->a:Lnkf;
 
-    check-cast v0, Liya;
+    return-object p0
+.end method
 
-    iget-object v0, v0, Liya;->a:Lxe6;
+.method public static valueOf(Ljava/lang/String;)Lnkf;
+    .locals 1
 
-    invoke-interface {v0, p1}, Lxe6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-class v0, Lnkf;
 
-    return-void
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    nop
+    move-result-object p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    check-cast p0, Lnkf;
+
+    return-object p0
+.end method
+
+.method public static values()[Lnkf;
+    .locals 1
+
+    sget-object v0, Lnkf;->o:[Lnkf;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lnkf;
+
+    return-object v0
 .end method

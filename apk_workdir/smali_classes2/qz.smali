@@ -1,19 +1,11 @@
-.class public final Lqz;
-.super Llde;
+.class public abstract Lqz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Lo10;
+# virtual methods
+.method public abstract a()J
+.end method
 
-
-# direct methods
-.method public constructor <init>(ILjava/lang/String;Lo10;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Llde;-><init>(ILjava/lang/String;)V
-
-    iput-object p3, p0, Lqz;->c:Lo10;
-
-    return-void
+.method public abstract b()Lcdf;
 .end method

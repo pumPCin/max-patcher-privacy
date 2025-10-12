@@ -1,24 +1,26 @@
 .class public final Lhx5;
-.super Lnz3;
+.super Lwy3;
 
 
 # instance fields
 .field public X:I
 
-.field public Y:Lgv5;
+.field public final synthetic Y:Lmw5;
 
-.field public final synthetic Z:Lix5;
+.field public Z:Ljava/lang/Object;
 
 .field public synthetic o:Ljava/lang/Object;
 
+.field public r0:Lku5;
+
 
 # direct methods
-.method public constructor <init>(Lix5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lmw5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lhx5;->Z:Lix5;
+    iput-object p1, p0, Lhx5;->Y:Lmw5;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,11 +40,11 @@
 
     iput p1, p0, Lhx5;->X:I
 
-    iget-object p1, p0, Lhx5;->Z:Lix5;
+    iget-object p1, p0, Lhx5;->Y:Lmw5;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lix5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lmw5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

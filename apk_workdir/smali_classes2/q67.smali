@@ -1,7 +1,25 @@
-.class public interface abstract Lq67;
+.class public final Lq67;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb5g;
-.implements Lt77;
+
+# virtual methods
+.method public final serializer()Lql7;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lql7;"
+        }
+    .end annotation
+
+    sget-object v0, Lr67;->a:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lql7;
+
+    return-object v0
+.end method

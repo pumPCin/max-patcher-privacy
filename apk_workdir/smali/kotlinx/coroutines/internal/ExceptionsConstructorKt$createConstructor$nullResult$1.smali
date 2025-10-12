@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lvd6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->createConstructor(Ljava/lang/Class;)Lxe6;
+    value = Lkotlinx/coroutines/internal/ExceptionsConstructorKt;->createConstructor(Ljava/lang/Class;)Lvd6;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,6 +57,7 @@
 .method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    .line 2
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {p0, p1}, Lkotlinx/coroutines/internal/ExceptionsConstructorKt$createConstructor$nullResult$1;->invoke(Ljava/lang/Throwable;)Ljava/lang/Void;
@@ -69,6 +70,7 @@
 .method public final invoke(Ljava/lang/Throwable;)Ljava/lang/Void;
     .locals 0
 
+    .line 1
     const/4 p1, 0x0
 
     return-object p1

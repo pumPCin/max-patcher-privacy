@@ -1,21 +1,31 @@
-.class public abstract Lydh;
+.class public final Lydh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
+# instance fields
+.field public final a:Ljj9;
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljj9;IJI)V
+    .locals 0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Lydh;->a:Ljj9;
 
-    sput-object v0, Lydh;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iput p2, p0, Lydh;->b:I
+
+    iput-wide p3, p0, Lydh;->c:J
+
+    iput p5, p0, Lydh;->d:I
 
     return-void
 .end method

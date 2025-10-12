@@ -1,98 +1,62 @@
 .class public final Lg40;
-.super Lh40;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lf00;
 
 
 # instance fields
-.field public final a:Ljef;
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:[B
+
+.field public final h:Ljava/lang/String;
+
+.field public final i:J
+
+.field public final j:Lane;
+
+.field public final k:Lane;
 
 
 # direct methods
-.method public constructor <init>(Ljef;)V
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BLjava/lang/String;JLhne;Lane;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lg40;->a:Ljef;
+    iput-wide p1, p0, Lg40;->a:J
+
+    iput-wide p3, p0, Lg40;->b:J
+
+    iput-object p5, p0, Lg40;->c:Ljava/lang/String;
+
+    iput-object p6, p0, Lg40;->d:Ljava/lang/String;
+
+    iput-object p7, p0, Lg40;->e:Ljava/lang/String;
+
+    iput-object p8, p0, Lg40;->f:Ljava/lang/String;
+
+    iput-object p9, p0, Lg40;->g:[B
+
+    iput-object p10, p0, Lg40;->h:Ljava/lang/String;
+
+    iput-wide p11, p0, Lg40;->i:J
+
+    iput-object p13, p0, Lg40;->j:Lane;
+
+    iput-object p14, p0, Lg40;->k:Lane;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lg40;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lg40;
-
-    iget-object v0, p0, Lg40;->a:Ljef;
-
-    iget-object p1, p1, Lg40;->a:Ljef;
-
-    invoke-virtual {v0, p1}, Ljef;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lg40;->a:Ljef;
-
-    iget v0, v0, Ljef;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowTooltipEvent(textSource="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg40;->a:Ljef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

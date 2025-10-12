@@ -1,83 +1,83 @@
-.class public final Lvda;
-.super Lraa;
+.class public final synthetic Lvda;
+.super Lye6;
 .source "SourceFile"
 
+# interfaces
+.implements Lle6;
 
-# instance fields
-.field public final a:Lked;
 
-.field public final b:J
-
-.field public final c:Ljava/util/concurrent/TimeUnit;
+# static fields
+.field public static final a:Lvda;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lked;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvda;
 
-    iput-wide p1, p0, Lvda;->b:J
+    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    iput-object p3, p0, Lvda;->c:Ljava/util/concurrent/TimeUnit;
+    const/4 v5, 0x0
 
-    iput-object p4, p0, Lvda;->a:Lked;
+    const/4 v1, 0x3
+
+    const-class v2, Lwda;
+
+    const-string v3, "register"
+
+    invoke-direct/range {v0 .. v5}, Lye6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lvda;->a:Lvda;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(Lxda;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    new-instance v0, Luda;
+    check-cast p1, Lwda;
 
-    const/4 v1, 0x0
+    check-cast p2, Lpnd;
 
-    invoke-direct {v0, v1, p1}, Luda;-><init>(ILjava/lang/Object;)V
+    iget-wide v0, p1, Lwda;->a:J
 
-    invoke-interface {p1, v0}, Lxda;->c(Lss4;)V
+    const-wide/16 v2, 0x0
 
-    iget-wide v1, p0, Lvda;->b:J
+    cmp-long p3, v0, v2
 
-    iget-object p1, p0, Lvda;->c:Ljava/util/concurrent/TimeUnit;
+    sget-object v2, Laxf;->a:Laxf;
 
-    iget-object v3, p0, Lvda;->a:Lked;
+    if-gtz p3, :cond_0
 
-    invoke-virtual {v3, v0, v1, v2, p1}, Lked;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lss4;
+    check-cast p2, Lond;
+
+    iput-object v2, p2, Lond;->X:Ljava/lang/Object;
+
+    return-object v2
+
+    :cond_0
+    new-instance p3, Lqf6;
+
+    const/16 v3, 0x13
+
+    invoke-direct {p3, p2, v3, p1}, Lqf6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    check-cast p2, Lond;
+
+    iget-object p1, p2, Lond;->a:Lf24;
+
+    invoke-static {p1}, Lbv0;->q(Lf24;)Lmm4;
+
+    move-result-object v3
+
+    invoke-interface {v3, v0, v1, p3, p1}, Lmm4;->invokeOnTimeout(JLjava/lang/Runnable;Lf24;)Lis4;
 
     move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x0
+    iput-object p1, p2, Lond;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Lws4;->a:Lws4;
-
-    if-ne v0, v1, :cond_2
-
-    invoke-interface {p1}, Lss4;->g()V
-
-    :cond_2
-    :goto_0
-    return-void
+    return-object v2
 .end method

@@ -3,95 +3,265 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final l:Lec2;
-
-
 # instance fields
-.field public final a:Z
+.field public A:Ljava/util/ArrayList;
 
-.field public final b:Z
+.field public B:Lpc2;
 
-.field public final c:Z
+.field public C:Lmc2;
 
-.field public final d:Z
+.field public D:Ljava/lang/String;
 
-.field public final e:Z
+.field public E:Lzs5;
 
-.field public final f:Z
+.field public F:I
 
-.field public final g:Z
+.field public G:Ljava/lang/String;
 
-.field public final h:Z
+.field public H:Ljava/util/List;
 
-.field public final i:Z
+.field public I:I
 
-.field public final j:Z
+.field public J:Ljc2;
 
-.field public final k:Z
+.field public K:J
+
+.field public L:Z
+
+.field public M:Z
+
+.field public N:Z
+
+.field public O:J
+
+.field public P:I
+
+.field public Q:Lrs;
+
+.field public R:I
+
+.field public S:Ls00;
+
+.field public T:J
+
+.field public U:I
+
+.field public V:J
+
+.field public W:I
+
+.field public X:J
+
+.field public Y:J
+
+.field public Z:Lsq0;
+
+.field public a:J
+
+.field public a0:J
+
+.field public b:Ltc2;
+
+.field public b0:Lkla;
+
+.field public c:Lsc2;
+
+.field public c0:J
+
+.field public d:J
+
+.field public d0:J
+
+.field public e:Ljava/util/Map;
+
+.field public e0:Z
+
+.field public f:J
+
+.field public f0:Ljava/util/Map;
+
+.field public g:Ljava/lang/String;
+
+.field public g0:J
+
+.field public h:Ljava/lang/String;
+
+.field public h0:Z
+
+.field public i:Ljava/lang/String;
+
+.field public i0:Lqc2;
+
+.field public j:J
+
+.field public j0:J
+
+.field public k:J
+
+.field public k0:Ljava/lang/String;
+
+.field public l:J
+
+.field public l0:J
+
+.field public m:I
+
+.field public m0:J
+
+.field public n:Loc2;
+
+.field public n0:I
+
+.field public o:Llc2;
+
+.field public p:Lhc2;
+
+.field public q:Lhc2;
+
+.field public r:Lhc2;
+
+.field public s:Lhc2;
+
+.field public t:Lhc2;
+
+.field public u:Lhc2;
+
+.field public v:Lhc2;
+
+.field public w:J
+
+.field public x:Ljava/util/ArrayList;
+
+.field public y:Ljava/util/List;
+
+.field public z:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lec2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v10, 0x0
+    new-instance v0, Loc2;
 
-    const/4 v11, 0x0
+    invoke-direct {v0}, Loc2;-><init>()V
+
+    iput-object v0, p0, Lec2;->n:Loc2;
+
+    const/4 v0, 0x2
+
+    iput v0, p0, Lec2;->n0:I
+
+    new-instance v0, Lrs;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
 
-    const/4 v3, 0x0
+    iput-object v0, p0, Lec2;->Q:Lrs;
 
-    const/4 v4, 0x0
+    sget-object v0, Lsq0;->c:Lsq0;
 
-    const/4 v5, 0x0
+    iput-object v0, p0, Lec2;->Z:Lsq0;
 
-    const/4 v6, 0x0
+    const/4 v0, 0x0
 
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v0 .. v11}, Lec2;-><init>(ZZZZZZZZZZZ)V
-
-    sput-object v0, Lec2;->l:Lec2;
+    iput-object v0, p0, Lec2;->i0:Lqc2;
 
     return-void
 .end method
 
-.method public constructor <init>(ZZZZZZZZZZZ)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final a(Lfc2;)V
+    .locals 1
 
-    iput-boolean p1, p0, Lec2;->a:Z
+    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
 
-    iput-boolean p2, p0, Lec2;->b:Z
+    if-nez v0, :cond_0
 
-    iput-boolean p3, p0, Lec2;->c:Z
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-boolean p4, p0, Lec2;->d:Z
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-boolean p5, p0, Lec2;->e:Z
+    iput-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
 
-    iput-boolean p6, p0, Lec2;->f:Z
+    :cond_0
+    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
 
-    iput-boolean p7, p0, Lec2;->g:Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput-boolean p8, p0, Lec2;->h:Z
+    return-void
+.end method
 
-    iput-boolean p9, p0, Lec2;->i:Z
+.method public final b()Ljava/util/List;
+    .locals 1
 
-    iput-boolean p10, p0, Lec2;->j:Z
+    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
 
-    iput-boolean p11, p0, Lec2;->k:Z
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+
+    :cond_0
+    iget-object v0, p0, Lec2;->A:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/util/Map;
+    .locals 2
+
+    iget-object v0, p0, Lec2;->e:Ljava/util/Map;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lrs;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
+
+    iput-object v0, p0, Lec2;->e:Ljava/util/Map;
+
+    :cond_0
+    iget-object v0, p0, Lec2;->e:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method public final d(Ljava/util/Map;)V
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Lrs;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p1, v0}, Lube;-><init>(I)V
+
+    iput-object p1, p0, Lec2;->Q:Lrs;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lrs;
+
+    invoke-interface {p1}, Ljava/util/Map;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
+
+    iput-object v0, p0, Lec2;->Q:Lrs;
+
+    invoke-virtual {v0, p1}, Lrs;->putAll(Ljava/util/Map;)V
 
     return-void
 .end method

@@ -2,75 +2,93 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr18;
+
 
 # instance fields
-.field public volatile a:J
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public volatile b:J
-
-.field public final synthetic c:Lzk6;
+.field public final synthetic b:Lc22;
 
 
 # direct methods
-.method public constructor <init>(Lzk6;)V
-    .locals 0
+.method public constructor <init>(Lc22;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyk6;->c:Lzk6;
+    iput-object p1, p0, Lyk6;->b:Lc22;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object p1, p0, Lyk6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lqe2;)V
+.method public final F()V
     .locals 4
-    .annotation runtime Lxye;
-    .end annotation
 
-    iget-wide v0, p1, Lbj0;->a:J
+    iget-object v0, p0, Lyk6;->b:Lc22;
 
-    iget-wide v2, p0, Lyk6;->b:J
+    invoke-virtual {v0}, Lc22;->r()Z
 
-    cmp-long v0, v0, v2
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    return-void
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    iget-object v3, p0, Lyk6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lc22;->resumeWith(Ljava/lang/Object;)V
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "onEvent "
+.method public final Q(Lf18;)V
+    .locals 4
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lyk6;->b:Lc22;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lc22;->r()Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v1
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    const-string v0, "zk6"
+    const/4 v1, 0x0
 
-    invoke-static {v0, p1}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    iget-object p1, p0, Lyk6;->c:Lzk6;
+    iget-object v3, p0, Lyk6;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-object p1, p1, Lzk6;->c:Lub2;
+    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    iget-wide v0, p0, Lyk6;->a:J
+    move-result v1
 
-    invoke-virtual {p1, v0, v1}, Lub2;->z(J)Lm82;
+    if-eqz v1, :cond_0
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lc22;->resumeWith(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lyk6;->c:Lzk6;
-
-    iget-object v0, v0, Lzk6;->d:Lqe3;
-
-    invoke-virtual {v0, p1}, Llj7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
-
+    :cond_0
     return-void
 .end method

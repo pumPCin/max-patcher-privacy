@@ -1,159 +1,301 @@
-.class public final synthetic Lve4;
-.super Ljava/lang/Object;
+.class public final Lve4;
+.super Lwe4;
 .source "SourceFile"
+
+# interfaces
+.implements Ln73;
+.implements Lfef;
 
 
 # instance fields
-.field public final synthetic a:Lxe4;
+.field public final X:Lane;
+
+.field public Y:Z
+
+.field public final Z:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public o:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxe4;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Lane;Lz68;)V
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lhi0;-><init>()V
 
-    iput-object p1, p0, Lve4;->a:Lxe4;
+    iput-object p1, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    iput-object p2, p0, Lve4;->X:Lane;
+
+    invoke-static {p3}, Lov9;->a(Lf24;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lve4;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v0, Lpq0;
+
+    const/4 v6, 0x4
+
+    const/16 v7, 0x11
+
+    const/4 v1, 0x2
+
+    const-class v3, Lve4;
+
+    const-string v4, "onThemeChanged"
+
+    const-string v5, "onThemeChanged(Lone/me/sdk/design/OneMeTheme;)V"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Lpq0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance p3, Lnw5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p3, p2, v0, v1}, Lnw5;-><init>(Liu5;Lje6;I)V
+
+    invoke-static {p3, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 9
+.method public final E()Landroid/graphics/drawable/Drawable;
+    .locals 3
 
-    iget-object v1, p0, Lve4;->a:Lxe4;
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
 
-    monitor-enter v1
-
-    :try_start_0
-    iget v0, v1, Lxe4;->i:I
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v2, v1, Lxe4;->e:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v2, :cond_0
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_2
-
-    :cond_0
-    if-ne v0, p1, :cond_1
-
-    monitor-exit v1
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    iput p1, v1, Lxe4;->i:I
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_4
-
-    if-eqz p1, :cond_4
-
-    const/16 v0, 0x8
-
-    if-ne p1, v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1, p1}, Lxe4;->b(I)J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lxe4;->l:J
-
-    iget-object p1, v1, Lxe4;->d:Ly5f;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    iget p1, v1, Lxe4;->f:I
+    if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    if-lez p1, :cond_3
+    return-object v0
 
-    iget-wide v2, v1, Lxe4;->g:J
+    :cond_0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    sub-long v2, v7, v2
+    move-result-object v1
 
-    long-to-int p1, v2
+    if-eq v1, v0, :cond_1
 
-    move v2, p1
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    :cond_1
+    instance-of v0, v1, Lfef;
+
+    if-eqz v0, :cond_2
+
+    move-object v0, v1
+
+    check-cast v0, Lfef;
+
+    iget-object v2, p0, Lve4;->X:Lane;
+
+    invoke-interface {v2}, Lane;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llwa;
+
+    invoke-interface {v0, v2}, Lfef;->onThemeChanged(Llwa;)V
+
+    :cond_2
+    return-object v1
+.end method
+
+.method public final close()V
+    .locals 3
+
+    iget-object v0, p0, Lve4;->Z:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lov9;->l(Ln24;Ljava/util/concurrent/CancellationException;)V
+
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    instance-of v2, v0, Ljava/io/Closeable;
+
+    if-eqz v2, :cond_0
+
+    check-cast v0, Ljava/io/Closeable;
 
     goto :goto_0
 
-    :cond_3
-    move v2, v0
+    :cond_0
+    move-object v0, v1
 
     :goto_0
-    iget-wide v3, v1, Lxe4;->h:J
+    if-eqz v0, :cond_1
 
-    iget-wide v5, v1, Lxe4;->l:J
+    invoke-interface {v0}, Ljava/io/Closeable;->close()V
 
-    invoke-virtual/range {v1 .. v6}, Lxe4;->c(IJJ)V
+    :cond_1
+    iput-object v1, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
 
-    iput-wide v7, v1, Lxe4;->g:J
+    const/4 v0, 0x1
 
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, v1, Lxe4;->h:J
-
-    iput-wide v2, v1, Lxe4;->k:J
-
-    iput-wide v2, v1, Lxe4;->j:J
-
-    iget-object p1, v1, Lxe4;->c:Llge;
-
-    iget-object v2, p1, Llge;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
-
-    const/4 v2, -0x1
-
-    iput v2, p1, Llge;->d:I
-
-    iput v0, p1, Llge;->e:I
-
-    iput v0, p1, Llge;->f:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit v1
+    iput-boolean v0, p0, Lve4;->Y:Z
 
     return-void
+.end method
 
-    :cond_4
-    :goto_1
-    monitor-exit v1
+.method public final getHeight()I
+    .locals 2
 
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    if-ltz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final getSizeInBytes()I
+    .locals 2
+
+    invoke-virtual {p0}, Lve4;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lve4;->getHeight()I
+
+    move-result v1
+
+    mul-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x4
+
+    return v1
+.end method
+
+.method public final getWidth()I
+    .locals 2
+
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v1
+
+    if-ltz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isClosed()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lve4;->Y:Z
+
+    return v0
+.end method
+
+.method public final isStateful()Z
+    .locals 1
+
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onThemeChanged(Llwa;)V
+    .locals 2
+
+    iget-object v0, p0, Lve4;->o:Landroid/graphics/drawable/Drawable;
+
+    instance-of v1, v0, Lfef;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Lfef;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lfef;->onThemeChanged(Llwa;)V
+
+    :cond_1
     return-void
-
-    :goto_2
-    :try_start_2
-    monitor-exit v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
 .end method

@@ -1,30 +1,26 @@
 .class public final Lvl2;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lqm8;
-
-.field public final synthetic Z:Lvm2;
+.field public final synthetic Y:Lrm2;
 
 
 # direct methods
-.method public constructor <init>(Lqm8;Lvm2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lrm2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lvl2;->Y:Lqm8;
-
-    iput-object p2, p0, Lvl2;->Z:Lvm2;
+    iput-object p1, p0, Lvl2;->Y:Lrm2;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg9h;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,191 +40,92 @@
 
     check-cast p1, Lvl2;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lvl2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lvl2;
+    new-instance p1, Lvl2;
 
-    iget-object v1, p0, Lvl2;->Y:Lqm8;
+    iget-object v0, p0, Lvl2;->Y:Lrm2;
 
-    iget-object v2, p0, Lvl2;->Z:Lvm2;
+    invoke-direct {p1, v0, p2}, Lvl2;-><init>(Lrm2;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, v2, p2}, Lvl2;-><init>(Lqm8;Lvm2;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lvl2;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
-    iget-object v0, p0, Lvl2;->Z:Lvm2;
-
-    iget-object v0, v0, Lvm2;->S0:Ljb5;
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvl2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lg9h;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_9
+    iget v0, p0, Lvl2;->X:I
 
     const/4 v1, 0x1
 
-    if-eq p1, v1, :cond_9
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x2
+    if-ne v0, v1, :cond_0
 
-    sget-object v2, Loef;->a:Lnef;
-
-    iget-object v3, p0, Lvl2;->Y:Lqm8;
-
-    if-eq p1, v1, :cond_5
-
-    const/4 v1, 0x3
-
-    if-eq p1, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq p1, v1, :cond_9
-
-    const/4 v1, 0x5
-
-    if-ne p1, v1, :cond_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
 
     :cond_1
-    :goto_0
-    instance-of p1, v3, Lim8;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    if-eqz p1, :cond_2
+    iput v1, p0, Lvl2;->X:I
 
-    sget p1, Lvic;->oneme_chatmedia_viewer_photo_download_error:I
+    const-wide/16 v0, 0xbb8
 
-    new-instance v2, Ljef;
+    invoke-static {v0, v1, p0}, Lbv0;->k(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
+    move-result-object p1
 
-    goto :goto_1
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    instance-of p1, v3, Lom8;
+    :goto_0
+    iget-object p1, p0, Lvl2;->Y:Lrm2;
 
-    if-eqz p1, :cond_3
-
-    sget p1, Lvic;->oneme_chatmedia_viewer_video_download_error:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    goto :goto_1
+    iget-object p1, p1, Lrm2;->a1:Lhne;
 
     :cond_3
-    instance-of p1, v3, Lam8;
+    invoke-virtual {p1}, Lhne;->getValue()Ljava/lang/Object;
 
-    if-eqz p1, :cond_4
+    move-result-object v0
 
-    :goto_1
-    new-instance p1, Ldb5;
+    move-object v1, v0
 
-    sget v1, Lq9d;->j:I
+    check-cast v1, Le04;
 
-    new-instance v3, Ljava/lang/Integer;
+    sget-object v1, Le04;->b:Le04;
 
-    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
+    invoke-virtual {p1, v0, v1}, Lhne;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v2, v3}, Ldb5;-><init>(Loef;Ljava/lang/Integer;)V
+    move-result v0
 
-    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    if-eqz v0, :cond_3
 
-    goto :goto_3
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_5
-    instance-of p1, v3, Lim8;
-
-    if-eqz p1, :cond_6
-
-    sget p1, Lvic;->oneme_chatmedia_viewer_photo_download_complete:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_6
-    instance-of p1, v3, Lom8;
-
-    if-eqz p1, :cond_7
-
-    sget p1, Lvic;->oneme_chatmedia_viewer_video_download_complete:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, p1}, Ljef;-><init>(I)V
-
-    goto :goto_2
-
-    :cond_7
-    instance-of p1, v3, Lam8;
-
-    if-eqz p1, :cond_8
-
-    :goto_2
-    new-instance p1, Ldb5;
-
-    sget v1, Lq9d;->m:I
-
-    new-instance v3, Ljava/lang/Integer;
-
-    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-direct {p1, v2, v3}, Ldb5;-><init>(Loef;Ljava/lang/Integer;)V
-
-    invoke-static {v0, p1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_8
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_9
-    :goto_3
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method

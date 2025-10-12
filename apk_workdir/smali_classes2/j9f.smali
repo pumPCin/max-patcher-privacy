@@ -1,62 +1,90 @@
-.class public interface abstract Lj9f;
-.super Ljava/lang/Object;
+.class public final Lj9f;
+.super Lc2f;
 .source "SourceFile"
 
+# interfaces
+.implements Lje6;
 
-# static fields
-.field public static final a0:Ljava/util/List;
 
-.field public static final b0:Lh2a;
+# instance fields
+.field public final synthetic X:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const-string v9, "login.flood"
+    iput-object p1, p0, Lj9f;->X:Landroid/view/View;
 
-    const-string v10, "login.blocked"
+    const/4 p1, 0x2
 
-    const-string v0, "session.state"
-
-    const-string v1, "proto.state"
-
-    const-string v2, "proto.payload"
-
-    const-string v3, "internal"
-
-    const-string v4, "service.unavailable"
-
-    const-string v5, "service.timeout"
-
-    const-string v6, "proto.ver"
-
-    const-string v7, "error.call.history.inconsistency"
-
-    const-string v8, "errors.event.unavailable"
-
-    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lj9f;->a0:Ljava/util/List;
-
-    new-instance v0, Lh2a;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lh2a;-><init>(I)V
-
-    sput-object v0, Lj9f;->b0:Lh2a;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract c(IJF)J
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lku5;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lj9f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lj9f;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lj9f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lj9f;
+
+    iget-object v0, p0, Lj9f;->X:Landroid/view/View;
+
+    invoke-direct {p1, v0, p2}, Lj9f;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lj9f;->X:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lfk4;->e0:Lfk4;
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v0, Lh9f;->a0:Lh4f;
+
+    invoke-static {p1}, Luce;->e0(Landroid/content/Context;)Lh9f;
+
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

@@ -2,58 +2,83 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lle6;
+
 
 # static fields
-.field public static final d:Lvc6;
+.field public static final b:Lqnd;
 
-.field public static final e:Lvc6;
+.field public static final c:Lqnd;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public b:I
-
-.field public c:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    const/16 v0, 0x3a
+    new-instance v0, Lqnd;
 
-    invoke-static {v0}, Lvc6;->T(C)Lvc6;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lqnd;-><init>(I)V
 
-    sput-object v0, Lqnd;->d:Lvc6;
+    sput-object v0, Lqnd;->b:Lqnd;
 
-    const/16 v0, 0x2a
+    new-instance v0, Lqnd;
 
-    invoke-static {v0}, Lvc6;->T(C)Lvc6;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lqnd;-><init>(I)V
 
-    sput-object v0, Lqnd;->e:Lvc6;
+    sput-object v0, Lqnd;->c:Lqnd;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lqnd;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lqnd;->a:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lqnd;->b:I
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lqnd;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    check-cast p2, Lj1d;
+
+    check-cast p3, Lf24;
+
+    invoke-static {p2}, Lf3g;->c(Ljava/io/Closeable;)V
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

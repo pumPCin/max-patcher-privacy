@@ -1,99 +1,67 @@
 .class public final Lkx9;
-.super Ljava/lang/Object;
+.super Landroid/telephony/TelephonyCallback;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/telephony/TelephonyCallback$DisplayInfoListener;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:F
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:Z
-
-.field public final p:I
-
-.field public final q:I
-
-.field public final r:I
-
-.field public final s:I
+.field public final a:Lox9;
 
 
 # direct methods
-.method public constructor <init>(IIIIIIFIIZZIIIZIIII)V
+.method public constructor <init>(Lox9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/telephony/TelephonyCallback;-><init>()V
 
-    iput p1, p0, Lkx9;->a:I
+    iput-object p1, p0, Lkx9;->a:Lox9;
 
-    iput p2, p0, Lkx9;->b:I
+    return-void
+.end method
 
-    iput p3, p0, Lkx9;->c:I
 
-    iput p4, p0, Lkx9;->d:I
+# virtual methods
+.method public final onDisplayInfoChanged(Landroid/telephony/TelephonyDisplayInfo;)V
+    .locals 2
 
-    iput p5, p0, Lkx9;->e:I
+    invoke-static {p1}, Lxo8;->c(Landroid/telephony/TelephonyDisplayInfo;)I
 
-    iput p6, p0, Lkx9;->f:I
+    move-result p1
 
-    iput p7, p0, Lkx9;->g:F
+    const/4 v0, 0x3
 
-    iput p8, p0, Lkx9;->h:I
+    const/4 v1, 0x5
 
-    iput p9, p0, Lkx9;->i:I
+    if-eq p1, v0, :cond_1
 
-    iput-boolean p10, p0, Lkx9;->j:Z
+    const/4 v0, 0x4
 
-    iput-boolean p11, p0, Lkx9;->k:Z
+    if-eq p1, v0, :cond_1
 
-    iput p12, p0, Lkx9;->l:I
+    if-ne p1, v1, :cond_0
 
-    iput p13, p0, Lkx9;->m:I
+    goto :goto_0
 
-    iput p14, p0, Lkx9;->n:I
+    :cond_0
+    const/4 p1, 0x0
 
-    iput-boolean p15, p0, Lkx9;->o:Z
+    goto :goto_1
 
-    move/from16 p1, p16
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    iput p1, p0, Lkx9;->p:I
+    :goto_1
+    if-eqz p1, :cond_2
 
-    move/from16 p1, p17
+    const/16 v1, 0xa
 
-    iput p1, p0, Lkx9;->q:I
+    :cond_2
+    iget-object p1, p0, Lkx9;->a:Lox9;
 
-    move/from16 p1, p18
-
-    iput p1, p0, Lkx9;->r:I
-
-    move/from16 p1, p19
-
-    iput p1, p0, Lkx9;->s:I
+    invoke-virtual {p1, v1}, Lox9;->d(I)V
 
     return-void
 .end method

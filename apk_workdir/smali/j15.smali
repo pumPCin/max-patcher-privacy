@@ -1,17 +1,28 @@
-.class public final Lj15;
-.super Lyhh;
+.class public final synthetic Lj15;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldv8;
+
+.field public final synthetic c:Lv6d;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Ldv8;Lv6d;I)V
     .locals 0
 
-    iput p1, p0, Lj15;->e:I
+    iput p3, p0, Lj15;->a:I
+
+    iput-object p1, p0, Lj15;->b:Ldv8;
+
+    iput-object p2, p0, Lj15;->c:Lv6d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -20,185 +31,216 @@
 
 
 # virtual methods
-.method public final K(Ljava/lang/Object;F)V
-    .locals 1
+.method public final run()V
+    .locals 8
 
-    iget v0, p0, Lj15;->e:I
+    iget v0, p0, Lj15;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/view/View;
+    iget-object v0, p0, Lj15;->c:Lv6d;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
+    iget-object v1, p0, Lj15;->b:Ldv8;
 
+    iget-object v2, v1, Ldv8;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lz6d;
+
+    :try_start_0
+    iget-object v3, v3, Lz6d;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v3, v0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v3
+
+    iget-object v4, v1, Ldv8;->b:Ljava/lang/Object;
+
+    check-cast v4, Lwkc;
+
+    const-string v5, "CallsListeners"
+
+    const-string v6, "rtc.command.handle.listeners.oncommandremove"
+
+    invoke-interface {v4, v5, v6, v3}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 
     :pswitch_0
-    check-cast p1, Landroid/view/View;
+    iget-object v0, p0, Lj15;->c:Lv6d;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
+    iget-object v1, p0, Lj15;->b:Ldv8;
 
+    iget-object v2, v1, Ldv8;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lz6d;
+
+    :try_start_1
+    iget-object v4, v3, Lz6d;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v4, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Long;
+
+    if-eqz v4, :cond_1
+
+    iget-object v5, v3, Lz6d;->b:Lwkc;
+
+    iget-object v3, v3, Lz6d;->a:Ljava/lang/String;
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "-> ["
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v4, "]: "
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v5, v3, v4}, Lwkc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v3
+
+    iget-object v4, v1, Ldv8;->b:Ljava/lang/Object;
+
+    check-cast v4, Lwkc;
+
+    const-string v5, "CallsListeners"
+
+    const-string v6, "rtc.command.handle.listeners.oncommandsent"
+
+    invoke-interface {v4, v5, v6, v3}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_2
     return-void
 
     :pswitch_1
-    check-cast p1, Landroid/view/View;
+    iget-object v0, p0, Lj15;->c:Lv6d;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
+    iget-object v1, p0, Lj15;->b:Ldv8;
 
-    return-void
+    iget-object v2, v1, Ldv8;->a:Ljava/lang/Object;
 
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
+    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    return-void
+    move-result-object v2
 
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+    move-result v3
 
-    return-void
+    if-eqz v3, :cond_3
 
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+    move-result-object v3
 
-    return-void
+    check-cast v3, Lz6d;
 
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
+    :try_start_2
+    iget-object v4, v3, Lz6d;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
+    invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
 
-    return-void
+    move-result-wide v4
 
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
+    iget-object v3, v3, Lz6d;->d:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
+    move-result-object v4
 
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
+    invoke-virtual {v3, v0, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
+    goto :goto_2
 
+    :catchall_2
+    move-exception v3
+
+    iget-object v4, v1, Ldv8;->b:Ljava/lang/Object;
+
+    check-cast v4, Lwkc;
+
+    const-string v5, "CallsListeners"
+
+    const-string v6, "rtc.command.handle.listeners.oncommandsubmit"
+
+    invoke-interface {v4, v5, v6, v3}, Lwkc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_3
     return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final t(Ljava/lang/Object;)F
-    .locals 1
-
-    iget v0, p0, Lj15;->e:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_2
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_3
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_4
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_5
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_6
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_7
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getY()F
-
-    move-result p1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

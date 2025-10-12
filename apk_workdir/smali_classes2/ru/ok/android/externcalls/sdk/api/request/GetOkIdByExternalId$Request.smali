@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfl;
+.implements Lvl;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lfl;"
+        "Lvl;"
     }
 .end annotation
 
@@ -29,7 +29,7 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;",
-        "Lfl;",
+        "Lvl;",
         "Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;",
         "",
         "id",
@@ -44,20 +44,20 @@
         "shouldReport",
         "willWriteParams",
         "willWriteSupplyParams",
-        "Lcm7;",
+        "Lyk7;",
         "writer",
-        "Loyf;",
+        "Laxf;",
         "writeParams",
-        "(Lcm7;)V",
+        "(Lyk7;)V",
         "writeSupplyParams",
-        "Ldl;",
+        "Lrl;",
         "getConfigExtractor",
-        "()Ldl;",
+        "()Lrl;",
         "configExtractor",
-        "Lpl7;",
+        "Llk7;",
         "Lru/ok/android/api/core/ApiInvocationException;",
         "getFailParser",
-        "()Lpl7;",
+        "()Llk7;",
         "failParser",
         "getOkParser",
         "okParser",
@@ -65,13 +65,13 @@
         "getPriority",
         "()I",
         "priority",
-        "Ltl;",
+        "Lim;",
         "getScope",
-        "()Ltl;",
+        "()Lim;",
         "scope",
-        "Lul;",
+        "Ljm;",
         "getScopeAfter",
-        "()Lul;",
+        "()Ljm;",
         "scopeAfter",
         "Landroid/net/Uri;",
         "getUri",
@@ -90,10 +90,10 @@
 
 
 # instance fields
-.field private final synthetic $$delegate_0:Lcl0;
+.field private final synthetic $$delegate_0:Lvk0;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcl0;"
+            "Lvk0;"
         }
     .end annotation
 .end field
@@ -110,57 +110,57 @@
     const-string v0, "vchat.getOkIdByExternalId"
 
     .line 3
-    invoke-static {v0}, Lbm;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lrm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     .line 4
-    new-instance v1, Lml;
+    new-instance v1, Lcm;
 
-    invoke-direct {v1}, Lml;-><init>()V
+    invoke-direct {v1}, Lcm;-><init>()V
 
     .line 5
-    new-instance v2, Lqxe;
+    new-instance v2, Lhwe;
 
     .line 6
     const-string v3, "externalId"
 
-    invoke-direct {v2, v3, p1}, Lwxe;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, p1}, Lnwe;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {v1, v2}, Lml;->a(Lll;)V
+    invoke-virtual {v1, v2}, Lcm;->a(Lbm;)V
 
     .line 8
-    new-instance p1, Ljq0;
+    new-instance p1, Lbq0;
 
     const-string v2, "anonym"
 
-    invoke-direct {p1, v2, p2}, Ljq0;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {p1, v2, p2}, Lbq0;-><init>(Ljava/lang/String;Z)V
 
     .line 9
-    invoke-virtual {v1, p1}, Lml;->a(Lll;)V
+    invoke-virtual {v1, p1}, Lcm;->a(Lbm;)V
 
     .line 10
     sget-object p1, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response;->Companion:Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;->getPARSER()Lpl7;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Response$Companion;->getPARSER()Llk7;
 
     move-result-object p1
 
     .line 11
-    new-instance p2, Lcl0;
+    new-instance p2, Lvk0;
 
-    sget-object v2, Ltl;->c:Ltl;
+    sget-object v2, Lim;->c:Lim;
 
-    invoke-direct {p2, v0, v2, v1, p1}, Lcl0;-><init>(Landroid/net/Uri;Ltl;Lml;Lpl7;)V
+    invoke-direct {p2, v0, v2, v1, p1}, Lvk0;-><init>(Landroid/net/Uri;Lim;Lcm;Llk7;)V
 
     .line 12
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZILof4;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZILaf4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -181,63 +181,63 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->c:Lml;
+    iget-object v0, v0, Lvk0;->c:Lcm;
 
-    iget-boolean v0, v0, Lml;->b:Z
+    iget-boolean v0, v0, Lcm;->b:Z
 
     return v0
 .end method
 
-.method public getConfigExtractor()Ldl;
+.method public getConfigExtractor()Lrl;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ldl;"
+            "Lrl;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Ldl;->e:Lzu3;
+    sget-object v0, Lrl;->e:Li7a;
 
     return-object v0
 .end method
 
-.method public getFailParser()Lpl7;
+.method public getFailParser()Llk7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lmf2;->b:Lmf2;
+    sget-object v0, Lwt3;->b:Lwt3;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lpl7;
+.method public getOkParser()Llk7;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lpl7;"
+            "Llk7;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->d:Lpl7;
+    iget-object v0, v0, Lvk0;->d:Llk7;
 
     return-object v0
 .end method
@@ -245,7 +245,7 @@
 .method public getPriority()I
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -254,24 +254,24 @@
     return v0
 .end method
 
-.method public getScope()Ltl;
+.method public getScope()Lim;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->b:Ltl;
+    iget-object v0, v0, Lvk0;->b:Lim;
 
     return-object v0
 .end method
 
-.method public getScopeAfter()Lul;
+.method public getScopeAfter()Ljm;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lul;->a:Lul;
+    sget-object v0, Ljm;->a:Ljm;
 
     return-object v0
 .end method
@@ -279,9 +279,9 @@
 .method public getUri()Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->a:Landroid/net/Uri;
+    iget-object v0, v0, Lvk0;->a:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -289,7 +289,7 @@
 .method public shouldGzip()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -301,11 +301,11 @@
 .method public shouldPost()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->c:Lml;
+    iget-object v0, v0, Lvk0;->c:Lcm;
 
-    iget-boolean v0, v0, Lml;->c:Z
+    iget-boolean v0, v0, Lcm;->c:Z
 
     return v0
 .end method
@@ -313,7 +313,7 @@
 .method public shouldReport()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -325,11 +325,11 @@
 .method public willWriteParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->c:Lml;
+    iget-object v0, v0, Lvk0;->c:Lcm;
 
-    iget-boolean v0, v0, Lml;->d:Z
+    iget-boolean v0, v0, Lcm;->d:Z
 
     return v0
 .end method
@@ -337,31 +337,31 @@
 .method public willWriteSupplyParams()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    iget-object v0, v0, Lcl0;->c:Lml;
+    iget-object v0, v0, Lvk0;->c:Lcm;
 
-    iget-boolean v0, v0, Lml;->e:Z
+    iget-boolean v0, v0, Lcm;->e:Z
 
     return v0
 .end method
 
-.method public writeParams(Lcm7;)V
+.method public writeParams(Lyk7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    invoke-virtual {v0, p1}, Lcl0;->writeParams(Lcm7;)V
+    invoke-virtual {v0, p1}, Lvk0;->writeParams(Lyk7;)V
 
     return-void
 .end method
 
-.method public writeSupplyParams(Lcm7;)V
+.method public writeSupplyParams(Lyk7;)V
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lcl0;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/api/request/GetOkIdByExternalId$Request;->$$delegate_0:Lvk0;
 
-    invoke-virtual {v0, p1}, Lcl0;->writeSupplyParams(Lcm7;)V
+    invoke-virtual {v0, p1}, Lvk0;->writeSupplyParams(Lyk7;)V
 
     return-void
 .end method

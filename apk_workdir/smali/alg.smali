@@ -3,97 +3,65 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/ThreadLocal;
-
-.field public static final b:Ljava/lang/ThreadLocal;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/view/ViewParent;Landroid/view/View;FFZ)Z
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedFling(Landroid/view/View;FFZ)Z
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    move-result p0
 
-    sput-object v0, Lalg;->a:Ljava/lang/ThreadLocal;
+    return p0
+.end method
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+.method public static b(Landroid/view/ViewParent;Landroid/view/View;FF)Z
+    .locals 0
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedPreFling(Landroid/view/View;FF)Z
 
-    sput-object v0, Lalg;->b:Ljava/lang/ThreadLocal;
+    move-result p0
+
+    return p0
+.end method
+
+.method public static c(Landroid/view/ViewParent;Landroid/view/View;II[I)V
+    .locals 0
+
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/view/ViewParent;->onNestedPreScroll(Landroid/view/View;II[I)V
 
     return-void
 .end method
 
-.method public static a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 2
+.method public static d(Landroid/view/ViewParent;Landroid/view/View;IIII)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-interface/range {p0 .. p5}, Landroid/view/ViewParent;->onNestedScroll(Landroid/view/View;IIII)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    instance-of v1, v0, Landroid/view/View;
+.method public static e(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V
+    .locals 0
 
-    if-eqz v1, :cond_0
+    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onNestedScrollAccepted(Landroid/view/View;Landroid/view/View;I)V
 
-    if-eq v0, p0, :cond_0
+    return-void
+.end method
 
-    check-cast v0, Landroid/view/View;
+.method public static f(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)Z
+    .locals 0
 
-    invoke-static {p0, v0, p2}, Lalg;->a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
-
-    move-result p0
-
-    neg-int p0, p0
-
-    int-to-float p0, p0
-
-    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+    invoke-interface {p0, p1, p2, p3}, Landroid/view/ViewParent;->onStartNestedScroll(Landroid/view/View;Landroid/view/View;I)Z
 
     move-result p0
 
-    int-to-float p0, p0
+    return p0
+.end method
 
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+.method public static g(Landroid/view/ViewParent;Landroid/view/View;)V
+    .locals 0
 
-    move-result v0
+    invoke-interface {p0, p1}, Landroid/view/ViewParent;->onStopNestedScroll(Landroid/view/View;)V
 
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
-
-    :cond_1
     return-void
 .end method

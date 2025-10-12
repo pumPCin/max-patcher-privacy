@@ -1,117 +1,75 @@
 .class public final Leoc;
-.super Lgoc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lc4d;
 
-.field public final b:J
+.field public final b:Lvh;
+
+.field public final c:Lra9;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Leoc;->a:J
+    iput-object p1, p0, Leoc;->a:Lc4d;
 
-    iput-wide p3, p0, Leoc;->b:J
+    new-instance v0, Lvh;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Leoc;->b:Lvh;
+
+    new-instance v0, Lra9;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Lra9;-><init>(Lc4d;I)V
+
+    iput-object v0, p0, Leoc;->c:Lra9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Lwy3;)Ljava/lang/Object;
+    .locals 4
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "SELECT * FROM reactions_section WHERE id = ?"
 
-    return v0
+    invoke-static {v0, v1}, Lt4d;->c(ILjava/lang/String;)Lt4d;
 
-    :cond_0
-    instance-of v1, p1, Leoc;
+    move-result-object v1
 
-    const/4 v2, 0x0
+    const-string v2, "POPULAR"
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, v0, v2}, Lt4d;->f(ILjava/lang/String;)V
 
-    return v2
+    new-instance v0, Landroid/os/CancellationSignal;
 
-    :cond_1
-    check-cast p1, Leoc;
+    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    iget-wide v3, p0, Leoc;->a:J
+    new-instance v2, Lxh;
 
-    iget-wide v5, p1, Leoc;->a:J
+    const/16 v3, 0x1b
 
-    cmp-long v1, v3, v5
+    invoke-direct {v2, p0, v3, v1}, Lxh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    if-eqz v1, :cond_2
+    iget-object v1, p0, Leoc;->a:Lc4d;
 
-    return v2
+    invoke-static {v1, v0, v2, p1}, Lcea;->i(Lc4d;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_2
-    iget-wide v3, p0, Leoc;->b:J
+    move-result-object p1
 
-    iget-wide v5, p1, Leoc;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Leoc;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Leoc;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Success(messageId="
-
-    const-string v1, ", totalBytes="
-
-    iget-wide v2, p0, Leoc;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Leoc;->b:J
-
-    invoke-static {v0, v2, v3, v1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

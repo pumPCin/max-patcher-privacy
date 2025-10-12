@@ -1,423 +1,327 @@
-.class public final Lt82;
-.super Laj4;
+.class public final enum Lt82;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final e:J
+# static fields
+.field public static final enum A0:Lt82;
 
-.field public final f:Lbp7;
+.field public static final enum B0:Lt82;
 
-.field public final g:Lbp7;
+.field public static final enum C0:Lt82;
+
+.field public static final enum D0:Lt82;
+
+.field public static final synthetic E0:[Lt82;
+
+.field public static final enum X:Lt82;
+
+.field public static final enum Y:Lt82;
+
+.field public static final enum Z:Lt82;
+
+.field public static final enum a:Lt82;
+
+.field public static final enum b:Lt82;
+
+.field public static final enum c:Lt82;
+
+.field public static final enum o:Lt82;
+
+.field public static final enum r0:Lt82;
+
+.field public static final enum s0:Lt82;
+
+.field public static final enum t0:Lt82;
+
+.field public static final enum u0:Lt82;
+
+.field public static final enum v0:Lt82;
+
+.field public static final enum w0:Lt82;
+
+.field public static final enum x0:Lt82;
+
+.field public static final enum y0:Lt82;
+
+.field public static final enum z0:Lt82;
 
 
 # direct methods
-.method public constructor <init>(JLbp7;Lbp7;Lbp7;Lbp7;Lbp7;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 23
 
-    invoke-direct {p0, p5, p6, p7, p8}, Laj4;-><init>(Lbp7;Lbp7;Lbp7;Lbp7;)V
+    new-instance v1, Lt82;
 
-    iput-wide p1, p0, Lt82;->e:J
+    const-string v0, "ADD_TO_FOLDER"
 
-    iput-object p3, p0, Lt82;->f:Lbp7;
+    const/4 v2, 0x0
 
-    iput-object p4, p0, Lt82;->g:Lbp7;
+    invoke-direct {v1, v0, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lt82;->a:Lt82;
+
+    new-instance v2, Lt82;
+
+    const-string v0, "REMOVE_FROM_FOLDER"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lt82;
+
+    const-string v0, "ADD_FAVORITE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v0, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lt82;->b:Lt82;
+
+    new-instance v4, Lt82;
+
+    const-string v0, "REMOVE_FAVORITE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v4, v0, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lt82;->c:Lt82;
+
+    new-instance v5, Lt82;
+
+    const-string v0, "MARK_AS_UNREAD"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v5, v0, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lt82;->o:Lt82;
+
+    new-instance v6, Lt82;
+
+    const-string v0, "MARK_AS_READ"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v6, v0, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lt82;->X:Lt82;
+
+    new-instance v7, Lt82;
+
+    const-string v0, "MUTE"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v7, v0, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lt82;->Y:Lt82;
+
+    new-instance v8, Lt82;
+
+    const-string v0, "UNMUTE"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v8, v0, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lt82;->Z:Lt82;
+
+    new-instance v9, Lt82;
+
+    const-string v0, "LEAVE_CHAT"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v9, v0, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lt82;->r0:Lt82;
+
+    new-instance v10, Lt82;
+
+    const-string v0, "LEAVE_CHANNEL"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v10, v0, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lt82;->s0:Lt82;
+
+    new-instance v11, Lt82;
+
+    const-string v0, "UNSUBSCRIBE_CHANNEL"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v11, v0, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v11, Lt82;->t0:Lt82;
+
+    new-instance v12, Lt82;
+
+    const-string v0, "DELETE_CHANNEL"
+
+    const/16 v13, 0xb
+
+    invoke-direct {v12, v0, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v12, Lt82;->u0:Lt82;
+
+    new-instance v13, Lt82;
+
+    const-string v0, "DELETE_FOR_ALL"
+
+    const/16 v14, 0xc
+
+    invoke-direct {v13, v0, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v13, Lt82;->v0:Lt82;
+
+    new-instance v14, Lt82;
+
+    const-string v0, "DELETE_CHAT"
+
+    const/16 v15, 0xd
+
+    invoke-direct {v14, v0, v15}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v14, Lt82;->w0:Lt82;
+
+    new-instance v15, Lt82;
+
+    const-string v0, "BLOCK"
+
+    move-object/from16 v16, v1
+
+    const/16 v1, 0xe
+
+    invoke-direct {v15, v0, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v15, Lt82;->x0:Lt82;
+
+    new-instance v0, Lt82;
+
+    const-string v1, "SELECT"
+
+    move-object/from16 v17, v2
+
+    const/16 v2, 0xf
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lt82;->y0:Lt82;
+
+    new-instance v1, Lt82;
+
+    const-string v2, "REPORT"
+
+    move-object/from16 v18, v0
+
+    const/16 v0, 0x10
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lt82;->z0:Lt82;
+
+    new-instance v0, Lt82;
+
+    const-string v2, "CLEAR_HISTORY"
+
+    move-object/from16 v19, v1
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lt82;->A0:Lt82;
+
+    new-instance v1, Lt82;
+
+    const-string v2, "SUSPEND_BOT"
+
+    move-object/from16 v20, v0
+
+    const/16 v0, 0x12
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lt82;->B0:Lt82;
+
+    new-instance v0, Lt82;
+
+    const-string v2, "SUSPEND_AND_DELETE_BOT"
+
+    move-object/from16 v21, v1
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, v2, v1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lt82;->C0:Lt82;
+
+    new-instance v1, Lt82;
+
+    const-string v2, "CLEAR_SAVED_MESSAGES"
+
+    move-object/from16 v22, v0
+
+    const/16 v0, 0x14
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lt82;->D0:Lt82;
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v17, v19
+
+    move-object/from16 v19, v21
+
+    move-object/from16 v21, v1
+
+    move-object/from16 v1, v16
+
+    move-object/from16 v16, v18
+
+    move-object/from16 v18, v20
+
+    move-object/from16 v20, v22
+
+    filled-new-array/range {v1 .. v21}, [Lt82;
+
+    move-result-object v0
+
+    sput-object v0, Lt82;->E0:[Lt82;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lt82;
+    .locals 1
 
-# virtual methods
-.method public final c(Lap3;)Loef;
-    .locals 5
+    const-class v0, Lt82;
 
-    invoke-virtual {p0}, Lt82;->g()Lm82;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object v0
+    move-result-object p0
 
-    if-eqz v0, :cond_0
+    check-cast p0, Lt82;
 
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lm82;->d(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-boolean v1, p1, Lap3;->Y:Z
-
-    if-eqz v1, :cond_1
-
-    sget p1, Lyra;->l2:I
-
-    new-instance v0, Ljef;
-
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {p0}, Laj4;->b()Lr63;
-
-    move-result-object v1
-
-    check-cast v1, Lxid;
-
-    invoke-virtual {v1}, Lxid;->p()J
-
-    move-result-wide v1
-
-    if-nez v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_3
-
-    sget p1, Lyra;->U:I
-
-    new-instance v0, Ljef;
-
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
-
-    return-object v0
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lm82;->Y(J)Z
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_5
-
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lm82;->H()Z
-
-    move-result p1
-
-    if-ne p1, v2, :cond_4
-
-    sget p1, Lyra;->n2:I
-
-    goto :goto_2
-
-    :cond_4
-    sget p1, Lyra;->o2:I
-
-    :goto_2
-    new-instance v0, Ljef;
-
-    invoke-direct {v0, p1}, Ljef;-><init>(I)V
-
-    return-object v0
-
-    :cond_5
-    if-eqz v0, :cond_7
-
-    iget-object v1, p0, Lt82;->g:Lbp7;
-
-    invoke-interface {v1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhx3;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lhx3;->c(J)Lsqc;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lsqc;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lap3;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Lap3;->d()Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    sget p1, Lyra;->T:I
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    new-instance v1, Llef;
-
-    invoke-static {v0}, Lhs;->p0([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-direct {v1, p1, v0}, Llef;-><init>(ILjava/util/List;)V
-
-    return-object v1
-
-    :cond_6
-    invoke-super {p0, p1}, Laj4;->c(Lap3;)Loef;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_7
-    invoke-super {p0, p1}, Laj4;->c(Lap3;)Loef;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final e(Lap3;)Z
-    .locals 8
+.method public static values()[Lt82;
+    .locals 1
 
-    invoke-virtual {p1}, Lap3;->n()J
+    sget-object v0, Lt82;->E0:[Lt82;
 
-    move-result-wide v0
-
-    invoke-virtual {p0}, Laj4;->b()Lr63;
-
-    move-result-object v2
-
-    check-cast v2, Lxid;
-
-    invoke-virtual {v2}, Lxid;->p()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v4
-
-    invoke-virtual {v3, v4, v5}, Lm82;->Y(J)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v1
-
-    :goto_1
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p0}, Laj4;->b()Lr63;
-
-    move-result-object v5
-
-    check-cast v5, Lxid;
-
-    invoke-virtual {v5}, Lxid;->p()J
-
-    move-result-wide v5
-
-    invoke-virtual {v4, v5, v6}, Lm82;->e(J)I
-
-    move-result v4
-
-    const/4 v5, 0x4
-
-    invoke-static {v4, v5}, Lud6;->u(II)Z
-
-    move-result v4
-
-    if-ne v4, v2, :cond_2
-
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v5
-
-    invoke-virtual {v4, v5, v6}, Lm82;->D(J)Z
-
-    move-result v4
-
-    if-ne v4, v2, :cond_2
-
-    move v4, v2
-
-    goto :goto_2
-
-    :cond_2
-    move v4, v1
-
-    :goto_2
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v6
-
-    invoke-virtual {v5, v6, v7}, Lm82;->D(J)Z
-
-    move-result p1
-
-    if-ne p1, v2, :cond_3
-
-    move p1, v2
-
-    goto :goto_3
-
-    :cond_3
-    move p1, v1
-
-    :goto_3
-    if-eqz v3, :cond_5
-
-    if-eqz v0, :cond_5
-
-    if-nez v4, :cond_4
-
-    if-nez p1, :cond_5
-
-    :cond_4
-    return v2
-
-    :cond_5
-    return v1
-.end method
-
-.method public final f(Lap3;)Lfy8;
-    .locals 5
-
-    invoke-super {p0, p1}, Laj4;->f(Lap3;)Lfy8;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lt82;->g()Lm82;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Lap3;->n()J
-
-    move-result-wide v3
-
-    invoke-virtual {v1, v3, v4}, Lm82;->Y(J)Z
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_0
-
-    move v2, v1
-
-    :cond_0
-    invoke-static {v0, v2}, Lfy8;->l(Lfy8;Z)Lfy8;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final g()Lm82;
-    .locals 3
-
-    iget-object v0, p0, Lt82;->f:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm13;
-
-    iget-wide v1, p0, Lt82;->e:J
-
-    check-cast v0, Lm23;
-
-    invoke-virtual {v0, v1, v2}, Lm23;->N(J)Lsqc;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lsqc;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm82;
+    check-cast v0, [Lt82;
 
     return-object v0
 .end method

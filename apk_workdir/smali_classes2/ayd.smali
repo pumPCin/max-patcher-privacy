@@ -1,51 +1,63 @@
 .class public final Layd;
-.super Lnz3;
+.super Luc0;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Law;
-
-.field public Z:I
-
-.field public o:Law;
+# static fields
+.field public static final b:Layd;
 
 
 # direct methods
-.method public constructor <init>(Law;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Layd;->Y:Law;
+    new-instance v0, Layd;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Layd;->b:Layd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Layd;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Layd;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Layd;
 
-    iput p1, p0, Layd;->Z:I
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Layd;->Y:Law;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Law;->b(Lvrb;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, -0x5de09f7
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "EnterPinCode"
+
+    return-object v0
 .end method

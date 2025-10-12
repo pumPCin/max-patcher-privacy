@@ -4,68 +4,191 @@
 
 
 # static fields
-.field public static final a:Lrpb;
+.field public static final e:Ljava/util/HashMap;
+
+
+# instance fields
+.field public final a:Z
+
+.field public final b:Ljava/io/File;
+
+.field public final c:Ljava/util/concurrent/locks/Lock;
+
+.field public d:Ljava/nio/channels/FileChannel;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    sget-object v0, Lst5;->c:Lst5;
+    new-instance v0, Ljava/util/HashMap;
 
-    sget-object v1, Lq2d;->c:Lq2d;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    new-instance v2, Lp2d;
+    sput-object v0, Lopb;->e:Ljava/util/HashMap;
 
-    invoke-direct {v2, v0, v1}, Lp2d;-><init>(Lst5;Lq2d;)V
+    return-void
+.end method
 
-    new-instance v0, Lv37;
+.method public constructor <init>(Ljava/lang/String;Ljava/io/File;Z)V
+    .locals 1
 
-    const/4 v1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lv37;-><init>(I)V
+    iput-boolean p3, p0, Lopb;->a:Z
 
-    sget-object v1, Lu3g;->o0:Ln90;
+    if-eqz p2, :cond_0
 
-    const/4 v3, 0x2
+    new-instance p3, Ljava/io/File;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v0, ".lck"
 
-    move-result-object v3
-
-    iget-object v0, v0, Lv37;->b:Lst9;
-
-    invoke-virtual {v0, v1, v3}, Lst9;->i(Ln90;Ljava/lang/Object;)V
-
-    sget-object v1, Lm57;->y:Ln90;
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Lst9;->i(Ln90;Ljava/lang/Object;)V
-
-    sget-object v1, Lm57;->G:Ln90;
-
-    invoke-virtual {v0, v1, v2}, Lst9;->i(Ln90;Ljava/lang/Object;)V
-
-    sget-object v1, Lc57;->x:Ln90;
-
-    sget-object v2, Lp15;->c:Lp15;
-
-    invoke-virtual {v0, v1, v2}, Lst9;->i(Ln90;Ljava/lang/Object;)V
-
-    new-instance v1, Lrpb;
-
-    invoke-static {v0}, Ls1b;->a(Lci3;)Ls1b;
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Lrpb;-><init>(Ls1b;)V
+    invoke-direct {p3, p2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    sput-object v1, Lopb;->a:Lrpb;
+    goto :goto_0
+
+    :cond_0
+    const/4 p3, 0x0
+
+    :goto_0
+    iput-object p3, p0, Lopb;->b:Ljava/io/File;
+
+    sget-object p2, Lopb;->e:Ljava/util/HashMap;
+
+    monitor-enter p2
+
+    :try_start_0
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-nez p3, :cond_1
+
+    new-instance p3, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p3}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    invoke-virtual {p2, p1, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    check-cast p3, Ljava/util/concurrent/locks/Lock;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p2
+
+    iput-object p3, p0, Lopb;->c:Ljava/util/concurrent/locks/Lock;
+
+    return-void
+
+    :goto_2
+    monitor-exit p2
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final a(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lopb;->c:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lopb;->b:Ljava/io/File;
+
+    if-eqz p1, :cond_1
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/nio/channels/FileChannel;->lock()Ljava/nio/channels/FileLock;
+
+    iput-object p1, p0, Lopb;->d:Ljava/nio/channels/FileChannel;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/io/IOException;
+
+    const-string v0, "No lock directory was provided."
+
+    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lopb;->d:Ljava/nio/channels/FileChannel;
+
+    const-string v0, "SupportSQLiteLock"
+
+    const-string v1, "Unable to grab file lock."
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_2
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    :try_start_0
+    iget-object v0, p0, Lopb;->d:Ljava/nio/channels/FileChannel;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    iget-object v0, p0, Lopb;->c:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     return-void
 .end method

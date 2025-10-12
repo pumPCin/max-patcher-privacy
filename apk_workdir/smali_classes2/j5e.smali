@@ -1,142 +1,64 @@
 .class public final Lj5e;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lk5e;
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lk5e;
-
-.field public final synthetic Z:I
+# static fields
+.field public static final a:Lj5e;
 
 
 # direct methods
-.method public constructor <init>(Lk5e;ILkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lj5e;->Y:Lk5e;
+    new-instance v0, Lj5e;
 
-    iput p2, p0, Lj5e;->Z:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lj5e;->a:Lj5e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Le34;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lj5e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lj5e;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lj5e;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lj5e;
-
-    iget-object v0, p0, Lj5e;->Y:Lk5e;
-
-    iget v1, p0, Lj5e;->Z:I
-
-    invoke-direct {p1, v0, v1, p2}, Lj5e;-><init>(Lk5e;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lj5e;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of p1, p1, Lj5e;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    sget-object p1, Lk5e;->C0:[Ltm7;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p0, Lj5e;->Y:Lk5e;
+    const v0, 0x651efdbd
 
-    iget-object v0, p1, Lk5e;->o:Lbp7;
+    return v0
+.end method
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object v0
-
-    check-cast v0, Lsp;
-
-    iget v2, p0, Lj5e;->Z:I
-
-    const-string v3, "app.media.caching.time"
-
-    invoke-virtual {v0, v2, v3}, Lh3;->h(ILjava/lang/String;)V
-
-    iget-object v0, p1, Lk5e;->w0:Lmoe;
-
-    invoke-virtual {p1}, Lk5e;->s()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v3, v2}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    iput v1, p0, Lj5e;->X:I
-
-    invoke-static {p1, p0}, Lk5e;->r(Lk5e;Lm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
+    const-string v0, "MultiselectEnabled"
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
 .end method

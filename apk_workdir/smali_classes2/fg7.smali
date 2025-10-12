@@ -1,51 +1,52 @@
 .class public final Lfg7;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Log7;
-
-.field public Z:I
-
-.field public o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Log7;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lfg7;->Y:Log7;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    iput-object p1, p0, Lfg7;->X:Ljava/lang/Object;
+    check-cast p1, Leg7;
 
-    iget p1, p0, Lfg7;->Z:I
+    check-cast p2, Leg7;
 
-    const/high16 v0, -0x80000000
+    iget v0, p1, Leg7;->b:I
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_0
 
-    iput p1, p0, Lfg7;->Z:I
+    iget v0, p2, Leg7;->b:I
 
-    iget-object p1, p0, Lfg7;->Y:Log7;
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p1, -0x1
 
-    invoke-static {p1, v0, v0, p0}, Log7;->q(Log7;Ljava/lang/String;Ljava/lang/String;Lnz3;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    iget v0, p1, Leg7;->b:I
 
-    return-object p1
+    if-eqz v0, :cond_1
+
+    iget v0, p2, Leg7;->b:I
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    iget p1, p1, Leg7;->e:F
+
+    iget p2, p2, Leg7;->e:F
+
+    invoke-static {p1, p2}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    return p1
 .end method

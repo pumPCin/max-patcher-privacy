@@ -1,169 +1,142 @@
 .class public final Lkg8;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llg8;
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ljava/lang/CharSequence;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ljava/util/ArrayList;
+.field public final synthetic Y:Landroid/widget/LinearLayout;
 
-.field public final c:Z
+.field public final synthetic Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;Ljava/util/ArrayList;Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Landroid/widget/LinearLayout;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lkg8;->Y:Landroid/widget/LinearLayout;
 
-    iput-object p1, p0, Lkg8;->a:Ljava/lang/CharSequence;
+    iput-object p3, p0, Lkg8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    iput-object p2, p0, Lkg8;->b:Ljava/util/ArrayList;
+    const/4 p2, 0x2
 
-    iput-boolean p3, p0, Lkg8;->c:Z
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Lkg8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lkg8;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lkg8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance v0, Lkg8;
+
+    iget-object v1, p0, Lkg8;->Y:Landroid/widget/LinearLayout;
+
+    iget-object v2, p0, Lkg8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    invoke-direct {v0, p2, v1, v2}, Lkg8;-><init>(Lkotlin/coroutines/Continuation;Landroid/widget/LinearLayout;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+
+    iput-object p1, v0, Lkg8;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkg8;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lkg8;
+    const/16 p1, 0x8
+
+    :goto_0
+    iget-object v0, p0, Lkg8;->Y:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lpl7;
+
+    iget-object p1, p0, Lkg8;->Z:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    iget-object v1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->H0:Ltm0;
+
+    sget-object v2, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lpl7;
+
+    const/16 v3, 0xc
+
+    aget-object v3, v2, v3
+
+    invoke-virtual {v1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    goto :goto_0
+    iget-object p1, p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0:Ltm0;
+
+    const/16 v0, 0xb
+
+    aget-object v0, v2, v0
+
+    invoke-virtual {p1}, Ltm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmod;
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lkg8;
-
-    iget-object v0, p0, Lkg8;->a:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Lkg8;->a:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lkg8;->b:Ljava/util/ArrayList;
-
-    iget-object v1, p1, Lkg8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lkg8;->c:Z
-
-    iget-boolean p1, p1, Lkg8;->c:Z
-
-    if-eq v0, p1, :cond_4
-
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
-
-    :cond_4
     :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lxuc;)V
 
-    return p1
-.end method
+    sget-object p1, Laxf;->a:Laxf;
 
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lkg8;->a:Ljava/lang/CharSequence;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lkg8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lkg8;->c:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SendMedia(caption="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkg8;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", media="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkg8;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sendAsFile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lkg8;->c:Z
-
-    invoke-static {v0, v2, v1}, Lqw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

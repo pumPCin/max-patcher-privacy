@@ -1,25 +1,54 @@
-.class public interface abstract Lh95;
+.class public final Lh95;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
 
-# virtual methods
-.method public g()Z
-    .locals 1
 
-    const/4 v0, 0x0
+# instance fields
+.field public final synthetic a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    return v0
-.end method
 
-.method public i()V
+# direct methods
+.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     return-void
 .end method
 
-.method public abstract l()V
+
+# virtual methods
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    iget-object p1, p0, Lh95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
 .end method
 
-.method public abstract m()Z
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 0
+
+    iget-object p1, p0, Lh95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    return-void
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 0
+
+    iget-object p1, p0, Lh95;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    return-void
 .end method

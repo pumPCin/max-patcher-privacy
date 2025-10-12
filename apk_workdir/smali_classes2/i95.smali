@@ -1,24 +1,21 @@
-.class public final synthetic Li95;
-.super Ljava/lang/Object;
+.class public final Li95;
+.super Lhe;
 .source "SourceFile"
-
-# interfaces
-.implements Lve6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic b:I
 
-.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
+.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
     .locals 0
 
-    iput p2, p0, Li95;->a:I
+    iput p2, p0, Li95;->b:I
 
-    iput-object p1, p0, Li95;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iput-object p1, p0, Li95;->c:Landroid/graphics/drawable/Drawable$Callback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,73 +24,81 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    iget v0, p0, Li95;->a:I
-
-    iget-object v1, p0, Li95;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget v0, p0, Li95;->b:I
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->D0:[Ltm7;
+    iget-object v0, p0, Li95;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast v0, Lpb8;
 
-    move-result-object v0
+    iget-object v0, v0, Lpb8;->B0:Landroid/content/res/ColorStateList;
 
-    invoke-static {v0}, Lgh5;->h(Landroid/content/Context;)Lqoe;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lbx4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    return-object v0
+    :cond_0
+    return-void
 
     :pswitch_0
-    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->m2:I
+    iget-object p1, p0, Li95;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    check-cast p1, Lj95;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Lj95;->a()V
 
-    move-result-object v0
+    return-void
 
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    nop
 
-    move-result-object v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
+.method public final b(Landroid/graphics/drawable/Drawable;)V
+    .locals 3
 
-    move-result v1
+    iget v0, p0, Li95;->b:I
 
-    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v1
+    iget-object v0, p0, Li95;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    check-cast v0, Lpb8;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, v0, Lpb8;->B0:Landroid/content/res/ColorStateList;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    const-string v0, "-"
+    iget-object v0, v0, Lpb8;->F0:[I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0, v2}, Landroid/content/res/ColorStateList;->getColorForState([II)I
 
-    move-result-object v0
+    move-result v0
 
-    const-string v1, "."
+    invoke-static {p1, v0}, Lbx4;->g(Landroid/graphics/drawable/Drawable;I)V
 
-    const-string v2, "_"
+    :cond_0
+    return-void
 
-    invoke-static {v0, v1, v2}, Lgye;->a0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    iget-object p1, p0, Li95;->c:Landroid/graphics/drawable/Drawable$Callback;
 
-    move-result-object v0
+    check-cast p1, Lj95;
 
-    return-object v0
+    invoke-virtual {p1}, Lj95;->b()V
+
+    return-void
 
     nop
 

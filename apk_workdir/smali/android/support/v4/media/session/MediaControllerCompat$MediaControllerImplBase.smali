@@ -51,6 +51,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
     .locals 4
 
+    .line 1
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -68,6 +69,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 2
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
     invoke-interface {v0, p1}, Landroid/support/v4/media/session/IMediaSession;->addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;)V
@@ -79,6 +81,7 @@
 
     goto :goto_0
 
+    .line 3
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -90,6 +93,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 4
     :goto_0
     const-string v0, "MediaControllerCompat"
 
@@ -103,6 +107,7 @@
 .method public addQueueItem(Landroid/support/v4/media/MediaDescriptionCompat;I)V
     .locals 4
 
+    .line 5
     :try_start_0
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
@@ -120,6 +125,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 6
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplBase;->mBinder:Landroid/support/v4/media/session/IMediaSession;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/media/session/IMediaSession;->addQueueItemAt(Landroid/support/v4/media/MediaDescriptionCompat;I)V
@@ -131,6 +137,7 @@
 
     goto :goto_0
 
+    .line 7
     :cond_0
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
@@ -142,6 +149,7 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 8
     :goto_0
     const-string p2, "MediaControllerCompat"
 

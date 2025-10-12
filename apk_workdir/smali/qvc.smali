@@ -4,210 +4,102 @@
 
 
 # instance fields
-.field public final a:Ljef;
+.field public a:I
 
-.field public final b:Loef;
+.field public b:Landroid/util/SparseArray;
 
-.field public final c:Lpvc;
+.field public c:I
 
-.field public final d:Lpvc;
+.field public d:I
 
-.field public final e:Lnef;
+.field public e:I
 
-.field public final f:Z
+.field public f:I
 
+.field public g:Z
 
-# direct methods
-.method public constructor <init>(Ljef;Ljef;Lpvc;Lpvc;Lnef;Z)V
-    .locals 0
+.field public h:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public i:Z
 
-    iput-object p1, p0, Lqvc;->a:Ljef;
+.field public j:Z
 
-    iput-object p2, p0, Lqvc;->b:Loef;
+.field public k:Z
 
-    iput-object p3, p0, Lqvc;->c:Lpvc;
+.field public l:Z
 
-    iput-object p4, p0, Lqvc;->d:Lpvc;
+.field public m:I
 
-    iput-object p5, p0, Lqvc;->e:Lnef;
+.field public n:J
 
-    iput-boolean p6, p0, Lqvc;->f:Z
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(I)V
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lqvc;->e:I
 
-    goto :goto_1
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_0
+
+    return-void
 
     :cond_0
-    instance-of v0, p1, Lqvc;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    if-nez v0, :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v2, "Layout state should be one of "
 
-    :cond_1
-    check-cast p1, Lqvc;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lqvc;->a:Ljef;
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
-    iget-object v1, p1, Lqvc;->a:Ljef;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljef;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string p1, " but it is "
 
-    if-nez v0, :cond_2
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    iget p1, p0, Lqvc;->e:I
 
-    :cond_2
-    iget-object v0, p0, Lqvc;->b:Loef;
+    invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
-    iget-object v1, p1, Lqvc;->b:Loef;
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-nez v0, :cond_3
+    move-result-object p1
 
-    goto :goto_0
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :cond_3
-    iget-object v0, p0, Lqvc;->c:Lpvc;
-
-    iget-object v1, p1, Lqvc;->c:Lpvc;
-
-    invoke-virtual {v0, v1}, Lpvc;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lqvc;->d:Lpvc;
-
-    iget-object v1, p1, Lqvc;->d:Lpvc;
-
-    invoke-virtual {v0, v1}, Lpvc;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lqvc;->e:Lnef;
-
-    iget-object v1, p1, Lqvc;->e:Lnef;
-
-    invoke-virtual {v0, v1}, Lnef;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-boolean v0, p0, Lqvc;->f:Z
-
-    iget-boolean p1, p1, Lqvc;->f:Z
-
-    if-eq v0, p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    throw v0
 .end method
 
-.method public final hashCode()I
+.method public final b()I
     .locals 2
 
-    iget-object v0, p0, Lqvc;->a:Ljef;
+    iget-boolean v0, p0, Lqvc;->h:Z
 
-    iget v0, v0, Ljef;->b:I
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget v0, p0, Lqvc;->c:I
 
-    move-result v0
+    iget v1, p0, Lqvc;->d:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lqvc;->b:Loef;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqvc;->c:Lpvc;
-
-    invoke-virtual {v1}, Lpvc;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lqvc;->d:Lpvc;
-
-    invoke-virtual {v0}, Lpvc;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lqvc;->e:Lnef;
-
-    invoke-virtual {v1}, Lnef;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lqvc;->f:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
+    iget v0, p0, Lqvc;->f:I
 
     return v0
 .end method
@@ -217,57 +109,89 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ExitWithRecordState(title="
+    const-string v1, "State{mTargetPosition="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lqvc;->a:Ljef;
+    iget v1, p0, Lqvc;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", subtitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqvc;->b:Loef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", negativeButton="
+    const-string v1, ", mData="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lqvc;->c:Lpvc;
+    iget-object v1, p0, Lqvc;->b:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", positiveButton="
+    const-string v1, ", mItemCount="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lqvc;->d:Lpvc;
+    iget v1, p0, Lqvc;->f:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", recordTitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lqvc;->e:Lnef;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", canRemove="
+    const-string v1, ", mIsMeasuring="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lqvc;->f:Z
+    iget-boolean v1, p0, Lqvc;->j:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, ", mPreviousLayoutItemCount="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lqvc;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mDeletedInvisibleItemCountSincePreviousLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lqvc;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mStructureChanged="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqvc;->g:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mInPreLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqvc;->h:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mRunSimpleAnimations="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqvc;->k:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mRunPredictiveAnimations="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqvc;->l:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

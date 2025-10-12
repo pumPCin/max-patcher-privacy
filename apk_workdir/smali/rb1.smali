@@ -1,5 +1,5 @@
 .class public final Lrb1;
-.super Lwb1;
+.super Lub1;
 .source "SourceFile"
 
 
@@ -68,13 +68,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "LoadingState(isEnabled="
+    const-string v0, "RaiseHand(isRaised="
 
     const-string v1, ")"
 
     iget-boolean v2, p0, Lrb1;->a:Z
 
-    invoke-static {v0, v1, v2}, Lhqd;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Ljjd;->j(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

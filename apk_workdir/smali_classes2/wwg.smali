@@ -1,156 +1,168 @@
 .class public final Lwwg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final Companion:Lvwg;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Luvg;
-
-.field public final synthetic Z:Lywg;
-
-.field public final synthetic w0:Lowg;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Luvg;Lowg;Lywg;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lvwg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwwg;->Companion:Lvwg;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(ILjava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    and-int/lit8 v0, p1, 0x3
+
+    const/4 v1, 0x3
+
+    if-ne v1, v0, :cond_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lwwg;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lwwg;->b:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    sget-object p2, Luwg;->a:Luwg;
+
+    invoke-virtual {p2}, Luwg;->d()Lmqd;
+
+    move-result-object p2
+
+    invoke-static {p1, v1, p2}, Lomc;->A(IILmqd;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lwwg;->Y:Luvg;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lwwg;->Z:Lywg;
+    .line 3
+    iput-object p1, p0, Lwwg;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lwwg;->w0:Lowg;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 4
+    iput-object p2, p0, Lwwg;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Loyf;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lwwg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwwg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lwwg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lwwg;
-
-    iget-object v0, p0, Lwwg;->Z:Lywg;
-
-    iget-object v1, p0, Lwwg;->w0:Lowg;
-
-    iget-object v2, p0, Lwwg;->Y:Luvg;
-
-    invoke-direct {p1, v2, v1, v0, p2}, Lwwg;-><init>(Luvg;Lowg;Lywg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lwwg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lwwg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    check-cast p1, Lwwg;
 
-    new-instance p1, Liwg;
+    iget-object v1, p0, Lwwg;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lwwg;->Y:Luvg;
+    iget-object v3, p1, Lwwg;->a:Ljava/lang/String;
 
-    iget-object v0, v0, Luvg;->c:Ljava/lang/String;
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object v2, Lnwg;->o:Lnwg;
+    move-result v1
 
-    invoke-direct {p1, v0, v2}, Liwg;-><init>(Ljava/lang/String;Lnwg;)V
+    if-nez v1, :cond_2
 
-    iget-object v0, p0, Lwwg;->Z:Lywg;
-
-    iget-object v2, v0, Lywg;->d:Llu0;
-
-    new-instance v3, Ljk7;
-
-    iget-object v4, p0, Lwwg;->w0:Lowg;
-
-    iget-object v4, v4, Lowg;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lywg;->a:Lwk7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Liwg;->Companion:Lhwg;
-
-    invoke-virtual {v5}, Lhwg;->serializer()Lum7;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, p1}, Lwk7;->b(Lum7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v3, v4, p1}, Ljk7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v1, p0, Lwwg;->X:I
-
-    invoke-interface {v2, v3, p0}, Lwqd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Loyf;->a:Loyf;
+    iget-object v1, p0, Lwwg;->b:Ljava/lang/String;
 
-    return-object p1
+    iget-object p1, p1, Lwwg;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lwwg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lwwg;->b:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", phone="
+
+    const-string v1, ")"
+
+    const-string v2, "WebAppRequestPhoneResponse(requestId="
+
+    iget-object v3, p0, Lwwg;->a:Ljava/lang/String;
+
+    iget-object v4, p0, Lwwg;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3, v0, v4, v1}, Lnd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

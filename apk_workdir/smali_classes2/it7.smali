@@ -1,87 +1,48 @@
 .class public final Lit7;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lwy3;
 
 
 # instance fields
-.field public final a:Le8e;
+.field public X:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic Y:Ljt7;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lov0;Lr8f;)V
-    .locals 2
+.method public constructor <init>(Ljt7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lit7;->Y:Ljt7;
 
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lf8e;->b(III)Le8e;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lit7;->a:Le8e;
-
-    check-cast p2, Lwla;
-
-    invoke-virtual {p2}, Lwla;->c()Le88;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lipe;->a(Lw24;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Lov0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Laj0;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    new-instance v0, Lht7;
+    iput-object p1, p0, Lit7;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lit7;->X:I
 
-    invoke-direct {v0, p0, p1, v1}, Lht7;-><init>(Lit7;Laj0;Lkotlin/coroutines/Continuation;)V
+    const/high16 v0, -0x80000000
 
-    const/4 p1, 0x3
+    or-int/2addr p1, v0
 
-    iget-object v2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
+    iput p1, p0, Lit7;->X:I
 
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
+    iget-object p1, p0, Lit7;->Y:Ljt7;
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final onEvent(Lft7;)V
-    .locals 3
-    .annotation runtime Lxye;
-    .end annotation
+    invoke-virtual {p1, v0, p0}, Ljt7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    .line 1
-    new-instance v0, Lgt7;
+    move-result-object p1
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lgt7;-><init>(Lit7;Lft7;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lit7;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lq9e;->q(Le34;Lw24;Lh34;Llf6;I)Lqle;
-
-    return-void
+    return-object p1
 .end method

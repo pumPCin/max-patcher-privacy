@@ -16,7 +16,7 @@
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsSender;",
         "<init>",
         "()V",
-        "Loyf;",
+        "Laxf;",
         "forceSendScheduledEvents",
         "Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;",
         "configuration",

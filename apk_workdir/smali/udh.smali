@@ -4,613 +4,695 @@
 
 
 # static fields
-.field public static final FRAGMENT_SHADER_UNI_COLOR_MATRIX:Ljava/lang/String; = "colorMatrix"
+.field public static final a:Lube;
 
-.field public static final FRAGMENT_SHADER_UNI_TEXTURE_ALPHA:Ljava/lang/String; = "texAlpha"
-
-.field public static final FRAGMENT_SHADER_UNI_TEXTURE_SAMPLER:Ljava/lang/String; = "sTexture"
-
-.field private static final LOG_TAG:Ljava/lang/String; = "GLProgram"
-
-.field public static final SHADER_VAR_TEXTURE_COORDINATES:Ljava/lang/String; = "vTextureCoord"
-
-.field public static final VERTEX_SHADER_ATTR_TEXTURE_COORDINATES:Ljava/lang/String; = "aTextureCoord"
-
-.field public static final VERTEX_SHADER_ATTR_VERTEXT_COORDINATES:Ljava/lang/String; = "aVertexCoord"
-
-.field public static final VERTEX_SHADER_UNI_MVP_MATRIX:Ljava/lang/String; = "mvpMatrix"
-
-.field public static final VERTEX_SHADER_UNI_TEXTURE_MATRIX:Ljava/lang/String; = "texMatrix"
-
-
-# instance fields
-.field private final aTextureCoordLoc:I
-
-.field private final aVertexCoordLoc:I
-
-.field private alpha:F
-
-.field private final alphaLocation:I
-
-.field private customParams:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private firstFreeTexture:I
-
-.field private frame:Lndh;
-
-.field private mvpMat:[F
-
-.field private final mvpMatrixLoc:I
-
-.field protected final programId:I
-
-.field private texMat:[F
-
-.field private final texMatrixLoc:I
-
-.field private textureId:I
-
-.field private final textureLocation:I
+.field public static b:Ljava/util/Locale;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 5
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lube;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/4 v1, 0x0
 
-    iput v0, p0, Ludh;->alpha:F
+    invoke-direct {v0, v1}, Lube;-><init>(I)V
 
-    new-instance v0, Ljava/util/HashMap;
+    sput-object v0, Ludh;->a:Lube;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Ludh;->customParams:Ljava/util/HashMap;
+.method public static a(Landroid/content/Context;)Ljava/lang/String;
+    .locals 4
 
-    const-string v0, "precision mediump float;\nuniform mat4 mvpMatrix;\nuniform mat4 texMatrix;\nattribute vec4 aVertexCoord;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = mvpMatrix * aVertexCoord;\n   vTextureCoord = (texMatrix * aTextureCoord).xy;\n}\n"
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    const v1, 0x8b31
+    move-result-object v0
 
-    invoke-static {v1, v0}, Lyhh;->c(ILjava/lang/String;)I
+    :try_start_0
+    invoke-static {p0}, Li9h;->a(Landroid/content/Context;)Ly64;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_2
+    iget-object v1, v1, Ly64;->a:Landroid/content/Context;
 
-    const v1, 0x8b30
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-static {v1, p1}, Lyhh;->c(ILjava/lang/String;)I
+    move-result-object v2
 
-    move-result p1
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    if-eqz p1, :cond_1
-
-    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
-
-    move-result v1
-
-    iput v1, p0, Ludh;->programId:I
-
-    const-string v2, "glCreateProgram"
-
-    invoke-static {v2}, Lyhh;->b(Ljava/lang/String;)V
-
-    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    const-string v2, "glAttachShader"
-
-    invoke-static {v2}, Lyhh;->b(Ljava/lang/String;)V
-
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
-
-    const-string v0, "glDeleteShader"
-
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glAttachShader(II)V
-
-    invoke-static {v2}, Lyhh;->b(Ljava/lang/String;)V
-
-    invoke-static {p1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
-
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glLinkProgram(I)V
-
-    const/4 p1, 0x1
-
-    new-array v0, p1, [I
-
-    const v2, 0x8b82
+    move-result-object v1
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v2, v0, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+    invoke-virtual {v1, v0, v3}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    aget v0, v0, v3
+    move-result-object v1
 
-    if-ne v0, p1, :cond_0
+    invoke-virtual {v2, v1}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
-    const-string p1, "aVertexCoord"
+    move-result-object v1
 
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput v0, p0, Ludh;->aVertexCoordLoc:I
+    return-object p0
 
-    invoke-static {v0, p1}, Lyhh;->a(ILjava/lang/String;)V
+    :catch_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
-    const-string p1, "aTextureCoord"
+    move-result-object p0
 
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+    iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->name:Ljava/lang/String;
 
-    move-result v2
-
-    iput v2, p0, Ludh;->aTextureCoordLoc:I
-
-    invoke-static {v2, p1}, Lyhh;->a(ILjava/lang/String;)V
-
-    const-string p1, "mvpMatrix"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Ludh;->mvpMatrixLoc:I
-
-    invoke-static {v3, p1}, Lyhh;->a(ILjava/lang/String;)V
-
-    const-string p1, "texMatrix"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Ludh;->texMatrixLoc:I
-
-    invoke-static {v3, p1}, Lyhh;->a(ILjava/lang/String;)V
-
-    const-string p1, "sTexture"
-
-    invoke-static {v1, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result v3
-
-    iput v3, p0, Ludh;->textureLocation:I
-
-    const-string v4, "texAlpha"
-
-    invoke-static {v1, v4}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    iput v1, p0, Ludh;->alphaLocation:I
+    if-eqz v1, :cond_0
 
-    invoke-static {v3, p1}, Lyhh;->a(ILjava/lang/String;)V
-
-    new-instance p1, Lndh;
-
-    invoke-direct {p1, v0, v2}, Lndh;-><init>(II)V
-
-    iput-object p1, p0, Ludh;->frame:Lndh;
-
-    return-void
+    return-object v0
 
     :cond_0
-    const-string p1, "Could not link program: "
+    return-object p0
+.end method
 
-    const-string v0, "GLProgram"
+.method public static b(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 1
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-static {v0, p1, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object p0
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    if-eq p1, v0, :cond_2
 
-    invoke-static {v0, p1, v2}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v0, 0x2
 
-    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+    if-eq p1, v0, :cond_1
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    const/4 v0, 0x3
 
-    const-string v0, "create program failed"
+    if-eq p1, v0, :cond_0
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    const p1, 0x104000a
 
-    throw p1
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    sget p1, Lejc;->common_google_play_services_enable_button:I
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 
     :cond_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    sget p1, Lejc;->common_google_play_services_update_button:I
 
-    const-string v0, "Failed to load fragment shader"
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw p1
+    return-object p0
 
     :cond_2
-    new-instance p1, Ljava/lang/RuntimeException;
+    sget p1, Lejc;->common_google_play_services_install_button:I
 
-    const-string v0, "Failed to load vertex shader"
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw p1
+    return-object p0
 .end method
 
+.method public static c(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public abstract getTarget()I
-.end method
-
-.method public getTextureCoordLoc()I
-    .locals 1
-
-    iget v0, p0, Ludh;->aTextureCoordLoc:I
-
-    return v0
-.end method
-
-.method public getVertexCoordLoc()I
-    .locals 1
-
-    iget v0, p0, Ludh;->aVertexCoordLoc:I
-
-    return v0
-.end method
-
-.method public registerTexture(IILjava/lang/String;)I
-    .locals 2
-
-    iget v0, p0, Ludh;->firstFreeTexture:I
-
-    const v1, 0x84c0
-
-    add-int/2addr v0, v1
-
-    invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "glActiveTexture "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Ludh;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    invoke-static {p1, p2}, Landroid/opengl/GLES20;->glBindTexture(II)V
+    move-result-object v1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const-string p2, "glBindTexture "
+    if-eq p1, v2, :cond_7
 
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x2
 
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq p1, v2, :cond_5
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v2, 0x3
 
-    move-result-object p1
+    if-eq p1, v2, :cond_4
 
-    invoke-static {p1}, Lyhh;->b(Ljava/lang/String;)V
+    const/4 v2, 0x5
 
-    iget p1, p0, Ludh;->firstFreeTexture:I
+    if-eq p1, v2, :cond_3
 
-    add-int/lit8 p2, p1, 0x1
+    const/4 v2, 0x7
 
-    iput p2, p0, Ludh;->firstFreeTexture:I
+    if-eq p1, v2, :cond_2
 
-    return p1
-.end method
+    const/16 v2, 0x9
 
-.method public release()V
-    .locals 1
+    if-eq p1, v2, :cond_1
 
-    iget-object v0, p0, Ludh;->frame:Lndh;
+    const/16 v2, 0x14
 
-    iget-object v0, v0, Lndh;->a:Lsdh;
+    if-eq p1, v2, :cond_0
 
-    invoke-interface {v0}, Lsdh;->a()V
+    packed-switch p1, :pswitch_data_0
 
-    iget v0, p0, Ludh;->programId:I
+    sget p0, Lfjc;->common_google_play_services_unknown_issue:I
 
-    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
-
-    return-void
-.end method
-
-.method public render()V
-    .locals 1
-
-    invoke-virtual {p0}, Ludh;->use()V
-
-    iget-object v0, p0, Ludh;->frame:Lndh;
-
-    iget-object v0, v0, Lndh;->a:Lsdh;
-
-    invoke-interface {v0}, Lsdh;->b()V
-
-    invoke-virtual {p0}, Ludh;->unUse()V
-
-    return-void
-.end method
-
-.method public setCustomParameter(Ljava/lang/String;F)V
-    .locals 1
-
-    iget v0, p0, Ludh;->programId:I
-
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
-
-    move-result p1
-
-    iget-object v0, p0, Ludh;->customParams:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    sget p0, Lejc;->common_google_play_services_updating_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    const-string p1, "common_google_play_services_sign_in_failed_text"
+
+    invoke-static {p0, p1, v1}, Ludh;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    const-string p1, "common_google_play_services_api_unavailable_text"
+
+    invoke-static {p0, p1, v1}, Ludh;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-string p1, "common_google_play_services_restricted_profile_text"
+
+    invoke-static {p0, p1, v1}, Ludh;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    sget p0, Lejc;->common_google_play_services_unsupported_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    const-string p1, "common_google_play_services_network_error_text"
+
+    invoke-static {p0, p1, v1}, Ludh;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_3
+    const-string p1, "common_google_play_services_invalid_account_text"
+
+    invoke-static {p0, p1, v1}, Ludh;->e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    sget p0, Lejc;->common_google_play_services_enable_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    invoke-static {p0}, Lzvd;->E(Landroid/content/Context;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_6
+
+    sget p0, Lejc;->common_google_play_services_wear_update_text:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_6
+    sget p0, Lejc;->common_google_play_services_update_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_7
+    sget p0, Lejc;->common_google_play_services_install_text:I
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x10
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static d(Landroid/content/Context;I)Ljava/lang/String;
+    .locals 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "GoogleApiAvailability"
+
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v0, "Unexpected error code "
+
+    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_1
+    const-string p1, "The current user profile is restricted and could not use authenticated features."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_restricted_profile_title"
+
+    invoke-static {p0, p1}, Ludh;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    const-string p1, "The specified account could not be signed in."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_sign_in_failed_title"
+
+    invoke-static {p0, p1}, Ludh;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_3
+    const-string p0, "One of the API components you attempted to connect to is not available."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_4
+    const-string p0, "The application is not licensed to the user."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_5
+    const-string p0, "Developer error occurred. Please see logs for detailed information"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_6
+    const-string p0, "Google Play services is invalid. Cannot recover."
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_7
+    const-string p0, "Internal error occurred. Please see logs for detailed information"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-object v1
+
+    :pswitch_8
+    const-string p1, "Network error occurred. Please retry request later."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_network_error_title"
+
+    invoke-static {p0, p1}, Ludh;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_9
+    const-string p1, "An invalid account was specified when connecting. Please provide a valid account."
+
+    invoke-static {v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "common_google_play_services_invalid_account_title"
+
+    invoke-static {p0, p1}, Ludh;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_a
+    return-object v1
+
+    :pswitch_b
+    sget p0, Lejc;->common_google_play_services_enable_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_c
+    sget p0, Lejc;->common_google_play_services_update_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_d
+    sget p0, Lejc;->common_google_play_services_install_title:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_a
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_a
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public static e(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-static {p0, p1}, Ludh;->f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    sget p0, Lfjc;->common_google_play_services_unknown_issue:I
+
+    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    filled-new-array {p2}, [Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1, p0, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public setCustomParameter(Ljava/lang/String;I)V
-    .locals 1
+.method public static f(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
 
-    iget v0, p0, Ludh;->programId:I
+    const-string v0, "Got empty resource: "
 
-    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
+    const-string v1, "Missing resource: "
 
-    move-result p1
+    sget-object v2, Ludh;->a:Lube;
 
-    iget-object v0, p0, Ludh;->customParams:Ljava/util/HashMap;
+    monitor-enter v2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object p2
+    move-result-object v3
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3}, Loj3;->a(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
 
-    return-void
-.end method
+    move-result-object v3
 
-.method public setMVPMat([F)V
-    .locals 0
+    new-instance v4, La18;
 
-    iput-object p1, p0, Ludh;->mvpMat:[F
+    const/4 v4, 0x0
 
-    return-void
-.end method
+    invoke-virtual {v3, v4}, Landroid/os/LocaleList;->get(I)Ljava/util/Locale;
 
-.method public setTexMat([F)V
-    .locals 0
+    move-result-object v3
 
-    iput-object p1, p0, Ludh;->texMat:[F
+    sget-object v4, Ludh;->b:Ljava/util/Locale;
 
-    return-void
-.end method
+    invoke-virtual {v3, v4}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
 
-.method public setTextureAlpha(F)V
-    .locals 0
+    move-result v4
 
-    iput p1, p0, Ludh;->alpha:F
+    if-nez v4, :cond_0
 
-    return-void
-.end method
+    invoke-virtual {v2}, Lube;->clear()V
 
-.method public setTextureId(I)V
-    .locals 0
+    sput-object v3, Ludh;->b:Ljava/util/Locale;
 
-    iput p1, p0, Ludh;->textureId:I
+    goto :goto_0
 
-    return-void
-.end method
+    :catchall_0
+    move-exception p0
 
-.method public unUse()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
-
-    const-string v0, "glUseProgram"
-
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public use()V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Ludh;->firstFreeTexture:I
-
-    iget-object v1, p0, Ludh;->mvpMat:[F
-
-    const/16 v2, 0x10
-
-    if-nez v1, :cond_0
-
-    new-array v1, v2, [F
-
-    iput-object v1, p0, Ludh;->mvpMat:[F
-
-    invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+    goto :goto_3
 
     :cond_0
-    iget-object v1, p0, Ludh;->texMat:[F
-
-    if-nez v1, :cond_1
-
-    new-array v1, v2, [F
-
-    iput-object v1, p0, Ludh;->texMat:[F
-
-    invoke-static {v1, v0}, Landroid/opengl/Matrix;->setIdentityM([FI)V
-
-    :cond_1
-    iget v1, p0, Ludh;->programId:I
-
-    invoke-static {v1}, Landroid/opengl/GLES20;->glUseProgram(I)V
-
-    const-string v1, "glUseProgram"
-
-    invoke-static {v1}, Lyhh;->b(Ljava/lang/String;)V
-
-    iget v1, p0, Ludh;->mvpMatrixLoc:I
-
-    iget-object v2, p0, Ludh;->mvpMat:[F
-
-    const/4 v3, 0x1
-
-    invoke-static {v1, v3, v0, v2, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    const-string v1, "glUniformMatrix4fv"
-
-    invoke-static {v1}, Lyhh;->b(Ljava/lang/String;)V
-
-    iget v2, p0, Ludh;->texMatrixLoc:I
-
-    iget-object v4, p0, Ludh;->texMat:[F
-
-    invoke-static {v2, v3, v0, v4, v0}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
-
-    invoke-static {v1}, Lyhh;->b(Ljava/lang/String;)V
-
-    iget v0, p0, Ludh;->textureLocation:I
-
-    invoke-virtual {p0}, Ludh;->getTarget()I
-
-    move-result v1
-
-    iget v2, p0, Ludh;->textureId:I
-
-    const-string v3, "textureId"
-
-    invoke-virtual {p0, v1, v2, v3}, Ludh;->registerTexture(IILjava/lang/String;)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
-
-    const-string v0, "glUniform1i"
-
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
-
-    iget v0, p0, Ludh;->alphaLocation:I
-
-    iget v1, p0, Ludh;->alpha:F
-
-    invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    const-string v0, "glUniform1f"
-
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
-
-    iget-object v0, p0, Ludh;->customParams:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_2
     :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2, p1}, Lube;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    if-eqz v3, :cond_1
+
+    monitor-exit v2
+
+    return-object v3
+
+    :cond_1
+    sget v3, Ltn6;->e:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v3, 0x0
+
+    :try_start_1
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const-string v4, "com.google.android.gms"
+
+    invoke-virtual {p0, v4}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
+
+    move-result-object p0
+    :try_end_1
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_1
+
+    :catch_0
+    move-object p0, v3
+
+    :goto_1
+    if-nez p0, :cond_2
+
+    :try_start_2
+    monitor-exit v2
+
+    goto :goto_2
+
+    :cond_2
+    const-string v4, "string"
+
+    const-string v5, "com.google.android.gms"
+
+    invoke-virtual {p0, p1, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    const-string p0, "GoogleApiAvailability"
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    monitor-exit v2
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string p0, "GoogleApiAvailability"
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast v1, Ljava/lang/Integer;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v2
+    monitor-exit v2
 
-    iget-object v3, p0, Ludh;->customParams:Ljava/util/HashMap;
-
-    const/4 v4, 0x0
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v1, v4}, Ljava/util/HashMap;->getOrDefault(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    instance-of v3, v1, Ljava/lang/Float;
-
-    if-eqz v3, :cond_3
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
-
-    goto :goto_0
-
-    :cond_3
-    instance-of v3, v1, Ljava/lang/Integer;
-
-    if-eqz v3, :cond_2
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glUniform1i(II)V
-
-    goto :goto_0
+    :goto_2
+    return-object v3
 
     :cond_4
-    const-string v0, "set custom"
+    sget-object v0, Ludh;->a:Lube;
 
-    invoke-static {v0}, Lyhh;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p0}, Lube;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    monitor-exit v2
+
+    return-object p0
+
+    :goto_3
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw p0
 .end method

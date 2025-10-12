@@ -1,10 +1,3 @@
-.class public abstract Lkjh;
-.super Lcfh;
+.class public final Lkjh;
+.super Lidh;
 .source "SourceFile"
-
-# interfaces
-.implements Lujh;
-
-
-# static fields
-.field public static final synthetic d:I

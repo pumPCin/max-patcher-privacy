@@ -1,135 +1,47 @@
 .class public final Lc1;
-.super Lnf2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Ll1;Ll1;)V
-    .locals 0
+# static fields
+.field public static final b:Lc1;
 
-    iput-object p2, p1, Ll1;->b:Ll1;
+
+# instance fields
+.field public final a:Ljava/lang/Throwable;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lc1;
+
+    new-instance v1, La1;
+
+    const-string v2, "Failure occurred while trying to finish a future."
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, La1;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v0, v1}, Lc1;-><init>(Ljava/lang/Throwable;)V
+
+    sput-object v0, Lc1;->b:Lc1;
 
     return-void
 .end method
 
-.method public final E(Ll1;Ljava/lang/Thread;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iput-object p2, p1, Ll1;->a:Ljava/lang/Thread;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-boolean v0, Lv1;->o:Z
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Lc1;->a:Ljava/lang/Throwable;
 
     return-void
-.end method
-
-.method public final k(Ln1;Lw0;Lw0;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Ln1;->b:Lw0;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->b:Lw0;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final l(Ln1;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Ln1;->a:Ljava/lang/Object;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->a:Ljava/lang/Object;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final m(Ln1;Ll1;Ll1;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Ln1;->c:Ll1;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Ln1;->c:Ll1;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
 .end method

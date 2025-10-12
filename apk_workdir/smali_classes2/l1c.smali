@@ -1,274 +1,194 @@
-.class public final Ll1c;
-.super Lv2;
+.class public final synthetic Ll1c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final c:Ll1c;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lo1c;
+
+.field public final synthetic c:Lzyb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lo1c;Lzyb;)V
+    .locals 1
 
-    new-instance v0, Ll1c;
+    .line 2
+    const/4 v0, 0x1
 
-    const/16 v1, 0x8
+    iput v0, p0, Ll1c;->a:I
 
-    invoke-direct {v0, v1}, Lv2;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Ll1c;->c:Ll1c;
+    iput-object p1, p0, Ll1c;->b:Lo1c;
+
+    iput-object p2, p0, Ll1c;->c:Lzyb;
 
     return-void
 .end method
 
-.method public static e1(JJ)Lzc4;
-    .locals 2
+.method public synthetic constructor <init>(Lzyb;Lo1c;)V
+    .locals 1
 
-    const-string v0, ":profile/edit/admin_permission?chat_id="
+    .line 1
+    const/4 v0, 0x0
 
-    const-string v1, "&contact_id="
+    iput v0, p0, Ll1c;->a:I
 
-    invoke-static {p0, p1, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Ll1c;->c:Lzyb;
 
-    const-string p1, "&permissions_type=change_admin"
+    iput-object p2, p0, Ll1c;->b:Lo1c;
 
-    invoke-static {p0, p2, p3, p1}, Lfl7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lzc4;
-
-    invoke-direct {p1, p0}, Lzc4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static i1(JLjava/lang/String;I)Lzc4;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, ":invite/qr?height="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p3, "&id="
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p0, "&type="
-
-    invoke-static {v0, p0, p2}, Lfl7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lzc4;
-
-    invoke-direct {p1, p0}, Lzc4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final c1(JZ)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 11
 
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    iget p1, p0, Ll1c;->a:I
 
-    move-result-object v0
+    packed-switch p1, :pswitch_data_0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Ll1c;->b:Lo1c;
 
-    const-string v2, ":profile/add-members?chat_id="
+    iget-object p1, p1, Lo1c;->X:Ln1c;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Ll1c;->c:Lzyb;
 
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    check-cast v0, Lsyb;
 
-    const-string p1, "&is_chat="
+    iget-wide v0, v0, Lsyb;->a:J
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lone/me/profile/ProfileScreen;
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v3, "ID #"
 
-    const/4 p2, 0x0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v3, " \u0441\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d \u0432 \u0431\u0443\u0444\u0435\u0440 \u043e\u0431\u043c\u0435\u043d\u0430"
 
-.method public final d1(J)V
-    .locals 3
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, ":chats?id="
-
-    const-string v2, "&type=local"
-
-    invoke-static {p1, p2, v1, v2}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->requireActivity()Lgn;
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p1, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-.end method
-
-.method public final f1(J)V
-    .locals 3
-
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sget-object v1, Lq63;->a:Lw9h;
 
-    const-string v2, ":profile/invite?id="
+    new-instance v3, Lxi;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/16 v4, 0x12
 
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {v3, p1, v2, v0, v4}, Lxi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v3}, Lw9h;->w(Ljava/lang/Runnable;)V
+
+    sget-object p1, Lqsb;->a:Lqsb;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    const-class v0, Lrta;
 
-    invoke-virtual {v0, p1, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-.end method
-
-.method public final g1(JLjava/lang/String;)V
-    .locals 3
-
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ":profile/members?id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, "&type="
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
     move-result-object p1
 
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p1, p2}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-.end method
-
-.method public final h1(J)V
-    .locals 3
-
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
-
-    move-result-object v0
-
-    new-instance v1, Lcd4;
-
-    invoke-direct {v1}, Lcd4;-><init>()V
-
-    const-string v2, ":profile"
-
-    iput-object v2, v1, Lcd4;->a:Ljava/lang/String;
-
-    const-string v2, "id"
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1, v2}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    check-cast p1, Lrta;
 
-    const-string p1, "type"
+    invoke-virtual {p1, v2}, Lrta;->h(Ljava/lang/CharSequence;)V
 
-    const-string p2, "contact"
+    iget-object v3, p1, Lrta;->b:Lqua;
 
-    invoke-virtual {v1, p2, p1}, Lcd4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object v0, v3, Lqua;->X:Lzta;
 
-    invoke-virtual {v1}, Lcd4;->a()Landroid/net/Uri;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    const/4 v2, 0x6
 
-    const/4 p2, 0x0
+    const/4 v4, 0x2
 
-    invoke-virtual {v0, p1, p2}, Ldd4;->c(Landroid/net/Uri;Landroid/os/Bundle;)Z
+    invoke-static {v0, v4, v1, v1, v2}, Lzta;->a(Lzta;IIII)Lzta;
+
+    move-result-object v8
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x2f
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v3 .. v10}, Lqua;->a(Lqua;Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;I)Lqua;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lrta;->b:Lqua;
+
+    invoke-virtual {p1}, Lrta;->i()Lqta;
 
     return-void
-.end method
 
-.method public final j1()V
-    .locals 1
+    :pswitch_0
+    iget-object p1, p0, Ll1c;->c:Lzyb;
 
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    check-cast p1, Lpyb;
 
-    move-result-object v0
+    iget-object v0, p0, Ll1c;->b:Lo1c;
 
-    invoke-virtual {v0}, Ldd4;->d()Z
+    iget-object v0, v0, Lo1c;->X:Ln1c;
 
-    move-result v0
+    iget-object p1, p1, Lpyb;->a:Lrsb;
 
-    if-nez v0, :cond_0
+    iget-wide v1, p1, Lrsb;->a:J
 
-    invoke-virtual {p0}, Lv2;->K0()Ldd4;
+    check-cast v0, Lone/me/profile/ProfileScreen;
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ldd4;->a()Luc4;
+    sget-object p1, La0c;->c:La0c;
 
-    move-result-object v0
+    invoke-virtual {p1, v1, v2}, La0c;->I0(J)V
 
-    check-cast v0, Lhma;
-
-    invoke-virtual {v0}, Lhma;->f()Lo8d;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lo8d;->I()Li8d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Li8d;->d()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    :cond_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

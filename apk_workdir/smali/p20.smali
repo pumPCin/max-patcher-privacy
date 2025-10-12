@@ -1,110 +1,88 @@
-.class public abstract Lp20;
-.super Ljava/lang/Object;
+.class public final Lp20;
+.super Landroid/media/AudioDeviceCallback;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()[I
-    .locals 9
+# instance fields
+.field public final synthetic a:Lr20;
 
-    invoke-static {}, Le77;->i()Lb77;
+
+# direct methods
+.method public constructor <init>(Lr20;)V
+    .locals 0
+
+    iput-object p1, p0, Lp20;->a:Lr20;
+
+    invoke-direct {p0}, Landroid/media/AudioDeviceCallback;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAudioDevicesAdded([Landroid/media/AudioDeviceInfo;)V
+    .locals 3
+
+    iget-object p1, p0, Lp20;->a:Lr20;
+
+    iget-object v0, p1, Lr20;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    iget-object v1, p1, Lr20;->j:Ljava/lang/Object;
+
+    check-cast v1, Le20;
+
+    iget-object v2, p1, Lr20;->i:Ljava/lang/Object;
+
+    check-cast v2, Lw9h;
+
+    invoke-static {v0, v1, v2}, Lo20;->b(Landroid/content/Context;Le20;Lw9h;)Lo20;
 
     move-result-object v0
 
-    sget-object v1, Lr20;->e:[I
+    invoke-virtual {p1, v0}, Lr20;->a(Lo20;)V
 
-    array-length v2, v1
+    return-void
+.end method
 
-    const/4 v3, 0x0
+.method public final onAudioDevicesRemoved([Landroid/media/AudioDeviceInfo;)V
+    .locals 3
 
-    move v4, v3
+    iget-object v0, p0, Lp20;->a:Lr20;
 
-    :goto_0
-    if-ge v4, v2, :cond_1
+    iget-object v1, v0, Lr20;->i:Ljava/lang/Object;
 
-    aget v5, v1, v4
+    check-cast v1, Lw9h;
 
-    new-instance v6, Landroid/media/AudioFormat$Builder;
+    invoke-static {p1, v1}, Lg3g;->l([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v6}, Landroid/media/AudioFormat$Builder;-><init>()V
+    move-result p1
 
-    const/16 v7, 0xc
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v6, v7}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
+    const/4 p1, 0x0
 
-    move-result-object v6
-
-    invoke-virtual {v6, v5}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v6
-
-    const v7, 0xbb80
-
-    invoke-virtual {v6, v7}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v6
-
-    new-instance v7, Landroid/media/AudioAttributes$Builder;
-
-    invoke-direct {v7}, Landroid/media/AudioAttributes$Builder;-><init>()V
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object v7
-
-    const/4 v8, 0x3
-
-    invoke-virtual {v7, v8}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v3}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lg4;->u(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Lu67;->a(Ljava/lang/Object;)V
+    iput-object p1, v0, Lr20;->i:Ljava/lang/Object;
 
     :cond_0
-    add-int/lit8 v4, v4, 0x1
+    iget-object p1, v0, Lr20;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast p1, Landroid/content/Context;
 
-    :cond_1
-    const/4 v1, 0x2
+    iget-object v1, v0, Lr20;->j:Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v1, Le20;
 
-    move-result-object v1
+    iget-object v2, v0, Lr20;->i:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lu67;->a(Ljava/lang/Object;)V
+    check-cast v2, Lw9h;
 
-    invoke-virtual {v0}, Lb77;->h()Lxyc;
+    invoke-static {p1, v1, v2}, Lo20;->b(Landroid/content/Context;Le20;Lw9h;)Lo20;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-static {v0}, Lv4b;->M(Ljava/util/Collection;)[I
+    invoke-virtual {v0, p1}, Lr20;->a(Lo20;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

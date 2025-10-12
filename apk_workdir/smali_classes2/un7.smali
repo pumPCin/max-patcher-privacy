@@ -2,80 +2,360 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lun7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final synthetic a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+.field public final X:Ljava/util/List;
 
-.field public final synthetic b:Landroid/os/Bundle;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Landroid/os/Bundle;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz94;
 
-    iput-object p1, p0, Lun7;->a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    const/16 v1, 0x1d
 
-    iput-object p2, p0, Lun7;->b:Landroid/os/Bundle;
+    invoke-direct {v0, v1}, Lz94;-><init>(I)V
+
+    sput-object v0, Lun7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(IIFLjava/util/List;)V
+    .locals 0
 
-# virtual methods
-.method public final a(Lzqe;)V
-    .locals 6
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lun7;->a:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    .line 2
+    iput p1, p0, Lun7;->a:I
 
-    iget-object v0, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->b:Lbp7;
+    const/4 p1, 0x1
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    .line 3
+    iput p1, p0, Lun7;->b:I
+
+    .line 4
+    iput p2, p0, Lun7;->c:I
+
+    .line 5
+    iput p3, p0, Lun7;->o:F
+
+    .line 6
+    iput-object p4, p0, Lun7;->X:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lan8;
+    if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lan8;->X:Ljb5;
+    .line 9
+    const-string v1, "DRAWING"
 
-    sget-object v1, Lwm8;->a:Lwm8;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    move-result v1
 
-    sget-object v0, Lln7;->c:Lln7;
+    if-eqz v1, :cond_0
 
-    iget-wide v1, p1, Lzqe;->a:J
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lun7;->b:Landroid/os/Bundle;
+    .line 10
+    iput v0, p0, Lun7;->b:I
 
-    const-string v3, "arg_key_chat_id"
+    .line 11
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    invoke-virtual {p1, v3}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
+    move-result v0
 
-    move-result-wide v3
+    iput v0, p0, Lun7;->a:I
 
-    invoke-virtual {v0}, Lv2;->K0()Ldd4;
+    .line 12
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lun7;->c:I
+
+    .line 13
+    invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
+
+    move-result v0
+
+    iput v0, p0, Lun7;->o:F
+
+    .line 14
+    sget-object v0, Lay4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
 
     move-result-object p1
 
-    const-string v0, ":stickers/preview?sticker_id="
+    iput-object p1, p0, Lun7;->X:Ljava/util/List;
 
-    const-string v5, "&chat_id="
+    return-void
 
-    invoke-static {v1, v2, v0, v5}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 15
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "No enum constant ru.ok.tamtam.photoeditor.state.LayerState.Type."
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    throw p1
 
-    move-result-object v0
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string v0, "Name is null"
+
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_7
+
+    const-class v0, Lun7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lun7;
+
+    iget-object v0, p1, Lun7;->X:Ljava/util/List;
+
+    iget v1, p0, Lun7;->a:I
+
+    iget v2, p1, Lun7;->a:I
+
+    if-eq v1, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget v1, p0, Lun7;->c:I
+
+    iget v2, p1, Lun7;->c:I
+
+    if-eq v1, v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v1, p1, Lun7;->o:F
+
+    iget v2, p0, Lun7;->o:F
+
+    invoke-static {v1, v2}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    iget v1, p0, Lun7;->b:I
+
+    iget p1, p1, Lun7;->b:I
+
+    if-eq v1, p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    iget-object p1, p0, Lun7;->X:Ljava/util/List;
+
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1, v0}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_6
+    if-nez v0, :cond_7
+
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_7
+    :goto_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget v0, p0, Lun7;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Ldd4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    iget v2, p0, Lun7;->b:I
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v2}, Lsw1;->u(I)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v2, p0, Lun7;->c:I
+
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v2, 0x0
+
+    iget v3, p0, Lun7;->o:F
+
+    cmpl-float v2, v3, v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lun7;->X:Ljava/util/List;
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v2}, Ljava/util/List;->hashCode()I
+
+    move-result v1
+
+    :cond_2
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget p2, p0, Lun7;->b:I
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_0
+
+    const-string p2, "DRAWING"
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget p2, p0, Lun7;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lun7;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Lun7;->o:F
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget-object p2, p0, Lun7;->X:Ljava/util/List;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
     return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
 .end method

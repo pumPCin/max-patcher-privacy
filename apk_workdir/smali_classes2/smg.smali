@@ -1,93 +1,192 @@
-.class public final Lsmg;
-.super Lm3f;
+.class public final synthetic Lsmg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Landroid/widget/TextView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lumg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lumg;I)V
     .locals 0
 
-    iput-object p1, p0, Lsmg;->X:Landroid/widget/TextView;
+    iput p2, p0, Lsmg;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lsmg;->b:Lumg;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 7
 
-    check-cast p1, Lgv5;
+    iget v0, p0, Lsmg;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lsmg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lsmg;->b:Lumg;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Lsmg;
+    iget-object v0, v2, Lumg;->a:Lyn7;
 
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lsmg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lsmg;
-
-    iget-object v0, p0, Lsmg;->X:Landroid/widget/TextView;
-
-    invoke-direct {p1, v0, p2}, Lsmg;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsmg;->X:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Lvmg;
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    iget-object v2, v2, Lumg;->e:Lyn7;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-interface {v2}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-virtual {v1, p1}, Lsed;->k(Landroid/content/Context;)Lbx4;
+    check-cast v2, Lr8b;
 
-    move-result-object p1
+    sget-object v3, Lr8b;->d:[Ljava/lang/String;
 
-    invoke-virtual {p1}, Lbx4;->h()Luxa;
+    const/4 v4, 0x0
 
-    move-result-object p1
+    aget-object v5, v3, v4
 
-    invoke-static {v0, p1}, Lsx9;->i(Ljava/lang/CharSequence;Luxa;)V
+    iget-object v6, v2, Lr8b;->c:Lvn4;
+
+    iget-object v6, v6, Lvn4;->c:Ljava/lang/Object;
+
+    check-cast v6, Lh4f;
+
+    invoke-virtual {v6}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/content/SharedPreferences;
+
+    invoke-interface {v6, v5, v4}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v6
+
+    if-nez v6, :cond_0
+
+    iget-object v6, v2, Lr8b;->a:Landroid/content/Context;
+
+    invoke-static {v6, v5}, Lw7;->e(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const-string v5, "umg"
+
+    const-string v6, "forceContactsSync"
+
+    invoke-static {v5, v6}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v5, v2, Lr8b;->c:Lvn4;
+
+    sget-object v6, Lr8b;->f:[Ljava/lang/String;
+
+    invoke-virtual {v2, v6}, Lr8b;->c([Ljava/lang/String;)Z
+
+    move-result v2
+
+    iget-object v5, v5, Lvn4;->c:Ljava/lang/Object;
+
+    check-cast v5, Lh4f;
+
+    invoke-virtual {v5}, Lh4f;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Landroid/content/SharedPreferences;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v5
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v5, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Loyf;->a:Loyf;
+    move v1, v4
 
-    return-object p1
+    :goto_0
+    invoke-virtual {v0, v1}, Lvmg;->b(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, v2, Lumg;->a:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvmg;
+
+    invoke-virtual {v0}, Lvmg;->a()V
+
+    iget-object v0, v2, Lumg;->c:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lc7f;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "c7f"
+
+    const-string v3, "syncAll"
+
+    invoke-static {v2, v3}, Lyt3;->j(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iget-object v3, v0, Lc7f;->e:Lpcd;
+
+    new-instance v4, Lyi;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v0, v2, v1, v5}, Lyi;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {v3, v4}, Lpcd;->b(Ljava/lang/Runnable;)Lfs4;
+
+    return-void
+
+    :pswitch_1
+    sget-object v0, Lnpb;->s0:Lnpb;
+
+    iget-object v0, v0, Lnpb;->Y:Lwq7;
+
+    iget-object v1, v2, Lumg;->m:Ltmg;
+
+    invoke-virtual {v0, v1}, Lwq7;->a(Lqq7;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

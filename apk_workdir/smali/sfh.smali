@@ -1,150 +1,278 @@
 .class public final Lsfh;
-.super Lu67;
+.super Le4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lsfh;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public e:Ljava/lang/Object;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Ltfh;
 
-    iput v0, p0, Lsfh;->d:I
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Ltfh;-><init>(I)V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lu67;->c:[Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lu67;->a:Z
-
-    iput v0, p0, Lu67;->b:I
+    sput-object v0, Lsfh;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Lnr0;[Lkm5;ZI)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lsfh;->d:I
-
-    iput-object p1, p0, Lsfh;->e:Ljava/lang/Object;
+.method public constructor <init>(IIJJ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lu67;->c:[Ljava/lang/Object;
+    iput p1, p0, Lsfh;->a:I
 
-    const/4 p1, 0x0
+    iput p2, p0, Lsfh;->b:I
 
-    if-eqz p2, :cond_0
+    iput-wide p3, p0, Lsfh;->c:J
 
-    if-eqz p3, :cond_0
-
-    const/4 p1, 0x1
-
-    :cond_0
-    iput-boolean p1, p0, Lu67;->a:Z
-
-    iput p4, p0, Lu67;->b:I
+    iput-wide p5, p0, Lsfh;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lsk;Ltbf;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    iget v0, p0, Lsfh;->d:I
+    instance-of v0, p1, Lsfh;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    check-cast p1, Ljkh;
+    if-eqz v0, :cond_0
 
-    iput-object p2, p0, Lsfh;->e:Ljava/lang/Object;
+    check-cast p1, Lsfh;
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
+    iget v0, p0, Lsfh;->a:I
 
-    move-result-object p1
+    iget v2, p1, Lsfh;->a:I
 
-    check-cast p1, Lbkh;
+    if-ne v0, v2, :cond_0
 
-    new-instance p2, Lblh;
+    iget v0, p0, Lsfh;->b:I
 
-    invoke-direct {p2, p0}, Lblh;-><init>(Lsfh;)V
+    iget v2, p1, Lsfh;->b:I
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    if-ne v0, v2, :cond_0
+
+    iget-wide v2, p0, Lsfh;->c:J
+
+    iget-wide v4, p1, Lsfh;->c:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_0
+
+    iget-wide v2, p0, Lsfh;->o:J
+
+    iget-wide v4, p1, Lsfh;->o:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget v0, p0, Lsfh;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    const-string v1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+    iget v1, p0, Lsfh;->a:I
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sget v1, Lmih;->a:I
+    move-result-object v1
 
-    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+    iget-wide v2, p0, Lsfh;->o:J
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p2
+    move-result-object v2
 
-    :try_start_0
-    iget-object p1, p1, Lbkh;->c:Landroid/os/IBinder;
+    iget-wide v3, p0, Lsfh;->c:J
 
-    const/4 v1, 0x1
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v2, 0x0
+    move-result-object v3
 
-    invoke-interface {p1, v1, v0, p2, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 10
+
+    iget v0, p0, Lsfh;->a:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    iget v2, p0, Lsfh;->b:I
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    iget-wide v4, p0, Lsfh;->o:J
+
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    iget-wide v7, p0, Lsfh;->c:J
+
+    invoke-static {v7, v8}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
+
+    move-result v9
+
+    add-int/lit8 v1, v1, 0x32
+
+    add-int/2addr v1, v3
+
+    add-int/lit8 v1, v1, 0x12
+
+    add-int/2addr v1, v6
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x11
+
+    add-int/2addr v1, v9
+
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "NetworkLocationStatus: Wifi status: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " Cell status: "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, " elapsed time NS: "
+
+    const-string v1, " system time ms: "
+
+    invoke-static {v4, v5, v0, v1, v3}, Lsw1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 5
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lnjg;->S(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x4
+
+    invoke-static {p1, v0, v1}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lsfh;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v0, v1}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    iget v0, p0, Lsfh;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x3
+
+    const/16 v2, 0x8
+
+    invoke-static {p1, v0, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    iget-wide v3, p0, Lsfh;->c:J
+
+    invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
+
+    invoke-static {p1, v1, v2}, Lnjg;->U(Landroid/os/Parcel;II)V
+
+    iget-wide v0, p0, Lsfh;->o:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    invoke-static {p1, p2}, Lnjg;->T(Landroid/os/Parcel;I)V
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lsfh;->e:Ljava/lang/Object;
-
-    check-cast v0, Lnr0;
-
-    iget-object v0, v0, Lnr0;->d:Ljava/lang/Object;
-
-    check-cast v0, Lgzc;
-
-    invoke-interface {v0, p1, p2}, Lgzc;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

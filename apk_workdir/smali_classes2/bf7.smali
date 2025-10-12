@@ -1,113 +1,99 @@
-.class public abstract Lbf7;
-.super Ljava/lang/Object;
+.class public final Lbf7;
+.super Lc2f;
 .source "SourceFile"
+
+# interfaces
+.implements Lje6;
+
+
+# instance fields
+.field public final synthetic X:Lyn7;
+
+.field public final synthetic Y:Luka;
 
 
 # direct methods
-.method public static a([B)Lcf7;
-    .locals 11
+.method public constructor <init>(Lyn7;Luka;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
+    iput-object p1, p0, Lbf7;->X:Lyn7;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;-><init>()V
+    iput-object p2, p0, Lbf7;->Y:Luka;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lg79;->mergeFrom(Lg79;[B)Lg79;
+    const/4 p1, 0x2
 
-    move-result-object p0
+    invoke-direct {p0, p1, p3}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
+.end method
 
-    new-instance v0, Lrbf;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v1, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->fileDownload:Lru/ok/tamtam/nano/Tasks$FileDownload;
+    check-cast p1, Ln24;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->messageId:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-wide v2, v0, Lrbf;->a:J
+    invoke-virtual {p0, p1, p2}, Lbf7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->attachId:Ljava/lang/String;
+    move-result-object p1
 
-    iput-object v2, v0, Lrbf;->b:Ljava/lang/String;
+    check-cast p1, Lbf7;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->videoId:J
+    sget-object p2, Laxf;->a:Laxf;
 
-    iput-wide v2, v0, Lrbf;->c:J
+    invoke-virtual {p1, p2}, Lbf7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->audioId:J
+    move-result-object p1
 
-    iput-wide v2, v0, Lrbf;->d:J
+    return-object p1
+.end method
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->mp4GifId:J
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput-wide v2, v0, Lrbf;->e:J
+    new-instance p1, Lbf7;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->stickerId:J
+    iget-object v0, p0, Lbf7;->X:Lyn7;
 
-    iput-wide v2, v0, Lrbf;->f:J
+    iget-object v1, p0, Lbf7;->Y:Luka;
 
-    iget-wide v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileId:J
+    invoke-direct {p1, v0, v1, p2}, Lbf7;-><init>(Lyn7;Luka;Lkotlin/coroutines/Continuation;)V
 
-    iput-wide v2, v0, Lrbf;->j:J
+    return-object p1
+.end method
 
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->fileName:Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object v2, v0, Lrbf;->k:Ljava/lang/String;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->url:Ljava/lang/String;
+    iget-object p1, p0, Lbf7;->X:Lyn7;
 
-    iput-object v2, v0, Lrbf;->g:Ljava/lang/String;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notifyProgress:Z
+    move-result-object p1
 
-    iput-boolean v2, v0, Lrbf;->h:Z
+    check-cast p1, Lbab;
 
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->checkAutoloadConnection:Z
+    iget-object v0, p0, Lbf7;->Y:Luka;
 
-    iput-boolean v2, v0, Lrbf;->i:Z
+    iget-object v0, v0, Luka;->a:Ljava/lang/String;
 
-    iget v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->invalidateCount:I
+    invoke-static {p1, v0}, Lcea;->t(Lbab;Ljava/lang/String;)Ljava/lang/String;
 
-    iput v2, v0, Lrbf;->l:I
+    move-result-object p1
 
-    iget-boolean v2, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->useOriginalExtension:Z
+    if-nez p1, :cond_0
 
-    iput-boolean v2, v0, Lrbf;->m:Z
+    const-string p1, ""
 
-    iget-boolean v1, v1, Lru/ok/tamtam/nano/Tasks$FileDownload;->notCopyVideoToGallery:Z
+    :cond_0
+    new-instance v0, Lbdf;
 
-    iput-boolean v1, v0, Lrbf;->n:Z
+    invoke-direct {v0, p1}, Lbdf;-><init>(Ljava/lang/CharSequence;)V
 
-    new-instance v10, Lsbf;
-
-    invoke-direct {v10, v0}, Lsbf;-><init>(Lrbf;)V
-
-    new-instance v2, Lcf7;
-
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->requestId:J
-
-    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->outputPath:Ljava/lang/String;
-
-    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->chatServerId:J
-
-    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$InvalidateAndDownloadAudio;->serverMessageId:J
-
-    invoke-direct/range {v2 .. v10}, Lcf7;-><init>(JLjava/lang/String;JJLsbf;)V
-
-    return-object v2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object v0
 .end method

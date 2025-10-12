@@ -1,54 +1,75 @@
-.class public final synthetic Lzb6;
+.class public final Lzb6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmag;
+.implements Lm54;
+
+
+# static fields
+.field public static final c:Z
 
 
 # instance fields
-.field public final synthetic a:Lqof;
+.field public final a:Ljava/util/UUID;
 
-.field public final synthetic b:Lin6;
-
-.field public final synthetic c:J
+.field public final b:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqof;Lin6;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Amazon"
 
-    iput-object p1, p0, Lzb6;->a:Lqof;
+    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    iput-object p2, p0, Lzb6;->b:Lin6;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-wide p3, p0, Lzb6;->c:J
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "AFTM"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "AFTB"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    sput-boolean v0, Lzb6;->c:Z
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/UUID;[B)V
+    .locals 0
 
-# virtual methods
-.method public final run()V
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lzb6;->a:Lqof;
+    iput-object p1, p0, Lzb6;->a:Ljava/util/UUID;
 
-    iget-object v1, v0, Lqof;->X:Ljava/lang/Object;
-
-    check-cast v1, Lhn6;
-
-    iget-object v0, v0, Lqof;->o:Ljava/lang/Object;
-
-    check-cast v0, Lbn6;
-
-    iget-object v2, p0, Lzb6;->b:Lin6;
-
-    iget-wide v3, p0, Lzb6;->c:J
-
-    invoke-interface {v1, v0, v2, v3, v4}, Lhn6;->a(Lbn6;Lin6;J)V
+    iput-object p2, p0, Lzb6;->b:[B
 
     return-void
 .end method

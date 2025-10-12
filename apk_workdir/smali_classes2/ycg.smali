@@ -1,110 +1,85 @@
 .class public final Lycg;
-.super Landroid/graphics/drawable/LayerDrawable;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzcg;
+
+
+# instance fields
+.field public final a:Lzcg;
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lndg;)V
     .locals 1
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
+    iput-object p1, p0, Lycg;->a:Lzcg;
 
-    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
+    new-instance p1, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-direct {p1, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p1, p0, Lycg;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final c()V
+    .locals 3
 
-    const/4 v0, 0x0
+    new-instance v0, Lece;
 
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    const/16 v1, 0x19
 
-    move-result-object v0
+    iget-object v2, p0, Lycg;->a:Lzcg;
 
-    instance-of v1, v0, Landroid/graphics/drawable/ShapeDrawable;
+    invoke-direct {v0, v1, v2}, Lece;-><init>(ILjava/lang/Object;)V
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Lycg;->b:Landroid/os/Handler;
 
-    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/high16 v1, 0x5c000000
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_1
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setTint(I)V
-
-    :cond_2
     return-void
 .end method
 
-.method public final b(ILjava/lang/Integer;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+    iget-object v0, p0, Lycg;->a:Lzcg;
 
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    :cond_0
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+    return p1
+.end method
 
-    move-result p2
+.method public final hashCode()I
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lycg;->a:Lzcg;
 
-    invoke-virtual {p0, v0, p1, p2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    const/16 p1, 0x11
+    move-result v0
 
-    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    return-void
+    return v0
 .end method

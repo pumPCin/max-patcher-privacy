@@ -1,19 +1,13 @@
 .class public final Lhr5;
-.super Ljava/io/IOException;
+.super Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lp07;
-
-
-# direct methods
-.method public constructor <init>(Lp07;)V
+# virtual methods
+.method public final finalize()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/io/IOException;-><init>()V
-
-    iput-object p1, p0, Lhr5;->a:Lp07;
+    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdown()V
 
     return-void
 .end method

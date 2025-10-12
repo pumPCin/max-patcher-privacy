@@ -3,50 +3,54 @@
 
 
 # static fields
-.field public static abc_fade_in:I = 0x7f010000
+.field public static ic_call_16:I = 0x7f080547
 
-.field public static abc_fade_out:I = 0x7f010001
+.field public static ic_call_22:I = 0x7f080548
 
-.field public static abc_grow_fade_in_from_bottom:I = 0x7f010002
+.field public static ic_call_24:I = 0x7f080549
 
-.field public static abc_popup_enter:I = 0x7f010003
+.field public static ic_call_contact_20:I = 0x7f080550
 
-.field public static abc_popup_exit:I = 0x7f010004
+.field public static ic_call_link_preview_36:I = 0x7f08055c
 
-.field public static abc_shrink_fade_out_from_bottom:I = 0x7f010005
+.field public static ic_checked_22:I = 0x7f080586
 
-.field public static abc_slide_in_bottom:I = 0x7f010006
+.field public static ic_copy_20:I = 0x7f0805a4
 
-.field public static abc_slide_in_top:I = 0x7f010007
+.field public static ic_copy_28:I = 0x7f0805a7
 
-.field public static abc_slide_out_bottom:I = 0x7f010008
+.field public static ic_delete_22:I = 0x7f0805b6
 
-.field public static abc_slide_out_top:I = 0x7f010009
+.field public static ic_edit_22:I = 0x7f0805d1
 
-.field public static abc_tooltip_enter:I = 0x7f01000a
+.field public static ic_incoming_audio_call_13:I = 0x7f080637
 
-.field public static abc_tooltip_exit:I = 0x7f01000b
+.field public static ic_incoming_video_call_15:I = 0x7f08063a
 
-.field public static btn_checkbox_to_checked_box_inner_merged_animation:I = 0x7f01000d
+.field public static ic_link_16:I = 0x7f08064b
 
-.field public static btn_checkbox_to_checked_box_outer_merged_animation:I = 0x7f01000e
+.field public static ic_link_22:I = 0x7f08064d
 
-.field public static btn_checkbox_to_checked_icon_null_animation:I = 0x7f01000f
+.field public static ic_loading_16:I = 0x7f080651
 
-.field public static btn_checkbox_to_unchecked_box_inner_merged_animation:I = 0x7f010010
+.field public static ic_more_14:I = 0x7f08068e
 
-.field public static btn_checkbox_to_unchecked_check_path_merged_animation:I = 0x7f010011
+.field public static ic_open_call_chat_24:I = 0x7f08072f
 
-.field public static btn_checkbox_to_unchecked_icon_null_animation:I = 0x7f010012
+.field public static ic_outgoing_audio_call_13:I = 0x7f080734
 
-.field public static btn_radio_to_off_mtrl_dot_group_animation:I = 0x7f010013
+.field public static ic_outgoing_video_call_15:I = 0x7f080736
 
-.field public static btn_radio_to_off_mtrl_ring_outer_animation:I = 0x7f010014
+.field public static ic_reject_audio_call_12:I = 0x7f080766
 
-.field public static btn_radio_to_off_mtrl_ring_outer_path_animation:I = 0x7f010015
+.field public static ic_reject_video_call_15:I = 0x7f080767
 
-.field public static btn_radio_to_on_mtrl_dot_group_animation:I = 0x7f010016
+.field public static ic_send_link_22:I = 0x7f080786
 
-.field public static btn_radio_to_on_mtrl_ring_outer_animation:I = 0x7f010017
+.field public static ic_share_link_20:I = 0x7f080794
 
-.field public static btn_radio_to_on_mtrl_ring_outer_path_animation:I = 0x7f010018
+.field public static ic_uncheced_22:I = 0x7f0807c3
+
+.field public static illustration_empty_58:I = 0x7f080812
+
+.field public static illustration_placeholder_casper:I = 0x7f080814

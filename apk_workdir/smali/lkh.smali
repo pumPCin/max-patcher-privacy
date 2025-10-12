@@ -1,75 +1,205 @@
-.class public abstract Llkh;
+.class public final Llkh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/HashMap;
+# instance fields
+.field public final a:I
+
+.field public final b:Lfaf;
+
+.field public final c:I
+
+.field public final d:Landroid/os/Bundle;
+
+.field public final synthetic e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(IILandroid/os/Bundle;I)V
+    .locals 0
+
+    iput p4, p0, Llkh;->e:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p4, Lfaf;
+
+    invoke-direct {p4}, Lfaf;-><init>()V
+
+    iput-object p4, p0, Llkh;->b:Lfaf;
+
+    iput p1, p0, Llkh;->a:I
+
+    iput p2, p0, Llkh;->c:I
+
+    iput-object p3, p0, Llkh;->d:Landroid/os/Bundle;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 1
+
+    iget v0, p0, Llkh;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(Lcom/google/android/gms/cloudmessaging/zzt;)V
     .locals 5
 
-    new-instance v0, Ljava/util/HashSet;
+    const/4 v0, 0x3
 
-    const-string v1, "review"
+    const-string v1, "MessengerIpcClient"
 
-    const-string v2, "app_update"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashSet;
-
-    const-string v1, "unity"
-
-    const-string v2, "native"
-
-    filled-new-array {v2, v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Llkh;->a:Ljava/util/HashMap;
-
-    invoke-static {}, Landroid/os/Process;->myUid()I
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
-    invoke-static {}, Landroid/os/Process;->myPid()I
+    if-eqz v0, :cond_0
 
-    move-result v1
-
-    const-string v2, "]  PID: ["
-
-    const-string v3, "] "
-
-    const-string v4, "UID: ["
-
-    invoke-static {v4, v0, v2, v1, v3}, Lgy1;->g(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Llkh;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "PlayCoreVersion"
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Failing "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " with "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Llkh;->b:Lfaf;
+
+    invoke-virtual {v0, p1}, Lfaf;->a(Ljava/lang/Exception;)V
 
     return-void
+.end method
+
+.method public final c(Landroid/os/Bundle;)V
+    .locals 5
+
+    const/4 v0, 0x3
+
+    const-string v1, "MessengerIpcClient"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Llkh;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Finishing "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " with "
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iget-object v0, p0, Llkh;->b:Lfaf;
+
+    invoke-virtual {v0, p1}, Lfaf;->b(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Request { what="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Llkh;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " id="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Llkh;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " oneWay="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Llkh;->a()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

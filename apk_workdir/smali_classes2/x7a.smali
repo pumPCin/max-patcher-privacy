@@ -1,105 +1,146 @@
-.class public final enum Lx7a;
-.super Ljava/lang/Enum;
+.class public final Lx7a;
+.super Lc2f;
 .source "SourceFile"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Lx7a;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lje6;
 
 
-# static fields
-.field public static final Companion:Lw7a;
+# instance fields
+.field public X:I
 
-.field public static final a:Ljava/lang/Object;
-
-.field public static final synthetic b:[Lx7a;
+.field public final synthetic Y:Ly7a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Ly7a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lx7a;
+    iput-object p1, p0, Lx7a;->Y:Ly7a;
 
-    const-string v1, "ERROR"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lx7a;
-
-    const-string v2, "SUCCESS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lx7a;
-
-    const-string v3, "WARNING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lx7a;
-
-    move-result-object v0
-
-    sput-object v0, Lx7a;->b:[Lx7a;
-
-    new-instance v0, Lw7a;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lx7a;->Companion:Lw7a;
-
-    new-instance v0, Lbh8;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lbh8;-><init>(I)V
-
-    invoke-static {v4, v0}, Lvr0;->r(ILve6;)Lbp7;
-
-    move-result-object v0
-
-    sput-object v0, Lx7a;->a:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lx7a;
-    .locals 1
 
-    const-class v0, Lx7a;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ln24;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Lx7a;
+    invoke-virtual {p0, p1, p2}, Lx7a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Lx7a;
+
+    sget-object p2, Laxf;->a:Laxf;
+
+    invoke-virtual {p1, p2}, Lx7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Lx7a;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lx7a;->b:[Lx7a;
+    new-instance p1, Lx7a;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lx7a;->Y:Ly7a;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lx7a;-><init>(Ly7a;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lx7a;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lx7a;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lx7a;->Y:Ly7a;
+
+    :try_start_1
+    iput v1, p0, Lx7a;->X:I
+
+    iget-object v0, p1, Ly7a;->a:Lc4d;
+
+    new-instance v1, Lig4;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v1, v2, p1}, Lig4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lcea;->j(Lc4d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :goto_0
+    const-string v0, "NotificationsTrackerMessagesDao"
+
+    const-string v1, "onLogout: failed"
+
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

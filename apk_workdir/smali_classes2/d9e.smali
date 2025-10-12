@@ -1,431 +1,156 @@
-.class public final Ld9e;
-.super Lv2;
+.class public final synthetic Ld9e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ltd6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic a:I
 
-.field public final synthetic o:Le9e;
+.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
 
 
 # direct methods
-.method public constructor <init>(Le9e;I)V
-    .locals 2
-
-    iput p2, p0, Ld9e;->c:I
-
-    packed-switch p2, :pswitch_data_0
-
-    :pswitch_0
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    .line 2
-    sget-object p2, Lb9e;->a:Lb9e;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 3
-    :pswitch_1
-    sget-object p2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    .line 4
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 5
-    :pswitch_2
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    const/4 p2, 0x0
-
-    .line 6
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_3
-    const-wide/16 v0, 0x1f40
-
-    .line 7
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    .line 8
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_4
-    const-wide/16 v0, 0x1f40
-
-    .line 9
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    .line 10
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 11
-    :pswitch_5
-    iput-object p1, p0, Ld9e;->o:Le9e;
-
-    const/16 p1, 0x9
-
-    .line 12
-    sget-object p2, Lc9e;->a:Lc9e;
-
-    invoke-direct {p0, p1, p2}, Lv2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_5
-        :pswitch_4
-        :pswitch_0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;Le9e;I)V
+.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Ld9e;->c:I
+    iput p2, p0, Ld9e;->a:I
 
-    iput-object p2, p0, Ld9e;->o:Le9e;
+    iput-object p1, p0, Ld9e;->b:Lone/me/location/map/show/ShowLocationScreen;
 
-    const/16 p2, 0x9
-
-    invoke-direct {p0, p2, p1}, Lv2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    iget v0, p0, Ld9e;->c:I
+    iget v0, p0, Ld9e;->a:I
 
-    iget-object v1, p0, Ld9e;->o:Le9e;
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Ld9e;->b:Lone/me/location/map/show/ShowLocationScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v3, Lp9e;
+
+    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->a:Lds;
+
+    sget-object v5, Lone/me/location/map/show/ShowLocationScreen;->A0:[Lpl7;
+
+    const/4 v6, 0x0
+
+    aget-object v6, v5, v6
+
+    invoke-virtual {v0, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v6
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->b:Lds;
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
+
+    move-result-wide v0
+
+    invoke-direct {v4, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+
+    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->c:Lds;
+
+    const/4 v1, 0x2
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {v0, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
 
     move-result v0
 
-    if-nez v0, :cond_2
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->o:Lds;
 
-    check-cast p2, Ljava/lang/Boolean;
+    const/4 v6, 0x3
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    aget-object v6, v5, v6
 
-    move-result p2
+    invoke-virtual {v1, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-object v6, v1
 
-    if-eqz p2, :cond_0
+    check-cast v6, Ljava/lang/Long;
 
-    invoke-virtual {v1}, Le9e;->e()V
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->X:Lds;
 
-    goto :goto_0
+    const/4 v7, 0x4
 
-    :cond_0
-    iget-object p1, v1, Le9e;->X:Landroid/animation/ObjectAnimator;
+    aget-object v7, v5, v7
 
-    invoke-virtual {p1}, Landroid/animation/Animator;->isRunning()Z
+    invoke-virtual {v1, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    move-result p2
+    move-result-object v1
 
-    if-eqz p2, :cond_1
+    move-object v7, v1
 
-    invoke-virtual {p1}, Landroid/animation/Animator;->cancel()V
+    check-cast v7, Ljava/lang/Long;
 
-    :cond_1
-    :goto_0
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->Y:Lds;
 
-    :cond_2
-    return-void
+    const/4 v8, 0x5
+
+    aget-object v5, v5, v8
+
+    invoke-virtual {v1, v2}, Lds;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v8, v1
+
+    check-cast v8, Ljava/lang/Long;
+
+    move v5, v0
+
+    invoke-direct/range {v3 .. v8}, Lp9e;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)V
+
+    return-object v3
 
     :pswitch_0
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->A0:[Lpl7;
 
-    move-result v0
+    new-instance v0, Lp5h;
 
-    if-nez v0, :cond_3
+    invoke-direct {v0, v2, v1}, Lp5h;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    check-cast p2, Ljava/lang/Integer;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_3
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    iget-object p1, v1, Le9e;->X:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    :cond_4
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    check-cast p2, [F
-
-    check-cast p1, [F
-
-    iget-object p1, v1, Le9e;->X:Landroid/animation/ObjectAnimator;
-
-    array-length v0, p2
-
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
-
-    :cond_5
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    iget-object p1, v1, Le9e;->Y:Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {p1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    :cond_6
-    return-void
-
-    :pswitch_4
-    iget-object v0, v1, Le9e;->o:Lq5c;
-
-    iget-object v1, v1, Le9e;->Y:Landroid/animation/ObjectAnimator;
-
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_9
-
-    check-cast p2, Lc9e;
-
-    check-cast p1, Lc9e;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    const/4 p2, 0x2
-
-    if-eqz p1, :cond_8
-
-    const/4 v2, 0x1
-
-    if-ne p1, v2, :cond_7
-
-    new-array p1, p2, [F
-
-    fill-array-data p1, :array_0
-
-    invoke-static {v0, p1}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/animation/ValueAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
-
-    goto :goto_1
-
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_8
-    new-array p1, p2, [F
-
-    fill-array-data p1, :array_1
-
-    invoke-static {v0, p1}, Landroid/animation/PropertyValuesHolder;->ofFloat(Landroid/util/Property;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Landroid/animation/PropertyValuesHolder;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/animation/ValueAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
-
-    :cond_9
-    :goto_1
-    return-void
-
-    :pswitch_5
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    check-cast p2, [F
-
-    check-cast p1, [F
-
-    iget-object p1, v1, Le9e;->Y:Landroid/animation/ObjectAnimator;
-
-    array-length v0, p2
-
-    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([FI)[F
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
-
-    :cond_a
-    return-void
-
-    :pswitch_6
-    invoke-static {p1, p2}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_b
-
-    check-cast p2, Lb9e;
-
-    check-cast p1, Lb9e;
-
-    iget-object p1, v1, Le9e;->b:Ljava/lang/Object;
-
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxu0;
-
-    invoke-virtual {v1}, Le9e;->a()Lb9e;
-
-    move-result-object p2
-
-    sget-object v0, Lbx4;->y0:Lsed;
-
-    iget-object v2, v1, Le9e;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, v2}, Lsed;->k(Landroid/content/Context;)Lbx4;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lbx4;->h()Luxa;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Le9e;->b()Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v0, p2, v2}, Lxu0;->a(Luxa;Lb9e;Ljava/lang/Integer;)Landroid/graphics/drawable/BitmapDrawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_b
-    return-void
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
-
-    :array_0
-    .array-data 4
-        0x43b38000    # 359.0f
-        0x0
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x0
-        0x43b38000    # 359.0f
-    .end array-data
 .end method

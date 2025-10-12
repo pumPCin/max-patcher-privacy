@@ -1,84 +1,67 @@
-.class public final Lfh8;
-.super Lm3f;
+.class public abstract Lfh8;
+.super Lh43;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+.field public final t0:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-    .locals 0
+.method public constructor <init>(Lt84;Lb94;Lu66;ILjava/lang/Object;JJJ)V
+    .locals 11
 
-    iput-object p2, p0, Lfh8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
+    const/4 v3, 0x1
 
-    const/4 p2, 0x2
+    move-object v0, p0
 
-    invoke-direct {p0, p2, p1}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    move-object/from16 v6, p5
+
+    move-wide/from16 v7, p6
+
+    move-wide/from16 v9, p8
+
+    invoke-direct/range {v0 .. v10}, Lh43;-><init>(Lt84;Lb94;ILu66;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-wide/from16 p1, p10
+
+    iput-wide p1, p0, Lfh8;->t0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a()J
+    .locals 5
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-wide v0, p0, Lfh8;->t0:J
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    const-wide/16 v2, -0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    cmp-long v4, v0, v2
 
-    invoke-virtual {p0, p1, p2}, Lfh8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz v4, :cond_0
 
-    move-result-object p1
+    const-wide/16 v2, 0x1
 
-    check-cast p1, Lfh8;
+    add-long/2addr v0, v2
 
-    sget-object p2, Loyf;->a:Loyf;
+    return-wide v0
 
-    invoke-virtual {p1, p2}, Lfh8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    :cond_0
+    return-wide v2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lfh8;
-
-    iget-object v0, p0, Lfh8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-direct {p1, p2, v0}, Lfh8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->h1:[Ltm7;
-
-    iget-object p1, p0, Lfh8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    invoke-virtual {p1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0()Landroid/widget/LinearLayout;
-
-    move-result-object p1
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->i1:Led7;
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lio7;->a(Landroid/view/View;Led7;Lxe6;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+.method public abstract c()Z
 .end method

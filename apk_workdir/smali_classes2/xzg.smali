@@ -1,148 +1,160 @@
 .class public final Lxzg;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llf6;
+
+# static fields
+.field public static final Companion:Lwzg;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Li0h;
-
-.field public final synthetic Z:Lik7;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Li0h;Lik7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lxzg;->Y:Li0h;
+    new-instance v0, Lwzg;
 
-    iput-object p2, p0, Lxzg;->Z:Lik7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lxzg;->Companion:Lwzg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Le34;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lxzg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lxzg;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lxzg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
     .locals 2
 
-    new-instance p1, Lxzg;
+    and-int/lit8 v0, p2, 0x3
 
-    iget-object v0, p0, Lxzg;->Y:Li0h;
+    const/4 v1, 0x3
 
-    iget-object v1, p0, Lxzg;->Z:Lik7;
+    if-ne v1, v0, :cond_0
 
-    invoke-direct {p1, v0, v1, p2}, Lxzg;-><init>(Li0h;Lik7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p1
-.end method
+    iput-object p1, p0, Lxzg;->a:Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iput-boolean p3, p0, Lxzg;->b:Z
 
-    iget v0, p0, Lxzg;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object p1, Lvzg;->a:Lvzg;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxzg;->Y:Li0h;
-
-    iget-object v0, p1, Li0h;->D0:Lbp7;
-
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll2c;
-
-    iget-object p1, p1, Li0h;->w0:Lr63;
-
-    check-cast p1, Lxid;
-
-    invoke-virtual {p1}, Lxid;->p()J
-
-    move-result-wide v2
-
-    iput v1, p0, Lxzg;->X:I
-
-    invoke-virtual {v0, v2, v3, p0}, Ll2c;->a(JLnz3;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lvzg;->d()Lmqd;
 
     move-result-object p1
 
-    sget-object v0, Lf34;->a:Lf34;
+    invoke-static {p2, v1, p1}, Lomc;->A(IILmqd;)V
 
-    if-ne p1, v0, :cond_2
+    const/4 p1, 0x0
 
-    return-object v0
+    throw p1
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lxzg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxzg;
+
+    iget-object v1, p0, Lxzg;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lxzg;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_0
-    check-cast p1, Lvrb;
+    iget-boolean v1, p0, Lxzg;->b:Z
 
-    iget-object p1, p1, Lvrb;->d:Lap3;
+    iget-boolean p1, p1, Lxzg;->b:Z
 
-    invoke-virtual {p1}, Lap3;->o()J
+    if-eq v1, p1, :cond_3
 
-    move-result-wide v0
+    return v2
 
-    iget-object p1, p0, Lxzg;->Z:Lik7;
+    :cond_3
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lxzg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lxzg;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WebAppSetupScreenCaptureBehaviorRequest(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lxzg;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isScreenCaptureEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxzg;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lik7;->a(Ljava/lang/Object;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    return-object v0
 .end method

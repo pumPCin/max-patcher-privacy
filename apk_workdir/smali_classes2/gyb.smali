@@ -1,27 +1,33 @@
 .class public final Lgyb;
-.super Ljava/lang/Object;
+.super Lzyb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/util/List;
 
-.field public final b:J
+.field public final b:Ljava/util/List;
 
-.field public final c:Lhcb;
+.field public final c:Z
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(JJLhcb;)V
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lgyb;->a:J
+    iput-object p1, p0, Lgyb;->a:Ljava/util/List;
 
-    iput-wide p3, p0, Lgyb;->b:J
+    iput-object p2, p0, Lgyb;->b:Ljava/util/List;
 
-    iput-object p5, p0, Lgyb;->c:Lhcb;
+    iput-boolean p3, p0, Lgyb;->c:Z
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lgyb;->o:I
 
     return-void
 .end method
@@ -29,7 +35,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -49,37 +55,37 @@
     :cond_1
     check-cast p1, Lgyb;
 
-    iget-wide v3, p0, Lgyb;->a:J
+    iget-object v1, p0, Lgyb;->a:Ljava/util/List;
 
-    iget-wide v5, p1, Lgyb;->a:J
+    iget-object v3, p1, Lgyb;->a:Ljava/util/List;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_2
+    move-result v1
+
+    if-nez v1, :cond_2
 
     return v2
 
     :cond_2
-    iget-wide v3, p0, Lgyb;->b:J
+    iget-object v1, p0, Lgyb;->b:Ljava/util/List;
 
-    iget-wide v5, p1, Lgyb;->b:J
+    iget-object v3, p1, Lgyb;->b:Ljava/util/List;
 
-    cmp-long v1, v3, v5
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v1, :cond_3
+    move-result v1
+
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
-    iget-object v1, p0, Lgyb;->c:Lhcb;
+    iget-boolean v1, p0, Lgyb;->c:Z
 
-    iget-object p1, p1, Lgyb;->c:Lhcb;
+    iget-boolean p1, p1, Lgyb;->c:Z
 
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
+    if-eq v1, p1, :cond_4
 
     return v2
 
@@ -87,12 +93,22 @@
     return v0
 .end method
 
+.method public final getItemId()J
+    .locals 2
+
+    const/4 v0, 0x1
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
 .method public final hashCode()I
-    .locals 4
+    .locals 3
 
-    iget-wide v0, p0, Lgyb;->a:J
+    iget-object v0, p0, Lgyb;->a:Ljava/util/List;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -100,15 +116,15 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lgyb;->b:J
+    iget-object v2, p0, Lgyb;->b:Ljava/util/List;
 
-    invoke-static {v0, v1, v2, v3}, Lgxf;->m(IIJ)I
+    invoke-static {v2, v0, v1}, Ljjd;->f(Ljava/util/List;II)I
 
     move-result v0
 
-    iget-object v1, p0, Lgyb;->c:Lhcb;
+    iget-boolean v1, p0, Lgyb;->c:Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -117,36 +133,44 @@
     return v1
 .end method
 
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lgyb;->o:I
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "ProfileEntity(id="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", serverId="
+    const-string v1, "ButtonsStack(buttons="
 
-    iget-wide v2, p0, Lgyb;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v3, v0, v1}, Lqw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lgyb;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profileData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgyb;->c:Lhcb;
+    iget-object v1, p0, Lgyb;->a:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, ", contextMenuButtons="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lgyb;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMoreButtonEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lgyb;->c:Z
+
+    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

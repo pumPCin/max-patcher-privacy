@@ -1,129 +1,76 @@
 .class public final Llba;
-.super Lel0;
+.super Lf3;
 .source "SourceFile"
 
 
 # instance fields
-.field public Y:Ljava/lang/Object;
+.field public final X:Z
 
-.field public Z:Z
+.field public final b:J
+
+.field public final c:Ljava/util/concurrent/TimeUnit;
+
+.field public final o:Lpcd;
 
 
-# virtual methods
-.method public final f(Ljava/lang/Object;)V
-    .locals 2
+# direct methods
+.method public constructor <init>(Loba;JLjava/util/concurrent/TimeUnit;Lpcd;Z)V
+    .locals 0
 
-    iget-boolean v0, p0, Lel0;->o:Z
+    invoke-direct {p0, p1}, Lf3;-><init>(Loba;)V
 
-    if-eqz v0, :cond_0
+    iput-wide p2, p0, Llba;->b:J
 
-    goto :goto_0
+    iput-object p4, p0, Llba;->c:Ljava/util/concurrent/TimeUnit;
 
-    :cond_0
-    iget v0, p0, Lel0;->X:I
+    iput-object p5, p0, Llba;->o:Lpcd;
 
-    iget-object v1, p0, Lel0;->a:Lxda;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    :try_start_0
-    iget-boolean v0, p0, Llba;->Z:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Llba;->Y:Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iput-object p1, p0, Llba;->Y:Ljava/lang/Object;
-
-    if-eqz v0, :cond_3
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llba;->Z:Z
-
-    iput-object p1, p0, Llba;->Y:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_3
-    invoke-interface {v1, p1}, Lxda;->f(Ljava/lang/Object;)V
-
-    return-void
-
-    :goto_1
-    invoke-static {p1}, Lhd6;->X(Ljava/lang/Throwable;)V
-
-    iget-object v0, p0, Lel0;->b:Lss4;
-
-    invoke-interface {v0}, Lss4;->g()V
-
-    invoke-virtual {p0, p1}, Lel0;->onError(Ljava/lang/Throwable;)V
+    iput-boolean p6, p0, Llba;->X:Z
 
     return-void
 .end method
 
-.method public final poll()Ljava/lang/Object;
-    .locals 2
 
-    :goto_0
-    iget-object v0, p0, Lel0;->c:Lq8c;
+# virtual methods
+.method public final o(Lyba;)V
+    .locals 7
 
-    invoke-interface {v0}, Lpde;->poll()Ljava/lang/Object;
+    new-instance v1, Ltqd;
 
-    move-result-object v0
+    invoke-direct {v1, p1}, Ltqd;-><init>(Lyba;)V
 
-    if-nez v0, :cond_0
+    iget-boolean p1, p0, Llba;->X:Z
 
-    const/4 v0, 0x0
+    iget-object v6, p0, Lf3;->a:Loba;
 
-    return-object v0
+    if-eqz p1, :cond_0
+
+    new-instance v0, Liba;
+
+    iget-object v4, p0, Llba;->c:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v5, p0, Llba;->o:Lpcd;
+
+    iget-wide v2, p0, Llba;->b:J
+
+    invoke-direct/range {v0 .. v5}, Liba;-><init>(Ltqd;JLjava/util/concurrent/TimeUnit;Lpcd;)V
+
+    invoke-interface {v6, v0}, Loba;->a(Lyba;)V
+
+    return-void
 
     :cond_0
-    iget-boolean v1, p0, Llba;->Z:Z
+    new-instance v0, Ljba;
 
-    if-nez v1, :cond_1
+    iget-object v4, p0, Llba;->c:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v1, 0x1
+    iget-object v5, p0, Llba;->o:Lpcd;
 
-    iput-boolean v1, p0, Llba;->Z:Z
+    iget-wide v2, p0, Llba;->b:J
 
-    iput-object v0, p0, Llba;->Y:Ljava/lang/Object;
+    invoke-direct/range {v0 .. v5}, Lkba;-><init>(Ltqd;JLjava/util/concurrent/TimeUnit;Lpcd;)V
 
-    return-object v0
+    invoke-interface {v6, v0}, Loba;->a(Lyba;)V
 
-    :cond_1
-    iget-object v1, p0, Llba;->Y:Ljava/lang/Object;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iput-object v0, p0, Llba;->Y:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    iput-object v0, p0, Llba;->Y:Ljava/lang/Object;
-
-    goto :goto_0
+    return-void
 .end method

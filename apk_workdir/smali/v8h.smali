@@ -1,99 +1,126 @@
 .class public final Lv8h;
-.super Landroid/os/Binder;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:Ljava/lang/String;
+
+
 # instance fields
-.field public final c:Lk12;
+.field public final a:Lt55;
+
+.field public final b:Ljava/util/HashMap;
+
+.field public final c:Ljava/util/HashMap;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lk12;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    const-string v0, "WorkTimer"
 
-    iput-object p1, p0, Lv8h;->c:Lk12;
+    invoke-static {v0}, Ldt;->K(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lv8h;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lt55;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lv8h;->b:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lv8h;->c:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lv8h;->d:Ljava/lang/Object;
+
+    iput-object p1, p0, Lv8h;->a:Lt55;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lw8h;)V
-    .locals 6
+.method public final a(Lr7h;)V
+    .locals 5
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    const-string v0, "Stopping timer for "
 
-    move-result v0
+    iget-object v1, p0, Lv8h;->d:Ljava/lang/Object;
 
-    invoke-static {}, Landroid/os/Process;->myUid()I
+    monitor-enter v1
 
-    move-result v1
+    :try_start_0
+    iget-object v2, p0, Lv8h;->b:Ljava/util/HashMap;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x3
+    move-result-object v2
 
-    const-string v1, "FirebaseMessaging"
+    check-cast v2, Lu8h;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    if-eqz v2, :cond_0
 
-    move-result v0
+    invoke-static {}, Ldt;->r()Ldt;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    const-string v0, "service received new intent via bind strategy"
+    sget-object v3, Lv8h;->e:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v3, v0}, Ldt;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lv8h;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
-    iget-object v0, p1, Lw8h;->a:Landroid/content/Intent;
-
-    iget-object v1, p0, Lv8h;->c:Lk12;
-
-    iget-object v1, v1, Lk12;->b:Ljava/lang/Object;
-
-    check-cast v1, Lv95;
-
-    new-instance v2, Ltbf;
-
-    invoke-direct {v2}, Ltbf;-><init>()V
-
-    iget-object v3, v1, Lv95;->a:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v4, Lb05;
-
-    const/16 v5, 0x8
-
-    invoke-direct {v4, v1, v0, v2, v5}, Lb05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v3, v4}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    new-instance v0, Lmr;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lmr;-><init>(I)V
-
-    new-instance v1, Lu8h;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v3, p1}, Lu8h;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, v2, Ltbf;->a:Lvmh;
-
-    invoke-virtual {p1, v0, v1}, Lvmh;->b(Ljava/util/concurrent/Executor;Lifa;)Lvmh;
+    :goto_0
+    monitor-exit v1
 
     return-void
 
-    :cond_1
-    new-instance p1, Ljava/lang/SecurityException;
-
-    const-string v0, "Binding only allowed within app"
-
-    invoke-direct {p1, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p1
 .end method

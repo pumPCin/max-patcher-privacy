@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static a(Landroid/app/KeyguardManager;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
+.method public static a(Landroid/hardware/biometrics/BiometricManager;I)I
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/KeyguardManager;->createConfirmDeviceCredentialIntent(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
+    invoke-virtual {p0, p1}, Landroid/hardware/biometrics/BiometricManager;->canAuthenticate(I)I
 
-    move-result-object p0
+    move-result p0
 
-    return-object p0
+    return p0
 .end method

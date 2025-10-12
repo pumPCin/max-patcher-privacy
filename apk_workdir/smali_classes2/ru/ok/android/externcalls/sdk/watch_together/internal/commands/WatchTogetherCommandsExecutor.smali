@@ -11,39 +11,39 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandsExecutor;",
         "",
-        "Lbo9;",
+        "Llm9;",
         "movieId",
-        "Loo9;",
+        "Lym9;",
         "volume",
-        "Lfo9;",
+        "Lpm9;",
         "meta",
         "",
         "moveToAdminOnHangup",
         "Lkotlin/Function0;",
-        "Loyf;",
+        "Laxf;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "play-yj_a6ag",
-        "(Lbo9;FLfo9;ZLve6;Lxe6;)V",
+        "(Llm9;FLpm9;ZLtd6;Lvd6;)V",
         "play",
         "stop",
-        "(Lbo9;Lve6;Lxe6;)V",
+        "(Llm9;Ltd6;Lvd6;)V",
         "pause",
         "resume",
         "isMuted",
         "setVolume-F2PwOSs",
-        "(Lbo9;FZLve6;Lxe6;)V",
+        "(Llm9;FZLtd6;Lvd6;)V",
         "setVolume",
         "setMuted",
-        "(Lbo9;ZLve6;Lxe6;)V",
+        "(Llm9;ZLtd6;Lvd6;)V",
         "",
         "position",
         "Ljava/util/concurrent/TimeUnit;",
         "unit",
         "setPosition",
-        "(Lbo9;JLjava/util/concurrent/TimeUnit;Lve6;Lxe6;)V",
+        "(Llm9;JLjava/util/concurrent/TimeUnit;Ltd6;Lvd6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -57,92 +57,92 @@
 
 
 # virtual methods
-.method public abstract pause(Lbo9;Lve6;Lxe6;)V
+.method public abstract pause(Llm9;Ltd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
-            "Lve6;",
-            "Lxe6;",
+            "Llm9;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract play-yj_a6ag(Lbo9;FLfo9;ZLve6;Lxe6;)V
+.method public abstract play-yj_a6ag(Llm9;FLpm9;ZLtd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
+            "Llm9;",
             "F",
-            "Lfo9;",
+            "Lpm9;",
             "Z",
-            "Lve6;",
-            "Lxe6;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract resume(Lbo9;Lve6;Lxe6;)V
+.method public abstract resume(Llm9;Ltd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
-            "Lve6;",
-            "Lxe6;",
+            "Llm9;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract setMuted(Lbo9;ZLve6;Lxe6;)V
+.method public abstract setMuted(Llm9;ZLtd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
+            "Llm9;",
             "Z",
-            "Lve6;",
-            "Lxe6;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract setPosition(Lbo9;JLjava/util/concurrent/TimeUnit;Lve6;Lxe6;)V
+.method public abstract setPosition(Llm9;JLjava/util/concurrent/TimeUnit;Ltd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
+            "Llm9;",
             "J",
             "Ljava/util/concurrent/TimeUnit;",
-            "Lve6;",
-            "Lxe6;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract setVolume-F2PwOSs(Lbo9;FZLve6;Lxe6;)V
+.method public abstract setVolume-F2PwOSs(Llm9;FZLtd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
+            "Llm9;",
             "FZ",
-            "Lve6;",
-            "Lxe6;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation
 .end method
 
-.method public abstract stop(Lbo9;Lve6;Lxe6;)V
+.method public abstract stop(Llm9;Ltd6;Lvd6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lbo9;",
-            "Lve6;",
-            "Lxe6;",
+            "Llm9;",
+            "Ltd6;",
+            "Lvd6;",
             ")V"
         }
     .end annotation

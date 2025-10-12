@@ -1,109 +1,127 @@
 .class public final Lz1g;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    iput-object p1, p0, Lz1g;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lz1g;->a:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lz1g;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Le34;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Lz1g;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Lz1g;
 
-    move-result-object p1
-
-    check-cast p1, Lz1g;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Lz1g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lz1g;
-
-    iget-object v0, p0, Lz1g;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-direct {p1, v0, p2}, Lz1g;-><init>(Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    :try_start_0
-    new-instance p1, Ljava/io/File;
-
-    iget-object v0, p0, Lz1g;->X:Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
-
-    invoke-virtual {v0}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->b()Lu89;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lu89;->b:Ljava/lang/String;
-
-    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->length()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x400
-
-    div-long/2addr v0, v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :cond_1
+    check-cast p1, Lz1g;
 
-    const-string v0, "UploadFileAttachWorker"
+    iget-object v0, p0, Lz1g;->a:Ljava/lang/String;
 
-    const-string v1, "fileSize fail!"
+    iget-object v1, p1, Lz1g;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-wide/16 v0, 0x0
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean v0, p0, Lz1g;->b:Z
+
+    iget-boolean p1, p1, Lz1g;->b:Z
+
+    if-eq v0, p1, :cond_3
 
     :goto_0
-    new-instance p1, Ljava/lang/Long;
+    const/4 p1, 0x0
 
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    return p1
 
-    return-object p1
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lz1g;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lz1g;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UrlState(url="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lz1g;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isRestored="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lz1g;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

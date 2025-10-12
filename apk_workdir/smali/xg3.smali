@@ -1,80 +1,252 @@
 .class public final Lxg3;
-.super Ljava/lang/Object;
+.super Lk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final h:I
 
-.field public final b:[Lyg3;
+.field public final i:I
 
-.field public c:J
+.field public final j:[I
+
+.field public final k:[I
+
+.field public final l:[Lbhf;
+
+.field public final m:[Ljava/lang/Object;
+
+.field public final n:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
-    .locals 3
+.method public constructor <init>(Ljava/util/ArrayList;Ljae;)V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lk0;-><init>(Ljae;)V
 
-    iput p1, p0, Lxg3;->a:I
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    new-array v0, p1, [Lyg3;
+    move-result p2
 
-    iput-object v0, p0, Lxg3;->b:[Lyg3;
+    new-array v0, p2, [I
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lxg3;->j:[I
+
+    new-array v0, p2, [I
+
+    iput-object v0, p0, Lxg3;->k:[I
+
+    new-array v0, p2, [Lbhf;
+
+    iput-object v0, p0, Lxg3;->l:[Lbhf;
+
+    new-array p2, p2, [Ljava/lang/Object;
+
+    iput-object p2, p0, Lxg3;->m:[Ljava/lang/Object;
+
+    new-instance p2, Ljava/util/HashMap;
+
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p0, Lxg3;->n:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    move v0, p2
+
+    move v1, v0
 
     :goto_0
-    if-ge v0, p1, :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object v1, p0, Lxg3;->b:[Lyg3;
+    move-result v2
 
-    new-instance v2, Lyg3;
+    if-eqz v2, :cond_0
 
-    invoke-direct {v2, p2}, Ls1a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    aput-object v2, v1, v0
+    move-result-object v2
 
-    add-int/lit8 v0, v0, 0x1
+    check-cast v2, Lah3;
+
+    iget-object v3, p0, Lxg3;->l:[Lbhf;
+
+    iget-object v4, v2, Lah3;->a:Lua8;
+
+    iget-object v4, v4, Lua8;->o:Lqa8;
+
+    aput-object v4, v3, v1
+
+    iget-object v3, p0, Lxg3;->k:[I
+
+    aput p2, v3, v1
+
+    iget-object v3, p0, Lxg3;->j:[I
+
+    aput v0, v3, v1
+
+    iget-object v3, v4, Ln96;->e:Lbhf;
+
+    invoke-virtual {v3}, Lbhf;->o()I
+
+    move-result v3
+
+    add-int/2addr p2, v3
+
+    iget-object v3, p0, Lxg3;->l:[Lbhf;
+
+    aget-object v3, v3, v1
+
+    invoke-virtual {v3}, Lbhf;->h()I
+
+    move-result v3
+
+    add-int/2addr v0, v3
+
+    iget-object v3, p0, Lxg3;->m:[Ljava/lang/Object;
+
+    iget-object v2, v2, Lah3;->b:Ljava/lang/Object;
+
+    aput-object v2, v3, v1
+
+    iget-object v3, p0, Lxg3;->n:Ljava/util/HashMap;
+
+    add-int/lit8 v4, v1, 0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move v1, v4
 
     goto :goto_0
 
     :cond_0
+    iput p2, p0, Lxg3;->h:I
+
+    iput v0, p0, Lxg3;->i:I
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lyg3;
-    .locals 5
+.method public final h()I
+    .locals 1
 
-    iget v0, p0, Lxg3;->a:I
+    iget v0, p0, Lxg3;->i:I
 
-    if-nez v0, :cond_0
+    return v0
+.end method
 
-    sget-object v0, Lzg3;->g:Lyg3;
+.method public final o()I
+    .locals 1
 
-    return-object v0
+    iget v0, p0, Lxg3;->h:I
+
+    return v0
+.end method
+
+.method public final q(Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lxg3;->n:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    if-nez p1, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
 
     :cond_0
-    iget-wide v1, p0, Lxg3;->c:J
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    const-wide/16 v3, 0x1
+    move-result p1
 
-    add-long/2addr v3, v1
+    return p1
+.end method
 
-    iput-wide v3, p0, Lxg3;->c:J
+.method public final r(I)I
+    .locals 2
 
-    int-to-long v3, v0
+    add-int/lit8 p1, p1, 0x1
 
-    rem-long/2addr v1, v3
+    const/4 v0, 0x0
 
-    long-to-int v0, v1
+    iget-object v1, p0, Lxg3;->j:[I
 
-    iget-object v1, p0, Lxg3;->b:[Lyg3;
+    invoke-static {v1, p1, v0, v0}, Lg3g;->d([IIZZ)I
 
-    aget-object v0, v1, v0
+    move-result p1
 
-    return-object v0
+    return p1
+.end method
+
+.method public final s(I)I
+    .locals 2
+
+    add-int/lit8 p1, p1, 0x1
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lxg3;->k:[I
+
+    invoke-static {v1, p1, v0, v0}, Lg3g;->d([IIZZ)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final t(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lxg3;->m:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public final u(I)I
+    .locals 1
+
+    iget-object v0, p0, Lxg3;->j:[I
+
+    aget p1, v0, p1
+
+    return p1
+.end method
+
+.method public final v(I)I
+    .locals 1
+
+    iget-object v0, p0, Lxg3;->k:[I
+
+    aget p1, v0, p1
+
+    return p1
+.end method
+
+.method public final y(I)Lbhf;
+    .locals 1
+
+    iget-object v0, p0, Lxg3;->l:[Lbhf;
+
+    aget-object p1, v0, p1
+
+    return-object p1
 .end method

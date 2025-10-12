@@ -1,41 +1,127 @@
-.class public final Lzua;
+.class public abstract Lzua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Li40;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
 
 
 # direct methods
-.method public constructor <init>(Li40;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
 
-    iput-object p1, p0, Lzua;->a:Li40;
+    sput v0, Lzua;->a:I
 
-    return-void
-.end method
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
 
+    sput v0, Lzua;->b:I
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
 
-    iget-object v0, p0, Lzua;->a:Li40;
+    sput v0, Lzua;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_constraint_layout:I
 
-    sget-object v1, Lgva;->a:Landroid/os/Handler;
+    sput v0, Lzua;->d:I
 
-    iget-object v0, v0, Li40;->h:Ljava/lang/Object;
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_create_button_view:I
 
-    check-cast v0, Ldva;
+    sput v0, Lzua;->e:I
 
-    sget-object v1, Lcva;->c:Lcva;
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
 
-    invoke-static {v0, v1}, Lgva;->b(Ldva;Lcva;)V
+    sput v0, Lzua;->f:I
+
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_description_view:I
+
+    sput v0, Lzua;->g:I
+
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_icon_view:I
+
+    sput v0, Lzua;->h:I
+
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_title_view:I
+
+    sput v0, Lzua;->i:I
+
+    sget v0, Lfec;->oneme_startconversation_chat_titleicon_toolbar:I
+
+    sput v0, Lzua;->j:I
+
+    sget v0, Lfec;->oneme_startconversation_chat_toolbar:I
+
+    sput v0, Lzua;->k:I
+
+    sget v0, Lfec;->oneme_startconversation_confirm_add_subscribers_button:I
+
+    sput v0, Lzua;->l:I
+
+    sget v0, Lfec;->oneme_startconversation_container:I
+
+    sput v0, Lzua;->m:I
+
+    sget v0, Lfec;->oneme_startconversation_create_button_view_type:I
+
+    sput v0, Lzua;->n:I
+
+    sget v0, Lfec;->oneme_startconversation_recyclerview:I
+
+    sput v0, Lzua;->o:I
+
+    sget v0, Lfec;->oneme_startconversation_select_channel_subscribers_toolbar:I
+
+    sput v0, Lzua;->p:I
+
+    sget v0, Lfec;->oneme_startconversation_toolbar:I
+
+    sput v0, Lzua;->q:I
+
+    sget v0, Lfec;->oneme_startconversations_create_channel:I
+
+    sput v0, Lzua;->r:I
+
+    sget v0, Lfec;->oneme_startconversations_create_chat:I
+
+    sput v0, Lzua;->s:I
 
     return-void
 .end method

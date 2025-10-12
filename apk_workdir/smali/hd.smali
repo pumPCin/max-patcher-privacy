@@ -1,79 +1,115 @@
-.class public final synthetic Lhd;
-.super Ljava/lang/Object;
+.class public final Lhd;
+.super Lu64;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/media/ImageReader$OnImageAvailableListener;
 
 
 # instance fields
-.field public final synthetic a:Ljd;
+.field public final j:Ljavax/net/ssl/X509TrustManager;
 
-.field public final synthetic b:Ljava/util/concurrent/Executor;
-
-.field public final synthetic c:Lu57;
+.field public final k:Landroid/net/http/X509TrustManagerExtensions;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljd;Ljava/util/concurrent/Executor;Lu57;)V
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhd;->a:Ljd;
+    iput-object p1, p0, Lhd;->j:Ljavax/net/ssl/X509TrustManager;
 
-    iput-object p2, p0, Lhd;->b:Ljava/util/concurrent/Executor;
-
-    iput-object p3, p0, Lhd;->c:Lu57;
+    iput-object p2, p0, Lhd;->k:Landroid/net/http/X509TrustManagerExtensions;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onImageAvailable(Landroid/media/ImageReader;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p0, Lhd;->a:Ljd;
+    instance-of v0, p1, Lhd;
 
-    iget-object v0, p0, Lhd;->b:Ljava/util/concurrent/Executor;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lhd;->c:Lu57;
+    check-cast p1, Lhd;
 
-    iget-object v2, p1, Ljd;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lhd;->j:Ljavax/net/ssl/X509TrustManager;
 
-    monitor-enter v2
+    iget-object v0, p0, Lhd;->j:Ljavax/net/ssl/X509TrustManager;
 
-    :try_start_0
-    iget-boolean v3, p1, Ljd;->b:Z
+    if-ne p1, v0, :cond_0
 
-    if-nez v3, :cond_0
+    const/4 p1, 0x1
 
-    new-instance v3, Lid;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v4, v1}, Lid;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    :goto_0
-    monitor-exit v2
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+.end method
 
-    :goto_1
-    monitor-exit v2
+.method public final g(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
+
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_0
+
+    check-cast p2, [Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    iget-object v0, p0, Lhd;->k:Landroid/net/http/X509TrustManagerExtensions;
+
+    const-string v1, "RSA"
+
+    invoke-virtual {v0, p2, v1, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p1
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p2
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lhd;->j:Ljavax/net/ssl/X509TrustManager;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

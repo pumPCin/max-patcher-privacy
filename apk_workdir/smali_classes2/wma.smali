@@ -1,80 +1,25 @@
-.class public final Lwma;
+.class public abstract Lwma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public static final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-    .locals 0
-
-    iput p2, p0, Lwma;->a:I
-
-    iput-object p1, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lwma;->a:I
+    sget v0, Lcgc;->oneme_folders_picker_snackbar_add_channel_title:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lwma;->a:I
 
-    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    sget v0, Lcgc;->oneme_folders_picker_snackbar_add_chat_title:I
 
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+    sput v0, Lwma;->b:I
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lwma;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

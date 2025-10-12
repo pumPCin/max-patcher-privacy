@@ -1,81 +1,175 @@
-.class public final synthetic Lfj5;
-.super Ljava/lang/Object;
+.class public final Lfj5;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+.field public final b:Landroid/graphics/Bitmap;
+
+.field public c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;I)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    iput p2, p0, Lfj5;->a:I
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    iput-object p1, p0, Lfj5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lfj5;->a:Landroid/graphics/Paint;
+
+    const/16 v0, 0xff
+
+    iput v0, p0, Lfj5;->c:I
+
+    iput-object p1, p0, Lfj5;->b:Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    iput p1, p0, Lfj5;->d:I
+
+    iget-object p1, p0, Lfj5;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lfj5;->e:I
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput p1, p0, Lfj5;->e:I
+
+    iput p1, p0, Lfj5;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    iget p1, p0, Lfj5;->a:I
+    iget-object v0, p0, Lfj5;->b:Landroid/graphics/Bitmap;
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lfj5;->b:Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    packed-switch p1, :pswitch_data_0
+    move-result v0
 
-    sget-object p1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->N0:[Ltm7;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    const/4 p1, 0x0
+    iget-object v1, p0, Lfj5;->a:Landroid/graphics/Paint;
 
-    iput-boolean p1, v1, Lone/me/inappreview/ui/FakeInAppReviewBottomSheet;->M0:Z
+    iget-object v2, p0, Lfj5;->b:Landroid/graphics/Bitmap;
 
-    sget-object p1, Lx77;->a:Lx77;
+    const/4 v3, 0x0
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()La5;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, La5;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lb87;
-
-    if-eqz p1, :cond_0
-
-    const/4 v2, 0x4
-
-    invoke-virtual {p1, v2}, Lb87;->b(I)V
+    invoke-virtual {p1, v2, v3, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     :cond_0
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0(Z)V
+    return-void
+.end method
+
+.method public final getAlpha()I
+    .locals 1
+
+    iget v0, p0, Lfj5;->c:I
+
+    return v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    iget v0, p0, Lfj5;->e:I
+
+    return v0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    iget v0, p0, Lfj5;->d:I
+
+    return v0
+.end method
+
+.method public final getMinimumHeight()I
+    .locals 1
+
+    iget v0, p0, Lfj5;->e:I
+
+    return v0
+.end method
+
+.method public final getMinimumWidth()I
+    .locals 1
+
+    iget v0, p0, Lfj5;->d:I
+
+    return v0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 1
+
+    iput p1, p0, Lfj5;->c:I
+
+    iget-object v0, p0, Lfj5;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     return-void
+.end method
 
-    nop
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lfj5;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    return-void
+.end method
+
+.method public final setFilterBitmap(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lfj5;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
+
+    return-void
 .end method

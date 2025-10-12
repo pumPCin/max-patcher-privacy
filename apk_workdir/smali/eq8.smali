@@ -1,31 +1,27 @@
 .class public final Leq8;
-.super Landroid/media/MediaRouter2$ControllerCallback;
+.super Luvc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljq8;
+.field public final E0:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Ljq8;)V
-    .locals 0
-
-    iput-object p1, p0, Leq8;->a:Ljq8;
-
-    invoke-direct {p0}, Landroid/media/MediaRouter2$ControllerCallback;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onControllerUpdated(Landroid/media/MediaRouter2$RoutingController;)V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Leq8;->a:Ljq8;
+    invoke-direct {p0, p1}, Luvc;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v0, p1}, Ljq8;->k(Landroid/media/MediaRouter2$RoutingController;)V
+    sget v0, Lpbc;->mr_cast_header_name:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    iput-object p1, p0, Leq8;->E0:Landroid/widget/TextView;
 
     return-void
 .end method

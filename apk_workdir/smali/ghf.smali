@@ -1,125 +1,89 @@
 .class public final Lghf;
-.super Lmn4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lo2d;
 
 
 # instance fields
-.field public final c:Lmrb;
+.field public final b:J
 
-.field public final d:I
-
-.field public final e:Lo2d;
-
-.field public final synthetic f:Li9;
+.field public final c:Lo2d;
 
 
 # direct methods
-.method public constructor <init>(Li9;Lqi0;Lmrb;I)V
-    .locals 0
+.method public constructor <init>(JLo2d;)V
+    .locals 2
 
-    iput-object p1, p0, Lghf;->f:Li9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lmn4;-><init>(Lqi0;)V
+    const-wide/16 v0, 0x0
 
-    iput-object p3, p0, Lghf;->c:Lmrb;
+    cmp-long v0, p1, v0
 
-    iput p4, p0, Lghf;->d:I
+    if-ltz v0, :cond_0
 
-    check-cast p3, Lvj0;
+    const/4 v0, 0x1
 
-    iget-object p1, p3, Lvj0;->a:Lb67;
+    goto :goto_0
 
-    iget-object p1, p1, Lb67;->h:Lo2d;
+    :cond_0
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lghf;->e:Lo2d;
+    :goto_0
+    const-string v1, "Timeout must be non-negative."
+
+    invoke-static {v1, v0}, Lnjg;->f(Ljava/lang/String;Z)V
+
+    iput-wide p1, p0, Lghf;->b:J
+
+    iput-object p3, p0, Lghf;->c:Lo2d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ljava/lang/Throwable;)V
-    .locals 4
+.method public final a()J
+    .locals 2
 
-    iget v0, p0, Lghf;->d:I
+    iget-wide v0, p0, Lghf;->b:J
 
-    add-int/lit8 v0, v0, 0x1
-
-    iget-object v1, p0, Lghf;->c:Lmrb;
-
-    iget-object v2, p0, Lghf;->f:Li9;
-
-    iget-object v3, p0, Lmn4;->b:Lqi0;
-
-    invoke-virtual {v2, v0, v3, v1}, Li9;->c(ILqi0;Lmrb;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v3, p1}, Lqi0;->e(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
+    return-wide v0
 .end method
 
-.method public final h(ILjava/lang/Object;)V
-    .locals 3
+.method public final b(Lw02;)Ln2d;
+    .locals 7
 
-    check-cast p2, Lw75;
+    iget-object v0, p0, Lghf;->c:Lo2d;
 
-    iget-object v0, p0, Lmn4;->b:Lqi0;
+    invoke-interface {v0, p1}, Lo2d;->b(Lw02;)Ln2d;
 
-    if-eqz p2, :cond_1
+    move-result-object v0
 
-    invoke-static {p1}, Lqi0;->b(I)Z
+    const-wide/16 v1, 0x0
 
-    move-result v1
+    iget-wide v3, p0, Lghf;->b:J
 
-    if-nez v1, :cond_0
+    cmp-long v1, v3, v1
 
-    iget-object v1, p0, Lghf;->e:Lo2d;
+    if-lez v1, :cond_0
 
-    invoke-static {p2, v1}, Lihf;->t(Lw75;Lo2d;)Z
+    iget-wide v1, p1, Lw02;->c:J
 
-    move-result v1
+    iget-wide v5, v0, Ln2d;->a:J
 
-    if-eqz v1, :cond_1
+    sub-long/2addr v3, v5
+
+    cmp-long p1, v1, v3
+
+    if-ltz p1, :cond_0
+
+    sget-object p1, Ln2d;->d:Ln2d;
+
+    return-object p1
 
     :cond_0
-    invoke-virtual {v0, p1, p2}, Lqi0;->g(ILjava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    invoke-static {p1}, Lqi0;->a(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p2}, Lw75;->d(Lw75;)V
-
-    iget p1, p0, Lghf;->d:I
-
-    const/4 p2, 0x1
-
-    add-int/2addr p1, p2
-
-    iget-object v1, p0, Lghf;->c:Lmrb;
-
-    iget-object v2, p0, Lghf;->f:Li9;
-
-    invoke-virtual {v2, p1, v0, v1}, Li9;->c(ILqi0;Lmrb;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p2, p1}, Lqi0;->g(ILjava/lang/Object;)V
-
-    :cond_2
-    return-void
+    return-object v0
 .end method

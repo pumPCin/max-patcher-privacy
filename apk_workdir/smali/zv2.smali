@@ -1,51 +1,24 @@
 .class public final Lzv2;
-.super Lnz3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Law2;
-
-.field public Z:I
-
-.field public o:Law2;
-
-
-# direct methods
-.method public constructor <init>(Law2;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lzv2;->Y:Law2;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Li43;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()J
+    .locals 2
 
-    iput-object p1, p0, Lzv2;->X:Ljava/lang/Object;
+    const-wide/16 v0, 0x1
 
-    iget p1, p0, Lzv2;->Z:I
+    return-wide v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final c()J
+    .locals 2
 
-    or-int/2addr p1, v0
+    const-wide v0, 0x7fffffffffffffffL
 
-    iput p1, p0, Lzv2;->Z:I
-
-    iget-object p1, p0, Lzv2;->Y:Law2;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Law2;->a(Ljava/util/Set;Lnz3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
+    return-wide v0
 .end method

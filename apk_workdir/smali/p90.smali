@@ -3,81 +3,107 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lp90;
+
+
 # instance fields
-.field public final a:I
+.field public final a:Lra0;
 
 .field public final b:I
 
-.field public final c:Lts1;
-
 
 # direct methods
-.method public constructor <init>(IILts1;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lp90;
+
+    sget-object v1, Lra0;->j:Lra0;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lp90;-><init>(Lra0;I)V
+
+    sput-object v0, Lp90;->c:Lp90;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lra0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lp90;->a:I
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Lp90;->a:Lra0;
 
     iput p2, p0, Lp90;->b:I
 
-    iput-object p3, p0, Lp90;->c:Lts1;
-
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null fallbackQuality"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lp90;
+    instance-of v0, p1, Lp90;
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     check-cast p1, Lp90;
 
-    iget v1, p0, Lp90;->a:I
+    iget-object v0, p0, Lp90;->a:Lra0;
 
-    iget v3, p1, Lp90;->a:I
+    iget-object v1, p1, Lp90;->a:Lra0;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Lp90;->b:I
+    move-result v0
 
-    iget v3, p1, Lp90;->b:I
+    if-eqz v0, :cond_1
 
-    if-ne v1, v3, :cond_1
+    iget v0, p0, Lp90;->b:I
 
-    iget-object v1, p0, Lp90;->c:Lts1;
+    iget p1, p1, Lp90;->b:I
 
-    iget-object p1, p1, Lp90;->c:Lts1;
+    if-ne v0, p1, :cond_1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    :goto_0
+    const/4 p1, 0x1
 
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
+    return p1
 
     :cond_1
-    return v2
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lp90;->a:I
+    iget-object v0, p0, Lp90;->a:Lra0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -85,17 +111,7 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lp90;->b:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lp90;->c:Lts1;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
+    iget v1, p0, Lp90;->b:I
 
     xor-int/2addr v0, v1
 
@@ -103,39 +119,27 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "PendingSnapshot{jpegQuality="
+    const-string v1, "RuleStrategy{fallbackQuality="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lp90;->a:I
+    iget-object v1, p0, Lp90;->a:Lra0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", rotationDegrees="
+    const-string v1, ", fallbackRule="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget v1, p0, Lp90;->b:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v2, "}"
 
-    const-string v1, ", completer="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lp90;->c:Lts1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

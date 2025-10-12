@@ -21,6 +21,7 @@
 .method public static a(Lcom/my/tracker/obfuscated/t;)Lcom/my/tracker/obfuscated/p;
     .locals 1
 
+    .line 1
     new-instance v0, Lcom/my/tracker/obfuscated/p;
 
     invoke-direct {v0, p0}, Lcom/my/tracker/obfuscated/p;-><init>(Lcom/my/tracker/obfuscated/t;)V
@@ -33,6 +34,7 @@
 .method public a(Landroid/content/Intent;)Ljava/lang/String;
     .locals 5
 
+    .line 2
     const-string v0, "DeeplinkHandler: clickId "
 
     const-string v1, "DeeplinkHandler: deeplink "
@@ -47,12 +49,14 @@
 
     if-nez p1, :cond_0
 
+    .line 3
     const-string p1, "DeeplinkHandler: intent is null"
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     return-object v3
 
+    .line 4
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -61,6 +65,7 @@
 
     if-nez p1, :cond_1
 
+    .line 5
     const-string p1, "DeeplinkHandler: intent data is null"
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
@@ -72,6 +77,7 @@
 
     goto :goto_1
 
+    .line 6
     :cond_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -85,12 +91,14 @@
 
     invoke-static {v2}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 7
     const-string v2, "mt_deeplink"
 
     invoke-virtual {p1, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
+    .line 8
     const-string v4, "mt_click_id"
 
     invoke-virtual {p1, v4}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
@@ -99,21 +107,25 @@
 
     if-eqz v2, :cond_2
 
+    .line 9
     const-string p1, "DeeplinkHandler: found mt_deeplink in intent"
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
+    .line 10
     :cond_2
     const-string v2, "DeeplinkHandler: mt_deeplink not found in intent"
 
     invoke-static {v2}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 11
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v2
 
+    .line 12
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -127,6 +139,7 @@
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 13
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -139,6 +152,7 @@
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;)V
 
+    .line 14
     iget-object p1, p0, Lcom/my/tracker/obfuscated/p;->a:Lcom/my/tracker/obfuscated/t;
 
     invoke-virtual {p1, v2, v4}, Lcom/my/tracker/obfuscated/t;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -147,6 +161,7 @@
 
     return-object v2
 
+    .line 15
     :goto_1
     const-string v0, "DeeplinkHandler error: "
 

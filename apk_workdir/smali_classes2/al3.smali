@@ -3,22 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Landroid/text/InputFilter;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lal3;->a:I
-
-    iput-object p1, p0, Lal3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    iput p1, p0, Lal3;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,52 +23,37 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget v0, p0, Lal3;->a:I
+    iget p2, p0, Lal3;->a:I
 
-    iget-object v1, p0, Lal3;->b:Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;
+    const-string p3, ""
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p2, :pswitch_data_0
 
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltm7;
+    sget-object p1, Lu49;->P0:[Lpl7;
 
-    new-instance v0, Lhl3;
-
-    iget-object v2, v1, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->a:Lpr;
-
-    sget-object v3, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltm7;
-
-    const/4 v4, 0x0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Lhl3;-><init>(Ljava/lang/String;)V
-
-    return-object v0
+    return-object p3
 
     :pswitch_0
-    sget-object v0, Lone/me/settings/privacy/ui/pincode/ConfirmPinCodeScreen;->Y:[Ltm7;
+    sget-object p2, Lbl3;->b:Lhwc;
 
-    invoke-virtual {v1}, Lb04;->getOnBackPressedDispatcher()Lgfa;
+    invoke-virtual {p2, p1}, Lhwc;->a(Ljava/lang/CharSequence;)Z
 
-    move-result-object v0
+    move-result p2
 
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0}, Lgfa;->d()V
+    goto :goto_0
 
     :cond_0
-    sget-object v0, Loyf;->a:Loyf;
+    move-object p1, p3
 
-    return-object v0
+    :goto_0
+    return-object p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

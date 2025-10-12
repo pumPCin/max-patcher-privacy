@@ -1,58 +1,103 @@
-.class public final Ltxa;
+.class public abstract Ltxa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltef;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Landroid/content/Context;
+.field public static final b:I
 
-.field public final b:Lzob;
+.field public static final c:I
 
-.field public final c:Ljava/lang/String;
+.field public static final d:I
 
-.field public final d:Lbp7;
+.field public static final e:I
 
-.field public final e:Lbp7;
+.field public static final f:I
 
-.field public final f:Ls5f;
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Landroid/content/Context;Lzob;Lbp7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lxic;->web_app_root_biometry_open_settings_dialog_accept:I
 
-    iput-object p2, p0, Ltxa;->a:Landroid/content/Context;
+    sput v0, Ltxa;->a:I
 
-    iput-object p3, p0, Ltxa;->b:Lzob;
+    sget v0, Lxic;->web_app_root_biometry_open_settings_dialog_title:I
 
-    const-class p2, Ltxa;
+    sput v0, Ltxa;->b:I
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget v0, Lxic;->web_app_root_biometry_request_dialog_accept:I
 
-    move-result-object p2
+    sput v0, Ltxa;->c:I
 
-    iput-object p2, p0, Ltxa;->c:Ljava/lang/String;
+    sget v0, Lxic;->web_app_root_biometry_request_dialog_decline:I
 
-    iput-object p4, p0, Ltxa;->d:Lbp7;
+    sput v0, Ltxa;->d:I
 
-    iput-object p1, p0, Ltxa;->e:Lbp7;
+    sget v0, Lxic;->web_app_root_biometry_request_dialog_default_reason:I
 
-    new-instance p1, Ljga;
+    sput v0, Ltxa;->e:I
 
-    const/16 p2, 0x11
+    sget v0, Lxic;->web_app_root_biometry_request_dialog_title:I
 
-    invoke-direct {p1, p2}, Ljga;-><init>(I)V
+    sput v0, Ltxa;->f:I
 
-    new-instance p2, Ls5f;
+    sget v0, Lxic;->web_app_root_biometry_setting:I
 
-    invoke-direct {p2, p1}, Ls5f;-><init>(Lve6;)V
+    sput v0, Ltxa;->g:I
 
-    iput-object p2, p0, Ltxa;->f:Ls5f;
+    sget v0, Lxic;->web_app_root_biometry_setting_description:I
+
+    sput v0, Ltxa;->h:I
+
+    sget v0, Lxic;->web_app_root_choose_media_bottomsheet_gallery:I
+
+    sput v0, Ltxa;->i:I
+
+    sget v0, Lxic;->web_app_root_choose_media_bottomsheet_title:I
+
+    sput v0, Ltxa;->j:I
+
+    sget v0, Lxic;->web_app_root_max_share_quote_title:I
+
+    sput v0, Ltxa;->k:I
+
+    sget v0, Lxic;->web_app_root_setting_open_webapp:I
+
+    sput v0, Ltxa;->l:I
+
+    sget v0, Lxic;->web_app_root_settings_header_subtitle:I
+
+    sput v0, Ltxa;->m:I
+
+    sget v0, Lxic;->web_app_root_settings_header_title:I
+
+    sput v0, Ltxa;->n:I
+
+    sget v0, Lxic;->web_app_root_settings_webapps:I
+
+    sput v0, Ltxa;->o:I
 
     return-void
 .end method

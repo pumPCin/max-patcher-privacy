@@ -1,89 +1,289 @@
-.class public abstract Lsy3;
-.super Ljava/lang/Object;
+.class public final Lsy3;
+.super Landroid/content/ContextWrapper;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-    .locals 6
+# static fields
+.field public static f:Landroid/content/res/Configuration;
 
-    and-int/lit8 v0, p5, 0x4
+
+# instance fields
+.field public a:I
+
+.field public b:Landroid/content/res/Resources$Theme;
+
+.field public c:Landroid/view/LayoutInflater;
+
+.field public d:Landroid/content/res/Configuration;
+
+.field public e:Landroid/content/res/Resources;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/content/ContextWrapper;-><init>(Landroid/content/Context;)V
+
+    iput p2, p0, Lsy3;->a:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/content/res/Configuration;)V
+    .locals 1
+
+    iget-object v0, p0, Lsy3;->e:Landroid/content/res/Resources;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lsy3;->d:Landroid/content/res/Configuration;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/content/res/Configuration;
+
+    invoke-direct {v0, p1}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
+
+    iput-object v0, p0, Lsy3;->d:Landroid/content/res/Configuration;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Override configuration has already been set"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "getResources() or getAssets() has already been called"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final attachBaseContext(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/content/ContextWrapper;->attachBaseContext(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .locals 3
+
+    iget-object v0, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lsy3;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
+
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
+
+    invoke-virtual {v1, v0}, Landroid/content/res/Resources$Theme;->setTo(Landroid/content/res/Resources$Theme;)V
+
+    :cond_0
+    iget-object v0, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
+
+    iget v1, p0, Lsy3;->a:I
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    return-void
+.end method
+
+.method public final getAssets()Landroid/content/res/AssetManager;
+    .locals 1
+
+    invoke-virtual {p0}, Lsy3;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getResources()Landroid/content/res/Resources;
+    .locals 3
+
+    iget-object v0, p0, Lsy3;->e:Landroid/content/res/Resources;
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lsy3;->d:Landroid/content/res/Configuration;
+
+    if-eqz v0, :cond_2
+
+    sget-object v1, Lsy3;->f:Landroid/content/res/Configuration;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Landroid/content/res/Configuration;
+
+    invoke-direct {v1}, Landroid/content/res/Configuration;-><init>()V
+
+    const/4 v2, 0x0
+
+    iput v2, v1, Landroid/content/res/Configuration;->fontScale:F
+
+    sput-object v1, Lsy3;->f:Landroid/content/res/Configuration;
+
+    :cond_0
+    sget-object v1, Lsy3;->f:Landroid/content/res/Configuration;
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Configuration;->equals(Landroid/content/res/Configuration;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    if-nez p3, :cond_1
+    goto :goto_0
 
-    new-instance p3, Ljava/lang/StringBuilder;
+    :cond_1
+    iget-object v0, p0, Lsy3;->d:Landroid/content/res/Configuration;
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {p0, v0}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p5
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string p5, ".DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    iput-object v0, p0, Lsy3;->e:Landroid/content/res/Resources;
 
-    invoke-virtual {p3, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    :goto_0
+    invoke-super {p0}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
-    move-result-object p3
+    move-result-object v0
 
-    invoke-static {p0, p3}, Lpih;->m(Landroid/content/Context;Ljava/lang/String;)I
+    iput-object v0, p0, Lsy3;->e:Landroid/content/res/Resources;
 
-    move-result p5
+    :cond_3
+    :goto_1
+    iget-object v0, p0, Lsy3;->e:Landroid/content/res/Resources;
 
-    if-nez p5, :cond_0
+    return-object v0
+.end method
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+.method public final getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
 
-    move-result-object p0
+    const-string v0, "layout_inflater"
 
-    return-object p0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_0
-    new-instance p0, Ljava/lang/RuntimeException;
+    move-result v0
 
-    const-string p1, "Permission "
+    if-eqz v0, :cond_1
 
-    const-string p2, " is required by your application to receive broadcasts, please add it to your manifest"
+    iget-object p1, p0, Lsy3;->c:Landroid/view/LayoutInflater;
 
-    invoke-static {p1, p3, p2}, Lfl7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    throw p0
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/LayoutInflater;->cloneInContext(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lsy3;->c:Landroid/view/LayoutInflater;
+
+    :cond_0
+    iget-object p1, p0, Lsy3;->c:Landroid/view/LayoutInflater;
+
+    return-object p1
 
     :cond_1
-    and-int/lit8 v5, p5, 0x1
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
-    move-object v0, p0
+    move-result-object v0
 
-    move-object v1, p1
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-object v2, p2
+    move-result-object p1
 
-    move-object v3, p3
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
-
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
-.method public static b(Landroid/content/Context;Landroid/content/Intent;)Landroid/content/ComponentName;
-    .locals 0
+.method public final getTheme()Landroid/content/res/Resources$Theme;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    iget-object v0, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    return-object p0
+    return-object v0
+
+    :cond_0
+    iget v0, p0, Lsy3;->a:I
+
+    if-nez v0, :cond_1
+
+    sget v0, Lqjc;->Theme_AppCompat_Light:I
+
+    iput v0, p0, Lsy3;->a:I
+
+    :cond_1
+    invoke-virtual {p0}, Lsy3;->b()V
+
+    iget-object v0, p0, Lsy3;->b:Landroid/content/res/Resources$Theme;
+
+    return-object v0
+.end method
+
+.method public final setTheme(I)V
+    .locals 1
+
+    iget v0, p0, Lsy3;->a:I
+
+    if-eq v0, p1, :cond_0
+
+    iput p1, p0, Lsy3;->a:I
+
+    invoke-virtual {p0}, Lsy3;->b()V
+
+    :cond_0
+    return-void
 .end method

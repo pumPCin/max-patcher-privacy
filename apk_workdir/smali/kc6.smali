@@ -1,90 +1,84 @@
-.class public final Lkc6;
+.class public Lkc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw0f;
+
 
 # instance fields
-.field public final a:Lt76;
-
-.field public final b:J
+.field public final a:Landroid/database/sqlite/SQLiteProgram;
 
 
 # direct methods
-.method public constructor <init>(Lt76;J)V
-    .locals 7
+.method public constructor <init>(Landroid/database/sqlite/SQLiteProgram;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lt76;->B:Lp93;
+    iput-object p1, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    iget v1, p1, Lt76;->v:I
+    return-void
+.end method
 
-    iget v2, p1, Lt76;->u:I
 
-    const/4 v3, 0x0
+# virtual methods
+.method public final Q(I)V
+    .locals 1
 
-    const/4 v4, 0x1
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, p1}, Landroid/database/sqlite/SQLiteProgram;->bindNull(I)V
 
-    move v0, v4
+    return-void
+.end method
 
-    goto :goto_0
+.method public final close()V
+    .locals 1
 
-    :cond_0
-    move v0, v3
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    :goto_0
-    const-string v5, "format colorInfo must be set"
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteClosable;->close()V
 
-    invoke-static {v5, v0}, Lpih;->h(Ljava/lang/Object;Z)V
+    return-void
+.end method
 
-    if-lez v2, :cond_1
+.method public final f(ILjava/lang/String;)V
+    .locals 1
 
-    move v0, v4
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    goto :goto_1
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindString(ILjava/lang/String;)V
 
-    :cond_1
-    move v0, v3
+    return-void
+.end method
 
-    :goto_1
-    new-instance v5, Ljava/lang/StringBuilder;
+.method public final g(ID)V
+    .locals 1
 
-    const-string v6, "format width must be positive, but is: "
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindDouble(ID)V
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final k(IJ)V
+    .locals 1
 
-    move-result-object v2
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    invoke-static {v2, v0}, Lpih;->h(Ljava/lang/Object;Z)V
+    invoke-virtual {v0, p1, p2, p3}, Landroid/database/sqlite/SQLiteProgram;->bindLong(IJ)V
 
-    if-lez v1, :cond_2
+    return-void
+.end method
 
-    move v3, v4
+.method public final l(I[B)V
+    .locals 1
 
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lkc6;->a:Landroid/database/sqlite/SQLiteProgram;
 
-    const-string v2, "format height must be positive, but is: "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0, v3}, Lpih;->h(Ljava/lang/Object;Z)V
-
-    iput-object p1, p0, Lkc6;->a:Lt76;
-
-    iput-wide p2, p0, Lkc6;->b:J
+    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteProgram;->bindBlob(I[B)V
 
     return-void
 .end method

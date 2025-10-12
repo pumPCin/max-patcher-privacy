@@ -4,40 +4,45 @@
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final a:I
 
-.field public final b:Landroid/os/Handler;
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+.method public constructor <init>(IIIIILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput p1, p0, Lj90;->a:I
 
-    iput-object p1, p0, Lj90;->a:Ljava/util/concurrent/Executor;
+    if-eqz p6, :cond_0
 
-    if-eqz p2, :cond_0
+    iput-object p6, p0, Lj90;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lj90;->b:Landroid/os/Handler;
+    iput p2, p0, Lj90;->c:I
+
+    iput p3, p0, Lj90;->d:I
+
+    iput p4, p0, Lj90;->e:I
+
+    iput p5, p0, Lj90;->f:I
 
     return-void
 
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
-    const-string p2, "Null schedulerHandler"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraExecutor"
+    const-string p2, "Null mediaType"
 
     invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -64,25 +69,45 @@
 
     check-cast p1, Lj90;
 
-    iget-object v1, p0, Lj90;->a:Ljava/util/concurrent/Executor;
+    iget v1, p0, Lj90;->a:I
 
-    iget-object v3, p1, Lj90;->a:Ljava/util/concurrent/Executor;
+    iget v3, p1, Lj90;->a:I
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_1
+
+    iget-object v1, p0, Lj90;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lj90;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lj90;->b:Landroid/os/Handler;
+    iget v1, p0, Lj90;->c:I
 
-    iget-object p1, p1, Lj90;->b:Landroid/os/Handler;
+    iget v3, p1, Lj90;->c:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_1
 
-    move-result p1
+    iget v1, p0, Lj90;->d:I
 
-    if-eqz p1, :cond_1
+    iget v3, p1, Lj90;->d:I
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lj90;->e:I
+
+    iget v3, p1, Lj90;->e:I
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lj90;->f:I
+
+    iget p1, p1, Lj90;->f:I
+
+    if-ne v1, p1, :cond_1
 
     return v0
 
@@ -91,13 +116,9 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lj90;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    iget v0, p0, Lj90;->a:I
 
     const v1, 0xf4243
 
@@ -105,11 +126,35 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lj90;->b:Landroid/os/Handler;
+    iget-object v2, p0, Lj90;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    move-result v1
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lj90;->c:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lj90;->d:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lj90;->e:I
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v1, p0, Lj90;->f:I
 
     xor-int/2addr v0, v1
 
@@ -117,31 +162,59 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CameraThreadConfig{cameraExecutor="
+    const-string v1, "AudioProfileProxy{codec="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lj90;->a:Ljava/util/concurrent/Executor;
+    iget v1, p0, Lj90;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", schedulerHandler="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lj90;->b:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
+    const-string v1, ", mediaType="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lj90;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lj90;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", sampleRate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lj90;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", channels="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lj90;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", profile="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lj90;->f:I
+
+    const-string v2, "}"
+
+    invoke-static {v0, v1, v2}, Lbk7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

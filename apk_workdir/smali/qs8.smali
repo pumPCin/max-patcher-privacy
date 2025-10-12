@@ -1,462 +1,152 @@
-.class public abstract Lqs8;
+.class public final Lqs8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Z
+
+.field public static final c:Ljava/lang/Object;
+
+.field public static volatile d:Lqs8;
+
+
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public final b:Lps8;
-
-.field public c:Z
-
-.field public d:Ljava/lang/ref/WeakReference;
-
-.field public e:Lix;
+.field public a:Lks8;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "MediaSessionManager"
+
+    const/4 v1, 0x3
+
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lqs8;->b:Z
 
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lqs8;->a:Ljava/lang/Object;
-
-    new-instance v0, Lps8;
-
-    invoke-direct {v0, p0}, Lps8;-><init>(Lqs8;)V
-
-    iput-object v0, p0, Lqs8;->b:Lps8;
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lqs8;->d:Ljava/lang/ref/WeakReference;
+    sput-object v0, Lqs8;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;)Lqs8;
+    .locals 4
 
-# virtual methods
-.method public A(J)V
-    .locals 0
+    if-eqz p0, :cond_2
 
-    return-void
-.end method
-
-.method public B()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final a(Lss8;Landroid/os/Handler;)V
-    .locals 8
-
-    iget-boolean v0, p0, Lqs8;->c:Z
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lqs8;->c:Z
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p2, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    invoke-virtual {p1}, Lss8;->d()Ljkb;
-
-    move-result-object p1
-
-    const-wide/16 v2, 0x0
-
-    if-nez p1, :cond_1
-
-    move-wide v4, v2
-
-    goto :goto_0
-
-    :cond_1
-    iget-wide v4, p1, Ljkb;->X:J
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    iget p1, p1, Ljkb;->a:I
-
-    const/4 p2, 0x3
-
-    if-ne p1, p2, :cond_2
-
-    move p1, v1
-
-    goto :goto_1
-
-    :cond_2
-    move p1, v0
-
-    :goto_1
-    const-wide/16 v6, 0x204
-
-    and-long/2addr v6, v4
-
-    cmp-long p2, v6, v2
-
-    if-eqz p2, :cond_3
-
-    move p2, v1
-
-    goto :goto_2
-
-    :cond_3
-    move p2, v0
-
-    :goto_2
-    const-wide/16 v6, 0x202
-
-    and-long/2addr v4, v6
-
-    cmp-long v2, v4, v2
-
-    if-eqz v2, :cond_4
-
-    move v0, v1
-
-    :cond_4
-    if-eqz p1, :cond_5
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {p0}, Lqs8;->h()V
-
-    return-void
-
-    :cond_5
-    if-nez p1, :cond_6
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p0}, Lqs8;->i()V
-
-    :cond_6
-    :goto_3
-    return-void
-.end method
-
-.method public b(Lgl8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Lgl8;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public e(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public g(Landroid/content/Intent;)Z
-    .locals 7
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1b
-
-    const/4 v2, 0x0
-
-    if-lt v0, v1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lqs8;->a:Ljava/lang/Object;
+    sget-object v0, Lqs8;->c:Ljava/lang/Object;
 
     monitor-enter v0
 
     :try_start_0
-    iget-object v1, p0, Lqs8;->d:Ljava/lang/ref/WeakReference;
+    sget-object v1, Lqs8;->d:Lqs8;
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object v1
+    new-instance v1, Lqs8;
 
-    check-cast v1, Lss8;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iget-object v3, p0, Lqs8;->e:Lix;
+    move-result-object p0
 
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x1c
+
+    if-lt v2, v3, :cond_0
+
+    new-instance v2, Lms8;
+
+    invoke-direct {v2, p0}, Lks8;-><init>(Landroid/content/Context;)V
+
+    const-string v3, "media_session"
+
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/media/session/MediaSessionManager;
+
+    iput-object v2, v1, Lqs8;->a:Lks8;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v2, Lks8;
+
+    invoke-direct {v2, p0}, Lks8;-><init>(Landroid/content/Context;)V
+
+    iput-object v2, v1, Lqs8;->a:Lks8;
+
+    :goto_0
+    sput-object v1, Lqs8;->d:Lqs8;
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    sget-object p0, Lqs8;->d:Lqs8;
+
+    monitor-exit v0
+
+    return-object p0
+
+    :goto_2
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v1, :cond_8
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const-string v0, "android.intent.extra.KEY_EVENT"
-
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/KeyEvent;
-
-    if-eqz p1, :cond_8
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_1
+    throw p0
 
     :cond_2
-    invoke-virtual {v1}, Lss8;->c()Lut8;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v0
+    const-string v0, "context cannot be null"
 
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result v4
+    throw p0
+.end method
 
-    const/16 v5, 0x4f
 
-    if-eq v4, v5, :cond_3
+# virtual methods
+.method public final b(Los8;)Z
+    .locals 1
 
-    const/16 v5, 0x55
+    if-eqz p1, :cond_0
 
-    if-eq v4, v5, :cond_3
+    iget-object v0, p0, Lqs8;->a:Lks8;
 
-    invoke-virtual {p0, v1, v3}, Lqs8;->a(Lss8;Landroid/os/Handler;)V
+    iget-object p1, p1, Los8;->a:Lns8;
 
-    return v2
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getRepeatCount()I
+    invoke-interface {v0, p1}, Ljs8;->a(Lns8;)Z
 
     move-result p1
 
-    const/4 v4, 0x1
+    return p1
 
-    if-nez p1, :cond_7
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    iget-boolean p1, p0, Lqs8;->c:Z
+    const-string v0, "userInfo should not be null"
 
-    if-eqz p1, :cond_6
-
-    invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
-
-    iput-boolean v2, p0, Lqs8;->c:Z
-
-    invoke-virtual {v1}, Lss8;->d()Ljkb;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0x0
-
-    if-nez p1, :cond_4
-
-    move-wide v2, v0
-
-    goto :goto_0
-
-    :cond_4
-    iget-wide v2, p1, Ljkb;->X:J
-
-    :goto_0
-    const-wide/16 v5, 0x20
-
-    and-long/2addr v2, v5
-
-    cmp-long p1, v2, v0
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p0}, Lqs8;->y()V
-
-    :cond_5
-    return v4
-
-    :cond_6
-    iput-boolean v4, p0, Lqs8;->c:Z
-
-    invoke-virtual {v3, v4, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-static {}, Landroid/view/ViewConfiguration;->getDoubleTapTimeout()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    invoke-virtual {v3, p1, v0, v1}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return v4
-
-    :cond_7
-    invoke-virtual {p0, v1, v3}, Lqs8;->a(Lss8;Landroid/os/Handler;)V
-
-    return v4
-
-    :cond_8
-    :goto_1
-    return v2
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p1
-.end method
-
-.method public h()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public i()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public j(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public k(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public l(Landroid/net/Uri;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(Landroid/net/Uri;Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Lgl8;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public u(Lwnc;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public v(Lwnc;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public w(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public x(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public z()V
-    .locals 0
-
-    return-void
 .end method

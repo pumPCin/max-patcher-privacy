@@ -1,97 +1,99 @@
-.class public final enum Lbua;
-.super Ljava/lang/Enum;
+.class public final Lbua;
+.super Ldua;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lbua;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbua;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum a:Lbua;
-
-.field public static final enum b:Lbua;
-
-.field public static final enum c:Lbua;
-
-.field public static final enum o:Lbua;
+.field public static final b:Lbua;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 3
 
     new-instance v0, Lbua;
 
-    const-string v1, "COLLAPSED"
+    const-wide/16 v1, 0xdac
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1, v2}, Ldua;-><init>(J)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput-object v0, Lbua;->b:Lbua;
 
-    sput-object v0, Lbua;->a:Lbua;
+    new-instance v0, Lqg8;
 
-    new-instance v1, Lbua;
+    const/16 v1, 0x14
 
-    const-string v2, "ANIMATING_COLLAPSE"
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lbua;->b:Lbua;
-
-    new-instance v2, Lbua;
-
-    const-string v3, "EXPANDED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lbua;->c:Lbua;
-
-    new-instance v3, Lbua;
-
-    const-string v4, "ANIMATING_EXPAND"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lbua;->o:Lbua;
-
-    filled-new-array {v0, v1, v2, v3}, [Lbua;
-
-    move-result-object v0
-
-    sput-object v0, Lbua;->X:[Lbua;
+    sput-object v0, Lbua;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lbua;
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    const-class v0, Lbua;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbua;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static values()[Lbua;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    sget-object v0, Lbua;->X:[Lbua;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, [Lbua;
+    :cond_0
+    instance-of p1, p1, Lbua;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x16da368a
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Standard"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

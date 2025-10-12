@@ -1,160 +1,397 @@
 .class public final Lh91;
-.super Lilg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj91;
+
+
+# static fields
+.field public static final h:Lh91;
 
 
 # instance fields
-.field public final X:Lmoe;
+.field public final a:Lq31;
 
-.field public final Y:Lmoe;
+.field public final b:Z
 
-.field public final Z:Lmoe;
+.field public final c:Ljava/lang/CharSequence;
 
-.field public final b:Lk1c;
+.field public final d:Ljava/lang/CharSequence;
 
-.field public final c:Lmh1;
+.field public final e:Lg91;
 
-.field public final o:Lbp7;
+.field public final f:Lg91;
 
-.field public final w0:Lmoe;
-
-.field public final x0:Lmoe;
+.field public final g:Lg91;
 
 
 # direct methods
-.method public constructor <init>(Lbp7;Lk1c;Lmh1;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 8
 
-    invoke-direct {p0}, Lilg;-><init>()V
+    new-instance v0, Lq31;
 
-    iput-object p2, p0, Lh91;->b:Lk1c;
+    const/4 v4, 0x0
 
-    iput-object p3, p0, Lh91;->c:Lmh1;
+    const/16 v5, 0xf
 
-    iput-object p1, p0, Lh91;->o:Lbp7;
+    const/4 v1, 0x0
 
-    new-instance p1, Lf91;
+    const/4 v2, 0x0
 
-    invoke-direct {p1}, Lf91;-><init>()V
+    const/4 v3, 0x0
 
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+    invoke-direct/range {v0 .. v5}, Lq31;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;ZI)V
 
-    move-result-object p1
+    sget-object v6, Lg91;->X:Lg91;
 
-    iput-object p1, p0, Lh91;->X:Lmoe;
+    sget-object v5, Lg91;->r0:Lg91;
 
-    iput-object p1, p0, Lh91;->Y:Lmoe;
+    move-object v1, v0
 
-    new-instance p1, Lxu1;
+    new-instance v0, Lh91;
 
-    sget-object p2, Lb75;->a:Lb75;
+    const-string v4, ""
 
-    const/4 p3, 0x0
+    const/4 v7, 0x0
 
-    invoke-direct {p1, p2, p3}, Lxu1;-><init>(Ljava/util/List;Z)V
+    const/4 v2, 0x0
 
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
+    invoke-direct/range {v0 .. v7}, Lh91;-><init>(Lq31;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lg91;Lg91;Lg91;)V
 
-    move-result-object p1
-
-    iput-object p1, p0, Lh91;->Z:Lmoe;
-
-    iput-object p1, p0, Lh91;->w0:Lmoe;
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lnoe;->a(Ljava/lang/Object;)Lmoe;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lh91;->x0:Lmoe;
-
-    new-instance p2, Le91;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Le91;-><init>(Lh91;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Ljx5;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p3, p1, p2, v0}, Ljx5;-><init>(Lev5;Llf6;I)V
-
-    iget-object p1, p0, Lilg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    sput-object v0, Lh91;->h:Lh91;
 
     return-void
 .end method
 
+.method public constructor <init>(Lq31;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lg91;Lg91;Lg91;)V
+    .locals 0
 
-# virtual methods
-.method public final q(JLov6;)V
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    iget-object v0, p0, Lh91;->X:Lmoe;
+    iput-object p1, p0, Lh91;->a:Lq31;
 
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    iput-boolean p2, p0, Lh91;->b:Z
 
-    move-result-object v1
+    iput-object p3, p0, Lh91;->c:Ljava/lang/CharSequence;
 
-    move-object v2, v1
+    iput-object p4, p0, Lh91;->d:Ljava/lang/CharSequence;
 
-    check-cast v2, Lf91;
+    iput-object p5, p0, Lh91;->e:Lg91;
 
-    iget-object v3, v2, Lf91;->b:Ljava/util/Map;
+    iput-object p6, p0, Lh91;->f:Lg91;
 
-    new-instance v4, Ljava/util/LinkedHashMap;
+    iput-object p7, p0, Lh91;->g:Lg91;
 
-    invoke-direct {v4, v3}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
+    return-void
+.end method
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+.method public static a(Lh91;Lq31;ZLandroid/text/SpannableStringBuilder;Lg91;I)Lh91;
+    .locals 8
 
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lov6;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lov6;
-
-    :goto_0
-    iget-boolean v2, v2, Lf91;->a:Z
-
-    new-instance v3, Lf91;
-
-    invoke-direct {v3, v2, v4}, Lf91;-><init>(ZLjava/util/Map;)V
-
-    invoke-virtual {v0, v1, v3}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
+    and-int/lit8 v0, p5, 0x1
 
     if-eqz v0, :cond_0
 
-    return-void
+    iget-object p1, p0, Lh91;->a:Lq31;
+
+    :cond_0
+    move-object v1, p1
+
+    and-int/lit8 p1, p5, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p2, p0, Lh91;->b:Z
+
+    :cond_1
+    move v2, p2
+
+    and-int/lit8 p1, p5, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Lh91;->c:Ljava/lang/CharSequence;
+
+    :cond_2
+    move-object v3, p3
+
+    iget-object v4, p0, Lh91;->d:Ljava/lang/CharSequence;
+
+    iget-object v5, p0, Lh91;->e:Lg91;
+
+    and-int/lit8 p1, p5, 0x20
+
+    if-eqz p1, :cond_3
+
+    iget-object p4, p0, Lh91;->f:Lg91;
+
+    :cond_3
+    move-object v6, p4
+
+    iget-object v7, p0, Lh91;->g:Lg91;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lh91;
+
+    invoke-direct/range {v0 .. v7}, Lh91;-><init>(Lq31;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;Lg91;Lg91;Lg91;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lh91;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lh91;
+
+    iget-object v1, p0, Lh91;->a:Lq31;
+
+    iget-object v3, p1, Lh91;->a:Lq31;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lh91;->b:Z
+
+    iget-boolean v3, p1, Lh91;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lh91;->c:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lh91;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lh91;->d:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lh91;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lh91;->e:Lg91;
+
+    iget-object v3, p1, Lh91;->e:Lg91;
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lh91;->f:Lg91;
+
+    iget-object v3, p1, Lh91;->f:Lg91;
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lh91;->g:Lg91;
+
+    iget-object p1, p1, Lh91;->g:Lg91;
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lh91;->a:Lq31;
+
+    invoke-virtual {v0}, Lq31;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lh91;->b:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lh91;->c:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lh91;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v3, v0, v1}, Lc85;->e(Ljava/lang/CharSequence;II)I
+
+    move-result v0
+
+    iget-object v3, p0, Lh91;->e:Lg91;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    iget-object v0, p0, Lh91;->f:Lg91;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lh91;->g:Lg91;
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Calling(chatState="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lh91;->a:Lq31;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canShowVideoPreview="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lh91;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", enableCameraButtonText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh91;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callTypeDescription="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh91;->d:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negativeActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh91;->e:Lg91;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", firstActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh91;->f:Lg91;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", secondActionButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lh91;->g:Lg91;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

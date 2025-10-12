@@ -1,52 +1,60 @@
-.class public final synthetic Ldre;
-.super Ln8;
+.class public final Ldre;
+.super Ly7f;
 .source "SourceFile"
 
-# interfaces
-.implements Lnf6;
 
-
-# static fields
-.field public static final w0:Ldre;
+# instance fields
+.field public c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lc79;)V
+    .locals 0
 
-    new-instance v0, Ldre;
-
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Ln4b;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Ln8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Ldre;->w0:Ldre;
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Lc79;Ljava/lang/String;)V
+    .locals 1
 
-    check-cast p1, Lmre;
+    const-string v0, "url"
 
-    check-cast p2, Ljava/lang/Boolean;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    move-result p2
 
-    sget-object p3, Lire;->L0:[Ltm7;
+    if-eqz p2, :cond_0
 
-    new-instance p3, Ln4b;
+    invoke-virtual {p1}, Lc79;->r0()Ljava/lang/String;
 
-    invoke-direct {p3, p1, p2}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object p1
 
-    return-object p3
+    iput-object p1, p0, Ldre;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lc79;->y()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ldre;->c:Ljava/lang/String;
+
+    const-string v1, "{url=\'"
+
+    const-string v2, "\'}"
+
+    invoke-static {v1, v0, v2}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

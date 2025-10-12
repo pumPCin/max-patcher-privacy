@@ -2,35 +2,41 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgwc;
-
-
-# instance fields
-.field public final synthetic a:Lbb0;
-
 
 # direct methods
-.method public constructor <init>(Lbb0;)V
-    .locals 0
+.method public static a(Lwe6;)Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p1, p0, Lfwc;->a:Lbb0;
+    move-result-object p0
 
-    return-void
-.end method
+    invoke-virtual {p0}, Ljava/lang/Class;->getGenericInterfaces()[Ljava/lang/reflect/Type;
 
+    move-result-object p0
 
-# virtual methods
-.method public final a(La90;Ljava/util/concurrent/Executor;)Ld60;
-    .locals 2
+    const/4 v0, 0x0
 
-    new-instance v0, Ld60;
+    aget-object p0, p0, v0
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-direct {v0, p1, p2, v1}, Ld60;-><init>(La90;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
+    move-result-object p0
 
-    return-object v0
+    const-string v0, "kotlin.jvm.functions."
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x15
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    return-object p0
 .end method

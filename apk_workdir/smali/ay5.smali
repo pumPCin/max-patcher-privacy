@@ -1,52 +1,42 @@
 .class public final Lay5;
-.super Lnz3;
+.super Lrx5;
+.source "SourceFile"
+
+# interfaces
+.implements Labd;
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg13;
-
-.field public Z:Lgv5;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public w0:Lwxc;
+# static fields
+.field public static final b:Lay5;
 
 
 # direct methods
-.method public constructor <init>(Lg13;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lay5;->Y:Lg13;
+    new-instance v0, Lay5;
 
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lay5;->b:Lay5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final g(Lbz5;)V
+    .locals 0
+
+    invoke-static {p1}, Le75;->a(Luxe;)V
+
+    return-void
+.end method
+
+.method public final get()Ljava/lang/Object;
     .locals 1
-
-    iput-object p1, p0, Lay5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lay5;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lay5;->X:I
-
-    iget-object p1, p0, Lay5;->Y:Lg13;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lg13;->d(Lgv5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

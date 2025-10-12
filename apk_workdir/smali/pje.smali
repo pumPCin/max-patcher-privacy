@@ -1,290 +1,323 @@
 .class public final Lpje;
-.super Landroid/opengl/GLSurfaceView;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:Z
+.field public final a:Ljava/lang/String;
 
-.field public B0:Z
+.field public final b:I
 
-.field public C0:Z
+.field public final c:Ljava/lang/Integer;
 
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final d:F
 
-.field public final b:Landroid/hardware/SensorManager;
+.field public final e:Z
 
-.field public final c:Landroid/hardware/Sensor;
+.field public final f:Z
 
-.field public final o:Ly1b;
+.field public final g:Z
 
-.field public final w0:Landroid/os/Handler;
-
-.field public final x0:Lhdd;
-
-.field public y0:Landroid/graphics/SurfaceTexture;
-
-.field public z0:Landroid/view/Surface;
+.field public final h:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;FZZZZ)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroid/opengl/GLSurfaceView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p1, p0, Lpje;->a:Ljava/lang/String;
 
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput p2, p0, Lpje;->b:I
 
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    iput-object p3, p0, Lpje;->c:Ljava/lang/Integer;
 
-    iput-object v1, p0, Lpje;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput p4, p0, Lpje;->d:F
 
-    new-instance v1, Landroid/os/Handler;
+    iput-boolean p5, p0, Lpje;->e:Z
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iput-boolean p6, p0, Lpje;->f:Z
 
-    move-result-object v2
+    iput-boolean p7, p0, Lpje;->g:Z
 
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v1, p0, Lpje;->w0:Landroid/os/Handler;
-
-    const-string v1, "sensor"
-
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v1, Landroid/hardware/SensorManager;
-
-    iput-object v1, p0, Lpje;->b:Landroid/hardware/SensorManager;
-
-    sget v2, Lr4g;->a:I
-
-    const/16 v3, 0x12
-
-    if-lt v2, v3, :cond_0
-
-    const/16 v0, 0xf
-
-    invoke-virtual {v1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    const/16 v0, 0xb
-
-    invoke-virtual {v1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
-
-    move-result-object v0
-
-    :cond_1
-    iput-object v0, p0, Lpje;->c:Landroid/hardware/Sensor;
-
-    new-instance v0, Lhdd;
-
-    invoke-direct {v0}, Lhdd;-><init>()V
-
-    iput-object v0, p0, Lpje;->x0:Lhdd;
-
-    new-instance v1, Loje;
-
-    invoke-direct {v1, p0, v0}, Loje;-><init>(Lpje;Lhdd;)V
-
-    new-instance v0, Lkmf;
-
-    invoke-direct {v0, p1, v1}, Lkmf;-><init>(Landroid/content/Context;Loje;)V
-
-    const-string v2, "window"
-
-    invoke-virtual {p1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/WindowManager;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object p1
-
-    new-instance v2, Ly1b;
-
-    const/4 v3, 0x2
-
-    new-array v4, v3, [Lx1b;
-
-    const/4 v5, 0x0
-
-    aput-object v0, v4, v5
-
-    const/4 v5, 0x1
-
-    aput-object v1, v4, v5
-
-    invoke-direct {v2, p1, v4}, Ly1b;-><init>(Landroid/view/Display;[Lx1b;)V
-
-    iput-object v2, p0, Lpje;->o:Ly1b;
-
-    iput-boolean v5, p0, Lpje;->A0:Z
-
-    invoke-virtual {p0, v3}, Landroid/opengl/GLSurfaceView;->setEGLContextClientVersion(I)V
-
-    invoke-virtual {p0, v1}, Landroid/opengl/GLSurfaceView;->setRenderer(Landroid/opengl/GLSurfaceView$Renderer;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    iput-boolean p8, p0, Lpje;->h:Z
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;)I
+    .locals 2
 
-# virtual methods
-.method public final a()V
-    .locals 5
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    iget-boolean v0, p0, Lpje;->A0:Z
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    packed-switch v0, :pswitch_data_0
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
-    iget-boolean v0, p0, Lpje;->B0:Z
+    :pswitch_0
+    const/4 v1, 0x1
 
-    if-eqz v0, :cond_0
+    :goto_0
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    return v0
+
+    :catch_0
+    :cond_0
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const-string v1, "Ignoring unknown alignment: "
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/String;
+
+    invoke-direct {p0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_1
+    const-string v0, "SsaStyle"
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_1
+
+    const/4 v2, -0x1
+
+    if-ne p0, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v0, v1
+    return v0
 
+    :cond_1
     :goto_0
-    iget-object v2, p0, Lpje;->c:Landroid/hardware/Sensor;
+    return v1
 
-    if-eqz v2, :cond_3
+    :catch_0
+    move-exception v1
 
-    iget-boolean v3, p0, Lpje;->C0:Z
+    const/16 v2, 0x21
 
-    if-ne v0, v3, :cond_1
+    invoke-static {v2, p0}, Lc85;->d(ILjava/lang/String;)I
+
+    move-result v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Failed to parse boolean value: \'"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v2, "SsaStyle"
+
+    invoke-static {v2, p0, v1}, Ltf2;->R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    return v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 8
+
+    :try_start_0
+    const-string v0, "&H"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v1, 0x10
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
+
+    move-result-wide v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
 
     goto :goto_2
 
-    :cond_1
-    iget-object v3, p0, Lpje;->o:Ly1b;
+    :cond_0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    iget-object v4, p0, Lpje;->b:Landroid/hardware/SensorManager;
+    move-result-wide v2
 
-    if-eqz v0, :cond_2
+    :goto_0
+    const-wide v4, 0xffffffffL
 
-    invoke-virtual {v4, v3, v2, v1}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
+    cmp-long v0, v2, v4
 
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v4, v3}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
-
-    :goto_1
-    iput-boolean v0, p0, Lpje;->C0:Z
-
-    :cond_3
-    :goto_2
-    return-void
-.end method
-
-.method public getCameraMotionListener()Lp02;
-    .locals 1
-
-    iget-object v0, p0, Lpje;->x0:Lhdd;
-
-    return-object v0
-.end method
-
-.method public getVideoFrameMetadataListener()Liag;
-    .locals 1
-
-    iget-object v0, p0, Lpje;->x0:Lhdd;
-
-    return-object v0
-.end method
-
-.method public getVideoSurface()Landroid/view/Surface;
-    .locals 1
-
-    iget-object v0, p0, Lpje;->z0:Landroid/view/Surface;
-
-    return-object v0
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onDetachedFromWindow()V
-
-    new-instance v0, Lace;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, p0}, Lace;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lpje;->w0:Landroid/os/Handler;
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final onPause()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lpje;->B0:Z
-
-    invoke-virtual {p0}, Lpje;->a()V
-
-    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onPause()V
-
-    return-void
-.end method
-
-.method public final onResume()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/opengl/GLSurfaceView;->onResume()V
+    if-gtz v0, :cond_1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lpje;->B0:Z
+    goto :goto_1
 
-    invoke-virtual {p0}, Lpje;->a()V
+    :cond_1
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    :goto_1
+    invoke-static {v0}, Lnjg;->e(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public setDefaultStereoMode(I)V
-    .locals 1
+    const/16 p0, 0x18
 
-    iget-object v0, p0, Lpje;->x0:Lhdd;
+    shr-long v4, v2, p0
 
-    iput p1, v0, Lhdd;->z0:I
+    const-wide/16 v6, 0xff
 
-    return-void
-.end method
+    and-long/2addr v4, v6
 
-.method public setUseSensorRotation(Z)V
-    .locals 0
+    xor-long/2addr v4, v6
 
-    iput-boolean p1, p0, Lpje;->A0:Z
+    invoke-static {v4, v5}, Lzvd;->i(J)I
 
-    invoke-virtual {p0}, Lpje;->a()V
+    move-result p0
 
-    return-void
+    shr-long v0, v2, v1
+
+    and-long/2addr v0, v6
+
+    invoke-static {v0, v1}, Lzvd;->i(J)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    shr-long v4, v2, v1
+
+    and-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Lzvd;->i(J)I
+
+    move-result v1
+
+    and-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Lzvd;->i(J)I
+
+    move-result v2
+
+    invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :goto_2
+    const/16 v1, 0x24
+
+    invoke-static {v1, p0}, Lc85;->d(ILjava/lang/String;)I
+
+    move-result v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v1, "Failed to parse color expression: \'"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v1, "SsaStyle"
+
+    invoke-static {v1, p0, v0}, Ltf2;->R(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

@@ -1,216 +1,196 @@
 .class public final Lfud;
-.super Lsud;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lg63;
 
 
 # instance fields
-.field public final A0:J
-
-.field public final y0:J
-
-.field public final z0:J
+.field public final a:Lyn7;
 
 
 # direct methods
-.method public constructor <init>(Leud;)V
-    .locals 2
+.method public constructor <init>(Lyn7;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lsud;-><init>(Lrud;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Leud;->g:J
-
-    iput-wide v0, p0, Lfud;->y0:J
-
-    iget-wide v0, p1, Leud;->h:J
-
-    iput-wide v0, p0, Lfud;->z0:J
-
-    iget-wide v0, p1, Leud;->i:J
-
-    iput-wide v0, p0, Lfud;->A0:J
+    iput-object p1, p0, Lfud;->a:Lyn7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x()Lp49;
-    .locals 11
+.method public final a()Lxm3;
+    .locals 1
 
-    invoke-virtual {p0}, Lstd;->n()Lo49;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lfud;->z0:J
-
-    invoke-virtual {v0, v1, v2}, Lo49;->p(J)Lq49;
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lstd;->e()Lub2;
+    invoke-interface {v0}, Lg63;->a()Lxm3;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-wide v2, p0, Lfud;->y0:J
+    return-object v0
+.end method
 
-    invoke-virtual {v1, v2, v3}, Lub2;->C(J)Lm82;
+.method public final b()V
+    .locals 1
 
-    move-result-object v1
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    if-eqz v1, :cond_8
+    invoke-interface {v0}, Lg63;->b()V
 
-    if-eqz v0, :cond_8
+    return-void
+.end method
 
-    iget-object v0, v0, Lq49;->C0:Lfah;
+.method public final c(Ljava/net/Socket;)V
+    .locals 1
 
-    invoke-virtual {v0}, Lfah;->g()I
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v3, 0x0
+    invoke-interface {v0, p1}, Lg63;->c(Ljava/net/Socket;)V
 
-    :goto_0
-    if-ge v3, v1, :cond_8
+    return-void
+.end method
 
-    invoke-virtual {v0, v3}, Lfah;->e(I)Lo10;
+.method public final close()V
+    .locals 1
 
-    move-result-object v4
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    if-nez v4, :cond_0
+    move-result-object v0
 
-    goto/16 :goto_1
+    invoke-interface {v0}, Lg63;->close()V
 
-    :cond_0
-    iget-object v5, v4, Lo10;->b:Lc10;
+    return-void
+.end method
 
-    invoke-virtual {v4}, Lo10;->f()Z
+.method public final connect()Ljava/net/Socket;
+    .locals 1
 
-    move-result v6
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    iget-wide v7, p0, Lfud;->A0:J
+    move-result-object v0
 
-    if-eqz v6, :cond_1
+    invoke-interface {v0}, Lg63;->connect()Ljava/net/Socket;
 
-    iget-wide v9, v5, Lc10;->w0:J
+    move-result-object v0
 
-    cmp-long v6, v9, v7
+    return-object v0
+.end method
 
-    if-eqz v6, :cond_4
+.method public final d()I
+    .locals 1
 
-    :cond_1
-    invoke-virtual {v4}, Lo10;->i()Z
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    move-result v6
+    move-result-object v0
 
-    if-eqz v6, :cond_2
-
-    iget-object v6, v4, Lo10;->d:Ln10;
-
-    iget-wide v9, v6, Ln10;->a:J
-
-    cmp-long v6, v9, v7
-
-    if-eqz v6, :cond_4
-
-    :cond_2
-    invoke-virtual {v4}, Lo10;->h()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    iget-object v6, v4, Lo10;->f:Lj10;
-
-    iget-wide v9, v6, Lj10;->a:J
-
-    cmp-long v6, v9, v7
-
-    if-eqz v6, :cond_4
-
-    :cond_3
-    invoke-virtual {v4}, Lo10;->g()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_7
-
-    iget-object v6, v4, Lo10;->g:Lg10;
-
-    iget-wide v9, v6, Lg10;->a:J
-
-    cmp-long v6, v9, v7
-
-    if-nez v6, :cond_7
-
-    :cond_4
-    invoke-virtual {v4}, Lo10;->f()Z
+    invoke-interface {v0}, Lg63;->d()I
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    return v0
+.end method
 
-    invoke-virtual {v5}, Lc10;->b()Lb10;
+.method public final e()Z
+    .locals 1
 
-    move-result-object v0
-
-    new-instance v1, Lc10;
-
-    invoke-direct {v1, v0}, Lc10;-><init>(Lb10;)V
-
-    invoke-virtual {v4}, Lo10;->j()Lp00;
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
     move-result-object v0
 
-    iput-object v1, v0, Lp00;->b:Lc10;
+    invoke-interface {v0}, Lg63;->e()Z
 
-    invoke-virtual {v0}, Lp00;->a()Lo10;
+    move-result v0
 
-    move-result-object v4
+    return v0
+.end method
 
-    :cond_5
-    new-instance v0, Lp10;
+.method public final f()V
+    .locals 1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lp10;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Lp10;->c()Lfah;
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
     move-result-object v0
 
-    invoke-virtual {v4}, Lo10;->g()Z
+    invoke-interface {v0}, Lg63;->f()V
 
-    move-result v1
+    return-void
+.end method
 
-    if-eqz v1, :cond_6
+.method public final g(Z)V
+    .locals 1
 
-    iget-object v1, v4, Lo10;->g:Lg10;
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    iget-object v2, v1, Lg10;->b:Ljava/lang/String;
+    move-result-object v0
 
-    :cond_6
-    new-instance v1, Lp49;
+    invoke-interface {v0, p1}, Lg63;->g(Z)V
 
-    invoke-direct {v1}, Lp49;-><init>()V
+    return-void
+.end method
 
-    iput-object v2, v1, Lp49;->g:Ljava/lang/String;
+.method public final h(I)J
+    .locals 2
 
-    iput-object v0, v1, Lp49;->n:Lfah;
+    invoke-virtual {p0}, Lfud;->l()Lg63;
 
-    return-object v1
+    move-result-object v0
 
-    :cond_7
-    add-int/lit8 v3, v3, 0x1
+    invoke-interface {v0, p1}, Lg63;->h(I)J
 
-    goto/16 :goto_0
+    move-result-wide v0
 
-    :cond_8
-    :goto_1
-    return-object v2
+    return-wide v0
+.end method
+
+.method public final i()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Lfud;->l()Lg63;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lg63;->i()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final k()Ltl3;
+    .locals 1
+
+    invoke-virtual {p0}, Lfud;->l()Lg63;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lg63;->k()Ltl3;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final l()Lg63;
+    .locals 1
+
+    iget-object v0, p0, Lfud;->a:Lyn7;
+
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lg63;
+
+    return-object v0
 .end method

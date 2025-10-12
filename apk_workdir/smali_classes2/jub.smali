@@ -1,51 +1,71 @@
-.class public abstract synthetic Ljub;
-.super Ljava/lang/Object;
+.class public final Ljub;
+.super Lrp;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Ljub;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Llub;->values()[Llub;
+    new-instance v0, Ljub;
+
+    invoke-direct {v0}, Lrp;-><init>()V
+
+    sput-object v0, Ljub;->a:Ljub;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lyn7;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
     move-result-object v0
 
-    array-length v0, v0
+    const-class v1, Lcl;
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    const/4 v1, 0x1
+    move-result-object v0
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.method public final b()Lyn7;
+    .locals 2
 
-    :catch_0
-    const/4 v2, 0x2
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
 
-    :try_start_1
-    aput v2, v0, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v0
 
-    :catch_1
-    const/4 v2, 0x3
+    const-class v1, Lg13;
 
-    :try_start_2
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
 
-    :catch_2
-    sput-object v0, Ljub;->$EnumSwitchMapping$0:[I
+    move-result-object v0
 
-    return-void
+    return-object v0
+.end method
+
+.method public final c()Lyn7;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lo5;
+
+    move-result-object v0
+
+    const-class v1, Le7f;
+
+    invoke-virtual {v0, v1}, Lo5;->d(Ljava/lang/Class;)Lh4f;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,92 +1,60 @@
-.class public final Lxj7;
-.super Lm3f;
+.class public final synthetic Lxj7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lr3g;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lak7;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lak7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lxj7;->Y:Lak7;
+    iput p1, p0, Lxj7;->a:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    check-cast p1, Lte2;
+    iget v0, p0, Lxj7;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lxj7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object p1
+    check-cast p2, Ls3g;
 
-    check-cast p1, Lxj7;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    sget-object p2, Loyf;->a:Loyf;
+    move-result p1
 
-    invoke-virtual {p1, p2}, Lxj7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Ls3g;->c(Z)Ls3g;
 
-    return-object p2
-.end method
+    return-void
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :pswitch_0
+    check-cast p1, Ljava/lang/String;
 
-    new-instance v0, Lxj7;
+    check-cast p2, Ls3g;
 
-    iget-object v1, p0, Lxj7;->Y:Lak7;
+    invoke-interface {p2, p1}, Ls3g;->b(Ljava/lang/String;)Ls3g;
 
-    invoke-direct {v0, v1, p2}, Lxj7;-><init>(Lak7;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    iput-object p1, v0, Lxj7;->X:Ljava/lang/Object;
+    nop
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lxj7;->X:Ljava/lang/Object;
-
-    check-cast p1, Lte2;
-
-    iget-object v0, p0, Lxj7;->Y:Lak7;
-
-    iget-object v0, v0, Lak7;->X:Ljb5;
-
-    new-instance v1, Lvj7;
-
-    iget-wide v2, p1, Lte2;->c:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Lhy9;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

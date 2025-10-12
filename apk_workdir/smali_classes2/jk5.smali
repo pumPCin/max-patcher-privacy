@@ -3,26 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lok5;
+.field public final synthetic b:J
 
-.field public final synthetic c:J
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lok5;JI)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
     .locals 0
 
     iput p4, p0, Ljk5;->a:I
 
-    iput-object p1, p0, Ljk5;->b:Lok5;
+    iput-object p1, p0, Ljk5;->c:Ljava/lang/Object;
 
-    iput-wide p2, p0, Ljk5;->c:J
+    iput-wide p2, p0, Ljk5;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,59 +31,87 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
     iget v0, p0, Ljk5;->a:I
 
-    const-string v1, "ok5"
-
-    iget-wide v2, p0, Ljk5;->c:J
-
-    iget-object v4, p0, Ljk5;->b:Lok5;
-
-    check-cast p1, Ljava/lang/Throwable;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    iget-object v0, p0, Ljk5;->c:Ljava/lang/Object;
 
-    const-string v0, "onNotifAdded: failed to add sticker set "
+    check-cast v0, Lwk5;
 
-    const-string v5, " to cache"
+    iget-object v0, v0, Lwk5;->b:Lys4;
 
-    invoke-static {v2, v3, v0, v5}, Lgxf;->n(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Lfpe;
 
-    invoke-virtual {v4}, Lok5;->J()V
+    iget-wide v1, p0, Ljk5;->b:J
 
-    return-void
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lfpe;->d(Ljava/util/List;)Lkde;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    iget-object v0, p0, Ljk5;->c:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast v0, Lok5;
 
-    const-string v5, "onNotifUpdated: failed for id: "
+    iget-object v0, v0, Lok5;->a:Lcl;
 
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lgea;
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance v1, Lyt;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lgea;->x()Lnnb;
+
+    move-result-object v2
+
+    check-cast v2, Lpnb;
+
+    iget-object v2, v2, Lpnb;->a:Lt08;
+
+    invoke-virtual {v2}, Lfhd;->k()J
+
+    move-result-wide v3
+
+    const/4 v2, 0x5
+
+    iget-wide v5, p0, Ljk5;->b:J
+
+    invoke-direct/range {v1 .. v6}, Lyt;-><init>(IJJ)V
+
+    invoke-virtual {v0}, Lgea;->y()Ld9f;
 
     move-result-object v0
 
-    invoke-static {v1, v0, p1}, Lox9;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/16 v2, 0xc
 
-    invoke-virtual {v4}, Lok5;->J()V
+    const/4 v3, 0x0
 
-    return-void
+    invoke-static {v0, v1, v3, v2}, Ld9f;->d(Ld9f;Lnm;ZI)J
 
-    nop
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

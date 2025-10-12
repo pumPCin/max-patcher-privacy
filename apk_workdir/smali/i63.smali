@@ -1,458 +1,158 @@
 .class public final Li63;
-.super Lb95;
+.super Le4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Li63;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final e:I
+.field public final a:I
 
-.field public final f:I
-
-.field public final g:Landroid/animation/TimeInterpolator;
-
-.field public final h:Landroid/animation/TimeInterpolator;
-
-.field public i:Landroid/widget/EditText;
-
-.field public final j:Lh5;
-
-.field public final k:Lf63;
-
-.field public l:Landroid/animation/AnimatorSet;
-
-.field public m:Landroid/animation/ValueAnimator;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(La95;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lb95;-><init>(La95;)V
+    new-instance v0, Lgng;
 
-    new-instance v0, Lh5;
+    const/4 v1, 0x3
 
-    const/16 v1, 0x11
+    invoke-direct {v0, v1}, Lgng;-><init>(I)V
 
-    invoke-direct {v0, v1, p0}, Lh5;-><init>(ILjava/lang/Object;)V
+    sput-object v0, Li63;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput-object v0, p0, Li63;->j:Lh5;
+    return-void
+.end method
 
-    new-instance v0, Lf63;
+.method public constructor <init>(ILjava/lang/String;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, p0}, Lf63;-><init>(ILjava/lang/Object;)V
+    iput p1, p0, Li63;->a:I
 
-    iput-object v0, p0, Li63;->k:Lf63;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lvac;->motionDurationShort3:I
-
-    const/16 v2, 0x64
-
-    invoke-static {v1, v2, v0}, Lpih;->U(IILandroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Li63;->e:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lvac;->motionDurationShort3:I
-
-    const/16 v2, 0x96
-
-    invoke-static {v1, v2, v0}, Lpih;->U(IILandroid/content/Context;)I
-
-    move-result v0
-
-    iput v0, p0, Li63;->f:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget v1, Lvac;->motionEasingLinearInterpolator:I
-
-    sget-object v2, Lgg;->a:Landroid/view/animation/LinearInterpolator;
-
-    invoke-static {v0, v1, v2}, Lpih;->V(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Li63;->g:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget v0, Lvac;->motionEasingEmphasizedInterpolator:I
-
-    sget-object v1, Lgg;->d:Lsj5;
-
-    invoke-static {p1, v0, v1}, Lpih;->V(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li63;->h:Landroid/animation/TimeInterpolator;
+    iput-object p2, p0, Li63;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    iget-object v0, p0, Lb95;->b:La95;
-
-    iget-object v0, v0, La95;->H0:Ljava/lang/CharSequence;
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Li63;->u()Z
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Li63;->t(Z)V
-
-    return-void
-.end method
-
-.method public final c()I
-    .locals 1
-
-    sget v0, Ljic;->clear_text_end_icon_content_description:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    sget v0, Lfdc;->mtrl_ic_cancel:I
-
-    return v0
-.end method
-
-.method public final e()Landroid/view/View$OnFocusChangeListener;
-    .locals 1
-
-    iget-object v0, p0, Li63;->k:Lf63;
-
-    return-object v0
-.end method
-
-.method public final f()Landroid/view/View$OnClickListener;
-    .locals 1
-
-    iget-object v0, p0, Li63;->j:Lh5;
-
-    return-object v0
-.end method
-
-.method public final g()Landroid/view/View$OnFocusChangeListener;
-    .locals 1
-
-    iget-object v0, p0, Li63;->k:Lf63;
-
-    return-object v0
-.end method
-
-.method public final m(Landroid/widget/EditText;)V
-    .locals 1
-
-    iput-object p1, p0, Li63;->i:Landroid/widget/EditText;
-
-    iget-object p1, p0, Lb95;->a:Lcom/google/android/material/textfield/TextInputLayout;
-
-    invoke-virtual {p0}, Li63;->u()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lcom/google/android/material/textfield/TextInputLayout;->setEndIconVisible(Z)V
-
-    return-void
-.end method
-
-.method public final p(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lb95;->b:La95;
-
-    iget-object v0, v0, La95;->H0:Ljava/lang/CharSequence;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Li63;->t(Z)V
-
-    return-void
-.end method
-
-.method public final r()V
-    .locals 9
-
-    const/4 v0, 0x2
-
-    new-array v1, v0, [F
-
-    fill-array-data v1, :array_0
-
-    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Li63;->h:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget v2, p0, Li63;->f:I
-
-    int-to-long v2, v2
-
-    invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v2, Lg63;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v3}, Lg63;-><init>(Li63;I)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-array v2, v0, [F
-
-    fill-array-data v2, :array_1
-
-    invoke-static {v2}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v2
-
-    iget-object v4, p0, Li63;->g:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v2, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    iget v5, p0, Li63;->e:I
-
-    int-to-long v6, v5
-
-    invoke-virtual {v2, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v6, Lg63;
-
-    const/4 v7, 0x0
-
-    invoke-direct {v6, p0, v7}, Lg63;-><init>(Li63;I)V
-
-    invoke-virtual {v2, v6}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance v6, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v6}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v6, p0, Li63;->l:Landroid/animation/AnimatorSet;
-
-    new-array v8, v0, [Landroid/animation/Animator;
-
-    aput-object v1, v8, v7
-
-    aput-object v2, v8, v3
-
-    invoke-virtual {v6, v8}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    iget-object v1, p0, Li63;->l:Landroid/animation/AnimatorSet;
-
-    new-instance v2, Lh63;
-
-    invoke-direct {v2, p0, v7}, Lh63;-><init>(Li63;I)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-array v0, v0, [F
-
-    fill-array-data v0, :array_2
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    int-to-long v1, v5
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lg63;
-
-    invoke-direct {v1, p0, v7}, Lg63;-><init>(Li63;I)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    iput-object v0, p0, Li63;->m:Landroid/animation/ValueAnimator;
-
-    new-instance v1, Lh63;
-
-    invoke-direct {v1, p0, v3}, Lh63;-><init>(Li63;I)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x3f4ccccd    # 0.8f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
-.end method
-
-.method public final s()V
-    .locals 3
-
-    iget-object v0, p0, Li63;->i:Landroid/widget/EditText;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lzv1;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v1, v2, p0}, Lzv1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final t(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lb95;->b:La95;
-
-    invoke-virtual {v0}, La95;->d()Z
-
-    move-result v0
-
-    if-ne v0, p1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    goto :goto_0
+    if-ne p1, p0, :cond_0
+
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Li63;
 
-    :goto_0
-    if-eqz p1, :cond_1
-
-    iget-object v1, p0, Li63;->l:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
-
-    move-result v1
+    const/4 v2, 0x0
 
     if-nez v1, :cond_1
 
-    iget-object p1, p0, Li63;->m:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
-
-    iget-object p1, p0, Li63;->l:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
-
-    if-eqz v0, :cond_2
-
-    iget-object p1, p0, Li63;->l:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->end()V
-
-    return-void
+    return v2
 
     :cond_1
-    if-nez p1, :cond_2
+    check-cast p1, Li63;
 
-    iget-object p1, p0, Li63;->l:Landroid/animation/AnimatorSet;
+    iget v1, p1, Li63;->a:I
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
+    iget v3, p0, Li63;->a:I
 
-    iget-object p1, p0, Li63;->m:Landroid/animation/ValueAnimator;
+    if-ne v1, v3, :cond_2
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+    iget-object p1, p1, Li63;->b:Ljava/lang/String;
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Li63;->b:Ljava/lang/String;
 
-    iget-object p1, p0, Li63;->m:Landroid/animation/ValueAnimator;
+    invoke-static {p1, v1}, Lq5h;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->end()V
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    return-void
+    return v2
 .end method
 
-.method public final u()Z
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Li63;->i:Landroid/widget/EditText;
+    iget v0, p0, Li63;->a:I
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v0}, Landroid/view/View;->hasFocus()Z
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p0, Lb95;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    iget v1, p0, Li63;->a:I
 
-    invoke-virtual {v0}, Landroid/view/View;->hasFocus()Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v1, ":"
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iget-object v0, p0, Li63;->i:Landroid/widget/EditText;
+    iget-object v1, p0, Li63;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+    return-object v0
+.end method
 
-    move-result v0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    if-lez v0, :cond_1
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lnjg;->S(Landroid/os/Parcel;I)I
+
+    move-result p2
 
     const/4 v0, 0x1
 
-    return v0
+    const/4 v1, 0x4
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-static {p1, v0, v1}, Lnjg;->U(Landroid/os/Parcel;II)V
 
-    return v0
+    iget v0, p0, Li63;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Li63;->b:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lnjg;->P(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Lnjg;->T(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

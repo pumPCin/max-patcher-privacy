@@ -1,20 +1,13 @@
-.class public interface abstract Lvrd;
+.class public abstract Lvrd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d()J
-.end method
+# direct methods
+.method public static a(Landroid/app/Service;I)V
+    .locals 0
 
-.method public abstract i()Z
-.end method
+    invoke-virtual {p0, p1}, Landroid/app/Service;->stopForeground(I)V
 
-.method public abstract o()J
-.end method
-
-.method public abstract p(J)V
-.end method
-
-.method public abstract s(La08;)Z
+    return-void
 .end method

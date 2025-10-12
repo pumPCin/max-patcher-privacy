@@ -1,64 +1,46 @@
-.class public final Lkce;
+.class public final synthetic Lkce;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmce;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
-# static fields
-.field public static final a:Lkce;
+# instance fields
+.field public final synthetic a:Lmce;
+
+.field public final synthetic b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lmce;I)V
+    .locals 0
 
-    new-instance v0, Lkce;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkce;->a:Lmce;
 
-    sput-object v0, Lkce;->a:Lkce;
+    iput p2, p0, Lkce;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lkce;->a:Lmce;
 
-    return v0
+    iget-object p1, p1, Lmce;->X:Ll30;
 
-    :cond_0
-    instance-of p1, p1, Lkce;
+    const/4 v0, 0x2
 
-    if-nez p1, :cond_1
+    iget v1, p0, Lkce;->b:I
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, v1, v0}, Ll30;->i(II)V
 
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x79e8661
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Reject"
-
-    return-object v0
+    return-void
 .end method

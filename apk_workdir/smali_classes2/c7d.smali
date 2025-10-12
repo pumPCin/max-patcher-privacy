@@ -1,3 +1,3 @@
-.class public abstract Lc7d;
-.super Lgd4;
+.class public interface abstract Lc7d;
+.super Ljava/lang/Object;
 .source "SourceFile"

@@ -1,145 +1,155 @@
-.class public final Lphf;
+.class public abstract synthetic Lphf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lphf;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 7
 
-    new-instance v0, Ltdd;
+    invoke-static {}, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->values()[Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-    const/16 v1, 0x19
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Ltdd;-><init>(I)V
+    array-length v0, v0
 
-    sput-object v0, Lphf;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public constructor <init>(I)V
-    .locals 1
+    :try_start_0
+    sget-object v2, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_UNWRAP:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    iput p1, p0, Lphf;->a:I
+    move-result v2
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object p1
+    :catch_0
+    const/4 v2, 0x2
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    :try_start_1
+    sget-object v3, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_WRAP:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-    move-result-object p1
+    invoke-virtual {v3}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 v0, 0x1
+    move-result v3
 
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object p1
+    :catch_1
+    const/4 v3, 0x3
 
-    const-string v0, "%02d"
+    :try_start_2
+    sget-object v4, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NOT_HANDSHAKING:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
-    move-result-object p1
+    move-result v4
 
-    iput-object p1, p0, Lphf;->b:Ljava/lang/String;
+    aput v3, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    return-void
-.end method
+    :catch_2
+    const/4 v4, 0x4
 
+    :try_start_3
+    sget-object v5, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->FINISHED:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 v0, 0x0
+    move-result v5
 
-    return v0
-.end method
+    aput v4, v0, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    :catch_3
+    :try_start_4
+    sget-object v5, Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;->NEED_TASK:Ljavax/net/ssl/SSLEngineResult$HandshakeStatus;
 
-    const/4 v0, 0x1
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    if-ne p0, p1, :cond_0
+    move-result v5
 
-    return v0
+    const/4 v6, 0x5
 
-    :cond_0
-    instance-of v1, p1, Lphf;
+    aput v6, v0, v5
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    const/4 v2, 0x0
+    :catch_4
+    sput-object v0, Lphf;->$EnumSwitchMapping$0:[I
 
-    if-nez v1, :cond_1
+    invoke-static {}, Ljavax/net/ssl/SSLEngineResult$Status;->values()[Ljavax/net/ssl/SSLEngineResult$Status;
 
-    return v2
+    move-result-object v0
 
-    :cond_1
-    check-cast p1, Lphf;
+    array-length v0, v0
 
-    iget v1, p0, Lphf;->a:I
+    new-array v0, v0, [I
 
-    iget p1, p1, Lphf;->a:I
+    :try_start_5
+    sget-object v5, Ljavax/net/ssl/SSLEngineResult$Status;->OK:Ljavax/net/ssl/SSLEngineResult$Status;
 
-    if-eq v1, p1, :cond_2
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
-    return v2
+    move-result v5
 
-    :cond_2
-    return v0
-.end method
+    aput v1, v0, v5
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-.method public final hashCode()I
-    .locals 1
+    :catch_5
+    :try_start_6
+    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->CLOSED:Ljavax/net/ssl/SSLEngineResult$Status;
 
-    iget v0, p0, Lphf;->a:I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result v1
 
-    move-result v0
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    return v0
-.end method
+    :catch_6
+    :try_start_7
+    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->BUFFER_OVERFLOW:Ljavax/net/ssl/SSLEngineResult$Status;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object v0, p0, Lphf;->b:Ljava/lang/String;
+    move-result v1
 
-    return-object v0
-.end method
+    aput v3, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :catch_7
+    :try_start_8
+    sget-object v1, Ljavax/net/ssl/SSLEngineResult$Status;->BUFFER_UNDERFLOW:Ljavax/net/ssl/SSLEngineResult$Status;
 
-    iget p2, p0, Lphf;->a:I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    move-result v1
+
+    aput v4, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    sput-object v0, Lphf;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

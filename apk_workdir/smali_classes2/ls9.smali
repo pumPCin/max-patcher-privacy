@@ -2,58 +2,124 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyj8;
-
 
 # instance fields
-.field public final synthetic a:Lws9;
+.field public final a:Lks9;
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lws9;)V
+.method public constructor <init>(Lks9;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lls9;->a:Lws9;
+    iput-object p1, p0, Lls9;->a:Lks9;
+
+    iput-boolean p2, p0, Lls9;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lak8;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lls9;->a:Lws9;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lws9;->n:Lis9;
+    if-ne p0, p1, :cond_0
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p1}, Lak8;->t()V
-
-    const-string v2, "listener must not be null"
-
-    invoke-static {v1, v2}, Lpih;->l(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object p1, p1, Lak8;->c:Lzj8;
-
-    invoke-interface {p1, v1}, Lzj8;->U(Lukb;)V
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lls9;
 
-    iput-object p1, v0, Lws9;->n:Lis9;
+    const/4 v2, 0x0
 
-    sget p1, Lws9;->K:I
+    if-nez v1, :cond_1
 
-    const-string p1, "ws9"
+    return v2
 
-    const-string v0, "onDisconnected"
+    :cond_1
+    check-cast p1, Lls9;
 
-    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lls9;->a:Lks9;
 
-    return-void
+    iget-object v3, p1, Lls9;->a:Lks9;
+
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lls9;->b:Z
+
+    iget-boolean p1, p1, Lls9;->b:Z
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lls9;->a:Lks9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Lls9;->b:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MuteState(muteEvent="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lls9;->a:Lks9;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isForAll="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lls9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

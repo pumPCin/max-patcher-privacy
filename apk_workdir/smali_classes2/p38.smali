@@ -1,55 +1,29 @@
 .class public final Lp38;
-.super Lnz3;
+.super Lq38;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final c:Lcdf;
 
-.field public Y:Ljava/lang/Exception;
+.field public final d:Lcdf;
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Lr38;
-
-.field public final synthetic w0:Lr38;
-
-.field public x0:I
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Lr38;Lnz3;)V
-    .locals 0
-
-    iput-object p1, p0, Lp38;->w0:Lr38;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lcdf;Lcdf;I)V
     .locals 1
-
-    iput-object p1, p0, Lp38;->Z:Ljava/lang/Object;
-
-    iget p1, p0, Lp38;->x0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lp38;->x0:I
-
-    iget-object p1, p0, Lp38;->w0:Lr38;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, v0, v0, p0}, Lr38;->a(Lr38;Ljava/util/List;Ljava/util/List;Ljava/lang/Exception;Lnz3;)Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lq38;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object p1
+    iput-object p1, p0, Lp38;->c:Lcdf;
 
-    return-object p1
+    iput-object p2, p0, Lp38;->d:Lcdf;
+
+    iput p3, p0, Lp38;->e:I
+
+    return-void
 .end method

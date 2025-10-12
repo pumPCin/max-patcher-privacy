@@ -1,152 +1,231 @@
 .class public final Lxtf;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final synthetic Z:Lytf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Landroid/widget/ScrollView;I)V
+.method public constructor <init>(Lytf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lxtf;->a:I
+    iput-object p1, p0, Lxtf;->Z:Lytf;
 
-    iput-object p1, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lxtf;->c:Landroid/widget/ScrollView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lxtf;->a:I
+    check-cast p1, Ln24;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {p0, p1, p2}, Lxtf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Lxtf;
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    sget-object p2, Laxf;->a:Laxf;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1, p2}, Lxtf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lxtf;
+
+    iget-object v1, p0, Lxtf;->Z:Lytf;
+
+    invoke-direct {v0, v1, p2}, Lxtf;-><init>(Lytf;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lxtf;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    iget v1, p0, Lxtf;->X:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    const/4 v1, 0x0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    iget-object p1, p0, Lxtf;->Y:Ljava/lang/Object;
 
-    move-result v0
+    check-cast p1, Ln24;
 
-    add-int/2addr v0, v1
+    iget-object p1, p0, Lxtf;->Z:Lytf;
 
-    iget-object v1, p0, Lxtf;->c:Landroid/widget/ScrollView;
+    :try_start_1
+    iget-object p1, p1, Lytf;->c:Lyn7;
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object p1
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+    check-cast p1, Lcl;
 
-    move-result v3
+    new-instance v1, Lzt;
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+    invoke-direct {v1}, Lzt;-><init>()V
 
-    move-result v4
+    iput v2, p0, Lxtf;->X:I
 
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+    check-cast p1, Lgea;
 
-    return-void
+    invoke-virtual {p1, v1, p0}, Lgea;->I(Lv7f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lxtf;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    move-result-object p1
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    if-ne p1, v0, :cond_2
 
-    move-result-object v1
+    return-object v0
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v2, :cond_2
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    :cond_2
+    :goto_0
+    check-cast p1, Lz60;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_2
 
-    :cond_2
-    const/4 v1, 0x0
+    :goto_1
+    new-instance v0, Lb2d;
+
+    invoke-direct {v0, p1}, Lb2d;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
 
     :goto_2
-    if-eqz v1, :cond_3
+    iget-object v0, p0, Lxtf;->Z:Lytf;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    instance-of v1, p1, Lb2d;
 
-    goto :goto_3
+    if-nez v1, :cond_3
+
+    move-object v1, p1
+
+    check-cast v1, Lz60;
+
+    iget-object v0, v0, Lytf;->Y:Lya5;
+
+    sget-object v2, Lntf;->c:Lntf;
+
+    iget-object v1, v1, Lz60;->c:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, ":settings/privacy/creation-twofa?track_id="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "&src=settings"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lnd0;->m(Ljava/lang/String;Lya5;)V
 
     :cond_3
-    const/4 v1, 0x0
+    iget-object v0, p0, Lxtf;->Z:Lytf;
 
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-static {p1}, Ld2d;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    move-result v0
+    move-result-object p1
 
-    add-int/2addr v0, v1
+    if-eqz p1, :cond_4
 
-    iget-object v1, p0, Lxtf;->c:Landroid/widget/ScrollView;
+    instance-of v1, p1, Lru/ok/tamtam/errors/TamErrorException;
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+    if-eqz v1, :cond_4
 
-    move-result v2
+    iget-object v0, v0, Lytf;->X:Lya5;
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+    new-instance v1, Lktf;
 
-    move-result v3
+    check-cast p1, Lru/ok/tamtam/errors/TamErrorException;
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Li7f;
 
-    move-result v4
+    invoke-static {p1}, Lbbh;->k(Li7f;)Lcdf;
 
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+    move-result-object p1
 
-    return-void
+    const/4 v2, 0x0
 
-    nop
+    const/4 v3, 0x6
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v1, v2, v3, p1}, Lktf;-><init>(IILcdf;)V
+
+    invoke-static {v0, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    :cond_4
+    iget-object p1, p0, Lxtf;->Z:Lytf;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lytf;->Z:Loke;
+
+    sget-object p1, Laxf;->a:Laxf;
+
+    return-object p1
 .end method

@@ -1,180 +1,109 @@
-.class public final synthetic Ljyg;
-.super Ljava/lang/Object;
+.class public final Ljyg;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
-    .locals 0
-
-    iput p2, p0, Ljyg;->a:I
-
-    iput-object p1, p0, Ljyg;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic Y:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ljyg;->a:I
+    check-cast p1, Lt2b;
 
-    iget-object v1, p0, Ljyg;->b:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ljyg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
+    move-result-object p1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast p1, Ljyg;
 
-    const/16 v2, 0x1f
+    sget-object p2, Laxf;->a:Laxf;
 
-    if-lt v0, v2, :cond_0
+    invoke-virtual {p1, p2}, Ljyg;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object v0
+    return-object p1
+.end method
 
-    const-string v1, "vibrator_manager"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhyg;->c(Ljava/lang/Object;)Landroid/os/VibratorManager;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lhyg;->b(Landroid/os/VibratorManager;)Landroid/os/Vibrator;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "vibrator"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Vibrator;
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
-
-    new-instance v0, Lh5h;
-
-    invoke-virtual {v1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->Q0()Luhd;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lh5h;-><init>(Luhd;)V
-
-    return-object v0
-
-    :pswitch_1
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Ljyg;
 
-    const/4 v2, 0x2
+    const/4 v1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljyg;-><init>(Lone/me/webapp/rootscreen/WebAppRootScreen;I)V
+    invoke-direct {v0, v1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    new-instance v10, Ls5f;
+    iput-object p1, v0, Ljyg;->Y:Ljava/lang/Object;
 
-    invoke-direct {v10, v0}, Ls5f;-><init>(Lve6;)V
+    return-object v0
+.end method
 
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->z0:Lpr;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    sget-object v3, Lone/me/webapp/rootscreen/WebAppRootScreen;->S0:[Ltm7;
+    iget v0, p0, Ljyg;->X:I
 
-    const/4 v4, 0x1
+    const/4 v1, 0x1
 
-    aget-object v4, v3, v4
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    iget-object v0, p0, Ljyg;->Y:Ljava/lang/Object;
 
-    check-cast v0, Ljava/lang/Number;
+    check-cast v0, Lt2b;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    move-result-wide v4
+    return-object v0
 
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->A0:Lpr;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    aget-object v2, v3, v2
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    throw p1
 
-    move-object v6, v0
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    check-cast v6, Lhqg;
+    iget-object p1, p0, Ljyg;->Y:Ljava/lang/Object;
 
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->y0:Lpr;
+    check-cast p1, Lt2b;
 
-    const/4 v2, 0x0
+    sget-object v0, Lt2b;->b:Lt2b;
 
-    aget-object v2, v3, v2
+    if-ne p1, v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    iput-object p1, p0, Ljyg;->Y:Ljava/lang/Object;
 
-    move-result-object v0
+    iput v1, p0, Ljyg;->X:I
 
-    move-object v7, v0
+    const-wide/16 v0, 0x258
 
-    check-cast v7, Ljava/lang/Long;
-
-    iget-object v0, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->B0:Lpr;
-
-    const/4 v2, 0x3
-
-    aget-object v2, v3, v2
-
-    invoke-virtual {v0, v1}, Lpr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-static {v0, v1, p0}, Lbv0;->k(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object v8, v0
+    sget-object v1, Lo24;->a:Lo24;
 
-    check-cast v8, Ljava/lang/String;
+    if-ne v0, v1, :cond_2
 
-    iget-object v9, v1, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0:Ln0h;
+    return-object v1
 
-    new-instance v3, Li0h;
-
-    invoke-direct/range {v3 .. v10}, Li0h;-><init>(JLhqg;Ljava/lang/Long;Ljava/lang/String;Ln0h;Ls5f;)V
-
-    return-object v3
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return-object p1
 .end method

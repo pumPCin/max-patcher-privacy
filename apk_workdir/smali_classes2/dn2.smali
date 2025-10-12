@@ -1,430 +1,277 @@
-.class public final synthetic Ldn2;
-.super Ln8;
+.class public final Ldn2;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic w0:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
     .locals 0
 
-    iput p7, p0, Ldn2;->w0:I
+    iput-object p2, p0, Ldn2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    move-object p7, p4
+    const/4 p2, 0x2
 
-    move-object p4, p3
-
-    move p3, p6
-
-    move-object p6, p7
-
-    move-object p7, p5
-
-    move-object p5, p2
-
-    move p2, p1
-
-    move-object p1, p0
-
-    invoke-direct/range {p1 .. p7}, Ln8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p2, p1}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldn2;->w0:I
+    check-cast p1, Lby8;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
+    invoke-virtual {p0, p1, p2}, Ldn2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    check-cast p1, Ldn2;
 
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
-    return-object p1
+    invoke-virtual {p1, p2}, Ldn2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    check-cast p1, Ltl3;
+    return-object p2
+.end method
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    check-cast v0, Lsl3;
+    new-instance v0, Ldn2;
 
-    filled-new-array {p1}, [Ltl3;
+    iget-object v1, p0, Ldn2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    move-result-object p1
+    invoke-direct {v0, p2, v1}, Ldn2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    iput-object p1, v0, Ldn2;->X:Ljava/lang/Object;
 
-    sget-object p1, Loyf;->a:Loyf;
+    return-object v0
+.end method
 
-    return-object p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    :pswitch_1
-    check-cast p1, Ltl3;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    iget-object p1, p0, Ldn2;->X:Ljava/lang/Object;
 
-    check-cast v0, Lsl3;
+    check-cast p1, Lby8;
 
-    filled-new-array {p1}, [Ltl3;
+    instance-of v0, p1, Lxx8;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    sget-object v0, La0c;->c:La0c;
 
-    sget-object p1, Loyf;->a:Loyf;
+    check-cast p1, Lxx8;
 
-    return-object p1
+    iget-wide v1, p1, Lxx8;->a:J
 
-    :pswitch_2
-    check-cast p1, Ltl3;
+    invoke-virtual {v0, v1, v2}, La0c;->M0(J)V
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    goto/16 :goto_0
 
-    check-cast v0, Lsl3;
+    :cond_0
+    instance-of v0, p1, Lwx8;
 
-    filled-new-array {p1}, [Ltl3;
+    iget-object v1, p0, Ldn2;->Y:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    move-result-object p1
+    if-eqz v0, :cond_3
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    check-cast p1, Lwx8;
 
-    sget-object p1, Loyf;->a:Loyf;
+    iget v0, p1, Lwx8;->a:I
 
-    return-object p1
+    iget-wide v2, p1, Lwx8;->b:J
 
-    :pswitch_3
-    check-cast p1, Ltl3;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    sget p1, Loqa;->v0:I
 
-    check-cast v0, Lsl3;
+    const/4 v4, 0x0
 
-    filled-new-array {p1}, [Ltl3;
+    if-ne v0, p1, :cond_1
 
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->D0()Lcy8;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    sget-object p1, Loyf;->a:Loyf;
+    move-result-object v0
 
-    return-object p1
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    :pswitch_5
-    check-cast p1, Ltl3;
+    move-result-object v0
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcy8;->Z:Lhne;
 
-    check-cast v0, Lsl3;
+    invoke-virtual {p1, v4, v0}, Lhne;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    filled-new-array {p1}, [Ltl3;
+    goto/16 :goto_0
 
-    move-result-object p1
+    :cond_1
+    sget p1, Loqa;->u0:I
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    if-eq v0, p1, :cond_2
 
-    sget-object p1, Loyf;->a:Loyf;
+    sget p1, Loqa;->t0:I
 
-    return-object p1
+    if-ne v0, p1, :cond_8
 
-    :pswitch_6
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
+    :cond_2
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->C0()Lon2;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
+    iget-object v0, p1, Lon2;->Y:Lyn7;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Le7f;
+
+    check-cast v0, Lmka;
+
+    invoke-virtual {v0}, Lmka;->b()Lh24;
+
+    move-result-object v0
+
+    new-instance v1, Lkn2;
+
+    invoke-direct {v1, p1, v2, v3, v4}, Lkn2;-><init>(Lon2;JLkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, v0, v1, v2}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
+
+    goto :goto_0
+
+    :cond_3
+    instance-of v0, p1, Lyx8;
+
+    if-eqz v0, :cond_6
+
+    check-cast p1, Lyx8;
+
+    iget p1, p1, Lyx8;->a:I
+
+    sget v0, Loqa;->y0:I
+
+    if-ne p1, v0, :cond_4
+
+    sget-object p1, La0c;->c:La0c;
+
+    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()J
+
+    move-result-wide v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1, v0, v1, v2}, La0c;->H0(JZ)V
+
+    goto :goto_0
+
+    :cond_4
+    sget v0, Loqa;->x0:I
+
+    if-ne p1, v0, :cond_5
+
+    sget-object p1, La0c;->c:La0c;
+
+    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()J
+
+    move-result-wide v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v0, v1, v2}, La0c;->H0(JZ)V
+
+    goto :goto_0
+
+    :cond_5
+    sget v0, Loqa;->H0:I
+
+    if-ne p1, v0, :cond_8
+
+    sget-object p1, La0c;->c:La0c;
+
+    sget-object v0, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Lpl7;
+
+    invoke-virtual {v1}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, La0c;->K0(J)V
+
+    goto :goto_0
+
+    :cond_6
+    instance-of v0, p1, Lzx8;
+
+    if-eqz v0, :cond_7
+
+    sget-object v0, La0c;->c:La0c;
+
+    check-cast p1, Lzx8;
+
+    iget-wide v1, p1, Lzx8;->a:J
+
+    invoke-virtual {v0, v1, v2}, La0c;->M0(J)V
+
+    goto :goto_0
+
+    :cond_7
+    instance-of p1, p1, Lay8;
+
+    if-eqz p1, :cond_9
+
+    new-instance p1, Lrta;
+
+    invoke-direct {p1, v1}, Lrta;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    sget v0, Lz7d;->v2:I
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lw7;->k(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lrta;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Lrta;->i()Lqta;
+
+    :cond_8
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 
-    :pswitch_7
-    check-cast p1, Ltl3;
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_b
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_c
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_d
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_e
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_f
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_10
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_11
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_12
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_13
-    check-cast p1, Ltl3;
-
-    iget-object v0, p0, Ln8;->a:Ljava/lang/Object;
-
-    check-cast v0, Lsl3;
-
-    filled-new-array {p1}, [Ltl3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lsl3;->a([Ltl3;)V
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

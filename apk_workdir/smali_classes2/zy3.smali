@@ -1,46 +1,57 @@
 .class public final Lzy3;
-.super Ljava/lang/Object;
+.super Lsi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lww7;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final c:J
 
-.field public final b:I
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method public constructor <init>(Li7f;JLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lsi0;-><init>(Li7f;)V
 
-    iput-object p1, p0, Lzy3;->a:Ljava/util/List;
+    iput-wide p2, p0, Lzy3;->c:J
 
-    sget p1, Lmqa;->D:I
-
-    iput p1, p0, Lzy3;->b:I
+    iput-object p4, p0, Lzy3;->o:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-wide/high16 v0, -0x8000000000000000L
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-wide v0
-.end method
+    const-string v1, "ControlMessageAddError{chatId="
 
-.method public final m()I
-    .locals 1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v0, p0, Lzy3;->b:I
+    iget-wide v1, p0, Lzy3;->c:J
 
-    return v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contactIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzy3;->o:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

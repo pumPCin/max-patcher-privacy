@@ -1,125 +1,234 @@
 .class public final Laed;
-.super Lm3f;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Llf6;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIIIZZZ)V
     .locals 0
 
-    iput-object p1, p0, Laed;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput p1, p0, Laed;->a:I
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Laed;->b:I
+
+    iput p3, p0, Laed;->c:I
+
+    iput p4, p0, Laed;->d:I
+
+    iput-boolean p5, p0, Laed;->e:Z
+
+    iput-boolean p6, p0, Laed;->f:Z
+
+    iput-boolean p7, p0, Laed;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ley9;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Laed;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Laed;
-
-    sget-object p2, Loyf;->a:Loyf;
-
-    invoke-virtual {p1, p2}, Laed;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Laed;
-
-    iget-object v0, p0, Laed;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-direct {p1, v0, p2}, Laed;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Laed;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->a1()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->f:Lsqc;
-
-    iget-object v0, v0, Lsqc;->a:Lfoe;
-
-    invoke-interface {v0}, Lfoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lda4;
-
-    sget-object v1, Loyf;->a:Loyf;
-
-    if-nez v0, :cond_0
-
-    return-object v1
+    return v0
 
     :cond_0
-    new-instance v2, Ludd;
+    instance-of v1, p1, Laed;
 
-    invoke-virtual {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->a1()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    const/4 v2, 0x0
 
-    move-result-object v3
+    if-nez v1, :cond_1
 
-    iget-object v3, v3, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Lfed;
+    return v2
 
-    sget-object v4, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Ltm7;
+    :cond_1
+    check-cast p1, Laed;
 
-    const/4 v5, 0x0
+    iget v1, p0, Laed;->a:I
 
-    aget-object v4, v4, v5
+    iget v3, p1, Laed;->a:I
 
-    iget-object v3, v3, Lv2;->b:Ljava/lang/Object;
+    if-eq v1, v3, :cond_2
 
-    check-cast v3, Ljava/lang/Boolean;
+    return v2
 
-    invoke-virtual {v3}, Ljava/lang/Boolean;->booleanValue()Z
+    :cond_2
+    iget v1, p0, Laed;->b:I
 
-    move-result v3
+    iget v3, p1, Laed;->b:I
 
-    iget-object v4, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->J1:Ljava/lang/Object;
+    if-eq v1, v3, :cond_3
 
-    invoke-interface {v4}, Lbp7;->getValue()Ljava/lang/Object;
+    return v2
 
-    move-result-object v4
+    :cond_3
+    iget v1, p0, Laed;->c:I
 
-    check-cast v4, Landroid/os/Parcelable;
+    iget v3, p1, Laed;->c:I
 
-    invoke-direct {v2, v0, v3, v4}, Ludd;-><init>(Lda4;ZLandroid/os/Parcelable;)V
+    if-eq v1, v3, :cond_4
 
-    invoke-virtual {p1, v2}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->b1(Lvdd;)V
+    return v2
 
-    invoke-virtual {p1}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->R0()V
+    :cond_4
+    iget v1, p0, Laed;->d:I
 
-    return-object v1
+    iget v3, p1, Laed;->d:I
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Laed;->e:Z
+
+    iget-boolean v3, p1, Laed;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Laed;->f:Z
+
+    iget-boolean v3, p1, Laed;->f:Z
+
+    if-eq v1, v3, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-boolean v1, p0, Laed;->g:Z
+
+    iget-boolean p1, p1, Laed;->g:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Laed;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Laed;->b:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Laed;->c:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget v2, p0, Laed;->d:I
+
+    invoke-static {v2, v0, v1}, Ljjd;->e(III)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Laed;->e:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Laed;->f:Z
+
+    invoke-static {v0, v1, v2}, Ljl3;->d(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Laed;->g:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", realWidth="
+
+    const-string v1, ", topInset="
+
+    const-string v2, "ScreenInfo(realHeight="
+
+    iget v3, p0, Laed;->a:I
+
+    iget v4, p0, Laed;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lxw1;->i(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", bottomInset="
+
+    const-string v2, ", isWeakDevice="
+
+    iget v3, p0, Laed;->c:I
+
+    iget v4, p0, Laed;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Ljl3;->l(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", isLong="
+
+    const-string v2, ", isWide="
+
+    iget-boolean v3, p0, Laed;->e:Z
+
+    iget-boolean v4, p0, Laed;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lsw1;->s(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Laed;->g:Z
+
+    invoke-static {v0, v2, v1}, Lsw1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

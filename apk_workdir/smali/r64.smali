@@ -1,195 +1,59 @@
 .class public final Lr64;
-.super Landroid/database/ContentObserver;
+.super Lfn7;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lk97;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lr64;->a:I
-
-    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lubb;Landroid/os/Handler;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lr64;->a:I
-
-    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
-
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly0f;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lr64;->a:I
-
-    iput-object p1, p0, Lr64;->b:Ljava/lang/Object;
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-direct {p1}, Landroid/os/Handler;-><init>()V
-
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public deliverSelfNotifications()Z
-    .locals 1
+.method public final s(Lt4e;FF)V
+    .locals 5
 
-    iget v0, p0, Lr64;->a:I
+    mul-float v0, p3, p2
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v1, 0x43340000    # 180.0f
 
-    :pswitch_0
-    invoke-super {p0}, Landroid/database/ContentObserver;->deliverSelfNotifications()Z
+    const/4 v2, 0x0
 
-    move-result v0
+    const/high16 v3, 0x42b40000    # 90.0f
 
-    return v0
+    invoke-virtual {p1, v2, v0, v1, v3}, Lt4e;->d(FFFF)V
 
-    :pswitch_1
-    const/4 v0, 0x0
+    float-to-double v0, v3
 
-    return v0
+    invoke-static {v0, v1}, Ljava/lang/Math;->toRadians(D)D
 
-    :pswitch_2
-    const/4 v0, 0x1
+    move-result-wide v0
 
-    return v0
+    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
+    move-result-wide v0
 
-.method public final onChange(Z)V
-    .locals 3
+    float-to-double v3, p3
 
-    iget p1, p0, Lr64;->a:I
+    mul-double/2addr v0, v3
 
-    packed-switch p1, :pswitch_data_0
+    float-to-double p2, p2
 
-    const-string p1, "Phonebook"
+    mul-double/2addr v0, p2
 
-    const-string v0, "contact observer onChange"
+    double-to-float v0, v0
 
-    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
+    float-to-double v1, v2
 
-    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
 
-    check-cast p1, Lubb;
+    move-result-wide v1
 
-    iget-object v0, p1, Lubb;->x0:Lmoe;
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
-    :cond_0
-    invoke-virtual {v0}, Lmoe;->getValue()Ljava/lang/Object;
+    move-result-wide v1
 
-    move-result-object v1
+    mul-double/2addr v1, v3
 
-    move-object v2, v1
+    mul-double/2addr v1, p2
 
-    check-cast v2, Ljava/lang/Number;
+    double-to-float p2, v1
 
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
-
-    iget-object v2, p1, Lubb;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lmoe;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
+    invoke-virtual {p1, v0, p2}, Lt4e;->c(FF)V
 
     return-void
-
-    :pswitch_0
-    sget-object p1, Lk97;->I0:Ljava/lang/String;
-
-    const-string v0, "ContentObserver: on content changed"
-
-    invoke-static {p1, v0}, Lox9;->k(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
-
-    check-cast p1, Lk97;
-
-    invoke-virtual {p1}, Lk97;->d()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lr64;->b:Ljava/lang/Object;
-
-    check-cast p1, Ly0f;
-
-    iget-boolean v0, p1, Lt64;->b:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p1, Lt64;->c:Landroid/database/Cursor;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p1, Lt64;->c:Landroid/database/Cursor;
-
-    invoke-interface {v0}, Landroid/database/Cursor;->requery()Z
-
-    move-result v0
-
-    iput-boolean v0, p1, Lt64;->a:Z
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,223 +1,465 @@
-.class public abstract Lqua;
+.class public final Lqua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
 
 # static fields
-.field public static final A:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lqua;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final B:I
+.field public static final Z:Lqua;
 
-.field public static final C:I
 
-.field public static final D:I
+# instance fields
+.field public final X:Lzta;
 
-.field public static final E:I
+.field public final Y:Ldua;
 
-.field public static final F:I
+.field public final a:Ljua;
 
-.field public static final G:I
+.field public final b:Ljava/lang/CharSequence;
 
-.field public static final H:I
+.field public final c:Ljava/lang/CharSequence;
 
-.field public static final I:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final o:Lpua;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Lqg8;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
+
+    sput-object v0, Lqua;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    new-instance v2, Lqua;
+
+    new-instance v7, Lzta;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-direct {v7, v0, v0, v0, v1}, Lzta;-><init>(IIII)V
+
+    sget-object v8, Lbua;->b:Lbua;
+
+    sget-object v3, Lgua;->a:Lgua;
+
+    const-string v4, ""
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lmua;->a:Lmua;
+
+    invoke-direct/range {v2 .. v8}, Lqua;-><init>(Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;)V
+
+    sput-object v2, Lqua;->Z:Lqua;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lqua;->a:Ljua;
+
+    .line 3
+    iput-object p2, p0, Lqua;->b:Ljava/lang/CharSequence;
+
+    .line 4
+    iput-object p3, p0, Lqua;->c:Ljava/lang/CharSequence;
+
+    .line 5
+    iput-object p4, p0, Lqua;->o:Lpua;
+
+    .line 6
+    iput-object p5, p0, Lqua;->X:Lzta;
+
+    .line 7
+    iput-object p6, p0, Lqua;->Y:Ldua;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljua;Ljava/lang/String;Ljava/lang/String;Lzta;)V
+    .locals 7
+
+    sget-object v4, Lmua;->a:Lmua;
+
+    .line 8
+    sget-object v6, Lbua;->b:Lbua;
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v5, p4
+
+    .line 9
+    invoke-direct/range {v0 .. v6}, Lqua;-><init>(Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;)V
+
+    return-void
+.end method
+
+.method public static a(Lqua;Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;I)Lqua;
+    .locals 7
+
+    and-int/lit8 v0, p7, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p0, Lqua;->a:Ljua;
+
+    :cond_0
+    move-object v1, p1
+
+    and-int/lit8 p1, p7, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, p0, Lqua;->b:Ljava/lang/CharSequence;
+
+    :cond_1
+    move-object v2, p2
+
+    and-int/lit8 p1, p7, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Lqua;->c:Ljava/lang/CharSequence;
+
+    :cond_2
+    move-object v3, p3
+
+    and-int/lit8 p1, p7, 0x8
+
+    if-eqz p1, :cond_3
+
+    iget-object p4, p0, Lqua;->o:Lpua;
+
+    :cond_3
+    move-object v4, p4
+
+    and-int/lit8 p1, p7, 0x10
+
+    if-eqz p1, :cond_4
+
+    iget-object p5, p0, Lqua;->X:Lzta;
+
+    :cond_4
+    move-object v5, p5
+
+    and-int/lit8 p1, p7, 0x20
+
+    if-eqz p1, :cond_5
+
+    iget-object p6, p0, Lqua;->Y:Ldua;
+
+    :cond_5
+    move-object v6, p6
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lqua;
+
+    invoke-direct/range {v0 .. v6}, Lqua;-><init>(Ljua;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lpua;Lzta;Ldua;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_all_cancel:I
+    const/4 v0, 0x0
 
-    sput v0, Lqua;->a:I
+    return v0
+.end method
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_all_clear:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    sput v0, Lqua;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_audio_cancel:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Lqua;->c:I
+    return v0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_audio_clear:I
+    :cond_0
+    instance-of v1, p1, Lqua;
 
-    sput v0, Lqua;->d:I
+    const/4 v2, 0x0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_files_cancel:I
+    if-nez v1, :cond_1
 
-    sput v0, Lqua;->e:I
+    return v2
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_files_clear:I
+    :cond_1
+    check-cast p1, Lqua;
 
-    sput v0, Lqua;->f:I
+    iget-object v1, p0, Lqua;->a:Ljua;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_gif_cancel:I
+    iget-object v3, p1, Lqua;->a:Ljua;
 
-    sput v0, Lqua;->g:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_gif_clear:I
+    move-result v1
 
-    sput v0, Lqua;->h:I
+    if-nez v1, :cond_2
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_images_cancel:I
+    return v2
 
-    sput v0, Lqua;->i:I
+    :cond_2
+    iget-object v1, p0, Lqua;->b:Ljava/lang/CharSequence;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_images_clear:I
+    iget-object v3, p1, Lqua;->b:Ljava/lang/CharSequence;
 
-    sput v0, Lqua;->j:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_music_cancel:I
+    move-result v1
 
-    sput v0, Lqua;->k:I
+    if-nez v1, :cond_3
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_music_clear:I
+    return v2
 
-    sput v0, Lqua;->l:I
+    :cond_3
+    iget-object v1, p0, Lqua;->c:Ljava/lang/CharSequence;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_stickers_cancel:I
+    iget-object v3, p1, Lqua;->c:Ljava/lang/CharSequence;
 
-    sput v0, Lqua;->m:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_stickers_clear:I
+    move-result v1
 
-    sput v0, Lqua;->n:I
+    if-nez v1, :cond_4
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_video_cancel:I
+    return v2
 
-    sput v0, Lqua;->o:I
+    :cond_4
+    iget-object v1, p0, Lqua;->o:Lpua;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_action_video_clear:I
+    iget-object v3, p1, Lqua;->o:Lpua;
 
-    sput v0, Lqua;->p:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_audio_messages:I
+    move-result v1
 
-    sput v0, Lqua;->q:I
+    if-nez v1, :cond_5
 
-    sget v0, Lvfc;->oneme_settings_storage_item_clear_cache:I
+    return v2
 
-    sput v0, Lqua;->r:I
+    :cond_5
+    iget-object v1, p0, Lqua;->X:Lzta;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_files:I
+    iget-object v3, p1, Lqua;->X:Lzta;
 
-    sput v0, Lqua;->s:I
+    invoke-static {v1, v3}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_gif:I
+    move-result v1
 
-    sput v0, Lqua;->t:I
+    if-nez v1, :cond_6
 
-    sget v0, Lvfc;->oneme_settings_storage_item_images:I
+    return v2
 
-    sput v0, Lqua;->u:I
+    :cond_6
+    iget-object v1, p0, Lqua;->Y:Ldua;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_music:I
+    iget-object p1, p1, Lqua;->Y:Ldua;
 
-    sput v0, Lqua;->v:I
+    invoke-static {v1, p1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget v0, Lvfc;->oneme_settings_storage_item_one_month:I
+    move-result p1
 
-    sput v0, Lqua;->w:I
+    if-nez p1, :cond_7
 
-    sget v0, Lvfc;->oneme_settings_storage_item_one_week:I
+    return v2
 
-    sput v0, Lqua;->x:I
+    :cond_7
+    return v0
+.end method
 
-    sget v0, Lvfc;->oneme_settings_storage_item_six_month:I
+.method public final hashCode()I
+    .locals 3
 
-    sput v0, Lqua;->y:I
+    iget-object v0, p0, Lqua;->a:Ljua;
 
-    sget v0, Lvfc;->oneme_settings_storage_item_stickers:I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    sput v0, Lqua;->z:I
+    move-result v0
 
-    sget v0, Lvfc;->oneme_settings_storage_item_unlimited:I
+    const/16 v1, 0x1f
 
-    sput v0, Lqua;->A:I
+    mul-int/2addr v0, v1
 
-    sget v0, Lvfc;->oneme_settings_storage_item_video:I
+    iget-object v2, p0, Lqua;->b:Ljava/lang/CharSequence;
 
-    sput v0, Lqua;->B:I
+    invoke-static {v2, v0, v1}, Lc85;->e(Ljava/lang/CharSequence;II)I
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_data_section_header:I
+    move-result v0
 
-    sput v0, Lqua;->C:I
+    iget-object v2, p0, Lqua;->c:Ljava/lang/CharSequence;
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_list:I
+    if-nez v2, :cond_0
 
-    sput v0, Lqua;->D:I
+    const/4 v2, 0x0
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_preserve_media_section:I
+    goto :goto_0
 
-    sput v0, Lqua;->E:I
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_button_vh:I
+    move-result v2
 
-    sput v0, Lqua;->F:I
+    :goto_0
+    add-int/2addr v0, v2
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_header_vh:I
+    mul-int/2addr v0, v1
 
-    sput v0, Lqua;->G:I
+    iget-object v2, p0, Lqua;->o:Lpua;
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_settings_item_vh:I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    sput v0, Lqua;->H:I
+    move-result v2
 
-    sget v0, Lvfc;->oneme_settings_storage_screen_toolbar:I
+    add-int/2addr v2, v0
 
-    sput v0, Lqua;->I:I
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lqua;->X:Lzta;
+
+    invoke-virtual {v0}, Lzta;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lqua;->Y:Ldua;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OneMeSnackbarModel(left="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqua;->a:Ljua;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", caption="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", right="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->o:Lpua;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", params="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->X:Lzta;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqua;->Y:Ldua;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lqua;->a:Ljua;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lqua;->b:Ljava/lang/CharSequence;
+
+    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+
+    iget-object v0, p0, Lqua;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+
+    iget-object v0, p0, Lqua;->o:Lpua;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lqua;->X:Lzta;
+
+    invoke-virtual {v0, p1, p2}, Lzta;->writeToParcel(Landroid/os/Parcel;I)V
+
+    iget-object v0, p0, Lqua;->Y:Ldua;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
 .end method

@@ -1,134 +1,110 @@
-.class public final synthetic Lzu5;
-.super Ljava/lang/Object;
+.class public final Lzu5;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lje6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:I
 
-.field public final synthetic a:Lbv5;
-
-.field public final synthetic b:I
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public final synthetic Y:Liu5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbv5;IIII)V
+.method public constructor <init>(Liu5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzu5;->Y:Liu5;
 
-    iput-object p1, p0, Lzu5;->a:Lbv5;
+    const/4 p1, 0x2
 
-    iput p2, p0, Lzu5;->b:I
-
-    iput p3, p0, Lzu5;->c:I
-
-    iput p4, p0, Lzu5;->o:I
-
-    iput p5, p0, Lzu5;->X:I
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lzu5;->a:Lbv5;
+    check-cast p1, Ln24;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lzu5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Float;
+    check-cast p1, Lzu5;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    sget-object p2, Laxf;->a:Laxf;
 
-    move-result p1
+    invoke-virtual {p1, p2}, Lzu5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v1, v0, Lbv5;->a:I
+    move-result-object p1
 
-    iget v2, p0, Lzu5;->b:I
+    return-object p1
+.end method
 
-    sub-int/2addr v2, v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    int-to-float v2, v2
+    new-instance p1, Lzu5;
 
-    mul-float/2addr v2, p1
+    iget-object v0, p0, Lzu5;->Y:Liu5;
 
-    float-to-int v2, v2
+    invoke-direct {p1, v0, p2}, Lzu5;-><init>(Liu5;Lkotlin/coroutines/Continuation;)V
 
-    add-int/2addr v1, v2
+    return-object p1
+.end method
 
-    iget v2, v0, Lbv5;->b:I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v3, p0, Lzu5;->c:I
+    iget v0, p0, Lzu5;->X:I
 
-    sub-int/2addr v3, v2
+    const/4 v1, 0x1
 
-    int-to-float v3, v3
+    if-eqz v0, :cond_1
 
-    mul-float/2addr v3, p1
+    if-ne v0, v1, :cond_0
 
-    float-to-int v3, v3
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    add-int/2addr v2, v3
+    goto :goto_0
 
-    iget v3, v0, Lbv5;->c:F
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget v4, p0, Lzu5;->o:I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    int-to-float v4, v4
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v4, v3, p1, v3}, Lvpb;->f(FFFF)F
+    throw p1
 
-    move-result v3
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    float-to-int v3, v3
+    iput v1, p0, Lzu5;->X:I
 
-    iget v4, v0, Lbv5;->o:F
+    iget-object p1, p0, Lzu5;->Y:Liu5;
 
-    iget v5, p0, Lzu5;->X:I
+    invoke-static {p1, p0}, Luce;->s(Liu5;Lc2f;)Ljava/lang/Object;
 
-    int-to-float v5, v5
+    move-result-object p1
 
-    invoke-static {v5, v4, p1, v4}, Lvpb;->f(FFFF)F
+    sget-object v0, Lo24;->a:Lo24;
 
-    move-result p1
+    if-ne p1, v0, :cond_2
 
-    float-to-int p1, p1
+    return-object v0
 
-    iget-object v4, v0, Lbv5;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
+    :cond_2
+    :goto_0
+    sget-object p1, Laxf;->a:Laxf;
 
-    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v5, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iget-object v1, v0, Lbv5;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    int-to-float v2, v3
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationX(F)V
-
-    iget-object v1, v0, Lbv5;->x0:Lcom/facebook/drawee/view/SimpleDraweeView;
-
-    int-to-float p1, p1
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    return-void
+    return-object p1
 .end method

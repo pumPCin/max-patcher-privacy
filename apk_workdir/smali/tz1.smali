@@ -1,29 +1,39 @@
 .class public final Ltz1;
-.super Landroid/hardware/camera2/CameraDevice$StateCallback;
+.super Lsz1;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
+.method public final a0(Ldud;)V
+    .locals 1
+
+    iget-object p1, p1, Ldud;->a:Lcud;
+
+    invoke-interface {p1}, Lcud;->a()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/hardware/camera2/params/SessionConfiguration;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :try_start_0
+    iget-object v0, p0, Lv7f;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/hardware/camera2/CameraDevice;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureSession(Landroid/hardware/camera2/params/SessionConfiguration;)V
+    :try_end_0
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
-.end method
 
-.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
+    :catch_0
+    move-exception p1
 
-    return-void
-.end method
+    new-instance v0, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
 
-.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 0
+    invoke-direct {v0, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
 
-    return-void
-.end method
-
-.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
-
-    return-void
+    throw v0
 .end method

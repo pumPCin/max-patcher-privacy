@@ -1,144 +1,85 @@
-.class public final Lic2;
-.super Ljava/lang/Object;
+.class public final enum Lic2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
-.implements Ln43;
 
+# static fields
+.field public static final enum a:Lic2;
 
-# instance fields
-.field public final a:J
+.field public static final enum b:Lic2;
 
-.field public final b:J
+.field public static final enum c:Lic2;
+
+.field public static final synthetic o:[Lic2;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lic2;
 
-    iput-wide p1, p0, Lic2;->a:J
+    const-string v1, "SOUND"
 
-    iput-wide p3, p0, Lic2;->b:J
+    const/4 v2, 0x0
 
-    const-wide/16 v0, -0x1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    cmp-long p1, p1, v0
+    sput-object v0, Lic2;->a:Lic2;
 
-    const-string p2, ""
+    new-instance v1, Lic2;
 
-    const-string v2, "Chunk"
+    const-string v2, "VIBRATION"
 
-    if-nez p1, :cond_0
+    const/4 v3, 0x1
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v3, "start time is -1"
+    sput-object v1, Lic2;->b:Lic2;
 
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v2, Lic2;
 
-    invoke-static {v2, p2, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v3, "LED"
 
-    :cond_0
-    cmp-long p1, p3, v0
+    const/4 v4, 0x2
 
-    if-nez p1, :cond_1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sput-object v2, Lic2;->c:Lic2;
 
-    const-string p3, "end time is -1"
+    filled-new-array {v0, v1, v2}, [Lic2;
 
-    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-static {v2, p2, p1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    sput-object v0, Lic2;->o:[Lic2;
 
-    :cond_1
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lic2;
+    .locals 1
 
-# virtual methods
-.method public final a()J
-    .locals 2
+    const-class v0, Lic2;
 
-    iget-wide v0, p0, Lic2;->a:J
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    return-wide v0
+    move-result-object p0
+
+    check-cast p0, Lic2;
+
+    return-object p0
 .end method
 
-.method public final c()J
-    .locals 2
+.method public static values()[Lic2;
+    .locals 1
 
-    iget-wide v0, p0, Lic2;->b:J
+    sget-object v0, Lic2;->o:[Lic2;
 
-    return-wide v0
-.end method
-
-.method public final d()Lhp0;
-    .locals 6
-
-    new-instance v0, Lhp0;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lhp0;-><init>(I)V
-
-    const-wide/16 v1, -0x1
-
-    iget-wide v3, p0, Lic2;->a:J
-
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "start time is -1"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "Chunk.Builder"
-
-    const-string v5, ""
-
-    invoke-static {v2, v5, v1}, Lox9;->N(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    iput-wide v3, v0, Lhp0;->b:J
-
-    iget-wide v1, p0, Lic2;->b:J
-
-    invoke-virtual {v0, v1, v2}, Lhp0;->b(J)V
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Chunk(startTime="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lic2;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", endTime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lic2;->b:J
-
-    const/16 v3, 0x29
-
-    invoke-static {v0, v1, v2, v3}, Lvpb;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-virtual {v0}, [Lic2;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lic2;
 
     return-object v0
 .end method

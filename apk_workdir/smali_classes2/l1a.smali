@@ -1,48 +1,70 @@
 .class public final Ll1a;
-.super Lnz3;
+.super Ly7f;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lg68;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ls82;
 
 
 # direct methods
-.method public constructor <init>(Lg68;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lc79;)V
     .locals 0
 
-    iput-object p1, p0, Ll1a;->Y:Lg68;
-
-    invoke-direct {p0, p2}, Lnz3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Ly7f;-><init>(Lc79;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c(Lc79;Ljava/lang/String;)V
     .locals 1
 
-    iput-object p1, p0, Ll1a;->o:Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget p1, p0, Ll1a;->X:I
+    const-string v0, "chat"
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    or-int/2addr p1, v0
+    move-result p2
 
-    iput p1, p0, Ll1a;->X:I
+    if-nez p2, :cond_0
 
-    iget-object p1, p0, Ll1a;->Y:Lg68;
+    invoke-virtual {p1}, Lc79;->y()V
 
-    const/4 v0, 0x0
+    return-void
 
-    invoke-virtual {p1, v0, p0}, Lg68;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_0
+    invoke-static {p1}, Ls82;->a(Lc79;)Ls82;
 
     move-result-object p1
 
-    return-object p1
+    iput-object p1, p0, Ll1a;->c:Ls82;
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ll1a;->c:Ls82;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

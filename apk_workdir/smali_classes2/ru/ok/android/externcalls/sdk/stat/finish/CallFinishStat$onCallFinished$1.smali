@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat$onCallFinished$1;
-.super Lmo7;
+.super Ljn7;
 .source "SourceFile"
 
 # interfaces
-.implements Lxe6;
+.implements Lvd6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lmo7;",
-        "Lxe6;"
+        "Ljn7;",
+        "Lvd6;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
         "\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Lx61;",
+        "Lp61;",
         "callEventualStatSender",
-        "Loyf;",
+        "Laxf;",
         "invoke",
-        "(Lx61;)V",
+        "(Lp61;)V",
         "<anonymous>"
     }
     k = 0x3
@@ -92,7 +92,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lmo7;-><init>(I)V
+    invoke-direct {p0, p1}, Ljn7;-><init>(I)V
 
     return-void
 .end method
@@ -103,16 +103,16 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lx61;
+    check-cast p1, Lp61;
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat$onCallFinished$1;->invoke(Lx61;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat$onCallFinished$1;->invoke(Lp61;)V
 
-    sget-object p1, Loyf;->a:Loyf;
+    sget-object p1, Laxf;->a:Laxf;
 
     return-object p1
 .end method
 
-.method public final invoke(Lx61;)V
+.method public final invoke(Lp61;)V
     .locals 6
 
     .line 2
@@ -128,7 +128,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->access$report(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lx61;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
+    invoke-static/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;->access$report(Lru/ok/android/externcalls/sdk/stat/finish/CallFinishStat;Lp61;Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;Ljava/util/List;Ljava/lang/String;Z)V
 
     return-void
 .end method

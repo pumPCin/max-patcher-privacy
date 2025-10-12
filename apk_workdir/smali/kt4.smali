@@ -2,145 +2,143 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Lpi5;
+.field public final a:Lyv4;
 
-.field public volatile b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:Lwv4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyv4;IJJI)V
+    .locals 12
 
-    new-instance v0, Ljava/lang/Object;
+    .line 1
+    new-instance v11, Lwv4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lkt4;->c:Ljava/lang/Object;
+    const-wide/16 v7, -0x1
+
+    const/4 v10, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move-wide v3, p3
+
+    move-wide/from16 v5, p5
+
+    move/from16 v9, p7
+
+    .line 3
+    invoke-direct/range {v0 .. v11}, Lkt4;-><init>(Lyv4;IJJJIILwv4;)V
 
     return-void
 .end method
 
-.method public static a(Lpi5;)Ljavax/inject/Provider;
-    .locals 2
+.method public constructor <init>(Lyv4;IJJJIILwv4;)V
+    .locals 4
 
-    instance-of v0, p0, Lkt4;
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    .line 5
+    invoke-virtual {p11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :cond_0
-    new-instance v0, Lkt4;
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-nez p10, :cond_0
 
-    sget-object v1, Lkt4;->c:Ljava/lang/Object;
-
-    iput-object v1, v0, Lkt4;->b:Ljava/lang/Object;
-
-    iput-object p0, v0, Lkt4;->a:Lpi5;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 5
-
-    iget-object v0, p0, Lkt4;->b:Ljava/lang/Object;
-
-    sget-object v1, Lkt4;->c:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lkt4;->b:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lkt4;->a:Lpi5;
-
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lkt4;->b:Ljava/lang/Object;
-
-    if-eq v2, v1, :cond_1
-
-    if-ne v2, v0, :cond_0
+    move v2, v1
 
     goto :goto_0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    move v2, v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Scoped provider was invoked recursively returning different results: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " & "
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". This is likely due to a circular dependency."
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
     :goto_0
-    iput-object v0, p0, Lkt4;->b:Ljava/lang/Object;
+    const/4 v3, 0x4
 
-    const/4 v1, 0x0
+    if-eq p2, v3, :cond_1
 
-    iput-object v1, p0, Lkt4;->a:Lpi5;
+    move v3, v1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    move v3, v0
+
+    :goto_1
+    if-ne v2, v3, :cond_2
+
+    move v2, v1
 
     goto :goto_2
 
     :cond_2
-    :goto_1
-    monitor-exit p0
+    move v2, v0
 
-    return-object v0
-
+    .line 6
     :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {v2}, Lq5h;->f(Z)V
 
-    throw v0
+    if-eqz p9, :cond_4
 
+    const/4 v2, 0x2
+
+    if-eq p2, v2, :cond_3
+
+    if-eqz p2, :cond_3
+
+    move v0, v1
+
+    .line 7
     :cond_3
-    return-object v0
+    invoke-static {v0}, Lq5h;->f(Z)V
+
+    .line 8
+    :cond_4
+    iput-object p1, p0, Lkt4;->a:Lyv4;
+
+    .line 9
+    iput p2, p0, Lkt4;->b:I
+
+    .line 10
+    iput-wide p3, p0, Lkt4;->c:J
+
+    .line 11
+    iput-wide p5, p0, Lkt4;->d:J
+
+    .line 12
+    iput-wide p7, p0, Lkt4;->e:J
+
+    .line 13
+    iput p9, p0, Lkt4;->f:I
+
+    .line 14
+    iput p10, p0, Lkt4;->g:I
+
+    .line 15
+    iput-object p11, p0, Lkt4;->h:Lwv4;
+
+    return-void
 .end method

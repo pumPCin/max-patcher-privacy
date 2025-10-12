@@ -1,90 +1,97 @@
-.class public final synthetic Lhn8;
-.super Ljava/lang/Object;
+.class public final enum Lhn8;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
 
+# static fields
+.field public static final synthetic X:[Lhn8;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Lhn8;
 
-.field public final synthetic b:[Landroid/view/View;
+.field public static final enum b:Lhn8;
+
+.field public static final enum c:Lhn8;
+
+.field public static final enum o:Lhn8;
 
 
 # direct methods
-.method public synthetic constructor <init>([Landroid/view/View;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lhn8;->a:I
+    new-instance v0, Lhn8;
 
-    iput-object p1, p0, Lhn8;->b:[Landroid/view/View;
+    const-string v1, "AUDIO"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lhn8;->a:Lhn8;
+
+    new-instance v1, Lhn8;
+
+    const-string v2, "VIDEO"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lhn8;->b:Lhn8;
+
+    new-instance v2, Lhn8;
+
+    const-string v3, "SCREEN_SHARING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lhn8;->c:Lhn8;
+
+    new-instance v3, Lhn8;
+
+    const-string v4, "MOVIE_SHARING"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lhn8;->o:Lhn8;
+
+    filled-new-array {v0, v1, v2, v3}, [Lhn8;
+
+    move-result-object v0
+
+    sput-object v0, Lhn8;->X:[Lhn8;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lhn8;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+    const-class v0, Lhn8;
 
-    iget v0, p0, Lhn8;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget-object v1, Loyf;->a:Loyf;
+    move-result-object p0
 
-    const/4 v2, 0x0
+    check-cast p0, Lhn8;
 
-    iget-object v3, p0, Lhn8;->b:[Landroid/view/View;
+    return-object p0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public static values()[Lhn8;
+    .locals 1
 
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->G0:[Ltm7;
+    sget-object v0, Lhn8;->X:[Lhn8;
 
-    array-length v0, v3
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    move-result-object v0
 
-    aget-object v4, v3, v2
+    check-cast v0, [Lhn8;
 
-    const/16 v5, 0x8
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
-
-    :pswitch_0
-    sget-object v0, Lone/me/keyboardmedia/MediaKeyboardWidget;->G0:[Ltm7;
-
-    array-length v0, v3
-
-    move v4, v2
-
-    :goto_1
-    if-ge v4, v0, :cond_1
-
-    aget-object v5, v3, v4
-
-    invoke-virtual {v5, v2}, Landroid/view/View;->setVisibility(I)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

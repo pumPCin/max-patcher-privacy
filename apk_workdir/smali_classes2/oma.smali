@@ -1,37 +1,61 @@
-.class public abstract Loma;
-.super Ljava/lang/Object;
+.class public final Loma;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public X:Ljava/nio/file/Path;
 
-.field public static final b:I
+.field public Y:Ljava/io/Closeable;
 
-.field public static final c:I
+.field public Z:Ljava/io/BufferedWriter;
 
-.field public static final d:I
+.field public o:Lpma;
+
+.field public r0:Lau0;
+
+.field public s0:I
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lpma;
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lpma;Lwy3;)V
+    .locals 0
 
-    sget v0, Lcjc;->oneme_file_download_warning_confirm_btn:I
+    iput-object p1, p0, Loma;->u0:Lpma;
 
-    sput v0, Loma;->a:I
-
-    sget v0, Lcjc;->oneme_file_download_warning_deny_btn:I
-
-    sput v0, Loma;->b:I
-
-    sget v0, Lcjc;->oneme_file_download_warning_description:I
-
-    sput v0, Loma;->c:I
-
-    sget v0, Lcjc;->oneme_file_download_warning_title:I
-
-    sput v0, Loma;->d:I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Loma;->t0:Ljava/lang/Object;
+
+    iget p1, p0, Loma;->v0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Loma;->v0:I
+
+    iget-object p1, p0, Loma;->u0:Lpma;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lpma;->b(Lpma;Ljava/nio/file/Path;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

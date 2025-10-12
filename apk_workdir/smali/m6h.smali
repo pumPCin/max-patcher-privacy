@@ -1,399 +1,243 @@
-.class public abstract Lm6h;
-.super Ljava/lang/Object;
+.class public final Lm6h;
+.super Landroid/view/WindowInsetsAnimation$Callback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/reflect/Field;
+# instance fields
+.field public final a:La82;
 
-.field public static final b:Ljava/lang/reflect/Method;
+.field public b:Ljava/util/List;
 
-.field public static final c:Ljava/lang/reflect/Method;
+.field public c:Ljava/util/ArrayList;
 
-.field public static final d:Ljava/lang/reflect/Constructor;
-
-.field public static final e:Lc78;
-
-.field public static final f:Ljava/lang/Object;
+.field public final d:Ljava/util/HashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(La82;)V
+    .locals 1
 
-    const-class v0, Landroid/graphics/Typeface;
+    iget v0, p1, La82;->a:I
 
-    :try_start_0
-    const-string v1, "native_instance"
+    invoke-direct {p0, v0}, Landroid/view/WindowInsetsAnimation$Callback;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    new-instance v0, Ljava/util/HashMap;
 
-    move-result-object v1
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const-string v2, "nativeCreateFromTypeface"
+    iput-object v0, p0, Lm6h;->d:Ljava/util/HashMap;
 
-    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v3, v4}, [Ljava/lang/Class;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v2, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v2, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v6, "nativeCreateWeightAlias"
-
-    filled-new-array {v3, v4}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v6, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v5}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "WeightTypeface"
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    const/4 v1, 0x0
-
-    move-object v0, v1
-
-    move-object v2, v0
-
-    move-object v4, v2
-
-    :goto_0
-    sput-object v1, Lm6h;->a:Ljava/lang/reflect/Field;
-
-    sput-object v2, Lm6h;->b:Ljava/lang/reflect/Method;
-
-    sput-object v4, Lm6h;->c:Ljava/lang/reflect/Method;
-
-    sput-object v0, Lm6h;->d:Ljava/lang/reflect/Constructor;
-
-    new-instance v0, Lc78;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lc78;-><init>(I)V
-
-    sput-object v0, Lm6h;->e:Lc78;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lm6h;->f:Ljava/lang/Object;
+    iput-object p1, p0, Lm6h;->a:La82;
 
     return-void
 .end method
 
-.method public static a(J)Landroid/graphics/Typeface;
-    .locals 2
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final a(Landroid/view/WindowInsetsAnimation;)Lp6h;
+    .locals 5
 
-    :try_start_0
-    sget-object v1, Lm6h;->d:Ljava/lang/reflect/Constructor;
+    iget-object v0, p0, Lm6h;->d:Ljava/util/HashMap;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    check-cast v0, Lp6h;
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    return-object v0
-.end method
-
-.method public static b(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
-    .locals 8
-
-    sget-object v0, Lm6h;->a:Ljava/lang/reflect/Field;
+    new-instance v0, Lp6h;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_3
+    const-wide/16 v2, 0x0
 
-    shl-int/lit8 v2, p1, 0x1
+    const/4 v4, 0x0
 
-    sget-object v3, Lm6h;->f:Ljava/lang/Object;
+    invoke-direct {v0, v4, v1, v2, v3}, Lp6h;-><init>(ILandroid/view/animation/Interpolator;J)V
 
-    monitor-enter v3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    :try_start_0
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
+    const/16 v2, 0x1e
 
-    move-result-wide v4
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-lt v1, v2, :cond_0
 
-    :try_start_1
-    sget-object v0, Lm6h;->e:Lc78;
+    new-instance v1, Ln6h;
 
-    invoke-virtual {v0, v4, v5}, Lc78;->b(J)Ljava/lang/Object;
+    invoke-direct {v1, p1}, Ln6h;-><init>(Landroid/view/WindowInsetsAnimation;)V
 
-    move-result-object v6
+    iput-object v1, v0, Lp6h;->a:Lo6h;
 
-    check-cast v6, Landroid/util/SparseArray;
+    :cond_0
+    iget-object v1, p0, Lm6h;->d:Ljava/util/HashMap;
 
-    if-nez v6, :cond_0
+    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v6, Landroid/util/SparseArray;
+    :cond_1
+    return-object v0
+.end method
 
-    const/4 v7, 0x4
+.method public final onEnd(Landroid/view/WindowInsetsAnimation;)V
+    .locals 2
 
-    invoke-direct {v6, v7}, Landroid/util/SparseArray;-><init>(I)V
+    iget-object v0, p0, Lm6h;->a:La82;
 
-    invoke-virtual {v0, v4, v5, v6}, Lc78;->e(JLjava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lm6h;->a(Landroid/view/WindowInsetsAnimation;)Lp6h;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, La82;->b(Lp6h;)V
+
+    iget-object v0, p0, Lm6h;->d:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final onPrepare(Landroid/view/WindowInsetsAnimation;)V
+    .locals 1
+
+    iget-object v0, p0, Lm6h;->a:La82;
+
+    invoke-virtual {p0, p1}, Lm6h;->a(Landroid/view/WindowInsetsAnimation;)Lp6h;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, La82;->c(Lp6h;)V
+
+    return-void
+.end method
+
+.method public final onProgress(Landroid/view/WindowInsets;Ljava/util/List;)Landroid/view/WindowInsets;
+    .locals 4
+
+    iget-object v0, p0, Lm6h;->c:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lm6h;->c:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lm6h;->b:Ljava/util/List;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
-
     :cond_0
-    invoke-virtual {v6, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Typeface;
-
-    if-eqz v0, :cond_1
-
-    monitor-exit v3
-
-    return-object v0
-
-    :cond_1
     :goto_0
-    invoke-virtual {p0}, Landroid/graphics/Typeface;->isItalic()Z
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    move-result p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result v0
 
-    if-nez p0, :cond_2
+    add-int/lit8 v0, v0, -0x1
 
-    :try_start_2
-    sget-object p0, Lm6h;->c:Ljava/lang/reflect/Method;
+    :goto_1
+    if-ltz v0, :cond_1
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1}, Ll2b;->m(Ljava/lang/Object;)Landroid/view/WindowInsetsAnimation;
 
-    move-result-object p1
+    move-result-object v1
 
-    filled-new-array {v0, p1}, [Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lm6h;->a(Landroid/view/WindowInsetsAnimation;)Lp6h;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-virtual {p0, v1, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Ll2b;->z(Landroid/view/WindowInsetsAnimation;)F
 
-    move-result-object p0
+    move-result v1
 
-    check-cast p0, Ljava/lang/Long;
+    iget-object v3, v2, Lp6h;->a:Lo6h;
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v3, v1}, Lo6h;->d(F)V
 
-    move-result-wide p0
-    :try_end_2
-    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    iget-object v1, p0, Lm6h;->c:Ljava/util/ArrayList;
 
-    :try_start_3
-    invoke-static {p0, p1}, Lm6h;->a(J)Landroid/graphics/Typeface;
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception p0
+    add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    :catch_1
-    move-exception p0
+    :cond_1
+    const/4 p2, 0x0
 
-    goto :goto_2
+    invoke-static {p2, p1}, Ld7h;->h(Landroid/view/View;Landroid/view/WindowInsets;)Ld7h;
 
-    :goto_1
-    new-instance p1, Ljava/lang/RuntimeException;
+    move-result-object p1
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    iget-object p2, p0, Lm6h;->b:Ljava/util/List;
 
-    throw p1
+    iget-object v0, p0, Lm6h;->a:La82;
 
-    :goto_2
-    new-instance p1, Ljava/lang/RuntimeException;
+    invoke-virtual {v0, p1, p2}, La82;->d(Ld7h;Ljava/util/List;)Ld7h;
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    move-result-object p1
 
-    throw p1
+    invoke-virtual {p1}, Ld7h;->g()Landroid/view/WindowInsets;
 
-    :cond_2
-    invoke-static {p1, v4, v5}, Lm6h;->c(IJ)J
+    move-result-object p1
 
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Lm6h;->a(J)Landroid/graphics/Typeface;
-
-    move-result-object p0
-
-    :goto_3
-    invoke-virtual {v6, v2, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    monitor-exit v3
-
-    return-object p0
-
-    :catch_2
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :goto_4
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p0
-
-    :cond_3
-    return-object v1
+    return-object p1
 .end method
 
-.method public static c(IJ)J
+.method public final onStart(Landroid/view/WindowInsetsAnimation;Landroid/view/WindowInsetsAnimation$Bounds;)Landroid/view/WindowInsetsAnimation$Bounds;
     .locals 1
 
-    :try_start_0
-    sget-object v0, Lm6h;->b:Ljava/lang/reflect/Method;
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0, p1}, Lm6h;->a(Landroid/view/WindowInsetsAnimation;)Lp6h;
 
     move-result-object p1
 
-    const/4 p2, 0x0
+    new-instance v0, Ldzb;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v0, p2}, Ldzb;-><init>(Landroid/view/WindowInsetsAnimation$Bounds;)V
 
-    move-result-object p2
+    iget-object p2, p0, Lm6h;->a:La82;
 
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {v0, p2, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1, v0}, La82;->e(Lp6h;Ldzb;)Ldzb;
 
     move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lm6h;->c:Ljava/lang/reflect/Method;
+    invoke-static {}, Ll2b;->q()V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object p2, p1, Ldzb;->b:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p2, Lwb7;
 
-    filled-new-array {p1, p0}, [Ljava/lang/Object;
+    invoke-virtual {p2}, Lwb7;->d()Landroid/graphics/Insets;
 
-    move-result-object p0
+    move-result-object p2
 
-    invoke-virtual {v0, p2, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Ldzb;->c:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Lwb7;
 
-    check-cast p0, Ljava/lang/Long;
+    invoke-virtual {p1}, Lwb7;->d()Landroid/graphics/Insets;
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    move-result-object p1
 
-    move-result-wide p0
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p2, p1}, Ll2b;->k(Landroid/graphics/Insets;Landroid/graphics/Insets;)Landroid/view/WindowInsetsAnimation$Bounds;
 
-    return-wide p0
+    move-result-object p1
 
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    return-object p1
 .end method

@@ -1,123 +1,70 @@
-.class public final Lhse;
-.super Ll9f;
+.class public final synthetic Lhse;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
-.field public c:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public o:J
+.field public final synthetic b:Lore;
 
 
 # direct methods
-.method public constructor <init>(Ls89;)V
+.method public synthetic constructor <init>(Lore;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ll9f;-><init>(Ls89;)V
+    iput p2, p0, Lhse;->a:I
+
+    iput-object p1, p0, Lhse;->b:Lore;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ls89;Ljava/lang/String;)V
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lhse;->a:I
 
-    const-string v0, "marker"
+    check-cast p1, Lgse;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lhse;->b:Lore;
 
-    if-nez v0, :cond_2
+    iget-wide v0, v0, Lore;->b:J
 
-    const-string v0, "stickers"
+    iget-object p1, p1, Lgse;->a:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v2, Lgse;
 
-    move-result p2
+    invoke-direct {v2, p1, v0, v1}, Lgse;-><init>(Ljava/lang/String;J)V
 
-    if-nez p2, :cond_0
+    return-object v2
 
-    invoke-virtual {p1}, Ls89;->B()V
+    :pswitch_0
+    iget-object v0, p0, Lhse;->b:Lore;
 
-    return-void
+    iget-wide v0, v0, Lore;->b:J
 
-    :cond_0
-    invoke-static {p1}, Lvb4;->Q(Ls89;)I
+    iget-object p1, p1, Lgse;->a:Ljava/lang/String;
 
-    move-result p2
+    new-instance v2, Lgse;
 
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {v2, p1, v0, v1}, Lgse;-><init>(Ljava/lang/String;J)V
 
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
+    return-object v2
 
-    iput-object v0, p0, Lhse;->c:Ljava/util/ArrayList;
+    nop
 
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    iget-object v1, p0, Lhse;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ls89;->A0()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :cond_2
-    invoke-virtual {p1}, Ls89;->A0()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lhse;->o:J
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-object v0, p0, Lhse;->c:Ljava/util/ArrayList;
-
-    iget-wide v1, p0, Lhse;->o:J
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{stickerIds="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", marker="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

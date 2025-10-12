@@ -3,345 +3,135 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnf6;
+.implements Lno3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lw88;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(ZLw88;J)V
     .locals 0
 
-    iput p1, p0, Lt88;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lt88;->a:Z
+
+    iput-object p2, p0, Lt88;->b:Lw88;
+
+    iput-wide p3, p0, Lt88;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final accept(Ljava/lang/Object;)V
+    .locals 8
 
-    iget v0, p0, Lt88;->a:I
+    check-cast p1, Ljava/util/Map;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ly38;
-
-    check-cast p2, Ljava/lang/String;
-
-    check-cast p3, Ljava/lang/String;
-
-    iget p1, p1, Ly38;->a:I
-
-    invoke-static {p1, p2, p3}, Landroid/util/Log;->println(ILjava/lang/String;Ljava/lang/String;)I
-
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Landroid/widget/ImageView;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Luxa;
-
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iget-boolean v0, p0, Lt88;->a:Z
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    sget-object v1, La98;->a:La98;
+
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwn0;
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    sget-object v1, La98;->c:La98;
+
+    invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lwn0;
 
     :goto_0
-    if-eqz p1, :cond_3
+    iget-object v2, p0, Lt88;->b:Lw88;
 
-    invoke-interface {p3}, Luxa;->b()Lue0;
+    iget-object v2, v2, Lw88;->e:Ljava/util/LinkedHashMap;
 
-    move-result-object v0
+    invoke-virtual {v2}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    iget v0, v0, Lue0;->j:I
+    move-result-object v2
 
-    const-string v1, "second_body"
+    invoke-interface {v2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "second_head"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "first_body"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "first_head"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lk27;->a:Lq27;
-
-    iget-object v0, v0, Lq27;->c:Ls27;
-
-    if-eqz p2, :cond_1
-
-    iget v0, v0, Ls27;->a:I
-
-    goto :goto_1
-
-    :cond_1
-    iget v0, v0, Ls27;->b:I
+    move-result-object v2
 
     :goto_1
-    const-string v1, "border"
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {p1, v1, v0}, Lk74;->T(Lc6g;Ljava/lang/String;I)V
+    move-result v3
 
-    if-eqz p2, :cond_2
+    if-eqz v3, :cond_3
 
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p2
+    move-result-object v3
 
-    iget-object p2, p2, Lk27;->a:Lq27;
+    check-cast v3, Lv88;
 
-    iget-object p2, p2, Lq27;->c:Ls27;
+    iget-object v4, v3, Lv88;->a:Lja8;
 
-    iget p2, p2, Ls27;->a:I
+    iget-object v3, v3, Lv88;->b:Lga8;
+
+    iget-wide v4, v4, Lja8;->j:J
+
+    iget-wide v6, p0, Lt88;->c:J
+
+    cmp-long v4, v4, v6
+
+    if-nez v4, :cond_2
+
+    if-eqz v0, :cond_1
+
+    sget-object v4, La98;->b:La98;
+
+    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwn0;
+
+    invoke-virtual {v3, v4}, Lga8;->b(Lwn0;)V
+
+    goto :goto_2
+
+    :cond_1
+    sget-object v4, La98;->o:La98;
+
+    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwn0;
+
+    invoke-virtual {v3, v4}, Lga8;->b(Lwn0;)V
 
     goto :goto_2
 
     :cond_2
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lk27;->a:Lq27;
-
-    iget-object p2, p2, Lq27;->c:Ls27;
-
-    iget p2, p2, Ls27;->b:I
+    invoke-virtual {v3, v1}, Lga8;->b(Lwn0;)V
 
     :goto_2
-    const-string p3, "background"
+    invoke-virtual {v3}, Lga8;->d()V
 
-    invoke-static {p1, p3, p2}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
+    goto :goto_1
 
     :cond_3
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Landroid/widget/ImageView;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Luxa;
-
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    if-eqz v0, :cond_4
-
-    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    goto :goto_3
-
-    :cond_4
-    const/4 p1, 0x0
-
-    :goto_3
-    if-eqz p1, :cond_6
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "cutout"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    if-eqz p2, :cond_5
-
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lk27;->a:Lq27;
-
-    iget-object p2, p2, Lq27;->c:Ls27;
-
-    iget p2, p2, Ls27;->a:I
-
-    goto :goto_4
-
-    :cond_5
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lk27;->a:Lq27;
-
-    iget-object p2, p2, Lq27;->c:Ls27;
-
-    iget p2, p2, Ls27;->b:I
-
-    :goto_4
-    const-string p3, "gear"
-
-    invoke-static {p1, p3, p2}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    :cond_6
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_2
-    check-cast p1, Landroid/widget/ImageView;
-
-    check-cast p2, Ljava/lang/Boolean;
-
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p2
-
-    check-cast p3, Luxa;
-
-    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    if-eqz v0, :cond_7
-
-    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-    goto :goto_5
-
-    :cond_7
-    const/4 p1, 0x0
-
-    :goto_5
-    if-eqz p1, :cond_9
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "left_dot"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "middle_dot"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    invoke-interface {p3}, Luxa;->b()Lue0;
-
-    move-result-object v0
-
-    iget v0, v0, Lue0;->j:I
-
-    const-string v1, "right_dot"
-
-    invoke-static {p1, v1, v0}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    if-eqz p2, :cond_8
-
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lk27;->a:Lq27;
-
-    iget-object p2, p2, Lq27;->c:Ls27;
-
-    iget p2, p2, Ls27;->a:I
-
-    goto :goto_6
-
-    :cond_8
-    invoke-interface {p3}, Luxa;->getIcon()Lk27;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lk27;->a:Lq27;
-
-    iget-object p2, p2, Lq27;->c:Ls27;
-
-    iget p2, p2, Ls27;->b:I
-
-    :goto_6
-    const-string p3, "shape"
-
-    invoke-static {p1, p3, p2}, Lk74;->S(Lc6g;Ljava/lang/String;I)V
-
-    :cond_9
-    sget-object p1, Loyf;->a:Loyf;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

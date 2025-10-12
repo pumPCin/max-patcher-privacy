@@ -1,26 +1,30 @@
 .class public final Lvk3;
-.super Lm3f;
+.super Lc2f;
 .source "SourceFile"
 
 # interfaces
-.implements Llf6;
+.implements Lje6;
 
 
 # instance fields
-.field public X:I
+.field public X:J
 
-.field public final synthetic Y:Lzk3;
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public final synthetic r0:Lxk3;
 
 
 # direct methods
-.method public constructor <init>(Lzk3;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxk3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lvk3;->Y:Lzk3;
+    iput-object p1, p0, Lvk3;->r0:Lxk3;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Lm3f;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Le34;
+    check-cast p1, Ln24;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +44,7 @@
 
     check-cast p1, Lvk3;
 
-    sget-object p2, Loyf;->a:Loyf;
+    sget-object p2, Laxf;->a:Laxf;
 
     invoke-virtual {p1, p2}, Lvk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,33 +54,61 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lvk3;
+    new-instance v0, Lvk3;
 
-    iget-object v0, p0, Lvk3;->Y:Lzk3;
+    iget-object v1, p0, Lvk3;->r0:Lxk3;
 
-    invoke-direct {p1, v0, p2}, Lvk3;-><init>(Lzk3;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1, p2}, Lvk3;-><init>(Lxk3;Lkotlin/coroutines/Continuation;)V
 
-    return-object p1
+    iput-object p1, v0, Lvk3;->Z:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 13
 
-    iget v0, p0, Lvk3;->X:I
+    iget v0, p0, Lvk3;->Y:I
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
-    iget-object v2, p0, Lvk3;->Y:Lzk3;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    iget-object v3, p0, Lvk3;->r0:Lxk3;
+
+    const/4 v4, 0x1
+
+    sget-object v5, Lo24;->a:Lo24;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v4, :cond_1
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-object v0, p0, Lvk3;->Z:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Ln24;
+
+    :try_start_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto/16 :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_3
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_4
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -88,102 +120,197 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lps;->L(Ljava/lang/Object;)V
+    iget-wide v6, p0, Lvk3;->X:J
 
-    iget-object p1, v2, Lzk3;->w0:Ls5f;
+    iget-object v0, p0, Lvk3;->Z:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    check-cast v0, Ln24;
 
-    move-result-object p1
+    :try_start_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast p1, Lt70;
-
-    iget-object v0, v2, Lzk3;->X:Ljava/lang/String;
-
-    iput v1, p0, Lvk3;->X:I
-
-    const/4 v1, 0x2
-
-    invoke-virtual {p1, v0, v1, p0}, Lt70;->a(Ljava/lang/String;ILm3f;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lf34;->a:Lf34;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    goto :goto_0
 
     :cond_2
-    :goto_0
-    check-cast p1, Ls70;
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
 
-    iget-object v0, p1, Ls70;->c:Ljava/lang/String;
+    iget-object p1, p0, Lvk3;->Z:Ljava/lang/Object;
 
-    iput-object v0, v2, Lzk3;->o:Ljava/lang/String;
+    move-object v0, p1
 
-    iget-wide v0, p1, Ls70;->X:J
+    check-cast v0, Ln24;
 
-    sget-object p1, Ls05;->c:Ls05;
+    :try_start_2
+    sget p1, Lyz4;->o:I
 
-    invoke-static {v0, v1, p1}, Lyhh;->P(JLs05;)J
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-wide v0
+    move-result-wide v6
 
-    sget p1, Ln05;->o:I
+    sget-object p1, Ld05;->b:Ld05;
 
-    sget-object p1, Ls05;->o:Ls05;
+    invoke-static {v6, v7, p1}, Lx2d;->N(JLd05;)J
 
-    invoke-static {v0, v1, p1}, Ln05;->i(JLs05;)J
+    move-result-wide v6
 
-    move-result-wide v0
+    iget-object p1, v3, Lxk3;->o:Lyn7;
 
-    iget-object p1, v2, Lzk3;->C0:Lmoe;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
-    new-instance v3, Ljava/lang/Long;
+    move-result-object p1
 
-    invoke-direct {v3, v0, v1}, Ljava/lang/Long;-><init>(J)V
+    check-cast p1, Lfzf;
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lvk3;->Z:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v3}, Lmoe;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-wide v6, p0, Lvk3;->X:J
 
-    iget-object p1, v2, Lzk3;->H0:Lqle;
+    iput v4, p0, Lvk3;->Y:I
 
-    if-eqz p1, :cond_3
+    invoke-virtual {p1, v4, v2, p0}, Lfzf;->a(ZZLc2f;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Llj7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    move-result-object p1
+
+    if-ne p1, v5, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    new-instance p1, Lyk3;
+    :goto_0
+    iget-object p1, v3, Lxk3;->c:Lyn7;
 
-    invoke-direct {p1, v2, v0}, Lyk3;-><init>(Lzk3;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v2, v0, p1, v1}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iput-object p1, v2, Lzk3;->H0:Lqle;
+    check-cast p1, Lm63;
 
-    iget-object p1, v2, Lzk3;->y0:Lbp7;
+    iget-object v8, v3, Lxk3;->b:Ljava/lang/String;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    check-cast p1, Lt08;
+
+    invoke-virtual {p1}, Lfhd;->s()J
+
+    move-result-wide v9
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    const-string v12, "app.pin_"
+
+    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v11, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {p1, v9, v8}, Lv3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget p1, Lyz4;->o:I
+
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v8
+
+    sget-object p1, Ld05;->b:Ld05;
+
+    invoke-static {v8, v9, p1}, Lx2d;->N(JLd05;)J
+
+    move-result-wide v8
+
+    invoke-static {v8, v9, v6, v7}, Lyz4;->g(JJ)J
+
+    move-result-wide v6
+
+    sget-object p1, Ld05;->o:Ld05;
+
+    invoke-static {v4, p1}, Lx2d;->M(ILd05;)J
+
+    move-result-wide v8
+
+    invoke-static {v8, v9, v6, v7}, Lyz4;->g(JJ)J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Lyz4;->e(J)J
+
+    move-result-wide v8
+
+    const-wide/16 v10, 0x0
+
+    cmp-long p1, v8, v10
+
+    if-lez p1, :cond_4
+
+    iput-object v0, p0, Lvk3;->Z:Ljava/lang/Object;
+
+    iput v1, p0, Lvk3;->Y:I
+
+    invoke-static {v6, v7, p0}, Lbv0;->l(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lqhe;
+    if-ne p1, v5, :cond_4
 
-    iget v0, v2, Lzk3;->c:I
+    :goto_1
+    return-object v5
 
-    check-cast p1, Lep6;
+    :cond_4
+    :goto_2
+    invoke-static {v0}, Lov9;->p(Ln24;)V
 
-    iput v0, p1, Lep6;->g:I
+    iget-object p1, v3, Lxk3;->u0:Lya5;
 
-    invoke-virtual {p1}, Lep6;->b()V
+    sget-object v1, Laxf;->a:Laxf;
 
-    sget-object p1, Loyf;->a:Loyf;
+    invoke-static {p1, v1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+    :try_end_2
+    .catch Lru/ok/tamtam/errors/TamErrorException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    move v2, v4
+
+    goto :goto_5
+
+    :goto_3
+    instance-of v1, p1, Ljava/util/concurrent/CancellationException;
+
+    if-nez v1, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "fail to update safe mode"
+
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_5
+
+    :goto_4
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_5
+
+    iget-object v0, v3, Lxk3;->t0:Lya5;
+
+    invoke-static {v0, p1}, Lyjg;->p(Lya5;Ljava/lang/Object;)V
+
+    :cond_5
+    :goto_5
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
 
     return-object p1
 .end method

@@ -1,67 +1,80 @@
-.class public final synthetic Lf1a;
+.class public final Lf1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lve6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lys4;
 
-.field public final synthetic b:Ln1a;
+.field public final b:Lys4;
+
+.field public final c:Lys4;
+
+.field public final d:Lys4;
+
+.field public final e:Lys4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln1a;I)V
+.method public constructor <init>(Lys4;Lys4;Lys4;Lys4;Lys4;)V
     .locals 0
 
-    iput p2, p0, Lf1a;->a:I
-
-    iput-object p1, p0, Lf1a;->b:Ln1a;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf1a;->a:Lys4;
+
+    iput-object p2, p0, Lf1a;->b:Lys4;
+
+    iput-object p3, p0, Lf1a;->c:Lys4;
+
+    iput-object p4, p0, Lf1a;->d:Lys4;
+
+    iput-object p5, p0, Lf1a;->e:Lys4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final a(Lg1a;)V
+    .locals 4
 
-    iget v0, p0, Lf1a;->a:I
+    iget-wide v0, p1, Lg1a;->r0:J
 
-    packed-switch v0, :pswitch_data_0
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Lf1a;->b:Ln1a;
+    cmp-long v2, v0, v2
 
-    iget-object v0, v0, Ln1a;->w0:Ljb5;
+    if-eqz v2, :cond_0
 
-    sget-object v1, Lj73;->b:Lj73;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    move-result-object v0
 
-    :goto_0
-    sget-object v0, Loyf;->a:Loyf;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lf1a;->b:Ln1a;
+    const-string v1, "f1a"
 
-    iget-object v0, v0, Ln1a;->w0:Ljb5;
+    const-string v2, "setFavoritesSync: %d"
 
-    sget-object v1, Lk0a;->b:Lk0a;
+    invoke-static {v1, v2, v0}, Lyt3;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lilg;->o(Ljb5;Ljava/lang/Object;)V
+    iget-object v0, p0, Lf1a;->c:Lys4;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lys4;->get()Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    check-cast v0, Lm63;
+
+    iget-wide v1, p1, Lg1a;->r0:J
+
+    check-cast v0, Lfhd;
+
+    invoke-virtual {v0, v1, v2}, Lfhd;->z(J)V
+
+    :cond_0
+    return-void
 .end method

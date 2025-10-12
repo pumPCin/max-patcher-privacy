@@ -1,126 +1,45 @@
-.class public final synthetic La3;
-.super Ljava/lang/Object;
+.class public abstract La3;
+.super Ljava/util/AbstractList;
 .source "SourceFile"
 
 # interfaces
-.implements Lve6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chats/picker/AbstractPickerScreen;
+.implements Ljava/util/List;
+.implements Lgl7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/chats/picker/AbstractPickerScreen;I)V
+.method public constructor <init>()V
     .locals 0
 
-    iput p2, p0, La3;->a:I
-
-    iput-object p1, p0, La3;->b:Lone/me/chats/picker/AbstractPickerScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public abstract a(I)Ljava/lang/Object;
+.end method
 
-    iget v0, p0, La3;->a:I
+.method public abstract getSize()I
+.end method
 
-    iget-object v1, p0, La3;->b:Lone/me/chats/picker/AbstractPickerScreen;
+.method public final bridge remove(I)Ljava/lang/Object;
+    .locals 0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1}, La3;->a(I)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->x0:[Ltm7;
+    move-result-object p1
 
-    new-instance v0, Lfla;
+    return-object p1
+.end method
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.method public final bridge size()I
+    .locals 1
 
-    move-result-object v2
+    invoke-virtual {p0}, La3;->getSize()I
 
-    invoke-direct {v0, v2}, Lfla;-><init>(Landroid/content/Context;)V
+    move-result v0
 
-    invoke-virtual {v0}, Lfla;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lfoe;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    check-cast v3, Lmoe;
-
-    invoke-virtual {v3}, Lmoe;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Loef;
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
-
-    new-instance v2, Ls9h;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v1, v3, v0}, Ls9h;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Lfla;->setCallback(Ldla;)V
-
-    invoke-virtual {v0}, Lfla;->getEditText()Landroid/widget/EditText;
-
-    move-result-object v2
-
-    new-instance v3, Lc3;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v1}, Lc3;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/chats/picker/AbstractPickerScreen;->x0:[Ltm7;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lone/me/chats/picker/AbstractPickerScreen;->E0(Landroid/content/Context;)Ltya;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

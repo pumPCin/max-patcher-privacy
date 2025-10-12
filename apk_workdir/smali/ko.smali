@@ -1,118 +1,99 @@
 .class public final Lko;
-.super Ltp;
+.super Landroid/widget/RatingBar;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic k:I
-
-.field public final synthetic l:I
-
-.field public final synthetic m:Ljava/lang/ref/WeakReference;
-
-.field public final synthetic n:Lpo;
+.field public final a:Lw98;
 
 
 # direct methods
-.method public constructor <init>(Lpo;IILjava/lang/ref/WeakReference;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ld9c;->ratingBarStyle:I
 
-    iput-object p1, p0, Lko;->n:Lpo;
+    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput p2, p0, Lko;->k:I
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iput p3, p0, Lko;->l:I
+    move-result-object p1
 
-    iput-object p4, p0, Lko;->m:Ljava/lang/ref/WeakReference;
+    invoke-static {p0, p1}, Lvef;->a(Landroid/view/View;Landroid/content/Context;)V
+
+    new-instance p1, Lw98;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lw98;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lko;->a:Lw98;
+
+    invoke-virtual {p1, p2, v0}, Lw98;->B(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f0(I)V
-    .locals 0
+.method public final declared-synchronized onMeasure(II)V
+    .locals 1
 
-    return-void
-.end method
+    monitor-enter p0
 
-.method public final g0(Landroid/graphics/Typeface;)V
-    .locals 4
+    :try_start_0
+    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object p2, p0, Lko;->a:Lw98;
 
-    const/16 v1, 0x1c
+    iget-object p2, p2, Lw98;->c:Ljava/lang/Object;
 
-    if-lt v0, v1, :cond_1
+    check-cast p2, Landroid/graphics/Bitmap;
 
-    const/4 v0, -0x1
+    if-eqz p2, :cond_0
 
-    iget v1, p0, Lko;->k:I
+    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
-    if-eq v1, v0, :cond_1
+    move-result p2
 
-    iget v0, p0, Lko;->l:I
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
 
-    and-int/lit8 v0, v0, 0x2
+    move-result v0
 
-    if-eqz v0, :cond_0
+    mul-int/2addr p2, v0
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
+
+    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    const/4 v0, 0x0
-
     :goto_0
-    invoke-static {p1, v1, v0}, Loo;->a(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    :cond_1
-    iget-object v0, p0, Lko;->n:Lpo;
-
-    iget-boolean v1, v0, Lpo;->m:Z
-
-    if-eqz v1, :cond_3
-
-    iput-object p1, v0, Lpo;->l:Landroid/graphics/Typeface;
-
-    iget-object v1, p0, Lko;->m:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget v0, v0, Lpo;->j:I
-
-    new-instance v2, Llo;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v1, p1, v0, v3}, Llo;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    monitor-exit p0
 
     return-void
 
-    :cond_2
-    iget v0, v0, Lpo;->j:I
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    :cond_3
-    return-void
+    throw p1
 .end method

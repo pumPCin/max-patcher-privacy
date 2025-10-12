@@ -4,39 +4,32 @@
 
 
 # instance fields
-.field public final a:Lgrb;
+.field public final a:J
 
-.field public final b:Lt57;
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lgrb;Lt57;)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-wide p1, p0, Lxa0;->a:J
 
-    iput-object p1, p0, Lxa0;->a:Lgrb;
+    iput-wide p3, p0, Lxa0;->b:J
 
-    iput-object p2, p0, Lxa0;->b:Lt57;
+    iput-wide p5, p0, Lxa0;->c:J
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null processingRequest"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -53,25 +46,29 @@
 
     check-cast p1, Lxa0;
 
-    iget-object v1, p0, Lxa0;->a:Lgrb;
+    iget-wide v3, p0, Lxa0;->a:J
 
-    iget-object v3, p1, Lxa0;->a:Lgrb;
+    iget-wide v5, p1, Lxa0;->a:J
 
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    cmp-long v1, v3, v5
 
-    move-result v1
+    if-nez v1, :cond_1
 
-    if-eqz v1, :cond_1
+    iget-wide v3, p0, Lxa0;->b:J
 
-    iget-object v1, p0, Lxa0;->b:Lt57;
+    iget-wide v5, p1, Lxa0;->b:J
 
-    iget-object p1, p1, Lxa0;->b:Lt57;
+    cmp-long v1, v3, v5
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-nez v1, :cond_1
 
-    move-result p1
+    iget-wide v3, p0, Lxa0;->c:J
 
-    if-eqz p1, :cond_1
+    iget-wide v5, p1, Lxa0;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-nez p1, :cond_1
 
     return v0
 
@@ -80,13 +77,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 7
 
-    iget-object v0, p0, Lxa0;->a:Lgrb;
+    iget-wide v0, p0, Lxa0;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    const/16 v2, 0x20
 
-    move-result v0
+    ushr-long v3, v0, v2
+
+    xor-long/2addr v0, v3
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -94,11 +95,25 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lxa0;->b:Lt57;
+    iget-wide v3, p0, Lxa0;->b:J
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    ushr-long v5, v3, v2
 
-    move-result v1
+    xor-long/2addr v3, v5
+
+    long-to-int v3, v3
+
+    xor-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Lxa0;->c:J
+
+    ushr-long v1, v3, v2
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
 
     xor-int/2addr v0, v1
 
@@ -106,31 +121,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "InputPacket{processingRequest="
+    const-string v1, "StartupTime{epochMillis="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lxa0;->a:Lgrb;
+    iget-wide v1, p0, Lxa0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", imageProxy="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxa0;->b:Lt57;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
+    const-string v1, ", elapsedRealtime="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-wide v1, p0, Lxa0;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", uptimeMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lxa0;->c:J
+
+    const-string v3, "}"
+
+    invoke-static {v0, v1, v2, v3}, Lbk7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

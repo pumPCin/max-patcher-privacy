@@ -1,61 +1,51 @@
-.class public abstract Ldma;
-.super Ljava/lang/Object;
+.class public final Ldma;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lema;
+# instance fields
+.field public X:Lps9;
 
-.field public static final b:Lema;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lpma;
+
+.field public o:Lpma;
+
+.field public r0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lpma;Lwy3;)V
+    .locals 0
 
-    new-instance v0, Lema;
+    iput-object p1, p0, Ldma;->Z:Lpma;
 
-    sget v1, Li9d;->i:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    sget v1, Lg9d;->x0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "BY"
-
-    const/16 v4, 0x177
-
-    invoke-direct {v0, v3, v4, v2, v1}, Lema;-><init>(Ljava/lang/String;ILjef;Ljava/lang/Integer;)V
-
-    sput-object v0, Ldma;->a:Lema;
-
-    new-instance v0, Lema;
-
-    sget v1, Li9d;->z0:I
-
-    new-instance v2, Ljef;
-
-    invoke-direct {v2, v1}, Ljef;-><init>(I)V
-
-    sget v1, Lg9d;->y0:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "RU"
-
-    const/4 v4, 0x7
-
-    invoke-direct {v0, v3, v4, v2, v1}, Lema;-><init>(Ljava/lang/String;ILjef;Ljava/lang/Integer;)V
-
-    sput-object v0, Ldma;->b:Lema;
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Ldma;->Y:Ljava/lang/Object;
+
+    iget p1, p0, Ldma;->r0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ldma;->r0:I
+
+    iget-object p1, p0, Ldma;->Z:Lpma;
+
+    invoke-static {p1, p0}, Lpma;->a(Lpma;Lwy3;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

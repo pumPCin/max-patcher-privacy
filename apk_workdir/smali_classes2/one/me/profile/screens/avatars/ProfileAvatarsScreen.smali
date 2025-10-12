@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcsb;
-.implements Lcz3;
-.implements Lmgd;
+.implements Lqqb;
+.implements Lmy3;
+.implements Lsed;
 
 
 # annotations
@@ -22,18 +22,18 @@
     d2 = {
         "Lone/me/profile/screens/avatars/ProfileAvatarsScreen;",
         "Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;",
-        "Lcsb;",
-        "Lcz3;",
-        "Lmgd;",
+        "Lqqb;",
+        "Lmy3;",
+        "Lsed;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "",
         "id",
-        "Llub;",
+        "Lzsb;",
         "type",
-        "(JLlub;)V",
+        "(JLzsb;)V",
         "profile_release"
     }
     k = 0x1
@@ -47,38 +47,38 @@
 
 
 # static fields
-.field public static final synthetic D0:[Ltm7;
+.field public static final synthetic y0:[Lpl7;
 
 
 # instance fields
-.field public final A0:Lmsb;
+.field public final X:Lh4f;
 
-.field public final B0:Ljava/lang/Object;
+.field public final Y:Lyb7;
 
-.field public final C0:Ljava/lang/Object;
+.field public final Z:La4d;
 
-.field public final X:Ls5f;
+.field public final o:Lyn7;
 
-.field public final Y:Led7;
+.field public final r0:Lyn7;
 
-.field public final Z:Lfub;
+.field public final s0:Lvoc;
 
-.field public final o:Lbp7;
+.field public final t0:Lvoc;
 
-.field public final w0:Lbp7;
+.field public final u0:Lvoc;
 
-.field public final x0:Lmqc;
+.field public final v0:Larb;
 
-.field public final y0:Lmqc;
+.field public final w0:Ljava/lang/Object;
 
-.field public final z0:Lmqc;
+.field public final x0:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Lt5c;
+    new-instance v0, Lf4c;
 
     const-class v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
@@ -88,29 +88,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lxxc;->a:Lyxc;
+    sget-object v2, Lewc;->a:Lfwc;
 
     const-string v3, "viewPager"
 
     const-string v5, "getViewPager()Landroidx/viewpager2/widget/ViewPager2;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lnd5;->h(Lyxc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lt5c;
+    invoke-static {v2, v1, v3, v5, v4}, Lc85;->h(Lfwc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lf4c;
 
     move-result-object v2
 
-    new-instance v3, Lt5c;
+    new-instance v3, Lf4c;
 
     const-string v5, "progressIndication"
 
     const-string v6, "getProgressIndication()Landroid/view/View;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lt5c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lf4c;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Ltm7;
+    new-array v1, v1, [Lpl7;
 
     aput-object v0, v1, v4
 
@@ -122,12 +122,12 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    sput-object v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lpl7;
 
     return-void
 .end method
 
-.method public constructor <init>(JLlub;)V
+.method public constructor <init>(JLzsb;)V
     .locals 1
 
     .line 26
@@ -136,29 +136,29 @@
     move-result-object p1
 
     .line 27
-    new-instance p2, Ln4b;
+    new-instance p2, Ld3b;
 
     const-string v0, "EXTRA_ID"
 
-    invoke-direct {p2, v0, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 28
-    iget-object p1, p3, Llub;->a:Ljava/lang/String;
+    iget-object p1, p3, Lzsb;->a:Ljava/lang/String;
 
     .line 29
-    new-instance p3, Ln4b;
+    new-instance p3, Ld3b;
 
     const-string v0, "EXTRA_TYPE"
 
-    invoke-direct {p3, v0, p1}, Ln4b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, v0, p1}, Ld3b;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 30
-    filled-new-array {p2, p3}, [Ln4b;
+    filled-new-array {p2, p3}, [Ld3b;
 
     move-result-object p1
 
     .line 31
-    invoke-static {p1}, Lhxf;->g([Ln4b;)Landroid/os/Bundle;
+    invoke-static {p1}, Lrkc;->f([Ld3b;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -175,140 +175,140 @@
     invoke-direct {p0, p1}, Lone/me/sdk/conductor/changehandlers/swipe/SwipeWidget;-><init>(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object v0, Lcub;->a:Lcub;
+    sget-object v0, Lqsb;->a:Lqsb;
 
-    invoke-virtual {v0}, Lcub;->g()Lbp7;
+    invoke-virtual {v0}, Lqsb;->f()Lyn7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->o:Lbp7;
+    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->o:Lyn7;
 
     .line 3
-    new-instance v0, Lusb;
+    new-instance v0, Lirb;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lusb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lirb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
 
     .line 4
-    new-instance v1, Ls5f;
+    new-instance v1, Lh4f;
 
-    invoke-direct {v1, v0}, Ls5f;-><init>(Lve6;)V
+    invoke-direct {v1, v0}, Lh4f;-><init>(Ltd6;)V
 
     .line 5
-    iput-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Ls5f;
+    iput-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Lh4f;
 
     .line 6
-    sget-object v0, Led7;->c:Led7;
+    sget-object v0, Lyb7;->c:Lyb7;
 
-    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Y:Led7;
+    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Y:Lyb7;
 
     .line 7
-    new-instance v0, Lfub;
+    new-instance v0, La4d;
 
     .line 8
-    sget-object v1, Lhfd;->K0:Lhfd;
+    sget-object v1, Lmdd;->F0:Lmdd;
 
     .line 9
-    invoke-direct {v0, v1}, Lfub;-><init>(Lhfd;)V
+    invoke-direct {v0, v1}, La4d;-><init>(Lmdd;)V
 
-    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Z:Lfub;
+    iput-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Z:La4d;
 
     .line 10
-    new-instance v0, Lyh1;
+    new-instance v0, Lzh1;
 
     const/16 v1, 0x8
 
-    invoke-direct {v0, p1, v1}, Lyh1;-><init>(Landroid/os/Bundle;I)V
+    invoke-direct {v0, p1, v1}, Lzh1;-><init>(Landroid/os/Bundle;I)V
 
     .line 11
-    new-instance p1, Lth8;
+    new-instance p1, Lmg8;
 
     const/16 v1, 0x1a
 
-    invoke-direct {p1, v1, v0}, Lth8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lmg8;-><init>(ILjava/lang/Object;)V
 
-    const-class v0, Lhtb;
+    const-class v0, Lvrb;
 
-    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lve6;)Lbp7;
+    invoke-virtual {p0, v0, p1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Ltd6;)Lyn7;
 
     move-result-object p1
 
     .line 12
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->w0:Lbp7;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->r0:Lyn7;
 
     .line 13
-    sget p1, Lzec;->profile_contact_avatars_toolbar:I
+    sget p1, Lfdc;->profile_contact_avatars_toolbar:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:Lmqc;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->s0:Lvoc;
 
     .line 14
-    sget p1, Lzec;->profile_contact_avatars_viewpager:I
+    sget p1, Lfdc;->profile_contact_avatars_viewpager:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:Lmqc;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->t0:Lvoc;
 
     .line 15
-    sget p1, Lzec;->profile_contact_avatars_progress_indicator:I
+    sget p1, Lfdc;->profile_contact_avatars_progress_indicator:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lmqc;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lvoc;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->z0:Lmqc;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:Lvoc;
 
     .line 16
-    new-instance p1, Lmsb;
+    new-instance p1, Larb;
 
     .line 17
-    invoke-direct {p1, p0}, La74;-><init>(Lb04;)V
+    invoke-direct {p1, p0}, Lk64;-><init>(Ljz3;)V
 
     .line 18
-    sget-object v0, Lb75;->a:Lb75;
+    sget-object v0, Lo65;->a:Lo65;
 
-    iput-object v0, p1, Lmsb;->A0:Ljava/util/List;
+    iput-object v0, p1, Larb;->v0:Ljava/util/List;
 
     .line 19
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->A0:Lmsb;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->v0:Larb;
 
     .line 20
-    new-instance p1, Lusb;
+    new-instance p1, Lirb;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Lusb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
+    invoke-direct {p1, p0, v0}, Lirb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
 
     const/4 v0, 0x3
 
     .line 21
-    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
 
     move-result-object p1
 
     .line 22
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->B0:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->w0:Ljava/lang/Object;
 
     .line 23
-    new-instance p1, Lusb;
+    new-instance p1, Lirb;
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, p0, v1}, Lusb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
+    invoke-direct {p1, p0, v1}, Lirb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;I)V
 
     .line 24
-    invoke-static {v0, p1}, Lvr0;->r(ILve6;)Lbp7;
+    invoke-static {v0, p1}, Lwee;->u(ILtd6;)Lyn7;
 
     move-result-object p1
 
     .line 25
-    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->C0:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:Ljava/lang/Object;
 
     return-void
 .end method
@@ -316,15 +316,15 @@
 .method public static final K0(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->z0:Lmqc;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->u0:Lvoc;
 
-    sget-object v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    sget-object v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lpl7;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, p0, v1}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -333,24 +333,24 @@
     return-object p0
 .end method
 
-.method public static final L0(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;Lksb;I)V
+.method public static final L0(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;Lyqb;I)V
     .locals 2
 
-    instance-of v0, p1, Ljsb;
+    instance-of v0, p1, Lxqb;
 
     const-string v1, ""
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Ljsb;
+    check-cast p1, Lxqb;
 
-    iget-object p1, p1, Ljsb;->a:Lnef;
+    iget-object p1, p1, Lxqb;->a:Lbdf;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Lcdf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -362,11 +362,11 @@
     move-object v1, p1
 
     :goto_0
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ltya;->getTitle()Landroid/widget/TextView;
+    invoke-virtual {p1}, Ljxa;->getTitle()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -374,33 +374,33 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
 
     :cond_1
     return-void
 
     :cond_2
-    sget-object v0, Lisb;->a:Lisb;
+    sget-object v0, Lwqb;->a:Lwqb;
 
-    invoke-static {p1, v0}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lg8;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->A0:Lmsb;
+    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->v0:Larb;
 
-    iget-object p1, p1, Lmsb;->A0:Ljava/util/List;
+    iget-object p1, p1, Larb;->v0:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -410,15 +410,15 @@
 
     if-lez p1, :cond_3
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object v0
 
     add-int/lit8 p2, p2, 0x1
 
-    iget-object p0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->C0:Ljava/lang/Object;
+    iget-object p0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -444,16 +444,16 @@
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p0}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
 
     return-void
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Ltya;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v1}, Ljxa;->setTitle(Ljava/lang/CharSequence;)V
 
     return-void
 
@@ -478,25 +478,25 @@
 .method public final D0()V
     .locals 2
 
-    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Ls5f;
+    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Lh4f;
 
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Luxa;
-
-    invoke-interface {v1}, Luxa;->b()Lue0;
+    invoke-virtual {v1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    iget v1, v1, Lue0;->k:I
+    check-cast v1, Llwa;
+
+    invoke-interface {v1}, Llwa;->b()Lme0;
+
+    move-result-object v1
+
+    iget v1, v1, Lme0;->k:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -513,7 +513,7 @@
 .method public final F(ILandroid/os/Bundle;)V
     .locals 7
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lhtb;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lvrb;
 
     move-result-object v1
 
@@ -525,27 +525,27 @@
 
     move-result v5
 
-    iget-object p2, v1, Lhtb;->b:Llsb;
+    iget-object p2, v1, Lvrb;->b:Lzqb;
 
-    invoke-interface {p2}, Llsb;->c()Lsqc;
+    invoke-interface {p2}, Lzqb;->c()Lbpc;
 
     move-result-object p2
 
-    iget-object p2, p2, Lsqc;->a:Lfoe;
+    iget-object p2, p2, Lbpc;->a:Lane;
 
-    invoke-interface {p2}, Lfoe;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lane;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Ljava/util/List;
 
-    invoke-static {v5, p2}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {v5, p2}, Lw83;->h0(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object p2
 
     move-object v3, p2
 
-    check-cast v3, Lasb;
+    check-cast v3, Loqb;
 
     if-nez v3, :cond_0
 
@@ -553,9 +553,9 @@
 
     :cond_0
     :try_start_0
-    iget-object p2, v3, Lasb;->b:Ljava/util/List;
+    iget-object p2, v3, Loqb;->b:Ljava/util/List;
 
-    invoke-static {p2}, Le93;->l0(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {p2}, Lw83;->e0(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -565,15 +565,15 @@
     :try_end_0
     .catch Ljava/util/NoSuchElementException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object p2, Ldsb;->x0:Lla5;
+    sget-object p2, Lrqb;->s0:Laa5;
 
-    invoke-static {p1, p2}, Le93;->o0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-static {p1, p2}, Lw83;->h0(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v2, p1
 
-    check-cast v2, Ldsb;
+    check-cast v2, Lrqb;
 
     if-nez v2, :cond_1
 
@@ -581,29 +581,29 @@
     return-void
 
     :cond_1
-    iget-object p1, v1, Lhtb;->X:Lbp7;
+    iget-object p1, v1, Lvrb;->X:Lyn7;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lr8f;
-
-    check-cast p1, Lwla;
-
-    invoke-virtual {p1}, Lwla;->b()Ly24;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lgtb;
+    check-cast p1, Le7f;
+
+    check-cast p1, Lmka;
+
+    invoke-virtual {p1}, Lmka;->b()Lh24;
+
+    move-result-object p1
+
+    new-instance v0, Lurb;
 
     const/4 v6, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lgtb;-><init>(Lhtb;Ldsb;Lasb;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+    invoke-direct/range {v0 .. v6}, Lurb;-><init>(Lvrb;Lrqb;Loqb;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
 
     const/4 p2, 0x2
 
-    invoke-static {v1, p1, v0, p2}, Lilg;->n(Lilg;Lw24;Llf6;I)Lqle;
+    invoke-static {v1, p1, v0, p2}, Lyjg;->n(Lyjg;Lf24;Lje6;I)Loke;
 
     return-void
 
@@ -612,13 +612,13 @@
 
     move-object p1, v0
 
-    iget-object p2, v1, Lhtb;->o:Lbp7;
+    iget-object p2, v1, Lvrb;->o:Lyn7;
 
-    invoke-interface {p2}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p2}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lec5;
+    check-cast p2, Ltb5;
 
     new-instance v0, Lru/ok/tamtam/ExceptionHandler$HandledException;
 
@@ -630,7 +630,7 @@
 
     invoke-direct {v0, v3, p1, v2, v1}, Lru/ok/tamtam/ExceptionHandler$HandledException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/String;)V
 
-    invoke-static {p2, v0}, Lec5;->b(Lec5;Ljava/lang/Throwable;)V
+    invoke-static {p2, v0}, Ltb5;->b(Ltb5;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -638,21 +638,21 @@
 .method public final F0()V
     .locals 2
 
-    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Ls5f;
+    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Lh4f;
 
-    invoke-virtual {v1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Luxa;
+    check-cast v1, Llwa;
 
-    invoke-interface {v1}, Luxa;->b()Lue0;
+    invoke-interface {v1}, Llwa;->b()Lme0;
 
     const/4 v1, 0x0
 
@@ -665,13 +665,13 @@
 .method public final G0()V
     .locals 2
 
-    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object v0
 
@@ -679,7 +679,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object v0
 
@@ -710,19 +710,19 @@
 .method public final J0()Ljava/lang/Integer;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Ls5f;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Lh4f;
 
-    invoke-virtual {v0}, Ls5f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luxa;
-
-    invoke-interface {v0}, Luxa;->b()Lue0;
+    invoke-virtual {v0}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget v0, v0, Lue0;->k:I
+    check-cast v0, Llwa;
+
+    invoke-interface {v0}, Llwa;->b()Lme0;
+
+    move-result-object v0
+
+    iget v0, v0, Lme0;->k:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -734,7 +734,7 @@
 .method public final M0(Z)V
     .locals 3
 
-    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
 
     move-result-object v0
 
@@ -785,11 +785,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lvsb;
+    new-instance v1, Ljrb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, v2}, Lvsb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;ZI)V
+    invoke-direct {v1, p0, p1, v2}, Ljrb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;ZI)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -805,34 +805,34 @@
 .method public final N0(Z)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->B0:Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->w0:Ljava/lang/Object;
 
     const/4 v1, 0x3
 
     if-eqz p1, :cond_0
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lt8h;
+    check-cast p1, Lg7h;
 
-    iget-object p1, p1, Lt8h;->a:Lv4b;
+    iget-object p1, p1, Lg7h;->a:Lpr0;
 
-    invoke-virtual {p1, v1}, Lv4b;->J(I)V
+    invoke-virtual {p1, v1}, Lpr0;->W(I)V
 
     return-void
 
     :cond_0
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lt8h;
+    check-cast p1, Lg7h;
 
-    iget-object p1, p1, Lt8h;->a:Lv4b;
+    iget-object p1, p1, Lg7h;->a:Lpr0;
 
-    invoke-virtual {p1, v1}, Lv4b;->r(I)V
+    invoke-virtual {p1, v1}, Lpr0;->w(I)V
 
     return-void
 .end method
@@ -840,13 +840,13 @@
 .method public final O0(Z)V
     .locals 3
 
-    invoke-virtual {p0}, Lb04;->getView()Landroid/view/View;
+    invoke-virtual {p0}, Ljz3;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object v0
 
@@ -879,7 +879,7 @@
     const/4 v0, 0x0
 
     :goto_1
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ltya;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->P0()Ljxa;
 
     move-result-object v1
 
@@ -899,11 +899,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lvsb;
+    new-instance v1, Ljrb;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, p1, v2}, Lvsb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;ZI)V
+    invoke-direct {v1, p0, p1, v2}, Ljrb;-><init>(Lone/me/profile/screens/avatars/ProfileAvatarsScreen;ZI)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -916,36 +916,36 @@
     return-void
 .end method
 
-.method public final P0()Ltya;
+.method public final P0()Ljxa;
     .locals 2
 
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lpl7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->x0:Lmqc;
+    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->s0:Lvoc;
 
-    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ltya;
+    check-cast v0, Ljxa;
 
     return-object v0
 .end method
 
-.method public final Q0()Lhtb;
+.method public final Q0()Lvrb;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->w0:Lbp7;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->r0:Lyn7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lhtb;
+    check-cast v0, Lvrb;
 
     return-object v0
 .end method
@@ -953,15 +953,15 @@
 .method public final R0()Landroidx/viewpager2/widget/ViewPager2;
     .locals 2
 
-    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0:[Ltm7;
+    sget-object v0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lpl7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:Lmqc;
+    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->t0:Lvoc;
 
-    invoke-interface {v1, p0, v0}, Lmqc;->M(Ljava/lang/Object;Ltm7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lvoc;->D(Ljava/lang/Object;Lpl7;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -973,19 +973,19 @@
 .method public final c(Landroid/view/Window;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lmgd;->c(Landroid/view/Window;)V
+    invoke-super {p0, p1}, Lsed;->c(Landroid/view/Window;)V
 
-    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->B0:Ljava/lang/Object;
+    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->w0:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lt8h;
+    check-cast p1, Lg7h;
 
-    iget-object p1, p1, Lt8h;->a:Lv4b;
+    iget-object p1, p1, Lg7h;->a:Lpr0;
 
-    invoke-virtual {p1}, Lv4b;->G()V
+    invoke-virtual {p1}, Lpr0;->V()V
 
     return-void
 .end method
@@ -993,35 +993,35 @@
 .method public final d0()Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->o:Lbp7;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->o:Lyn7;
 
-    invoke-interface {v0}, Lbp7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lyn7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Llm5;
+    check-cast v0, Lzl5;
 
-    check-cast v0, Lnm5;
+    check-cast v0, Lbm5;
 
-    invoke-virtual {v0}, Lnm5;->t()Z
+    invoke-virtual {v0}, Lbm5;->s()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final getInsetsConfig()Led7;
+.method public final getInsetsConfig()Lyb7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Y:Led7;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Y:Lyb7;
 
     return-object v0
 .end method
 
-.method public final getScreenDelegate()Lmfd;
+.method public final getScreenDelegate()Lsdd;
     .locals 1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Z:Lfub;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Z:La4d;
 
     return-object v0
 .end method
@@ -1029,13 +1029,13 @@
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 11
 
-    new-instance p2, Lx4f;
+    new-instance p2, Lm3f;
 
     invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lx4f;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lm3f;-><init>(Landroid/content/Context;)V
 
     const/4 p3, -0x1
 
@@ -1047,27 +1047,27 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v0, Lbx4;->y0:Lsed;
+    sget-object v0, Lrw4;->t0:Lss6;
 
     invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lsed;->m(Landroid/content/Context;)Lloa;
+    invoke-virtual {v0, p1}, Lss6;->w(Landroid/content/Context;)Lzma;
 
     move-result-object p1
 
-    iget-object p1, p1, Lloa;->c:Luxa;
+    iget-object p1, p1, Lzma;->c:Llwa;
 
-    invoke-interface {p1}, Luxa;->b()Lue0;
+    invoke-interface {p1}, Llwa;->b()Lme0;
 
     move-result-object p1
 
-    iget p1, p1, Lue0;->k:I
+    iget p1, p1, Lme0;->k:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    sget p1, Lzec;->profile_contact_avatars_viewpager:I
+    sget p1, Lfdc;->profile_contact_avatars_viewpager:I
 
     new-instance v0, Landroidx/viewpager2/widget/ViewPager2;
 
@@ -1095,9 +1095,9 @@
 
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget p1, Lzec;->profile_contact_avatars_toolbar:I
+    sget p1, Lfdc;->profile_contact_avatars_toolbar:I
 
-    new-instance v0, Ltya;
+    new-instance v0, Ljxa;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1105,19 +1105,19 @@
 
     const/4 v2, 0x6
 
-    invoke-direct {v0, v1, v2}, Ltya;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Ljxa;-><init>(Landroid/content/Context;I)V
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
 
-    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Ls5f;
+    iget-object p1, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->X:Lh4f;
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Luxa;
+    check-cast v1, Llwa;
 
-    invoke-virtual {v0, v1}, Ltya;->setCustomTheme(Luxa;)V
+    invoke-virtual {v0, v1}, Ljxa;->setCustomTheme(Llwa;)V
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -1131,29 +1131,29 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object v1, Llya;->a:Llya;
+    sget-object v1, Lbxa;->a:Lbxa;
 
-    invoke-virtual {v0, v1}, Ltya;->setForm(Llya;)V
+    invoke-virtual {v0, v1}, Ljxa;->setForm(Lbxa;)V
 
-    new-instance v1, Lbya;
+    new-instance v1, Lrwa;
 
-    new-instance v3, Lkgb;
+    new-instance v3, Lcdb;
 
-    const/4 v4, 0x4
+    const/4 v4, 0x6
 
-    invoke-direct {v3, v4, p0}, Lkgb;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, p0}, Lcdb;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v1, v3}, Lbya;-><init>(Lxe6;)V
+    invoke-direct {v1, v3}, Lrwa;-><init>(Lvd6;)V
 
-    invoke-virtual {v0, v1}, Ltya;->setLeftActions(Lhya;)V
+    invoke-virtual {v0, v1}, Ljxa;->setLeftActions(Lxwa;)V
 
-    new-instance v1, Liya;
+    new-instance v1, Lywa;
 
-    new-instance v3, Lrn7;
+    new-instance v3, Ld99;
 
     const/4 v9, 0x0
 
-    const/16 v10, 0x11
+    const/16 v10, 0x8
 
     const/4 v4, 0x1
 
@@ -1165,17 +1165,17 @@
 
     move-object v5, p0
 
-    invoke-direct/range {v3 .. v10}, Lrn7;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v3 .. v10}, Ld99;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-direct {v1, v3}, Liya;-><init>(Lxe6;)V
+    invoke-direct {v1, v3}, Lywa;-><init>(Lvd6;)V
 
-    invoke-virtual {v0, v1}, Ltya;->setRightActions(Ljya;)V
+    invoke-virtual {v0, v1}, Ljxa;->setRightActions(Lzwa;)V
 
-    invoke-static {v0}, Lio7;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lpr0;->d(Landroid/view/View;)V
 
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget v0, Lzec;->profile_contact_avatars_progress_indicator:I
+    sget v0, Lfdc;->profile_contact_avatars_progress_indicator:I
 
     new-instance v1, Landroid/widget/FrameLayout;
 
@@ -1193,27 +1193,27 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p1}, Ls5f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lh4f;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Luxa;
+    check-cast p1, Llwa;
 
-    invoke-interface {p1}, Luxa;->b()Lue0;
+    invoke-interface {p1}, Llwa;->b()Lme0;
 
     move-result-object p1
 
-    iget p1, p1, Lue0;->g:I
+    iget p1, p1, Lme0;->g:I
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance p1, Lnsa;
+    new-instance p1, Lfra;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p1, p3}, Lnsa;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p3}, Lfra;-><init>(Landroid/content/Context;)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -1225,21 +1225,21 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p3, Lfsa;->a:Lfsa;
+    sget-object p3, Lxqa;->a:Lxqa;
 
-    invoke-virtual {p1, p3}, Lnsa;->setAppearance(Lgsa;)V
+    invoke-virtual {p1, p3}, Lfra;->setAppearance(Lyqa;)V
 
-    sget-object p3, Lhsa;->a:Lhsa;
+    sget-object p3, Lzqa;->a:Lzqa;
 
-    invoke-virtual {p1, p3}, Lnsa;->setSize(Llsa;)V
+    invoke-virtual {p1, p3}, Lfra;->setSize(Ldra;)V
 
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lb20;
+    new-instance p1, Lu81;
 
-    const/4 p3, 0x5
+    const/4 p3, 0x3
 
-    invoke-direct {p1, p3}, Lb20;-><init>(I)V
+    invoke-direct {p1, p3}, Lu81;-><init>(I)V
 
     invoke-virtual {v1, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1255,7 +1255,7 @@
 .method public final onDestroy()V
     .locals 1
 
-    invoke-super {p0}, Lb04;->onDestroy()V
+    invoke-super {p0}, Ljz3;->onDestroy()V
 
     const/4 v0, 0x1
 
@@ -1273,97 +1273,97 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->A0:Lmsb;
+    iget-object v0, p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->v0:Larb;
 
-    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lpwc;)V
+    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lxuc;)V
 
     invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->R0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
-    new-instance v0, Lyh0;
+    new-instance v0, Lqh0;
 
     const/16 v1, 0x9
 
-    invoke-direct {v0, v1, p0}, Lyh0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lqh0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->b(Lfmg;)V
+    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->b(Lvkg;)V
 
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lhtb;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lhtb;->b:Llsb;
-
-    invoke-interface {p1}, Llsb;->c()Lsqc;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lvrb;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    iget-object p1, p1, Lvrb;->b:Lzqb;
+
+    invoke-interface {p1}, Lzqb;->c()Lbpc;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcs7;->L()Les7;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
     move-result-object v0
 
-    sget-object v1, Ler7;->o:Ler7;
+    sget-object v1, Lwp7;->o:Lwp7;
 
-    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {p1, v0, v1}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object p1
 
-    new-instance v0, Lwsb;
+    new-instance v0, Lkrb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lwsb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
+    invoke-direct {v0, v2, p0}, Lkrb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
 
-    new-instance v3, Ljx5;
+    new-instance v3, Lnw5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
-
-    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lhtb;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    iget-object p1, p1, Lhtb;->Z:Ljb5;
+    invoke-static {v3, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lcs7;
+    invoke-virtual {p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->Q0()Lvrb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lvrb;->Z:Lya5;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Luq7;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcs7;->L()Les7;
+    invoke-interface {v0}, Luq7;->x()Lwq7;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lo7;->h(Lev5;Les7;Ler7;)Lss1;
+    invoke-static {p1, v0, v1}, Li8e;->r(Liu5;Lwq7;Lwp7;)Lus1;
 
     move-result-object p1
 
-    new-instance v0, Lxsb;
+    new-instance v0, Llrb;
 
-    invoke-direct {v0, v2, p0}, Lxsb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
+    invoke-direct {v0, v2, p0}, Llrb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/avatars/ProfileAvatarsScreen;)V
 
-    new-instance v1, Ljx5;
+    new-instance v1, Lnw5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ljx5;-><init>(Lev5;Llf6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnw5;-><init>(Liu5;Lje6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lor7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lgq7;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Ltp;->a0(Lev5;Le34;)Lqle;
+    invoke-static {v1, p1}, Luce;->N(Liu5;Ln24;)Loke;
 
     return-void
 .end method

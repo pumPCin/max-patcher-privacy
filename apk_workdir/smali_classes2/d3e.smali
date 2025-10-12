@@ -1,39 +1,63 @@
 .class public final Ld3e;
-.super Lbp;
+.super Luc0;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ld3e;
+.field public static final b:Ld3e;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Ld3e;
 
-    invoke-direct {v0}, Lbp;-><init>()V
+    const/16 v1, 0x13
 
-    sput-object v0, Ld3e;->a:Ld3e;
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Ld3e;->b:Ld3e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lbp7;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()La5;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    const-class v1, Lr8f;
+    return v0
 
-    invoke-virtual {v0, v1}, La5;->d(Ljava/lang/Class;)Ls5f;
+    :cond_0
+    instance-of p1, p1, Ld3e;
 
-    move-result-object v0
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x340f21a3    # -3.157113E7f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OpenRingtonePicker"
 
     return-object v0
 .end method

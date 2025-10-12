@@ -1,165 +1,240 @@
-.class public final Lkt;
-.super Lfi0;
+.class public final synthetic Lkt;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvae;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Ltd6;
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
+.method public synthetic constructor <init>(ILtd6;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p1}, Lfi0;-><init>(JI)V
+    iput p1, p0, Lkt;->a:I
 
-    iput-wide p4, p0, Lkt;->X:J
+    iput-object p2, p0, Lkt;->b:Ltd6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsAdd;-><init>()V
-
-    iget v1, p0, Lfi0;->o:I
-
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
-
-    move-result v1
-
-    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->assetType:I
-
-    iget-wide v1, p0, Lkt;->X:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->id:J
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsAdd;->requestId:J
-
-    invoke-static {v0}, Lg79;->toByteArray(Lg79;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getType()Ldab;
+.method public final onResponse(Lorg/json/JSONObject;)V
     .locals 1
 
-    sget-object v0, Ldab;->V0:Ldab;
+    iget v0, p0, Lkt;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final i()Li9f;
-    .locals 6
+    iget-object v0, p0, Lkt;->b:Ltd6;
 
-    new-instance v0, Llt;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Llt;-><init>(Ln0b;I)V
-
-    iget v1, p0, Lfi0;->o:I
-
-    if-eqz v1, :cond_1
-
-    const-wide/16 v2, 0x0
-
-    iget-wide v4, p0, Lkt;->X:J
-
-    cmp-long v2, v4, v2
-
-    if-eqz v2, :cond_0
-
-    const-string v2, "type"
-
-    invoke-static {v1}, Lqw1;->d(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Li9f;->q(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "id"
-
-    invoke-virtual {v0, v4, v5, v1}, Li9f;->j(JLjava/lang/String;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "id must not be null or empty"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "type must not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final t(Ll9f;)V
-    .locals 4
-
-    check-cast p1, Lmt;
-
-    iget-boolean v0, p1, Lmt;->c:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-wide v2, p1, Lmt;->o:J
-
-    invoke-virtual {p0, v2, v3}, Lfi0;->u(J)V
-
-    iget-object p1, p0, Lxl;->c:Lyl;
-
-    if-eqz p1, :cond_0
-
-    move-object v1, p1
-
-    :cond_0
-    invoke-virtual {v1}, Lyl;->b()Lov0;
-
-    move-result-object p1
-
-    new-instance v0, Lnt;
-
-    iget-wide v1, p0, Lxl;->a:J
-
-    invoke-direct {v0, v1, v2}, Lbj0;-><init>(J)V
-
-    invoke-virtual {p1, v0}, Lov0;->c(Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->g(Ltd6;Lorg/json/JSONObject;)V
 
     return-void
 
-    :cond_1
-    new-instance p1, Lv8f;
+    :pswitch_0
+    iget-object v0, p0, Lkt;->b:Ltd6;
 
-    const-string v0, "asset.task.failed"
-
-    const-string v2, "failed to add asset"
-
-    invoke-direct {p1, v0, v2, v1}, Lv8f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lfi0;->e(Lv8f;)V
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->m(Ltd6;Lorg/json/JSONObject;)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->d(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->i(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->l(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->k(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/watch_together/internal/commands/WatchTogetherCommandExecutorImpl;->f(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->d(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_7
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->c(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->g(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_9
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->h(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->e(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_b
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->b(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_c
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->e(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_d
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomCommandExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_e
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_f
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/sessionroom/internal/command/SessionRoomAdminCommandExecutorImpl;->b(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_10
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->b(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_11
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->c(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_12
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->d(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_13
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_14
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_15
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_16
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->b(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_17
+    iget-object v0, p0, Lkt;->b:Ltd6;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->a(Ltd6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

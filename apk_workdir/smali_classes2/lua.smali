@@ -1,109 +1,100 @@
-.class public abstract Llua;
+.class public final Llua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpua;
+
 
 # static fields
-.field public static final a:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llua;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public static final a:Llua;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Llua;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Llua;->a:Llua;
+
+    new-instance v0, Lqg8;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lqg8;-><init>(I)V
+
+    sput-object v0, Llua;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 1
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_cancel:I
+    const/4 v0, 0x0
 
-    sput v0, Llua;->a:I
+    return v0
+.end method
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_camera:I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sput v0, Llua;->b:I
+    const/4 v0, 0x1
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_gallery:I
+    if-ne p0, p1, :cond_0
 
-    sput v0, Llua;->c:I
+    return v0
 
-    sget v0, Lrfc;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+    :cond_0
+    instance-of p1, p1, Llua;
 
-    sput v0, Llua;->d:I
+    if-nez p1, :cond_1
 
-    sget v0, Lrfc;->oneme_settings_collapsingstoolbar:I
+    const/4 p1, 0x0
 
-    sput v0, Llua;->e:I
+    return p1
 
-    sget v0, Lrfc;->oneme_settings_container:I
+    :cond_1
+    return v0
+.end method
 
-    sput v0, Llua;->f:I
+.method public final hashCode()I
+    .locals 1
 
-    sget v0, Lrfc;->oneme_settings_list_screen_appbar:I
+    const v0, 0x61724f48
 
-    sput v0, Llua;->g:I
+    return v0
+.end method
 
-    sget v0, Lrfc;->oneme_settings_list_screen_pinned_toolbar:I
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sput v0, Llua;->h:I
+    const-string v0, "Chevron"
 
-    sget v0, Lrfc;->oneme_settings_toolbar:I
+    return-object v0
+.end method
 
-    sput v0, Llua;->i:I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    sget v0, Lrfc;->oneme_settings_topbar:I
+    const/4 p2, 0x1
 
-    sput v0, Llua;->j:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_avatar:I
-
-    sput v0, Llua;->k:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_container:I
-
-    sput v0, Llua;->l:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_dotdivider:I
-
-    sput v0, Llua;->m:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_name:I
-
-    sput v0, Llua;->n:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_nick:I
-
-    sput v0, Llua;->o:I
-
-    sget v0, Lrfc;->oneme_settings_topbar_phone:I
-
-    sput v0, Llua;->p:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

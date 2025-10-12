@@ -1,265 +1,81 @@
 .class public final Lh6c;
-.super Lg79;
+.super Lwy3;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile c:[Lh6c;
-
-
 # instance fields
-.field public a:I
+.field public X:Lyq5;
 
-.field public b:[F
+.field public Y:Ll6c;
+
+.field public Z:Ljava/lang/String;
+
+.field public o:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+
+.field public r0:Landroid/graphics/Bitmap;
+
+.field public s0:Landroid/graphics/Bitmap;
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lone/me/sdk/uikit/qr/QrCodeGenerator;Lwy3;)V
+    .locals 0
 
-    invoke-direct {p0}, Lg79;-><init>()V
+    iput-object p1, p0, Lh6c;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lh6c;->a:I
-
-    sget-object v0, Lo7;->g:[F
-
-    iput-object v0, p0, Lh6c;->b:[F
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lg79;->cachedSize:I
+    invoke-direct {p0, p2}, Lwy3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    iget v0, p0, Lh6c;->a:I
+    iput-object p1, p0, Lh6c;->t0:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iget p1, p0, Lh6c;->v0:I
 
-    const/4 v1, 0x1
+    const/high16 v0, -0x80000000
 
-    invoke-static {v1, v0}, Le83;->f(II)I
+    or-int/2addr p1, v0
 
-    move-result v0
+    iput p1, p0, Lh6c;->v0:I
 
-    goto :goto_0
+    const/4 v9, 0x0
 
-    :cond_0
-    const/4 v0, 0x0
+    const/4 v10, 0x0
 
-    :goto_0
-    iget-object v1, p0, Lh6c;->b:[F
+    iget-object v0, p0, Lh6c;->u0:Lone/me/sdk/uikit/qr/QrCodeGenerator;
 
-    array-length v2, v1
-
-    if-lez v2, :cond_1
-
-    array-length v2, v1
-
-    mul-int/lit8 v2, v2, 0x4
-
-    add-int/2addr v2, v0
-
-    array-length v0, v1
-
-    add-int/2addr v2, v0
-
-    return v2
-
-    :cond_1
-    return v0
-.end method
-
-.method public final mergeFrom(Ld83;)Lg79;
-    .locals 6
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Ld83;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    const/16 v1, 0x8
-
-    if-eq v0, v1, :cond_7
-
-    const/16 v1, 0x12
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-eq v0, v1, :cond_4
+    const/4 v3, 0x0
 
-    const/16 v1, 0x15
+    const/4 v4, 0x0
 
-    if-eq v0, v1, :cond_1
+    const/4 v5, 0x0
 
-    invoke-virtual {p1, v0}, Ld83;->u(I)Z
+    const/4 v6, 0x0
 
-    move-result v0
+    const/4 v7, 0x0
 
-    if-nez v0, :cond_0
+    const/4 v8, 0x0
 
-    goto :goto_3
+    move-object v11, p0
 
-    :cond_1
-    invoke-static {p1, v1}, Lo7;->m(Ld83;I)I
+    invoke-virtual/range {v0 .. v11}, Lone/me/sdk/uikit/qr/QrCodeGenerator;->e(Landroid/content/Context;Lyq5;Le7f;Ll6c;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lwy3;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p1
 
-    iget-object v1, p0, Lh6c;->b:[F
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [F
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_3
-
-    invoke-virtual {p1}, Ld83;->i()F
-
-    move-result v1
-
-    aput v1, v4, v3
-
-    invoke-virtual {p1}, Ld83;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Ld83;->i()F
-
-    move-result v0
-
-    aput v0, v4, v3
-
-    iput-object v4, p0, Lh6c;->b:[F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ld83;->e(I)I
-
-    move-result v1
-
-    div-int/lit8 v0, v0, 0x4
-
-    iget-object v3, p0, Lh6c;->b:[F
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v5, v0, [F
-
-    if-eqz v4, :cond_5
-
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
-
-    invoke-virtual {p1}, Ld83;->i()F
-
-    move-result v2
-
-    aput v2, v5, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
-    :cond_6
-    iput-object v5, p0, Lh6c;->b:[F
-
-    invoke-virtual {p1, v1}, Ld83;->d(I)V
-
-    goto :goto_0
-
-    :cond_7
-    invoke-virtual {p1}, Ld83;->p()I
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iput v0, p0, Lh6c;->a:I
-
-    goto :goto_0
-
-    :cond_9
-    :goto_3
-    return-object p0
-.end method
-
-.method public final writeTo(Le83;)V
-    .locals 3
-
-    iget v0, p0, Lh6c;->a:I
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Le83;->w(II)V
-
-    :cond_0
-    iget-object v0, p0, Lh6c;->b:[F
-
-    array-length v0, v0
-
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lh6c;->b:[F
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_1
-
-    const/4 v2, 0x2
-
-    aget v1, v1, v0
-
-    invoke-virtual {p1, v2, v1}, Le83;->v(IF)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return-object p1
 .end method

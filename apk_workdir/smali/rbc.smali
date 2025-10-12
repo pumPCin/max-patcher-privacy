@@ -3,6 +3,4 @@
 
 
 # static fields
-.field public static browser_actions_context_menu_max_width:I = 0x7f07005e
-
-.field public static browser_actions_context_menu_min_padding:I = 0x7f07005f
+.field public static view_tree_saved_state_registry_owner:I = 0x7f0a0d09

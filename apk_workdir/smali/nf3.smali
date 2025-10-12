@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lur7;
+.implements Ld5c;
 
 
 # instance fields
@@ -11,18 +11,14 @@
 
 .field public final synthetic b:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
-
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lnf3;->a:I
+    iput p1, p0, Lnf3;->a:I
 
-    iput-object p1, p0, Lnf3;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lnf3;->c:Ljava/lang/Object;
+    iput-object p2, p0, Lnf3;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,124 +27,200 @@
 
 
 # virtual methods
-.method public final d(Lcs7;Ldr7;)V
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 8
 
     iget v0, p0, Lnf3;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Lnf3;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lnf3;->b:Ljava/lang/Object;
 
-    check-cast p2, Ljr7;
+    check-cast v0, Ltd6;
 
-    iget-object v0, p0, Lnf3;->c:Ljava/lang/Object;
+    invoke-interface {v0}, Ltd6;->invoke()Ljava/lang/Object;
 
-    check-cast v0, Lji7;
+    move-result-object v0
 
-    iget-object v1, p2, Ljr7;->c:Lds4;
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-interface {p1}, Lcs7;->L()Les7;
-
-    move-result-object v2
-
-    iget-object v2, v2, Les7;->d:Ler7;
-
-    sget-object v3, Ler7;->a:Ler7;
-
-    if-ne v2, v3, :cond_0
-
-    const/4 p1, 0x0
-
-    invoke-interface {v0, p1}, Lji7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    invoke-virtual {p2}, Ljr7;->a()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Lcs7;->L()Les7;
-
-    move-result-object p1
-
-    iget-object p1, p1, Les7;->d:Ler7;
-
-    iget-object p2, p2, Ljr7;->b:Ler7;
-
-    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result p1
-
-    if-gez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, v1, Lds4;->a:Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-boolean p1, v1, Lds4;->a:Z
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean p1, v1, Lds4;->b:Z
-
-    if-nez p1, :cond_3
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, v1, Lds4;->a:Z
-
-    invoke-virtual {v1}, Lds4;->a()V
-
-    :goto_0
-    return-void
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "Cannot resume a finished dispatcher"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object v0
 
     :pswitch_0
-    iget-object p1, p0, Lnf3;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lnf3;->b:Ljava/lang/Object;
 
-    check-cast p1, Lgfa;
+    check-cast v0, Lwr5;
 
-    iget-object v0, p0, Lnf3;->c:Ljava/lang/Object;
+    new-instance v1, Lo27;
 
-    check-cast v0, Landroidx/fragment/app/b;
+    invoke-direct {v1, v0}, Lo27;-><init>(Lwr5;)V
 
-    sget-object v1, Ldr7;->ON_CREATE:Ldr7;
+    return-object v1
 
-    if-ne p2, v1, :cond_4
+    :pswitch_1
+    iget-object v0, p0, Lnf3;->b:Ljava/lang/Object;
 
-    sget-object p2, Lof3;->a:Lof3;
+    check-cast v0, Lcom/google/firebase/components/ComponentRegistrar;
 
-    invoke-virtual {p2, v0}, Lof3;->a(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+    return-object v0
 
-    move-result-object p2
+    :pswitch_2
+    iget-object v0, p0, Lnf3;->b:Ljava/lang/Object;
 
-    iput-object p2, p1, Lgfa;->e:Landroid/window/OnBackInvokedDispatcher;
+    check-cast v0, Ljava/lang/String;
 
-    iget-boolean p2, p1, Lgfa;->g:Z
+    const-string v1, "."
 
-    invoke-virtual {p1, p2}, Lgfa;->e(Z)V
+    const-string v2, "Could not instantiate "
 
-    :cond_4
-    return-void
+    const-string v3, " is not an instance of com.google.firebase.components.ComponentRegistrar"
 
-    nop
+    const-string v4, "Class "
+
+    const/4 v5, 0x0
+
+    :try_start_0
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v6
+
+    const-class v7, Lcom/google/firebase/components/ComponentRegistrar;
+
+    invoke-virtual {v7, v6}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v6, v5}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v5}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/google/firebase/components/ComponentRegistrar;
+
+    move-object v5, v3
+
+    goto :goto_4
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v3
+
+    goto :goto_2
+
+    :catch_3
+    move-exception v3
+
+    goto :goto_3
+
+    :cond_0
+    new-instance v6, Lcom/google/firebase/components/InvalidRegistrarException;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v6, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v3, Lcom/google/firebase/components/InvalidRegistrarException;
+
+    invoke-static {v2, v0}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v3
+
+    :goto_1
+    new-instance v3, Lcom/google/firebase/components/InvalidRegistrarException;
+
+    invoke-static {v2, v0}, Lnd0;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v3
+
+    :goto_2
+    new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
+
+    invoke-static {v2, v0, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v4, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v4
+
+    :goto_3
+    new-instance v4, Lcom/google/firebase/components/InvalidRegistrarException;
+
+    invoke-static {v2, v0, v1}, Lbk7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v4, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v4
+
+    :catch_4
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " is not an found."
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ComponentDiscovery"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_4
+    return-object v5
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

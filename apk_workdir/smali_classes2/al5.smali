@@ -1,230 +1,146 @@
 .class public final Lal5;
-.super Ljava/lang/Object;
+.super Lc2f;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic h:I
+# interfaces
+.implements Lje6;
 
 
 # instance fields
-.field public final a:Ltk;
+.field public X:I
 
-.field public final b:Liaf;
-
-.field public final c:Lked;
-
-.field public final d:Lked;
-
-.field public final e:Licf;
-
-.field public final f:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final g:Lbg3;
+.field public final synthetic Y:Ldl5;
 
 
 # direct methods
-.method public constructor <init>(Ltk;Liaf;Lked;Lked;Lov0;Licf;)V
-    .locals 1
+.method public constructor <init>(Ldl5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lal5;->Y:Ldl5;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 p1, 0x2
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance v0, Lbg3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lal5;->g:Lbg3;
-
-    iput-object p1, p0, Lal5;->a:Ltk;
-
-    iput-object p2, p0, Lal5;->b:Liaf;
-
-    iput-object p3, p0, Lal5;->c:Lked;
-
-    iput-object p4, p0, Lal5;->d:Lked;
-
-    iput-object p6, p0, Lal5;->e:Licf;
-
-    invoke-virtual {p5, p0}, Lov0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lc2f;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/concurrent/Callable;)Lhfe;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lhfe;
+    check-cast p1, Ln24;
 
-    invoke-direct {v0}, Lhfe;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lal5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Long;
+    check-cast p1, Lal5;
 
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object p2, Laxf;->a:Laxf;
 
-    invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lal5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lal5;
+
+    iget-object v0, p0, Lal5;->Y:Ldl5;
+
+    invoke-direct {p1, v0, p2}, Lal5;-><init>(Ldl5;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lal5;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lcea;->z(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lal5;->Y:Ldl5;
+
+    :try_start_1
+    iput v1, p0, Lal5;->X:I
+
+    iget-object v0, p1, Ldl5;->a:Lc4d;
+
+    new-instance v1, Lig4;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2, p1}, Lig4;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, p0}, Lcea;->j(Lc4d;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lo24;->a:Lo24;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
-.end method
 
-.method public onEvent(Laj0;)V
-    .locals 2
-    .annotation runtime Lxye;
-    .end annotation
+    :goto_0
+    const-string v0, "FcmAnalyticsDao"
 
-    .line 9
-    iget-wide v0, p1, Lbj0;->a:J
+    const-string v1, "onLogout: clear failed"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1, p1}, Lyt3;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    :cond_2
+    :goto_1
+    sget-object p1, Laxf;->a:Laxf;
 
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+    return-object p1
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhfe;
-
-    if-eqz v0, :cond_0
-
-    .line 10
-    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p1, p1, Laj0;->b:Lv8f;
-
-    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lv8f;)V
-
-    invoke-virtual {v0, v1}, Lhfe;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onEvent(Lau;)V
-    .locals 2
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 3
-    iget-wide v0, p1, Lbj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhfe;
-
-    if-eqz v0, :cond_0
-
-    .line 4
-    invoke-virtual {v0, p1}, Lhfe;->a(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onEvent(Lnt;)V
-    .locals 2
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 1
-    iget-wide v0, p1, Lbj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhfe;
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {v0, p1}, Lhfe;->a(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onEvent(Lut;)V
-    .locals 2
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 5
-    iget-wide v0, p1, Lbj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhfe;
-
-    if-eqz v0, :cond_0
-
-    .line 6
-    invoke-virtual {v0, p1}, Lhfe;->a(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onEvent(Lxt;)V
-    .locals 2
-    .annotation runtime Lxye;
-    .end annotation
-
-    .line 7
-    iget-wide v0, p1, Lbj0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lal5;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lhfe;
-
-    if-eqz v0, :cond_0
-
-    .line 8
-    invoke-virtual {v0, p1}, Lhfe;->a(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
+    :goto_2
+    throw p1
 .end method

@@ -1,87 +1,137 @@
 .class public final Ly9;
-.super Ltde;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb24;
 
 
 # instance fields
-.field public final J0:Ldpg;
+.field public final a:Lb24;
+
+.field public final b:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ldpg;)V
-    .locals 2
+.method public constructor <init>(FLb24;)V
+    .locals 1
 
-    new-instance v0, Lsp3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    :goto_0
+    instance-of v0, p2, Ly9;
 
-    invoke-direct {v0, p1, v1}, Lsp3;-><init>(Landroid/content/Context;I)V
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, v0}, Lnxc;-><init>(Landroid/view/View;)V
+    check-cast p2, Ly9;
 
-    iput-object p2, p0, Ly9;->J0:Ldpg;
+    iget-object p2, p2, Ly9;->a:Lb24;
+
+    move-object v0, p2
+
+    check-cast v0, Ly9;
+
+    iget v0, v0, Ly9;->b:F
+
+    add-float/2addr p1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object p2, p0, Ly9;->a:Lb24;
+
+    iput p1, p0, Ly9;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lf4g;)V
-    .locals 4
+.method public final a(Landroid/graphics/RectF;)F
+    .locals 1
 
-    iget-object v0, p0, Lnxc;->a:Landroid/view/View;
+    iget-object v0, p0, Ly9;->a:Lb24;
 
-    check-cast v0, Lsp3;
+    invoke-interface {v0, p1}, Lb24;->a(Landroid/graphics/RectF;)F
 
-    sget-object v1, Lbx4;->y0:Lsed;
+    move-result p1
 
-    invoke-virtual {v1, v0}, Lsed;->o(Landroid/view/View;)Lloa;
+    iget v0, p0, Ly9;->b:F
 
-    move-result-object v1
+    add-float/2addr p1, v0
 
-    iget-object v1, v1, Lloa;->c:Luxa;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lsp3;->setCustomTheme(Luxa;)V
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
 
-    sget-object v1, Lqp3;->b:Lqp3;
+    move-result p1
 
-    invoke-virtual {v0, v1}, Lsp3;->setCallButtonMode(Lqp3;)V
-
-    iget-object v1, p1, Lf4g;->a:Lnef;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Loef;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lsp3;->setName(Ljava/lang/CharSequence;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lsp3;->setMessage(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p1, Lf4g;->b:Lhc0;
-
-    iget-wide v2, v1, Lhc0;->a:J
-
-    iget-object v1, v1, Lhc0;->b:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lf4g;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v1, p1}, Lsp3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    return-void
+    return p1
 .end method
 
-.method public final bridge synthetic x(Lww7;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lf4g;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1}, Ly9;->F(Lf4g;)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ly9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ly9;
+
+    iget-object v1, p0, Ly9;->a:Lb24;
+
+    iget-object v3, p1, Ly9;->a:Lb24;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget v1, p0, Ly9;->b:F
+
+    iget p1, p1, Ly9;->b:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Ly9;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    iget-object v1, p0, Ly9;->a:Lb24;
+
+    filled-new-array {v1, v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
 .end method

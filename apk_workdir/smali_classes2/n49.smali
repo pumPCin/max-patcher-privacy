@@ -1,50 +1,64 @@
-.class public final synthetic Ln49;
+.class public final Ln49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwo3;
+.implements Lp49;
 
 
-# instance fields
-.field public final synthetic a:J
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
+# static fields
+.field public static final a:Ln49;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ln49;
 
-    iput-wide p1, p0, Ln49;->a:J
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p3, p0, Ln49;->b:J
-
-    iput-boolean p5, p0, Ln49;->c:Z
+    sput-object v0, Ln49;->a:Ln49;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-boolean v5, p0, Ln49;->c:Z
+    const/4 v0, 0x1
 
-    move-object v0, p1
+    if-ne p0, p1, :cond_0
 
-    check-cast v0, Lp00;
+    return v0
 
-    iget-wide v1, p0, Ln49;->a:J
+    :cond_0
+    instance-of p1, p1, Ln49;
 
-    iget-wide v3, p0, Ln49;->b:J
+    if-nez p1, :cond_1
 
-    invoke-static/range {v0 .. v5}, Lj40;->M(Lp00;JJZ)V
+    const/4 p1, 0x0
 
-    return-void
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x56957f9e
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Done"
+
+    return-object v0
 .end method

@@ -1,86 +1,64 @@
-.class public final Ldef;
-.super Lzxd;
+.class public final synthetic Ldef;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final T0:Landroid/widget/TextView;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Landroid/view/LayoutInflater;Lru/ok/messages/settings/FrgBaseSettings;)V
-    .locals 2
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
+    .locals 0
 
-    invoke-direct {p0, p1, p3}, Lzxd;-><init>(Landroid/view/View;Lru/ok/messages/settings/FrgBaseSettings;)V
+    iput p2, p0, Ldef;->a:I
 
-    sget p3, Lghc;->row_setting_text:I
+    iput-object p1, p0, Ldef;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p3, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Ldef;->T0:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p3
-
-    sget-object v1, Lvaf;->a0:Ls5f;
-
-    invoke-static {p3}, Lnf2;->J(Landroid/content/Context;)Lvaf;
-
-    move-result-object p3
-
-    iget p3, p3, Lvaf;->F:I
-
-    invoke-virtual {p2, p3}, Landroid/widget/TextView;->setTextColor(I)V
-
-    sget p3, Ljgc;->row_setting__fl_value:I
-
-    invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/FrameLayout;
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x(Lwxd;Z)V
+.method public final run()V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Lzxd;->x(Lwxd;Z)V
+    iget v0, p0, Ldef;->a:I
 
-    iget-object p1, p1, Lwxd;->X:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p2, p0, Ldef;->T0:Landroid/widget/TextView;
+    iget-object v0, p0, Ldef;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
     return-void
 
-    :cond_0
-    const/16 p1, 0x8
+    :pswitch_0
+    iget-object v0, p0, Ldef;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
     return-void
+
+    :pswitch_1
+    iget-object v0, p0, Ldef;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

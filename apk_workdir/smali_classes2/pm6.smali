@@ -1,154 +1,320 @@
 .class public final Lpm6;
-.super Ljava/lang/Object;
+.super Ltbe;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lhc0;
+.field public final Y:Lone/me/sdk/arch/Widget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lhc0;)V
-    .locals 0
+.method public constructor <init>(Lhe7;Ljava/util/concurrent/ExecutorService;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lpm6;->a:Ljava/lang/String;
+    iput v0, p0, Lpm6;->X:I
 
-    iput-object p2, p0, Lpm6;->b:Ljava/lang/String;
+    .line 3
+    invoke-direct {p0, p2}, Ltbe;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-object p3, p0, Lpm6;->c:Lhc0;
+    .line 4
+    check-cast p1, Lone/me/sdk/arch/Widget;
+
+    iput-object p1, p0, Lpm6;->Y:Lone/me/sdk/arch/Widget;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lom6;Ljava/util/concurrent/ExecutorService;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lpm6;->X:I
+
+    .line 1
+    invoke-direct {p0, p2}, Ltbe;-><init>(Ljava/util/concurrent/Executor;)V
+
+    .line 2
+    check-cast p1, Lone/me/sdk/arch/Widget;
+
+    iput-object p1, p0, Lpm6;->Y:Lone/me/sdk/arch/Widget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final bridge synthetic H(Lqce;I)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lpm6;->X:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Lge7;
+
+    invoke-virtual {p0, p1, p2}, Lpm6;->K(Lge7;I)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lrm6;
+
+    invoke-virtual {p0, p1, p2}, Lpm6;->J(Lrm6;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public J(Lrm6;I)V
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    invoke-virtual {v0, v2}, Lhv7;->C(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lov7;
+
+    check-cast v2, Lqm6;
+
+    new-instance v3, Lyv0;
+
+    const/4 v9, 0x0
+
+    const/16 v10, 0x13
+
+    const/4 v4, 0x1
+
+    iget-object v13, v0, Lpm6;->Y:Lone/me/sdk/arch/Widget;
+
+    const-class v6, Lom6;
+
+    const-string v7, "onGlobalContactClick"
+
+    const-string v8, "onGlobalContactClick(Lone/me/contactlist/recyclerview/adapter/search/GlobalContactListItem;)V"
+
+    move-object v5, v13
+
+    invoke-direct/range {v3 .. v10}, Lyv0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v11, Lmw;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x13
+
+    const/4 v12, 0x2
+
+    const-class v14, Lom6;
+
+    const-string v15, "onGlobalContactCallClick"
+
+    const-string v16, "onGlobalContactCallClick(Lone/me/contactlist/recyclerview/adapter/search/GlobalContactListItem;Z)V"
+
+    invoke-direct/range {v11 .. v18}, Lmw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual {v1, v2}, Lrm6;->G(Lqm6;)V
+
+    iget-object v1, v1, Luvc;->a:Landroid/view/View;
+
+    check-cast v1, Lqia;
+
+    new-instance v4, Ll55;
+
+    const/4 v5, 0x4
+
+    invoke-direct {v4, v3, v5, v2}, Ll55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v1, v4}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    iget-boolean v3, v2, Lqm6;->s0:Z
+
+    if-eqz v3, :cond_0
+
+    new-instance v3, Lfa;
+
+    const/16 v4, 0xf
+
+    invoke-direct {v3, v11, v4, v2}, Lfa;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v3}, Lqia;->setCallButtons(Lvd6;)V
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lpm6;
+    invoke-virtual {v1}, Lqia;->e()V
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lpm6;
-
-    iget-object v1, p0, Lpm6;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lpm6;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lpm6;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lpm6;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lpm6;->c:Lhc0;
-
-    iget-object p1, p1, Lpm6;->c:Lhc0;
-
-    invoke-static {v1, p1}, Lsx9;->e(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public K(Lge7;I)V
+    .locals 8
 
-    iget-object v0, p0, Lpm6;->a:Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lhv7;->C(I)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object p2
 
-    move-result v0
+    check-cast p2, Lov7;
 
-    const/16 v1, 0x1f
+    check-cast p2, Lee7;
 
-    mul-int/2addr v0, v1
+    new-instance v0, Lyv0;
 
-    iget-object v2, p0, Lpm6;->b:Ljava/lang/String;
+    const/4 v6, 0x0
 
-    invoke-static {v0, v1, v2}, Lvl3;->c(IILjava/lang/String;)I
+    const/16 v7, 0x15
 
-    move-result v0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lpm6;->c:Lhc0;
+    iget-object v2, p0, Lpm6;->Y:Lone/me/sdk/arch/Widget;
 
-    invoke-virtual {v1}, Lhc0;->hashCode()I
+    const-class v3, Lhe7;
 
-    move-result v1
+    const-string v4, "onInviteActionClick"
 
-    add-int/2addr v1, v0
+    const-string v5, "onInviteActionClick(Lone/me/inviteactions/list/InviteActionListItem$Type;)V"
 
-    return v1
+    invoke-direct/range {v0 .. v7}, Lyv0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-virtual {p1, p2}, Lge7;->G(Lee7;)V
+
+    iget-object p1, p1, Luvc;->a:Landroid/view/View;
+
+    new-instance v1, Ll55;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v0, v2, p2}, Ll55;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v1}, Ljgh;->C(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final l(I)I
+    .locals 1
 
-    const-string v0, ", avatarUrl="
+    iget v0, p0, Lpm6;->X:I
 
-    const-string v1, ", abbreviationModel="
+    packed-switch v0, :pswitch_data_0
 
-    const-string v2, "WebAppContactData(displayName="
+    invoke-virtual {p0, p1}, Lhv7;->C(I)Ljava/lang/Object;
 
-    iget-object v3, p0, Lpm6;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object v4, p0, Lpm6;->b:Ljava/lang/String;
+    check-cast p1, Lov7;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lqe0;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lee7;
 
-    move-result-object v0
+    iget p1, p1, Lee7;->o:I
 
-    iget-object v1, p0, Lpm6;->c:Lhc0;
+    return p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    invoke-virtual {p0, p1}, Lhv7;->C(I)Ljava/lang/Object;
 
-    const-string v1, ")"
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p1, Lov7;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast p1, Lqm6;
 
-    move-result-object v0
+    iget p1, p1, Lqm6;->t0:I
 
-    return-object v0
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final bridge synthetic r(Luvc;I)V
+    .locals 1
+
+    iget v0, p0, Lpm6;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lge7;
+
+    invoke-virtual {p0, p1, p2}, Lpm6;->K(Lge7;I)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lrm6;
+
+    invoke-virtual {p0, p1, p2}, Lpm6;->J(Lrm6;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Luvc;
+    .locals 1
+
+    iget p2, p0, Lpm6;->X:I
+
+    packed-switch p2, :pswitch_data_0
+
+    new-instance p2, Lge7;
+
+    new-instance v0, Lfe7;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lfe7;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p2, v0}, Luvc;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p2, Lrm6;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lqia;
+
+    invoke-direct {v0, p1}, Lqia;-><init>(Landroid/content/Context;)V
+
+    invoke-direct {p2, v0}, Luvc;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

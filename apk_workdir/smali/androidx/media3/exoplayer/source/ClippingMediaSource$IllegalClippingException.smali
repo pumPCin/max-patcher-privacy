@@ -15,6 +15,7 @@
 
     move v1, p1
 
+    .line 1
     invoke-direct/range {v0 .. v5}, Landroidx/media3/exoplayer/source/ClippingMediaSource$IllegalClippingException;-><init>(IJJ)V
 
     return-void
@@ -23,6 +24,7 @@
 .method public constructor <init>(IJJ)V
     .locals 4
 
+    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Illegal clipping: "
@@ -39,6 +41,7 @@
 
     if-eq p1, v2, :cond_0
 
+    .line 3
     const-string p1, "unknown"
 
     goto :goto_1
@@ -59,9 +62,11 @@
     :cond_1
     const/4 v1, 0x0
 
+    .line 4
     :goto_0
-    invoke-static {v1}, Lpih;->o(Z)V
+    invoke-static {v1}, Lq5h;->k(Z)V
 
+    .line 5
     new-instance p1, Ljava/lang/StringBuilder;
 
     const-string v1, "start exceeds end. Start time: "
@@ -82,14 +87,17 @@
 
     goto :goto_1
 
+    .line 6
     :cond_2
     const-string p1, "not seekable to start"
 
     goto :goto_1
 
+    .line 7
     :cond_3
     const-string p1, "invalid period count"
 
+    .line 8
     :goto_1
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1,201 +1,173 @@
 .class public final Lt35;
-.super Ljava/lang/Object;
+.super Lq5h;
 .source "SourceFile"
 
 
-# static fields
-.field public static final f:I
-
-
 # instance fields
-.field public final a:Z
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:F
+.field public final synthetic b:Lu35;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-wide v0, 0x4014666666666667L    # 5.1000000000000005
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    sput v0, Lt35;->f:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
-
-    sget v0, Lvac;->elevationOverlayEnabled:I
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1}, Ltp;->n0(ILandroid/content/Context;Z)Z
-
-    move-result v0
-
-    sget v2, Lvac;->elevationOverlayColor:I
-
-    invoke-static {v2, v1, p1}, Lps;->l(IILandroid/content/Context;)I
-
-    move-result v2
-
-    sget v3, Lvac;->elevationOverlayAccentColor:I
-
-    invoke-static {v3, v1, p1}, Lps;->l(IILandroid/content/Context;)I
-
-    move-result v3
-
-    sget v4, Lvac;->colorSurface:I
-
-    invoke-static {v4, v1, p1}, Lps;->l(IILandroid/content/Context;)I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+.method public constructor <init>(Lu35;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lt35;->a:Z
-
-    iput v2, p0, Lt35;->b:I
-
-    iput v3, p0, Lt35;->c:I
-
-    iput v1, p0, Lt35;->d:I
-
-    iput p1, p0, Lt35;->e:F
+    iput-object p1, p0, Lt35;->b:Lu35;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IF)I
-    .locals 5
+.method public final E(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lt35;->a:Z
+    iget-object v0, p0, Lt35;->b:Lu35;
 
-    if-eqz v0, :cond_3
+    iget-object v0, v0, Lu35;->a:Ljava/lang/Object;
 
-    const/16 v0, 0xff
+    check-cast v0, Ly35;
 
-    invoke-static {p1, v0}, Lz93;->i(II)I
+    invoke-virtual {v0, p1}, Ly35;->e(Ljava/lang/Throwable;)V
 
-    move-result v1
+    return-void
+.end method
 
-    iget v2, p0, Lt35;->d:I
+.method public final F(Lej9;)V
+    .locals 8
 
-    if-ne v1, v2, :cond_3
+    iget-object v0, p0, Lt35;->b:Lu35;
 
-    iget v1, p0, Lt35;->e:F
+    if-nez p1, :cond_0
 
-    const/4 v2, 0x0
+    iget-object p1, v0, Lu35;->a:Ljava/lang/Object;
 
-    cmpg-float v3, v1, v2
+    check-cast p1, Ly35;
 
-    if-lez v3, :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    cmpg-float v3, p2, v2
+    const-string v1, "metadataRepo cannot be null"
 
-    if-gtz v3, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    invoke-virtual {p1, v0}, Ly35;->e(Ljava/lang/Throwable;)V
+
+    return-void
 
     :cond_0
-    div-float/2addr p2, v1
+    iput-object p1, v0, Lu35;->c:Ljava/lang/Object;
 
-    float-to-double v3, p2
+    new-instance v2, Lhpd;
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->log1p(D)D
+    iget-object p1, v0, Lu35;->c:Ljava/lang/Object;
 
-    move-result-wide v3
+    move-object v3, p1
 
-    double-to-float p2, v3
+    check-cast v3, Lej9;
 
-    const/high16 v1, 0x40900000    # 4.5f
+    iget-object p1, v0, Lu35;->a:Ljava/lang/Object;
 
-    mul-float/2addr p2, v1
+    check-cast p1, Ly35;
 
-    const/high16 v1, 0x40000000    # 2.0f
+    iget-object v4, p1, Ly35;->g:Lsf2;
 
-    add-float/2addr p2, v1
+    iget-object v5, p1, Ly35;->k:Lyg4;
 
-    const/high16 v1, 0x42c80000    # 100.0f
+    iget-object v6, p1, Ly35;->i:[I
 
-    div-float/2addr p2, v1
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/16 v1, 0x22
 
-    invoke-static {p2, v1}, Ljava/lang/Math;->min(FF)F
+    if-lt p1, v1, :cond_1
 
-    move-result p2
+    invoke-static {}, Lg45;->a()Ljava/util/Set;
+
+    move-result-object p1
+
+    :goto_0
+    move-object v7, p1
 
     goto :goto_1
 
     :cond_1
-    :goto_0
-    move p2, v2
+    invoke-static {}, Labh;->A()Ljava/util/Set;
+
+    move-result-object p1
+
+    goto :goto_0
 
     :goto_1
-    invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
+    invoke-direct/range {v2 .. v7}, Lhpd;-><init>(Lej9;Lsf2;Lyg4;[ILjava/util/Set;)V
 
-    move-result v1
+    iput-object v2, v0, Lu35;->b:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lz93;->i(II)I
+    iget-object p1, v0, Lu35;->a:Ljava/lang/Object;
 
-    move-result p1
+    check-cast p1, Ly35;
 
-    iget v0, p0, Lt35;->b:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1, p2, v0}, Lps;->y(IFI)I
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result p1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    cmpl-float p2, p2, v2
+    iget-object v1, p1, Ly35;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    if-lez p2, :cond_2
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
 
-    iget p2, p0, Lt35;->c:I
+    move-result-object v1
 
-    if-eqz p2, :cond_2
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    sget v0, Lt35;->f:I
+    const/4 v1, 0x1
 
-    invoke-static {p2, v0}, Lz93;->i(II)I
+    :try_start_0
+    iput v1, p1, Ly35;->c:I
 
-    move-result p2
+    iget-object v1, p1, Ly35;->b:Lus;
 
-    invoke-static {p2, p1}, Lz93;->g(II)I
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    move-result p1
+    iget-object v1, p1, Ly35;->b:Lus;
 
-    :cond_2
-    invoke-static {p1, v1}, Lz93;->i(II)I
+    invoke-virtual {v1}, Lus;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result p1
+    iget-object v1, p1, Ly35;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
 
-    :cond_3
-    return p1
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    iget-object v1, p1, Ly35;->d:Landroid/os/Handler;
+
+    new-instance v2, Lbp;
+
+    iget p1, p1, Ly35;->c:I
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, p1, v3}, Lbp;-><init>(Ljava/util/List;ILjava/lang/Throwable;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    iget-object p1, p1, Ly35;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    throw v0
 .end method
